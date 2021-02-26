@@ -13,6 +13,7 @@ import typingsSlinky.antd.antdStrings.prev
 import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.paginationPaginationMod.PaginationProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ object Pagination {
   
   @JSImport("antd", "Pagination")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -64,10 +65,10 @@ object Pagination {
     def pageSize(value: Double): this.type = set("pageSize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pageSizeOptionsVarargs(value: String*): this.type = set("pageSizeOptions", js.Array(value :_*))
+    def pageSizeOptions(value: js.Array[String]): this.type = set("pageSizeOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pageSizeOptions(value: js.Array[String]): this.type = set("pageSizeOptions", value.asInstanceOf[js.Any])
+    def pageSizeOptionsVarargs(value: String*): this.type = set("pageSizeOptions", js.Array(value :_*))
     
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
@@ -109,7 +110,7 @@ object Pagination {
     def total(value: Double): this.type = set("total", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Pagination.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

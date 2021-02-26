@@ -13,6 +13,7 @@ import typingsSlinky.materialUiLab.materialUiLabStrings.secondary
 import typingsSlinky.materialUiLab.timelineDotTimelineDotMod.TimelineDotProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ object TimelineDot {
   
   @JSImport("@material-ui/lab", "TimelineDot")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,16 +39,16 @@ object TimelineDot {
     def color(value: inherit | primary | secondary | grey): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
@@ -56,7 +57,7 @@ object TimelineDot {
     def variant(value: default | outlined): this.type = set("variant", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TimelineDotProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TimelineDot.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TimelineDotProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

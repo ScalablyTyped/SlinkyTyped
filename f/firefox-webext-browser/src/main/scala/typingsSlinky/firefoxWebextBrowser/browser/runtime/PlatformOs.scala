@@ -1,5 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.runtime
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.linux
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.openbsd
 */
-trait PlatformOs extends js.Object
+trait PlatformOs extends StObject
 object PlatformOs {
   
   @scala.inline

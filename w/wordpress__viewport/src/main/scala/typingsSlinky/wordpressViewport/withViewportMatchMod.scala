@@ -3,13 +3,12 @@ package typingsSlinky.wordpressViewport
 import slinky.core.ReactComponentClass
 import typingsSlinky.std.Omit
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@wordpress/viewport/with-viewport-match", JSImport.Namespace)
-@js.native
-object withViewportMatchMod extends js.Object {
+object withViewportMatchMod {
   
   /**
     * Higher-order component creator, creating a new component which renders with the given prop names,
@@ -31,6 +30,8 @@ object withViewportMatchMod extends js.Object {
     * ```
     */
   // prettier-ignore
+  @JSImport("@wordpress/viewport/with-viewport-match", JSImport.Default)
+  @js.native
   def default[T /* <: Record[String, String] */](queries: T): js.Function1[
     /* component */ ReactComponentClass[_], 
     ReactComponentClass[Omit[_, /* keyof T */ String]]

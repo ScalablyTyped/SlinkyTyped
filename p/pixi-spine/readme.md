@@ -10,9 +10,9 @@ Spine implementation for pixi v^5
 | ------------------ | :-------------: |
 | Full name          | pixi-spine |
 | Keywords           | - |
-| # releases         | 24 |
-| # dependents       | 17 |
-| # downloads        | 107138 |
+| # releases         | 20 |
+| # dependents       | 22 |
+| # downloads        | 143039 |
 | # stars            | 1 |
 
 ## Links

@@ -1,5 +1,6 @@
 package typingsSlinky.qlikEngineapi.EngineAPI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.OTHER_REL_LIMITED
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.OTHER_REL_ACC_TARGET
 */
-trait OtherModeType extends js.Object
+trait OtherModeType extends StObject
 object OtherModeType {
   
   @scala.inline

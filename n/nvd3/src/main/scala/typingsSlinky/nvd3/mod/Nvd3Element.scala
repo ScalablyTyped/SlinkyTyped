@@ -4,12 +4,13 @@ import typingsSlinky.d3Dispatch.mod.Dispatch_
 import typingsSlinky.d3Selection.mod.BaseType
 import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.d3Transition.mod.Transition_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Nvd3Element extends js.Object {
+trait Nvd3Element extends StObject {
   
   def apply(
     selection: Selection_[

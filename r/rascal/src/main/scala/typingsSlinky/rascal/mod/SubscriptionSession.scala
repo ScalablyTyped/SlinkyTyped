@@ -2,12 +2,14 @@ package typingsSlinky.rascal.mod
 
 import typingsSlinky.amqplib.propertiesMod.Message
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.rascal.rascalStrings.cancelled
 import typingsSlinky.rascal.rascalStrings.error
 import typingsSlinky.rascal.rascalStrings.invalid_content
 import typingsSlinky.rascal.rascalStrings.message
 import typingsSlinky.rascal.rascalStrings.redeliveries_error
 import typingsSlinky.rascal.rascalStrings.redeliveries_exceeded
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,6 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("rascal", "SubscriptionSession")
 @js.native
 class SubscriptionSession () extends EventEmitter {
+  def this(options: EventEmitterOptions) = this()
   
   def cancel(next: ErrorCb): Unit = js.native
   

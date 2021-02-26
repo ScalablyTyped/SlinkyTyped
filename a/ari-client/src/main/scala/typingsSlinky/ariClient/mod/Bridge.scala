@@ -8,6 +8,7 @@ import typingsSlinky.ariClient.anon.PlaybackId
 import typingsSlinky.ariClient.anon.Type
 import typingsSlinky.ariClient.anon.`2`
 import typingsSlinky.ariClient.anon.`3`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

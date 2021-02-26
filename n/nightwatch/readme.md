@@ -9,10 +9,10 @@ Easy to use Node.js based End-to-End testing solution for browser based apps and
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | nightwatch |
-| Keywords           | - |
-| # releases         | 42 |
-| # dependents       | 108 |
-| # downloads        | 8278513 |
+| Keywords           | nightwatch, nightwatchjs, selenium, testing, webdriver, browserstack, end-to-end, automated-testing, e2e |
+| # releases         | 39 |
+| # dependents       | 121 |
+| # downloads        | 9649637 |
 | # stars            | 25 |
 
 ## Links

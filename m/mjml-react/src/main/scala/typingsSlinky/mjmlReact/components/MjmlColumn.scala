@@ -9,6 +9,7 @@ import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.MjmlColumnProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
 import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object MjmlColumn {
   
   @JSImport("mjml-react", "MjmlColumn")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -70,9 +71,9 @@ object MjmlColumn {
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
+  implicit def make(companion: MjmlColumn.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   def withProps(
     p: RequiredChildrenProps with MjmlColumnProps with PaddingProps with ClassNameProps with BorderProps
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: MjmlColumn.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

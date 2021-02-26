@@ -1,13 +1,14 @@
 package typingsSlinky.semanticUiAccordion.anon
 
 import typingsSlinky.semanticUiAccordion.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Pick<semantic-ui-accordion.SemanticUI.AccordionSettings._Impl, 'onOpening'> */
 @js.native
-trait PickImplonOpening extends js.Object {
+trait PickImplonOpening extends StObject {
   
   def onOpening(): Unit = js.native
   @JSName("onOpening")

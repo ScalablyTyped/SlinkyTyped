@@ -1,5 +1,6 @@
 package typingsSlinky.codemirror.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.codemirror.codemirrorStrings.textarea
   - typingsSlinky.codemirror.codemirrorStrings.contenteditable
 */
-trait InputStyle extends js.Object
+trait InputStyle extends StObject
 object InputStyle {
   
   @scala.inline

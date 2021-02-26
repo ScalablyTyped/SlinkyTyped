@@ -9,9 +9,9 @@ Polyfill for the Encoding Living Standard's API.
 | ------------------ | :-------------: |
 | Full name          | text-encoding |
 | Keywords           | encoding, decoding, living standard |
-| # releases         | 2 |
-| # dependents       | 297 |
-| # downloads        | 34701669 |
+| # releases         | 0 |
+| # dependents       | 388 |
+| # downloads        | 25892340 |
 | # stars            | 5 |
 
 ## Links

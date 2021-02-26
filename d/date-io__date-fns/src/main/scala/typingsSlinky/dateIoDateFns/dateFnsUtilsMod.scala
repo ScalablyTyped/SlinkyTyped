@@ -1,6 +1,5 @@
 package typingsSlinky.dateIoDateFns
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dateIoCore.mod.DateIOFormats
 import typingsSlinky.dateIoCore.mod.IUtils
 import typingsSlinky.dateIoDateFns.anon.Formats
@@ -8,13 +7,18 @@ import typingsSlinky.dateIoDateFns.dateIoDateFnsStrings.AM
 import typingsSlinky.dateIoDateFns.dateIoDateFnsStrings.PM
 import typingsSlinky.dateIoDateFns.dateIoDateFnsStrings.am_
 import typingsSlinky.dateIoDateFns.dateIoDateFnsStrings.pm_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@date-io/date-fns/build/date-fns-utils", JSImport.Namespace)
-@js.native
-object dateFnsUtilsMod extends js.Object {
+object dateFnsUtilsMod {
+  
+  @JSImport("@date-io/date-fns/build/date-fns-utils", JSImport.Default)
+  @js.native
+  class default () extends DateFnsUtils {
+    def this(hasLocaleFormats: Formats) = this()
+  }
   
   @js.native
   trait DateFnsUtils
@@ -34,10 +38,5 @@ object dateFnsUtilsMod extends js.Object {
   
   @js.native
   trait Locale
-    extends TopLevel[typingsSlinky.dateFns.Locale]
-  
-  @js.native
-  class default () extends DateFnsUtils {
-    def this(hasLocaleFormats: Formats) = this()
-  }
+    extends typingsSlinky.dateFns.Locale
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-motion
 
-Typings are for version 2.3.4
+Typings are for version 2.4.1
 
 ## Library description:
 React lifecycle controlled motion library

@@ -17,6 +17,7 @@ import typingsSlinky.primereact.anon.MultiSortMeta
 import typingsSlinky.primereact.anon.Type
 import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.dataTableMod.DataTableProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ object DataTable {
   
   @JSImport("primereact/datatable", "DataTable")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -78,10 +79,10 @@ object DataTable {
     def expandableRowGroups(value: Boolean): this.type = set("expandableRowGroups", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def expandedRowsVarargs(value: js.Any*): this.type = set("expandedRows", js.Array(value :_*))
+    def expandedRows(value: js.Array[_]): this.type = set("expandedRows", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def expandedRows(value: js.Array[_]): this.type = set("expandedRows", value.asInstanceOf[js.Any])
+    def expandedRowsVarargs(value: js.Any*): this.type = set("expandedRows", js.Array(value :_*))
     
     @scala.inline
     def exportFilename(value: String): this.type = set("exportFilename", value.asInstanceOf[js.Any])
@@ -111,10 +112,10 @@ object DataTable {
     def frozenHeaderColumnGroup(value: js.Any): this.type = set("frozenHeaderColumnGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def frozenValueVarargs(value: js.Any*): this.type = set("frozenValue", js.Array(value :_*))
+    def frozenValue(value: js.Array[_]): this.type = set("frozenValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def frozenValue(value: js.Array[_]): this.type = set("frozenValue", value.asInstanceOf[js.Any])
+    def frozenValueVarargs(value: js.Any*): this.type = set("frozenValue", js.Array(value :_*))
     
     @scala.inline
     def frozenWidth(value: String): this.type = set("frozenWidth", value.asInstanceOf[js.Any])
@@ -147,10 +148,10 @@ object DataTable {
     def metaKeySelection(value: Boolean): this.type = set("metaKeySelection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def multiSortMetaVarargs(value: js.Any*): this.type = set("multiSortMeta", js.Array(value :_*))
+    def multiSortMeta(value: js.Array[_]): this.type = set("multiSortMeta", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def multiSortMeta(value: js.Array[_]): this.type = set("multiSortMeta", value.asInstanceOf[js.Any])
+    def multiSortMetaVarargs(value: js.Any*): this.type = set("multiSortMeta", js.Array(value :_*))
     
     @scala.inline
     def onColReorder(value: /* e */ Columns => Unit): this.type = set("onColReorder", js.Any.fromFunction1(value))
@@ -276,10 +277,10 @@ object DataTable {
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
+    def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
+    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
     
     @scala.inline
     def scrollHeight(value: String): this.type = set("scrollHeight", value.asInstanceOf[js.Any])
@@ -330,10 +331,10 @@ object DataTable {
     def totalRecords(value: Double): this.type = set("totalRecords", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def virtualRowHeight(value: Double): this.type = set("virtualRowHeight", value.asInstanceOf[js.Any])
@@ -345,7 +346,7 @@ object DataTable {
     def virtualScrollDelay(value: Double): this.type = set("virtualScrollDelay", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DataTableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DataTable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DataTableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -11,8 +11,8 @@ Two-dimensional recursive spatial subdivision.
 | Full name          | d3-quadtree |
 | Keywords           | d3, d3-module, quadtree |
 | # releases         | 5 |
-| # dependents       | 24 |
-| # downloads        | 26421939 |
+| # dependents       | 32 |
+| # downloads        | 48544356 |
 | # stars            | 0 |
 
 ## Links

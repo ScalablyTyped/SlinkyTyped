@@ -6,6 +6,7 @@ import typingsSlinky.baseui.accordionMod.PanelState
 import typingsSlinky.baseui.accordionMod.StatefulPanelContainerProps
 import typingsSlinky.baseui.anon.ExpandedBoolean
 import typingsSlinky.baseui.baseuiStrings.expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object StatefulPanelContainer {
   
   @JSImport("baseui/accordion", "StatefulPanelContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,7 +32,7 @@ object StatefulPanelContainer {
     def stateReducer(value: (expand, PanelState, PanelState) => PanelState): this.type = set("stateReducer", js.Any.fromFunction3(value))
   }
   
-  def withProps(p: StatefulPanelContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatefulPanelContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatefulPanelContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

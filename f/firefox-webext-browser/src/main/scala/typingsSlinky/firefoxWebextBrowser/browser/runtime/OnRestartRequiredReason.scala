@@ -1,5 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.runtime
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.os_update
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.periodic
 */
-trait OnRestartRequiredReason extends js.Object
+trait OnRestartRequiredReason extends StObject
 object OnRestartRequiredReason {
   
   @scala.inline

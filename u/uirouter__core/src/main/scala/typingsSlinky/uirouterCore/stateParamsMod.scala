@@ -3,14 +3,14 @@ package typingsSlinky.uirouterCore
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.uirouterCore.commonCommonMod.Obj
 import typingsSlinky.uirouterCore.stateObjectMod.StateObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/params/stateParams", JSImport.Namespace)
-@js.native
-object stateParamsMod extends js.Object {
+object stateParamsMod {
   
+  @JSImport("@uirouter/core/lib/params/stateParams", "StateParams")
   @js.native
   class StateParams ()
     extends /* key */ StringDictionary[js.Any] {

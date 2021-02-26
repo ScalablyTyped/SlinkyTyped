@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactOnsenui.anon.DataSource
 import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object List {
   
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassName with DataSource[T]]))
+  }
+  
   @JSImport("react-onsenui", "List")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -25,10 +32,10 @@ object List {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataSourceVarargs(value: T*): this.type = set("dataSource", js.Array(value :_*))
+    def dataSource(value: js.Array[T]): this.type = set("dataSource", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataSource(value: js.Array[T]): this.type = set("dataSource", value.asInstanceOf[js.Any])
+    def dataSourceVarargs(value: T*): this.type = set("dataSource", js.Array(value :_*))
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -49,13 +56,7 @@ object List {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: HTMLAttributesidclassName with DataSource[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassName with DataSource[T]]))
-  }
-  
   implicit def make[T](companion: List.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps[T](p: HTMLAttributesidclassName with DataSource[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

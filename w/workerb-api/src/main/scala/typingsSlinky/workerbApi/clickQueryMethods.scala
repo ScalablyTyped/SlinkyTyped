@@ -1,5 +1,6 @@
 package typingsSlinky.workerbApi
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.workerbApi.workerbApiStrings.by_xpath
   - typingsSlinky.workerbApi.workerbApiStrings.by_query_selector
 */
-trait clickQueryMethods extends js.Object
+trait clickQueryMethods extends StObject
 object clickQueryMethods {
   
   @scala.inline

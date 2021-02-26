@@ -1,15 +1,17 @@
 package typingsSlinky.convertUnits.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// Speed
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.convertUnits.convertUnitsStrings.sSlashm
   - typingsSlinky.convertUnits.convertUnitsStrings.minSlashkm
   - typingsSlinky.convertUnits.convertUnitsStrings.sSlashft
 */
-trait uPace extends js.Object
+trait uPace extends StObject
 object uPace {
   
   @scala.inline

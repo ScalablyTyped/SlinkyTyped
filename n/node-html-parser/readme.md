@@ -9,10 +9,10 @@ A very fast HTML parser, generating a simplified DOM, with basic element query s
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | node-html-parser |
-| Keywords           | fast html parser nodejs typescript |
-| # releases         | 34 |
-| # dependents       | 179 |
-| # downloads        | 2588156 |
+| Keywords           | parser, html, nodejs, typescript |
+| # releases         | 53 |
+| # dependents       | 297 |
+| # downloads        | 32050675 |
 | # stars            | 2 |
 
 ## Links

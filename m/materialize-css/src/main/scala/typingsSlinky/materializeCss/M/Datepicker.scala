@@ -1,6 +1,7 @@
 package typingsSlinky.materializeCss.M
 
 import org.scalajs.dom.raw.HTMLButtonElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
 - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Component<DatepickerOptions> * / any
 - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Openable * / any */ @js.native
-trait Datepicker extends js.Object {
+trait Datepicker extends StObject {
   
   /**
     * CLEAR button instance (undocumented!).

@@ -10,6 +10,7 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.global
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.local
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.module
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.script_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.module
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`wasm-expression-stack`
 */
-trait ScopeType extends js.Object
+trait ScopeType extends StObject
 object ScopeType {
   
   @scala.inline

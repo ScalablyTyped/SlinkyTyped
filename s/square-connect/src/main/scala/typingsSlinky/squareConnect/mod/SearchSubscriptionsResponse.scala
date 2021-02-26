@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "SearchSubscriptionsResponse")
 @js.native
-class SearchSubscriptionsResponse () extends js.Object {
+class SearchSubscriptionsResponse () extends StObject {
   
   /**
     * When a response is truncated, it includes a cursor that you can  use in a subsequent request to fetch the next

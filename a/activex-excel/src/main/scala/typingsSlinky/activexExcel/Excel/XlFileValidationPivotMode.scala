@@ -3,6 +3,7 @@ package typingsSlinky.activexExcel.Excel
 import typingsSlinky.activexExcel.activexExcelNumbers.`0`
 import typingsSlinky.activexExcel.activexExcelNumbers.`1`
 import typingsSlinky.activexExcel.activexExcelNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`1`
   - typingsSlinky.activexExcel.activexExcelNumbers.`2`
 */
-trait XlFileValidationPivotMode extends js.Object
+trait XlFileValidationPivotMode extends StObject
 object XlFileValidationPivotMode {
   
   @scala.inline

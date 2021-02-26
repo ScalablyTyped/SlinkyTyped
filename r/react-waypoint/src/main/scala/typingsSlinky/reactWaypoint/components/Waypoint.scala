@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactWaypoint.mod.Waypoint.CallbackArgs
 import typingsSlinky.reactWaypoint.mod.Waypoint.WaypointProps
-import typingsSlinky.reactWaypoint.mod.Waypoint_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,12 +13,12 @@ object Waypoint {
   
   @JSImport("react-waypoint", "Waypoint")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Waypoint_] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactWaypoint.mod.Waypoint] {
     
     @scala.inline
     def bottomOffset(value: String | Double): this.type = set("bottomOffset", value.asInstanceOf[js.Any])
@@ -48,7 +48,7 @@ object Waypoint {
     def topOffset(value: String | Double): this.type = set("topOffset", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: WaypointProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Waypoint.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: WaypointProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

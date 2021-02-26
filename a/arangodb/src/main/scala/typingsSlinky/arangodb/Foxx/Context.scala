@@ -4,12 +4,13 @@ import typingsSlinky.arangodb.ArangoDB.Collection
 import typingsSlinky.arangodb.anon.PartialDocumentationRoute
 import typingsSlinky.arangodb.arangodbBooleans.`false`
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Context extends js.Object {
+trait Context extends StObject {
   
   var argv: js.Array[_] = js.native
   

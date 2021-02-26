@@ -1,5 +1,6 @@
 package typingsSlinky.qlikEngineapi.EngineAPI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.R
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.U
 */
-trait NxCellType extends js.Object
+trait NxCellType extends StObject
 object NxCellType {
   
   @scala.inline

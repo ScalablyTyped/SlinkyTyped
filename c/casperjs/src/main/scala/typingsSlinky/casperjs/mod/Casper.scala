@@ -4,13 +4,14 @@ import typingsSlinky.casperjs.anon.Url
 import typingsSlinky.casperjs.casperjsBooleans.`false`
 import typingsSlinky.casperjs.casperjsBooleans.`true`
 import typingsSlinky.phantomjs.ClipRect
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("casperjs", "Casper")
 @js.native
-class Casper protected () extends js.Object {
+class Casper protected () extends StObject {
   def this(options: CasperOptions) = this()
   
   // Properties
@@ -410,6 +411,19 @@ class Casper protected () extends js.Object {
   def waitForPopup(urlPattern: String, `then`: FunctionThen, onTimeout: js.UndefOr[scala.Nothing], timeout: Double): Casper = js.native
   def waitForPopup(urlPattern: String, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
   def waitForPopup(urlPattern: String, `then`: FunctionThen, onTimeout: js.Function, timeout: Double): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp): Casper = js.native
+  def waitForPopup(
+    urlPattern: js.RegExp,
+    `then`: js.UndefOr[scala.Nothing],
+    onTimeout: js.UndefOr[scala.Nothing],
+    timeout: Double
+  ): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp, `then`: js.UndefOr[scala.Nothing], onTimeout: js.Function): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp, `then`: js.UndefOr[scala.Nothing], onTimeout: js.Function, timeout: Double): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen, onTimeout: js.UndefOr[scala.Nothing], timeout: Double): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
+  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen, onTimeout: js.Function, timeout: Double): Casper = js.native
   def waitForPopup(urlPattern: Double): Casper = js.native
   def waitForPopup(
     urlPattern: Double,
@@ -446,19 +460,6 @@ class Casper protected () extends js.Object {
   ): Casper = js.native
   def waitForPopup(urlPattern: FindByUrlNameTitle, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
   def waitForPopup(urlPattern: FindByUrlNameTitle, `then`: FunctionThen, onTimeout: js.Function, timeout: Double): Casper = js.native
-  def waitForPopup(urlPattern: js.RegExp): Casper = js.native
-  def waitForPopup(
-    urlPattern: js.RegExp,
-    `then`: js.UndefOr[scala.Nothing],
-    onTimeout: js.UndefOr[scala.Nothing],
-    timeout: Double
-  ): Casper = js.native
-  def waitForPopup(urlPattern: js.RegExp, `then`: js.UndefOr[scala.Nothing], onTimeout: js.Function): Casper = js.native
-  def waitForPopup(urlPattern: js.RegExp, `then`: js.UndefOr[scala.Nothing], onTimeout: js.Function, timeout: Double): Casper = js.native
-  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen): Casper = js.native
-  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen, onTimeout: js.UndefOr[scala.Nothing], timeout: Double): Casper = js.native
-  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
-  def waitForPopup(urlPattern: js.RegExp, `then`: FunctionThen, onTimeout: js.Function, timeout: Double): Casper = js.native
   
   def waitForResource(testFx: String): Casper = js.native
   def waitForResource(
@@ -659,9 +660,9 @@ class Casper protected () extends js.Object {
   def withFrame(frameInfo: Double, `then`: FunctionThen): Casper = js.native
   
   def withPopup(popupInfo: String, step: FunctionThen): Casper = js.native
+  def withPopup(popupInfo: js.RegExp, step: FunctionThen): Casper = js.native
   def withPopup(popupInfo: Double, step: FunctionThen): Casper = js.native
   def withPopup(popupInfo: FindByUrlNameTitle, step: FunctionThen): Casper = js.native
-  def withPopup(popupInfo: js.RegExp, step: FunctionThen): Casper = js.native
   
   def withSelectorScope(selector: String, `then`: FunctionThen): Casper = js.native
   

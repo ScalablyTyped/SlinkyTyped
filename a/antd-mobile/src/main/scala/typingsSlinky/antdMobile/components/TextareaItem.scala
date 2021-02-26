@@ -72,6 +72,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -80,12 +81,15 @@ object TextareaItem {
   
   @JSImport("antd-mobile", "TextareaItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.TextareaItem] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -355,9 +359,6 @@ object TextareaItem {
     
     @scala.inline
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
@@ -915,10 +916,10 @@ object TextareaItem {
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
@@ -948,7 +949,7 @@ object TextareaItem {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TextareaItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TextareaItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TextareaItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

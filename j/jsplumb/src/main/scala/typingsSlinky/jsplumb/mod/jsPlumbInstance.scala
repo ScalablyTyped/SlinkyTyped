@@ -7,13 +7,14 @@ import typingsSlinky.jsplumb.anon.Each
 import typingsSlinky.jsplumb.jsplumbStrings.click
 import typingsSlinky.jsplumb.jsplumbStrings.connection
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jsplumb", "jsPlumbInstance")
 @js.native
-class jsPlumbInstance () extends js.Object {
+class jsPlumbInstance () extends StObject {
   
   def addEndpoint(el: ElementGroupRef): Endpoint | js.Array[Endpoint] = js.native
   def addEndpoint(el: ElementGroupRef, params: js.UndefOr[scala.Nothing], referenceParams: EndpointOptions): Endpoint | js.Array[Endpoint] = js.native
@@ -152,10 +153,10 @@ class jsPlumbInstance () extends js.Object {
   
   def getSelector(): Unit = js.native
   def getSelector(context: js.UndefOr[scala.Nothing], spec: String): Unit = js.native
-  def getSelector(context: Selector): Unit = js.native
-  def getSelector(context: Selector, spec: String): Unit = js.native
   def getSelector(context: Element): Unit = js.native
   def getSelector(context: Element, spec: String): Unit = js.native
+  def getSelector(context: Selector): Unit = js.native
+  def getSelector(context: Selector, spec: String): Unit = js.native
   
   def getSourceScope(element: String): String = js.native
   def getSourceScope(element: Element): String = js.native
@@ -452,20 +453,20 @@ class jsPlumbInstance () extends js.Object {
   
   def setIdChanged(oldId: String, newId: String): Unit = js.native
   
-  def setParent(el: Selector, newParent: Selector | String): Unit = js.native
-  def setParent(el: Selector, newParent: Element): Unit = js.native
   def setParent(el: Element, newParent: Selector | String): Unit = js.native
   def setParent(el: Element, newParent: Element): Unit = js.native
+  def setParent(el: Selector, newParent: Selector | String): Unit = js.native
+  def setParent(el: Selector, newParent: Element): Unit = js.native
   
   def setScope(el: String, scope: String): Unit = js.native
   def setScope(el: Element, scope: String): Unit = js.native
   
   def setSource(connection: Connection, source: String): jsPlumbInstance = js.native
   def setSource(connection: Connection, source: String, doNotRepaint: Boolean): jsPlumbInstance = js.native
-  def setSource(connection: Connection, source: Endpoint): jsPlumbInstance = js.native
-  def setSource(connection: Connection, source: Endpoint, doNotRepaint: Boolean): jsPlumbInstance = js.native
   def setSource(connection: Connection, source: Element): jsPlumbInstance = js.native
   def setSource(connection: Connection, source: Element, doNotRepaint: Boolean): jsPlumbInstance = js.native
+  def setSource(connection: Connection, source: Endpoint): jsPlumbInstance = js.native
+  def setSource(connection: Connection, source: Endpoint, doNotRepaint: Boolean): jsPlumbInstance = js.native
   
   def setSourceEnabled(el: Selector | String, state: Boolean): jsPlumbInstance = js.native
   def setSourceEnabled(el: Element, state: Boolean): jsPlumbInstance = js.native
@@ -482,10 +483,10 @@ class jsPlumbInstance () extends js.Object {
   
   def setTarget(connection: Connection, target: String): jsPlumbInstance = js.native
   def setTarget(connection: Connection, target: String, doNotRepaint: Boolean): jsPlumbInstance = js.native
-  def setTarget(connection: Connection, target: Endpoint): jsPlumbInstance = js.native
-  def setTarget(connection: Connection, target: Endpoint, doNotRepaint: Boolean): jsPlumbInstance = js.native
   def setTarget(connection: Connection, target: Element): jsPlumbInstance = js.native
   def setTarget(connection: Connection, target: Element, doNotRepaint: Boolean): jsPlumbInstance = js.native
+  def setTarget(connection: Connection, target: Endpoint): jsPlumbInstance = js.native
+  def setTarget(connection: Connection, target: Endpoint, doNotRepaint: Boolean): jsPlumbInstance = js.native
   
   def setTargetEnabled(el: Selector | String, state: Boolean): jsPlumbInstance = js.native
   def setTargetEnabled(el: Element, state: Boolean): jsPlumbInstance = js.native

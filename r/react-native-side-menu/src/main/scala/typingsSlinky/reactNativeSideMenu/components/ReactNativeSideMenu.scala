@@ -14,6 +14,7 @@ import typingsSlinky.reactNativeSideMenu.mod.ReactNativeSideMenuProps
 import typingsSlinky.reactNativeSideMenu.mod.default
 import typingsSlinky.reactNativeSideMenu.reactNativeSideMenuStrings.left
 import typingsSlinky.reactNativeSideMenu.reactNativeSideMenuStrings.right
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ object ReactNativeSideMenu {
   
   @JSImport("react-native-side-menu", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -84,7 +85,7 @@ object ReactNativeSideMenu {
     def toleranceY(value: Double): this.type = set("toleranceY", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactNativeSideMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeSideMenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactNativeSideMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

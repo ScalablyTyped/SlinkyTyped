@@ -1,14 +1,21 @@
 package typingsSlinky.tuyaPanelKit
 
+import org.scalablytyped.runtime.Shortcut
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.tuyaPanelKit.anon.ServerContextTypechildren
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tuya-panel-kit/@react-navigation/native/ServerContainer", JSImport.Namespace)
-@js.native
-object serverContainerMod extends js.Object {
+object serverContainerMod extends Shortcut {
   
+  @JSImport("tuya-panel-kit/@react-navigation/native/ServerContainer", JSImport.Default)
+  @js.native
   val default: ForwardRefExoticComponent[ServerContextTypechildren] = js.native
+  
+  type _To = ForwardRefExoticComponent[ServerContextTypechildren]
+  
+  /* This means you don't have to write `default`, but can instead just say `serverContainerMod.foo` */
+  override def _to: ForwardRefExoticComponent[ServerContextTypechildren] = default
 }

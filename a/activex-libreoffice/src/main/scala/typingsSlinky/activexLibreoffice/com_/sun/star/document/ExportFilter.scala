@@ -6,6 +6,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.beans.PropertyValue
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XNamed
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XInitialization
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

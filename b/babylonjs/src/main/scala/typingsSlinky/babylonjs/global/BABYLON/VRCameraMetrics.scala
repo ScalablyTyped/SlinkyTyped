@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,13 +10,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class VRCameraMetrics ()
   extends typingsSlinky.babylonjs.BABYLON.VRCameraMetrics
 /* static members */
-@JSGlobal("BABYLON.VRCameraMetrics")
-@js.native
-object VRCameraMetrics extends js.Object {
+object VRCameraMetrics {
   
   /**
     * Get the default VRMetrics based on the most generic setup.
     * @returns the default vr metrics
     */
+  @JSGlobal("BABYLON.VRCameraMetrics.GetDefault")
+  @js.native
   def GetDefault(): typingsSlinky.babylonjs.BABYLON.VRCameraMetrics = js.native
 }

@@ -1,17 +1,19 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.lightShadowMod.LightShadow
 import typingsSlinky.three.perspectiveCameraMod.PerspectiveCamera
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/lights/PointLightShadow", JSImport.Namespace)
-@js.native
-object pointLightShadowMod extends js.Object {
+object pointLightShadowMod {
   
+  @JSImport("three/src/lights/PointLightShadow", "PointLightShadow")
   @js.native
-  class PointLightShadow () extends LightShadow {
+  class PointLightShadow protected () extends LightShadow {
+    def this(camera: Camera) = this()
     
     @JSName("camera")
     var camera_PointLightShadow: PerspectiveCamera = js.native

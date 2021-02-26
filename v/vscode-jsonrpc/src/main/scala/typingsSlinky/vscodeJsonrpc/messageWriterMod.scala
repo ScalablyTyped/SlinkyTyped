@@ -8,16 +8,16 @@ import typingsSlinky.node.processMod.global.NodeJS.Process
 import typingsSlinky.vscodeJsonrpc.eventsMod.Disposable
 import typingsSlinky.vscodeJsonrpc.eventsMod.Event
 import typingsSlinky.vscodeJsonrpc.messagesMod.Message
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-jsonrpc/lib/messageWriter", JSImport.Namespace)
-@js.native
-object messageWriterMod extends js.Object {
+object messageWriterMod {
   
+  @JSImport("vscode-jsonrpc/lib/messageWriter", "AbstractMessageWriter")
   @js.native
-  abstract class AbstractMessageWriter () extends js.Object {
+  abstract class AbstractMessageWriter () extends StObject {
     
     var asError: js.Any = js.native
     
@@ -39,6 +39,7 @@ object messageWriterMod extends js.Object {
     def onError: Event[js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]]] = js.native
   }
   
+  @JSImport("vscode-jsonrpc/lib/messageWriter", "IPCMessageWriter")
   @js.native
   class IPCMessageWriter protected ()
     extends AbstractMessageWriter
@@ -61,7 +62,7 @@ object messageWriterMod extends js.Object {
   }
   
   @js.native
-  trait MessageWriter extends js.Object {
+  trait MessageWriter extends StObject {
     
     def dispose(): Unit = js.native
     
@@ -92,12 +93,14 @@ object messageWriterMod extends js.Object {
     
     def write(msg: Message): Unit = js.native
   }
-  @js.native
-  object MessageWriter extends js.Object {
+  object MessageWriter {
     
+    @JSImport("vscode-jsonrpc/lib/messageWriter", "MessageWriter.is")
+    @js.native
     def is(value: js.Any): /* is vscode-jsonrpc.vscode-jsonrpc/lib/messageWriter.MessageWriter */ Boolean = js.native
   }
   
+  @JSImport("vscode-jsonrpc/lib/messageWriter", "SocketMessageWriter")
   @js.native
   class SocketMessageWriter protected ()
     extends AbstractMessageWriter
@@ -123,6 +126,7 @@ object messageWriterMod extends js.Object {
     var socket: js.Any = js.native
   }
   
+  @JSImport("vscode-jsonrpc/lib/messageWriter", "StreamMessageWriter")
   @js.native
   class StreamMessageWriter protected ()
     extends AbstractMessageWriter

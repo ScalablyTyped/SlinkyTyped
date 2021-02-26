@@ -1,5 +1,6 @@
 package typingsSlinky.mapboxGl.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,60 +16,60 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mapboxGl.mod.HeatmapPaint
   - typingsSlinky.mapboxGl.mod.HillshadePaint
 */
-trait AnyPaint extends js.Object
+trait AnyPaint extends StObject
 object AnyPaint {
   
   @scala.inline
-  def RasterPaint(): AnyPaint = {
+  def BackgroundPaint(): typingsSlinky.mapboxGl.mod.BackgroundPaint = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
+    __obj.asInstanceOf[typingsSlinky.mapboxGl.mod.BackgroundPaint]
   }
   
   @scala.inline
-  def SymbolPaint(): AnyPaint = {
+  def CirclePaint(): typingsSlinky.mapboxGl.mod.CirclePaint = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
+    __obj.asInstanceOf[typingsSlinky.mapboxGl.mod.CirclePaint]
   }
   
   @scala.inline
-  def LinePaint(): AnyPaint = {
+  def FillExtrusionPaint(): typingsSlinky.mapboxGl.mod.FillExtrusionPaint = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
+    __obj.asInstanceOf[typingsSlinky.mapboxGl.mod.FillExtrusionPaint]
   }
   
   @scala.inline
-  def HeatmapPaint(): AnyPaint = {
+  def FillPaint(): typingsSlinky.mapboxGl.mod.FillPaint = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
+    __obj.asInstanceOf[typingsSlinky.mapboxGl.mod.FillPaint]
   }
   
   @scala.inline
-  def HillshadePaint(): AnyPaint = {
+  def HeatmapPaint(): typingsSlinky.mapboxGl.mod.HeatmapPaint = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
+    __obj.asInstanceOf[typingsSlinky.mapboxGl.mod.HeatmapPaint]
   }
   
   @scala.inline
-  def BackgroundPaint(): AnyPaint = {
+  def HillshadePaint(): typingsSlinky.mapboxGl.mod.HillshadePaint = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
+    __obj.asInstanceOf[typingsSlinky.mapboxGl.mod.HillshadePaint]
   }
   
   @scala.inline
-  def FillExtrusionPaint(): AnyPaint = {
+  def LinePaint(): typingsSlinky.mapboxGl.mod.LinePaint = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
+    __obj.asInstanceOf[typingsSlinky.mapboxGl.mod.LinePaint]
   }
   
   @scala.inline
-  def FillPaint(): AnyPaint = {
+  def RasterPaint(): typingsSlinky.mapboxGl.mod.RasterPaint = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
+    __obj.asInstanceOf[typingsSlinky.mapboxGl.mod.RasterPaint]
   }
   
   @scala.inline
-  def CirclePaint(): AnyPaint = {
+  def SymbolPaint(): typingsSlinky.mapboxGl.mod.SymbolPaint = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
+    __obj.asInstanceOf[typingsSlinky.mapboxGl.mod.SymbolPaint]
   }
 }

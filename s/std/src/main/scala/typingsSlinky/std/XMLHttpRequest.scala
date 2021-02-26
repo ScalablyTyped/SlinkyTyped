@@ -1,6 +1,7 @@
 package typingsSlinky.std
 
 import typingsSlinky.std.stdStrings.readystatechange
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -103,13 +104,13 @@ trait XMLHttpRequest extends XMLHttpRequestEventTarget {
   def removeEventListener_readystatechange(
     `type`: readystatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readystatechange(
     `type`: readystatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   /**
@@ -152,8 +153,8 @@ trait XMLHttpRequest extends XMLHttpRequestEventTarget {
     * Throws an "InvalidStateError" DOMException if either state is not opened or the send() flag is set.
     */
   def send(): Unit = js.native
-  def send(body: BodyInit): Unit = js.native
   def send(body: org.scalajs.dom.raw.Document): Unit = js.native
+  def send(body: BodyInit): Unit = js.native
   
   /**
     * Combines a header in author request headers.

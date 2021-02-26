@@ -3,6 +3,7 @@ package typingsSlinky.playcanvas.pc
 import typingsSlinky.playcanvas.anon.Physics
 import typingsSlinky.playcanvas.pc.callbacks.ConfigureApp
 import typingsSlinky.playcanvas.pc.callbacks.PreloadApp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

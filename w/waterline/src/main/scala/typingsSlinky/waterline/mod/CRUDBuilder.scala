@@ -13,13 +13,14 @@ import typingsSlinky.bluebird.mod.SpreadOption
 import typingsSlinky.std.Map
 import typingsSlinky.std.ReturnType
 import typingsSlinky.waterline.waterlineStrings.Object
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined waterline.waterline.WaterlinePromise<T> & {fetch (): waterline.waterline.CRUDBuilder<T>} */
 @js.native
-trait CRUDBuilder[T] extends js.Object {
+trait CRUDBuilder[T] extends StObject {
   
   /**
     * Same as calling `Promise.all(thisPromise)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
@@ -3004,7 +3005,7 @@ trait CRUDBuilder[T] extends js.Object {
   
   def thenThrow(reason: js.Error): Bluebird[scala.Nothing] = js.native
   
-   // For simpler signature help.
+  // For simpler signature help.
   @JSName("then")
   def then_TResult1TResult2[TResult1, TResult2](): Bluebird[TResult1 | TResult2] = js.native
   @JSName("then")

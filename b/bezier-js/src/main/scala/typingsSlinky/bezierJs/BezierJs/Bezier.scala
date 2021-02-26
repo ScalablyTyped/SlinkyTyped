@@ -1,6 +1,7 @@
 package typingsSlinky.bezierJs.BezierJs
 
 import typingsSlinky.bezierJs.anon.Typeofutils
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   */
 @js.native
-trait Bezier extends js.Object {
+trait Bezier extends StObject {
   
   var _3d: Boolean = js.native
   

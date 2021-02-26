@@ -13,13 +13,14 @@ import typingsSlinky.node.anon.TypeofresolvePtr
 import typingsSlinky.node.anon.TypeofresolveSoa
 import typingsSlinky.node.anon.TypeofresolveSrv
 import typingsSlinky.node.anon.TypeofresolveTxt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dns", "Resolver")
 @js.native
-class Resolver () extends js.Object {
+class Resolver () extends StObject {
   
   def cancel(): Unit = js.native
   

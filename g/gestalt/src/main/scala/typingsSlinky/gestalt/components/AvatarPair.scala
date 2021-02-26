@@ -7,15 +7,22 @@ import typingsSlinky.gestalt.gestaltStrings.fit
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.mod.AvatarPairProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AvatarPair {
   
+  @scala.inline
+  def apply(collaborators: js.Array[Name]): Builder = {
+    val __props = js.Dynamic.literal(collaborators = collaborators.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AvatarPairProps]))
+  }
+  
   @JSImport("gestalt", "AvatarPair")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,10 +34,4 @@ object AvatarPair {
   }
   
   def withProps(p: AvatarPairProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(collaborators: js.Array[Name]): Builder = {
-    val __props = js.Dynamic.literal(collaborators = collaborators.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AvatarPairProps]))
-  }
 }

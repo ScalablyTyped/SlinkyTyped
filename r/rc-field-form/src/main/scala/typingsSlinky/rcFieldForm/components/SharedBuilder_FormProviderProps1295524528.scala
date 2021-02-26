@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcFieldForm.formContextMod.FormChangeInfo
 import typingsSlinky.rcFieldForm.formContextMod.FormFinishInfo
 import typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

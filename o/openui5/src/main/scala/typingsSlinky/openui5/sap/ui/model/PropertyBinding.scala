@@ -1,6 +1,7 @@
 package typingsSlinky.openui5.sap.ui.model
 
 import typingsSlinky.openui5.anon.TypeofBindingMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

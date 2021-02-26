@@ -75,15 +75,24 @@ import typingsSlinky.reactElemental.reactElementalStrings.tree
 import typingsSlinky.reactElemental.reactElementalStrings.url
 import typingsSlinky.reactElemental.reactElementalStrings.vertical
 import typingsSlinky.reactElemental.reactElementalStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RadioGroup {
   
+  @scala.inline
+  def apply(
+    onChange: js.UndefOr[FormEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* value */ String, Unit]])
+  ): Builder = {
+    val __props = js.Dynamic.literal(onChange = onChange.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RadioGroupProps]))
+  }
+  
   @JSImport("react-elemental", "RadioGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -276,10 +285,10 @@ object RadioGroup {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -558,10 +567,10 @@ object RadioGroup {
     def onWheel(value: SyntheticWheelEvent[HTMLDivElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def optionsVarargs(value: Disabled*): this.type = set("options", js.Array(value :_*))
+    def options(value: js.Array[Disabled]): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: js.Array[Disabled]): this.type = set("options", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: Disabled*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -630,12 +639,4 @@ object RadioGroup {
   }
   
   def withProps(p: RadioGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    onChange: js.UndefOr[FormEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* value */ String, Unit]])
-  ): Builder = {
-    val __props = js.Dynamic.literal(onChange = onChange.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RadioGroupProps]))
-  }
 }

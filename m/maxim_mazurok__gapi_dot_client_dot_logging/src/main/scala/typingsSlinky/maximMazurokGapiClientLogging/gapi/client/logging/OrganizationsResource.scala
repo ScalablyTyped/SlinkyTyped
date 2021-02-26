@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientLogging.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientLogging.anon.KeyName
 import typingsSlinky.maximMazurokGapiClientLogging.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OrganizationsResource extends js.Object {
+trait OrganizationsResource extends StObject {
   
   var exclusions: ExclusionsResource = js.native
   

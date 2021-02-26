@@ -12,6 +12,7 @@ import typingsSlinky.stripe.mod.paymentMethods.IPaymentMethodCreationOptions
 import typingsSlinky.stripe.mod.paymentMethods.IPaymentMethodListOptions
 import typingsSlinky.stripe.mod.paymentMethods.IPaymentMethodType
 import typingsSlinky.stripe.mod.paymentMethods.IPaymentMethodUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** https://stripe.com/docs/api/payment_methods */
 @JSImport("stripe", "resources.PaymentMethods")
 @js.native
-class PaymentMethods () extends js.Object {
+class PaymentMethods () extends StObject {
   
   def attach(paymentMethodId: String, data: IPaymentMethodAttachOptions): js.Promise[IPaymentMethod] = js.native
   def attach(paymentMethodId: String, data: IPaymentMethodAttachOptions, options: HeaderOptions): js.Promise[IPaymentMethod] = js.native

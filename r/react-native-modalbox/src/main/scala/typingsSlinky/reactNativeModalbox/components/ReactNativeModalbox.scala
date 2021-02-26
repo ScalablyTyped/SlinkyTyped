@@ -10,6 +10,7 @@ import typingsSlinky.reactNativeModalbox.mod.default
 import typingsSlinky.reactNativeModalbox.reactNativeModalboxStrings.bottom
 import typingsSlinky.reactNativeModalbox.reactNativeModalboxStrings.center
 import typingsSlinky.reactNativeModalbox.reactNativeModalboxStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object ReactNativeModalbox {
   
   @JSImport("react-native-modalbox", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +39,10 @@ object ReactNativeModalbox {
     def backdropColor(value: String): this.type = set("backdropColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def backdropContentReactElement(value: ReactElement): this.type = set("backdropContent", value.asInstanceOf[js.Any])
+    def backdropContent(value: ReactElement): this.type = set("backdropContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def backdropContent(value: ReactElement): this.type = set("backdropContent", value.asInstanceOf[js.Any])
+    def backdropContentReactElement(value: ReactElement): this.type = set("backdropContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def backdropOpacity(value: Double): this.type = set("backdropOpacity", value.asInstanceOf[js.Any])
@@ -98,7 +99,7 @@ object ReactNativeModalbox {
     def useNativeDriver(value: Boolean): this.type = set("useNativeDriver", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeModalbox.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

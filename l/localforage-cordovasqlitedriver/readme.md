@@ -10,9 +10,9 @@ SQLite driver for Cordova apps using localForage.
 | ------------------ | :-------------: |
 | Full name          | localforage-cordovasqlitedriver |
 | Keywords           | localforage, SQLite, driver, cordova |
-| # releases         | 3 |
-| # dependents       | 12 |
-| # downloads        | 1993260 |
+| # releases         | 2 |
+| # dependents       | 13 |
+| # downloads        | 2350261 |
 | # stars            | 0 |
 
 ## Links

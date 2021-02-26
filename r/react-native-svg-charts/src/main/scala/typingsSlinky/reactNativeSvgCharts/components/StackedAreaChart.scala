@@ -19,15 +19,22 @@ import typingsSlinky.reactNativeSvgCharts.mod.AccessorFunctionProps
 import typingsSlinky.reactNativeSvgCharts.mod.GridProps
 import typingsSlinky.reactNativeSvgCharts.mod.ScaleType
 import typingsSlinky.reactNativeSvgCharts.mod.StackedAreaChartProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StackedAreaChart {
   
+  @scala.inline
+  def apply[T](colors: js.Array[String], data: js.Array[T], keys: js.Array[/* keyof T */ String]): Builder[T] = {
+    val __props = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[StackedAreaChartProps[T]]))
+  }
+  
   @JSImport("react-native-svg-charts", "StackedAreaChart")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -47,10 +54,10 @@ object StackedAreaChart {
     def curve(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("curve", js.Any.fromFunction1(value))
     
     @scala.inline
-    def extrasVarargs(value: js.Any*): this.type = set("extras", js.Array(value :_*))
+    def extras(value: js.Array[_]): this.type = set("extras", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extras(value: js.Array[_]): this.type = set("extras", value.asInstanceOf[js.Any])
+    def extrasVarargs(value: js.Any*): this.type = set("extras", js.Array(value :_*))
     
     @scala.inline
     def gridMax(value: Double): this.type = set("gridMax", value.asInstanceOf[js.Any])
@@ -120,10 +127,4 @@ object StackedAreaChart {
   }
   
   def withProps[T](p: StackedAreaChartProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](colors: js.Array[String], data: js.Array[T], keys: js.Array[/* keyof T */ String]): Builder[T] = {
-    val __props = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[StackedAreaChartProps[T]]))
-  }
 }

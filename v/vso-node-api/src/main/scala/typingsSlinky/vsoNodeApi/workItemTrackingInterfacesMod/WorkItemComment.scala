@@ -1,5 +1,6 @@
 package typingsSlinky.vsoNodeApi.workItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,30 +32,18 @@ object WorkItemComment {
   }
   
   @scala.inline
-  implicit class WorkItemCommentOps[Self <: WorkItemComment] (val x: Self) extends AnyVal {
+  implicit class WorkItemCommentMutableBuilder[Self <: WorkItemComment] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setRevisedBy(value: IdentityReference): Self = StObject.set(x, "revisedBy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setRevisedDate(value: js.Date): Self = StObject.set(x, "revisedDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setRevision(value: Double): Self = StObject.set(x, "revision", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRevisedBy(value: IdentityReference): Self = this.set("revisedBy", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRevisedDate(value: js.Date): Self = this.set("revisedDate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRevision(value: Double): Self = this.set("revision", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])
+    def setText(value: String): Self = StObject.set(x, "text", value.asInstanceOf[js.Any])
   }
 }

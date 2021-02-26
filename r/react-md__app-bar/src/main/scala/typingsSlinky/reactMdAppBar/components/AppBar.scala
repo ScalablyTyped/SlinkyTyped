@@ -78,6 +78,7 @@ import typingsSlinky.reactMdAppBar.appBarMod.AppBarHeight
 import typingsSlinky.reactMdAppBar.appBarMod.AppBarPosition
 import typingsSlinky.reactMdAppBar.appBarMod.AppBarProps
 import typingsSlinky.reactMdAppBar.appBarMod.AppBarTheme
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -86,7 +87,7 @@ object AppBar {
   
   @JSImport("@react-md/app-bar", "AppBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -261,13 +262,13 @@ object AppBar {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentFunctionComponent(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactElement): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def component(value: ReactElement): this.type = set("component", value.asInstanceOf[js.Any])
+    def componentFunctionComponent(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -285,10 +286,10 @@ object AppBar {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -645,7 +646,7 @@ object AppBar {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AppBarProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: AppBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AppBarProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

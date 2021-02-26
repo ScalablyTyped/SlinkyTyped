@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.CallbackCampaignId
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.CampaignId
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.PageToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CampaignCreativeAssociationsResource extends js.Object {
+trait CampaignCreativeAssociationsResource extends StObject {
   
   def insert(request: CallbackCampaignId, body: CampaignCreativeAssociation): Request[CampaignCreativeAssociation] = js.native
   /**

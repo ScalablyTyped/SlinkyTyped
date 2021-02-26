@@ -11,8 +11,8 @@ small xhr abstraction
 | Full name          | xhr |
 | Keywords           | xhr, http, xmlhttprequest, xhr2, browserify |
 | # releases         | 2 |
-| # dependents       | 351 |
-| # downloads        | 35227983 |
+| # dependents       | 369 |
+| # downloads        | 55623434 |
 | # stars            | 39 |
 
 ## Links

@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientJobs.gapi.client.jobs
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientJobs.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientJobs.anon.Alt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClientEventsResource extends js.Object {
+trait ClientEventsResource extends StObject {
   
   /**
     * Report events issued when end user interacts with customer's application that uses Cloud Talent Solution. You may inspect the created events in [self service

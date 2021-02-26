@@ -1,6 +1,7 @@
 package typingsSlinky.emberData.mod.DS
 
-import typingsSlinky.emberObject.mod.default
+import typingsSlinky.ember.mod.default.Object
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("ember-data", "DS.Serializer")
 @js.native
-class Serializer () extends default {
+class Serializer () extends Object {
   
   /**
     * The `normalize` method is used to convert a payload received from your

@@ -7,12 +7,13 @@ import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestCallback
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Usage extends js.Object {
+trait Usage extends StObject {
   
   def info[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def info[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native

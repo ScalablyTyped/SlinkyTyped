@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Callback
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.ContainerVersionId
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Path
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VersionsResource extends js.Object {
+trait VersionsResource extends StObject {
   
   /** Deletes a Container Version. */
   def delete(): Request[Unit] = js.native

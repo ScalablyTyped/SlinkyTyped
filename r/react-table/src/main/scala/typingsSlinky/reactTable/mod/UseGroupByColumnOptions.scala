@@ -2,13 +2,14 @@ package typingsSlinky.reactTable.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Partial<{  aggregate :react-table.react-table.Aggregator<D>,   Aggregated :react-table.react-table.Renderer<react-table.react-table.CellProps<D, any>>,   disableGroupBy :boolean,   defaultCanGroupBy :boolean}> */
 @js.native
-trait UseGroupByColumnOptions[D /* <: js.Object */] extends js.Object {
+trait UseGroupByColumnOptions[D /* <: js.Object */] extends StObject {
   
   var Aggregated: js.UndefOr[Renderer[CellProps[D, _]]] = js.native
   
@@ -27,56 +28,44 @@ object UseGroupByColumnOptions {
   }
   
   @scala.inline
-  implicit class UseGroupByColumnOptionsOps[Self <: UseGroupByColumnOptions[_], D /* <: js.Object */] (val x: Self with UseGroupByColumnOptions[D]) extends AnyVal {
+  implicit class UseGroupByColumnOptionsMutableBuilder[Self <: UseGroupByColumnOptions[_], D /* <: js.Object */] (val x: Self with UseGroupByColumnOptions[D]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setAggregatedReactElement(value: ReactElement): Self = this.set("Aggregated", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAggregatedFunctionComponent(value: ReactComponentClass[CellProps[D, _]]): Self = this.set("Aggregated", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAggregatedComponentClass(value: ReactComponentClass[CellProps[D, _]]): Self = this.set("Aggregated", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAggregated(value: Renderer[CellProps[D, _]]): Self = this.set("Aggregated", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAggregated: Self = this.set("Aggregated", js.undefined)
+    def setAggregate(value: Aggregator[D]): Self = StObject.set(x, "aggregate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAggregateFunction3(
       value: (/* columnValues */ js.Array[CellValue[js.Any]], /* rows */ js.Array[Row[D]], /* isAggregated */ Boolean) => AggregatedValue
-    ): Self = this.set("aggregate", js.Any.fromFunction3(value))
+    ): Self = StObject.set(x, "aggregate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setAggregate(value: Aggregator[D]): Self = this.set("aggregate", value.asInstanceOf[js.Any])
+    def setAggregateUndefined: Self = StObject.set(x, "aggregate", js.undefined)
     
     @scala.inline
-    def deleteAggregate: Self = this.set("aggregate", js.undefined)
+    def setAggregated(value: Renderer[CellProps[D, _]]): Self = StObject.set(x, "Aggregated", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDefaultCanGroupBy(value: Boolean): Self = this.set("defaultCanGroupBy", value.asInstanceOf[js.Any])
+    def setAggregatedComponentClass(value: ReactComponentClass[CellProps[D, _]]): Self = StObject.set(x, "Aggregated", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDefaultCanGroupBy: Self = this.set("defaultCanGroupBy", js.undefined)
+    def setAggregatedFunctionComponent(value: ReactComponentClass[CellProps[D, _]]): Self = StObject.set(x, "Aggregated", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDisableGroupBy(value: Boolean): Self = this.set("disableGroupBy", value.asInstanceOf[js.Any])
+    def setAggregatedReactElement(value: ReactElement): Self = StObject.set(x, "Aggregated", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDisableGroupBy: Self = this.set("disableGroupBy", js.undefined)
+    def setAggregatedUndefined: Self = StObject.set(x, "Aggregated", js.undefined)
+    
+    @scala.inline
+    def setDefaultCanGroupBy(value: Boolean): Self = StObject.set(x, "defaultCanGroupBy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDefaultCanGroupByUndefined: Self = StObject.set(x, "defaultCanGroupBy", js.undefined)
+    
+    @scala.inline
+    def setDisableGroupBy(value: Boolean): Self = StObject.set(x, "disableGroupBy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDisableGroupByUndefined: Self = StObject.set(x, "disableGroupBy", js.undefined)
   }
 }

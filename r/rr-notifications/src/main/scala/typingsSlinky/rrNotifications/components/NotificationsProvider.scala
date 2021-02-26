@@ -7,15 +7,22 @@ import typingsSlinky.rrNotifications.anon.AnimationDuration
 import typingsSlinky.rrNotifications.anon.Payload
 import typingsSlinky.rrNotifications.rrNotificationsStrings.left
 import typingsSlinky.rrNotifications.rrNotificationsStrings.right
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object NotificationsProvider {
   
+  @scala.inline
+  def apply(renderNotification: Payload => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(renderNotification = js.Any.fromFunction1(renderNotification))
+    new Builder(js.Array(this.component, __props.asInstanceOf[AnimationDuration]))
+  }
+  
   @JSImport("rr-notifications", "NotificationsProvider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,10 +46,4 @@ object NotificationsProvider {
   }
   
   def withProps(p: AnimationDuration): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(renderNotification: Payload => ReactElement): Builder = {
-    val __props = js.Dynamic.literal(renderNotification = js.Any.fromFunction1(renderNotification))
-    new Builder(js.Array(this.component, __props.asInstanceOf[AnimationDuration]))
-  }
 }

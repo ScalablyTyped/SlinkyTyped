@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.lambdaMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _LastUpdateStatus extends js.Object
+trait _LastUpdateStatus extends StObject

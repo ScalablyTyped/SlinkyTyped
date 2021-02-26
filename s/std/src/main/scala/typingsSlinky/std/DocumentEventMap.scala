@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -127,36 +128,24 @@ object DocumentEventMap {
   }
   
   @scala.inline
-  implicit class DocumentEventMapOps[Self <: DocumentEventMap] (val x: Self) extends AnyVal {
+  implicit class DocumentEventMapMutableBuilder[Self <: DocumentEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setFullscreenchange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "fullscreenchange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setFullscreenerror(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "fullscreenerror", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setPointerlockchange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "pointerlockchange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFullscreenchange(value: org.scalajs.dom.raw.Event): Self = this.set("fullscreenchange", value.asInstanceOf[js.Any])
+    def setPointerlockerror(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "pointerlockerror", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFullscreenerror(value: org.scalajs.dom.raw.Event): Self = this.set("fullscreenerror", value.asInstanceOf[js.Any])
+    def setReadystatechange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "readystatechange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPointerlockchange(value: org.scalajs.dom.raw.Event): Self = this.set("pointerlockchange", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPointerlockerror(value: org.scalajs.dom.raw.Event): Self = this.set("pointerlockerror", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setReadystatechange(value: org.scalajs.dom.raw.Event): Self = this.set("readystatechange", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVisibilitychange(value: org.scalajs.dom.raw.Event): Self = this.set("visibilitychange", value.asInstanceOf[js.Any])
+    def setVisibilitychange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "visibilitychange", value.asInstanceOf[js.Any])
   }
 }

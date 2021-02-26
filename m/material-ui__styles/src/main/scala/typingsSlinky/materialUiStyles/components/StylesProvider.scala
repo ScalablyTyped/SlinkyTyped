@@ -6,6 +6,7 @@ import typingsSlinky.jss.mod.Jss
 import typingsSlinky.jss.mod.Rule
 import typingsSlinky.jss.mod.StyleSheet
 import typingsSlinky.materialUiStyles.stylesProviderStylesProviderMod.StylesProviderProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object StylesProvider {
   
   @JSImport("@material-ui/styles", "StylesProvider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,7 +44,7 @@ object StylesProvider {
     def sheetsRegistry(value: js.Object): this.type = set("sheetsRegistry", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StylesProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StylesProvider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StylesProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

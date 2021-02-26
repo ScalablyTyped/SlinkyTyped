@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesGetBucketWebsiteInputMod.GetBuck
 import typingsSlinky.awsSdkClientS3Browser.typesGetBucketWebsiteOutputMod.GetBucketWebsiteOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/GetBucketWebsiteCommand", JSImport.Namespace)
-@js.native
-object getBucketWebsiteCommandMod extends js.Object {
+object getBucketWebsiteCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/GetBucketWebsiteCommand", "GetBucketWebsiteCommand")
   @js.native
   class GetBucketWebsiteCommand protected () extends Command[
           InputTypesUnion, 

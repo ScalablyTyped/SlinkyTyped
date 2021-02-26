@@ -1,5 +1,6 @@
 package typingsSlinky.chartJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chartJs.chartJsStrings.label
   - typingsSlinky.chartJs.chartJsStrings.index
 */
-trait InteractionMode extends js.Object
+trait InteractionMode extends StObject
 object InteractionMode {
   
   @scala.inline

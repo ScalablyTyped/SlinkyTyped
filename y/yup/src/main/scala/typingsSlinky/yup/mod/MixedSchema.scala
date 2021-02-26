@@ -5,6 +5,7 @@ import typingsSlinky.std.Record
 import typingsSlinky.yup.anon.Values
 import typingsSlinky.yup.yupBooleans.`false`
 import typingsSlinky.yup.yupBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

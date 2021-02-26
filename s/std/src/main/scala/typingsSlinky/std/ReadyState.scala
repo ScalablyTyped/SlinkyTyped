@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.ended
   - typingsSlinky.std.stdStrings.open
 */
-trait ReadyState extends js.Object
+trait ReadyState extends StObject
 object ReadyState {
   
   @scala.inline

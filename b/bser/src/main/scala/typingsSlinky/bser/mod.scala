@@ -9,20 +9,16 @@ import typingsSlinky.node.NodeJS.TypedArray
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.nodeInt64.mod.^
 import typingsSlinky.std.SharedArrayBuffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("bser", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  def dumpToBuffer(`val`: js.Any): Buffer = js.native
-  
-  def loadFromBuffer(input: InputWrapper): AnyWrapper | js.Array[AnyWrapper] = js.native
-  
+  @JSImport("bser", "Accumulator")
   @js.native
-  class Accumulator () extends js.Object {
+  class Accumulator () extends StObject {
     def this(initsize: Double) = this()
     
     def append(buf: InputWrapper): Unit = js.native
@@ -63,6 +59,7 @@ object mod extends js.Object {
     var writeOffset: Double = js.native
   }
   
+  @JSImport("bser", "BunserBuf")
   @js.native
   class BunserBuf () extends EventEmitter {
     
@@ -107,9 +104,17 @@ object mod extends js.Object {
     var state: `0` | `1` = js.native
   }
   
+  @JSImport("bser", "dumpToBuffer")
+  @js.native
+  def dumpToBuffer(`val`: js.Any): Buffer = js.native
+  
+  @JSImport("bser", "loadFromBuffer")
+  @js.native
+  def loadFromBuffer(input: InputWrapper): AnyWrapper | js.Array[AnyWrapper] = js.native
+  
   type AnyWrapper = Boolean | IntWrapper | Null | String | js.Object
   
   type InputWrapper = Buffer | String | TypedArray | js.typedarray.DataView | js.typedarray.ArrayBuffer | SharedArrayBuffer
   
-  type IntWrapper = Double | ^ 
+  type IntWrapper = Double | ^
 }

@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.anon.ReadonlyArrayReactNode
 import typingsSlinky.baseui.phoneInputMod.Country
 import typingsSlinky.baseui.phoneInputMod.CountrySelectDropdownProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object CountrySelectDropdown {
   
   @JSImport("baseui/phone-input", "CountrySelectDropdown")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,7 +37,7 @@ object CountrySelectDropdown {
     def overrides(value: typingsSlinky.baseui.anon.CountrySelectDropdown): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CountrySelectDropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: CountrySelectDropdown.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CountrySelectDropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

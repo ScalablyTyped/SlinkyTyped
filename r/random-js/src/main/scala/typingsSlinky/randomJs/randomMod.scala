@@ -2,20 +2,20 @@ package typingsSlinky.randomJs
 
 import typingsSlinky.randomJs.typesMod.Engine
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("random-js/dist/Random", JSImport.Namespace)
-@js.native
-object randomMod extends js.Object {
+object randomMod {
   
+  @JSImport("random-js/dist/Random", "Random")
   @js.native
   /**
     * Creates a new Random wrapper
     * @param engine The engine to use (defaults to a `Math.random`-based implementation)
     */
-  class Random () extends js.Object {
+  class Random () extends StObject {
     def this(engine: Engine) = this()
     
     /**

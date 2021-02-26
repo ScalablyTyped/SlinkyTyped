@@ -8,15 +8,22 @@ import typingsSlinky.higButton.mod.AvailableTypes_
 import typingsSlinky.higButton.mod.AvailableWidths_
 import typingsSlinky.higButton.mod.Props
 import typingsSlinky.higButton.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Button {
   
+  @scala.inline
+  def apply(title: String): Builder = {
+    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@hig/button", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -70,10 +77,4 @@ object Button {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(title: String): Builder = {
-    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

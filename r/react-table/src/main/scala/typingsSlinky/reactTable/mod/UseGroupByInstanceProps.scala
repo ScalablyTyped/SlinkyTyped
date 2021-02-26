@@ -1,12 +1,13 @@
 package typingsSlinky.reactTable.mod
 
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UseGroupByInstanceProps[D /* <: js.Object */] extends js.Object {
+trait UseGroupByInstanceProps[D /* <: js.Object */] extends StObject {
   
   var flatRows: js.Array[Row[D]] = js.native
   

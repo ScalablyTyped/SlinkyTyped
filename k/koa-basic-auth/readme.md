@@ -10,9 +10,9 @@ Blanket basic auth middleware for koa
 | ------------------ | :-------------: |
 | Full name          | koa-basic-auth |
 | Keywords           | koa, auth, authentication, basicauth, basic auth |
-| # releases         | 3 |
-| # dependents       | 29 |
-| # downloads        | 313719 |
+| # releases         | 0 |
+| # dependents       | 33 |
+| # downloads        | 771683 |
 | # stars            | 3 |
 
 ## Links

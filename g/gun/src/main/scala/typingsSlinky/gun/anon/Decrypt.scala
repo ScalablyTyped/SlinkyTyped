@@ -1,12 +1,13 @@
 package typingsSlinky.gun.anon
 
 import typingsSlinky.gun.mod.Gun.CryptoKeyPair
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Decrypt extends js.Object {
+trait Decrypt extends StObject {
   
   def decrypt(message: js.Any, pair: String): js.Promise[_] = js.native
   /**

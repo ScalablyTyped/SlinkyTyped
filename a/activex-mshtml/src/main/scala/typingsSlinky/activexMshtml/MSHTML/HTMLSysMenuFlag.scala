@@ -3,6 +3,7 @@ package typingsSlinky.activexMshtml.MSHTML
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`0`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`524288`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`0`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`524288`
 */
-trait HTMLSysMenuFlag extends js.Object
+trait HTMLSysMenuFlag extends StObject
 object HTMLSysMenuFlag {
   
   @scala.inline

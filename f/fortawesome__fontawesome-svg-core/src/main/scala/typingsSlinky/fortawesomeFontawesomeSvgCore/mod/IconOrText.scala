@@ -1,6 +1,7 @@
 package typingsSlinky.fortawesomeFontawesomeSvgCore.mod
 
 import org.scalajs.dom.raw.HTMLCollection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fortawesomeFontawesomeSvgCore.mod.Icon_
   - typingsSlinky.fortawesomeFontawesomeSvgCore.mod.Text_
 */
-trait IconOrText extends js.Object
+trait IconOrText extends StObject
 object IconOrText {
   
   @scala.inline
@@ -18,10 +19,10 @@ object IconOrText {
     html: js.Array[String],
     node: HTMLCollection,
     `type`: typingsSlinky.fortawesomeFontawesomeSvgCore.fortawesomeFontawesomeSvgCoreStrings.text
-  ): IconOrText = {
+  ): typingsSlinky.fortawesomeFontawesomeSvgCore.mod.Text_ = {
     val __obj = js.Dynamic.literal(html = html.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
     __obj.updateDynamic("abstract")(`abstract`.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IconOrText]
+    __obj.asInstanceOf[typingsSlinky.fortawesomeFontawesomeSvgCore.mod.Text_]
   }
 }

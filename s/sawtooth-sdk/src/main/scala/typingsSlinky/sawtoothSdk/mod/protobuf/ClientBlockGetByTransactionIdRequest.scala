@@ -5,6 +5,7 @@ import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IClientBlockGetByTransactionIdRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,18 +21,26 @@ class ClientBlockGetByTransactionIdRequest ()
   def this(properties: IClientBlockGetByTransactionIdRequest) = this()
 }
 /* static members */
-@JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest")
-@js.native
-object ClientBlockGetByTransactionIdRequest extends js.Object {
+object ClientBlockGetByTransactionIdRequest {
   
   /**
     * Creates a new ClientBlockGetByTransactionIdRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ClientBlockGetByTransactionIdRequest instance
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.create")
+  @js.native
   def create(): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.create")
+  @js.native
   def create(properties: IClientBlockGetByTransactionIdRequest): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
   /**
     * Decodes a ClientBlockGetByTransactionIdRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -40,11 +49,16 @@ object ClientBlockGetByTransactionIdRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
   /**
     * Decodes a ClientBlockGetByTransactionIdRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,8 +66,9 @@ object ClientBlockGetByTransactionIdRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
   
   /**
     * Encodes the specified ClientBlockGetByTransactionIdRequest message. Does not implicitly {@link ClientBlockGetByTransactionIdRequest.verify|verify} messages.
@@ -61,7 +76,11 @@ object ClientBlockGetByTransactionIdRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.encode")
+  @js.native
   def encode(message: IClientBlockGetByTransactionIdRequest): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.encode")
+  @js.native
   def encode(message: IClientBlockGetByTransactionIdRequest, writer: Writer): Writer = js.native
   
   /**
@@ -70,7 +89,11 @@ object ClientBlockGetByTransactionIdRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientBlockGetByTransactionIdRequest): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientBlockGetByTransactionIdRequest, writer: Writer): Writer = js.native
   
   /**
@@ -78,6 +101,8 @@ object ClientBlockGetByTransactionIdRequest extends js.Object {
     * @param object Plain object
     * @returns ClientBlockGetByTransactionIdRequest
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest = js.native
   
   /**
@@ -86,7 +111,11 @@ object ClientBlockGetByTransactionIdRequest extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.toObject")
+  @js.native
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.toObject")
+  @js.native
   def toObject(
     message: typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetByTransactionIdRequest,
     options: IConversionOptions
@@ -97,5 +126,7 @@ object ClientBlockGetByTransactionIdRequest extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientBlockGetByTransactionIdRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

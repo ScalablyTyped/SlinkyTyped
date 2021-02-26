@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,15 +10,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers.html)
   */
-@JSGlobal("__esri.renderers")
-@js.native
-object renderers extends js.Object {
+object renderers {
+  
+  type ClassBreaksRenderer = typingsSlinky.arcgisJsApi.esri.ClassBreaksRenderer
+  
+  type DotDensityRenderer = typingsSlinky.arcgisJsApi.esri.DotDensityRenderer
+  
+  type HeatmapRenderer = typingsSlinky.arcgisJsApi.esri.HeatmapRenderer
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.arcgisJsApi.esri.HeatmapRenderer
     - typingsSlinky.arcgisJsApi.esri.RendererWithVisualVariables
   */
-  trait Renderer extends js.Object
+  trait Renderer extends StObject
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.arcgisJsApi.esri.SimpleRenderer
@@ -25,13 +30,7 @@ object renderers extends js.Object {
     - typingsSlinky.arcgisJsApi.esri.UniqueValueRenderer
     - typingsSlinky.arcgisJsApi.esri.DotDensityRenderer
   */
-  trait RendererWithVisualVariables extends js.Object
-  
-  type ClassBreaksRenderer = typingsSlinky.arcgisJsApi.esri.ClassBreaksRenderer
-  
-  type DotDensityRenderer = typingsSlinky.arcgisJsApi.esri.DotDensityRenderer
-  
-  type HeatmapRenderer = typingsSlinky.arcgisJsApi.esri.HeatmapRenderer
+  trait RendererWithVisualVariables extends StObject
   
   type SimpleRenderer = typingsSlinky.arcgisJsApi.esri.SimpleRenderer
   

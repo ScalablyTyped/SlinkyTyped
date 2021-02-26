@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.babylonjs.babylonjsStrings.left
   - typingsSlinky.babylonjs.babylonjsStrings.right
 */
-trait MotionControllerHandedness extends js.Object
+trait MotionControllerHandedness extends StObject
 object MotionControllerHandedness {
   
   @scala.inline

@@ -8,6 +8,7 @@ import typingsSlinky.node.urlMod.Url
 import typingsSlinky.websocket.websocketStrings.connect
 import typingsSlinky.websocket.websocketStrings.connectFailed
 import typingsSlinky.websocket.websocketStrings.httpResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,12 +1,13 @@
 package typingsSlinky.coreJs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("core-js/fn/$for", JSImport.Namespace)
-@js.native
-object $forMod extends js.Object {
+object $forMod {
   
+  @JSImport("core-js/fn/$for", JSImport.Namespace)
+  @js.native
   def apply[T](iterable: js.Iterable[T]): `for`[T] = js.native
 }

@@ -1,10 +1,14 @@
 package typingsSlinky.typedoc.serializersMod
 
+import typingsSlinky.typedoc.serializerMod.Serializer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc/dist/lib/serialization/serializers", "QueryTypeSerializer")
 @js.native
-class QueryTypeSerializer ()
-  extends typingsSlinky.typedoc.serializersTypesQueryMod.QueryTypeSerializer
+class QueryTypeSerializer protected ()
+  extends typingsSlinky.typedoc.serializersTypesMod.QueryTypeSerializer {
+  def this(owner: Serializer) = this()
+}

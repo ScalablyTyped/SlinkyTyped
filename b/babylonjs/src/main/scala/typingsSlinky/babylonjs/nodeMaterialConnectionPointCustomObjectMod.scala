@@ -4,14 +4,14 @@ import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPointDirection
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/nodeMaterialConnectionPointCustomObject", JSImport.Namespace)
-@js.native
-object nodeMaterialConnectionPointCustomObjectMod extends js.Object {
+object nodeMaterialConnectionPointCustomObjectMod {
   
+  @JSImport("babylonjs/Materials/Node/nodeMaterialConnectionPointCustomObject", "NodeMaterialConnectionPointCustomObject")
   @js.native
   class NodeMaterialConnectionPointCustomObject[T /* <: NodeMaterialBlock */] protected () extends NodeMaterialConnectionPoint {
     /**

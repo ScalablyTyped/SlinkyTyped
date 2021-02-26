@@ -8,6 +8,7 @@ import typingsSlinky.antdMobileRn.gridIndexNativeMod.GridProps
 import typingsSlinky.antdMobileRn.gridPropsTypeMod.DataItem
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object Grid {
   
   @JSImport("antd-mobile-rn", "Grid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,10 +34,10 @@ object Grid {
     def columnNum(value: Double): this.type = set("columnNum", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: js.UndefOr[DataItem]*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[js.UndefOr[DataItem]]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[js.UndefOr[DataItem]]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: js.UndefOr[DataItem]*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def hasLine(value: Boolean): this.type = set("hasLine", value.asInstanceOf[js.Any])
@@ -60,7 +61,7 @@ object Grid {
     def styles(value: js.Any): this.type = set("styles", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Grid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

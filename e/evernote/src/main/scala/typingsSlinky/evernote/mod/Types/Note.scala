@@ -1,13 +1,14 @@
 package typingsSlinky.evernote.mod.Types
 
 import typingsSlinky.evernote.anon.Active
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("evernote", "Types.Note")
 @js.native
-class Note () extends js.Object {
+class Note () extends StObject {
   def this(args: Active) = this()
   
   var active: js.UndefOr[Boolean] = js.native

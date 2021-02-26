@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.indexMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -50,13 +51,13 @@ class Octree[T] protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/index", "Octree")
-@js.native
-object Octree extends js.Object {
+object Octree {
   
   /**
     * Adds a mesh into the octree block if it intersects the block
     */
+  @JSImport("babylonjs/index", "Octree.CreationFuncForMeshes")
+  @js.native
   def CreationFuncForMeshes(
     entry: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
     block: typingsSlinky.babylonjs.octreeBlockMod.OctreeBlock[typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh]
@@ -65,6 +66,8 @@ object Octree extends js.Object {
   /**
     * Adds a submesh into the octree block if it intersects the block
     */
+  @JSImport("babylonjs/index", "Octree.CreationFuncForSubMeshes")
+  @js.native
   def CreationFuncForSubMeshes(
     entry: typingsSlinky.babylonjs.subMeshMod.SubMesh,
     block: typingsSlinky.babylonjs.octreeBlockMod.OctreeBlock[typingsSlinky.babylonjs.subMeshMod.SubMesh]

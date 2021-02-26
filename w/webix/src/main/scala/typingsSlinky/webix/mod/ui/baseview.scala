@@ -2,12 +2,13 @@ package typingsSlinky.webix.mod.ui
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.webix.mod.WebixCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait baseview extends js.Object {
+trait baseview extends StObject {
   
   @JSName("$getSize")
   def $getSize(): js.Array[_] = js.native

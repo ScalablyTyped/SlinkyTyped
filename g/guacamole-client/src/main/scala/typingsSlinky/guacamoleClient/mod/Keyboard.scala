@@ -3,6 +3,7 @@ package typingsSlinky.guacamoleClient.mod
 import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,22 +21,22 @@ class Keyboard protected ()
   def this(element: HTMLDocument) = this()
   def this(element: HTMLElement) = this()
 }
-@JSImport("guacamole-client", "Keyboard")
-@js.native
-object Keyboard extends js.Object {
+object Keyboard {
   
+  @JSImport("guacamole-client", "Keyboard.ModifierState")
   @js.native
   class ModifierState ()
     extends typingsSlinky.guacamoleClient.keyboardMod.Keyboard.ModifierState
   /* static members */
-  @js.native
-  object ModifierState extends js.Object {
+  object ModifierState {
     
     /**
       * Returns the modifier state applicable to the keyboard event given.
       * @param event The keyboard event to read.
       * @returns The current state of keyboard modifiers.
       */
+    @JSImport("guacamole-client", "Keyboard.ModifierState.fromKeyboardEvent")
+    @js.native
     def fromKeyboardEvent(event: KeyboardEvent): typingsSlinky.guacamoleClient.keyboardMod.Keyboard.ModifierState = js.native
   }
 }

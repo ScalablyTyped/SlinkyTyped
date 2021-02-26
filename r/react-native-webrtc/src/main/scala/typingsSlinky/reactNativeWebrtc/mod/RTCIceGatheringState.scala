@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeWebrtc.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.gathering
   - typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.complete
 */
-trait RTCIceGatheringState extends js.Object
+trait RTCIceGatheringState extends StObject
 object RTCIceGatheringState {
   
   @scala.inline

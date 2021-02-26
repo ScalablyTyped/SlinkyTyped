@@ -1,11 +1,12 @@
 package typingsSlinky.ddTrace.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Scope extends js.Object {
+trait Scope extends StObject {
   
   /**
     * Activate a span in the scope of a function.

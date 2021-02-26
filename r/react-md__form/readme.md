@@ -10,9 +10,9 @@ This package is for creating all the different form input types.
 | ------------------ | :-------------: |
 | Full name          | @react-md/form |
 | Keywords           | react-md, material design, react, form, input, text field, textarea, checkbox, radio, select, accessible, component, components |
-| # releases         | 22 |
+| # releases         | 42 |
 | # dependents       | 4 |
-| # downloads        | 4056 |
+| # downloads        | 21374 |
 | # stars            | 0 |
 
 ## Links

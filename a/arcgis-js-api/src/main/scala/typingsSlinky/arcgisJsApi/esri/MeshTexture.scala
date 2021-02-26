@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.ImageData
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.clamp
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.mirror
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.repeat
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

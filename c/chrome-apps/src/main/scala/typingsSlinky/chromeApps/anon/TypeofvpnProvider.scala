@@ -4,12 +4,13 @@ import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.events.Event
 import typingsSlinky.chromeApps.chrome.vpnProvider.VpnSessionParameters
 import typingsSlinky.std.Exclude
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofvpnProvider extends js.Object {
+trait TypeofvpnProvider extends StObject {
   
   /**
     * The enum is used by the platform to notify the client of the VPN session status.

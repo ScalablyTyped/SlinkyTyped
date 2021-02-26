@@ -6,15 +6,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.treeMod.ITreeProps
 import typingsSlinky.blueprintjsCore.treeNodeMod.ITreeNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tree {
   
+  @scala.inline
+  def apply[T](contents: js.Array[ITreeNode[T]]): Builder[T] = {
+    val __props = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ITreeProps[T]]))
+  }
+  
   @JSImport("@blueprintjs/core", "Tree")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -61,10 +68,4 @@ object Tree {
   }
   
   def withProps[T](p: ITreeProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](contents: js.Array[ITreeNode[T]]): Builder[T] = {
-    val __props = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ITreeProps[T]]))
-  }
 }

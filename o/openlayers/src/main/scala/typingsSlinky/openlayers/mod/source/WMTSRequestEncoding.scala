@@ -1,5 +1,6 @@
 package typingsSlinky.openlayers.mod.source
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.openlayers.openlayersStrings.KVP
   - typingsSlinky.openlayers.openlayersStrings.REST
 */
-trait WMTSRequestEncoding extends js.Object
+trait WMTSRequestEncoding extends StObject
 object WMTSRequestEncoding {
   
   @scala.inline

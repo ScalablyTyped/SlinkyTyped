@@ -5,6 +5,7 @@ import typingsSlinky.activexAdodb.activexAdodbNumbers.`2`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`3`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`4`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAdodb.activexAdodbNumbers.`1`
   - typingsSlinky.activexAdodb.activexAdodbNumbers.`5`
 */
-trait EventStatusEnum extends js.Object
+trait EventStatusEnum extends StObject
 object EventStatusEnum {
   
   @scala.inline

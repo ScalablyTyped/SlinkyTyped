@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientIap.anon.Alt
 import typingsSlinky.maximMazurokGapiClientIap.anon.Callback
 import typingsSlinky.maximMazurokGapiClientIap.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BrandsResource extends js.Object {
+trait BrandsResource extends StObject {
   
   def create(request: Alt, body: Brand): Request[Brand] = js.native
   /**

@@ -2,7 +2,9 @@ package typingsSlinky.twilioVideo.mod
 
 import org.scalajs.dom.experimental.mediastream.MediaStreamTrack
 import org.scalajs.dom.raw.HTMLMediaElement
+import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.twilioVideo.twilioVideoStrings.audio
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("twilio-video", "AudioTrack")
 @js.native
 class AudioTrack () extends Track {
+  def this(options: EventEmitterOptions) = this()
   
   // Required for Safari if you want to detach without errors
   // See: https://github.com/twilio/twilio-video.js/issues/294#issuecomment-389708981

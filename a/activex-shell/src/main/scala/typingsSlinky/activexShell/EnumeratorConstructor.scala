@@ -8,6 +8,7 @@ import typingsSlinky.activexShell.Shell32.FolderItems3
 import typingsSlinky.activexShell.Shell32.ShellFolderItem
 import typingsSlinky.activexShell.Shell32.ShellWindows
 import typingsSlinky.std.Enumerator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

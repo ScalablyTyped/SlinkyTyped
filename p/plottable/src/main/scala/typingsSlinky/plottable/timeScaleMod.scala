@@ -2,14 +2,14 @@ package typingsSlinky.plottable
 
 import typingsSlinky.d3Time.mod.CountableTimeInterval
 import typingsSlinky.plottable.quantitativeScaleMod.QuantitativeScale
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("plottable/build/src/scales/timeScale", JSImport.Namespace)
-@js.native
-object timeScaleMod extends js.Object {
+object timeScaleMod {
   
+  @JSImport("plottable/build/src/scales/timeScale", "Time")
   @js.native
   /**
     * A Time Scale maps Date objects to numbers.
@@ -34,13 +34,14 @@ object timeScaleMod extends js.Object {
     def tickInterval(interval: String, step: Double, useUTC: Boolean): js.Array[js.Date] = js.native
   }
   /* static members */
-  @js.native
-  object Time extends js.Object {
+  object Time {
     
     /**
       * Transforms the Plottable TimeInterval string into a d3 time interval equivalent.
       * If the provided TimeInterval is incorrect, the default is d3.timeYear
       */
+    @JSImport("plottable/build/src/scales/timeScale", "Time.timeIntervalToD3Time")
+    @js.native
     def timeIntervalToD3Time(timeInterval: String, useUTC: Boolean): CountableTimeInterval = js.native
   }
 }

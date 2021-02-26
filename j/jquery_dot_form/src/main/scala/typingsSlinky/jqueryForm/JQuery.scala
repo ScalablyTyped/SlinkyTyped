@@ -1,12 +1,13 @@
 package typingsSlinky.jqueryForm
 
 import org.scalajs.dom.raw.Element
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def ajaxForm(): JQuery = js.native
   def ajaxForm(callback: js.Function): JQuery = js.native

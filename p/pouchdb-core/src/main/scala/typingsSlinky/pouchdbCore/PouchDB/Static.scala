@@ -14,6 +14,7 @@ import typingsSlinky.pouchdbCore.PouchDB.Configuration.DatabaseConfiguration
 import typingsSlinky.pouchdbCore.anon.Instantiable
 import typingsSlinky.pouchdbCore.pouchdbCoreStrings.created
 import typingsSlinky.pouchdbCore.pouchdbCoreStrings.destroyed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

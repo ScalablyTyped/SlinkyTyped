@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.seleniumWebdriver.mod.IWebElementId
 import typingsSlinky.seleniumWebdriver.mod.WebDriver
 import typingsSlinky.seleniumWebdriver.mod.WebElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

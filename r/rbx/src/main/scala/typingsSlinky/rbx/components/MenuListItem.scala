@@ -9,6 +9,7 @@ import typingsSlinky.rbx.typesMod.Prefer
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,18 +19,18 @@ typingsSlinky.rbx.anon.As[TAsComponent] with typingsSlinky.rbx.menuListItemMod.M
 typingsSlinky.react.mod.ComponentProps[TAsComponent]]) with (typingsSlinky.react.mod.RefAttributes[TAsComponent | typingsSlinky.rbx.exoticMod.FromReactType[TAsComponent]]) because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
 object MenuListItem {
   
+  def apply[TAsComponent /* <: ReactType[js.Any] */](
+    p: (Prefer[As[TAsComponent] with MenuListItemProps, ComponentProps[TAsComponent]]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
+  ): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @JSImport("rbx/components/menu/menu-list-item", "MenuListItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[TAsComponent /* <: ReactType[js.Any] */] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object]
-  
-  def apply[TAsComponent /* <: ReactType[js.Any] */](
-    p: (Prefer[As[TAsComponent] with MenuListItemProps, ComponentProps[TAsComponent]]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
-  ): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make[TAsComponent /* <: ReactType[js.Any] */](companion: MenuListItem.type): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, js.Dictionary.empty))()
 }

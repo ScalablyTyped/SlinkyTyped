@@ -78,15 +78,22 @@ import typingsSlinky.reactMentions.reactMentionsStrings.tree
 import typingsSlinky.reactMentions.reactMentionsStrings.url
 import typingsSlinky.reactMentions.reactMentionsStrings.vertical
 import typingsSlinky.reactMentions.reactMentionsStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MentionsInput {
   
+  @scala.inline
+  def apply(children: ReactElement | js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MentionsInputProps]))
+  }
+  
   @JSImport("react-mentions", "MentionsInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -294,10 +301,10 @@ object MentionsInput {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -330,16 +337,16 @@ object MentionsInput {
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRefRefObject(value: ReactRef[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRef(value: Ref[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputRefFunction1(value: /* instance */ HTMLInputElement | HTMLTextAreaElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def inputRef(value: Ref[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRefNull: this.type = set("inputRef", null)
     
     @scala.inline
-    def inputRefNull: this.type = set("inputRef", null)
+    def inputRefRefObject(value: ReactRef[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -692,10 +699,4 @@ object MentionsInput {
   }
   
   def withProps(p: MentionsInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: ReactElement | js.Array[ReactElement]): Builder = {
-    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MentionsInputProps]))
-  }
 }

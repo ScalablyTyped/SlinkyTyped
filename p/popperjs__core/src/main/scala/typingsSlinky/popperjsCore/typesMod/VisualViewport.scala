@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.EventTarget & {  width :number,   height :number,   offsetLeft :number,   offsetTop :number,   scale :number} */
 @js.native
-trait VisualViewport extends js.Object {
+trait VisualViewport extends StObject {
   
   /**
     * Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
@@ -47,11 +48,11 @@ trait VisualViewport extends js.Object {
     * Removes the event listener in target's event listener list with the same type, callback, and options.
     */
   def removeEventListener(`type`: String): Unit = js.native
-  def removeEventListener(`type`: String, callback: Null, options: Boolean): Unit = js.native
   def removeEventListener(`type`: String, callback: Null, options: EventListenerOptions): Unit = js.native
+  def removeEventListener(`type`: String, callback: Null, options: Boolean): Unit = js.native
   def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject): Unit = js.native
-  def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
   def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: EventListenerOptions): Unit = js.native
+  def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
   
   var scale: Double = js.native
   

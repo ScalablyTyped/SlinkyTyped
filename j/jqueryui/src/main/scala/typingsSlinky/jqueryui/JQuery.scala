@@ -92,12 +92,13 @@ import typingsSlinky.jqueryui.jqueryuiStrings.value
 import typingsSlinky.jqueryui.jqueryuiStrings.values
 import typingsSlinky.jqueryui.jqueryuiStrings.widget
 import typingsSlinky.std.ThisType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def accordion(): JQuery = js.native
   def accordion(methodName: String): JQuery = js.native
@@ -196,7 +197,7 @@ trait JQuery extends js.Object {
     * Initialize a datepicker
     */
   def datepicker(): JQuery = js.native
-   // Used for getting and setting options
+  // Used for getting and setting options
   def datepicker(methodName: String, otherParams: js.Any*): js.Any = js.native
   /**
     * Get the altField option, after initialization
@@ -220,7 +221,7 @@ trait JQuery extends js.Object {
     * @param optionName 'altField'
     * @param altFieldValue An input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field.
     */
-  def datepicker(methodName: option, optionName: altField, altFieldValue: JQuery): JQuery = js.native
+  def datepicker(methodName: option, optionName: altField, altFieldValue: Element): JQuery = js.native
   /**
     * Set the altField option, after initialization
     *
@@ -228,7 +229,7 @@ trait JQuery extends js.Object {
     * @param optionName 'altField'
     * @param altFieldValue An input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field.
     */
-  def datepicker(methodName: option, optionName: altField, altFieldValue: Element): JQuery = js.native
+  def datepicker(methodName: option, optionName: altField, altFieldValue: JQuery): JQuery = js.native
   /**
     * Get the altFormat option, after initialization
     *
@@ -542,17 +543,17 @@ trait JQuery extends js.Object {
     *
     * @param methodName 'option'
     * @param optionName 'defaultDate'
-    * @param defaultDateValue A number of days from today. For example 2 represents two days from today and -1 represents yesterday.
+    * @param defaultDateValue A date object containing the default date.
     */
-  def datepicker(methodName: option, optionName: defaultDate, defaultDateValue: Double): JQuery = js.native
+  def datepicker(methodName: option, optionName: defaultDate, defaultDateValue: js.Date): JQuery = js.native
   /**
     * Set the defaultDate option, after initialization
     *
     * @param methodName 'option'
     * @param optionName 'defaultDate'
-    * @param defaultDateValue A date object containing the default date.
+    * @param defaultDateValue A number of days from today. For example 2 represents two days from today and -1 represents yesterday.
     */
-  def datepicker(methodName: option, optionName: defaultDate, defaultDateValue: js.Date): JQuery = js.native
+  def datepicker(methodName: option, optionName: defaultDate, defaultDateValue: Double): JQuery = js.native
   /**
     * Get the duration option, after initialization
     *
@@ -1028,7 +1029,7 @@ trait JQuery extends js.Object {
   def progressbar_value(methodName: value): js.Any = js.native
   @JSName("progressbar")
   def progressbar_value(methodName: value, value: Boolean): Unit = js.native
-   // number or boolean
+  // number or boolean
   @JSName("progressbar")
   def progressbar_value(methodName: value, value: Double): Unit = js.native
   @JSName("progressbar")

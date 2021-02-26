@@ -3,12 +3,13 @@ package typingsSlinky.astTypes.buildersMod
 import typingsSlinky.astTypes.anon.ArgumentCommentsLoc
 import typingsSlinky.astTypes.kindsMod.PatternKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.SpreadElementPattern
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SpreadElementPatternBuilder extends js.Object {
+trait SpreadElementPatternBuilder extends StObject {
   
   def apply(argument: PatternKind): SpreadElementPattern = js.native
   

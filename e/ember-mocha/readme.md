@@ -10,9 +10,9 @@ Mocha helpers for testing Ember.js applications
 | ------------------ | :-------------: |
 | Full name          | ember-mocha |
 | Keywords           | ember-addon |
-| # releases         | 11 |
+| # releases         | 6 |
 | # dependents       | 1 |
-| # downloads        | 863615 |
+| # downloads        | 774088 |
 | # stars            | 0 |
 
 ## Links

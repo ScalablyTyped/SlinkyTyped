@@ -1,5 +1,6 @@
 package typingsSlinky.wegameApi.wx.types
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.wegameApi.wegameApiStrings.unknown
   - typingsSlinky.wegameApi.wegameApiStrings.none
 */
-trait NetworkType extends js.Object
+trait NetworkType extends StObject
 object NetworkType {
   
   @scala.inline

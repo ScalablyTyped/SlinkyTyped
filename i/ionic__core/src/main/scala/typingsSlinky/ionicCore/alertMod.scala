@@ -8,14 +8,14 @@ import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayInterface
 import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/alert/alert", JSImport.Namespace)
-@js.native
-object alertMod extends js.Object {
+object alertMod {
   
+  @JSImport("@ionic/core/dist/types/components/alert/alert", "Alert")
   @js.native
   class Alert ()
     extends ComponentInterface

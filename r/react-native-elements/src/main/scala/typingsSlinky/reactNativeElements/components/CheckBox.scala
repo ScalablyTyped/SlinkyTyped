@@ -10,15 +10,22 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.anon.PartialTextProperties
 import typingsSlinky.reactNativeElements.mod.CheckBoxProps
 import typingsSlinky.reactNativeElements.mod.IconType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CheckBox {
   
+  @scala.inline
+  def apply(checked: Boolean): Builder = {
+    val __props = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CheckBoxProps]))
+  }
+  
   @JSImport("react-native-elements", "CheckBox")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,10 +42,10 @@ object CheckBox {
     def checkedColor(value: String): this.type = set("checkedColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def checkedIconReactElement(value: ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
+    def checkedIcon(value: String | ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def checkedIcon(value: String | ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
+    def checkedIconReactElement(value: ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def checkedTitle(value: String): this.type = set("checkedTitle", value.asInstanceOf[js.Any])
@@ -83,22 +90,22 @@ object CheckBox {
     def textStyleNull: this.type = set("textStyle", null)
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def titleProps(value: PartialTextProperties): this.type = set("titleProps", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def uncheckedColor(value: String): this.type = set("uncheckedColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def uncheckedIconReactElement(value: ReactElement): this.type = set("uncheckedIcon", value.asInstanceOf[js.Any])
+    def uncheckedIcon(value: String | ReactElement): this.type = set("uncheckedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def uncheckedIcon(value: String | ReactElement): this.type = set("uncheckedIcon", value.asInstanceOf[js.Any])
+    def uncheckedIconReactElement(value: ReactElement): this.type = set("uncheckedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def wrapperStyle(value: StyleProp[ViewStyle]): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
@@ -108,10 +115,4 @@ object CheckBox {
   }
   
   def withProps(p: CheckBoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(checked: Boolean): Builder = {
-    val __props = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CheckBoxProps]))
-  }
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.siesta.Siesta.Test
 
 import typingsSlinky.siesta.Siesta.Test.BDD.Expectation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @mixin
   */
 @js.native
-trait IBDD extends js.Object {
+trait IBDD extends StObject {
   
   def any(clsConstructor: js.Function): js.Any = js.native
   

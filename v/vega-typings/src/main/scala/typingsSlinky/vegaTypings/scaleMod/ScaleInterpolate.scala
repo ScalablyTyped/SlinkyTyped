@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.scaleMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.signalMod.SignalRef
   - typingsSlinky.vegaTypings.scaleMod.ScaleInterpolateParams
 */
-trait ScaleInterpolate extends js.Object
+trait ScaleInterpolate extends StObject

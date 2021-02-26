@@ -4,16 +4,15 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Combokeys")
-@js.native
-object Combokeys extends js.Object {
+object Combokeys {
   
   @js.native
-  trait Combokeys extends js.Object {
+  trait Combokeys extends StObject {
     
     /**
       * binds an event to Combokeys

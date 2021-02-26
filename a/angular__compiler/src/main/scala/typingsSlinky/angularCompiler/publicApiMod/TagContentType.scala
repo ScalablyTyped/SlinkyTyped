@@ -1,12 +1,13 @@
 package typingsSlinky.angularCompiler.publicApiMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/public_api", "TagContentType")
 @js.native
-object TagContentType extends js.Object {
+object TagContentType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.angularCompiler.tagsMod.TagContentType with Double] = js.native

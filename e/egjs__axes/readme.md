@@ -10,9 +10,9 @@ A module used to change the information of user action entered by various input 
 | ------------------ | :-------------: |
 | Full name          | @egjs/axes |
 | Keywords           | - |
-| # releases         | 32 |
+| # releases         | 21 |
 | # dependents       | 9 |
-| # downloads        | 31985 |
+| # downloads        | 144685 |
 | # stars            | 0 |
 
 ## Links

@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/editor/money-off", JSImport.Namespace)
-@js.native
-object moneyOffMod extends js.Object {
+object moneyOffMod {
   
+  @JSImport("material-ui/svg-icons/editor/money-off", JSImport.Default)
+  @js.native
+  class default () extends EditorMoneyOff
+  
+  @JSImport("material-ui/svg-icons/editor/money-off", "EditorMoneyOff")
   @js.native
   class EditorMoneyOff ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

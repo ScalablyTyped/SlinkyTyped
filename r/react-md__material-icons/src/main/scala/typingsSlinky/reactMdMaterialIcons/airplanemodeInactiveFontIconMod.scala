@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.fontIconMod.FontIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/AirplanemodeInactiveFontIcon", JSImport.Namespace)
-@js.native
-object airplanemodeInactiveFontIconMod extends js.Object {
+object airplanemodeInactiveFontIconMod {
   
+  @JSImport("@react-md/material-icons/types/AirplanemodeInactiveFontIcon", "AirplanemodeInactiveFontIcon")
+  @js.native
   val AirplanemodeInactiveFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

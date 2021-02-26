@@ -1,10 +1,10 @@
 organization := "org.scalablytyped.slinky"
 name := "js-base64"
-version := "3.0-dt-20200718Z-6de6ee"
+version := "3.0-dt-20200718Z-d87a60"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

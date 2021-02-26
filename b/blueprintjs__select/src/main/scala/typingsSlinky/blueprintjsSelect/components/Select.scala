@@ -19,15 +19,26 @@ import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
 import typingsSlinky.blueprintjsSelect.selectMod.ISelectProps
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.MouseEventHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Select {
   
+  @scala.inline
+  def apply[T](
+    itemRenderer: (T, /* itemProps */ IItemRendererProps) => ReactElement | Null,
+    items: js.Array[T],
+    onItemSelect: (T, js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => Unit
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(itemRenderer = js.Any.fromFunction2(itemRenderer), items = items.asInstanceOf[js.Any], onItemSelect = js.Any.fromFunction2(onItemSelect))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ISelectProps[T]]))
+  }
+  
   @JSImport("@blueprintjs/select", "Select")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -61,22 +72,22 @@ object Select {
     def filterable(value: Boolean): this.type = set("filterable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def initialContentReactElement(value: ReactElement): this.type = set("initialContent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def initialContent(value: ReactElement): this.type = set("initialContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def initialContentNull: this.type = set("initialContent", null)
     
     @scala.inline
+    def initialContentReactElement(value: ReactElement): this.type = set("initialContent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def inputProps(value: IInputGroupProps with HTMLInputProps): this.type = set("inputProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemDisabledFunction2(value: (T, /* index */ Double) => Boolean): this.type = set("itemDisabled", js.Any.fromFunction2(value))
+    def itemDisabled(value: (/* keyof T */ String) | (js.Function2[T, /* index */ Double, Boolean])): this.type = set("itemDisabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemDisabled(value: (/* keyof T */ String) | (js.Function2[T, /* index */ Double, Boolean])): this.type = set("itemDisabled", value.asInstanceOf[js.Any])
+    def itemDisabledFunction2(value: (T, /* index */ Double) => Boolean): this.type = set("itemDisabled", js.Any.fromFunction2(value))
     
     @scala.inline
     def itemListPredicate(value: (/* query */ String, /* items */ js.Array[T]) => js.Array[T]): this.type = set("itemListPredicate", js.Any.fromFunction2(value))
@@ -90,16 +101,16 @@ object Select {
     ): this.type = set("itemPredicate", js.Any.fromFunction4(value))
     
     @scala.inline
-    def itemsEqualFunction2(value: (T, T) => Boolean): this.type = set("itemsEqual", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def itemsEqual(value: ItemsEqualProp[T]): this.type = set("itemsEqual", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noResultsReactElement(value: ReactElement): this.type = set("noResults", value.asInstanceOf[js.Any])
+    def itemsEqualFunction2(value: (T, T) => Boolean): this.type = set("itemsEqual", js.Any.fromFunction2(value))
     
     @scala.inline
     def noResults(value: ReactElement): this.type = set("noResults", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def noResultsReactElement(value: ReactElement): this.type = set("noResults", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onActiveItemChange(value: (/* activeItem */ T | Null, /* isCreateNewItem */ Boolean) => Unit): this.type = set("onActiveItemChange", js.Any.fromFunction2(value))
@@ -130,14 +141,4 @@ object Select {
   }
   
   def withProps[T](p: ISelectProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](
-    itemRenderer: (T, /* itemProps */ IItemRendererProps) => ReactElement | Null,
-    items: js.Array[T],
-    onItemSelect: (T, js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => Unit
-  ): Builder[T] = {
-    val __props = js.Dynamic.literal(itemRenderer = js.Any.fromFunction2(itemRenderer), items = items.asInstanceOf[js.Any], onItemSelect = js.Any.fromFunction2(onItemSelect))
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ISelectProps[T]]))
-  }
 }

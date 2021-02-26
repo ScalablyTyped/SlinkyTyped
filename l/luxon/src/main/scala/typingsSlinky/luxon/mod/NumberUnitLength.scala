@@ -1,5 +1,6 @@
 package typingsSlinky.luxon.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.luxon.luxonStrings.numeric
   - typingsSlinky.luxon.luxonStrings.`2-digit`
 */
-trait NumberUnitLength extends js.Object
+trait NumberUnitLength extends StObject
 object NumberUnitLength {
   
   @scala.inline

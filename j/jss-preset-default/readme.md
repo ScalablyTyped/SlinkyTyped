@@ -10,9 +10,9 @@ Default preset for JSS with selected plugins.
 | ------------------ | :-------------: |
 | Full name          | jss-preset-default |
 | Keywords           | jss, preset, default |
-| # releases         | 37 |
-| # dependents       | 141 |
-| # downloads        | 9142171 |
+| # releases         | 31 |
+| # dependents       | 177 |
+| # downloads        | 9002761 |
 | # stars            | 2 |
 
 ## Links

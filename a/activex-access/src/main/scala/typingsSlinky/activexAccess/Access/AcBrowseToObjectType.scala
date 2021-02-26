@@ -2,6 +2,7 @@ package typingsSlinky.activexAccess.Access
 
 import typingsSlinky.activexAccess.activexAccessNumbers.`2`
 import typingsSlinky.activexAccess.activexAccessNumbers.`3`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAccess.activexAccessNumbers.`2`
   - typingsSlinky.activexAccess.activexAccessNumbers.`3`
 */
-trait AcBrowseToObjectType extends js.Object
+trait AcBrowseToObjectType extends StObject
 object AcBrowseToObjectType {
   
   @scala.inline

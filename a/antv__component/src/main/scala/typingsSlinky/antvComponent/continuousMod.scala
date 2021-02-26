@@ -1,22 +1,24 @@
 package typingsSlinky.antvComponent
 
 import typingsSlinky.antvComponent.interfacesMod.ISlider
-import typingsSlinky.antvComponent.legendBaseMod.LegendBase
 import typingsSlinky.antvComponent.typesMod.ContinueLegendCfg
 import typingsSlinky.antvEventEmitter.mod.EventType
 import typingsSlinky.antvGBase.interfacesMod.IGroup
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/legend/continuous", JSImport.Namespace)
-@js.native
-object continuousMod extends js.Object {
+object continuousMod {
+  
+  @JSImport("@antv/component/lib/legend/continuous", JSImport.Default)
+  @js.native
+  class default () extends ContinueLegend
   
   @js.native
   trait ContinueLegend
-    extends LegendBase[ContinueLegendCfg]
+    extends typingsSlinky.antvComponent.legendBaseMod.default[ContinueLegendCfg]
        with ISlider {
     
     var bindHandlersEvent: js.Any = js.native
@@ -115,7 +117,4 @@ object continuousMod extends js.Object {
     
     def setRange(min: js.Any, max: js.Any): Unit = js.native
   }
-  
-  @js.native
-  class default () extends ContinueLegend
 }

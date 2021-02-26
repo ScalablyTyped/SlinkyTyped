@@ -8,15 +8,22 @@ import typingsSlinky.reactVirtualized.esArrowKeyStepperMod.ChildProps
 import typingsSlinky.reactVirtualized.esArrowKeyStepperMod.ScrollIndices
 import typingsSlinky.reactVirtualized.reactVirtualizedStrings.cells
 import typingsSlinky.reactVirtualized.reactVirtualizedStrings.edges
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ArrowKeyStepper {
   
+  @scala.inline
+  def apply(children: ChildProps => ReactElement, columnCount: Double, rowCount: Double): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), columnCount = columnCount.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ArrowKeyStepperProps]))
+  }
+  
   @JSImport("react-virtualized", "ArrowKeyStepper")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -46,10 +53,4 @@ object ArrowKeyStepper {
   }
   
   def withProps(p: ArrowKeyStepperProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: ChildProps => ReactElement, columnCount: Double, rowCount: Double): Builder = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), columnCount = columnCount.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ArrowKeyStepperProps]))
-  }
 }

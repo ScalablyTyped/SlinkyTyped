@@ -14,16 +14,15 @@ import typingsSlinky.octokitTypes.requestOptionsMod.RequestOptions
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.octokitTypes.routeMod.Route
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@octokit/types/dist-types/RequestInterface", JSImport.Namespace)
-@js.native
-object requestInterfaceMod extends js.Object {
+object requestInterfaceMod {
   
   @js.native
-  trait RequestInterface[D /* <: js.Object */] extends js.Object {
+  trait RequestInterface[D /* <: js.Object */] extends StObject {
     
     def apply[R /* <: Route */](route: R): js.Promise[
         (/* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints[R]['response'] */ js.Any) | OctokitResponse[_]

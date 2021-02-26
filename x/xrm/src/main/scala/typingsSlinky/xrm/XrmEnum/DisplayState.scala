@@ -2,6 +2,7 @@ package typingsSlinky.xrm.XrmEnum
 
 import typingsSlinky.xrm.xrmStrings.collapsed
 import typingsSlinky.xrm.xrmStrings.expanded
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.expanded
   - typingsSlinky.xrm.xrmStrings.collapsed
 */
-trait DisplayState extends js.Object
+trait DisplayState extends StObject
 object DisplayState {
   
   @scala.inline

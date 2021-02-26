@@ -5,6 +5,7 @@ import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashDRAWE
 import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashDRAWER_OPENED
 import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashOPEN_DRAWER
 import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashTOGGLE_DRAWER
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,37 +21,37 @@ trait NavigationDrawerAction extends _NavigationAction
 object NavigationDrawerAction {
   
   @scala.inline
-  def NavigationDrawerClosedAction(`type`: NavigationSlashDRAWER_CLOSED): NavigationDrawerAction = {
+  def NavigationCloseDrawerAction(`type`: NavigationSlashCLOSE_DRAWER): typingsSlinky.reactNavigation.mod.NavigationCloseDrawerAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NavigationDrawerAction]
+    __obj.asInstanceOf[typingsSlinky.reactNavigation.mod.NavigationCloseDrawerAction]
   }
   
   @scala.inline
-  def NavigationCloseDrawerAction(`type`: NavigationSlashCLOSE_DRAWER): NavigationDrawerAction = {
+  def NavigationDrawerClosedAction(`type`: NavigationSlashDRAWER_CLOSED): typingsSlinky.reactNavigation.mod.NavigationDrawerClosedAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NavigationDrawerAction]
+    __obj.asInstanceOf[typingsSlinky.reactNavigation.mod.NavigationDrawerClosedAction]
   }
   
   @scala.inline
-  def NavigationDrawerOpenedAction(`type`: NavigationSlashDRAWER_OPENED): NavigationDrawerAction = {
+  def NavigationDrawerOpenedAction(`type`: NavigationSlashDRAWER_OPENED): typingsSlinky.reactNavigation.mod.NavigationDrawerOpenedAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NavigationDrawerAction]
+    __obj.asInstanceOf[typingsSlinky.reactNavigation.mod.NavigationDrawerOpenedAction]
   }
   
   @scala.inline
-  def NavigationToggleDrawerAction(`type`: NavigationSlashTOGGLE_DRAWER): NavigationDrawerAction = {
+  def NavigationOpenDrawerAction(`type`: NavigationSlashOPEN_DRAWER): typingsSlinky.reactNavigation.mod.NavigationOpenDrawerAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NavigationDrawerAction]
+    __obj.asInstanceOf[typingsSlinky.reactNavigation.mod.NavigationOpenDrawerAction]
   }
   
   @scala.inline
-  def NavigationOpenDrawerAction(`type`: NavigationSlashOPEN_DRAWER): NavigationDrawerAction = {
+  def NavigationToggleDrawerAction(`type`: NavigationSlashTOGGLE_DRAWER): typingsSlinky.reactNavigation.mod.NavigationToggleDrawerAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NavigationDrawerAction]
+    __obj.asInstanceOf[typingsSlinky.reactNavigation.mod.NavigationToggleDrawerAction]
   }
 }

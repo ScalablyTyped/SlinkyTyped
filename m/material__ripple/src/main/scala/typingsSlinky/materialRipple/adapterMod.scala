@@ -6,16 +6,15 @@ import typingsSlinky.materialBase.typesMod.EventType
 import typingsSlinky.materialBase.typesMod.SpecificEventListener
 import typingsSlinky.materialRipple.materialRippleStrings.resize
 import typingsSlinky.materialRipple.typesMod.MDCRipplePoint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/ripple/adapter", JSImport.Namespace)
-@js.native
-object adapterMod extends js.Object {
+object adapterMod {
   
   @js.native
-  trait MDCRippleAdapter extends js.Object {
+  trait MDCRippleAdapter extends StObject {
     
     def addClass(className: String): Unit = js.native
     

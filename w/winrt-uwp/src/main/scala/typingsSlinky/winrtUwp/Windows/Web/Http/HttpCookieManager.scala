@@ -1,13 +1,14 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Add or delete an HttpCookie or view the cookies associated with an app. */
 @js.native
-trait HttpCookieManager extends js.Object {
+trait HttpCookieManager extends StObject {
   
   /**
     * Delete an HttpCookie from the cookies associated with an app.

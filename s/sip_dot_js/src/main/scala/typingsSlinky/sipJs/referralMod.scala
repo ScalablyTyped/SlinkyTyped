@@ -7,16 +7,16 @@ import typingsSlinky.sipJs.inviterOptionsMod.InviterOptions
 import typingsSlinky.sipJs.outgoingResponseMod.ResponseOptions
 import typingsSlinky.sipJs.referMod.IncomingReferRequest
 import typingsSlinky.sipJs.sessionMod.Session
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/api/referral", JSImport.Namespace)
-@js.native
-object referralMod extends js.Object {
+object referralMod {
   
+  @JSImport("sip.js/lib/api/referral", "Referral")
   @js.native
-  class Referral protected () extends js.Object {
+  class Referral protected () extends StObject {
     /** @internal */
     def this(incomingReferRequest: IncomingReferRequest, session: Session) = this()
     

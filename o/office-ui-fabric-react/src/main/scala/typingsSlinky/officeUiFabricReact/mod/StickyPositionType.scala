@@ -1,12 +1,13 @@
 package typingsSlinky.officeUiFabricReact.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react", "StickyPositionType")
 @js.native
-object StickyPositionType extends js.Object {
+object StickyPositionType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.stickyTypesMod.StickyPositionType with Double] = js.native

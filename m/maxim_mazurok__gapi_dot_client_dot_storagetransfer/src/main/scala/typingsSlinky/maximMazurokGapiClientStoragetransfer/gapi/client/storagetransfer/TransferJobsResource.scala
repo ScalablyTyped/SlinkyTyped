@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientStoragetransfer.anon.Fields
 import typingsSlinky.maximMazurokGapiClientStoragetransfer.anon.Filter
 import typingsSlinky.maximMazurokGapiClientStoragetransfer.anon.JobName
 import typingsSlinky.maximMazurokGapiClientStoragetransfer.anon.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TransferJobsResource extends js.Object {
+trait TransferJobsResource extends StObject {
   
   /** Creates a transfer job that runs periodically. */
   def create(request: Alt): Request[TransferJob] = js.native

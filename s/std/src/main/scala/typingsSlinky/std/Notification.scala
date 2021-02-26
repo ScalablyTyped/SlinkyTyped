@@ -4,6 +4,7 @@ import typingsSlinky.std.stdStrings.click
 import typingsSlinky.std.stdStrings.close
 import typingsSlinky.std.stdStrings.error
 import typingsSlinky.std.stdStrings.show
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -116,13 +117,13 @@ trait Notification extends EventTarget {
   def removeEventListener_click(
     `type`: click,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_click(
     `type`: click,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
@@ -133,13 +134,13 @@ trait Notification extends EventTarget {
   def removeEventListener_close(
     `type`: close,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
     `type`: close,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
@@ -150,13 +151,13 @@ trait Notification extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_show(
@@ -167,13 +168,13 @@ trait Notification extends EventTarget {
   def removeEventListener_show(
     `type`: show,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_show(
     `type`: show,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   val renotify: scala.Boolean = js.native

@@ -4,12 +4,13 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.stellarBase.stellarBaseStrings.base64
 import typingsSlinky.stellarBase.stellarBaseStrings.hex
 import typingsSlinky.stellarBase.stellarBaseStrings.raw
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TrustLineEntryV1 extends js.Object {
+trait TrustLineEntryV1 extends StObject {
   
   def ext(): TrustLineEntryV1Ext = js.native
   def ext(value: TrustLineEntryV1Ext): TrustLineEntryV1Ext = js.native

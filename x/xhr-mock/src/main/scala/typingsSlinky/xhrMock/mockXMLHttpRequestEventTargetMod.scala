@@ -2,18 +2,20 @@ package typingsSlinky.xhrMock
 
 import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.std.XMLHttpRequestEventTarget
-import typingsSlinky.xhrMock.mockEventTargetMod.MockEventTarget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xhr-mock/lib/MockXMLHttpRequestEventTarget", JSImport.Namespace)
-@js.native
-object mockXMLHttpRequestEventTargetMod extends js.Object {
+object mockXMLHttpRequestEventTargetMod {
+  
+  @JSImport("xhr-mock/lib/MockXMLHttpRequestEventTarget", JSImport.Default)
+  @js.native
+  class default () extends MockXMLHttpRequestEventTarget
   
   @js.native
   trait MockXMLHttpRequestEventTarget
-    extends MockEventTarget
+    extends typingsSlinky.xhrMock.mockEventTargetMod.default
        with XMLHttpRequestEventTarget {
     
     @JSName("onabort")
@@ -37,7 +39,4 @@ object mockXMLHttpRequestEventTargetMod extends js.Object {
     @JSName("ontimeout")
     def ontimeout_MMockXMLHttpRequestEventTarget(ev: ProgressEvent): js.Any = js.native
   }
-  
-  @js.native
-  class default () extends MockXMLHttpRequestEventTarget
 }

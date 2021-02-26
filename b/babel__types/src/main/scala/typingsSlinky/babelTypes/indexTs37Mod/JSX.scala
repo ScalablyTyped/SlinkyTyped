@@ -15,6 +15,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.JSXOpeningFragment
 import typingsSlinky.babelTypes.babelTypesStrings.JSXSpreadAttribute
 import typingsSlinky.babelTypes.babelTypesStrings.JSXSpreadChild
 import typingsSlinky.babelTypes.babelTypesStrings.JSXText
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,78 +41,24 @@ trait JSX extends _Node
 object JSX {
   
   @scala.inline
-  def JSXFragment_(
-    children: js.Array[
-      JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | typingsSlinky.babelTypes.indexTs37Mod.JSXFragment_
-    ],
-    closingFragment: JSXClosingFragment_,
-    openingFragment: JSXOpeningFragment_,
-    `type`: JSXFragment
-  ): JSX = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], closingFragment = closingFragment.asInstanceOf[js.Any], openingFragment = openingFragment.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
-  }
-  
-  @scala.inline
-  def JSXClosingElement_(name: JSXIdentifier_ | JSXMemberExpression_ | JSXNamespacedName_, `type`: JSXClosingElement): JSX = {
+  def JSXAttribute_(name: JSXIdentifier_ | JSXNamespacedName_, `type`: JSXAttribute): typingsSlinky.babelTypes.indexTs37Mod.JSXAttribute_ = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXAttribute_]
   }
   
   @scala.inline
-  def JSXEmptyExpression_(`type`: JSXEmptyExpression): JSX = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
-  }
-  
-  @scala.inline
-  def JSXClosingFragment_(`type`: JSXClosingFragment): JSX = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
-  }
-  
-  @scala.inline
-  def JSXMemberExpression_(
-    `object`: typingsSlinky.babelTypes.indexTs37Mod.JSXMemberExpression_ | JSXIdentifier_,
-    property: JSXIdentifier_,
-    `type`: JSXMemberExpression
-  ): JSX = {
-    val __obj = js.Dynamic.literal(property = property.asInstanceOf[js.Any])
-    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
-  }
-  
-  @scala.inline
-  def JSXOpeningFragment_(`type`: JSXOpeningFragment): JSX = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
-  }
-  
-  @scala.inline
-  def JSXText_(`type`: JSXText, value: String): JSX = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
-  }
-  
-  @scala.inline
-  def JSXAttribute_(name: JSXIdentifier_ | JSXNamespacedName_, `type`: JSXAttribute): JSX = {
+  def JSXClosingElement_(name: JSXIdentifier_ | JSXMemberExpression_ | JSXNamespacedName_, `type`: JSXClosingElement): typingsSlinky.babelTypes.indexTs37Mod.JSXClosingElement_ = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXClosingElement_]
   }
   
   @scala.inline
-  def JSXSpreadAttribute_(argument: Expression, `type`: JSXSpreadAttribute): JSX = {
-    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
+  def JSXClosingFragment_(`type`: JSXClosingFragment): typingsSlinky.babelTypes.indexTs37Mod.JSXClosingFragment_ = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXClosingFragment_]
   }
   
   @scala.inline
@@ -121,10 +68,64 @@ object JSX {
     ],
     openingElement: JSXOpeningElement_,
     `type`: JSXElement
-  ): JSX = {
+  ): typingsSlinky.babelTypes.indexTs37Mod.JSXElement_ = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], openingElement = openingElement.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXElement_]
+  }
+  
+  @scala.inline
+  def JSXEmptyExpression_(`type`: JSXEmptyExpression): typingsSlinky.babelTypes.indexTs37Mod.JSXEmptyExpression_ = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXEmptyExpression_]
+  }
+  
+  @scala.inline
+  def JSXExpressionContainer_(expression: Expression | JSXEmptyExpression_, `type`: JSXExpressionContainer): typingsSlinky.babelTypes.indexTs37Mod.JSXExpressionContainer_ = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXExpressionContainer_]
+  }
+  
+  @scala.inline
+  def JSXFragment_(
+    children: js.Array[
+      JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | typingsSlinky.babelTypes.indexTs37Mod.JSXFragment_
+    ],
+    closingFragment: JSXClosingFragment_,
+    openingFragment: JSXOpeningFragment_,
+    `type`: JSXFragment
+  ): typingsSlinky.babelTypes.indexTs37Mod.JSXFragment_ = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], closingFragment = closingFragment.asInstanceOf[js.Any], openingFragment = openingFragment.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXFragment_]
+  }
+  
+  @scala.inline
+  def JSXIdentifier_(name: String, `type`: JSXIdentifier): typingsSlinky.babelTypes.indexTs37Mod.JSXIdentifier_ = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXIdentifier_]
+  }
+  
+  @scala.inline
+  def JSXMemberExpression_(
+    `object`: typingsSlinky.babelTypes.indexTs37Mod.JSXMemberExpression_ | JSXIdentifier_,
+    property: JSXIdentifier_,
+    `type`: JSXMemberExpression
+  ): typingsSlinky.babelTypes.indexTs37Mod.JSXMemberExpression_ = {
+    val __obj = js.Dynamic.literal(property = property.asInstanceOf[js.Any])
+    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXMemberExpression_]
+  }
+  
+  @scala.inline
+  def JSXNamespacedName_(name: JSXIdentifier_, namespace: JSXIdentifier_, `type`: JSXNamespacedName): typingsSlinky.babelTypes.indexTs37Mod.JSXNamespacedName_ = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], namespace = namespace.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXNamespacedName_]
   }
   
   @scala.inline
@@ -133,37 +134,37 @@ object JSX {
     name: JSXIdentifier_ | JSXMemberExpression_ | JSXNamespacedName_,
     selfClosing: Boolean,
     `type`: JSXOpeningElement
-  ): JSX = {
+  ): typingsSlinky.babelTypes.indexTs37Mod.JSXOpeningElement_ = {
     val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selfClosing = selfClosing.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXOpeningElement_]
   }
   
   @scala.inline
-  def JSXIdentifier_(name: String, `type`: JSXIdentifier): JSX = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+  def JSXOpeningFragment_(`type`: JSXOpeningFragment): typingsSlinky.babelTypes.indexTs37Mod.JSXOpeningFragment_ = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXOpeningFragment_]
   }
   
   @scala.inline
-  def JSXNamespacedName_(name: JSXIdentifier_, namespace: JSXIdentifier_, `type`: JSXNamespacedName): JSX = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], namespace = namespace.asInstanceOf[js.Any])
+  def JSXSpreadAttribute_(argument: Expression, `type`: JSXSpreadAttribute): typingsSlinky.babelTypes.indexTs37Mod.JSXSpreadAttribute_ = {
+    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXSpreadAttribute_]
   }
   
   @scala.inline
-  def JSXSpreadChild_(expression: Expression, `type`: JSXSpreadChild): JSX = {
+  def JSXSpreadChild_(expression: Expression, `type`: JSXSpreadChild): typingsSlinky.babelTypes.indexTs37Mod.JSXSpreadChild_ = {
     val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXSpreadChild_]
   }
   
   @scala.inline
-  def JSXExpressionContainer_(expression: Expression | JSXEmptyExpression_, `type`: JSXExpressionContainer): JSX = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
+  def JSXText_(`type`: JSXText, value: String): typingsSlinky.babelTypes.indexTs37Mod.JSXText_ = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSX]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXText_]
   }
 }

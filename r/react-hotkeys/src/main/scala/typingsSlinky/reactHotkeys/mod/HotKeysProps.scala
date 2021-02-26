@@ -3,6 +3,7 @@ package typingsSlinky.reactHotkeys.mod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactRef
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,36 +28,24 @@ object HotKeysProps {
   }
   
   @scala.inline
-  implicit class HotKeysPropsOps[Self <: HotKeysProps] (val x: Self) extends AnyVal {
+  implicit class HotKeysPropsMutableBuilder[Self <: HotKeysProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setComponent(value: ReactComponent): Self = StObject.set(x, "component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setComponentComponentClass(value: ReactComponentClass[js.Object]): Self = StObject.set(x, "component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setComponentFunctionComponent(value: ReactComponentClass[ComponentProps]): Self = StObject.set(x, "component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setComponentFunctionComponent(value: ReactComponentClass[ComponentProps]): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponentUndefined: Self = StObject.set(x, "component", js.undefined)
     
     @scala.inline
-    def setComponentComponentClass(value: ReactComponentClass[js.Object]): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setInnerRef(value: ReactRef[HTMLElement]): Self = StObject.set(x, "innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setComponent(value: ReactComponent): Self = this.set("component", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteComponent: Self = this.set("component", js.undefined)
-    
-    @scala.inline
-    def setInnerRef(value: ReactRef[HTMLElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteInnerRef: Self = this.set("innerRef", js.undefined)
+    def setInnerRefUndefined: Self = StObject.set(x, "innerRef", js.undefined)
   }
 }

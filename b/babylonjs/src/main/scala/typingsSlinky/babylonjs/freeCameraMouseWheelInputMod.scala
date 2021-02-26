@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.baseCameraMouseWheelInputMod.BaseCameraMouseWheel
 import typingsSlinky.babylonjs.freeCameraMod.FreeCamera
 import typingsSlinky.babylonjs.mathAxisMod.Coordinate
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/Inputs/freeCameraMouseWheelInput", JSImport.Namespace)
-@js.native
-object freeCameraMouseWheelInputMod extends js.Object {
+object freeCameraMouseWheelInputMod {
   
+  @JSImport("babylonjs/Cameras/Inputs/freeCameraMouseWheelInput", "FreeCameraMouseWheelInput")
   @js.native
   class FreeCameraMouseWheelInput () extends BaseCameraMouseWheelInput {
     

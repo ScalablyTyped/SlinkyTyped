@@ -21,6 +21,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactMdl.mod.ListItemContentProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,12 +30,15 @@ object ListItemContent {
   
   @JSImport("react-mdl", "ListItemContent")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactMdl.mod.ListItemContent] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -82,10 +86,10 @@ object ListItemContent {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
+    def avatar(value: String | ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def avatar(value: String | ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
+    def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def capture(value: Boolean): this.type = set("capture", value.asInstanceOf[js.Any])
@@ -148,16 +152,13 @@ object ListItemContent {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: Double | String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: Double | String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -223,10 +224,10 @@ object ListItemContent {
     def httpEquiv(value: String): this.type = set("httpEquiv", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: String | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: String | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -664,10 +665,10 @@ object ListItemContent {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def subtitleReactElement(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    def subtitle(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def subtitle(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    def subtitleReactElement(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def summary(value: String): this.type = set("summary", value.asInstanceOf[js.Any])
@@ -706,7 +707,7 @@ object ListItemContent {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ListItemContentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ListItemContent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ListItemContentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.reactOnsenui.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactOnsenui.reactOnsenuiStrings.`bottom right`
   - typingsSlinky.reactOnsenui.reactOnsenuiStrings.`bottom left`
 */
-trait SpeedDialPosition extends js.Object
+trait SpeedDialPosition extends StObject
 object SpeedDialPosition {
   
   @scala.inline

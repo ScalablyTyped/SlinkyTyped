@@ -11,8 +11,8 @@ Bare bones Promises/A+ implementation
 | Full name          | promise |
 | Keywords           | - |
 | # releases         | 3 |
-| # dependents       | 4097 |
-| # downloads        | 380682720 |
+| # dependents       | 4195 |
+| # downloads        | 486671923 |
 | # stars            | 113 |
 
 ## Links

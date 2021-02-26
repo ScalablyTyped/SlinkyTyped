@@ -1,12 +1,13 @@
 package typingsSlinky.kineticjs.Kinetic
 
 import typingsSlinky.kineticjs.anon.X
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait INode extends js.Object {
+trait INode extends StObject {
   
   def cache(): INode = js.native
   def cache(cacheConfig: js.Any): INode = js.native

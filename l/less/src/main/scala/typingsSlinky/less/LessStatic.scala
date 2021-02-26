@@ -8,12 +8,13 @@ import typingsSlinky.less.Less.RefreshOutput
 import typingsSlinky.less.Less.RenderError
 import typingsSlinky.less.Less.RenderOutput
 import typingsSlinky.less.Less.StaticOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LessStatic extends js.Object {
+trait LessStatic extends StObject {
   
   var importManager: js.UndefOr[ImportManager] = js.native
   

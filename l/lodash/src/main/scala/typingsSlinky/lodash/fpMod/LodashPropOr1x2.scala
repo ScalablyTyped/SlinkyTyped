@@ -2,12 +2,13 @@ package typingsSlinky.lodash.fpMod
 
 import typingsSlinky.lodash.mod.__
 import typingsSlinky.std.Exclude
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashPropOr1x2[TObject, TKey /* <: /* keyof TObject */ String */] extends js.Object {
+trait LodashPropOr1x2[TObject, TKey /* <: /* keyof TObject */ String */] extends StObject {
   
   def apply(defaultValue: __): LodashPropOr1x6[TObject, TKey] = js.native
   def apply(defaultValue: __, `object`: TObject): LodashPropOr1x6[TObject, TKey] = js.native

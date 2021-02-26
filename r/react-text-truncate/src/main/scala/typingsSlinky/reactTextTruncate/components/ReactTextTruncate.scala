@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTextTruncate.mod.TextTruncateProps
 import typingsSlinky.reactTextTruncate.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object ReactTextTruncate {
   
   @JSImport("react-text-truncate", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,22 +46,22 @@ object ReactTextTruncate {
     def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def textElementReactElement(value: ReactElement): this.type = set("textElement", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def textElement(value: ReactElement): this.type = set("textElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def textTruncateChildReactElement(value: ReactElement): this.type = set("textTruncateChild", value.asInstanceOf[js.Any])
+    def textElementReactElement(value: ReactElement): this.type = set("textElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def textTruncateChild(value: ReactElement): this.type = set("textTruncateChild", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def textTruncateChildReactElement(value: ReactElement): this.type = set("textTruncateChild", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def truncateText(value: String): this.type = set("truncateText", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TextTruncateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactTextTruncate.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TextTruncateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

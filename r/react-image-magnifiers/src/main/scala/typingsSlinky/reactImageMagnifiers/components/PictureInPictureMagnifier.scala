@@ -12,15 +12,22 @@ import typingsSlinky.reactImageMagnifiers.reactImageMagnifiersStrings.bottom
 import typingsSlinky.reactImageMagnifiers.reactImageMagnifiersStrings.left
 import typingsSlinky.reactImageMagnifiers.reactImageMagnifiersStrings.right
 import typingsSlinky.reactImageMagnifiers.reactImageMagnifiersStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PictureInPictureMagnifier {
   
+  @scala.inline
+  def apply(imageSrc: String): Builder = {
+    val __props = js.Dynamic.literal(imageSrc = imageSrc.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PictureInPictureMagnifierProps]))
+  }
+  
   @JSImport("react-image-magnifiers", "PictureInPictureMagnifier")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -98,10 +105,4 @@ object PictureInPictureMagnifier {
   }
   
   def withProps(p: PictureInPictureMagnifierProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(imageSrc: String): Builder = {
-    val __props = js.Dynamic.literal(imageSrc = imageSrc.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PictureInPictureMagnifierProps]))
-  }
 }

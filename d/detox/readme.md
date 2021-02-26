@@ -10,9 +10,9 @@ E2E tests and automation for mobile
 | ------------------ | :-------------: |
 | Full name          | detox |
 | Keywords           | - |
-| # releases         | 132 |
-| # dependents       | 6 |
-| # downloads        | 2198697 |
+| # releases         | 218 |
+| # dependents       | 8 |
+| # downloads        | 4095364 |
 | # stars            | 0 |
 
 ## Links

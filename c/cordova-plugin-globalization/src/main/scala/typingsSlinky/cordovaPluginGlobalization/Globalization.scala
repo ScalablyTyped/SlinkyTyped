@@ -7,13 +7,14 @@ import typingsSlinky.cordovaPluginGlobalization.anon.Type
 import typingsSlinky.cordovaPluginGlobalization.anon.Value
 import typingsSlinky.cordovaPluginGlobalization.anon.ValueArray
 import typingsSlinky.cordovaPluginGlobalization.anon.ValueNumber
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This plugin obtains information and performs operations specific to the user's locale and timezone. */
 @js.native
-trait Globalization extends js.Object {
+trait Globalization extends StObject {
   
   /**
     * Returns a date formatted as a string according to the client's locale and timezone.

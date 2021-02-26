@@ -8,14 +8,14 @@ import typingsSlinky.angularCompiler.outputAstMod.ExternalReference
 import typingsSlinky.angularCompiler.srcSummaryResolverMod.SummaryResolver
 import typingsSlinky.angularCompiler.staticSymbolMod.StaticSymbol
 import typingsSlinky.angularCompiler.staticSymbolResolverMod.StaticSymbolResolver
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/compiler/src/aot/static_reflector", JSImport.Namespace)
-@js.native
-object staticReflectorMod extends js.Object {
+object staticReflectorMod {
   
+  @JSImport("@angular/compiler/src/aot/static_reflector", "StaticReflector")
   @js.native
   class StaticReflector protected () extends CompileReflector {
     def this(summaryResolver: SummaryResolver[StaticSymbol], symbolResolver: StaticSymbolResolver) = this()

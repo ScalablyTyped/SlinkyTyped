@@ -3,6 +3,7 @@ package typingsSlinky.googleapis.websecurityscannerV1alphaMod.websecurityscanner
 import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
 import typingsSlinky.googleapisCommon.apiMod.GlobalOptions
 import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("googleapis/build/src/apis/websecurityscanner/v1alpha", "websecurityscanner_v1alpha.Websecurityscanner")
 @js.native
-class Websecurityscanner protected () extends js.Object {
+class Websecurityscanner protected () extends StObject {
   def this(options: GlobalOptions) = this()
   def this(options: GlobalOptions, google: GoogleConfigurable) = this()
   

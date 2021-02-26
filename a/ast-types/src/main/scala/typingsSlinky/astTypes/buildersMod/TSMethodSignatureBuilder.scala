@@ -8,12 +8,13 @@ import typingsSlinky.astTypes.kindsMod.ObjectPatternKind
 import typingsSlinky.astTypes.kindsMod.RestElementKind
 import typingsSlinky.astTypes.kindsMod.TSTypeAnnotationKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSMethodSignature
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TSMethodSignatureBuilder extends js.Object {
+trait TSMethodSignatureBuilder extends StObject {
   
   def apply(
     key: ExpressionKind,

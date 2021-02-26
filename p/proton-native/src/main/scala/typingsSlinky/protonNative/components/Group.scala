@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.protonNative.anon.H
 import typingsSlinky.protonNative.anon.X
 import typingsSlinky.protonNative.mod.GroupProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Group {
   
   @JSImport("proton-native", "Group")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -58,7 +59,7 @@ object Group {
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Group.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.rax
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,6 +18,9 @@ package object mod {
   type CFactory[P, T /* <: typingsSlinky.rax.mod.Component[P, typingsSlinky.rax.mod.ComponentState, _] */] = typingsSlinky.rax.mod.ComponentFactory[P, T]
   
   type ChangeEventHandler[T] = typingsSlinky.rax.mod.EventHandler[typingsSlinky.rax.mod.ChangeEvent[T]]
+  
+  @scala.inline
+  def Children: typingsSlinky.rax.mod.RaxChildren = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].selectDynamic("Children").asInstanceOf[typingsSlinky.rax.mod.RaxChildren]
   
   /**
     * We use an intersection type to infer multiple type parameters from
@@ -130,6 +134,9 @@ package object mod {
   type FormEvent[T] = typingsSlinky.rax.mod.SyntheticEvent[T, org.scalajs.dom.raw.Event]
   
   type FormEventHandler[T] = typingsSlinky.rax.mod.EventHandler[typingsSlinky.rax.mod.FormEvent[T]]
+  
+  @scala.inline
+  def Fragment: typingsSlinky.rax.mod.ExoticComponent[typingsSlinky.rax.anon.Children] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].selectDynamic("Fragment").asInstanceOf[typingsSlinky.rax.mod.ExoticComponent[typingsSlinky.rax.anon.Children]]
   
   type FunctionComponentFactory[P] = js.Function2[
     /* props */ js.UndefOr[typingsSlinky.rax.mod.Attributes with P], 
@@ -526,4 +533,499 @@ package object mod {
     */ typingsSlinky.rax.raxStrings.WeakValidationMap with org.scalablytyped.runtime.TopLevel[js.Any]
   
   type WheelEventHandler[T] = typingsSlinky.rax.mod.EventHandler[typingsSlinky.rax.mod.WheelEvent[T]]
+  
+  @scala.inline
+  def createContext[T](defaultValue: T): typingsSlinky.rax.mod.Context[T] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(defaultValue.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.rax.mod.Context[T]]
+  @scala.inline
+  def createContext[T](defaultValue: T, calculateChangedBits: js.Function2[/* prev */ T, /* next */ T, scala.Double]): typingsSlinky.rax.mod.Context[T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(defaultValue.asInstanceOf[js.Any], calculateChangedBits.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.Context[T]]
+  
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: java.lang.String,
+    props: typingsSlinky.rax.mod.Attributes with P,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: java.lang.String,
+    props: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](`type`: java.lang.String, props: scala.Null, children: typingsSlinky.rax.mod.RaxNode*): typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.ClassType[
+      P, 
+      typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState], 
+      typingsSlinky.rax.mod.ClassicComponentClass[P]
+    ],
+    props: (typingsSlinky.rax.mod.ClassAttributes[typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState]]) with P,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.CElement[P, typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.CElement[P, typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.ClassType[
+      P, 
+      typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState], 
+      typingsSlinky.rax.mod.ClassicComponentClass[P]
+    ],
+    props: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.CElement[P, typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.CElement[P, typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.ClassType[
+      P, 
+      typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState], 
+      typingsSlinky.rax.mod.ClassicComponentClass[P]
+    ],
+    props: scala.Null,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.CElement[P, typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.CElement[P, typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.ComponentClass[P, typingsSlinky.rax.mod.ComponentState],
+    props: typingsSlinky.rax.mod.Attributes with P,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.ComponentClass[P, typingsSlinky.rax.mod.ComponentState],
+    props: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.ComponentClass[P, typingsSlinky.rax.mod.ComponentState],
+    props: scala.Null,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.FunctionComponent[P],
+    props: typingsSlinky.rax.mod.Attributes with P,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.FunctionComponent[P],
+    props: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]]]
+  @scala.inline
+  def createElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.FunctionComponent[P],
+    props: scala.Null,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxElement[P, java.lang.String | typingsSlinky.rax.mod.JSXElementConstructor[_]]]
+  @scala.inline
+  def createElement[P /* <: typingsSlinky.rax.mod.DOMAttributes[T] */, T /* <: typingsSlinky.rax.mod.Element */](
+    `type`: java.lang.String,
+    props: typingsSlinky.rax.mod.ClassAttributes[T] with P,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.DOMElement[P, T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.DOMElement[P, T]]
+  @scala.inline
+  def createElement[P /* <: typingsSlinky.rax.mod.SVGAttributes[T] */, T /* <: org.scalajs.dom.raw.Element */](
+    `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any,
+    props: typingsSlinky.rax.mod.ClassAttributes[T] with P,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxSVGElement = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxSVGElement]
+  @scala.inline
+  def createElement[P /* <: typingsSlinky.rax.mod.SVGAttributes[T] */, T /* <: org.scalajs.dom.raw.Element */](
+    `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any,
+    props: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxSVGElement = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxSVGElement]
+  @scala.inline
+  def createElement[P /* <: typingsSlinky.rax.mod.SVGAttributes[T] */, T /* <: org.scalajs.dom.raw.Element */](
+    `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any,
+    props: scala.Null,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.RaxSVGElement = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.RaxSVGElement]
+  @scala.inline
+  def createElement[P /* <: js.Object */, T /* <: typingsSlinky.rax.mod.Component[P, typingsSlinky.rax.mod.ComponentState, _] */, C /* <: typingsSlinky.rax.mod.ComponentClass[P, typingsSlinky.rax.mod.ComponentState] */](
+    `type`: typingsSlinky.rax.mod.ClassType[P, T, C],
+    props: typingsSlinky.rax.mod.ClassAttributes[T] with P,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.CElement[P, T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.CElement[P, T]]
+  @scala.inline
+  def createElement[P /* <: js.Object */, T /* <: typingsSlinky.rax.mod.Component[P, typingsSlinky.rax.mod.ComponentState, _] */, C /* <: typingsSlinky.rax.mod.ComponentClass[P, typingsSlinky.rax.mod.ComponentState] */](
+    `type`: typingsSlinky.rax.mod.ClassType[P, T, C],
+    props: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.CElement[P, T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.CElement[P, T]]
+  @scala.inline
+  def createElement[P /* <: js.Object */, T /* <: typingsSlinky.rax.mod.Component[P, typingsSlinky.rax.mod.ComponentState, _] */, C /* <: typingsSlinky.rax.mod.ComponentClass[P, typingsSlinky.rax.mod.ComponentState] */](
+    `type`: typingsSlinky.rax.mod.ClassType[P, T, C],
+    props: scala.Null,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.CElement[P, T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.CElement[P, T]]
+  
+  @scala.inline
+  def createElement_P_DOMAttributesTT_Element_DOMElement[P /* <: typingsSlinky.rax.mod.DOMAttributes[T] */, T /* <: typingsSlinky.rax.mod.Element */](
+    `type`: java.lang.String,
+    props: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.DOMElement[P, T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.DOMElement[P, T]]
+  @scala.inline
+  def createElement_P_DOMAttributesTT_Element_DOMElement[P /* <: typingsSlinky.rax.mod.DOMAttributes[T] */, T /* <: typingsSlinky.rax.mod.Element */](`type`: java.lang.String, props: scala.Null, children: typingsSlinky.rax.mod.RaxNode*): typingsSlinky.rax.mod.DOMElement[P, T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.DOMElement[P, T]]
+  
+  @scala.inline
+  def createElement_P_HTMLAttributesTT_HTMLElement_DetailedRaxHTMLElement[P /* <: typingsSlinky.rax.mod.HTMLAttributes[T] */, T /* <: org.scalajs.dom.raw.Element */](
+    `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 114 */ js.Any,
+    props: typingsSlinky.rax.mod.ClassAttributes[T] with P,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.DetailedRaxHTMLElement[P, T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.DetailedRaxHTMLElement[P, T]]
+  @scala.inline
+  def createElement_P_HTMLAttributesTT_HTMLElement_DetailedRaxHTMLElement[P /* <: typingsSlinky.rax.mod.HTMLAttributes[T] */, T /* <: org.scalajs.dom.raw.Element */](
+    `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 114 */ js.Any,
+    props: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.DetailedRaxHTMLElement[P, T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.DetailedRaxHTMLElement[P, T]]
+  @scala.inline
+  def createElement_P_HTMLAttributesTT_HTMLElement_DetailedRaxHTMLElement[P /* <: typingsSlinky.rax.mod.HTMLAttributes[T] */, T /* <: org.scalajs.dom.raw.Element */](
+    `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 114 */ js.Any,
+    props: scala.Null,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.DetailedRaxHTMLElement[P, T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.DetailedRaxHTMLElement[P, T]]
+  
+  // Custom components
+  @scala.inline
+  def createElement_P_Object_FunctionComponentElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.FunctionComponent[P],
+    props: typingsSlinky.rax.mod.Attributes with P,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.FunctionComponentElement[P] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.FunctionComponentElement[P]]
+  @scala.inline
+  def createElement_P_Object_FunctionComponentElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.FunctionComponent[P],
+    props: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.FunctionComponentElement[P] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.FunctionComponentElement[P]]
+  @scala.inline
+  def createElement_P_Object_FunctionComponentElement[P /* <: js.Object */](
+    `type`: typingsSlinky.rax.mod.FunctionComponent[P],
+    props: scala.Null,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.FunctionComponentElement[P] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.FunctionComponentElement[P]]
+  
+  /**
+    * ======================================================================
+    * Rax Top Level API
+    * ======================================================================
+    */
+  // DOM Elements
+  // TODO: generalize this to everything in `keyof RaxHTML`, not just "input"
+  @scala.inline
+  def createElement_input(
+    `type`: typingsSlinky.rax.raxStrings.input,
+    props: typingsSlinky.rax.mod.InputHTMLAttributes[org.scalajs.dom.raw.HTMLElement] with typingsSlinky.rax.mod.ClassAttributes[org.scalajs.dom.raw.HTMLElement],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.DetailedRaxHTMLElement[
+    typingsSlinky.rax.mod.InputHTMLAttributes[org.scalajs.dom.raw.HTMLElement], 
+    org.scalajs.dom.raw.HTMLElement
+  ] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.DetailedRaxHTMLElement[
+    typingsSlinky.rax.mod.InputHTMLAttributes[org.scalajs.dom.raw.HTMLElement], 
+    org.scalajs.dom.raw.HTMLElement
+  ]]
+  @scala.inline
+  def createElement_input(
+    `type`: typingsSlinky.rax.raxStrings.input,
+    props: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.DetailedRaxHTMLElement[
+    typingsSlinky.rax.mod.InputHTMLAttributes[org.scalajs.dom.raw.HTMLElement], 
+    org.scalajs.dom.raw.HTMLElement
+  ] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.DetailedRaxHTMLElement[
+    typingsSlinky.rax.mod.InputHTMLAttributes[org.scalajs.dom.raw.HTMLElement], 
+    org.scalajs.dom.raw.HTMLElement
+  ]]
+  @scala.inline
+  def createElement_input(
+    `type`: typingsSlinky.rax.raxStrings.input,
+    props: scala.Null,
+    children: typingsSlinky.rax.mod.RaxNode*
+  ): typingsSlinky.rax.mod.DetailedRaxHTMLElement[
+    typingsSlinky.rax.mod.InputHTMLAttributes[org.scalajs.dom.raw.HTMLElement], 
+    org.scalajs.dom.raw.HTMLElement
+  ] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createElement")(`type`.asInstanceOf[js.Any], props.asInstanceOf[js.Any], children.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.DetailedRaxHTMLElement[
+    typingsSlinky.rax.mod.InputHTMLAttributes[org.scalajs.dom.raw.HTMLElement], 
+    org.scalajs.dom.raw.HTMLElement
+  ]]
+  
+  @scala.inline
+  def createRef[T](): typingsSlinky.rax.mod.RefObject[T] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createRef")().asInstanceOf[typingsSlinky.rax.mod.RefObject[T]]
+  
+  @scala.inline
+  def forwardRef[T, P](Component: typingsSlinky.rax.mod.RefForwardingComponent[T, P]): typingsSlinky.rax.mod.ForwardRefExoticComponent[
+    typingsSlinky.rax.mod.PropsWithoutRef[P] with typingsSlinky.rax.mod.RefAttributes[T]
+  ] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("forwardRef")(Component.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.rax.mod.ForwardRefExoticComponent[
+    typingsSlinky.rax.mod.PropsWithoutRef[P] with typingsSlinky.rax.mod.RefAttributes[T]
+  ]]
+  
+  @scala.inline
+  def memo[T /* <: typingsSlinky.rax.mod.ComponentType[_] */](Component: T): typingsSlinky.rax.mod.MemoExoticComponent[T] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("memo")(Component.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.rax.mod.MemoExoticComponent[T]]
+  @scala.inline
+  def memo[T /* <: typingsSlinky.rax.mod.ComponentType[_] */](
+    Component: T,
+    propsAreEqual: js.Function2[
+      /* prevProps */ typingsSlinky.rax.mod.ComponentProps[T], 
+      /* nextProps */ typingsSlinky.rax.mod.ComponentProps[T], 
+      scala.Boolean
+    ]
+  ): typingsSlinky.rax.mod.MemoExoticComponent[T] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("memo")(Component.asInstanceOf[js.Any], propsAreEqual.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.MemoExoticComponent[T]]
+  @scala.inline
+  def memo[P /* <: js.Object */](Component: typingsSlinky.rax.mod.FC[P]): typingsSlinky.rax.mod.NamedExoticComponent[P] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("memo")(Component.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.rax.mod.NamedExoticComponent[P]]
+  @scala.inline
+  def memo[P /* <: js.Object */](
+    Component: typingsSlinky.rax.mod.FC[P],
+    propsAreEqual: js.Function2[
+      /* prevProps */ typingsSlinky.rax.mod.PropsWithChildren[P], 
+      /* nextProps */ typingsSlinky.rax.mod.PropsWithChildren[P], 
+      scala.Boolean
+    ]
+  ): typingsSlinky.rax.mod.NamedExoticComponent[P] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("memo")(Component.asInstanceOf[js.Any], propsAreEqual.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.rax.mod.NamedExoticComponent[P]]
+  
+  @scala.inline
+  def render[T](element: typingsSlinky.rax.mod.Element, parent: typingsSlinky.rax.mod.Document): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("render")(element.asInstanceOf[js.Any], parent.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def render[T](
+    element: typingsSlinky.rax.mod.Element,
+    parent: typingsSlinky.rax.mod.Document,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function0[scala.Unit]
+  ): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("render")(element.asInstanceOf[js.Any], parent.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def render[T](
+    element: typingsSlinky.rax.mod.Element,
+    parent: typingsSlinky.rax.mod.Document,
+    options: typingsSlinky.rax.mod.RenderOption
+  ): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("render")(element.asInstanceOf[js.Any], parent.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def render[T](
+    element: typingsSlinky.rax.mod.Element,
+    parent: typingsSlinky.rax.mod.Document,
+    options: typingsSlinky.rax.mod.RenderOption,
+    callback: js.Function0[scala.Unit]
+  ): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("render")(element.asInstanceOf[js.Any], parent.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def render[T](element: typingsSlinky.rax.mod.Element, parent: typingsSlinky.rax.mod.Element): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("render")(element.asInstanceOf[js.Any], parent.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def render[T](
+    element: typingsSlinky.rax.mod.Element,
+    parent: typingsSlinky.rax.mod.Element,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function0[scala.Unit]
+  ): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("render")(element.asInstanceOf[js.Any], parent.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def render[T](
+    element: typingsSlinky.rax.mod.Element,
+    parent: typingsSlinky.rax.mod.Element,
+    options: typingsSlinky.rax.mod.RenderOption
+  ): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("render")(element.asInstanceOf[js.Any], parent.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def render[T](
+    element: typingsSlinky.rax.mod.Element,
+    parent: typingsSlinky.rax.mod.Element,
+    options: typingsSlinky.rax.mod.RenderOption,
+    callback: js.Function0[scala.Unit]
+  ): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("render")(element.asInstanceOf[js.Any], parent.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  // I made 'inputs' required here and in useMemo as there's no point to memoizing without the memoization key
+  // useCallback(X) is identical to just using X, useMemo(() => Y) is identical to just using Y.
+  /**
+    * `useCallback` will return a memoized version of the callback that only changes if one of the `inputs`
+    * has changed.
+    */
+  // TODO (TypeScript 3.0): <T extends (...args: never[]) => unknown>
+  @scala.inline
+  def useCallback[T /* <: js.Function1[/* repeated */ js.Any, _] */](callback: T, deps: typingsSlinky.rax.mod.DependencyList): T = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useCallback")(callback.asInstanceOf[js.Any], deps.asInstanceOf[js.Any])).asInstanceOf[T]
+  
+  // This will technically work if you give a Consumer<T> or Provider<T> but it's deprecated and warns
+  /**
+    * Accepts a context object (the value returned from `Rax.createContext`) and returns the current
+    * context value, as given by the nearest context provider for the given context.
+    */
+  @scala.inline
+  def useContext[T](context: typingsSlinky.rax.mod.Context[T]): T = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useContext")(context.asInstanceOf[js.Any]).asInstanceOf[T]
+  
+  /**
+    * Accepts a function that contains imperative, possibly effectful code.
+    *
+    * @param effect Imperative function that can return a cleanup function
+    * @param deps If present, effect will only activate if the values in the list change.
+    */
+  @scala.inline
+  def useEffect(effect: typingsSlinky.rax.mod.EffectCallback): scala.Unit = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useEffect")(effect.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
+  @scala.inline
+  def useEffect(effect: typingsSlinky.rax.mod.EffectCallback, deps: typingsSlinky.rax.mod.DependencyList): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useEffect")(effect.asInstanceOf[js.Any], deps.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  // NOTE: this does not accept strings, but this will have to be fixed by removing strings from type Ref<T>
+  /**
+    * `useImperativeHandle` customizes the instance value that is exposed to parent components when using
+    * `ref`. As always, imperative code using refs should be avoided in most cases.
+    *
+    * `useImperativeHandle` should be used with `Rax.forwardRef`.
+    */
+  @scala.inline
+  def useImperativeHandle[T, R /* <: T */](ref: js.UndefOr[typingsSlinky.rax.mod.Ref[T]], init: js.Function0[R]): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useImperativeHandle")(ref.asInstanceOf[js.Any], init.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def useImperativeHandle[T, R /* <: T */](
+    ref: js.UndefOr[typingsSlinky.rax.mod.Ref[T]],
+    init: js.Function0[R],
+    deps: typingsSlinky.rax.mod.DependencyList
+  ): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useImperativeHandle")(ref.asInstanceOf[js.Any], init.asInstanceOf[js.Any], deps.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  /**
+    * The signature is identical to `useEffect`, but it fires synchronously after all DOM mutations.
+    * Use this to read layout from the DOM and synchronously re-render. Updates scheduled inside
+    * `useLayoutEffect` will be flushed synchronously, before the browser has a chance to paint.
+    *
+    * Prefer the standard `useEffect` when possible to avoid blocking visual updates.
+    *
+    * If you’re migrating code from a class component, `useLayoutEffect` fires in the same phase as
+    * `componentDidMount` and `componentDidUpdate`.
+    */
+  @scala.inline
+  def useLayoutEffect(effect: typingsSlinky.rax.mod.EffectCallback): scala.Unit = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useLayoutEffect")(effect.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
+  @scala.inline
+  def useLayoutEffect(effect: typingsSlinky.rax.mod.EffectCallback, deps: typingsSlinky.rax.mod.DependencyList): scala.Unit = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useLayoutEffect")(effect.asInstanceOf[js.Any], deps.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  /**
+    * `useMemo` will only recompute the memoized value when one of the `deps` has changed.
+    *
+    * Usage note: if calling `useMemo` with a referentially stable function, also give it as the input in
+    * the second argument.
+    *
+    * ```ts
+    * function expensive () { ... }
+    *
+    * function Component () {
+    *   const expensiveResult = useMemo(expensive, [expensive])
+    *   return ...
+    * }
+    * ```
+    */
+  // allow undefined, but don't make it optional as that is very likely a mistake
+  @scala.inline
+  def useMemo[T](factory: js.Function0[T]): T = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useMemo")(factory.asInstanceOf[js.Any]).asInstanceOf[T]
+  @scala.inline
+  def useMemo[T](factory: js.Function0[T], deps: typingsSlinky.rax.mod.DependencyList): T = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useMemo")(factory.asInstanceOf[js.Any], deps.asInstanceOf[js.Any])).asInstanceOf[T]
+  
+  /**
+    * An alternative to `useState`.
+    *
+    * `useReducer` is usually preferable to `useState` when you have complex state logic that involves
+    * multiple sub-values. It also lets you optimize performance for components that trigger deep
+    * updates because you can pass `dispatch` down instead of callbacks.
+    */
+  // I'm not sure if I keep this 2-ary or if I make it (2,3)-ary; it's currently (2,3)-ary.
+  // The Flow types do have an overload for 3-ary invocation with undefined initializer.
+  // NOTE: without the ReducerState indirection, TypeScript would reduce S to be the most common
+  // supertype between the reducer's return type and the initialState (or the initializer's return type),
+  // which would prevent autocompletion from ever working.
+  // TODO: double-check if this weird overload logic is necessary. It is possible it's either a bug
+  // in older versions, or a regression in newer versions of the typescript completion service.
+  @scala.inline
+  def useReducer[R /* <: typingsSlinky.rax.mod.Reducer[_, _] */](
+    reducer: R,
+    initialState: typingsSlinky.rax.mod.ReducerState[R],
+    initializer: js.UndefOr[scala.Nothing]
+  ): js.Tuple2[
+    typingsSlinky.rax.mod.ReducerState[R], 
+    typingsSlinky.rax.mod.Dispatch[typingsSlinky.rax.mod.ReducerAction[R]]
+  ] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useReducer")(reducer.asInstanceOf[js.Any], initialState.asInstanceOf[js.Any], initializer.asInstanceOf[js.Any])).asInstanceOf[js.Tuple2[
+    typingsSlinky.rax.mod.ReducerState[R], 
+    typingsSlinky.rax.mod.Dispatch[typingsSlinky.rax.mod.ReducerAction[R]]
+  ]]
+  /**
+    * An alternative to `useState`.
+    *
+    * `useReducer` is usually preferable to `useState` when you have complex state logic that involves
+    * multiple sub-values. It also lets you optimize performance for components that trigger deep
+    * updates because you can pass `dispatch` down instead of callbacks.
+    */
+  // overload where "I" may be a subset of ReducerState<R>; used to provide autocompletion.
+  // If "I" matches ReducerState<R> exactly then the last overload will allow initializer to be ommitted.
+  // the last overload effectively behaves as if the identity function (x => x) is the initializer.
+  // overload for free "I"; all goes as long as initializer converts it into "ReducerState<R>".
+  @scala.inline
+  def useReducer[R /* <: typingsSlinky.rax.mod.Reducer[_, _] */, I](
+    reducer: R,
+    initializerArg: (I with typingsSlinky.rax.mod.ReducerState[R]) | I,
+    initializer: js.Function1[
+      (/* arg */ I with typingsSlinky.rax.mod.ReducerState[R]) | (/* arg */ I), 
+      typingsSlinky.rax.mod.ReducerState[R]
+    ]
+  ): js.Tuple2[
+    typingsSlinky.rax.mod.ReducerState[R], 
+    typingsSlinky.rax.mod.Dispatch[typingsSlinky.rax.mod.ReducerAction[R]]
+  ] = (typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useReducer")(reducer.asInstanceOf[js.Any], initializerArg.asInstanceOf[js.Any], initializer.asInstanceOf[js.Any])).asInstanceOf[js.Tuple2[
+    typingsSlinky.rax.mod.ReducerState[R], 
+    typingsSlinky.rax.mod.Dispatch[typingsSlinky.rax.mod.ReducerAction[R]]
+  ]]
+  
+  // convenience overload for potentially undefined initialValue / call with 0 arguments
+  // has a default to stop it from defaulting to {} instead
+  /**
+    * `useRef` returns a mutable ref object whose `.current` property is initialized to the passed argument
+    * (`initialValue`). The returned object will persist for the full lifetime of the component.
+    *
+    * Note that `useRef()` is useful for more than the `ref` attribute. It’s handy for keeping any mutable
+    * value around similar to how you’d use instance fields in classes.
+    */
+  // TODO (TypeScript 3.0): <T extends unknown>
+  @scala.inline
+  def useRef[T](): typingsSlinky.rax.mod.MutableRefObject[js.UndefOr[T]] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useRef")().asInstanceOf[typingsSlinky.rax.mod.MutableRefObject[js.UndefOr[T]]]
+  /**
+    * `useRef` returns a mutable ref object whose `.current` property is initialized to the passed argument
+    * (`initialValue`). The returned object will persist for the full lifetime of the component.
+    *
+    * Note that `useRef()` is useful for more than the `ref` attribute. It’s handy for keeping any mutable
+    * value around similar to how you’d use instance fields in classes.
+    */
+  // TODO (TypeScript 3.0): <T extends unknown>
+  @scala.inline
+  def useRef[T](initialValue: T): typingsSlinky.rax.mod.MutableRefObject[T] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useRef")(initialValue.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.rax.mod.MutableRefObject[T]]
+  
+  // convenience overload for refs given as a ref prop as they typically start with a null value
+  /**
+    * `useRef` returns a mutable ref object whose `.current` property is initialized to the passed argument
+    * (`initialValue`). The returned object will persist for the full lifetime of the component.
+    *
+    * Note that `useRef()` is useful for more than the `ref` attribute. It’s handy for keeping any mutable
+    * value around similar to how you’d use instance fields in classes.
+    *
+    * Usage note: if you need the result of useRef to be directly mutable, include `| null` in the type
+    * of the generic argument.
+    */
+  // TODO (TypeScript 3.0): <T extends unknown>
+  @scala.inline
+  def useRef_T_RefObject[T](): typingsSlinky.rax.mod.RefObject[T] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useRef")().asInstanceOf[typingsSlinky.rax.mod.RefObject[T]]
+  @scala.inline
+  def useRef_T_RefObject[T](initialValue: T): typingsSlinky.rax.mod.RefObject[T] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useRef")(initialValue.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.rax.mod.RefObject[T]]
+  
+  // convenience overload when first argument is ommitted
+  /**
+    * Returns a stateful value, and a function to update it.
+    */
+  @scala.inline
+  def useState[S](): js.Tuple2[
+    js.UndefOr[S], 
+    typingsSlinky.rax.mod.Dispatch[typingsSlinky.rax.mod.SetStateAction[js.UndefOr[S]]]
+  ] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useState")().asInstanceOf[js.Tuple2[
+    js.UndefOr[S], 
+    typingsSlinky.rax.mod.Dispatch[typingsSlinky.rax.mod.SetStateAction[js.UndefOr[S]]]
+  ]]
+  /**
+    * Returns a stateful value, and a function to update it.
+    */
+  @scala.inline
+  def useState[S](initialState: S): js.Tuple2[S, typingsSlinky.rax.mod.Dispatch[typingsSlinky.rax.mod.SetStateAction[S]]] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useState")(initialState.asInstanceOf[js.Any]).asInstanceOf[js.Tuple2[S, typingsSlinky.rax.mod.Dispatch[typingsSlinky.rax.mod.SetStateAction[S]]]]
+  @scala.inline
+  def useState[S](initialState: js.Function0[S]): js.Tuple2[S, typingsSlinky.rax.mod.Dispatch[typingsSlinky.rax.mod.SetStateAction[S]]] = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useState")(initialState.asInstanceOf[js.Any]).asInstanceOf[js.Tuple2[S, typingsSlinky.rax.mod.Dispatch[typingsSlinky.rax.mod.SetStateAction[S]]]]
+  
+  @scala.inline
+  def version: java.lang.String = typingsSlinky.rax.mod.^.asInstanceOf[js.Dynamic].selectDynamic("version").asInstanceOf[java.lang.String]
 }

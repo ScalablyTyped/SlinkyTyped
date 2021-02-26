@@ -1,12 +1,13 @@
 package typingsSlinky.angularCompiler.publicApiMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/public_api", "TokenType")
 @js.native
-object TokenType extends js.Object {
+object TokenType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.angularCompiler.lexerMod.TokenType with Double] = js.native

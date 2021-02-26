@@ -10,9 +10,9 @@ Formats ICU Message strings with number, date, plural, and select placeholders t
 | ------------------ | :-------------: |
 | Full name          | intl-messageformat |
 | Keywords           | i18n, intl, internationalization, localization, globalization, messageformat, parser, plural, icu |
-| # releases         | 78 |
-| # dependents       | 188 |
-| # downloads        | 28766554 |
+| # releases         | 162 |
+| # dependents       | 235 |
+| # downloads        | 55348795 |
 | # stars            | 6 |
 
 ## Links

@@ -1,13 +1,14 @@
 package typingsSlinky.cesium.mod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "CameraEventAggregator")
 @js.native
-class CameraEventAggregator () extends js.Object {
+class CameraEventAggregator () extends StObject {
   def this(element: HTMLCanvasElement) = this()
   
   var anyButtonDown: Boolean = js.native

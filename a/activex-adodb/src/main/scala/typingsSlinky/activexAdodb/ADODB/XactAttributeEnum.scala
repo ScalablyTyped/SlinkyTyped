@@ -4,6 +4,7 @@ import typingsSlinky.activexAdodb.activexAdodbNumbers.`1048576`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`131072`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`262144`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`524288`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAdodb.activexAdodbNumbers.`131072`
   - typingsSlinky.activexAdodb.activexAdodbNumbers.`1048576`
 */
-trait XactAttributeEnum extends js.Object
+trait XactAttributeEnum extends StObject
 object XactAttributeEnum {
   
   @scala.inline

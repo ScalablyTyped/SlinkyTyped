@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "react-dropzone"
-version := "11.2.4-a4d626"
+version := "11.2.4-50c4f9"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.14-23cf0c",
-  "org.scalablytyped.slinky" %%% "file-selector" % "0.2.3-591522",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ed7fbd",
-  "org.scalablytyped.slinky" %%% "react" % "17.0-dt-20201121Z-8f0b52",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.14-58bcb0",
+  "org.scalablytyped.slinky" %%% "file-selector" % "0.2.3-d10b4a",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-931d77",
+  "org.scalablytyped.slinky" %%% "react" % "17.0-dt-20201121Z-9cde70",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

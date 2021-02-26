@@ -9,14 +9,14 @@ import typingsSlinky.tensorflowTfjsConverter.typesMod.TensorInfo
 import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-converter/dist/executor/graph_executor", JSImport.Namespace)
-@js.native
-object graphExecutorMod extends js.Object {
+object graphExecutorMod {
   
+  @JSImport("@tensorflow/tfjs-converter/dist/executor/graph_executor", "GraphExecutor")
   @js.native
   class GraphExecutor protected () extends FunctionExecutor {
     /**

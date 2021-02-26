@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientDocs.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDocs.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDocs.anon.DocumentId
 import typingsSlinky.maximMazurokGapiClientDocs.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DocumentsResource extends js.Object {
+trait DocumentsResource extends StObject {
   
   /**
     * Applies one or more updates to the document. Each request is validated before being applied. If any request is not valid, then the entire request will fail and nothing will be

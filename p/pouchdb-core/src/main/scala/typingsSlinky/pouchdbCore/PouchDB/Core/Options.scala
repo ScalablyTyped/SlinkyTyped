@@ -3,12 +3,13 @@ package typingsSlinky.pouchdbCore.PouchDB.Core
 import org.scalajs.dom.experimental.Request
 import org.scalajs.dom.experimental.RequestInit
 import typingsSlinky.pouchdbCore.Fetch
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Options extends js.Object {
+trait Options extends StObject {
   
   var fetch: js.UndefOr[Fetch] = js.native
 }
@@ -21,26 +22,14 @@ object Options {
   }
   
   @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+  implicit class OptionsMutableBuilder[Self <: Options] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setFetch(
       value: (/* url */ String | Request, /* opts */ js.UndefOr[RequestInit]) => js.Promise[org.scalajs.dom.experimental.Response]
-    ): Self = this.set("fetch", js.Any.fromFunction2(value))
+    ): Self = StObject.set(x, "fetch", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteFetch: Self = this.set("fetch", js.undefined)
+    def setFetchUndefined: Self = StObject.set(x, "fetch", js.undefined)
   }
 }

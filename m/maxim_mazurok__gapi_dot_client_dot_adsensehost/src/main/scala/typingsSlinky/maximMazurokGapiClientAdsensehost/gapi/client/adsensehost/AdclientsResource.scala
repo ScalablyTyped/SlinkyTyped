@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientAdsensehost.anon.AccountId
 import typingsSlinky.maximMazurokGapiClientAdsensehost.anon.AdClientId
 import typingsSlinky.maximMazurokGapiClientAdsensehost.anon.Alt
 import typingsSlinky.maximMazurokGapiClientAdsensehost.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AdclientsResource extends js.Object {
+trait AdclientsResource extends StObject {
   
   /** Get information about one of the ad clients in the specified publisher's AdSense account. */
   def get(): Request[AdClient] = js.native

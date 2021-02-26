@@ -1,6 +1,7 @@
 package typingsSlinky.typescript.mod
 
 import typingsSlinky.typescript.mod.InvalidatedProjectKind.Build
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

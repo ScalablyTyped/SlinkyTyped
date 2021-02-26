@@ -1,5 +1,6 @@
 package typingsSlinky.nodeHueApi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nodeHueApi.nodeHueApiStrings.none
   - typingsSlinky.nodeHueApi.nodeHueApiStrings.colorloop
 */
-trait LightEffect extends js.Object
+trait LightEffect extends StObject
 object LightEffect {
   
   @scala.inline

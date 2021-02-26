@@ -1,12 +1,13 @@
 package typingsSlinky.activexOutlook.Outlook
 
 import typingsSlinky.std.VarDate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AddressEntry extends js.Object {
+trait AddressEntry extends StObject {
   
   var Address: String = js.native
   

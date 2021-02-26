@@ -4,18 +4,18 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.grommetStrings.component
 import typingsSlinky.grommet.grommetStrings.document
 import typingsSlinky.grommet.keyboardMod.KeyboardProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Keyboard {
   
-  @JSImport("grommet/es6", "Keyboard")
+  @JSImport("grommet", "Keyboard")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,10 +59,10 @@ object Keyboard {
     def onUp(value: /* event */ SyntheticKeyboardEvent[HTMLElement] => Unit): this.type = set("onUp", js.Any.fromFunction1(value))
     
     @scala.inline
-    def target(value: component | document): this.type = set("target", value.asInstanceOf[js.Any])
+    def target(value: typingsSlinky.grommet.grommetStrings.component | document): this.type = set("target", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: KeyboardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Keyboard.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: KeyboardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

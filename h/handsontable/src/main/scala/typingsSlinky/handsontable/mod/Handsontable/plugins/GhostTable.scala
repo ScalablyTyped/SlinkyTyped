@@ -4,12 +4,13 @@ import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.handsontable.mod.Handsontable.GridSettings
 import typingsSlinky.handsontable.mod._Handsontable.Core
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GhostTable extends js.Object {
+trait GhostTable extends StObject {
   
   def addColumn(column: Double, samples: js.Object): Unit = js.native
   
@@ -50,8 +51,8 @@ trait GhostTable extends js.Object {
   var hot: Core = js.native
   
   def injectTable(): Unit = js.native
-  def injectTable(parent: Unit): Unit = js.native
   def injectTable(parent: HTMLElement): Unit = js.native
+  def injectTable(parent: Unit): Unit = js.native
   
   var injected: Boolean = js.native
   

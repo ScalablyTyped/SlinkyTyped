@@ -1,13 +1,13 @@
 package typingsSlinky.ol
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/format/filter/Not", JSImport.Namespace)
-@js.native
-object notMod extends js.Object {
+object notMod {
   
+  @JSImport("ol/format/filter/Not", JSImport.Default)
   @js.native
   class default protected ()
     extends typingsSlinky.ol.filterFilterMod.default {

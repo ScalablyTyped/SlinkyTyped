@@ -6,14 +6,14 @@ import typingsSlinky.grpcGrpcJs.loadBalancerMod.LoadBalancer
 import typingsSlinky.grpcGrpcJs.loadBalancingConfigMod.LoadBalancingConfig
 import typingsSlinky.grpcGrpcJs.subchannelMod.SubchannelAddress
 import typingsSlinky.grpcGrpcJs.uriParserMod.GrpcUri
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@grpc/grpc-js/build/src/resolving-load-balancer", JSImport.Namespace)
-@js.native
-object resolvingLoadBalancerMod extends js.Object {
+object resolvingLoadBalancerMod {
   
+  @JSImport("@grpc/grpc-js/build/src/resolving-load-balancer", "ResolvingLoadBalancer")
   @js.native
   class ResolvingLoadBalancer protected () extends LoadBalancer {
     /**

@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientSqladmin.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientSqladmin.anon.Alt
 import typingsSlinky.maximMazurokGapiClientSqladmin.anon.Callback
 import typingsSlinky.maximMazurokGapiClientSqladmin.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BackupRunsResource extends js.Object {
+trait BackupRunsResource extends StObject {
   
   /** Deletes the backup taken by a backup run. */
   def delete(): Request[Operation] = js.native

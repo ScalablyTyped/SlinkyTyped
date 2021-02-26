@@ -2,12 +2,13 @@ package typingsSlinky.jqueryui.JQueryUI
 
 import typingsSlinky.jqueryui.JQuery
 import typingsSlinky.std.ThisType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UI extends js.Object {
+trait UI extends StObject {
   
   def accordion(methodName: String): JQuery = js.native
   def accordion(optionLiteral: String, optionName: String): js.Any = js.native

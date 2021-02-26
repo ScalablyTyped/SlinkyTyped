@@ -4,6 +4,7 @@ import typingsSlinky.winrtUwp.Windows.Foundation.IClosable
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IOutputStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

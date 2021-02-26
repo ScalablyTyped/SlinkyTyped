@@ -9,11 +9,11 @@ the complete solution for node.js command-line programs
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | commander |
-| Keywords           | commander, command, option, parser |
-| # releases         | 22 |
-| # dependents       | 35164 |
-| # downloads        | 1369209723 |
-| # stars            | 1011 |
+| Keywords           | commander, command, option, parser, cli, argument, args, argv |
+| # releases         | 30 |
+| # dependents       | 45041 |
+| # downloads        | 2332041270 |
+| # stars            | 1016 |
 
 ## Links
 - [Homepage](https://github.com/tj/commander.js#readme)

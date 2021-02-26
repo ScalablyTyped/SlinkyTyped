@@ -1,6 +1,7 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Page
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.none_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.child
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.root
 */
-trait AdFrameType extends js.Object
+trait AdFrameType extends StObject
 object AdFrameType {
   
   @scala.inline

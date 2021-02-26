@@ -1,17 +1,18 @@
 package typingsSlinky.libp2pNoise
 
 import typingsSlinky.libp2pNoise.basicMod.bytes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("libp2p-noise", JSImport.Namespace)
-@js.native
-object libp2pNoiseMod extends js.Object {
+object libp2pNoiseMod {
   
-  @JSName("NOISE")
+  @JSImport("libp2p-noise", "NOISE")
+  @js.native
   val NOISE_ : typingsSlinky.libp2pNoise.noiseMod.Noise = js.native
   
+  @JSImport("libp2p-noise", "Noise")
   @js.native
   /**
     *

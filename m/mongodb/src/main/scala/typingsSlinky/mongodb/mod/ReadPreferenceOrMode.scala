@@ -1,5 +1,6 @@
 package typingsSlinky.mongodb.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mongodb.mod.ReadPreference
   - typingsSlinky.mongodb.mod.ReadPreferenceMode
 */
-trait ReadPreferenceOrMode extends js.Object
+trait ReadPreferenceOrMode extends StObject

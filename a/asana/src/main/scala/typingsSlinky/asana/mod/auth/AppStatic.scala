@@ -1,6 +1,7 @@
 package typingsSlinky.asana.mod.auth
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,4 +19,4 @@ trait AppStatic
   * @option {String} [asanaBaseUrl] Base URL to use for Asana, for debugging
   * @constructor
   */
-Instantiable1[/* options */ AppOptions, App]
+Instantiable1[/* options */ AppOptions, typingsSlinky.asana.mod.auth.App]

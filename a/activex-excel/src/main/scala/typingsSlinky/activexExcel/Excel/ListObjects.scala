@@ -3,12 +3,13 @@ package typingsSlinky.activexExcel.Excel
 import typingsSlinky.activexExcel.activexExcelNumbers.`0`
 import typingsSlinky.activexExcel.activexExcelNumbers.`1`
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ListObjects extends js.Object {
+trait ListObjects extends StObject {
   
   def apply(Index: String): ListObject = js.native
   def apply(Index: Double): ListObject = js.native

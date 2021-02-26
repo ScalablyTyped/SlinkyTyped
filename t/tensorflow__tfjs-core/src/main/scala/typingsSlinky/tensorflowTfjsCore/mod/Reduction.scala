@@ -1,12 +1,13 @@
 package typingsSlinky.tensorflowTfjsCore.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core", "Reduction")
 @js.native
-object Reduction extends js.Object {
+object Reduction extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.tensorflowTfjsCore.lossOpsUtilsMod.Reduction with Double] = js.native

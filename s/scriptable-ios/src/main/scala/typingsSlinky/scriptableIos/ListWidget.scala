@@ -1,5 +1,6 @@
 package typingsSlinky.scriptableIos
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @see https://docs.scriptable.app/listwidget/#-new-listwidget
   */
 @js.native
-trait ListWidget extends js.Object {
+trait ListWidget extends StObject {
   
   /**
     * _Add date to the widget._

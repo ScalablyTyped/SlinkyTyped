@@ -5,6 +5,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.point
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.polygon
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.polyline
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.stream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

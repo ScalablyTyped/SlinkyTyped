@@ -3,6 +3,7 @@ package typingsSlinky.surveyKnockout.mod
 import org.scalajs.dom.raw.File
 import typingsSlinky.surveyKnockout.anon.Calculations
 import typingsSlinky.surveyKnockout.anon.NameString
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

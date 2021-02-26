@@ -22,6 +22,7 @@ import typingsSlinky.rcFieldForm.interfaceMod.StoreValue
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Key
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,13 +33,13 @@ class SharedBuilder_FormItemProps1309695920[Values] (val args: js.Array[js.Any])
      with StBuildingComponent[tag.type, scala.Nothing] {
   
   @scala.inline
-  def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+  def children(value: ChildrenType[Values]): this.type = set("children", value.asInstanceOf[js.Any])
   
   @scala.inline
   def childrenFunction1(value: /* form */ FormInstance[Values] => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
   
   @scala.inline
-  def children(value: ChildrenType[Values]): this.type = set("children", value.asInstanceOf[js.Any])
+  def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
   
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -47,22 +48,22 @@ class SharedBuilder_FormItemProps1309695920[Values] (val args: js.Array[js.Any])
   def colon(value: Boolean): this.type = set("colon", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def dependenciesVarargs(value: NamePath*): this.type = set("dependencies", js.Array(value :_*))
-  
-  @scala.inline
   def dependencies(value: js.Array[NamePath]): this.type = set("dependencies", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+  def dependenciesVarargs(value: NamePath*): this.type = set("dependencies", js.Array(value :_*))
   
   @scala.inline
   def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def fieldKeyVarargs(value: Key*): this.type = set("fieldKey", js.Array(value :_*))
+  def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
   
   @scala.inline
   def fieldKey(value: Key | js.Array[Key]): this.type = set("fieldKey", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def fieldKeyVarargs(value: Key*): this.type = set("fieldKey", js.Array(value :_*))
   
   @scala.inline
   def getValueFromEvent(value: /* args */ EventArgs => StoreValue): this.type = set("getValueFromEvent", js.Any.fromFunction1(value))
@@ -74,10 +75,10 @@ class SharedBuilder_FormItemProps1309695920[Values] (val args: js.Array[js.Any])
   def hasFeedback(value: Boolean): this.type = set("hasFeedback", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def helpReactElement(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
+  def help(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def help(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
+  def helpReactElement(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
   
   @scala.inline
   def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -98,9 +99,6 @@ class SharedBuilder_FormItemProps1309695920[Values] (val args: js.Array[js.Any])
   def isListField(value: Boolean): this.type = set("isListField", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
   
   @scala.inline
@@ -110,13 +108,16 @@ class SharedBuilder_FormItemProps1309695920[Values] (val args: js.Array[js.Any])
   def labelCol(value: ColProps): this.type = set("labelCol", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def messageVariables(value: Record[String, String]): this.type = set("messageVariables", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def nameVarargs(value: (String | Double)*): this.type = set("name", js.Array(value :_*))
+  def name(value: NamePath): this.type = set("name", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def name(value: NamePath): this.type = set("name", value.asInstanceOf[js.Any])
+  def nameVarargs(value: (String | Double)*): this.type = set("name", js.Array(value :_*))
   
   @scala.inline
   def noStyle(value: Boolean): this.type = set("noStyle", value.asInstanceOf[js.Any])
@@ -140,16 +141,16 @@ class SharedBuilder_FormItemProps1309695920[Values] (val args: js.Array[js.Any])
   def requiredMark(value: RequiredMark): this.type = set("requiredMark", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def rulesVarargs(value: Rule*): this.type = set("rules", js.Array(value :_*))
-  
-  @scala.inline
   def rules(value: js.Array[Rule]): this.type = set("rules", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def shouldUpdateFunction3(value: (_, _, /* info */ Source) => Boolean): this.type = set("shouldUpdate", js.Any.fromFunction3(value))
+  def rulesVarargs(value: Rule*): this.type = set("rules", js.Array(value :_*))
   
   @scala.inline
   def shouldUpdate(value: ShouldUpdate[_]): this.type = set("shouldUpdate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def shouldUpdateFunction3(value: (_, _, /* info */ Source) => Boolean): this.type = set("shouldUpdate", js.Any.fromFunction3(value))
   
   @scala.inline
   def status(value: ValidateStatus): this.type = set("status", value.asInstanceOf[js.Any])
@@ -158,10 +159,10 @@ class SharedBuilder_FormItemProps1309695920[Values] (val args: js.Array[js.Any])
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def tooltipReactElement(value: ReactElement): this.type = set("tooltip", value.asInstanceOf[js.Any])
+  def tooltip(value: LabelTooltipType): this.type = set("tooltip", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def tooltip(value: LabelTooltipType): this.type = set("tooltip", value.asInstanceOf[js.Any])
+  def tooltipReactElement(value: ReactElement): this.type = set("tooltip", value.asInstanceOf[js.Any])
   
   @scala.inline
   def trigger(value: String): this.type = set("trigger", value.asInstanceOf[js.Any])
@@ -173,10 +174,10 @@ class SharedBuilder_FormItemProps1309695920[Values] (val args: js.Array[js.Any])
   def validateStatus(value: ValidateStatus): this.type = set("validateStatus", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def validateTriggerVarargs(value: String*): this.type = set("validateTrigger", js.Array(value :_*))
+  def validateTrigger(value: String | js.Array[String] | `false`): this.type = set("validateTrigger", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def validateTrigger(value: String | js.Array[String] | `false`): this.type = set("validateTrigger", value.asInstanceOf[js.Any])
+  def validateTriggerVarargs(value: String*): this.type = set("validateTrigger", js.Array(value :_*))
   
   @scala.inline
   def valuePropName(value: String): this.type = set("valuePropName", value.asInstanceOf[js.Any])

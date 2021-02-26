@@ -6,16 +6,16 @@ import typingsSlinky.typeorm.queryRunnerMod.QueryRunner
 import typingsSlinky.typeorm.typeormStrings.all
 import typingsSlinky.typeorm.typeormStrings.each
 import typingsSlinky.typeorm.typeormStrings.none
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/migration/MigrationExecutor", JSImport.Namespace)
-@js.native
-object migrationExecutorMod extends js.Object {
+object migrationExecutorMod {
   
+  @JSImport("typeorm/browser/migration/MigrationExecutor", "MigrationExecutor")
   @js.native
-  class MigrationExecutor protected () extends js.Object {
+  class MigrationExecutor protected () extends StObject {
     def this(connection: Connection) = this()
     def this(connection: Connection, queryRunner: QueryRunner) = this()
     

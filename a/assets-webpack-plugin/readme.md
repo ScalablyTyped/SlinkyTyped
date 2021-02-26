@@ -10,9 +10,9 @@ Emits a json file with assets paths
 | ------------------ | :-------------: |
 | Full name          | assets-webpack-plugin |
 | Keywords           | webpack, plugin, generate, assets, hashes |
-| # releases         | 29 |
-| # dependents       | 223 |
-| # downloads        | 7738978 |
+| # releases         | 32 |
+| # dependents       | 246 |
+| # downloads        | 11638123 |
 | # stars            | 31 |
 
 ## Links

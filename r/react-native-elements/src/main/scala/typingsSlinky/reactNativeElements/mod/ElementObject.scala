@@ -3,12 +3,13 @@ package typingsSlinky.reactNativeElements.mod
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ElementObject extends js.Object {
+trait ElementObject extends StObject {
   
   var element: ReactElement | ReactType[_] = js.native
 }
@@ -21,30 +22,18 @@ object ElementObject {
   }
   
   @scala.inline
-  implicit class ElementObjectOps[Self <: ElementObject] (val x: Self) extends AnyVal {
+  implicit class ElementObjectMutableBuilder[Self <: ElementObject] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setElement(value: ReactElement | ReactType[_]): Self = StObject.set(x, "element", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setElementComponentClass(value: ReactComponentClass[_]): Self = StObject.set(x, "element", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setElementFunctionComponent(value: ReactComponentClass[_]): Self = StObject.set(x, "element", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setElementReactElement(value: ReactElement): Self = this.set("element", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setElementFunctionComponent(value: ReactComponentClass[_]): Self = this.set("element", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setElementComponentClass(value: ReactComponentClass[_]): Self = this.set("element", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setElement(value: ReactElement | ReactType[_]): Self = this.set("element", value.asInstanceOf[js.Any])
+    def setElementReactElement(value: ReactElement): Self = StObject.set(x, "element", value.asInstanceOf[js.Any])
   }
 }

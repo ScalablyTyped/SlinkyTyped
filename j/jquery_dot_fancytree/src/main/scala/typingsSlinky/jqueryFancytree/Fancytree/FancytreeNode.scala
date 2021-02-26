@@ -3,13 +3,14 @@ package typingsSlinky.jqueryFancytree.Fancytree
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTableRowElement
 import typingsSlinky.jquery.JQueryPromise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A FancytreeNode represents the hierarchical data model and operations. */
 @js.native
-trait FancytreeNode extends js.Object {
+trait FancytreeNode extends StObject {
   
   //#endregion
   //#region Methods

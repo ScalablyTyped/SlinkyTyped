@@ -1,5 +1,6 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.open
   - typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.closed
 */
-trait OpenOrClosed extends js.Object
+trait OpenOrClosed extends StObject
 object OpenOrClosed {
   
   @scala.inline

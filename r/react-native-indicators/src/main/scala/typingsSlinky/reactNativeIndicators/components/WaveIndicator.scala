@@ -7,6 +7,7 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeIndicators.mod.WaveIndicatorProps
 import typingsSlinky.reactNativeIndicators.reactNativeIndicatorsStrings.fill
 import typingsSlinky.reactNativeIndicators.reactNativeIndicatorsStrings.outline
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object WaveIndicator {
   
   @JSImport("react-native-indicators", "WaveIndicator")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,7 +60,7 @@ object WaveIndicator {
     def waveMode(value: fill | outline): this.type = set("waveMode", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: WaveIndicatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: WaveIndicator.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: WaveIndicatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

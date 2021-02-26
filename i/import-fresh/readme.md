@@ -10,9 +10,9 @@ Import a module while bypassing the cache
 | ------------------ | :-------------: |
 | Full name          | import-fresh |
 | Keywords           | require, cache, uncache, uncached, module, fresh, bypass |
-| # releases         | 5 |
-| # dependents       | 96 |
-| # downloads        | 372761226 |
+| # releases         | 6 |
+| # dependents       | 188 |
+| # downloads        | 930764868 |
 | # stars            | 0 |
 
 ## Links

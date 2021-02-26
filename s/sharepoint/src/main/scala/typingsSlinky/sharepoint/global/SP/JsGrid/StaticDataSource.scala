@@ -2,6 +2,7 @@ package typingsSlinky.sharepoint.global.SP.JsGrid
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.sharepoint.SP.JsGrid.IGridData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

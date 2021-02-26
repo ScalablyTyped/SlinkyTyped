@@ -4,6 +4,7 @@ import typingsSlinky.pulumiKubernetes.podMod.PodArgs
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,9 +26,7 @@ class Pod protected ()
   def this(name: String, args: PodArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/kubernetes/core", "v1.Pod")
-@js.native
-object Pod extends js.Object {
+object Pod {
   
   /**
     * Get an existing Pod resource's state with the given name, ID, and optional extra
@@ -37,12 +36,18 @@ object Pod extends js.Object {
     * @param id The _unique_ provider ID of the resource to lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/kubernetes/core", "v1.Pod.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.podMod.Pod = js.native
+  @JSImport("@pulumi/kubernetes/core", "v1.Pod.get")
+  @js.native
   def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.podMod.Pod = js.native
   
   /**
     * Returns true if the given object is an instance of Pod.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/kubernetes/core", "v1.Pod.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/core/v1/pod.Pod */ Boolean = js.native
 }

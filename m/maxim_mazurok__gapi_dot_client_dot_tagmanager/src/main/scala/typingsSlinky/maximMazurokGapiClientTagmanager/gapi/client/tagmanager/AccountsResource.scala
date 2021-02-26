@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientTagmanager.anon.AccesstokenAltCallbac
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Callback
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.OauthtokenPageToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AccountsResource extends js.Object {
+trait AccountsResource extends StObject {
   
   var containers: ContainersResource = js.native
   

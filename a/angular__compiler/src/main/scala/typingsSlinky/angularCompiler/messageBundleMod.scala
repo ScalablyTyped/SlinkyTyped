@@ -6,16 +6,16 @@ import typingsSlinky.angularCompiler.i18nAstMod.Message
 import typingsSlinky.angularCompiler.interpolationConfigMod.InterpolationConfig
 import typingsSlinky.angularCompiler.serializerMod.Serializer
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/compiler/src/i18n/message_bundle", JSImport.Namespace)
-@js.native
-object messageBundleMod extends js.Object {
+object messageBundleMod {
   
+  @JSImport("@angular/compiler/src/i18n/message_bundle", "MessageBundle")
   @js.native
-  class MessageBundle protected () extends js.Object {
+  class MessageBundle protected () extends StObject {
     def this(
       _htmlParser: HtmlParser,
       _implicitTags: js.Array[String],

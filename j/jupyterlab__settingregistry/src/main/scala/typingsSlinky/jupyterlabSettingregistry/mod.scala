@@ -1,17 +1,17 @@
 package typingsSlinky.jupyterlabSettingregistry
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.Shortcut
 import typingsSlinky.jupyterlabSettingregistry.settingregistryMod.SettingRegistry.IOptions
 import typingsSlinky.jupyterlabSettingregistry.tokensMod.ISettingRegistry.IShortcut
 import typingsSlinky.luminoCoreutils.mod.Token
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/settingregistry", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@jupyterlab/settingregistry", "DefaultSchemaValidator")
   @js.native
   /**
     * Instantiate a schema validator.
@@ -19,17 +19,24 @@ object mod extends js.Object {
   class DefaultSchemaValidator ()
     extends typingsSlinky.jupyterlabSettingregistry.settingregistryMod.DefaultSchemaValidator
   
-  @js.native
-  object ISettingRegistry
-    extends TopLevel[Token[typingsSlinky.jupyterlabSettingregistry.tokensMod.ISettingRegistry]] {
+  object ISettingRegistry extends Shortcut {
+    
+    @JSImport("@jupyterlab/settingregistry", "ISettingRegistry")
+    @js.native
+    val ^ : Token[typingsSlinky.jupyterlabSettingregistry.tokensMod.ISettingRegistry] = js.native
     
     /**
       * A namespace for plugin functionality.
       */
-    @js.native
-    object IPlugin extends js.Object
+    object IPlugin
+    
+    type _To = Token[typingsSlinky.jupyterlabSettingregistry.tokensMod.ISettingRegistry]
+    
+    /* This means you don't have to write `^`, but can instead just say `ISettingRegistry.foo` */
+    override def _to: Token[typingsSlinky.jupyterlabSettingregistry.tokensMod.ISettingRegistry] = ^
   }
   
+  @JSImport("@jupyterlab/settingregistry", "SettingRegistry")
   @js.native
   class SettingRegistry protected ()
     extends typingsSlinky.jupyterlabSettingregistry.settingregistryMod.SettingRegistry {
@@ -38,8 +45,7 @@ object mod extends js.Object {
       */
     def this(options: IOptions) = this()
   }
-  @js.native
-  object SettingRegistry extends js.Object {
+  object SettingRegistry {
     
     /**
       * Reconcile default and user shortcuts and return the composite list.
@@ -50,9 +56,12 @@ object mod extends js.Object {
       *
       * @returns A loadable list of shortcuts (omitting disabled and overridden).
       */
+    @JSImport("@jupyterlab/settingregistry", "SettingRegistry.reconcileShortcuts")
+    @js.native
     def reconcileShortcuts(defaults: js.Array[IShortcut], user: js.Array[IShortcut]): js.Array[IShortcut] = js.native
   }
   
+  @JSImport("@jupyterlab/settingregistry", "Settings")
   @js.native
   class Settings protected ()
     extends typingsSlinky.jupyterlabSettingregistry.settingregistryMod.Settings {

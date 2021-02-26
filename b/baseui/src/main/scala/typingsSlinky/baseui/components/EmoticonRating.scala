@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.anon.ValueNumber
 import typingsSlinky.baseui.ratingMod.EmoticonRatingProps
 import typingsSlinky.baseui.ratingMod.RatingOverrides
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object EmoticonRating {
   
   @JSImport("baseui/rating", "EmoticonRating")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,7 +37,7 @@ object EmoticonRating {
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: EmoticonRatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: EmoticonRating.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: EmoticonRatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -3,6 +3,7 @@ package typingsSlinky.phaser.phaserMod.GameObjects
 import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Types.Math.Vector2Like
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

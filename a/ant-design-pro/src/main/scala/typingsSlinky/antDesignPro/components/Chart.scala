@@ -27,15 +27,22 @@ import typingsSlinky.bizcharts.mod.ChartProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Chart {
   
+  @scala.inline
+  def apply(height: Double): Builder = {
+    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ChartProps]))
+  }
+  
   @JSImport("ant-design-pro/lib/Charts/bizcharts", "Chart")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -58,10 +65,10 @@ object Chart {
     def data(value: js.Any): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filterVarargs(value: js.Any*): this.type = set("filter", js.Array(value :_*))
+    def filter(value: js.Array[_]): this.type = set("filter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filter(value: js.Array[_]): this.type = set("filter", value.asInstanceOf[js.Any])
+    def filterVarargs(value: js.Any*): this.type = set("filter", js.Array(value :_*))
     
     @scala.inline
     def forceFit(value: Boolean): this.type = set("forceFit", value.asInstanceOf[js.Any])
@@ -348,10 +355,10 @@ object Chart {
     def pixelRatio(value: Double): this.type = set("pixelRatio", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: ReactElement | String | Boolean): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholder(value: ReactElement | String | Boolean): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
     def plotBackground(value: background): this.type = set("plotBackground", value.asInstanceOf[js.Any])
@@ -367,10 +374,4 @@ object Chart {
   }
   
   def withProps(p: ChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(height: Double): Builder = {
-    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ChartProps]))
-  }
 }

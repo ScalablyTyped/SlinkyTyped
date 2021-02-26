@@ -1,5 +1,6 @@
 package typingsSlinky.raphael.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.raphael.raphaelStrings.baseline
   - typingsSlinky.raphael.raphaelStrings.middle
 */
-trait RaphaelFontOrigin extends js.Object
+trait RaphaelFontOrigin extends StObject
 object RaphaelFontOrigin {
   
   @scala.inline

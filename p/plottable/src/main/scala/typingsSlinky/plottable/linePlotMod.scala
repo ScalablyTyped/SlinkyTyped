@@ -8,14 +8,26 @@ import typingsSlinky.plottable.datasetMod.Dataset
 import typingsSlinky.plottable.interfacesMod.IAccessor
 import typingsSlinky.plottable.interfacesMod.Point
 import typingsSlinky.plottable.interfacesMod.Projector
+import typingsSlinky.plottable.plottableStrings.basis
+import typingsSlinky.plottable.plottableStrings.basisClosed
+import typingsSlinky.plottable.plottableStrings.basisOpen
+import typingsSlinky.plottable.plottableStrings.bundle
+import typingsSlinky.plottable.plottableStrings.cardinal
+import typingsSlinky.plottable.plottableStrings.cardinalClosed
+import typingsSlinky.plottable.plottableStrings.cardinalOpen
+import typingsSlinky.plottable.plottableStrings.linear
+import typingsSlinky.plottable.plottableStrings.linearClosed
+import typingsSlinky.plottable.plottableStrings.monotone
+import typingsSlinky.plottable.plottableStrings.step
+import typingsSlinky.plottable.plottableStrings.stepAfter
+import typingsSlinky.plottable.plottableStrings.stepBefore
 import typingsSlinky.plottable.xyPlotMod.XYPlot
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("plottable/build/src/plots/linePlot", JSImport.Namespace)
-@js.native
-object linePlotMod extends js.Object {
+object linePlotMod {
   
   /* keyof plottable.anon.Basis */ /* Rewritten from type alias, can be one of: 
     - typingsSlinky.plottable.plottableStrings.linear
@@ -32,37 +44,97 @@ object linePlotMod extends js.Object {
     - typingsSlinky.plottable.plottableStrings.cardinalClosed
     - typingsSlinky.plottable.plottableStrings.monotone
   */
-  trait CurveName extends js.Object
-  @js.native
-  object CurveName extends js.Object {
+  trait CurveName extends StObject
+  object CurveName {
     
-    var basis: typingsSlinky.plottable.plottableStrings.basis = js.native
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var basisClosed: typingsSlinky.plottable.plottableStrings.basisClosed = js.native
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.basis")
+    @js.native
+    def basis: typingsSlinky.plottable.plottableStrings.basis = js.native
     
-    var basisOpen: typingsSlinky.plottable.plottableStrings.basisOpen = js.native
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.basisClosed")
+    @js.native
+    def basisClosed: typingsSlinky.plottable.plottableStrings.basisClosed = js.native
+    @scala.inline
+    def basisClosed_=(x: basisClosed): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("basisClosed")(x.asInstanceOf[js.Any])
     
-    var bundle: typingsSlinky.plottable.plottableStrings.bundle = js.native
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.basisOpen")
+    @js.native
+    def basisOpen: typingsSlinky.plottable.plottableStrings.basisOpen = js.native
+    @scala.inline
+    def basisOpen_=(x: basisOpen): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("basisOpen")(x.asInstanceOf[js.Any])
     
-    var cardinal: typingsSlinky.plottable.plottableStrings.cardinal = js.native
+    @scala.inline
+    def basis_=(x: basis): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("basis")(x.asInstanceOf[js.Any])
     
-    var cardinalClosed: typingsSlinky.plottable.plottableStrings.cardinalClosed = js.native
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.bundle")
+    @js.native
+    def bundle: typingsSlinky.plottable.plottableStrings.bundle = js.native
+    @scala.inline
+    def bundle_=(x: bundle): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("bundle")(x.asInstanceOf[js.Any])
     
-    var cardinalOpen: typingsSlinky.plottable.plottableStrings.cardinalOpen = js.native
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.cardinal")
+    @js.native
+    def cardinal: typingsSlinky.plottable.plottableStrings.cardinal = js.native
     
-    var linear: typingsSlinky.plottable.plottableStrings.linear = js.native
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.cardinalClosed")
+    @js.native
+    def cardinalClosed: typingsSlinky.plottable.plottableStrings.cardinalClosed = js.native
+    @scala.inline
+    def cardinalClosed_=(x: cardinalClosed): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("cardinalClosed")(x.asInstanceOf[js.Any])
     
-    var linearClosed: typingsSlinky.plottable.plottableStrings.linearClosed = js.native
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.cardinalOpen")
+    @js.native
+    def cardinalOpen: typingsSlinky.plottable.plottableStrings.cardinalOpen = js.native
+    @scala.inline
+    def cardinalOpen_=(x: cardinalOpen): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("cardinalOpen")(x.asInstanceOf[js.Any])
     
-    var monotone: typingsSlinky.plottable.plottableStrings.monotone = js.native
+    @scala.inline
+    def cardinal_=(x: cardinal): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("cardinal")(x.asInstanceOf[js.Any])
     
-    var step: typingsSlinky.plottable.plottableStrings.step = js.native
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.linear")
+    @js.native
+    def linear: typingsSlinky.plottable.plottableStrings.linear = js.native
     
-    var stepAfter: typingsSlinky.plottable.plottableStrings.stepAfter = js.native
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.linearClosed")
+    @js.native
+    def linearClosed: typingsSlinky.plottable.plottableStrings.linearClosed = js.native
+    @scala.inline
+    def linearClosed_=(x: linearClosed): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("linearClosed")(x.asInstanceOf[js.Any])
     
-    var stepBefore: typingsSlinky.plottable.plottableStrings.stepBefore = js.native
+    @scala.inline
+    def linear_=(x: linear): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("linear")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.monotone")
+    @js.native
+    def monotone: typingsSlinky.plottable.plottableStrings.monotone = js.native
+    @scala.inline
+    def monotone_=(x: monotone): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("monotone")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.step")
+    @js.native
+    def step: typingsSlinky.plottable.plottableStrings.step = js.native
+    
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.stepAfter")
+    @js.native
+    def stepAfter: typingsSlinky.plottable.plottableStrings.stepAfter = js.native
+    @scala.inline
+    def stepAfter_=(x: stepAfter): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("stepAfter")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/plots/linePlot", "CurveName.stepBefore")
+    @js.native
+    def stepBefore: typingsSlinky.plottable.plottableStrings.stepBefore = js.native
+    @scala.inline
+    def stepBefore_=(x: stepBefore): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("stepBefore")(x.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def step_=(x: step): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("step")(x.asInstanceOf[js.Any])
   }
   
+  @JSImport("plottable/build/src/plots/linePlot", "Line")
   @js.native
   /**
     * A Line Plot draws line segments starting from the first data point to the next.

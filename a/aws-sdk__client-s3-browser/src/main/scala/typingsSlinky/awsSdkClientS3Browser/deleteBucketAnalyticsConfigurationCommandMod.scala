@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesDeleteBucketAnalyticsConfigurati
 import typingsSlinky.awsSdkClientS3Browser.typesDeleteBucketAnalyticsConfigurationOutputMod.DeleteBucketAnalyticsConfigurationOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/DeleteBucketAnalyticsConfigurationCommand", JSImport.Namespace)
-@js.native
-object deleteBucketAnalyticsConfigurationCommandMod extends js.Object {
+object deleteBucketAnalyticsConfigurationCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/DeleteBucketAnalyticsConfigurationCommand", "DeleteBucketAnalyticsConfigurationCommand")
   @js.native
   class DeleteBucketAnalyticsConfigurationCommand protected () extends Command[
           InputTypesUnion, 

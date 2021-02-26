@@ -18,6 +18,7 @@ import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,13 +38,13 @@ class SharedBuilder_IGroupShowAllProps_1085117924 (val args: js.Array[js.Any])
   def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def componentRefFunction1(value: /* ref */ js.Object | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
   
   @scala.inline
   def componentRefRefObject(value: ReactRef[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def expandButtonProps(value: HTMLAttributes[HTMLButtonElement]): this.type = set("expandButtonProps", value.asInstanceOf[js.Any])
@@ -61,10 +62,10 @@ class SharedBuilder_IGroupShowAllProps_1085117924 (val args: js.Array[js.Any])
   def groupLevel(value: Double): this.type = set("groupLevel", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
+  def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
+  def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
   
   @scala.inline
   def indentWidth(value: Double): this.type = set("indentWidth", value.asInstanceOf[js.Any])
@@ -111,10 +112,10 @@ class SharedBuilder_IGroupShowAllProps_1085117924 (val args: js.Array[js.Any])
   def showAllLinkText(value: String): this.type = set("showAllLinkText", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def stylesFunction1(value: IGroupShowAllStyleProps => DeepPartial[IGroupShowAllStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def styles(value: IStyleFunctionOrObject[IGroupShowAllStyleProps, IGroupShowAllStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def styles(value: IStyleFunctionOrObject[IGroupShowAllStyleProps, IGroupShowAllStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+  def stylesFunction1(value: IGroupShowAllStyleProps => DeepPartial[IGroupShowAllStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   
   @scala.inline
   def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])

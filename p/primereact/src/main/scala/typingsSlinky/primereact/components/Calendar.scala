@@ -10,6 +10,7 @@ import typingsSlinky.primereact.calendarCalendarMod.CalendarProps
 import typingsSlinky.primereact.calendarCalendarMod.DateMetaData
 import typingsSlinky.primereact.calendarCalendarMod.LocaleSettings
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object Calendar {
   
   @JSImport("primereact/calendar", "Calendar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -53,16 +54,16 @@ object Calendar {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabledDatesVarargs(value: js.Date*): this.type = set("disabledDates", js.Array(value :_*))
-    
-    @scala.inline
     def disabledDates(value: js.Array[js.Date]): this.type = set("disabledDates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabledDaysVarargs(value: Double*): this.type = set("disabledDays", js.Array(value :_*))
+    def disabledDatesVarargs(value: js.Date*): this.type = set("disabledDates", js.Array(value :_*))
     
     @scala.inline
     def disabledDays(value: js.Array[Double]): this.type = set("disabledDays", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def disabledDaysVarargs(value: Double*): this.type = set("disabledDays", js.Array(value :_*))
     
     @scala.inline
     def footerTemplate(value: () => ReactElement): this.type = set("footerTemplate", js.Any.fromFunction0(value))
@@ -224,13 +225,13 @@ object Calendar {
     def touchUI(value: Boolean): this.type = set("touchUI", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: js.Date*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Date | js.Array[js.Date]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def valueDate(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Date | js.Array[js.Date]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: js.Date*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def view(value: String): this.type = set("view", value.asInstanceOf[js.Any])
@@ -245,7 +246,7 @@ object Calendar {
     def yearRange(value: String): this.type = set("yearRange", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CalendarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Calendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CalendarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

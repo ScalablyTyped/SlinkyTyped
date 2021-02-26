@@ -90,6 +90,7 @@ import typingsSlinky.reactMdStates.typesMod.MergableRippleHandlers
 import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
 import typingsSlinky.reactMdUtils.typesTypesMod.PropsWithRef
 import typingsSlinky.reactTransitionGroup.csstransitionMod.CSSTransitionClassNames
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -98,7 +99,7 @@ object BadgedButton {
   
   @JSImport("@react-md/badge", "BadgedButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -276,16 +277,16 @@ object BadgedButton {
     def badgeId(value: String): this.type = set("badgeId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def badgeRefRefObject(value: ReactRef[HTMLSpanElement]): this.type = set("badgeRef", value.asInstanceOf[js.Any])
+    def badgeRef(value: Ref[HTMLSpanElement]): this.type = set("badgeRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def badgeRefFunction1(value: /* instance */ HTMLSpanElement | Null => Unit): this.type = set("badgeRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def badgeRef(value: Ref[HTMLSpanElement]): this.type = set("badgeRef", value.asInstanceOf[js.Any])
+    def badgeRefNull: this.type = set("badgeRef", null)
     
     @scala.inline
-    def badgeRefNull: this.type = set("badgeRef", null)
+    def badgeRefRefObject(value: ReactRef[HTMLSpanElement]): this.type = set("badgeRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def badgeStyle(value: CSSProperties): this.type = set("badgeStyle", value.asInstanceOf[js.Any])
@@ -294,10 +295,10 @@ object BadgedButton {
     def badgeTheme(value: BadgeTheme): this.type = set("badgeTheme", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttonChildrenReactElement(value: ReactElement): this.type = set("buttonChildren", value.asInstanceOf[js.Any])
+    def buttonChildren(value: ReactElement): this.type = set("buttonChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttonChildren(value: ReactElement): this.type = set("buttonChildren", value.asInstanceOf[js.Any])
+    def buttonChildrenReactElement(value: ReactElement): this.type = set("buttonChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def buttonType(value: ButtonType): this.type = set("buttonType", value.asInstanceOf[js.Any])
@@ -324,10 +325,10 @@ object BadgedButton {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -735,16 +736,16 @@ object BadgedButton {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: BadgedButtonProps with RefAttributes[HTMLButtonElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: BadgedButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: BadgedButtonProps with RefAttributes[HTMLButtonElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.reactVirtualized.esTableMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactVirtualized.reactVirtualizedStrings.ASC
   - typingsSlinky.reactVirtualized.reactVirtualizedStrings.DESC
 */
-trait SortDirectionType extends js.Object
+trait SortDirectionType extends StObject
 object SortDirectionType {
   
   @scala.inline

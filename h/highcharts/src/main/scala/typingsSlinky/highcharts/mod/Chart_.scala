@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import typingsSlinky.highcharts.boostMod.highchartsAugmentingMod.Chart
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts", "Chart")
 @js.native
-class Chart_ protected () extends js.Object {
+class Chart_ protected () extends StObject {
   /**
     * The Chart class. The recommended constructor is Highcharts#chart.
     *

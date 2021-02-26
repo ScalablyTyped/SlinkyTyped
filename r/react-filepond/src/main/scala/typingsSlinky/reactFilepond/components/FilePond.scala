@@ -15,6 +15,7 @@ import typingsSlinky.filepond.mod.FilePondErrorDescription
 import typingsSlinky.filepond.mod.FilePondFile
 import typingsSlinky.filepond.mod.FilePondInitialFile
 import typingsSlinky.reactFilepond.mod.FilePondProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ object FilePond {
   
   @JSImport("react-filepond", "FilePond")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,10 +32,10 @@ object FilePond {
        with StBuildingComponent[tag.type, typingsSlinky.reactFilepond.mod.FilePond] {
     
     @scala.inline
-    def acceptedFileTypesVarargs(value: String*): this.type = set("acceptedFileTypes", js.Array(value :_*))
+    def acceptedFileTypes(value: js.Array[String]): this.type = set("acceptedFileTypes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def acceptedFileTypes(value: js.Array[String]): this.type = set("acceptedFileTypes", value.asInstanceOf[js.Any])
+    def acceptedFileTypesVarargs(value: String*): this.type = set("acceptedFileTypes", js.Array(value :_*))
     
     @scala.inline
     def allowBrowse(value: Boolean): this.type = set("allowBrowse", value.asInstanceOf[js.Any])
@@ -88,10 +89,10 @@ object FilePond {
     def chunkForce(value: Boolean): this.type = set("chunkForce", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def chunkRetryDelaysVarargs(value: Double*): this.type = set("chunkRetryDelays", js.Array(value :_*))
+    def chunkRetryDelays(value: js.Array[Double]): this.type = set("chunkRetryDelays", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def chunkRetryDelays(value: js.Array[Double]): this.type = set("chunkRetryDelays", value.asInstanceOf[js.Any])
+    def chunkRetryDelaysVarargs(value: Double*): this.type = set("chunkRetryDelays", js.Array(value :_*))
     
     @scala.inline
     def chunkSize(value: Double): this.type = set("chunkSize", value.asInstanceOf[js.Any])
@@ -118,10 +119,10 @@ object FilePond {
     def dropValidation(value: Boolean): this.type = set("dropValidation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filesVarargs(value: (FilePondInitialFile | ActualFileObject | Blob | String)*): this.type = set("files", js.Array(value :_*))
+    def files(value: js.Array[FilePondInitialFile | ActualFileObject | Blob | String]): this.type = set("files", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def files(value: js.Array[FilePondInitialFile | ActualFileObject | Blob | String]): this.type = set("files", value.asInstanceOf[js.Any])
+    def filesVarargs(value: (FilePondInitialFile | ActualFileObject | Blob | String)*): this.type = set("files", js.Array(value :_*))
     
     @scala.inline
     def forceRevert(value: Boolean): this.type = set("forceRevert", value.asInstanceOf[js.Any])
@@ -148,10 +149,10 @@ object FilePond {
     def idNull: this.type = set("id", null)
     
     @scala.inline
-    def ignoredFilesVarargs(value: String*): this.type = set("ignoredFiles", js.Array(value :_*))
+    def ignoredFiles(value: js.Array[String]): this.type = set("ignoredFiles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ignoredFiles(value: js.Array[String]): this.type = set("ignoredFiles", value.asInstanceOf[js.Any])
+    def ignoredFilesVarargs(value: String*): this.type = set("ignoredFiles", js.Array(value :_*))
     
     @scala.inline
     def instantUpload(value: Boolean): this.type = set("instantUpload", value.asInstanceOf[js.Any])
@@ -160,13 +161,13 @@ object FilePond {
     def itemInsertInterval(value: Double): this.type = set("itemInsertInterval", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemInsertLocationFunction2(value: (/* a */ FilePondFile, /* b */ FilePondFile) => Double): this.type = set("itemInsertLocation", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def itemInsertLocation(value: before | after | (js.Function2[/* a */ FilePondFile, /* b */ FilePondFile, Double])): this.type = set("itemInsertLocation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def itemInsertLocationFreedom(value: Boolean): this.type = set("itemInsertLocationFreedom", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def itemInsertLocationFunction2(value: (/* a */ FilePondFile, /* b */ FilePondFile) => Double): this.type = set("itemInsertLocation", js.Any.fromFunction2(value))
     
     @scala.inline
     def labelButtonAbortItemLoad(value: String): this.type = set("labelButtonAbortItemLoad", value.asInstanceOf[js.Any])
@@ -202,10 +203,10 @@ object FilePond {
     def labelFileCountSingular(value: String): this.type = set("labelFileCountSingular", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelFileLoadErrorFunction1(value: /* error */ js.Any => String): this.type = set("labelFileLoadError", js.Any.fromFunction1(value))
+    def labelFileLoadError(value: (js.Function1[/* error */ js.Any, String]) | String): this.type = set("labelFileLoadError", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelFileLoadError(value: (js.Function1[/* error */ js.Any, String]) | String): this.type = set("labelFileLoadError", value.asInstanceOf[js.Any])
+    def labelFileLoadErrorFunction1(value: /* error */ js.Any => String): this.type = set("labelFileLoadError", js.Any.fromFunction1(value))
     
     @scala.inline
     def labelFileLoading(value: String): this.type = set("labelFileLoading", value.asInstanceOf[js.Any])
@@ -220,22 +221,22 @@ object FilePond {
     def labelFileProcessingComplete(value: String): this.type = set("labelFileProcessingComplete", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelFileProcessingErrorFunction1(value: /* error */ js.Any => String): this.type = set("labelFileProcessingError", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def labelFileProcessingError(value: (js.Function1[/* error */ js.Any, String]) | String): this.type = set("labelFileProcessingError", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelFileProcessingRevertErrorFunction1(value: /* error */ js.Any => String): this.type = set("labelFileProcessingRevertError", js.Any.fromFunction1(value))
+    def labelFileProcessingErrorFunction1(value: /* error */ js.Any => String): this.type = set("labelFileProcessingError", js.Any.fromFunction1(value))
     
     @scala.inline
     def labelFileProcessingRevertError(value: (js.Function1[/* error */ js.Any, String]) | String): this.type = set("labelFileProcessingRevertError", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelFileRemoveErrorFunction1(value: /* error */ js.Any => String): this.type = set("labelFileRemoveError", js.Any.fromFunction1(value))
+    def labelFileProcessingRevertErrorFunction1(value: /* error */ js.Any => String): this.type = set("labelFileProcessingRevertError", js.Any.fromFunction1(value))
     
     @scala.inline
     def labelFileRemoveError(value: (js.Function1[/* error */ js.Any, String]) | String): this.type = set("labelFileRemoveError", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelFileRemoveErrorFunction1(value: /* error */ js.Any => String): this.type = set("labelFileRemoveError", js.Any.fromFunction1(value))
     
     @scala.inline
     def labelFileRemoved(value: String): this.type = set("labelFileRemoved", value.asInstanceOf[js.Any])
@@ -374,7 +375,7 @@ object FilePond {
     def styleProgressIndicatorPosition(value: String): this.type = set("styleProgressIndicatorPosition", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FilePondProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FilePond.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FilePondProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

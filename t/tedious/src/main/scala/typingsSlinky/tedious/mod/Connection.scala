@@ -10,6 +10,7 @@ import typingsSlinky.tedious.tediousStrings.error
 import typingsSlinky.tedious.tediousStrings.errorMessage
 import typingsSlinky.tedious.tediousStrings.infoMessage
 import typingsSlinky.tedious.tediousStrings.languageChange
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

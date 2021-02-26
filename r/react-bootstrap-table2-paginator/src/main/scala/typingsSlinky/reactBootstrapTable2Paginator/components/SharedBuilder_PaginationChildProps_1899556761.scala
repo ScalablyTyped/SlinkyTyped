@@ -8,6 +8,7 @@ import typingsSlinky.reactBootstrapTableNext.mod.PageButtonRendererOptions
 import typingsSlinky.reactBootstrapTableNext.mod.PageListRendererOptions
 import typingsSlinky.reactBootstrapTableNext.mod.SizePerPageOptionRendererOptions
 import typingsSlinky.reactBootstrapTableNext.mod.SizePerPageRendererOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,10 +28,10 @@ class SharedBuilder_PaginationChildProps_1899556761 (val args: js.Array[js.Any])
   def custom(value: Boolean): this.type = set("custom", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def firstPageTextReactElement(value: ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
+  def firstPageText(value: String | ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def firstPageText(value: String | ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
+  def firstPageTextReactElement(value: ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
   
   @scala.inline
   def firstPageTitle(value: String): this.type = set("firstPageTitle", value.asInstanceOf[js.Any])
@@ -42,19 +43,19 @@ class SharedBuilder_PaginationChildProps_1899556761 (val args: js.Array[js.Any])
   def hideSizePerPage(value: Boolean): this.type = set("hideSizePerPage", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def lastPageTextReactElement(value: ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
+  def lastPageText(value: String | ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def lastPageText(value: String | ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
+  def lastPageTextReactElement(value: ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
   
   @scala.inline
   def lastPageTitle(value: String): this.type = set("lastPageTitle", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def nextPageTextReactElement(value: ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
+  def nextPageText(value: String | ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def nextPageText(value: String | ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
+  def nextPageTextReactElement(value: ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
   
   @scala.inline
   def nextPageTitle(value: String): this.type = set("nextPageTitle", value.asInstanceOf[js.Any])
@@ -84,10 +85,10 @@ class SharedBuilder_PaginationChildProps_1899556761 (val args: js.Array[js.Any])
   def paginationTotalRenderer(value: (/* from */ Double, /* to */ Double, /* size */ Double) => ReactElement): this.type = set("paginationTotalRenderer", js.Any.fromFunction3(value))
   
   @scala.inline
-  def prePageTextReactElement(value: ReactElement): this.type = set("prePageText", value.asInstanceOf[js.Any])
+  def prePageText(value: String | ReactElement): this.type = set("prePageText", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def prePageText(value: String | ReactElement): this.type = set("prePageText", value.asInstanceOf[js.Any])
+  def prePageTextReactElement(value: ReactElement): this.type = set("prePageText", value.asInstanceOf[js.Any])
   
   @scala.inline
   def prePageTitle(value: String): this.type = set("prePageTitle", value.asInstanceOf[js.Any])
@@ -99,10 +100,10 @@ class SharedBuilder_PaginationChildProps_1899556761 (val args: js.Array[js.Any])
   def sizePerPage(value: Double): this.type = set("sizePerPage", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def sizePerPageListVarargs(value: (Double | Text)*): this.type = set("sizePerPageList", js.Array(value :_*))
+  def sizePerPageList(value: js.Array[Double | Text]): this.type = set("sizePerPageList", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def sizePerPageList(value: js.Array[Double | Text]): this.type = set("sizePerPageList", value.asInstanceOf[js.Any])
+  def sizePerPageListVarargs(value: (Double | Text)*): this.type = set("sizePerPageList", js.Array(value :_*))
   
   @scala.inline
   def sizePerPageOptionRenderer(value: /* options */ SizePerPageOptionRendererOptions => ReactElement): this.type = set("sizePerPageOptionRenderer", js.Any.fromFunction1(value))

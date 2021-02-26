@@ -6,12 +6,13 @@ import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
 import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IonLoading extends js.Object {
+trait IonLoading extends StObject {
   
   /**
     * If `true`, the loading indicator will animate.

@@ -10,9 +10,9 @@ Generate, and decode, base64 VLQ mappings for source maps and other uses
 | ------------------ | :-------------: |
 | Full name          | vlq |
 | Keywords           | - |
-| # releases         | 3 |
-| # dependents       | 30 |
-| # downloads        | 50213876 |
+| # releases         | 2 |
+| # dependents       | 60 |
+| # downloads        | 75804379 |
 | # stars            | 0 |
 
 ## Links

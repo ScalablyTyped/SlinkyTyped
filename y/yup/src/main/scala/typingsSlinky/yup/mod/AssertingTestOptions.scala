@@ -1,6 +1,7 @@
 package typingsSlinky.yup.mod
 
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.yup.mod.NonExclusiveAssertingTestOptions[U, P, C]
   - typingsSlinky.yup.mod.ExclusiveAssertingTestOptions[U, P, C]
 */
-trait AssertingTestOptions[U, P /* <: Record[String, _] */, C] extends js.Object
+trait AssertingTestOptions[U, P /* <: Record[String, _] */, C] extends StObject

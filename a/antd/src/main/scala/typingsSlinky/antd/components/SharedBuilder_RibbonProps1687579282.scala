@@ -7,6 +7,7 @@ import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.ribbonMod.RibbonPlacement
 import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,8 +33,8 @@ class SharedBuilder_RibbonProps1687579282 (val args: js.Array[js.Any])
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+  def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+  def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
 }

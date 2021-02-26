@@ -29,16 +29,16 @@ import typingsSlinky.agGrid.stylingServiceMod.StylingService
 import typingsSlinky.agGrid.templateServiceMod.TemplateService
 import typingsSlinky.agGrid.valueFormatterServiceMod.ValueFormatterService
 import typingsSlinky.agGrid.valueServiceMod.ValueService
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/rendering/beans", JSImport.Namespace)
-@js.native
-object beansMod extends js.Object {
+object beansMod {
   
+  @JSImport("ag-grid/dist/lib/rendering/beans", "Beans")
   @js.native
-  class Beans () extends js.Object {
+  class Beans () extends StObject {
     
     @JSName("$compile")
     var $compile: js.Any = js.native

@@ -30,6 +30,7 @@ import typingsSlinky.officeJs.officeJsStrings.ThreeDEmboss
 import typingsSlinky.officeJs.officeJsStrings.ThreeDEngrave
 import typingsSlinky.officeJs.officeJsStrings.Triple
 import typingsSlinky.officeJs.officeJsStrings.Wave
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

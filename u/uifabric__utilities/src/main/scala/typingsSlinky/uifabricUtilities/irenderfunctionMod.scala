@@ -1,13 +1,12 @@
 package typingsSlinky.uifabricUtilities
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uifabric/utilities/lib/IRenderFunction", JSImport.Namespace)
-@js.native
-object irenderfunctionMod extends js.Object {
+object irenderfunctionMod {
   
   type IRenderFunction[P] = js.Function2[
     /* props */ js.UndefOr[P], 

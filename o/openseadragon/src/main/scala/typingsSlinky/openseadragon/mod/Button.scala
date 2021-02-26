@@ -2,6 +2,7 @@ package typingsSlinky.openseadragon.mod
 
 import typingsSlinky.openseadragon.anon.Element
 import typingsSlinky.std.EventSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

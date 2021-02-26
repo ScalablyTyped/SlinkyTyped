@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTypeahead.mod.OverlayProps
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadAlign
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Overlay {
   
+  @scala.inline
+  def apply(container: HTMLElement): Builder = {
+    val __props = js.Dynamic.literal(container = container.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OverlayProps]))
+  }
+  
   @JSImport("react-bootstrap-typeahead", "Overlay")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,10 +56,4 @@ object Overlay {
   }
   
   def withProps(p: OverlayProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(container: HTMLElement): Builder = {
-    val __props = js.Dynamic.literal(container = container.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[OverlayProps]))
-  }
 }

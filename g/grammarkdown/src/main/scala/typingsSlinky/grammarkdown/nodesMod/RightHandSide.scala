@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.nodesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "RightHandSide")
 @js.native
 class RightHandSide ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.RightHandSide]
+  extends ProductionBodyBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.RightHandSide]
      with ProductionBody {
   def this(constraints: Constraints) = this()
   def this(constraints: js.UndefOr[scala.Nothing], head: SymbolSpan) = this()

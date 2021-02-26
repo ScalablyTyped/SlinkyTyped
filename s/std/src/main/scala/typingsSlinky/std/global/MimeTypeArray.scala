@@ -1,15 +1,12 @@
 package typingsSlinky.std.global
 
-import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("MimeTypeArray")
 @js.native
 class MimeTypeArray ()
   extends typingsSlinky.std.MimeTypeArray
-@JSGlobal("MimeTypeArray")
-@js.native
-object MimeTypeArray
-  extends Instantiable0[typingsSlinky.std.MimeTypeArray]

@@ -10,9 +10,9 @@ Get, set, or delete a property from a nested object using a dot path
 | ------------------ | :-------------: |
 | Full name          | dot-prop |
 | Keywords           | object, prop, property, dot, path, get, set, delete, access, notation, dotty |
-| # releases         | 6 |
-| # dependents       | 352 |
-| # downloads        | 333111760 |
+| # releases         | 8 |
+| # dependents       | 478 |
+| # downloads        | 683262525 |
 | # stars            | 14 |
 
 ## Links

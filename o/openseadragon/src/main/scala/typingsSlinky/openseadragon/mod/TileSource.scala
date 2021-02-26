@@ -3,6 +3,7 @@ package typingsSlinky.openseadragon.mod
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Event
 import typingsSlinky.std.EventSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

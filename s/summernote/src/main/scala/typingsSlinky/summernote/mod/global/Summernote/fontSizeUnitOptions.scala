@@ -1,5 +1,6 @@
 package typingsSlinky.summernote.mod.global.Summernote
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.summernote.summernoteStrings.px
   - typingsSlinky.summernote.summernoteStrings.pt
 */
-trait fontSizeUnitOptions extends js.Object
+trait fontSizeUnitOptions extends StObject
 object fontSizeUnitOptions {
   
   @scala.inline

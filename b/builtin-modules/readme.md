@@ -11,8 +11,8 @@ List of the Node.js builtin modules
 | Full name          | builtin-modules |
 | Keywords           | builtin, built-in, builtins, node, modules, core, bundled, list, array, names |
 | # releases         | 3 |
-| # dependents       | 199 |
-| # downloads        | 271394275 |
+| # dependents       | 278 |
+| # downloads        | 313480944 |
 | # stars            | 1 |
 
 ## Links

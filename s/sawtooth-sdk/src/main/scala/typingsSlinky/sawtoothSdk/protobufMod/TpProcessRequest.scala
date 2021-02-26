@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,18 +37,26 @@ class TpProcessRequest () extends ITpProcessRequest {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "TpProcessRequest")
-@js.native
-object TpProcessRequest extends js.Object {
+object TpProcessRequest {
   
   /**
     * Creates a new TpProcessRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns TpProcessRequest instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.create")
+  @js.native
   def create(): TpProcessRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.create")
+  @js.native
   def create(properties: ITpProcessRequest): TpProcessRequest = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): TpProcessRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): TpProcessRequest = js.native
   /**
     * Decodes a TpProcessRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -56,11 +65,16 @@ object TpProcessRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.decode")
+  @js.native
   def decode(reader: Reader): TpProcessRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): TpProcessRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): TpProcessRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): TpProcessRequest = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): TpProcessRequest = js.native
   /**
     * Decodes a TpProcessRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -68,8 +82,9 @@ object TpProcessRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): TpProcessRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): TpProcessRequest = js.native
   
   /**
     * Encodes the specified TpProcessRequest message. Does not implicitly {@link TpProcessRequest.verify|verify} messages.
@@ -77,7 +92,11 @@ object TpProcessRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.encode")
+  @js.native
   def encode(message: ITpProcessRequest): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.encode")
+  @js.native
   def encode(message: ITpProcessRequest, writer: Writer): Writer = js.native
   
   /**
@@ -86,7 +105,11 @@ object TpProcessRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITpProcessRequest): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITpProcessRequest, writer: Writer): Writer = js.native
   
   /**
@@ -94,6 +117,8 @@ object TpProcessRequest extends js.Object {
     * @param object Plain object
     * @returns TpProcessRequest
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): TpProcessRequest = js.native
   
   /**
@@ -102,7 +127,11 @@ object TpProcessRequest extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.toObject")
+  @js.native
   def toObject(message: TpProcessRequest): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.toObject")
+  @js.native
   def toObject(message: TpProcessRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -110,5 +139,7 @@ object TpProcessRequest extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.expressValidator.optionsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.expressValidator.expressValidatorNumbers.`4`
   - typingsSlinky.expressValidator.expressValidatorNumbers.`6`
 */
-trait IPVersion extends js.Object
+trait IPVersion extends StObject
 object IPVersion {
   
   @scala.inline

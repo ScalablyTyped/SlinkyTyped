@@ -1,11 +1,20 @@
 package typingsSlinky.reactOnsenui.mod
 
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameValue
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import typingsSlinky.reactOnsenui.anon.Value
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-onsenui", "SearchInput")
 @js.native
-class SearchInput ()
-  extends typingsSlinky.react.mod.Component[HTMLAttributesidclassNameValue, js.Any, js.Any]
+class SearchInput protected ()
+  extends Component[Value, js.Any] {
+  def this(props: HTMLAttributesidclassName with Value) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: HTMLAttributesidclassName with Value, context: js.Any) = this()
+}

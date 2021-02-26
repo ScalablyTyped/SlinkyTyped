@@ -2,6 +2,7 @@ package typingsSlinky.openlayers.mod
 
 import typingsSlinky.openlayers.mod.geom.LineString
 import typingsSlinky.openlayers.mod.olx.GraticuleOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @param opt_options Options.
   * @api
   */
-class Graticule () extends js.Object {
+class Graticule () extends StObject {
   def this(opt_options: GraticuleOptions) = this()
   
   /**

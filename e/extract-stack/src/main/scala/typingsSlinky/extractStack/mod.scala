@@ -1,12 +1,11 @@
 package typingsSlinky.extractStack
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("extract-stack", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   /**
   	Extract the actual stack of an error.
@@ -30,8 +29,14 @@ object mod extends js.Object {
   	// 	at startup (node.js:139:18)
   	```
   	 */
+  @JSImport("extract-stack", JSImport.Namespace)
+  @js.native
   def apply(): String = js.native
+  @JSImport("extract-stack", JSImport.Namespace)
+  @js.native
   def apply(error: String): String = js.native
+  @JSImport("extract-stack", JSImport.Namespace)
+  @js.native
   def apply(error: js.Error): String = js.native
   
   /**
@@ -57,7 +62,13 @@ object mod extends js.Object {
   	// ]
   	```
   	 */
+  @JSImport("extract-stack", "lines")
+  @js.native
   def lines(): js.Array[String] = js.native
+  @JSImport("extract-stack", "lines")
+  @js.native
   def lines(error: String): js.Array[String] = js.native
+  @JSImport("extract-stack", "lines")
+  @js.native
   def lines(error: js.Error): js.Array[String] = js.native
 }

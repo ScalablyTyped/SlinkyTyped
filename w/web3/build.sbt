@@ -1,30 +1,30 @@
 organization := "org.scalablytyped.slinky"
 name := "web3"
-version := "1.3.0-086ef7"
+version := "1.3.0-0df0fd"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "bignumber_dot_js" % "9.0.1-ebae07",
-  "org.scalablytyped.slinky" %%% "bn_dot_js" % "4.11-dt-20200515Z-81625d",
-  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
-  "org.scalablytyped.slinky" %%% "web3-bzz" % "1.3.0-7c2bec",
-  "org.scalablytyped.slinky" %%% "web3-core" % "1.3.0-f9f4e6",
-  "org.scalablytyped.slinky" %%% "web3-core-helpers" % "1.3.0-b15db2",
-  "org.scalablytyped.slinky" %%% "web3-core-method" % "1.3.0-c6c7ca",
-  "org.scalablytyped.slinky" %%% "web3-core-subscriptions" % "1.3.0-ec3033",
-  "org.scalablytyped.slinky" %%% "web3-eth" % "1.3.0-55e578",
-  "org.scalablytyped.slinky" %%% "web3-eth-abi" % "1.3.0-7c879b",
-  "org.scalablytyped.slinky" %%% "web3-eth-accounts" % "1.3.0-e14dea",
-  "org.scalablytyped.slinky" %%% "web3-eth-contract" % "1.3.0-c6e08c",
-  "org.scalablytyped.slinky" %%% "web3-eth-ens" % "1.3.0-f56ba6",
-  "org.scalablytyped.slinky" %%% "web3-eth-iban" % "1.3.0-492e6e",
-  "org.scalablytyped.slinky" %%% "web3-eth-personal" % "1.3.0-5294b3",
-  "org.scalablytyped.slinky" %%% "web3-net" % "1.3.0-444422",
-  "org.scalablytyped.slinky" %%% "web3-shh" % "1.3.0-657d47",
-  "org.scalablytyped.slinky" %%% "web3-utils" % "1.3.0-0a9988")
+  "org.scalablytyped.slinky" %%% "bignumber_dot_js" % "9.0.1-73ed3d",
+  "org.scalablytyped.slinky" %%% "bn_dot_js" % "4.11-dt-20200515Z-e7a7b6",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27",
+  "org.scalablytyped.slinky" %%% "web3-bzz" % "1.3.0-79e289",
+  "org.scalablytyped.slinky" %%% "web3-core" % "1.3.0-c94d75",
+  "org.scalablytyped.slinky" %%% "web3-core-helpers" % "1.3.0-dcc5b6",
+  "org.scalablytyped.slinky" %%% "web3-core-method" % "1.3.0-c85038",
+  "org.scalablytyped.slinky" %%% "web3-core-subscriptions" % "1.3.0-de9839",
+  "org.scalablytyped.slinky" %%% "web3-eth" % "1.3.0-0d6cdf",
+  "org.scalablytyped.slinky" %%% "web3-eth-abi" % "1.3.0-0ace30",
+  "org.scalablytyped.slinky" %%% "web3-eth-accounts" % "1.3.0-e4a554",
+  "org.scalablytyped.slinky" %%% "web3-eth-contract" % "1.3.0-4e6126",
+  "org.scalablytyped.slinky" %%% "web3-eth-ens" % "1.3.0-8005fb",
+  "org.scalablytyped.slinky" %%% "web3-eth-iban" % "1.3.0-725a97",
+  "org.scalablytyped.slinky" %%% "web3-eth-personal" % "1.3.0-fbabcc",
+  "org.scalablytyped.slinky" %%% "web3-net" % "1.3.0-a11945",
+  "org.scalablytyped.slinky" %%% "web3-shh" % "1.3.0-dc250f",
+  "org.scalablytyped.slinky" %%% "web3-utils" % "1.3.0-914017")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

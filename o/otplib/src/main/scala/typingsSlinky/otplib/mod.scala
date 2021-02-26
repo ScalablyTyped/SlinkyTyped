@@ -6,17 +6,22 @@ import typingsSlinky.otplibCore.mod.Authenticator
 import typingsSlinky.otplibCore.mod.HOTP
 import typingsSlinky.otplibCore.mod.TOTP
 import typingsSlinky.otplibCore.totpMod.TOTPOptions_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("otplib", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("otplib", "authenticator")
+  @js.native
   val authenticator: Authenticator[AuthenticatorOptions_[String]] = js.native
   
+  @JSImport("otplib", "hotp")
+  @js.native
   val hotp: HOTP[HOTPOptions_[String]] = js.native
   
+  @JSImport("otplib", "totp")
+  @js.native
   val totp: TOTP[TOTPOptions_[String]] = js.native
 }

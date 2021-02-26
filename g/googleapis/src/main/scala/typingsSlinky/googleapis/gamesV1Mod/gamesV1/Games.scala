@@ -3,6 +3,7 @@ package typingsSlinky.googleapis.gamesV1Mod.gamesV1
 import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
 import typingsSlinky.googleapisCommon.apiMod.GlobalOptions
 import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("googleapis/build/src/apis/games/v1", "games_v1.Games")
 @js.native
-class Games protected () extends js.Object {
+class Games protected () extends StObject {
   def this(options: GlobalOptions) = this()
   def this(options: GlobalOptions, google: GoogleConfigurable) = this()
   

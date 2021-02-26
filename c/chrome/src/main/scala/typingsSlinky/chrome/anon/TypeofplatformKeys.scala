@@ -1,12 +1,13 @@
 package typingsSlinky.chrome.anon
 
 import typingsSlinky.chrome.chrome.enterprise.platformKeys.Token
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofplatformKeys extends js.Object {
+trait TypeofplatformKeys extends StObject {
   
   def challengeMachineKey(
     challenge: js.typedarray.ArrayBuffer,

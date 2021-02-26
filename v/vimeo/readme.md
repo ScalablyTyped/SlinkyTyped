@@ -10,9 +10,9 @@ A Node.js library for the new Vimeo API.
 | ------------------ | :-------------: |
 | Full name          | vimeo |
 | Keywords           | vimeo |
-| # releases         | 6 |
-| # dependents       | 15 |
-| # downloads        | 134098 |
+| # releases         | 0 |
+| # dependents       | 20 |
+| # downloads        | 410246 |
 | # stars            | 6 |
 
 ## Links

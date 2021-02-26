@@ -1,6 +1,5 @@
 package typingsSlinky.asana.mod
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.asana.mod.auth.App
 import typingsSlinky.asana.mod.auth.OauthAuthenticatorOptions
 import typingsSlinky.asana.mod.resources.Attachments
@@ -15,12 +14,13 @@ import typingsSlinky.asana.mod.resources.UserTaskLists
 import typingsSlinky.asana.mod.resources.Users
 import typingsSlinky.asana.mod.resources.Webhooks
 import typingsSlinky.asana.mod.resources.Workspaces
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Client extends js.Object {
+trait Client extends StObject {
   
   /**
     * Store off Oauth info.
@@ -40,7 +40,7 @@ trait Client extends js.Object {
     * @returns {Promise<Client>} A promise that resolves to this client when
     *     authorization is complete.
     */
-  def authorize(): typingsSlinky.bluebird.mod.^[Client] = js.native
+  def authorize(): typingsSlinky.bluebird.mod.^[typingsSlinky.asana.mod.Client] = js.native
   
   /**
     * The internal dispatcher. This is mostly used by the resources but provided
@@ -48,7 +48,7 @@ trait Client extends js.Object {
     * to the client.
     * @type {Dispatcher}
     */
-  var dispatcher: Dispatcher = js.native
+  var dispatcher: typingsSlinky.asana.mod.Dispatcher = js.native
   
   /**
     * An instance of the Events resource.
@@ -155,6 +155,3 @@ trait Client extends js.Object {
     */
   var workspaces: Workspaces = js.native
 }
-@JSImport("asana", "Client")
-@js.native
-object Client extends TopLevel[ClientStatic]

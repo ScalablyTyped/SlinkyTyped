@@ -7,16 +7,16 @@ import typingsSlinky.imageQ.commonMod.IImageDitherer
 import typingsSlinky.imageQ.paletteCommonMod.IPaletteQuantizer
 import typingsSlinky.imageQ.pointContainerMod.PointContainer
 import typingsSlinky.imageQ.utilsPaletteMod.Palette
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("image-q/dist/helper", JSImport.Namespace)
-@js.native
-object helperMod extends js.Object {
+object helperMod {
   
+  @JSImport("image-q/dist/helper", "IQ")
   @js.native
-  class IQ protected () extends js.Object {
+  class IQ protected () extends StObject {
     def this(
       colors: Double,
       DistanceCalculator: Instantiable0[AbstractDistanceCalculator],

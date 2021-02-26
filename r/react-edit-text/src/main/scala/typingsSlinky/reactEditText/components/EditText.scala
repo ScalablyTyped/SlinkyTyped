@@ -6,6 +6,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactEditText.mod.EditTextProps
 import typingsSlinky.reactEditText.mod.inputTextType
 import typingsSlinky.reactEditText.mod.onSaveProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object EditText {
   
   @JSImport("react-edit-text", "EditText")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,7 +53,7 @@ object EditText {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: EditTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: EditText.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: EditTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -2,6 +2,7 @@ package typingsSlinky.webix.mod.ui
 
 import typingsSlinky.webix.mod.Date
 import typingsSlinky.webix.mod.WebixCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

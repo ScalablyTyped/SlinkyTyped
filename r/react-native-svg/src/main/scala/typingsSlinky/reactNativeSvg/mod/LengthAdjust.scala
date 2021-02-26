@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeSvg.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeSvg.reactNativeSvgStrings.spacing
   - typingsSlinky.reactNativeSvg.reactNativeSvgStrings.spacingAndGlyphs
 */
-trait LengthAdjust extends js.Object
+trait LengthAdjust extends StObject
 object LengthAdjust {
   
   @scala.inline

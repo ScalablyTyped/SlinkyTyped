@@ -11,6 +11,7 @@ import typingsSlinky.swaggerUiReact.mod.default
 import typingsSlinky.swaggerUiReact.swaggerUiReactStrings.full
 import typingsSlinky.swaggerUiReact.swaggerUiReactStrings.list
 import typingsSlinky.swaggerUiReact.swaggerUiReactStrings.none
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object SwaggerUiReact {
   
   @JSImport("swagger-ui-react", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,10 +40,10 @@ object SwaggerUiReact {
     def onComplete(value: /* system */ System => Unit): this.type = set("onComplete", js.Any.fromFunction1(value))
     
     @scala.inline
-    def pluginsVarargs(value: Plugin*): this.type = set("plugins", js.Array(value :_*))
+    def plugins(value: js.Array[Plugin]): this.type = set("plugins", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def plugins(value: js.Array[Plugin]): this.type = set("plugins", value.asInstanceOf[js.Any])
+    def pluginsVarargs(value: Plugin*): this.type = set("plugins", js.Array(value :_*))
     
     @scala.inline
     def requestInterceptor(value: /* req */ Request => Request | js.Promise[Request]): this.type = set("requestInterceptor", js.Any.fromFunction1(value))
@@ -54,16 +55,16 @@ object SwaggerUiReact {
     def spec(value: js.Object | String): this.type = set("spec", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def supportedSubmitMethodsVarargs(value: String*): this.type = set("supportedSubmitMethods", js.Array(value :_*))
+    def supportedSubmitMethods(value: js.Array[String]): this.type = set("supportedSubmitMethods", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def supportedSubmitMethods(value: js.Array[String]): this.type = set("supportedSubmitMethods", value.asInstanceOf[js.Any])
+    def supportedSubmitMethodsVarargs(value: String*): this.type = set("supportedSubmitMethods", js.Array(value :_*))
     
     @scala.inline
     def url(value: String): this.type = set("url", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SwaggerUIProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SwaggerUiReact.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SwaggerUIProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -19,15 +19,22 @@ import typingsSlinky.reactRequest.mod.RenderProps
 import typingsSlinky.reactRequest.mod.ResponseType
 import typingsSlinky.std.BodyInit
 import typingsSlinky.std.HeadersInit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Fetch {
   
+  @scala.inline
+  def apply[T](url: String): Builder[T] = {
+    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[FetchProps[T]]))
+  }
+  
   @JSImport("react-request", "Fetch")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -38,25 +45,25 @@ object Fetch {
     def afterFetch(value: /* args */ FetchResponse[T] => Unit): this.type = set("afterFetch", js.Any.fromFunction1(value))
     
     @scala.inline
-    def bodyBlob(value: Blob): this.type = set("body", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def bodyFormData(value: FormData): this.type = set("body", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def bodyArrayBufferView(value: js.typedarray.ArrayBufferView): this.type = set("body", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def body(value: BodyInit): this.type = set("body", value.asInstanceOf[js.Any])
     
     @scala.inline
     def bodyArrayBuffer(value: js.typedarray.ArrayBuffer): this.type = set("body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def bodyReadableStream(value: ReadableStream[js.typedarray.Uint8Array]): this.type = set("body", value.asInstanceOf[js.Any])
+    def bodyArrayBufferView(value: js.typedarray.ArrayBufferView): this.type = set("body", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def bodyBlob(value: Blob): this.type = set("body", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def bodyFormData(value: FormData): this.type = set("body", value.asInstanceOf[js.Any])
     
     @scala.inline
     def bodyNull: this.type = set("body", null)
+    
+    @scala.inline
+    def bodyReadableStream(value: ReadableStream[js.typedarray.Uint8Array]): this.type = set("body", value.asInstanceOf[js.Any])
     
     @scala.inline
     def cache(value: RequestCache): this.type = set("cache", value.asInstanceOf[js.Any])
@@ -68,13 +75,13 @@ object Fetch {
     def credentials(value: RequestCredentials): this.type = set("credentials", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headersVarargs(value: js.Array[String]*): this.type = set("headers", js.Array(value :_*))
+    def headers(value: HeadersInit): this.type = set("headers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def headersHeaders(value: Headers): this.type = set("headers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headers(value: HeadersInit): this.type = set("headers", value.asInstanceOf[js.Any])
+    def headersVarargs(value: js.Array[String]*): this.type = set("headers", js.Array(value :_*))
     
     @scala.inline
     def integrity(value: String): this.type = set("integrity", value.asInstanceOf[js.Any])
@@ -117,10 +124,4 @@ object Fetch {
   }
   
   def withProps[T](p: FetchProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](url: String): Builder[T] = {
-    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[FetchProps[T]]))
-  }
 }

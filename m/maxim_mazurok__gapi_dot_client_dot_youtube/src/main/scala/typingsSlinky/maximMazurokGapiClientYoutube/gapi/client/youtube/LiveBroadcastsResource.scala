@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientYoutube.anon.FieldsId
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.StreamId
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LiveBroadcastsResource extends js.Object {
+trait LiveBroadcastsResource extends StObject {
   
   /** Bind a broadcast to a stream. */
   def bind(): Request[LiveBroadcast] = js.native

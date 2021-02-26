@@ -5,6 +5,7 @@ import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStreamReference
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStream
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStreamReference
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

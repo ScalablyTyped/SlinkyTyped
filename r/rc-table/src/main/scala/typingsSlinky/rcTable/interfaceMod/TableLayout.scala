@@ -1,5 +1,6 @@
 package typingsSlinky.rcTable.interfaceMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.rcTable.rcTableStrings.auto
   - typingsSlinky.rcTable.rcTableStrings.fixed
 */
-trait TableLayout extends js.Object
+trait TableLayout extends StObject
 object TableLayout {
   
   @scala.inline

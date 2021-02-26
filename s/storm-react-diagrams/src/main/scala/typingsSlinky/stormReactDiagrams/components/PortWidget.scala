@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.stormReactDiagrams.nodeModelMod.NodeModel
 import typingsSlinky.stormReactDiagrams.portWidgetMod.PortProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PortWidget {
   
+  @scala.inline
+  def apply(name: String, node: NodeModel): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PortProps]))
+  }
+  
   @JSImport("storm-react-diagrams", "PortWidget")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +37,4 @@ object PortWidget {
   }
   
   def withProps(p: PortProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(name: String, node: NodeModel): Builder = {
-    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PortProps]))
-  }
 }

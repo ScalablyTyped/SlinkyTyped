@@ -14,6 +14,7 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import typingsSlinky.phaser.Phaser.Types.GameObjects.BitmapText.BitmapFontData
 import typingsSlinky.phaser.Phaser.Types.GameObjects.BitmapText.BitmapTextSize
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

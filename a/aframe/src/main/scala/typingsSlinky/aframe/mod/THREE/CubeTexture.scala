@@ -6,10 +6,12 @@ import typingsSlinky.three.constantsMod.TextureDataType
 import typingsSlinky.three.constantsMod.TextureEncoding
 import typingsSlinky.three.constantsMod.TextureFilter
 import typingsSlinky.three.constantsMod.Wrapping
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSImport("aframe", "THREE.CubeTexture")
 @js.native
 class CubeTexture protected ()
@@ -27,9 +29,9 @@ class CubeTexture protected ()
   	 * @param [encoding=THREE.LinearEncoding]
   	 */
   def this(
-     // HTMLImageElement or HTMLCanvasElement
-  images: js.UndefOr[js.Array[_]],
-    mapping: js.UndefOr[Mapping],
+    images: js.UndefOr[js.Array[_]],
+    // HTMLImageElement or HTMLCanvasElement
+  mapping: js.UndefOr[Mapping],
     wrapS: js.UndefOr[Wrapping],
     wrapT: js.UndefOr[Wrapping],
     magFilter: js.UndefOr[TextureFilter],

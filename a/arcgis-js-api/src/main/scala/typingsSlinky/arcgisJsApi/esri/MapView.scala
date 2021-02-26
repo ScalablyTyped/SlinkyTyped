@@ -12,6 +12,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.center
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.left
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.right
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -57,6 +58,8 @@ trait MapView
     */
   var highlightOptions: MapViewHighlightOptions = js.native
   
+  def hitTest(screenPoint: MouseEvent): js.Promise[HitTestResult] = js.native
+  def hitTest(screenPoint: MouseEvent, options: MapViewHitTestOptions): js.Promise[HitTestResult] = js.native
   /**
     * Returns the topmost feature from each layer that intersects the specified screen coordinates.
     *
@@ -64,8 +67,6 @@ trait MapView
     */
   def hitTest(screenPoint: ScreenPoint): js.Promise[HitTestResult] = js.native
   def hitTest(screenPoint: ScreenPoint, options: MapViewHitTestOptions): js.Promise[HitTestResult] = js.native
-  def hitTest(screenPoint: MouseEvent): js.Promise[HitTestResult] = js.native
-  def hitTest(screenPoint: MouseEvent, options: MapViewHitTestOptions): js.Promise[HitTestResult] = js.native
   
   def on(`type`: String, modifiersOrHandler: js.Array[String], handler: EventHandler): IHandle = js.native
   def on(`type`: String, modifiersOrHandler: EventHandler, handler: EventHandler): IHandle = js.native
@@ -101,13 +102,13 @@ trait MapView
   def takeScreenshot(): js.Promise[Screenshot] = js.native
   def takeScreenshot(options: MapViewTakeScreenshotOptions): js.Promise[Screenshot] = js.native
   
+  def toMap(screenPoint: MouseEvent): Point = js.native
   /**
     * Converts the given screen point to a [map point](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#toMap)
     */
   def toMap(screenPoint: ScreenPoint): Point = js.native
-  def toMap(screenPoint: MouseEvent): Point = js.native
   
   /**
     * Converts the given [map point](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html) to a screen point.

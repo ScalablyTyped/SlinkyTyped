@@ -1,6 +1,7 @@
 package typingsSlinky.chromeApps.chrome.networking.onc
 
 import typingsSlinky.chromeApps.chromeAppsStrings.All_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.WiFi
   - typingsSlinky.chromeApps.chromeAppsStrings.WiMAX
 */
-trait NetworkType extends js.Object
+trait NetworkType extends StObject
 object NetworkType {
   
   @scala.inline

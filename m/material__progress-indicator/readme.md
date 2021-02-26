@@ -10,9 +10,9 @@ The Material Components for the web interface for Progress Indicators
 | ------------------ | :-------------: |
 | Full name          | @material/progress-indicator |
 | Keywords           | - |
-| # releases         | 352 |
+| # releases         | 631 |
 | # dependents       | 2 |
-| # downloads        | 263202 |
+| # downloads        | 794427 |
 | # stars            | 0 |
 
 ## Links

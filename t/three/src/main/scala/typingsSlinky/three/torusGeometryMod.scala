@@ -2,14 +2,14 @@ package typingsSlinky.three
 
 import typingsSlinky.three.anon.Arc
 import typingsSlinky.three.geometryMod.Geometry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/geometries/TorusGeometry", JSImport.Namespace)
-@js.native
-object torusGeometryMod extends js.Object {
+object torusGeometryMod {
   
+  @JSImport("three/src/geometries/TorusGeometry", "TorusGeometry")
   @js.native
   /**
   	 * @param [radius=1]

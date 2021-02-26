@@ -19,6 +19,7 @@ import typingsSlinky.request.requestStrings.pipe
 import typingsSlinky.request.requestStrings.request
 import typingsSlinky.request.requestStrings.response
 import typingsSlinky.request.requestStrings.socket
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

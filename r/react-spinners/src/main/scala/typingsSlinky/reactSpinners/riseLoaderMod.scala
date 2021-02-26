@@ -1,29 +1,36 @@
 package typingsSlinky.reactSpinners
 
-import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.PureComponent
 import typingsSlinky.reactSpinners.interfacesMod.LoaderSizeMarginProps
 import typingsSlinky.reactSpinners.interfacesMod.StyleFunctionWithIndex
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-spinners/RiseLoader", JSImport.Namespace)
-@js.native
-object riseLoaderMod extends js.Object {
+object riseLoaderMod {
   
+  @JSImport("react-spinners/RiseLoader", JSImport.Default)
   @js.native
-  trait Loader
-    extends Component[LoaderSizeMarginProps, js.Object, js.Any] {
+  class default () extends Loader
+  object default {
     
-    var style: StyleFunctionWithIndex = js.native
+    @JSImport("react-spinners/RiseLoader", JSImport.Default)
+    @js.native
+    val ^ : js.Any = js.native
+    
+    /* static member */
+    @JSImport("react-spinners/RiseLoader", "default.defaultProps")
+    @js.native
+    def defaultProps: LoaderSizeMarginProps = js.native
+    @scala.inline
+    def defaultProps_=(x: LoaderSizeMarginProps): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
   }
   
   @js.native
-  class default () extends Loader
-  /* static members */
-  @js.native
-  object default extends js.Object {
+  trait Loader
+    extends PureComponent[LoaderSizeMarginProps, js.Object, js.Any] {
     
-    var defaultProps: LoaderSizeMarginProps = js.native
+    var style: StyleFunctionWithIndex = js.native
   }
 }

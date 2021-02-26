@@ -4,13 +4,18 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.streamMod.WritableOptions
 import typingsSlinky.streamMock.iwritablemockMod.IWritableMock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("stream-mock/lib/writable/BufferWritableMock", JSImport.Namespace)
-@js.native
-object bufferWritableMockMod extends js.Object {
+object bufferWritableMockMod {
+  
+  @JSImport("stream-mock/lib/writable/BufferWritableMock", JSImport.Default)
+  @js.native
+  class default () extends BufferWritableMock {
+    def this(options: WritableOptions) = this()
+  }
   
   @js.native
   trait BufferWritableMock extends IWritableMock {
@@ -31,10 +36,5 @@ object bufferWritableMockMod extends js.Object {
     
     @JSName("flatData")
     var flatData_BufferWritableMock: Buffer = js.native
-  }
-  
-  @js.native
-  class default () extends BufferWritableMock {
-    def this(options: WritableOptions) = this()
   }
 }

@@ -9,15 +9,22 @@ import typingsSlinky.antDesignReactNative.cascaderTypesMod.CascaderProps
 import typingsSlinky.antDesignReactNative.cascaderTypesMod.CascaderValue
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Cascader {
   
+  @scala.inline
+  def apply(data: js.Array[CascaderDataItem]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CascaderProps]))
+  }
+  
   @JSImport("@ant-design/react-native/lib/picker/cascader", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -28,10 +35,10 @@ object Cascader {
     def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: CascaderOneValue*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: CascaderValue): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: CascaderValue): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: CascaderOneValue*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -64,17 +71,11 @@ object Cascader {
     def styleNull: this.type = set("style", null)
     
     @scala.inline
-    def valueVarargs(value: CascaderOneValue*): this.type = set("value", js.Array(value :_*))
+    def value(value: CascaderValue): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: CascaderValue): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: CascaderOneValue*): this.type = set("value", js.Array(value :_*))
   }
   
   def withProps(p: CascaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[CascaderDataItem]): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CascaderProps]))
-  }
 }

@@ -1,12 +1,13 @@
 package typingsSlinky.typeorm.anon
 
 import typingsSlinky.typeorm.typeormStrings.optimistic
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Mode extends js.Object {
+trait Mode extends StObject {
   
   var mode: optimistic = js.native
   
@@ -21,27 +22,15 @@ object Mode {
   }
   
   @scala.inline
-  implicit class ModeOps[Self <: Mode] (val x: Self) extends AnyVal {
+  implicit class ModeMutableBuilder[Self <: Mode] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setMode(value: optimistic): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setVersion(value: Double | js.Date): Self = StObject.set(x, "version", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setMode(value: optimistic): Self = this.set("mode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVersionDate(value: js.Date): Self = this.set("version", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVersion(value: Double | js.Date): Self = this.set("version", value.asInstanceOf[js.Any])
+    def setVersionDate(value: js.Date): Self = StObject.set(x, "version", value.asInstanceOf[js.Any])
   }
 }

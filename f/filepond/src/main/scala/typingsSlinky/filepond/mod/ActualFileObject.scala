@@ -2,13 +2,14 @@ package typingsSlinky.filepond.mod
 
 import org.scalajs.dom.experimental.ReadableStream
 import org.scalajs.dom.raw.Blob
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Blob & { readonly lastModified :number,  readonly name :string} */
 @js.native
-trait ActualFileObject extends js.Object {
+trait ActualFileObject extends StObject {
   
   def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
   

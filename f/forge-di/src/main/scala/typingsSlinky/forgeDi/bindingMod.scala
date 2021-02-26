@@ -4,16 +4,21 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.forgeDi.constructorMod.Constructor
 import typingsSlinky.forgeDi.lifecycleMod.Lifecycle
 import typingsSlinky.forgeDi.predicateMod.Predicate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("forge-di/dist/framework/Binding", JSImport.Namespace)
-@js.native
-object bindingMod extends js.Object {
+object bindingMod {
+  
+  @JSImport("forge-di/dist/framework/Binding", JSImport.Default)
+  @js.native
+  class default protected () extends Binding {
+    def this(forge: typingsSlinky.forgeDi.forgeMod.default, name: String) = this()
+  }
   
   @js.native
-  trait Binding extends js.Object {
+  trait Binding extends StObject {
     
     var arguments: StringDictionary[js.Any] = js.native
     
@@ -52,10 +57,5 @@ object bindingMod extends js.Object {
     def when(condition: Predicate): this.type = js.native
     
     def `with`(args: js.Any): this.type = js.native
-  }
-  
-  @js.native
-  class default protected () extends Binding {
-    def this(forge: typingsSlinky.forgeDi.forgeMod.default, name: String) = this()
   }
 }

@@ -3,14 +3,14 @@ package typingsSlinky.typeorm
 import typingsSlinky.typeorm.connectionConnectionMod.Connection
 import typingsSlinky.typeorm.sqliteAbstractAbstractSqliteDriverMod.AbstractSqliteDriver
 import typingsSlinky.typeorm.sqljsSqljsConnectionOptionsMod.SqljsConnectionOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/driver/sqljs/SqljsDriver", JSImport.Namespace)
-@js.native
-object sqljsSqljsDriverMod extends js.Object {
+object sqljsSqljsDriverMod {
   
+  @JSImport("typeorm/driver/sqljs/SqljsDriver", "SqljsDriver")
   @js.native
   class SqljsDriver protected () extends AbstractSqliteDriver {
     def this(connection: Connection) = this()

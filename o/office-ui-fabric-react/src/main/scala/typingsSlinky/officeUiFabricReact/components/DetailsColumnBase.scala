@@ -17,15 +17,22 @@ import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DetailsColumnBase {
   
+  @scala.inline
+  def apply(column: IColumn, columnIndex: Double): Builder = {
+    val __props = js.Dynamic.literal(column = column.asInstanceOf[js.Any], columnIndex = columnIndex.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsColumnProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "DetailsColumnBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -70,10 +77,10 @@ object DetailsColumnBase {
     def setDraggedItemIndex(value: /* itemIndex */ Double => Unit): this.type = set("setDraggedItemIndex", js.Any.fromFunction1(value))
     
     @scala.inline
-    def stylesFunction1(value: IDetailsColumnStyleProps => DeepPartial[IDetailsColumnStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IDetailsColumnStyleProps, IDetailsColumnStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IDetailsColumnStyleProps, IDetailsColumnStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IDetailsColumnStyleProps => DeepPartial[IDetailsColumnStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -86,10 +93,4 @@ object DetailsColumnBase {
   }
   
   def withProps(p: IDetailsColumnProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(column: IColumn, columnIndex: Double): Builder = {
-    val __props = js.Dynamic.literal(column = column.asInstanceOf[js.Any], columnIndex = columnIndex.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsColumnProps]))
-  }
 }

@@ -2,12 +2,13 @@ package typingsSlinky.nodeZendesk.mod.Requests
 
 import typingsSlinky.nodeZendesk.mod.ZendeskCallback
 import typingsSlinky.nodeZendesk.mod.ZendeskID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Methods extends js.Object {
+trait Methods extends StObject {
   
   def create(request: CreatePayload): js.Promise[ResponsePayload] = js.native
   /** Creating Requests */

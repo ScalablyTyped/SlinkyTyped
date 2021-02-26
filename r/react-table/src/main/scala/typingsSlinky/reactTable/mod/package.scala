@@ -1,5 +1,6 @@
 package typingsSlinky.reactTable
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -170,4 +171,78 @@ package object mod {
   type UseRowUpdater[T] = T | (js.Function1[/* prev */ T, T])
   
   type ValueOf[T] = /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+  
+  @scala.inline
+  def actions: typingsSlinky.std.Record[java.lang.String, java.lang.String] = typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].selectDynamic("actions").asInstanceOf[typingsSlinky.std.Record[java.lang.String, java.lang.String]]
+  
+  @scala.inline
+  def defaultColumn: typingsSlinky.std.Partial[typingsSlinky.reactTable.mod.Column[js.Object]] with (typingsSlinky.std.Record[java.lang.String, _]) = typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].selectDynamic("defaultColumn").asInstanceOf[typingsSlinky.std.Partial[typingsSlinky.reactTable.mod.Column[js.Object]] with (typingsSlinky.std.Record[java.lang.String, _])]
+  
+  @scala.inline
+  def defaultGroupByFn[D /* <: js.Object */](
+    rows: js.Array[typingsSlinky.reactTable.mod.Row[D]],
+    columnId: typingsSlinky.reactTable.mod.IdType[D]
+  ): typingsSlinky.std.Record[java.lang.String, js.Array[typingsSlinky.reactTable.mod.Row[D]]] = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("defaultGroupByFn")(rows.asInstanceOf[js.Any], columnId.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.std.Record[java.lang.String, js.Array[typingsSlinky.reactTable.mod.Row[D]]]]
+  
+  @scala.inline
+  def defaultOrderByFn[D /* <: js.Object */](
+    arr: js.Array[typingsSlinky.reactTable.mod.Row[D]],
+    funcs: js.Array[typingsSlinky.reactTable.mod.SortByFn[D]],
+    dirs: js.Array[scala.Boolean]
+  ): js.Array[typingsSlinky.reactTable.mod.Row[D]] = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("defaultOrderByFn")(arr.asInstanceOf[js.Any], funcs.asInstanceOf[js.Any], dirs.asInstanceOf[js.Any])).asInstanceOf[js.Array[typingsSlinky.reactTable.mod.Row[D]]]
+  
+  @scala.inline
+  def ensurePluginOrder[D /* <: js.Object */](
+    plugins: js.Array[typingsSlinky.reactTable.mod.PluginHook[D]],
+    befores: js.Array[java.lang.String],
+    pluginName: java.lang.String
+  ): scala.Unit = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("ensurePluginOrder")(plugins.asInstanceOf[js.Any], befores.asInstanceOf[js.Any], pluginName.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def functionalUpdate[D /* <: js.Object */](updater: js.Any, old: typingsSlinky.std.Partial[typingsSlinky.reactTable.mod.TableState[D]]): typingsSlinky.std.Partial[typingsSlinky.reactTable.mod.TableState[D]] = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("functionalUpdate")(updater.asInstanceOf[js.Any], old.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.std.Partial[typingsSlinky.reactTable.mod.TableState[D]]]
+  
+  @scala.inline
+  def loopHooks(hooks: typingsSlinky.reactTable.mod.Hooks[js.Object], args: js.Any*): scala.Unit = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("loopHooks")(hooks.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def makePropGetter(hooks: typingsSlinky.reactTable.mod.Hooks[js.Object], meta: js.Any*): js.Any = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("makePropGetter")(hooks.asInstanceOf[js.Any], meta.asInstanceOf[js.Any])).asInstanceOf[js.Any]
+  
+  @scala.inline
+  def makeRenderer(
+    instance: typingsSlinky.reactTable.mod.TableInstance[js.Object],
+    column: typingsSlinky.reactTable.mod.ColumnInstance[js.Object]
+  ): slinky.core.facade.ReactElement = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("makeRenderer")(instance.asInstanceOf[js.Any], column.asInstanceOf[js.Any])).asInstanceOf[slinky.core.facade.ReactElement]
+  @scala.inline
+  def makeRenderer(
+    instance: typingsSlinky.reactTable.mod.TableInstance[js.Object],
+    column: typingsSlinky.reactTable.mod.ColumnInstance[js.Object],
+    meta: js.Any
+  ): slinky.core.facade.ReactElement = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("makeRenderer")(instance.asInstanceOf[js.Any], column.asInstanceOf[js.Any], meta.asInstanceOf[js.Any])).asInstanceOf[slinky.core.facade.ReactElement]
+  
+  @scala.inline
+  def reduceHooks[T /* <: js.Object */](hooks: typingsSlinky.reactTable.mod.Hooks[js.Object], initial: T, args: js.Any*): T = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("reduceHooks")(hooks.asInstanceOf[js.Any], initial.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[T]
+  
+  @scala.inline
+  def safeUseLayoutEffect(effect: typingsSlinky.react.mod.EffectCallback): scala.Unit = typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("safeUseLayoutEffect")(effect.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
+  @scala.inline
+  def safeUseLayoutEffect(effect: typingsSlinky.react.mod.EffectCallback, deps: typingsSlinky.react.mod.DependencyList): scala.Unit = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("safeUseLayoutEffect")(effect.asInstanceOf[js.Any], deps.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def useAsyncDebounce[F /* <: js.Function1[/* repeated */ js.Any, _] */](defaultFn: F): F = typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useAsyncDebounce")(defaultFn.asInstanceOf[js.Any]).asInstanceOf[F]
+  @scala.inline
+  def useAsyncDebounce[F /* <: js.Function1[/* repeated */ js.Any, _] */](defaultFn: F, defaultWait: scala.Double): F = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useAsyncDebounce")(defaultFn.asInstanceOf[js.Any], defaultWait.asInstanceOf[js.Any])).asInstanceOf[F]
+  
+  @scala.inline
+  def useGetLatest[T](obj: T): js.Function0[T] = typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useGetLatest")(obj.asInstanceOf[js.Any]).asInstanceOf[js.Function0[T]]
+  
+  @scala.inline
+  def useMountedLayoutEffect(effect: typingsSlinky.react.mod.EffectCallback): scala.Unit = typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useMountedLayoutEffect")(effect.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
+  @scala.inline
+  def useMountedLayoutEffect(effect: typingsSlinky.react.mod.EffectCallback, deps: typingsSlinky.react.mod.DependencyList): scala.Unit = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useMountedLayoutEffect")(effect.asInstanceOf[js.Any], deps.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def useTable[D /* <: js.Object */](
+    options: typingsSlinky.reactTable.mod.TableOptions[D],
+    plugins: typingsSlinky.reactTable.mod.PluginHook[D]*
+  ): typingsSlinky.reactTable.mod.TableInstance[D] = (typingsSlinky.reactTable.mod.^.asInstanceOf[js.Dynamic].applyDynamic("useTable")(options.asInstanceOf[js.Any], plugins.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.reactTable.mod.TableInstance[D]]
 }

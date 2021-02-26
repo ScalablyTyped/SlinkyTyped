@@ -1,5 +1,6 @@
 package typingsSlinky.gatsbyPluginUtils.pluginOptionsSchemaJoiTypeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -81,8 +82,6 @@ trait ObjectSchema[TSchema] extends AnySchema {
     */
   def oxor(peers: (String | HierarchySeparatorOptions)*): this.type = js.native
   
-  def pattern(pattern: SchemaLike, schema: SchemaLike): this.type = js.native
-  def pattern(pattern: SchemaLike, schema: SchemaLike, options: ObjectPatternOptions): this.type = js.native
   /**
     * Specify validation rules for unknown keys matching a pattern.
     *
@@ -91,6 +90,8 @@ trait ObjectSchema[TSchema] extends AnySchema {
     */
   def pattern(pattern: js.RegExp, schema: SchemaLike): this.type = js.native
   def pattern(pattern: js.RegExp, schema: SchemaLike, options: ObjectPatternOptions): this.type = js.native
+  def pattern(pattern: SchemaLike, schema: SchemaLike): this.type = js.native
+  def pattern(pattern: SchemaLike, schema: SchemaLike, options: ObjectPatternOptions): this.type = js.native
   
   /**
     * Requires the object to be a Joi reference.

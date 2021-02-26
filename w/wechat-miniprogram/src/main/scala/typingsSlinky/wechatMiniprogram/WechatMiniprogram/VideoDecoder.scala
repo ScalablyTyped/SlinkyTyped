@@ -5,12 +5,13 @@ import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.ended
 import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.seek
 import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.start
 import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.stop
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VideoDecoder extends js.Object {
+trait VideoDecoder extends StObject {
   
   /** [Object VideoDecoder.getFrameData()](https://developers.weixin.qq.com/miniprogram/dev/api/media/video-decoder/VideoDecoder.getFrameData.html)
     *

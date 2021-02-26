@@ -5,12 +5,13 @@ import typingsSlinky.angular.angularStrings.abort
 import typingsSlinky.angular.angularStrings.complete
 import typingsSlinky.angular.angularStrings.error
 import typingsSlinky.angular.angularStrings.timeout
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IHttpResponse[T] extends js.Object {
+trait IHttpResponse[T] extends StObject {
   
   var config: IRequestConfig = js.native
   

@@ -1,11 +1,12 @@
 package typingsSlinky.chunkedDc.jasmine
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Clock extends js.Object {
+trait Clock extends StObject {
   
   def install(): Unit = js.native
   

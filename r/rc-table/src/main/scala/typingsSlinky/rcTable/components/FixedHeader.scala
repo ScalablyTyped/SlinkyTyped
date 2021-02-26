@@ -13,26 +13,12 @@ import typingsSlinky.rcTable.rcTableStrings.ltr
 import typingsSlinky.rcTable.rcTableStrings.rtl
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FixedHeader {
-  
-  @JSImport("rc-table/lib/Header/FixedHeader", JSImport.Default)
-  @js.native
-  object component extends js.Object
-  
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, HTMLDivElement] {
-    
-    @scala.inline
-    def stickyClassName(value: String): this.type = set("stickyClassName", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: FixedHeaderProps[js.Any] with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -51,4 +37,19 @@ object FixedHeader {
     val __props = js.Dynamic.literal(colWidths = colWidths.asInstanceOf[js.Any], columCount = columCount.asInstanceOf[js.Any], columns = columns.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], fixHeader = fixHeader.asInstanceOf[js.Any], flattenColumns = flattenColumns.asInstanceOf[js.Any], noData = noData.asInstanceOf[js.Any], offsetHeader = offsetHeader.asInstanceOf[js.Any], onHeaderRow = js.Any.fromFunction2(onHeaderRow), onScroll = js.Any.fromFunction1(onScroll), stickyOffsets = stickyOffsets.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[FixedHeaderProps[js.Any] with RefAttributes[HTMLDivElement]]))
   }
+  
+  @JSImport("rc-table/lib/Header/FixedHeader", JSImport.Default)
+  @js.native
+  val component: js.Object = js.native
+  
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, HTMLDivElement] {
+    
+    @scala.inline
+    def stickyClassName(value: String): this.type = set("stickyClassName", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: FixedHeaderProps[js.Any] with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

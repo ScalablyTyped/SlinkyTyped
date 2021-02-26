@@ -2,24 +2,27 @@ package typingsSlinky.aframe.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.aframe.anon.Back
-import typingsSlinky.aframe.anon.Bezier
+import typingsSlinky.aframe.anon.TypeofEasing
+import typingsSlinky.aframe.anon.TypeofInterpolation
 import typingsSlinky.aframe.anon.TypeofSequence
 import typingsSlinky.aframe.anon.Typeofdefault
 import typingsSlinky.std.Record
 import typingsSlinky.tweenjsTweenJs.mod.Tween
 import typingsSlinky.tweenjsTweenJs.mod.UnknownProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TweenLib extends js.Object {
+trait TweenLib extends StObject {
+  
+  val default: Typeofdefault = js.native
   
   /**
     * The Ease class provides a collection of easing functions for use with tween.js.
     */
-  val Easing: Back = js.native
+  val Easing: TypeofEasing = js.native
   
   /**
     * Controlling groups of tweens
@@ -32,12 +35,12 @@ trait TweenLib extends js.Object {
   /**
     *
     */
-  val Interpolation: Bezier = js.native
+  val Interpolation: TypeofInterpolation = js.native
   
   /**
     * Utils
     */
-  var Sequence: TypeofSequence = js.native
+  val Sequence: TypeofSequence with Instantiable0[typingsSlinky.tweenjsTweenJs.mod.Sequence] = js.native
   
   var Tween: Instantiable1[
     /* import warning: RewrittenClass.unapply cls was tparam T */ /* _object */ js.Any, 
@@ -48,11 +51,11 @@ trait TweenLib extends js.Object {
   
   def add(tween: Tween[Record[String, _]]): Unit = js.native
   
-  val default: Typeofdefault = js.native
-  
   def getAll(): js.Array[Tween[Record[String, _]]] = js.native
   
-  val nextId: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Sequence.nextId */ js.Any = js.native
+  /* static member */
+  /* was `typeof Sequence.nextId` */
+  def nextId(): Double = js.native
   
   def now(): Double = js.native
   @JSName("now")

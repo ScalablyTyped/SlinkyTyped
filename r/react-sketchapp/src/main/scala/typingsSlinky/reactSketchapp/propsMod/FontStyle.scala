@@ -1,5 +1,6 @@
 package typingsSlinky.reactSketchapp.propsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactSketchapp.reactSketchappStrings.italic
   - typingsSlinky.reactSketchapp.reactSketchappStrings.oblique
 */
-trait FontStyle extends js.Object
+trait FontStyle extends StObject
 object FontStyle {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.web3Core.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.web3Core.web3CoreStrings.petersburg
   - typingsSlinky.web3Core.web3CoreStrings.istanbul
 */
-trait hardfork extends js.Object
+trait hardfork extends StObject
 object hardfork {
   
   @scala.inline

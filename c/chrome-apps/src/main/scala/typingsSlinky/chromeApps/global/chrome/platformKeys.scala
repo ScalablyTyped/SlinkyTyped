@@ -8,6 +8,7 @@ import typingsSlinky.chromeApps.chrome.platformKeys.VerificationDetails
 import typingsSlinky.chromeApps.chrome.platformKeys.VerificationResult
 import typingsSlinky.chromeApps.chromeAppsStrings.ecdsaSign
 import typingsSlinky.chromeApps.chromeAppsStrings.rsaSign
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,9 +28,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * E.g. this allows usage of platform managed certificates in third party VPNs
   * @see chrome.vpnProvider
   */
-@JSGlobal("chrome.platformKeys")
-@js.native
-object platformKeys extends js.Object {
+object platformKeys {
+  
+  /**
+    * @enum
+    */
+  object ClientCertificateType {
+    
+    @JSGlobal("chrome.platformKeys.ClientCertificateType")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSGlobal("chrome.platformKeys.ClientCertificateType.ECDSA_SIGN")
+    @js.native
+    def ECDSA_SIGN: ecdsaSign = js.native
+    @scala.inline
+    def ECDSA_SIGN_=(x: ecdsaSign): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ECDSA_SIGN")(x.asInstanceOf[js.Any])
+    
+    @JSGlobal("chrome.platformKeys.ClientCertificateType.RSA_SIGN")
+    @js.native
+    def RSA_SIGN: rsaSign = js.native
+    @scala.inline
+    def RSA_SIGN_=(x: rsaSign): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("RSA_SIGN")(x.asInstanceOf[js.Any])
+  }
   
   /**
     * @description
@@ -54,6 +75,8 @@ object platformKeys extends js.Object {
     * @see[WebCrypto's importKey docs]{@link http://www.w3.org/TR/WebCryptoAPI/#SubtleCrypto-method-importKey}
     * @see[CryptoKey docs]{@link http://www.w3.org/TR/WebCryptoAPI/#dfn-CryptoKey}
     */
+  @JSGlobal("chrome.platformKeys.getKeyPair")
+  @js.native
   def getKeyPair(
     certificate: js.typedarray.ArrayBuffer,
     parameters: js.Object,
@@ -71,6 +94,8 @@ object platformKeys extends js.Object {
     * @param callback Will provide *matches*: The list of certificates that match the request, that the
     *                 app has permission for and, if *interactive* is true, that were selected by the user.
     */
+  @JSGlobal("chrome.platformKeys.selectClientCertificates")
+  @js.native
   def selectClientCertificates(details: SelectDetails, callback: js.Function1[/* matches */ js.Array[Match], Unit]): Unit = js.native
   
   /**
@@ -79,6 +104,8 @@ object platformKeys extends js.Object {
     * certificates that are available to this app.
     * @see[SubtleCrypto]{@link http://www.w3.org/TR/WebCryptoAPI/#subtlecrypto-interface}
     */
+  @JSGlobal("chrome.platformKeys.subtleCrypto")
+  @js.native
   def subtleCrypto(): SubtleCrypto = js.native
   
   /**
@@ -92,16 +119,7 @@ object platformKeys extends js.Object {
     * The implementation is supposed to respect the EKU serverAuth and to
     * support subject alternative names.
     */
-  def verifyTLSServerCertificate(details: VerificationDetails, callback: js.Function1[/* result */ VerificationResult, Unit]): Unit = js.native
-  
-  /**
-    * @enum
-    */
+  @JSGlobal("chrome.platformKeys.verifyTLSServerCertificate")
   @js.native
-  object ClientCertificateType extends js.Object {
-    
-    var ECDSA_SIGN: ecdsaSign = js.native
-    
-    var RSA_SIGN: rsaSign = js.native
-  }
+  def verifyTLSServerCertificate(details: VerificationDetails, callback: js.Function1[/* result */ VerificationResult, Unit]): Unit = js.native
 }

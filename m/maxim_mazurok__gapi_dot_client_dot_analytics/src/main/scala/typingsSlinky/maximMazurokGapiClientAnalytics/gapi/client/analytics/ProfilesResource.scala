@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAnalytics.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.PrettyPrintQuotaUser
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.ProfileIdQuotaUser
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.Startindex
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProfilesResource extends js.Object {
+trait ProfilesResource extends StObject {
   
   /** Deletes a view (profile). */
   def delete(): Request[Unit] = js.native

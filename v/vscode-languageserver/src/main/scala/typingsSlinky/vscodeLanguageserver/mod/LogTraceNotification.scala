@@ -1,13 +1,14 @@
 package typingsSlinky.vscodeLanguageserver.mod
 
 import typingsSlinky.vscodeJsonrpc.mod.LogTraceParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageserver", "LogTraceNotification")
-@js.native
-object LogTraceNotification extends js.Object {
+object LogTraceNotification {
   
+  @JSImport("vscode-languageserver", "LogTraceNotification.type")
+  @js.native
   val `type`: typingsSlinky.vscodeJsonrpc.messagesMod.NotificationType[LogTraceParams, Unit] = js.native
 }

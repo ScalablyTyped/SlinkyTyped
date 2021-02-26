@@ -1,5 +1,6 @@
 package typingsSlinky.workerbApi
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.workerbApi.workerbApiStrings.by_query_selector
   - typingsSlinky.workerbApi.workerbApiStrings.by_query_selector_all
 */
-trait getAttributeQueryMethods extends js.Object
+trait getAttributeQueryMethods extends StObject
 object getAttributeQueryMethods {
   
   @scala.inline

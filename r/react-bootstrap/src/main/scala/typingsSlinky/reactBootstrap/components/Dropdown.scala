@@ -74,22 +74,56 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactBootstrap.anon.Source
+import typingsSlinky.reactBootstrap.dropdownMenuMod.DropdownMenuProps
 import typingsSlinky.reactBootstrap.dropdownMod.DropdownProps
+import typingsSlinky.reactBootstrap.dropdownToggleMod.DropdownToggleProps
 import typingsSlinky.reactBootstrap.mod.SelectCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Dropdown {
   
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DropdownProps]))
+  }
+  
+  object Menu {
+    
+    @JSImport("react-bootstrap", "Dropdown.Menu")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Menu.type): SharedBuilder_DropdownMenuProps_1530386802[typingsSlinky.reactBootstrap.mod.Dropdown.Menu] = new SharedBuilder_DropdownMenuProps_1530386802[typingsSlinky.reactBootstrap.mod.Dropdown.Menu](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: DropdownMenuProps): SharedBuilder_DropdownMenuProps_1530386802[typingsSlinky.reactBootstrap.mod.Dropdown.Menu] = new SharedBuilder_DropdownMenuProps_1530386802[typingsSlinky.reactBootstrap.mod.Dropdown.Menu](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Toggle {
+    
+    @JSImport("react-bootstrap", "Dropdown.Toggle")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Toggle.type): SharedBuilder_DropdownToggleProps_1250924136[typingsSlinky.reactBootstrap.mod.Dropdown.Toggle] = new SharedBuilder_DropdownToggleProps_1250924136[typingsSlinky.reactBootstrap.mod.Dropdown.Toggle](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: DropdownToggleProps): SharedBuilder_DropdownToggleProps_1250924136[typingsSlinky.reactBootstrap.mod.Dropdown.Toggle] = new SharedBuilder_DropdownToggleProps_1250924136[typingsSlinky.reactBootstrap.mod.Dropdown.Toggle](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("react-bootstrap", "Dropdown")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Dropdown] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -325,13 +359,13 @@ object Dropdown {
     def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentClassFunctionComponent(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
+    def componentClass(value: ReactType[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentClassComponentClass(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentClass(value: ReactType[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
+    def componentClassFunctionComponent(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
     
     @scala.inline
     def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
@@ -364,16 +398,13 @@ object Dropdown {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -948,10 +979,10 @@ object Dropdown {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -967,10 +998,4 @@ object Dropdown {
   }
   
   def withProps(p: DropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DropdownProps]))
-  }
 }

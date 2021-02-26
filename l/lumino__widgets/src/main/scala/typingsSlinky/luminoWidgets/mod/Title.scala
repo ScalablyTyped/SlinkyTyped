@@ -1,6 +1,7 @@
 package typingsSlinky.luminoWidgets.mod
 
 import typingsSlinky.luminoWidgets.titleMod.Title.IOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

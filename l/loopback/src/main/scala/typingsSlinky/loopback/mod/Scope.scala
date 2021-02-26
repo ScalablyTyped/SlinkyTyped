@@ -1,5 +1,6 @@
 package typingsSlinky.loopback.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,11 +14,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("loopback", "Scope")
 @js.native
-class Scope () extends js.Object
-/* static members */
-@JSImport("loopback", "Scope")
-@js.native
-object Scope extends js.Object {
+class Scope () extends StObject
+object Scope {
   
   /**
     * Check if the given scope is allowed to access the model/property
@@ -29,6 +27,9 @@ object Scope extends js.Object {
     * @param {string|Error} err The error object
     * @param {AccessRequest} result The access permission
     */
+  /* static member */
+  @JSImport("loopback", "Scope.checkPermission")
+  @js.native
   def checkPermission(
     scope: String,
     model: String,

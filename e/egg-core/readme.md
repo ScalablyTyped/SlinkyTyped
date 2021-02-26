@@ -10,9 +10,9 @@ A core Pluggable framework based on koa
 | ------------------ | :-------------: |
 | Full name          | egg-core |
 | Keywords           | egg, loader |
-| # releases         | 39 |
-| # dependents       | 14 |
-| # downloads        | 315789 |
+| # releases         | 24 |
+| # dependents       | 17 |
+| # downloads        | 393915 |
 | # stars            | 0 |
 
 ## Links

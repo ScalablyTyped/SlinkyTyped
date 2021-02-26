@@ -4,6 +4,7 @@ import typingsSlinky.chromeApps.chrome.clipboard.AdditionalItems
 import typingsSlinky.chromeApps.chrome.clipboard.ImageType
 import typingsSlinky.chromeApps.chromeAppsStrings.textHtml
 import typingsSlinky.chromeApps.chromeAppsStrings.textPlain
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,9 +24,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * It will be deprecated once open-web solution is available.
   * @see[Docs]{@link https://developer.chrome.com/apps/clipboard}
   */
-@JSGlobal("chrome.clipboard")
-@js.native
-object clipboard extends js.Object {
+object clipboard {
+  
+  /** @enum */
+  object DataItemType {
+    
+    @JSGlobal("chrome.clipboard.DataItemType")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSGlobal("chrome.clipboard.DataItemType.TEXT_HTML")
+    @js.native
+    def TEXT_HTML: textHtml = js.native
+    @scala.inline
+    def TEXT_HTML_=(x: textHtml): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("TEXT_HTML")(x.asInstanceOf[js.Any])
+    
+    @JSGlobal("chrome.clipboard.DataItemType.TEXT_PLAIN")
+    @js.native
+    def TEXT_PLAIN: textPlain = js.native
+    @scala.inline
+    def TEXT_PLAIN_=(x: textPlain): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("TEXT_PLAIN")(x.asInstanceOf[js.Any])
+  }
   
   /**
     * **Dev channel only.**
@@ -34,6 +53,8 @@ object clipboard extends js.Object {
     * chrome.clipboard.onClipboardDataChanged event. After this event fires, the
     * clipboard data is available by calling document.execCommand('paste').
     */
+  @JSGlobal("chrome.clipboard.onClipboardDataChanged")
+  @js.native
   val onClipboardDataChanged: typingsSlinky.chromeApps.chrome.events.Event[js.Function0[Unit]] = js.native
   
   /**
@@ -47,27 +68,26 @@ object clipboard extends js.Object {
     *      *Since Chrome 71. Warning: this is the current Dev channel.*
     * @param [callback]
     */
+  @JSGlobal("chrome.clipboard.setImageData")
+  @js.native
   def setImageData(imageData: js.typedarray.ArrayBuffer, `type`: ImageType): Unit = js.native
+  @JSGlobal("chrome.clipboard.setImageData")
+  @js.native
   def setImageData(
     imageData: js.typedarray.ArrayBuffer,
     `type`: ImageType,
     additionalItems: js.UndefOr[scala.Nothing],
     callback: js.Function0[Unit]
   ): Unit = js.native
+  @JSGlobal("chrome.clipboard.setImageData")
+  @js.native
   def setImageData(imageData: js.typedarray.ArrayBuffer, `type`: ImageType, additionalItems: AdditionalItems): Unit = js.native
+  @JSGlobal("chrome.clipboard.setImageData")
+  @js.native
   def setImageData(
     imageData: js.typedarray.ArrayBuffer,
     `type`: ImageType,
     additionalItems: AdditionalItems,
     callback: js.Function0[Unit]
   ): Unit = js.native
-  
-  /** @enum */
-  @js.native
-  object DataItemType extends js.Object {
-    
-    var TEXT_HTML: textHtml = js.native
-    
-    var TEXT_PLAIN: textPlain = js.native
-  }
 }

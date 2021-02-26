@@ -1,5 +1,6 @@
 package typingsSlinky.mathjs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,4 +25,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mathjs.mathjsStrings.expression
   - typingsSlinky.mathjs.mathjsStrings.json
 */
-trait MathJsFunctionName extends js.Object
+trait MathJsFunctionName extends StObject

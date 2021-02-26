@@ -4,12 +4,13 @@ import typingsSlinky.ionicUtilsSubprocess.mod.Subprocess
 import typingsSlinky.ionicUtilsSubprocess.mod.SubprocessOptions
 import typingsSlinky.ionicUtilsSubprocess.mod.WhichOptions
 import typingsSlinky.node.childProcessMod.ChildProcess
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IShell extends js.Object {
+trait IShell extends StObject {
   
   def alterPath(path: String): String = js.native
   

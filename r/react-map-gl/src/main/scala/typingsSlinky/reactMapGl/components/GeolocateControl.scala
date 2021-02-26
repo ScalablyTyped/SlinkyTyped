@@ -8,6 +8,7 @@ import typingsSlinky.reactMapGl.mod.GeolocateControlProps
 import typingsSlinky.reactMapGl.mod.PositionOptions
 import typingsSlinky.reactMapGl.mod.ViewStateChangeInfo
 import typingsSlinky.reactMapGl.mod.ViewportProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object GeolocateControl {
   
   @JSImport("react-map-gl", "GeolocateControl")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -69,7 +70,7 @@ object GeolocateControl {
     def trackUserLocation(value: Boolean): this.type = set("trackUserLocation", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GeolocateControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: GeolocateControl.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GeolocateControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

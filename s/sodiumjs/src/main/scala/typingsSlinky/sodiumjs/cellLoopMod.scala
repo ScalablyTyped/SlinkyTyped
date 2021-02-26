@@ -2,14 +2,14 @@ package typingsSlinky.sodiumjs
 
 import typingsSlinky.sodiumjs.cellMod.Cell
 import typingsSlinky.sodiumjs.lazyCellMod.LazyCell
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sodiumjs/dist/typings/sodium/CellLoop", JSImport.Namespace)
-@js.native
-object cellLoopMod extends js.Object {
+object cellLoopMod {
   
+  @JSImport("sodiumjs/dist/typings/sodium/CellLoop", "CellLoop")
   @js.native
   class CellLoop[A] () extends LazyCell[A] {
     

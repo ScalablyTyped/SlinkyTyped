@@ -1,5 +1,6 @@
 package typingsSlinky.googleAdwordsScripts
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.DISAPPROVED
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.SITE_SUSPENDED
 */
-trait PolicyApprovalStatus extends js.Object
+trait PolicyApprovalStatus extends StObject
 object PolicyApprovalStatus {
   
   @scala.inline

@@ -1,13 +1,14 @@
 package typingsSlinky.winrtUwp.Windows.UI.Notifications
 
 import typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Defines the visual content and timing for a single, non-recurring scheduled update to a tile. */
 @js.native
-trait ScheduledTileNotification extends js.Object {
+trait ScheduledTileNotification extends StObject {
   
   /** Gets the XML description of the content of the scheduled tile update. */
   var content: XmlDocument = js.native
@@ -33,33 +34,21 @@ object ScheduledTileNotification {
   }
   
   @scala.inline
-  implicit class ScheduledTileNotificationOps[Self <: ScheduledTileNotification] (val x: Self) extends AnyVal {
+  implicit class ScheduledTileNotificationMutableBuilder[Self <: ScheduledTileNotification] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setContent(value: XmlDocument): Self = StObject.set(x, "content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDeliveryTime(value: js.Date): Self = StObject.set(x, "deliveryTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setExpirationTime(value: js.Date): Self = StObject.set(x, "expirationTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContent(value: XmlDocument): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setId(value: String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDeliveryTime(value: js.Date): Self = this.set("deliveryTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setExpirationTime(value: js.Date): Self = this.set("expirationTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTag(value: String): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: String): Self = StObject.set(x, "tag", value.asInstanceOf[js.Any])
   }
 }

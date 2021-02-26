@@ -11,8 +11,8 @@ The lodash method `_.findIndex` exported as a module.
 | Full name          | lodash.findindex |
 | Keywords           | lodash-modularized, findindex |
 | # releases         | 0 |
-| # dependents       | 135 |
-| # downloads        | 19256366 |
+| # dependents       | 152 |
+| # downloads        | 18954730 |
 | # stars            | 0 |
 
 ## Links

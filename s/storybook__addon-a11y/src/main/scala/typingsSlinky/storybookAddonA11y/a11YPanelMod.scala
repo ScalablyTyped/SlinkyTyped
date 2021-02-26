@@ -1,38 +1,36 @@
 package typingsSlinky.storybookAddonA11y
 
-import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@storybook/addon-a11y/dist/components/A11YPanel", JSImport.Namespace)
-@js.native
-object a11YPanelMod extends js.Object {
+object a11YPanelMod {
   
+  @JSImport("@storybook/addon-a11y/dist/components/A11YPanel", "A11YPanel")
+  @js.native
   val A11YPanel: ReactComponentClass[js.Object] = js.native
   
   @js.native
-  sealed trait RuleType extends js.Object
+  sealed trait RuleType extends StObject
+  @JSImport("@storybook/addon-a11y/dist/components/A11YPanel", "RuleType")
   @js.native
-  object RuleType extends js.Object {
+  object RuleType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[RuleType with Double] = js.native
     
     @js.native
     sealed trait INCOMPLETION extends RuleType
-    /* 2 */ @js.native
-    object INCOMPLETION extends TopLevel[INCOMPLETION with Double]
+    /* 2 */ val INCOMPLETION: typingsSlinky.storybookAddonA11y.a11YPanelMod.RuleType.INCOMPLETION with Double = js.native
     
     @js.native
     sealed trait PASS extends RuleType
-    /* 1 */ @js.native
-    object PASS extends TopLevel[PASS with Double]
+    /* 1 */ val PASS: typingsSlinky.storybookAddonA11y.a11YPanelMod.RuleType.PASS with Double = js.native
     
     @js.native
     sealed trait VIOLATION extends RuleType
-    /* 0 */ @js.native
-    object VIOLATION extends TopLevel[VIOLATION with Double]
+    /* 0 */ val VIOLATION: typingsSlinky.storybookAddonA11y.a11YPanelMod.RuleType.VIOLATION with Double = js.native
   }
 }

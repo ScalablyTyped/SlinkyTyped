@@ -1,5 +1,6 @@
 package typingsSlinky.googleAdwordsScripts
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.PHASING_OUT
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.OBSOLETE
 */
-trait TargetingStatus extends js.Object
+trait TargetingStatus extends StObject
 object TargetingStatus {
   
   @scala.inline

@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcUtil.portalMod.PortalProps
 import typingsSlinky.rcUtil.portalMod.PortalRef
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Portal {
   
+  @scala.inline
+  def apply(getContainer: () => HTMLElement): Builder = {
+    val __props = js.Dynamic.literal(getContainer = js.Any.fromFunction0(getContainer))
+    new Builder(js.Array(this.component, __props.asInstanceOf[PortalProps with RefAttributes[PortalRef]]))
+  }
+  
   @JSImport("rc-util/lib/Portal", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -26,10 +33,4 @@ object Portal {
   }
   
   def withProps(p: PortalProps with RefAttributes[PortalRef]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(getContainer: () => HTMLElement): Builder = {
-    val __props = js.Dynamic.literal(getContainer = js.Any.fromFunction0(getContainer))
-    new Builder(js.Array(this.component, __props.asInstanceOf[PortalProps with RefAttributes[PortalRef]]))
-  }
 }

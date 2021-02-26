@@ -3,12 +3,13 @@ package typingsSlinky.amapJsApi.anon
 import typingsSlinky.amapJsApi.AMap.LocationValue
 import typingsSlinky.amapJsApi.AMap.convertFrom.Result
 import typingsSlinky.amapJsApi.AMap.convertFrom.SearchStatus
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofconvertFrom extends js.Object {
+trait TypeofconvertFrom extends StObject {
   
   def apply(
     lnglat: js.Array[LocationValue],

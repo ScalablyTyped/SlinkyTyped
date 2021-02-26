@@ -1,6 +1,7 @@
 package typingsSlinky.kendoUi.global.kendo
 
 import typingsSlinky.kendoUi.kendo.RouterOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

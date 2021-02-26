@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Particle/particleBlendMultiplyBlock", JSImport.Namespace)
-@js.native
-object particleBlendMultiplyBlockMod extends js.Object {
+object particleBlendMultiplyBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Particle/particleBlendMultiplyBlock", "ParticleBlendMultiplyBlock")
   @js.native
   class ParticleBlendMultiplyBlock protected () extends NodeMaterialBlock {
     /**

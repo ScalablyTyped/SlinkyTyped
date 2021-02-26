@@ -10,9 +10,9 @@ Connect middleware for busboy
 | ------------------ | :-------------: |
 | Full name          | connect-busboy |
 | Keywords           | connect, middleware, uploads, forms, multipart, form-data |
-| # releases         | 1 |
-| # dependents       | 93 |
-| # downloads        | 824022 |
+| # releases         | 0 |
+| # dependents       | 98 |
+| # downloads        | 1129937 |
 | # stars            | 15 |
 
 ## Links

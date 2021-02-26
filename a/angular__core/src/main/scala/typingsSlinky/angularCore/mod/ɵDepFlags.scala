@@ -5,6 +5,7 @@ import typingsSlinky.angularCore.angularCoreNumbers.`1`
 import typingsSlinky.angularCore.angularCoreNumbers.`2`
 import typingsSlinky.angularCore.angularCoreNumbers.`4`
 import typingsSlinky.angularCore.angularCoreNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCore.angularCoreNumbers.`4`
   - typingsSlinky.angularCore.angularCoreNumbers.`8`
 */
-trait ɵDepFlags extends js.Object
+trait ɵDepFlags extends StObject
 object ɵDepFlags {
   
   @scala.inline

@@ -4,13 +4,12 @@ import typingsSlinky.expressValidator.baseMod.Request
 import typingsSlinky.expressValidator.contextBuilderMod.ContextBuilder
 import typingsSlinky.expressValidator.contextRunnerMod.ContextRunner
 import typingsSlinky.expressValidator.sanitizersMod.Sanitizers
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("express-validator/src/chain/sanitization-chain", JSImport.Namespace)
-@js.native
-object sanitizationChainMod extends js.Object {
+object sanitizationChainMod {
   
   @js.native
   trait SanitizationChain

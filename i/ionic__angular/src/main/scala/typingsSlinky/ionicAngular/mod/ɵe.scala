@@ -2,6 +2,7 @@ package typingsSlinky.ionicAngular.mod
 
 import typingsSlinky.ionicAngular.overlayMod.ControllerShape
 import typingsSlinky.ionicAngular.overlayMod.OverlayBaseController
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

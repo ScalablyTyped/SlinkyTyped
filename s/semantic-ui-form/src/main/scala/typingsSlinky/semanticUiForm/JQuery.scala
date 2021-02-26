@@ -67,12 +67,13 @@ import typingsSlinky.semanticUiForm.semanticUiFormStrings.templates
 import typingsSlinky.semanticUiForm.semanticUiFormStrings.text
 import typingsSlinky.semanticUiForm.semanticUiFormStrings.transition
 import typingsSlinky.semanticUiForm.semanticUiFormStrings.verbose
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def form(): JQuery = js.native
   def form(behavior: setting, name: `inline`, value: js.UndefOr[scala.Nothing]): Boolean = js.native

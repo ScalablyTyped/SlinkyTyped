@@ -2,22 +2,22 @@ package typingsSlinky.libp2pNoise
 
 import typingsSlinky.libp2pNoise.basicMod.bytes32
 import typingsSlinky.peerId.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("libp2p-noise/dist/src/keycache", JSImport.Namespace)
-@js.native
-object keycacheMod extends js.Object {
+object keycacheMod {
   
-  @JSName("KeyCache")
+  @JSImport("libp2p-noise/dist/src/keycache", "KeyCache")
+  @js.native
   val KeyCache_ : Keycache = js.native
   
   /**
     * Storage for static keys of previously connected peers.
     */
   @js.native
-  trait Keycache extends js.Object {
+  trait Keycache extends StObject {
     
     def load(): bytes32 | Null = js.native
     def load(peerId: ^): bytes32 | Null = js.native

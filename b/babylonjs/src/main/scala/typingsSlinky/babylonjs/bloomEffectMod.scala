@@ -5,14 +5,14 @@ import typingsSlinky.babylonjs.extractHighlightsPostProcessMod.ExtractHighlights
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessRenderEffectMod.PostProcessRenderEffect
 import typingsSlinky.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/PostProcesses/bloomEffect", JSImport.Namespace)
-@js.native
-object bloomEffectMod extends js.Object {
+object bloomEffectMod {
   
+  @JSImport("babylonjs/PostProcesses/bloomEffect", "BloomEffect")
   @js.native
   class BloomEffect protected () extends PostProcessRenderEffect {
     /**

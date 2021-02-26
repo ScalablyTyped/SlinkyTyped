@@ -1,12 +1,12 @@
 package typingsSlinky.minappEnv.global
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.minappEnv.Iterable
-import typingsSlinky.minappEnv.WeakMapConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("WeakMap")
 @js.native
 class WeakMap[K /* <: js.Object */, V] ()
@@ -14,6 +14,3 @@ class WeakMap[K /* <: js.Object */, V] ()
   def this(entries: typingsSlinky.minappEnv.Array[js.Tuple2[K, V]]) = this()
   def this(iterable: Iterable[js.Tuple2[K, V]]) = this()
 }
-@JSGlobal("WeakMap")
-@js.native
-object WeakMap extends TopLevel[WeakMapConstructor]

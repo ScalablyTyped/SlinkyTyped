@@ -5,17 +5,16 @@ import typingsSlinky.chalk.mod.Chalk
 import typingsSlinky.chalk.mod.ColorSupport
 import typingsSlinky.chalk.mod.Level
 import typingsSlinky.std.TemplateStringsArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   /* Inlined chalk.chalk.Chalk & {  supportsColor :chalk.chalk.ColorSupport | false} */
   @js.native
-  trait ChalksupportsColorColorSu extends js.Object {
+  trait ChalksupportsColorColorSu extends StObject {
     
     def apply(text: js.Any*): String = js.native
     /**

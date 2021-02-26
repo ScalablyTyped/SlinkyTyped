@@ -1,5 +1,6 @@
 package typingsSlinky.actionsOnGoogle.apiV2Mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VIBER
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTIONS_ON_GOOGLE
 */
-trait GoogleCloudDialogflowV2IntentMessagePlatform extends js.Object
+trait GoogleCloudDialogflowV2IntentMessagePlatform extends StObject
 object GoogleCloudDialogflowV2IntentMessagePlatform {
   
   @scala.inline

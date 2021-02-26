@@ -4,16 +4,19 @@ import typingsSlinky.typedoc.anon.Caption
 import typingsSlinky.typedoc.eventsMod.MarkdownEvent
 import typingsSlinky.typedoc.eventsMod.RendererEvent
 import typingsSlinky.typedoc.outputComponentsMod.ContextAwareRendererComponent
+import typingsSlinky.typedoc.rendererMod.Renderer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/output/plugins/MarkedLinksPlugin", JSImport.Namespace)
-@js.native
-object markedLinksPluginMod extends js.Object {
+object markedLinksPluginMod {
   
+  @JSImport("typedoc/dist/lib/output/plugins/MarkedLinksPlugin", "MarkedLinksPlugin")
   @js.native
-  class MarkedLinksPlugin () extends ContextAwareRendererComponent {
+  class MarkedLinksPlugin protected () extends ContextAwareRendererComponent {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Renderer) = this()
     
     var brackets: js.Any = js.native
     
@@ -34,9 +37,10 @@ object markedLinksPluginMod extends js.Object {
     var warnings: js.Any = js.native
   }
   /* static members */
-  @js.native
-  object MarkedLinksPlugin extends js.Object {
+  object MarkedLinksPlugin {
     
+    @JSImport("typedoc/dist/lib/output/plugins/MarkedLinksPlugin", "MarkedLinksPlugin.splitLinkText")
+    @js.native
     def splitLinkText(text: String): Caption = js.native
   }
 }

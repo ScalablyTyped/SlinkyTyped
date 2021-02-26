@@ -1,6 +1,7 @@
 package typingsSlinky.moment.mod
 
 import typingsSlinky.moment.mod.unitOfTime.Base
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

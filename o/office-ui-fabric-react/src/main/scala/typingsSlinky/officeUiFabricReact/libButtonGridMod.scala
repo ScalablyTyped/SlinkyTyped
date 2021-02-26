@@ -1,44 +1,64 @@
 package typingsSlinky.officeUiFabricReact
 
-import org.scalablytyped.runtime.Instantiable0
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.anon.Disabled
 import typingsSlinky.officeUiFabricReact.buttonGridCellTypesMod.IButtonGridCellProps
 import typingsSlinky.officeUiFabricReact.buttonGridTypesMod.IButtonGridProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/ButtonGrid", JSImport.Namespace)
-@js.native
-object libButtonGridMod extends js.Object {
+object libButtonGridMod {
   
+  @JSImport("office-ui-fabric-react/lib/ButtonGrid", "ButtonGrid")
+  @js.native
   val ButtonGrid: ReactComponentClass[IButtonGridProps] = js.native
   
-  val Grid: ReactComponentClass[IButtonGridProps] = js.native
-  
+  @JSImport("office-ui-fabric-react/lib/ButtonGrid", "ButtonGridCell")
   @js.native
-  class ButtonGridCell[T, P /* <: IButtonGridCellProps[T] */] ()
-    extends typingsSlinky.officeUiFabricReact.buttonGridMod.ButtonGridCell[T, P]
+  class ButtonGridCell[T, P /* <: IButtonGridCellProps[T] */] protected ()
+    extends typingsSlinky.officeUiFabricReact.buttonGridMod.ButtonGridCell[T, P] {
+    def this(props: P) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: P, context: js.Any) = this()
+  }
   /* static members */
-  @js.native
-  object ButtonGridCell extends js.Object {
+  object ButtonGridCell {
     
-    var defaultProps: Disabled = js.native
+    @JSImport("office-ui-fabric-react/lib/ButtonGrid", "ButtonGridCell")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("office-ui-fabric-react/lib/ButtonGrid", "ButtonGridCell.defaultProps")
+    @js.native
+    def defaultProps: Disabled = js.native
+    @scala.inline
+    def defaultProps_=(x: Disabled): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
   }
   
+  @JSImport("office-ui-fabric-react/lib/ButtonGrid", "Grid")
+  @js.native
+  val Grid: ReactComponentClass[IButtonGridProps] = js.native
+  
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSImport("office-ui-fabric-react/lib/ButtonGrid", "GridCell")
   @js.native
   class GridCell[T, P /* <: IButtonGridCellProps[/* import warning: RewrittenClass.unapply cls was tparam T */ _] */] ()
     extends typingsSlinky.officeUiFabricReact.buttonGridCellMod.ButtonGridCell[T, P]
-  @js.native
-  object GridCell
-    extends Instantiable0[
-          typingsSlinky.officeUiFabricReact.buttonGridCellMod.ButtonGridCell[
-            js.Object, 
-            IButtonGridCellProps[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]
-          ]
-        ] {
+  object GridCell {
     
-    var defaultProps: Disabled = js.native
+    @JSImport("office-ui-fabric-react/lib/ButtonGrid", "GridCell")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("office-ui-fabric-react/lib/ButtonGrid", "GridCell.defaultProps")
+    @js.native
+    def defaultProps: Disabled = js.native
+    @scala.inline
+    def defaultProps_=(x: Disabled): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
   }
 }

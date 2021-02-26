@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientSourcerepo.anon.Key
 import typingsSlinky.maximMazurokGapiClientSourcerepo.anon.Name
 import typingsSlinky.maximMazurokGapiClientSourcerepo.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientSourcerepo.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReposResource extends js.Object {
+trait ReposResource extends StObject {
   
   /** Creates a repo in the given project with the given name. If the named repository already exists, `CreateRepo` returns `ALREADY_EXISTS`. */
   def create(request: Accesstoken): Request[Repo] = js.native

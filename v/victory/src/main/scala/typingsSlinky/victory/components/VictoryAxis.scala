@@ -25,6 +25,7 @@ import typingsSlinky.victory.victoryStrings.right
 import typingsSlinky.victory.victoryStrings.tickLabels
 import typingsSlinky.victory.victoryStrings.ticks
 import typingsSlinky.victory.victoryStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,7 +34,7 @@ object VictoryAxis {
   
   @JSImport("victory", "VictoryAxis")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -65,16 +66,16 @@ object VictoryAxis {
     def domain(value: DomainPropType): this.type = set("domain", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventsVarargs(
-      value: (EventPropTypeInterface[axis | axisLabel | grid | ticks | tickLabels | parent, Double | String])*
-    ): this.type = set("events", js.Array(value :_*))
-    
-    @scala.inline
     def events(
       value: js.Array[
           EventPropTypeInterface[axis | axisLabel | grid | ticks | tickLabels | parent, Double | String]
         ]
     ): this.type = set("events", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def eventsVarargs(
+      value: (EventPropTypeInterface[axis | axisLabel | grid | ticks | tickLabels | parent, Double | String])*
+    ): this.type = set("events", js.Array(value :_*))
     
     @scala.inline
     def fixLabelOverlap(value: Boolean): this.type = set("fixLabelOverlap", value.asInstanceOf[js.Any])
@@ -140,30 +141,30 @@ object VictoryAxis {
     def tickCount(value: Double): this.type = set("tickCount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tickFormatVarargs(value: js.Any*): this.type = set("tickFormat", js.Array(value :_*))
-    
-    @scala.inline
-    def tickFormatFunction3(value: (/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_]) => String | Double): this.type = set("tickFormat", js.Any.fromFunction3(value))
-    
-    @scala.inline
     def tickFormat(
       value: js.Array[_] | (js.Function3[/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_], String | Double])
     ): this.type = set("tickFormat", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tickLabelComponent(value: ReactElement): this.type = set("tickLabelComponent", value.asInstanceOf[js.Any])
+    def tickFormatFunction3(value: (/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_]) => String | Double): this.type = set("tickFormat", js.Any.fromFunction3(value))
     
     @scala.inline
-    def tickValuesVarargs(value: js.Any*): this.type = set("tickValues", js.Array(value :_*))
+    def tickFormatVarargs(value: js.Any*): this.type = set("tickFormat", js.Array(value :_*))
+    
+    @scala.inline
+    def tickLabelComponent(value: ReactElement): this.type = set("tickLabelComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tickValues(value: js.Array[_]): this.type = set("tickValues", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def tickValuesVarargs(value: js.Any*): this.type = set("tickValues", js.Array(value :_*))
+    
+    @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: VictoryAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: VictoryAxis.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: VictoryAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

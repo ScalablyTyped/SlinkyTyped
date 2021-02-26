@@ -9,11 +9,11 @@ JavaScript 3D library
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | three |
-| Keywords           | three, three.js, 3d, canvas, svg, webgl |
-| # releases         | 31 |
-| # dependents       | 855 |
-| # downloads        | 7321343 |
-| # stars            | 72 |
+| Keywords           | three, three.js, javascript, 3d, virtual-reality, augmented-reality, webgl, webgl2, webaudio, webxr, canvas, svg, html5 |
+| # releases         | 42 |
+| # dependents       | 1230 |
+| # downloads        | 15203831 |
+| # stars            | 73 |
 
 ## Links
 - [Homepage](https://threejs.org/)

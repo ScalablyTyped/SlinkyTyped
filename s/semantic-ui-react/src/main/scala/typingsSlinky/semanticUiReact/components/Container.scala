@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.containerContainerMod.ContainerProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticTEXTALIGNMENTS
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Container {
   
   @JSImport("semantic-ui-react", "Container")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -28,10 +29,10 @@ object Container {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def fluid(value: Boolean): this.type = set("fluid", value.asInstanceOf[js.Any])
@@ -43,7 +44,7 @@ object Container {
     def textAlign(value: SemanticTEXTALIGNMENTS): this.type = set("textAlign", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Container.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

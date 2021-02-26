@@ -4,21 +4,23 @@ import typingsSlinky.ionic.anon.NameString
 import typingsSlinky.ionic.commandMod.Command
 import typingsSlinky.ionic.definitionsMod.App
 import typingsSlinky.ionic.definitionsMod.CommandInstanceInfo
+import typingsSlinky.ionic.definitionsMod.INamespace
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineInputs
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ionic/commands/link", JSImport.Namespace)
-@js.native
-object linkMod extends js.Object {
+object linkMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.ionicCliFramework.definitionsMod.ICommand because Already inherited
   - typingsSlinky.ionic.definitionsMod.ICommand because Already inherited
-  - typingsSlinky.ionic.definitionsMod.CommandPreRun because var conflicts: env, namespace, project. Inlined preRun */ @js.native
-  class LinkCommand () extends Command {
+  - typingsSlinky.ionic.definitionsMod.CommandPreRun because var conflicts: env, namespace, project. Inlined preRun */ @JSImport("ionic/commands/link", "LinkCommand")
+  @js.native
+  class LinkCommand protected () extends Command {
+    def this(namespace: INamespace) = this()
     
     def chooseApp(apps: js.Array[App]): js.Promise[String] = js.native
     

@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.Filter
 import typingsSlinky.maximMazurokGapiClientCompute.anon.InterconnectAttachmentKey
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RegionRequestId
 import typingsSlinky.maximMazurokGapiClientCompute.anon.ValidateOnly
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InterconnectAttachmentsResource extends js.Object {
+trait InterconnectAttachmentsResource extends StObject {
   
   /** Retrieves an aggregated list of interconnect attachments. */
   def aggregatedList(): Request[InterconnectAttachmentAggregatedList] = js.native

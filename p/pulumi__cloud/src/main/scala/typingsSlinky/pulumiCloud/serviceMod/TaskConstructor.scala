@@ -3,6 +3,7 @@ package typingsSlinky.pulumiCloud.serviceMod
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,5 +17,14 @@ trait TaskConstructor
   * @param container The container specification.
   * @param opts A bag of options that controls how this resource behaves.
   */
-Instantiable2[/* name */ String, /* container */ Container, Task]
-     with Instantiable3[/* name */ String, /* container */ Container, /* opts */ ResourceOptions, Task]
+Instantiable2[
+      /* name */ String, 
+      /* container */ Container, 
+      typingsSlinky.pulumiCloud.serviceMod.Task
+    ]
+     with Instantiable3[
+      /* name */ String, 
+      /* container */ Container, 
+      /* opts */ ResourceOptions, 
+      typingsSlinky.pulumiCloud.serviceMod.Task
+    ]

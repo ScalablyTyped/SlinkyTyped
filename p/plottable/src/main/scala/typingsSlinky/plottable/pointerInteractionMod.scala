@@ -2,14 +2,14 @@ package typingsSlinky.plottable
 
 import typingsSlinky.plottable.interactionMod.Interaction
 import typingsSlinky.plottable.interfacesMod.Point
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("plottable/build/src/interactions/pointerInteraction", JSImport.Namespace)
-@js.native
-object pointerInteractionMod extends js.Object {
+object pointerInteractionMod {
   
+  @JSImport("plottable/build/src/interactions/pointerInteraction", "Pointer")
   @js.native
   class Pointer () extends Interaction {
     

@@ -11,12 +11,13 @@ import typingsSlinky.natsHemera.natsHemeraStrings.onResponse
 import typingsSlinky.natsHemera.natsHemeraStrings.onSend
 import typingsSlinky.natsHemera.natsHemeraStrings.preHandler
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Hemera[Request, Response] extends js.Object {
+trait Hemera[Request, Response] extends StObject {
   
   // act
   def act(pattern: String, handler: ActHandler): Unit = js.native

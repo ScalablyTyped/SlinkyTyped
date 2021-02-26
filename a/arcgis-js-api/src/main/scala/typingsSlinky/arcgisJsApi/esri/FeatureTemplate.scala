@@ -15,6 +15,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.point
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.polygon
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.rectangle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.triangle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

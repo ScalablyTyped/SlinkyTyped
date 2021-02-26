@@ -1,5 +1,6 @@
 package typingsSlinky.reactBytesizeIcons.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.miter
   - typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.inherit
 */
-trait StrokeLinejoin extends js.Object
+trait StrokeLinejoin extends StObject
 object StrokeLinejoin {
   
   @scala.inline

@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientToolresults.anon.RequestId
 import typingsSlinky.maximMazurokGapiClientToolresults.anon.Resource
 import typingsSlinky.maximMazurokGapiClientToolresults.anon.StepId
 import typingsSlinky.maximMazurokGapiClientToolresults.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait StepsResource extends js.Object {
+trait StepsResource extends StObject {
   
   /**
     * Lists accessibility clusters for a given Step May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project -

@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.BABYLON
 import typingsSlinky.babylonjs.XRReferenceSpaceType
 import typingsSlinky.babylonjs.XRSessionInit
 import typingsSlinky.babylonjs.XRSessionMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

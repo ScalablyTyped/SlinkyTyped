@@ -1,17 +1,19 @@
 package typingsSlinky.officeUiFabricReact
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/utilities/selection/interfaces", JSImport.Namespace)
-@js.native
-object selectionInterfacesMod extends js.Object {
+object selectionInterfacesMod {
   
+  @JSImport("office-ui-fabric-react/lib/utilities/selection/interfaces", "SELECTION_CHANGE")
+  @js.native
   val SELECTION_CHANGE: /* "change" */ String = js.native
   
+  @JSImport("office-ui-fabric-react/lib/utilities/selection/interfaces", "SelectionDirection")
   @js.native
-  object SelectionDirection extends js.Object {
+  object SelectionDirection extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionDirection with Double] = js.native
@@ -21,8 +23,9 @@ object selectionInterfacesMod extends js.Object {
     /* 1 */ val vertical: typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionDirection.vertical with Double = js.native
   }
   
+  @JSImport("office-ui-fabric-react/lib/utilities/selection/interfaces", "SelectionMode")
   @js.native
-  object SelectionMode extends js.Object {
+  object SelectionMode extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode with Double] = js.native

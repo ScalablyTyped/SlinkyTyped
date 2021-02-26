@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesPutBucketCorsInputMod.PutBucketCors
 import typingsSlinky.awsSdkClientS3Node.typesPutBucketCorsOutputMod.PutBucketCorsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/PutBucketCorsCommand", JSImport.Namespace)
-@js.native
-object putBucketCorsCommandMod extends js.Object {
+object putBucketCorsCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/PutBucketCorsCommand", "PutBucketCorsCommand")
   @js.native
   class PutBucketCorsCommand protected () extends Command[
           InputTypesUnion, 

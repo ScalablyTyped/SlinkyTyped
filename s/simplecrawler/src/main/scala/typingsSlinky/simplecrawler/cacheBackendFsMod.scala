@@ -3,19 +3,23 @@ package typingsSlinky.simplecrawler
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.simplecrawler.queueMod.QueueItem
 import typingsSlinky.simplecrawler.simplecrawlerBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("simplecrawler/cache-backend-fs", JSImport.Namespace)
-@js.native
-object cacheBackendFsMod extends js.Object {
+object cacheBackendFsMod {
   
+  @JSImport("simplecrawler/cache-backend-fs", JSImport.Default)
+  @js.native
   def default(): FSBackend = js.native
+  @JSImport("simplecrawler/cache-backend-fs", JSImport.Default)
+  @js.native
   def default(loadParameter: String): FSBackend = js.native
   
+  @JSImport("simplecrawler/cache-backend-fs", "FSBackend")
   @js.native
-  class FSBackend () extends js.Object {
+  class FSBackend () extends StObject {
     
     def fileExists(location: String): Boolean = js.native
     

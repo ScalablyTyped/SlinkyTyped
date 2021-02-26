@@ -10,12 +10,13 @@ import typingsSlinky.chromeApps.chrome.usb.InterfaceDescriptor
 import typingsSlinky.chromeApps.chrome.usb.IsochronousTransferInfo
 import typingsSlinky.chromeApps.chrome.usb.TransferInfo
 import typingsSlinky.chromeApps.chrome.usb.TransferResultInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofusb extends js.Object {
+trait Typeofusb extends StObject {
   
   /** Direction, Recipient, RequestType, and TransferType all map to their namesakes within the USB specification. */
   val Direction: IN = js.native

@@ -3,6 +3,7 @@ package typingsSlinky.googleapis.serviceusageV1beta1Mod.serviceusageV1beta1
 import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
 import typingsSlinky.googleapisCommon.apiMod.GlobalOptions
 import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("googleapis/build/src/apis/serviceusage/v1beta1", "serviceusage_v1beta1.Serviceusage")
 @js.native
-class Serviceusage protected () extends js.Object {
+class Serviceusage protected () extends StObject {
   def this(options: GlobalOptions) = this()
   def this(options: GlobalOptions, google: GoogleConfigurable) = this()
   

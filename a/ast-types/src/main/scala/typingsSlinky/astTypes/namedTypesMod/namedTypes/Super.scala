@@ -1,12 +1,12 @@
 package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.NodeKind
 import typingsSlinky.astTypes.kindsMod.PrintableKind
 import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import typingsSlinky.astTypes.typesMod.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,6 +25,37 @@ trait Super
   
   var `type`: typingsSlinky.astTypes.astTypesStrings.Super = js.native
 }
-@JSImport("ast-types/gen/namedTypes", "namedTypes.Super")
-@js.native
-object Super extends TopLevel[Type[Super]]
+object Super {
+  
+  @JSImport("ast-types/gen/namedTypes", "namedTypes.Super")
+  @js.native
+  val ^ : Type[Super] = js.native
+  
+  @scala.inline
+  implicit class SuperMutableBuilder[Self <: Super] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setComments(value: js.Array[CommentKind]): Self = StObject.set(x, "comments", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCommentsNull: Self = StObject.set(x, "comments", null)
+    
+    @scala.inline
+    def setCommentsUndefined: Self = StObject.set(x, "comments", js.undefined)
+    
+    @scala.inline
+    def setCommentsVarargs(value: CommentKind*): Self = StObject.set(x, "comments", js.Array(value :_*))
+    
+    @scala.inline
+    def setLoc(value: SourceLocationKind): Self = StObject.set(x, "loc", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLocNull: Self = StObject.set(x, "loc", null)
+    
+    @scala.inline
+    def setLocUndefined: Self = StObject.set(x, "loc", js.undefined)
+    
+    @scala.inline
+    def setType(value: typingsSlinky.astTypes.astTypesStrings.Super): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+  }
+}

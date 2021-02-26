@@ -10,9 +10,9 @@ Simple JSON Addressing.
 | ------------------ | :-------------: |
 | Full name          | jsonpointer |
 | Keywords           | - |
-| # releases         | 0 |
-| # dependents       | 78 |
-| # downloads        | 92275616 |
+| # releases         | 2 |
+| # dependents       | 103 |
+| # downloads        | 89289221 |
 | # stars            | 3 |
 
 ## Links

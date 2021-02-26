@@ -2,14 +2,14 @@ package typingsSlinky.three
 
 import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.shapeMod.Shape
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/geometries/ShapeGeometry", JSImport.Namespace)
-@js.native
-object shapeGeometryMod extends js.Object {
+object shapeGeometryMod {
   
+  @JSImport("three/src/geometries/ShapeGeometry", "ShapeGeometry")
   @js.native
   class ShapeGeometry protected () extends Geometry {
     def this(shapes: js.Array[Shape]) = this()

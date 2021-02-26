@@ -11,8 +11,8 @@ Service Worker Toolbox provides some simple helpers for use in creating your own
 | Full name          | sw-toolbox |
 | Keywords           | - |
 | # releases         | 1 |
-| # dependents       | 156 |
-| # downloads        | 34263187 |
+| # dependents       | 159 |
+| # downloads        | 11967100 |
 | # stars            | 11 |
 
 ## Links

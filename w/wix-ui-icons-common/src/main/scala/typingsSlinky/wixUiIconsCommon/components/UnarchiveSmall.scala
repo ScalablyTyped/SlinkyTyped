@@ -95,15 +95,16 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.wixUiIconsCommon.unarchiveSmallMod.UnarchiveSmallProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object UnarchiveSmall {
   
-  @JSImport("wix-ui-icons-common/dist/es/src/general/dist", "UnarchiveSmall")
+  @JSImport("wix-ui-icons-common/dist/src", "UnarchiveSmall")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1276,7 +1277,7 @@ object UnarchiveSmall {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: UnarchiveSmallProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: UnarchiveSmall.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: UnarchiveSmallProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

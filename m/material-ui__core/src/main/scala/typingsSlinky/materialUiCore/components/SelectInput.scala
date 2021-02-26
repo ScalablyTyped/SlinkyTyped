@@ -16,15 +16,27 @@ import typingsSlinky.materialUiCore.selectInputMod.SelectInputProps
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.ReactType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SelectInput {
   
+  @scala.inline
+  def apply(
+    autoWidth: Boolean,
+    multiple: Boolean,
+    native: Boolean,
+    value: String | Double | Boolean | (js.Array[String | Double | Boolean])
+  ): Builder = {
+    val __props = js.Dynamic.literal(autoWidth = autoWidth.asInstanceOf[js.Any], multiple = multiple.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SelectInputProps]))
+  }
+  
   @JSImport("@material-ui/core/Select/SelectInput", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,13 +44,13 @@ object SelectInput {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def IconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    def IconComponent(value: ReactType[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def IconComponentComponentClass(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def IconComponent(value: ReactType[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    def IconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def MenuProps(value: PartialMenuProps): this.type = set("MenuProps", value.asInstanceOf[js.Any])
@@ -92,15 +104,4 @@ object SelectInput {
   }
   
   def withProps(p: SelectInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    autoWidth: Boolean,
-    multiple: Boolean,
-    native: Boolean,
-    value: String | Double | Boolean | (js.Array[String | Double | Boolean])
-  ): Builder = {
-    val __props = js.Dynamic.literal(autoWidth = autoWidth.asInstanceOf[js.Any], multiple = multiple.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SelectInputProps]))
-  }
 }

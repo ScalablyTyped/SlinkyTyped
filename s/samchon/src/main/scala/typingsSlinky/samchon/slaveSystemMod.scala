@@ -3,14 +3,14 @@ package typingsSlinky.samchon
 import typingsSlinky.samchon.icommunicatorMod.ICommunicator
 import typingsSlinky.samchon.invokeMod.Invoke
 import typingsSlinky.samchon.iprotocolMod.IProtocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/slave/SlaveSystem", JSImport.Namespace)
-@js.native
-object slaveSystemMod extends js.Object {
+object slaveSystemMod {
   
+  @JSImport("samchon/templates/slave/SlaveSystem", "SlaveSystem")
   @js.native
   /**
     * Default Constructor.

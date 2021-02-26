@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.QuotaUserResource
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.ResourceUpdateMask
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PropertiesResource extends js.Object {
+trait PropertiesResource extends StObject {
   
   var androidAppDataStreams: AndroidAppDataStreamsResource = js.native
   

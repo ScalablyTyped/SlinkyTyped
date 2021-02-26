@@ -2,16 +2,16 @@ package typingsSlinky.typedoc
 
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/output/utils/resources/stack", JSImport.Namespace)
-@js.native
-object stackMod extends js.Object {
+object stackMod {
   
+  @JSImport("typedoc/dist/lib/output/utils/resources/stack", "Resource")
   @js.native
-  abstract class Resource protected () extends js.Object {
+  abstract class Resource protected () extends StObject {
     def this(origin: ResourceOrigin[_], name: String, fileName: String) = this()
     
     var fileName: String = js.native
@@ -23,13 +23,9 @@ object stackMod extends js.Object {
     var origin: ResourceOrigin[_] = js.native
   }
   
+  @JSImport("typedoc/dist/lib/output/utils/resources/stack", "ResourceOrigin")
   @js.native
-  trait ResourceClass[T /* <: Resource */]
-    extends js.Function
-       with Instantiable3[/* origin */ ResourceOrigin[T], /* name */ String, /* fileName */ String, T]
-  
-  @js.native
-  class ResourceOrigin[T /* <: Resource */] protected () extends js.Object {
+  class ResourceOrigin[T /* <: Resource */] protected () extends StObject {
     def this(stack: ResourceStack[T], name: String, path: String) = this()
     
     var findResources: js.Any = js.native
@@ -51,8 +47,9 @@ object stackMod extends js.Object {
     var stack: js.Any = js.native
   }
   
+  @JSImport("typedoc/dist/lib/output/utils/resources/stack", "ResourceStack")
   @js.native
-  abstract class ResourceStack[T /* <: Resource */] protected () extends js.Object {
+  abstract class ResourceStack[T /* <: Resource */] protected () extends StObject {
     def this(resourceClass: ResourceClass[T]) = this()
     def this(resourceClass: ResourceClass[T], resourceRegExp: js.RegExp) = this()
     
@@ -87,6 +84,11 @@ object stackMod extends js.Object {
     
     var resourceRegExp: js.Any = js.native
   }
+  
+  @js.native
+  trait ResourceClass[T /* <: Resource */]
+    extends js.Function
+       with Instantiable3[/* origin */ ResourceOrigin[T], /* name */ String, /* fileName */ String, T]
   
   type ResourceMap[T /* <: Resource */] = StringDictionary[T]
 }

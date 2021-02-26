@@ -10,9 +10,9 @@ RowGroup for DataTables
 | ------------------ | :-------------: |
 | Full name          | datatables.net-rowgroup |
 | Keywords           | row grouping, DataTables, jQuery, table, DataTables |
-| # releases         | 5 |
-| # dependents       | 8 |
-| # downloads        | 319320 |
+| # releases         | 3 |
+| # dependents       | 10 |
+| # downloads        | 1451086 |
 | # stars            | 0 |
 
 ## Links

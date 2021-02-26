@@ -1,11 +1,12 @@
 package typingsSlinky.meteor
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ITinytestAssertions extends js.Object {
+trait ITinytestAssertions extends StObject {
   
   def _stringEqual(actual: String, expected: String): Unit = js.native
   def _stringEqual(actual: String, expected: String, msg: String): Unit = js.native

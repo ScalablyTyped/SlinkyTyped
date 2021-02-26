@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateApplicationSettingsI
 import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateApplicationSettingsOutputMod.UpdateApplicationSettingsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/UpdateApplicationSettingsCommand", JSImport.Namespace)
-@js.native
-object updateApplicationSettingsCommandMod extends js.Object {
+object updateApplicationSettingsCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/UpdateApplicationSettingsCommand", "UpdateApplicationSettingsCommand")
   @js.native
   class UpdateApplicationSettingsCommand protected () extends Command[
           InputTypesUnion, 

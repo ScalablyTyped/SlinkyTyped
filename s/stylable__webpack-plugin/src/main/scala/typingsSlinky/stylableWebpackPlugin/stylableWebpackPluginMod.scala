@@ -5,16 +5,16 @@ import typingsSlinky.stylableWebpackPlugin.anon.Options
 import typingsSlinky.stylableWebpackPlugin.anon.ShallowPartialStylableWeb
 import typingsSlinky.stylableWebpackPlugin.stylableBootstrapModuleMod.StylableBootstrapModule
 import typingsSlinky.stylableWebpackPlugin.typesMod.StylableWebpackPluginOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@stylable/webpack-plugin/cjs/stylable-webpack-plugin", JSImport.Namespace)
-@js.native
-object stylableWebpackPluginMod extends js.Object {
+object stylableWebpackPluginMod {
   
+  @JSImport("@stylable/webpack-plugin/cjs/stylable-webpack-plugin", "StylableWebpackPlugin")
   @js.native
-  class StylableWebpackPlugin () extends js.Object {
+  class StylableWebpackPlugin () extends StObject {
     def this(options: ShallowPartialStylableWeb) = this()
     
     @JSName("apply")

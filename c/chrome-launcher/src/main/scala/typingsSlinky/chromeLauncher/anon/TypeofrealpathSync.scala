@@ -5,12 +5,13 @@ import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.fsMod.BaseEncodingOptions
 import typingsSlinky.node.fsMod.BufferEncodingOption
 import typingsSlinky.node.fsMod.PathLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofrealpathSync extends js.Object {
+trait TypeofrealpathSync extends StObject {
   
   def apply(path: PathLike): String = js.native
   def apply(path: PathLike, options: String): String | Buffer = js.native

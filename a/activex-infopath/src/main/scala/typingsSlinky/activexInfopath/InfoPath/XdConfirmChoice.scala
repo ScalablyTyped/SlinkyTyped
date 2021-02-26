@@ -4,6 +4,7 @@ import typingsSlinky.activexInfopath.activexInfopathNumbers.`1`
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`2`
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`6`
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`7`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexInfopath.activexInfopathNumbers.`1`
   - typingsSlinky.activexInfopath.activexInfopathNumbers.`6`
 */
-trait XdConfirmChoice extends js.Object
+trait XdConfirmChoice extends StObject
 object XdConfirmChoice {
   
   @scala.inline

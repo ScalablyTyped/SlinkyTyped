@@ -74,15 +74,16 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.toastHeaderMod.ToastHeaderProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ToastHeader {
   
-  @JSImport("reactstrap/es", "ToastHeader")
+  @JSImport("reactstrap/lib", "ToastHeader")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -257,13 +258,13 @@ object ToastHeader {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeReactElement(value: ReactElement): this.type = set("close", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def close(value: ReactElement): this.type = set("close", value.asInstanceOf[js.Any])
     
     @scala.inline
     def closeAriaLabel(value: String): this.type = set("closeAriaLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def closeReactElement(value: ReactElement): this.type = set("close", value.asInstanceOf[js.Any])
     
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
@@ -287,10 +288,10 @@ object ToastHeader {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -302,10 +303,10 @@ object ToastHeader {
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: String | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: String | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -617,13 +618,13 @@ object ToastHeader {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tagFunctionComponent(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: ReactElement): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tag(value: ReactElement): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tagFunctionComponent(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -644,16 +645,16 @@ object ToastHeader {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def wrapTagFunctionComponent(value: ReactComponentClass[_]): this.type = set("wrapTag", value.asInstanceOf[js.Any])
+    def wrapTag(value: ReactElement): this.type = set("wrapTag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def wrapTagComponentClass(value: ReactComponentClass[_]): this.type = set("wrapTag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def wrapTag(value: ReactElement): this.type = set("wrapTag", value.asInstanceOf[js.Any])
+    def wrapTagFunctionComponent(value: ReactComponentClass[_]): this.type = set("wrapTag", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ToastHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ToastHeader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ToastHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

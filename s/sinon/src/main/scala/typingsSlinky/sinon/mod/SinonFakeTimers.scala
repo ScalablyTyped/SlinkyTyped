@@ -1,17 +1,17 @@
 package typingsSlinky.sinon.mod
 
-import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.sinonjsFakeTimers.anon.Now
 import typingsSlinky.sinonjsFakeTimers.mod.FakeMethod
 import typingsSlinky.sinonjsFakeTimers.mod.NodeTimer
 import typingsSlinky.std.DateConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined @sinonjs/fake-timers.@sinonjs/fake-timers.InstalledMethods & @sinonjs/fake-timers.@sinonjs/fake-timers.NodeClock & @sinonjs/fake-timers.@sinonjs/fake-timers.BrowserClock & {restore (): void} */
 @js.native
-trait SinonFakeTimers extends js.Object {
+trait SinonFakeTimers extends StObject {
   
   /**
     * Implements the Date object but using this clock to provide the correct time.
@@ -21,7 +21,7 @@ trait SinonFakeTimers extends js.Object {
     * Implements the Date object but using this clock to provide the correct time.
     */
   @JSName("Date")
-  var Date_Original: DateConstructor with (Instantiable1[/* value */ Double, js.Date]) = js.native
+  var Date_Original: DateConstructor = js.native
   
   /**
     * Cancel animation frame request.
@@ -285,8 +285,8 @@ trait SinonFakeTimers extends js.Object {
     * @remarks This affects the current time but it does not in itself cause timers to fire.
     */
   def setSystemTime(): Unit = js.native
-  def setSystemTime(now: Double): Unit = js.native
   def setSystemTime(now: js.Date): Unit = js.native
+  def setSystemTime(now: Double): Unit = js.native
   
   /**
     * Schedules a callback to be fired once timeout milliseconds have ticked by.

@@ -10,10 +10,10 @@ JSON Web Token implementation (symmetric and asymmetric)
 | ------------------ | :-------------: |
 | Full name          | jsonwebtoken |
 | Keywords           | jwt |
-| # releases         | 9 |
-| # dependents       | 4116 |
-| # downloads        | 136052992 |
-| # stars            | 316 |
+| # releases         | 2 |
+| # dependents       | 8373 |
+| # downloads        | 242847631 |
+| # stars            | 317 |
 
 ## Links
 - [Homepage](https://github.com/auth0/node-jsonwebtoken#readme)

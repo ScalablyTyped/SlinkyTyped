@@ -2,6 +2,7 @@ package typingsSlinky.twilioVideo.mod
 
 import typingsSlinky.twilioVideo.twilioVideoNumbers.`53203`
 import typingsSlinky.twilioVideo.twilioVideoStrings.`Participant has too many Tracks`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

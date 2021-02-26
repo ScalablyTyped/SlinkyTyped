@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,79 +10,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols.html)
   */
-@JSGlobal("__esri.symbols")
-@js.native
-object symbols extends js.Object {
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.arcgisJsApi.esri.PictureFillSymbol
-    - typingsSlinky.arcgisJsApi.esri.SimpleFillSymbol
-  */
-  trait FillSymbol extends js.Object
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.arcgisJsApi.esri.PictureMarkerSymbol
-    - typingsSlinky.arcgisJsApi.esri.SimpleMarkerSymbol
-  */
-  trait MarkerSymbol extends js.Object
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.arcgisJsApi.esri.Symbol2D
-    - typingsSlinky.arcgisJsApi.esri.symbolsSymbol3D
-    - typingsSlinky.arcgisJsApi.esri.WebStyleSymbol
-  */
-  trait Symbol extends js.Object
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.arcgisJsApi.esri.PictureFillSymbol
-    - typingsSlinky.arcgisJsApi.esri.PictureMarkerSymbol
-    - typingsSlinky.arcgisJsApi.esri.SimpleFillSymbol
-    - typingsSlinky.arcgisJsApi.esri.SimpleLineSymbol
-    - typingsSlinky.arcgisJsApi.esri.SimpleMarkerSymbol
-    - typingsSlinky.arcgisJsApi.esri.TextSymbol
-  */
-  trait Symbol2D extends js.Object
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.arcgisJsApi.esri.PictureFillSymbol
-    - typingsSlinky.arcgisJsApi.esri.PictureMarkerSymbol
-    - typingsSlinky.arcgisJsApi.esri.SimpleFillSymbol
-    - typingsSlinky.arcgisJsApi.esri.SimpleLineSymbol
-    - typingsSlinky.arcgisJsApi.esri.SimpleMarkerSymbol
-    - typingsSlinky.arcgisJsApi.esri.TextSymbol
-    - typingsSlinky.arcgisJsApi.esri.Symbol2D
-    - typingsSlinky.arcgisJsApi.esri.LabelSymbol3D
-    - typingsSlinky.arcgisJsApi.esri.LineSymbol3D
-    - typingsSlinky.arcgisJsApi.esri.MeshSymbol3D
-    - typingsSlinky.arcgisJsApi.esri.PointSymbol3D
-    - typingsSlinky.arcgisJsApi.esri.PolygonSymbol3D
-  */
-  trait Symbol2D3D extends js.Object
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.arcgisJsApi.esri.LabelSymbol3D
-    - typingsSlinky.arcgisJsApi.esri.LineSymbol3D
-    - typingsSlinky.arcgisJsApi.esri.MeshSymbol3D
-    - typingsSlinky.arcgisJsApi.esri.PointSymbol3D
-    - typingsSlinky.arcgisJsApi.esri.PolygonSymbol3D
-  */
-  trait Symbol3D extends js.Object
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.arcgisJsApi.esri.ExtrudeSymbol3DLayer
-    - typingsSlinky.arcgisJsApi.esri.FillSymbol3DLayer
-    - typingsSlinky.arcgisJsApi.esri.WaterSymbol3DLayer
-    - typingsSlinky.arcgisJsApi.esri.IconSymbol3DLayer
-    - typingsSlinky.arcgisJsApi.esri.LineSymbol3DLayer
-    - typingsSlinky.arcgisJsApi.esri.ObjectSymbol3DLayer
-    - typingsSlinky.arcgisJsApi.esri.PathSymbol3DLayer
-    - typingsSlinky.arcgisJsApi.esri.TextSymbol3DLayer
-  */
-  trait Symbol3DLayer extends js.Object
+object symbols {
   
   type CIMSymbol = typingsSlinky.arcgisJsApi.esri.CIMSymbol
   
   type ExtrudeSymbol3DLayer = typingsSlinky.arcgisJsApi.esri.ExtrudeSymbol3DLayer
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.arcgisJsApi.esri.PictureFillSymbol
+    - typingsSlinky.arcgisJsApi.esri.SimpleFillSymbol
+  */
+  trait FillSymbol extends StObject
   
   type FillSymbol3DLayer = typingsSlinky.arcgisJsApi.esri.FillSymbol3DLayer
   
@@ -94,6 +33,12 @@ object symbols extends js.Object {
   type LineSymbol3D = typingsSlinky.arcgisJsApi.esri.LineSymbol3D
   
   type LineSymbol3DLayer = typingsSlinky.arcgisJsApi.esri.LineSymbol3DLayer
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.arcgisJsApi.esri.PictureMarkerSymbol
+    - typingsSlinky.arcgisJsApi.esri.SimpleMarkerSymbol
+  */
+  trait MarkerSymbol extends StObject
   
   type MeshSymbol3D = typingsSlinky.arcgisJsApi.esri.MeshSymbol3D
   
@@ -114,6 +59,60 @@ object symbols extends js.Object {
   type SimpleLineSymbol = typingsSlinky.arcgisJsApi.esri.SimpleLineSymbol
   
   type SimpleMarkerSymbol = typingsSlinky.arcgisJsApi.esri.SimpleMarkerSymbol
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.arcgisJsApi.esri.Symbol2D
+    - typingsSlinky.arcgisJsApi.esri.symbolsSymbol3D
+    - typingsSlinky.arcgisJsApi.esri.WebStyleSymbol
+  */
+  trait Symbol extends StObject
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.arcgisJsApi.esri.PictureFillSymbol
+    - typingsSlinky.arcgisJsApi.esri.PictureMarkerSymbol
+    - typingsSlinky.arcgisJsApi.esri.SimpleFillSymbol
+    - typingsSlinky.arcgisJsApi.esri.SimpleLineSymbol
+    - typingsSlinky.arcgisJsApi.esri.SimpleMarkerSymbol
+    - typingsSlinky.arcgisJsApi.esri.TextSymbol
+  */
+  trait Symbol2D extends StObject
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.arcgisJsApi.esri.PictureFillSymbol
+    - typingsSlinky.arcgisJsApi.esri.PictureMarkerSymbol
+    - typingsSlinky.arcgisJsApi.esri.SimpleFillSymbol
+    - typingsSlinky.arcgisJsApi.esri.SimpleLineSymbol
+    - typingsSlinky.arcgisJsApi.esri.SimpleMarkerSymbol
+    - typingsSlinky.arcgisJsApi.esri.TextSymbol
+    - typingsSlinky.arcgisJsApi.esri.Symbol2D
+    - typingsSlinky.arcgisJsApi.esri.LabelSymbol3D
+    - typingsSlinky.arcgisJsApi.esri.LineSymbol3D
+    - typingsSlinky.arcgisJsApi.esri.MeshSymbol3D
+    - typingsSlinky.arcgisJsApi.esri.PointSymbol3D
+    - typingsSlinky.arcgisJsApi.esri.PolygonSymbol3D
+  */
+  trait Symbol2D3D extends StObject
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.arcgisJsApi.esri.LabelSymbol3D
+    - typingsSlinky.arcgisJsApi.esri.LineSymbol3D
+    - typingsSlinky.arcgisJsApi.esri.MeshSymbol3D
+    - typingsSlinky.arcgisJsApi.esri.PointSymbol3D
+    - typingsSlinky.arcgisJsApi.esri.PolygonSymbol3D
+  */
+  trait Symbol3D extends StObject
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.arcgisJsApi.esri.ExtrudeSymbol3DLayer
+    - typingsSlinky.arcgisJsApi.esri.FillSymbol3DLayer
+    - typingsSlinky.arcgisJsApi.esri.WaterSymbol3DLayer
+    - typingsSlinky.arcgisJsApi.esri.IconSymbol3DLayer
+    - typingsSlinky.arcgisJsApi.esri.LineSymbol3DLayer
+    - typingsSlinky.arcgisJsApi.esri.ObjectSymbol3DLayer
+    - typingsSlinky.arcgisJsApi.esri.PathSymbol3DLayer
+    - typingsSlinky.arcgisJsApi.esri.TextSymbol3DLayer
+  */
+  trait Symbol3DLayer extends StObject
   
   type TextSymbol = typingsSlinky.arcgisJsApi.esri.TextSymbol
   

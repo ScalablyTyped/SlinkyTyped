@@ -25,6 +25,7 @@ import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
 import typingsSlinky.recharts.rechartsStrings.polygon
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,7 +34,7 @@ object PolarGrid {
   
   @JSImport("recharts", "PolarGrid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -190,16 +191,16 @@ object PolarGrid {
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def polarAnglesVarargs(value: Double*): this.type = set("polarAngles", js.Array(value :_*))
-    
-    @scala.inline
     def polarAngles(value: js.Array[Double]): this.type = set("polarAngles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def polarRadiusVarargs(value: Double*): this.type = set("polarRadius", js.Array(value :_*))
+    def polarAnglesVarargs(value: Double*): this.type = set("polarAngles", js.Array(value :_*))
     
     @scala.inline
     def polarRadius(value: js.Array[Double]): this.type = set("polarRadius", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def polarRadiusVarargs(value: Double*): this.type = set("polarRadius", js.Array(value :_*))
     
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
@@ -274,7 +275,7 @@ object PolarGrid {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PolarGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: PolarGrid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PolarGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -7,6 +7,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.container.XEnumerationAcce
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XIndexAccess
 import typingsSlinky.activexLibreoffice.com_.sun.star.table.CellRangeAddress
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

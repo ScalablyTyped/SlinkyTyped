@@ -2,12 +2,13 @@ package typingsSlinky.jqueryPnotify
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PNotify extends js.Object {
+trait PNotify extends StObject {
   
   /**
     *  Get the DOM element.

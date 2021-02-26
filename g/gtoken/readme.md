@@ -10,9 +10,9 @@ Node.js Google Authentication Service Account Tokens
 | ------------------ | :-------------: |
 | Full name          | gtoken |
 | Keywords           | google, service, account, api, token, api, auth |
-| # releases         | 15 |
-| # dependents       | 15 |
-| # downloads        | 92373906 |
+| # releases         | 18 |
+| # dependents       | 20 |
+| # downloads        | 168225898 |
 | # stars            | 3 |
 
 ## Links

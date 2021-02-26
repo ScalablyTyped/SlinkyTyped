@@ -88,6 +88,7 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -96,7 +97,7 @@ object ChoiceGroupBase {
   
   @JSImport("office-ui-fabric-react", "ChoiceGroupBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -292,13 +293,13 @@ object ChoiceGroupBase {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IChoiceGroup]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IChoiceGroup | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IChoiceGroup]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IChoiceGroup]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -322,10 +323,10 @@ object ChoiceGroupBase {
     def defaultSelectedKey(value: String | Double): this.type = set("defaultSelectedKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -662,10 +663,10 @@ object ChoiceGroupBase {
     def onWheel(value: SyntheticWheelEvent[HTMLElement | HTMLInputElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def optionsVarargs(value: IChoiceGroupOption*): this.type = set("options", js.Array(value :_*))
+    def options(value: js.Array[IChoiceGroupOption]): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: js.Array[IChoiceGroupOption]): this.type = set("options", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: IChoiceGroupOption*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
@@ -722,10 +723,10 @@ object ChoiceGroupBase {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IChoiceGroupStyleProps => DeepPartial[IChoiceGroupStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IChoiceGroupStyleProps, IChoiceGroupStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IChoiceGroupStyleProps, IChoiceGroupStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IChoiceGroupStyleProps => DeepPartial[IChoiceGroupStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -755,10 +756,10 @@ object ChoiceGroupBase {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -767,7 +768,7 @@ object ChoiceGroupBase {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IChoiceGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ChoiceGroupBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IChoiceGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

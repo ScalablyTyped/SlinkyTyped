@@ -1,18 +1,18 @@
 package typingsSlinky.prex
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("prex/out/lib/deferred", JSImport.Namespace)
-@js.native
-object deferredMod extends js.Object {
+object deferredMod {
   
+  @JSImport("prex/out/lib/deferred", "Deferred")
   @js.native
   /**
     * Initializes a new instance of the Deferred class.
     */
-  class Deferred[T] () extends js.Object {
+  class Deferred[T] () extends StObject {
     
     var _callback: js.Any = js.native
     

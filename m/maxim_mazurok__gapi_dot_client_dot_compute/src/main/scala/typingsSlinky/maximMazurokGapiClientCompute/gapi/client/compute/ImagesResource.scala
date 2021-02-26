@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.ImageKey
 import typingsSlinky.maximMazurokGapiClientCompute.anon.KeyOauthtokenPrettyPrint
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientCompute.anon.OauthtokenOptionsRequestedPolicyVersion
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ImagesResource extends js.Object {
+trait ImagesResource extends StObject {
   
   /** Deletes the specified image. */
   def delete(): Request[Operation] = js.native

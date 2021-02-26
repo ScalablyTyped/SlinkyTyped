@@ -4,6 +4,7 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.allow
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.allowAndName
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.default_
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.deny
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.allowAndName
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.default_
 */
-trait SetDownloadBehaviorRequestBehavior extends js.Object
+trait SetDownloadBehaviorRequestBehavior extends StObject
 object SetDownloadBehaviorRequestBehavior {
   
   @scala.inline

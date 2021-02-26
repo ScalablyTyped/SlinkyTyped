@@ -4,6 +4,7 @@ import typingsSlinky.googlemaps.google.maps.LatLng
 import typingsSlinky.googlemaps.google.maps.LatLngBounds
 import typingsSlinky.googlemaps.google.maps.Marker
 import typingsSlinky.googlemaps.google.maps.OverlayView
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

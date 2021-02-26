@@ -11,6 +11,7 @@ import typingsSlinky.atlaskitButton.mod.ButtonProps
 import typingsSlinky.atlaskitButton.mod.ButtonSpacing
 import typingsSlinky.atlaskitButton.mod.ButtonType
 import typingsSlinky.atlaskitButton.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object Button {
   
   @JSImport("@atlaskit/button", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -87,7 +88,7 @@ object Button {
     def `type`(value: ButtonType): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Button.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

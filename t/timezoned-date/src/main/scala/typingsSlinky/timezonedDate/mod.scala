@@ -1,14 +1,14 @@
 package typingsSlinky.timezonedDate
 
-import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.std.DateConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("timezoned-date", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  def makeConstructor(offsetInMinutes: Double): DateConstructor with (Instantiable1[/* value */ Double, js.Date]) = js.native
+  @JSImport("timezoned-date", "makeConstructor")
+  @js.native
+  def makeConstructor(offsetInMinutes: Double): DateConstructor = js.native
 }

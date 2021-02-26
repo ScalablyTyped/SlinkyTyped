@@ -1,5 +1,6 @@
 package typingsSlinky.reactInspector.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactInspector.reactInspectorStrings.chromeDark
   - typingsSlinky.reactInspector.mod.InspectorThemeDefinition
 */
-trait InspectorTheme extends js.Object
+trait InspectorTheme extends StObject

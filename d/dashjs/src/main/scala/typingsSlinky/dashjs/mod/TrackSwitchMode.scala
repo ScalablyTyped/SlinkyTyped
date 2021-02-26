@@ -1,5 +1,6 @@
 package typingsSlinky.dashjs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.dashjs.dashjsStrings.alwaysReplace
   - typingsSlinky.dashjs.dashjsStrings.neverReplace
 */
-trait TrackSwitchMode extends js.Object
+trait TrackSwitchMode extends StObject
 object TrackSwitchMode {
   
   @scala.inline

@@ -434,13 +434,14 @@ import typingsSlinky.std.ScrollToOptions
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import typingsSlinky.std.ShadowRoot
 import typingsSlinky.std.ShadowRootInit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.HTMLElement & {  result :object | undefined,   second_best :object | undefined,   parentNode :std.HTMLElement} */
 @js.native
-trait HighlightedHTMLElement extends js.Object {
+trait HighlightedHTMLElement extends StObject {
   
   val ATTRIBUTE_NODE: Double = js.native
   
@@ -3988,24 +3989,24 @@ trait HighlightedHTMLElement extends js.Object {
     * Removes the event listener in target's event listener list with the same type, callback, and options.
     */
   def removeEventListener(`type`: String): Unit = js.native
-  def removeEventListener(`type`: String, callback: Null, options: Boolean): Unit = js.native
   def removeEventListener(`type`: String, callback: Null, options: EventListenerOptions): Unit = js.native
+  def removeEventListener(`type`: String, callback: Null, options: Boolean): Unit = js.native
   def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject): Unit = js.native
-  def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
   def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject, options: EventListenerOptions): Unit = js.native
+  def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_abort(`type`: abort, listener: js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_abort(
     `type`: abort,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_abort(
     `type`: abort,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_animationcancel(
@@ -4016,13 +4017,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_animationcancel(
     `type`: animationcancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_animationcancel(
     `type`: animationcancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_animationend(`type`: animationend, listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]): Unit = js.native
@@ -4030,13 +4031,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_animationend(
     `type`: animationend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_animationend(
     `type`: animationend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_animationiteration(
@@ -4047,13 +4048,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_animationiteration(
     `type`: animationiteration,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_animationiteration(
     `type`: animationiteration,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_animationstart(
@@ -4064,13 +4065,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_animationstart(
     `type`: animationstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_animationstart(
     `type`: animationstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_auxclick(`type`: auxclick, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4078,13 +4079,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_auxclick(
     `type`: auxclick,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_auxclick(
     `type`: auxclick,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_blur(`type`: blur, listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]): Unit = js.native
@@ -4092,13 +4093,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_blur(
     `type`: blur,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_blur(
     `type`: blur,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cancel(`type`: cancel, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4106,13 +4107,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_cancel(
     `type`: cancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cancel(
     `type`: cancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplay(`type`: canplay, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4120,13 +4121,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_canplay(
     `type`: canplay,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplay(
     `type`: canplay,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplaythrough(`type`: canplaythrough, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4134,13 +4135,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_canplaythrough(
     `type`: canplaythrough,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplaythrough(
     `type`: canplaythrough,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4148,13 +4149,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_change(
     `type`: change,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(
     `type`: change,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_click(`type`: click, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4162,13 +4163,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_click(
     `type`: click,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_click(
     `type`: click,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4176,13 +4177,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_close(
     `type`: close,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
     `type`: close,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_contextmenu(`type`: contextmenu, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4190,13 +4191,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_contextmenu(
     `type`: contextmenu,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_contextmenu(
     `type`: contextmenu,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_copy(`type`: copy, listener: js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]): Unit = js.native
@@ -4204,13 +4205,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_copy(
     `type`: copy,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_copy(
     `type`: copy,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cuechange(`type`: cuechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4218,13 +4219,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_cuechange(
     `type`: cuechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cuechange(
     `type`: cuechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cut(`type`: cut, listener: js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]): Unit = js.native
@@ -4232,13 +4233,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_cut(
     `type`: cut,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cut(
     `type`: cut,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dblclick(`type`: dblclick, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4246,13 +4247,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_dblclick(
     `type`: dblclick,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dblclick(
     `type`: dblclick,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_drag(`type`: drag, listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]): Unit = js.native
@@ -4260,13 +4261,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_drag(
     `type`: drag,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_drag(
     `type`: drag,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragend(`type`: dragend, listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]): Unit = js.native
@@ -4274,13 +4275,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_dragend(
     `type`: dragend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragend(
     `type`: dragend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragenter(`type`: dragenter, listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]): Unit = js.native
@@ -4288,13 +4289,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_dragenter(
     `type`: dragenter,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragenter(
     `type`: dragenter,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragexit(`type`: dragexit, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4302,13 +4303,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_dragexit(
     `type`: dragexit,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragexit(
     `type`: dragexit,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragleave(`type`: dragleave, listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]): Unit = js.native
@@ -4316,13 +4317,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_dragleave(
     `type`: dragleave,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragleave(
     `type`: dragleave,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragover(`type`: dragover, listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]): Unit = js.native
@@ -4330,13 +4331,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_dragover(
     `type`: dragover,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragover(
     `type`: dragover,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragstart(`type`: dragstart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]): Unit = js.native
@@ -4344,13 +4345,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_dragstart(
     `type`: dragstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragstart(
     `type`: dragstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_drop(`type`: drop, listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]): Unit = js.native
@@ -4358,13 +4359,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_drop(
     `type`: drop,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_drop(
     `type`: drop,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_durationchange(`type`: durationchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4372,13 +4373,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_durationchange(
     `type`: durationchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_durationchange(
     `type`: durationchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_emptied(`type`: emptied, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4386,13 +4387,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_emptied(
     `type`: emptied,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_emptied(
     `type`: emptied,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ended(`type`: ended, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4400,13 +4401,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_ended(
     `type`: ended,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ended(
     `type`: ended,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ ErrorEvent, _]): Unit = js.native
@@ -4414,13 +4415,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ ErrorEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ ErrorEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_focus(`type`: focus, listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]): Unit = js.native
@@ -4428,13 +4429,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_focus(
     `type`: focus,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_focus(
     `type`: focus,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_focusin(`type`: focusin, listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]): Unit = js.native
@@ -4442,13 +4443,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_focusin(
     `type`: focusin,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_focusin(
     `type`: focusin,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_focusout(`type`: focusout, listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]): Unit = js.native
@@ -4456,13 +4457,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_focusout(
     `type`: focusout,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_focusout(
     `type`: focusout,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4470,13 +4471,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4484,13 +4485,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_gotpointercapture(
@@ -4501,13 +4502,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_gotpointercapture(
     `type`: gotpointercapture,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_gotpointercapture(
     `type`: gotpointercapture,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_input(`type`: input, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4515,13 +4516,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_input(
     `type`: input,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_input(
     `type`: input,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_invalid(`type`: invalid, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4529,13 +4530,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_invalid(
     `type`: invalid,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_invalid(
     `type`: invalid,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_keydown(`type`: keydown, listener: js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]): Unit = js.native
@@ -4543,13 +4544,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_keydown(
     `type`: keydown,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_keydown(
     `type`: keydown,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_keypress(`type`: keypress, listener: js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]): Unit = js.native
@@ -4557,13 +4558,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_keypress(
     `type`: keypress,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_keypress(
     `type`: keypress,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_keyup(`type`: keyup, listener: js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]): Unit = js.native
@@ -4571,13 +4572,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_keyup(
     `type`: keyup,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_keyup(
     `type`: keyup,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4585,13 +4586,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_load(
     `type`: load,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
     `type`: load,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadeddata(`type`: loadeddata, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4599,13 +4600,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_loadeddata(
     `type`: loadeddata,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadeddata(
     `type`: loadeddata,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4613,13 +4614,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_loadedmetadata(
     `type`: loadedmetadata,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadedmetadata(
     `type`: loadedmetadata,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(`type`: loadstart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4627,13 +4628,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_loadstart(
     `type`: loadstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(
     `type`: loadstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_lostpointercapture(
@@ -4644,13 +4645,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_lostpointercapture(
     `type`: lostpointercapture,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_lostpointercapture(
     `type`: lostpointercapture,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mousedown(`type`: mousedown, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4658,13 +4659,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_mousedown(
     `type`: mousedown,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mousedown(
     `type`: mousedown,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseenter(`type`: mouseenter, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4672,13 +4673,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_mouseenter(
     `type`: mouseenter,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseenter(
     `type`: mouseenter,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseleave(`type`: mouseleave, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4686,13 +4687,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_mouseleave(
     `type`: mouseleave,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseleave(
     `type`: mouseleave,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mousemove(`type`: mousemove, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4700,13 +4701,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_mousemove(
     `type`: mousemove,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mousemove(
     `type`: mousemove,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseout(`type`: mouseout, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4714,13 +4715,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_mouseout(
     `type`: mouseout,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseout(
     `type`: mouseout,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseover(`type`: mouseover, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4728,13 +4729,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_mouseover(
     `type`: mouseover,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseover(
     `type`: mouseover,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseup(`type`: mouseup, listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]): Unit = js.native
@@ -4742,13 +4743,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_mouseup(
     `type`: mouseup,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseup(
     `type`: mouseup,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_paste(`type`: paste, listener: js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]): Unit = js.native
@@ -4756,13 +4757,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_paste(
     `type`: paste,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_paste(
     `type`: paste,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4770,13 +4771,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_pause(
     `type`: pause,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(
     `type`: pause,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_play(`type`: play, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4784,13 +4785,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_play(
     `type`: play,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_play(
     `type`: play,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_playing(`type`: playing, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4798,13 +4799,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_playing(
     `type`: playing,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_playing(
     `type`: playing,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointercancel(`type`: pointercancel, listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]): Unit = js.native
@@ -4812,13 +4813,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_pointercancel(
     `type`: pointercancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointercancel(
     `type`: pointercancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerdown(`type`: pointerdown, listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]): Unit = js.native
@@ -4826,13 +4827,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_pointerdown(
     `type`: pointerdown,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerdown(
     `type`: pointerdown,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerenter(`type`: pointerenter, listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]): Unit = js.native
@@ -4840,13 +4841,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_pointerenter(
     `type`: pointerenter,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerenter(
     `type`: pointerenter,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerleave(`type`: pointerleave, listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]): Unit = js.native
@@ -4854,13 +4855,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_pointerleave(
     `type`: pointerleave,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerleave(
     `type`: pointerleave,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointermove(`type`: pointermove, listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]): Unit = js.native
@@ -4868,13 +4869,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_pointermove(
     `type`: pointermove,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointermove(
     `type`: pointermove,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerout(`type`: pointerout, listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]): Unit = js.native
@@ -4882,13 +4883,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_pointerout(
     `type`: pointerout,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerout(
     `type`: pointerout,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerover(`type`: pointerover, listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]): Unit = js.native
@@ -4896,13 +4897,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_pointerover(
     `type`: pointerover,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerover(
     `type`: pointerover,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerup(`type`: pointerup, listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]): Unit = js.native
@@ -4910,13 +4911,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_pointerup(
     `type`: pointerup,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerup(
     `type`: pointerup,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(`type`: progress, listener: js.ThisFunction1[/* this */ this.type, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -4924,13 +4925,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_progress(
     `type`: progress,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ ProgressEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(
     `type`: progress,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ ProgressEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ratechange(`type`: ratechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4938,13 +4939,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_ratechange(
     `type`: ratechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ratechange(
     `type`: ratechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_reset(`type`: reset, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4952,13 +4953,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_reset(
     `type`: reset,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_reset(
     `type`: reset,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_resize(`type`: resize, listener: js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]): Unit = js.native
@@ -4966,13 +4967,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_resize(
     `type`: resize,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_resize(
     `type`: resize,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_scroll(`type`: scroll, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -4980,13 +4981,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_scroll(
     `type`: scroll,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_scroll(
     `type`: scroll,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_securitypolicyviolation(
@@ -4997,13 +4998,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_securitypolicyviolation(
     `type`: securitypolicyviolation,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_securitypolicyviolation(
     `type`: securitypolicyviolation,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeked(`type`: seeked, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5011,13 +5012,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_seeked(
     `type`: seeked,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeked(
     `type`: seeked,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeking(`type`: seeking, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5025,13 +5026,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_seeking(
     `type`: seeking,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeking(
     `type`: seeking,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_select(`type`: select, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5039,13 +5040,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_select(
     `type`: select,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_select(
     `type`: select,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectionchange(`type`: selectionchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5053,13 +5054,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_selectionchange(
     `type`: selectionchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectionchange(
     `type`: selectionchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectstart(`type`: selectstart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5067,13 +5068,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_selectstart(
     `type`: selectstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectstart(
     `type`: selectstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_stalled(`type`: stalled, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5081,13 +5082,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_stalled(
     `type`: stalled,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_stalled(
     `type`: stalled,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_submit(`type`: submit, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5095,13 +5096,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_submit(
     `type`: submit,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_submit(
     `type`: submit,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_suspend(`type`: suspend, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5109,13 +5110,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_suspend(
     `type`: suspend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_suspend(
     `type`: suspend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_timeupdate(`type`: timeupdate, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5123,13 +5124,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_timeupdate(
     `type`: timeupdate,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_timeupdate(
     `type`: timeupdate,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_toggle(`type`: toggle, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5137,13 +5138,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_toggle(
     `type`: toggle,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_toggle(
     `type`: toggle,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_touchcancel(`type`: touchcancel, listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]): Unit = js.native
@@ -5151,13 +5152,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_touchcancel(
     `type`: touchcancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_touchcancel(
     `type`: touchcancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_touchend(`type`: touchend, listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]): Unit = js.native
@@ -5165,13 +5166,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_touchend(
     `type`: touchend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_touchend(
     `type`: touchend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_touchmove(`type`: touchmove, listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]): Unit = js.native
@@ -5179,13 +5180,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_touchmove(
     `type`: touchmove,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_touchmove(
     `type`: touchmove,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_touchstart(`type`: touchstart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]): Unit = js.native
@@ -5193,13 +5194,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_touchstart(
     `type`: touchstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_touchstart(
     `type`: touchstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_transitioncancel(
@@ -5210,13 +5211,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_transitioncancel(
     `type`: transitioncancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_transitioncancel(
     `type`: transitioncancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_transitionend(
@@ -5227,13 +5228,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_transitionend(
     `type`: transitionend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_transitionend(
     `type`: transitionend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_transitionrun(
@@ -5244,13 +5245,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_transitionrun(
     `type`: transitionrun,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_transitionrun(
     `type`: transitionrun,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_transitionstart(
@@ -5261,13 +5262,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_transitionstart(
     `type`: transitionstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_transitionstart(
     `type`: transitionstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_volumechange(`type`: volumechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5275,13 +5276,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_volumechange(
     `type`: volumechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_volumechange(
     `type`: volumechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_waiting(`type`: waiting, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -5289,13 +5290,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_waiting(
     `type`: waiting,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_waiting(
     `type`: waiting,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_wheel(`type`: wheel, listener: js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _]): Unit = js.native
@@ -5303,13 +5304,13 @@ trait HighlightedHTMLElement extends js.Object {
   def removeEventListener_wheel(
     `type`: wheel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_wheel(
     `type`: wheel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   
   def replaceChild[T /* <: Node */](newChild: Node, oldChild: T): T = js.native

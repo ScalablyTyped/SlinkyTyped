@@ -5,14 +5,14 @@ import typingsSlinky.babylonjs.internalTextureMod.InternalTexture
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.sphericalPolynomialMod.SphericalPolynomial
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Textures/rawCubeTexture", JSImport.Namespace)
-@js.native
-object rawCubeTextureMod extends js.Object {
+object rawCubeTextureMod {
   
+  @JSImport("babylonjs/Materials/Textures/rawCubeTexture", "RawCubeTexture")
   @js.native
   class RawCubeTexture protected () extends CubeTexture {
     /**
@@ -89,10 +89,11 @@ object rawCubeTextureMod extends js.Object {
     ): js.Promise[Unit] = js.native
   }
   /* static members */
-  @js.native
-  object RawCubeTexture extends js.Object {
+  object RawCubeTexture {
     
     /** @hidden */
+    @JSImport("babylonjs/Materials/Textures/rawCubeTexture", "RawCubeTexture._UpdateRGBDAsync")
+    @js.native
     def _UpdateRGBDAsync(
       internalTexture: InternalTexture,
       data: js.Array[js.Array[js.typedarray.ArrayBufferView]],

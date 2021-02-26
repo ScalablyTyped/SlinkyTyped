@@ -10,9 +10,9 @@ String utility functions.
 | ------------------ | :-------------: |
 | Full name          | @ethersproject/strings |
 | Keywords           | Ethereum, ethers, strings, utf8 |
-| # releases         | 21 |
-| # dependents       | 20 |
-| # downloads        | 194992 |
+| # releases         | 31 |
+| # dependents       | 44 |
+| # downloads        | 2859064 |
 | # stars            | 0 |
 
 ## Links

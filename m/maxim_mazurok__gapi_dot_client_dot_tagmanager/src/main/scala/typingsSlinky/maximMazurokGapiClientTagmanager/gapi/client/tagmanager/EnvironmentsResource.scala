@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Fields
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Fingerprint
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Key
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EnvironmentsResource extends js.Object {
+trait EnvironmentsResource extends StObject {
   
   /** Creates a GTM Environment. */
   def create(request: Accesstoken): Request[Environment] = js.native

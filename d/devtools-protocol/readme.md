@@ -10,9 +10,9 @@ The Chrome DevTools Protocol JSON
 | ------------------ | :-------------: |
 | Full name          | devtools-protocol |
 | Keywords           | - |
-| # releases         | 364 |
-| # dependents       | 15 |
-| # downloads        | 1092640 |
+| # releases         | 375 |
+| # dependents       | 27 |
+| # downloads        | 21867568 |
 | # stars            | 0 |
 
 ## Links

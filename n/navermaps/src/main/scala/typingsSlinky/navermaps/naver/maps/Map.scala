@@ -1,6 +1,7 @@
 package typingsSlinky.navermaps.naver.maps
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,8 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Map extends KVO {
   
-  def addPane(name: String, elementOrIndex: Double): Unit = js.native
   def addPane(name: String, elementOrIndex: HTMLElement): Unit = js.native
+  def addPane(name: String, elementOrIndex: Double): Unit = js.native
   
   var controls: js.Any = js.native
   

@@ -8,6 +8,7 @@ import typingsSlinky.kendoUi.kendo.data.GanttDataSource
 import typingsSlinky.kendoUi.kendo.data.GanttDependency
 import typingsSlinky.kendoUi.kendo.data.GanttDependencyDataSource
 import typingsSlinky.kendoUi.kendo.data.GanttTask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,8 +19,8 @@ trait Gantt extends Widget {
   def clearSelection(): Unit = js.native
   
   def dataItem(row: String): GanttTask = js.native
-  def dataItem(row: JQuery): GanttTask = js.native
   def dataItem(row: Element): GanttTask = js.native
+  def dataItem(row: JQuery): GanttTask = js.native
   
   var dataSource: DataSource = js.native
   
@@ -48,8 +49,8 @@ trait Gantt extends Widget {
   
   def select(): JQuery = js.native
   def select(row: String): Unit = js.native
-  def select(row: JQuery): Unit = js.native
   def select(row: Element): Unit = js.native
+  def select(row: JQuery): Unit = js.native
   
   def setDataSource(dataSource: GanttDataSource): Unit = js.native
   

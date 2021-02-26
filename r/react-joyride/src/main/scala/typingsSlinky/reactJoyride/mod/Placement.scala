@@ -1,5 +1,6 @@
 package typingsSlinky.reactJoyride.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactJoyride.reactJoyrideStrings.auto
   - typingsSlinky.reactJoyride.reactJoyrideStrings.center
 */
-trait Placement extends js.Object
+trait Placement extends StObject
 object Placement {
   
   @scala.inline

@@ -73,6 +73,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -89,10 +90,10 @@ class SharedBuilder_ListItemProps_1246570549 (val args: js.Array[js.Any])
   def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def actionsVarargs(value: ReactElement*): this.type = set("actions", js.Array(value :_*))
+  def actions(value: js.Array[ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def actions(value: js.Array[ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
+  def actionsVarargs(value: ReactElement*): this.type = set("actions", js.Array(value :_*))
   
   @scala.inline
   def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
@@ -274,10 +275,10 @@ class SharedBuilder_ListItemProps_1246570549 (val args: js.Array[js.Any])
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -286,10 +287,10 @@ class SharedBuilder_ListItemProps_1246570549 (val args: js.Array[js.Any])
   def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+  def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+  def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
   
   @scala.inline
   def grid(value: ListGridType): this.type = set("grid", value.asInstanceOf[js.Any])

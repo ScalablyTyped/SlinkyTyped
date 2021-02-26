@@ -4,15 +4,15 @@
 Typings are for version 1.1
 
 ## Library description:
-Encode & decode XML/HTML entities with ease
+Encode & decode XML and HTML entities with ease
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | entities |
-| Keywords           | html, xml, entity, decoding, encoding |
-| # releases         | 3 |
-| # dependents       | 317 |
-| # downloads        | 408675904 |
+| Keywords           | entity, decoding, encoding, html, xml, html entities |
+| # releases         | 5 |
+| # dependents       | 389 |
+| # downloads        | 887642542 |
 | # stars            | 19 |
 
 ## Links

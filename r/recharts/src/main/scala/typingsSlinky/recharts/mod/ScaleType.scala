@@ -1,5 +1,6 @@
 package typingsSlinky.recharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.recharts.rechartsStrings.sequential
   - typingsSlinky.recharts.rechartsStrings.threshold
 */
-trait ScaleType extends js.Object
+trait ScaleType extends StObject
 object ScaleType {
   
   @scala.inline

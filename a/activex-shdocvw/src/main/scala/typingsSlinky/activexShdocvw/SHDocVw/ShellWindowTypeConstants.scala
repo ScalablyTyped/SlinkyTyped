@@ -5,6 +5,7 @@ import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`1`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`2`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`4`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexShdocvw.activexShdocvwNumbers.`8`
   - typingsSlinky.activexShdocvw.activexShdocvwNumbers.`0`
 */
-trait ShellWindowTypeConstants extends js.Object
+trait ShellWindowTypeConstants extends StObject
 object ShellWindowTypeConstants {
   
   @scala.inline

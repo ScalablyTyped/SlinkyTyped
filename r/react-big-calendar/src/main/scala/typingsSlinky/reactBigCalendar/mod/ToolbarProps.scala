@@ -1,12 +1,13 @@
 package typingsSlinky.reactBigCalendar.mod
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ToolbarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] extends js.Object {
+trait ToolbarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] extends StObject {
   
   var children: js.UndefOr[ReactElement] = js.native
   

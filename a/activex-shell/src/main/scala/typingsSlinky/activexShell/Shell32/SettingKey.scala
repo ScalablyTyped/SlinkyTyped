@@ -25,6 +25,7 @@ import typingsSlinky.activexShell.activexShellNumbers.`0x00400000`
 import typingsSlinky.activexShell.activexShellNumbers.`0x00800000`
 import typingsSlinky.activexShell.activexShellNumbers.`0x01000000`
 import typingsSlinky.activexShell.activexShellNumbers.`0x02000000`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -57,7 +58,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexShell.activexShellNumbers.`0x00020000`
   - typingsSlinky.activexShell.activexShellNumbers.`0x00000400`
 */
-trait SettingKey extends js.Object
+trait SettingKey extends StObject
 object SettingKey {
   
   /**

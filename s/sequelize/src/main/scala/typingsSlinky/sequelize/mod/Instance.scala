@@ -3,6 +3,7 @@ package typingsSlinky.sequelize.mod
 import typingsSlinky.sequelize.anon.Clone
 import typingsSlinky.sequelize.anon.Skip
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @see Sequelize.define for more information about getters and setters
   */
 @js.native
-trait Instance[TAttributes] extends js.Object {
+trait Instance[TAttributes] extends StObject {
   
   /**
     * Returns the Model the instance was created from.

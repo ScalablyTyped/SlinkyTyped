@@ -4,16 +4,16 @@ import typingsSlinky.typeorm.anon.ArgsRelationCountMetadataArgsEntityMetadataEnt
 import typingsSlinky.typeorm.metadataEntityMetadataMod.EntityMetadata
 import typingsSlinky.typeorm.metadataRelationMetadataMod.RelationMetadata
 import typingsSlinky.typeorm.queryBuilderSelectQueryBuilderMod.SelectQueryBuilder
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/metadata/RelationCountMetadata", JSImport.Namespace)
-@js.native
-object metadataRelationCountMetadataMod extends js.Object {
+object metadataRelationCountMetadataMod {
   
+  @JSImport("typeorm/metadata/RelationCountMetadata", "RelationCountMetadata")
   @js.native
-  class RelationCountMetadata protected () extends js.Object {
+  class RelationCountMetadata protected () extends StObject {
     def this(options: ArgsRelationCountMetadataArgsEntityMetadataEntityMetadata) = this()
     
     /**

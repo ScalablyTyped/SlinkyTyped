@@ -1,5 +1,6 @@
 package typingsSlinky.domMediacaptureRecord
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.vbr
   - typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.cbr
 */
-trait BitrateMode extends js.Object
+trait BitrateMode extends StObject
 object BitrateMode {
   
   @scala.inline

@@ -4,14 +4,14 @@ import typingsSlinky.uirouterCore.coreservicesMod.LocationServices
 import typingsSlinky.uirouterCore.routerMod.UIRouter
 import typingsSlinky.uirouterCore.vanillaInterfaceMod.HistoryLike
 import typingsSlinky.uirouterCore.vanillaInterfaceMod.LocationLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/vanilla/baseLocationService", JSImport.Namespace)
-@js.native
-object baseLocationServiceMod extends js.Object {
+object baseLocationServiceMod {
   
+  @JSImport("@uirouter/core/lib/vanilla/baseLocationService", "BaseLocationServices")
   @js.native
   abstract class BaseLocationServices protected () extends LocationServices {
     def this(router: UIRouter, fireAfterUpdate: Boolean) = this()

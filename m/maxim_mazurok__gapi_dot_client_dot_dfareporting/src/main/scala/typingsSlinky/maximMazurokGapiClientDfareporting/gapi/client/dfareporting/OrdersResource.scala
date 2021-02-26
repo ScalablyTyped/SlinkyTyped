@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDfareporting.gapi.client.dfareportin
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.ProjectId
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.SiteId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OrdersResource extends js.Object {
+trait OrdersResource extends StObject {
   
   /** Gets one order by ID. */
   def get(): Request[Order] = js.native

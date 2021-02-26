@@ -2,13 +2,14 @@ package typingsSlinky.webxr.mod
 
 import typingsSlinky.std.DOMPointInit
 import typingsSlinky.std.DOMPointReadOnly
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("webxr", "XRRigidTransform")
 @js.native
-class XRRigidTransform () extends js.Object {
+class XRRigidTransform () extends StObject {
   def this(position: DOMPointInit) = this()
   def this(position: js.UndefOr[scala.Nothing], direction: DOMPointInit) = this()
   def this(position: DOMPointInit, direction: DOMPointInit) = this()

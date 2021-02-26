@@ -11,6 +11,7 @@ import typingsSlinky.node.nodeStrings.goaway
 import typingsSlinky.node.nodeStrings.ping
 import typingsSlinky.node.nodeStrings.timeout
 import typingsSlinky.node.tlsMod.TLSSocket
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

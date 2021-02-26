@@ -1,23 +1,23 @@
 organization := "org.scalablytyped.slinky"
 name := "hapi-auth-jwt2"
-version := "10.2.0-93c498"
+version := "10.2.0-3cac2e"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "hapi__boom" % "9.1.0-1d0df7",
-  "org.scalablytyped.slinky" %%% "hapi__catbox" % "10.2-dt-20200925Z-ddb60e",
-  "org.scalablytyped.slinky" %%% "hapi__hapi" % "20.0-dt-20201028Z-f587ef",
-  "org.scalablytyped.slinky" %%% "hapi__iron" % "6.0.0-869055",
-  "org.scalablytyped.slinky" %%% "hapi__mimos" % "4.1-dt-20200925Z-916e85",
-  "org.scalablytyped.slinky" %%% "hapi__podium" % "3.4-dt-20201002Z-be0948",
-  "org.scalablytyped.slinky" %%% "hapi__shot" % "4.1-dt-20200925Z-4ad776",
-  "org.scalablytyped.slinky" %%% "joi" % "17.3.0-11fb7b",
-  "org.scalablytyped.slinky" %%% "jsonwebtoken" % "8.5-dt-20200513Z-373806",
-  "org.scalablytyped.slinky" %%% "mime-db" % "1.43-dt-20200424Z-3991b7",
-  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "hapi__boom" % "9.1.0-ce42f2",
+  "org.scalablytyped.slinky" %%% "hapi__catbox" % "10.2-dt-20200925Z-6746dd",
+  "org.scalablytyped.slinky" %%% "hapi__hapi" % "20.0-dt-20201028Z-3adc1b",
+  "org.scalablytyped.slinky" %%% "hapi__iron" % "6.0.0-58c143",
+  "org.scalablytyped.slinky" %%% "hapi__mimos" % "4.1-dt-20200925Z-db6434",
+  "org.scalablytyped.slinky" %%% "hapi__podium" % "3.4-dt-20201002Z-05305b",
+  "org.scalablytyped.slinky" %%% "hapi__shot" % "4.1-dt-20200925Z-e6a54b",
+  "org.scalablytyped.slinky" %%% "joi" % "17.3.0-876e70",
+  "org.scalablytyped.slinky" %%% "jsonwebtoken" % "8.5-dt-20200513Z-7dce4d",
+  "org.scalablytyped.slinky" %%% "mime-db" % "1.43-dt-20200424Z-ebf808",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

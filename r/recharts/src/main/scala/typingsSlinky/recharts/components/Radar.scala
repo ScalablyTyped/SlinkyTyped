@@ -30,15 +30,22 @@ import typingsSlinky.recharts.rechartsStrings.normal
 import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Radar {
   
+  @scala.inline
+  def apply(dataKey: DataKey): Builder = {
+    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RadarProps]))
+  }
+  
   @JSImport("recharts", "Radar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -46,13 +53,13 @@ object Radar {
        with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.Radar] {
     
     @scala.inline
-    def activeDotReactElement(value: ReactElement): this.type = set("activeDot", value.asInstanceOf[js.Any])
+    def activeDot(value: js.Object | ReactElement | ContentRenderer[_] | Boolean): this.type = set("activeDot", value.asInstanceOf[js.Any])
     
     @scala.inline
     def activeDotFunction1(value: _ => ReactElement): this.type = set("activeDot", js.Any.fromFunction1(value))
     
     @scala.inline
-    def activeDot(value: js.Object | ReactElement | ContentRenderer[_] | Boolean): this.type = set("activeDot", value.asInstanceOf[js.Any])
+    def activeDotReactElement(value: ReactElement): this.type = set("activeDot", value.asInstanceOf[js.Any])
     
     @scala.inline
     def alignmentBaseline(value: String): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
@@ -115,13 +122,13 @@ object Radar {
     def dominantBaseline(value: String): this.type = set("dominantBaseline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dotReactElement(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
+    def dot(value: js.Object | ReactElement | ContentRenderer[DotProps] | Boolean): this.type = set("dot", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dotFunction1(value: DotProps => ReactElement): this.type = set("dot", js.Any.fromFunction1(value))
     
     @scala.inline
-    def dot(value: js.Object | ReactElement | ContentRenderer[DotProps] | Boolean): this.type = set("dot", value.asInstanceOf[js.Any])
+    def dotReactElement(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dx(value: Double): this.type = set("dx", value.asInstanceOf[js.Any])
@@ -195,13 +202,13 @@ object Radar {
     def kerning(value: Double | String): this.type = set("kerning", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: js.Object | ReactElement | ContentRenderer[_] | Boolean): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelFunction1(value: _ => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
     
     @scala.inline
-    def label(value: js.Object | ReactElement | ContentRenderer[_] | Boolean): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def legendType(value: LegendType): this.type = set("legendType", value.asInstanceOf[js.Any])
@@ -279,22 +286,22 @@ object Radar {
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pointsVarargs(value: RadarPoint*): this.type = set("points", js.Array(value :_*))
+    def points(value: js.Array[RadarPoint]): this.type = set("points", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def points(value: js.Array[RadarPoint]): this.type = set("points", value.asInstanceOf[js.Any])
+    def pointsVarargs(value: RadarPoint*): this.type = set("points", js.Array(value :_*))
     
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
+    def shape(value: ReactElement | ContentRenderer[RadarProps]): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shapeFunction1(value: RadarProps => ReactElement): this.type = set("shape", js.Any.fromFunction1(value))
     
     @scala.inline
-    def shape(value: ReactElement | ContentRenderer[RadarProps]): this.type = set("shape", value.asInstanceOf[js.Any])
+    def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
@@ -367,10 +374,4 @@ object Radar {
   }
   
   def withProps(p: RadarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(dataKey: DataKey): Builder = {
-    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RadarProps]))
-  }
 }

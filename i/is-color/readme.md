@@ -10,9 +10,9 @@ Check if a string is CSS color value
 | ------------------ | :-------------: |
 | Full name          | is-color |
 | Keywords           | css, color |
-| # releases         | 4 |
-| # dependents       | 11 |
-| # downloads        | 492331 |
+| # releases         | 0 |
+| # dependents       | 20 |
+| # downloads        | 717876 |
 | # stars            | 1 |
 
 ## Links

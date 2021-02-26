@@ -1,5 +1,6 @@
 package typingsSlinky.reactNavigationStack.vendorTypesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNavigationStack.reactNavigationStackStrings.vertical
   - typingsSlinky.reactNavigationStack.reactNavigationStackStrings.`vertical-inverted`
 */
-trait GestureDirection extends js.Object
+trait GestureDirection extends StObject
 object GestureDirection {
   
   @scala.inline

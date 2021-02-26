@@ -10,9 +10,9 @@ HTML5 Mobile Framework & UI Components
 | ------------------ | :-------------: |
 | Full name          | onsenui |
 | Keywords           | phonegap, cordova, web-components, react, components, angular, vue, hybrid, app, ui, mobile, onsen, onsenui |
-| # releases         | 15 |
-| # dependents       | 12 |
-| # downloads        | 444942 |
+| # releases         | 8 |
+| # dependents       | 11 |
+| # downloads        | 779787 |
 | # stars            | 5 |
 
 ## Links

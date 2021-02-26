@@ -17,6 +17,7 @@ import typingsSlinky.reactAutosuggest.mod.Theme
 import typingsSlinky.reactAutosuggest.mod.^
 import typingsSlinky.reactAutosuggest.reactAutosuggestBooleans.`false`
 import typingsSlinky.reactAutosuggest.reactAutosuggestBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,9 +26,22 @@ object ReactAutosuggest {
   
   object AutosuggestPropsMultiSection {
     
+    @scala.inline
+    def apply[T, T2](
+      getSuggestionValue: T => String,
+      inputProps: InputProps[T],
+      multiSection: `true`,
+      onSuggestionsFetchRequested: /* request */ SuggestionsFetchRequestedParams => Unit,
+      renderSuggestion: (T, /* params */ RenderSuggestionParams) => ReactElement,
+      suggestions: js.Array[T2]
+    ): Builder[T, T2] = {
+      val __props = js.Dynamic.literal(getSuggestionValue = js.Any.fromFunction1(getSuggestionValue), inputProps = inputProps.asInstanceOf[js.Any], multiSection = multiSection.asInstanceOf[js.Any], onSuggestionsFetchRequested = js.Any.fromFunction1(onSuggestionsFetchRequested), renderSuggestion = js.Any.fromFunction2(renderSuggestion), suggestions = suggestions.asInstanceOf[js.Any])
+      new Builder[T, T2](js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactAutosuggest.mod.AutosuggestPropsMultiSection[T, T2]]))
+    }
+    
     @JSImport("react-autosuggest", JSImport.Namespace)
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder[T, T2] (val args: js.Array[js.Any])
@@ -77,26 +91,25 @@ object ReactAutosuggest {
     }
     
     def withProps[T, T2](p: typingsSlinky.reactAutosuggest.mod.AutosuggestPropsMultiSection[T, T2]): Builder[T, T2] = new Builder[T, T2](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object AutosuggestPropsSingleSection {
     
     @scala.inline
     def apply[T, T2](
       getSuggestionValue: T => String,
       inputProps: InputProps[T],
-      multiSection: `true`,
       onSuggestionsFetchRequested: /* request */ SuggestionsFetchRequestedParams => Unit,
       renderSuggestion: (T, /* params */ RenderSuggestionParams) => ReactElement,
-      suggestions: js.Array[T2]
+      suggestions: js.Array[T]
     ): Builder[T, T2] = {
-      val __props = js.Dynamic.literal(getSuggestionValue = js.Any.fromFunction1(getSuggestionValue), inputProps = inputProps.asInstanceOf[js.Any], multiSection = multiSection.asInstanceOf[js.Any], onSuggestionsFetchRequested = js.Any.fromFunction1(onSuggestionsFetchRequested), renderSuggestion = js.Any.fromFunction2(renderSuggestion), suggestions = suggestions.asInstanceOf[js.Any])
-      new Builder[T, T2](js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactAutosuggest.mod.AutosuggestPropsMultiSection[T, T2]]))
+      val __props = js.Dynamic.literal(getSuggestionValue = js.Any.fromFunction1(getSuggestionValue), inputProps = inputProps.asInstanceOf[js.Any], onSuggestionsFetchRequested = js.Any.fromFunction1(onSuggestionsFetchRequested), renderSuggestion = js.Any.fromFunction2(renderSuggestion), suggestions = suggestions.asInstanceOf[js.Any])
+      new Builder[T, T2](js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactAutosuggest.mod.AutosuggestPropsSingleSection[T]]))
     }
-  }
-  
-  object AutosuggestPropsSingleSection {
     
     @JSImport("react-autosuggest", JSImport.Namespace)
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder[T, T2] (val args: js.Array[js.Any])
@@ -143,17 +156,5 @@ object ReactAutosuggest {
     }
     
     def withProps[T, T2](p: typingsSlinky.reactAutosuggest.mod.AutosuggestPropsSingleSection[T]): Builder[T, T2] = new Builder[T, T2](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply[T, T2](
-      getSuggestionValue: T => String,
-      inputProps: InputProps[T],
-      onSuggestionsFetchRequested: /* request */ SuggestionsFetchRequestedParams => Unit,
-      renderSuggestion: (T, /* params */ RenderSuggestionParams) => ReactElement,
-      suggestions: js.Array[T]
-    ): Builder[T, T2] = {
-      val __props = js.Dynamic.literal(getSuggestionValue = js.Any.fromFunction1(getSuggestionValue), inputProps = inputProps.asInstanceOf[js.Any], onSuggestionsFetchRequested = js.Any.fromFunction1(onSuggestionsFetchRequested), renderSuggestion = js.Any.fromFunction2(renderSuggestion), suggestions = suggestions.asInstanceOf[js.Any])
-      new Builder[T, T2](js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactAutosuggest.mod.AutosuggestPropsSingleSection[T]]))
-    }
   }
 }

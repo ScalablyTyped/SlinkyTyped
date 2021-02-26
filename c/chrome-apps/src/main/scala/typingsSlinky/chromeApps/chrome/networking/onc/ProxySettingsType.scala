@@ -1,6 +1,7 @@
 package typingsSlinky.chromeApps.chrome.networking.onc
 
 import typingsSlinky.chromeApps.chromeAppsStrings.Manual_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.PAC
   - typingsSlinky.chromeApps.chromeAppsStrings.WPAD
 */
-trait ProxySettingsType extends js.Object
+trait ProxySettingsType extends StObject
 object ProxySettingsType {
   
   @scala.inline

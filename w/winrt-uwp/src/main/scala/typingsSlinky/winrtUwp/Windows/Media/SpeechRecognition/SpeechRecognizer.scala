@@ -10,13 +10,14 @@ import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.hypothesisgenerated
 import typingsSlinky.winrtUwp.winrtUwpStrings.recognitionqualitydegrading
 import typingsSlinky.winrtUwp.winrtUwpStrings.statechanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Enables speech recognition with either a default or a custom graphical user interface (GUI). */
 @js.native
-trait SpeechRecognizer extends js.Object {
+trait SpeechRecognizer extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

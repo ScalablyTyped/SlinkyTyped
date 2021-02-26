@@ -1,12 +1,13 @@
 package typingsSlinky.sipJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js", "SIPExtension")
 @js.native
-object SIPExtension extends js.Object {
+object SIPExtension extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.sipJs.userAgentOptionsMod.SIPExtension with String] = js.native

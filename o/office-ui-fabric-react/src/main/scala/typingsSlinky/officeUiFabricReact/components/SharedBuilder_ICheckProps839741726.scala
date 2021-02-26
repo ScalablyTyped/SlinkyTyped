@@ -10,6 +10,7 @@ import typingsSlinky.officeUiFabricReact.checkTypesMod.ICheckStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,19 +30,19 @@ class SharedBuilder_ICheckProps839741726 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def componentRef(value: IRefObject[ICheckProps]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def componentRefFunction1(value: /* ref */ ICheckProps | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
   
   @scala.inline
   def componentRefRefObject(value: ReactRef[ICheckProps]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def componentRef(value: IRefObject[ICheckProps]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  def styles(value: IStyleFunctionOrObject[ICheckStyleProps, ICheckStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   
   @scala.inline
   def stylesFunction1(value: ICheckStyleProps => DeepPartial[ICheckStyles]): this.type = set("styles", js.Any.fromFunction1(value))
-  
-  @scala.inline
-  def styles(value: IStyleFunctionOrObject[ICheckStyleProps, ICheckStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   
   @scala.inline
   def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])

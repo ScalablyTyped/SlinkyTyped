@@ -1,10 +1,12 @@
 package typingsSlinky.orientjs.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.orientjs.orientjsStrings.document
 import typingsSlinky.orientjs.orientjsStrings.graph
 import typingsSlinky.orientjs.orientjsStrings.memory
 import typingsSlinky.orientjs.orientjsStrings.plocal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,6 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("orientjs", "ODB")
 @js.native
 class ODB () extends EventEmitter {
+  def this(options: EventEmitterOptions) = this()
   
   var `class`: OClass = js.native
   

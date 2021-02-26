@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.AccountIdAlt
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.AltConfigId
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.ConfigId
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.KeyOauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PretargetingConfigResource extends js.Object {
+trait PretargetingConfigResource extends StObject {
   
   /** Deletes an existing pretargeting config. */
   def delete(): Request[Unit] = js.native

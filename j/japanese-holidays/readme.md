@@ -11,8 +11,8 @@ Provides utilities to manipulate japanese holidays.
 | Full name          | japanese-holidays |
 | Keywords           | - |
 | # releases         | 4 |
-| # dependents       | 1 |
-| # downloads        | 75762 |
+| # dependents       | 2 |
+| # downloads        | 101437 |
 | # stars            | 0 |
 
 ## Links

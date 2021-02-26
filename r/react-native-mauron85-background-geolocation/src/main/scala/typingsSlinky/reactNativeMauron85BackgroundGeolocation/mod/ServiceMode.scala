@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeMauron85BackgroundGeolocation.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationNumbers.`0`
   - typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationNumbers.`1`
 */
-trait ServiceMode extends js.Object
+trait ServiceMode extends StObject
 object ServiceMode {
   
   @scala.inline

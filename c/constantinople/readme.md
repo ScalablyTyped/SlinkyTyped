@@ -10,9 +10,9 @@ Determine whether a JavaScript expression evaluates to a constant
 | ------------------ | :-------------: |
 | Full name          | constantinople |
 | Keywords           | constant, ast, tooling |
-| # releases         | 5 |
-| # dependents       | 48 |
-| # downloads        | 32860559 |
+| # releases         | 3 |
+| # dependents       | 49 |
+| # downloads        | 61047455 |
 | # stars            | 1 |
 
 ## Links

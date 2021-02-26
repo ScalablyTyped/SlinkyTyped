@@ -3,6 +3,7 @@ package typingsSlinky.wegameApi
 import typingsSlinky.wegameApi.anon.ErrMsg
 import typingsSlinky.wegameApi.wx.types.UDPMessage
 import typingsSlinky.wegameApi.wx.types.UDPSendParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *     2  发送失败，参数错误，port不合法
   */
 @js.native
-trait UDPSocket extends js.Object {
+trait UDPSocket extends StObject {
   
   /**
     * 绑定一个系统随机分配的可用端口，或绑定一个指定的端口号

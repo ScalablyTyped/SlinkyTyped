@@ -2,12 +2,13 @@ package typingsSlinky.angularMaterial.mod.angularAugmentingMod.material
 
 import typingsSlinky.angular.JQuery
 import typingsSlinky.angular.mod.IPromise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IPanelRef extends js.Object {
+trait IPanelRef extends StObject {
   
   def addClass(newClass: String): Unit = js.native
   

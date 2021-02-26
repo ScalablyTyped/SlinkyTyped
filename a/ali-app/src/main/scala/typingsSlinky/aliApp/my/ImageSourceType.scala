@@ -1,6 +1,7 @@
 package typingsSlinky.aliApp.my
 
 import typingsSlinky.aliApp.aliAppStrings.camera_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.aliApp.aliAppStrings.album
   - typingsSlinky.aliApp.aliAppStrings.camera_
 */
-trait ImageSourceType extends js.Object
+trait ImageSourceType extends StObject
 object ImageSourceType {
   
   @scala.inline

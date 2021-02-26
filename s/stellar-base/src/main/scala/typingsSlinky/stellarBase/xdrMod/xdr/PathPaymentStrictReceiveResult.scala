@@ -4,12 +4,13 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.stellarBase.stellarBaseStrings.base64
 import typingsSlinky.stellarBase.stellarBaseStrings.hex
 import typingsSlinky.stellarBase.stellarBaseStrings.raw
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PathPaymentStrictReceiveResult extends js.Object {
+trait PathPaymentStrictReceiveResult extends StObject {
   
   def noIssuer(): Asset = js.native
   def noIssuer(value: Asset): Asset = js.native

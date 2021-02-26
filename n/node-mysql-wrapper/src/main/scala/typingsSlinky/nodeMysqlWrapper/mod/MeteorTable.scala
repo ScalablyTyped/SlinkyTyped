@@ -2,13 +2,14 @@ package typingsSlinky.nodeMysqlWrapper.mod
 
 import typingsSlinky.nodeMysqlWrapper.Mongo.Collection
 import typingsSlinky.nodeMysqlWrapper.anon.Multi
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("node-mysql-wrapper", "MeteorTable")
 @js.native
-class MeteorTable[T] protected () extends js.Object {
+class MeteorTable[T] protected () extends StObject {
   def this(table: Table[T]) = this()
   
   def collection(): Collection[T] = js.native

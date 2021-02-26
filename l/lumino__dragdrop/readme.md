@@ -10,9 +10,9 @@ Lumino Drag and Drop
 | ------------------ | :-------------: |
 | Full name          | @lumino/dragdrop |
 | Keywords           | - |
-| # releases         | 16 |
-| # dependents       | 15 |
-| # downloads        | 444737 |
+| # releases         | 18 |
+| # dependents       | 29 |
+| # downloads        | 1166377 |
 | # stars            | 0 |
 
 ## Links

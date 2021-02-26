@@ -10,6 +10,7 @@ import typingsSlinky.reactNativeRatings.reactNativeRatingsStrings.custom
 import typingsSlinky.reactNativeRatings.reactNativeRatingsStrings.heart
 import typingsSlinky.reactNativeRatings.reactNativeRatingsStrings.rocket
 import typingsSlinky.reactNativeRatings.reactNativeRatingsStrings.star
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object Rating {
   
   @JSImport("react-native-ratings", "Rating")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -74,7 +75,7 @@ object Rating {
     def `type`(value: star | rocket | bell | heart | custom): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Rating.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

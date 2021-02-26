@@ -16,12 +16,13 @@ import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.octokitTypes.routeMod.Route
 import typingsSlinky.std.Omit
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `267` extends js.Object {
+trait `267` extends StObject {
   
   def apply(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PUT /projects/:project_id/collaborators/:username']['response'] */ js.Any

@@ -4,6 +4,7 @@ import typingsSlinky.activexOffice.activexOfficeNumbers.`-4128`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`-4166`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`-4170`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`-4171`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`-4171`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`-4166`
 */
-trait XlChartOrientation extends js.Object
+trait XlChartOrientation extends StObject
 object XlChartOrientation {
   
   @scala.inline

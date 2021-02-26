@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.xtsAes128
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.xtsAes256
 */
-trait BitLockerEncryptionMethod extends js.Object
+trait BitLockerEncryptionMethod extends StObject
 object BitLockerEncryptionMethod {
   
   @scala.inline

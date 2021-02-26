@@ -1,12 +1,13 @@
 package typingsSlinky.activexWord.Word
 
 import typingsSlinky.activexOffice.Office.MsoDiagramNodeType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DiagramNodeChildren extends js.Object {
+trait DiagramNodeChildren extends StObject {
   
   /**
     * @param any [Index=-1]

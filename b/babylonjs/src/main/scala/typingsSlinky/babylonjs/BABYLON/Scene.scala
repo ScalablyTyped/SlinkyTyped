@@ -8,6 +8,7 @@ import typingsSlinky.babylonjs.anon.MaxMin
 import typingsSlinky.babylonjs.anon.OriginalValue
 import typingsSlinky.babylonjs.anon.PartialIEnvironmentHelperBackgroundYRotation
 import typingsSlinky.babylonjs.anon.TotalAdditiveWeight
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

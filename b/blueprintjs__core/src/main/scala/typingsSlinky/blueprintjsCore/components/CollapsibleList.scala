@@ -7,15 +7,22 @@ import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
 import typingsSlinky.blueprintjsCore.collapsibleListMod.ICollapsibleListProps
 import typingsSlinky.blueprintjsCore.menuItemMod.IMenuItemProps
 import typingsSlinky.blueprintjsCore.popoverMod.IPopoverProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CollapsibleList {
   
+  @scala.inline
+  def apply(dropdownTarget: ReactElement, visibleItemRenderer: (IMenuItemProps, Double) => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(dropdownTarget = dropdownTarget.asInstanceOf[js.Any], visibleItemRenderer = js.Any.fromFunction2(visibleItemRenderer))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ICollapsibleListProps]))
+  }
+  
   @JSImport("@blueprintjs/core", "CollapsibleList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,10 +46,4 @@ object CollapsibleList {
   }
   
   def withProps(p: ICollapsibleListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(dropdownTarget: ReactElement, visibleItemRenderer: (IMenuItemProps, Double) => ReactElement): Builder = {
-    val __props = js.Dynamic.literal(dropdownTarget = dropdownTarget.asInstanceOf[js.Any], visibleItemRenderer = js.Any.fromFunction2(visibleItemRenderer))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ICollapsibleListProps]))
-  }
 }

@@ -5,12 +5,13 @@ import typingsSlinky.jquery.JQuery
 import typingsSlinky.layuiSrc.layuiSrcStrings.checkbox
 import typingsSlinky.layuiSrc.layuiSrcStrings.radio
 import typingsSlinky.layuiSrc.layuiSrcStrings.select
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Form extends js.Object {
+trait Form extends StObject {
   
   def getValue(filter: String): js.Any = js.native
   def getValue(filter: String, itemForm: JQuery[HTMLElement]): js.Any = js.native

@@ -10,9 +10,9 @@ persist and rehydrate redux stores
 | ------------------ | :-------------: |
 | Full name          | redux-persist |
 | Keywords           | - |
-| # releases         | 28 |
-| # dependents       | 288 |
-| # downloads        | 12871592 |
+| # releases         | 6 |
+| # dependents       | 388 |
+| # downloads        | 21587800 |
 | # stars            | 34 |
 
 ## Links

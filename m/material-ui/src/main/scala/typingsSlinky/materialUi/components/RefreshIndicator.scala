@@ -7,15 +7,22 @@ import typingsSlinky.materialUi.materialUiStrings.hide
 import typingsSlinky.materialUi.materialUiStrings.loading
 import typingsSlinky.materialUi.materialUiStrings.ready
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RefreshIndicator {
   
+  @scala.inline
+  def apply(left: Double, top: Double): Builder = {
+    val __props = js.Dynamic.literal(left = left.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RefreshIndicatorProps]))
+  }
+  
   @JSImport("material-ui", "RefreshIndicator")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,10 +49,4 @@ object RefreshIndicator {
   }
   
   def withProps(p: RefreshIndicatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(left: Double, top: Double): Builder = {
-    val __props = js.Dynamic.literal(left = left.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RefreshIndicatorProps]))
-  }
 }

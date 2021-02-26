@@ -10,15 +10,15 @@ A light weight native JavaScript implementation of GeoIP API from MaxMind
 | ------------------ | :-------------: |
 | Full name          | geoip-lite |
 | Keywords           | geo, geoip, ip, ipv4, ipv6, geolookup, maxmind, geolite |
-| # releases         | 10 |
-| # dependents       | 117 |
-| # downloads        | 2077928 |
+| # releases         | 6 |
+| # dependents       | 161 |
+| # downloads        | 3741532 |
 | # stars            | 37 |
 
 ## Links
-- [Homepage](https://github.com/bluesmoon/node-geoip)
-- [Bugs](https://github.com/bluesmoon/node-geoip/issues)
-- [Repository](https://github.com/bluesmoon/node-geoip)
+- [Homepage](https://github.com/geoip-lite/node-geoip)
+- [Bugs](https://github.com/geoip-lite/node-geoip/issues)
+- [Repository](https://github.com/geoip-lite/node-geoip)
 - [Npm](https://www.npmjs.com/package/geoip-lite)
     
 

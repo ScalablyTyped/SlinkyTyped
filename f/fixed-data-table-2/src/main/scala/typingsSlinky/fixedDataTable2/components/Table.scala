@@ -11,15 +11,22 @@ import typingsSlinky.fixedDataTable2.mod.ColumnReorderEndEvent
 import typingsSlinky.fixedDataTable2.mod.ElementOrFunc
 import typingsSlinky.fixedDataTable2.mod.RowProps
 import typingsSlinky.fixedDataTable2.mod.TableProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Table {
   
+  @scala.inline
+  def apply(headerHeight: Double, rowHeight: Double, rowsCount: Double, width: Double): Builder = {
+    val __props = js.Dynamic.literal(headerHeight = headerHeight.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], rowsCount = rowsCount.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TableProps]))
+  }
+  
   @JSImport("fixed-data-table-2", "Table")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -138,13 +145,13 @@ object Table {
     def rowClassNameGetter(value: /* index */ Double => String): this.type = set("rowClassNameGetter", js.Any.fromFunction1(value))
     
     @scala.inline
-    def rowExpandedReactElement(value: ReactElement): this.type = set("rowExpanded", value.asInstanceOf[js.Any])
+    def rowExpanded(value: ElementOrFunc[RowProps]): this.type = set("rowExpanded", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rowExpandedFunction1(value: RowProps => String | ReactElement): this.type = set("rowExpanded", js.Any.fromFunction1(value))
     
     @scala.inline
-    def rowExpanded(value: ElementOrFunc[RowProps]): this.type = set("rowExpanded", value.asInstanceOf[js.Any])
+    def rowExpandedReactElement(value: ReactElement): this.type = set("rowExpanded", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rowHeightGetter(value: /* index */ Double => Double): this.type = set("rowHeightGetter", js.Any.fromFunction1(value))
@@ -184,10 +191,4 @@ object Table {
   }
   
   def withProps(p: TableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(headerHeight: Double, rowHeight: Double, rowsCount: Double, width: Double): Builder = {
-    val __props = js.Dynamic.literal(headerHeight = headerHeight.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], rowsCount = rowsCount.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TableProps]))
-  }
 }

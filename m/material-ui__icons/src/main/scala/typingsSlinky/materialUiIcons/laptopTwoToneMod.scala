@@ -1,14 +1,21 @@
 package typingsSlinky.materialUiIcons
 
+import org.scalablytyped.runtime.Shortcut
 import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material-ui/icons/LaptopTwoTone", JSImport.Namespace)
-@js.native
-object laptopTwoToneMod extends js.Object {
+object laptopTwoToneMod extends Shortcut {
   
+  @JSImport("@material-ui/icons/LaptopTwoTone", JSImport.Default)
+  @js.native
   val default: ReactComponentClass[SvgIconProps] = js.native
+  
+  type _To = ReactComponentClass[SvgIconProps]
+  
+  /* This means you don't have to write `default`, but can instead just say `laptopTwoToneMod.foo` */
+  override def _to: ReactComponentClass[SvgIconProps] = default
 }

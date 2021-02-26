@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Event
 import typingsSlinky.std.CustomEvent
 import typingsSlinky.videoJs.mod.videojs.EventTarget.EventListener
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @see [EventTarget Spec]{@link https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget}
   */
 @js.native
-trait EventTarget extends js.Object {
+trait EventTarget extends StObject {
   
   /**
     * An alias of {@link EventTarget#on}. Allows `EventTarget` to mimic
@@ -121,9 +122,7 @@ trait EventTarget extends js.Object {
   def trigger(event: String): Unit = js.native
   def trigger(event: typingsSlinky.videoJs.mod.videojs.EventTarget.Event): Unit = js.native
 }
-@JSImport("video.js", "videojs.EventTarget")
-@js.native
-object EventTarget extends js.Object {
+object EventTarget {
   
   /**
     * A Custom DOM event.

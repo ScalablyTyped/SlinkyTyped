@@ -10,9 +10,9 @@ Scales and color schemes for visual encoding.
 | ------------------ | :-------------: |
 | Full name          | vega-scale |
 | Keywords           | vega, scale, color, palette |
-| # releases         | 15 |
-| # dependents       | 9 |
-| # downloads        | 1883306 |
+| # releases         | 14 |
+| # dependents       | 10 |
+| # downloads        | 2960659 |
 | # stars            | 0 |
 
 ## Links

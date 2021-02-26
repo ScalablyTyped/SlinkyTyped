@@ -6,16 +6,16 @@ import typingsSlinky.uirouterCore.transitionHookMod.TransitionHook
 import typingsSlinky.uirouterCore.transitionInterfaceMod.TransitionHookPhase
 import typingsSlinky.uirouterCore.transitionInterfaceMod.TreeChanges
 import typingsSlinky.uirouterCore.transitionTransitionMod.Transition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/transition/hookBuilder", JSImport.Namespace)
-@js.native
-object hookBuilderMod extends js.Object {
+object hookBuilderMod {
   
+  @JSImport("@uirouter/core/lib/transition/hookBuilder", "HookBuilder")
   @js.native
-  class HookBuilder protected () extends js.Object {
+  class HookBuilder protected () extends StObject {
     def this(transition: Transition) = this()
     
     /**

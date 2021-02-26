@@ -15,6 +15,7 @@ import typingsSlinky.is.isStrings.nanpPhone
 import typingsSlinky.is.isStrings.timeString
 import typingsSlinky.is.isStrings.url
 import typingsSlinky.is.isStrings.usZipCode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

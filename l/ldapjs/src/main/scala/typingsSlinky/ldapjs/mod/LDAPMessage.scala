@@ -1,13 +1,14 @@
 package typingsSlinky.ldapjs.mod
 
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ldapjs", "LDAPMessage")
 @js.native
-abstract class LDAPMessage () extends js.Object {
+abstract class LDAPMessage () extends StObject {
   
   var controls: js.Array[Control] = js.native
   

@@ -1,5 +1,6 @@
 package typingsSlinky.slonik.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.slonik.slonikStrings.timestamptz
   - typingsSlinky.slonik.slonikStrings.uuid
 */
-trait TypeNameIdentifierType extends js.Object
+trait TypeNameIdentifierType extends StObject
 object TypeNameIdentifierType {
   
   @scala.inline

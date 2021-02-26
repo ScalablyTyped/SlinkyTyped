@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientBigquerydatatransfer.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientBigquerydatatransfer.anon.Alt
 import typingsSlinky.maximMazurokGapiClientBigquerydatatransfer.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DataSourcesResource extends js.Object {
+trait DataSourcesResource extends StObject {
   
   /**
     * Returns true if valid credentials exist for the given data source and requesting user. Some data sources doesn't support service account, so we need to talk to them on behalf of the

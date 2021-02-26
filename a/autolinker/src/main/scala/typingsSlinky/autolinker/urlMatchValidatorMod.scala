@@ -1,20 +1,27 @@
 package typingsSlinky.autolinker
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("autolinker/dist/commonjs/matcher/url-match-validator", JSImport.Namespace)
-@js.native
-object urlMatchValidatorMod extends js.Object {
+object urlMatchValidatorMod {
   
+  @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator")
   @js.native
-  class UrlMatchValidator () extends js.Object
+  class UrlMatchValidator () extends StObject
   /* static members */
-  @js.native
-  object UrlMatchValidator extends js.Object {
+  object UrlMatchValidator {
     
-    var containsMultipleDots: js.Any = js.native
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator.containsMultipleDots")
+    @js.native
+    def containsMultipleDots: js.Any = js.native
+    @scala.inline
+    def containsMultipleDots_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("containsMultipleDots")(x.asInstanceOf[js.Any])
     
     /**
       * Regex to test for a full protocol, with the two trailing slashes. Ex: 'http://'
@@ -22,7 +29,11 @@ object urlMatchValidatorMod extends js.Object {
       * @private
       * @property {RegExp} hasFullProtocolRegex
       */
-    var hasFullProtocolRegex: js.RegExp = js.native
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator.hasFullProtocolRegex")
+    @js.native
+    def hasFullProtocolRegex: js.RegExp = js.native
+    @scala.inline
+    def hasFullProtocolRegex_=(x: js.RegExp): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("hasFullProtocolRegex")(x.asInstanceOf[js.Any])
     
     /**
       * Regex to determine if at least one word char exists after the protocol (i.e. after the ':')
@@ -30,7 +41,11 @@ object urlMatchValidatorMod extends js.Object {
       * @private
       * @property {RegExp} hasWordCharAfterProtocolRegex
       */
-    var hasWordCharAfterProtocolRegex: js.RegExp = js.native
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator.hasWordCharAfterProtocolRegex")
+    @js.native
+    def hasWordCharAfterProtocolRegex: js.RegExp = js.native
+    @scala.inline
+    def hasWordCharAfterProtocolRegex_=(x: js.RegExp): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("hasWordCharAfterProtocolRegex")(x.asInstanceOf[js.Any])
     
     /**
       * Regex to determine if the string is a valid IP address
@@ -38,7 +53,11 @@ object urlMatchValidatorMod extends js.Object {
       * @private
       * @property {RegExp} ipRegex
       */
-    var ipRegex: js.RegExp = js.native
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator.ipRegex")
+    @js.native
+    def ipRegex: js.RegExp = js.native
+    @scala.inline
+    def ipRegex_=(x: js.RegExp): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ipRegex")(x.asInstanceOf[js.Any])
     
     /**
       * Determines if a given URL match found by the {@link Autolinker.matcher.Url UrlMatcher}
@@ -66,8 +85,12 @@ object urlMatchValidatorMod extends js.Object {
       *   processed, or `false` if the match is invalid and/or should just not be
       *   processed.
       */
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator.isValid")
+    @js.native
     def isValid(urlMatch: String, protocolUrlMatch: String): Boolean = js.native
     
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator.isValidIpAddress")
+    @js.native
     def isValidIpAddress(uriSchemeMatch: String): Boolean = js.native
     
     /**
@@ -79,6 +102,8 @@ object urlMatchValidatorMod extends js.Object {
       *   match. Ex: 'http://yahoo.com' or 'mailto:a@a.com'.
       * @return {Boolean} `true` if the scheme is a valid one, `false` otherwise.
       */
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator.isValidUriScheme")
+    @js.native
     def isValidUriScheme(uriSchemeMatch: String): Boolean = js.native
     
     /**
@@ -89,7 +114,11 @@ object urlMatchValidatorMod extends js.Object {
       * @private
       * @property {RegExp} uriSchemeRegex
       */
-    var uriSchemeRegex: js.RegExp = js.native
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator.uriSchemeRegex")
+    @js.native
+    def uriSchemeRegex: js.RegExp = js.native
+    @scala.inline
+    def uriSchemeRegex_=(x: js.RegExp): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("uriSchemeRegex")(x.asInstanceOf[js.Any])
     
     /**
       * Determines if a URL match does not have either:
@@ -110,6 +139,8 @@ object urlMatchValidatorMod extends js.Object {
       * @return {Boolean} `true` if the URL match does not have a full protocol, or
       * at least one word character in it, `false` otherwise.
       */
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator.urlMatchDoesNotHaveAtLeastOneWordChar")
+    @js.native
     def urlMatchDoesNotHaveAtLeastOneWordChar(urlMatch: String, protocolUrlMatch: String): Boolean = js.native
     
     /**
@@ -133,6 +164,8 @@ object urlMatchValidatorMod extends js.Object {
       * @return {Boolean} `true` if the URL match does not have a full protocol,
       *   or at least one dot ('.') in a non-full-protocol match.
       */
+    @JSImport("autolinker/dist/commonjs/matcher/url-match-validator", "UrlMatchValidator.urlMatchDoesNotHaveProtocolOrDot")
+    @js.native
     def urlMatchDoesNotHaveProtocolOrDot(urlMatch: String, protocolUrlMatch: String): Boolean = js.native
   }
 }

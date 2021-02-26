@@ -1,12 +1,13 @@
 package typingsSlinky.cookieclicker.Game
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Tooltip extends js.Object {
+trait Tooltip extends StObject {
   
   def draw(from: HTMLElement, text: String, origin: TooltipOrigins): Unit = js.native
   /**

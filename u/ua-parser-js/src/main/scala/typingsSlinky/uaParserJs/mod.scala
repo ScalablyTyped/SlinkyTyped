@@ -1,24 +1,29 @@
 package typingsSlinky.uaParserJs
 
+import typingsSlinky.uaParserJs.IUAParser.BROWSER
+import typingsSlinky.uaParserJs.IUAParser.CPU
+import typingsSlinky.uaParserJs.IUAParser.DEVICE
+import typingsSlinky.uaParserJs.IUAParser.ENGINE
 import typingsSlinky.uaParserJs.IUAParser.IBrowser
 import typingsSlinky.uaParserJs.IUAParser.ICPU
 import typingsSlinky.uaParserJs.IUAParser.IDevice
 import typingsSlinky.uaParserJs.IUAParser.IEngine
 import typingsSlinky.uaParserJs.IUAParser.IOS
 import typingsSlinky.uaParserJs.IUAParser.IResult
+import typingsSlinky.uaParserJs.IUAParser.OS
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ua-parser-js", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("ua-parser-js", "UAParser")
   @js.native
   /**
     * Create a new parser with UA prepopulated and extensions extended
     */
-  class UAParser () extends js.Object {
+  class UAParser () extends StObject {
     def this(uastring: String) = this()
     def this(uastring: js.UndefOr[scala.Nothing], extensions: js.Any) = this()
     def this(uastring: String, extensions: js.Any) = this()
@@ -64,19 +69,46 @@ object mod extends js.Object {
     def setUA(uastring: String): UAParser = js.native
   }
   /* static members */
-  @js.native
-  object UAParser extends js.Object {
+  object UAParser {
     
-    var BROWSER: typingsSlinky.uaParserJs.IUAParser.BROWSER = js.native
+    @JSImport("ua-parser-js", "UAParser")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var CPU: typingsSlinky.uaParserJs.IUAParser.CPU = js.native
+    @JSImport("ua-parser-js", "UAParser.BROWSER")
+    @js.native
+    def BROWSER: typingsSlinky.uaParserJs.IUAParser.BROWSER = js.native
+    @scala.inline
+    def BROWSER_=(x: BROWSER): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("BROWSER")(x.asInstanceOf[js.Any])
     
-    var DEVICE: typingsSlinky.uaParserJs.IUAParser.DEVICE = js.native
+    @JSImport("ua-parser-js", "UAParser.CPU")
+    @js.native
+    def CPU: typingsSlinky.uaParserJs.IUAParser.CPU = js.native
+    @scala.inline
+    def CPU_=(x: CPU): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("CPU")(x.asInstanceOf[js.Any])
     
-    var ENGINE: typingsSlinky.uaParserJs.IUAParser.ENGINE = js.native
+    @JSImport("ua-parser-js", "UAParser.DEVICE")
+    @js.native
+    def DEVICE: typingsSlinky.uaParserJs.IUAParser.DEVICE = js.native
+    @scala.inline
+    def DEVICE_=(x: DEVICE): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DEVICE")(x.asInstanceOf[js.Any])
     
-    var OS: typingsSlinky.uaParserJs.IUAParser.OS = js.native
+    @JSImport("ua-parser-js", "UAParser.ENGINE")
+    @js.native
+    def ENGINE: typingsSlinky.uaParserJs.IUAParser.ENGINE = js.native
+    @scala.inline
+    def ENGINE_=(x: ENGINE): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ENGINE")(x.asInstanceOf[js.Any])
     
-    var VERSION: String = js.native
+    @JSImport("ua-parser-js", "UAParser.OS")
+    @js.native
+    def OS: typingsSlinky.uaParserJs.IUAParser.OS = js.native
+    @scala.inline
+    def OS_=(x: OS): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("OS")(x.asInstanceOf[js.Any])
+    
+    @JSImport("ua-parser-js", "UAParser.VERSION")
+    @js.native
+    def VERSION: String = js.native
+    @scala.inline
+    def VERSION_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("VERSION")(x.asInstanceOf[js.Any])
   }
 }

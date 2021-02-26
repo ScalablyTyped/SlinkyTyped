@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientApigateway.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.Resource
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GatewaysResource extends js.Object {
+trait GatewaysResource extends StObject {
   
   /** Creates a new Gateway in a given project and location. */
   def create(request: GatewayId): Request[ApigatewayOperation] = js.native

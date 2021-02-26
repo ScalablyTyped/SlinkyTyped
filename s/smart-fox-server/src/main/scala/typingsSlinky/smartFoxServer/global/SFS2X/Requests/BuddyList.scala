@@ -2,6 +2,7 @@ package typingsSlinky.smartFoxServer.global.SFS2X.Requests
 
 import typingsSlinky.smartFoxServer.SFS2X.Entities.SFSBuddy
 import typingsSlinky.smartFoxServer.SFS2X.Entities.Variables.SFSBuddyVariable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,10 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 //#endregion
 //#region BuddyList
 // http://docs2x.smartfoxserver.com/api-docs/jsdoc/symbols/SFS2X.Requests.BuddyList.html
-@JSGlobal("SFS2X.Requests.BuddyList")
-@js.native
-object BuddyList extends js.Object {
+object BuddyList {
   
+  @JSGlobal("SFS2X.Requests.BuddyList.AddBuddyRequest")
   @js.native
   class AddBuddyRequest protected ()
     extends typingsSlinky.smartFoxServer.SFS2X.Requests.BuddyList.AddBuddyRequest {
@@ -23,6 +23,7 @@ object BuddyList extends js.Object {
     def this(buddyName: String) = this()
   }
   
+  @JSGlobal("SFS2X.Requests.BuddyList.BlockBuddyRequest")
   @js.native
   class BlockBuddyRequest protected ()
     extends typingsSlinky.smartFoxServer.SFS2X.Requests.BuddyList.BlockBuddyRequest {
@@ -34,6 +35,7 @@ object BuddyList extends js.Object {
     def this(buddyName: String, blocked: Boolean) = this()
   }
   
+  @JSGlobal("SFS2X.Requests.BuddyList.BuddyMessageRequest")
   @js.native
   class BuddyMessageRequest protected ()
     extends typingsSlinky.smartFoxServer.SFS2X.Requests.BuddyList.BuddyMessageRequest {
@@ -47,6 +49,7 @@ object BuddyList extends js.Object {
     def this(message: String, targetBuddy: SFSBuddy, parms: js.Object) = this()
   }
   
+  @JSGlobal("SFS2X.Requests.BuddyList.GoOnlineRequest")
   @js.native
   class GoOnlineRequest protected ()
     extends typingsSlinky.smartFoxServer.SFS2X.Requests.BuddyList.GoOnlineRequest {
@@ -57,6 +60,7 @@ object BuddyList extends js.Object {
     def this(online: Boolean) = this()
   }
   
+  @JSGlobal("SFS2X.Requests.BuddyList.InitBuddyListRequest")
   @js.native
   /**
     * Creates a new InitBuddyListRequest instance.
@@ -64,6 +68,7 @@ object BuddyList extends js.Object {
   class InitBuddyListRequest ()
     extends typingsSlinky.smartFoxServer.SFS2X.Requests.BuddyList.InitBuddyListRequest
   
+  @JSGlobal("SFS2X.Requests.BuddyList.RemoveBuddyRequest")
   @js.native
   class RemoveBuddyRequest protected ()
     extends typingsSlinky.smartFoxServer.SFS2X.Requests.BuddyList.RemoveBuddyRequest {
@@ -74,6 +79,7 @@ object BuddyList extends js.Object {
     def this(buddyName: String) = this()
   }
   
+  @JSGlobal("SFS2X.Requests.BuddyList.SetBuddyVariablesRequest")
   @js.native
   class SetBuddyVariablesRequest protected ()
     extends typingsSlinky.smartFoxServer.SFS2X.Requests.BuddyList.SetBuddyVariablesRequest {

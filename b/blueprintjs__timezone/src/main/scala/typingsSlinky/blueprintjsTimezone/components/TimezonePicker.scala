@@ -8,15 +8,22 @@ import typingsSlinky.blueprintjsTimezone.anon.PartialIButtonProps
 import typingsSlinky.blueprintjsTimezone.anon.PartialIPopoverProps
 import typingsSlinky.blueprintjsTimezone.timezoneDisplayFormatMod.TimezoneDisplayFormat
 import typingsSlinky.blueprintjsTimezone.timezonePickerMod.ITimezonePickerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TimezonePicker {
   
+  @scala.inline
+  def apply(onChange: String => Unit): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITimezonePickerProps]))
+  }
+  
   @JSImport("@blueprintjs/timezone", "TimezonePicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -55,10 +62,4 @@ object TimezonePicker {
   }
   
   def withProps(p: ITimezonePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onChange: String => Unit): Builder = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ITimezonePickerProps]))
-  }
 }

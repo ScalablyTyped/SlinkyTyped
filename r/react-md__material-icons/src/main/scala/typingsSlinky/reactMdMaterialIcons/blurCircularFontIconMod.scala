@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.fontIconMod.FontIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/BlurCircularFontIcon", JSImport.Namespace)
-@js.native
-object blurCircularFontIconMod extends js.Object {
+object blurCircularFontIconMod {
   
+  @JSImport("@react-md/material-icons/types/BlurCircularFontIcon", "BlurCircularFontIcon")
+  @js.native
   val BlurCircularFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

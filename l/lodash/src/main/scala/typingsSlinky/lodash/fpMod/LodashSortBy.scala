@@ -4,12 +4,13 @@ import typingsSlinky.lodash.mod.List
 import typingsSlinky.lodash.mod.Many
 import typingsSlinky.lodash.mod.ValueIteratee
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashSortBy extends js.Object {
+trait LodashSortBy extends StObject {
   
   def apply[T /* <: js.Object */](
     iteratees: Many[

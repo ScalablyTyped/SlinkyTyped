@@ -82,6 +82,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -90,7 +91,7 @@ object Rating {
   
   @JSImport("@material-ui/lab", "Rating")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -98,13 +99,13 @@ object Rating {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def IconContainerComponentFunctionComponent(value: ReactComponentClass[IconContainerProps]): this.type = set("IconContainerComponent", value.asInstanceOf[js.Any])
+    def IconContainerComponent(value: ReactElement): this.type = set("IconContainerComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def IconContainerComponentComponentClass(value: ReactComponentClass[IconContainerProps]): this.type = set("IconContainerComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def IconContainerComponent(value: ReactElement): this.type = set("IconContainerComponent", value.asInstanceOf[js.Any])
+    def IconContainerComponentFunctionComponent(value: ReactComponentClass[IconContainerProps]): this.type = set("IconContainerComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -304,16 +305,16 @@ object Rating {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def emptyIconReactElement(value: ReactElement): this.type = set("emptyIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def emptyIcon(value: ReactElement): this.type = set("emptyIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def emptyLabelTextReactElement(value: ReactElement): this.type = set("emptyLabelText", value.asInstanceOf[js.Any])
+    def emptyIconReactElement(value: ReactElement): this.type = set("emptyIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def emptyLabelText(value: ReactElement): this.type = set("emptyLabelText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def emptyLabelTextReactElement(value: ReactElement): this.type = set("emptyLabelText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def getLabelText(value: /* value */ Double => String): this.type = set("getLabelText", js.Any.fromFunction1(value))
@@ -322,10 +323,10 @@ object Rating {
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -334,16 +335,16 @@ object Rating {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -688,7 +689,7 @@ object Rating {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Rating.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

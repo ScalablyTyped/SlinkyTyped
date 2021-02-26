@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RequestInit extends js.Object {
+trait RequestInit extends StObject {
   
   /**
     * A BodyInit object or null to set request's body.
@@ -75,129 +76,117 @@ trait RequestInit extends js.Object {
 object RequestInit {
   
   @scala.inline
-  def apply(): RequestInit = {
+  def apply(): org.scalajs.dom.experimental.RequestInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[RequestInit]
+    __obj.asInstanceOf[org.scalajs.dom.experimental.RequestInit]
   }
   
   @scala.inline
-  implicit class RequestInitOps[Self <: org.scalajs.dom.experimental.RequestInit] (val x: Self) extends AnyVal {
+  implicit class RequestInitMutableBuilder[Self <: org.scalajs.dom.experimental.RequestInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBody(value: BodyInit): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setBodyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setBodyArrayBufferView(value: js.typedarray.ArrayBufferView): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBodyFormData(value: org.scalajs.dom.raw.FormData): Self = this.set("body", value.asInstanceOf[js.Any])
+    def setBodyBlob(value: org.scalajs.dom.raw.Blob): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBodyReadableStream(value: org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array]): Self = this.set("body", value.asInstanceOf[js.Any])
+    def setBodyFormData(value: org.scalajs.dom.raw.FormData): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBodyArrayBufferView(value: js.typedarray.ArrayBufferView): Self = this.set("body", value.asInstanceOf[js.Any])
+    def setBodyNull: Self = StObject.set(x, "body", null)
     
     @scala.inline
-    def setBodyBlob(value: org.scalajs.dom.raw.Blob): Self = this.set("body", value.asInstanceOf[js.Any])
+    def setBodyReadableStream(value: org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array]): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBodyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("body", value.asInstanceOf[js.Any])
+    def setBodyUndefined: Self = StObject.set(x, "body", js.undefined)
     
     @scala.inline
-    def setBody(value: BodyInit): Self = this.set("body", value.asInstanceOf[js.Any])
+    def setCache(value: org.scalajs.dom.experimental.RequestCache): Self = StObject.set(x, "cache", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBody: Self = this.set("body", js.undefined)
+    def setCacheUndefined: Self = StObject.set(x, "cache", js.undefined)
     
     @scala.inline
-    def setBodyNull: Self = this.set("body", null)
+    def setCredentials(value: org.scalajs.dom.experimental.RequestCredentials): Self = StObject.set(x, "credentials", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCache(value: org.scalajs.dom.experimental.RequestCache): Self = this.set("cache", value.asInstanceOf[js.Any])
+    def setCredentialsUndefined: Self = StObject.set(x, "credentials", js.undefined)
     
     @scala.inline
-    def deleteCache: Self = this.set("cache", js.undefined)
+    def setHeaders(value: HeadersInit): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCredentials(value: org.scalajs.dom.experimental.RequestCredentials): Self = this.set("credentials", value.asInstanceOf[js.Any])
+    def setHeadersHeaders(value: org.scalajs.dom.experimental.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteCredentials: Self = this.set("credentials", js.undefined)
+    def setHeadersUndefined: Self = StObject.set(x, "headers", js.undefined)
     
     @scala.inline
-    def setHeadersVarargs(value: js.Array[java.lang.String]*): Self = this.set("headers", js.Array(value :_*))
+    def setHeadersVarargs(value: js.Array[java.lang.String]*): Self = StObject.set(x, "headers", js.Array(value :_*))
     
     @scala.inline
-    def setHeadersHeaders(value: org.scalajs.dom.experimental.Headers): Self = this.set("headers", value.asInstanceOf[js.Any])
+    def setIntegrity(value: java.lang.String): Self = StObject.set(x, "integrity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeaders(value: HeadersInit): Self = this.set("headers", value.asInstanceOf[js.Any])
+    def setIntegrityUndefined: Self = StObject.set(x, "integrity", js.undefined)
     
     @scala.inline
-    def deleteHeaders: Self = this.set("headers", js.undefined)
+    def setKeepalive(value: scala.Boolean): Self = StObject.set(x, "keepalive", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIntegrity(value: java.lang.String): Self = this.set("integrity", value.asInstanceOf[js.Any])
+    def setKeepaliveUndefined: Self = StObject.set(x, "keepalive", js.undefined)
     
     @scala.inline
-    def deleteIntegrity: Self = this.set("integrity", js.undefined)
+    def setMethod(value: java.lang.String): Self = StObject.set(x, "method", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setKeepalive(value: scala.Boolean): Self = this.set("keepalive", value.asInstanceOf[js.Any])
+    def setMethodUndefined: Self = StObject.set(x, "method", js.undefined)
     
     @scala.inline
-    def deleteKeepalive: Self = this.set("keepalive", js.undefined)
+    def setMode(value: org.scalajs.dom.experimental.RequestMode): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMethod(value: java.lang.String): Self = this.set("method", value.asInstanceOf[js.Any])
+    def setModeUndefined: Self = StObject.set(x, "mode", js.undefined)
     
     @scala.inline
-    def deleteMethod: Self = this.set("method", js.undefined)
+    def setRedirect(value: org.scalajs.dom.experimental.RequestRedirect): Self = StObject.set(x, "redirect", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMode(value: org.scalajs.dom.experimental.RequestMode): Self = this.set("mode", value.asInstanceOf[js.Any])
+    def setRedirectUndefined: Self = StObject.set(x, "redirect", js.undefined)
     
     @scala.inline
-    def deleteMode: Self = this.set("mode", js.undefined)
+    def setReferrer(value: java.lang.String): Self = StObject.set(x, "referrer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRedirect(value: org.scalajs.dom.experimental.RequestRedirect): Self = this.set("redirect", value.asInstanceOf[js.Any])
+    def setReferrerPolicy(value: org.scalajs.dom.experimental.ReferrerPolicy): Self = StObject.set(x, "referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRedirect: Self = this.set("redirect", js.undefined)
+    def setReferrerPolicyUndefined: Self = StObject.set(x, "referrerPolicy", js.undefined)
     
     @scala.inline
-    def setReferrer(value: java.lang.String): Self = this.set("referrer", value.asInstanceOf[js.Any])
+    def setReferrerUndefined: Self = StObject.set(x, "referrer", js.undefined)
     
     @scala.inline
-    def deleteReferrer: Self = this.set("referrer", js.undefined)
+    def setSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setReferrerPolicy(value: org.scalajs.dom.experimental.ReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    def setSignalNull: Self = StObject.set(x, "signal", null)
     
     @scala.inline
-    def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)
+    def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)
     
     @scala.inline
-    def setSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = this.set("signal", value.asInstanceOf[js.Any])
+    def setWindow(value: js.Any): Self = StObject.set(x, "window", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteSignal: Self = this.set("signal", js.undefined)
-    
-    @scala.inline
-    def setSignalNull: Self = this.set("signal", null)
-    
-    @scala.inline
-    def setWindow(value: js.Any): Self = this.set("window", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteWindow: Self = this.set("window", js.undefined)
+    def setWindowUndefined: Self = StObject.set(x, "window", js.undefined)
   }
 }

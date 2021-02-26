@@ -1,5 +1,6 @@
 package typingsSlinky.w3cWebUsb
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.w3cWebUsb.w3cWebUsbStrings.interrupt
   - typingsSlinky.w3cWebUsb.w3cWebUsbStrings.isochronous
 */
-trait USBEndpointType extends js.Object
+trait USBEndpointType extends StObject
 object USBEndpointType {
   
   @scala.inline

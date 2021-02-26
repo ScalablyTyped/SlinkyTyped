@@ -5,6 +5,7 @@ import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IGetPeersRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,18 +21,26 @@ class GetPeersRequest ()
   def this(properties: IGetPeersRequest) = this()
 }
 /* static members */
-@JSImport("sawtooth-sdk", "protobuf.GetPeersRequest")
-@js.native
-object GetPeersRequest extends js.Object {
+object GetPeersRequest {
   
   /**
     * Creates a new GetPeersRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns GetPeersRequest instance
     */
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.create")
+  @js.native
   def create(): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.create")
+  @js.native
   def create(properties: IGetPeersRequest): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
   /**
     * Decodes a GetPeersRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -40,11 +49,16 @@ object GetPeersRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
   /**
     * Decodes a GetPeersRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,8 +66,9 @@ object GetPeersRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
   
   /**
     * Encodes the specified GetPeersRequest message. Does not implicitly {@link GetPeersRequest.verify|verify} messages.
@@ -61,7 +76,11 @@ object GetPeersRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.encode")
+  @js.native
   def encode(message: IGetPeersRequest): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.encode")
+  @js.native
   def encode(message: IGetPeersRequest, writer: Writer): Writer = js.native
   
   /**
@@ -70,7 +89,11 @@ object GetPeersRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IGetPeersRequest): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IGetPeersRequest, writer: Writer): Writer = js.native
   
   /**
@@ -78,6 +101,8 @@ object GetPeersRequest extends js.Object {
     * @param object Plain object
     * @returns GetPeersRequest
     */
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest = js.native
   
   /**
@@ -86,7 +111,11 @@ object GetPeersRequest extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.toObject")
+  @js.native
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.toObject")
+  @js.native
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.GetPeersRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -94,5 +123,7 @@ object GetPeersRequest extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk", "protobuf.GetPeersRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

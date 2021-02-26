@@ -1,5 +1,6 @@
 package typingsSlinky.nodeRsa.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nodeRsa.nodeRsaStrings.`components-public-pem`
   - typingsSlinky.nodeRsa.nodeRsaStrings.`components-public-der`
 */
-trait FormatComponentsPublic extends js.Object
+trait FormatComponentsPublic extends StObject
 object FormatComponentsPublic {
   
   @scala.inline

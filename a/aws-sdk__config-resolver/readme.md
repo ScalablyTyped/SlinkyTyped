@@ -3,18 +3,22 @@
 
 Typings are for version 1.0.0-rc.7
 
-
+## Library description:
+[![NPM version](https://img.shields.io/npm/v/@aws-sdk/config-resolver/latest.svg)](https://www.npmjs.com/package/@aws-sdk/config-resolver) [![NPM downloads](https://img.shields.io/npm/dm/@aws-sdk/config-resolver.svg)](https://www.npmjs.com/package/@aws-sd
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/config-resolver |
 | Keywords           | - |
-| # releases         | 13 |
-| # dependents       | 556 |
-| # downloads        | 38711 |
+| # releases         | 52 |
+| # dependents       | 249 |
+| # downloads        | 7030169 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/aws/aws-sdk-js-v3/tree/main/packages/config-resolver)
+- [Bugs](https://github.com/aws/aws-sdk-js-v3/issues)
+- [Repository](https://github.com/aws/aws-sdk-js-v3)
 - [Npm](https://www.npmjs.com/package/%40aws-sdk%2Fconfig-resolver)
     
 

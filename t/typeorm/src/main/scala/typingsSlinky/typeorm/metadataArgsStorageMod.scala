@@ -24,16 +24,16 @@ import typingsSlinky.typeorm.transactionEntityMetadataArgsMod.TransactionEntityM
 import typingsSlinky.typeorm.transactionRepositoryMetadataArgsMod.TransactionRepositoryMetadataArgs
 import typingsSlinky.typeorm.treeMetadataArgsMod.TreeMetadataArgs
 import typingsSlinky.typeorm.uniqueMetadataArgsMod.UniqueMetadataArgs
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/metadata-args/MetadataArgsStorage", JSImport.Namespace)
-@js.native
-object metadataArgsStorageMod extends js.Object {
+object metadataArgsStorageMod {
   
+  @JSImport("typeorm/browser/metadata-args/MetadataArgsStorage", "MetadataArgsStorage")
   @js.native
-  class MetadataArgsStorage () extends js.Object {
+  class MetadataArgsStorage () extends StObject {
     
     val checks: js.Array[CheckMetadataArgs] = js.native
     

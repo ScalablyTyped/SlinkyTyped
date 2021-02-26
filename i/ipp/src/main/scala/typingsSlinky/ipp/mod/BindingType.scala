@@ -1,5 +1,6 @@
 package typingsSlinky.ipp.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ipp.ippStrings.tape
   - typingsSlinky.ipp.ippStrings.velo
 */
-trait BindingType extends js.Object
+trait BindingType extends StObject
 object BindingType {
   
   @scala.inline

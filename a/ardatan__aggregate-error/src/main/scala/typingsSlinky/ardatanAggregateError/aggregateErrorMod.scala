@@ -3,14 +3,14 @@ package typingsSlinky.ardatanAggregateError
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Error
 import typingsSlinky.std.IterableIterator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ardatan/aggregate-error/AggregateError", JSImport.Namespace)
-@js.native
-object aggregateErrorMod extends js.Object {
+object aggregateErrorMod {
   
+  @JSImport("@ardatan/aggregate-error/AggregateError", "AggregateError")
   @js.native
   class AggregateError protected () extends Error {
     def this(errors: js.Array[js.Error | StringDictionary[_] | String]) = this()

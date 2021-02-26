@@ -10,9 +10,9 @@ JS port of the Twig templating language.
 | ------------------ | :-------------: |
 | Full name          | twig |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 227 |
-| # downloads        | 3897844 |
+| # releases         | 11 |
+| # dependents       | 250 |
+| # downloads        | 6403578 |
 | # stars            | 13 |
 
 ## Links

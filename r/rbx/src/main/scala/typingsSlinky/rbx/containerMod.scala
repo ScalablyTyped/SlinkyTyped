@@ -3,13 +3,14 @@ package typingsSlinky.rbx
 import slinky.core.facade.ReactElement
 import typingsSlinky.rbx.containerContainerMod.ContainerProps
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rbx/elements/container", JSImport.Namespace)
-@js.native
-object containerMod extends js.Object {
+object containerMod {
   
+  @JSImport("rbx/elements/container", "Container")
+  @js.native
   val Container: ForwardRefAsExoticComponent[ContainerProps, ReactElement] = js.native
 }

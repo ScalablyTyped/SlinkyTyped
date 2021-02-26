@@ -8,6 +8,7 @@ import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.victory.mod.VictoryVoronoiContainerProps
 import typingsSlinky.victory.victoryStrings.x
 import typingsSlinky.victory.victoryStrings.y
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object VictoryVoronoiContainer {
   
   @JSImport("victory", "VictoryVoronoiContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -66,10 +67,10 @@ object VictoryVoronoiContainer {
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def voronoiBlacklistVarargs(value: String*): this.type = set("voronoiBlacklist", js.Array(value :_*))
+    def voronoiBlacklist(value: js.Array[String]): this.type = set("voronoiBlacklist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def voronoiBlacklist(value: js.Array[String]): this.type = set("voronoiBlacklist", value.asInstanceOf[js.Any])
+    def voronoiBlacklistVarargs(value: String*): this.type = set("voronoiBlacklist", js.Array(value :_*))
     
     @scala.inline
     def voronoiDimension(value: x | y): this.type = set("voronoiDimension", value.asInstanceOf[js.Any])
@@ -81,7 +82,7 @@ object VictoryVoronoiContainer {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: VictoryVoronoiContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: VictoryVoronoiContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: VictoryVoronoiContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

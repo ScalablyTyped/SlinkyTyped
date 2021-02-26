@@ -2,6 +2,7 @@ package typingsSlinky.asana.mod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,13 +22,20 @@ trait ClientStatic
   * @param {String} [redirectUri]  Default redirect URI for this client
   * @param {String} [asanaBaseUrl] Base URL for Asana, for debugging
   */
-Instantiable1[/* dispatcher */ Dispatcher, Client]
-     with Instantiable2[/* dispatcher */ Dispatcher, /* options */ ClientOptions, Client] {
+Instantiable1[
+      /* dispatcher */ typingsSlinky.asana.mod.Dispatcher, 
+      typingsSlinky.asana.mod.Client
+    ]
+     with Instantiable2[
+      /* dispatcher */ typingsSlinky.asana.mod.Dispatcher, 
+      /* options */ ClientOptions, 
+      typingsSlinky.asana.mod.Client
+    ] {
   
   /**
     * Creates a new client.
     * @param {Object} options Options for specifying the client, see constructor.
     */
-  def create(): Client = js.native
-  def create(options: ClientOptions): Client = js.native
+  def create(): typingsSlinky.asana.mod.Client = js.native
+  def create(options: ClientOptions): typingsSlinky.asana.mod.Client = js.native
 }

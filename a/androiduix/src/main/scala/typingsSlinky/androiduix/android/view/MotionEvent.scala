@@ -2,12 +2,13 @@ package typingsSlinky.androiduix.android.view
 
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.androiduix.android.graphics.Rect
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MotionEvent extends js.Object {
+trait MotionEvent extends StObject {
   
   var _activeTouch: js.Any = js.native
   

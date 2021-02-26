@@ -1,12 +1,13 @@
 package typingsSlinky.terminalKit.anon
 
 import typingsSlinky.terminalKit.terminalMod.Terminal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Shrink extends js.Object {
+trait Shrink extends StObject {
   
   var shrink: js.UndefOr[Height] = js.native
   

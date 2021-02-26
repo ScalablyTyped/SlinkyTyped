@@ -4,14 +4,14 @@ import typingsSlinky.ionicCore.ionicCoreStrings.determinate
 import typingsSlinky.ionicCore.ionicCoreStrings.indeterminate
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/progress-bar/progress-bar", JSImport.Namespace)
-@js.native
-object progressBarMod extends js.Object {
+object progressBarMod {
   
+  @JSImport("@ionic/core/dist/types/components/progress-bar/progress-bar", "ProgressBar")
   @js.native
   class ProgressBar () extends ComponentInterface {
     

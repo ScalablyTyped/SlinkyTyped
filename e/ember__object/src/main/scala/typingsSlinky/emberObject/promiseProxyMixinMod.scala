@@ -1,14 +1,16 @@
 package typingsSlinky.emberObject
 
+import org.scalablytyped.runtime.Shortcut
 import typingsSlinky.rsvp.mod.default.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ember/object/promise-proxy-mixin", JSImport.Namespace)
-@js.native
-object promiseProxyMixinMod extends js.Object {
+object promiseProxyMixinMod extends Shortcut {
   
+  @JSImport("@ember/object/promise-proxy-mixin", JSImport.Default)
+  @js.native
   val default: typingsSlinky.emberObject.mixinMod.default[PromiseProxyMixin[js.Any], typingsSlinky.emberObject.mod.default] = js.native
   
   /**
@@ -48,4 +50,9 @@ object promiseProxyMixinMod extends js.Object {
       */
     var reason: js.Any = js.native
   }
+  
+  type _To = typingsSlinky.emberObject.mixinMod.default[PromiseProxyMixin[js.Any], typingsSlinky.emberObject.mod.default]
+  
+  /* This means you don't have to write `default`, but can instead just say `promiseProxyMixinMod.foo` */
+  override def _to: typingsSlinky.emberObject.mixinMod.default[PromiseProxyMixin[js.Any], typingsSlinky.emberObject.mod.default] = default
 }

@@ -14,13 +14,14 @@ import typingsSlinky.angularRouter.angularRouterStrings.ignore
 import typingsSlinky.angularRouter.angularRouterStrings.legacy
 import typingsSlinky.angularRouter.angularRouterStrings.reload
 import typingsSlinky.rxjs.mod.Observable_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/router", "Router")
 @js.native
-class Router protected () extends js.Object {
+class Router protected () extends StObject {
   def this(
     rootComponentType: Null,
     urlSerializer: UrlSerializer,

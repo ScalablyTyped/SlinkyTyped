@@ -8,12 +8,13 @@ import typingsSlinky.seleniumWebdriver.mod.Locator
 import typingsSlinky.seleniumWebdriver.mod.WebDriver
 import typingsSlinky.seleniumWebdriver.mod.WebElement
 import typingsSlinky.seleniumWebdriver.mod.WebElementCondition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofuntil extends js.Object {
+trait Typeofuntil extends StObject {
   
   def ableToSwitchToFrame(frame: js.Function1[/* webdriver */ WebDriver, WebElement]): Condition[Boolean] = js.native
   def ableToSwitchToFrame(frame: Double): Condition[Boolean] = js.native

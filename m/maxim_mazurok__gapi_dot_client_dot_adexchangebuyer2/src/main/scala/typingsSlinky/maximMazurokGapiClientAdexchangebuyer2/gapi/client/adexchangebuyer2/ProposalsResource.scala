@@ -12,12 +12,13 @@ import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.PrettyPrintProp
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.ProposalId
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.ProposalIdQuotaUser
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.QuotaUserResource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProposalsResource extends js.Object {
+trait ProposalsResource extends StObject {
   
   def accept(request: AltCallback, body: AcceptProposalRequest): Request[Proposal] = js.native
   /**

@@ -1,12 +1,13 @@
 package typingsSlinky.monacoEditor.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("monaco-editor", "Emitter")
 @js.native
-class Emitter[T] () extends js.Object {
+class Emitter[T] () extends StObject {
   
   def dispose(): Unit = js.native
   

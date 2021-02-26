@@ -14,6 +14,7 @@ import typingsSlinky.rcTrigger.interfaceMod.MobileConfig
 import typingsSlinky.rcTrigger.interfaceMod.TransitionNameType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,10 +25,10 @@ class SharedBuilder_TriggerProps1005917762[R <: js.Object] (val args: js.Array[j
      with StBuildingComponent[tag.type, R] {
   
   @scala.inline
-  def actionVarargs(value: ActionType*): this.type = set("action", js.Array(value :_*))
+  def action(value: ActionType | js.Array[ActionType]): this.type = set("action", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def action(value: ActionType | js.Array[ActionType]): this.type = set("action", value.asInstanceOf[js.Any])
+  def actionVarargs(value: ActionType*): this.type = set("action", js.Array(value :_*))
   
   @scala.inline
   def afterPopupVisibleChange(value: /* visible */ Boolean => Unit): this.type = set("afterPopupVisibleChange", js.Any.fromFunction1(value))
@@ -72,10 +73,10 @@ class SharedBuilder_TriggerProps1005917762[R <: js.Object] (val args: js.Array[j
   def getTriggerDOMNode(value: /* node */ ReactInstance => HTMLElement): this.type = set("getTriggerDOMNode", js.Any.fromFunction1(value))
   
   @scala.inline
-  def hideActionVarargs(value: ActionType*): this.type = set("hideAction", js.Array(value :_*))
+  def hideAction(value: js.Array[ActionType]): this.type = set("hideAction", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def hideAction(value: js.Array[ActionType]): this.type = set("hideAction", value.asInstanceOf[js.Any])
+  def hideActionVarargs(value: ActionType*): this.type = set("hideAction", js.Array(value :_*))
   
   @scala.inline
   def mask(value: Boolean): this.type = set("mask", value.asInstanceOf[js.Any])
@@ -108,12 +109,6 @@ class SharedBuilder_TriggerProps1005917762[R <: js.Object] (val args: js.Array[j
   def onPopupVisibleChange(value: /* visible */ Boolean => Unit): this.type = set("onPopupVisibleChange", js.Any.fromFunction1(value))
   
   @scala.inline
-  def popupReactElement(value: ReactElement): this.type = set("popup", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def popupFunction0(value: () => ReactElement): this.type = set("popup", js.Any.fromFunction0(value))
-  
-  @scala.inline
   def popup(value: ReactElement | js.Function0[ReactElement]): this.type = set("popup", value.asInstanceOf[js.Any])
   
   @scala.inline
@@ -126,10 +121,16 @@ class SharedBuilder_TriggerProps1005917762[R <: js.Object] (val args: js.Array[j
   def popupClassName(value: String): this.type = set("popupClassName", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def popupFunction0(value: () => ReactElement): this.type = set("popup", js.Any.fromFunction0(value))
+  
+  @scala.inline
   def popupMotion(value: CSSMotionProps): this.type = set("popupMotion", value.asInstanceOf[js.Any])
   
   @scala.inline
   def popupPlacement(value: String): this.type = set("popupPlacement", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def popupReactElement(value: ReactElement): this.type = set("popup", value.asInstanceOf[js.Any])
   
   @scala.inline
   def popupStyle(value: CSSProperties): this.type = set("popupStyle", value.asInstanceOf[js.Any])
@@ -144,10 +145,10 @@ class SharedBuilder_TriggerProps1005917762[R <: js.Object] (val args: js.Array[j
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def showActionVarargs(value: ActionType*): this.type = set("showAction", js.Array(value :_*))
+  def showAction(value: js.Array[ActionType]): this.type = set("showAction", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def showAction(value: js.Array[ActionType]): this.type = set("showAction", value.asInstanceOf[js.Any])
+  def showActionVarargs(value: ActionType*): this.type = set("showAction", js.Array(value :_*))
   
   @scala.inline
   def stretch(value: String): this.type = set("stretch", value.asInstanceOf[js.Any])

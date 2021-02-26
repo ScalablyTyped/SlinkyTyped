@@ -8,6 +8,7 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.reactColor.anon.PartialClassesSwatchesPic
 import typingsSlinky.reactColor.mod.Color
 import typingsSlinky.reactColor.mod.ColorResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,10 +25,10 @@ class SharedBuilder_SwatchesPickerProps_1631029907[R <: js.Object] (val args: js
   def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def colorsVarargs(value: js.Array[String]*): this.type = set("colors", js.Array(value :_*))
+  def colors(value: js.Array[js.Array[String]]): this.type = set("colors", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def colors(value: js.Array[js.Array[String]]): this.type = set("colors", value.asInstanceOf[js.Any])
+  def colorsVarargs(value: js.Array[String]*): this.type = set("colors", js.Array(value :_*))
   
   @scala.inline
   def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])

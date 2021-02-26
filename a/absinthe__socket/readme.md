@@ -10,9 +10,9 @@ Absinthe Socket
 | ------------------ | :-------------: |
 | Full name          | @absinthe/socket |
 | Keywords           | absinthe, phoenix, socket, client, graphql, utilities, utils |
-| # releases         | 3 |
-| # dependents       | 10 |
-| # downloads        | 366959 |
+| # releases         | 2 |
+| # dependents       | 11 |
+| # downloads        | 466011 |
 | # stars            | 0 |
 
 ## Links

@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "abort-controller"
-version := "3.0.0-e02b40"
+version := "3.0.0-334ada"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "event-target-shim" % "5.0.1-2126cd",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "event-target-shim" % "5.0.1-9a96af",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

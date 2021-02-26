@@ -21,15 +21,22 @@ import typingsSlinky.griddleReact.mod.default
 import typingsSlinky.redux.mod.AnyAction
 import typingsSlinky.redux.mod.Dispatch
 import typingsSlinky.redux.mod.Middleware
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object GriddleReact {
   
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[GriddleProps[T]]))
+  }
+  
   @JSImport("griddle-react", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -43,10 +50,10 @@ object GriddleReact {
     def core(value: GriddlePlugin): this.type = set("core", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: T*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[T]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[T]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: T*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def enableSettings(value: Boolean): this.type = set("enableSettings", value.asInstanceOf[js.Any])
@@ -64,19 +71,19 @@ object GriddleReact {
     def pageProperties(value: GriddlePageProperties): this.type = set("pageProperties", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pluginsVarargs(value: GriddlePlugin*): this.type = set("plugins", js.Array(value :_*))
+    def plugins(value: js.Array[GriddlePlugin]): this.type = set("plugins", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def plugins(value: js.Array[GriddlePlugin]): this.type = set("plugins", value.asInstanceOf[js.Any])
+    def pluginsVarargs(value: GriddlePlugin*): this.type = set("plugins", js.Array(value :_*))
     
     @scala.inline
     def reducer(value: PropertyBag[Reducer]): this.type = set("reducer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def reduxMiddlewareVarargs(value: (Middleware[js.Object, js.Any, Dispatch[AnyAction]])*): this.type = set("reduxMiddleware", js.Array(value :_*))
+    def reduxMiddleware(value: js.Array[Middleware[js.Object, _, Dispatch[AnyAction]]]): this.type = set("reduxMiddleware", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def reduxMiddleware(value: js.Array[Middleware[js.Object, _, Dispatch[AnyAction]]]): this.type = set("reduxMiddleware", value.asInstanceOf[js.Any])
+    def reduxMiddlewareVarargs(value: (Middleware[js.Object, js.Any, Dispatch[AnyAction]])*): this.type = set("reduxMiddleware", js.Array(value :_*))
     
     @scala.inline
     def renderProperties(value: GriddleRenderProperties): this.type = set("renderProperties", value.asInstanceOf[js.Any])
@@ -93,10 +100,10 @@ object GriddleReact {
     ): this.type = set("sortMethod", js.Any.fromFunction3(value))
     
     @scala.inline
-    def sortPropertiesVarargs(value: GriddleSortKey*): this.type = set("sortProperties", js.Array(value :_*))
+    def sortProperties(value: js.Array[GriddleSortKey]): this.type = set("sortProperties", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sortProperties(value: js.Array[GriddleSortKey]): this.type = set("sortProperties", value.asInstanceOf[js.Any])
+    def sortPropertiesVarargs(value: GriddleSortKey*): this.type = set("sortProperties", js.Array(value :_*))
     
     @scala.inline
     def storeKey(value: String): this.type = set("storeKey", value.asInstanceOf[js.Any])
@@ -108,13 +115,7 @@ object GriddleReact {
     def textProperties(value: FilterPlaceholder): this.type = set("textProperties", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: GriddleProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[GriddleProps[T]]))
-  }
-  
   implicit def make[T](companion: GriddleReact.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps[T](p: GriddleProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -7,6 +7,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`vertex-add`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`vertex-remove`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.redo
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.undo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

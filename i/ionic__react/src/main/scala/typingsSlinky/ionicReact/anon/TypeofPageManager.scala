@@ -5,6 +5,7 @@ import typingsSlinky.ionicReact.pageManagerMod.PageManagerProps
 import typingsSlinky.ionicReact.pageManagerMod.default
 import typingsSlinky.ionicReact.stackContextMod.StackContextState
 import typingsSlinky.react.mod.Context
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

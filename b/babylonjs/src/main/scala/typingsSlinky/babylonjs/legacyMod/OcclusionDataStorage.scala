@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.legacyMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("babylonjs/Legacy/legacy", "_OcclusionDataStorage")
 @js.native
 class OcclusionDataStorage ()
-  extends typingsSlinky.babylonjs.engineOcclusionQueryMod.OcclusionDataStorage
+  extends typingsSlinky.babylonjs.indexMod.OcclusionDataStorage

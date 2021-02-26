@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsBrowser.typesCreateGrantInputMod.CreateGrant
 import typingsSlinky.awsSdkClientKmsBrowser.typesCreateGrantOutputMod.CreateGrantOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-browser/commands/CreateGrantCommand", JSImport.Namespace)
-@js.native
-object createGrantCommandMod extends js.Object {
+object createGrantCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-browser/commands/CreateGrantCommand", "CreateGrantCommand")
   @js.native
   class CreateGrantCommand protected () extends Command[
           InputTypesUnion, 

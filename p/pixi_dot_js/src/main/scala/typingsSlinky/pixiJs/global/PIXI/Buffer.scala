@@ -1,6 +1,7 @@
 package typingsSlinky.pixiJs.global.PIXI
 
 import typingsSlinky.std.SharedArrayBuffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,11 +29,10 @@ class Buffer protected ()
   def this(data: SharedArrayBuffer, _static: js.UndefOr[scala.Nothing], index: Boolean) = this()
   def this(data: SharedArrayBuffer, _static: Boolean, index: Boolean) = this()
 }
-/* static members */
-@JSGlobal("PIXI.Buffer")
-@js.native
-object Buffer extends js.Object {
+object Buffer {
   
+  @JSGlobal("PIXI.Buffer.from")
+  @js.native
   def from(data: js.Array[Double]): typingsSlinky.pixiJs.PIXI.Buffer = js.native
   /**
     * Helper function that creates a buffer based on an array or TypedArray
@@ -41,5 +41,8 @@ object Buffer extends js.Object {
     * @param {ArrayBufferView | number[]} data - the TypedArray that the buffer will store. If this is a regular Array it will be converted to a Float32Array.
     * @return {PIXI.Buffer} A new Buffer based on the data provided.
     */
+  /* static member */
+  @JSGlobal("PIXI.Buffer.from")
+  @js.native
   def from(data: js.typedarray.ArrayBufferView): typingsSlinky.pixiJs.PIXI.Buffer = js.native
 }

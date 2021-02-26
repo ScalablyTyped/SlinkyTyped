@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.treeSelectMod.TreeSelect.Props
 import typingsSlinky.wordpressComponents.treeSelectMod.TreeSelect.Tree
 import typingsSlinky.wordpressComponents.treeSelectMod.TreeSelect.TreeNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object TreeSelect {
   
   @JSImport("@wordpress/components", "TreeSelect")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,13 +28,13 @@ object TreeSelect {
     def selectedId(value: String): this.type = set("selectedId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def treeVarargs(value: TreeNode*): this.type = set("tree", js.Array(value :_*))
+    def tree(value: Tree): this.type = set("tree", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tree(value: Tree): this.type = set("tree", value.asInstanceOf[js.Any])
+    def treeVarargs(value: TreeNode*): this.type = set("tree", js.Array(value :_*))
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TreeSelect.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

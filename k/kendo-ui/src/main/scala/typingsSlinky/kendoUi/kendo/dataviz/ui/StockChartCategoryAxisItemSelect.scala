@@ -1,11 +1,12 @@
 package typingsSlinky.kendoUi.kendo.dataviz.ui
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait StockChartCategoryAxisItemSelect extends js.Object {
+trait StockChartCategoryAxisItemSelect extends StObject {
   
   var from: js.UndefOr[String | js.Date] = js.native
   
@@ -26,54 +27,42 @@ object StockChartCategoryAxisItemSelect {
   }
   
   @scala.inline
-  implicit class StockChartCategoryAxisItemSelectOps[Self <: StockChartCategoryAxisItemSelect] (val x: Self) extends AnyVal {
+  implicit class StockChartCategoryAxisItemSelectMutableBuilder[Self <: StockChartCategoryAxisItemSelect] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setFrom(value: String | js.Date): Self = StObject.set(x, "from", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setFromDate(value: js.Date): Self = StObject.set(x, "from", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setFromUndefined: Self = StObject.set(x, "from", js.undefined)
     
     @scala.inline
-    def setFromDate(value: js.Date): Self = this.set("from", value.asInstanceOf[js.Any])
+    def setMax(value: js.Any): Self = StObject.set(x, "max", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFrom(value: String | js.Date): Self = this.set("from", value.asInstanceOf[js.Any])
+    def setMaxUndefined: Self = StObject.set(x, "max", js.undefined)
     
     @scala.inline
-    def deleteFrom: Self = this.set("from", js.undefined)
+    def setMin(value: js.Any): Self = StObject.set(x, "min", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMax(value: js.Any): Self = this.set("max", value.asInstanceOf[js.Any])
+    def setMinUndefined: Self = StObject.set(x, "min", js.undefined)
     
     @scala.inline
-    def deleteMax: Self = this.set("max", js.undefined)
+    def setMousewheel(value: StockChartCategoryAxisItemSelectMousewheel): Self = StObject.set(x, "mousewheel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMin(value: js.Any): Self = this.set("min", value.asInstanceOf[js.Any])
+    def setMousewheelUndefined: Self = StObject.set(x, "mousewheel", js.undefined)
     
     @scala.inline
-    def deleteMin: Self = this.set("min", js.undefined)
+    def setTo(value: String | js.Date): Self = StObject.set(x, "to", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMousewheel(value: StockChartCategoryAxisItemSelectMousewheel): Self = this.set("mousewheel", value.asInstanceOf[js.Any])
+    def setToDate(value: js.Date): Self = StObject.set(x, "to", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteMousewheel: Self = this.set("mousewheel", js.undefined)
-    
-    @scala.inline
-    def setToDate(value: js.Date): Self = this.set("to", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTo(value: String | js.Date): Self = this.set("to", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTo: Self = this.set("to", js.undefined)
+    def setToUndefined: Self = StObject.set(x, "to", js.undefined)
   }
 }

@@ -1,13 +1,14 @@
 package typingsSlinky.framebus
 
 import typingsSlinky.framebus.typesMod.global.Window
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("framebus/dist/lib/broadcast", JSImport.Namespace)
-@js.native
-object broadcastMod extends js.Object {
+object broadcastMod {
   
+  @JSImport("framebus/dist/lib/broadcast", "broadcast")
+  @js.native
   def broadcast(frame: Window, payload: String, origin: String): Unit = js.native
 }

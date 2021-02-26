@@ -1,5 +1,6 @@
 package typingsSlinky.reactEmailEditor.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactEmailEditor.reactEmailEditorStrings.right
   - typingsSlinky.reactEmailEditor.reactEmailEditorStrings.left
 */
-trait DockPosition extends js.Object
+trait DockPosition extends StObject
 object DockPosition {
   
   @scala.inline

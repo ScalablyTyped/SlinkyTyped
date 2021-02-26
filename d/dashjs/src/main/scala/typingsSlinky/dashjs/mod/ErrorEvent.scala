@@ -11,6 +11,7 @@ import typingsSlinky.dashjs.dashjsStrings.key_message
 import typingsSlinky.dashjs.dashjsStrings.key_session
 import typingsSlinky.dashjs.dashjsStrings.manifestError
 import typingsSlinky.dashjs.dashjsStrings.mediasource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,41 +23,41 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.dashjs.mod.TimedTextErrorEvent
   - typingsSlinky.dashjs.mod.MediaPlayerErrorEvent
 */
-trait ErrorEvent extends js.Object
+trait ErrorEvent extends StObject
 object ErrorEvent {
   
   @scala.inline
-  def DownloadErrorEvent(error: download, event: Id, `type`: error): ErrorEvent = {
+  def DownloadErrorEvent(error: download, event: Id, `type`: error): typingsSlinky.dashjs.mod.DownloadErrorEvent = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ErrorEvent]
+    __obj.asInstanceOf[typingsSlinky.dashjs.mod.DownloadErrorEvent]
   }
   
   @scala.inline
-  def GenericErrorEvent(error: capability | mediasource | key_session | key_message, event: String, `type`: error): ErrorEvent = {
+  def GenericErrorEvent(error: capability | mediasource | key_session | key_message, event: String, `type`: error): typingsSlinky.dashjs.mod.GenericErrorEvent = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ErrorEvent]
+    __obj.asInstanceOf[typingsSlinky.dashjs.mod.GenericErrorEvent]
   }
   
   @scala.inline
-  def TimedTextErrorEvent(error: cc, event: Cc, `type`: error): ErrorEvent = {
+  def ManifestErrorEvent(error: manifestError, event: typingsSlinky.dashjs.anon.Event, `type`: error): typingsSlinky.dashjs.mod.ManifestErrorEvent = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ErrorEvent]
+    __obj.asInstanceOf[typingsSlinky.dashjs.mod.ManifestErrorEvent]
   }
   
   @scala.inline
-  def MediaPlayerErrorEvent(error: Code, `type`: error): ErrorEvent = {
+  def MediaPlayerErrorEvent(error: Code, `type`: error): typingsSlinky.dashjs.mod.MediaPlayerErrorEvent = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ErrorEvent]
+    __obj.asInstanceOf[typingsSlinky.dashjs.mod.MediaPlayerErrorEvent]
   }
   
   @scala.inline
-  def ManifestErrorEvent(error: manifestError, event: typingsSlinky.dashjs.anon.Event, `type`: error): ErrorEvent = {
+  def TimedTextErrorEvent(error: cc, event: Cc, `type`: error): typingsSlinky.dashjs.mod.TimedTextErrorEvent = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ErrorEvent]
+    __obj.asInstanceOf[typingsSlinky.dashjs.mod.TimedTextErrorEvent]
   }
 }

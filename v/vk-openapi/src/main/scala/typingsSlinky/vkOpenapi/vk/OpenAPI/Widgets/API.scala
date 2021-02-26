@@ -2,12 +2,13 @@ package typingsSlinky.vkOpenapi.vk.OpenAPI.Widgets
 
 import typingsSlinky.vkOpenapi.vk.OpenAPI.Nullable
 import typingsSlinky.vkOpenapi.vk.OpenAPI.NumericBoolean
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait API extends js.Object {
+trait API extends StObject {
   
   def AllowMessagesFromCommunity(elementId: String, options: Nullable[AllowMessagesFromCommunityOptions], groupId: Double): Double = js.native
   

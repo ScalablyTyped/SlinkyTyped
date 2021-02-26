@@ -11,8 +11,8 @@ Logger for Redux
 | Full name          | redux-logger |
 | Keywords           | redux, logger, redux-logger, middleware |
 | # releases         | 2 |
-| # dependents       | 1045 |
-| # downloads        | 29833697 |
+| # dependents       | 1265 |
+| # downloads        | 36302667 |
 | # stars            | 49 |
 
 ## Links

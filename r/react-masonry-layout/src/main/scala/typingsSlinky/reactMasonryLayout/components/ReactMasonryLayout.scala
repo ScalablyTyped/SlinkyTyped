@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactMasonryLayout.mod.ReactMasonryLayoutExport.MasonryLayoutProps
 import typingsSlinky.reactMasonryLayout.mod.ReactMasonryLayoutExport.MasonryLayoutSizes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactMasonryLayout {
   
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MasonryLayoutProps]))
+  }
+  
   @JSImport("react-masonry-layout", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,19 +47,19 @@ object ReactMasonryLayout {
     def infiniteScrollEnd(value: Boolean): this.type = set("infiniteScrollEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def infiniteScrollEndIndicatorReactElement(value: ReactElement): this.type = set("infiniteScrollEndIndicator", value.asInstanceOf[js.Any])
+    def infiniteScrollEndIndicator(value: ReactElement): this.type = set("infiniteScrollEndIndicator", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def infiniteScrollEndIndicator(value: ReactElement): this.type = set("infiniteScrollEndIndicator", value.asInstanceOf[js.Any])
+    def infiniteScrollEndIndicatorReactElement(value: ReactElement): this.type = set("infiniteScrollEndIndicator", value.asInstanceOf[js.Any])
     
     @scala.inline
     def infiniteScrollLoading(value: Boolean): this.type = set("infiniteScrollLoading", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def infiniteScrollSpinnerReactElement(value: ReactElement): this.type = set("infiniteScrollSpinner", value.asInstanceOf[js.Any])
+    def infiniteScrollSpinner(value: ReactElement): this.type = set("infiniteScrollSpinner", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def infiniteScrollSpinner(value: ReactElement): this.type = set("infiniteScrollSpinner", value.asInstanceOf[js.Any])
+    def infiniteScrollSpinnerReactElement(value: ReactElement): this.type = set("infiniteScrollSpinner", value.asInstanceOf[js.Any])
     
     @scala.inline
     def packed(value: String): this.type = set("packed", value.asInstanceOf[js.Any])
@@ -61,20 +68,14 @@ object ReactMasonryLayout {
     def position(value: Boolean): this.type = set("position", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sizesVarargs(value: MasonryLayoutSizes*): this.type = set("sizes", js.Array(value :_*))
+    def sizes(value: js.Array[MasonryLayoutSizes]): this.type = set("sizes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sizes(value: js.Array[MasonryLayoutSizes]): this.type = set("sizes", value.asInstanceOf[js.Any])
+    def sizesVarargs(value: MasonryLayoutSizes*): this.type = set("sizes", js.Array(value :_*))
     
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MasonryLayoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MasonryLayoutProps]))
-  }
 }

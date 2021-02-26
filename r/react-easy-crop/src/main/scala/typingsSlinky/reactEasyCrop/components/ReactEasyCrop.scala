@@ -15,15 +15,36 @@ import typingsSlinky.reactEasyCrop.typesMod.Area
 import typingsSlinky.reactEasyCrop.typesMod.MediaSize
 import typingsSlinky.reactEasyCrop.typesMod.Point
 import typingsSlinky.reactEasyCrop.typesMod.Size
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactEasyCrop {
   
+  @scala.inline
+  def apply(
+    aspect: Double,
+    classes: ContainerClassName,
+    crop: Point,
+    cropShape: rect | round,
+    maxZoom: Double,
+    mediaProps: ImgHTMLAttributes[HTMLElement] | VideoHTMLAttributes[HTMLElement],
+    minZoom: Double,
+    onCropChange: Point => Unit,
+    restrictPosition: Boolean,
+    rotation: Double,
+    style: ContainerStyle,
+    zoom: Double,
+    zoomSpeed: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(aspect = aspect.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], crop = crop.asInstanceOf[js.Any], cropShape = cropShape.asInstanceOf[js.Any], maxZoom = maxZoom.asInstanceOf[js.Any], mediaProps = mediaProps.asInstanceOf[js.Any], minZoom = minZoom.asInstanceOf[js.Any], onCropChange = js.Any.fromFunction1(onCropChange), restrictPosition = restrictPosition.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], zoom = zoom.asInstanceOf[js.Any], zoomSpeed = zoomSpeed.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CropperProps]))
+  }
+  
   @JSImport("react-easy-crop", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -80,24 +101,4 @@ object ReactEasyCrop {
   }
   
   def withProps(p: CropperProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    aspect: Double,
-    classes: ContainerClassName,
-    crop: Point,
-    cropShape: rect | round,
-    maxZoom: Double,
-    mediaProps: ImgHTMLAttributes[HTMLElement] | VideoHTMLAttributes[HTMLElement],
-    minZoom: Double,
-    onCropChange: Point => Unit,
-    restrictPosition: Boolean,
-    rotation: Double,
-    style: ContainerStyle,
-    zoom: Double,
-    zoomSpeed: Double
-  ): Builder = {
-    val __props = js.Dynamic.literal(aspect = aspect.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], crop = crop.asInstanceOf[js.Any], cropShape = cropShape.asInstanceOf[js.Any], maxZoom = maxZoom.asInstanceOf[js.Any], mediaProps = mediaProps.asInstanceOf[js.Any], minZoom = minZoom.asInstanceOf[js.Any], onCropChange = js.Any.fromFunction1(onCropChange), restrictPosition = restrictPosition.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], zoom = zoom.asInstanceOf[js.Any], zoomSpeed = zoomSpeed.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CropperProps]))
-  }
 }

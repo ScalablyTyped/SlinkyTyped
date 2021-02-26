@@ -10,9 +10,9 @@ Error handling for Vinyl plugins.
 | ------------------ | :-------------: |
 | Full name          | plugin-error |
 | Keywords           | error, plugin, gulp-util |
-| # releases         | 3 |
-| # dependents       | 926 |
-| # downloads        | 82321819 |
+| # releases         | 0 |
+| # dependents       | 1116 |
+| # downloads        | 108481024 |
 | # stars            | 1 |
 
 ## Links

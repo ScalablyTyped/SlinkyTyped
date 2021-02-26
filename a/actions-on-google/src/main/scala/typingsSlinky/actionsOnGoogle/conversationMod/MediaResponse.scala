@@ -2,6 +2,7 @@ package typingsSlinky.actionsOnGoogle.conversationMod
 
 import typingsSlinky.actionsOnGoogle.responseMediaMod.MediaObjectString
 import typingsSlinky.actionsOnGoogle.responseMediaMod.MediaResponseOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

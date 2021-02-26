@@ -1,13 +1,14 @@
 package typingsSlinky.antvScale
 
 import typingsSlinky.antvScale.typesMod.ScaleConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/scale/lib/tick-method/d3-linear", JSImport.Namespace)
-@js.native
-object d3LinearMod extends js.Object {
+object d3LinearMod {
   
+  @JSImport("@antv/scale/lib/tick-method/d3-linear", JSImport.Default)
+  @js.native
   def default(cfg: ScaleConfig): js.Array[Double] = js.native
 }

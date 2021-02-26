@@ -6,6 +6,7 @@ import typingsSlinky.titanium.titaniumStrings.resume
 import typingsSlinky.titanium.titaniumStrings.start
 import typingsSlinky.titanium.titaniumStrings.stop
 import typingsSlinky.titanium.titaniumStrings.taskremoved
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

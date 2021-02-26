@@ -2,12 +2,13 @@ package typingsSlinky.konva.anon
 
 import org.scalajs.dom.raw.ImageData
 import typingsSlinky.konva.nodeMod.Filter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Blur extends js.Object {
+trait Blur extends StObject {
   
   def Blur(imageData: ImageData): Unit = js.native
   @JSName("Blur")

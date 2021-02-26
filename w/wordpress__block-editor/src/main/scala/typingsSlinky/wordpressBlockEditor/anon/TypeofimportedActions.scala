@@ -5,12 +5,13 @@ import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Record
 import typingsSlinky.wordpressBlockEditor.mod.EditorBlockListSettings
 import typingsSlinky.wordpressBlocks.mod.BlockInstance
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofimportedActions extends js.Object {
+trait TypeofimportedActions extends StObject {
   
   def clearSelectedBlock(): Unit = js.native
   

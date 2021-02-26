@@ -2,13 +2,14 @@ package typingsSlinky.winrtUwp.Windows.Media.Devices
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides functionality to mange the regions of interest on a device. */
 @js.native
-trait RegionsOfInterestControl extends js.Object {
+trait RegionsOfInterestControl extends StObject {
   
   /** Gets a value that specifies if auto exposure is supported on the capture device. */
   var autoExposureSupported: Boolean = js.native

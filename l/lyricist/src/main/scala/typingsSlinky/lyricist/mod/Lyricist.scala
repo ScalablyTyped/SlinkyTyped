@@ -4,12 +4,13 @@ import typingsSlinky.lyricist.anon.FetchLyrics
 import typingsSlinky.lyricist.anon.FetchTracklist
 import typingsSlinky.lyricist.anon.Page
 import typingsSlinky.lyricist.anon.TextFormat
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Lyricist extends js.Object {
+trait Lyricist extends StObject {
   
   def album(id: Double): js.Promise[Album] = js.native
   def album(id: Double, opts: FetchTracklist): js.Promise[Album] = js.native

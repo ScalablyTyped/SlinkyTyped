@@ -1,5 +1,6 @@
 package typingsSlinky.actionsOnGoogle.apiV1Mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.pinNeeded
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.challengeFailedPinNeeded
 */
-trait challengeType extends js.Object
+trait challengeType extends StObject
 object challengeType {
   
   @scala.inline

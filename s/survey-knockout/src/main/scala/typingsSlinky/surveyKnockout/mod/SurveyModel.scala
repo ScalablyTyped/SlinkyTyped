@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.File
 import typingsSlinky.surveyKnockout.anon.CanAddRow
 import typingsSlinky.surveyKnockout.anon.IncludeEmpty
 import typingsSlinky.surveyKnockout.surveyKnockoutStrings.autogonext
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -2236,9 +2237,15 @@ class SurveyModel ()
   val visiblePages: js.Array[PageModel] = js.native
 }
 /* static members */
-@JSImport("survey-knockout", "SurveyModel")
-@js.native
-object SurveyModel extends js.Object {
+object SurveyModel {
   
-  var platform: String = js.native
+  @JSImport("survey-knockout", "SurveyModel")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  @JSImport("survey-knockout", "SurveyModel.platform")
+  @js.native
+  def platform: String = js.native
+  @scala.inline
+  def platform_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("platform")(x.asInstanceOf[js.Any])
 }

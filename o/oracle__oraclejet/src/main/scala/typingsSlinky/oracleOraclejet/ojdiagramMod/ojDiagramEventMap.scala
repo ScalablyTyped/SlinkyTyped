@@ -17,6 +17,7 @@ import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -233,123 +234,111 @@ object ojDiagramEventMap {
   }
   
   @scala.inline
-  implicit class ojDiagramEventMapOps[Self <: ojDiagramEventMap[_, _, _, _], K1, K2, D1, D2] (val x: Self with (ojDiagramEventMap[K1, K2, D1, D2])) extends AnyVal {
+  implicit class ojDiagramEventMapMutableBuilder[Self <: ojDiagramEventMap[_, _, _, _], K1, K2, D1, D2] (val x: Self with (ojDiagramEventMap[K1, K2, D1, D2])) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAnimationOnDataChangeChanged(value: CustomEvent): Self = StObject.set(x, "animationOnDataChangeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAnimationOnDisplayChanged(value: CustomEvent): Self = StObject.set(x, "animationOnDisplayChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setAsChanged(value: CustomEvent): Self = StObject.set(x, "asChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAnimationOnDataChangeChanged(value: CustomEvent): Self = this.set("animationOnDataChangeChanged", value.asInstanceOf[js.Any])
+    def setDndChanged(value: CustomEvent): Self = StObject.set(x, "dndChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAnimationOnDisplayChanged(value: CustomEvent): Self = this.set("animationOnDisplayChanged", value.asInstanceOf[js.Any])
+    def setExpandedChanged(value: CustomEvent): Self = StObject.set(x, "expandedChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAsChanged(value: CustomEvent): Self = this.set("asChanged", value.asInstanceOf[js.Any])
+    def setFocusRendererChanged(value: CustomEvent): Self = StObject.set(x, "focusRendererChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDndChanged(value: CustomEvent): Self = this.set("dndChanged", value.asInstanceOf[js.Any])
+    def setHiddenCategoriesChanged(value: CustomEvent): Self = StObject.set(x, "hiddenCategoriesChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExpandedChanged(value: CustomEvent): Self = this.set("expandedChanged", value.asInstanceOf[js.Any])
+    def setHighlightMatchChanged(value: CustomEvent): Self = StObject.set(x, "highlightMatchChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFocusRendererChanged(value: CustomEvent): Self = this.set("focusRendererChanged", value.asInstanceOf[js.Any])
+    def setHighlightedCategoriesChanged(value: CustomEvent): Self = StObject.set(x, "highlightedCategoriesChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHiddenCategoriesChanged(value: CustomEvent): Self = this.set("hiddenCategoriesChanged", value.asInstanceOf[js.Any])
+    def setHoverBehaviorChanged(value: CustomEvent): Self = StObject.set(x, "hoverBehaviorChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHighlightMatchChanged(value: CustomEvent): Self = this.set("highlightMatchChanged", value.asInstanceOf[js.Any])
+    def setHoverRendererChanged(value: CustomEvent): Self = StObject.set(x, "hoverRendererChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHighlightedCategoriesChanged(value: CustomEvent): Self = this.set("highlightedCategoriesChanged", value.asInstanceOf[js.Any])
+    def setLayoutChanged(value: CustomEvent): Self = StObject.set(x, "layoutChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHoverBehaviorChanged(value: CustomEvent): Self = this.set("hoverBehaviorChanged", value.asInstanceOf[js.Any])
+    def setLinkDataChanged(value: CustomEvent): Self = StObject.set(x, "linkDataChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHoverRendererChanged(value: CustomEvent): Self = this.set("hoverRendererChanged", value.asInstanceOf[js.Any])
+    def setLinkHighlightModeChanged(value: CustomEvent): Self = StObject.set(x, "linkHighlightModeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLayoutChanged(value: CustomEvent): Self = this.set("layoutChanged", value.asInstanceOf[js.Any])
+    def setMaxZoomChanged(value: CustomEvent): Self = StObject.set(x, "maxZoomChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLinkDataChanged(value: CustomEvent): Self = this.set("linkDataChanged", value.asInstanceOf[js.Any])
+    def setMinZoomChanged(value: CustomEvent): Self = StObject.set(x, "minZoomChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLinkHighlightModeChanged(value: CustomEvent): Self = this.set("linkHighlightModeChanged", value.asInstanceOf[js.Any])
+    def setNodeDataChanged(value: CustomEvent): Self = StObject.set(x, "nodeDataChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMaxZoomChanged(value: CustomEvent): Self = this.set("maxZoomChanged", value.asInstanceOf[js.Any])
+    def setNodeHighlightModeChanged(value: CustomEvent): Self = StObject.set(x, "nodeHighlightModeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMinZoomChanged(value: CustomEvent): Self = this.set("minZoomChanged", value.asInstanceOf[js.Any])
+    def setOjBeforeCollapse(value: CustomEvent): Self = StObject.set(x, "ojBeforeCollapse", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNodeDataChanged(value: CustomEvent): Self = this.set("nodeDataChanged", value.asInstanceOf[js.Any])
+    def setOjBeforeExpand(value: CustomEvent): Self = StObject.set(x, "ojBeforeExpand", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNodeHighlightModeChanged(value: CustomEvent): Self = this.set("nodeHighlightModeChanged", value.asInstanceOf[js.Any])
+    def setOjCollapse(value: CustomEvent): Self = StObject.set(x, "ojCollapse", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjBeforeCollapse(value: CustomEvent): Self = this.set("ojBeforeCollapse", value.asInstanceOf[js.Any])
+    def setOjExpand(value: CustomEvent): Self = StObject.set(x, "ojExpand", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjBeforeExpand(value: CustomEvent): Self = this.set("ojBeforeExpand", value.asInstanceOf[js.Any])
+    def setOverviewChanged(value: CustomEvent): Self = StObject.set(x, "overviewChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjCollapse(value: CustomEvent): Self = this.set("ojCollapse", value.asInstanceOf[js.Any])
+    def setPanDirectionChanged(value: CustomEvent): Self = StObject.set(x, "panDirectionChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjExpand(value: CustomEvent): Self = this.set("ojExpand", value.asInstanceOf[js.Any])
+    def setPanningChanged(value: CustomEvent): Self = StObject.set(x, "panningChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverviewChanged(value: CustomEvent): Self = this.set("overviewChanged", value.asInstanceOf[js.Any])
+    def setPromotedLinkBehaviorChanged(value: CustomEvent): Self = StObject.set(x, "promotedLinkBehaviorChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPanDirectionChanged(value: CustomEvent): Self = this.set("panDirectionChanged", value.asInstanceOf[js.Any])
+    def setRendererChanged(value: CustomEvent): Self = StObject.set(x, "rendererChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPanningChanged(value: CustomEvent): Self = this.set("panningChanged", value.asInstanceOf[js.Any])
+    def setSelectionChanged(value: CustomEvent): Self = StObject.set(x, "selectionChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPromotedLinkBehaviorChanged(value: CustomEvent): Self = this.set("promotedLinkBehaviorChanged", value.asInstanceOf[js.Any])
+    def setSelectionModeChanged(value: CustomEvent): Self = StObject.set(x, "selectionModeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRendererChanged(value: CustomEvent): Self = this.set("rendererChanged", value.asInstanceOf[js.Any])
+    def setSelectionRendererChanged(value: CustomEvent): Self = StObject.set(x, "selectionRendererChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSelectionChanged(value: CustomEvent): Self = this.set("selectionChanged", value.asInstanceOf[js.Any])
+    def setStyleDefaultsChanged(value: CustomEvent): Self = StObject.set(x, "styleDefaultsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSelectionModeChanged(value: CustomEvent): Self = this.set("selectionModeChanged", value.asInstanceOf[js.Any])
+    def setTooltipChanged(value: CustomEvent): Self = StObject.set(x, "tooltipChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSelectionRendererChanged(value: CustomEvent): Self = this.set("selectionRendererChanged", value.asInstanceOf[js.Any])
+    def setTouchResponseChanged(value: CustomEvent): Self = StObject.set(x, "touchResponseChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStyleDefaultsChanged(value: CustomEvent): Self = this.set("styleDefaultsChanged", value.asInstanceOf[js.Any])
+    def setZoomRendererChanged(value: CustomEvent): Self = StObject.set(x, "zoomRendererChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTooltipChanged(value: CustomEvent): Self = this.set("tooltipChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTouchResponseChanged(value: CustomEvent): Self = this.set("touchResponseChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setZoomRendererChanged(value: CustomEvent): Self = this.set("zoomRendererChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setZoomingChanged(value: CustomEvent): Self = this.set("zoomingChanged", value.asInstanceOf[js.Any])
+    def setZoomingChanged(value: CustomEvent): Self = StObject.set(x, "zoomingChanged", value.asInstanceOf[js.Any])
   }
 }

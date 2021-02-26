@@ -14,12 +14,13 @@ import typingsSlinky.contentfulManagement.usageMod.Usage
 import typingsSlinky.contentfulManagement.usageMod.UsageProps
 import typingsSlinky.contentfulManagement.usageMod.UsageQuery
 import typingsSlinky.contentfulManagement.userMod.User
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CreatePersonalAccessToken extends js.Object {
+trait CreatePersonalAccessToken extends StObject {
   
   /**
     * Creates a personal access token

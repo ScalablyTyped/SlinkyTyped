@@ -10,9 +10,9 @@ Jimp core
 | ------------------ | :-------------: |
 | Full name          | @jimp/core |
 | Keywords           | - |
-| # releases         | 69 |
-| # dependents       | 1 |
-| # downloads        | 14363198 |
+| # releases         | 101 |
+| # dependents       | 3 |
+| # downloads        | 43341106 |
 | # stars            | 0 |
 
 ## Links

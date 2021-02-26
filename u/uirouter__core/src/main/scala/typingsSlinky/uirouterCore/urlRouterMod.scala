@@ -13,16 +13,16 @@ import typingsSlinky.uirouterCore.urlInterfaceMod.UrlRule
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlRuleHandlerFn
 import typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher
 import typingsSlinky.uirouterCore.urlRuleMod.UrlRuleFactory
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/url/urlRouter", JSImport.Namespace)
-@js.native
-object urlRouterMod extends js.Object {
+object urlRouterMod {
   
+  @JSImport("@uirouter/core/lib/url/urlRouter", "UrlRouter")
   @js.native
-  class UrlRouter protected () extends js.Object {
+  class UrlRouter protected () extends StObject {
     /** @internal */
     def this(/** @internal */ router: UIRouter) = this()
     

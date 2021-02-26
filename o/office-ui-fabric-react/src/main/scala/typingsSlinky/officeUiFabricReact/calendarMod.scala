@@ -1,28 +1,36 @@
 package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/Calendar", JSImport.Namespace)
-@js.native
-object calendarMod extends js.Object {
+object calendarMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/Calendar", "Calendar")
   @js.native
   class Calendar protected ()
     extends typingsSlinky.officeUiFabricReact.calendarCalendarMod.Calendar {
     def this(props: ICalendarProps) = this()
   }
   /* static members */
-  @js.native
-  object Calendar extends js.Object {
+  object Calendar {
     
-    var defaultProps: ICalendarProps = js.native
+    @JSImport("office-ui-fabric-react/lib/components/Calendar", "Calendar")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("office-ui-fabric-react/lib/components/Calendar", "Calendar.defaultProps")
+    @js.native
+    def defaultProps: ICalendarProps = js.native
+    @scala.inline
+    def defaultProps_=(x: ICalendarProps): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
   }
   
+  @JSImport("office-ui-fabric-react/lib/components/Calendar", "DateRangeType")
   @js.native
-  object DateRangeType extends js.Object {
+  object DateRangeType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DateRangeType with Double] = js.native
@@ -36,8 +44,9 @@ object calendarMod extends js.Object {
     /* 3 */ val WorkWeek: typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DateRangeType.WorkWeek with Double = js.native
   }
   
+  @JSImport("office-ui-fabric-react/lib/components/Calendar", "DayOfWeek")
   @js.native
-  object DayOfWeek extends js.Object {
+  object DayOfWeek extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DayOfWeek with Double] = js.native
@@ -57,8 +66,9 @@ object calendarMod extends js.Object {
     /* 3 */ val Wednesday: typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DayOfWeek.Wednesday with Double = js.native
   }
   
+  @JSImport("office-ui-fabric-react/lib/components/Calendar", "FirstWeekOfYear")
   @js.native
-  object FirstWeekOfYear extends js.Object {
+  object FirstWeekOfYear extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[

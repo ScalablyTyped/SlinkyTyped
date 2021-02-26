@@ -3,6 +3,7 @@ package typingsSlinky.winrtUwp.global.Windows.Media.Protection.PlayReady
 import typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.INDDownloadEngine
 import typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.INDMessenger
 import typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.INDStreamParser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNativeSvgUri.mod.SvgUriProps
 import typingsSlinky.reactNativeSvgUri.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object ReactNativeSvgUri {
   
   @JSImport("react-native-svg-uri", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,7 +37,7 @@ object ReactNativeSvgUri {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SvgUriProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeSvgUri.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SvgUriProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -7,14 +7,15 @@ import typingsSlinky.astTypes.astTypesMod.Fork
 import typingsSlinky.astTypes.pathMod.Path
 import typingsSlinky.astTypes.scopeMod.Scope
 import typingsSlinky.astTypes.typesMod.ASTNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ast-types/lib/node-path", JSImport.Namespace)
-@js.native
-object nodePathMod extends js.Object {
+object nodePathMod {
   
+  @JSImport("ast-types/lib/node-path", JSImport.Default)
+  @js.native
   def default(fork: Fork): NodePathConstructor = js.native
   
   @js.native

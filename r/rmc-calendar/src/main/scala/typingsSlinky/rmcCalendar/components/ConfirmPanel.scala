@@ -7,15 +7,22 @@ import typingsSlinky.rmcCalendar.confirmPanelMod.default
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.Locale
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.one
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.range
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ConfirmPanel {
   
+  @scala.inline
+  def apply(locale: Locale, onConfirm: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], onConfirm = js.Any.fromFunction0(onConfirm))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ConfirmPanelPropsType]))
+  }
+  
   @JSImport("rmc-calendar/lib/calendar/ConfirmPanel", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,10 +49,4 @@ object ConfirmPanel {
   }
   
   def withProps(p: ConfirmPanelPropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(locale: Locale, onConfirm: () => Unit): Builder = {
-    val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], onConfirm = js.Any.fromFunction0(onConfirm))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ConfirmPanelPropsType]))
-  }
 }

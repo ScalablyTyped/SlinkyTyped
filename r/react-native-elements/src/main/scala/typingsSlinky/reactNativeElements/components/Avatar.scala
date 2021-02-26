@@ -63,103 +63,28 @@ import typingsSlinky.reactNativeElements.reactNativeElementsStrings.tail
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.xlarge
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.yes
 import typingsSlinky.reactNativeVectorIcons.iconMod.IconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Avatar {
   
-  @JSImport("react-native-elements", "Avatar")
-  @js.native
-  object component extends js.Object
-  
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Avatar] {
-    
-    @scala.inline
-    def Component(value: ReactComponentClass[js.Object]): this.type = set("Component", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ImageComponent(value: ReactComponentClass[js.Object]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def activeOpacity(value: Double): this.type = set("activeOpacity", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def avatarStyle(value: ImageStyle): this.type = set("avatarStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def containerStyleNull: this.type = set("containerStyle", null)
-    
-    @scala.inline
-    def icon(value: AvatarIcon): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def iconStyle(value: StyleProp[TextStyle]): this.type = set("iconStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def iconStyleNull: this.type = set("iconStyle", null)
-    
-    @scala.inline
-    def imageProps(value: PartialImageProps): this.type = set("imageProps", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def onLongPress(value: () => Unit): this.type = set("onLongPress", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def overlayContainerStyle(value: StyleProp[ViewStyle]): this.type = set("overlayContainerStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def overlayContainerStyleNull: this.type = set("overlayContainerStyle", null)
-    
-    @scala.inline
-    def placeholderStyle(value: StyleProp[ViewStyle]): this.type = set("placeholderStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def placeholderStyleNull: this.type = set("placeholderStyle", null)
-    
-    @scala.inline
-    def renderPlaceholderContent(value: ReactElement): this.type = set("renderPlaceholderContent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def rounded(value: Boolean): this.type = set("rounded", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def size(value: small | medium | large | xlarge | Double): this.type = set("size", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def sourceVarargs(value: ImageURISource*): this.type = set("source", js.Array(value :_*))
-    
-    @scala.inline
-    def source(value: ImageSourcePropType): this.type = set("source", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def titleStyle(value: StyleProp[TextStyle]): this.type = set("titleStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def titleStyleNull: this.type = set("titleStyle", null)
-  }
-  
-  def withProps(p: AvatarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: Avatar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
-  
   object Accessory {
+    
+    @scala.inline
+    def apply(
+      onLongPress: (js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]) with js.UndefOr[js.Function0[Unit]],
+      onPress: (js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]) with js.UndefOr[js.Function0[Unit]],
+      style: (js.UndefOr[ViewStyle | TextStyle]) with js.UndefOr[StyleProp[ImageStyle]]
+    ): typingsSlinky.reactNativeElements.components.Avatar.Accessory.Builder = {
+      val __props = js.Dynamic.literal(onLongPress = onLongPress.asInstanceOf[js.Any], onPress = onPress.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any])
+      new typingsSlinky.reactNativeElements.components.Avatar.Accessory.Builder(js.Array(this.component, __props.asInstanceOf[PartialIconPropsPartialIm]))
+    }
     
     @JSImport("react-native-elements", "Avatar.Accessory")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -170,22 +95,22 @@ object Avatar {
       def Component(value: ReactComponentClass[js.Object]): this.type = set("Component", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def ImageComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
+      def ImageComponent(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def ImageComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def ImageComponent(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
+      def ImageComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def PlaceholderContent(value: ReactElement): this.type = set("PlaceholderContent", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+      def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+      def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
       
       @scala.inline
       def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -212,10 +137,10 @@ object Avatar {
       def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+      def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+      def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
       
       @scala.inline
       def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -446,10 +371,10 @@ object Avatar {
       def solid(value: Boolean): this.type = set("solid", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def sourceVarargs(value: ImageURISource*): this.type = set("source", js.Array(value :_*))
+      def source(value: ImageSourcePropType): this.type = set("source", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def source(value: ImageSourcePropType): this.type = set("source", value.asInstanceOf[js.Any])
+      def sourceVarargs(value: ImageURISource*): this.type = set("source", js.Array(value :_*))
       
       @scala.inline
       def suppressHighlighting(value: Boolean): this.type = set("suppressHighlighting", value.asInstanceOf[js.Any])
@@ -489,15 +414,91 @@ object Avatar {
     }
     
     def withProps(p: PartialIconPropsPartialIm): typingsSlinky.reactNativeElements.components.Avatar.Accessory.Builder = new typingsSlinky.reactNativeElements.components.Avatar.Accessory.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  @JSImport("react-native-elements", "Avatar")
+  @js.native
+  val component: js.Object = js.native
+  
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Avatar] {
     
     @scala.inline
-    def apply(
-      onLongPress: (js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]) with js.UndefOr[js.Function0[Unit]],
-      onPress: (js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]) with js.UndefOr[js.Function0[Unit]],
-      style: (js.UndefOr[ViewStyle | TextStyle]) with js.UndefOr[StyleProp[ImageStyle]]
-    ): typingsSlinky.reactNativeElements.components.Avatar.Accessory.Builder = {
-      val __props = js.Dynamic.literal(onLongPress = onLongPress.asInstanceOf[js.Any], onPress = onPress.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any])
-      new typingsSlinky.reactNativeElements.components.Avatar.Accessory.Builder(js.Array(this.component, __props.asInstanceOf[PartialIconPropsPartialIm]))
-    }
+    def Component(value: ReactComponentClass[js.Object]): this.type = set("Component", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def ImageComponent(value: ReactComponentClass[js.Object]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def activeOpacity(value: Double): this.type = set("activeOpacity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def avatarStyle(value: ImageStyle): this.type = set("avatarStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def containerStyleNull: this.type = set("containerStyle", null)
+    
+    @scala.inline
+    def icon(value: AvatarIcon): this.type = set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def iconStyle(value: StyleProp[TextStyle]): this.type = set("iconStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def iconStyleNull: this.type = set("iconStyle", null)
+    
+    @scala.inline
+    def imageProps(value: PartialImageProps): this.type = set("imageProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def onLongPress(value: () => Unit): this.type = set("onLongPress", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def overlayContainerStyle(value: StyleProp[ViewStyle]): this.type = set("overlayContainerStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def overlayContainerStyleNull: this.type = set("overlayContainerStyle", null)
+    
+    @scala.inline
+    def placeholderStyle(value: StyleProp[ViewStyle]): this.type = set("placeholderStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def placeholderStyleNull: this.type = set("placeholderStyle", null)
+    
+    @scala.inline
+    def renderPlaceholderContent(value: ReactElement): this.type = set("renderPlaceholderContent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def rounded(value: Boolean): this.type = set("rounded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def size(value: small | medium | large | xlarge | Double): this.type = set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def source(value: ImageSourcePropType): this.type = set("source", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def sourceVarargs(value: ImageURISource*): this.type = set("source", js.Array(value :_*))
+    
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def titleStyle(value: StyleProp[TextStyle]): this.type = set("titleStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def titleStyleNull: this.type = set("titleStyle", null)
   }
+  
+  implicit def make(companion: Avatar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AvatarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -3,6 +3,7 @@ package typingsSlinky.googleapis.vaultV1Mod.vaultV1
 import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
 import typingsSlinky.googleapisCommon.apiMod.GlobalOptions
 import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("googleapis/build/src/apis/vault/v1", "vault_v1.Vault")
 @js.native
-class Vault protected () extends js.Object {
+class Vault protected () extends StObject {
   def this(options: GlobalOptions) = this()
   def this(options: GlobalOptions, google: GoogleConfigurable) = this()
   

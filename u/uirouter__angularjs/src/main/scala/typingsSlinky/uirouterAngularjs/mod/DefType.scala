@@ -1,12 +1,13 @@
 package typingsSlinky.uirouterAngularjs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@uirouter/angularjs", "DefType")
 @js.native
-object DefType extends js.Object {
+object DefType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.uirouterCore.paramMod.DefType with Double] = js.native

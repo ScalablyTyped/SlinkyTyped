@@ -2,6 +2,7 @@ package typingsSlinky.kurentoClient.mod
 
 import typingsSlinky.kurentoClient.anon.EventUriEndpointStateChan
 import typingsSlinky.kurentoClient.kurentoClientStrings.UriEndpointStateChanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

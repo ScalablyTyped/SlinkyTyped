@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Browser
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.wakeLockScreen
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.wakeLockSystem
 */
-trait PermissionType extends js.Object
+trait PermissionType extends StObject
 object PermissionType {
   
   @scala.inline

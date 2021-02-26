@@ -3,6 +3,7 @@ package typingsSlinky.xrm.XrmEnum
 import typingsSlinky.xrm.xrmStrings.aborted
 import typingsSlinky.xrm.xrmStrings.active
 import typingsSlinky.xrm.xrmStrings.finished
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.aborted
   - typingsSlinky.xrm.xrmStrings.finished
 */
-trait ProcessStatus extends js.Object
+trait ProcessStatus extends StObject
 object ProcessStatus {
   
   @scala.inline

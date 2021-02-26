@@ -22,6 +22,7 @@ import typingsSlinky.materialUi.materialUiStrings.before
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ object FlatButton {
   
   @JSImport("material-ui", "FlatButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -47,10 +48,10 @@ object FlatButton {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
@@ -83,22 +84,22 @@ object FlatButton {
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def keyboardFocused(value: Boolean): this.type = set("keyboardFocused", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def keyboardFocused(value: Boolean): this.type = set("keyboardFocused", value.asInstanceOf[js.Any])
     
     @scala.inline
     def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelPosition(value: before | after): this.type = set("labelPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelStyle(value: CSSProperties): this.type = set("labelStyle", value.asInstanceOf[js.Any])
@@ -374,7 +375,7 @@ object FlatButton {
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FlatButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FlatButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FlatButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

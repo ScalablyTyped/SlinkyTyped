@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCloudtasks.anon.Callback
 import typingsSlinky.maximMazurokGapiClientCloudtasks.anon.Fields
 import typingsSlinky.maximMazurokGapiClientCloudtasks.anon.Key
 import typingsSlinky.maximMazurokGapiClientCloudtasks.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TasksResource extends js.Object {
+trait TasksResource extends StObject {
   
   /** Creates a task and adds it to a queue. Tasks cannot be updated after creation; there is no UpdateTask command. * The maximum task size is 100KB. */
   def create(request: Accesstoken): Request[Task] = js.native

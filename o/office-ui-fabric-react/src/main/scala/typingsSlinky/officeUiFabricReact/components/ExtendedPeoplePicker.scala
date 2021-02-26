@@ -15,15 +15,27 @@ import typingsSlinky.officeUiFabricReact.basePickerTypesMod.IInputProps
 import typingsSlinky.officeUiFabricReact.baseSelectedItemsListTypesMod.IBaseSelectedItemsListProps
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaProps
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ExtendedPeoplePicker {
   
+  @scala.inline
+  def apply(
+    floatingPickerProps: IBaseFloatingPickerProps[IPersonaProps],
+    onRenderFloatingPicker: ReactComponentClass[IBaseFloatingPickerProps[IPersonaProps]],
+    onRenderSelectedItems: ReactComponentClass[IBaseSelectedItemsListProps[IPersonaProps]],
+    selectedItemsListProps: IBaseSelectedItemsListProps[IPersonaProps]
+  ): Builder = {
+    val __props = js.Dynamic.literal(floatingPickerProps = floatingPickerProps.asInstanceOf[js.Any], onRenderFloatingPicker = onRenderFloatingPicker.asInstanceOf[js.Any], onRenderSelectedItems = onRenderSelectedItems.asInstanceOf[js.Any], selectedItemsListProps = selectedItemsListProps.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IBaseExtendedPickerProps[IPersonaProps]]))
+  }
+  
   @JSImport("office-ui-fabric-react", "ExtendedPeoplePicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,22 +46,22 @@ object ExtendedPeoplePicker {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IBaseExtendedPicker[IPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IBaseExtendedPicker[IPersonaProps] | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IBaseExtendedPicker[IPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentRef(value: IRefObject[IBaseExtendedPicker[IPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def currentRenderedQueryString(value: String): this.type = set("currentRenderedQueryString", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultSelectedItemsVarargs(value: IPersonaProps*): this.type = set("defaultSelectedItems", js.Array(value :_*))
+    def defaultSelectedItems(value: js.Array[IPersonaProps]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultSelectedItems(value: js.Array[IPersonaProps]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
+    def defaultSelectedItemsVarargs(value: IPersonaProps*): this.type = set("defaultSelectedItems", js.Array(value :_*))
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -92,28 +104,17 @@ object ExtendedPeoplePicker {
     def onPaste(value: /* pastedText */ String => js.Array[IPersonaProps]): this.type = set("onPaste", js.Any.fromFunction1(value))
     
     @scala.inline
-    def selectedItemsVarargs(value: IPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
-    
-    @scala.inline
     def selectedItems(value: js.Array[IPersonaProps]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suggestionItemsVarargs(value: IPersonaProps*): this.type = set("suggestionItems", js.Array(value :_*))
+    def selectedItemsVarargs(value: IPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
     
     @scala.inline
     def suggestionItems(value: js.Array[IPersonaProps]): this.type = set("suggestionItems", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def suggestionItemsVarargs(value: IPersonaProps*): this.type = set("suggestionItems", js.Array(value :_*))
   }
   
   def withProps(p: IBaseExtendedPickerProps[IPersonaProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    floatingPickerProps: IBaseFloatingPickerProps[IPersonaProps],
-    onRenderFloatingPicker: ReactComponentClass[IBaseFloatingPickerProps[IPersonaProps]],
-    onRenderSelectedItems: ReactComponentClass[IBaseSelectedItemsListProps[IPersonaProps]],
-    selectedItemsListProps: IBaseSelectedItemsListProps[IPersonaProps]
-  ): Builder = {
-    val __props = js.Dynamic.literal(floatingPickerProps = floatingPickerProps.asInstanceOf[js.Any], onRenderFloatingPicker = onRenderFloatingPicker.asInstanceOf[js.Any], onRenderSelectedItems = onRenderSelectedItems.asInstanceOf[js.Any], selectedItemsListProps = selectedItemsListProps.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IBaseExtendedPickerProps[IPersonaProps]]))
-  }
 }

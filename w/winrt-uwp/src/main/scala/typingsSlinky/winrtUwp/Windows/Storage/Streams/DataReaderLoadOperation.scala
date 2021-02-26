@@ -4,13 +4,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.AsyncOperationCompletedHandler
 import typingsSlinky.winrtUwp.Windows.Foundation.AsyncStatus
 import typingsSlinky.winrtUwp.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrtUwp.Windows.WinRTError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Loads data from an input stream. */
 @js.native
-trait DataReaderLoadOperation extends js.Object {
+trait DataReaderLoadOperation extends StObject {
   
   /** Requests the cancellation of the data load operation. */
   def cancel(): Unit = js.native

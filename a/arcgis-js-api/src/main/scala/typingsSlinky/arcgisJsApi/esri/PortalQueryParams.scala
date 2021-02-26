@@ -12,6 +12,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.owner
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.title
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.uploaded
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.username
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

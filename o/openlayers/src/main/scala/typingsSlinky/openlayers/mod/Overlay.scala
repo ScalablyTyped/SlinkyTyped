@@ -2,6 +2,7 @@ package typingsSlinky.openlayers.mod
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.openlayers.mod.olx.OverlayOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

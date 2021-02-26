@@ -1,5 +1,6 @@
 package typingsSlinky.aureliaDependencyInjection.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.aureliaDependencyInjection.aureliaDependencyInjectionNumbers.`4`
   - typingsSlinky.aureliaDependencyInjection.aureliaDependencyInjectionNumbers.`5`
 */
-trait IStrategy extends js.Object
+trait IStrategy extends StObject
 object IStrategy {
   
   @scala.inline

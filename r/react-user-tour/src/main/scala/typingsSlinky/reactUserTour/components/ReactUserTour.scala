@@ -71,20 +71,35 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactUserTour.mod.TourProps
 import typingsSlinky.reactUserTour.mod.TourStep
+import typingsSlinky.reactUserTour.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactUserTour {
   
+  @scala.inline
+  def apply(
+    active: Boolean,
+    onBack: js.Function,
+    onCancel: js.Function,
+    onNext: js.Function,
+    step: Double,
+    steps: js.Array[TourStep]
+  ): Builder = {
+    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any], onBack = onBack.asInstanceOf[js.Any], onCancel = onCancel.asInstanceOf[js.Any], onNext = onNext.asInstanceOf[js.Any], step = step.asInstanceOf[js.Any], steps = steps.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TourProps]))
+  }
+  
   @JSImport("react-user-tour", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
+       with StBuildingComponent[tag.type, default] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -290,10 +305,10 @@ object ReactUserTour {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -642,17 +657,4 @@ object ReactUserTour {
   }
   
   def withProps(p: TourProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    active: Boolean,
-    onBack: js.Function,
-    onCancel: js.Function,
-    onNext: js.Function,
-    step: Double,
-    steps: js.Array[TourStep]
-  ): Builder = {
-    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any], onBack = onBack.asInstanceOf[js.Any], onCancel = onCancel.asInstanceOf[js.Any], onNext = onNext.asInstanceOf[js.Any], step = step.asInstanceOf[js.Any], steps = steps.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TourProps]))
-  }
 }

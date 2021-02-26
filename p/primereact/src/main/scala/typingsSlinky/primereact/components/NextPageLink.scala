@@ -3,6 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.nextPageLinkMod.NextPageLinkProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ object NextPageLink {
   
   @JSImport("primereact/components/paginator/NextPageLink", "NextPageLink")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,7 +26,7 @@ object NextPageLink {
     def onClick(value: () => Unit): this.type = set("onClick", js.Any.fromFunction0(value))
   }
   
-  def withProps(p: NextPageLinkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: NextPageLink.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: NextPageLinkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.chartJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chartJs.chartJsStrings.time
   - typingsSlinky.chartJs.chartJsStrings.radialLinear
 */
-trait ScaleType extends js.Object
+trait ScaleType extends StObject
 object ScaleType {
   
   @scala.inline

@@ -10,9 +10,9 @@ The Material Components for the web line-ripple component
 | ------------------ | :-------------: |
 | Full name          | @material/line-ripple |
 | Keywords           | material components, material design, lineripple, line-ripple |
-| # releases         | 151 |
-| # dependents       | 28 |
-| # downloads        | 1629624 |
+| # releases         | 808 |
+| # dependents       | 38 |
+| # downloads        | 2899688 |
 | # stars            | 0 |
 
 ## Links

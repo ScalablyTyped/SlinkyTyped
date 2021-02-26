@@ -6,16 +6,16 @@ import typingsSlinky.angularHttp.interfacesMod.RequestOptionsArgs
 import typingsSlinky.angularHttp.staticRequestMod.Request
 import typingsSlinky.angularHttp.staticResponseMod.Response
 import typingsSlinky.rxjs.mod.Observable_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/http/src/http", JSImport.Namespace)
-@js.native
-object httpMod extends js.Object {
+object httpMod {
   
+  @JSImport("@angular/http/src/http", "Http")
   @js.native
-  class Http protected () extends js.Object {
+  class Http protected () extends StObject {
     def this(_backend: ConnectionBackend, _defaultOptions: RequestOptions) = this()
     
     var _backend: ConnectionBackend = js.native
@@ -76,6 +76,7 @@ object httpMod extends js.Object {
     def request(url: Request, options: RequestOptionsArgs): Observable_[Response] = js.native
   }
   
+  @JSImport("@angular/http/src/http", "Jsonp")
   @js.native
   class Jsonp protected () extends Http {
     def this(backend: ConnectionBackend, defaultOptions: RequestOptions) = this()

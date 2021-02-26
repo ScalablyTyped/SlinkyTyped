@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientLambdaNode.typesCreateFunctionInputMod.CreateFu
 import typingsSlinky.awsSdkClientLambdaNode.typesCreateFunctionOutputMod.CreateFunctionOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-lambda-node/commands/CreateFunctionCommand", JSImport.Namespace)
-@js.native
-object createFunctionCommandMod extends js.Object {
+object createFunctionCommandMod {
   
+  @JSImport("@aws-sdk/client-lambda-node/commands/CreateFunctionCommand", "CreateFunctionCommand")
   @js.native
   class CreateFunctionCommand protected () extends Command[
           InputTypesUnion, 

@@ -1,5 +1,6 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.handsontable.handsontableStrings.shift_down
   - typingsSlinky.handsontable.handsontableStrings.shift_right
 */
-trait PasteModeType extends js.Object
+trait PasteModeType extends StObject
 object PasteModeType {
   
   @scala.inline

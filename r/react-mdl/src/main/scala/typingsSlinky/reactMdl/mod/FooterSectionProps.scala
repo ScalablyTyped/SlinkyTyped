@@ -2,6 +2,7 @@ package typingsSlinky.reactMdl.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.DOMAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,39 +27,27 @@ object FooterSectionProps {
   }
   
   @scala.inline
-  implicit class FooterSectionPropsOps[Self <: FooterSectionProps] (val x: Self) extends AnyVal {
+  implicit class FooterSectionPropsMutableBuilder[Self <: FooterSectionProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setLogo(value: ReactElement): Self = StObject.set(x, "logo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setLogoReactElement(value: ReactElement): Self = StObject.set(x, "logo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setLogoUndefined: Self = StObject.set(x, "logo", js.undefined)
     
     @scala.inline
-    def setLogoReactElement(value: ReactElement): Self = this.set("logo", value.asInstanceOf[js.Any])
+    def setSize(value: String): Self = StObject.set(x, "size", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLogo(value: ReactElement): Self = this.set("logo", value.asInstanceOf[js.Any])
+    def setSizeUndefined: Self = StObject.set(x, "size", js.undefined)
     
     @scala.inline
-    def deleteLogo: Self = this.set("logo", js.undefined)
+    def setTitle(value: String): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSize(value: String): Self = this.set("size", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSize: Self = this.set("size", js.undefined)
-    
-    @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTitle: Self = this.set("title", js.undefined)
+    def setTitleUndefined: Self = StObject.set(x, "title", js.undefined)
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.chromeApps.chrome.webViewRequest
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.onHeadersReceived
   - typingsSlinky.chromeApps.chromeAppsStrings.onAuthRequired
 */
-trait Stage extends js.Object
+trait Stage extends StObject
 object Stage {
   
   @scala.inline

@@ -9,12 +9,13 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.left
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.middle
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.right
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DvtDiagramLayoutContextNode extends js.Object {
+trait DvtDiagramLayoutContextNode extends StObject {
   
   def getBounds(): H = js.native
   

@@ -1,26 +1,39 @@
 package typingsSlinky.devexpressUtils
 
 import typingsSlinky.devexpressUtils.anon.TwoDigitYearMax
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@devexpress/utils/lib/formatters/date-utils", JSImport.Namespace)
-@js.native
-object dateUtilsMod extends js.Object {
+object dateUtilsMod {
   
+  @JSImport("@devexpress/utils/lib/formatters/date-utils", "DateUtils")
   @js.native
-  class DateUtils () extends js.Object
+  class DateUtils () extends StObject
   /* static members */
-  @js.native
-  object DateUtils extends js.Object {
+  object DateUtils {
     
+    @JSImport("@devexpress/utils/lib/formatters/date-utils", "DateUtils")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("@devexpress/utils/lib/formatters/date-utils", "DateUtils.expandTwoDigitYear")
+    @js.native
     def expandTwoDigitYear(value: Double, options: TwoDigitYearMax): Double = js.native
     
+    @JSImport("@devexpress/utils/lib/formatters/date-utils", "DateUtils.fixTimezoneGap")
+    @js.native
     def fixTimezoneGap(oldDate: js.Date, newDate: js.Date): Unit = js.native
     
-    var getTimeZoneOffset: js.Any = js.native
+    @JSImport("@devexpress/utils/lib/formatters/date-utils", "DateUtils.getTimeZoneOffset")
+    @js.native
+    def getTimeZoneOffset: js.Any = js.native
+    @scala.inline
+    def getTimeZoneOffset_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("getTimeZoneOffset")(x.asInstanceOf[js.Any])
     
+    @JSImport("@devexpress/utils/lib/formatters/date-utils", "DateUtils.toUtcTime")
+    @js.native
     def toUtcTime(date: js.Date): js.Date = js.native
   }
 }

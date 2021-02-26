@@ -11,6 +11,7 @@ import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`1`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`4`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`8`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`99`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`4`
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`17`
 */
-trait PpRemoveDocInfoType extends js.Object
+trait PpRemoveDocInfoType extends StObject
 object PpRemoveDocInfoType {
   
   @scala.inline

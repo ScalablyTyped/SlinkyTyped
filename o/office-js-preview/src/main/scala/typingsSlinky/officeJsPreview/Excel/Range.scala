@@ -53,6 +53,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Text
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Up
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Values
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Visible
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

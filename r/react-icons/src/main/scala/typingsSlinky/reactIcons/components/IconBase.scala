@@ -95,6 +95,7 @@ import typingsSlinky.reactIcons.reactIconsStrings.time
 import typingsSlinky.reactIcons.reactIconsStrings.tree
 import typingsSlinky.reactIcons.reactIconsStrings.vertical
 import typingsSlinky.reactIcons.reactIconsStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -103,7 +104,7 @@ object IconBase {
   
   @JSImport("react-icons", "IconBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1282,7 +1283,7 @@ object IconBase {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IconBasePropsattrundefine): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: IconBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IconBasePropsattrundefine): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

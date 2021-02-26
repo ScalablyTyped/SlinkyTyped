@@ -2,6 +2,7 @@ package typingsSlinky.angularCommon.httpHttpMod
 
 import typingsSlinky.angularCommon.anon.Headers
 import typingsSlinky.angularCommon.httpHttpMod.HttpEventType.ResponseHeader
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

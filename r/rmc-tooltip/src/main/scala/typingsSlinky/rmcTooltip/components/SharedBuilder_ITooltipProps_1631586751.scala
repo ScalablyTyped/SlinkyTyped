@@ -3,6 +3,7 @@ package typingsSlinky.rmcTooltip.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,13 +38,13 @@ class SharedBuilder_ITooltipProps_1631586751[R <: js.Object] (val args: js.Array
   def onVisibleChange(value: js.Function): this.type = set("onVisibleChange", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def overlay(value: ReactElement | js.Function): this.type = set("overlay", value.asInstanceOf[js.Any])
   
   @scala.inline
   def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
   
   @scala.inline
   def overlayStyle(value: js.Object): this.type = set("overlayStyle", value.asInstanceOf[js.Any])

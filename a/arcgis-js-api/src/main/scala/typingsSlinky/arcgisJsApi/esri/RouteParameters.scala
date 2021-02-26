@@ -25,6 +25,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.points
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.standard
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.straight
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.yards
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

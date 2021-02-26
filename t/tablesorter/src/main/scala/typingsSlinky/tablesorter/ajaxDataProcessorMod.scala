@@ -4,13 +4,12 @@ import typingsSlinky.jquery.JQuery.jqXHR
 import typingsSlinky.tablesorter.mod.global.HTMLElement
 import typingsSlinky.tablesorter.mod.global.JQuery
 import typingsSlinky.tablesorter.pagerDataPartMod.PagerDataPart
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tablesorter/Paging/AjaxDataProcessor", JSImport.Namespace)
-@js.native
-object ajaxDataProcessorMod extends js.Object {
+object ajaxDataProcessorMod {
   
   type AjaxDataProcessor[TElement] = js.Function3[
     /* data */ js.Any, 

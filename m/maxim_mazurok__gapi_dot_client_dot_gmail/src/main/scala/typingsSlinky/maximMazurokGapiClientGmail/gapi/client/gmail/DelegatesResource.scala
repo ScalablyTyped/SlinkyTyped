@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientGmail.anon.Alt
 import typingsSlinky.maximMazurokGapiClientGmail.anon.DelegateEmail
 import typingsSlinky.maximMazurokGapiClientGmail.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DelegatesResource extends js.Object {
+trait DelegatesResource extends StObject {
   
   def create(request: Alt, body: Delegate): Request[Delegate] = js.native
   /**

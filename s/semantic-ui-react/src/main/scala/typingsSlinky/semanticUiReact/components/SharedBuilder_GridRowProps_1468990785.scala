@@ -9,6 +9,7 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
 import typingsSlinky.semanticUiReact.gridColumnMod.GridOnlyProp
 import typingsSlinky.semanticUiReact.gridGridMod.GridReversedProp
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.equal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

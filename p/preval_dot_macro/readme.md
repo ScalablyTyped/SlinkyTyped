@@ -10,12 +10,15 @@ Pre-evaluate code at build-time with babel-macros
 | ------------------ | :-------------: |
 | Full name          | preval.macro |
 | Keywords           | babel-macros, babel-plugin-macros |
-| # releases         | 4 |
-| # dependents       | 9 |
-| # downloads        | 341485 |
+| # releases         | 3 |
+| # dependents       | 13 |
+| # downloads        | 487413 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/kentcdodds/preval.macro#readme)
+- [Bugs](https://github.com/kentcdodds/preval.macro/issues)
+- [Repository](https://github.com/kentcdodds/preval.macro)
 - [Npm](https://www.npmjs.com/package/preval.macro)
     
 

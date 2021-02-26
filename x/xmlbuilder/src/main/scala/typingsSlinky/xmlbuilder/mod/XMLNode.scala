@@ -2,6 +2,7 @@ package typingsSlinky.xmlbuilder.mod
 
 import typingsSlinky.xmlbuilder.anon.Encoding
 import typingsSlinky.xmlbuilder.anon.PubID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("xmlbuilder", "XMLNode")
 @js.native
-abstract class XMLNode () extends js.Object {
+abstract class XMLNode () extends StObject {
   
   def a(name: js.Any): XMLElement = js.native
   def a(name: js.Any, value: js.Any): XMLElement = js.native

@@ -10,9 +10,9 @@ MySQL/MariaDB storage adapter for Keyv
 | ------------------ | :-------------: |
 | Full name          | @keyv/mysql |
 | Keywords           | mysql, mariadb, sql, keyv, storage, adapter, key, value, store, cache, ttl |
-| # releases         | 2 |
-| # dependents       | 1 |
-| # downloads        | 3037 |
+| # releases         | 0 |
+| # dependents       | 2 |
+| # downloads        | 10525 |
 | # stars            | 0 |
 
 ## Links

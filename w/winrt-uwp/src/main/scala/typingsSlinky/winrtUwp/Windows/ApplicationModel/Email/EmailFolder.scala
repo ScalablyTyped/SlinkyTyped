@@ -3,13 +3,14 @@ package typingsSlinky.winrtUwp.Windows.ApplicationModel.Email
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents and email folder. */
 @js.native
-trait EmailFolder extends js.Object {
+trait EmailFolder extends StObject {
   
   /**
     * Asynchronously creates a new folder.

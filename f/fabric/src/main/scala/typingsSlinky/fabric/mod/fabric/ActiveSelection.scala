@@ -1,6 +1,7 @@
 package typingsSlinky.fabric.mod.fabric
 
 import typingsSlinky.fabric.fabricImplMod.IObjectOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,9 +20,7 @@ class ActiveSelection ()
   def this(objects: js.Array[typingsSlinky.fabric.fabricImplMod.Object], options: IObjectOptions) = this()
 }
 /* static members */
-@JSImport("fabric", "fabric.ActiveSelection")
-@js.native
-object ActiveSelection extends js.Object {
+object ActiveSelection {
   
   /**
     * Returns {@link fabric.ActiveSelection} instance from an object representation
@@ -29,5 +28,7 @@ object ActiveSelection extends js.Object {
     * @param object Object to create a group from
     * @param [callback] Callback to invoke when an ActiveSelection instance is created
     */
+  @JSImport("fabric", "fabric.ActiveSelection.fromObject")
+  @js.native
   def fromObject(`object`: js.Any, callback: js.Function): Unit = js.native
 }

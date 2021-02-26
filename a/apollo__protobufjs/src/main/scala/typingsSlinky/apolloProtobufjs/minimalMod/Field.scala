@@ -23,6 +23,7 @@ import typingsSlinky.apolloProtobufjs.mod.Constructor
 import typingsSlinky.apolloProtobufjs.mod.FieldDecorator
 import typingsSlinky.apolloProtobufjs.mod.IField
 import typingsSlinky.long.mod.Long
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -147,9 +148,7 @@ class Field protected ()
   ) = this()
 }
 /* static members */
-@JSImport("@apollo/protobufjs/minimal", "Field")
-@js.native
-object Field extends js.Object {
+object Field {
   
   /**
     * Field decorator (TypeScript).
@@ -159,12 +158,16 @@ object Field extends js.Object {
     * @param [defaultValue] Default value
     * @returns Decorator function
     */
+  @JSImport("@apollo/protobufjs/minimal", "Field.d")
+  @js.native
   def d[T /* <: Double | (js.Array[Boolean | js.typedarray.Uint8Array | Double | Long | String]) | Long | String | Boolean | js.typedarray.Uint8Array */](
     fieldId: Double,
     fieldType: double | float | int32 | uint32 | sint32 | fixed32 | sfixed32 | int64 | uint64 | sint64 | fixed64 | sfixed64 | string | bool | bytes | js.Object,
     fieldRule: js.UndefOr[optional | required | repeated],
     defaultValue: js.UndefOr[T]
   ): FieldDecorator = js.native
+  @JSImport("@apollo/protobufjs/minimal", "Field.d")
+  @js.native
   def d[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](fieldId: Double, fieldType: String): FieldDecorator = js.native
   /**
     * Field decorator (TypeScript).
@@ -173,18 +176,26 @@ object Field extends js.Object {
     * @param [fieldRule="optional"] Field rule
     * @returns Decorator function
     */
+  @JSImport("@apollo/protobufjs/minimal", "Field.d")
+  @js.native
   def d[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](fieldId: Double, fieldType: Constructor[T]): FieldDecorator = js.native
-  @JSName("d")
+  @JSImport("@apollo/protobufjs/minimal", "Field.d")
+  @js.native
   def d_optional[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](fieldId: Double, fieldType: String, fieldRule: optional): FieldDecorator = js.native
-  @JSName("d")
+  @JSImport("@apollo/protobufjs/minimal", "Field.d")
+  @js.native
   def d_optional[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](fieldId: Double, fieldType: Constructor[T], fieldRule: optional): FieldDecorator = js.native
-  @JSName("d")
+  @JSImport("@apollo/protobufjs/minimal", "Field.d")
+  @js.native
   def d_repeated[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](fieldId: Double, fieldType: String, fieldRule: repeated): FieldDecorator = js.native
-  @JSName("d")
+  @JSImport("@apollo/protobufjs/minimal", "Field.d")
+  @js.native
   def d_repeated[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](fieldId: Double, fieldType: Constructor[T], fieldRule: repeated): FieldDecorator = js.native
-  @JSName("d")
+  @JSImport("@apollo/protobufjs/minimal", "Field.d")
+  @js.native
   def d_required[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](fieldId: Double, fieldType: String, fieldRule: required): FieldDecorator = js.native
-  @JSName("d")
+  @JSImport("@apollo/protobufjs/minimal", "Field.d")
+  @js.native
   def d_required[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](fieldId: Double, fieldType: Constructor[T], fieldRule: required): FieldDecorator = js.native
   
   /**
@@ -194,5 +205,7 @@ object Field extends js.Object {
     * @returns Created field
     * @throws {TypeError} If arguments are invalid
     */
+  @JSImport("@apollo/protobufjs/minimal", "Field.fromJSON")
+  @js.native
   def fromJSON(name: String, json: IField): typingsSlinky.apolloProtobufjs.mod.Field = js.native
 }

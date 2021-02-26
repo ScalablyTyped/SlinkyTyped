@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientCompute.anon.OauthtokenPrettyPrintProjectQuotaUserRequestIdResourceUserIp
 import typingsSlinky.maximMazurokGapiClientCompute.anon.QuotaUserRoute
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RoutesResource extends js.Object {
+trait RoutesResource extends StObject {
   
   /** Deletes the specified Route resource. */
   def delete(): Request[Operation] = js.native

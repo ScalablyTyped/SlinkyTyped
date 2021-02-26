@@ -11,15 +11,22 @@ import typingsSlinky.gestalt.gestaltStrings.high
 import typingsSlinky.gestalt.gestaltStrings.low
 import typingsSlinky.gestalt.gestaltStrings.none
 import typingsSlinky.gestalt.mod.ImageProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Image {
   
+  @scala.inline
+  def apply(alt: String, color: String, naturalHeight: Double, naturalWidth: Double, src: String): Builder = {
+    val __props = js.Dynamic.literal(alt = alt.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], naturalHeight = naturalHeight.asInstanceOf[js.Any], naturalWidth = naturalWidth.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ImageProps]))
+  }
+  
   @JSImport("gestalt", "Image")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,10 +56,4 @@ object Image {
   }
   
   def withProps(p: ImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(alt: String, color: String, naturalHeight: Double, naturalWidth: Double, src: String): Builder = {
-    val __props = js.Dynamic.literal(alt = alt.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], naturalHeight = naturalHeight.asInstanceOf[js.Any], naturalWidth = naturalWidth.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ImageProps]))
-  }
 }

@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.anon.ErrorVal
 import typingsSlinky.recharts.mod.DataKey
 import typingsSlinky.recharts.mod.ErrorBarProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ErrorBar {
   
+  @scala.inline
+  def apply(dataKey: DataKey): Builder = {
+    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ErrorBarProps]))
+  }
+  
   @JSImport("recharts", "ErrorBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -21,13 +28,13 @@ object ErrorBar {
        with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.ErrorBar] {
     
     @scala.inline
-    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
-    
-    @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dataPointFormatter(value: (/* entry */ js.Any, /* dataKey */ DataKey) => ErrorVal): this.type = set("dataPointFormatter", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def layout(value: String): this.type = set("layout", value.asInstanceOf[js.Any])
@@ -52,10 +59,4 @@ object ErrorBar {
   }
   
   def withProps(p: ErrorBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(dataKey: DataKey): Builder = {
-    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ErrorBarProps]))
-  }
 }

@@ -6,6 +6,7 @@ import typingsSlinky.officeJsPreview.OneNote.Interfaces.InkAnalysisData
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.InkAnalysisLoadOptions
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.InkAnalysisUpdateData
 import typingsSlinky.officeJsPreview.anon.Expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

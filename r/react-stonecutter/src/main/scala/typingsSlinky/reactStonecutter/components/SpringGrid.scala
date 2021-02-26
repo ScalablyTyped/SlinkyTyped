@@ -6,15 +6,22 @@ import typingsSlinky.reactStonecutter.mod.AngleUnit
 import typingsSlinky.reactStonecutter.mod.Layout_
 import typingsSlinky.reactStonecutter.mod.LengthUnit
 import typingsSlinky.reactStonecutter.mod.SpringGridProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SpringGrid {
   
+  @scala.inline
+  def apply(columnWidth: Double, columns: Double): Builder = {
+    val __props = js.Dynamic.literal(columnWidth = columnWidth.asInstanceOf[js.Any], columns = columns.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SpringGridProps]))
+  }
+  
   @JSImport("react-stonecutter", "SpringGrid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -56,10 +63,4 @@ object SpringGrid {
   }
   
   def withProps(p: SpringGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(columnWidth: Double, columns: Double): Builder = {
-    val __props = js.Dynamic.literal(columnWidth = columnWidth.asInstanceOf[js.Any], columns = columns.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SpringGridProps]))
-  }
 }

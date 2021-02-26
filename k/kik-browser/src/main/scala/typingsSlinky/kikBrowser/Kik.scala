@@ -6,12 +6,13 @@ import typingsSlinky.kikBrowser.anon.EnableGoogleAnalytics
 import typingsSlinky.kikBrowser.anon.Get
 import typingsSlinky.kikBrowser.anon.Hide
 import typingsSlinky.kikBrowser.anon.Platform
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Kik extends js.Object {
+trait Kik extends StObject {
   
   def anonymousSign(
     data: String,

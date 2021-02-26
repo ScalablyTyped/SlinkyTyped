@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAnalyticsdata.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientAnalyticsdata.anon.Alt
 import typingsSlinky.maximMazurokGapiClientAnalyticsdata.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PropertiesResource extends js.Object {
+trait PropertiesResource extends StObject {
   
   /**
     * Returns metadata for dimensions and metrics available in reporting methods. Used to explore the dimensions and metrics. In this method, a Google Analytics GA4 Property Identifier is

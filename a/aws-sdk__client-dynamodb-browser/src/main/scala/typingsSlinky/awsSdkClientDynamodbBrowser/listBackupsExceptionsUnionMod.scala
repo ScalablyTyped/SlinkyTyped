@@ -1,13 +1,12 @@
 package typingsSlinky.awsSdkClientDynamodbBrowser
 
 import typingsSlinky.awsSdkClientDynamodbBrowser.typesInternalServerErrorMod.InternalServerError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-browser/types/ListBackupsExceptionsUnion", JSImport.Namespace)
-@js.native
-object listBackupsExceptionsUnionMod extends js.Object {
+object listBackupsExceptionsUnionMod {
   
   type ListBackupsExceptionsUnion = InternalServerError
 }

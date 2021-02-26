@@ -5,16 +5,16 @@ import typingsSlinky.typedRestClient.restClientMod.RestClient
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestHandler
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestOptions
 import typingsSlinky.vsoNodeApi.vsoClientMod.VsoClient
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vso-node-api/ClientApiBases", JSImport.Namespace)
-@js.native
-object clientApiBasesMod extends js.Object {
+object clientApiBasesMod {
   
+  @JSImport("vso-node-api/ClientApiBases", "ClientApiBase")
   @js.native
-  class ClientApiBase protected () extends js.Object {
+  class ClientApiBase protected () extends StObject {
     def this(baseUrl: String, handlers: js.Array[IRequestHandler]) = this()
     def this(baseUrl: String, handlers: js.Array[IRequestHandler], userAgent: String) = this()
     def this(

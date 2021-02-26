@@ -4,12 +4,13 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.stellarBase.stellarBaseStrings.base64
 import typingsSlinky.stellarBase.stellarBaseStrings.hex
 import typingsSlinky.stellarBase.stellarBaseStrings.raw
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UpgradeEntryMeta extends js.Object {
+trait UpgradeEntryMeta extends StObject {
   
   def changes(): js.Array[LedgerEntryChange] = js.native
   def changes(value: js.Array[LedgerEntryChange]): js.Array[LedgerEntryChange] = js.native

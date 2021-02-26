@@ -12,6 +12,7 @@ import typingsSlinky.reactResizeDetector.mod.ReactResizeDetectorProps
 import typingsSlinky.reactResizeDetector.mod.default
 import typingsSlinky.reactResizeDetector.reactResizeDetectorStrings.debounce
 import typingsSlinky.reactResizeDetector.reactResizeDetectorStrings.throttle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object ReactResizeDetector {
   
   @JSImport("react-resize-detector", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,19 +62,19 @@ object ReactResizeDetector {
     def targetDomEl(value: HTMLElement): this.type = set("targetDomEl", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def targetRefRefObject(value: ReactRef[HTMLElement]): this.type = set("targetRef", value.asInstanceOf[js.Any])
+    def targetRef(value: Ref[HTMLElement]): this.type = set("targetRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("targetRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def targetRef(value: Ref[HTMLElement]): this.type = set("targetRef", value.asInstanceOf[js.Any])
+    def targetRefNull: this.type = set("targetRef", null)
     
     @scala.inline
-    def targetRefNull: this.type = set("targetRef", null)
+    def targetRefRefObject(value: ReactRef[HTMLElement]): this.type = set("targetRef", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactResizeDetectorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactResizeDetector.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactResizeDetectorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

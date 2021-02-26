@@ -10,9 +10,9 @@ Provides access to GPIO on the Raspberry Pi from Node.js
 | ------------------ | :-------------: |
 | Full name          | raspi-gpio |
 | Keywords           | nodebots, robotics, raspberry pi |
-| # releases         | 6 |
-| # dependents       | 5 |
-| # downloads        | 11012 |
+| # releases         | 3 |
+| # dependents       | 6 |
+| # downloads        | 7317 |
 | # stars            | 0 |
 
 ## Links

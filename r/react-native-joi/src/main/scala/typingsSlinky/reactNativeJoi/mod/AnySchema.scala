@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeJoi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,25 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AnySchema
   extends _Schema
      with JoiObject {
-  
-  /**
-    * Whitelists a value
-    */
-  def allow(values: js.Any*): this.type = js.native
-  def allow(values: js.Array[_]): this.type = js.native
-  
-  /**
-    * By default, some Joi methods to function properly need to rely on the Joi instance they are attached to because
-    * they use `this` internally.
-    * So `Joi.string()` works but if you extract the function from it and call `string()` it won't.
-    * `bind()` creates a new Joi instance where all the functions relying on `this` are bound to the Joi instance.
-    */
-  def bind(): this.type = js.native
-  
-  /**
-    * Returns a new type that is the result of adding the rules of one type to another.
-    */
-  def concat(schema: this.type): this.type = js.native
   
   /**
     * Sets a default value if the original value is undefined.
@@ -52,6 +34,25 @@ trait AnySchema
   def default(value: js.Any, description: String): this.type = js.native
   
   /**
+    * Whitelists a value
+    */
+  def allow(values: js.Any*): this.type = js.native
+  def allow(values: js.Array[_]): this.type = js.native
+  
+  /**
+    * By default, some Joi methods to function properly need to rely on the Joi instance they are attached to because
+    * they use `this` internally.
+    * So `Joi.string()` works but if you extract the function from it and call `string()` it won't.
+    * `bind()` creates a new Joi instance where all the functions relying on `this` are bound to the Joi instance.
+    */
+  def bind(): this.type = js.native
+  
+  /**
+    * Returns a new type that is the result of adding the rules of one type to another.
+    */
+  def concat(schema: this.type): this.type = js.native
+  
+  /**
     * Returns a plain object representing the schema's rules and properties
     */
   def describe(): Description_ = js.native
@@ -74,8 +75,6 @@ trait AnySchema
   def equal(values: js.Any*): this.type = js.native
   def equal(values: js.Array[_]): this.type = js.native
   
-  def error(err: ValidationErrorFunction): this.type = js.native
-  def error(err: ValidationErrorFunction, options: ErrorOptions): this.type = js.native
   /**
     * Overrides the default joi error with a custom error if the rule fails where:
     * @param err - can be:
@@ -96,6 +95,8 @@ trait AnySchema
     */
   def error(err: js.Error): this.type = js.native
   def error(err: js.Error, options: ErrorOptions): this.type = js.native
+  def error(err: ValidationErrorFunction): this.type = js.native
+  def error(err: ValidationErrorFunction, options: ErrorOptions): this.type = js.native
   
   /**
     * Annotates the key with an example value, must be valid.

@@ -78,20 +78,39 @@ import typingsSlinky.reactWebcam.reactWebcamStrings.tree
 import typingsSlinky.reactWebcam.reactWebcamStrings.url
 import typingsSlinky.reactWebcam.reactWebcamStrings.vertical
 import typingsSlinky.reactWebcam.reactWebcamStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactWebcam {
   
+  @scala.inline
+  def apply(
+    audio: Boolean,
+    forceScreenshotSourceSize: Boolean,
+    imageSmoothing: Boolean,
+    mirrored: Boolean,
+    onUserMedia: MediaStream => Unit,
+    onUserMediaError: String => Unit,
+    screenshotFormat: imageSlashwebp | imageSlashpng | imageSlashjpeg,
+    screenshotQuality: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(audio = audio.asInstanceOf[js.Any], forceScreenshotSourceSize = forceScreenshotSourceSize.asInstanceOf[js.Any], imageSmoothing = imageSmoothing.asInstanceOf[js.Any], mirrored = mirrored.asInstanceOf[js.Any], onUserMedia = js.Any.fromFunction1(onUserMedia), onUserMediaError = js.Any.fromFunction1(onUserMediaError), screenshotFormat = screenshotFormat.asInstanceOf[js.Any], screenshotQuality = screenshotQuality.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[WebcamProps]))
+  }
+  
   @JSImport("react-webcam", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -270,10 +289,10 @@ object ReactWebcam {
     def async(value: Boolean): this.type = set("async", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def audioConstraintsMediaTrackConstraints(value: MediaTrackConstraints): this.type = set("audioConstraints", value.asInstanceOf[js.Any])
+    def audioConstraints(value: Boolean | MediaTrackConstraints): this.type = set("audioConstraints", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def audioConstraints(value: Boolean | MediaTrackConstraints): this.type = set("audioConstraints", value.asInstanceOf[js.Any])
+    def audioConstraintsMediaTrackConstraints(value: MediaTrackConstraints): this.type = set("audioConstraints", value.asInstanceOf[js.Any])
     
     @scala.inline
     def autoCapitalize(value: String): this.type = set("autoCapitalize", value.asInstanceOf[js.Any])
@@ -360,16 +379,13 @@ object ReactWebcam {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -927,16 +943,16 @@ object ReactWebcam {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
-    
-    @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def videoConstraintsMediaTrackConstraints(value: MediaTrackConstraints): this.type = set("videoConstraints", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def videoConstraints(value: Boolean | MediaTrackConstraints): this.type = set("videoConstraints", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def videoConstraintsMediaTrackConstraints(value: MediaTrackConstraints): this.type = set("videoConstraints", value.asInstanceOf[js.Any])
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -952,19 +968,4 @@ object ReactWebcam {
   }
   
   def withProps(p: WebcamProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    audio: Boolean,
-    forceScreenshotSourceSize: Boolean,
-    imageSmoothing: Boolean,
-    mirrored: Boolean,
-    onUserMedia: MediaStream => Unit,
-    onUserMediaError: String => Unit,
-    screenshotFormat: imageSlashwebp | imageSlashpng | imageSlashjpeg,
-    screenshotQuality: Double
-  ): Builder = {
-    val __props = js.Dynamic.literal(audio = audio.asInstanceOf[js.Any], forceScreenshotSourceSize = forceScreenshotSourceSize.asInstanceOf[js.Any], imageSmoothing = imageSmoothing.asInstanceOf[js.Any], mirrored = mirrored.asInstanceOf[js.Any], onUserMedia = js.Any.fromFunction1(onUserMedia), onUserMediaError = js.Any.fromFunction1(onUserMediaError), screenshotFormat = screenshotFormat.asInstanceOf[js.Any], screenshotQuality = screenshotQuality.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[WebcamProps]))
-  }
 }

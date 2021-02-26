@@ -1,5 +1,6 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORDER_STATUS
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SNAPSHOT
 */
-trait GoogleActionsOrdersV3OrderUpdateType extends js.Object
+trait GoogleActionsOrdersV3OrderUpdateType extends StObject
 object GoogleActionsOrdersV3OrderUpdateType {
   
   @scala.inline

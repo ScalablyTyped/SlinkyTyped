@@ -11,8 +11,8 @@ Generate random numbers with a seed, useful for reproducible tests
 | Full name          | seed-random |
 | Keywords           | - |
 | # releases         | 0 |
-| # dependents       | 37 |
-| # downloads        | 13631911 |
+| # dependents       | 42 |
+| # downloads        | 26002700 |
 | # stars            | 5 |
 
 ## Links

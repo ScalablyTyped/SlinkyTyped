@@ -1,18 +1,21 @@
 package typingsSlinky.antvComponent
 
-import typingsSlinky.antvComponent.htmlComponentMod.HtmlComponent
 import typingsSlinky.antvComponent.typesMod.HtmlComponentCfg
 import typingsSlinky.antvComponent.typesMod.HtmlCrossHairCfg
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/crosshair/html", JSImport.Namespace)
-@js.native
-object crosshairHtmlMod extends js.Object {
+object crosshairHtmlMod {
+  
+  @JSImport("@antv/component/lib/crosshair/html", JSImport.Default)
+  @js.native
+  class default[T /* <: HtmlCrossHairCfg */] () extends HtmlCrosshair[T]
   
   @js.native
-  trait HtmlCrosshair[T /* <: HtmlCrossHairCfg */] extends HtmlComponent[HtmlComponentCfg] {
+  trait HtmlCrosshair[T /* <: HtmlCrossHairCfg */]
+    extends typingsSlinky.antvComponent.htmlComponentMod.default[HtmlComponentCfg] {
     
     var alignText: js.Any = js.native
     
@@ -24,7 +27,4 @@ object crosshairHtmlMod extends js.Object {
     
     var resetText: js.Any = js.native
   }
-  
-  @js.native
-  class default[T /* <: HtmlCrossHairCfg */] () extends HtmlCrosshair[T]
 }

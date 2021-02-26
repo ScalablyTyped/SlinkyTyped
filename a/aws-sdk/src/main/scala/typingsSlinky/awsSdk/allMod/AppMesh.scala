@@ -2,6 +2,7 @@ package typingsSlinky.awsSdk.allMod
 
 import typingsSlinky.awsSdk.appmeshMod.ClientConfiguration
 import typingsSlinky.awsSdk.appmeshMod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

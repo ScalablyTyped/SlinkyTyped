@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactStarRatingComponent.mod.StarRatingComponentProps
 import typingsSlinky.reactStarRatingComponent.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactStarRatingComponent {
   
+  @scala.inline
+  def apply(name: String, value: Double): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StarRatingComponentProps]))
+  }
+  
   @JSImport("react-star-rating-component", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -53,10 +60,4 @@ object ReactStarRatingComponent {
   }
   
   def withProps(p: StarRatingComponentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(name: String, value: Double): Builder = {
-    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StarRatingComponentProps]))
-  }
 }

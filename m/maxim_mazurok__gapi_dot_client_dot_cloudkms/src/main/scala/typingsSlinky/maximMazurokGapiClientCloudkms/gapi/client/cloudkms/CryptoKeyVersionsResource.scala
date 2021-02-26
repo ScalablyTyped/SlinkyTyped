@@ -12,12 +12,13 @@ import typingsSlinky.maximMazurokGapiClientCloudkms.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientCloudkms.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientCloudkms.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientCloudkms.anon.Resource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CryptoKeyVersionsResource extends js.Object {
+trait CryptoKeyVersionsResource extends StObject {
   
   /** Decrypts data that was encrypted with a public key retrieved from GetPublicKey corresponding to a CryptoKeyVersion with CryptoKey.purpose ASYMMETRIC_DECRYPT. */
   def asymmetricDecrypt(request: Accesstoken): Request[AsymmetricDecryptResponse] = js.native

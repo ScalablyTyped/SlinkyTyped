@@ -4,7 +4,9 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameAutofocus
+import typingsSlinky.reactOnsenui.anon.Autofocus
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +15,7 @@ object Select {
   
   @JSImport("react-onsenui", "Select")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,7 +62,7 @@ object Select {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HTMLAttributesidclassNameAutofocus): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Select.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HTMLAttributesidclassName with Autofocus): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -5,6 +5,7 @@ import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IConsensusCommitBlockRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,18 +21,26 @@ class ConsensusCommitBlockRequest ()
   def this(properties: IConsensusCommitBlockRequest) = this()
 }
 /* static members */
-@JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest")
-@js.native
-object ConsensusCommitBlockRequest extends js.Object {
+object ConsensusCommitBlockRequest {
   
   /**
     * Creates a new ConsensusCommitBlockRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ConsensusCommitBlockRequest instance
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.create")
+  @js.native
   def create(): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.create")
+  @js.native
   def create(properties: IConsensusCommitBlockRequest): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
   /**
     * Decodes a ConsensusCommitBlockRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -40,11 +49,16 @@ object ConsensusCommitBlockRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
   /**
     * Decodes a ConsensusCommitBlockRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,8 +66,9 @@ object ConsensusCommitBlockRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
   
   /**
     * Encodes the specified ConsensusCommitBlockRequest message. Does not implicitly {@link ConsensusCommitBlockRequest.verify|verify} messages.
@@ -61,7 +76,11 @@ object ConsensusCommitBlockRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.encode")
+  @js.native
   def encode(message: IConsensusCommitBlockRequest): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.encode")
+  @js.native
   def encode(message: IConsensusCommitBlockRequest, writer: Writer): Writer = js.native
   
   /**
@@ -70,7 +89,11 @@ object ConsensusCommitBlockRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusCommitBlockRequest): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusCommitBlockRequest, writer: Writer): Writer = js.native
   
   /**
@@ -78,6 +101,8 @@ object ConsensusCommitBlockRequest extends js.Object {
     * @param object Plain object
     * @returns ConsensusCommitBlockRequest
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest = js.native
   
   /**
@@ -86,7 +111,11 @@ object ConsensusCommitBlockRequest extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.toObject")
+  @js.native
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.toObject")
+  @js.native
   def toObject(
     message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusCommitBlockRequest,
     options: IConversionOptions
@@ -97,5 +126,7 @@ object ConsensusCommitBlockRequest extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCommitBlockRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

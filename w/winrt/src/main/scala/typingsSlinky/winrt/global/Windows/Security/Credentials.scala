@@ -1,33 +1,35 @@
 package typingsSlinky.winrt.global.Windows.Security
 
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Windows.Security.Credentials")
-@js.native
-object Credentials extends js.Object {
+object Credentials {
   
+  @JSGlobal("Windows.Security.Credentials.PasswordCredential")
   @js.native
   class PasswordCredential ()
     extends typingsSlinky.winrt.Windows.Security.Credentials.PasswordCredential {
     def this(resource: String, userName: String, password: String) = this()
   }
   
+  @JSGlobal("Windows.Security.Credentials.PasswordCredentialPropertyStore")
   @js.native
   class PasswordCredentialPropertyStore ()
     extends typingsSlinky.winrt.Windows.Security.Credentials.PasswordCredentialPropertyStore
   
+  @JSGlobal("Windows.Security.Credentials.PasswordVault")
   @js.native
   class PasswordVault ()
     extends typingsSlinky.winrt.Windows.Security.Credentials.PasswordVault
   
-  @js.native
-  object UI extends js.Object {
+  object UI {
     
+    @JSGlobal("Windows.Security.Credentials.UI.AuthenticationProtocol")
     @js.native
-    object AuthenticationProtocol extends js.Object {
+    object AuthenticationProtocol extends StObject {
       
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[
@@ -49,28 +51,37 @@ object Credentials extends js.Object {
       /* 2 */ val ntlm: typingsSlinky.winrt.Windows.Security.Credentials.UI.AuthenticationProtocol.ntlm with Double = js.native
     }
     
+    @JSGlobal("Windows.Security.Credentials.UI.CredentialPicker")
     @js.native
     class CredentialPicker ()
       extends typingsSlinky.winrt.Windows.Security.Credentials.UI.CredentialPicker
     /* static members */
-    @js.native
-    object CredentialPicker extends js.Object {
+    object CredentialPicker {
       
+      @JSGlobal("Windows.Security.Credentials.UI.CredentialPicker.pickAsync")
+      @js.native
       def pickAsync(options: typingsSlinky.winrt.Windows.Security.Credentials.UI.CredentialPickerOptions): IAsyncOperation[typingsSlinky.winrt.Windows.Security.Credentials.UI.CredentialPickerResults] = js.native
+      @JSGlobal("Windows.Security.Credentials.UI.CredentialPicker.pickAsync")
+      @js.native
       def pickAsync(targetName: String, message: String): IAsyncOperation[typingsSlinky.winrt.Windows.Security.Credentials.UI.CredentialPickerResults] = js.native
+      @JSGlobal("Windows.Security.Credentials.UI.CredentialPicker.pickAsync")
+      @js.native
       def pickAsync(targetName: String, message: String, caption: String): IAsyncOperation[typingsSlinky.winrt.Windows.Security.Credentials.UI.CredentialPickerResults] = js.native
     }
     
+    @JSGlobal("Windows.Security.Credentials.UI.CredentialPickerOptions")
     @js.native
     class CredentialPickerOptions ()
       extends typingsSlinky.winrt.Windows.Security.Credentials.UI.CredentialPickerOptions
     
+    @JSGlobal("Windows.Security.Credentials.UI.CredentialPickerResults")
     @js.native
     class CredentialPickerResults ()
       extends typingsSlinky.winrt.Windows.Security.Credentials.UI.CredentialPickerResults
     
+    @JSGlobal("Windows.Security.Credentials.UI.CredentialSaveOption")
     @js.native
-    object CredentialSaveOption extends js.Object {
+    object CredentialSaveOption extends StObject {
       
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[

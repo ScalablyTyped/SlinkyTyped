@@ -1,12 +1,13 @@
 package typingsSlinky.pdfmake.interfacesMod
 
 import typingsSlinky.pdfkit.PDFKit.Mixins.PDFFontSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TFontFamilyTypes extends js.Object {
+trait TFontFamilyTypes extends StObject {
   
   var bold: js.UndefOr[PDFFontSource] = js.native
   
@@ -25,66 +26,54 @@ object TFontFamilyTypes {
   }
   
   @scala.inline
-  implicit class TFontFamilyTypesOps[Self <: TFontFamilyTypes] (val x: Self) extends AnyVal {
+  implicit class TFontFamilyTypesMutableBuilder[Self <: TFontFamilyTypes] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBold(value: PDFFontSource): Self = StObject.set(x, "bold", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setBoldArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "bold", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setBoldUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "bold", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBoldUint8Array(value: js.typedarray.Uint8Array): Self = this.set("bold", value.asInstanceOf[js.Any])
+    def setBoldUndefined: Self = StObject.set(x, "bold", js.undefined)
     
     @scala.inline
-    def setBoldArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("bold", value.asInstanceOf[js.Any])
+    def setBolditalics(value: PDFFontSource): Self = StObject.set(x, "bolditalics", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBold(value: PDFFontSource): Self = this.set("bold", value.asInstanceOf[js.Any])
+    def setBolditalicsArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "bolditalics", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBold: Self = this.set("bold", js.undefined)
+    def setBolditalicsUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "bolditalics", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBolditalicsUint8Array(value: js.typedarray.Uint8Array): Self = this.set("bolditalics", value.asInstanceOf[js.Any])
+    def setBolditalicsUndefined: Self = StObject.set(x, "bolditalics", js.undefined)
     
     @scala.inline
-    def setBolditalicsArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("bolditalics", value.asInstanceOf[js.Any])
+    def setItalics(value: PDFFontSource): Self = StObject.set(x, "italics", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBolditalics(value: PDFFontSource): Self = this.set("bolditalics", value.asInstanceOf[js.Any])
+    def setItalicsArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "italics", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBolditalics: Self = this.set("bolditalics", js.undefined)
+    def setItalicsUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "italics", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setItalicsUint8Array(value: js.typedarray.Uint8Array): Self = this.set("italics", value.asInstanceOf[js.Any])
+    def setItalicsUndefined: Self = StObject.set(x, "italics", js.undefined)
     
     @scala.inline
-    def setItalicsArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("italics", value.asInstanceOf[js.Any])
+    def setNormal(value: PDFFontSource): Self = StObject.set(x, "normal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setItalics(value: PDFFontSource): Self = this.set("italics", value.asInstanceOf[js.Any])
+    def setNormalArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "normal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteItalics: Self = this.set("italics", js.undefined)
+    def setNormalUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "normal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNormalUint8Array(value: js.typedarray.Uint8Array): Self = this.set("normal", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setNormalArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("normal", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setNormal(value: PDFFontSource): Self = this.set("normal", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteNormal: Self = this.set("normal", js.undefined)
+    def setNormalUndefined: Self = StObject.set(x, "normal", js.undefined)
   }
 }

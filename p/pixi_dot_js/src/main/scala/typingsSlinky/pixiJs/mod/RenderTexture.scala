@@ -1,6 +1,7 @@
 package typingsSlinky.pixiJs.mod
 
 import typingsSlinky.pixiJs.anon.Resolution
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -55,10 +56,7 @@ class RenderTexture protected ()
     frame: typingsSlinky.pixiJs.PIXI.Rectangle
   ) = this()
 }
-/* static members */
-@JSImport("pixi.js", "RenderTexture")
-@js.native
-object RenderTexture extends js.Object {
+object RenderTexture {
   
   /**
     * A short hand way of creating a render texture.
@@ -70,6 +68,11 @@ object RenderTexture extends js.Object {
     * @param {number} [options.resolution=1] - The resolution / device pixel ratio of the texture being generated
     * @return {PIXI.RenderTexture} The new render texture
     */
+  /* static member */
+  @JSImport("pixi.js", "RenderTexture.create")
+  @js.native
   def create(): typingsSlinky.pixiJs.PIXI.RenderTexture = js.native
+  @JSImport("pixi.js", "RenderTexture.create")
+  @js.native
   def create(options: Resolution): typingsSlinky.pixiJs.PIXI.RenderTexture = js.native
 }

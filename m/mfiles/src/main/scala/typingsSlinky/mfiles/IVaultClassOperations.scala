@@ -3,12 +3,13 @@ package typingsSlinky.mfiles
 import typingsSlinky.mfiles.MFiles.MFBuiltInDocumentClass
 import typingsSlinky.mfiles.MFiles.MFBuiltInObjectClass
 import typingsSlinky.mfiles.MFiles.MFBuiltInObjectType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultClassOperations extends js.Object {
+trait IVaultClassOperations extends StObject {
   
   def AddObjectClassAdmin(ObjectClassAdmin: IObjectClassAdmin): IObjectClassAdmin = js.native
   

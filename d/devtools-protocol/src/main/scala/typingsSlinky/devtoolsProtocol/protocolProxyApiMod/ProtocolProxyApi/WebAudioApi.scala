@@ -28,12 +28,13 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.WebAudio.NodeParamConnectedEv
 import typingsSlinky.devtoolsProtocol.mod.Protocol.WebAudio.NodeParamDisconnectedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.WebAudio.NodesConnectedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.WebAudio.NodesDisconnectedEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebAudioApi extends js.Object {
+trait WebAudioApi extends StObject {
   
   /**
     * Disables the WebAudio domain.

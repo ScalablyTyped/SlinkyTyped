@@ -3,12 +3,13 @@ package typingsSlinky.griddleReact.mod.components
 import slinky.core.ReactComponentClass
 import typingsSlinky.griddleReact.mod.GriddleComponent
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SettingsWrapperProps extends js.Object {
+trait SettingsWrapperProps extends StObject {
   
   var Settings: js.UndefOr[GriddleComponent[SettingsProps]] = js.native
   
@@ -31,66 +32,54 @@ object SettingsWrapperProps {
   }
   
   @scala.inline
-  implicit class SettingsWrapperPropsOps[Self <: SettingsWrapperProps] (val x: Self) extends AnyVal {
+  implicit class SettingsWrapperPropsMutableBuilder[Self <: SettingsWrapperProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setClassNameUndefined: Self = StObject.set(x, "className", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setIsEnabled(value: Boolean): Self = StObject.set(x, "isEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSettingsFunctionComponent(value: ReactComponentClass[SettingsProps]): Self = this.set("Settings", value.asInstanceOf[js.Any])
+    def setIsEnabledUndefined: Self = StObject.set(x, "isEnabled", js.undefined)
     
     @scala.inline
-    def setSettingsComponentClass(value: ReactComponentClass[SettingsProps]): Self = this.set("Settings", value.asInstanceOf[js.Any])
+    def setIsVisible(value: Boolean): Self = StObject.set(x, "isVisible", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSettings(value: GriddleComponent[SettingsProps]): Self = this.set("Settings", value.asInstanceOf[js.Any])
+    def setIsVisibleUndefined: Self = StObject.set(x, "isVisible", js.undefined)
     
     @scala.inline
-    def deleteSettings: Self = this.set("Settings", js.undefined)
+    def setSettings(value: GriddleComponent[SettingsProps]): Self = StObject.set(x, "Settings", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSettingsToggleFunctionComponent(value: ReactComponentClass[SettingsToggleProps]): Self = this.set("SettingsToggle", value.asInstanceOf[js.Any])
+    def setSettingsComponentClass(value: ReactComponentClass[SettingsProps]): Self = StObject.set(x, "Settings", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSettingsToggleComponentClass(value: ReactComponentClass[SettingsToggleProps]): Self = this.set("SettingsToggle", value.asInstanceOf[js.Any])
+    def setSettingsFunctionComponent(value: ReactComponentClass[SettingsProps]): Self = StObject.set(x, "Settings", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSettingsToggle(value: GriddleComponent[SettingsToggleProps]): Self = this.set("SettingsToggle", value.asInstanceOf[js.Any])
+    def setSettingsToggle(value: GriddleComponent[SettingsToggleProps]): Self = StObject.set(x, "SettingsToggle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteSettingsToggle: Self = this.set("SettingsToggle", js.undefined)
+    def setSettingsToggleComponentClass(value: ReactComponentClass[SettingsToggleProps]): Self = StObject.set(x, "SettingsToggle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    def setSettingsToggleFunctionComponent(value: ReactComponentClass[SettingsToggleProps]): Self = StObject.set(x, "SettingsToggle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteClassName: Self = this.set("className", js.undefined)
+    def setSettingsToggleUndefined: Self = StObject.set(x, "SettingsToggle", js.undefined)
     
     @scala.inline
-    def setIsEnabled(value: Boolean): Self = this.set("isEnabled", value.asInstanceOf[js.Any])
+    def setSettingsUndefined: Self = StObject.set(x, "Settings", js.undefined)
     
     @scala.inline
-    def deleteIsEnabled: Self = this.set("isEnabled", js.undefined)
+    def setStyle(value: CSSProperties): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIsVisible(value: Boolean): Self = this.set("isVisible", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteIsVisible: Self = this.set("isVisible", js.undefined)
-    
-    @scala.inline
-    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStyle: Self = this.set("style", js.undefined)
+    def setStyleUndefined: Self = StObject.set(x, "style", js.undefined)
   }
 }

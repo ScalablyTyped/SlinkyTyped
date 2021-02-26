@@ -7,15 +7,22 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeAwesomeCardIo.mod.CardDetails
 import typingsSlinky.reactNativeAwesomeCardIo.mod.CardIODetectionMode
 import typingsSlinky.reactNativeAwesomeCardIo.mod.CardIOViewProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CardIOView {
   
+  @scala.inline
+  def apply(didScanCard: CardDetails => Unit): Builder = {
+    val __props = js.Dynamic.literal(didScanCard = js.Any.fromFunction1(didScanCard))
+    new Builder(js.Array(this.component, __props.asInstanceOf[CardIOViewProps]))
+  }
+  
   @JSImport("react-native-awesome-card-io", "CardIOView")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -57,10 +64,4 @@ object CardIOView {
   }
   
   def withProps(p: CardIOViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(didScanCard: CardDetails => Unit): Builder = {
-    val __props = js.Dynamic.literal(didScanCard = js.Any.fromFunction1(didScanCard))
-    new Builder(js.Array(this.component, __props.asInstanceOf[CardIOViewProps]))
-  }
 }

@@ -10,9 +10,9 @@ Lightweight browser detector
 | ------------------ | :-------------: |
 | Full name          | bowser |
 | Keywords           | browser, useragent, user-agent, parser, ua, detection, ender, sniff |
-| # releases         | 29 |
-| # dependents       | 250 |
-| # downloads        | 48911585 |
+| # releases         | 20 |
+| # dependents       | 338 |
+| # downloads        | 106981445 |
 | # stars            | 21 |
 
 ## Links

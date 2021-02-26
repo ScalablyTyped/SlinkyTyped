@@ -1,13 +1,14 @@
 package typingsSlinky.materialBase
 
 import org.scalajs.dom.raw.Event
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/base/types", JSImport.Namespace)
-@js.native
-object typesMod extends js.Object {
+object typesMod {
+  
+  type CustomEventListener[E /* <: Event */] = js.Function1[/* evt */ E, Unit]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.materialBase.materialBaseStrings.abort
@@ -98,9 +99,7 @@ object typesMod extends js.Object {
     - typingsSlinky.materialBase.materialBaseStrings.waiting
     - typingsSlinky.materialBase.materialBaseStrings.wheel
   */
-  trait EventType extends js.Object
-  
-  type CustomEventListener[E /* <: Event */] = js.Function1[/* evt */ E, Unit]
+  trait EventType extends StObject
   
   type SpecificEventListener[K /* <: EventType */] = js.Function1[
     /* import warning: importer.ImportType#apply Failed type conversion: std.GlobalEventHandlersEventMap[K] */ /* evt */ js.Any, 

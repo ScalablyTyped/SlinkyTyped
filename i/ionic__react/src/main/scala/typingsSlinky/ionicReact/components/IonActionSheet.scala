@@ -9,15 +9,22 @@ import typingsSlinky.ionicCore.componentsMod.global.HTMLIonActionSheetElement
 import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicReact.anon.ActionSheetOptionsReactOv
 import typingsSlinky.ionicReact.ionActionSheetMod.ActionSheetButton
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IonActionSheet {
   
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ActionSheetOptionsReactOv]))
+  }
+  
   @JSImport("@ionic/react", "IonActionSheet")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,16 +38,16 @@ object IonActionSheet {
     def backdropDismiss(value: Boolean): this.type = set("backdropDismiss", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttonsVarargs(value: (ActionSheetButton | String)*): this.type = set("buttons", js.Array(value :_*))
-    
-    @scala.inline
     def buttons(value: js.Array[ActionSheetButton | String]): this.type = set("buttons", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cssClassVarargs(value: String*): this.type = set("cssClass", js.Array(value :_*))
+    def buttonsVarargs(value: (ActionSheetButton | String)*): this.type = set("buttons", js.Array(value :_*))
     
     @scala.inline
     def cssClass(value: String | js.Array[String]): this.type = set("cssClass", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def cssClassVarargs(value: String*): this.type = set("cssClass", js.Array(value :_*))
     
     @scala.inline
     def enterAnimation(value: (/* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => Animation): this.type = set("enterAnimation", js.Any.fromFunction2(value))
@@ -83,10 +90,4 @@ object IonActionSheet {
   }
   
   def withProps(p: ActionSheetOptionsReactOv): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(isOpen: Boolean): Builder = {
-    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ActionSheetOptionsReactOv]))
-  }
 }

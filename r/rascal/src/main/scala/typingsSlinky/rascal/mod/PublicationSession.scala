@@ -5,6 +5,7 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.rascal.rascalStrings.`return`
 import typingsSlinky.rascal.rascalStrings.error
 import typingsSlinky.rascal.rascalStrings.success
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

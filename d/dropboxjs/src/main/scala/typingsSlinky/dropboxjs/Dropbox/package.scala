@@ -1,12 +1,11 @@
 package typingsSlinky.dropboxjs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object Dropbox {
-  
-  type AuthDriver = typingsSlinky.dropboxjs.Dropbox.AuthDriver_
   
   type ClientFileReadCallback = js.Function4[
     /* err */ typingsSlinky.dropboxjs.Dropbox.ApiError, 

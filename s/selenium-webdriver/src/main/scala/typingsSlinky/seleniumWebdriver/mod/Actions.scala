@@ -4,6 +4,7 @@ import typingsSlinky.seleniumWebdriver.anon.Async
 import typingsSlinky.seleniumWebdriver.anon.AsyncBoolean
 import typingsSlinky.seleniumWebdriver.anon.Bridge
 import typingsSlinky.seleniumWebdriver.commandMod.Executor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

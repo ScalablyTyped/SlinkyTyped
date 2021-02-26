@@ -1,6 +1,7 @@
 package typingsSlinky.androiduix.android.text
 
 import typingsSlinky.androiduix.android.graphics.Paint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

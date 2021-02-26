@@ -10,9 +10,9 @@ Javascript Matrix and Vector library for High Performance WebGL apps
 | ------------------ | :-------------: |
 | Full name          | gl-matrix |
 | Keywords           | - |
-| # releases         | 11 |
-| # dependents       | 286 |
-| # downloads        | 7466608 |
+| # releases         | 5 |
+| # dependents       | 406 |
+| # downloads        | 19942150 |
 | # stars            | 16 |
 
 ## Links

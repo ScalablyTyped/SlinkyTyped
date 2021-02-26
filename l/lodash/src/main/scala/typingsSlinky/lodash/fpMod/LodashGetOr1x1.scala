@@ -4,12 +4,13 @@ import typingsSlinky.lodash.mod.NumericDictionary
 import typingsSlinky.lodash.mod.PropertyPath
 import typingsSlinky.lodash.mod.__
 import typingsSlinky.std.Exclude
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashGetOr1x1[TDefault] extends js.Object {
+trait LodashGetOr1x1[TDefault] extends StObject {
   
   def apply(path: Double): LodashGetOr5x3[TDefault] = js.native
   def apply(path: PropertyPath): TDefault = js.native

@@ -4,14 +4,14 @@ import typingsSlinky.tslint.ruleMod.IOptions
 import typingsSlinky.tslint.ruleWalkerMod.RuleWalker
 import typingsSlinky.typescript.mod.Node
 import typingsSlinky.typescript.mod.SourceFile
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tslint/lib/language/walker/scopeAwareRuleWalker", JSImport.Namespace)
-@js.native
-object scopeAwareRuleWalkerMod extends js.Object {
+object scopeAwareRuleWalkerMod {
   
+  @JSImport("tslint/lib/language/walker/scopeAwareRuleWalker", "ScopeAwareRuleWalker")
   @js.native
   abstract class ScopeAwareRuleWalker[T] protected () extends RuleWalker {
     def this(sourceFile: SourceFile, options: IOptions) = this()

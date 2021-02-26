@@ -7,14 +7,14 @@ import typingsSlinky.three.constantsMod.TextureFilter
 import typingsSlinky.three.constantsMod.Wrapping
 import typingsSlinky.three.textureMod.Texture
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/textures/DepthTexture", JSImport.Namespace)
-@js.native
-object depthTextureMod extends js.Object {
+object depthTextureMod {
   
+  @JSImport("three/src/textures/DepthTexture", "DepthTexture")
   @js.native
   class DepthTexture protected () extends Texture {
     /**

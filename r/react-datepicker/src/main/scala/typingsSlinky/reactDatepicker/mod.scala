@@ -17,14 +17,19 @@ import typingsSlinky.reactDatepicker.anon.Children
 import typingsSlinky.reactDatepicker.anon.Code
 import typingsSlinky.reactDatepicker.reactDatepickerStrings.scroll
 import typingsSlinky.reactDatepicker.reactDatepickerStrings.select
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-datepicker", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("react-datepicker", JSImport.Default)
+  @js.native
+  class default () extends ReactDatePicker
+  
+  @JSImport("react-datepicker", "CalendarContainer")
+  @js.native
   def CalendarContainer(
     className: String,
     children: js.Array[ReactElement],
@@ -32,11 +37,19 @@ object mod extends js.Object {
     arrowProps: js.Object
   ): ReactElement = js.native
   
+  @JSImport("react-datepicker", "getDefaultLocale")
+  @js.native
   def getDefaultLocale(): String = js.native
   
+  @JSImport("react-datepicker", "registerLocale")
+  @js.native
   def registerLocale(localeName: String, localeData: js.Object): Unit = js.native
   
+  @JSImport("react-datepicker", "setDefaultLocale")
+  @js.native
   def setDefaultLocale(localeName: String): Unit = js.native
+  
+  type HighlightDates = StringDictionary[js.Array[js.Date]]
   
   @js.native
   trait ReactDatePicker
@@ -53,7 +66,7 @@ object mod extends js.Object {
   }
   
   @js.native
-  trait ReactDatePickerProps extends js.Object {
+  trait ReactDatePickerProps extends StObject {
     
     var adjustDateOnChange: js.UndefOr[Boolean] = js.native
     
@@ -164,11 +177,11 @@ object mod extends js.Object {
     var onCalendarOpen: js.UndefOr[js.Function0[Unit]] = js.native
     
     def onChange(): Unit = js.native
+    def onChange(date: js.Date): Unit = js.native
+    def onChange(date: js.Date, event: SyntheticEvent[Event, _]): Unit = js.native
     def onChange(date: js.Tuple2[js.Date, js.Date]): Unit = js.native
     def onChange(date: js.Tuple2[js.Date, js.Date], event: SyntheticEvent[Event, _]): Unit = js.native
     def onChange(date: Null, event: SyntheticEvent[Event, _]): Unit = js.native
-    def onChange(date: js.Date): Unit = js.native
-    def onChange(date: js.Date, event: SyntheticEvent[Event, _]): Unit = js.native
     
     var onChangeRaw: js.UndefOr[js.Function1[/* event */ SyntheticFocusEvent[HTMLInputElement], Unit]] = js.native
     
@@ -323,9 +336,4 @@ object mod extends js.Object {
     
     var yearDropdownItemNumber: js.UndefOr[Double] = js.native
   }
-  
-  @js.native
-  class default () extends ReactDatePicker
-  
-  type HighlightDates = StringDictionary[js.Array[js.Date]]
 }

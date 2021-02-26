@@ -10,9 +10,9 @@ Pin mapping functionality for the Raspberry Pi in Node.js
 | ------------------ | :-------------: |
 | Full name          | raspi-board |
 | Keywords           | nodebots, robotics, raspberry pi |
-| # releases         | 17 |
-| # dependents       | 7 |
-| # downloads        | 21312 |
+| # releases         | 11 |
+| # dependents       | 8 |
+| # downloads        | 13895 |
 | # stars            | 9 |
 
 ## Links

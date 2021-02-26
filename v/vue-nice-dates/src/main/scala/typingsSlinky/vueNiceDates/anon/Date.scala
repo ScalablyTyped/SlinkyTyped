@@ -3,12 +3,13 @@ package typingsSlinky.vueNiceDates.anon
 import typingsSlinky.vueNiceDates.sharedMod.DateLocale
 import typingsSlinky.vueNiceDates.sharedMod.Modifiers
 import typingsSlinky.vueNiceDates.sharedMod.ModifiersClassNames
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Date extends js.Object {
+trait Date extends StObject {
   
   var date: js.Date | String = js.native
   
@@ -41,54 +42,42 @@ object Date {
   }
   
   @scala.inline
-  implicit class DateOps[Self <: Date] (val x: Self) extends AnyVal {
+  implicit class DateMutableBuilder[Self <: Date] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDate(value: js.Date | String): Self = StObject.set(x, "date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDateDate(value: js.Date): Self = StObject.set(x, "date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setEnableGridSwitch(value: Boolean): Self = StObject.set(x, "enableGridSwitch", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDateDate(value: js.Date): Self = this.set("date", value.asInstanceOf[js.Any])
+    def setInitialDate(value: js.Date): Self = StObject.set(x, "initialDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDate(value: js.Date | String): Self = this.set("date", value.asInstanceOf[js.Any])
+    def setInitialDateUndefined: Self = StObject.set(x, "initialDate", js.undefined)
     
     @scala.inline
-    def setEnableGridSwitch(value: Boolean): Self = this.set("enableGridSwitch", value.asInstanceOf[js.Any])
+    def setLocale(value: DateLocale): Self = StObject.set(x, "locale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLocale(value: DateLocale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    def setMaximumDate(value: js.Date): Self = StObject.set(x, "maximumDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setModifiers(value: Modifiers): Self = this.set("modifiers", value.asInstanceOf[js.Any])
+    def setMaximumDateNull: Self = StObject.set(x, "maximumDate", null)
     
     @scala.inline
-    def setModifiersClassNames(value: ModifiersClassNames): Self = this.set("modifiersClassNames", value.asInstanceOf[js.Any])
+    def setMinimumDate(value: js.Date): Self = StObject.set(x, "minimumDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInitialDate(value: js.Date): Self = this.set("initialDate", value.asInstanceOf[js.Any])
+    def setMinimumDateNull: Self = StObject.set(x, "minimumDate", null)
     
     @scala.inline
-    def deleteInitialDate: Self = this.set("initialDate", js.undefined)
+    def setModifiers(value: Modifiers): Self = StObject.set(x, "modifiers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMaximumDate(value: js.Date): Self = this.set("maximumDate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMaximumDateNull: Self = this.set("maximumDate", null)
-    
-    @scala.inline
-    def setMinimumDate(value: js.Date): Self = this.set("minimumDate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMinimumDateNull: Self = this.set("minimumDate", null)
+    def setModifiersClassNames(value: ModifiersClassNames): Self = StObject.set(x, "modifiersClassNames", value.asInstanceOf[js.Any])
   }
 }

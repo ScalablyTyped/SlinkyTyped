@@ -1,211 +1,172 @@
 package typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait SearchableAttributeMetadataProperties extends js.Object
+sealed trait SearchableAttributeMetadataProperties extends StObject
 @JSGlobal("Sdk.Mdq.SearchableAttributeMetadataProperties")
 @js.native
-object SearchableAttributeMetadataProperties extends js.Object {
+object SearchableAttributeMetadataProperties extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SearchableAttributeMetadataProperties with Double] = js.native
   
   @js.native
   sealed trait AttributeOf extends SearchableAttributeMetadataProperties
-  /* 0 */ @js.native
-  object AttributeOf extends TopLevel[AttributeOf with Double]
+  /* 0 */ val AttributeOf: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.AttributeOf with Double = js.native
   
   @js.native
   sealed trait AttributeType extends SearchableAttributeMetadataProperties
-  /* 1 */ @js.native
-  object AttributeType extends TopLevel[AttributeType with Double]
+  /* 1 */ val AttributeType: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.AttributeType with Double = js.native
   
   @js.native
   sealed trait CalculationOf extends SearchableAttributeMetadataProperties
-  /* 2 */ @js.native
-  object CalculationOf extends TopLevel[CalculationOf with Double]
+  /* 2 */ val CalculationOf: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.CalculationOf with Double = js.native
   
   @js.native
   sealed trait CanBeSecuredForCreate extends SearchableAttributeMetadataProperties
-  /* 3 */ @js.native
-  object CanBeSecuredForCreate extends TopLevel[CanBeSecuredForCreate with Double]
+  /* 3 */ val CanBeSecuredForCreate: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.CanBeSecuredForCreate with Double = js.native
   
   @js.native
   sealed trait CanBeSecuredForRead extends SearchableAttributeMetadataProperties
-  /* 4 */ @js.native
-  object CanBeSecuredForRead extends TopLevel[CanBeSecuredForRead with Double]
+  /* 4 */ val CanBeSecuredForRead: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.CanBeSecuredForRead with Double = js.native
   
   @js.native
   sealed trait CanBeSecuredForUpdate extends SearchableAttributeMetadataProperties
-  /* 5 */ @js.native
-  object CanBeSecuredForUpdate extends TopLevel[CanBeSecuredForUpdate with Double]
+  /* 5 */ val CanBeSecuredForUpdate: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.CanBeSecuredForUpdate with Double = js.native
   
   @js.native
   sealed trait CanModifyAdditionalSettings extends SearchableAttributeMetadataProperties
-  /* 6 */ @js.native
-  object CanModifyAdditionalSettings extends TopLevel[CanModifyAdditionalSettings with Double]
+  /* 6 */ val CanModifyAdditionalSettings: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.CanModifyAdditionalSettings with Double = js.native
   
   @js.native
   sealed trait ColumnNumber extends SearchableAttributeMetadataProperties
-  /* 7 */ @js.native
-  object ColumnNumber extends TopLevel[ColumnNumber with Double]
+  /* 7 */ val ColumnNumber: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.ColumnNumber with Double = js.native
   
   @js.native
   sealed trait DefaultFormValue extends SearchableAttributeMetadataProperties
-  /* 8 */ @js.native
-  object DefaultFormValue extends TopLevel[DefaultFormValue with Double]
+  /* 8 */ val DefaultFormValue: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.DefaultFormValue with Double = js.native
   
   @js.native
   sealed trait DefaultValue extends SearchableAttributeMetadataProperties
-  /* 9 */ @js.native
-  object DefaultValue extends TopLevel[DefaultValue with Double]
+  /* 9 */ val DefaultValue: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.DefaultValue with Double = js.native
   
   @js.native
   sealed trait DeprecatedVersion extends SearchableAttributeMetadataProperties
-  /* 10 */ @js.native
-  object DeprecatedVersion extends TopLevel[DeprecatedVersion with Double]
+  /* 10 */ val DeprecatedVersion: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.DeprecatedVersion with Double = js.native
   
   @js.native
   sealed trait EntityLogicalName extends SearchableAttributeMetadataProperties
-  /* 11 */ @js.native
-  object EntityLogicalName extends TopLevel[EntityLogicalName with Double]
+  /* 11 */ val EntityLogicalName: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.EntityLogicalName with Double = js.native
   
   @js.native
   sealed trait Format extends SearchableAttributeMetadataProperties
-  /* 12 */ @js.native
-  object Format extends TopLevel[Format with Double]
+  /* 12 */ val Format: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.Format with Double = js.native
   
   @js.native
   sealed trait FormatName extends SearchableAttributeMetadataProperties
-  /* 13 */ @js.native
-  object FormatName extends TopLevel[FormatName with Double]
+  /* 13 */ val FormatName: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.FormatName with Double = js.native
   
   @js.native
   sealed trait ImeMode extends SearchableAttributeMetadataProperties
-  /* 14 */ @js.native
-  object ImeMode extends TopLevel[ImeMode with Double]
+  /* 14 */ val ImeMode: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.ImeMode with Double = js.native
   
   @js.native
   sealed trait IntroducedVersion extends SearchableAttributeMetadataProperties
-  /* 15 */ @js.native
-  object IntroducedVersion extends TopLevel[IntroducedVersion with Double]
+  /* 15 */ val IntroducedVersion: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IntroducedVersion with Double = js.native
   
   @js.native
   sealed trait IsAuditEnabled extends SearchableAttributeMetadataProperties
-  /* 16 */ @js.native
-  object IsAuditEnabled extends TopLevel[IsAuditEnabled with Double]
+  /* 16 */ val IsAuditEnabled: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsAuditEnabled with Double = js.native
   
   @js.native
   sealed trait IsCustomAttribute extends SearchableAttributeMetadataProperties
-  /* 17 */ @js.native
-  object IsCustomAttribute extends TopLevel[IsCustomAttribute with Double]
+  /* 17 */ val IsCustomAttribute: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsCustomAttribute with Double = js.native
   
   @js.native
   sealed trait IsCustomizable extends SearchableAttributeMetadataProperties
-  /* 18 */ @js.native
-  object IsCustomizable extends TopLevel[IsCustomizable with Double]
+  /* 18 */ val IsCustomizable: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsCustomizable with Double = js.native
   
   @js.native
   sealed trait IsManaged extends SearchableAttributeMetadataProperties
-  /* 19 */ @js.native
-  object IsManaged extends TopLevel[IsManaged with Double]
+  /* 19 */ val IsManaged: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsManaged with Double = js.native
   
   @js.native
   sealed trait IsPrimaryId extends SearchableAttributeMetadataProperties
-  /* 20 */ @js.native
-  object IsPrimaryId extends TopLevel[IsPrimaryId with Double]
+  /* 20 */ val IsPrimaryId: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsPrimaryId with Double = js.native
   
   @js.native
   sealed trait IsPrimaryName extends SearchableAttributeMetadataProperties
-  /* 21 */ @js.native
-  object IsPrimaryName extends TopLevel[IsPrimaryName with Double]
+  /* 21 */ val IsPrimaryName: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsPrimaryName with Double = js.native
   
   @js.native
   sealed trait IsRenameable extends SearchableAttributeMetadataProperties
-  /* 22 */ @js.native
-  object IsRenameable extends TopLevel[IsRenameable with Double]
+  /* 22 */ val IsRenameable: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsRenameable with Double = js.native
   
   @js.native
   sealed trait IsSecured extends SearchableAttributeMetadataProperties
-  /* 23 */ @js.native
-  object IsSecured extends TopLevel[IsSecured with Double]
+  /* 23 */ val IsSecured: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsSecured with Double = js.native
   
   @js.native
   sealed trait IsValidForAdvancedFind extends SearchableAttributeMetadataProperties
-  /* 24 */ @js.native
-  object IsValidForAdvancedFind extends TopLevel[IsValidForAdvancedFind with Double]
+  /* 24 */ val IsValidForAdvancedFind: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsValidForAdvancedFind with Double = js.native
   
   @js.native
   sealed trait IsValidForCreate extends SearchableAttributeMetadataProperties
-  /* 25 */ @js.native
-  object IsValidForCreate extends TopLevel[IsValidForCreate with Double]
+  /* 25 */ val IsValidForCreate: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsValidForCreate with Double = js.native
   
   @js.native
   sealed trait IsValidForRead extends SearchableAttributeMetadataProperties
-  /* 26 */ @js.native
-  object IsValidForRead extends TopLevel[IsValidForRead with Double]
+  /* 26 */ val IsValidForRead: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsValidForRead with Double = js.native
   
   @js.native
   sealed trait IsValidForUpdate extends SearchableAttributeMetadataProperties
-  /* 27 */ @js.native
-  object IsValidForUpdate extends TopLevel[IsValidForUpdate with Double]
+  /* 27 */ val IsValidForUpdate: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.IsValidForUpdate with Double = js.native
   
   @js.native
   sealed trait LinkedAttributeId extends SearchableAttributeMetadataProperties
-  /* 28 */ @js.native
-  object LinkedAttributeId extends TopLevel[LinkedAttributeId with Double]
+  /* 28 */ val LinkedAttributeId: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.LinkedAttributeId with Double = js.native
   
   @js.native
   sealed trait LogicalName extends SearchableAttributeMetadataProperties
-  /* 29 */ @js.native
-  object LogicalName extends TopLevel[LogicalName with Double]
+  /* 29 */ val LogicalName: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.LogicalName with Double = js.native
   
   @js.native
   sealed trait MaxLength extends SearchableAttributeMetadataProperties
-  /* 30 */ @js.native
-  object MaxLength extends TopLevel[MaxLength with Double]
+  /* 30 */ val MaxLength: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.MaxLength with Double = js.native
   
   @js.native
   sealed trait MaxValue extends SearchableAttributeMetadataProperties
-  /* 31 */ @js.native
-  object MaxValue extends TopLevel[MaxValue with Double]
+  /* 31 */ val MaxValue: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.MaxValue with Double = js.native
   
   @js.native
   sealed trait MetadataId extends SearchableAttributeMetadataProperties
-  /* 32 */ @js.native
-  object MetadataId extends TopLevel[MetadataId with Double]
+  /* 32 */ val MetadataId: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.MetadataId with Double = js.native
   
   @js.native
   sealed trait MinValue extends SearchableAttributeMetadataProperties
-  /* 33 */ @js.native
-  object MinValue extends TopLevel[MinValue with Double]
+  /* 33 */ val MinValue: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.MinValue with Double = js.native
   
   @js.native
   sealed trait Precision extends SearchableAttributeMetadataProperties
-  /* 34 */ @js.native
-  object Precision extends TopLevel[Precision with Double]
+  /* 34 */ val Precision: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.Precision with Double = js.native
   
   @js.native
   sealed trait PrecisionSource extends SearchableAttributeMetadataProperties
-  /* 35 */ @js.native
-  object PrecisionSource extends TopLevel[PrecisionSource with Double]
+  /* 35 */ val PrecisionSource: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.PrecisionSource with Double = js.native
   
   @js.native
   sealed trait RequiredLevel extends SearchableAttributeMetadataProperties
-  /* 36 */ @js.native
-  object RequiredLevel extends TopLevel[RequiredLevel with Double]
+  /* 36 */ val RequiredLevel: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.RequiredLevel with Double = js.native
   
   @js.native
   sealed trait SchemaName extends SearchableAttributeMetadataProperties
-  /* 37 */ @js.native
-  object SchemaName extends TopLevel[SchemaName with Double]
+  /* 37 */ val SchemaName: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.SchemaName with Double = js.native
   
   @js.native
   sealed trait YomiOf extends SearchableAttributeMetadataProperties
-  /* 38 */ @js.native
-  object YomiOf extends TopLevel[YomiOf with Double]
+  /* 38 */ val YomiOf: typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SearchableAttributeMetadataProperties.YomiOf with Double = js.native
 }

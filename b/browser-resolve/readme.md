@@ -11,14 +11,14 @@ resolve which handles browser field support in package.json
 | Full name          | browser-resolve |
 | Keywords           | resolve, browser |
 | # releases         | 2 |
-| # dependents       | 157 |
-| # downloads        | 221252903 |
+| # dependents       | 173 |
+| # downloads        | 320745098 |
 | # stars            | 5 |
 
 ## Links
-- [Homepage](https://github.com/shtylman/node-browser-resolve#readme)
-- [Bugs](https://github.com/shtylman/node-browser-resolve/issues)
-- [Repository](https://github.com/shtylman/node-browser-resolve)
+- [Homepage](https://github.com/browserify/browser-resolve#readme)
+- [Bugs](https://github.com/browserify/browser-resolve/issues)
+- [Repository](https://github.com/browserify/browser-resolve)
 - [Npm](https://www.npmjs.com/package/browser-resolve)
     
 

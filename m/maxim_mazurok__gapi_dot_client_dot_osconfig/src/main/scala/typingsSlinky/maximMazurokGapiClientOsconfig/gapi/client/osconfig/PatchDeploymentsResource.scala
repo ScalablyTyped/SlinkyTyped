@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientOsconfig.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientOsconfig.anon.Alt
 import typingsSlinky.maximMazurokGapiClientOsconfig.anon.Callback
 import typingsSlinky.maximMazurokGapiClientOsconfig.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PatchDeploymentsResource extends js.Object {
+trait PatchDeploymentsResource extends StObject {
   
   /** Create an OS Config patch deployment. */
   def create(request: Accesstoken): Request[PatchDeployment] = js.native

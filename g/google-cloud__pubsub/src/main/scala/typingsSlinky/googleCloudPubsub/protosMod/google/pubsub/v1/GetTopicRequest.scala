@@ -1,12 +1,13 @@
 package typingsSlinky.googleCloudPubsub.protosMod.google.pubsub.v1
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.googleGax.mod.protobuf.Reader
+import typingsSlinky.googleGax.mod.protobuf.Writer
 import typingsSlinky.protobufjs.mod.IConversionOptions
-import typingsSlinky.protobufjs.mod.Reader
-import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a GetTopicRequest. */
 @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest")
@@ -17,27 +18,38 @@ import scala.scalajs.js.annotation._
   */
 class GetTopicRequest () extends IGetTopicRequest {
   def this(properties: IGetTopicRequest) = this()
-  /** GetTopicRequest topic. */
-  @JSName("topic")
-  var topic_GetTopicRequest: String = js.native
+  
   /**
     * Converts this GetTopicRequest to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
+  
+  /** GetTopicRequest topic. */
+  @JSName("topic")
+  var topic_GetTopicRequest: String = js.native
 }
-
-/* static members */
-@JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest")
-@js.native
-object GetTopicRequest extends js.Object {
+object GetTopicRequest {
+  
   /**
     * Creates a new GetTopicRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns GetTopicRequest instance
     */
+  /* static member */
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.create")
+  @js.native
   def create(): GetTopicRequest = js.native
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.create")
+  @js.native
   def create(properties: IGetTopicRequest): GetTopicRequest = js.native
+  
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): GetTopicRequest = js.native
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): GetTopicRequest = js.native
   /**
     * Decodes a GetTopicRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -46,10 +58,17 @@ object GetTopicRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.decode")
+  @js.native
   def decode(reader: Reader): GetTopicRequest = js.native
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): GetTopicRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): GetTopicRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): GetTopicRequest = js.native
+  
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): GetTopicRequest = js.native
   /**
     * Decodes a GetTopicRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -57,43 +76,70 @@ object GetTopicRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): GetTopicRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): GetTopicRequest = js.native
+  
   /**
     * Encodes the specified GetTopicRequest message. Does not implicitly {@link google.pubsub.v1.GetTopicRequest.verify|verify} messages.
     * @param message GetTopicRequest message or plain object to encode
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.encode")
+  @js.native
   def encode(message: IGetTopicRequest): Writer = js.native
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.encode")
+  @js.native
   def encode(message: IGetTopicRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified GetTopicRequest message, length delimited. Does not implicitly {@link google.pubsub.v1.GetTopicRequest.verify|verify} messages.
     * @param message GetTopicRequest message or plain object to encode
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IGetTopicRequest): Writer = js.native
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IGetTopicRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a GetTopicRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns GetTopicRequest
     */
+  /* static member */
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): GetTopicRequest = js.native
+  
   /**
     * Creates a plain object from a GetTopicRequest message. Also converts values to other types if specified.
     * @param message GetTopicRequest
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.toObject")
+  @js.native
   def toObject(message: GetTopicRequest): StringDictionary[js.Any] = js.native
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.toObject")
+  @js.native
   def toObject(message: GetTopicRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a GetTopicRequest message.
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("@google-cloud/pubsub/build/protos/protos", "google.pubsub.v1.GetTopicRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

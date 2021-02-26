@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.urgent
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue
 */
-trait ChatMessageImportance extends js.Object
+trait ChatMessageImportance extends StObject
 object ChatMessageImportance {
   
   @scala.inline

@@ -27,16 +27,16 @@ import typingsSlinky.ecmarkdown.nodeTypesMod.Unlocated
 import typingsSlinky.ecmarkdown.nodeTypesMod.UnorderedListToken
 import typingsSlinky.ecmarkdown.nodeTypesMod.WhitespaceToken
 import typingsSlinky.std.RegExpMatchArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ecmarkdown/dist/tokenizer", JSImport.Namespace)
-@js.native
-object tokenizerMod extends js.Object {
+object tokenizerMod {
   
+  @JSImport("ecmarkdown/dist/tokenizer", "Tokenizer")
   @js.native
-  class Tokenizer protected () extends js.Object {
+  class Tokenizer protected () extends StObject {
     def this(str: String) = this()
     
     var _eof: Boolean = js.native

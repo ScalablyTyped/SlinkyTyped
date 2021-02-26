@@ -1,13 +1,12 @@
 package typingsSlinky.fridaGum.global
 
 import typingsSlinky.fridaGum.CpuContext
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Thread")
-@js.native
-object Thread extends js.Object {
+object Thread {
   
   /**
     * Generates a backtrace for the given thread's `context`.
@@ -24,9 +23,17 @@ object Thread extends js.Object {
     *                   `Backtracer.FUZZY` or `Backtracer.ACCURATE`,
     *                   where the latter is the default if not specified.
     */
+  @JSGlobal("Thread.backtrace")
+  @js.native
   def backtrace(): js.Array[typingsSlinky.fridaGum.NativePointer] = js.native
+  @JSGlobal("Thread.backtrace")
+  @js.native
   def backtrace(context: js.UndefOr[scala.Nothing], backtracer: typingsSlinky.fridaGum.Backtracer): js.Array[typingsSlinky.fridaGum.NativePointer] = js.native
+  @JSGlobal("Thread.backtrace")
+  @js.native
   def backtrace(context: CpuContext): js.Array[typingsSlinky.fridaGum.NativePointer] = js.native
+  @JSGlobal("Thread.backtrace")
+  @js.native
   def backtrace(context: CpuContext, backtracer: typingsSlinky.fridaGum.Backtracer): js.Array[typingsSlinky.fridaGum.NativePointer] = js.native
   
   /**
@@ -36,5 +43,7 @@ object Thread extends js.Object {
     *
     * @param delay Delay in seconds.
     */
+  @JSGlobal("Thread.sleep")
+  @js.native
   def sleep(delay: Double): Unit = js.native
 }

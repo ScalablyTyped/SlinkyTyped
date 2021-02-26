@@ -28,6 +28,7 @@ import typingsSlinky.baseui.baseuiStrings.white
 import typingsSlinky.baseui.baseuiStrings.yellow
 import typingsSlinky.baseui.tagMod.TagOverrides
 import typingsSlinky.baseui.tagMod.TagProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,7 +37,7 @@ object Tag {
   
   @JSImport("baseui/tag", "Tag")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -88,7 +89,7 @@ object Tag {
     def variant(value: solid | light | outlined): this.type = set("variant", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tag.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -2,16 +2,16 @@ package typingsSlinky.antlr4
 
 import typingsSlinky.antlr4.intervalSetMod.Interval
 import typingsSlinky.antlr4.tokenMod.Token
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antlr4/BufferedTokenStream", JSImport.Namespace)
-@js.native
-object bufferedTokenStreamMod extends js.Object {
+object bufferedTokenStreamMod {
   
+  @JSImport("antlr4/BufferedTokenStream", "BufferedTokenStream")
   @js.native
-  class BufferedTokenStream () extends js.Object {
+  class BufferedTokenStream () extends StObject {
     
     def LA(i: Double): js.Any = js.native
     

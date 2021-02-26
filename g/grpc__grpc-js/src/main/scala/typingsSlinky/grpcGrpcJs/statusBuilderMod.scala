@@ -3,16 +3,16 @@ package typingsSlinky.grpcGrpcJs
 import typingsSlinky.grpcGrpcJs.anon.PartialStatusObject
 import typingsSlinky.grpcGrpcJs.constantsMod.Status
 import typingsSlinky.grpcGrpcJs.metadataMod.Metadata
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@grpc/grpc-js/build/src/status-builder", JSImport.Namespace)
-@js.native
-object statusBuilderMod extends js.Object {
+object statusBuilderMod {
   
+  @JSImport("@grpc/grpc-js/build/src/status-builder", "StatusBuilder")
   @js.native
-  class StatusBuilder () extends js.Object {
+  class StatusBuilder () extends StObject {
     
     /**
       * Builds the status object.

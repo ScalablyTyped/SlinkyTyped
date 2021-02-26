@@ -5,13 +5,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IKeyValuePair
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides a collection of the HTTP headers associated with content on an HTTP request or response. */
 @js.native
-trait HttpContentHeaderCollection extends js.Object {
+trait HttpContentHeaderCollection extends StObject {
   
   /**
     * Adds a new item to the end of the HttpContentHeaderCollection .

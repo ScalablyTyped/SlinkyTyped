@@ -1,6 +1,7 @@
 package typingsSlinky.msRestAzure.mod
 
 import typingsSlinky.msRest.mod.WebResource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * 
   * @param {MSIOptions} [options] - Optional parameters.
   */
-class MSITokenCredentials () extends js.Object {
+class MSITokenCredentials () extends StObject {
   def this(options: MSIOptions) = this()
   
   /**

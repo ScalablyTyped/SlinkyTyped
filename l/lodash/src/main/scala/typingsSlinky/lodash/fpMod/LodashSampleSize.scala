@@ -3,12 +3,13 @@ package typingsSlinky.lodash.fpMod
 import typingsSlinky.lodash.mod.Dictionary
 import typingsSlinky.lodash.mod.NumericDictionary
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashSampleSize extends js.Object {
+trait LodashSampleSize extends StObject {
   
   def apply(n: Double): LodashSampleSize1x1 = js.native
   def apply[T /* <: js.Object */](n: Double, collection: T): js.Array[

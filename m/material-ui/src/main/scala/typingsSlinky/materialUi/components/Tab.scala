@@ -8,6 +8,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Tabs.TabProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object Tab {
   
   @JSImport("material-ui", "Tab")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,10 +34,10 @@ object Tab {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disableFocusRipple(value: Boolean): this.type = set("disableFocusRipple", value.asInstanceOf[js.Any])
@@ -60,19 +61,19 @@ object Tab {
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def keyboardFocused(value: Boolean): this.type = set("keyboardFocused", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onActive(value: /* tab */ typingsSlinky.materialUi.MaterialUI.Tabs.Tab => Unit): this.type = set("onActive", js.Any.fromFunction1(value))
@@ -117,7 +118,7 @@ object Tab {
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tab.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

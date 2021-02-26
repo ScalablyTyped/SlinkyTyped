@@ -10,9 +10,9 @@ Babylon.js is a JavaScript 3D engine based on webgl.
 | ------------------ | :-------------: |
 | Full name          | babylonjs |
 | Keywords           | 3D, javascript, html5, webgl |
-| # releases         | 135 |
-| # dependents       | 40 |
-| # downloads        | 213197 |
+| # releases         | 156 |
+| # dependents       | 46 |
+| # downloads        | 339757 |
 | # stars            | 6 |
 
 ## Links

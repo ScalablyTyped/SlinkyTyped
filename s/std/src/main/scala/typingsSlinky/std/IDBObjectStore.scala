@@ -1,12 +1,13 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This example shows a variety of different uses of object stores, from updating the data structure with IDBObjectStore.createIndex inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our To-do Notifications app (view example live.) */
 @js.native
-trait IDBObjectStore extends js.Object {
+trait IDBObjectStore extends StObject {
   
   /**
     * Adds or updates a record in store with the given value and key.
@@ -83,9 +84,9 @@ trait IDBObjectStore extends js.Object {
     */
   def getAll(): org.scalajs.dom.raw.IDBRequest = js.native
   def getAll(query: js.UndefOr[IDBValidKey], count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: Null, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
   def getAll(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   def getAll(query: org.scalajs.dom.raw.IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
+  def getAll(query: Null, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
   def getAll(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   
   /**
@@ -95,9 +96,9 @@ trait IDBObjectStore extends js.Object {
     */
   def getAllKeys(): org.scalajs.dom.raw.IDBRequest = js.native
   def getAllKeys(query: js.UndefOr[IDBValidKey], count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: Null, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
   def getAllKeys(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   def getAllKeys(query: org.scalajs.dom.raw.IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
+  def getAllKeys(query: Null, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
   def getAllKeys(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   
   def getKey(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
@@ -132,9 +133,9 @@ trait IDBObjectStore extends js.Object {
     */
   def openCursor(): org.scalajs.dom.raw.IDBRequest = js.native
   def openCursor(query: js.UndefOr[IDBValidKey], direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   def openCursor(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   def openCursor(query: org.scalajs.dom.raw.IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
+  def openCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   def openCursor(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   
   /**
@@ -144,9 +145,9 @@ trait IDBObjectStore extends js.Object {
     */
   def openKeyCursor(): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: js.UndefOr[IDBValidKey], direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: org.scalajs.dom.raw.IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
+  def openKeyCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   
   /**

@@ -12,12 +12,13 @@ import typingsSlinky.maximMazurokGapiClientIam.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientIam.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientIam.anon.Resource
 import typingsSlinky.maximMazurokGapiClientIam.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RolesResource extends js.Object {
+trait RolesResource extends StObject {
   
   /** Creates a new custom Role. */
   def create(request: Fields): Request[Role] = js.native

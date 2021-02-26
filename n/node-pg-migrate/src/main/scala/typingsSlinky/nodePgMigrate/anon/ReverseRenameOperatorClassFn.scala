@@ -1,12 +1,13 @@
 package typingsSlinky.nodePgMigrate.anon
 
 import typingsSlinky.nodePgMigrate.operatorsTypesMod.RenameOperatorClassFn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReverseRenameOperatorClassFn extends js.Object {
+trait ReverseRenameOperatorClassFn extends StObject {
   
   def reverse(
     oldOperatorClassName: typingsSlinky.nodePgMigrate.generalTypesMod.Name,

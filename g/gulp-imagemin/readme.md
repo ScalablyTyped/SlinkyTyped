@@ -10,9 +10,9 @@ Minify PNG, JPEG, GIF and SVG images
 | ------------------ | :-------------: |
 | Full name          | gulp-imagemin |
 | Keywords           | gulpplugin, imagemin, image, img, picture, photo, minify, minifier, compress, png, jpg, jpeg, gif, svg |
-| # releases         | 8 |
-| # dependents       | 583 |
-| # downloads        | 5637176 |
+| # releases         | 7 |
+| # dependents       | 793 |
+| # downloads        | 6469732 |
 | # stars            | 342 |
 
 ## Links

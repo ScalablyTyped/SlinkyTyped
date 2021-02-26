@@ -2,6 +2,7 @@ package typingsSlinky.titanium.Titanium.Android
 
 import typingsSlinky.titanium.Titanium.Proxy
 import typingsSlinky.titanium.wakeLockOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -431,12 +432,12 @@ trait Notification extends Proxy {
     */
   def setWakeLock(wakeLock: wakeLockOptions): Unit = js.native
   
-  def setWhen(when: Double): Unit = js.native
   /**
     * Sets the value of the <Titanium.Android.Notification.when> property.
     * @deprecated Set the value using <Titanium.Android.Notification.when> instead.
     */
   def setWhen(when: js.Date): Unit = js.native
+  def setWhen(when: Double): Unit = js.native
   
   /**
     * A URL to the sound to play.

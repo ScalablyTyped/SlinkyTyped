@@ -10,9 +10,9 @@ strong uid
 | ------------------ | :-------------: |
 | Full name          | uid2 |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 199 |
-| # downloads        | 23440988 |
+| # releases         | 0 |
+| # dependents       | 221 |
+| # downloads        | 31693247 |
 | # stars            | 4 |
 
 ## Links

@@ -2,6 +2,7 @@ package typingsSlinky.mangopay2NodejsSdk.mod.models
 
 import typingsSlinky.mangopay2NodejsSdk.anon.PartialBankingAliasData
 import typingsSlinky.mangopay2NodejsSdk.mod.bankingAlias.IBANBankingAliasData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

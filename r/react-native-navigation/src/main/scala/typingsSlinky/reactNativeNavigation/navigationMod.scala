@@ -9,16 +9,16 @@ import typingsSlinky.reactNativeNavigation.layoutMod.Layout
 import typingsSlinky.reactNativeNavigation.layoutMod.LayoutRoot
 import typingsSlinky.reactNativeNavigation.optionsMod.Options
 import typingsSlinky.reactNativeNavigation.processorSubscriptionMod.ProcessorSubscription
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-navigation/lib/dist/Navigation", JSImport.Namespace)
-@js.native
-object navigationMod extends js.Object {
+object navigationMod {
   
+  @JSImport("react-native-navigation/lib/dist/Navigation", "NavigationRoot")
   @js.native
-  class NavigationRoot () extends js.Object {
+  class NavigationRoot () extends StObject {
     
     val TouchablePreview: TypeofTouchablePreview = js.native
     

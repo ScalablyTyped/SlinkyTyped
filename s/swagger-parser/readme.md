@@ -10,9 +10,9 @@ Swagger 2.0 and OpenAPI 3.0 parser and validator for Node and browsers
 | ------------------ | :-------------: |
 | Full name          | swagger-parser |
 | Keywords           | swagger, openapi, open-api, json, yaml, parse, parser, validate, validator, validation, spec, specification, schema, reference, dereference |
-| # releases         | 21 |
-| # dependents       | 302 |
-| # downloads        | 18449214 |
+| # releases         | 13 |
+| # dependents       | 350 |
+| # downloads        | 27666223 |
 | # stars            | 9 |
 
 ## Links

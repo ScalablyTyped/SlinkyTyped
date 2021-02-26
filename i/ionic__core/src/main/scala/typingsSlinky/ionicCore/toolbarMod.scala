@@ -4,14 +4,14 @@ import org.scalajs.dom.raw.CustomEvent
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonToolbarElement
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/toolbar/toolbar", JSImport.Namespace)
-@js.native
-object toolbarMod extends js.Object {
+object toolbarMod {
   
+  @JSImport("@ionic/core/dist/types/components/toolbar/toolbar", "Toolbar")
   @js.native
   class Toolbar () extends ComponentInterface {
     

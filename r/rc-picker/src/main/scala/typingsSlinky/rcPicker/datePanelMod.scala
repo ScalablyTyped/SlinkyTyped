@@ -4,14 +4,15 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.rcPicker.dateBodyMod.DateRender
 import typingsSlinky.rcPicker.interfaceMod.PanelSharedProps
 import typingsSlinky.rcPicker.uiUtilMod.KeyboardConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-picker/es/panels/DatePanel", JSImport.Namespace)
-@js.native
-object datePanelMod extends js.Object {
+object datePanelMod {
   
+  @JSImport("rc-picker/es/panels/DatePanel", JSImport.Default)
+  @js.native
   def default[DateType](props: DatePanelProps[DateType]): ReactElement = js.native
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 

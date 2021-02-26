@@ -1,5 +1,6 @@
 package typingsSlinky.facebookJsSdk.facebook
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.facebookJsSdk.facebookJsSdkStrings.not_authorized
   - typingsSlinky.facebookJsSdk.facebookJsSdkStrings.unknown
 */
-trait LoginStatus extends js.Object
+trait LoginStatus extends StObject
 object LoginStatus {
   
   @scala.inline

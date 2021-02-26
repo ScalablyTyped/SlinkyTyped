@@ -8,14 +8,14 @@ import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.meshMod.Mesh
 import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.vector3Mod.Vector3
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/helpers/ArrowHelper", JSImport.Namespace)
-@js.native
-object arrowHelperMod extends js.Object {
+object arrowHelperMod {
   
+  @JSImport("three/src/helpers/ArrowHelper", "ArrowHelper")
   @js.native
   class ArrowHelper protected () extends Object3D {
     /**

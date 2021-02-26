@@ -33,15 +33,22 @@ import typingsSlinky.reactNativeMaps.mod.LatLng
 import typingsSlinky.reactNativeMaps.mod.LineCapType
 import typingsSlinky.reactNativeMaps.mod.LineJoinType
 import typingsSlinky.reactNativeMaps.mod.MapPolylineProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Polyline {
   
+  @scala.inline
+  def apply(coordinates: js.Array[LatLng]): Builder = {
+    val __props = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MapPolylineProps]))
+  }
+  
   @JSImport("react-native-maps", "Polyline")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,10 +56,10 @@ object Polyline {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaps.mod.Polyline] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -79,10 +86,10 @@ object Polyline {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -121,10 +128,10 @@ object Polyline {
     def lineCap(value: LineCapType): this.type = set("lineCap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lineDashPatternVarargs(value: Double*): this.type = set("lineDashPattern", js.Array(value :_*))
+    def lineDashPattern(value: js.Array[Double]): this.type = set("lineDashPattern", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lineDashPattern(value: js.Array[Double]): this.type = set("lineDashPattern", value.asInstanceOf[js.Any])
+    def lineDashPatternVarargs(value: Double*): this.type = set("lineDashPattern", js.Array(value :_*))
     
     @scala.inline
     def lineDashPhase(value: Double): this.type = set("lineDashPhase", value.asInstanceOf[js.Any])
@@ -226,10 +233,10 @@ object Polyline {
     def strokeColor(value: String): this.type = set("strokeColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeColorsVarargs(value: String*): this.type = set("strokeColors", js.Array(value :_*))
+    def strokeColors(value: js.Array[String]): this.type = set("strokeColors", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeColors(value: js.Array[String]): this.type = set("strokeColors", value.asInstanceOf[js.Any])
+    def strokeColorsVarargs(value: String*): this.type = set("strokeColors", js.Array(value :_*))
     
     @scala.inline
     def strokeWidth(value: Double): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
@@ -266,10 +273,4 @@ object Polyline {
   }
   
   def withProps(p: MapPolylineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(coordinates: js.Array[LatLng]): Builder = {
-    val __props = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MapPolylineProps]))
-  }
 }

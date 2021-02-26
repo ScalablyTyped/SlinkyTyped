@@ -10,12 +10,13 @@ import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.httpsMod.Server
 import typingsSlinky.nodeRedUtil.mod.Util
 import typingsSlinky.qs.mod.ParsedQs
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RuntimeModule extends js.Object {
+trait RuntimeModule extends StObject {
   
   @JSName("_")
   var _underscore: InternalRuntimeAPI = js.native

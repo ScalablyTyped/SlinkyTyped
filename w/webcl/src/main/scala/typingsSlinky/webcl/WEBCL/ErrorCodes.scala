@@ -48,6 +48,7 @@ import typingsSlinky.webcl.webclNumbers.`-7`
 import typingsSlinky.webcl.webclNumbers.`-8`
 import typingsSlinky.webcl.webclNumbers.`-9`
 import typingsSlinky.webcl.webclNumbers.`0`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -103,7 +104,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webcl.webclNumbers.`-63`
   - typingsSlinky.webcl.webclNumbers.`-64`
 */
-trait ErrorCodes extends js.Object
+trait ErrorCodes extends StObject
 object ErrorCodes {
   
   @scala.inline

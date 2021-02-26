@@ -1,5 +1,6 @@
 package typingsSlinky.backlogJs.mod.Option
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.backlogJs.backlogJsStrings.asc
   - typingsSlinky.backlogJs.backlogJsStrings.desc
 */
-trait Order extends js.Object
+trait Order extends StObject
 object Order {
   
   @scala.inline

@@ -1,10 +1,15 @@
 package typingsSlinky.ava
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
+  /** Call to declare a test, or chain to declare hooks or test modifiers */
+  @scala.inline
+  def default: typingsSlinky.ava.mod.TestInterface[js.Any] = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("default").asInstanceOf[typingsSlinky.ava.mod.TestInterface[js.Any]]
   
   type AssertionError = js.Error
   
@@ -51,4 +56,37 @@ package object mod {
     /* args */ Args, 
     typingsSlinky.ava.mod.ImplementationResult
   ]
+  
+  @scala.inline
+  def after: typingsSlinky.ava.mod.AfterInterface[js.Any] = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("after").asInstanceOf[typingsSlinky.ava.mod.AfterInterface[js.Any]]
+  
+  @scala.inline
+  def afterEach: typingsSlinky.ava.mod.AfterInterface[js.Any] = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("afterEach").asInstanceOf[typingsSlinky.ava.mod.AfterInterface[js.Any]]
+  
+  @scala.inline
+  def before: typingsSlinky.ava.mod.BeforeInterface[js.Any] = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("before").asInstanceOf[typingsSlinky.ava.mod.BeforeInterface[js.Any]]
+  
+  @scala.inline
+  def beforeEach: typingsSlinky.ava.mod.BeforeInterface[js.Any] = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("beforeEach").asInstanceOf[typingsSlinky.ava.mod.BeforeInterface[js.Any]]
+  
+  @scala.inline
+  def cb: typingsSlinky.ava.mod.CbInterface[js.Any] = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("cb").asInstanceOf[typingsSlinky.ava.mod.CbInterface[js.Any]]
+  
+  @scala.inline
+  def failing: typingsSlinky.ava.mod.FailingInterface[js.Any] = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("failing").asInstanceOf[typingsSlinky.ava.mod.FailingInterface[js.Any]]
+  
+  @scala.inline
+  def meta: typingsSlinky.ava.mod.MetaInterface = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("meta").asInstanceOf[typingsSlinky.ava.mod.MetaInterface]
+  
+  @scala.inline
+  def only: typingsSlinky.ava.mod.OnlyInterface[js.Any] = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("only").asInstanceOf[typingsSlinky.ava.mod.OnlyInterface[js.Any]]
+  
+  @scala.inline
+  def serial: typingsSlinky.ava.mod.SerialInterface[js.Any] = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("serial").asInstanceOf[typingsSlinky.ava.mod.SerialInterface[js.Any]]
+  
+  @scala.inline
+  def skip: typingsSlinky.ava.mod.SkipInterface[js.Any] = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("skip").asInstanceOf[typingsSlinky.ava.mod.SkipInterface[js.Any]]
+  
+  @scala.inline
+  def todo: typingsSlinky.ava.mod.TodoDeclaration = typingsSlinky.ava.mod.^.asInstanceOf[js.Dynamic].selectDynamic("todo").asInstanceOf[typingsSlinky.ava.mod.TodoDeclaration]
 }

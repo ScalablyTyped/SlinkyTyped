@@ -10,9 +10,9 @@ Enforces SSL for node.js express projects
 | ------------------ | :-------------: |
 | Full name          | express-sslify |
 | Keywords           | express, node.js, node, ssl, sslify, http, redirect |
-| # releases         | 1 |
+| # releases         | 0 |
 | # dependents       | 10 |
-| # downloads        | 642085 |
+| # downloads        | 1291859 |
 | # stars            | 8 |
 
 ## Links

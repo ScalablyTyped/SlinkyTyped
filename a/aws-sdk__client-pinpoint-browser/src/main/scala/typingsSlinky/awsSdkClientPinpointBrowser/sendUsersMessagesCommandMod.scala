@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesSendUsersMessagesInputMod.
 import typingsSlinky.awsSdkClientPinpointBrowser.typesSendUsersMessagesOutputMod.SendUsersMessagesOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/SendUsersMessagesCommand", JSImport.Namespace)
-@js.native
-object sendUsersMessagesCommandMod extends js.Object {
+object sendUsersMessagesCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/SendUsersMessagesCommand", "SendUsersMessagesCommand")
   @js.native
   class SendUsersMessagesCommand protected () extends Command[
           InputTypesUnion, 

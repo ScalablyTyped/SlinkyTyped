@@ -1,6 +1,7 @@
 package typingsSlinky.nightwatch.mod
 
 import typingsSlinky.nightwatch.nightwatchNumbers.`0`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,30 +24,18 @@ object NightwatchTypedCallbackResult {
   }
   
   @scala.inline
-  implicit class NightwatchTypedCallbackResultOps[Self <: NightwatchTypedCallbackResult[_], T] (val x: Self with NightwatchTypedCallbackResult[T]) extends AnyVal {
+  implicit class NightwatchTypedCallbackResultMutableBuilder[Self <: NightwatchTypedCallbackResult[_], T] (val x: Self with NightwatchTypedCallbackResult[T]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setState(value: js.Error | String): Self = StObject.set(x, "state", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setStateError(value: js.Error): Self = StObject.set(x, "state", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setStatus(value: `0`): Self = StObject.set(x, "status", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStateError(value: js.Error): Self = this.set("state", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setState(value: js.Error | String): Self = this.set("state", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStatus(value: `0`): Self = this.set("status", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValue(value: T): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: T): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
   }
 }

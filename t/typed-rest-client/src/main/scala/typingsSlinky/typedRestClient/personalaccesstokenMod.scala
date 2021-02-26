@@ -1,14 +1,14 @@
 package typingsSlinky.typedRestClient
 
 import typingsSlinky.typedRestClient.interfacesMod.IRequestHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typed-rest-client/handlers/personalaccesstoken", JSImport.Namespace)
-@js.native
-object personalaccesstokenMod extends js.Object {
+object personalaccesstokenMod {
   
+  @JSImport("typed-rest-client/handlers/personalaccesstoken", "PersonalAccessTokenCredentialHandler")
   @js.native
   class PersonalAccessTokenCredentialHandler protected () extends IRequestHandler {
     def this(token: String) = this()

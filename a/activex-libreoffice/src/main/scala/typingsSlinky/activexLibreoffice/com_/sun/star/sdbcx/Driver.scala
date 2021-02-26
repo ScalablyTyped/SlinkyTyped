@@ -7,6 +7,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.DriverPropertyInfo
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XConnection
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XDriver
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

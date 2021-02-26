@@ -8,6 +8,7 @@ import typingsSlinky.monacoEditor.mod.editor.IStandaloneCodeEditor
 import typingsSlinky.monacoEditor.mod.editor.IStandaloneEditorConstructionOptions
 import typingsSlinky.reactMonacoEditor.anon.TypeofmonacoEditor
 import typingsSlinky.reactMonacoEditor.typesMod.EditorConstructionOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

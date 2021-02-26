@@ -3,18 +3,21 @@ package typingsSlinky.stripe.mod.resources
 import typingsSlinky.stripe.mod.HeaderOptions
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.creditNotes.ICreditNote
 import typingsSlinky.stripe.mod.creditNotes.ICreditNoteCreationOptions
 import typingsSlinky.stripe.mod.creditNotes.ICreditNoteListOptions
 import typingsSlinky.stripe.mod.creditNotes.ICreditNoteUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.CreditNotes")
 @js.native
-class CreditNotes () extends StripeResource {
+class CreditNotes protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(data: ICreditNoteCreationOptions): js.Promise[ICreditNote] = js.native
   /**

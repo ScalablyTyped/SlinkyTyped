@@ -10,9 +10,9 @@ React package for snapshot testing.
 | ------------------ | :-------------: |
 | Full name          | react-test-renderer |
 | Keywords           | react, react-native, react-testing |
-| # releases         | 110 |
-| # dependents       | 664 |
-| # downloads        | 114438204 |
+| # releases         | 136 |
+| # dependents       | 871 |
+| # downloads        | 174328633 |
 | # stars            | 25 |
 
 ## Links

@@ -10,12 +10,15 @@ Provides a chainable axe API for Puppeteer and automatically injects into all fr
 | ------------------ | :-------------: |
 | Full name          | axe-puppeteer |
 | Keywords           | - |
-| # releases         | 34 |
-| # dependents       | 12 |
-| # downloads        | 187971 |
+| # releases         | 40 |
+| # dependents       | 18 |
+| # downloads        | 1863176 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/dequelabs/axe-puppeteer#readme)
+- [Bugs](https://github.com/dequelabs/axe-puppeteer/issues)
+- [Repository](https://github.com/dequelabs/axe-puppeteer)
 - [Npm](https://www.npmjs.com/package/axe-puppeteer)
     
 

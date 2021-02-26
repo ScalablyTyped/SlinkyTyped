@@ -14,13 +14,14 @@ import typingsSlinky.reactNativeFirebase.mod.RNFirebase.messaging.Messaging
 import typingsSlinky.reactNativeFirebase.mod.RNFirebase.notifications.Notifications
 import typingsSlinky.reactNativeFirebase.mod.RNFirebase.perf.Perf
 import typingsSlinky.reactNativeFirebase.mod.RNFirebase.storage.Storage
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-firebase", "App")
 @js.native
-class App protected () extends js.Object {
+class App protected () extends StObject {
   
   // admob(): RNFirebase.admob.AdMob;
   def analytics(): Analytics = js.native

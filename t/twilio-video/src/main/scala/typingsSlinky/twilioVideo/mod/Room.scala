@@ -1,8 +1,10 @@
 package typingsSlinky.twilioVideo.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.std.Map
 import typingsSlinky.twilioVideo.mod.Participant.SID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("twilio-video", "Room")
 @js.native
 class Room () extends EventEmitter {
+  def this(options: EventEmitterOptions) = this()
   
   def disconnect(): Room = js.native
   
@@ -31,9 +34,7 @@ class Room () extends EventEmitter {
   
   var state: String = js.native
 }
-@JSImport("twilio-video", "Room")
-@js.native
-object Room extends js.Object {
+object Room {
   
   type SID = String
 }

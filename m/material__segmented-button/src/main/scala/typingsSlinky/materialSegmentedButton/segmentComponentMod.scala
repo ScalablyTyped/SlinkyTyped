@@ -5,17 +5,19 @@ import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialRipple.componentMod.MDCRipple
 import typingsSlinky.materialRipple.componentMod.MDCRippleFactory
 import typingsSlinky.materialSegmentedButton.segmentFoundationMod.MDCSegmentedButtonSegmentFoundation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/segmented-button/segment/component", JSImport.Namespace)
-@js.native
-object segmentComponentMod extends js.Object {
+object segmentComponentMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-  - typingsSlinky.materialRipple.typesMod.MDCRippleCapableSurface because var conflicts: root. Inlined disabled, unbounded */ @js.native
-  class MDCSegmentedButtonSegment () extends MDCComponent[MDCSegmentedButtonSegmentFoundation] {
+  - typingsSlinky.materialRipple.typesMod.MDCRippleCapableSurface because var conflicts: root. Inlined disabled, unbounded */ @JSImport("@material/segmented-button/segment/component", "MDCSegmentedButtonSegment")
+  @js.native
+  class MDCSegmentedButtonSegment protected () extends MDCComponent[MDCSegmentedButtonSegmentFoundation] {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(root: Element, foundation: MDCSegmentedButtonSegmentFoundation, args: js.Any*) = this()
     
     var disabled: js.UndefOr[Boolean] = js.native
     
@@ -70,9 +72,10 @@ object segmentComponentMod extends js.Object {
     var unbounded: js.UndefOr[Boolean] = js.native
   }
   /* static members */
-  @js.native
-  object MDCSegmentedButtonSegment extends js.Object {
+  object MDCSegmentedButtonSegment {
     
+    @JSImport("@material/segmented-button/segment/component", "MDCSegmentedButtonSegment.attachTo")
+    @js.native
     def attachTo(root: Element): MDCSegmentedButtonSegment = js.native
   }
   

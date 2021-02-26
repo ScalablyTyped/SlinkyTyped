@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactAce.diffMod.IDiffEditorProps
 import typingsSlinky.reactAce.mod.diff
 import typingsSlinky.reactAce.typesMod.IEditorProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object Diff {
   
   @JSImport("react-ace", "diff")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,16 +31,16 @@ object Diff {
     def editorProps(value: js.Object): this.type = set("editorProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def enableBasicAutocompletionVarargs(value: String*): this.type = set("enableBasicAutocompletion", js.Array(value :_*))
-    
-    @scala.inline
     def enableBasicAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableBasicAutocompletion", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def enableLiveAutocompletionVarargs(value: String*): this.type = set("enableLiveAutocompletion", js.Array(value :_*))
+    def enableBasicAutocompletionVarargs(value: String*): this.type = set("enableBasicAutocompletion", js.Array(value :_*))
     
     @scala.inline
     def enableLiveAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableLiveAutocompletion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enableLiveAutocompletionVarargs(value: String*): this.type = set("enableLiveAutocompletion", js.Array(value :_*))
     
     @scala.inline
     def focus(value: Boolean): this.type = set("focus", value.asInstanceOf[js.Any])
@@ -84,10 +85,10 @@ object Diff {
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scrollMarginVarargs(value: Double*): this.type = set("scrollMargin", js.Array(value :_*))
+    def scrollMargin(value: js.Array[Double]): this.type = set("scrollMargin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scrollMargin(value: js.Array[Double]): this.type = set("scrollMargin", value.asInstanceOf[js.Any])
+    def scrollMarginVarargs(value: Double*): this.type = set("scrollMargin", js.Array(value :_*))
     
     @scala.inline
     def setOptions(value: js.Object): this.type = set("setOptions", value.asInstanceOf[js.Any])
@@ -111,10 +112,10 @@ object Diff {
     def theme(value: String): this.type = set("theme", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Array[String]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Array[String]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def width(value: String): this.type = set("width", value.asInstanceOf[js.Any])
@@ -123,7 +124,7 @@ object Diff {
     def wrapEnabled(value: Boolean): this.type = set("wrapEnabled", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IDiffEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Diff.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IDiffEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

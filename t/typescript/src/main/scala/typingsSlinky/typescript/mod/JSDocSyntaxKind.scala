@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,4 +25,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.typescript.mod.SyntaxKind.Unknown
   - typingsSlinky.typescript.mod.KeywordSyntaxKind
 */
-trait JSDocSyntaxKind extends js.Object
+trait JSDocSyntaxKind extends StObject

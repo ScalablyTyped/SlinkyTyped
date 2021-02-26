@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientAnalyticsreporting.gapi.client.analy
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAnalyticsreporting.anon.Alt
 import typingsSlinky.maximMazurokGapiClientAnalyticsreporting.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UserActivityResource extends js.Object {
+trait UserActivityResource extends StObject {
   
   def search(request: Alt, body: SearchUserActivityRequest): Request[SearchUserActivityResponse] = js.native
   /** Returns User Activity data. */

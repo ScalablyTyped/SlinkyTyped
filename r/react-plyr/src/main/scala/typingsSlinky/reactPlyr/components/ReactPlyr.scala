@@ -18,6 +18,7 @@ import typingsSlinky.reactPlyr.reactPlyrStrings.audio
 import typingsSlinky.reactPlyr.reactPlyrStrings.video
 import typingsSlinky.reactPlyr.reactPlyrStrings.vimeo
 import typingsSlinky.reactPlyr.reactPlyrStrings.youtube
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ object ReactPlyr {
   
   @JSImport("react-plyr", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,10 +44,10 @@ object ReactPlyr {
     def blankVideo(value: String): this.type = set("blankVideo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def captionsVarargs(value: Kind*): this.type = set("captions", js.Array(value :_*))
+    def captions(value: js.Array[Kind]): this.type = set("captions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def captions(value: js.Array[Kind]): this.type = set("captions", value.asInstanceOf[js.Any])
+    def captionsVarargs(value: Kind*): this.type = set("captions", js.Array(value :_*))
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -55,10 +56,10 @@ object ReactPlyr {
     def clickToPlay(value: Boolean): this.type = set("clickToPlay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def controlsVarargs(value: String*): this.type = set("controls", js.Array(value :_*))
+    def controls(value: js.Array[String]): this.type = set("controls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def controls(value: js.Array[String]): this.type = set("controls", value.asInstanceOf[js.Any])
+    def controlsVarargs(value: String*): this.type = set("controls", js.Array(value :_*))
     
     @scala.inline
     def debug(value: Boolean): this.type = set("debug", value.asInstanceOf[js.Any])
@@ -154,16 +155,16 @@ object ReactPlyr {
     def seekTime(value: Double): this.type = set("seekTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def settingsVarargs(value: String*): this.type = set("settings", js.Array(value :_*))
-    
-    @scala.inline
     def settings(value: js.Array[String]): this.type = set("settings", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sourcesVarargs(value: Size*): this.type = set("sources", js.Array(value :_*))
+    def settingsVarargs(value: String*): this.type = set("settings", js.Array(value :_*))
     
     @scala.inline
     def sources(value: js.Array[Size]): this.type = set("sources", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def sourcesVarargs(value: Size*): this.type = set("sources", js.Array(value :_*))
     
     @scala.inline
     def speed(value: Options): this.type = set("speed", value.asInstanceOf[js.Any])
@@ -193,7 +194,7 @@ object ReactPlyr {
     def volume(value: Double): this.type = set("volume", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactPlyr.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

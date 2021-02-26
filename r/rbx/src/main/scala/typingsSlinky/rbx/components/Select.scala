@@ -45,6 +45,7 @@ import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -57,15 +58,6 @@ typingsSlinky.std.Exclude[
 ]]) with (typingsSlinky.react.mod.RefAttributes[TAsComponent | typingsSlinky.rbx.exoticMod.FromReactType[TAsComponent]]) because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
 object Select {
   
-  @JSImport("rbx", "Select")
-  @js.native
-  object component extends js.Object
-  
-  @scala.inline
-  class Builder[TAsComponent /* <: ReactElement */] (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object]
-  
   def apply[TAsComponent /* <: ReactElement */](
     p: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
       ComponentProps[TAsComponent], 
@@ -75,6 +67,15 @@ object Select {
       ]
     ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
   ): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
+  @JSImport("rbx", "Select")
+  @js.native
+  val component: js.Object = js.native
+  
+  @scala.inline
+  class Builder[TAsComponent /* <: ReactElement */] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object]
   
   implicit def make[TAsComponent /* <: ReactElement */](companion: Select.type): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, js.Dictionary.empty))()
 }

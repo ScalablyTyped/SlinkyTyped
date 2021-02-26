@@ -10,15 +10,22 @@ import typingsSlinky.reactDateRange.mod.DateInputType
 import typingsSlinky.reactDateRange.mod.LanguageType
 import typingsSlinky.reactDateRange.mod.OnChangeProps
 import typingsSlinky.reactDateRange.mod.Range
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Calendar {
   
+  @scala.inline
+  def apply(date: DateInputType): Builder = {
+    val __props = js.Dynamic.literal(date = date.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CalendarProps]))
+  }
+  
   @JSImport("react-date-range", "Calendar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,22 +45,22 @@ object Calendar {
     def lang(value: LanguageType): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def maxDate(value: DateInputType): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maxDateFunction1(value: /* now */ js.Date => AnyDate): this.type = set("maxDate", js.Any.fromFunction1(value))
     
     @scala.inline
-    def maxDate(value: DateInputType): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    def minDate(value: DateInputType): this.type = set("minDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def minDateFunction1(value: /* now */ js.Date => AnyDate): this.type = set("minDate", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def minDate(value: DateInputType): this.type = set("minDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onChange(value: /* range */ OnChangeProps => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
@@ -66,10 +73,4 @@ object Calendar {
   }
   
   def withProps(p: CalendarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(date: DateInputType): Builder = {
-    val __props = js.Dynamic.literal(date = date.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CalendarProps]))
-  }
 }

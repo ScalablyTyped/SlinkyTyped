@@ -11,15 +11,22 @@ import typingsSlinky.officeUiFabricReact.documentCardLogoTypesMod.IDocumentCardL
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DocumentCardLogoBase {
   
+  @scala.inline
+  def apply(logoIcon: String): Builder = {
+    val __props = js.Dynamic.literal(logoIcon = logoIcon.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDocumentCardLogoProps]))
+  }
+  
   @JSImport("office-ui-fabric-react/lib/components/DocumentCard/DocumentCardLogo.base", "DocumentCardLogoBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,32 +40,26 @@ object DocumentCardLogoBase {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IDocumentCardLogo]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IDocumentCardLogo | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IDocumentCardLogo]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentRef(value: IRefObject[IDocumentCardLogo]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def logoName(value: String): this.type = set("logoName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IDocumentCardLogoStyleProps => DeepPartial[IDocumentCardLogoStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IDocumentCardLogoStyleProps, IDocumentCardLogoStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IDocumentCardLogoStyleProps, IDocumentCardLogoStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IDocumentCardLogoStyleProps => DeepPartial[IDocumentCardLogoStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IDocumentCardLogoProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(logoIcon: String): Builder = {
-    val __props = js.Dynamic.literal(logoIcon = logoIcon.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IDocumentCardLogoProps]))
-  }
 }

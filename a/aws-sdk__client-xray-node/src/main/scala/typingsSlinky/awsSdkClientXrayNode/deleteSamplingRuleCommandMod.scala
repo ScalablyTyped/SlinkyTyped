@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientXrayNode.typesDeleteSamplingRuleOutputMod.Delet
 import typingsSlinky.awsSdkClientXrayNode.xrayconfigurationMod.XRayResolvedConfiguration
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-xray-node/commands/DeleteSamplingRuleCommand", JSImport.Namespace)
-@js.native
-object deleteSamplingRuleCommandMod extends js.Object {
+object deleteSamplingRuleCommandMod {
   
+  @JSImport("@aws-sdk/client-xray-node/commands/DeleteSamplingRuleCommand", "DeleteSamplingRuleCommand")
   @js.native
   class DeleteSamplingRuleCommand protected () extends Command[
           InputTypesUnion, 

@@ -4,16 +4,16 @@ import typingsSlinky.guacamoleClient.guacCommonMod.TypedArray
 import typingsSlinky.guacamoleClient.guacamoleClientNumbers.`6048`
 import typingsSlinky.guacamoleClient.outputStreamMod.OutputStream
 import typingsSlinky.guacamoleClient.statusMod.Status
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("guacamole-client/lib/ArrayBufferWriter", JSImport.Namespace)
-@js.native
-object arrayBufferWriterMod extends js.Object {
+object arrayBufferWriterMod {
   
+  @JSImport("guacamole-client/lib/ArrayBufferWriter", "ArrayBufferWriter")
   @js.native
-  class ArrayBufferWriter protected () extends js.Object {
+  class ArrayBufferWriter protected () extends StObject {
     /**
       * @param stream The stream that data will be written
       */
@@ -37,12 +37,12 @@ object arrayBufferWriterMod extends js.Object {
       */
     var onack: Null | (js.Function1[/* status */ Status, Unit]) = js.native
     
-    def sendData(data: TypedArray): Unit = js.native
     /**
       * Sends the given data.
       * @param data The data to send.
       */
     def sendData(data: js.typedarray.ArrayBuffer): Unit = js.native
+    def sendData(data: TypedArray): Unit = js.native
     
     /**
       * Signals that no further text will be sent, effectively closing the
@@ -51,13 +51,14 @@ object arrayBufferWriterMod extends js.Object {
     def sendEnd(): Unit = js.native
   }
   /* static members */
-  @js.native
-  object ArrayBufferWriter extends js.Object {
+  object ArrayBufferWriter {
     
     /**
       * The default maximum blob length for new Guacamole.ArrayBufferWriter
       * instances.
       */
+    @JSImport("guacamole-client/lib/ArrayBufferWriter", "ArrayBufferWriter.DEFAULT_BLOB_LENGTH")
+    @js.native
     val DEFAULT_BLOB_LENGTH: `6048` = js.native
   }
 }

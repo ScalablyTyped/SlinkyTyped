@@ -8,16 +8,16 @@ import typingsSlinky.classTransformer.exposeMetadataMod.ExposeMetadata
 import typingsSlinky.classTransformer.transformMetadataMod.TransformMetadata
 import typingsSlinky.classTransformer.transformationTypeEnumMod.TransformationType
 import typingsSlinky.classTransformer.typeMetadataMod.TypeMetadata
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("class-transformer/metadata/MetadataStorage", JSImport.Namespace)
-@js.native
-object metadataStorageMod extends js.Object {
+object metadataStorageMod {
   
+  @JSImport("class-transformer/metadata/MetadataStorage", "MetadataStorage")
   @js.native
-  class MetadataStorage () extends js.Object {
+  class MetadataStorage () extends StObject {
     
     var _ancestorsMap: js.Any = js.native
     

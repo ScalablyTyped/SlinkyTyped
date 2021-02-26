@@ -39,6 +39,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.unsupported
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.wcs
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.wms
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.wmts
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

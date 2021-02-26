@@ -3,12 +3,13 @@ package typingsSlinky.jqueryUiDatetimepicker
 import typingsSlinky.jqueryUiDatetimepicker.jqueryUiDatetimepickerStrings.formatTime
 import typingsSlinky.jqueryUiDatetimepicker.jqueryUiDatetimepickerStrings.parseDateTime
 import typingsSlinky.jqueryUiDatetimepicker.jqueryUiDatetimepickerStrings.parseTime
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def datetimepicker(): JQuery = js.native
   def datetimepicker(method: String, methodParameter: js.Any): js.Any = js.native

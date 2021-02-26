@@ -10,9 +10,9 @@ It is a trap! (for a focus)
 | ------------------ | :-------------: |
 | Full name          | react-focus-lock |
 | Keywords           | react, focus, lock, trap, tabbable |
-| # releases         | 49 |
-| # dependents       | 59 |
-| # downloads        | 26893996 |
+| # releases         | 21 |
+| # dependents       | 140 |
+| # downloads        | 84999293 |
 | # stars            | 0 |
 
 ## Links

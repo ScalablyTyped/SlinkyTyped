@@ -2,13 +2,14 @@ package typingsSlinky.athenajs.mod
 
 import typingsSlinky.athenajs.anon.Instantiable
 import typingsSlinky.athenajs.anon.Loop
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("athenajs", "Drawable")
 @js.native
-class Drawable protected () extends js.Object {
+class Drawable protected () extends StObject {
   def this(`type`: String, options: DrawableOptions) = this()
   
   def addChild(child: Drawable): Unit = js.native

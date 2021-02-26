@@ -8,6 +8,7 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`13`
 import typingsSlinky.activexExcel.activexExcelNumbers.`1`
 import typingsSlinky.activexExcel.activexExcelNumbers.`4`
 import typingsSlinky.activexExcel.activexExcelNumbers.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

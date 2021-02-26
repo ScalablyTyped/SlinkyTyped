@@ -1,5 +1,6 @@
 package typingsSlinky.jsoneditor.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jsoneditor.jsoneditorStrings.start
   - typingsSlinky.jsoneditor.jsoneditorStrings.contain
 */
-trait AutoCompleteMatchingStrategy extends js.Object
+trait AutoCompleteMatchingStrategy extends StObject
 object AutoCompleteMatchingStrategy {
   
   @scala.inline

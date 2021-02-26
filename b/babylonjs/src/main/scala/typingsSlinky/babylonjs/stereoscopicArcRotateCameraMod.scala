@@ -3,14 +3,14 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.arcRotateCameraMod.ArcRotateCamera
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/Stereoscopic/stereoscopicArcRotateCamera", JSImport.Namespace)
-@js.native
-object stereoscopicArcRotateCameraMod extends js.Object {
+object stereoscopicArcRotateCameraMod {
   
+  @JSImport("babylonjs/Cameras/Stereoscopic/stereoscopicArcRotateCamera", "StereoscopicArcRotateCamera")
   @js.native
   class StereoscopicArcRotateCamera protected () extends ArcRotateCamera {
     /**

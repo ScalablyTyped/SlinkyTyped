@@ -10,9 +10,9 @@ An HTTP client library for node.js
 | ------------------ | :-------------: |
 | Full name          | restler |
 | Keywords           | - |
-| # releases         | 1 |
+| # releases         | 0 |
 | # dependents       | 396 |
-| # downloads        | 1763891 |
+| # downloads        | 1707893 |
 | # stars            | 28 |
 
 ## Links

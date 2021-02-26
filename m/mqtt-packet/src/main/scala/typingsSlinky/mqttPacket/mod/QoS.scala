@@ -1,5 +1,6 @@
 package typingsSlinky.mqttPacket.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mqttPacket.mqttPacketNumbers.`1`
   - typingsSlinky.mqttPacket.mqttPacketNumbers.`2`
 */
-trait QoS extends js.Object
+trait QoS extends StObject
 object QoS {
   
   @scala.inline

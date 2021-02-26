@@ -1,13 +1,14 @@
 package typingsSlinky.baconjs
 
 import typingsSlinky.baconjs.typesFlatmapMod.SpawnerOrObservable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("baconjs/types/flatmapconcat", JSImport.Namespace)
-@js.native
-object flatmapconcatMod extends js.Object {
+object flatmapconcatMod {
   
+  @JSImport("baconjs/types/flatmapconcat", JSImport.Default)
+  @js.native
   def default[V, V2](src: typingsSlinky.baconjs.observableMod.default[V], f: SpawnerOrObservable[V, V2]): typingsSlinky.baconjs.observableMod.default[V2] = js.native
 }

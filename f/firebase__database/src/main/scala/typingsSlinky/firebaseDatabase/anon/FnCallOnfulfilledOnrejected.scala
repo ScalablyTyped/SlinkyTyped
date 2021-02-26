@@ -1,12 +1,13 @@
 package typingsSlinky.firebaseDatabase.anon
 
 import typingsSlinky.firebaseDatabase.referenceMod.Reference
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FnCallOnfulfilledOnrejected extends js.Object {
+trait FnCallOnfulfilledOnrejected extends StObject {
   
   def apply[TResult1, TResult2](): js.Promise[TResult1 | TResult2] = js.native
   def apply[TResult1, TResult2](

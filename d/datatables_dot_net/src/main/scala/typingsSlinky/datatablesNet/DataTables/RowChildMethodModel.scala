@@ -2,12 +2,13 @@ package typingsSlinky.datatablesNet.DataTables
 
 import org.scalajs.dom.raw.Node
 import typingsSlinky.datatablesNet.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RowChildMethodModel extends js.Object {
+trait RowChildMethodModel extends StObject {
   
   /**
     * Get the child row(s) that have been set for a parent row
@@ -23,10 +24,10 @@ trait RowChildMethodModel extends js.Object {
   def apply(data: String, className: String): RowChildMethods = js.native
   def apply(data: js.Array[String | Double | JQuery]): RowChildMethods = js.native
   def apply(data: js.Array[String | Double | JQuery], className: String): RowChildMethods = js.native
-  def apply(data: JQuery): RowChildMethods = js.native
-  def apply(data: JQuery, className: String): RowChildMethods = js.native
   def apply(data: Node): RowChildMethods = js.native
   def apply(data: Node, className: String): RowChildMethods = js.native
+  def apply(data: JQuery): RowChildMethods = js.native
+  def apply(data: JQuery, className: String): RowChildMethods = js.native
   /**
     * Get the child row(s) that have been set for a parent row
     *

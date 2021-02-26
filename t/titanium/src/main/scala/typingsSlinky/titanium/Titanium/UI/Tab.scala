@@ -20,6 +20,7 @@ import typingsSlinky.titanium.titaniumStrings.touchmove
 import typingsSlinky.titanium.titaniumStrings.touchstart
 import typingsSlinky.titanium.titaniumStrings.twofingertap
 import typingsSlinky.titanium.titaniumStrings.unselected
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

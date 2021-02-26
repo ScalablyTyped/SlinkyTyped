@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.OptionOriginalEvent
 import typingsSlinky.primereact.listBoxItemMod.ListBoxItemProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object ListBoxItem {
   
   @JSImport("primereact/components/listbox/ListBoxItem", "ListBoxItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,7 +37,7 @@ object ListBoxItem {
     def template(value: /* item */ js.Any => js.UndefOr[ReactElement]): this.type = set("template", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: ListBoxItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ListBoxItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ListBoxItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

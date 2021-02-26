@@ -1,44 +1,39 @@
 package typingsSlinky.reactIntl.anon
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.std.Intl.NumberFormatPart
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Value extends js.Object {
+trait Value extends StObject {
   
-  var value: js.UndefOr[String | Double | js.Date] = js.native
+  def children(`val`: js.Array[NumberFormatPart]): ReactElement | Null = js.native
+  
+  var value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.anon.FnCallValueOpts>[0] */ js.Any = js.native
 }
 object Value {
   
   @scala.inline
-  def apply(): Value = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    children: js.Array[NumberFormatPart] => ReactElement | Null,
+    value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.anon.FnCallValueOpts>[0] */ js.Any
+  ): Value = {
+    val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Value]
   }
   
   @scala.inline
-  implicit class ValueOps[Self <: Value] (val x: Self) extends AnyVal {
+  implicit class ValueMutableBuilder[Self <: Value] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChildren(value: js.Array[NumberFormatPart] => ReactElement | Null): Self = StObject.set(x, "children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setValueDate(value: js.Date): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValue(value: String | Double | js.Date): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValue: Self = this.set("value", js.undefined)
+    def setValue(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.anon.FnCallValueOpts>[0] */ js.Any
+    ): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
   }
 }

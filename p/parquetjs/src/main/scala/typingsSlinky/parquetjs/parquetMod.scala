@@ -8,14 +8,14 @@ import typingsSlinky.parquetjs.rowBufferInterfaceMod.RowBufferInterface
 import typingsSlinky.parquetjs.rowInterfaceMod.RowInterface
 import typingsSlinky.parquetjs.schemaInterfaceMod.SchemaInterface
 import typingsSlinky.parquetjs.writerMod.ParquetWriterOpts
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("parquetjs/parquet", JSImport.Namespace)
-@js.native
-object parquetMod extends js.Object {
+object parquetMod {
   
+  @JSImport("parquetjs/parquet", "ParquetEnvelopeReader")
   @js.native
   class ParquetEnvelopeReader protected ()
     extends typingsSlinky.parquetjs.readerMod.ParquetEnvelopeReader {
@@ -31,12 +31,14 @@ object parquetMod extends js.Object {
     ) = this()
   }
   /* static members */
-  @js.native
-  object ParquetEnvelopeReader extends js.Object {
+  object ParquetEnvelopeReader {
     
+    @JSImport("parquetjs/parquet", "ParquetEnvelopeReader.openFile")
+    @js.native
     def openFile(filePath: String): typingsSlinky.parquetjs.readerMod.ParquetReader = js.native
   }
   
+  @JSImport("parquetjs/parquet", "ParquetEnvelopeWriter")
   @js.native
   class ParquetEnvelopeWriter protected ()
     extends typingsSlinky.parquetjs.writerMod.ParquetEnvelopeWriter {
@@ -62,11 +64,16 @@ object parquetMod extends js.Object {
     ) = this()
   }
   /* static members */
-  @js.native
-  object ParquetEnvelopeWriter extends js.Object {
+  object ParquetEnvelopeWriter {
     
+    @JSImport("parquetjs/parquet", "ParquetEnvelopeWriter.openStream")
+    @js.native
     def openStream(schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema, outputStream: WriteStream): js.Promise[typingsSlinky.parquetjs.writerMod.ParquetEnvelopeWriter] = js.native
+    @JSImport("parquetjs/parquet", "ParquetEnvelopeWriter.openStream")
+    @js.native
     def openStream(schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema, outputStream: WriteStream, opts: String): js.Promise[typingsSlinky.parquetjs.writerMod.ParquetEnvelopeWriter] = js.native
+    @JSImport("parquetjs/parquet", "ParquetEnvelopeWriter.openStream")
+    @js.native
     def openStream(
       schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema,
       outputStream: WriteStream,
@@ -74,6 +81,7 @@ object parquetMod extends js.Object {
     ): js.Promise[typingsSlinky.parquetjs.writerMod.ParquetEnvelopeWriter] = js.native
   }
   
+  @JSImport("parquetjs/parquet", "ParquetReader")
   @js.native
   class ParquetReader protected ()
     extends typingsSlinky.parquetjs.readerMod.ParquetReader {
@@ -83,23 +91,28 @@ object parquetMod extends js.Object {
     ) = this()
   }
   /* static members */
-  @js.native
-  object ParquetReader extends js.Object {
+  object ParquetReader {
     
+    @JSImport("parquetjs/parquet", "ParquetReader.openFile")
+    @js.native
     def openFile(filePath: String): js.Promise[typingsSlinky.parquetjs.readerMod.ParquetReader] = js.native
   }
   
+  @JSImport("parquetjs/parquet", "ParquetSchema")
   @js.native
   class ParquetSchema protected ()
     extends typingsSlinky.parquetjs.schemaMod.ParquetSchema {
     def this(schema: SchemaInterface) = this()
   }
   
-  @js.native
-  object ParquetShredder extends js.Object {
+  object ParquetShredder {
     
+    @JSImport("parquetjs/parquet", "ParquetShredder.materializeRecords")
+    @js.native
     def materializeRecords(schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema, buffer: RowBufferInterface): Unit = js.native
     
+    @JSImport("parquetjs/parquet", "ParquetShredder.shredRecord")
+    @js.native
     def shredRecord(
       schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema,
       record: RowInterface,
@@ -107,6 +120,7 @@ object parquetMod extends js.Object {
     ): Unit = js.native
   }
   
+  @JSImport("parquetjs/parquet", "ParquetTransformer")
   @js.native
   class ParquetTransformer protected ()
     extends typingsSlinky.parquetjs.writerMod.ParquetTransformer {
@@ -115,6 +129,7 @@ object parquetMod extends js.Object {
     def this(schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema, opts: ParquetWriterOpts) = this()
   }
   
+  @JSImport("parquetjs/parquet", "ParquetWriter")
   @js.native
   class ParquetWriter protected ()
     extends typingsSlinky.parquetjs.writerMod.ParquetWriter {
@@ -134,15 +149,26 @@ object parquetMod extends js.Object {
     ) = this()
   }
   /* static members */
-  @js.native
-  object ParquetWriter extends js.Object {
+  object ParquetWriter {
     
+    @JSImport("parquetjs/parquet", "ParquetWriter.openFile")
+    @js.native
     def openFile(schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema, path: PathLike): js.Promise[typingsSlinky.parquetjs.writerMod.ParquetWriter] = js.native
+    @JSImport("parquetjs/parquet", "ParquetWriter.openFile")
+    @js.native
     def openFile(schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema, path: PathLike, opts: String): js.Promise[typingsSlinky.parquetjs.writerMod.ParquetWriter] = js.native
+    @JSImport("parquetjs/parquet", "ParquetWriter.openFile")
+    @js.native
     def openFile(schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema, path: PathLike, opts: ParquetWriterOpts): js.Promise[typingsSlinky.parquetjs.writerMod.ParquetWriter] = js.native
     
+    @JSImport("parquetjs/parquet", "ParquetWriter.openStream")
+    @js.native
     def openStream(schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema, outputStream: WriteStream): js.Promise[typingsSlinky.parquetjs.writerMod.ParquetWriter] = js.native
+    @JSImport("parquetjs/parquet", "ParquetWriter.openStream")
+    @js.native
     def openStream(schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema, outputStream: WriteStream, opts: String): js.Promise[typingsSlinky.parquetjs.writerMod.ParquetWriter] = js.native
+    @JSImport("parquetjs/parquet", "ParquetWriter.openStream")
+    @js.native
     def openStream(
       schema: typingsSlinky.parquetjs.schemaMod.ParquetSchema,
       outputStream: WriteStream,

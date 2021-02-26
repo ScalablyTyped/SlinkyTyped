@@ -1,13 +1,14 @@
 package typingsSlinky.evernote.mod.NoteStore
 
 import typingsSlinky.evernote.anon.IncludeAccountLimits
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("evernote", "NoteStore.NoteResultSpec")
 @js.native
-class NoteResultSpec () extends js.Object {
+class NoteResultSpec () extends StObject {
   def this(args: IncludeAccountLimits) = this()
   
   var includeAccountLimits: js.UndefOr[Boolean] = js.native

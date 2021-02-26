@@ -14,6 +14,7 @@ import typingsSlinky.reactForm.mod.FormFunctionProps
 import typingsSlinky.reactForm.mod.FormState
 import typingsSlinky.reactForm.mod.FormValues
 import typingsSlinky.reactForm.mod.RenderReturn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,12 +23,21 @@ object Form {
   
   @JSImport("react-form", "Form")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactForm.mod.Form] {
+    
+    @scala.inline
+    def children(value: (js.Function1[/* props */ FormFunctionProps, RenderReturn]) | RenderReturn): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def childrenFunction1(value: /* props */ FormFunctionProps => RenderReturn): this.type = set("children", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def childrenNull: this.type = set("children", null)
     
     @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
@@ -36,22 +46,13 @@ object Form {
     def childrenVarargs(value: scala.Nothing*): this.type = set("children", js.Array(value :_*))
     
     @scala.inline
-    def childrenFunction1(value: /* props */ FormFunctionProps => RenderReturn): this.type = set("children", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def children(value: (js.Function1[/* props */ FormFunctionProps, RenderReturn]) | RenderReturn): this.type = set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def childrenNull: this.type = set("children", null)
-    
-    @scala.inline
-    def componentFunctionComponent(value: ReactComponentClass[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def component(value: ReactType[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
+    def componentFunctionComponent(value: ReactComponentClass[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultValues(value: FormValues): this.type = set("defaultValues", value.asInstanceOf[js.Any])
@@ -98,7 +99,7 @@ object Form {
     def validateWarning(value: /* values */ FormValues => FormErrors): this.type = set("validateWarning", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: FormPropschildrenpropsFor): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FormPropschildrenpropsFor): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

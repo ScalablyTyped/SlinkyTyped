@@ -1,13 +1,12 @@
 package typingsSlinky.sinonChrome.mod
 
 import typingsSlinky.sinon.mod.SinonSpy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sinon-chrome", "events")
-@js.native
-object events extends js.Object {
+object events {
   
   @js.native
   trait Event

@@ -2,6 +2,7 @@ package typingsSlinky.winjs.WinJS.UI
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Represents a command in the SplitView Pane.
   **/
 @js.native
-trait SplitViewCommand extends js.Object {
+trait SplitViewCommand extends StObject {
   
   //#endregion Events
   //#region Methods

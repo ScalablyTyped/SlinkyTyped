@@ -1,12 +1,13 @@
 package typingsSlinky.firebase.mod.firebase.firestore
 
 import typingsSlinky.firebase.anon.Next
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Query[T] extends js.Object {
+trait Query[T] extends StObject {
   
   /**
     * Creates and returns a new Query that ends at the provided fields

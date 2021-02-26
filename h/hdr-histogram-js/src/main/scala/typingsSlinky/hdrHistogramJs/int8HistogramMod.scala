@@ -1,22 +1,14 @@
 package typingsSlinky.hdrHistogramJs
 
 import typingsSlinky.hdrHistogramJs.abstractHistogramMod.AbstractHistogram
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("hdr-histogram-js/Int8Histogram", JSImport.Namespace)
-@js.native
-object int8HistogramMod extends js.Object {
+object int8HistogramMod {
   
-  @js.native
-  trait Int8Histogram extends AbstractHistogram {
-    
-    var counts: js.typedarray.Uint8Array = js.native
-    
-    var totalCount: Double = js.native
-  }
-  
+  @JSImport("hdr-histogram-js/Int8Histogram", JSImport.Default)
   @js.native
   class default protected () extends Int8Histogram {
     def this(
@@ -24,5 +16,13 @@ object int8HistogramMod extends js.Object {
       highestTrackableValue: Double,
       numberOfSignificantValueDigits: Double
     ) = this()
+  }
+  
+  @js.native
+  trait Int8Histogram extends AbstractHistogram {
+    
+    var counts: js.typedarray.Uint8Array = js.native
+    
+    var totalCount: Double = js.native
   }
 }

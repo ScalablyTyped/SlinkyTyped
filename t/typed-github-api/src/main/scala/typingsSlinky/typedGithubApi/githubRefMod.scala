@@ -2,14 +2,14 @@ package typingsSlinky.typedGithubApi
 
 import typingsSlinky.typedGithubApi.apiFetchMod.Options
 import typingsSlinky.typedGithubApi.apiFetchMod.Response
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typed-github-api/dist/github-ref", JSImport.Namespace)
-@js.native
-object githubRefMod extends js.Object {
+object githubRefMod {
   
+  @JSImport("typed-github-api/dist/github-ref", "GitHubRef")
   @js.native
   class GitHubRef protected () extends OptionsOrRef {
     protected def this(options: OptionsOrRef) = this()
@@ -27,5 +27,5 @@ object githubRefMod extends js.Object {
     - typingsSlinky.typedGithubApi.apiFetchMod.Options
     - typingsSlinky.typedGithubApi.githubRefMod.GitHubRef
   */
-  trait OptionsOrRef extends js.Object
+  trait OptionsOrRef extends StObject
 }

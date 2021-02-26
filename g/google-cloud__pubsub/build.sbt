@@ -1,23 +1,25 @@
 organization := "org.scalablytyped.slinky"
 name := "google-cloud__pubsub"
-version := "1.7.3-61a6cd"
-scalaVersion := "2.13.2"
+version := "2.6.0-8b7731"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "gaxios" % "2.0.1-a9f797",
-  "org.scalablytyped.slinky" %%% "google-auth-library" % "5.3.0-181e58",
-  "org.scalablytyped.slinky" %%% "google-cloud__precise-date" % "1.0.3-019fa5",
-  "org.scalablytyped.slinky" %%% "google-gax" % "1.15.3-93ec8a",
-  "org.scalablytyped.slinky" %%% "grpc__grpc-js" % "1.0.3-be69e0",
-  "org.scalablytyped.slinky" %%% "grpc__proto-loader" % "0.5.4-a48dbd",
-  "org.scalablytyped.slinky" %%% "gtoken" % "4.1.0-b1b091",
-  "org.scalablytyped.slinky" %%% "long" % "4.0.0-dt-20200515Z-ced51c",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "p-defer" % "3.0.0-c101f6",
-  "org.scalablytyped.slinky" %%% "protobufjs" % "6.9.0-b83d51",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "gaxios" % "4.0.1-b7ad40",
+  "org.scalablytyped.slinky" %%% "google-auth-library" % "6.1.3-d0c57d",
+  "org.scalablytyped.slinky" %%% "google-cloud__precise-date" % "2.0.3-ddcf3f",
+  "org.scalablytyped.slinky" %%% "google-gax" % "2.9.2-4523c6",
+  "org.scalablytyped.slinky" %%% "grpc__grpc-js" % "1.1.8-a6f17a",
+  "org.scalablytyped.slinky" %%% "grpc__proto-loader" % "0.5.5-6fa706",
+  "org.scalablytyped.slinky" %%% "gtoken" % "5.1.0-039104",
+  "org.scalablytyped.slinky" %%% "long" % "4.0.0-dt-20201002Z-1816bf",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "opentelemetry__api" % "0.11.0-5fca65",
+  "org.scalablytyped.slinky" %%% "opentelemetry__context-base" % "0.11.0-e6446a",
+  "org.scalablytyped.slinky" %%% "p-defer" % "3.0.0-f60a8c",
+  "org.scalablytyped.slinky" %%% "protobufjs" % "6.10.2-96263b",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

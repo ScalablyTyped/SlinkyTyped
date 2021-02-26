@@ -1,6 +1,7 @@
 package typingsSlinky.kiiCloudSdk.global.KiiCloud
 
 import typingsSlinky.kiiCloudSdk.KiiCloud.KiiError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,10 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class KiiErrorParser ()
   extends typingsSlinky.kiiCloudSdk.KiiCloud.KiiErrorParser
-/* static members */
-@JSGlobal("KiiCloud.KiiErrorParser")
-@js.native
-object KiiErrorParser extends js.Object {
+object KiiErrorParser {
   
   /**
     * Parse an error string or error object returned by SDK.
@@ -40,6 +38,11 @@ object KiiErrorParser extends js.Object {
     *     var errorCode = err.code;
     *     var errorMessage = err.message;
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiErrorParser.parse")
+  @js.native
   def parse(error: String): KiiError = js.native
+  @JSGlobal("KiiCloud.KiiErrorParser.parse")
+  @js.native
   def parse(error: js.Error): KiiError = js.native
 }

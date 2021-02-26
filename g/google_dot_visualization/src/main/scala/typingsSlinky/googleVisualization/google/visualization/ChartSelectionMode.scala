@@ -1,5 +1,6 @@
 package typingsSlinky.googleVisualization.google.visualization
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleVisualization.googleVisualizationStrings.single
   - typingsSlinky.googleVisualization.googleVisualizationStrings.multiple
 */
-trait ChartSelectionMode extends js.Object
+trait ChartSelectionMode extends StObject
 object ChartSelectionMode {
   
   @scala.inline

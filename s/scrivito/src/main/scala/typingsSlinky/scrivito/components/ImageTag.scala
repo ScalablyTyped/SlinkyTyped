@@ -75,15 +75,22 @@ import typingsSlinky.scrivito.mod.Binary
 import typingsSlinky.scrivito.mod.ImageTagProps
 import typingsSlinky.scrivito.mod.Obj
 import typingsSlinky.scrivito.mod.Widget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ImageTag {
   
+  @scala.inline
+  def apply(attribute: String, content: Binary | Obj | Widget): Builder = {
+    val __props = js.Dynamic.literal(attribute = attribute.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ImageTagProps]))
+  }
+  
   @JSImport("scrivito", "ImageTag")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -276,10 +283,10 @@ object ImageTag {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -616,10 +623,4 @@ object ImageTag {
   }
   
   def withProps(p: ImageTagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(attribute: String, content: Binary | Obj | Widget): Builder = {
-    val __props = js.Dynamic.literal(attribute = attribute.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ImageTagProps]))
-  }
 }

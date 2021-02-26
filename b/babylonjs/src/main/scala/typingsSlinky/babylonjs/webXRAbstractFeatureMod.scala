@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.observableMod.EventState
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.webXRFeaturesManagerMod.IWebXRFeature
 import typingsSlinky.babylonjs.webXRSessionManagerMod.WebXRSessionManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/XR/features/WebXRAbstractFeature", JSImport.Namespace)
-@js.native
-object webXRAbstractFeatureMod extends js.Object {
+object webXRAbstractFeatureMod {
   
+  @JSImport("babylonjs/XR/features/WebXRAbstractFeature", "WebXRAbstractFeature")
   @js.native
   abstract class WebXRAbstractFeature protected () extends IWebXRFeature {
     /**

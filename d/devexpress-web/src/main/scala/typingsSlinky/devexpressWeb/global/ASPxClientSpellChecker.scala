@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressWeb.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,14 +12,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ASPxClientSpellChecker ()
   extends typingsSlinky.devexpressWeb.ASPxClientSpellChecker
-/* static members */
-@JSGlobal("ASPxClientSpellChecker")
-@js.native
-object ASPxClientSpellChecker extends js.Object {
+object ASPxClientSpellChecker {
   
   /**
     * Converts the specified object to the ASPxClientSpellChecker type. The converted client object specified by the obj parameter.
     * @param obj The client object to be type cast.
     */
+  /* static member */
+  @JSGlobal("ASPxClientSpellChecker.Cast")
+  @js.native
   def Cast(obj: js.Any): typingsSlinky.devexpressWeb.ASPxClientSpellChecker = js.native
 }

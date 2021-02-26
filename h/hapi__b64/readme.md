@@ -10,9 +10,9 @@ Base64 streaming encoder and decoder
 | ------------------ | :-------------: |
 | Full name          | @hapi/b64 |
 | Keywords           | buffer, base64, decode, encode, stream |
-| # releases         | 3 |
-| # dependents       | 4 |
-| # downloads        | 3135936 |
+| # releases         | 4 |
+| # dependents       | 10 |
+| # downloads        | 15474410 |
 | # stars            | 0 |
 
 ## Links

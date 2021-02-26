@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientGmail.anon.Callback
 import typingsSlinky.maximMazurokGapiClientGmail.anon.Fields
 import typingsSlinky.maximMazurokGapiClientGmail.anon.Id
 import typingsSlinky.maximMazurokGapiClientGmail.anon.IncludeSpamTrash
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DraftsResource extends js.Object {
+trait DraftsResource extends StObject {
   
   /** Creates a new draft with the `DRAFT` label. */
   def create(request: Accesstoken): Request[Draft] = js.native

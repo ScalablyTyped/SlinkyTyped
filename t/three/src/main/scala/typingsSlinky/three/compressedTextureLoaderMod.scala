@@ -5,14 +5,14 @@ import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.three.compressedTextureMod.CompressedTexture
 import typingsSlinky.three.loaderMod.Loader
 import typingsSlinky.three.loadingManagerMod.LoadingManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/loaders/CompressedTextureLoader", JSImport.Namespace)
-@js.native
-object compressedTextureLoaderMod extends js.Object {
+object compressedTextureLoaderMod {
   
+  @JSImport("three/src/loaders/CompressedTextureLoader", "CompressedTextureLoader")
   @js.native
   class CompressedTextureLoader () extends Loader {
     def this(manager: LoadingManager) = this()

@@ -3,23 +3,26 @@ package typingsSlinky.materialTextfield
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialTextfield.helperTextFoundationMod.MDCTextFieldHelperTextFoundation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/textfield/helper-text/component", JSImport.Namespace)
-@js.native
-object helperTextComponentMod extends js.Object {
+object helperTextComponentMod {
   
+  @JSImport("@material/textfield/helper-text/component", "MDCTextFieldHelperText")
   @js.native
-  class MDCTextFieldHelperText () extends MDCComponent[MDCTextFieldHelperTextFoundation] {
+  class MDCTextFieldHelperText protected () extends MDCComponent[MDCTextFieldHelperTextFoundation] {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(root: Element, foundation: MDCTextFieldHelperTextFoundation, args: js.Any*) = this()
     
     def foundationForTextField: MDCTextFieldHelperTextFoundation = js.native
   }
   /* static members */
-  @js.native
-  object MDCTextFieldHelperText extends js.Object {
+  object MDCTextFieldHelperText {
     
+    @JSImport("@material/textfield/helper-text/component", "MDCTextFieldHelperText.attachTo")
+    @js.native
     def attachTo(root: Element): MDCTextFieldHelperText = js.native
   }
   

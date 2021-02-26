@@ -10,15 +10,22 @@ import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsCore.treeNodeMod.ITreeNode
 import typingsSlinky.blueprintjsCore.treeNodeMod.ITreeNodeProps
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TreeNode {
   
+  @scala.inline
+  def apply[T](depth: Double, id: String | Double, label: String | ReactElement, path: js.Array[Double]): Builder[T] = {
+    val __props = js.Dynamic.literal(depth = depth.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ITreeNodeProps[T]]))
+  }
+  
   @JSImport("@blueprintjs/core", "TreeNode")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -26,10 +33,10 @@ object TreeNode {
        with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.TreeNode[T]] {
     
     @scala.inline
-    def childNodesVarargs(value: ITreeNode[T]*): this.type = set("childNodes", js.Array(value :_*))
+    def childNodes(value: js.Array[ITreeNode[T]]): this.type = set("childNodes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def childNodes(value: js.Array[ITreeNode[T]]): this.type = set("childNodes", value.asInstanceOf[js.Any])
+    def childNodesVarargs(value: ITreeNode[T]*): this.type = set("childNodes", js.Array(value :_*))
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -46,13 +53,13 @@ object TreeNode {
     def hasCaret(value: Boolean): this.type = set("hasCaret", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: IconName | MaybeElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconNull: this.type = set("icon", null)
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def isExpanded(value: Boolean): this.type = set("isExpanded", value.asInstanceOf[js.Any])
@@ -99,20 +106,14 @@ object TreeNode {
     ): this.type = set("onMouseLeave", js.Any.fromFunction2(value))
     
     @scala.inline
-    def secondaryLabelReactElement(value: ReactElement): this.type = set("secondaryLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def secondaryLabel(value: String | MaybeElement): this.type = set("secondaryLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def secondaryLabelNull: this.type = set("secondaryLabel", null)
+    
+    @scala.inline
+    def secondaryLabelReactElement(value: ReactElement): this.type = set("secondaryLabel", value.asInstanceOf[js.Any])
   }
   
   def withProps[T](p: ITreeNodeProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](depth: Double, id: String | Double, label: String | ReactElement, path: js.Array[Double]): Builder[T] = {
-    val __props = js.Dynamic.literal(depth = depth.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ITreeNodeProps[T]]))
-  }
 }

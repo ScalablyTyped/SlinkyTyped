@@ -4,15 +4,15 @@
 Typings are for version 6.1.2
 
 ## Library description:
-Story Links addon for storybook
+Link stories together to build demos and prototypes with your UI components
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @storybook/addon-links |
 | Keywords           | addon, storybook |
-| # releases         | 417 |
-| # dependents       | 107 |
-| # downloads        | 25402422 |
+| # releases         | 553 |
+| # dependents       | 173 |
+| # downloads        | 52876726 |
 | # stars            | 0 |
 
 ## Links

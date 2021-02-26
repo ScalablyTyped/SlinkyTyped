@@ -10,9 +10,9 @@ Cordova InAppBrowser Plugin
 | ------------------ | :-------------: |
 | Full name          | cordova-plugin-inappbrowser |
 | Keywords           | cordova, in, app, browser, inappbrowser, ecosystem:cordova, cordova-android, cordova-browser, cordova-ios, cordova-osx, cordova-windows |
-| # releases         | 3 |
+| # releases         | 4 |
 | # dependents       | 31 |
-| # downloads        | 1773931 |
+| # downloads        | 2260706 |
 | # stars            | 22 |
 
 ## Links

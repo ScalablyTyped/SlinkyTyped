@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.inavigationengineMod.ICrowd
 import typingsSlinky.babylonjs.inavigationengineMod.INavigationEnginePlugin
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.transformNodeMod.TransformNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Navigation/Plugins/recastJSPlugin", JSImport.Namespace)
-@js.native
-object recastJSPluginMod extends js.Object {
+object recastJSPluginMod {
   
+  @JSImport("babylonjs/Navigation/Plugins/recastJSPlugin", "RecastJSCrowd")
   @js.native
   class RecastJSCrowd protected () extends ICrowd {
     /**
@@ -55,6 +55,7 @@ object recastJSPluginMod extends js.Object {
     var transforms: js.Array[TransformNode] = js.native
   }
   
+  @JSImport("babylonjs/Navigation/Plugins/recastJSPlugin", "RecastJSPlugin")
   @js.native
   /**
     * Initializes the recastJS plugin

@@ -2,6 +2,7 @@ package typingsSlinky.activexWord.Word
 
 import typingsSlinky.activexWord.activexWordNumbers.`-1072898048`
 import typingsSlinky.activexWord.activexWordNumbers.`0`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWord.activexWordNumbers.`-1072898048`
   - typingsSlinky.activexWord.activexWordNumbers.`0`
 */
-trait WdXMLValidationStatus extends js.Object
+trait WdXMLValidationStatus extends StObject
 object WdXMLValidationStatus {
   
   @scala.inline

@@ -2,12 +2,13 @@ package typingsSlinky.activexWord.Word
 
 import typingsSlinky.activexOffice.Office.DocumentProperties
 import typingsSlinky.activexOffice.Office.DocumentProperty
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Template extends js.Object {
+trait Template extends StObject {
   
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   

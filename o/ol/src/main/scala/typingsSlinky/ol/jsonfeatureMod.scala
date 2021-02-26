@@ -2,13 +2,16 @@ package typingsSlinky.ol
 
 import typingsSlinky.ol.featureMod.ReadOptions
 import typingsSlinky.ol.featureMod.WriteOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/format/JSONFeature", JSImport.Namespace)
-@js.native
-object jsonfeatureMod extends js.Object {
+object jsonfeatureMod {
+  
+  @JSImport("ol/format/JSONFeature", JSImport.Default)
+  @js.native
+  abstract class default () extends JSONFeature
   
   @js.native
   trait JSONFeature
@@ -58,7 +61,4 @@ object jsonfeatureMod extends js.Object {
     def writeGeometryObject(geometry: typingsSlinky.ol.geometryMod.default): js.Any = js.native
     def writeGeometryObject(geometry: typingsSlinky.ol.geometryMod.default, opt_options: WriteOptions): js.Any = js.native
   }
-  
-  @js.native
-  abstract class default () extends JSONFeature
 }

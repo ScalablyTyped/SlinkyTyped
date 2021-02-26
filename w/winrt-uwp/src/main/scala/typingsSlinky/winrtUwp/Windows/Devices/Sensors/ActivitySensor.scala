@@ -7,13 +7,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.TypedEventHandler
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.readingchanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents an activity sensor that provides the activity and status of a sensor. */
 @js.native
-trait ActivitySensor extends js.Object {
+trait ActivitySensor extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

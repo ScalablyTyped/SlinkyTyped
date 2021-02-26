@@ -6,6 +6,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactVis.mod.AnimationParam
 import typingsSlinky.reactVis.mod.HorizontalGridLinesProps
 import typingsSlinky.reactVis.reactVisStrings.horizontal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object HorizontalGridLines {
   
   @JSImport("react-vis", "HorizontalGridLines")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,10 +62,10 @@ object HorizontalGridLines {
     def tickTotal(value: Double): this.type = set("tickTotal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tickValuesVarargs(value: js.Any*): this.type = set("tickValues", js.Array(value :_*))
+    def tickValues(value: js.Array[_]): this.type = set("tickValues", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tickValues(value: js.Array[_]): this.type = set("tickValues", value.asInstanceOf[js.Any])
+    def tickValuesVarargs(value: js.Any*): this.type = set("tickValues", js.Array(value :_*))
     
     @scala.inline
     def top(value: Double): this.type = set("top", value.asInstanceOf[js.Any])
@@ -73,7 +74,7 @@ object HorizontalGridLines {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HorizontalGridLinesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: HorizontalGridLines.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HorizontalGridLinesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

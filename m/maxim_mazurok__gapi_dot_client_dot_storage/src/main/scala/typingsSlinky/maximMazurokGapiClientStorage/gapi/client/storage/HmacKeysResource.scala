@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientStorage.anon.AccessId
 import typingsSlinky.maximMazurokGapiClientStorage.anon.AccessIdAlt
 import typingsSlinky.maximMazurokGapiClientStorage.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientStorage.anon.ProjectId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HmacKeysResource extends js.Object {
+trait HmacKeysResource extends StObject {
   
   /** Creates a new HMAC key for the specified service account. */
   def create(): Request[HmacKey] = js.native

@@ -8,6 +8,7 @@ import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.secondary
 import typingsSlinky.cathoQuantum.progressBarMod.ProgressBarProps
 import typingsSlinky.cathoQuantum.progressBarMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object ProgressBar {
   
   @JSImport("@catho/quantum/ProgressBar", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,7 +46,7 @@ object ProgressBar {
     def width(value: String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ProgressBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ProgressBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ProgressBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

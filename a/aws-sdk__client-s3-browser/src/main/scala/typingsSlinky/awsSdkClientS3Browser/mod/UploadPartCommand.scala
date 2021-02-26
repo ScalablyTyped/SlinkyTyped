@@ -2,6 +2,7 @@ package typingsSlinky.awsSdkClientS3Browser.mod
 
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientS3Browser.typesUploadPartInputMod.UploadPartInput
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

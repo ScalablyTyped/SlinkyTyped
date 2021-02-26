@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RTCSessionDescriptionInit extends js.Object {
+trait RTCSessionDescriptionInit extends StObject {
   
   var sdp: js.UndefOr[java.lang.String] = js.native
   
@@ -14,36 +15,24 @@ trait RTCSessionDescriptionInit extends js.Object {
 object RTCSessionDescriptionInit {
   
   @scala.inline
-  def apply(): RTCSessionDescriptionInit = {
+  def apply(): org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[RTCSessionDescriptionInit]
+    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit]
   }
   
   @scala.inline
-  implicit class RTCSessionDescriptionInitOps[Self <: org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit] (val x: Self) extends AnyVal {
+  implicit class RTCSessionDescriptionInitMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setSdp(value: java.lang.String): Self = StObject.set(x, "sdp", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setSdpUndefined: Self = StObject.set(x, "sdp", js.undefined)
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setType(value: org.scalajs.dom.experimental.webrtc.RTCSdpType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSdp(value: java.lang.String): Self = this.set("sdp", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSdp: Self = this.set("sdp", js.undefined)
-    
-    @scala.inline
-    def setType(value: org.scalajs.dom.experimental.webrtc.RTCSdpType): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteType: Self = this.set("type", js.undefined)
+    def setTypeUndefined: Self = StObject.set(x, "type", js.undefined)
   }
 }

@@ -10,9 +10,9 @@ A browser based code editor
 | ------------------ | :-------------: |
 | Full name          | monaco-editor |
 | Keywords           | - |
-| # releases         | 26 |
-| # dependents       | 190 |
-| # downloads        | 4425449 |
+| # releases         | 18 |
+| # dependents       | 358 |
+| # downloads        | 12104618 |
 | # stars            | 9 |
 
 ## Links

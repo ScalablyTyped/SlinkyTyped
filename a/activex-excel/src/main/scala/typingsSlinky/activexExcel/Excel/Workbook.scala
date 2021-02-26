@@ -29,12 +29,13 @@ import typingsSlinky.activexOffice.Office.UserPermission
 import typingsSlinky.activexOffice.Office.WorkflowTasks
 import typingsSlinky.activexOffice.Office.WorkflowTemplates
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Workbook extends js.Object {
+trait Workbook extends StObject {
   
   def AcceptAllChanges(): Unit = js.native
   def AcceptAllChanges(When: js.UndefOr[scala.Nothing], Who: js.UndefOr[scala.Nothing], Where: js.Any): Unit = js.native

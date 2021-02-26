@@ -10,6 +10,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-left`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-right`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-trailing`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.manual
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,6 +24,9 @@ trait UI extends Accessor {
   def add(component: js.Array[_]): Unit = js.native
   def add(component: js.Array[_], position: String): Unit = js.native
   def add(component: js.Array[_], position: UIAddPosition): Unit = js.native
+  def add(component: HTMLElement): Unit = js.native
+  def add(component: HTMLElement, position: String): Unit = js.native
+  def add(component: HTMLElement, position: UIAddPosition): Unit = js.native
   def add(component: UIAddComponent): Unit = js.native
   def add(component: UIAddComponent, position: String): Unit = js.native
   def add(component: UIAddComponent, position: UIAddPosition): Unit = js.native
@@ -34,9 +38,6 @@ trait UI extends Accessor {
   def add(component: Widget_): Unit = js.native
   def add(component: Widget_, position: String): Unit = js.native
   def add(component: Widget_, position: UIAddPosition): Unit = js.native
-  def add(component: HTMLElement): Unit = js.native
-  def add(component: HTMLElement, position: String): Unit = js.native
-  def add(component: HTMLElement, position: UIAddPosition): Unit = js.native
   
   /**
     * The HTML Element that contains the view.
@@ -90,6 +91,9 @@ trait UI extends Accessor {
   def move(component: js.Array[_]): Unit = js.native
   def move(component: js.Array[_], position: String): Unit = js.native
   def move(component: js.Array[_], position: UIMovePosition): Unit = js.native
+  def move(component: HTMLElement): Unit = js.native
+  def move(component: HTMLElement, position: String): Unit = js.native
+  def move(component: HTMLElement, position: UIMovePosition): Unit = js.native
   def move(component: UIMoveComponent): Unit = js.native
   def move(component: UIMoveComponent, position: String): Unit = js.native
   def move(component: UIMoveComponent, position: UIMovePosition): Unit = js.native
@@ -101,9 +105,6 @@ trait UI extends Accessor {
   def move(component: Widget_): Unit = js.native
   def move(component: Widget_, position: String): Unit = js.native
   def move(component: Widget_, position: UIMovePosition): Unit = js.native
-  def move(component: HTMLElement): Unit = js.native
-  def move(component: HTMLElement, position: String): Unit = js.native
-  def move(component: HTMLElement, position: UIMovePosition): Unit = js.native
   
   /**
     * Defines the padding for the UI from the top, left, right, and bottom sides of the container or [View](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html).
@@ -114,13 +115,13 @@ trait UI extends Accessor {
   
   def remove(component: String): Unit = js.native
   def remove(component: js.Array[_]): Unit = js.native
+  def remove(component: HTMLElement): Unit = js.native
   /**
     * Removes one or more HTML component(s) or [widgets](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Widget.html) from the UI.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#remove)
     */
   def remove(component: Widget_): Unit = js.native
-  def remove(component: HTMLElement): Unit = js.native
   
   /**
     * The view associated with the UI components.

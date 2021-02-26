@@ -1,6 +1,7 @@
 package typingsSlinky.appleMapkitJsBrowser.mapkit
 
 import typingsSlinky.appleMapkitJsBrowser.anon.PickGeocoderConstructorOp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * and vice versa.
   */
 @js.native
-trait Geocoder extends js.Object {
+trait Geocoder extends StObject {
   
   /**
     * Cancels the pending lookup or reverse lookup specified by its request ID.

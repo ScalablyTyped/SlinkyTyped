@@ -1,12 +1,13 @@
 package typingsSlinky.awsSdkSmithyClient
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/smithy-client/dist/cjs/date-utils", JSImport.Namespace)
-@js.native
-object dateUtilsMod extends js.Object {
+object dateUtilsMod {
   
+  @JSImport("@aws-sdk/smithy-client/dist/cjs/date-utils", "dateToUtcString")
+  @js.native
   def dateToUtcString(date: js.Date): String = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings._empty
   - typingsSlinky.std.stdStrings.standard
 */
-trait GamepadMappingType extends js.Object
+trait GamepadMappingType extends StObject
 object GamepadMappingType {
   
   @scala.inline

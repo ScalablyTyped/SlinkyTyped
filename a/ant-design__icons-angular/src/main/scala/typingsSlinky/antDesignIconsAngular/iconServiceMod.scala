@@ -13,16 +13,16 @@ import typingsSlinky.antDesignIconsAngular.typesMod.TwoToneColorPalette
 import typingsSlinky.antDesignIconsAngular.typesMod.TwoToneColorPaletteSetter
 import typingsSlinky.rxjs.mod.Observable_
 import typingsSlinky.std.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ant-design/icons-angular/component/icon.service", JSImport.Namespace)
-@js.native
-object iconServiceMod extends js.Object {
+object iconServiceMod {
   
+  @JSImport("@ant-design/icons-angular/component/icon.service", "IconService")
   @js.native
-  class IconService protected () extends js.Object {
+  class IconService protected () extends StObject {
     def this(
       _rendererFactory: RendererFactory2,
       _handler: HttpBackend,

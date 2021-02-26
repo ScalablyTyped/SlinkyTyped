@@ -10,9 +10,9 @@ Format and manipulate numbers.
 | ------------------ | :-------------: |
 | Full name          | numbro |
 | Keywords           | numeral, numbro, number, format, time, money, percentage |
-| # releases         | 11 |
-| # dependents       | 96 |
-| # downloads        | 5145470 |
+| # releases         | 5 |
+| # dependents       | 123 |
+| # downloads        | 7986934 |
 | # stars            | 3 |
 
 ## Links

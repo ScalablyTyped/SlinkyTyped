@@ -1,5 +1,6 @@
 package typingsSlinky.chrome.chrome.webRequest
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chrome.chromeStrings.websocket
   - typingsSlinky.chrome.chromeStrings.other
 */
-trait ResourceType extends js.Object
+trait ResourceType extends StObject
 object ResourceType {
   
   @scala.inline

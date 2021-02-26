@@ -4,12 +4,13 @@ import typingsSlinky.novaEditorNode.novaEditorNodeStrings.array
 import typingsSlinky.novaEditorNode.novaEditorNodeStrings.boolean
 import typingsSlinky.novaEditorNode.novaEditorNodeStrings.number
 import typingsSlinky.novaEditorNode.novaEditorNodeStrings.string
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Configuration extends js.Object {
+trait Configuration extends StObject {
   
   def get(key: String): ConfigurationValue | Null = js.native
   @JSName("get")

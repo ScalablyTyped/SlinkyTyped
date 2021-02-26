@@ -1,5 +1,6 @@
 package typingsSlinky.exceljs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.exceljs.exceljsStrings.hidden
   - typingsSlinky.exceljs.exceljsStrings.veryHidden
 */
-trait WorksheetState extends js.Object
+trait WorksheetState extends StObject
 object WorksheetState {
   
   @scala.inline

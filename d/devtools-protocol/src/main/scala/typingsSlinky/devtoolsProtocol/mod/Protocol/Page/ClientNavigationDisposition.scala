@@ -1,6 +1,7 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Page
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.download_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.newWindow
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.download_
 */
-trait ClientNavigationDisposition extends js.Object
+trait ClientNavigationDisposition extends StObject
 object ClientNavigationDisposition {
   
   @scala.inline

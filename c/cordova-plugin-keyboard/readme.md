@@ -12,7 +12,7 @@ Cordova Keyboard Plugin
 | Keywords           | cordova, keyboard, ecosystem:cordova, cordova-ios, cordova-android |
 | # releases         | 0 |
 | # dependents       | 0 |
-| # downloads        | 115493 |
+| # downloads        | 126661 |
 | # stars            | 3 |
 
 ## Links

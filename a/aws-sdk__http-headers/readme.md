@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.1
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/http-headers |
 | Keywords           | - |
-| # releases         | 10 |
+| # releases         | 13 |
 | # dependents       | 0 |
-| # downloads        | 464 |
+| # downloads        | 558 |
 | # stars            | 0 |
 
 ## Links

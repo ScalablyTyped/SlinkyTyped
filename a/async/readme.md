@@ -10,10 +10,10 @@ Higher-order functions and common patterns for asynchronous code
 | ------------------ | :-------------: |
 | Full name          | async |
 | Keywords           | async, callback, module, utility |
-| # releases         | 8 |
-| # dependents       | 22788 |
-| # downloads        | 1184598848 |
-| # stars            | 1213 |
+| # releases         | 7 |
+| # dependents       | 23747 |
+| # downloads        | 1585089642 |
+| # stars            | 1212 |
 
 ## Links
 - [Homepage](https://caolan.github.io/async/)

@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientContaineranalysis.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientContaineranalysis.anon.Parent
 import typingsSlinky.maximMazurokGapiClientContaineranalysis.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientContaineranalysis.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NotesResource extends js.Object {
+trait NotesResource extends StObject {
   
   def batchCreate(request: Callback, body: BatchCreateNotesRequest): Request[BatchCreateNotesResponse] = js.native
   /** Creates new notes in batch. */

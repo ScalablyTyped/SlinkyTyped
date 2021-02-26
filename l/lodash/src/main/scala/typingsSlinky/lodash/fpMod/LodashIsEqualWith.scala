@@ -2,12 +2,13 @@ package typingsSlinky.lodash.fpMod
 
 import typingsSlinky.lodash.mod.IsEqualCustomizer
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashIsEqualWith extends js.Object {
+trait LodashIsEqualWith extends StObject {
   
   def apply(customizer: IsEqualCustomizer): LodashIsEqualWith1x1 = js.native
   def apply(customizer: IsEqualCustomizer, value: js.Any): LodashIsEqualWith1x3 = js.native

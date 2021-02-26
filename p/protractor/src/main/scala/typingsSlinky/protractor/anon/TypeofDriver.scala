@@ -1,17 +1,19 @@
 package typingsSlinky.protractor.anon
 
-import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.seleniumWebdriver.firefoxMod.Driver
 import typingsSlinky.seleniumWebdriver.firefoxMod.Options
 import typingsSlinky.seleniumWebdriver.httpMod.Executor
 import typingsSlinky.seleniumWebdriver.mod.Capabilities
+import typingsSlinky.seleniumWebdriver.mod.Session
 import typingsSlinky.seleniumWebdriver.remoteMod.DriverService
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofDriver extends Instantiable0[Driver] {
+trait TypeofDriver extends Instantiable2[/* session */ Session, /* executor */ Executor, Driver] {
   
   /**
     * Creates a new Firefox session.

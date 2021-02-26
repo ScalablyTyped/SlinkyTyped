@@ -10,9 +10,9 @@ A fast and easy to use JSON Schema validator
 | ------------------ | :-------------: |
 | Full name          | jsonschema |
 | Keywords           | json, schema, jsonschema, validator, validation |
-| # releases         | 4 |
-| # dependents       | 808 |
-| # downloads        | 25277088 |
+| # releases         | 10 |
+| # dependents       | 970 |
+| # downloads        | 41612528 |
 | # stars            | 55 |
 
 ## Links

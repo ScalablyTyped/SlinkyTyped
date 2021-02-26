@@ -1,16 +1,16 @@
 package typingsSlinky.dateFns
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("date-fns/getOverlappingDaysInIntervals", JSImport.Namespace)
-@js.native
-object dateFnsGetOverlappingDaysInIntervalsMod extends js.Object {
+object dateFnsGetOverlappingDaysInIntervalsMod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
+    @JSImport("date-fns/getOverlappingDaysInIntervals", JSImport.Default)
+    @js.native
     def apply(
       intervalLeft: typingsSlinky.dateFns.mod.Interval,
       intervalRight: typingsSlinky.dateFns.mod.Interval

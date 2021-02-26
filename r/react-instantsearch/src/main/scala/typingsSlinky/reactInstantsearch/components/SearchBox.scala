@@ -8,6 +8,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactInstantsearchDom.mod.SearchBoxProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object SearchBox {
   
   @JSImport("react-instantsearch/dom", "SearchBox")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +31,10 @@ object SearchBox {
     def defaultRefinement(value: String): this.type = set("defaultRefinement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def focusShortcutsVarargs(value: String*): this.type = set("focusShortcuts", js.Array(value :_*))
+    def focusShortcuts(value: js.Array[String]): this.type = set("focusShortcuts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def focusShortcuts(value: js.Array[String]): this.type = set("focusShortcuts", value.asInstanceOf[js.Any])
+    def focusShortcutsVarargs(value: String*): this.type = set("focusShortcuts", js.Array(value :_*))
     
     @scala.inline
     def loadingIndicator(value: ReactElement): this.type = set("loadingIndicator", value.asInstanceOf[js.Any])
@@ -60,7 +61,7 @@ object SearchBox {
     def submit(value: ReactElement): this.type = set("submit", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SearchBoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SearchBox.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SearchBoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

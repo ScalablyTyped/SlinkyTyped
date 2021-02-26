@@ -10,9 +10,9 @@ Job manager
 | ------------------ | :-------------: |
 | Full name          | bull |
 | Keywords           | job, queue, task, parallel |
-| # releases         | 27 |
-| # dependents       | 199 |
-| # downloads        | 3620125 |
+| # releases         | 19 |
+| # dependents       | 279 |
+| # downloads        | 10057542 |
 | # stars            | 28 |
 
 ## Links

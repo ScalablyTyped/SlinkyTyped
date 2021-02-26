@@ -10,9 +10,9 @@ An Open Graph implementation for Node.js.
 | ------------------ | :-------------: |
 | Full name          | open-graph |
 | Keywords           | open graph, open, graph, opengraph, og |
-| # releases         | 2 |
-| # dependents       | 7 |
-| # downloads        | 51065 |
+| # releases         | 0 |
+| # dependents       | 10 |
+| # downloads        | 128730 |
 | # stars            | 3 |
 
 ## Links

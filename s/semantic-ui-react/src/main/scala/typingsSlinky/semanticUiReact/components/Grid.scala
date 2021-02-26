@@ -14,15 +14,38 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.horizontally
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.internally
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.vertically
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.very
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Grid {
   
+  object Column {
+    
+    @JSImport("semantic-ui-react", "Grid.Column")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Column.type): SharedBuilder_GridColumnProps_612419309 = new SharedBuilder_GridColumnProps_612419309(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: GridColumnProps): SharedBuilder_GridColumnProps_612419309 = new SharedBuilder_GridColumnProps_612419309(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Row {
+    
+    @JSImport("semantic-ui-react", "Grid.Row")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Row.type): SharedBuilder_GridRowProps_1468990785 = new SharedBuilder_GridRowProps_1468990785(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: GridRowProps): SharedBuilder_GridRowProps_1468990785 = new SharedBuilder_GridRowProps_1468990785(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Grid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -78,29 +101,7 @@ object Grid {
     def verticalAlign(value: SemanticVERTICALALIGNMENTS): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Grid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Row {
-    
-    @JSImport("semantic-ui-react", "Grid.Row")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: GridRowProps): SharedBuilder_GridRowProps_1468990785 = new SharedBuilder_GridRowProps_1468990785(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Row.type): SharedBuilder_GridRowProps_1468990785 = new SharedBuilder_GridRowProps_1468990785(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Column {
-    
-    @JSImport("semantic-ui-react", "Grid.Column")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: GridColumnProps): SharedBuilder_GridColumnProps_612419309 = new SharedBuilder_GridColumnProps_612419309(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Column.type): SharedBuilder_GridColumnProps_612419309 = new SharedBuilder_GridColumnProps_612419309(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

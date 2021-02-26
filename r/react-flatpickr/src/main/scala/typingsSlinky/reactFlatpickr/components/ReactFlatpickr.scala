@@ -56,6 +56,7 @@ import typingsSlinky.std.InsertPosition
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import typingsSlinky.std.ShadowRoot
 import typingsSlinky.std.ShadowRootInit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -64,7 +65,7 @@ object ReactFlatpickr {
   
   @JSImport("react-flatpickr", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -290,9 +291,6 @@ object ReactFlatpickr {
     def form(value: HTMLFormElement): this.type = set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def formNull: this.type = set("form", null)
-    
-    @scala.inline
     def formAction(value: String): this.type = set("formAction", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -303,6 +301,9 @@ object ReactFlatpickr {
     
     @scala.inline
     def formNoValidate(value: Boolean): this.type = set("formNoValidate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def formNull: this.type = set("form", null)
     
     @scala.inline
     def formTarget(value: String): this.type = set("formTarget", value.asInstanceOf[js.Any])
@@ -1334,12 +1335,6 @@ object ReactFlatpickr {
     def validity(value: ValidityState): this.type = set("validity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: (String | js.Date | Double)*): this.type = set("value", js.Array(value :_*))
-    
-    @scala.inline
-    def valueDate(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def value(value: String | js.Date | Double | (js.Array[String | js.Date | Double])): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1352,6 +1347,12 @@ object ReactFlatpickr {
     def valueAsNumber(value: Double): this.type = set("valueAsNumber", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def valueDate(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def valueVarargs(value: (String | js.Date | Double)*): this.type = set("value", js.Array(value :_*))
+    
+    @scala.inline
     def webkitMatchesSelector(value: /* selectors */ String => Boolean): this.type = set("webkitMatchesSelector", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -1361,7 +1362,7 @@ object ReactFlatpickr {
     def willValidate(value: Boolean): this.type = set("willValidate", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DateTimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactFlatpickr.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DateTimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

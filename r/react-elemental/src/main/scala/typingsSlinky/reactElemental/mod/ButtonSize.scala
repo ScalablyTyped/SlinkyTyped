@@ -1,5 +1,6 @@
 package typingsSlinky.reactElemental.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactElemental.reactElementalStrings.beta
   - typingsSlinky.reactElemental.reactElementalStrings.gamma
 */
-trait ButtonSize extends js.Object
+trait ButtonSize extends StObject
 object ButtonSize {
   
   @scala.inline

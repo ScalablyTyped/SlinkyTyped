@@ -1,5 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.weixinApp.weixinAppStrings.scopeDotwritePhotosAlbum
   - typingsSlinky.weixinApp.weixinAppStrings.scopeDotcamera
 */
-trait Scope extends js.Object
+trait Scope extends StObject
 object Scope {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.facebookInstantGames.FBInstant
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.UNKNOWN
   - typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.USER_INPUT
 */
-trait ErrorCodeType extends js.Object
+trait ErrorCodeType extends StObject
 object ErrorCodeType {
   
   @scala.inline

@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.inputMoment.mod.InputMomentProps
 import typingsSlinky.inputMoment.mod.default
 import typingsSlinky.moment.mod.Moment
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object InputMoment {
   
+  @scala.inline
+  def apply(moment: Moment): Builder = {
+    val __props = js.Dynamic.literal(moment = moment.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[InputMomentProps]))
+  }
+  
   @JSImport("input-moment", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +47,4 @@ object InputMoment {
   }
   
   def withProps(p: InputMomentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(moment: Moment): Builder = {
-    val __props = js.Dynamic.literal(moment = moment.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[InputMomentProps]))
-  }
 }

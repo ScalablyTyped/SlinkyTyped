@@ -11,6 +11,7 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallA
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,16 +32,20 @@ class TabContainer protected ()
     container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
-/* static members */
-@JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer")
-@js.native
-object TabContainer extends js.Object {
+object TabContainer {
+  
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.create")
+  @js.native
   def create(model: IModel): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -51,6 +56,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.7.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInBuildingBlockUnderWidget")
+  @js.native
   def createInBuildingBlockUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.BuildingBlock): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -61,6 +69,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInBuildingBlockUnderWidgets")
+  @js.native
   def createInBuildingBlockUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.BuildingBlock): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -71,6 +82,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.7.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInDataViewUnderFooterWidget")
+  @js.native
   def createInDataViewUnderFooterWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -81,6 +95,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInDataViewUnderFooterWidgets")
+  @js.native
   def createInDataViewUnderFooterWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -91,6 +108,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInDataViewUnderWidget")
+  @js.native
   def createInDataViewUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -101,6 +121,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInDataViewUnderWidgets")
+  @js.native
   def createInDataViewUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -111,6 +134,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInDivContainerUnderWidget")
+  @js.native
   def createInDivContainerUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DivContainer): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -121,6 +147,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInDivContainerUnderWidgets")
+  @js.native
   def createInDivContainerUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DivContainer): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -131,6 +160,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInGroupBoxUnderWidget")
+  @js.native
   def createInGroupBoxUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.GroupBox): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -141,6 +173,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInGroupBoxUnderWidgets")
+  @js.native
   def createInGroupBoxUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.GroupBox): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -151,6 +186,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInHeaderUnderLeftWidget")
+  @js.native
   def createInHeaderUnderLeftWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -161,6 +199,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInHeaderUnderLeftWidgets")
+  @js.native
   def createInHeaderUnderLeftWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -171,6 +212,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInHeaderUnderRightWidget")
+  @js.native
   def createInHeaderUnderRightWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -181,6 +225,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInHeaderUnderRightWidgets")
+  @js.native
   def createInHeaderUnderRightWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -191,6 +238,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInLayoutCallArgumentUnderWidget")
+  @js.native
   def createInLayoutCallArgumentUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutCallArgument): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -201,6 +251,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInLayoutCallArgumentUnderWidgets")
+  @js.native
   def createInLayoutCallArgumentUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutCallArgument): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -211,6 +264,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInLayoutGridColumnUnderWidget")
+  @js.native
   def createInLayoutGridColumnUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutGridColumn): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -221,6 +277,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInLayoutGridColumnUnderWidgets")
+  @js.native
   def createInLayoutGridColumnUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutGridColumn): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -231,6 +290,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInLayoutUnderWidget")
+  @js.native
   def createInLayoutUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Layout): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -241,6 +303,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 to 7.23.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInLayoutUnderWidgets")
+  @js.native
   def createInLayoutUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Layout): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -251,6 +316,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInListViewTemplateUnderWidget")
+  @js.native
   def createInListViewTemplateUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListViewTemplate): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -261,6 +329,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInListViewTemplateUnderWidgets")
+  @js.native
   def createInListViewTemplateUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListViewTemplate): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -271,6 +342,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInListViewUnderWidget")
+  @js.native
   def createInListViewUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -281,6 +355,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInListViewUnderWidgets")
+  @js.native
   def createInListViewUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -291,6 +368,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.1.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInMasterDetailRegionUnderWidget")
+  @js.native
   def createInMasterDetailRegionUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.MasterDetailRegion): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -301,6 +381,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.23.0 to 7.23.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInNativeLayoutCallArgumentUnderWidgets")
+  @js.native
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -311,6 +394,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.5.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInNativeLayoutContentUnderSidebarWidgets")
+  @js.native
   def createInNativeLayoutContentUnderSidebarWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NativeLayoutContent): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -321,6 +407,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.0.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInNativeLayoutContentUnderWidgets")
+  @js.native
   def createInNativeLayoutContentUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NativeLayoutContent): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -331,6 +420,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.22.0 to 7.23.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInNativeLayoutUnderHeaderWidget")
+  @js.native
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -341,6 +433,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.21.0 to 7.23.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInNativeLayoutUnderWidgets")
+  @js.native
   def createInNativeLayoutUnderWidgets(container: NativeLayout): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -351,6 +446,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInNavigationListItemUnderWidget")
+  @js.native
   def createInNavigationListItemUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationListItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -361,6 +459,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInNavigationListItemUnderWidgets")
+  @js.native
   def createInNavigationListItemUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationListItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -371,6 +472,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 6.9.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInReportPaneUnderParameterWidget")
+  @js.native
   def createInReportPaneUnderParameterWidget(container: ReportPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -381,6 +485,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 6.9.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInReportPaneUnderReportWidget")
+  @js.native
   def createInReportPaneUnderReportWidget(container: ReportPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -391,6 +498,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInScrollContainerRegionUnderWidget")
+  @js.native
   def createInScrollContainerRegionUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollContainerRegion): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -401,6 +511,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInScrollContainerRegionUnderWidgets")
+  @js.native
   def createInScrollContainerRegionUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollContainerRegion): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -411,6 +524,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInSnippetUnderWidget")
+  @js.native
   def createInSnippetUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Snippet): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -421,6 +537,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInSnippetUnderWidgets")
+  @js.native
   def createInSnippetUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Snippet): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -431,6 +550,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInSplitPaneUnderFirstWidget")
+  @js.native
   def createInSplitPaneUnderFirstWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -441,6 +563,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 to 7.23.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInSplitPaneUnderFirstWidgets")
+  @js.native
   def createInSplitPaneUnderFirstWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -451,6 +576,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInSplitPaneUnderSecondWidget")
+  @js.native
   def createInSplitPaneUnderSecondWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -461,6 +589,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 to 7.23.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInSplitPaneUnderSecondWidgets")
+  @js.native
   def createInSplitPaneUnderSecondWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -471,6 +602,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInTabPageUnderWidget")
+  @js.native
   def createInTabPageUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TabPage): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -481,6 +615,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInTabPageUnderWidgets")
+  @js.native
   def createInTabPageUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TabPage): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -491,6 +628,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInTableCellUnderWidget")
+  @js.native
   def createInTableCellUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TableCell): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -501,6 +641,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInTableCellUnderWidgets")
+  @js.native
   def createInTableCellUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TableCell): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -511,6 +654,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInTemplateGridContentsUnderWidget")
+  @js.native
   def createInTemplateGridContentsUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -521,6 +667,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInTemplateGridContentsUnderWidgets")
+  @js.native
   def createInTemplateGridContentsUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -531,6 +680,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 7.14.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInVerticalFlowUnderWidgets")
+  @js.native
   def createInVerticalFlowUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.VerticalFlow): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -541,6 +693,9 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.0.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInWebLayoutContentUnderWidgets")
+  @js.native
   def createInWebLayoutContentUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.WebLayoutContent): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
   /**
@@ -551,9 +706,22 @@ object TabContainer extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.2.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.createInWidgetValueUnderWidgets")
+  @js.native
   def createInWidgetValueUnderWidgets(container: WidgetValue): typingsSlinky.mendixmodelsdk.pagesMod.pages.TabContainer = js.native
   
-  var structureTypeName: String = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.structureTypeName")
+  @js.native
+  def structureTypeName: String = js.native
+  @scala.inline
+  def structureTypeName_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("structureTypeName")(x.asInstanceOf[js.Any])
   
-  var versionInfo: StructureVersionInfo = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.TabContainer.versionInfo")
+  @js.native
+  def versionInfo: StructureVersionInfo = js.native
+  @scala.inline
+  def versionInfo_=(x: StructureVersionInfo): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(x.asInstanceOf[js.Any])
 }

@@ -6,16 +6,16 @@ import typingsSlinky.agGrid.anon.Column
 import typingsSlinky.agGrid.anon.EPopup
 import typingsSlinky.agGrid.anon.EventSource
 import typingsSlinky.agGrid.anon.KeepWithinBounds
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/widgets/popupService", JSImport.Namespace)
-@js.native
-object popupServiceMod extends js.Object {
+object popupServiceMod {
   
+  @JSImport("ag-grid/dist/lib/widgets/popupService", "PopupService")
   @js.native
-  class PopupService () extends js.Object {
+  class PopupService () extends StObject {
     
     var activePopupElements: js.Any = js.native
     

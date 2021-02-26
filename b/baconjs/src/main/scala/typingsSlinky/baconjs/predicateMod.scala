@@ -5,16 +5,19 @@ import typingsSlinky.baconjs.observableMod.Property
 import typingsSlinky.baconjs.observableMod.default
 import typingsSlinky.baconjs.transformMod.Transformer
 import typingsSlinky.baconjs.typesMod.Function1
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("baconjs/types/predicate", JSImport.Namespace)
-@js.native
-object predicateMod extends js.Object {
+object predicateMod {
   
+  @JSImport("baconjs/types/predicate", "toPredicate")
+  @js.native
   def toPredicate[V](f: PredicateOrBoolean[V]): Predicate[V] = js.native
   
+  @JSImport("baconjs/types/predicate", "withPredicate")
+  @js.native
   def withPredicate[V](
     src: default[V],
     f: PredicateOrProperty[V],

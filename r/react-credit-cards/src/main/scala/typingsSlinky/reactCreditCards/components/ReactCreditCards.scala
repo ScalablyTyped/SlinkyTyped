@@ -8,15 +8,22 @@ import typingsSlinky.reactCreditCards.mod.CallbackArgument
 import typingsSlinky.reactCreditCards.mod.Focused
 import typingsSlinky.reactCreditCards.mod.ReactCreditCardProps
 import typingsSlinky.reactCreditCards.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactCreditCards {
   
+  @scala.inline
+  def apply(cvc: String | Double, expiry: String | Double, name: String, number: String | Double): Builder = {
+    val __props = js.Dynamic.literal(cvc = cvc.asInstanceOf[js.Any], expiry = expiry.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactCreditCardProps]))
+  }
+  
   @JSImport("react-credit-cards", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -24,10 +31,10 @@ object ReactCreditCards {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def acceptedCardsVarargs(value: String*): this.type = set("acceptedCards", js.Array(value :_*))
+    def acceptedCards(value: js.Array[String]): this.type = set("acceptedCards", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def acceptedCards(value: js.Array[String]): this.type = set("acceptedCards", value.asInstanceOf[js.Any])
+    def acceptedCardsVarargs(value: String*): this.type = set("acceptedCards", js.Array(value :_*))
     
     @scala.inline
     def callback(value: (/* type */ CallbackArgument, /* isValid */ Boolean) => Unit): this.type = set("callback", js.Any.fromFunction2(value))
@@ -49,10 +56,4 @@ object ReactCreditCards {
   }
   
   def withProps(p: ReactCreditCardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(cvc: String | Double, expiry: String | Double, name: String, number: String | Double): Builder = {
-    val __props = js.Dynamic.literal(cvc = cvc.asInstanceOf[js.Any], expiry = expiry.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactCreditCardProps]))
-  }
 }

@@ -1,11 +1,12 @@
 package typingsSlinky.uniApp
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Uni extends js.Object {
+trait Uni extends StObject {
   
   /**
     * 触发自定义事件，附加的参数会传递给事件监听器。

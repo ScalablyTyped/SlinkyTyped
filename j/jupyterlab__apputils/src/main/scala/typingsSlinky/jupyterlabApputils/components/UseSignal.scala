@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.jupyterlabApputils.vdomMod.IUseSignalProps
 import typingsSlinky.luminoSignaling.mod.ISignal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object UseSignal {
   
+  @scala.inline
+  def apply[SENDER, ARGS](children: (js.UndefOr[SENDER], js.UndefOr[ARGS]) => ReactElement, signal: ISignal[SENDER, ARGS]): Builder[SENDER, ARGS] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children), signal = signal.asInstanceOf[js.Any])
+    new Builder[SENDER, ARGS](js.Array(this.component, __props.asInstanceOf[IUseSignalProps[SENDER, ARGS]]))
+  }
+  
   @JSImport("@jupyterlab/apputils", "UseSignal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[SENDER, ARGS] (val args: js.Array[js.Any])
@@ -31,10 +38,4 @@ object UseSignal {
   }
   
   def withProps[SENDER, ARGS](p: IUseSignalProps[SENDER, ARGS]): Builder[SENDER, ARGS] = new Builder[SENDER, ARGS](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[SENDER, ARGS](children: (js.UndefOr[SENDER], js.UndefOr[ARGS]) => ReactElement, signal: ISignal[SENDER, ARGS]): Builder[SENDER, ARGS] = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children), signal = signal.asInstanceOf[js.Any])
-    new Builder[SENDER, ARGS](js.Array(this.component, __props.asInstanceOf[IUseSignalProps[SENDER, ARGS]]))
-  }
 }

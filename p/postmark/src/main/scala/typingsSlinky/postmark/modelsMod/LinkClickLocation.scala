@@ -1,12 +1,13 @@
 package typingsSlinky.postmark.modelsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("postmark/dist/client/models", "LinkClickLocation")
 @js.native
-object LinkClickLocation extends js.Object {
+object LinkClickLocation extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.postmark.messageSupportingTypesMod.LinkClickLocation with String] = js.native

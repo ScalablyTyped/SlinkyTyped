@@ -5,6 +5,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.ObjectProperty
 import typingsSlinky.babelTypes.babelTypesStrings.get
 import typingsSlinky.babelTypes.babelTypesStrings.method
 import typingsSlinky.babelTypes.babelTypesStrings.set
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.babelTypes.ts36Mod.ObjectMethod_
   - typingsSlinky.babelTypes.ts36Mod.ObjectProperty_
 */
-trait ObjectMember extends js.Object
+trait ObjectMember extends StObject
 object ObjectMember {
   
   @scala.inline
@@ -32,10 +33,10 @@ object ObjectMember {
     start: Double,
     `type`: ObjectMethod,
     value: Expression
-  ): ObjectMember = {
+  ): typingsSlinky.babelTypes.ts36Mod.ObjectMethod_ = {
     val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], computed = computed.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], shorthand = shorthand.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ObjectMember]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.ObjectMethod_]
   }
   
   @scala.inline
@@ -48,9 +49,9 @@ object ObjectMember {
     start: Double,
     `type`: ObjectProperty,
     value: Expression
-  ): ObjectMember = {
+  ): typingsSlinky.babelTypes.ts36Mod.ObjectProperty_ = {
     val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], shorthand = shorthand.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ObjectMember]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.ObjectProperty_]
   }
 }

@@ -2,6 +2,7 @@ package typingsSlinky.typescriptServices.mod
 
 import typingsSlinky.typescriptServices.TypeScript.IStatementSyntax
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,10 +18,10 @@ class LabeledStatementSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSImport("typescript-services", "LabeledStatementSyntax")
-@js.native
-object LabeledStatementSyntax extends js.Object {
+object LabeledStatementSyntax {
   
+  /* static member */
+  @JSImport("typescript-services", "LabeledStatementSyntax.create1")
+  @js.native
   def create1(identifier: ISyntaxToken, statement: IStatementSyntax): typingsSlinky.typescriptServices.TypeScript.LabeledStatementSyntax = js.native
 }

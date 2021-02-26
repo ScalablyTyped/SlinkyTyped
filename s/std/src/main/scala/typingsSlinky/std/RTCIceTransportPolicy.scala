@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.all
   - typingsSlinky.std.stdStrings.relay
 */
-trait RTCIceTransportPolicy extends js.Object
+trait RTCIceTransportPolicy extends StObject
 object RTCIceTransportPolicy {
   
   @scala.inline

@@ -10,10 +10,10 @@ Returns true if the given number is odd, and is an integer that does not exceed 
 | ------------------ | :-------------: |
 | Full name          | is-odd |
 | Keywords           | array, count, even, filter, integer, is, math, numeric, odd, string |
-| # releases         | 3 |
-| # dependents       | 29 |
-| # downloads        | 42397474 |
-| # stars            | 1 |
+| # releases         | 1 |
+| # dependents       | 33 |
+| # downloads        | 26300618 |
+| # stars            | 2 |
 
 ## Links
 - [Homepage](https://github.com/jonschlinkert/is-odd)

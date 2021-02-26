@@ -3,13 +3,12 @@ package typingsSlinky.marko
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.marko.domElementMod.DomElement
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("marko/src/components/Component", JSImport.Namespace)
-@js.native
-object componentMod extends js.Object {
+object componentMod {
   
   @js.native
   trait Component

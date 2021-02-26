@@ -2,13 +2,14 @@ package typingsSlinky.squareConnect.mod
 
 import typingsSlinky.squareConnect.squareConnectStrings.PENDING
 import typingsSlinky.squareConnect.squareConnectStrings.VERIFIED
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "RegisterDomainResponse")
 @js.native
-class RegisterDomainResponse () extends js.Object {
+class RegisterDomainResponse () extends StObject {
   
   /**
     * Any errors that occurred during the request.

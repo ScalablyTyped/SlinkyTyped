@@ -10,9 +10,9 @@ WebMidi.js helps you tame the Web MIDI API. Send and receive MIDI messages with 
 | ------------------ | :-------------: |
 | Full name          | webmidi |
 | Keywords           | midi, message, web, browser, front-end, webmidi api |
-| # releases         | 13 |
-| # dependents       | 12 |
-| # downloads        | 16874 |
+| # releases         | 5 |
+| # dependents       | 23 |
+| # downloads        | 25937 |
 | # stars            | 5 |
 
 ## Links

@@ -2,13 +2,14 @@ package typingsSlinky.firebaseFirestoreTypes.mod
 
 import typingsSlinky.firebaseFirestoreTypes.anon.Complete
 import typingsSlinky.firebaseFirestoreTypes.anon.Delete
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@firebase/firestore-types", "FirebaseFirestore")
 @js.native
-class FirebaseFirestore protected () extends js.Object {
+class FirebaseFirestore protected () extends StObject {
   
   var INTERNAL: Delete = js.native
   

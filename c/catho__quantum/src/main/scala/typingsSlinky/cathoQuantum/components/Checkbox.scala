@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.anon.BaseFontSize
 import typingsSlinky.cathoQuantum.checkboxMod.CheckboxProps
 import typingsSlinky.react.mod.ChangeEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Checkbox {
   
+  @scala.inline
+  def apply(name: String): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CheckboxProps]))
+  }
+  
   @JSImport("@catho/quantum/Checkbox", "Checkbox")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -50,10 +57,4 @@ object Checkbox {
   }
   
   def withProps(p: CheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(name: String): Builder = {
-    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CheckboxProps]))
-  }
 }

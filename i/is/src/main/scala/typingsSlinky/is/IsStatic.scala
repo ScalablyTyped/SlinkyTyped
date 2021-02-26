@@ -1,11 +1,12 @@
 package typingsSlinky.is
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IsStatic extends js.Object {
+trait IsStatic extends StObject {
   
   /**
     * Checks if the given value is above minimum value.

@@ -6,13 +6,12 @@ import typingsSlinky.node.streamMod.PassThrough
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.node.streamMod.Writable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("multipipe", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   /**
     * Pass a variable number of streams and each will be piped to the next one.
@@ -23,27 +22,51 @@ object mod extends js.Object {
     *
     * Pass a function as last argument to be called on error or finish of the last stream.
     */
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(): PassThrough = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): PassThrough = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(options: js.UndefOr[scala.Nothing], callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): PassThrough = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(options: DuplexOptions): PassThrough = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(options: DuplexOptions, callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): PassThrough = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(source: Readable, destination: Writable): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(source: Readable, destination: Writable, callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     destination: Writable,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(source: Readable, destination: Writable, options: DuplexOptions): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     destination: Writable,
     options: DuplexOptions,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(source: Readable, t1: Duplex, t2: Duplex, destination: Writable): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -51,7 +74,11 @@ object mod extends js.Object {
     destination: Writable,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(source: Readable, t1: Duplex, t2: Duplex, destination: Writable, options: DuplexOptions): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -60,7 +87,11 @@ object mod extends js.Object {
     options: DuplexOptions,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(source: Readable, t1: Duplex, t2: Duplex, t3: Duplex, destination: Writable): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -69,6 +100,8 @@ object mod extends js.Object {
     destination: Writable,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -77,6 +110,8 @@ object mod extends js.Object {
     destination: Writable,
     options: DuplexOptions
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -86,7 +121,11 @@ object mod extends js.Object {
     options: DuplexOptions,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(source: Readable, t1: Duplex, t2: Duplex, t3: Duplex, t4: Duplex, destination: Writable): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -96,6 +135,8 @@ object mod extends js.Object {
     destination: Writable,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -105,6 +146,8 @@ object mod extends js.Object {
     destination: Writable,
     options: DuplexOptions
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -115,6 +158,8 @@ object mod extends js.Object {
     options: DuplexOptions,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -124,6 +169,8 @@ object mod extends js.Object {
     t5: Duplex,
     destination: Writable
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -134,6 +181,8 @@ object mod extends js.Object {
     destination: Writable,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -144,6 +193,8 @@ object mod extends js.Object {
     destination: Writable,
     options: DuplexOptions
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -155,6 +206,8 @@ object mod extends js.Object {
     options: DuplexOptions,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -165,6 +218,8 @@ object mod extends js.Object {
     t6: Duplex,
     destination: Writable
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -176,6 +231,8 @@ object mod extends js.Object {
     destination: Writable,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -187,6 +244,8 @@ object mod extends js.Object {
     destination: Writable,
     options: DuplexOptions
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -199,6 +258,8 @@ object mod extends js.Object {
     options: DuplexOptions,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -210,6 +271,8 @@ object mod extends js.Object {
     t7: Duplex,
     destination: Writable
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -222,6 +285,8 @@ object mod extends js.Object {
     destination: Writable,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -234,6 +299,8 @@ object mod extends js.Object {
     destination: Writable,
     options: DuplexOptions
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     t1: Duplex,
@@ -247,14 +314,22 @@ object mod extends js.Object {
     options: DuplexOptions,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(source: Readable, transform: Duplex, destination: Writable): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     transform: Duplex,
     destination: Writable,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(source: Readable, transform: Duplex, destination: Writable, options: DuplexOptions): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     source: Readable,
     transform: Duplex,
@@ -262,26 +337,46 @@ object mod extends js.Object {
     options: DuplexOptions,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(stream: js.Array[Stream]): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(stream: js.Array[Stream], callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     stream: js.Array[Stream],
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(stream: js.Array[Stream], options: DuplexOptions): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     stream: js.Array[Stream],
     options: DuplexOptions,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(stream: Duplex): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(stream: Duplex, callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(
     stream: Duplex,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
   ): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(stream: Duplex, options: DuplexOptions): Duplex = js.native
+  @JSImport("multipipe", JSImport.Namespace)
+  @js.native
   def apply(stream: Duplex, options: DuplexOptions, callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): Duplex = js.native
 }

@@ -5,6 +5,7 @@ import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrt.Windows.Storage.FileProperties.PropertyPrefetchOptions
 import typingsSlinky.winrt.Windows.Storage.FileProperties.ThumbnailMode
 import typingsSlinky.winrt.Windows.Storage.FileProperties.ThumbnailOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

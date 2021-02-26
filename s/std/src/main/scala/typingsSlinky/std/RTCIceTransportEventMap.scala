@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RTCIceTransportEventMap extends js.Object {
+trait RTCIceTransportEventMap extends StObject {
   
   var gatheringstatechange: org.scalajs.dom.raw.Event = js.native
   
@@ -26,27 +27,15 @@ object RTCIceTransportEventMap {
   }
   
   @scala.inline
-  implicit class RTCIceTransportEventMapOps[Self <: RTCIceTransportEventMap] (val x: Self) extends AnyVal {
+  implicit class RTCIceTransportEventMapMutableBuilder[Self <: RTCIceTransportEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setGatheringstatechange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "gatheringstatechange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setSelectedcandidatepairchange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "selectedcandidatepairchange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setGatheringstatechange(value: org.scalajs.dom.raw.Event): Self = this.set("gatheringstatechange", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSelectedcandidatepairchange(value: org.scalajs.dom.raw.Event): Self = this.set("selectedcandidatepairchange", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStatechange(value: org.scalajs.dom.raw.Event): Self = this.set("statechange", value.asInstanceOf[js.Any])
+    def setStatechange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "statechange", value.asInstanceOf[js.Any])
   }
 }

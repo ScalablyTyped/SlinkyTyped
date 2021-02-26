@@ -6,6 +6,7 @@ import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListOptions
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.charges.ICharge
 import typingsSlinky.stripe.mod.transferReversals.IReversal
@@ -15,13 +16,15 @@ import typingsSlinky.stripe.mod.transfers.ITransfer
 import typingsSlinky.stripe.mod.transfers.ITransferCreationOptions
 import typingsSlinky.stripe.mod.transfers.ITransferListOptions
 import typingsSlinky.stripe.mod.transfers.ITransferUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.Transfers")
 @js.native
-class Transfers () extends StripeResource {
+class Transfers protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def cancel(id: String): js.Promise[ITransfer] = js.native
   def cancel(id: String, options: HeaderOptions): js.Promise[ITransfer] = js.native
@@ -67,7 +70,7 @@ class Transfers () extends StripeResource {
   def createReversal(transferId: String, options: HeaderOptions, response: IResponseFn[IReversal]): js.Promise[IReversal] = js.native
   def createReversal(transferId: String, response: IResponseFn[IReversal]): js.Promise[IReversal] = js.native
   
-   // TODO: Implement placeholder method
+  // TODO: Implement placeholder method
   def getMetadata(): Unit = js.native
   
   def list(): IListPromise[ITransfer] = js.native
@@ -102,7 +105,7 @@ class Transfers () extends StripeResource {
   def listReversals(transferId: String, options: HeaderOptions, response: IResponseFn[IList[IReversal]]): IListPromise[IReversal] = js.native
   def listReversals(transferId: String, response: IResponseFn[IList[IReversal]]): IListPromise[IReversal] = js.native
   
-   // TODO: Not sure if this should be a list of balance transactions or charges.
+  // TODO: Not sure if this should be a list of balance transactions or charges.
   def listTransactions(): IListPromise[ICharge] = js.native
   def listTransactions(options: HeaderOptions): IListPromise[ICharge] = js.native
   def listTransactions(options: HeaderOptions, response: IResponseFn[IList[ICharge]]): IListPromise[ICharge] = js.native
@@ -131,7 +134,7 @@ class Transfers () extends StripeResource {
   def retrieveReversal(transferId: String, reversalId: String, response: IResponseFn[IReversal]): js.Promise[IReversal] = js.native
   
   def reverse(id: String): js.Promise[IReversal] = js.native
-   // TODO: Not sure if this should be a list of balance transactions or charges.
+  // TODO: Not sure if this should be a list of balance transactions or charges.
   /**
     * When you create a new reversal, you must specify a transfer to create it on.
     *

@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,19 +33,27 @@ class Timestamp () extends ITimestamp {
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-/* static members */
-@JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp")
-@js.native
-object Timestamp extends js.Object {
+object Timestamp {
   
   /**
     * Creates a new Timestamp instance using the specified properties.
     * @param [properties] Properties to set
     * @returns Timestamp instance
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.create")
+  @js.native
   def create(): Timestamp = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.create")
+  @js.native
   def create(properties: ITimestamp): Timestamp = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): Timestamp = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Timestamp = js.native
   /**
     * Decodes a Timestamp message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -53,11 +62,17 @@ object Timestamp extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.decode")
+  @js.native
   def decode(reader: Reader): Timestamp = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.decode")
+  @js.native
   def decode(reader: Reader, length: Double): Timestamp = js.native
-  def decode(reader: js.typedarray.Uint8Array): Timestamp = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): Timestamp = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Timestamp = js.native
   /**
     * Decodes a Timestamp message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -65,8 +80,10 @@ object Timestamp extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): Timestamp = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): Timestamp = js.native
   
   /**
     * Encodes the specified Timestamp message. Does not implicitly {@link io.cucumber.messages.Timestamp.verify|verify} messages.
@@ -74,7 +91,12 @@ object Timestamp extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.encode")
+  @js.native
   def encode(message: ITimestamp): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.encode")
+  @js.native
   def encode(message: ITimestamp, writer: Writer): Writer = js.native
   
   /**
@@ -83,7 +105,12 @@ object Timestamp extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITimestamp): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITimestamp, writer: Writer): Writer = js.native
   
   /**
@@ -91,6 +118,9 @@ object Timestamp extends js.Object {
     * @param object Plain object
     * @returns Timestamp
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): Timestamp = js.native
   
   /**
@@ -99,7 +129,12 @@ object Timestamp extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.toObject")
+  @js.native
   def toObject(message: Timestamp): StringDictionary[js.Any] = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.toObject")
+  @js.native
   def toObject(message: Timestamp, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -107,5 +142,8 @@ object Timestamp extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Timestamp.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

@@ -5,16 +5,16 @@ import typingsSlinky.notyf.notyfModelsMod.NotyfArrayEvent
 import typingsSlinky.notyf.notyfModelsMod.NotyfEventCallback
 import typingsSlinky.notyf.notyfModelsMod.NotyfNotification
 import typingsSlinky.notyf.notyfOptionsMod.NotyfEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("notyf/notyf.view", JSImport.Namespace)
-@js.native
-object notyfViewMod extends js.Object {
+object notyfViewMod {
   
+  @JSImport("notyf/notyf.view", "NotyfView")
   @js.native
-  class NotyfView () extends js.Object {
+  class NotyfView () extends StObject {
     
     val X_POSITION_FLEX_MAP: js.Any = js.native
     

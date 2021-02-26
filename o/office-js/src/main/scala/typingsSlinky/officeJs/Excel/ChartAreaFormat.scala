@@ -23,6 +23,7 @@ import typingsSlinky.officeJs.officeJsStrings.MonochromaticPalette6
 import typingsSlinky.officeJs.officeJsStrings.MonochromaticPalette7
 import typingsSlinky.officeJs.officeJsStrings.MonochromaticPalette8
 import typingsSlinky.officeJs.officeJsStrings.MonochromaticPalette9
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

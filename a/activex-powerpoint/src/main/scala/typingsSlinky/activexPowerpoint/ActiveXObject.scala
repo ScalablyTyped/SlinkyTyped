@@ -49,12 +49,13 @@ import typingsSlinky.activexPowerpoint.anon.CancelProtViewWindow
 import typingsSlinky.activexPowerpoint.anon.NEffect
 import typingsSlinky.activexPowerpoint.anon.PresWn
 import typingsSlinky.activexPowerpoint.anon.SelSelection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ActiveXObject extends js.Object {
+trait ActiveXObject extends StObject {
   
   def on(
     obj: Application,

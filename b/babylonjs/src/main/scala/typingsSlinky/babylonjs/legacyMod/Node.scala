@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import typingsSlinky.babylonjs.nodeMod.NodeConstructor
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,15 +20,19 @@ class Node protected ()
   def this(name: String, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]) = this()
 }
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "Node")
-@js.native
-object Node extends js.Object {
+object Node {
+  
+  @JSImport("babylonjs/Legacy/legacy", "Node")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Add a new node constructor
     * @param type defines the type name of the node to construct
     * @param constructorFunc defines the constructor function
     */
+  @JSImport("babylonjs/Legacy/legacy", "Node.AddNodeConstructor")
+  @js.native
   def AddNodeConstructor(`type`: String, constructorFunc: NodeConstructor): Unit = js.native
   
   /**
@@ -38,7 +43,11 @@ object Node extends js.Object {
     * @param options defines optional options to transmit to constructors
     * @returns the new constructor or null
     */
+  @JSImport("babylonjs/Legacy/legacy", "Node.Construct")
+  @js.native
   def Construct(`type`: String, name: String, scene: typingsSlinky.babylonjs.sceneMod.Scene): Nullable[js.Function0[this.type]] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Node.Construct")
+  @js.native
   def Construct(`type`: String, name: String, scene: typingsSlinky.babylonjs.sceneMod.Scene, options: js.Any): Nullable[js.Function0[this.type]] = js.native
   
   /**
@@ -47,6 +56,8 @@ object Node extends js.Object {
     * @param parsedNode defines the serialization object to read data from
     * @param scene defines the hosting scene
     */
+  @JSImport("babylonjs/Legacy/legacy", "Node.ParseAnimationRanges")
+  @js.native
   def ParseAnimationRanges(
     node: typingsSlinky.babylonjs.nodeMod.Node,
     parsedNode: js.Any,
@@ -54,7 +65,13 @@ object Node extends js.Object {
   ): Unit = js.native
   
   /** @hidden */
+  @JSImport("babylonjs/Legacy/legacy", "Node._AnimationRangeFactory")
+  @js.native
   def _AnimationRangeFactory(name: String, from: Double, to: Double): typingsSlinky.babylonjs.animationRangeMod.AnimationRange = js.native
   
-  var _NodeConstructors: js.Any = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Node._NodeConstructors")
+  @js.native
+  def _NodeConstructors: js.Any = js.native
+  @scala.inline
+  def _NodeConstructors_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_NodeConstructors")(x.asInstanceOf[js.Any])
 }

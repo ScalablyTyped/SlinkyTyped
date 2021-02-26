@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.KeyLocationListId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.LocationListId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.LocationListIdOauthtoken
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.PageSizePageToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AssignedLocationsResource extends js.Object {
+trait AssignedLocationsResource extends StObject {
   
   def bulkEdit(request: KeyLocationListId, body: BulkEditAssignedLocationsRequest): Request[BulkEditAssignedLocationsResponse] = js.native
   /**

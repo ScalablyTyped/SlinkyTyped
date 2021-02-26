@@ -10,9 +10,9 @@ Compile ES2015 with buble
 | ------------------ | :-------------: |
 | Full name          | rollup-plugin-buble |
 | Keywords           | - |
-| # releases         | 7 |
-| # dependents       | 145 |
-| # downloads        | 981428 |
+| # releases         | 2 |
+| # dependents       | 149 |
+| # downloads        | 1414799 |
 | # stars            | 5 |
 
 ## Links

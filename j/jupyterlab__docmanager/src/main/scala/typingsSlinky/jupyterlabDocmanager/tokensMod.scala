@@ -1,6 +1,5 @@
 package typingsSlinky.jupyterlabDocmanager
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.jupyterlabDocmanager.anon.PartialIModel
 import typingsSlinky.jupyterlabDocregistry.mod.DocumentRegistry
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.Context
@@ -13,13 +12,12 @@ import typingsSlinky.luminoCoreutils.mod.Token
 import typingsSlinky.luminoDisposable.mod.IDisposable
 import typingsSlinky.luminoSignaling.mod.ISignal
 import typingsSlinky.luminoWidgets.mod.Widget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/docmanager/lib/tokens", JSImport.Namespace)
-@js.native
-object tokensMod extends js.Object {
+object tokensMod {
   
   @js.native
   trait IDocumentManager extends IDisposable {
@@ -238,6 +236,7 @@ object tokensMod extends js.Object {
       */
     val services: IManager = js.native
   }
+  @JSImport("@jupyterlab/docmanager/lib/tokens", "IDocumentManager")
   @js.native
-  object IDocumentManager extends TopLevel[Token[IDocumentManager]]
+  val IDocumentManager: Token[typingsSlinky.jupyterlabDocmanager.tokensMod.IDocumentManager] = js.native
 }

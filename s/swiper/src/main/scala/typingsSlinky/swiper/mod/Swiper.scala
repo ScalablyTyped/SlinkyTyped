@@ -21,12 +21,13 @@ import typingsSlinky.swiper.swiperEsmMod.Parallax
 import typingsSlinky.swiper.swiperEsmMod.Scrollbar
 import typingsSlinky.swiper.swiperEsmMod.Virtual
 import typingsSlinky.swiper.swiperEsmMod.Zoom
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Swiper extends js.Object {
+trait Swiper extends StObject {
   
   /**
     * Dom7 element with slider container HTML element. To get vanilla HTMLElement use el

@@ -14,15 +14,30 @@ import typingsSlinky.reactWindow.mod.GridChildComponentProps
 import typingsSlinky.reactWindow.mod.GridOnItemsRenderedProps
 import typingsSlinky.reactWindow.mod.GridOnScrollProps
 import typingsSlinky.reactWindow.mod.ReactElementType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FixedSizeGrid {
   
+  @scala.inline
+  def apply(
+    children: ReactComponentClass[GridChildComponentProps],
+    columnCount: Double,
+    columnWidth: Double,
+    height: Double,
+    rowCount: Double,
+    rowHeight: Double,
+    width: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], columnCount = columnCount.asInstanceOf[js.Any], columnWidth = columnWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[FixedSizeGridProps]))
+  }
+  
   @JSImport("react-window", "FixedSizeGrid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,25 +57,25 @@ object FixedSizeGrid {
     def initialScrollTop(value: Double): this.type = set("initialScrollTop", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerElementTypeFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("innerElementType", value.asInstanceOf[js.Any])
+    def innerElementType(value: ReactElementType): this.type = set("innerElementType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerElementTypeComponentClass(value: ReactComponentClass[js.Any]): this.type = set("innerElementType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerElementType(value: ReactElementType): this.type = set("innerElementType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    def innerElementTypeFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("innerElementType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRef(value: Ref[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def innerRefNull: this.type = set("innerRef", null)
+    
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerTagName(value: String): this.type = set("innerTagName", value.asInstanceOf[js.Any])
@@ -78,25 +93,25 @@ object FixedSizeGrid {
     def onScroll(value: /* props */ GridOnScrollProps => _): this.type = set("onScroll", js.Any.fromFunction1(value))
     
     @scala.inline
-    def outerElementTypeFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("outerElementType", value.asInstanceOf[js.Any])
+    def outerElementType(value: ReactElementType): this.type = set("outerElementType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def outerElementTypeComponentClass(value: ReactComponentClass[js.Any]): this.type = set("outerElementType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def outerElementType(value: ReactElementType): this.type = set("outerElementType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def outerRefRefObject(value: ReactRef[_]): this.type = set("outerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def outerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("outerRef", js.Any.fromFunction1(value))
+    def outerElementTypeFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("outerElementType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def outerRef(value: Ref[_]): this.type = set("outerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def outerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("outerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def outerRefNull: this.type = set("outerRef", null)
+    
+    @scala.inline
+    def outerRefRefObject(value: ReactRef[_]): this.type = set("outerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def outerTagName(value: String): this.type = set("outerTagName", value.asInstanceOf[js.Any])
@@ -124,18 +139,4 @@ object FixedSizeGrid {
   }
   
   def withProps(p: FixedSizeGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    children: ReactComponentClass[GridChildComponentProps],
-    columnCount: Double,
-    columnWidth: Double,
-    height: Double,
-    rowCount: Double,
-    rowHeight: Double,
-    width: Double
-  ): Builder = {
-    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], columnCount = columnCount.asInstanceOf[js.Any], columnWidth = columnWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[FixedSizeGridProps]))
-  }
 }

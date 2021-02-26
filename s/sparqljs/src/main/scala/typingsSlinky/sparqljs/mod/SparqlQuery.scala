@@ -7,6 +7,7 @@ import typingsSlinky.sparqljs.sparqljsStrings.DESCRIBE
 import typingsSlinky.sparqljs.sparqljsStrings.SELECT
 import typingsSlinky.sparqljs.sparqljsStrings.query
 import typingsSlinky.sparqljs.sparqljsStrings.update
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,40 +16,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.sparqljs.mod.Query
   - typingsSlinky.sparqljs.mod.Update
 */
-trait SparqlQuery extends js.Object
+trait SparqlQuery extends StObject
 object SparqlQuery {
   
   @scala.inline
-  def Update(prefixes: StringDictionary[String], `type`: update, updates: js.Array[UpdateOperation]): SparqlQuery = {
-    val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], updates = updates.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SparqlQuery]
-  }
-  
-  @scala.inline
-  def ConstructQuery(prefixes: StringDictionary[String], queryType: CONSTRUCT, `type`: query): SparqlQuery = {
+  def AskQuery(prefixes: StringDictionary[String], queryType: ASK, `type`: query): typingsSlinky.sparqljs.mod.AskQuery = {
     val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], queryType = queryType.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SparqlQuery]
+    __obj.asInstanceOf[typingsSlinky.sparqljs.mod.AskQuery]
   }
   
   @scala.inline
-  def SelectQuery(
-    prefixes: StringDictionary[String],
-    queryType: SELECT,
-    `type`: query,
-    variables: js.Array[Variable | Wildcard]
-  ): SparqlQuery = {
-    val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], queryType = queryType.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SparqlQuery]
-  }
-  
-  @scala.inline
-  def AskQuery(prefixes: StringDictionary[String], queryType: ASK, `type`: query): SparqlQuery = {
+  def ConstructQuery(prefixes: StringDictionary[String], queryType: CONSTRUCT, `type`: query): typingsSlinky.sparqljs.mod.ConstructQuery = {
     val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], queryType = queryType.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SparqlQuery]
+    __obj.asInstanceOf[typingsSlinky.sparqljs.mod.ConstructQuery]
   }
   
   @scala.inline
@@ -57,9 +39,28 @@ object SparqlQuery {
     queryType: DESCRIBE,
     `type`: query,
     variables: js.Array[Variable | Wildcard]
-  ): SparqlQuery = {
+  ): typingsSlinky.sparqljs.mod.DescribeQuery = {
     val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], queryType = queryType.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SparqlQuery]
+    __obj.asInstanceOf[typingsSlinky.sparqljs.mod.DescribeQuery]
+  }
+  
+  @scala.inline
+  def SelectQuery(
+    prefixes: StringDictionary[String],
+    queryType: SELECT,
+    `type`: query,
+    variables: js.Array[Variable | Wildcard]
+  ): typingsSlinky.sparqljs.mod.SelectQuery = {
+    val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], queryType = queryType.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.sparqljs.mod.SelectQuery]
+  }
+  
+  @scala.inline
+  def Update(prefixes: StringDictionary[String], `type`: update, updates: js.Array[UpdateOperation]): typingsSlinky.sparqljs.mod.Update = {
+    val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], updates = updates.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.sparqljs.mod.Update]
   }
 }

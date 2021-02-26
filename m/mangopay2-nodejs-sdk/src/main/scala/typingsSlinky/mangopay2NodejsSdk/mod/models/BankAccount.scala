@@ -3,6 +3,7 @@ package typingsSlinky.mangopay2NodejsSdk.mod.models
 import typingsSlinky.mangopay2NodejsSdk.mod.bankAccount.BaseData
 import typingsSlinky.mangopay2NodejsSdk.mod.bankAccount.CreationDetails
 import typingsSlinky.mangopay2NodejsSdk.mod.bankAccount.DataIntersection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

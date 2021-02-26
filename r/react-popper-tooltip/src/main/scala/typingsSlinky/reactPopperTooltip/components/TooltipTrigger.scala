@@ -3,23 +3,19 @@ package typingsSlinky.reactPopperTooltip.components
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MutationObserverInit
 import slinky.core.facade.ReactElement
+import typingsSlinky.popperjsCore.enumsMod.Placement
 import typingsSlinky.reactPopper.mod.Modifier
 import typingsSlinky.reactPopperTooltip.tooltipTriggerMod.default
 import typingsSlinky.reactPopperTooltip.typesMod.ChildrenArg
 import typingsSlinky.reactPopperTooltip.typesMod.TooltipArg
 import typingsSlinky.reactPopperTooltip.typesMod.TooltipTriggerProps
 import typingsSlinky.reactPopperTooltip.typesMod.Trigger
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TooltipTrigger {
-  
-  @JSImport("react-popper-tooltip/dist/TooltipTrigger", JSImport.Default)
-  @js.native
-  object component extends js.Object
-  
-  def withProps(p: TooltipTriggerProps): SharedBuilder_TooltipTriggerProps102580951[default] = new SharedBuilder_TooltipTriggerProps102580951[default](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -32,7 +28,7 @@ object TooltipTrigger {
     modifiers: js.Array[Modifier[_, js.Object]],
     mutationObserverOptions: MutationObserverInit,
     onVisibilityChange: Boolean => Unit,
-    placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any,
+    placement: Placement,
     portalContainer: HTMLElement,
     tooltip: TooltipArg => ReactElement,
     trigger: Trigger,
@@ -41,4 +37,10 @@ object TooltipTrigger {
     val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), closeOnReferenceHidden = closeOnReferenceHidden.asInstanceOf[js.Any], defaultTooltipShown = defaultTooltipShown.asInstanceOf[js.Any], delayHide = delayHide.asInstanceOf[js.Any], delayShow = delayShow.asInstanceOf[js.Any], followCursor = followCursor.asInstanceOf[js.Any], modifiers = modifiers.asInstanceOf[js.Any], mutationObserverOptions = mutationObserverOptions.asInstanceOf[js.Any], onVisibilityChange = js.Any.fromFunction1(onVisibilityChange), placement = placement.asInstanceOf[js.Any], portalContainer = portalContainer.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any], usePortal = usePortal.asInstanceOf[js.Any])
     new SharedBuilder_TooltipTriggerProps102580951[default](js.Array(this.component, __props.asInstanceOf[TooltipTriggerProps]))
   }
+  
+  @JSImport("react-popper-tooltip/dist/TooltipTrigger", JSImport.Default)
+  @js.native
+  val component: js.Object = js.native
+  
+  def withProps(p: TooltipTriggerProps): SharedBuilder_TooltipTriggerProps102580951[default] = new SharedBuilder_TooltipTriggerProps102580951[default](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

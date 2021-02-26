@@ -96,6 +96,7 @@ import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps
 import typingsSlinky.uifabricUtilities.keyCodesMod.KeyCodes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -104,6 +105,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class SharedBuilder_IButtonProps1271470609[R <: js.Object] (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, R] {
+  
+  @scala.inline
+  def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
   
   @scala.inline
   def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -351,13 +355,13 @@ class SharedBuilder_IButtonProps1271470609[R <: js.Object] (val args: js.Array[j
   def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def componentRef(value: IRefObject[IButton]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def componentRefFunction1(value: /* ref */ IButton | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
   
   @scala.inline
   def componentRefRefObject(value: ReactRef[IButton]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def componentRef(value: IRefObject[IButton]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
@@ -390,19 +394,16 @@ class SharedBuilder_IButtonProps1271470609[R <: js.Object] (val args: js.Array[j
   def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
   def defaultRender(value: js.Any): this.type = set("defaultRender", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -426,16 +427,16 @@ class SharedBuilder_IButtonProps1271470609[R <: js.Object] (val args: js.Array[j
   def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def elementRefRefObject(value: ReactRef[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+  def elementRef(value: Ref[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def elementRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("elementRef", js.Any.fromFunction1(value))
   
   @scala.inline
-  def elementRef(value: Ref[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+  def elementRefNull: this.type = set("elementRef", null)
   
   @scala.inline
-  def elementRefNull: this.type = set("elementRef", null)
+  def elementRefRefObject(value: ReactRef[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def encType(value: String): this.type = set("encType", value.asInstanceOf[js.Any])
@@ -577,13 +578,13 @@ class SharedBuilder_IButtonProps1271470609[R <: js.Object] (val args: js.Array[j
   def mediaGroup(value: String): this.type = set("mediaGroup", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def menuAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IContextualMenuProps]]): this.type = set("menuAs", value.asInstanceOf[js.Any])
+  def menuAs(value: IComponentAs[IContextualMenuProps]): this.type = set("menuAs", value.asInstanceOf[js.Any])
   
   @scala.inline
   def menuAsComponentClass(value: ReactComponentClass[IComponentAsProps[IContextualMenuProps]]): this.type = set("menuAs", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def menuAs(value: IComponentAs[IContextualMenuProps]): this.type = set("menuAs", value.asInstanceOf[js.Any])
+  def menuAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IContextualMenuProps]]): this.type = set("menuAs", value.asInstanceOf[js.Any])
   
   @scala.inline
   def menuIconProps(value: IIconProps): this.type = set("menuIconProps", value.asInstanceOf[js.Any])
@@ -1447,10 +1448,10 @@ class SharedBuilder_IButtonProps1271470609[R <: js.Object] (val args: js.Array[j
   def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
   
   @scala.inline
   def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])

@@ -25,12 +25,13 @@ import typingsSlinky.activexOffice.Office.SmartArtLayouts
 import typingsSlinky.activexOffice.Office.SmartArtQuickStyle
 import typingsSlinky.activexOffice.Office.SmartArtQuickStyles
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Application extends js.Object {
+trait Application extends StObject {
   
   def ActivateMicrosoftApp(Index: XlMSApplication): Unit = js.native
   

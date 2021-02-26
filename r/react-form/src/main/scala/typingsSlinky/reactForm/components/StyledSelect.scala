@@ -83,15 +83,22 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactForm.mod.SelectOptions
 import typingsSlinky.reactForm.mod.SelectProps
 import typingsSlinky.reactForm.mod.StyledProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StyledSelect {
   
+  @scala.inline
+  def apply(options: SelectOptions): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StyledProps with SelectProps with InputHTMLAttributes[HTMLSelectElement]]))
+  }
+  
   @JSImport("react-form", "StyledSelect")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -302,10 +309,10 @@ object StyledSelect {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -323,10 +330,10 @@ object StyledSelect {
     def errorBefore(value: Boolean): this.type = set("errorBefore", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fieldVarargs(value: (js.Array[ReactText] | ReactText | String)*): this.type = set("field", js.Array(value :_*))
+    def field(value: String | (js.Array[js.Array[ReactText] | ReactText | String])): this.type = set("field", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def field(value: String | (js.Array[js.Array[ReactText] | ReactText | String])): this.type = set("field", value.asInstanceOf[js.Any])
+    def fieldVarargs(value: (js.Array[ReactText] | ReactText | String)*): this.type = set("field", js.Array(value :_*))
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
@@ -731,10 +738,10 @@ object StyledSelect {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -744,10 +751,4 @@ object StyledSelect {
   }
   
   def withProps(p: StyledProps with SelectProps with InputHTMLAttributes[HTMLSelectElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(options: SelectOptions): Builder = {
-    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StyledProps with SelectProps with InputHTMLAttributes[HTMLSelectElement]]))
-  }
 }

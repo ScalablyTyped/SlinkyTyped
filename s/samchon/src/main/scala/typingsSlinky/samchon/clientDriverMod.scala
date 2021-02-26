@@ -2,18 +2,18 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.communicatorMod.Communicator
 import typingsSlinky.samchon.iprotocolMod.IProtocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/protocol/communicator/client_driver/ClientDriver", JSImport.Namespace)
-@js.native
-object clientDriverMod extends js.Object {
+object clientDriverMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.samchon.iprotocolMod.IProtocol because Already inherited
   - typingsSlinky.samchon.icommunicatorMod.ICommunicator because Already inherited
-  - typingsSlinky.samchon.iclientdriverMod.IClientDriver because var conflicts: onClose. Inlined listen */ @js.native
+  - typingsSlinky.samchon.iclientdriverMod.IClientDriver because var conflicts: onClose. Inlined listen */ @JSImport("samchon/protocol/communicator/client_driver/ClientDriver", "ClientDriver")
+  @js.native
   class ClientDriver protected () extends Communicator {
     /**
       * Construct from a socket.

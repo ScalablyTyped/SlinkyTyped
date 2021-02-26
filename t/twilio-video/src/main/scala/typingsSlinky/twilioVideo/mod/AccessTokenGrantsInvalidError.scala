@@ -2,6 +2,7 @@ package typingsSlinky.twilioVideo.mod
 
 import typingsSlinky.twilioVideo.twilioVideoNumbers.`20106`
 import typingsSlinky.twilioVideo.twilioVideoStrings.`Invalid Access Token grants`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

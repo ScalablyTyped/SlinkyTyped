@@ -4,6 +4,7 @@ import typingsSlinky.sugar.sugarjs.Date.DateCreateOptions
 import typingsSlinky.sugar.sugarjs.Locale
 import typingsSlinky.sugar.sugarjs.Range
 import typingsSlinky.sugar.sugarjs._NativeConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

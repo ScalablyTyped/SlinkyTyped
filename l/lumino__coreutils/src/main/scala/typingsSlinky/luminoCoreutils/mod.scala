@@ -7,18 +7,20 @@ import typingsSlinky.luminoCoreutils.jsonMod.ReadonlyJSONObject
 import typingsSlinky.luminoCoreutils.jsonMod.ReadonlyJSONValue
 import typingsSlinky.luminoCoreutils.jsonMod.ReadonlyPartialJSONObject
 import typingsSlinky.luminoCoreutils.jsonMod.ReadonlyPartialJSONValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@lumino/coreutils", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  @js.native
-  object JSONExt extends js.Object {
+  object JSONExt {
     
+    @JSImport("@lumino/coreutils", "JSONExt.deepCopy")
+    @js.native
     def deepCopy(value: String): String = js.native
+    @JSImport("@lumino/coreutils", "JSONExt.deepCopy")
+    @js.native
     def deepCopy(value: js.Array[ReadonlyPartialJSONValue]): js.Array[ReadonlyPartialJSONValue] = js.native
     /**
       * Create a deep copy of a JSON value.
@@ -27,9 +29,17 @@ object mod extends js.Object {
       *
       * @returns A deep copy of the given JSON value.
       */
+    @JSImport("@lumino/coreutils", "JSONExt.deepCopy")
+    @js.native
     def deepCopy(value: Boolean): Boolean = js.native
+    @JSImport("@lumino/coreutils", "JSONExt.deepCopy")
+    @js.native
     def deepCopy(value: Double): Double = js.native
+    @JSImport("@lumino/coreutils", "JSONExt.deepCopy")
+    @js.native
     def deepCopy(value: Null): Null = js.native
+    @JSImport("@lumino/coreutils", "JSONExt.deepCopy")
+    @js.native
     def deepCopy(value: ReadonlyPartialJSONObject): ReadonlyPartialJSONObject = js.native
     
     /**
@@ -41,16 +51,22 @@ object mod extends js.Object {
       *
       * @returns `true` if the values are equivalent, `false` otherwise.
       */
+    @JSImport("@lumino/coreutils", "JSONExt.deepEqual")
+    @js.native
     def deepEqual(first: ReadonlyPartialJSONValue, second: ReadonlyPartialJSONValue): Boolean = js.native
     
     /**
       * A shared frozen empty JSONArray
       */
+    @JSImport("@lumino/coreutils", "JSONExt.emptyArray")
+    @js.native
     val emptyArray: ReadonlyJSONArray = js.native
     
     /**
       * A shared frozen empty JSONObject
       */
+    @JSImport("@lumino/coreutils", "JSONExt.emptyObject")
+    @js.native
     val emptyObject: ReadonlyJSONObject = js.native
     
     /**
@@ -60,6 +76,8 @@ object mod extends js.Object {
       *
       * @returns `true` if the value is a an array, `false` otherwise.
       */
+    @JSImport("@lumino/coreutils", "JSONExt.isArray")
+    @js.native
     def isArray(value: JSONValue | PartialJSONValue | ReadonlyJSONValue | ReadonlyPartialJSONValue): /* is @lumino/coreutils.@lumino/coreutils/types/json.JSONArray */ Boolean = js.native
     
     /**
@@ -69,6 +87,8 @@ object mod extends js.Object {
       *
       * @returns `true` if the value is a an object, `false` otherwise.
       */
+    @JSImport("@lumino/coreutils", "JSONExt.isObject")
+    @js.native
     def isObject(value: JSONValue | PartialJSONValue | ReadonlyJSONValue | ReadonlyPartialJSONValue): /* is @lumino/coreutils.@lumino/coreutils/types/json.JSONObject */ Boolean = js.native
     
     /**
@@ -78,13 +98,17 @@ object mod extends js.Object {
       *
       * @returns `true` if the value is a primitive,`false` otherwise.
       */
+    @JSImport("@lumino/coreutils", "JSONExt.isPrimitive")
+    @js.native
     def isPrimitive(value: ReadonlyPartialJSONValue): /* is @lumino/coreutils.@lumino/coreutils/types/json.JSONPrimitive */ Boolean = js.native
   }
   
+  @JSImport("@lumino/coreutils", "MimeData")
   @js.native
   class MimeData ()
     extends typingsSlinky.luminoCoreutils.mimeMod.MimeData
   
+  @JSImport("@lumino/coreutils", "PromiseDelegate")
   @js.native
   /**
     * Construct a new promise delegate.
@@ -92,8 +116,7 @@ object mod extends js.Object {
   class PromiseDelegate[T] ()
     extends typingsSlinky.luminoCoreutils.promiseMod.PromiseDelegate[T]
   
-  @js.native
-  object Random extends js.Object {
+  object Random {
     
     /**
       * A function which generates random bytes.
@@ -112,9 +135,12 @@ object mod extends js.Object {
       *   - `require('crypto').randomBytes
       *   - `Math.random`
       */
+    @JSImport("@lumino/coreutils", "Random.getRandomValues")
+    @js.native
     def getRandomValues(buffer: js.typedarray.Uint8Array): Unit = js.native
   }
   
+  @JSImport("@lumino/coreutils", "Token")
   @js.native
   class Token[T] protected ()
     extends typingsSlinky.luminoCoreutils.tokenMod.Token[T] {
@@ -126,8 +152,7 @@ object mod extends js.Object {
     def this(name: String) = this()
   }
   
-  @js.native
-  object UUID extends js.Object {
+  object UUID {
     
     /**
       * A function which generates UUID v4 identifiers.
@@ -141,6 +166,8 @@ object mod extends js.Object {
       * turn will use the underlying `crypto` module of the platform if
       * it is available. The fallback for randomness is `Math.random`.
       */
+    @JSImport("@lumino/coreutils", "UUID.uuid4")
+    @js.native
     def uuid4(): String = js.native
   }
 }

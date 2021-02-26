@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientTpu.anon.Key
 import typingsSlinky.maximMazurokGapiClientTpu.anon.Name
 import typingsSlinky.maximMazurokGapiClientTpu.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientTpu.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NodesResource extends js.Object {
+trait NodesResource extends StObject {
   
   /** Creates a node. */
   def create(request: Callback): Request[Operation] = js.native

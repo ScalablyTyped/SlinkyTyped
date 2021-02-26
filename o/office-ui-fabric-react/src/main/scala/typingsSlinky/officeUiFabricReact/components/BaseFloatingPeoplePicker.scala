@@ -15,15 +15,25 @@ import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionItem
 import typingsSlinky.officeUiFabricReact.suggestionsStoreMod.SuggestionsStore
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object BaseFloatingPeoplePicker {
   
+  @scala.inline
+  def apply(
+    onResolveSuggestions: (String, js.UndefOr[js.Array[IPersonaProps]]) => js.Array[IPersonaProps] | Null | js.Thenable[js.Array[IPersonaProps]],
+    suggestionsStore: SuggestionsStore[IPersonaProps]
+  ): Builder = {
+    val __props = js.Dynamic.literal(onResolveSuggestions = js.Any.fromFunction2(onResolveSuggestions), suggestionsStore = suggestionsStore.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IBaseFloatingPickerProps[IPersonaProps]]))
+  }
+  
   @JSImport("office-ui-fabric-react", "BaseFloatingPeoplePicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,13 +47,13 @@ object BaseFloatingPeoplePicker {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IBaseFloatingPicker]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IBaseFloatingPicker | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IBaseFloatingPicker]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IBaseFloatingPicker]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def createGenericItem(value: (/* input */ String, /* isValid */ Boolean) => ISuggestionModel[IPersonaProps]): this.type = set("createGenericItem", js.Any.fromFunction2(value))
@@ -93,35 +103,26 @@ object BaseFloatingPeoplePicker {
     def resolveDelay(value: Double): this.type = set("resolveDelay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def searchingTextFunction1(value: /* props */ Input => String): this.type = set("searchingText", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def searchingText(value: (js.Function1[/* props */ Input, String]) | String): this.type = set("searchingText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedItemsVarargs(value: IPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
+    def searchingTextFunction1(value: /* props */ Input => String): this.type = set("searchingText", js.Any.fromFunction1(value))
     
     @scala.inline
     def selectedItems(value: js.Array[IPersonaProps]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def selectedItemsVarargs(value: IPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
+    
+    @scala.inline
     def showForceResolve(value: () => Boolean): this.type = set("showForceResolve", js.Any.fromFunction0(value))
     
     @scala.inline
-    def suggestionItemsVarargs(value: IPersonaProps*): this.type = set("suggestionItems", js.Array(value :_*))
+    def suggestionItems(value: js.Array[IPersonaProps]): this.type = set("suggestionItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suggestionItems(value: js.Array[IPersonaProps]): this.type = set("suggestionItems", value.asInstanceOf[js.Any])
+    def suggestionItemsVarargs(value: IPersonaProps*): this.type = set("suggestionItems", js.Array(value :_*))
   }
   
   def withProps(p: IBaseFloatingPickerProps[IPersonaProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    onResolveSuggestions: (String, js.UndefOr[js.Array[IPersonaProps]]) => js.Array[IPersonaProps] | Null | js.Thenable[js.Array[IPersonaProps]],
-    suggestionsStore: SuggestionsStore[IPersonaProps]
-  ): Builder = {
-    val __props = js.Dynamic.literal(onResolveSuggestions = js.Any.fromFunction2(onResolveSuggestions), suggestionsStore = suggestionsStore.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IBaseFloatingPickerProps[IPersonaProps]]))
-  }
 }

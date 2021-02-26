@@ -4,14 +4,14 @@ import typingsSlinky.hyperlorisTyson.mod.Tyson
 import typingsSlinky.hyperlorisTyson.typeAdapterFactoryMod.TypeAdapterFactory
 import typingsSlinky.hyperlorisTyson.typeAdapterMod.TypeAdapter
 import typingsSlinky.hyperlorisTyson.typeTokenMod.TypeToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@hyperloris/tyson/dist/types/adapters/objectTypeAdapter", JSImport.Namespace)
-@js.native
-object objectTypeAdapterMod extends js.Object {
+object objectTypeAdapterMod {
   
+  @JSImport("@hyperloris/tyson/dist/types/adapters/objectTypeAdapter", "ObjectTypeAdapter")
   @js.native
   class ObjectTypeAdapter protected ()
     extends TypeAdapter[js.Any] {
@@ -30,9 +30,10 @@ object objectTypeAdapterMod extends js.Object {
     /* private */ def loadMetadata(): js.Any = js.native
   }
   /* static members */
-  @js.native
-  object ObjectTypeAdapter extends js.Object {
+  object ObjectTypeAdapter {
     
+    @JSImport("@hyperloris/tyson/dist/types/adapters/objectTypeAdapter", "ObjectTypeAdapter.FACTORY")
+    @js.native
     val FACTORY: TypeAdapterFactory = js.native
   }
 }

@@ -8,12 +8,13 @@ import typingsSlinky.rollup.rollupStrings.default
 import typingsSlinky.rollup.rollupStrings.hidden
 import typingsSlinky.rollup.rollupStrings.named
 import typingsSlinky.rollup.rollupStrings.none
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NormalizedOutputOptions extends js.Object {
+trait NormalizedOutputOptions extends StObject {
   
   var amd: Id = js.native
   

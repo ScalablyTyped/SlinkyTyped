@@ -3,13 +3,12 @@ package typingsSlinky.typedGithubApi
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.typedGithubApi.anon.Name
 import typingsSlinky.typedGithubApi.ownerRefMod.OwnerRef
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typed-github-api/dist/interfaces/user", JSImport.Namespace)
-@js.native
-object interfacesUserMod extends js.Object {
+object interfacesUserMod {
   
   @js.native
   trait MyUser extends User {

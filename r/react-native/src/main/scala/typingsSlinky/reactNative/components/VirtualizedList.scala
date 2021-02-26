@@ -59,15 +59,22 @@ import typingsSlinky.reactNative.reactNativeStrings.scrollableAxes
 import typingsSlinky.reactNative.reactNativeStrings.start
 import typingsSlinky.reactNative.reactNativeStrings.white
 import typingsSlinky.reactNative.reactNativeStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object VirtualizedList {
   
+  @scala.inline
+  def apply[ItemT](): Builder[ItemT] = {
+    val __props = js.Dynamic.literal()
+    new Builder[ItemT](js.Array(this.component, __props.asInstanceOf[VirtualizedListProps[ItemT]]))
+  }
+  
   @JSImport("react-native", "VirtualizedList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[ItemT] (val args: js.Array[js.Any])
@@ -75,64 +82,64 @@ object VirtualizedList {
        with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.VirtualizedList[ItemT]] {
     
     @scala.inline
-    def CellRendererComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
+    def CellRendererComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def CellRendererComponentComponentClass(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def CellRendererComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListEmptyComponentReactElement(value: ReactElement): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListEmptyComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListEmptyComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
+    def CellRendererComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListEmptyComponent(value: ReactComponentClass[_] | ReactElement): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def ListEmptyComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def ListEmptyComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def ListEmptyComponentNull: this.type = set("ListEmptyComponent", null)
     
     @scala.inline
-    def ListFooterComponentReactElement(value: ReactElement): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListFooterComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListFooterComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
+    def ListEmptyComponentReactElement(value: ReactElement): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListFooterComponent(value: ReactComponentClass[_] | ReactElement): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def ListFooterComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def ListFooterComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def ListFooterComponentNull: this.type = set("ListFooterComponent", null)
     
     @scala.inline
-    def ListHeaderComponentReactElement(value: ReactElement): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListHeaderComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListHeaderComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
+    def ListFooterComponentReactElement(value: ReactElement): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListHeaderComponent(value: ReactComponentClass[_] | ReactElement): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def ListHeaderComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def ListHeaderComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def ListHeaderComponentNull: this.type = set("ListHeaderComponent", null)
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def ListHeaderComponentReactElement(value: ReactElement): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -159,10 +166,10 @@ object VirtualizedList {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -525,19 +532,19 @@ object VirtualizedList {
     def snapToInterval(value: Double): this.type = set("snapToInterval", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def snapToOffsetsVarargs(value: Double*): this.type = set("snapToOffsets", js.Array(value :_*))
+    def snapToOffsets(value: js.Array[Double]): this.type = set("snapToOffsets", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def snapToOffsets(value: js.Array[Double]): this.type = set("snapToOffsets", value.asInstanceOf[js.Any])
+    def snapToOffsetsVarargs(value: Double*): this.type = set("snapToOffsets", js.Array(value :_*))
     
     @scala.inline
     def snapToStart(value: Boolean): this.type = set("snapToStart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stickyHeaderIndicesVarargs(value: Double*): this.type = set("stickyHeaderIndices", js.Array(value :_*))
+    def stickyHeaderIndices(value: js.Array[Double]): this.type = set("stickyHeaderIndices", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stickyHeaderIndices(value: js.Array[Double]): this.type = set("stickyHeaderIndices", value.asInstanceOf[js.Any])
+    def stickyHeaderIndicesVarargs(value: Double*): this.type = set("stickyHeaderIndices", js.Array(value :_*))
     
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
@@ -570,10 +577,10 @@ object VirtualizedList {
     def viewabilityConfig(value: ViewabilityConfig): this.type = set("viewabilityConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def viewabilityConfigCallbackPairsVarargs(value: ViewabilityConfigCallbackPair*): this.type = set("viewabilityConfigCallbackPairs", js.Array(value :_*))
+    def viewabilityConfigCallbackPairs(value: ViewabilityConfigCallbackPairs): this.type = set("viewabilityConfigCallbackPairs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def viewabilityConfigCallbackPairs(value: ViewabilityConfigCallbackPairs): this.type = set("viewabilityConfigCallbackPairs", value.asInstanceOf[js.Any])
+    def viewabilityConfigCallbackPairsVarargs(value: ViewabilityConfigCallbackPair*): this.type = set("viewabilityConfigCallbackPairs", js.Array(value :_*))
     
     @scala.inline
     def windowSize(value: Double): this.type = set("windowSize", value.asInstanceOf[js.Any])
@@ -582,13 +589,7 @@ object VirtualizedList {
     def zoomScale(value: Double): this.type = set("zoomScale", value.asInstanceOf[js.Any])
   }
   
-  def withProps[ItemT](p: VirtualizedListProps[ItemT]): Builder[ItemT] = new Builder[ItemT](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[ItemT](): Builder[ItemT] = {
-    val __props = js.Dynamic.literal()
-    new Builder[ItemT](js.Array(this.component, __props.asInstanceOf[VirtualizedListProps[ItemT]]))
-  }
-  
   implicit def make[ItemT](companion: VirtualizedList.type): Builder[ItemT] = new Builder[ItemT](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps[ItemT](p: VirtualizedListProps[ItemT]): Builder[ItemT] = new Builder[ItemT](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

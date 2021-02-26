@@ -2,6 +2,7 @@ package typingsSlinky.apolloProtobufjs.lightMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloProtobufjs.mod.IService
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,9 +21,7 @@ class Service protected ()
   def this(name: String, options: StringDictionary[js.UndefOr[js.Any]]) = this()
 }
 /* static members */
-@JSImport("@apollo/protobufjs/light", "Service")
-@js.native
-object Service extends js.Object {
+object Service {
   
   /**
     * Constructs a service from a service descriptor.
@@ -31,5 +30,7 @@ object Service extends js.Object {
     * @returns Created service
     * @throws {TypeError} If arguments are invalid
     */
+  @JSImport("@apollo/protobufjs/light", "Service.fromJSON")
+  @js.native
   def fromJSON(name: String, json: IService): typingsSlinky.apolloProtobufjs.mod.Service = js.native
 }

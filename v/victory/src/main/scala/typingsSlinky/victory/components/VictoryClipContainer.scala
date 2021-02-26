@@ -7,6 +7,7 @@ import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.victory.anon.`0`
 import typingsSlinky.victory.mod.BlockProps
 import typingsSlinky.victory.mod.VictoryClipContainerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object VictoryClipContainer {
   
   @JSImport("victory", "VictoryClipContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -23,13 +24,13 @@ object VictoryClipContainer {
        with StBuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryClipContainer] {
     
     @scala.inline
+    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
-    
-    @scala.inline
-    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def circleComponent(value: ReactElement): this.type = set("circleComponent", value.asInstanceOf[js.Any])
@@ -77,7 +78,7 @@ object VictoryClipContainer {
     def translateY(value: Double): this.type = set("translateY", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: VictoryClipContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: VictoryClipContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: VictoryClipContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -11,15 +11,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.TextFieldProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactMaterialUiFormValidator.mod.ValidatorComponentProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TextValidator {
   
+  @scala.inline
+  def apply(name: String, value: js.Any): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ValidatorComponentProps with TextFieldProps]))
+  }
+  
   @JSImport("react-material-ui-form-validator", "TextValidator")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,19 +49,19 @@ object TextValidator {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorMessagesVarargs(value: js.Any*): this.type = set("errorMessages", js.Array(value :_*))
+    def errorMessages(value: js.Array[_] | String): this.type = set("errorMessages", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorMessages(value: js.Array[_] | String): this.type = set("errorMessages", value.asInstanceOf[js.Any])
+    def errorMessagesVarargs(value: js.Any*): this.type = set("errorMessages", js.Array(value :_*))
     
     @scala.inline
     def errorStyle(value: CSSProperties): this.type = set("errorStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
+    def errorText(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorText(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
+    def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def floatingLabelFixed(value: Boolean): this.type = set("floatingLabelFixed", value.asInstanceOf[js.Any])
@@ -69,10 +76,10 @@ object TextValidator {
     def floatingLabelStyle(value: CSSProperties): this.type = set("floatingLabelStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    def floatingLabelText(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def floatingLabelText(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
@@ -81,10 +88,10 @@ object TextValidator {
     def hintStyle(value: CSSProperties): this.type = set("hintStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
+    def hintText(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def hintText(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
+    def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -168,20 +175,14 @@ object TextValidator {
     def validatorListener(value: /* isValid */ Boolean => Unit): this.type = set("validatorListener", js.Any.fromFunction1(value))
     
     @scala.inline
-    def validatorsVarargs(value: js.Any*): this.type = set("validators", js.Array(value :_*))
+    def validators(value: js.Array[_]): this.type = set("validators", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def validators(value: js.Array[_]): this.type = set("validators", value.asInstanceOf[js.Any])
+    def validatorsVarargs(value: js.Any*): this.type = set("validators", js.Array(value :_*))
     
     @scala.inline
     def withRequiredValidator(value: Boolean): this.type = set("withRequiredValidator", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ValidatorComponentProps with TextFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(name: String, value: js.Any): Builder = {
-    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ValidatorComponentProps with TextFieldProps]))
-  }
 }

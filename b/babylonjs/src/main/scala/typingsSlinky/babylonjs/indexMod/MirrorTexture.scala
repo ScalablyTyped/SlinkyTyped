@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import typingsSlinky.babylonjs.anon.Ratio
 import typingsSlinky.babylonjs.anon.Width
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

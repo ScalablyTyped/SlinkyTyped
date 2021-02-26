@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.typesListBranchesInputMod.ListBr
 import typingsSlinky.awsSdkClientCodecommitNode.typesListBranchesOutputMod.ListBranchesOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-codecommit-node/commands/ListBranchesCommand", JSImport.Namespace)
-@js.native
-object listBranchesCommandMod extends js.Object {
+object listBranchesCommandMod {
   
+  @JSImport("@aws-sdk/client-codecommit-node/commands/ListBranchesCommand", "ListBranchesCommand")
   @js.native
   class ListBranchesCommand protected () extends Command[
           InputTypesUnion, 

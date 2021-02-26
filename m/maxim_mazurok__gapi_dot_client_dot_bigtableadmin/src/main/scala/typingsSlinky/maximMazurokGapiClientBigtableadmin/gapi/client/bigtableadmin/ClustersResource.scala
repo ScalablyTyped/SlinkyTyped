@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.ClusterId
 import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.Parent
 import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.Resource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClustersResource extends js.Object {
+trait ClustersResource extends StObject {
   
   var backups: BackupsResource = js.native
   

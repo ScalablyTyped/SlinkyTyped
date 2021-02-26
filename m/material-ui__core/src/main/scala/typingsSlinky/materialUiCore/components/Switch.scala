@@ -88,6 +88,7 @@ import typingsSlinky.react.mod.InputHTMLAttributes
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -96,7 +97,7 @@ object Switch {
   
   @JSImport("@material-ui/core", "Switch")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -274,16 +275,16 @@ object Switch {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttonRefRefObject(value: ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
+    def buttonRef(value: Ref[_] | ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def buttonRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("buttonRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def buttonRef(value: Ref[_] | ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
+    def buttonRefNull: this.type = set("buttonRef", null)
     
     @scala.inline
-    def buttonRefNull: this.type = set("buttonRef", null)
+    def buttonRefRefObject(value: ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def centerRipple(value: Boolean): this.type = set("centerRipple", value.asInstanceOf[js.Any])
@@ -292,10 +293,10 @@ object Switch {
     def checked(value: Boolean | String): this.type = set("checked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def checkedIconReactElement(value: ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
+    def checkedIcon(value: ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def checkedIcon(value: ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
+    def checkedIconReactElement(value: ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -307,13 +308,13 @@ object Switch {
     def color(value: primary | secondary | default): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentFunctionComponent(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def component(value: ReactType[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def componentFunctionComponent(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -331,10 +332,10 @@ object Switch {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -388,10 +389,10 @@ object Switch {
     def hrefLang(value: String): this.type = set("hrefLang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -400,16 +401,16 @@ object Switch {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -418,16 +419,16 @@ object Switch {
     def inputProps(value: InputHTMLAttributes[HTMLInputElement]): this.type = set("inputProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRef(value: Ref[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def inputRef(value: Ref[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRefNull: this.type = set("inputRef", null)
     
     @scala.inline
-    def inputRefNull: this.type = set("inputRef", null)
+    def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -778,7 +779,7 @@ object Switch {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SwitchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Switch.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SwitchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -5,17 +5,20 @@ import typingsSlinky.stripe.mod.IDeleteConfirmation
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.plans.IPlan
 import typingsSlinky.stripe.mod.plans.IPlanCreationOptions
 import typingsSlinky.stripe.mod.plans.IPlanUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.Plans")
 @js.native
-class Plans () extends StripeResource {
+class Plans protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(data: IPlanCreationOptions): js.Promise[IPlan] = js.native
   /**

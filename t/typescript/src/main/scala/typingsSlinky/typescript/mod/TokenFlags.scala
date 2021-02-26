@@ -1,46 +1,40 @@
 package typingsSlinky.typescript.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait TokenFlags extends js.Object
+sealed trait TokenFlags extends StObject
 @JSImport("typescript", "TokenFlags")
 @js.native
-object TokenFlags extends js.Object {
+object TokenFlags extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TokenFlags with Double] = js.native
   
   @js.native
   sealed trait BinarySpecifier extends TokenFlags
-  /* 128 */ @js.native
-  object BinarySpecifier extends TopLevel[BinarySpecifier with Double]
+  /* 128 */ val BinarySpecifier: typingsSlinky.typescript.mod.TokenFlags.BinarySpecifier with Double = js.native
   
   @js.native
   sealed trait HexSpecifier extends TokenFlags
-  /* 64 */ @js.native
-  object HexSpecifier extends TopLevel[HexSpecifier with Double]
+  /* 64 */ val HexSpecifier: typingsSlinky.typescript.mod.TokenFlags.HexSpecifier with Double = js.native
   
   @js.native
   sealed trait None extends TokenFlags
-  /* 0 */ @js.native
-  object None extends TopLevel[None with Double]
+  /* 0 */ val None: typingsSlinky.typescript.mod.TokenFlags.None with Double = js.native
   
   @js.native
   sealed trait Octal extends TokenFlags
-  /* 32 */ @js.native
-  object Octal extends TopLevel[Octal with Double]
+  /* 32 */ val Octal: typingsSlinky.typescript.mod.TokenFlags.Octal with Double = js.native
   
   @js.native
   sealed trait OctalSpecifier extends TokenFlags
-  /* 256 */ @js.native
-  object OctalSpecifier extends TopLevel[OctalSpecifier with Double]
+  /* 256 */ val OctalSpecifier: typingsSlinky.typescript.mod.TokenFlags.OctalSpecifier with Double = js.native
   
   @js.native
   sealed trait Scientific extends TokenFlags
-  /* 16 */ @js.native
-  object Scientific extends TopLevel[Scientific with Double]
+  /* 16 */ val Scientific: typingsSlinky.typescript.mod.TokenFlags.Scientific with Double = js.native
 }

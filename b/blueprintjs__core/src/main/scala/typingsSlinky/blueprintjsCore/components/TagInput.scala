@@ -17,15 +17,22 @@ import typingsSlinky.blueprintjsCore.tagInputMod.ITagInputProps
 import typingsSlinky.blueprintjsCore.tagInputMod.TagInputAddMethod
 import typingsSlinky.blueprintjsCore.tagMod.ITagProps
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TagInput {
   
+  @scala.inline
+  def apply(values: js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITagInputProps]))
+  }
+  
   @JSImport("@blueprintjs/core", "TagInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -63,13 +70,13 @@ object TagInput {
     def large(value: Boolean): this.type = set("large", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def leftIcon(value: IconName | MaybeElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftIconNull: this.type = set("leftIcon", null)
+    
+    @scala.inline
+    def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAdd(value: (/* values */ js.Array[String], /* method */ TagInputAddMethod) => Boolean | Unit): this.type = set("onAdd", js.Any.fromFunction2(value))
@@ -96,23 +103,17 @@ object TagInput {
     def rightElement(value: ReactElement): this.type = set("rightElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def separatorRegExp(value: js.RegExp): this.type = set("separator", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def separator(value: String | js.RegExp | `false`): this.type = set("separator", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tagPropsFunction2(value: (/* value */ ReactElement, /* index */ Double) => ITagProps): this.type = set("tagProps", js.Any.fromFunction2(value))
+    def separatorRegExp(value: js.RegExp): this.type = set("separator", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tagProps(value: ITagProps | (js.Function2[/* value */ ReactElement, /* index */ Double, ITagProps])): this.type = set("tagProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def tagPropsFunction2(value: (/* value */ ReactElement, /* index */ Double) => ITagProps): this.type = set("tagProps", js.Any.fromFunction2(value))
   }
   
   def withProps(p: ITagInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(values: js.Array[ReactElement]): Builder = {
-    val __props = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ITagInputProps]))
-  }
 }

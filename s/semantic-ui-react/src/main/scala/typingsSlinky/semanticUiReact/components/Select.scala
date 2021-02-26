@@ -24,15 +24,66 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Select {
   
+  @scala.inline
+  def apply(options: js.Array[DropdownItemProps]): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SelectProps]))
+  }
+  
+  object Divider {
+    
+    @JSImport("semantic-ui-react", "Select.Divider")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Divider.type): SharedBuilder_DropdownDividerProps1604490139[typingsSlinky.semanticUiReact.mod.Select.Divider] = new SharedBuilder_DropdownDividerProps1604490139[typingsSlinky.semanticUiReact.mod.Select.Divider](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: DropdownDividerProps): SharedBuilder_DropdownDividerProps1604490139[typingsSlinky.semanticUiReact.mod.Select.Divider] = new SharedBuilder_DropdownDividerProps1604490139[typingsSlinky.semanticUiReact.mod.Select.Divider](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Header {
+    
+    @JSImport("semantic-ui-react", "Select.Header")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Header.type): SharedBuilder_DropdownHeaderProps1502232053[typingsSlinky.semanticUiReact.mod.Select.Header] = new SharedBuilder_DropdownHeaderProps1502232053[typingsSlinky.semanticUiReact.mod.Select.Header](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: DropdownHeaderProps): SharedBuilder_DropdownHeaderProps1502232053[typingsSlinky.semanticUiReact.mod.Select.Header] = new SharedBuilder_DropdownHeaderProps1502232053[typingsSlinky.semanticUiReact.mod.Select.Header](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Item {
+    
+    @JSImport("semantic-ui-react", "Select.Item")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Item.type): SharedBuilder_DropdownItemProps1131760844[typingsSlinky.semanticUiReact.mod.Select.Item] = new SharedBuilder_DropdownItemProps1131760844[typingsSlinky.semanticUiReact.mod.Select.Item](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: DropdownItemProps): SharedBuilder_DropdownItemProps1131760844[typingsSlinky.semanticUiReact.mod.Select.Item] = new SharedBuilder_DropdownItemProps1131760844[typingsSlinky.semanticUiReact.mod.Select.Item](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Menu {
+    
+    @JSImport("semantic-ui-react", "Select.Menu")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Menu.type): SharedBuilder_DropdownMenuProps188553549 = new SharedBuilder_DropdownMenuProps188553549(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: DropdownMenuProps): SharedBuilder_DropdownMenuProps188553549 = new SharedBuilder_DropdownMenuProps188553549(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Select")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +91,10 @@ object Select {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def additionLabelReactElement(value: ReactElement): this.type = set("additionLabel", value.asInstanceOf[js.Any])
+    def additionLabel(value: Double | String | ReactElement): this.type = set("additionLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def additionLabel(value: Double | String | ReactElement): this.type = set("additionLabel", value.asInstanceOf[js.Any])
+    def additionLabelReactElement(value: ReactElement): this.type = set("additionLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def additionPosition(value: top | bottom): this.type = set("additionPosition", value.asInstanceOf[js.Any])
@@ -94,10 +145,10 @@ object Select {
     def defaultUpward(value: Boolean): this.type = set("defaultUpward", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: (Double | String | Boolean)*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | Boolean | (js.Array[Double | String | Boolean])): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | Boolean | (js.Array[Double | String | Boolean])): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: (Double | String | Boolean)*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def direction(value: left | right): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -115,10 +166,10 @@ object Select {
     def fluid(value: Boolean): this.type = set("fluid", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
     def icon(value: js.Any): this.type = set("icon", value.asInstanceOf[js.Any])
@@ -145,10 +196,10 @@ object Select {
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noResultsMessageReactElement(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
+    def noResultsMessage(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noResultsMessage(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
+    def noResultsMessageReactElement(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAddItem(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onAddItem", js.Any.fromFunction2(value))
@@ -203,11 +254,6 @@ object Select {
     def scrolling(value: Boolean): this.type = set("scrolling", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def searchFunction2(
-      value: (/* options */ js.Array[DropdownItemProps], /* value */ String) => js.Array[DropdownItemProps]
-    ): this.type = set("search", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def search(
       value: Boolean | (js.Function2[
           /* options */ js.Array[DropdownItemProps], 
@@ -215,6 +261,11 @@ object Select {
           js.Array[DropdownItemProps]
         ])
     ): this.type = set("search", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def searchFunction2(
+      value: (/* options */ js.Array[DropdownItemProps], /* value */ String) => js.Array[DropdownItemProps]
+    ): this.type = set("search", js.Any.fromFunction2(value))
     
     @scala.inline
     def searchInput(value: js.Any): this.type = set("searchInput", value.asInstanceOf[js.Any])
@@ -244,73 +295,23 @@ object Select {
     def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
+    def trigger(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def trigger(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
+    def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     
     @scala.inline
     def upward(value: Boolean): this.type = set("upward", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: (Boolean | Double | String)*): this.type = set("value", js.Array(value :_*))
+    def value(value: Boolean | Double | String | (js.Array[Boolean | Double | String])): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: Boolean | Double | String | (js.Array[Boolean | Double | String])): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: (Boolean | Double | String)*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def wrapSelection(value: Boolean): this.type = set("wrapSelection", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SelectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(options: js.Array[DropdownItemProps]): Builder = {
-    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SelectProps]))
-  }
-  
-  object Header {
-    
-    @JSImport("semantic-ui-react", "Select.Header")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: DropdownHeaderProps): SharedBuilder_DropdownHeaderProps_361301233 = new SharedBuilder_DropdownHeaderProps_361301233(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Header.type): SharedBuilder_DropdownHeaderProps_361301233 = new SharedBuilder_DropdownHeaderProps_361301233(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Item {
-    
-    @JSImport("semantic-ui-react", "Select.Item")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: DropdownItemProps): SharedBuilder_DropdownItemProps_1338970085 = new SharedBuilder_DropdownItemProps_1338970085(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Item.type): SharedBuilder_DropdownItemProps_1338970085 = new SharedBuilder_DropdownItemProps_1338970085(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Divider {
-    
-    @JSImport("semantic-ui-react", "Select.Divider")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: DropdownDividerProps): SharedBuilder_DropdownDividerProps1707744239 = new SharedBuilder_DropdownDividerProps1707744239(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Divider.type): SharedBuilder_DropdownDividerProps1707744239 = new SharedBuilder_DropdownDividerProps1707744239(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Menu {
-    
-    @JSImport("semantic-ui-react", "Select.Menu")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: DropdownMenuProps): SharedBuilder_DropdownMenuProps188553549 = new SharedBuilder_DropdownMenuProps188553549(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Menu.type): SharedBuilder_DropdownMenuProps188553549 = new SharedBuilder_DropdownMenuProps188553549(js.Array(this.component, js.Dictionary.empty))()
-  }
 }

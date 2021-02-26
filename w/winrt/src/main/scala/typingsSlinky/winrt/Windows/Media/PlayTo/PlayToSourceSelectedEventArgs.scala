@@ -1,6 +1,7 @@
 package typingsSlinky.winrt.Windows.Media.PlayTo
 
 import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStreamWithContentType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

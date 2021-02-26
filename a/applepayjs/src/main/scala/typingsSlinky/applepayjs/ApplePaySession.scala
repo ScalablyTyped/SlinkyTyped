@@ -13,6 +13,7 @@ import typingsSlinky.applepayjs.ApplePayJS.ApplePayShippingMethodUpdate
 import typingsSlinky.applepayjs.ApplePayJS.ApplePayValidateMerchantEvent
 import typingsSlinky.applepayjs.ApplePayJS.Event
 import typingsSlinky.std.EventTarget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

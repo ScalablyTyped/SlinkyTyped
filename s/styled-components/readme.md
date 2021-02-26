@@ -10,10 +10,10 @@ Visual primitives for the component age. Use the best bits of ES6 and CSS to sty
 | ------------------ | :-------------: |
 | Full name          | styled-components |
 | Keywords           | react, css, css-in-js, styled-components, babel-macro, babel-macros, styling |
-| # releases         | 167 |
-| # dependents       | 4927 |
-| # downloads        | 51565784 |
-| # stars            | 47 |
+| # releases         | 77 |
+| # dependents       | 7925 |
+| # downloads        | 99895374 |
+| # stars            | 48 |
 
 ## Links
 - [Homepage](https://styled-components.com/)

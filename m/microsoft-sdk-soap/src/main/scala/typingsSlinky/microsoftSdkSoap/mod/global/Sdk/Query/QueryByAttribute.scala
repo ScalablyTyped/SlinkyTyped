@@ -2,6 +2,7 @@ package typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Query
 
 import typingsSlinky.microsoftSdkSoap.mod.global.Sdk.AttributeBase
 import typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Collection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

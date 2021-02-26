@@ -1,5 +1,6 @@
 package typingsSlinky.webix.webix
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webix.webixStrings.onChange
   - typingsSlinky.webix.webixStrings.onLoadError
 */
-trait DataRecordEventName extends js.Object
+trait DataRecordEventName extends StObject
 object DataRecordEventName {
   
   @scala.inline

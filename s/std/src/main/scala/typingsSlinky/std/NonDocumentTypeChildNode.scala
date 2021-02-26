@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NonDocumentTypeChildNode extends js.Object {
+trait NonDocumentTypeChildNode extends StObject {
   
   /**
     * Returns the first following sibling that is an element, and null otherwise.
@@ -20,36 +21,24 @@ trait NonDocumentTypeChildNode extends js.Object {
 object NonDocumentTypeChildNode {
   
   @scala.inline
-  def apply(): NonDocumentTypeChildNode = {
+  def apply(): org.scalajs.dom.raw.NonDocumentTypeChildNode = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[NonDocumentTypeChildNode]
+    __obj.asInstanceOf[org.scalajs.dom.raw.NonDocumentTypeChildNode]
   }
   
   @scala.inline
-  implicit class NonDocumentTypeChildNodeOps[Self <: org.scalajs.dom.raw.NonDocumentTypeChildNode] (val x: Self) extends AnyVal {
+  implicit class NonDocumentTypeChildNodeMutableBuilder[Self <: org.scalajs.dom.raw.NonDocumentTypeChildNode] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setNextElementSibling(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "nextElementSibling", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setNextElementSiblingNull: Self = StObject.set(x, "nextElementSibling", null)
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setPreviousElementSibling(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "previousElementSibling", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNextElementSibling(value: org.scalajs.dom.raw.Element): Self = this.set("nextElementSibling", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setNextElementSiblingNull: Self = this.set("nextElementSibling", null)
-    
-    @scala.inline
-    def setPreviousElementSibling(value: org.scalajs.dom.raw.Element): Self = this.set("previousElementSibling", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPreviousElementSiblingNull: Self = this.set("previousElementSibling", null)
+    def setPreviousElementSiblingNull: Self = StObject.set(x, "previousElementSibling", null)
   }
 }

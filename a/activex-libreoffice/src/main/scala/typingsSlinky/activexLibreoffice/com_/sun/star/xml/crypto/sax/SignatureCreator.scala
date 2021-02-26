@@ -5,6 +5,7 @@ import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.io.XInputStream
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XInitialization
 import typingsSlinky.activexLibreoffice.com_.sun.star.xml.crypto.XUriBinding
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

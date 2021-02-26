@@ -2,14 +2,15 @@ package typingsSlinky.uifabricUtilities
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.enzyme.mod.ReactWrapper
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uifabric/utilities/lib/test/injectWrapperMethod", JSImport.Namespace)
-@js.native
-object injectWrapperMethodMod extends js.Object {
+object injectWrapperMethodMod {
   
+  @JSImport("@uifabric/utilities/lib/test/injectWrapperMethod", "injectWrapperMethod")
+  @js.native
   def injectWrapperMethod(
     wrapper: ReactWrapper[js.Object, js.Object, ReactComponentClass[js.Object]],
     methodName: String,

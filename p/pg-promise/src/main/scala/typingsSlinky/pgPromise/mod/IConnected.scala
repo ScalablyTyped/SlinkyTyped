@@ -2,6 +2,7 @@ package typingsSlinky.pgPromise.mod
 
 import typingsSlinky.pgPromise.pgSubsetMod.IClient
 import typingsSlinky.spex.mod.ISpexBase
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

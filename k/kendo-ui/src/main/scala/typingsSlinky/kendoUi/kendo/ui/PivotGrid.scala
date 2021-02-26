@@ -5,6 +5,7 @@ import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.JQueryPromise
 import typingsSlinky.kendoUi.kendo.data.DataSource
 import typingsSlinky.kendoUi.kendo.data.PivotDataSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,8 +16,8 @@ trait PivotGrid extends Widget {
   def cellInfo(columnIndex: Double, rowIndex: Double): js.Any = js.native
   
   def cellInfoByElement(cell: String): js.Any = js.native
-  def cellInfoByElement(cell: JQuery): js.Any = js.native
   def cellInfoByElement(cell: Element): js.Any = js.native
+  def cellInfoByElement(cell: JQuery): js.Any = js.native
   
   var dataSource: DataSource = js.native
   

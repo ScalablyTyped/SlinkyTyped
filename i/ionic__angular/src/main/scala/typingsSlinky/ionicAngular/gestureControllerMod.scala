@@ -3,16 +3,16 @@ package typingsSlinky.ionicAngular
 import typingsSlinky.angularCore.mod.NgZone
 import typingsSlinky.ionicCore.gestureMod.Gesture
 import typingsSlinky.ionicCore.gestureMod.GestureConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/angular/providers/gesture-controller", JSImport.Namespace)
-@js.native
-object gestureControllerMod extends js.Object {
+object gestureControllerMod {
   
+  @JSImport("@ionic/angular/providers/gesture-controller", "GestureController")
   @js.native
-  class GestureController protected () extends js.Object {
+  class GestureController protected () extends StObject {
     def this(zone: NgZone) = this()
     
     /**

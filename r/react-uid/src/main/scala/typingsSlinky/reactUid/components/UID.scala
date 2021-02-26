@@ -2,17 +2,12 @@ package typingsSlinky.reactUid.components
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactUid.contextMod.UIDProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object UID {
-  
-  @JSImport("react-uid/dist/es5/UIDComponent", "UID")
-  @js.native
-  object component extends js.Object
-  
-  def withProps(p: UIDProps): SharedBuilder_UIDProps670959062[typingsSlinky.reactUid.uidcomponentMod.UID] = new SharedBuilder_UIDProps670959062[typingsSlinky.reactUid.uidcomponentMod.UID](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -21,4 +16,10 @@ object UID {
     val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children))
     new SharedBuilder_UIDProps670959062[typingsSlinky.reactUid.uidcomponentMod.UID](js.Array(this.component, __props.asInstanceOf[UIDProps]))
   }
+  
+  @JSImport("react-uid/dist/es5/UIDComponent", "UID")
+  @js.native
+  val component: js.Object = js.native
+  
+  def withProps(p: UIDProps): SharedBuilder_UIDProps670959062[typingsSlinky.reactUid.uidcomponentMod.UID] = new SharedBuilder_UIDProps670959062[typingsSlinky.reactUid.uidcomponentMod.UID](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

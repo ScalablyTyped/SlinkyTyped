@@ -1,5 +1,6 @@
 package typingsSlinky.jestTestResult.typesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jestTestResult.jestTestResultStrings.todo
   - typingsSlinky.jestTestResult.jestTestResultStrings.disabled
 */
-trait Status extends js.Object
+trait Status extends StObject
 object Status {
   
   @scala.inline

@@ -1,15 +1,25 @@
 package typingsSlinky.reactOnsenui.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameAnimationOptions
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-onsenui", "Navigator")
 @js.native
-class Navigator ()
-  extends typingsSlinky.react.mod.Component[HTMLAttributesidclassNameAnimationOptions, js.Any, js.Any] {
+class Navigator protected ()
+  extends Component[typingsSlinky.reactOnsenui.anon.AnimationOptions, js.Any] {
+  def this(props: HTMLAttributesidclassName with typingsSlinky.reactOnsenui.anon.AnimationOptions) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(
+    props: HTMLAttributesidclassName with typingsSlinky.reactOnsenui.anon.AnimationOptions,
+    context: js.Any
+  ) = this()
   
   var pages: js.Array[_] = js.native
   

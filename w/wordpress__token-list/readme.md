@@ -9,15 +9,16 @@ Constructable, plain JavaScript DOMTokenList implementation, supporting non-brow
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @wordpress/token-list |
-| Keywords           | domtokenlist |
-| # releases         | 13 |
-| # dependents       | 3 |
-| # downloads        | 118642 |
+| Keywords           | wordpress, gutenberg, domtokenlist |
+| # releases         | 17 |
+| # dependents       | 4 |
+| # downloads        | 595583 |
 | # stars            | 0 |
 
 ## Links
 - [Homepage](https://github.com/WordPress/gutenberg/tree/master/packages/token-list/README.md)
 - [Bugs](https://github.com/WordPress/gutenberg/issues)
+- [Repository](https://github.com/WordPress/gutenberg)
 - [Npm](https://www.npmjs.com/package/%40wordpress%2Ftoken-list)
     
 

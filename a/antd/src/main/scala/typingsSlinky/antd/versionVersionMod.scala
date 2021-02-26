@@ -1,13 +1,20 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.antdStrings.`4Dot8Dot4`
+import org.scalablytyped.runtime.Shortcut
+import typingsSlinky.antd.antdStrings.`4Dot8Dot5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antd/lib/version/version", JSImport.Namespace)
-@js.native
-object versionVersionMod extends js.Object {
+object versionVersionMod extends Shortcut {
   
-  val default: `4Dot8Dot4` = js.native
+  @JSImport("antd/lib/version/version", JSImport.Default)
+  @js.native
+  val default: `4Dot8Dot5` = js.native
+  
+  type _To = `4Dot8Dot5`
+  
+  /* This means you don't have to write `default`, but can instead just say `versionVersionMod.foo` */
+  override def _to: `4Dot8Dot5` = default
 }

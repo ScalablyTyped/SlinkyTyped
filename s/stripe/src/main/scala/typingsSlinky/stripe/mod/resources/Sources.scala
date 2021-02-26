@@ -2,18 +2,21 @@ package typingsSlinky.stripe.mod.resources
 
 import typingsSlinky.stripe.mod.HeaderOptions
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.sources.ISource
 import typingsSlinky.stripe.mod.sources.ISourceCreationOptions
 import typingsSlinky.stripe.mod.sources.ISourceRetrieveOptions
 import typingsSlinky.stripe.mod.sources.ISourceUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.Sources")
 @js.native
-class Sources () extends StripeResource {
+class Sources protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(data: ISourceCreationOptions): js.Promise[ISource] = js.native
   /** Create Source: https://stripe.com/docs/api/sources/create */

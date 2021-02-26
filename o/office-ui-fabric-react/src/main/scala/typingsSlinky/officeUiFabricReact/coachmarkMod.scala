@@ -3,27 +3,38 @@ package typingsSlinky.officeUiFabricReact
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.anon.PartialICoachmarkProps
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/Coachmark", JSImport.Namespace)
-@js.native
-object coachmarkMod extends js.Object {
+object coachmarkMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/Coachmark", "COACHMARK_ATTRIBUTE_NAME")
+  @js.native
   val COACHMARK_ATTRIBUTE_NAME: /* "data-coachmarkid" */ String = js.native
   
+  @JSImport("office-ui-fabric-react/lib/components/Coachmark", "Coachmark")
+  @js.native
   val Coachmark: ReactComponentClass[ICoachmarkProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/components/Coachmark", "CoachmarkBase")
   @js.native
   class CoachmarkBase protected ()
     extends typingsSlinky.officeUiFabricReact.coachmarkBaseMod.CoachmarkBase {
     def this(props: ICoachmarkProps) = this()
   }
   /* static members */
-  @js.native
-  object CoachmarkBase extends js.Object {
+  object CoachmarkBase {
     
-    var defaultProps: PartialICoachmarkProps = js.native
+    @JSImport("office-ui-fabric-react/lib/components/Coachmark", "CoachmarkBase")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("office-ui-fabric-react/lib/components/Coachmark", "CoachmarkBase.defaultProps")
+    @js.native
+    def defaultProps: PartialICoachmarkProps = js.native
+    @scala.inline
+    def defaultProps_=(x: PartialICoachmarkProps): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
   }
 }

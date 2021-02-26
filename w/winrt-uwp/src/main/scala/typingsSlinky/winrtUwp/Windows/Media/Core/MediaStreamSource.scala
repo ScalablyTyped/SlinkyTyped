@@ -12,13 +12,14 @@ import typingsSlinky.winrtUwp.winrtUwpStrings.paused
 import typingsSlinky.winrtUwp.winrtUwpStrings.samplerequested
 import typingsSlinky.winrtUwp.winrtUwpStrings.starting
 import typingsSlinky.winrtUwp.winrtUwpStrings.switchstreamsrequested
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a media source that delivers media samples directly to the media pipeline. */
 @js.native
-trait MediaStreamSource extends js.Object {
+trait MediaStreamSource extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

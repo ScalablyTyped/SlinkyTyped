@@ -7,12 +7,13 @@ import typingsSlinky.astTypes.astTypesStrings.let
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.VariableDeclaratorKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.VariableDeclaration
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VariableDeclarationBuilder extends js.Object {
+trait VariableDeclarationBuilder extends StObject {
   
   def apply(kind: `var`, declarations: js.Array[VariableDeclaratorKind | IdentifierKind]): VariableDeclaration = js.native
   def apply(kind: const, declarations: js.Array[VariableDeclaratorKind | IdentifierKind]): VariableDeclaration = js.native

@@ -1,16 +1,29 @@
 package typingsSlinky.awsSdkClientSqsNode
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-sqs-node/types/DeleteMessageExceptionsUnion", JSImport.Namespace)
-@js.native
-object deleteMessageExceptionsUnionMod extends js.Object {
+object deleteMessageExceptionsUnionMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientSqsNode.typesInvalidIdFormatMod.InvalidIdFormat
     - typingsSlinky.awsSdkClientSqsNode.typesReceiptHandleIsInvalidMod.ReceiptHandleIsInvalid
   */
-  trait DeleteMessageExceptionsUnion extends js.Object
+  trait DeleteMessageExceptionsUnion extends StObject
+  object DeleteMessageExceptionsUnion {
+    
+    @scala.inline
+    def InvalidIdFormat(name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.InvalidIdFormat): typingsSlinky.awsSdkClientSqsNode.typesInvalidIdFormatMod.InvalidIdFormat = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientSqsNode.typesInvalidIdFormatMod.InvalidIdFormat]
+    }
+    
+    @scala.inline
+    def ReceiptHandleIsInvalid(name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.ReceiptHandleIsInvalid): typingsSlinky.awsSdkClientSqsNode.typesReceiptHandleIsInvalidMod.ReceiptHandleIsInvalid = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientSqsNode.typesReceiptHandleIsInvalidMod.ReceiptHandleIsInvalid]
+    }
+  }
 }

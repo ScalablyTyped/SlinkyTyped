@@ -2,6 +2,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.reflection
 
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`-1`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`-1`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
 */
-trait TypeDescriptionSearchDepth extends js.Object
+trait TypeDescriptionSearchDepth extends StObject
 object TypeDescriptionSearchDepth {
   
   /** Infinite search depth. Search through all children including direct children, grand children, grand children's children, ... */

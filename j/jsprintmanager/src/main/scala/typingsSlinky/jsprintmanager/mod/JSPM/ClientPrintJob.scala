@@ -1,13 +1,14 @@
 package typingsSlinky.jsprintmanager.mod.JSPM
 
 import org.scalajs.dom.raw.Blob
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jsprintmanager", "JSPM.ClientPrintJob")
 @js.native
-class ClientPrintJob () extends js.Object {
+class ClientPrintJob () extends StObject {
   
   var _binaryPrinterCommands: js.Any = js.native
   

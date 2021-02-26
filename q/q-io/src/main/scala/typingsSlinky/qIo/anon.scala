@@ -4,16 +4,15 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.Buffer
 import typingsSlinky.q.mod.Promise
 import typingsSlinky.qIo.QioFS.Stats
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait TypeofQioFS extends js.Object {
+  trait TypeofQioFS extends StObject {
     
     def absolute(path: String): String = js.native
     

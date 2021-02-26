@@ -9,6 +9,7 @@ import typingsSlinky.openlayers.mod.layer.Group
 import typingsSlinky.openlayers.mod.layer.Layer
 import typingsSlinky.openlayers.mod.olx.AtPixelOptions
 import typingsSlinky.openlayers.mod.olx.MapOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

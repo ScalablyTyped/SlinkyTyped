@@ -2,13 +2,14 @@ package typingsSlinky.cesium.mod
 
 import typingsSlinky.cesium.anon.Delay
 import typingsSlinky.cesium.anon.RemoveOnStop
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "ModelAnimationCollection")
 @js.native
-class ModelAnimationCollection () extends js.Object {
+class ModelAnimationCollection () extends StObject {
   
   def add(options: Delay): ModelAnimation = js.native
   

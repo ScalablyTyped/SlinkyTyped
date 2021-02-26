@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMapGl.mod.FullscreenControlProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object FullscreenControl {
   
   @JSImport("react-map-gl", "FullscreenControl")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,7 +42,7 @@ object FullscreenControl {
     def containerNull: this.type = set("container", null)
   }
   
-  def withProps(p: FullscreenControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FullscreenControl.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FullscreenControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

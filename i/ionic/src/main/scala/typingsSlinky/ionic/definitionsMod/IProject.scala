@@ -7,12 +7,13 @@ import typingsSlinky.ionic.libProjectMod.ProjectDetailsResult
 import typingsSlinky.ionic.libServeMod.ServeRunner
 import typingsSlinky.ionicCliFramework.definitionsMod.PackageJson
 import typingsSlinky.ionicCliFramework.mod.BaseConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IProject extends js.Object {
+trait IProject extends StObject {
   
   val config: BaseConfig[IProjectConfig] = js.native
   

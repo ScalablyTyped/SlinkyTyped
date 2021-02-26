@@ -1,90 +1,170 @@
 package typingsSlinky.typedoc
 
+import typingsSlinky.typedoc.converterConverterMod.Converter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/converter/types", JSImport.Namespace)
-@js.native
-object typesMod extends js.Object {
+object typesMod {
   
+  @JSImport("typedoc/dist/lib/converter/types", "AliasConverter")
   @js.native
-  class AliasConverter ()
-    extends typingsSlinky.typedoc.typesAliasMod.AliasConverter
+  class AliasConverter protected ()
+    extends typingsSlinky.typedoc.typesAliasMod.AliasConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "ArrayConverter")
   @js.native
-  class ArrayConverter ()
-    extends typingsSlinky.typedoc.arrayMod.ArrayConverter
+  class ArrayConverter protected ()
+    extends typingsSlinky.typedoc.arrayMod.ArrayConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "BindingArrayConverter")
   @js.native
-  class BindingArrayConverter ()
-    extends typingsSlinky.typedoc.bindingArrayMod.BindingArrayConverter
+  class BindingArrayConverter protected ()
+    extends typingsSlinky.typedoc.bindingArrayMod.BindingArrayConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "BindingObjectConverter")
   @js.native
-  class BindingObjectConverter ()
-    extends typingsSlinky.typedoc.bindingObjectMod.BindingObjectConverter
+  class BindingObjectConverter protected ()
+    extends typingsSlinky.typedoc.bindingObjectMod.BindingObjectConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "ConditionalConverter")
   @js.native
-  class ConditionalConverter ()
-    extends typingsSlinky.typedoc.conditionalMod.ConditionalConverter
+  class ConditionalConverter protected ()
+    extends typingsSlinky.typedoc.conditionalMod.ConditionalConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "EnumConverter")
   @js.native
-  class EnumConverter ()
-    extends typingsSlinky.typedoc.typesEnumMod.EnumConverter
+  class EnumConverter protected ()
+    extends typingsSlinky.typedoc.typesEnumMod.EnumConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "IndexedAccessConverter")
   @js.native
-  class IndexedAccessConverter ()
-    extends typingsSlinky.typedoc.indexedAccessMod.IndexedAccessConverter
+  class IndexedAccessConverter protected ()
+    extends typingsSlinky.typedoc.indexedAccessMod.IndexedAccessConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "InferredConverter")
   @js.native
-  class InferredConverter ()
-    extends typingsSlinky.typedoc.inferredMod.InferredConverter
+  class InferredConverter protected ()
+    extends typingsSlinky.typedoc.inferredMod.InferredConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "IntrinsicConverter")
   @js.native
-  class IntrinsicConverter ()
-    extends typingsSlinky.typedoc.intrinsicMod.IntrinsicConverter
+  class IntrinsicConverter protected ()
+    extends typingsSlinky.typedoc.intrinsicMod.IntrinsicConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "ParensConverter")
   @js.native
-  class ParensConverter ()
-    extends typingsSlinky.typedoc.parensMod.ParensConverter
+  class ParensConverter protected ()
+    extends typingsSlinky.typedoc.parensMod.ParensConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "PredicateConverter")
   @js.native
-  class PredicateConverter ()
-    extends typingsSlinky.typedoc.predicateMod.PredicateConverter
+  class PredicateConverter protected ()
+    extends typingsSlinky.typedoc.predicateMod.PredicateConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "QueryConverter")
   @js.native
-  class QueryConverter ()
-    extends typingsSlinky.typedoc.queryMod.QueryConverter
+  class QueryConverter protected ()
+    extends typingsSlinky.typedoc.queryMod.QueryConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "ReferenceConverter")
   @js.native
-  class ReferenceConverter ()
-    extends typingsSlinky.typedoc.typesReferenceMod.ReferenceConverter
+  class ReferenceConverter protected ()
+    extends typingsSlinky.typedoc.typesReferenceMod.ReferenceConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "StringLiteralConverter")
   @js.native
-  class StringLiteralConverter ()
-    extends typingsSlinky.typedoc.stringLiteralMod.StringLiteralConverter
+  class StringLiteralConverter protected ()
+    extends typingsSlinky.typedoc.stringLiteralMod.StringLiteralConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "ThisConverter")
   @js.native
-  class ThisConverter ()
-    extends typingsSlinky.typedoc.thisMod.ThisConverter
+  class ThisConverter protected ()
+    extends typingsSlinky.typedoc.thisMod.ThisConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "TupleConverter")
   @js.native
-  class TupleConverter ()
-    extends typingsSlinky.typedoc.tupleMod.TupleConverter
+  class TupleConverter protected ()
+    extends typingsSlinky.typedoc.tupleMod.TupleConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "TypeOperatorConverter")
   @js.native
-  class TypeOperatorConverter ()
-    extends typingsSlinky.typedoc.typeOperatorMod.TypeOperatorConverter
+  class TypeOperatorConverter protected ()
+    extends typingsSlinky.typedoc.typeOperatorMod.TypeOperatorConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "TypeParameterConverter")
   @js.native
-  class TypeParameterConverter ()
-    extends typingsSlinky.typedoc.typesTypeParameterMod.TypeParameterConverter
+  class TypeParameterConverter protected ()
+    extends typingsSlinky.typedoc.typesTypeParameterMod.TypeParameterConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "UnionOrIntersectionConverter")
   @js.native
-  class UnionOrIntersectionConverter ()
-    extends typingsSlinky.typedoc.unionOrIntersectionMod.UnionOrIntersectionConverter
+  class UnionOrIntersectionConverter protected ()
+    extends typingsSlinky.typedoc.unionOrIntersectionMod.UnionOrIntersectionConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
   
+  @JSImport("typedoc/dist/lib/converter/types", "UnknownConverter")
   @js.native
-  class UnknownConverter ()
-    extends typingsSlinky.typedoc.unknownMod.UnknownConverter
+  class UnknownConverter protected ()
+    extends typingsSlinky.typedoc.unknownMod.UnknownConverter {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
 }

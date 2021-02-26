@@ -24,6 +24,7 @@ import typingsSlinky.recharts.rechartsStrings.normal
 import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,7 +33,7 @@ object Rectangle {
   
   @JSImport("recharts", "Rectangle")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -240,10 +241,10 @@ object Rectangle {
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def radiusVarargs(value: js.Any*): this.type = set("radius", js.Array(value :_*))
+    def radius(value: Double | js.Array[_]): this.type = set("radius", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def radius(value: Double | js.Array[_]): this.type = set("radius", value.asInstanceOf[js.Any])
+    def radiusVarargs(value: js.Any*): this.type = set("radius", js.Array(value :_*))
     
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
@@ -315,7 +316,7 @@ object Rectangle {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RectangleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Rectangle.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RectangleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

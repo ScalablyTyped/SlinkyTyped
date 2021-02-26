@@ -7,6 +7,7 @@ import typingsSlinky.browserfs.asyncMirrorMod.default
 import typingsSlinky.browserfs.fileSystemMod.BFSCallback
 import typingsSlinky.browserfs.fileSystemMod.FileSystem
 import typingsSlinky.browserfs.fileSystemMod.FileSystemOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

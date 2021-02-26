@@ -13,6 +13,7 @@ import typingsSlinky.postmanCollection.postmanCollectionStrings.ntlm
 import typingsSlinky.postmanCollection.postmanCollectionStrings.oauth1
 import typingsSlinky.postmanCollection.postmanCollectionStrings.oauth2
 import typingsSlinky.std.NonNullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -73,9 +74,9 @@ class RequestAuth protected () extends Property[RequestAuthDefinition] {
   def use(`type`: String, options: VariableList): Unit = js.native
 }
 /* static members */
-@JSImport("postman-collection", "RequestAuth")
-@js.native
-object RequestAuth extends js.Object {
+object RequestAuth {
   
+  @JSImport("postman-collection", "RequestAuth.isValidType")
+  @js.native
   def isValidType(`type`: js.Any): Boolean = js.native
 }

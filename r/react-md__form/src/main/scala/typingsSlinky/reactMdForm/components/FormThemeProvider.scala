@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMdForm.formThemeProviderMod.FormTheme
 import typingsSlinky.reactMdForm.formThemeProviderMod.FormThemeProviderProps
 import typingsSlinky.reactMdForm.formThemeProviderMod.FormUnderlineDirection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object FormThemeProvider {
   
   @JSImport("@react-md/form", "FormThemeProvider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,7 +28,7 @@ object FormThemeProvider {
     def underlineDirection(value: FormUnderlineDirection): this.type = set("underlineDirection", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FormThemeProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FormThemeProvider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FormThemeProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

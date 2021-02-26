@@ -12,15 +12,27 @@ import typingsSlinky.officeUiFabricReact.suggestionsDottypesMod.ISuggestionsHead
 import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionItemProps
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SuggestionsControl {
   
+  @scala.inline
+  def apply[T](
+    completeSuggestion: () => Unit,
+    onSuggestionClick: (js.UndefOr[SyntheticMouseEvent[HTMLElement]], js.UndefOr[js.Any], js.UndefOr[Double]) => Unit,
+    shouldLoopSelection: Boolean,
+    suggestions: js.Array[ISuggestionModel[T]]
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(completeSuggestion = js.Any.fromFunction0(completeSuggestion), onSuggestionClick = js.Any.fromFunction3(onSuggestionClick), shouldLoopSelection = shouldLoopSelection.asInstanceOf[js.Any], suggestions = suggestions.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ISuggestionsControlProps[T]]))
+  }
+  
   @JSImport("office-ui-fabric-react", "SuggestionsControl")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -31,25 +43,25 @@ object SuggestionsControl {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ js.Object | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    def footerItemsProps(value: js.Array[ISuggestionsHeaderFooterProps]): this.type = set("footerItemsProps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def footerItemsPropsVarargs(value: ISuggestionsHeaderFooterProps*): this.type = set("footerItemsProps", js.Array(value :_*))
     
     @scala.inline
-    def footerItemsProps(value: js.Array[ISuggestionsHeaderFooterProps]): this.type = set("footerItemsProps", value.asInstanceOf[js.Any])
+    def headerItemsProps(value: js.Array[ISuggestionsHeaderFooterProps]): this.type = set("headerItemsProps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def headerItemsPropsVarargs(value: ISuggestionsHeaderFooterProps*): this.type = set("headerItemsProps", js.Array(value :_*))
-    
-    @scala.inline
-    def headerItemsProps(value: js.Array[ISuggestionsHeaderFooterProps]): this.type = set("headerItemsProps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onRenderSuggestion(value: (T, /* suggestionItemProps */ ISuggestionItemProps[T]) => ReactElement): this.type = set("onRenderSuggestion", js.Any.fromFunction2(value))
@@ -85,15 +97,4 @@ object SuggestionsControl {
   }
   
   def withProps[T](p: ISuggestionsControlProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](
-    completeSuggestion: () => Unit,
-    onSuggestionClick: (js.UndefOr[SyntheticMouseEvent[HTMLElement]], js.UndefOr[js.Any], js.UndefOr[Double]) => Unit,
-    shouldLoopSelection: Boolean,
-    suggestions: js.Array[ISuggestionModel[T]]
-  ): Builder[T] = {
-    val __props = js.Dynamic.literal(completeSuggestion = js.Any.fromFunction0(completeSuggestion), onSuggestionClick = js.Any.fromFunction3(onSuggestionClick), shouldLoopSelection = shouldLoopSelection.asInstanceOf[js.Any], suggestions = suggestions.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ISuggestionsControlProps[T]]))
-  }
 }

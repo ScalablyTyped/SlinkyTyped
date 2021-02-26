@@ -5,12 +5,13 @@ import typingsSlinky.activexAdodb.ADODB.Field
 import typingsSlinky.activexAdodb.ADODB.Recordset
 import typingsSlinky.std.SafeArray
 import typingsSlinky.std.VarDate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PivotCache extends js.Object {
+trait PivotCache extends StObject {
   
   val ADOConnection: Connection = js.native
   

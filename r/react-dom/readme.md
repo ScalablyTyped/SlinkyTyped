@@ -10,10 +10,10 @@ React package for working with the DOM.
 | ------------------ | :-------------: |
 | Full name          | react-dom |
 | Keywords           | react |
-| # releases         | 113 |
-| # dependents       | 23738 |
-| # downloads        | 250079350 |
-| # stars            | 213 |
+| # releases         | 135 |
+| # dependents       | 33255 |
+| # downloads        | 388289650 |
+| # stars            | 216 |
 
 ## Links
 - [Homepage](https://reactjs.org/)

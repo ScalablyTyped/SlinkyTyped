@@ -1,5 +1,6 @@
 package typingsSlinky.convertUnits.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.convertUnits.convertUnitsStrings.reactiveEnergy
   - typingsSlinky.convertUnits.convertUnitsStrings.angle
 */
-trait measure extends js.Object
+trait measure extends StObject
 object measure {
   
   @scala.inline

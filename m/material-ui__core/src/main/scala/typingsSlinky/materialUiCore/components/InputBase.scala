@@ -84,6 +84,7 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,7 +93,7 @@ object InputBase {
   
   @JSImport("@material-ui/core", "InputBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -291,10 +292,10 @@ object InputBase {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: (String | Double | Boolean | js.Object)*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: (js.Array[String | Double | Boolean | js.Object]) | String | Double | Boolean | js.Object): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: (js.Array[String | Double | Boolean | js.Object]) | String | Double | Boolean | js.Object): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: (String | Double | Boolean | js.Object)*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -306,10 +307,10 @@ object InputBase {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def endAdornmentReactElement(value: ReactElement): this.type = set("endAdornment", value.asInstanceOf[js.Any])
+    def endAdornment(value: ReactElement): this.type = set("endAdornment", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def endAdornment(value: ReactElement): this.type = set("endAdornment", value.asInstanceOf[js.Any])
+    def endAdornmentReactElement(value: ReactElement): this.type = set("endAdornment", value.asInstanceOf[js.Any])
     
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
@@ -327,25 +328,25 @@ object InputBase {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def inputComponentFunctionComponent(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def inputComponent(value: ReactType[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputComponentComponentClass(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputComponent(value: ReactType[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
+    def inputComponentFunctionComponent(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -354,16 +355,16 @@ object InputBase {
     def inputProps(value: InputBaseComponentProps): this.type = set("inputProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRef(value: Ref[_] | ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def inputRef(value: Ref[_] | ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRefNull: this.type = set("inputRef", null)
     
     @scala.inline
-    def inputRefNull: this.type = set("inputRef", null)
+    def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -681,10 +682,10 @@ object InputBase {
     def spellCheck(value: Booleanish): this.type = set("spellCheck", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def startAdornmentReactElement(value: ReactElement): this.type = set("startAdornment", value.asInstanceOf[js.Any])
+    def startAdornment(value: ReactElement): this.type = set("startAdornment", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def startAdornment(value: ReactElement): this.type = set("startAdornment", value.asInstanceOf[js.Any])
+    def startAdornmentReactElement(value: ReactElement): this.type = set("startAdornment", value.asInstanceOf[js.Any])
     
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
@@ -714,16 +715,16 @@ object InputBase {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: (String | Double | Boolean | js.Object)*): this.type = set("value", js.Array(value :_*))
+    def value(value: (js.Array[String | Double | Boolean | js.Object]) | String | Double | Boolean | js.Object): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: (js.Array[String | Double | Boolean | js.Object]) | String | Double | Boolean | js.Object): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: (String | Double | Boolean | js.Object)*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: InputBaseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: InputBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: InputBaseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

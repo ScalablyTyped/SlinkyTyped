@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,18 +29,26 @@ class ClientBlockGetByIdRequest () extends IClientBlockGetByIdRequest {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest")
-@js.native
-object ClientBlockGetByIdRequest extends js.Object {
+object ClientBlockGetByIdRequest {
   
   /**
     * Creates a new ClientBlockGetByIdRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ClientBlockGetByIdRequest instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.create")
+  @js.native
   def create(): ClientBlockGetByIdRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.create")
+  @js.native
   def create(properties: IClientBlockGetByIdRequest): ClientBlockGetByIdRequest = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): ClientBlockGetByIdRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ClientBlockGetByIdRequest = js.native
   /**
     * Decodes a ClientBlockGetByIdRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -48,11 +57,16 @@ object ClientBlockGetByIdRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.decode")
+  @js.native
   def decode(reader: Reader): ClientBlockGetByIdRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): ClientBlockGetByIdRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): ClientBlockGetByIdRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): ClientBlockGetByIdRequest = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ClientBlockGetByIdRequest = js.native
   /**
     * Decodes a ClientBlockGetByIdRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -60,8 +74,9 @@ object ClientBlockGetByIdRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): ClientBlockGetByIdRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): ClientBlockGetByIdRequest = js.native
   
   /**
     * Encodes the specified ClientBlockGetByIdRequest message. Does not implicitly {@link ClientBlockGetByIdRequest.verify|verify} messages.
@@ -69,7 +84,11 @@ object ClientBlockGetByIdRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.encode")
+  @js.native
   def encode(message: IClientBlockGetByIdRequest): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.encode")
+  @js.native
   def encode(message: IClientBlockGetByIdRequest, writer: Writer): Writer = js.native
   
   /**
@@ -78,7 +97,11 @@ object ClientBlockGetByIdRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientBlockGetByIdRequest): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientBlockGetByIdRequest, writer: Writer): Writer = js.native
   
   /**
@@ -86,6 +109,8 @@ object ClientBlockGetByIdRequest extends js.Object {
     * @param object Plain object
     * @returns ClientBlockGetByIdRequest
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): ClientBlockGetByIdRequest = js.native
   
   /**
@@ -94,7 +119,11 @@ object ClientBlockGetByIdRequest extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.toObject")
+  @js.native
   def toObject(message: ClientBlockGetByIdRequest): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.toObject")
+  @js.native
   def toObject(message: ClientBlockGetByIdRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -102,5 +131,7 @@ object ClientBlockGetByIdRequest extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetByIdRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

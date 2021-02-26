@@ -27,6 +27,7 @@ import typingsSlinky.officeJs.officeJsStrings.ThreeSymbols2
 import typingsSlinky.officeJs.officeJsStrings.ThreeTrafficLights1
 import typingsSlinky.officeJs.officeJsStrings.ThreeTrafficLights2
 import typingsSlinky.officeJs.officeJsStrings.ThreeTriangles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

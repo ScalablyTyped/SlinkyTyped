@@ -14,14 +14,14 @@ import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.targetCameraMod.TargetCamera
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/arcRotateCamera", JSImport.Namespace)
-@js.native
-object arcRotateCameraMod extends js.Object {
+object arcRotateCameraMod {
   
+  @JSImport("babylonjs/Cameras/arcRotateCamera", "ArcRotateCamera")
   @js.native
   class ArcRotateCamera protected () extends TargetCamera {
     /**

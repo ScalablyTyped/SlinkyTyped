@@ -17,6 +17,7 @@ import typingsSlinky.ariClient.anon.Whisper
 import typingsSlinky.ariClient.anon.`3`
 import typingsSlinky.ariClient.anon.`4`
 import typingsSlinky.ariClient.anon.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

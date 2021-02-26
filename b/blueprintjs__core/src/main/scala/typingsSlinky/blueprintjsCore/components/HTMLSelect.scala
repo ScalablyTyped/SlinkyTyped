@@ -76,6 +76,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -84,7 +85,7 @@ object HTMLSelect {
   
   @JSImport("@blueprintjs/core", "HTMLSelect")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -280,10 +281,10 @@ object HTMLSelect {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -295,10 +296,10 @@ object HTMLSelect {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def elementRefFunction1(value: /* ref */ HTMLSelectElement | Null => js.Any): this.type = set("elementRef", js.Any.fromFunction1(value))
+    def elementRef(value: IRef[HTMLSelectElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def elementRef(value: IRef[HTMLSelectElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+    def elementRefFunction1(value: /* ref */ HTMLSelectElement | Null => js.Any): this.type = set("elementRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def fill(value: Boolean): this.type = set("fill", value.asInstanceOf[js.Any])
@@ -592,10 +593,10 @@ object HTMLSelect {
     def onWheel(value: SyntheticWheelEvent[HTMLSelectElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def optionsVarargs(value: (String | Double | IOptionProps)*): this.type = set("options", js.Array(value :_*))
+    def options(value: js.Array[String | Double | IOptionProps]): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: js.Array[String | Double | IOptionProps]): this.type = set("options", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: (String | Double | IOptionProps)*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -664,7 +665,7 @@ object HTMLSelect {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IHTMLSelectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: HTMLSelect.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IHTMLSelectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

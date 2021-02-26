@@ -1,11 +1,12 @@
 package typingsSlinky.textEncoding
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TextEncoder extends js.Object {
+trait TextEncoder extends StObject {
   
   def encode(): js.typedarray.Uint8Array = js.native
   def encode(input: js.UndefOr[scala.Nothing], options: TextEncodeOptions): js.typedarray.Uint8Array = js.native

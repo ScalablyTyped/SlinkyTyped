@@ -3,14 +3,14 @@ package typingsSlinky.plottable
 import typingsSlinky.plottable.axisMod.Axis
 import typingsSlinky.plottable.axisMod.AxisOrientation
 import typingsSlinky.plottable.quantitativeScaleMod.QuantitativeScale
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("plottable/build/src/axes/numericAxis", JSImport.Namespace)
-@js.native
-object numericAxisMod extends js.Object {
+object numericAxisMod {
   
+  @JSImport("plottable/build/src/axes/numericAxis", "Numeric")
   @js.native
   class Numeric protected () extends Axis[Double] {
     /**

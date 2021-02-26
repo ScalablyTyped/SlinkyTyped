@@ -26,15 +26,27 @@ import typingsSlinky.antd.uploadInterfaceMod.UploadType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Upload {
   
+  object Dragger {
+    
+    @JSImport("antd", "Upload.Dragger")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Dragger.type): SharedBuilder_DraggerProps_1915486784 = new SharedBuilder_DraggerProps_1915486784(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: DraggerProps): SharedBuilder_DraggerProps_1915486784 = new SharedBuilder_DraggerProps_1915486784(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd", "Upload")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,10 +57,10 @@ object Upload {
     def accept(value: String): this.type = set("accept", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def actionFunction1(value: /* file */ RcFile => String | js.Thenable[String]): this.type = set("action", js.Any.fromFunction1(value))
+    def action(value: String | (js.Function1[/* file */ RcFile, String | js.Thenable[String]])): this.type = set("action", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def action(value: String | (js.Function1[/* file */ RcFile, String | js.Thenable[String]])): this.type = set("action", value.asInstanceOf[js.Any])
+    def actionFunction1(value: /* file */ RcFile => String | js.Thenable[String]): this.type = set("action", js.Any.fromFunction1(value))
     
     @scala.inline
     def beforeUpload(value: (/* file */ RcFile, /* FileList */ js.Array[RcFile]) => Boolean | js.Thenable[Unit]): this.type = set("beforeUpload", js.Any.fromFunction2(value))
@@ -60,16 +72,16 @@ object Upload {
     def customRequest(value: /* options */ RcCustomRequestOptions => Unit): this.type = set("customRequest", js.Any.fromFunction1(value))
     
     @scala.inline
-    def dataFunction1(value: /* file */ UploadFile[js.Any] => js.Object): this.type = set("data", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def data(value: js.Object | (js.Function1[/* file */ UploadFile[js.Any], js.Object])): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultFileListVarargs(value: UploadFile[js.Any]*): this.type = set("defaultFileList", js.Array(value :_*))
+    def dataFunction1(value: /* file */ UploadFile[js.Any] => js.Object): this.type = set("data", js.Any.fromFunction1(value))
     
     @scala.inline
     def defaultFileList(value: js.Array[UploadFile[js.Any]]): this.type = set("defaultFileList", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def defaultFileListVarargs(value: UploadFile[js.Any]*): this.type = set("defaultFileList", js.Array(value :_*))
     
     @scala.inline
     def directory(value: Boolean): this.type = set("directory", value.asInstanceOf[js.Any])
@@ -78,10 +90,10 @@ object Upload {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fileListVarargs(value: UploadFile[js.Any]*): this.type = set("fileList", js.Array(value :_*))
+    def fileList(value: js.Array[UploadFile[js.Any]]): this.type = set("fileList", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fileList(value: js.Array[UploadFile[js.Any]]): this.type = set("fileList", value.asInstanceOf[js.Any])
+    def fileListVarargs(value: UploadFile[js.Any]*): this.type = set("fileList", js.Array(value :_*))
     
     @scala.inline
     def headers(value: HttpRequestHeader): this.type = set("headers", value.asInstanceOf[js.Any])
@@ -97,7 +109,7 @@ object Upload {
     
     @scala.inline
     def itemRender(
-      value: (/* originNode */ ReactElement, /* file */ UploadFile[_], /* fileList */ js.UndefOr[js.Array[UploadFile[js.Any]]]) => ReactElement
+      value: (/* originNode */ ReactElement, /* file */ UploadFile[js.Any], /* fileList */ js.UndefOr[js.Array[UploadFile[js.Any]]]) => ReactElement
     ): this.type = set("itemRender", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -158,18 +170,7 @@ object Upload {
     def withCredentials(value: Boolean): this.type = set("withCredentials", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PropsWithChildren[UploadProps[js.Any]] with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Upload.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Dragger {
-    
-    @JSImport("antd", "Upload.Dragger")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: DraggerProps): SharedBuilder_DraggerProps_1915486784 = new SharedBuilder_DraggerProps_1915486784(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Dragger.type): SharedBuilder_DraggerProps_1915486784 = new SharedBuilder_DraggerProps_1915486784(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: PropsWithChildren[UploadProps[js.Any]] with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

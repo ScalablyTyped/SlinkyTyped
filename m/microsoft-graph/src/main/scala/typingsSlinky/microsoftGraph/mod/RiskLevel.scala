@@ -1,6 +1,7 @@
 package typingsSlinky.microsoftGraph.mod
 
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.none_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.none_
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue
 */
-trait RiskLevel extends js.Object
+trait RiskLevel extends StObject
 object RiskLevel {
   
   @scala.inline

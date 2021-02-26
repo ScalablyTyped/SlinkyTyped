@@ -21,6 +21,7 @@ import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObjec
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ object NavBase {
   
   @JSImport("office-ui-fabric-react", "NavBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,19 +44,16 @@ object NavBase {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[INav]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ INav | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[INav]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentRef(value: IRefObject[INav]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def expandButtonAriaLabel(value: String): this.type = set("expandButtonAriaLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def groupsVarargs(value: INavLinkGroup*): this.type = set("groups", js.Array(value :_*))
     
     @scala.inline
     def groups(value: js.Array[INavLinkGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
@@ -64,19 +62,22 @@ object NavBase {
     def groupsNull: this.type = set("groups", null)
     
     @scala.inline
+    def groupsVarargs(value: INavLinkGroup*): this.type = set("groups", js.Array(value :_*))
+    
+    @scala.inline
     def initialSelectedKey(value: String): this.type = set("initialSelectedKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def isOnTop(value: Boolean): this.type = set("isOnTop", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def linkAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[INavButtonProps]]): this.type = set("linkAs", value.asInstanceOf[js.Any])
+    def linkAs(value: IComponentAs[INavButtonProps]): this.type = set("linkAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def linkAsComponentClass(value: ReactComponentClass[IComponentAsProps[INavButtonProps]]): this.type = set("linkAs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def linkAs(value: IComponentAs[INavButtonProps]): this.type = set("linkAs", value.asInstanceOf[js.Any])
+    def linkAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[INavButtonProps]]): this.type = set("linkAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onLinkClick(
@@ -107,16 +108,16 @@ object NavBase {
     def selectedKey(value: String): this.type = set("selectedKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: INavStyleProps => DeepPartial[INavStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[INavStyleProps, INavStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[INavStyleProps, INavStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: INavStyleProps => DeepPartial[INavStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: INavProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: NavBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: INavProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

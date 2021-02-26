@@ -1,12 +1,13 @@
 package typingsSlinky.dropkickjs
 
 import org.scalajs.dom.raw.Node
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Dropkick extends js.Object {
+trait Dropkick extends StObject {
   
   def add(value: String): Unit = js.native
   def add(value: String, before: String): Unit = js.native

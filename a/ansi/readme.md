@@ -11,8 +11,8 @@ Advanced ANSI formatting tool for Node.js
 | Full name          | ansi |
 | Keywords           | ansi, formatting, cursor, color, terminal, rgb, 256, stream |
 | # releases         | 0 |
-| # dependents       | 177 |
-| # downloads        | 31444116 |
+| # dependents       | 191 |
+| # downloads        | 27395817 |
 | # stars            | 13 |
 
 ## Links

@@ -17,6 +17,7 @@ import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.oracleOraclejet.mod.baseComponentEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -139,30 +140,18 @@ object ojButtonEventMap {
   }
   
   @scala.inline
-  implicit class ojButtonEventMapOps[Self <: ojButtonEventMap[_], SP /* <: ojButtonSettableProperties */] (val x: Self with ojButtonEventMap[SP]) extends AnyVal {
+  implicit class ojButtonEventMapMutableBuilder[Self <: ojButtonEventMap[_], SP /* <: ojButtonSettableProperties */] (val x: Self with ojButtonEventMap[SP]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChromingChanged(value: CustomEvent): Self = StObject.set(x, "chromingChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDisabledChanged(value: CustomEvent): Self = StObject.set(x, "disabledChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDisplayChanged(value: CustomEvent): Self = StObject.set(x, "displayChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChromingChanged(value: CustomEvent): Self = this.set("chromingChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDisabledChanged(value: CustomEvent): Self = this.set("disabledChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDisplayChanged(value: CustomEvent): Self = this.set("displayChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOjAction(value: CustomEvent): Self = this.set("ojAction", value.asInstanceOf[js.Any])
+    def setOjAction(value: CustomEvent): Self = StObject.set(x, "ojAction", value.asInstanceOf[js.Any])
   }
 }

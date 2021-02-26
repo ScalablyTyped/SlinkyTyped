@@ -8,6 +8,7 @@ import typingsSlinky.mfiles.mfilesNumbers.`5`
 import typingsSlinky.mfiles.mfilesNumbers.`6`
 import typingsSlinky.mfiles.mfilesNumbers.`7`
 import typingsSlinky.mfiles.mfilesNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mfiles.mfilesNumbers.`7`
   - typingsSlinky.mfiles.mfilesNumbers.`8`
 */
-trait MFFolderListingViewMode extends js.Object
+trait MFFolderListingViewMode extends StObject
 object MFFolderListingViewMode {
   
   @scala.inline

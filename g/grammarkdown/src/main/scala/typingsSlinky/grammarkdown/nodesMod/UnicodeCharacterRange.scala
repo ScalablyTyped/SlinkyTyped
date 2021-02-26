@@ -1,6 +1,7 @@
 package typingsSlinky.grammarkdown.nodesMod
 
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.ThroughKeyword
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "UnicodeCharacterRange")
 @js.native
 class UnicodeCharacterRange protected ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.UnicodeCharacterRange]
+  extends LexicalSymbolBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.UnicodeCharacterRange]
      with _LexicalSymbol {
   def this(
     left: UnicodeCharacterLiteral,

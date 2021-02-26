@@ -1,12 +1,11 @@
 package typingsSlinky.arcgisJsApi
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("esri/views/layers/GeoRSSLayerView", JSImport.Namespace)
-@js.native
-object geoRSSLayerViewMod extends js.Object {
+object geoRSSLayerViewMod {
   
   type GeoRSSLayerView = typingsSlinky.arcgisJsApi.esri.GeoRSSLayerView
 }

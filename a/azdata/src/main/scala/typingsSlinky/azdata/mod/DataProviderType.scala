@@ -1,116 +1,84 @@
 package typingsSlinky.azdata.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait DataProviderType extends js.Object
+sealed trait DataProviderType extends StObject
 @JSImport("azdata", "DataProviderType")
 @js.native
-object DataProviderType extends js.Object {
+object DataProviderType extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[DataProviderType with String] = js.native
   
   @js.native
   sealed trait AdminServicesProvider extends DataProviderType
-  /* "AdminServicesProvider" */ @js.native
-  object AdminServicesProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.AdminServicesProvider with String]
+  /* "AdminServicesProvider" */ val AdminServicesProvider: typingsSlinky.azdata.mod.DataProviderType.AdminServicesProvider with String = js.native
   
   @js.native
   sealed trait AgentServicesProvider extends DataProviderType
-  /* "AgentServicesProvider" */ @js.native
-  object AgentServicesProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.AgentServicesProvider with String]
+  /* "AgentServicesProvider" */ val AgentServicesProvider: typingsSlinky.azdata.mod.DataProviderType.AgentServicesProvider with String = js.native
   
   @js.native
   sealed trait BackupProvider extends DataProviderType
-  /* "BackupProvider" */ @js.native
-  object BackupProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.BackupProvider with String]
+  /* "BackupProvider" */ val BackupProvider: typingsSlinky.azdata.mod.DataProviderType.BackupProvider with String = js.native
   
   @js.native
   sealed trait CapabilitiesProvider extends DataProviderType
-  /* "CapabilitiesProvider" */ @js.native
-  object CapabilitiesProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.CapabilitiesProvider with String]
+  /* "CapabilitiesProvider" */ val CapabilitiesProvider: typingsSlinky.azdata.mod.DataProviderType.CapabilitiesProvider with String = js.native
   
   @js.native
   sealed trait ConnectionProvider extends DataProviderType
-  /* "ConnectionProvider" */ @js.native
-  object ConnectionProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.ConnectionProvider with String]
+  /* "ConnectionProvider" */ val ConnectionProvider: typingsSlinky.azdata.mod.DataProviderType.ConnectionProvider with String = js.native
   
   @js.native
   sealed trait FileBrowserProvider extends DataProviderType
-  /* "FileBrowserProvider" */ @js.native
-  object FileBrowserProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.FileBrowserProvider with String]
+  /* "FileBrowserProvider" */ val FileBrowserProvider: typingsSlinky.azdata.mod.DataProviderType.FileBrowserProvider with String = js.native
   
   @js.native
   sealed trait IconProvider extends DataProviderType
-  /* "IconProvider" */ @js.native
-  object IconProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.IconProvider with String]
+  /* "IconProvider" */ val IconProvider: typingsSlinky.azdata.mod.DataProviderType.IconProvider with String = js.native
   
   @js.native
   sealed trait MetadataProvider extends DataProviderType
-  /* "MetadataProvider" */ @js.native
-  object MetadataProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.MetadataProvider with String]
+  /* "MetadataProvider" */ val MetadataProvider: typingsSlinky.azdata.mod.DataProviderType.MetadataProvider with String = js.native
   
   @js.native
   sealed trait ObjectExplorerNodeProvider extends DataProviderType
-  /* "ObjectExplorerNodeProvider" */ @js.native
-  object ObjectExplorerNodeProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.ObjectExplorerNodeProvider with String]
+  /* "ObjectExplorerNodeProvider" */ val ObjectExplorerNodeProvider: typingsSlinky.azdata.mod.DataProviderType.ObjectExplorerNodeProvider with String = js.native
   
   @js.native
   sealed trait ObjectExplorerProvider extends DataProviderType
-  /* "ObjectExplorerProvider" */ @js.native
-  object ObjectExplorerProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.ObjectExplorerProvider with String]
+  /* "ObjectExplorerProvider" */ val ObjectExplorerProvider: typingsSlinky.azdata.mod.DataProviderType.ObjectExplorerProvider with String = js.native
   
   @js.native
   sealed trait ProfilerProvider extends DataProviderType
-  /* "ProfilerProvider" */ @js.native
-  object ProfilerProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.ProfilerProvider with String]
+  /* "ProfilerProvider" */ val ProfilerProvider: typingsSlinky.azdata.mod.DataProviderType.ProfilerProvider with String = js.native
   
   @js.native
   sealed trait QueryProvider extends DataProviderType
-  /* "QueryProvider" */ @js.native
-  object QueryProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.QueryProvider with String]
+  /* "QueryProvider" */ val QueryProvider: typingsSlinky.azdata.mod.DataProviderType.QueryProvider with String = js.native
   
   @js.native
   sealed trait RestoreProvider extends DataProviderType
-  /* "RestoreProvider" */ @js.native
-  object RestoreProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.RestoreProvider with String]
+  /* "RestoreProvider" */ val RestoreProvider: typingsSlinky.azdata.mod.DataProviderType.RestoreProvider with String = js.native
   
   @js.native
   sealed trait ScriptingProvider extends DataProviderType
-  /* "ScriptingProvider" */ @js.native
-  object ScriptingProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.ScriptingProvider with String]
+  /* "ScriptingProvider" */ val ScriptingProvider: typingsSlinky.azdata.mod.DataProviderType.ScriptingProvider with String = js.native
   
   @js.native
   sealed trait SerializationProvider extends DataProviderType
-  /* "SerializationProvider" */ @js.native
-  object SerializationProvider extends TopLevel[SerializationProvider with String]
+  /* "SerializationProvider" */ val SerializationProvider: typingsSlinky.azdata.mod.DataProviderType.SerializationProvider with String = js.native
   
   @js.native
   sealed trait SqlAssessmentServicesProvider extends DataProviderType
-  /* "SqlAssessmentServicesProvider" */ @js.native
-  object SqlAssessmentServicesProvider extends TopLevel[SqlAssessmentServicesProvider with String]
+  /* "SqlAssessmentServicesProvider" */ val SqlAssessmentServicesProvider: typingsSlinky.azdata.mod.DataProviderType.SqlAssessmentServicesProvider with String = js.native
   
   @js.native
   sealed trait TaskServicesProvider extends DataProviderType
-  /* "TaskServicesProvider" */ @js.native
-  object TaskServicesProvider
-    extends TopLevel[typingsSlinky.azdata.mod.DataProviderType.TaskServicesProvider with String]
+  /* "TaskServicesProvider" */ val TaskServicesProvider: typingsSlinky.azdata.mod.DataProviderType.TaskServicesProvider with String = js.native
 }

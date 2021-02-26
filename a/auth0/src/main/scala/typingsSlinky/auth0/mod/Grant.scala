@@ -1,5 +1,6 @@
 package typingsSlinky.auth0.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.auth0.auth0Strings.password
   - typingsSlinky.auth0.auth0Strings.refresh_token
 */
-trait Grant extends js.Object
+trait Grant extends StObject
 object Grant {
   
   @scala.inline

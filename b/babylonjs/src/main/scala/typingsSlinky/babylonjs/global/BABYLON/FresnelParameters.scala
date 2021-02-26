@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.BABYLON.IFresnelParametersCreationOptions
 import typingsSlinky.babylonjs.BABYLON.IFresnelParametersSerialized
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,14 +19,14 @@ class FresnelParameters ()
   def this(options: IFresnelParametersCreationOptions) = this()
 }
 /* static members */
-@JSGlobal("BABYLON.FresnelParameters")
-@js.native
-object FresnelParameters extends js.Object {
+object FresnelParameters {
   
   /**
     * Parse a JSON object and deserialize it to a new Fresnel parameter object.
     * @param parsedFresnelParameters Define the JSON representation
     * @returns the parsed parameters
     */
+  @JSGlobal("BABYLON.FresnelParameters.Parse")
+  @js.native
   def Parse(parsedFresnelParameters: IFresnelParametersSerialized): typingsSlinky.babylonjs.BABYLON.FresnelParameters = js.native
 }

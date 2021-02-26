@@ -2,14 +2,14 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.iserverMod.IServer
 import typingsSlinky.samchon.webServerMod.WebServer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/protocol/server/base/WebServerBase", JSImport.Namespace)
-@js.native
-object webServerBaseMod extends js.Object {
+object webServerBaseMod {
   
+  @JSImport("samchon/protocol/server/base/WebServerBase", "WebServerBase")
   @js.native
   class WebServerBase protected () extends WebServer {
     /**

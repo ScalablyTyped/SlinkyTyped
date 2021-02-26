@@ -3,6 +3,7 @@ package typingsSlinky.plottable.mod
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import typingsSlinky.plottable.canvasDrawerMod.CanvasDrawer
 import typingsSlinky.plottable.svgDrawerMod.SVGDrawer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

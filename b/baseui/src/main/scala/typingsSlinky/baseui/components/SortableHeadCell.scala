@@ -6,15 +6,22 @@ import typingsSlinky.baseui.baseuiStrings.ASC
 import typingsSlinky.baseui.baseuiStrings.DESC
 import typingsSlinky.baseui.tableMod.SortableHeadCellOverrides
 import typingsSlinky.baseui.tableMod.SortableHeadCellProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SortableHeadCell {
   
+  @scala.inline
+  def apply(title: String): Builder = {
+    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SortableHeadCellProps]))
+  }
+  
   @JSImport("baseui/table", "SortableHeadCell")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,10 +48,4 @@ object SortableHeadCell {
   }
   
   def withProps(p: SortableHeadCellProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(title: String): Builder = {
-    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SortableHeadCellProps]))
-  }
 }

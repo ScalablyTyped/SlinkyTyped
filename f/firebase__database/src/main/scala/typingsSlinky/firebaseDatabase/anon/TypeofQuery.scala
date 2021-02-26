@@ -5,6 +5,7 @@ import org.scalablytyped.runtime.Instantiable4
 import typingsSlinky.firebaseDatabase.queryMod.Query
 import typingsSlinky.firebaseDatabase.queryParamsMod.QueryParams
 import typingsSlinky.firebaseDatabase.repoMod.Repo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

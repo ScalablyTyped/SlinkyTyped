@@ -7,13 +7,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.TypedEventHandler
 import typingsSlinky.winrtUwp.Windows.Globalization.Language
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.voicecommandcompleted
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** The background app service connection to Cortana. */
 @js.native
-trait VoiceCommandServiceConnection extends js.Object {
+trait VoiceCommandServiceConnection extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

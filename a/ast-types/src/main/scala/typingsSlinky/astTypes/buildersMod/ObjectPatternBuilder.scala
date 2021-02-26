@@ -8,12 +8,13 @@ import typingsSlinky.astTypes.kindsMod.RestPropertyKind
 import typingsSlinky.astTypes.kindsMod.SpreadPropertyKind
 import typingsSlinky.astTypes.kindsMod.SpreadPropertyPatternKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectPattern
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ObjectPatternBuilder extends js.Object {
+trait ObjectPatternBuilder extends StObject {
   
   def apply(
     properties: js.Array[

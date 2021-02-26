@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKinesisBrowser.typesIncreaseStreamRetentionPeri
 import typingsSlinky.awsSdkClientKinesisBrowser.typesIncreaseStreamRetentionPeriodOutputMod.IncreaseStreamRetentionPeriodOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kinesis-browser/commands/IncreaseStreamRetentionPeriodCommand", JSImport.Namespace)
-@js.native
-object increaseStreamRetentionPeriodCommandMod extends js.Object {
+object increaseStreamRetentionPeriodCommandMod {
   
+  @JSImport("@aws-sdk/client-kinesis-browser/commands/IncreaseStreamRetentionPeriodCommand", "IncreaseStreamRetentionPeriodCommand")
   @js.native
   class IncreaseStreamRetentionPeriodCommand protected () extends Command[
           InputTypesUnion, 

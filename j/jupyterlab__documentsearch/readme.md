@@ -10,9 +10,9 @@ Document Search
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/documentsearch |
 | Keywords           | - |
-| # releases         | 47 |
-| # dependents       | 4 |
-| # downloads        | 370405 |
+| # releases         | 132 |
+| # dependents       | 6 |
+| # downloads        | 1422536 |
 | # stars            | 0 |
 
 ## Links

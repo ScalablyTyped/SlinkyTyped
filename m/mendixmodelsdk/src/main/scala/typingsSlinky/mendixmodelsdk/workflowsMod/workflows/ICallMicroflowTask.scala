@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.workflowsMod.workflows
 
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

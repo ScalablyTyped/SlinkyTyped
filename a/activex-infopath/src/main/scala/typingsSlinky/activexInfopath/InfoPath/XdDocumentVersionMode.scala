@@ -8,6 +8,7 @@ import typingsSlinky.activexInfopath.activexInfopathNumbers.`2`
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`32`
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`64`
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexInfopath.activexInfopathNumbers.`32`
   - typingsSlinky.activexInfopath.activexInfopathNumbers.`2`
 */
-trait XdDocumentVersionMode extends js.Object
+trait XdDocumentVersionMode extends StObject
 object XdDocumentVersionMode {
   
   @scala.inline

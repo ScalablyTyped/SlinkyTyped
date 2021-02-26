@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,18 +37,26 @@ class PathErrorStats () extends IPathErrorStats {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats")
-@js.native
-object PathErrorStats extends js.Object {
+object PathErrorStats {
   
   /**
     * Creates a new PathErrorStats instance using the specified properties.
     * @param [properties] Properties to set
     * @returns PathErrorStats instance
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.create")
+  @js.native
   def create(): PathErrorStats = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.create")
+  @js.native
   def create(properties: IPathErrorStats): PathErrorStats = js.native
   
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): PathErrorStats = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): PathErrorStats = js.native
   /**
     * Decodes a PathErrorStats message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -56,11 +65,16 @@ object PathErrorStats extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.decode")
+  @js.native
   def decode(reader: Reader): PathErrorStats = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.decode")
+  @js.native
   def decode(reader: Reader, length: Double): PathErrorStats = js.native
-  def decode(reader: js.typedarray.Uint8Array): PathErrorStats = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): PathErrorStats = js.native
   
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): PathErrorStats = js.native
   /**
     * Decodes a PathErrorStats message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -68,8 +82,9 @@ object PathErrorStats extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): PathErrorStats = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): PathErrorStats = js.native
   
   /**
     * Encodes the specified PathErrorStats message. Does not implicitly {@link PathErrorStats.verify|verify} messages.
@@ -77,7 +92,11 @@ object PathErrorStats extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.encode")
+  @js.native
   def encode(message: IPathErrorStats): Writer = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.encode")
+  @js.native
   def encode(message: IPathErrorStats, writer: Writer): Writer = js.native
   
   /**
@@ -86,7 +105,11 @@ object PathErrorStats extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IPathErrorStats): Writer = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IPathErrorStats, writer: Writer): Writer = js.native
   
   /**
@@ -94,6 +117,8 @@ object PathErrorStats extends js.Object {
     * @param object Plain object
     * @returns PathErrorStats
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): PathErrorStats = js.native
   
   /**
@@ -102,7 +127,11 @@ object PathErrorStats extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.toObject")
+  @js.native
   def toObject(message: PathErrorStats): StringDictionary[js.Any] = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.toObject")
+  @js.native
   def toObject(message: PathErrorStats, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -110,5 +139,7 @@ object PathErrorStats extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "PathErrorStats.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

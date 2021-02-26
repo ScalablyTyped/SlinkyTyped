@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientGameservices.gapi.client.gameservice
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientGameservices.anon.Callback
 import typingsSlinky.maximMazurokGapiClientGameservices.anon.IncludeUnrevealedLocations
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationsResource extends js.Object {
+trait LocationsResource extends StObject {
   
   var gameServerDeployments: GameServerDeploymentsResource = js.native
   

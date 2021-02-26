@@ -10,9 +10,9 @@ Generate UUID for request and add it to headers
 | ------------------ | :-------------: |
 | Full name          | express-request-id |
 | Keywords           | express, middleware, request, id, uuid |
-| # releases         | 2 |
-| # dependents       | 37 |
-| # downloads        | 1215983 |
+| # releases         | 0 |
+| # dependents       | 56 |
+| # downloads        | 2076112 |
 | # stars            | 5 |
 
 ## Links

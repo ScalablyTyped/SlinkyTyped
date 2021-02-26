@@ -82,6 +82,7 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.keyCodesMod.KeyCodes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -277,13 +278,13 @@ class SharedBuilder_IAutofillProps_786739988[R <: js.Object] (val args: js.Array
   def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def componentRef(value: IRefObject[IAutofill]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def componentRefFunction1(value: /* ref */ IAutofill | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
   
   @scala.inline
   def componentRefRefObject(value: ReactRef[IAutofill]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def componentRef(value: IRefObject[IAutofill]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -304,10 +305,10 @@ class SharedBuilder_IAutofillProps_786739988[R <: js.Object] (val args: js.Array
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def defaultVisibleValue(value: String): this.type = set("defaultVisibleValue", value.asInstanceOf[js.Any])
@@ -322,10 +323,10 @@ class SharedBuilder_IAutofillProps_786739988[R <: js.Object] (val args: js.Array
   def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def enableAutofillOnKeyPressVarargs(value: KeyCodes*): this.type = set("enableAutofillOnKeyPress", js.Array(value :_*))
+  def enableAutofillOnKeyPress(value: js.Array[KeyCodes]): this.type = set("enableAutofillOnKeyPress", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def enableAutofillOnKeyPress(value: js.Array[KeyCodes]): this.type = set("enableAutofillOnKeyPress", value.asInstanceOf[js.Any])
+  def enableAutofillOnKeyPressVarargs(value: KeyCodes*): this.type = set("enableAutofillOnKeyPress", js.Array(value :_*))
   
   @scala.inline
   def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
@@ -1082,10 +1083,10 @@ class SharedBuilder_IAutofillProps_786739988[R <: js.Object] (val args: js.Array
   def updateValueInWillReceiveProps(value: () => String | Null): this.type = set("updateValueInWillReceiveProps", js.Any.fromFunction0(value))
   
   @scala.inline
-  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
   
   @scala.inline
   def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])

@@ -1,12 +1,21 @@
 package typingsSlinky.wordpressComponents.mod
 
-import org.scalablytyped.runtime.TopLevel
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.Shortcut
+import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.wordpressComponents.isolatedEventContainerMod.IsolatedEventContainer.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@wordpress/components", "IsolatedEventContainer")
-@js.native
-object IsolatedEventContainer extends TopLevel[ReactComponentClass[Props]]
+object IsolatedEventContainer extends Shortcut {
+  
+  @JSImport("@wordpress/components", "IsolatedEventContainer")
+  @js.native
+  val ^ : ComponentType[Props] = js.native
+  
+  type _To = ComponentType[Props]
+  
+  /* This means you don't have to write `^`, but can instead just say `IsolatedEventContainer.foo` */
+  override def _to: ComponentType[Props] = ^
+}

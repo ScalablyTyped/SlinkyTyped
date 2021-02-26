@@ -3,17 +3,22 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.fullScreenTypesMod.IFullScreenViewConfig
 import typingsSlinky.playable.fullScreenTypesMod.IFullScreenViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/controls/full-screen/full-screen.view", JSImport.Namespace)
-@js.native
-object fullScreenViewMod extends js.Object {
+object fullScreenViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/controls/full-screen/full-screen.view", JSImport.Default)
+  @js.native
+  class default protected () extends FullScreenView {
+    def this(config: IFullScreenViewConfig) = this()
+  }
   
   @js.native
   trait FullScreenView
-    extends typingsSlinky.playable.stylableMod.default[IFullScreenViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[IFullScreenViewStyles] {
     
     @JSName("_$rootElement")
     var _$rootElement: js.Any = js.native
@@ -42,10 +47,5 @@ object fullScreenViewMod extends js.Object {
     def setFullScreenState(isInFullScreen: Boolean): Unit = js.native
     
     def show(): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends FullScreenView {
-    def this(config: IFullScreenViewConfig) = this()
   }
 }

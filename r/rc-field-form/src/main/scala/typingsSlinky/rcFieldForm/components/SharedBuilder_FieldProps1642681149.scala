@@ -16,6 +16,7 @@ import typingsSlinky.rcFieldForm.interfaceMod.StoreValue
 import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`false`
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.parallel
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,14 +25,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class SharedBuilder_FieldProps1642681149[Values] (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
-  
-  @scala.inline
-  def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def childrenFunction3(
-    value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance[Values]) => ReactElement
-  ): this.type = set("children", js.Any.fromFunction3(value))
   
   @scala.inline
   def children(
@@ -44,10 +37,18 @@ class SharedBuilder_FieldProps1642681149[Values] (val args: js.Array[js.Any])
   ): this.type = set("children", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def dependenciesVarargs(value: NamePath*): this.type = set("dependencies", js.Array(value :_*))
+  def childrenFunction3(
+    value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance[Values]) => ReactElement
+  ): this.type = set("children", js.Any.fromFunction3(value))
+  
+  @scala.inline
+  def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
   
   @scala.inline
   def dependencies(value: js.Array[NamePath]): this.type = set("dependencies", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def dependenciesVarargs(value: NamePath*): this.type = set("dependencies", js.Array(value :_*))
   
   @scala.inline
   def getValueFromEvent(value: /* args */ EventArgs => StoreValue): this.type = set("getValueFromEvent", js.Any.fromFunction1(value))
@@ -68,10 +69,10 @@ class SharedBuilder_FieldProps1642681149[Values] (val args: js.Array[js.Any])
   def messageVariables(value: Record[String, String]): this.type = set("messageVariables", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def nameVarargs(value: (String | Double)*): this.type = set("name", js.Array(value :_*))
+  def name(value: NamePath): this.type = set("name", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def name(value: NamePath): this.type = set("name", value.asInstanceOf[js.Any])
+  def nameVarargs(value: (String | Double)*): this.type = set("name", js.Array(value :_*))
   
   @scala.inline
   def normalize(value: (/* value */ StoreValue, /* prevValue */ StoreValue, /* allValues */ Store) => StoreValue): this.type = set("normalize", js.Any.fromFunction3(value))
@@ -83,16 +84,16 @@ class SharedBuilder_FieldProps1642681149[Values] (val args: js.Array[js.Any])
   def preserve(value: Boolean): this.type = set("preserve", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def rulesVarargs(value: Rule*): this.type = set("rules", js.Array(value :_*))
-  
-  @scala.inline
   def rules(value: js.Array[Rule]): this.type = set("rules", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def shouldUpdateFunction3(value: (Values, Values, /* info */ Source) => Boolean): this.type = set("shouldUpdate", js.Any.fromFunction3(value))
+  def rulesVarargs(value: Rule*): this.type = set("rules", js.Array(value :_*))
   
   @scala.inline
   def shouldUpdate(value: ShouldUpdate[Values]): this.type = set("shouldUpdate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def shouldUpdateFunction3(value: (Values, Values, /* info */ Source) => Boolean): this.type = set("shouldUpdate", js.Any.fromFunction3(value))
   
   @scala.inline
   def trigger(value: String): this.type = set("trigger", value.asInstanceOf[js.Any])
@@ -101,10 +102,10 @@ class SharedBuilder_FieldProps1642681149[Values] (val args: js.Array[js.Any])
   def validateFirst(value: Boolean | parallel): this.type = set("validateFirst", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def validateTriggerVarargs(value: String*): this.type = set("validateTrigger", js.Array(value :_*))
+  def validateTrigger(value: String | js.Array[String] | `false`): this.type = set("validateTrigger", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def validateTrigger(value: String | js.Array[String] | `false`): this.type = set("validateTrigger", value.asInstanceOf[js.Any])
+  def validateTriggerVarargs(value: String*): this.type = set("validateTrigger", js.Array(value :_*))
   
   @scala.inline
   def valuePropName(value: String): this.type = set("valuePropName", value.asInstanceOf[js.Any])

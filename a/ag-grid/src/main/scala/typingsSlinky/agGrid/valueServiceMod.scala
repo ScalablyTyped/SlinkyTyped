@@ -2,16 +2,16 @@ package typingsSlinky.agGrid
 
 import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.rowNodeMod.RowNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/valueService/valueService", JSImport.Namespace)
-@js.native
-object valueServiceMod extends js.Object {
+object valueServiceMod {
   
+  @JSImport("ag-grid/dist/lib/valueService/valueService", "ValueService")
   @js.native
-  class ValueService () extends js.Object {
+  class ValueService () extends StObject {
     
     var cellExpressions: js.Any = js.native
     

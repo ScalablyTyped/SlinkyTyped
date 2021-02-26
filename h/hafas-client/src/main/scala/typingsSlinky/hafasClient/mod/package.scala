@@ -1,10 +1,16 @@
 package typingsSlinky.hafasClient
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
+  @scala.inline
+  def apply(commonProfile: typingsSlinky.hafasClient.mod.Profile, userAgent: java.lang.String): typingsSlinky.hafasClient.mod.HafasClient = (typingsSlinky.hafasClient.mod.^.asInstanceOf[js.Dynamic].apply(commonProfile.asInstanceOf[js.Any], userAgent.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.hafasClient.mod.HafasClient]
+  @scala.inline
+  def apply(commonProfile: typingsSlinky.hafasClient.mod.Profile, userAgent: java.lang.String, opt: js.Any): typingsSlinky.hafasClient.mod.HafasClient = (typingsSlinky.hafasClient.mod.^.asInstanceOf[js.Dynamic].apply(commonProfile.asInstanceOf[js.Any], userAgent.asInstanceOf[js.Any], opt.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.hafasClient.mod.HafasClient]
   
   type Facilities = org.scalablytyped.runtime.StringDictionary[java.lang.String | scala.Boolean]
   

@@ -3,14 +3,14 @@ package typingsSlinky.tensorflowTfjsBackendWebgl
 import typingsSlinky.tensorflowTfjsBackendWebgl.gpgpuMathMod.GPGPUProgram
 import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.NCHW
 import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.NHWC
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-backend-webgl/dist/depth_to_space_gpu", JSImport.Namespace)
-@js.native
-object depthToSpaceGpuMod extends js.Object {
+object depthToSpaceGpuMod {
   
+  @JSImport("@tensorflow/tfjs-backend-webgl/dist/depth_to_space_gpu", "DepthToSpaceProgram")
   @js.native
   class DepthToSpaceProgram protected () extends GPGPUProgram {
     def this(outputShape: js.Array[Double], blockSize: Double, dataFormat: NCHW) = this()

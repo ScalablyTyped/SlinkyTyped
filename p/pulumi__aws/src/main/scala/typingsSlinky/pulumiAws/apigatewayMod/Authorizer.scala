@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.apigatewayAuthorizerMod.AuthorizerState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,9 +25,7 @@ class Authorizer protected ()
   def this(name: String, args: AuthorizerArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/aws/apigateway", "Authorizer")
-@js.native
-object Authorizer extends js.Object {
+object Authorizer {
   
   /**
     * Get an existing Authorizer resource's state with the given name, ID, and optional extra
@@ -37,14 +36,24 @@ object Authorizer extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/aws/apigateway", "Authorizer.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.apigatewayAuthorizerMod.Authorizer = js.native
+  @JSImport("@pulumi/aws/apigateway", "Authorizer.get")
+  @js.native
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayAuthorizerMod.Authorizer = js.native
+  @JSImport("@pulumi/aws/apigateway", "Authorizer.get")
+  @js.native
   def get(name: String, id: Input[ID], state: AuthorizerState): typingsSlinky.pulumiAws.apigatewayAuthorizerMod.Authorizer = js.native
+  @JSImport("@pulumi/aws/apigateway", "Authorizer.get")
+  @js.native
   def get(name: String, id: Input[ID], state: AuthorizerState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayAuthorizerMod.Authorizer = js.native
   
   /**
     * Returns true if the given object is an instance of Authorizer.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/aws/apigateway", "Authorizer.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/apigateway/authorizer.Authorizer */ Boolean = js.native
 }

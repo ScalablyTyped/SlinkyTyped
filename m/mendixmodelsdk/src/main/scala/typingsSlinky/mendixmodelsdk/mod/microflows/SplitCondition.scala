@@ -6,6 +6,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,12 +24,23 @@ abstract class SplitCondition protected ()
     container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
-/* static members */
-@JSImport("mendixmodelsdk", "microflows.SplitCondition")
-@js.native
-object SplitCondition extends js.Object {
+object SplitCondition {
   
-  var structureTypeName: String = js.native
+  @JSImport("mendixmodelsdk", "microflows.SplitCondition")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var versionInfo: StructureVersionInfo = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk", "microflows.SplitCondition.structureTypeName")
+  @js.native
+  def structureTypeName: String = js.native
+  @scala.inline
+  def structureTypeName_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("structureTypeName")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("mendixmodelsdk", "microflows.SplitCondition.versionInfo")
+  @js.native
+  def versionInfo: StructureVersionInfo = js.native
+  @scala.inline
+  def versionInfo_=(x: StructureVersionInfo): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(x.asInstanceOf[js.Any])
 }

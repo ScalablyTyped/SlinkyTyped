@@ -21,28 +21,14 @@ import typingsSlinky.mendixmodelsdk.unitsMod.StructuralUnit
 import typingsSlinky.mendixmodelsdk.versionChecksMod.ILifeCycle
 import typingsSlinky.mobx.observablearrayMod.IArrayWillChange
 import typingsSlinky.mobx.observablearrayMod.IArrayWillSplice
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("mendixmodelsdk/dist/sdk/internal/properties", JSImport.Namespace)
-@js.native
-object propertiesMod extends js.Object {
+object propertiesMod {
   
-  def instantiateChildElement(parent: AbstractElement[IAbstractModel, Container]): Element[IAbstractModel] | Null = js.native
-  def instantiateChildElement(parent: AbstractElement[IAbstractModel, Container], value: IAbstractElementJson): Element[IAbstractModel] | Null = js.native
-  
-  def isNamedElement(element: IStructure): /* is mendixmodelsdk.mendixmodelsdk/dist/sdk/internal/properties/LocalByNameReferenceProperty.INamedElement */ Boolean = js.native
-  
-  def sendListChangeDeltas[T, P](
-    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
-    change: IArrayWillChange[P]
-  ): Unit = js.native
-  def sendListChangeDeltas[T, P](
-    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
-    change: IArrayWillSplice[P]
-  ): Unit = js.native
-  
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "AbstractProperty")
   @js.native
   abstract class AbstractProperty[T, P] protected ()
     extends typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[T, P] {
@@ -63,10 +49,35 @@ object propertiesMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "ByIdReferenceProperty")
   @js.native
-  class ByIdReferenceProperty[T /* <: AbstractElement[IAbstractModel, Container] */] ()
-    extends typingsSlinky.mendixmodelsdk.byIdReferencePropertyMod.ByIdReferenceProperty[T]
+  class ByIdReferenceProperty[T /* <: AbstractElement[IAbstractModel, Container] */] protected ()
+    extends typingsSlinky.mendixmodelsdk.byIdReferencePropertyMod.ByIdReferenceProperty[T] {
+    /**
+      * parent is the structure that the value of this property attaches to,
+      * so e.g. for all values `item` of Part(List)Property we (should) have the invariant:
+      *    item.container === this.parent.
+      *
+      * initialValue is default value except parts and GUID-typed primitives.
+      * (by-id/name references do not have default values.)
+      */
+    def this(
+      declaredOn: IStructureClass,
+      parent: Structure[IAbstractModel, IContainer | Null],
+      name: String,
+      initialValue: T,
+      moreArgs: js.Any*
+    ) = this()
+    def this(
+      declaredOn: IStructureClass,
+      parent: Structure[IAbstractModel, IContainer | Null],
+      name: String,
+      initialValue: Null,
+      moreArgs: js.Any*
+    ) = this()
+  }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "ByNameReferenceListProperty")
   @js.native
   class ByNameReferenceListProperty[T /* <: IAbstractElement */] protected ()
     extends typingsSlinky.mendixmodelsdk.byNameReferencePropertyMod.ByNameReferenceListProperty[T] {
@@ -79,6 +90,7 @@ object propertiesMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "ByNameReferenceProperty")
   @js.native
   class ByNameReferenceProperty[T /* <: IAbstractElement */] protected ()
     extends typingsSlinky.mendixmodelsdk.byNameReferencePropertyMod.ByNameReferenceProperty[T] {
@@ -98,6 +110,7 @@ object propertiesMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "EnumListProperty")
   @js.native
   class EnumListProperty[T /* <: AbstractEnum */] protected ()
     extends typingsSlinky.mendixmodelsdk.enumListPropertyMod.EnumListProperty[T] {
@@ -110,6 +123,7 @@ object propertiesMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "EnumProperty")
   @js.native
   class EnumProperty[T /* <: AbstractEnum */] protected ()
     extends typingsSlinky.mendixmodelsdk.enumPropertyMod.EnumProperty[T] {
@@ -122,6 +136,7 @@ object propertiesMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "LocalByNameReferenceProperty")
   @js.native
   class LocalByNameReferenceProperty[T /* <: INamedElement */] protected ()
     extends typingsSlinky.mendixmodelsdk.localByNameReferencePropertyMod.LocalByNameReferenceProperty[T] {
@@ -141,24 +156,100 @@ object propertiesMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "PartListProperty")
   @js.native
-  class PartListProperty[T /* <: Element[IAbstractModel] */] ()
-    extends typingsSlinky.mendixmodelsdk.partListPropertyMod.PartListProperty[T]
+  class PartListProperty[T /* <: Element[IAbstractModel] */] protected ()
+    extends typingsSlinky.mendixmodelsdk.partListPropertyMod.PartListProperty[T] {
+    /**
+      * parent is the structure that the value of this property attaches to,
+      * so e.g. for all values `item` of Part(List)Property we (should) have the invariant:
+      *    item.container === this.parent.
+      *
+      * initialValue is default value except parts and GUID-typed primitives.
+      * (by-id/name references do not have default values.)
+      */
+    def this(
+      declaredOn: IStructureClass,
+      parent: Structure[IAbstractModel, IContainer | Null],
+      name: String,
+      initialValue: js.Array[T],
+      moreArgs: js.Any*
+    ) = this()
+  }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "PartProperty")
   @js.native
-  class PartProperty[T /* <: Element[IAbstractModel] */] ()
-    extends typingsSlinky.mendixmodelsdk.partPropertyMod.PartProperty[T]
+  class PartProperty[T /* <: Element[IAbstractModel] */] protected ()
+    extends typingsSlinky.mendixmodelsdk.partPropertyMod.PartProperty[T] {
+    /**
+      * parent is the structure that the value of this property attaches to,
+      * so e.g. for all values `item` of Part(List)Property we (should) have the invariant:
+      *    item.container === this.parent.
+      *
+      * initialValue is default value except parts and GUID-typed primitives.
+      * (by-id/name references do not have default values.)
+      */
+    def this(
+      declaredOn: IStructureClass,
+      parent: Structure[IAbstractModel, IContainer | Null],
+      name: String,
+      initialValue: T,
+      moreArgs: js.Any*
+    ) = this()
+    def this(
+      declaredOn: IStructureClass,
+      parent: Structure[IAbstractModel, IContainer | Null],
+      name: String,
+      initialValue: Null,
+      moreArgs: js.Any*
+    ) = this()
+  }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "PrimitiveListProperty")
   @js.native
-  class PrimitiveListProperty[T] ()
-    extends typingsSlinky.mendixmodelsdk.primitiveListPropertyMod.PrimitiveListProperty[T]
+  class PrimitiveListProperty[T] protected ()
+    extends typingsSlinky.mendixmodelsdk.primitiveListPropertyMod.PrimitiveListProperty[T] {
+    /**
+      * parent is the structure that the value of this property attaches to,
+      * so e.g. for all values `item` of Part(List)Property we (should) have the invariant:
+      *    item.container === this.parent.
+      *
+      * initialValue is default value except parts and GUID-typed primitives.
+      * (by-id/name references do not have default values.)
+      */
+    def this(
+      declaredOn: IStructureClass,
+      parent: Structure[IAbstractModel, IContainer | Null],
+      name: String,
+      initialValue: js.Array[T],
+      moreArgs: js.Any*
+    ) = this()
+  }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "PrimitiveProperty")
   @js.native
-  class PrimitiveProperty[T] ()
-    extends typingsSlinky.mendixmodelsdk.primitivePropertyMod.PrimitiveProperty[T]
+  class PrimitiveProperty[T] protected ()
+    extends typingsSlinky.mendixmodelsdk.primitivePropertyMod.PrimitiveProperty[T] {
+    /**
+      * parent is the structure that the value of this property attaches to,
+      * so e.g. for all values `item` of Part(List)Property we (should) have the invariant:
+      *    item.container === this.parent.
+      *
+      * initialValue is default value except parts and GUID-typed primitives.
+      * (by-id/name references do not have default values.)
+      */
+    def this(
+      declaredOn: IStructureClass,
+      parent: Structure[IAbstractModel, IContainer | Null],
+      name: String,
+      initialValue: T,
+      moreArgs: js.Any*
+    ) = this()
+  }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "PrimitiveTypeEnum")
   @js.native
-  object PrimitiveTypeEnum extends js.Object {
+  object PrimitiveTypeEnum extends StObject {
     
     @JSBracketAccess
     def apply(value: scala.Double): js.UndefOr[
@@ -186,6 +277,7 @@ object propertiesMod extends js.Object {
     /* 1 */ val String: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.String with scala.Double = js.native
   }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "StructuralChildListProperty")
   @js.native
   class StructuralChildListProperty[T /* <: IStructuralUnit | IModelUnit */] protected ()
     extends typingsSlinky.mendixmodelsdk.structuralMod.StructuralChildListProperty[T] {
@@ -204,6 +296,7 @@ object propertiesMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "StructuralChildProperty")
   @js.native
   class StructuralChildProperty[T /* <: IStructuralUnit | IModelUnit */] protected ()
     extends typingsSlinky.mendixmodelsdk.structuralMod.StructuralChildProperty[T] {
@@ -224,4 +317,28 @@ object propertiesMod extends js.Object {
       targetRefType: String
     ) = this()
   }
+  
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "instantiateChildElement")
+  @js.native
+  def instantiateChildElement(parent: AbstractElement[IAbstractModel, Container]): Element[IAbstractModel] | Null = js.native
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "instantiateChildElement")
+  @js.native
+  def instantiateChildElement(parent: AbstractElement[IAbstractModel, Container], value: IAbstractElementJson): Element[IAbstractModel] | Null = js.native
+  
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "isNamedElement")
+  @js.native
+  def isNamedElement(element: IStructure): /* is mendixmodelsdk.mendixmodelsdk/dist/sdk/internal/properties/LocalByNameReferenceProperty.INamedElement */ Boolean = js.native
+  
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "sendListChangeDeltas")
+  @js.native
+  def sendListChangeDeltas[T, P](
+    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
+    change: IArrayWillChange[P]
+  ): Unit = js.native
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties", "sendListChangeDeltas")
+  @js.native
+  def sendListChangeDeltas[T, P](
+    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
+    change: IArrayWillSplice[P]
+  ): Unit = js.native
 }

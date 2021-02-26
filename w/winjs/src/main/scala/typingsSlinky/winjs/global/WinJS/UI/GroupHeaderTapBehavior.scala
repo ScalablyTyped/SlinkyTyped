@@ -1,5 +1,6 @@
 package typingsSlinky.winjs.global.WinJS.UI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   **/
 @JSGlobal("WinJS.UI.GroupHeaderTapBehavior")
 @js.native
-object GroupHeaderTapBehavior extends js.Object {
+object GroupHeaderTapBehavior extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.winjs.WinJS.UI.GroupHeaderTapBehavior with Double] = js.native

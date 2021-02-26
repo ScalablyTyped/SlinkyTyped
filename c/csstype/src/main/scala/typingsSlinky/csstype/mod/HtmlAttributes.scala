@@ -1,6 +1,7 @@
 package typingsSlinky.csstype.mod
 
 import typingsSlinky.csstype.csstypeStrings.`[referrerpolicy]_`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -229,7 +230,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.`[wrap]`
   - typingsSlinky.csstype.csstypeStrings.`[xmlns]`
 */
-trait HtmlAttributes extends js.Object
+trait HtmlAttributes extends StObject
 object HtmlAttributes {
   
   @scala.inline

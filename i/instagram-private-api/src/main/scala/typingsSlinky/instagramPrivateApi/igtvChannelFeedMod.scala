@@ -1,18 +1,20 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.igtvChannelFeedResponseMod.IgtvChannelFeedResponseItemsItem
 import typingsSlinky.instagramPrivateApi.igtvChannelFeedResponseMod.IgtvChannelFeedResponseRootObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/igtv.channel.feed", JSImport.Namespace)
-@js.native
-object igtvChannelFeedMod extends js.Object {
+object igtvChannelFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/igtv.channel.feed", "IgtvChannelFeed")
   @js.native
-  class IgtvChannelFeed () extends Feed[IgtvChannelFeedResponseRootObject, IgtvChannelFeedResponseItemsItem] {
+  class IgtvChannelFeed protected () extends Feed[IgtvChannelFeedResponseRootObject, IgtvChannelFeedResponseItemsItem] {
+    def this(client: IgApiClient) = this()
     
     var channelId: String = js.native
     

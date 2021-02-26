@@ -1,13 +1,14 @@
 package typingsSlinky.typescriptServices.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typescript-services", "DeclarationCreator")
-@js.native
-object DeclarationCreator extends js.Object {
+object DeclarationCreator {
   
+  @JSImport("typescript-services", "DeclarationCreator.create")
+  @js.native
   def create(
     document: typingsSlinky.typescriptServices.TypeScript.Document,
     semanticInfoChain: typingsSlinky.typescriptServices.TypeScript.SemanticInfoChain,

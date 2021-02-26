@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientApigateway.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.Parent
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ApisResource extends js.Object {
+trait ApisResource extends StObject {
   
   var configs: ConfigsResource = js.native
   

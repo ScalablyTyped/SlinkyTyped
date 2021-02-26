@@ -1,5 +1,6 @@
 package typingsSlinky.ipp.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -63,7 +64,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ipp.ippStrings.`unsupported-document-format`
   - typingsSlinky.ipp.ippStrings.`warnings-detected`
 */
-trait JobStateReasons extends js.Object
+trait JobStateReasons extends StObject
 object JobStateReasons {
   
   @scala.inline

@@ -4,13 +4,14 @@ import typingsSlinky.gaxios.commonMod.GaxiosPromise
 import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
 import typingsSlinky.googleapisCommon.apiMod.BodyResponseCallback
 import typingsSlinky.googleapisCommon.apiMod.MethodOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("googleapis/build/src/apis/calendar/v3", "calendar_v3.Resource$Colors")
 @js.native
-class ResourceColors protected () extends js.Object {
+class ResourceColors protected () extends StObject {
   def this(context: APIRequestContext) = this()
   
   var context: APIRequestContext = js.native

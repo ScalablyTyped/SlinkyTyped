@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Text.TextMetrics
 import typingsSlinky.phaser.TextStyleWordWrapCallback
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * instantiate one yourself.
   */
 @js.native
-trait TextStyle extends js.Object {
+trait TextStyle extends StObject {
   
   /**
     * The text alignment.

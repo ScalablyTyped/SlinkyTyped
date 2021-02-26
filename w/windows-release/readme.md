@@ -10,9 +10,9 @@ Get the name of a Windows version from the release number: `5.1.2600` → `XP`
 | ------------------ | :-------------: |
 | Full name          | windows-release |
 | Keywords           | os, win, win32, windows, operating, system, platform, name, title, release, version |
-| # releases         | 4 |
-| # dependents       | 5 |
-| # downloads        | 46994495 |
+| # releases         | 7 |
+| # dependents       | 26 |
+| # downloads        | 142521290 |
 | # stars            | 0 |
 
 ## Links

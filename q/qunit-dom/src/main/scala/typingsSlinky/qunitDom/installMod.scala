@@ -1,13 +1,14 @@
 package typingsSlinky.qunitDom
 
 import typingsSlinky.qunitDom.mod.global.Assert
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("qunit-dom/dist/install", JSImport.Namespace)
-@js.native
-object installMod extends js.Object {
+object installMod {
   
+  @JSImport("qunit-dom/dist/install", JSImport.Default)
+  @js.native
   def default(assert: Assert): Unit = js.native
 }

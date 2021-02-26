@@ -6,13 +6,12 @@ import typingsSlinky.expressValidator.contextHandlerMod.ContextHandler
 import typingsSlinky.expressValidator.contextRunnerMod.ContextRunner
 import typingsSlinky.expressValidator.sanitizersMod.Sanitizers
 import typingsSlinky.expressValidator.validatorsMod.Validators
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("express-validator/src/chain/validation-chain", JSImport.Namespace)
-@js.native
-object validationChainMod extends js.Object {
+object validationChainMod {
   
   @js.native
   trait ValidationChain

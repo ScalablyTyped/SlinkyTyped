@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.perUser
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.dualPurpose
 */
-trait Win32LobAppMsiPackageType extends js.Object
+trait Win32LobAppMsiPackageType extends StObject
 object Win32LobAppMsiPackageType {
   
   @scala.inline

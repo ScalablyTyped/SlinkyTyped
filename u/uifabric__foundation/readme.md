@@ -10,15 +10,15 @@ Foundation library for building Fabric components.
 | ------------------ | :-------------: |
 | Full name          | @uifabric/foundation |
 | Keywords           | - |
-| # releases         | 79 |
-| # dependents       | 5 |
-| # downloads        | 1262101 |
+| # releases         | 155 |
+| # dependents       | 7 |
+| # downloads        | 3611098 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/OfficeDev/office-ui-fabric-react#readme)
-- [Bugs](https://github.com/OfficeDev/office-ui-fabric-react/issues)
-- [Repository](https://github.com/OfficeDev/office-ui-fabric-react)
+- [Homepage](https://github.com/microsoft/fluentui#readme)
+- [Bugs](https://github.com/microsoft/fluentui/issues)
+- [Repository](https://github.com/microsoft/fluentui)
 - [Npm](https://www.npmjs.com/package/%40uifabric%2Ffoundation)
     
 

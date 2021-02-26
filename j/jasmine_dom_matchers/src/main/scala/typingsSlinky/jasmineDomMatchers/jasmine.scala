@@ -1,16 +1,15 @@
 package typingsSlinky.jasmineDomMatchers
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("jasmine")
-@js.native
-object jasmine extends js.Object {
+object jasmine {
   
   @js.native
-  trait Matchers[T] extends js.Object {
+  trait Matchers[T] extends StObject {
     
     /**
       * Checks if element has a `checked` property, only useful for checkbox inputs.
@@ -50,8 +49,8 @@ object jasmine extends js.Object {
       * Checks if text substring is contained within element.
       */
     def toContainText(text: String): Boolean = js.native
-    def toContainText(text: Double): Boolean = js.native
     def toContainText(text: js.RegExp): Boolean = js.native
+    def toContainText(text: Double): Boolean = js.native
     
     /**
       * True if the element exists, does not have to be in the DOM.
@@ -64,8 +63,8 @@ object jasmine extends js.Object {
       */
     def toHaveAttr(attributeName: String): Boolean = js.native
     def toHaveAttr(attributeName: String, attributeValue: String): Boolean = js.native
-    def toHaveAttr(attributeName: String, attributeValue: Double): Boolean = js.native
     def toHaveAttr(attributeName: String, attributeValue: js.RegExp): Boolean = js.native
+    def toHaveAttr(attributeName: String, attributeValue: Double): Boolean = js.native
     
     /**
       * Checks for presence of classes on the element.
@@ -92,21 +91,21 @@ object jasmine extends js.Object {
       */
     def toHaveProp(propertyName: String): Boolean = js.native
     def toHaveProp(propertyName: String, propertyValue: String): Boolean = js.native
-    def toHaveProp(propertyName: String, propertyValue: Double): Boolean = js.native
     def toHaveProp(propertyName: String, propertyValue: js.RegExp): Boolean = js.native
+    def toHaveProp(propertyName: String, propertyValue: Double): Boolean = js.native
     
     /**
       * Checks for exact match with text, after trimming whitespace.
       */
     def toHaveText(text: String): Boolean = js.native
-    def toHaveText(text: Double): Boolean = js.native
     def toHaveText(text: js.RegExp): Boolean = js.native
+    def toHaveText(text: Double): Boolean = js.native
     
     /**
       * Checks the `value` of eligible elements (like inputs).
       */
     def toHaveValue(value: String): Boolean = js.native
-    def toHaveValue(value: Double): Boolean = js.native
     def toHaveValue(value: js.RegExp): Boolean = js.native
+    def toHaveValue(value: Double): Boolean = js.native
   }
 }

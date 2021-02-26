@@ -1,14 +1,17 @@
 package typingsSlinky.proxyFromEnv
 
 import typingsSlinky.node.urlMod.Url
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("proxy-from-env", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("proxy-from-env", "getProxyForUrl")
+  @js.native
   def getProxyForUrl(url: String): String = js.native
+  @JSImport("proxy-from-env", "getProxyForUrl")
+  @js.native
   def getProxyForUrl(url: Url): String = js.native
 }

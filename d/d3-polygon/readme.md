@@ -11,8 +11,8 @@ Operations for two-dimensional polygons.
 | Full name          | d3-polygon |
 | Keywords           | d3, d3-module, polygon, hull, geometry, graphics |
 | # releases         | 4 |
-| # dependents       | 30 |
-| # downloads        | 19896679 |
+| # dependents       | 37 |
+| # downloads        | 33192157 |
 | # stars            | 0 |
 
 ## Links

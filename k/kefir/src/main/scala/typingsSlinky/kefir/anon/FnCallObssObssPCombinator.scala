@@ -4,12 +4,13 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.kefir.mod.Stream_
 import typingsSlinky.kefir.mod.ValueOfAnObservable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FnCallObssObssPCombinator extends js.Object {
+trait FnCallObssObssPCombinator extends StObject {
   
   def apply[T /* <: js.Tuple7[
     typingsSlinky.kefir.mod.Observable[_, _], 

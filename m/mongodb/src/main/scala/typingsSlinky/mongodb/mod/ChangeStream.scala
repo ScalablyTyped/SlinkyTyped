@@ -2,6 +2,7 @@ package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.mongodb.anon.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,5 +1,6 @@
 package typingsSlinky.victory.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.victory.victoryStrings.stepAfter
   - typingsSlinky.victory.victoryStrings.stepBefore
 */
-trait InterpolationPropType extends js.Object
+trait InterpolationPropType extends StObject
 object InterpolationPropType {
   
   @scala.inline

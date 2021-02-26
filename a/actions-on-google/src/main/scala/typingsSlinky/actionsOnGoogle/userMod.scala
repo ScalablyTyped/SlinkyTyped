@@ -7,16 +7,16 @@ import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2UserProfile
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2UserUserVerificationStatus
 import typingsSlinky.googleAuthLibrary.loginticketMod.TokenPayload
 import typingsSlinky.googleAuthLibrary.mod.OAuth2Client
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("actions-on-google/dist/service/actionssdk/conversation/user", JSImport.Namespace)
-@js.native
-object userMod extends js.Object {
+object userMod {
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/user", "Access")
   @js.native
-  class Access protected () extends js.Object {
+  class Access protected () extends StObject {
     /** @hidden */
     def this(user: GoogleActionsV2User) = this()
     
@@ -27,8 +27,9 @@ object userMod extends js.Object {
     var token: js.UndefOr[String] = js.native
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/user", "Last")
   @js.native
-  class Last protected () extends js.Object {
+  class Last protected () extends StObject {
     /** @hidden */
     def this(user: GoogleActionsV2User) = this()
     
@@ -40,8 +41,9 @@ object userMod extends js.Object {
     var seen: js.UndefOr[js.Date] = js.native
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/user", "Name")
   @js.native
-  class Name protected () extends js.Object {
+  class Name protected () extends StObject {
     /** @hidden */
     def this(profile: GoogleActionsV2UserProfile) = this()
     
@@ -64,8 +66,9 @@ object userMod extends js.Object {
     var given: js.UndefOr[String] = js.native
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/user", "Profile")
   @js.native
-  class Profile protected () extends js.Object {
+  class Profile protected () extends StObject {
     /** @hidden */
     def this(user: GoogleActionsV2User) = this()
     
@@ -131,9 +134,10 @@ object userMod extends js.Object {
     var token: js.UndefOr[String] = js.native
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/user", "User")
   @js.native
   /** @hidden */
-  class User[TUserStorage] () extends js.Object {
+  class User[TUserStorage] () extends StObject {
     def this(raw: GoogleActionsV2User) = this()
     def this(raw: js.UndefOr[scala.Nothing], initial: TUserStorage) = this()
     def this(raw: GoogleActionsV2User, initial: TUserStorage) = this()

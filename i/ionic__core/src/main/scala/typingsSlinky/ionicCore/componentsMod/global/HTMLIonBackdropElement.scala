@@ -1,11 +1,11 @@
 package typingsSlinky.ionicCore.componentsMod.global
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.ionicCore.componentsMod.Components.IonBackdrop
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.HTMLStencilElement
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,10 +25,7 @@ trait HTMLIonBackdropElement
   /* InferMemberOverrides */
   override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
-  override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
-  /* InferMemberOverrides */
   override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: EventListenerOptions): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
 }
-@JSGlobal("HTMLIonBackdropElement")
-@js.native
-object HTMLIonBackdropElement extends Instantiable0[HTMLIonBackdropElement]

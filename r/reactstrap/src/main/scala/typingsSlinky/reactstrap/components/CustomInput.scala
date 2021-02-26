@@ -87,15 +87,23 @@ import typingsSlinky.reactstrap.reactstrapStrings.tree
 import typingsSlinky.reactstrap.reactstrapStrings.url
 import typingsSlinky.reactstrap.reactstrapStrings.vertical
 import typingsSlinky.reactstrap.reactstrapStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CustomInput {
   
-  @JSImport("reactstrap/es", "CustomInput")
+  @scala.inline
+  def apply(id: String | Double, `type`: CustomInputType): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CustomInputProps]))
+  }
+  
+  @JSImport("reactstrap/lib", "CustomInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -312,10 +320,10 @@ object CustomInput {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -363,16 +371,16 @@ object CustomInput {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -399,10 +407,10 @@ object CustomInput {
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
@@ -741,10 +749,10 @@ object CustomInput {
     def valid(value: Boolean): this.type = set("valid", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -754,11 +762,4 @@ object CustomInput {
   }
   
   def withProps(p: CustomInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String | Double, `type`: CustomInputType): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CustomInputProps]))
-  }
 }

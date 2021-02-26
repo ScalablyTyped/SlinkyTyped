@@ -1,5 +1,6 @@
 package typingsSlinky.stripeV3.stripe
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.stripeV3.stripeV3Strings.auto
   - typingsSlinky.stripeV3.stripeV3Strings._empty
 */
-trait billingAddressCollectionType extends js.Object
+trait billingAddressCollectionType extends StObject
 object billingAddressCollectionType {
   
   @scala.inline

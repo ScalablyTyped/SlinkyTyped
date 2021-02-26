@@ -21,6 +21,7 @@ import typingsSlinky.reactNativeCommunityViewpager.reactNativeCommunityViewpager
 import typingsSlinky.reactNativeCommunityViewpager.reactNativeCommunityViewpagerStrings.none
 import typingsSlinky.reactNativeCommunityViewpager.reactNativeCommunityViewpagerStrings.scroll
 import typingsSlinky.reactNativeCommunityViewpager.reactNativeCommunityViewpagerStrings.vertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ object Viewpager {
   
   @JSImport("@react-native-community/viewpager", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -79,7 +80,7 @@ object Viewpager {
     def transitionStyle(value: scroll | curl): this.type = set("transitionStyle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ViewPagerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Viewpager.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ViewPagerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

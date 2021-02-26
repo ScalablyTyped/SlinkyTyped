@@ -11,8 +11,8 @@ Copy properties from one object to another.
 | Full name          | object-mapper |
 | Keywords           | - |
 | # releases         | 6 |
-| # dependents       | 26 |
-| # downloads        | 625495 |
+| # dependents       | 36 |
+| # downloads        | 1094601 |
 | # stars            | 10 |
 
 ## Links

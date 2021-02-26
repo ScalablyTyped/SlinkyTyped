@@ -78,15 +78,22 @@ import typingsSlinky.reactSvg.reactSvgStrings.span
 import typingsSlinky.reactSvg.typesMod.Props
 import typingsSlinky.reactSvg.typesMod.WrapperType
 import typingsSlinky.tanemSvgInjector.typesMod.EvalScripts
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactSVG {
   
+  @scala.inline
+  def apply(src: String): Builder = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("react-svg", "ReactSVG")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -282,10 +289,10 @@ object ReactSVG {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -297,13 +304,13 @@ object ReactSVG {
     def evalScripts(value: EvalScripts): this.type = set("evalScripts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fallbackFunctionComponent(value: ReactComponentClass[_]): this.type = set("fallback", value.asInstanceOf[js.Any])
+    def fallback(value: ReactType[_]): this.type = set("fallback", value.asInstanceOf[js.Any])
     
     @scala.inline
     def fallbackComponentClass(value: ReactComponentClass[_]): this.type = set("fallback", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fallback(value: ReactType[_]): this.type = set("fallback", value.asInstanceOf[js.Any])
+    def fallbackFunctionComponent(value: ReactComponentClass[_]): this.type = set("fallback", value.asInstanceOf[js.Any])
     
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -339,13 +346,13 @@ object ReactSVG {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingFunctionComponent(value: ReactComponentClass[_]): this.type = set("loading", value.asInstanceOf[js.Any])
+    def loading(value: ReactType[_]): this.type = set("loading", value.asInstanceOf[js.Any])
     
     @scala.inline
     def loadingComponentClass(value: ReactComponentClass[_]): this.type = set("loading", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loading(value: ReactType[_]): this.type = set("loading", value.asInstanceOf[js.Any])
+    def loadingFunctionComponent(value: ReactComponentClass[_]): this.type = set("loading", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, WrapperType] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -652,10 +659,4 @@ object ReactSVG {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(src: String): Builder = {
-    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

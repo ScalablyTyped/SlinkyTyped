@@ -2,13 +2,14 @@ package typingsSlinky.firebaseFirestoreTypes.mod
 
 import typingsSlinky.firebaseFirestoreTypes.anon.Error
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@firebase/firestore-types", "DocumentReference")
 @js.native
-class DocumentReference[T] protected () extends js.Object {
+class DocumentReference[T] protected () extends StObject {
   
   def collection(collectionPath: String): CollectionReference[DocumentData] = js.native
   

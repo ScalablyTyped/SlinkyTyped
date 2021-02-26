@@ -1,5 +1,6 @@
 package typingsSlinky.ipp.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ipp.ippStrings.`relative-bpc`
   - typingsSlinky.ipp.ippStrings.saturation
 */
-trait PrintRenderingIntent extends js.Object
+trait PrintRenderingIntent extends StObject
 object PrintRenderingIntent {
   
   @scala.inline

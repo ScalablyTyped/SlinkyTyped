@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "stylefire"
-version := "7.0.3-01fd76"
+version := "7.0.3-b80a9b"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
-  "org.scalablytyped.slinky" %%% "style-value-types" % "3.1.9-ec7ce6")
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27",
+  "org.scalablytyped.slinky" %%% "style-value-types" % "3.1.9-5a2fba")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

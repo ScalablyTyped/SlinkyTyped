@@ -23,6 +23,7 @@ import typingsSlinky.cadesplugin.CAdESCOM.CADESCOM_DISPLAY_DATA
 import typingsSlinky.cadesplugin.CAdESCOM.CADESCOM_ENCRYPTION_ALGORITHM
 import typingsSlinky.cadesplugin.CAdESCOM.CADESCOM_HASH_ALGORITHM
 import typingsSlinky.cadesplugin.CAdESCOM.CADESCOM_XML_SIGNATURE_TYPE
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

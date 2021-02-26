@@ -9,15 +9,22 @@ import typingsSlinky.reactPortalTooltip.cardMod.Card.Align
 import typingsSlinky.reactPortalTooltip.cardMod.Card.Arrow
 import typingsSlinky.reactPortalTooltip.cardMod.Card.Position
 import typingsSlinky.reactPortalTooltip.statefulToolTipMod.StatefulToolTipProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StatefulToolTip {
   
+  @scala.inline
+  def apply(parent: String | ReactElement | ReactRef[_]): Builder = {
+    val __props = js.Dynamic.literal(parent = parent.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StatefulToolTipProps]))
+  }
+  
   @JSImport("react-portal-tooltip", "StatefulToolTip")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,10 +66,4 @@ object StatefulToolTip {
   }
   
   def withProps(p: StatefulToolTipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(parent: String | ReactElement | ReactRef[_]): Builder = {
-    val __props = js.Dynamic.literal(parent = parent.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StatefulToolTipProps]))
-  }
 }

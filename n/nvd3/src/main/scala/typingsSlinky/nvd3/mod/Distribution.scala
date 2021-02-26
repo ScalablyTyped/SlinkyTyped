@@ -2,6 +2,7 @@ package typingsSlinky.nvd3.mod
 
 import typingsSlinky.nvd3.nvd3Strings.x
 import typingsSlinky.nvd3.nvd3Strings.y
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

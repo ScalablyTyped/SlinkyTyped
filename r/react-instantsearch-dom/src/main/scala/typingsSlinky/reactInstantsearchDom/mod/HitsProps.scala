@@ -2,12 +2,13 @@ package typingsSlinky.reactInstantsearchDom.mod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.reactInstantsearchDom.anon.Hit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HitsProps[T] extends js.Object {
+trait HitsProps[T] extends StObject {
   
   var hitComponent: js.UndefOr[ReactComponentClass[Hit[T]]] = js.native
 }
@@ -20,30 +21,18 @@ object HitsProps {
   }
   
   @scala.inline
-  implicit class HitsPropsOps[Self <: HitsProps[_], T] (val x: Self with HitsProps[T]) extends AnyVal {
+  implicit class HitsPropsMutableBuilder[Self <: HitsProps[_], T] (val x: Self with HitsProps[T]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setHitComponent(value: ReactComponentClass[Hit[T]]): Self = StObject.set(x, "hitComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setHitComponentComponentClass(value: ReactComponentClass[Hit[T]]): Self = StObject.set(x, "hitComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setHitComponentFunctionComponent(value: ReactComponentClass[Hit[T]]): Self = StObject.set(x, "hitComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHitComponentFunctionComponent(value: ReactComponentClass[Hit[T]]): Self = this.set("hitComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHitComponentComponentClass(value: ReactComponentClass[Hit[T]]): Self = this.set("hitComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHitComponent(value: ReactComponentClass[Hit[T]]): Self = this.set("hitComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHitComponent: Self = this.set("hitComponent", js.undefined)
+    def setHitComponentUndefined: Self = StObject.set(x, "hitComponent", js.undefined)
   }
 }

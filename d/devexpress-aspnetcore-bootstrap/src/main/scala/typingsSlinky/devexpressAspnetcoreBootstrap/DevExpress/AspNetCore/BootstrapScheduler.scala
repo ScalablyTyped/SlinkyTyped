@@ -22,6 +22,7 @@ import typingsSlinky.devexpressAspnetcoreBootstrap.devexpressAspnetcoreBootstrap
 import typingsSlinky.devexpressAspnetcoreBootstrap.devexpressAspnetcoreBootstrapStrings.selectionChanging
 import typingsSlinky.devexpressAspnetcoreBootstrap.devexpressAspnetcoreBootstrapStrings.shortcut
 import typingsSlinky.devexpressAspnetcoreBootstrap.devexpressAspnetcoreBootstrapStrings.visibleIntervalChanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -517,7 +518,7 @@ trait BootstrapScheduler extends Control {
   def selectAppointmentById(aptId: js.Any): Unit = js.native
   def selectAppointmentById(aptId: js.Any, scrollToSelection: Boolean): Unit = js.native
   
-   // tslint:disable-line:unified-signatures
+  // tslint:disable-line:unified-signatures
   def setActiveViewType(value: BootstrapSchedulerViewType): Unit = js.native
   
   def setAllDayAreaHeight(height: Double): Unit = js.native
@@ -528,16 +529,16 @@ trait BootstrapScheduler extends Control {
   
   def setSelection(interval: BootstrapTimeInterval): Unit = js.native
   def setSelection(interval: BootstrapTimeInterval, resourceId: String): Unit = js.native
-   // tslint:disable-line:unified-signatures
+  // tslint:disable-line:unified-signatures
   def setSelection(interval: BootstrapTimeInterval, resourceId: String, scrollToSelection: Boolean): Unit = js.native
   
-   // tslint:disable-line:unified-signatures
+  // tslint:disable-line:unified-signatures
   def setToolbarVisible(visible: Boolean): Unit = js.native
   
   def setTopRowTime(duration: Double): Unit = js.native
   def setTopRowTime(duration: Double, viewType: BootstrapSchedulerViewType): Unit = js.native
   
-   // tslint:disable-line:unified-signatures
+  // tslint:disable-line:unified-signatures
   def setVisibleResources(resourceIds: js.Array[String]): Unit = js.native
   
   def showAppointmentFormByClientId(aptClientId: String): Unit = js.native
@@ -547,7 +548,7 @@ trait BootstrapScheduler extends Control {
   def showInplaceEditor(start: js.Date, end: js.Date): Unit = js.native
   def showInplaceEditor(start: js.Date, end: js.Date, resourceId: String): Unit = js.native
   
-   // tslint:disable-line:unified-signatures
+  // tslint:disable-line:unified-signatures
   def showLoadingPanel(): Unit = js.native
   
   def showSelectionToolTip(x: Double, y: Double): Unit = js.native

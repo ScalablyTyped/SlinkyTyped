@@ -4,15 +4,15 @@
 Typings are for version 2.15.0
 
 ## Library description:
-First incomplete navigation solution for your react-native app.
+Native navigation primitives for your React Native app.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | react-native-screens |
 | Keywords           | - |
-| # releases         | 48 |
-| # dependents       | 33 |
-| # downloads        | 8566825 |
+| # releases         | 71 |
+| # dependents       | 208 |
+| # downloads        | 16350446 |
 | # stars            | 0 |
 
 ## Links

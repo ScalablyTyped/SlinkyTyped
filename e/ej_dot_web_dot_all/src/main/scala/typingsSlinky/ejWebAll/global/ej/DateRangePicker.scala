@@ -2,6 +2,7 @@ package typingsSlinky.ejWebAll.global.ej
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,17 +11,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class DateRangePicker protected ()
   extends typingsSlinky.ejWebAll.ej.DateRangePicker {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.DateRangePicker.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.DateRangePicker.Model) = this()
+  def this(element: JQuery) = this()
+  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Model) = this()
+  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Model) = this()
 }
-/* static members */
-@JSGlobal("ej.DateRangePicker")
-@js.native
-object DateRangePicker extends js.Object {
+object DateRangePicker {
   
-  var Locale: js.Any = js.native
+  @JSGlobal("ej.DateRangePicker")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var fn: typingsSlinky.ejWebAll.ej.DateRangePicker = js.native
+  /* static member */
+  @JSGlobal("ej.DateRangePicker.Locale")
+  @js.native
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSGlobal("ej.DateRangePicker.fn")
+  @js.native
+  def fn: typingsSlinky.ejWebAll.ej.DateRangePicker = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.DateRangePicker): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

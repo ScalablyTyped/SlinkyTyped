@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.OauthtokenPrettyPrint
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.PrettyPrintQuotaUser
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.QuotaUserResource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UsersResource extends js.Object {
+trait UsersResource extends StObject {
   
   /** Deleted an EMM-managed user. */
   def delete(): Request[Unit] = js.native

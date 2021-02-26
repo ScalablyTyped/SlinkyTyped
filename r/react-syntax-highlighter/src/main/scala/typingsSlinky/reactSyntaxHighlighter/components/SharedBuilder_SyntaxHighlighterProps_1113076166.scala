@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.HTMLProps
 import typingsSlinky.reactSyntaxHighlighter.lineTagPropsFunction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,10 +28,10 @@ class SharedBuilder_SyntaxHighlighterProps_1113076166[R <: js.Object] (val args:
   def lineNumberStyle(value: js.Any): this.type = set("lineNumberStyle", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def linePropsFunction1(value: /* lineNumber */ Double => HTMLProps[HTMLElement]): this.type = set("lineProps", js.Any.fromFunction1(value))
+  def lineProps(value: lineTagPropsFunction | HTMLProps[HTMLElement]): this.type = set("lineProps", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def lineProps(value: lineTagPropsFunction | HTMLProps[HTMLElement]): this.type = set("lineProps", value.asInstanceOf[js.Any])
+  def linePropsFunction1(value: /* lineNumber */ Double => HTMLProps[HTMLElement]): this.type = set("lineProps", js.Any.fromFunction1(value))
   
   @scala.inline
   def showLineNumbers(value: Boolean): this.type = set("showLineNumbers", value.asInstanceOf[js.Any])

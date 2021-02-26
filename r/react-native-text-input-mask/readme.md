@@ -10,9 +10,9 @@ Text input mask for React Native.
 | ------------------ | :-------------: |
 | Full name          | react-native-text-input-mask |
 | Keywords           | react, native, mask, text input, android, ios |
-| # releases         | 13 |
-| # dependents       | 1 |
-| # downloads        | 132428 |
+| # releases         | 9 |
+| # dependents       | 7 |
+| # downloads        | 356498 |
 | # stars            | 0 |
 
 ## Links

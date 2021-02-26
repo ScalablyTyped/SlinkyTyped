@@ -5,6 +5,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessible
 import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessibleContext
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

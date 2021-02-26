@@ -1,11 +1,12 @@
 package typingsSlinky.fhirKitClient.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Compartment extends js.Object {
+trait Compartment extends StObject {
   
   var compartment: js.UndefOr[typingsSlinky.fhirKitClient.mod.Compartment] = js.native
   
@@ -26,45 +27,33 @@ object Compartment {
   }
   
   @scala.inline
-  implicit class CompartmentOps[Self <: Compartment] (val x: Self) extends AnyVal {
+  implicit class CompartmentMutableBuilder[Self <: Compartment] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCompartment(value: typingsSlinky.fhirKitClient.mod.Compartment): Self = StObject.set(x, "compartment", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setCompartmentUndefined: Self = StObject.set(x, "compartment", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setHeaders(value: typingsSlinky.request.mod.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResourceType(value: typingsSlinky.fhirKitClient.mod.ResourceType): Self = this.set("resourceType", value.asInstanceOf[js.Any])
+    def setHeadersUndefined: Self = StObject.set(x, "headers", js.undefined)
     
     @scala.inline
-    def setCompartment(value: typingsSlinky.fhirKitClient.mod.Compartment): Self = this.set("compartment", value.asInstanceOf[js.Any])
+    def setOptions(value: typingsSlinky.request.mod.Options): Self = StObject.set(x, "options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteCompartment: Self = this.set("compartment", js.undefined)
+    def setOptionsUndefined: Self = StObject.set(x, "options", js.undefined)
     
     @scala.inline
-    def setHeaders(value: typingsSlinky.request.mod.Headers): Self = this.set("headers", value.asInstanceOf[js.Any])
+    def setResourceType(value: typingsSlinky.fhirKitClient.mod.ResourceType): Self = StObject.set(x, "resourceType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteHeaders: Self = this.set("headers", js.undefined)
+    def setSearchParams(value: typingsSlinky.fhirKitClient.mod.SearchParams): Self = StObject.set(x, "searchParams", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: typingsSlinky.request.mod.Options): Self = this.set("options", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOptions: Self = this.set("options", js.undefined)
-    
-    @scala.inline
-    def setSearchParams(value: typingsSlinky.fhirKitClient.mod.SearchParams): Self = this.set("searchParams", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSearchParams: Self = this.set("searchParams", js.undefined)
+    def setSearchParamsUndefined: Self = StObject.set(x, "searchParams", js.undefined)
   }
 }

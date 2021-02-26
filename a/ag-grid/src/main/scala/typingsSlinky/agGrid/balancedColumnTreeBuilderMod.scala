@@ -4,16 +4,16 @@ import typingsSlinky.agGrid.colDefMod.ColDef
 import typingsSlinky.agGrid.colDefMod.ColGroupDef
 import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.originalColumnGroupChildMod.OriginalColumnGroupChild
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/columnController/balancedColumnTreeBuilder", JSImport.Namespace)
-@js.native
-object balancedColumnTreeBuilderMod extends js.Object {
+object balancedColumnTreeBuilderMod {
   
+  @JSImport("ag-grid/dist/lib/columnController/balancedColumnTreeBuilder", "BalancedColumnTreeBuilder")
   @js.native
-  class BalancedColumnTreeBuilder () extends js.Object {
+  class BalancedColumnTreeBuilder () extends StObject {
     
     /* private */ def assignColumnTypes(colDef: js.Any, colDefMerged: js.Any): js.Any = js.native
     

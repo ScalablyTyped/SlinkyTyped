@@ -1,7 +1,6 @@
 package typingsSlinky.dialogflow.mod.google.cloud.dialogflow.v2beta1
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dialogflow.dialogflowStrings.content
 import typingsSlinky.dialogflow.dialogflowStrings.contentUri
 import typingsSlinky.dialogflow.dialogflowStrings.rawContent
@@ -9,9 +8,10 @@ import typingsSlinky.dialogflow.mod.google.cloud.dialogflow.v2beta1.Document.Kno
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a Document. */
 @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document")
@@ -22,50 +22,88 @@ import scala.scalajs.js.annotation._
   */
 class Document () extends IDocument {
   def this(properties: IDocument) = this()
+  
   /** Document contentUri. */
   @JSName("contentUri")
   var contentUri_Document: String = js.native
+  
   /** Document content. */
   @JSName("content")
   var content_Document: String = js.native
+  
   /** Document displayName. */
   @JSName("displayName")
   var displayName_Document: String = js.native
+  
   /** Document knowledgeTypes. */
   @JSName("knowledgeTypes")
   var knowledgeTypes_Document: js.Array[KnowledgeType] = js.native
+  
   /** Document mimeType. */
   @JSName("mimeType")
   var mimeType_Document: String = js.native
+  
   /** Document name. */
   @JSName("name")
   var name_Document: String = js.native
+  
   /** Document rawContent. */
   @JSName("rawContent")
-  var rawContent_Document: js.typedarray.Uint8Array = js.native
+  var rawContent_Document: js.typedarray.Uint8Array | String = js.native
+  
   /** Document source. */
   var source: js.UndefOr[contentUri | content | rawContent] = js.native
+  
   /**
     * Converts this Document to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
-/* static members */
-@JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document")
-@js.native
-object Document extends js.Object {
+object Document {
+  
   @js.native
-  sealed trait KnowledgeType extends js.Object
+  sealed trait KnowledgeType extends StObject
+  /** KnowledgeType enum. */
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.KnowledgeType")
+  @js.native
+  object KnowledgeType extends StObject {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[KnowledgeType with Double] = js.native
+    
+    @js.native
+    sealed trait EXTRACTIVE_QA extends KnowledgeType
+    /* 2 */ val EXTRACTIVE_QA: typingsSlinky.dialogflow.mod.google.cloud.dialogflow.v2beta1.Document.KnowledgeType.EXTRACTIVE_QA with Double = js.native
+    
+    @js.native
+    sealed trait FAQ extends KnowledgeType
+    /* 1 */ val FAQ: typingsSlinky.dialogflow.mod.google.cloud.dialogflow.v2beta1.Document.KnowledgeType.FAQ with Double = js.native
+    
+    @js.native
+    sealed trait KNOWLEDGE_TYPE_UNSPECIFIED extends KnowledgeType
+    /* 0 */ val KNOWLEDGE_TYPE_UNSPECIFIED: typingsSlinky.dialogflow.mod.google.cloud.dialogflow.v2beta1.Document.KnowledgeType.KNOWLEDGE_TYPE_UNSPECIFIED with Double = js.native
+  }
   
   /**
     * Creates a new Document instance using the specified properties.
     * @param [properties] Properties to set
     * @returns Document instance
     */
+  /* static member */
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.create")
+  @js.native
   def create(): Document = js.native
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.create")
+  @js.native
   def create(properties: IDocument): Document = js.native
+  
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): Document = js.native
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Document = js.native
   /**
     * Decodes a Document message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -74,10 +112,17 @@ object Document extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.decode")
+  @js.native
   def decode(reader: Reader): Document = js.native
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.decode")
+  @js.native
   def decode(reader: Reader, length: Double): Document = js.native
-  def decode(reader: js.typedarray.Uint8Array): Document = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): Document = js.native
+  
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Document = js.native
   /**
     * Decodes a Document message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -85,68 +130,70 @@ object Document extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): Document = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): Document = js.native
+  
   /**
     * Encodes the specified Document message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.Document.verify|verify} messages.
     * @param message Document message or plain object to encode
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.encode")
+  @js.native
   def encode(message: IDocument): Writer = js.native
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.encode")
+  @js.native
   def encode(message: IDocument, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified Document message, length delimited. Does not implicitly {@link google.cloud.dialogflow.v2beta1.Document.verify|verify} messages.
     * @param message Document message or plain object to encode
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IDocument): Writer = js.native
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IDocument, writer: Writer): Writer = js.native
+  
   /**
     * Creates a Document message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns Document
     */
+  /* static member */
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): Document = js.native
+  
   /**
     * Creates a plain object from a Document message. Also converts values to other types if specified.
     * @param message Document
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.toObject")
+  @js.native
   def toObject(message: Document): StringDictionary[js.Any] = js.native
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.toObject")
+  @js.native
   def toObject(message: Document, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a Document message.
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
-  def verify(message: StringDictionary[js.Any]): String | Null = js.native
-  /** KnowledgeType enum. */
+  /* static member */
+  @JSImport("dialogflow/protos/protos", "google.cloud.dialogflow.v2beta1.Document.verify")
   @js.native
-  object KnowledgeType extends js.Object {
-    @js.native
-    sealed trait EXTRACTIVE_QA extends KnowledgeType
-    
-    @js.native
-    sealed trait FAQ extends KnowledgeType
-    
-    @js.native
-    sealed trait KNOWLEDGE_TYPE_UNSPECIFIED extends KnowledgeType
-    
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[KnowledgeType with Double] = js.native
-    /* 2 */ @js.native
-    object EXTRACTIVE_QA extends TopLevel[EXTRACTIVE_QA with Double]
-    
-    /* 1 */ @js.native
-    object FAQ extends TopLevel[FAQ with Double]
-    
-    /* 0 */ @js.native
-    object KNOWLEDGE_TYPE_UNSPECIFIED extends TopLevel[KNOWLEDGE_TYPE_UNSPECIFIED with Double]
-    
-  }
-  
+  def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

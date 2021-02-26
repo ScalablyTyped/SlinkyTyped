@@ -6,12 +6,13 @@ import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.fabric.anon.Angle
 import typingsSlinky.fabric.anon.FlipX
 import typingsSlinky.fabric.anon.X
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IUtilMisc extends js.Object {
+trait IUtilMisc extends StObject {
   
   /**
     * Clear char widths cache for the given font family or all the cache if no

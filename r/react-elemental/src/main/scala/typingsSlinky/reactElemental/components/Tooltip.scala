@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactElemental.mod.TooltipProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tooltip {
   
+  @scala.inline
+  def apply(contents: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
+  }
+  
   @JSImport("react-elemental", "Tooltip")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +47,4 @@ object Tooltip {
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(contents: ReactElement): Builder = {
-    val __props = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
-  }
 }

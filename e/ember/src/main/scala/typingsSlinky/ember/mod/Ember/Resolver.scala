@@ -1,6 +1,7 @@
 package typingsSlinky.ember.mod.Ember
 
-import typingsSlinky.emberObject.mod.default
+import typingsSlinky.emberApplication.resolverMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

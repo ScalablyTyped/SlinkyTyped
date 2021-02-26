@@ -10,6 +10,7 @@ import typingsSlinky.highcharts.highchartsStrings.s_
 import typingsSlinky.highcharts.highchartsStrings.t_
 import typingsSlinky.highcharts.highchartsStrings.v_
 import typingsSlinky.highcharts.highchartsStrings.z_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,7 +37,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.V
   - typingsSlinky.highcharts.highchartsStrings.Z
 */
-trait SVGPathCommand extends js.Object
+trait SVGPathCommand extends StObject
 object SVGPathCommand {
   
   @scala.inline

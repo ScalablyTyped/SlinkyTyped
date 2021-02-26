@@ -34,6 +34,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.text.XTextCursor
 import typingsSlinky.activexLibreoffice.com_.sun.star.text.XTextRange
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.Color
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,11 +42,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** This service is for an open Bezier shape. */
 @js.native
 trait OpenBezierShape
-  extends Shape
+  extends Text
+     with Shape
      with LineProperties
      with PolyPolygonBezierDescriptor
-     with XText
-     with TextProperties
      with ShadowProperties
      with RotationDescriptor
 object OpenBezierShape {

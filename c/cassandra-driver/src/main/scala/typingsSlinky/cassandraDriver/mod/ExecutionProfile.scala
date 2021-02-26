@@ -5,13 +5,14 @@ import typingsSlinky.cassandraDriver.anon.Language
 import typingsSlinky.cassandraDriver.policiesMod.policies.loadBalancing.LoadBalancingPolicy
 import typingsSlinky.cassandraDriver.policiesMod.policies.retry.RetryPolicy
 import typingsSlinky.cassandraDriver.typesMod.types.consistencies
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cassandra-driver", "ExecutionProfile")
 @js.native
-class ExecutionProfile protected () extends js.Object {
+class ExecutionProfile protected () extends StObject {
   def this(name: String, options: Consistency) = this()
   
   var consistency: js.UndefOr[consistencies] = js.native

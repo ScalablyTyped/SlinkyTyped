@@ -10,15 +10,22 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.onMouseUp
 import typingsSlinky.materialUiCore.materialUiCoreStrings.onTouchEnd
 import typingsSlinky.materialUiCore.materialUiCoreStrings.onTouchStart
 import typingsSlinky.react.mod.ChangeEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ClickAwayListener {
   
+  @scala.inline
+  def apply(onClickAway: ChangeEvent[js.Object] => Unit): Builder = {
+    val __props = js.Dynamic.literal(onClickAway = js.Any.fromFunction1(onClickAway))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ClickAwayListenerProps]))
+  }
+  
   @JSImport("@material-ui/core", "ClickAwayListener")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,10 +40,4 @@ object ClickAwayListener {
   }
   
   def withProps(p: ClickAwayListenerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onClickAway: ChangeEvent[js.Object] => Unit): Builder = {
-    val __props = js.Dynamic.literal(onClickAway = js.Any.fromFunction1(onClickAway))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ClickAwayListenerProps]))
-  }
 }

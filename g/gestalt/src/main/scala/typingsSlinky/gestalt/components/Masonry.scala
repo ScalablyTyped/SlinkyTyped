@@ -8,15 +8,22 @@ import typingsSlinky.gestalt.anon.Data
 import typingsSlinky.gestalt.gestaltStrings.MasonryDefaultLayout
 import typingsSlinky.gestalt.gestaltStrings.MasonryUniformRowLayout
 import typingsSlinky.gestalt.mod.MasonryProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Masonry {
   
+  @scala.inline
+  def apply(comp: ReactComponentClass[Data[js.Any]], items: js.Array[js.Any]): Builder = {
+    val __props = js.Dynamic.literal(comp = comp.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MasonryProps[js.Any]]))
+  }
+  
   @JSImport("gestalt", "Masonry")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -58,10 +65,4 @@ object Masonry {
   }
   
   def withProps(p: MasonryProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(comp: ReactComponentClass[Data[js.Any]], items: js.Array[js.Any]): Builder = {
-    val __props = js.Dynamic.literal(comp = comp.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MasonryProps[js.Any]]))
-  }
 }

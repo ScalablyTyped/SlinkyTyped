@@ -1,6 +1,7 @@
 package typingsSlinky.winrt.Windows.Storage.Pickers.Provider
 
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

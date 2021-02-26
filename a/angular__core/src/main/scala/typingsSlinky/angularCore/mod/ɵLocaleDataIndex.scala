@@ -1,126 +1,104 @@
 package typingsSlinky.angularCore.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait ɵLocaleDataIndex extends js.Object
+sealed trait ɵLocaleDataIndex extends StObject
 @JSImport("@angular/core", "\u0275LocaleDataIndex")
 @js.native
-object ɵLocaleDataIndex extends js.Object {
+object ɵLocaleDataIndex extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ɵLocaleDataIndex with Double] = js.native
   
   @js.native
   sealed trait Currencies extends ɵLocaleDataIndex
-  /* 18 */ @js.native
-  object Currencies extends TopLevel[Currencies with Double]
+  /* 18 */ val Currencies: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.Currencies with Double = js.native
   
   @js.native
   sealed trait CurrencyCode extends ɵLocaleDataIndex
-  /* 15 */ @js.native
-  object CurrencyCode extends TopLevel[CurrencyCode with Double]
+  /* 15 */ val CurrencyCode: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.CurrencyCode with Double = js.native
   
   @js.native
   sealed trait CurrencyName extends ɵLocaleDataIndex
-  /* 17 */ @js.native
-  object CurrencyName extends TopLevel[CurrencyName with Double]
+  /* 17 */ val CurrencyName: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.CurrencyName with Double = js.native
   
   @js.native
   sealed trait CurrencySymbol extends ɵLocaleDataIndex
-  /* 16 */ @js.native
-  object CurrencySymbol extends TopLevel[CurrencySymbol with Double]
+  /* 16 */ val CurrencySymbol: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.CurrencySymbol with Double = js.native
   
   @js.native
   sealed trait DateFormat extends ɵLocaleDataIndex
-  /* 10 */ @js.native
-  object DateFormat extends TopLevel[DateFormat with Double]
+  /* 10 */ val DateFormat: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.DateFormat with Double = js.native
   
   @js.native
   sealed trait DateTimeFormat extends ɵLocaleDataIndex
-  /* 12 */ @js.native
-  object DateTimeFormat extends TopLevel[DateTimeFormat with Double]
+  /* 12 */ val DateTimeFormat: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.DateTimeFormat with Double = js.native
   
   @js.native
   sealed trait DayPeriodsFormat extends ɵLocaleDataIndex
-  /* 1 */ @js.native
-  object DayPeriodsFormat extends TopLevel[DayPeriodsFormat with Double]
+  /* 1 */ val DayPeriodsFormat: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.DayPeriodsFormat with Double = js.native
   
   @js.native
   sealed trait DayPeriodsStandalone extends ɵLocaleDataIndex
-  /* 2 */ @js.native
-  object DayPeriodsStandalone extends TopLevel[DayPeriodsStandalone with Double]
+  /* 2 */ val DayPeriodsStandalone: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.DayPeriodsStandalone with Double = js.native
   
   @js.native
   sealed trait DaysFormat extends ɵLocaleDataIndex
-  /* 3 */ @js.native
-  object DaysFormat extends TopLevel[DaysFormat with Double]
+  /* 3 */ val DaysFormat: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.DaysFormat with Double = js.native
   
   @js.native
   sealed trait DaysStandalone extends ɵLocaleDataIndex
-  /* 4 */ @js.native
-  object DaysStandalone extends TopLevel[DaysStandalone with Double]
+  /* 4 */ val DaysStandalone: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.DaysStandalone with Double = js.native
   
   @js.native
   sealed trait Directionality extends ɵLocaleDataIndex
-  /* 19 */ @js.native
-  object Directionality extends TopLevel[Directionality with Double]
+  /* 19 */ val Directionality: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.Directionality with Double = js.native
   
   @js.native
   sealed trait Eras extends ɵLocaleDataIndex
-  /* 7 */ @js.native
-  object Eras extends TopLevel[Eras with Double]
+  /* 7 */ val Eras: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.Eras with Double = js.native
   
   @js.native
   sealed trait ExtraData extends ɵLocaleDataIndex
-  /* 21 */ @js.native
-  object ExtraData extends TopLevel[ExtraData with Double]
+  /* 21 */ val ExtraData: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.ExtraData with Double = js.native
   
   @js.native
   sealed trait FirstDayOfWeek extends ɵLocaleDataIndex
-  /* 8 */ @js.native
-  object FirstDayOfWeek extends TopLevel[FirstDayOfWeek with Double]
+  /* 8 */ val FirstDayOfWeek: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.FirstDayOfWeek with Double = js.native
   
   @js.native
   sealed trait LocaleId extends ɵLocaleDataIndex
-  /* 0 */ @js.native
-  object LocaleId extends TopLevel[LocaleId with Double]
+  /* 0 */ val LocaleId: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.LocaleId with Double = js.native
   
   @js.native
   sealed trait MonthsFormat extends ɵLocaleDataIndex
-  /* 5 */ @js.native
-  object MonthsFormat extends TopLevel[MonthsFormat with Double]
+  /* 5 */ val MonthsFormat: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.MonthsFormat with Double = js.native
   
   @js.native
   sealed trait MonthsStandalone extends ɵLocaleDataIndex
-  /* 6 */ @js.native
-  object MonthsStandalone extends TopLevel[MonthsStandalone with Double]
+  /* 6 */ val MonthsStandalone: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.MonthsStandalone with Double = js.native
   
   @js.native
   sealed trait NumberFormats extends ɵLocaleDataIndex
-  /* 14 */ @js.native
-  object NumberFormats extends TopLevel[NumberFormats with Double]
+  /* 14 */ val NumberFormats: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.NumberFormats with Double = js.native
   
   @js.native
   sealed trait NumberSymbols extends ɵLocaleDataIndex
-  /* 13 */ @js.native
-  object NumberSymbols extends TopLevel[NumberSymbols with Double]
+  /* 13 */ val NumberSymbols: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.NumberSymbols with Double = js.native
   
   @js.native
   sealed trait PluralCase extends ɵLocaleDataIndex
-  /* 20 */ @js.native
-  object PluralCase extends TopLevel[PluralCase with Double]
+  /* 20 */ val PluralCase: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.PluralCase with Double = js.native
   
   @js.native
   sealed trait TimeFormat extends ɵLocaleDataIndex
-  /* 11 */ @js.native
-  object TimeFormat extends TopLevel[TimeFormat with Double]
+  /* 11 */ val TimeFormat: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.TimeFormat with Double = js.native
   
   @js.native
   sealed trait WeekendRange extends ɵLocaleDataIndex
-  /* 9 */ @js.native
-  object WeekendRange extends TopLevel[WeekendRange with Double]
+  /* 9 */ val WeekendRange: typingsSlinky.angularCore.mod.ɵLocaleDataIndex.WeekendRange with Double = js.native
 }

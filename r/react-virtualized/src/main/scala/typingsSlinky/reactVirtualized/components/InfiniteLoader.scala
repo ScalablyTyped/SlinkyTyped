@@ -7,15 +7,26 @@ import typingsSlinky.reactVirtualized.esInfiniteLoaderMod.InfiniteLoaderChildPro
 import typingsSlinky.reactVirtualized.esInfiniteLoaderMod.InfiniteLoaderProps
 import typingsSlinky.reactVirtualized.mod.Index
 import typingsSlinky.reactVirtualized.mod.IndexRange
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object InfiniteLoader {
   
+  @scala.inline
+  def apply(
+    children: InfiniteLoaderChildProps => ReactElement,
+    isRowLoaded: Index => Boolean,
+    loadMoreRows: IndexRange => js.Promise[_]
+  ): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), isRowLoaded = js.Any.fromFunction1(isRowLoaded), loadMoreRows = js.Any.fromFunction1(loadMoreRows))
+    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteLoaderProps]))
+  }
+  
   @JSImport("react-virtualized", "InfiniteLoader")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,14 +44,4 @@ object InfiniteLoader {
   }
   
   def withProps(p: InfiniteLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    children: InfiniteLoaderChildProps => ReactElement,
-    isRowLoaded: Index => Boolean,
-    loadMoreRows: IndexRange => js.Promise[_]
-  ): Builder = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), isRowLoaded = js.Any.fromFunction1(isRowLoaded), loadMoreRows = js.Any.fromFunction1(loadMoreRows))
-    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteLoaderProps]))
-  }
 }

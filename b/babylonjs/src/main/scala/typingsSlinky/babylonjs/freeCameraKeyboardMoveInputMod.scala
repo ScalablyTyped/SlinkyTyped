@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.cameraInputsManagerMod.ICameraInput
 import typingsSlinky.babylonjs.freeCameraMod.FreeCamera
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/Inputs/freeCameraKeyboardMoveInput", JSImport.Namespace)
-@js.native
-object freeCameraKeyboardMoveInputMod extends js.Object {
+object freeCameraKeyboardMoveInputMod {
   
+  @JSImport("babylonjs/Cameras/Inputs/freeCameraKeyboardMoveInput", "FreeCameraKeyboardMoveInput")
   @js.native
   class FreeCameraKeyboardMoveInput () extends ICameraInput[FreeCamera] {
     

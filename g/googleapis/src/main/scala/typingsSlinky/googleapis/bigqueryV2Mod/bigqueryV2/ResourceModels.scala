@@ -4,13 +4,14 @@ import typingsSlinky.gaxios.commonMod.GaxiosPromise
 import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
 import typingsSlinky.googleapisCommon.apiMod.BodyResponseCallback
 import typingsSlinky.googleapisCommon.apiMod.MethodOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("googleapis/build/src/apis/bigquery/v2", "bigquery_v2.Resource$Models")
 @js.native
-class ResourceModels protected () extends js.Object {
+class ResourceModels protected () extends StObject {
   def this(context: APIRequestContext) = this()
   
   var context: APIRequestContext = js.native

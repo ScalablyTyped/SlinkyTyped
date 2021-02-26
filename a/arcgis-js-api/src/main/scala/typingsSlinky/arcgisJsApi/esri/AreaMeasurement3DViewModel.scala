@@ -16,6 +16,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.measured
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.measuring
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.metric
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

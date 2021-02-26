@@ -11,6 +11,7 @@ import typingsSlinky.primereact.anon.NodeOriginalEvent
 import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.treeNodeMod.TreeNode
 import typingsSlinky.primereact.treeTableMod.TreeTableProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object TreeTable {
   
   @JSImport("primereact/treetable", "TreeTable")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -105,10 +106,10 @@ object TreeTable {
     def metaKeySelection(value: Boolean): this.type = set("metaKeySelection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def multiSortMetaVarargs(value: js.Any*): this.type = set("multiSortMeta", js.Array(value :_*))
+    def multiSortMeta(value: js.Array[_]): this.type = set("multiSortMeta", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def multiSortMeta(value: js.Array[_]): this.type = set("multiSortMeta", value.asInstanceOf[js.Any])
+    def multiSortMetaVarargs(value: js.Any*): this.type = set("multiSortMeta", js.Array(value :_*))
     
     @scala.inline
     def onColReorder(value: /* e */ DropIndex => Unit): this.type = set("onColReorder", js.Any.fromFunction1(value))
@@ -192,10 +193,10 @@ object TreeTable {
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
+    def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
+    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
     
     @scala.inline
     def scrollHeight(value: String): this.type = set("scrollHeight", value.asInstanceOf[js.Any])
@@ -234,13 +235,13 @@ object TreeTable {
     def totalRecords(value: Double): this.type = set("totalRecords", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: TreeNode*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Array[TreeNode]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Array[TreeNode]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: TreeNode*): this.type = set("value", js.Array(value :_*))
   }
   
-  def withProps(p: TreeTableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TreeTable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TreeTableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -6,14 +6,21 @@ import org.scalajs.dom.raw.WebGLBuffer
 import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLTexture
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gl-react", "Surface")
 @js.native
-class Surface[T] ()
+class Surface[T] protected ()
   extends Component[SurfaceProps, SurfaceState, js.Any] {
+  def this(props: SurfaceProps) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: SurfaceProps, context: js.Any) = this()
   
   var buffer: WebGLBuffer = js.native
   

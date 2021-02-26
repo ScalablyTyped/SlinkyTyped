@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.storybookComponents.argsTableArgsTableMod.ArgsTableError
 import typingsSlinky.storybookComponents.typesMod.ArgTypes
 import typingsSlinky.storybookComponents.typesMod.Args
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,24 +15,30 @@ object ArgsTable {
   
   object ArgsTableErrorProps {
     
-    @JSImport("@storybook/components", "ArgsTable")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: typingsSlinky.storybookComponents.argsTableArgsTableMod.ArgsTableErrorProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     @scala.inline
     def apply(error: ArgsTableError): Default[tag.type, js.Object] = {
       val __props = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
       new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[typingsSlinky.storybookComponents.argsTableArgsTableMod.ArgsTableErrorProps]))
     }
+    
+    @JSImport("@storybook/components", "ArgsTable")
+    @js.native
+    val component: js.Object = js.native
+    
+    def withProps(p: typingsSlinky.storybookComponents.argsTableArgsTableMod.ArgsTableErrorProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object ArgsTableRowProps {
     
+    @scala.inline
+    def apply(rows: ArgTypes): Builder = {
+      val __props = js.Dynamic.literal(rows = rows.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.storybookComponents.argsTableArgsTableMod.ArgsTableRowProps]))
+    }
+    
     @JSImport("@storybook/components", "ArgsTable")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -58,11 +65,5 @@ object ArgsTable {
     }
     
     def withProps(p: typingsSlinky.storybookComponents.argsTableArgsTableMod.ArgsTableRowProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(rows: ArgTypes): Builder = {
-      val __props = js.Dynamic.literal(rows = rows.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.storybookComponents.argsTableArgsTableMod.ArgsTableRowProps]))
-    }
   }
 }

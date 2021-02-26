@@ -1,11 +1,12 @@
 package typingsSlinky.phantomjs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebServer extends js.Object {
+trait WebServer extends StObject {
   
   def close(): Unit = js.native
   

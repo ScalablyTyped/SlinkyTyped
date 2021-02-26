@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMotion.mod.MotionProps
 import typingsSlinky.reactMotion.mod.PlainStyle
 import typingsSlinky.reactMotion.mod.Style
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Motion {
   
+  @scala.inline
+  def apply(style: Style): Builder = {
+    val __props = js.Dynamic.literal(style = style.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MotionProps]))
+  }
+  
   @JSImport("react-motion", "Motion")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +39,4 @@ object Motion {
   }
   
   def withProps(p: MotionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(style: Style): Builder = {
-    val __props = js.Dynamic.literal(style = style.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MotionProps]))
-  }
 }

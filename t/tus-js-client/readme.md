@@ -10,9 +10,9 @@ A pure JavaScript client for the tus resumable upload protocol
 | ------------------ | :-------------: |
 | Full name          | tus-js-client |
 | Keywords           | tus, resumable, upload, protocol, progress, file, browser |
-| # releases         | 13 |
-| # dependents       | 30 |
-| # downloads        | 1476346 |
+| # releases         | 15 |
+| # dependents       | 40 |
+| # downloads        | 4615987 |
 | # stars            | 0 |
 
 ## Links

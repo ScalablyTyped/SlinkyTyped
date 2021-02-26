@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -55,7 +56,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.endAngle
   - typingsSlinky.highcharts.highchartsStrings.dataURL
 */
-trait SeriesOptionsType extends js.Object
+trait SeriesOptionsType extends StObject
 object SeriesOptionsType {
   
   @scala.inline

@@ -10,9 +10,9 @@ JupyterLab - Extension Manager Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/extensionmanager-extension |
 | Keywords           | - |
-| # releases         | 57 |
+| # releases         | 132 |
 | # dependents       | 1 |
-| # downloads        | 738872 |
+| # downloads        | 1447436 |
 | # stars            | 0 |
 
 ## Links

@@ -11,8 +11,8 @@ Get an available port
 | Full name          | get-port |
 | Keywords           | port, find, finder, portfinder, free, available, connection, connect, open, net, tcp, scan, random, preferred, chosen |
 | # releases         | 5 |
-| # dependents       | 683 |
-| # downloads        | 68679720 |
+| # dependents       | 973 |
+| # downloads        | 132762204 |
 | # stars            | 17 |
 
 ## Links

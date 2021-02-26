@@ -10,9 +10,9 @@ A configurable mock file system.  You know, for testing.
 | ------------------ | :-------------: |
 | Full name          | mock-fs |
 | Keywords           | mock, fs, test, fixtures, file system, memory |
-| # releases         | 9 |
-| # dependents       | 61 |
-| # downloads        | 5976946 |
+| # releases         | 11 |
+| # dependents       | 75 |
+| # downloads        | 10584726 |
 | # stars            | 26 |
 
 ## Links

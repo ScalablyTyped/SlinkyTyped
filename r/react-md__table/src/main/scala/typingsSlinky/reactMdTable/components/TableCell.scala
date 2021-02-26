@@ -18,6 +18,7 @@ import typingsSlinky.reactMdTable.reactMdTableStrings.rowgroup
 import typingsSlinky.reactMdTable.tableCellContentMod.SortOrder
 import typingsSlinky.reactMdTable.tableCellMod.TableCellElement
 import typingsSlinky.reactMdTable.tableCellMod.TableCellProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ object TableCell {
   
   @JSImport("@react-md/table", "TableCell")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -58,13 +59,13 @@ object TableCell {
     def scope(value: row | col | rowgroup | colgroup): this.type = set("scope", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sortIconReactElement(value: ReactElement): this.type = set("sortIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def sortIcon(value: ReactElement): this.type = set("sortIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def sortIconAfter(value: Boolean): this.type = set("sortIconAfter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def sortIconReactElement(value: ReactElement): this.type = set("sortIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def sortIconRotated(value: Boolean): this.type = set("sortIconRotated", value.asInstanceOf[js.Any])
@@ -76,7 +77,7 @@ object TableCell {
     def vAlign(value: TableCellVerticalAlignment): this.type = set("vAlign", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TableCellProps with RefAttributes[TableCellElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TableCell.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TableCellProps with RefAttributes[TableCellElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

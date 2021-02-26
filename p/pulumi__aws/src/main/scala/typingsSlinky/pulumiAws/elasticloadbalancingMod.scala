@@ -26,27 +26,14 @@ import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws/elasticloadbalancing", JSImport.Namespace)
-@js.native
-object elasticloadbalancingMod extends js.Object {
+object elasticloadbalancingMod {
   
-  def getHostedZoneId(): js.Promise[GetHostedZoneIdResult] = js.native
-  def getHostedZoneId(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetHostedZoneIdResult] = js.native
-  def getHostedZoneId(args: GetHostedZoneIdArgs): js.Promise[GetHostedZoneIdResult] = js.native
-  def getHostedZoneId(args: GetHostedZoneIdArgs, opts: InvokeOptions): js.Promise[GetHostedZoneIdResult] = js.native
-  
-  def getLoadBalancer(args: GetLoadBalancerArgs): js.Promise[GetLoadBalancerResult] = js.native
-  def getLoadBalancer(args: GetLoadBalancerArgs, opts: InvokeOptions): js.Promise[GetLoadBalancerResult] = js.native
-  
-  def getServiceAccount(): js.Promise[GetServiceAccountResult] = js.native
-  def getServiceAccount(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetServiceAccountResult] = js.native
-  def getServiceAccount(args: GetServiceAccountArgs): js.Promise[GetServiceAccountResult] = js.native
-  def getServiceAccount(args: GetServiceAccountArgs, opts: InvokeOptions): js.Promise[GetServiceAccountResult] = js.native
-  
+  @JSImport("@pulumi/aws/elasticloadbalancing", "AppCookieStickinessPolicy")
   @js.native
   class AppCookieStickinessPolicy protected ()
     extends typingsSlinky.pulumiAws.appCookieStickinessPolicyMod.AppCookieStickinessPolicy {
@@ -62,8 +49,7 @@ object elasticloadbalancingMod extends js.Object {
     def this(name: String, args: AppCookieStickinessPolicyArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object AppCookieStickinessPolicy extends js.Object {
+  object AppCookieStickinessPolicy {
     
     /**
       * Get an existing AppCookieStickinessPolicy resource's state with the given name, ID, and optional extra
@@ -74,18 +60,29 @@ object elasticloadbalancingMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "AppCookieStickinessPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.appCookieStickinessPolicyMod.AppCookieStickinessPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "AppCookieStickinessPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.appCookieStickinessPolicyMod.AppCookieStickinessPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "AppCookieStickinessPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: AppCookieStickinessPolicyState): typingsSlinky.pulumiAws.appCookieStickinessPolicyMod.AppCookieStickinessPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "AppCookieStickinessPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: AppCookieStickinessPolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.appCookieStickinessPolicyMod.AppCookieStickinessPolicy = js.native
     
     /**
       * Returns true if the given object is an instance of AppCookieStickinessPolicy.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "AppCookieStickinessPolicy.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/elasticloadbalancing/appCookieStickinessPolicy.AppCookieStickinessPolicy */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/elasticloadbalancing", "Attachment")
   @js.native
   class Attachment protected ()
     extends typingsSlinky.pulumiAws.elasticloadbalancingAttachmentMod.Attachment {
@@ -101,8 +98,7 @@ object elasticloadbalancingMod extends js.Object {
     def this(name: String, args: AttachmentArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object Attachment extends js.Object {
+  object Attachment {
     
     /**
       * Get an existing Attachment resource's state with the given name, ID, and optional extra
@@ -113,18 +109,29 @@ object elasticloadbalancingMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "Attachment.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.elasticloadbalancingAttachmentMod.Attachment = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "Attachment.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.elasticloadbalancingAttachmentMod.Attachment = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "Attachment.get")
+    @js.native
     def get(name: String, id: Input[ID], state: AttachmentState): typingsSlinky.pulumiAws.elasticloadbalancingAttachmentMod.Attachment = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "Attachment.get")
+    @js.native
     def get(name: String, id: Input[ID], state: AttachmentState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.elasticloadbalancingAttachmentMod.Attachment = js.native
     
     /**
       * Returns true if the given object is an instance of Attachment.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "Attachment.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/elasticloadbalancing/attachment.Attachment */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/elasticloadbalancing", "ListenerPolicy")
   @js.native
   class ListenerPolicy protected ()
     extends typingsSlinky.pulumiAws.listenerPolicyMod.ListenerPolicy {
@@ -140,8 +147,7 @@ object elasticloadbalancingMod extends js.Object {
     def this(name: String, args: ListenerPolicyArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object ListenerPolicy extends js.Object {
+  object ListenerPolicy {
     
     /**
       * Get an existing ListenerPolicy resource's state with the given name, ID, and optional extra
@@ -152,18 +158,29 @@ object elasticloadbalancingMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "ListenerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.listenerPolicyMod.ListenerPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "ListenerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.listenerPolicyMod.ListenerPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "ListenerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ListenerPolicyState): typingsSlinky.pulumiAws.listenerPolicyMod.ListenerPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "ListenerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ListenerPolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.listenerPolicyMod.ListenerPolicy = js.native
     
     /**
       * Returns true if the given object is an instance of ListenerPolicy.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "ListenerPolicy.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/elasticloadbalancing/listenerPolicy.ListenerPolicy */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancer")
   @js.native
   class LoadBalancer protected ()
     extends typingsSlinky.pulumiAws.elasticloadbalancingLoadBalancerMod.LoadBalancer {
@@ -179,8 +196,7 @@ object elasticloadbalancingMod extends js.Object {
     def this(name: String, args: LoadBalancerArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object LoadBalancer extends js.Object {
+  object LoadBalancer {
     
     /**
       * Get an existing LoadBalancer resource's state with the given name, ID, and optional extra
@@ -191,18 +207,29 @@ object elasticloadbalancingMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancer.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.elasticloadbalancingLoadBalancerMod.LoadBalancer = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancer.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.elasticloadbalancingLoadBalancerMod.LoadBalancer = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancer.get")
+    @js.native
     def get(name: String, id: Input[ID], state: LoadBalancerState): typingsSlinky.pulumiAws.elasticloadbalancingLoadBalancerMod.LoadBalancer = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancer.get")
+    @js.native
     def get(name: String, id: Input[ID], state: LoadBalancerState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.elasticloadbalancingLoadBalancerMod.LoadBalancer = js.native
     
     /**
       * Returns true if the given object is an instance of LoadBalancer.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancer.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/elasticloadbalancing/loadBalancer.LoadBalancer */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerBackendServerPolicy")
   @js.native
   class LoadBalancerBackendServerPolicy protected ()
     extends typingsSlinky.pulumiAws.loadBalancerBackendServerPolicyMod.LoadBalancerBackendServerPolicy {
@@ -218,8 +245,7 @@ object elasticloadbalancingMod extends js.Object {
     def this(name: String, args: LoadBalancerBackendServerPolicyArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object LoadBalancerBackendServerPolicy extends js.Object {
+  object LoadBalancerBackendServerPolicy {
     
     /**
       * Get an existing LoadBalancerBackendServerPolicy resource's state with the given name, ID, and optional extra
@@ -230,9 +256,17 @@ object elasticloadbalancingMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerBackendServerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.loadBalancerBackendServerPolicyMod.LoadBalancerBackendServerPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerBackendServerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.loadBalancerBackendServerPolicyMod.LoadBalancerBackendServerPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerBackendServerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: LoadBalancerBackendServerPolicyState): typingsSlinky.pulumiAws.loadBalancerBackendServerPolicyMod.LoadBalancerBackendServerPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerBackendServerPolicy.get")
+    @js.native
     def get(
       name: String,
       id: Input[ID],
@@ -244,9 +278,12 @@ object elasticloadbalancingMod extends js.Object {
       * Returns true if the given object is an instance of LoadBalancerBackendServerPolicy.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerBackendServerPolicy.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/elasticloadbalancing/loadBalancerBackendServerPolicy.LoadBalancerBackendServerPolicy */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerCookieStickinessPolicy")
   @js.native
   class LoadBalancerCookieStickinessPolicy protected ()
     extends typingsSlinky.pulumiAws.loadBalancerCookieStickinessPolicyMod.LoadBalancerCookieStickinessPolicy {
@@ -262,8 +299,7 @@ object elasticloadbalancingMod extends js.Object {
     def this(name: String, args: LoadBalancerCookieStickinessPolicyArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object LoadBalancerCookieStickinessPolicy extends js.Object {
+  object LoadBalancerCookieStickinessPolicy {
     
     /**
       * Get an existing LoadBalancerCookieStickinessPolicy resource's state with the given name, ID, and optional extra
@@ -274,9 +310,17 @@ object elasticloadbalancingMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerCookieStickinessPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.loadBalancerCookieStickinessPolicyMod.LoadBalancerCookieStickinessPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerCookieStickinessPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.loadBalancerCookieStickinessPolicyMod.LoadBalancerCookieStickinessPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerCookieStickinessPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: LoadBalancerCookieStickinessPolicyState): typingsSlinky.pulumiAws.loadBalancerCookieStickinessPolicyMod.LoadBalancerCookieStickinessPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerCookieStickinessPolicy.get")
+    @js.native
     def get(
       name: String,
       id: Input[ID],
@@ -288,9 +332,12 @@ object elasticloadbalancingMod extends js.Object {
       * Returns true if the given object is an instance of LoadBalancerCookieStickinessPolicy.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerCookieStickinessPolicy.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/elasticloadbalancing/loadBalancerCookieStickinessPolicy.LoadBalancerCookieStickinessPolicy */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerPolicy")
   @js.native
   class LoadBalancerPolicy protected ()
     extends typingsSlinky.pulumiAws.loadBalancerPolicyMod.LoadBalancerPolicy {
@@ -306,8 +353,7 @@ object elasticloadbalancingMod extends js.Object {
     def this(name: String, args: LoadBalancerPolicyArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object LoadBalancerPolicy extends js.Object {
+  object LoadBalancerPolicy {
     
     /**
       * Get an existing LoadBalancerPolicy resource's state with the given name, ID, and optional extra
@@ -318,18 +364,29 @@ object elasticloadbalancingMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.loadBalancerPolicyMod.LoadBalancerPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.loadBalancerPolicyMod.LoadBalancerPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: LoadBalancerPolicyState): typingsSlinky.pulumiAws.loadBalancerPolicyMod.LoadBalancerPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: LoadBalancerPolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.loadBalancerPolicyMod.LoadBalancerPolicy = js.native
     
     /**
       * Returns true if the given object is an instance of LoadBalancerPolicy.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "LoadBalancerPolicy.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/elasticloadbalancing/loadBalancerPolicy.LoadBalancerPolicy */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/elasticloadbalancing", "SslNegotiationPolicy")
   @js.native
   class SslNegotiationPolicy protected ()
     extends typingsSlinky.pulumiAws.sslNegotiationPolicyMod.SslNegotiationPolicy {
@@ -345,8 +402,7 @@ object elasticloadbalancingMod extends js.Object {
     def this(name: String, args: SslNegotiationPolicyArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object SslNegotiationPolicy extends js.Object {
+  object SslNegotiationPolicy {
     
     /**
       * Get an existing SslNegotiationPolicy resource's state with the given name, ID, and optional extra
@@ -357,15 +413,58 @@ object elasticloadbalancingMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "SslNegotiationPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.sslNegotiationPolicyMod.SslNegotiationPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "SslNegotiationPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.sslNegotiationPolicyMod.SslNegotiationPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "SslNegotiationPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: SslNegotiationPolicyState): typingsSlinky.pulumiAws.sslNegotiationPolicyMod.SslNegotiationPolicy = js.native
+    @JSImport("@pulumi/aws/elasticloadbalancing", "SslNegotiationPolicy.get")
+    @js.native
     def get(name: String, id: Input[ID], state: SslNegotiationPolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.sslNegotiationPolicyMod.SslNegotiationPolicy = js.native
     
     /**
       * Returns true if the given object is an instance of SslNegotiationPolicy.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/elasticloadbalancing", "SslNegotiationPolicy.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/elasticloadbalancing/sslNegotiationPolicy.SslNegotiationPolicy */ Boolean = js.native
   }
+  
+  @JSImport("@pulumi/aws/elasticloadbalancing", "getHostedZoneId")
+  @js.native
+  def getHostedZoneId(): js.Promise[GetHostedZoneIdResult] = js.native
+  @JSImport("@pulumi/aws/elasticloadbalancing", "getHostedZoneId")
+  @js.native
+  def getHostedZoneId(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetHostedZoneIdResult] = js.native
+  @JSImport("@pulumi/aws/elasticloadbalancing", "getHostedZoneId")
+  @js.native
+  def getHostedZoneId(args: GetHostedZoneIdArgs): js.Promise[GetHostedZoneIdResult] = js.native
+  @JSImport("@pulumi/aws/elasticloadbalancing", "getHostedZoneId")
+  @js.native
+  def getHostedZoneId(args: GetHostedZoneIdArgs, opts: InvokeOptions): js.Promise[GetHostedZoneIdResult] = js.native
+  
+  @JSImport("@pulumi/aws/elasticloadbalancing", "getLoadBalancer")
+  @js.native
+  def getLoadBalancer(args: GetLoadBalancerArgs): js.Promise[GetLoadBalancerResult] = js.native
+  @JSImport("@pulumi/aws/elasticloadbalancing", "getLoadBalancer")
+  @js.native
+  def getLoadBalancer(args: GetLoadBalancerArgs, opts: InvokeOptions): js.Promise[GetLoadBalancerResult] = js.native
+  
+  @JSImport("@pulumi/aws/elasticloadbalancing", "getServiceAccount")
+  @js.native
+  def getServiceAccount(): js.Promise[GetServiceAccountResult] = js.native
+  @JSImport("@pulumi/aws/elasticloadbalancing", "getServiceAccount")
+  @js.native
+  def getServiceAccount(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetServiceAccountResult] = js.native
+  @JSImport("@pulumi/aws/elasticloadbalancing", "getServiceAccount")
+  @js.native
+  def getServiceAccount(args: GetServiceAccountArgs): js.Promise[GetServiceAccountResult] = js.native
+  @JSImport("@pulumi/aws/elasticloadbalancing", "getServiceAccount")
+  @js.native
+  def getServiceAccount(args: GetServiceAccountArgs, opts: InvokeOptions): js.Promise[GetServiceAccountResult] = js.native
 }

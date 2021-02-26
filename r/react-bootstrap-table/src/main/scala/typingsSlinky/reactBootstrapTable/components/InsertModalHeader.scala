@@ -6,6 +6,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTable.mod.BootstrapVersion
 import typingsSlinky.reactBootstrapTable.mod.InsertModalHeaderProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object InsertModalHeader {
   
   @JSImport("react-bootstrap-table", "InsertModalHeader")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,7 +41,7 @@ object InsertModalHeader {
     def version(value: BootstrapVersion): this.type = set("version", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: InsertModalHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: InsertModalHeader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: InsertModalHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

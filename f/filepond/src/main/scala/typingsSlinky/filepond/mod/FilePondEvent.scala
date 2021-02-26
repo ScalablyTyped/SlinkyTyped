@@ -1,5 +1,6 @@
 package typingsSlinky.filepond.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.filepond.filepondStrings.updatefiles
   - typingsSlinky.filepond.filepondStrings.reorderfiles
 */
-trait FilePondEvent extends js.Object
+trait FilePondEvent extends StObject
 object FilePondEvent {
   
   @scala.inline

@@ -2,6 +2,7 @@ package typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.beforeScriptExecution
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.beforeScriptWithSourceMapExecution
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.beforeScriptExecution
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.beforeScriptWithSourceMapExecution
 */
-trait SetInstrumentationBreakpointRequestInstrumentation extends js.Object
+trait SetInstrumentationBreakpointRequestInstrumentation extends StObject
 object SetInstrumentationBreakpointRequestInstrumentation {
   
   @scala.inline

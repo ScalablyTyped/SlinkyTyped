@@ -13,6 +13,7 @@ import typingsSlinky.yaml.utilMod.Type.SEQ
 import typingsSlinky.yaml.yamlStrings.CLIP
 import typingsSlinky.yaml.yamlStrings.KEEP
 import typingsSlinky.yaml.yamlStrings.STRIP
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,8 +25,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.yaml.parseCstMod.CST.Seq
   - typingsSlinky.yaml.parseCstMod.CST.FlowCollection
 */
-trait ContentNode extends js.Object
+trait ContentNode extends StObject
 object ContentNode {
+  
+  @scala.inline
+  def Alias(
+    hasComment: Boolean,
+    hasProps: Boolean,
+    jsonLike: Boolean,
+    props: js.Array[Range],
+    rawValue: String,
+    `type`: ALIAS,
+    valueRangeContainsNewline: Boolean
+  ): typingsSlinky.yaml.parseCstMod.CST.Alias = {
+    val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], rawValue = rawValue.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.yaml.parseCstMod.CST.Alias]
+  }
   
   @scala.inline
   def BlockValue(
@@ -37,68 +53,10 @@ object ContentNode {
     props: js.Array[Range],
     `type`: BLOCK_FOLDED | BLOCK_LITERAL,
     valueRangeContainsNewline: Boolean
-  ): ContentNode = {
+  ): typingsSlinky.yaml.parseCstMod.CST.BlockValue = {
     val __obj = js.Dynamic.literal(chomping = chomping.asInstanceOf[js.Any], hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ContentNode]
-  }
-  
-  @scala.inline
-  def QuoteValue(
-    hasComment: Boolean,
-    hasProps: Boolean,
-    jsonLike: Boolean,
-    props: js.Array[Range],
-    `type`: QUOTE_DOUBLE | QUOTE_SINGLE,
-    valueRangeContainsNewline: Boolean
-  ): ContentNode = {
-    val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ContentNode]
-  }
-  
-  @scala.inline
-  def PlainValue(
-    hasComment: Boolean,
-    hasProps: Boolean,
-    jsonLike: Boolean,
-    props: js.Array[Range],
-    `type`: PLAIN,
-    valueRangeContainsNewline: Boolean
-  ): ContentNode = {
-    val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ContentNode]
-  }
-  
-  @scala.inline
-  def Map(
-    hasComment: Boolean,
-    hasProps: Boolean,
-    items: js.Array[BlankLine | Comment | Alias | Scalar | MapItem],
-    jsonLike: Boolean,
-    props: js.Array[Range],
-    `type`: MAP,
-    valueRangeContainsNewline: Boolean
-  ): ContentNode = {
-    val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ContentNode]
-  }
-  
-  @scala.inline
-  def Alias(
-    hasComment: Boolean,
-    hasProps: Boolean,
-    jsonLike: Boolean,
-    props: js.Array[Range],
-    rawValue: String,
-    `type`: ALIAS,
-    valueRangeContainsNewline: Boolean
-  ): ContentNode = {
-    val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], rawValue = rawValue.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ContentNode]
+    __obj.asInstanceOf[typingsSlinky.yaml.parseCstMod.CST.BlockValue]
   }
   
   @scala.inline
@@ -112,10 +70,53 @@ object ContentNode {
     props: js.Array[Range],
     `type`: FLOW_MAP | FLOW_SEQ,
     valueRangeContainsNewline: Boolean
-  ): ContentNode = {
+  ): typingsSlinky.yaml.parseCstMod.CST.FlowCollection = {
     val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ContentNode]
+    __obj.asInstanceOf[typingsSlinky.yaml.parseCstMod.CST.FlowCollection]
+  }
+  
+  @scala.inline
+  def Map(
+    hasComment: Boolean,
+    hasProps: Boolean,
+    items: js.Array[BlankLine | Comment | Alias | Scalar | MapItem],
+    jsonLike: Boolean,
+    props: js.Array[Range],
+    `type`: MAP,
+    valueRangeContainsNewline: Boolean
+  ): typingsSlinky.yaml.parseCstMod.CST.Map = {
+    val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.yaml.parseCstMod.CST.Map]
+  }
+  
+  @scala.inline
+  def PlainValue(
+    hasComment: Boolean,
+    hasProps: Boolean,
+    jsonLike: Boolean,
+    props: js.Array[Range],
+    `type`: PLAIN,
+    valueRangeContainsNewline: Boolean
+  ): typingsSlinky.yaml.parseCstMod.CST.PlainValue = {
+    val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.yaml.parseCstMod.CST.PlainValue]
+  }
+  
+  @scala.inline
+  def QuoteValue(
+    hasComment: Boolean,
+    hasProps: Boolean,
+    jsonLike: Boolean,
+    props: js.Array[Range],
+    `type`: QUOTE_DOUBLE | QUOTE_SINGLE,
+    valueRangeContainsNewline: Boolean
+  ): typingsSlinky.yaml.parseCstMod.CST.QuoteValue = {
+    val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.yaml.parseCstMod.CST.QuoteValue]
   }
   
   @scala.inline
@@ -127,9 +128,9 @@ object ContentNode {
     props: js.Array[Range],
     `type`: SEQ,
     valueRangeContainsNewline: Boolean
-  ): ContentNode = {
+  ): typingsSlinky.yaml.parseCstMod.CST.Seq = {
     val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ContentNode]
+    __obj.asInstanceOf[typingsSlinky.yaml.parseCstMod.CST.Seq]
   }
 }

@@ -4,6 +4,7 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.pg.pgStrings.end
 import typingsSlinky.pg.pgStrings.error
 import typingsSlinky.pg.pgStrings.row
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

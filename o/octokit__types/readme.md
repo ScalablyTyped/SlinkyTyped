@@ -10,9 +10,9 @@ Shared TypeScript definitions for Octokit projects
 | ------------------ | :-------------: |
 | Full name          | @octokit/types |
 | Keywords           | github, api, sdk, toolkit, typescript |
-| # releases         | 61 |
-| # dependents       | 27 |
-| # downloads        | 71258765 |
+| # releases         | 96 |
+| # dependents       | 44 |
+| # downloads        | 187354028 |
 | # stars            | 0 |
 
 ## Links

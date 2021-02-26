@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.xRIndexMod
 
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

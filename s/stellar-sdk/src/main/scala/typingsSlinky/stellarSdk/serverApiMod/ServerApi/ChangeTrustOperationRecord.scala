@@ -3,6 +3,7 @@ package typingsSlinky.stellarSdk.serverApiMod.ServerApi
 import typingsSlinky.stellarBase.mod.AssetType.credit12
 import typingsSlinky.stellarBase.mod.AssetType.credit4
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.changeTrust
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

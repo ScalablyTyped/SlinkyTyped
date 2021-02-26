@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientLambdaNode.typesGetPolicyInputMod.GetPolicyInpu
 import typingsSlinky.awsSdkClientLambdaNode.typesGetPolicyOutputMod.GetPolicyOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-lambda-node/commands/GetPolicyCommand", JSImport.Namespace)
-@js.native
-object getPolicyCommandMod extends js.Object {
+object getPolicyCommandMod {
   
+  @JSImport("@aws-sdk/client-lambda-node/commands/GetPolicyCommand", "GetPolicyCommand")
   @js.native
   class GetPolicyCommand protected () extends Command[
           InputTypesUnion, 

@@ -1,5 +1,6 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.squareConnect.squareConnectStrings.FIXED_PRICING
   - typingsSlinky.squareConnect.squareConnectStrings.VARIABLE_PRICING
 */
-trait PricingType extends js.Object
+trait PricingType extends StObject
 object PricingType {
   
   @scala.inline

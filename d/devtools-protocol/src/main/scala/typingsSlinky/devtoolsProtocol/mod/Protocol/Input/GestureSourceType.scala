@@ -1,6 +1,7 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Input
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.default_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.touch
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.mouse
 */
-trait GestureSourceType extends js.Object
+trait GestureSourceType extends StObject
 object GestureSourceType {
   
   @scala.inline

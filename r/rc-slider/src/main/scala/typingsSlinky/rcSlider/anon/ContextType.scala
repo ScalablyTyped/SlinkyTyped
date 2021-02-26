@@ -5,6 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.rcSlider.createSliderWithTooltipMod.ComponentWrapperProps
 import typingsSlinky.rcSlider.interfaceMod.GenericSliderProps
 import typingsSlinky.react.mod.Context
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

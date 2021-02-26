@@ -1,5 +1,6 @@
 package typingsSlinky.recharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.recharts.rechartsStrings.wiggle
   - typingsSlinky.recharts.rechartsStrings.silhouette
 */
-trait StackOffsetType extends js.Object
+trait StackOffsetType extends StObject
 object StackOffsetType {
   
   @scala.inline

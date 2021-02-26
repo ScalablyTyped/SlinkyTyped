@@ -1,10 +1,16 @@
 package typingsSlinky.cassanknex
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
+  @scala.inline
+  def apply(): typingsSlinky.cassanknex.mod.CassanKnex = typingsSlinky.cassanknex.mod.^.asInstanceOf[js.Dynamic].apply().asInstanceOf[typingsSlinky.cassanknex.mod.CassanKnex]
+  @scala.inline
+  def apply(options: typingsSlinky.cassanknex.mod.DriverOptions): typingsSlinky.cassanknex.mod.CassanKnex = typingsSlinky.cassanknex.mod.^.asInstanceOf[js.Dynamic].apply(options.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.cassanknex.mod.CassanKnex]
   
   type AlterColumnFamilyQueryBuilder[T] = typingsSlinky.cassanknex.mod.QueryBuilder with typingsSlinky.cassanknex.mod.AlterableQueryBuilder[T] with typingsSlinky.cassanknex.mod.FieldValueQueryBuilder[T]
   

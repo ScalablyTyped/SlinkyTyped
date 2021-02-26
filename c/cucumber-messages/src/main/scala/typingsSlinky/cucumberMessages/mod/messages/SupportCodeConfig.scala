@@ -5,6 +5,7 @@ import typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.I
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,19 +21,27 @@ class SupportCodeConfig ()
   extends typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig {
   def this(properties: ISupportCodeConfig) = this()
 }
-/* static members */
-@JSImport("cucumber-messages", "messages.SupportCodeConfig")
-@js.native
-object SupportCodeConfig extends js.Object {
+object SupportCodeConfig {
   
   /**
     * Creates a new SupportCodeConfig instance using the specified properties.
     * @param [properties] Properties to set
     * @returns SupportCodeConfig instance
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.create")
+  @js.native
   def create(): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.create")
+  @js.native
   def create(properties: ISupportCodeConfig): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
   
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
   /**
     * Decodes a SupportCodeConfig message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -41,11 +50,17 @@ object SupportCodeConfig extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
   
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
   /**
     * Decodes a SupportCodeConfig message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -53,8 +68,10 @@ object SupportCodeConfig extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
   
   /**
     * Encodes the specified SupportCodeConfig message. Does not implicitly {@link io.cucumber.messages.SupportCodeConfig.verify|verify} messages.
@@ -62,7 +79,12 @@ object SupportCodeConfig extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.encode")
+  @js.native
   def encode(message: ISupportCodeConfig): Writer = js.native
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.encode")
+  @js.native
   def encode(message: ISupportCodeConfig, writer: Writer): Writer = js.native
   
   /**
@@ -71,7 +93,12 @@ object SupportCodeConfig extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ISupportCodeConfig): Writer = js.native
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ISupportCodeConfig, writer: Writer): Writer = js.native
   
   /**
@@ -79,6 +106,9 @@ object SupportCodeConfig extends js.Object {
     * @param object Plain object
     * @returns SupportCodeConfig
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig = js.native
   
   /**
@@ -87,7 +117,12 @@ object SupportCodeConfig extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.toObject")
+  @js.native
   def toObject(message: typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig): StringDictionary[js.Any] = js.native
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.toObject")
+  @js.native
   def toObject(
     message: typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.SupportCodeConfig,
     options: IConversionOptions
@@ -98,5 +133,8 @@ object SupportCodeConfig extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.SupportCodeConfig.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

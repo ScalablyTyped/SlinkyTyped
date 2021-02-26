@@ -5,18 +5,21 @@ import typingsSlinky.mendixmodelsdk.anon.ToRawChangeValue
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mobx.observablearrayMod.IArrayWillChange
 import typingsSlinky.mobx.observablearrayMod.IArrayWillSplice
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("mendixmodelsdk/dist/sdk/internal/properties/sendListChangeDeltas", JSImport.Namespace)
-@js.native
-object sendListChangeDeltasMod extends js.Object {
+object sendListChangeDeltasMod {
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties/sendListChangeDeltas", "sendListChangeDeltas")
+  @js.native
   def sendListChangeDeltas[T, P](
     property: (AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
     change: IArrayWillChange[P]
   ): Unit = js.native
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties/sendListChangeDeltas", "sendListChangeDeltas")
+  @js.native
   def sendListChangeDeltas[T, P](
     property: (AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
     change: IArrayWillSplice[P]

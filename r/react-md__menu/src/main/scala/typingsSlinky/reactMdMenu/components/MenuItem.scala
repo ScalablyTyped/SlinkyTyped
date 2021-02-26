@@ -82,6 +82,7 @@ import typingsSlinky.reactMdMenu.reactMdMenuStrings.menuitem
 import typingsSlinky.reactMdStates.typesMod.MergableRippleHandlers
 import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
 import typingsSlinky.reactTransitionGroup.csstransitionMod.CSSTransitionClassNames
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -90,7 +91,7 @@ object MenuItem {
   
   @JSImport("@react-md/menu", "MenuItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -283,10 +284,10 @@ object MenuItem {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -361,13 +362,13 @@ object MenuItem {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftAddonReactElement(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def leftAddon(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftAddonPosition(value: ListItemAddonPosition): this.type = set("leftAddonPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def leftAddonReactElement(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftAddonType(value: ListItemAddonType): this.type = set("leftAddonType", value.asInstanceOf[js.Any])
@@ -616,10 +617,10 @@ object MenuItem {
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+    def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+    def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -634,13 +635,13 @@ object MenuItem {
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightAddonReactElement(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def rightAddon(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rightAddonPosition(value: ListItemAddonPosition): this.type = set("rightAddonPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def rightAddonReactElement(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rightAddonType(value: ListItemAddonType): this.type = set("rightAddonType", value.asInstanceOf[js.Any])
@@ -661,13 +662,13 @@ object MenuItem {
     def role(value: menuitem | button): this.type = set("role", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def secondaryText(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def secondaryTextClassName(value: String): this.type = set("secondaryTextClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
@@ -715,7 +716,7 @@ object MenuItem {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MenuItemProps with RefAttributes[HTMLLIElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MenuItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MenuItemProps with RefAttributes[HTMLLIElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

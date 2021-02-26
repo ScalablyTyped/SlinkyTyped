@@ -4,14 +4,14 @@ import typingsSlinky.rollupPluginTypescript2.ioptionsMod.TransformerFactoryCreat
 import typingsSlinky.typescript.mod.IScriptSnapshot
 import typingsSlinky.typescript.mod.LanguageService
 import typingsSlinky.typescript.mod.ParsedCommandLine
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rollup-plugin-typescript2/dist/host", JSImport.Namespace)
-@js.native
-object hostMod extends js.Object {
+object hostMod {
   
+  @JSImport("rollup-plugin-typescript2/dist/host", "LanguageServiceHost")
   @js.native
   class LanguageServiceHost protected ()
     extends typingsSlinky.typescript.mod.LanguageServiceHost {

@@ -74,15 +74,22 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.PropsWithChildren
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ActionBar {
   
+  @scala.inline
+  def apply(title: String with js.UndefOr[String]): Builder = {
+    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[ActionBarProps]]))
+  }
+  
   @JSImport("fundamental-react", "ActionBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -102,10 +109,10 @@ object ActionBar {
     def actionProps(value: js.Any): this.type = set("actionProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def actionsReactElement(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actions(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def actions(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actionsReactElement(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
@@ -290,10 +297,10 @@ object ActionBar {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def description(value: String): this.type = set("description", value.asInstanceOf[js.Any])
@@ -645,10 +652,4 @@ object ActionBar {
   }
   
   def withProps(p: PropsWithChildren[ActionBarProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(title: String with js.UndefOr[String]): Builder = {
-    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[ActionBarProps]]))
-  }
 }

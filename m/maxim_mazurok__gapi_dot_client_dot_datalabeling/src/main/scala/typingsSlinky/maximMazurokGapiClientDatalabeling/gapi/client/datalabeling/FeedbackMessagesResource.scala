@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Key
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FeedbackMessagesResource extends js.Object {
+trait FeedbackMessagesResource extends StObject {
   
   def create(request: Alt, body: GoogleCloudDatalabelingV1beta1FeedbackMessage): Request[GoogleLongrunningOperation] = js.native
   /** Create a FeedbackMessage object. */

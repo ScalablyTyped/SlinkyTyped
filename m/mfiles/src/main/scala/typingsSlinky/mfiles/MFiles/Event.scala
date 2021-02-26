@@ -152,6 +152,7 @@ import typingsSlinky.mfiles.mfilesNumbers.`97`
 import typingsSlinky.mfiles.mfilesNumbers.`98`
 import typingsSlinky.mfiles.mfilesNumbers.`99`
 import typingsSlinky.mfiles.mfilesNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -310,7 +311,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mfiles.mfilesNumbers.`150`
   - typingsSlinky.mfiles.mfilesNumbers.`151`
 */
-trait Event extends js.Object
+trait Event extends StObject
 object Event {
   
   @scala.inline

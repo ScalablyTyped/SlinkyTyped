@@ -3,15 +3,15 @@ package typingsSlinky.fluentuiReactFocus
 import typingsSlinky.fluentuiReactFocus.anon.ComponentPath
 import typingsSlinky.fluentuiReactFocus.fluentuiReactFocusStrings.componentPath
 import typingsSlinky.std.Omit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@fluentui/react-focus/lib/common/isConformant", JSImport.Namespace)
-@js.native
-object isConformantMod extends js.Object {
+object isConformantMod {
   
-  @JSName("isConformant")
+  @JSImport("@fluentui/react-focus/lib/common/isConformant", "isConformant")
+  @js.native
   def isConformant_componentPath(
     testInfo: (Omit[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IsConformantOptions */ _, 

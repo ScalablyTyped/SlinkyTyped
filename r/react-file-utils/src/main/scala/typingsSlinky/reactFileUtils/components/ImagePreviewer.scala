@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFileUtils.anon.Disabled
 import typingsSlinky.reactFileUtils.mod.ImageUpload
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object ImagePreviewer {
   
   @JSImport("react-file-utils", "ImagePreviewer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,16 +34,16 @@ object ImagePreviewer {
     def handleRetry(value: /* id */ String => Unit): this.type = set("handleRetry", js.Any.fromFunction1(value))
     
     @scala.inline
-    def imageUploadsVarargs(value: ImageUpload*): this.type = set("imageUploads", js.Array(value :_*))
+    def imageUploads(value: js.Array[ImageUpload]): this.type = set("imageUploads", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def imageUploads(value: js.Array[ImageUpload]): this.type = set("imageUploads", value.asInstanceOf[js.Any])
+    def imageUploadsVarargs(value: ImageUpload*): this.type = set("imageUploads", js.Array(value :_*))
     
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Disabled): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ImagePreviewer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Disabled): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

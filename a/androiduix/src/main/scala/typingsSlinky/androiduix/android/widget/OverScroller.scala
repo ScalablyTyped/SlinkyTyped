@@ -1,12 +1,13 @@
 package typingsSlinky.androiduix.android.widget
 
 import typingsSlinky.androiduix.android.view.animation.Interpolator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OverScroller extends js.Object {
+trait OverScroller extends StObject {
   
   def abortAnimation(): Unit = js.native
   

@@ -27,6 +27,7 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.renderModeChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.timePicker
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.timePickerChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -171,9 +172,7 @@ trait ojInputTime extends inputBase[String, ojInputTimeSettableProperties, Strin
   @JSName("translations")
   var translations_ojInputTime: AmpmWheelLabel = js.native
 }
-@JSImport("@oracle/oraclejet/ojdatetimepicker", "ojInputTime")
-@js.native
-object ojInputTime extends js.Object {
+object ojInputTime {
   
   type ojAnimateEnd = CustomEvent
   

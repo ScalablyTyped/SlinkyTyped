@@ -3,6 +3,7 @@ package typingsSlinky.bingmaps.global.Microsoft.Maps
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.bingmaps.Microsoft.Maps.IMapLoadOptions
 import typingsSlinky.bingmaps.Microsoft.Maps.IPanoramaInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,14 +21,14 @@ class Map protected ()
   def this(parentElement: HTMLElement, options: IMapLoadOptions) = this()
 }
 /* static members */
-@JSGlobal("Microsoft.Maps.Map")
-@js.native
-object Map extends js.Object {
+object Map {
   
   /**
   		* Gets the streetside panorama information closest to the specified bounding box and returns using a success callback function. 
   		* This information can then be used to set the map view to that streetside panorama.
   		*/
+  @JSGlobal("Microsoft.Maps.Map.getClosestPanorama")
+  @js.native
   def getClosestPanorama(
     bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
     success: js.Function1[/* panoramaInfo */ IPanoramaInfo, Unit],
@@ -35,5 +36,7 @@ object Map extends js.Object {
   ): Unit = js.native
   
   /** Returns the branch name; release, experimental, frozen. */
+  @JSGlobal("Microsoft.Maps.Map.getVersion")
+  @js.native
   def getVersion(): String = js.native
 }

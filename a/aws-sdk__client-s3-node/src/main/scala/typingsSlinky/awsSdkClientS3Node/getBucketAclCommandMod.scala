@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesGetBucketAclInputMod.GetBucketAclIn
 import typingsSlinky.awsSdkClientS3Node.typesGetBucketAclOutputMod.GetBucketAclOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/GetBucketAclCommand", JSImport.Namespace)
-@js.native
-object getBucketAclCommandMod extends js.Object {
+object getBucketAclCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/GetBucketAclCommand", "GetBucketAclCommand")
   @js.native
   class GetBucketAclCommand protected () extends Command[
           InputTypesUnion, 

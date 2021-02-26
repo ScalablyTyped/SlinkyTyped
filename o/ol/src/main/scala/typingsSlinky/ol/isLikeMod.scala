@@ -1,13 +1,13 @@
 package typingsSlinky.ol
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/format/filter/IsLike", JSImport.Namespace)
-@js.native
-object isLikeMod extends js.Object {
+object isLikeMod {
   
+  @JSImport("ol/format/filter/IsLike", JSImport.Default)
   @js.native
   class default protected ()
     extends typingsSlinky.ol.comparisonMod.default {

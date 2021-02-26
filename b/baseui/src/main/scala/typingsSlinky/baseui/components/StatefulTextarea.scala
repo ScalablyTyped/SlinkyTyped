@@ -23,15 +23,25 @@ import typingsSlinky.baseui.inputMod.State
 import typingsSlinky.baseui.textareaMod.StatefulTextareaProps
 import typingsSlinky.react.mod.FormEventHandler
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StatefulTextarea {
   
+  @scala.inline
+  def apply(
+    children: js.UndefOr[ReactElement] with js.UndefOr[scala.Nothing],
+    onChange: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]]
+  ): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], onChange = onChange.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StatefulTextareaProps]))
+  }
+  
   @JSImport("baseui/textarea", "StatefulTextarea")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -84,16 +94,16 @@ object StatefulTextarea {
     def inputMode(value: String): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRefRefObject(value: ReactRef[HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRef(value: Ref[HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputRefFunction1(value: /* instance */ HTMLTextAreaElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def inputRef(value: Ref[HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRefNull: this.type = set("inputRef", null)
     
     @scala.inline
-    def inputRefNull: this.type = set("inputRef", null)
+    def inputRefRefObject(value: ReactRef[HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
@@ -157,13 +167,4 @@ object StatefulTextarea {
   }
   
   def withProps(p: StatefulTextareaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    children: js.UndefOr[ReactElement] with js.UndefOr[scala.Nothing],
-    onChange: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]]
-  ): Builder = {
-    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], onChange = onChange.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StatefulTextareaProps]))
-  }
 }

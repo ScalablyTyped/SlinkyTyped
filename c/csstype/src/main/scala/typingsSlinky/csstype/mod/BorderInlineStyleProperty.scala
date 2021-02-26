@@ -1,5 +1,6 @@
 package typingsSlinky.csstype.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.ridge
   - typingsSlinky.csstype.csstypeStrings.solid
 */
-trait BorderInlineStyleProperty extends js.Object
+trait BorderInlineStyleProperty extends StObject
 object BorderInlineStyleProperty {
   
   @scala.inline

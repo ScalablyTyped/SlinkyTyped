@@ -4,17 +4,30 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameOnPostPop
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import typingsSlinky.reactOnsenui.anon.OnPostPop
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.force
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RouterNavigator {
   
+  @scala.inline
+  def apply(
+    onPostPop: () => Unit,
+    onPostPush: () => Unit,
+    renderPage: (js.Any, js.UndefOr[typingsSlinky.reactOnsenui.mod.Navigator]) => ReactElement,
+    routeConfig: js.Any
+  ): Builder = {
+    val __props = js.Dynamic.literal(onPostPop = js.Any.fromFunction0(onPostPop), onPostPush = js.Any.fromFunction0(onPostPush), renderPage = js.Any.fromFunction2(renderPage), routeConfig = routeConfig.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassName with OnPostPop]))
+  }
+  
   @JSImport("react-onsenui", "RouterNavigator")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,16 +56,5 @@ object RouterNavigator {
     def swipeable(value: Boolean | force): this.type = set("swipeable", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HTMLAttributesidclassNameOnPostPop): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    onPostPop: () => Unit,
-    onPostPush: () => Unit,
-    renderPage: (js.Any, js.UndefOr[typingsSlinky.reactOnsenui.mod.Navigator]) => ReactElement,
-    routeConfig: js.Any
-  ): Builder = {
-    val __props = js.Dynamic.literal(onPostPop = js.Any.fromFunction0(onPostPop), onPostPush = js.Any.fromFunction0(onPostPush), renderPage = js.Any.fromFunction2(renderPage), routeConfig = routeConfig.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassNameOnPostPop]))
-  }
+  def withProps(p: HTMLAttributesidclassName with OnPostPop): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -6,12 +6,13 @@ import typingsSlinky.nightwatch.nightwatchStrings.client
 import typingsSlinky.nightwatch.nightwatchStrings.driver
 import typingsSlinky.nightwatch.nightwatchStrings.server
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebDriverProtocolSessions extends js.Object {
+trait WebDriverProtocolSessions extends StObject {
   
   /**
     * Get info about, delete or create a new session. Defaults to the current session.

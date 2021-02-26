@@ -3,10 +3,12 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameStyle
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import typingsSlinky.reactOnsenui.anon.`0`
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.bottom
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.center
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +17,7 @@ object Row {
   
   @JSImport("react-onsenui", "Row")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,7 +37,7 @@ object Row {
     def verticalAlign(value: top | bottom | center): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HTMLAttributesidclassNameStyle): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Row.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HTMLAttributesidclassName with `0`): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -15,13 +15,18 @@ import typingsSlinky.antvGBase.typesMod.ElementAttrs
 import typingsSlinky.antvGBase.typesMod.OnFrame
 import typingsSlinky.antvGBase.typesMod.ShapeAttrs
 import typingsSlinky.antvGBase.typesMod.ShapeBase
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/g-base/lib/abstract/element", JSImport.Namespace)
-@js.native
-object elementMod extends js.Object {
+object elementMod {
+  
+  @JSImport("@antv/g-base/lib/abstract/element", JSImport.Default)
+  @js.native
+  abstract class default protected () extends Element {
+    def this(cfg: js.Any) = this()
+  }
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.antvGBase.interfacesMod.IObservable because Already inherited
@@ -533,10 +538,5 @@ object elementMod extends js.Object {
     def translate_IElement(translateX: Double): IElement = js.native
     @JSName("translate")
     def translate_IElement(translateX: Double, translateY: Double): IElement = js.native
-  }
-  
-  @js.native
-  abstract class default protected () extends Element {
-    def this(cfg: js.Any) = this()
   }
 }

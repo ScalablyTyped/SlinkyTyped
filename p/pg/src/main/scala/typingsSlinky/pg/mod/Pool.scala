@@ -5,6 +5,7 @@ import typingsSlinky.pg.pgStrings.acquire
 import typingsSlinky.pg.pgStrings.connect
 import typingsSlinky.pg.pgStrings.error
 import typingsSlinky.pg.pgStrings.remove
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

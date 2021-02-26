@@ -7,6 +7,7 @@ import typingsSlinky.reactNativeSvg.mod.NumberProp
 import typingsSlinky.reactNativeSvg.mod.PatternCls
 import typingsSlinky.reactNativeSvg.mod.PatternProps
 import typingsSlinky.reactNativeSvg.mod.Units
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object Pattern {
   
   @JSImport("react-native-svg", "Pattern")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -53,7 +54,7 @@ object Pattern {
     def y(value: NumberProp): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PatternProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Pattern.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PatternProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

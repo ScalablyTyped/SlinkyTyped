@@ -2,6 +2,7 @@ package typingsSlinky.web3Core.mod
 
 import typingsSlinky.node.netMod.Server
 import typingsSlinky.web3CoreHelpers.mod.IpcProviderBase
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

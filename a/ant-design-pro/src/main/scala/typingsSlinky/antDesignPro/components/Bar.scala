@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.anon.X
 import typingsSlinky.antDesignPro.barMod.IBarProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Bar {
   
+  @scala.inline
+  def apply(data: js.Array[X], height: Double): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IBarProps]))
+  }
+  
   @JSImport("ant-design-pro/lib/Charts", "Bar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +45,4 @@ object Bar {
   }
   
   def withProps(p: IBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[X], height: Double): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IBarProps]))
-  }
 }

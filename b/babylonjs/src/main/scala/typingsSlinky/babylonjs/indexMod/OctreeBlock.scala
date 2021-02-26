@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.indexMod
 
 import typingsSlinky.babylonjs.octreeBlockMod.IOctreeContainer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,13 +33,13 @@ class OctreeBlock[T] protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/index", "OctreeBlock")
-@js.native
-object OctreeBlock extends js.Object {
+object OctreeBlock {
   
   /**
     * @hidden
     */
+  @JSImport("babylonjs/index", "OctreeBlock._CreateBlocks")
+  @js.native
   def _CreateBlocks[T](
     worldMin: typingsSlinky.babylonjs.mathVectorMod.Vector3,
     worldMax: typingsSlinky.babylonjs.mathVectorMod.Vector3,

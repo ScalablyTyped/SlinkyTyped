@@ -3,14 +3,14 @@ package typingsSlinky.samchon
 import typingsSlinky.samchon.iprotocolMod.IProtocol
 import typingsSlinky.samchon.userMod.User
 import typingsSlinky.samchon.webServerMod.WebServer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/service/Server", JSImport.Namespace)
-@js.native
-object serviceServerMod extends js.Object {
+object serviceServerMod {
   
+  @JSImport("samchon/templates/service/Server", "Server")
   @js.native
   /**
     * Default Constructor.

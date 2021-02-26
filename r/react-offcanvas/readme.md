@@ -12,7 +12,7 @@ Off-canvas menus for React.
 | Keywords           | - |
 | # releases         | 2 |
 | # dependents       | 1 |
-| # downloads        | 16465 |
+| # downloads        | 25394 |
 | # stars            | 0 |
 
 ## Links

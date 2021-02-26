@@ -7,6 +7,7 @@ import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,13 +24,13 @@ class SharedBuilder_FeedLikeProps1306299417 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def iconFunction3(
@@ -37,5 +38,5 @@ class SharedBuilder_FeedLikeProps1306299417 (val args: js.Array[js.Any])
   ): this.type = set("icon", js.Any.fromFunction3(value))
   
   @scala.inline
-  def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
 }

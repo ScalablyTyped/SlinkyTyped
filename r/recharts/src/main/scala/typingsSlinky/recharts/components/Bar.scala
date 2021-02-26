@@ -33,15 +33,22 @@ import typingsSlinky.recharts.rechartsStrings.normal
 import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Bar {
   
+  @scala.inline
+  def apply(dataKey: DataKey): Builder = {
+    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BarProps]))
+  }
+  
   @JSImport("recharts", "Bar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -67,13 +74,13 @@ object Bar {
     def animationId(value: Double): this.type = set("animationId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def backgroundReactElement(value: ReactElement): this.type = set("background", value.asInstanceOf[js.Any])
+    def background(value: Boolean | ReactElement | ContentRenderer[_] | js.Object): this.type = set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
     def backgroundFunction1(value: _ => ReactElement): this.type = set("background", js.Any.fromFunction1(value))
     
     @scala.inline
-    def background(value: Boolean | ReactElement | ContentRenderer[_] | js.Object): this.type = set("background", value.asInstanceOf[js.Any])
+    def backgroundReactElement(value: ReactElement): this.type = set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
     def barSize(value: Double): this.type = set("barSize", value.asInstanceOf[js.Any])
@@ -112,10 +119,10 @@ object Bar {
     def cursor(value: String): this.type = set("cursor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: BarData*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[BarData]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[BarData]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: BarData*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -201,7 +208,9 @@ object Bar {
     def kerning(value: Double | String): this.type = set("kerning", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(
+      value: Boolean | typingsSlinky.recharts.mod.Label | LabelProps | ReactComponentClass[LabelProps] | ReactElement | ContentRenderer[_]
+    ): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelFunction1(value: _ => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
@@ -210,9 +219,7 @@ object Bar {
     def labelFunctionComponent(value: ReactComponentClass[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def label(
-      value: Boolean | typingsSlinky.recharts.mod.Label | LabelProps | ReactComponentClass[LabelProps] | ReactElement | ContentRenderer[_]
-    ): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def layout(value: LayoutType): this.type = set("layout", value.asInstanceOf[js.Any])
@@ -302,19 +309,19 @@ object Bar {
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def radiusVarargs(value: Double*): this.type = set("radius", js.Array(value :_*))
-    
-    @scala.inline
     def radius(value: Double | js.Array[Double]): this.type = set("radius", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
+    def radiusVarargs(value: Double*): this.type = set("radius", js.Array(value :_*))
+    
+    @scala.inline
+    def shape(value: ReactElement | ContentRenderer[RectangleProps]): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shapeFunction1(value: RectangleProps => ReactElement): this.type = set("shape", js.Any.fromFunction1(value))
     
     @scala.inline
-    def shape(value: ReactElement | ContentRenderer[RectangleProps]): this.type = set("shape", value.asInstanceOf[js.Any])
+    def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
@@ -405,10 +412,4 @@ object Bar {
   }
   
   def withProps(p: BarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(dataKey: DataKey): Builder = {
-    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[BarProps]))
-  }
 }

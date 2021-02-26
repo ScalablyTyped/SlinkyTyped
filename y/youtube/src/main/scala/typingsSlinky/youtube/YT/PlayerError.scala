@@ -5,6 +5,7 @@ import typingsSlinky.youtube.youtubeNumbers.`101`
 import typingsSlinky.youtube.youtubeNumbers.`150`
 import typingsSlinky.youtube.youtubeNumbers.`2`
 import typingsSlinky.youtube.youtubeNumbers.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.youtube.youtubeNumbers.`101`
   - typingsSlinky.youtube.youtubeNumbers.`150`
 */
-trait PlayerError extends js.Object
+trait PlayerError extends StObject
 object PlayerError {
   
   /**

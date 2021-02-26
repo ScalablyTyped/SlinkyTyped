@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Network
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.None
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.RequireCorp
 */
-trait CrossOriginEmbedderPolicyValue extends js.Object
+trait CrossOriginEmbedderPolicyValue extends StObject
 object CrossOriginEmbedderPolicyValue {
   
   @scala.inline

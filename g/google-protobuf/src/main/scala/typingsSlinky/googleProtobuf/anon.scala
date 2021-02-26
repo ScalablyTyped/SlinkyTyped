@@ -12,13 +12,12 @@ import typingsSlinky.googleProtobuf.mod.Map
 import typingsSlinky.googleProtobuf.mod.Message
 import typingsSlinky.googleProtobuf.mod.Message.MessageArray
 import typingsSlinky.googleProtobuf.mod.Message.StaticToObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
   trait Instantiable[T /* <: Message */] extends Instantiable0[T]

@@ -1,6 +1,7 @@
 package typingsSlinky.node.http2Mod
 
 import typingsSlinky.node.tlsMod.TlsOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

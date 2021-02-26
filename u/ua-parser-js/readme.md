@@ -10,13 +10,13 @@ Lightweight JavaScript-based user-agent string parser
 | ------------------ | :-------------: |
 | Full name          | ua-parser-js |
 | Keywords           | user-agent, parser, browser, engine, os, device, cpu, jquery-plugin, ecosystem:jquery |
-| # releases         | 5 |
-| # dependents       | 394 |
-| # downloads        | 214438744 |
+| # releases         | 4 |
+| # dependents       | 556 |
+| # downloads        | 284695381 |
 | # stars            | 51 |
 
 ## Links
-- [Homepage](http://github.com/faisalman/ua-parser-js)
+- [Homepage](https://github.com/faisalman/ua-parser-js)
 - [Bugs](https://github.com/faisalman/ua-parser-js/issues)
 - [Repository](https://github.com/faisalman/ua-parser-js)
 - [Npm](https://www.npmjs.com/package/ua-parser-js)

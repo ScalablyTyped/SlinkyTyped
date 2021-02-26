@@ -9,14 +9,14 @@ import typingsSlinky.tslint.walkerWalkerMod.IWalker
 import typingsSlinky.typescript.mod.LineAndCharacter
 import typingsSlinky.typescript.mod.Node
 import typingsSlinky.typescript.mod.SourceFile
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tslint/lib/language/walker/ruleWalker", JSImport.Namespace)
-@js.native
-object ruleWalkerMod extends js.Object {
+object ruleWalkerMod {
   
+  @JSImport("tslint/lib/language/walker/ruleWalker", "RuleWalker")
   @js.native
   class RuleWalker protected ()
     extends SyntaxWalker

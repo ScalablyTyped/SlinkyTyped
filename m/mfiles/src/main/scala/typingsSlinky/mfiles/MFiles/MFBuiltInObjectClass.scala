@@ -3,6 +3,7 @@ package typingsSlinky.mfiles.MFiles
 import typingsSlinky.mfiles.mfilesNumbers.`-100`
 import typingsSlinky.mfiles.mfilesNumbers.`-2`
 import typingsSlinky.mfiles.mfilesNumbers.`-3`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mfiles.mfilesNumbers.`-2`
   - typingsSlinky.mfiles.mfilesNumbers.`-100`
 */
-trait MFBuiltInObjectClass extends js.Object
+trait MFBuiltInObjectClass extends StObject
 object MFBuiltInObjectClass {
   
   @scala.inline

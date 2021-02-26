@@ -3,6 +3,7 @@ package typingsSlinky.jqueryFileupload
 import typingsSlinky.jquery.JQuery.Deferred.CallbackBase
 import typingsSlinky.jquery.JQuery.PromiseBase
 import typingsSlinky.jquery.JQuery.TypeOrArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

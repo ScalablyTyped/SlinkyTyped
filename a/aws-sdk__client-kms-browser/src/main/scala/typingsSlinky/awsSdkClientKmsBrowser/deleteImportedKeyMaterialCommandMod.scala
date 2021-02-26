@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsBrowser.typesDeleteImportedKeyMaterialInputM
 import typingsSlinky.awsSdkClientKmsBrowser.typesDeleteImportedKeyMaterialOutputMod.DeleteImportedKeyMaterialOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-browser/commands/DeleteImportedKeyMaterialCommand", JSImport.Namespace)
-@js.native
-object deleteImportedKeyMaterialCommandMod extends js.Object {
+object deleteImportedKeyMaterialCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-browser/commands/DeleteImportedKeyMaterialCommand", "DeleteImportedKeyMaterialCommand")
   @js.native
   class DeleteImportedKeyMaterialCommand protected () extends Command[
           InputTypesUnion, 

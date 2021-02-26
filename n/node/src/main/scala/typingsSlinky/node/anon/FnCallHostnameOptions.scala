@@ -3,12 +3,13 @@ package typingsSlinky.node.anon
 import typingsSlinky.node.dnsMod.RecordWithTtl
 import typingsSlinky.node.dnsMod.ResolveOptions
 import typingsSlinky.node.dnsMod.ResolveWithTtlOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FnCallHostnameOptions extends js.Object {
+trait FnCallHostnameOptions extends StObject {
   
   def apply(hostname: String): js.Promise[js.Array[String]] = js.native
   def apply(hostname: String, options: ResolveOptions): js.Promise[js.Array[RecordWithTtl | String]] = js.native

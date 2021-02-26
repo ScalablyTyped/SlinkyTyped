@@ -10,9 +10,9 @@ A smaller version of caniuse-db, with only the essentials!
 | ------------------ | :-------------: |
 | Full name          | caniuse-lite |
 | Keywords           | support, css, js, html5, svg |
-| # releases         | 178 |
-| # dependents       | 96 |
-| # downloads        | 455113083 |
+| # releases         | 201 |
+| # dependents       | 231 |
+| # downloads        | 835156131 |
 | # stars            | 4 |
 
 ## Links

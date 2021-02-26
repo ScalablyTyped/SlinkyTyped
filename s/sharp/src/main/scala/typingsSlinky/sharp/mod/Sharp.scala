@@ -7,6 +7,7 @@ import typingsSlinky.sharp.anon.Data
 import typingsSlinky.sharp.anon.ResolveWithObject
 import typingsSlinky.sharp.anon.`0`
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

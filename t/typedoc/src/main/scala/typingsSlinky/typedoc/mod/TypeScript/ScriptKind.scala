@@ -1,12 +1,13 @@
 package typingsSlinky.typedoc.mod.TypeScript
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.ScriptKind")
 @js.native
-object ScriptKind extends js.Object {
+object ScriptKind extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.typescript.mod.ScriptKind with Double] = js.native

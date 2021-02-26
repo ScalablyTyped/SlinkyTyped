@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.indexMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("babylonjs/index", "AutoRotationBehavior")
 @js.native
 class AutoRotationBehavior ()
-  extends typingsSlinky.babylonjs.autoRotationBehaviorMod.AutoRotationBehavior
+  extends typingsSlinky.babylonjs.behaviorsIndexMod.AutoRotationBehavior

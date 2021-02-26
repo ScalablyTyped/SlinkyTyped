@@ -1,22 +1,29 @@
 package typingsSlinky.pdfViewerReactjs.components
 
+import org.scalajs.dom.raw.Document
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.pdfViewerReactjs.mod.Document
 import typingsSlinky.pdfViewerReactjs.mod.Err
 import typingsSlinky.pdfViewerReactjs.mod.PDFViewerProps
 import typingsSlinky.pdfViewerReactjs.mod.Watermark
 import typingsSlinky.pdfViewerReactjs.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PdfViewerReactjs {
   
+  @scala.inline
+  def apply(document: Document): Builder = {
+    val __props = js.Dynamic.literal(document = document.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PDFViewerProps]))
+  }
+  
   @JSImport("pdf-viewer-reactjs", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,10 +52,10 @@ object PdfViewerReactjs {
     def hideZoom(value: Boolean): this.type = set("hideZoom", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loaderReactElement(value: ReactElement): this.type = set("loader", value.asInstanceOf[js.Any])
+    def loader(value: ReactElement): this.type = set("loader", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loader(value: ReactElement): this.type = set("loader", value.asInstanceOf[js.Any])
+    def loaderReactElement(value: ReactElement): this.type = set("loader", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maxScale(value: Double): this.type = set("maxScale", value.asInstanceOf[js.Any])
@@ -97,10 +104,4 @@ object PdfViewerReactjs {
   }
   
   def withProps(p: PDFViewerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(document: Document): Builder = {
-    val __props = js.Dynamic.literal(document = document.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PDFViewerProps]))
-  }
 }

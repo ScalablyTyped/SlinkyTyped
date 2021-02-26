@@ -3,13 +3,14 @@ package typingsSlinky.cesium.mod
 import typingsSlinky.cesium.anon.IsStopIncluded
 import typingsSlinky.cesium.mod.TimeInterval.DataComparer
 import typingsSlinky.cesium.mod.TimeInterval.MergeCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "TimeIntervalCollection")
 @js.native
-class TimeIntervalCollection () extends js.Object {
+class TimeIntervalCollection () extends StObject {
   def this(intervals: js.Array[TimeInterval]) = this()
   
   def addInterval(interval: TimeInterval): Unit = js.native

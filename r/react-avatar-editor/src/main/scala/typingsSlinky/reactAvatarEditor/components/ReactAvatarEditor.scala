@@ -9,23 +9,27 @@ import typingsSlinky.reactAvatarEditor.mod.AvatarEditorProps
 import typingsSlinky.reactAvatarEditor.mod.ImageState
 import typingsSlinky.reactAvatarEditor.mod.Position
 import typingsSlinky.reactAvatarEditor.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactAvatarEditor {
   
+  @scala.inline
+  def apply(image: String | File): Builder = {
+    val __props = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AvatarEditorProps]))
+  }
+  
   @JSImport("react-avatar-editor", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
-    
-    @scala.inline
-    def borderVarargs(value: Double*): this.type = set("border", js.Array(value :_*))
     
     @scala.inline
     def border(value: Double | js.Array[Double]): this.type = set("border", value.asInstanceOf[js.Any])
@@ -34,13 +38,16 @@ object ReactAvatarEditor {
     def borderRadius(value: Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def borderVarargs(value: Double*): this.type = set("border", js.Array(value :_*))
+    
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def colorVarargs(value: Double*): this.type = set("color", js.Array(value :_*))
+    def color(value: js.Array[Double]): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def color(value: js.Array[Double]): this.type = set("color", value.asInstanceOf[js.Any])
+    def colorVarargs(value: Double*): this.type = set("color", js.Array(value :_*))
     
     @scala.inline
     def crossOrigin(value: String): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
@@ -95,10 +102,4 @@ object ReactAvatarEditor {
   }
   
   def withProps(p: AvatarEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(image: String | File): Builder = {
-    val __props = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AvatarEditorProps]))
-  }
 }

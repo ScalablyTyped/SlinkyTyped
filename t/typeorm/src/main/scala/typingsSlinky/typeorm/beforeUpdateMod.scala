@@ -1,13 +1,14 @@
 package typingsSlinky.typeorm
 
 import typingsSlinky.std.PropertyDecorator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/decorator/listeners/BeforeUpdate", JSImport.Namespace)
-@js.native
-object beforeUpdateMod extends js.Object {
+object beforeUpdateMod {
   
+  @JSImport("typeorm/browser/decorator/listeners/BeforeUpdate", "BeforeUpdate")
+  @js.native
   def BeforeUpdate(): PropertyDecorator = js.native
 }

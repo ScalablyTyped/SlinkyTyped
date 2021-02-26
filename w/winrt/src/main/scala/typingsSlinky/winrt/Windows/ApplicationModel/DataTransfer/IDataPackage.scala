@@ -5,12 +5,13 @@ import typingsSlinky.winrt.Windows.Foundation.Collections.IMap
 import typingsSlinky.winrt.Windows.Foundation.Uri
 import typingsSlinky.winrt.Windows.Storage.IStorageItem
 import typingsSlinky.winrt.Windows.Storage.Streams.RandomAccessStreamReference
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IDataPackage extends js.Object {
+trait IDataPackage extends StObject {
   
   def getView(): DataPackageView = js.native
   

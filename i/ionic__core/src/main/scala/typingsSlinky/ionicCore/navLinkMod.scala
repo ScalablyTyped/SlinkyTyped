@@ -6,14 +6,14 @@ import typingsSlinky.ionicCore.interfaceMod.RouterDirection
 import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.navInterfaceMod.NavComponent
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/nav-link/nav-link", JSImport.Namespace)
-@js.native
-object navLinkMod extends js.Object {
+object navLinkMod {
   
+  @JSImport("@ionic/core/dist/types/components/nav-link/nav-link", "NavLink")
   @js.native
   class NavLink () extends ComponentInterface {
     

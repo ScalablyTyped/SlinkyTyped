@@ -77,6 +77,7 @@ import typingsSlinky.reactMdCard.reactMdCardStrings.bottom
 import typingsSlinky.reactMdCard.reactMdCardStrings.center
 import typingsSlinky.reactMdCard.reactMdCardStrings.none
 import typingsSlinky.reactMdCard.reactMdCardStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -85,7 +86,7 @@ object CardHeader {
   
   @JSImport("@react-md/card", "CardHeader")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -99,10 +100,10 @@ object CardHeader {
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def afterChildrenReactElement(value: ReactElement): this.type = set("afterChildren", value.asInstanceOf[js.Any])
+    def afterChildren(value: ReactElement): this.type = set("afterChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def afterChildren(value: ReactElement): this.type = set("afterChildren", value.asInstanceOf[js.Any])
+    def afterChildrenReactElement(value: ReactElement): this.type = set("afterChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def align(value: top | center | bottom | none): this.type = set("align", value.asInstanceOf[js.Any])
@@ -263,10 +264,10 @@ object CardHeader {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def beforeChildrenReactElement(value: ReactElement): this.type = set("beforeChildren", value.asInstanceOf[js.Any])
+    def beforeChildren(value: ReactElement): this.type = set("beforeChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def beforeChildren(value: ReactElement): this.type = set("beforeChildren", value.asInstanceOf[js.Any])
+    def beforeChildrenReactElement(value: ReactElement): this.type = set("beforeChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -293,10 +294,10 @@ object CardHeader {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -634,7 +635,7 @@ object CardHeader {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CardHeaderProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: CardHeader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CardHeaderProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

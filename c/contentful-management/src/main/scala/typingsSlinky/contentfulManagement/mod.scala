@@ -2,13 +2,14 @@ package typingsSlinky.contentfulManagement
 
 import typingsSlinky.contentfulManagement.createCmaHttpClientMod.ClientParams
 import typingsSlinky.contentfulManagement.createContentfulApiMod.ClientAPI
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("contentful-management", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("contentful-management", "createClient")
+  @js.native
   def createClient(params: ClientParams): ClientAPI = js.native
 }

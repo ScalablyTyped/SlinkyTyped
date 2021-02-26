@@ -4,15 +4,15 @@
 Typings are for version 0.26
 
 ## Library description:
-High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP and TIFF images
+High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | sharp |
-| Keywords           | jpeg, png, webp, tiff, gif, svg, dzi, image, resize, thumbnail, crop, embed, libvips, vips |
-| # releases         | 21 |
-| # dependents       | 927 |
-| # downloads        | 20121824 |
+| Keywords           | jpeg, png, webp, avif, tiff, gif, svg, dzi, image, resize, thumbnail, crop, embed, libvips, vips |
+| # releases         | 22 |
+| # dependents       | 1425 |
+| # downloads        | 53518204 |
 | # stars            | 126 |
 
 ## Links

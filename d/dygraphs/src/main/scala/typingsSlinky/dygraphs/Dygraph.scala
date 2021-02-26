@@ -8,12 +8,13 @@ import typingsSlinky.dygraphs.dygraphs.Options
 import typingsSlinky.dygraphs.dygraphs.SeriesProperties
 import typingsSlinky.dygraphs.dygraphsStrings.x
 import typingsSlinky.dygraphs.dygraphsStrings.y
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Dygraph extends js.Object {
+trait Dygraph extends StObject {
   
   /**
     * Adjusts the number of points in the rolling average. Updates the graph to

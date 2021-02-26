@@ -17,15 +17,16 @@ import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.GridAreaType
 import typingsSlinky.grommet.utilsMod.MarginType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Meter {
   
-  @JSImport("grommet/es6", "Meter")
+  @JSImport("grommet", "Meter")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -63,13 +64,13 @@ object Meter {
     def `type`(value: bar | circle): this.type = set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valuesVarargs(value: Highlight*): this.type = set("values", js.Array(value :_*))
+    def values(value: js.Array[Highlight]): this.type = set("values", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def values(value: js.Array[Highlight]): this.type = set("values", value.asInstanceOf[js.Any])
+    def valuesVarargs(value: Highlight*): this.type = set("values", js.Array(value :_*))
   }
   
-  def withProps(p: MeterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Meter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MeterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -2,12 +2,13 @@ package typingsSlinky.muicss.reactMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.muicss.tabMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TabProps extends js.Object {
+trait TabProps extends StObject {
   
   var label: js.UndefOr[ReactElement] = js.native
   
@@ -24,39 +25,27 @@ object TabProps {
   }
   
   @scala.inline
-  implicit class TabPropsOps[Self <: TabProps] (val x: Self) extends AnyVal {
+  implicit class TabPropsMutableBuilder[Self <: TabProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setLabel(value: ReactElement): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setLabelReactElement(value: ReactElement): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setLabelUndefined: Self = StObject.set(x, "label", js.undefined)
     
     @scala.inline
-    def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setOnActive(value: /* tab */ default => Unit): Self = StObject.set(x, "onActive", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setOnActiveUndefined: Self = StObject.set(x, "onActive", js.undefined)
     
     @scala.inline
-    def deleteLabel: Self = this.set("label", js.undefined)
+    def setValue(value: js.Any): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnActive(value: /* tab */ default => Unit): Self = this.set("onActive", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnActive: Self = this.set("onActive", js.undefined)
-    
-    @scala.inline
-    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValue: Self = this.set("value", js.undefined)
+    def setValueUndefined: Self = StObject.set(x, "value", js.undefined)
   }
 }

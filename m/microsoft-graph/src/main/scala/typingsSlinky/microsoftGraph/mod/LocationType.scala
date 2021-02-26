@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,17 +17,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.localBusiness
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.postalAddress
 */
-trait LocationType extends js.Object
+trait LocationType extends StObject
 object LocationType {
+  
+  @scala.inline
+  def default: typingsSlinky.microsoftGraph.microsoftGraphStrings.default = "default".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.default]
   
   @scala.inline
   def businessAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.businessAddress = "businessAddress".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.businessAddress]
   
   @scala.inline
   def conferenceRoom: typingsSlinky.microsoftGraph.microsoftGraphStrings.conferenceRoom = "conferenceRoom".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.conferenceRoom]
-  
-  @scala.inline
-  def default: typingsSlinky.microsoftGraph.microsoftGraphStrings.default = "default".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.default]
   
   @scala.inline
   def geoCoordinates: typingsSlinky.microsoftGraph.microsoftGraphStrings.geoCoordinates = "geoCoordinates".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.geoCoordinates]

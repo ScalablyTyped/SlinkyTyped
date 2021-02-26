@@ -2,16 +2,15 @@ package typingsSlinky.requestretry
 
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.requestretry.mod.RetryStrategy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait FnCall extends js.Object {
+  trait FnCall extends StObject {
     
     def apply[TResult1, TResult2](): js.Promise[TResult1 | TResult2] = js.native
     def apply[TResult1, TResult2](
@@ -27,14 +26,14 @@ object anon extends js.Object {
   }
   
   @js.native
-  trait FnCallOnrejected extends js.Object {
+  trait FnCallOnrejected extends StObject {
     
     def apply[TResult](): js.Promise[_ | TResult] = js.native
     def apply[TResult](onrejected: js.Function1[/* reason */ js.Any, TResult | js.Thenable[TResult]]): js.Promise[_ | TResult] = js.native
   }
   
   @js.native
-  trait HTTPOrNetworkError extends js.Object {
+  trait HTTPOrNetworkError extends StObject {
     
     def HTTPOrNetworkError(err: js.Error, response: IncomingMessage, body: js.Any): Boolean = js.native
     @JSName("HTTPOrNetworkError")

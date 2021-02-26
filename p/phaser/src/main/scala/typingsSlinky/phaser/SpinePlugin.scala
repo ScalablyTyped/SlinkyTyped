@@ -15,6 +15,7 @@ import typingsSlinky.phaser.spine.VertexEffect
 import typingsSlinky.phaser.spine.canvas.SkeletonRenderer
 import typingsSlinky.phaser.spine.webgl.SceneRenderer
 import typingsSlinky.phaser.spine.webgl.SkeletonDebugRenderer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

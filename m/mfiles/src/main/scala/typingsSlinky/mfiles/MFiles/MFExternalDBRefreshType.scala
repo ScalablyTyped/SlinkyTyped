@@ -3,6 +3,7 @@ package typingsSlinky.mfiles.MFiles
 import typingsSlinky.mfiles.mfilesNumbers.`0`
 import typingsSlinky.mfiles.mfilesNumbers.`1`
 import typingsSlinky.mfiles.mfilesNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mfiles.mfilesNumbers.`1`
   - typingsSlinky.mfiles.mfilesNumbers.`2`
 */
-trait MFExternalDBRefreshType extends js.Object
+trait MFExternalDBRefreshType extends StObject
 object MFExternalDBRefreshType {
   
   @scala.inline

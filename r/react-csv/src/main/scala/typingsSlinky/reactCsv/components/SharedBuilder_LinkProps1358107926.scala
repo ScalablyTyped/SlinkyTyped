@@ -77,6 +77,7 @@ import typingsSlinky.reactCsv.reactCsvStrings.tree
 import typingsSlinky.reactCsv.reactCsvStrings.url
 import typingsSlinky.reactCsv.reactCsvStrings.vertical
 import typingsSlinky.reactCsv.reactCsvStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -272,10 +273,10 @@ class SharedBuilder_LinkProps1358107926[R <: js.Object] (val args: js.Array[js.A
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -293,10 +294,10 @@ class SharedBuilder_LinkProps1358107926[R <: js.Object] (val args: js.Array[js.A
   def filename(value: String): this.type = set("filename", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def headersVarargs(value: (LabelKeyObject | String)*): this.type = set("headers", js.Array(value :_*))
+  def headers(value: Headers): this.type = set("headers", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def headers(value: Headers): this.type = set("headers", value.asInstanceOf[js.Any])
+  def headersVarargs(value: (LabelKeyObject | String)*): this.type = set("headers", js.Array(value :_*))
   
   @scala.inline
   def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -371,15 +372,15 @@ class SharedBuilder_LinkProps1358107926[R <: js.Object] (val args: js.Array[js.A
   def onChange(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
   
   @scala.inline
-  def onClickFunction2(
-    value: (/* event */ MouseEventHandler[HTMLAnchorElement], /* done */ js.Function1[/* proceed */ js.UndefOr[Boolean], Unit]) => Unit
-  ): this.type = set("onClick", js.Any.fromFunction2(value))
+  def onClick(value: SyncClickHandler | AsyncClickHandler): this.type = set("onClick", value.asInstanceOf[js.Any])
   
   @scala.inline
   def onClickFunction1(value: /* event */ MouseEventHandler[HTMLAnchorElement] => Boolean | Unit): this.type = set("onClick", js.Any.fromFunction1(value))
   
   @scala.inline
-  def onClick(value: SyncClickHandler | AsyncClickHandler): this.type = set("onClick", value.asInstanceOf[js.Any])
+  def onClickFunction2(
+    value: (/* event */ MouseEventHandler[HTMLAnchorElement], /* done */ js.Function1[/* proceed */ js.UndefOr[Boolean], Unit]) => Unit
+  ): this.type = set("onClick", js.Any.fromFunction2(value))
   
   @scala.inline
   def onCompositionEnd(value: SyntheticCompositionEvent[HTMLAnchorElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))

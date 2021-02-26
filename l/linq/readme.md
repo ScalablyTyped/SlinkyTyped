@@ -11,8 +11,8 @@ linq.js - LINQ for JavaScript library packaged for node.js
 | Full name          | linq |
 | Keywords           | linq |
 | # releases         | 5 |
-| # dependents       | 87 |
-| # downloads        | 553867 |
+| # dependents       | 108 |
+| # downloads        | 1019193 |
 | # stars            | 7 |
 
 ## Links

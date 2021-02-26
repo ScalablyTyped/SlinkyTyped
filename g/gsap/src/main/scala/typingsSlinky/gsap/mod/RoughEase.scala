@@ -1,6 +1,7 @@
 package typingsSlinky.gsap.mod
 
 import typingsSlinky.gsap.gsap.RoughEaseConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,10 +12,16 @@ class RoughEase protected ()
   extends typingsSlinky.gsap.gsap.RoughEase {
   def this(vars: RoughEaseConfig) = this()
 }
-/* static members */
-@JSImport("gsap", "RoughEase")
-@js.native
-object RoughEase extends js.Object {
+object RoughEase {
   
-  var ease: typingsSlinky.gsap.gsap.RoughEase = js.native
+  @JSImport("gsap", "RoughEase")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSImport("gsap", "RoughEase.ease")
+  @js.native
+  def ease: typingsSlinky.gsap.gsap.RoughEase = js.native
+  @scala.inline
+  def ease_=(x: typingsSlinky.gsap.gsap.RoughEase): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ease")(x.asInstanceOf[js.Any])
 }

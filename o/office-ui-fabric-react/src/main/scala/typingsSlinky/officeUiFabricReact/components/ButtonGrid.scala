@@ -2,21 +2,22 @@ package typingsSlinky.officeUiFabricReact.components
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.officeUiFabricReact.buttonGridTypesMod.IButtonGridProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ButtonGrid {
   
+  @scala.inline
+  def apply(columnCount: Double, items: js.Array[_], onRenderItem: (js.Any, Double) => ReactElement): SharedBuilder_IButtonGridProps523119058[js.Object] = {
+    val __props = js.Dynamic.literal(columnCount = columnCount.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], onRenderItem = js.Any.fromFunction2(onRenderItem))
+    new SharedBuilder_IButtonGridProps523119058[js.Object](js.Array(this.component, __props.asInstanceOf[IButtonGridProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "ButtonGrid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
-  def withProps(p: IButtonGridProps): SharedBuilder_IButtonGridProps2062964594 = new SharedBuilder_IButtonGridProps2062964594(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(columnCount: Double, items: js.Array[_], onRenderItem: (js.Any, Double) => ReactElement): SharedBuilder_IButtonGridProps2062964594 = {
-    val __props = js.Dynamic.literal(columnCount = columnCount.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], onRenderItem = js.Any.fromFunction2(onRenderItem))
-    new SharedBuilder_IButtonGridProps2062964594(js.Array(this.component, __props.asInstanceOf[IButtonGridProps]))
-  }
+  def withProps(p: IButtonGridProps): SharedBuilder_IButtonGridProps523119058[js.Object] = new SharedBuilder_IButtonGridProps523119058[js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

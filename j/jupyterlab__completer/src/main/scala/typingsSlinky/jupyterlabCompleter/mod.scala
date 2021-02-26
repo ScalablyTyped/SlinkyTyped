@@ -1,18 +1,18 @@
 package typingsSlinky.jupyterlabCompleter
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.Shortcut
 import typingsSlinky.jupyterlabCompleter.jupyterlabCompleterStrings.ICompletionItemsReply
 import typingsSlinky.jupyterlabCompleter.widgetMod.Completer.IOptions
 import typingsSlinky.luminoCoreutils.mod.Token
 import typingsSlinky.luminoMessaging.mod.Message
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/completer", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@jupyterlab/completer", "Completer")
   @js.native
   class Completer protected ()
     extends typingsSlinky.jupyterlabCompleter.widgetMod.Completer {
@@ -21,26 +21,30 @@ object mod extends js.Object {
       */
     def this(options: IOptions) = this()
   }
-  @js.native
-  object Completer extends js.Object {
-    
-    /**
-      * The default `IRenderer` instance.
-      */
-    val defaultRenderer: typingsSlinky.jupyterlabCompleter.widgetMod.Completer.Renderer = js.native
+  object Completer {
     
     /**
       * The default implementation of an `IRenderer`.
       */
+    @JSImport("@jupyterlab/completer", "Completer.Renderer")
     @js.native
     class Renderer ()
       extends typingsSlinky.jupyterlabCompleter.widgetMod.Completer.Renderer
+    
+    /**
+      * The default `IRenderer` instance.
+      */
+    @JSImport("@jupyterlab/completer", "Completer.defaultRenderer")
+    @js.native
+    val defaultRenderer: typingsSlinky.jupyterlabCompleter.widgetMod.Completer.Renderer = js.native
   }
   
+  @JSImport("@jupyterlab/completer", "CompleterModel")
   @js.native
   class CompleterModel ()
     extends typingsSlinky.jupyterlabCompleter.modelMod.CompleterModel
   
+  @JSImport("@jupyterlab/completer", "CompletionConnector")
   @js.native
   class CompletionConnector protected ()
     extends typingsSlinky.jupyterlabCompleter.connectorMod.CompletionConnector {
@@ -52,6 +56,7 @@ object mod extends js.Object {
     def this(options: typingsSlinky.jupyterlabCompleter.connectorMod.CompletionConnector.IOptions) = this()
   }
   
+  @JSImport("@jupyterlab/completer", "CompletionHandler")
   @js.native
   class CompletionHandler protected ()
     extends typingsSlinky.jupyterlabCompleter.handlerMod.CompletionHandler {
@@ -60,24 +65,27 @@ object mod extends js.Object {
       */
     def this(options: typingsSlinky.jupyterlabCompleter.handlerMod.CompletionHandler.IOptions) = this()
   }
-  @js.native
-  object CompletionHandler extends js.Object {
+  object CompletionHandler {
     
+    @JSImport("@jupyterlab/completer", "CompletionHandler.ICompletionItemsResponseType")
+    @js.native
     val ICompletionItemsResponseType: ICompletionItemsReply = js.native
     
     /**
       * A namespace for completion handler messages.
       */
-    @js.native
-    object Msg extends js.Object {
+    object Msg {
       
       /**
         * A singleton `'invoke-request'` message.
         */
+      @JSImport("@jupyterlab/completer", "CompletionHandler.Msg.InvokeRequest")
+      @js.native
       val InvokeRequest: Message = js.native
     }
   }
   
+  @JSImport("@jupyterlab/completer", "ContextConnector")
   @js.native
   class ContextConnector protected ()
     extends typingsSlinky.jupyterlabCompleter.contextconnectorMod.ContextConnector {
@@ -89,10 +97,19 @@ object mod extends js.Object {
     def this(options: typingsSlinky.jupyterlabCompleter.contextconnectorMod.ContextConnector.IOptions) = this()
   }
   
-  @js.native
-  object ICompletionManager
-    extends TopLevel[Token[typingsSlinky.jupyterlabCompleter.tokensMod.ICompletionManager]]
+  object ICompletionManager extends Shortcut {
+    
+    @JSImport("@jupyterlab/completer", "ICompletionManager")
+    @js.native
+    val ^ : Token[typingsSlinky.jupyterlabCompleter.tokensMod.ICompletionManager] = js.native
+    
+    type _To = Token[typingsSlinky.jupyterlabCompleter.tokensMod.ICompletionManager]
+    
+    /* This means you don't have to write `^`, but can instead just say `ICompletionManager.foo` */
+    override def _to: Token[typingsSlinky.jupyterlabCompleter.tokensMod.ICompletionManager] = ^
+  }
   
+  @JSImport("@jupyterlab/completer", "KernelConnector")
   @js.native
   class KernelConnector protected ()
     extends typingsSlinky.jupyterlabCompleter.kernelconnectorMod.KernelConnector {

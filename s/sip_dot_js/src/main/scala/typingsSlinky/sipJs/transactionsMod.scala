@@ -7,14 +7,14 @@ import typingsSlinky.sipJs.transactionStateMod.TransactionState
 import typingsSlinky.sipJs.transactionUserMod.ClientTransactionUser
 import typingsSlinky.sipJs.transactionUserMod.ServerTransactionUser
 import typingsSlinky.sipJs.transactionUserMod.TransactionUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/core/transactions", JSImport.Namespace)
-@js.native
-object transactionsMod extends js.Object {
+object transactionsMod {
   
+  @JSImport("sip.js/lib/core/transactions", "ClientTransaction")
   @js.native
   abstract class ClientTransaction protected ()
     extends typingsSlinky.sipJs.clientTransactionMod.ClientTransaction {
@@ -27,12 +27,20 @@ object transactionsMod extends js.Object {
     ) = this()
   }
   /* static members */
-  @js.native
-  object ClientTransaction extends js.Object {
+  object ClientTransaction {
     
-    var makeId: js.Any = js.native
+    @JSImport("sip.js/lib/core/transactions", "ClientTransaction")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("sip.js/lib/core/transactions", "ClientTransaction.makeId")
+    @js.native
+    def makeId: js.Any = js.native
+    @scala.inline
+    def makeId_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("makeId")(x.asInstanceOf[js.Any])
   }
   
+  @JSImport("sip.js/lib/core/transactions", "InviteClientTransaction")
   @js.native
   class InviteClientTransaction protected ()
     extends typingsSlinky.sipJs.inviteClientTransactionMod.InviteClientTransaction {
@@ -50,6 +58,7 @@ object transactionsMod extends js.Object {
     def this(request: OutgoingRequestMessage, transport: Transport, user: ClientTransactionUser) = this()
   }
   
+  @JSImport("sip.js/lib/core/transactions", "InviteServerTransaction")
   @js.native
   class InviteServerTransaction protected ()
     extends typingsSlinky.sipJs.inviteServerTransactionMod.InviteServerTransaction {
@@ -66,6 +75,7 @@ object transactionsMod extends js.Object {
     def this(request: IncomingRequestMessage, transport: Transport, user: ServerTransactionUser) = this()
   }
   
+  @JSImport("sip.js/lib/core/transactions", "NonInviteClientTransaction")
   @js.native
   class NonInviteClientTransaction protected ()
     extends typingsSlinky.sipJs.nonInviteClientTransactionMod.NonInviteClientTransaction {
@@ -83,6 +93,7 @@ object transactionsMod extends js.Object {
     def this(request: OutgoingRequestMessage, transport: Transport, user: ClientTransactionUser) = this()
   }
   
+  @JSImport("sip.js/lib/core/transactions", "NonInviteServerTransaction")
   @js.native
   class NonInviteServerTransaction protected ()
     extends typingsSlinky.sipJs.nonInviteServerTransactionMod.NonInviteServerTransaction {
@@ -98,6 +109,7 @@ object transactionsMod extends js.Object {
     def this(request: IncomingRequestMessage, transport: Transport, user: ServerTransactionUser) = this()
   }
   
+  @JSImport("sip.js/lib/core/transactions", "ServerTransaction")
   @js.native
   abstract class ServerTransaction protected ()
     extends typingsSlinky.sipJs.serverTransactionMod.ServerTransaction {
@@ -110,6 +122,7 @@ object transactionsMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("sip.js/lib/core/transactions", "Transaction")
   @js.native
   abstract class Transaction protected ()
     extends typingsSlinky.sipJs.transactionMod.Transaction {
@@ -122,8 +135,9 @@ object transactionsMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("sip.js/lib/core/transactions", "TransactionState")
   @js.native
-  object TransactionState extends js.Object {
+  object TransactionState extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.sipJs.transactionStateMod.TransactionState with String] = js.native

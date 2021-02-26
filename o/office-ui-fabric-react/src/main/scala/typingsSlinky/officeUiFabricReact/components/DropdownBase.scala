@@ -89,15 +89,22 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DropdownBase {
   
+  @scala.inline
+  def apply(options: js.Array[IDropdownOption]): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDropdownInternalProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "DropdownBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -278,13 +285,13 @@ object DropdownBase {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IDropdown]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IDropdown | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IDropdown]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IDropdown]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -302,25 +309,25 @@ object DropdownBase {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultSelectedKeyVarargs(value: (Double | String)*): this.type = set("defaultSelectedKey", js.Array(value :_*))
-    
-    @scala.inline
     def defaultSelectedKey(value: String | Double | (js.Array[Double | String])): this.type = set("defaultSelectedKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultSelectedKeyNull: this.type = set("defaultSelectedKey", null)
     
     @scala.inline
-    def defaultSelectedKeysVarargs(value: (Double | String)*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
+    def defaultSelectedKeyVarargs(value: (Double | String)*): this.type = set("defaultSelectedKey", js.Array(value :_*))
     
     @scala.inline
     def defaultSelectedKeys(value: js.Array[Double | String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultSelectedKeysVarargs(value: (Double | String)*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
     
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -722,22 +729,22 @@ object DropdownBase {
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedKeyVarargs(value: (Double | String)*): this.type = set("selectedKey", js.Array(value :_*))
-    
-    @scala.inline
     def selectedKey(value: String | Double | (js.Array[Double | String])): this.type = set("selectedKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def selectedKeyNull: this.type = set("selectedKey", null)
     
     @scala.inline
-    def selectedKeysVarargs(value: (Double | String)*): this.type = set("selectedKeys", js.Array(value :_*))
+    def selectedKeyVarargs(value: (Double | String)*): this.type = set("selectedKey", js.Array(value :_*))
     
     @scala.inline
     def selectedKeys(value: js.Array[Double | String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
     def selectedKeysNull: this.type = set("selectedKeys", null)
+    
+    @scala.inline
+    def selectedKeysVarargs(value: (Double | String)*): this.type = set("selectedKeys", js.Array(value :_*))
     
     @scala.inline
     def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
@@ -749,10 +756,10 @@ object DropdownBase {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IDropdownStyleProps => DeepPartial[IDropdownStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IDropdownStyleProps, IDropdownStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IDropdownStyleProps, IDropdownStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IDropdownStyleProps => DeepPartial[IDropdownStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -783,10 +790,4 @@ object DropdownBase {
   }
   
   def withProps(p: IDropdownInternalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(options: js.Array[IDropdownOption]): Builder = {
-    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IDropdownInternalProps]))
-  }
 }

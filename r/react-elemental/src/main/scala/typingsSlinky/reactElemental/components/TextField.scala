@@ -79,15 +79,102 @@ import typingsSlinky.reactElemental.reactElementalStrings.tree
 import typingsSlinky.reactElemental.reactElementalStrings.url
 import typingsSlinky.reactElemental.reactElementalStrings.vertical
 import typingsSlinky.reactElemental.reactElementalStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TextField {
   
+  @scala.inline
+  def apply(
+    onAbort: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onAnimationEnd: js.UndefOr[AnimationEventHandler[HTMLTextAreaElement]] with js.UndefOr[AnimationEventHandler[HTMLInputElement]],
+    onAnimationIteration: js.UndefOr[AnimationEventHandler[HTMLTextAreaElement]] with js.UndefOr[AnimationEventHandler[HTMLInputElement]],
+    onAnimationStart: js.UndefOr[AnimationEventHandler[HTMLTextAreaElement]] with js.UndefOr[AnimationEventHandler[HTMLInputElement]],
+    onAuxClick: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onBeforeInput: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]],
+    onBlur: js.UndefOr[FocusEventHandler[HTMLTextAreaElement]] with js.UndefOr[FocusEventHandler[HTMLInputElement]],
+    onCanPlay: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onCanPlayThrough: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onChange: js.UndefOr[ChangeEventHandler[HTMLTextAreaElement]] with js.UndefOr[ChangeEventHandler[HTMLInputElement]],
+    onClick: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onCompositionEnd: js.UndefOr[CompositionEventHandler[HTMLTextAreaElement]] with js.UndefOr[CompositionEventHandler[HTMLInputElement]],
+    onCompositionStart: js.UndefOr[CompositionEventHandler[HTMLTextAreaElement]] with js.UndefOr[CompositionEventHandler[HTMLInputElement]],
+    onCompositionUpdate: js.UndefOr[CompositionEventHandler[HTMLTextAreaElement]] with js.UndefOr[CompositionEventHandler[HTMLInputElement]],
+    onContextMenu: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onCopy: js.UndefOr[ClipboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[ClipboardEventHandler[HTMLInputElement]],
+    onCut: js.UndefOr[ClipboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[ClipboardEventHandler[HTMLInputElement]],
+    onDoubleClick: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onDrag: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
+    onDragEnd: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
+    onDragEnter: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
+    onDragExit: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
+    onDragLeave: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
+    onDragOver: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
+    onDragStart: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
+    onDrop: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
+    onDurationChange: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onEmptied: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onEncrypted: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onEnded: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onError: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onFocus: js.UndefOr[FocusEventHandler[HTMLTextAreaElement]] with js.UndefOr[FocusEventHandler[HTMLInputElement]],
+    onInput: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]],
+    onInvalid: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]],
+    onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[KeyboardEventHandler[HTMLInputElement]],
+    onKeyPress: js.UndefOr[KeyboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[KeyboardEventHandler[HTMLInputElement]],
+    onKeyUp: js.UndefOr[KeyboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[KeyboardEventHandler[HTMLInputElement]],
+    onLoad: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onLoadStart: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onLoadedData: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onLoadedMetadata: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onMouseDown: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onMouseEnter: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onMouseLeave: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onMouseMove: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onMouseOut: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onMouseOver: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onMouseUp: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
+    onPaste: js.UndefOr[ClipboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[ClipboardEventHandler[HTMLInputElement]],
+    onPause: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onPlay: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onPlaying: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onPointerCancel: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
+    onPointerDown: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
+    onPointerEnter: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
+    onPointerLeave: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
+    onPointerMove: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
+    onPointerOut: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
+    onPointerOver: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
+    onPointerUp: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
+    onProgress: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onRateChange: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onReset: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]],
+    onScroll: js.UndefOr[UIEventHandler[HTMLTextAreaElement]] with js.UndefOr[UIEventHandler[HTMLInputElement]],
+    onSeeked: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onSeeking: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onSelect: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onStalled: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onSubmit: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]],
+    onSuspend: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onTimeUpdate: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onTouchCancel: js.UndefOr[TouchEventHandler[HTMLTextAreaElement]] with js.UndefOr[TouchEventHandler[HTMLInputElement]],
+    onTouchEnd: js.UndefOr[TouchEventHandler[HTMLTextAreaElement]] with js.UndefOr[TouchEventHandler[HTMLInputElement]],
+    onTouchMove: js.UndefOr[TouchEventHandler[HTMLTextAreaElement]] with js.UndefOr[TouchEventHandler[HTMLInputElement]],
+    onTouchStart: js.UndefOr[TouchEventHandler[HTMLTextAreaElement]] with js.UndefOr[TouchEventHandler[HTMLInputElement]],
+    onTransitionEnd: js.UndefOr[TransitionEventHandler[HTMLTextAreaElement]] with js.UndefOr[TransitionEventHandler[HTMLInputElement]],
+    onVolumeChange: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onWaiting: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
+    onWheel: js.UndefOr[WheelEventHandler[HTMLTextAreaElement]] with js.UndefOr[WheelEventHandler[HTMLInputElement]]
+  ): Builder = {
+    val __props = js.Dynamic.literal(onAbort = onAbort.asInstanceOf[js.Any], onAnimationEnd = onAnimationEnd.asInstanceOf[js.Any], onAnimationIteration = onAnimationIteration.asInstanceOf[js.Any], onAnimationStart = onAnimationStart.asInstanceOf[js.Any], onAuxClick = onAuxClick.asInstanceOf[js.Any], onBeforeInput = onBeforeInput.asInstanceOf[js.Any], onBlur = onBlur.asInstanceOf[js.Any], onCanPlay = onCanPlay.asInstanceOf[js.Any], onCanPlayThrough = onCanPlayThrough.asInstanceOf[js.Any], onChange = onChange.asInstanceOf[js.Any], onClick = onClick.asInstanceOf[js.Any], onCompositionEnd = onCompositionEnd.asInstanceOf[js.Any], onCompositionStart = onCompositionStart.asInstanceOf[js.Any], onCompositionUpdate = onCompositionUpdate.asInstanceOf[js.Any], onContextMenu = onContextMenu.asInstanceOf[js.Any], onCopy = onCopy.asInstanceOf[js.Any], onCut = onCut.asInstanceOf[js.Any], onDoubleClick = onDoubleClick.asInstanceOf[js.Any], onDrag = onDrag.asInstanceOf[js.Any], onDragEnd = onDragEnd.asInstanceOf[js.Any], onDragEnter = onDragEnter.asInstanceOf[js.Any], onDragExit = onDragExit.asInstanceOf[js.Any], onDragLeave = onDragLeave.asInstanceOf[js.Any], onDragOver = onDragOver.asInstanceOf[js.Any], onDragStart = onDragStart.asInstanceOf[js.Any], onDrop = onDrop.asInstanceOf[js.Any], onDurationChange = onDurationChange.asInstanceOf[js.Any], onEmptied = onEmptied.asInstanceOf[js.Any], onEncrypted = onEncrypted.asInstanceOf[js.Any], onEnded = onEnded.asInstanceOf[js.Any], onError = onError.asInstanceOf[js.Any], onFocus = onFocus.asInstanceOf[js.Any], onInput = onInput.asInstanceOf[js.Any], onInvalid = onInvalid.asInstanceOf[js.Any], onKeyDown = onKeyDown.asInstanceOf[js.Any], onKeyPress = onKeyPress.asInstanceOf[js.Any], onKeyUp = onKeyUp.asInstanceOf[js.Any], onLoad = onLoad.asInstanceOf[js.Any], onLoadStart = onLoadStart.asInstanceOf[js.Any], onLoadedData = onLoadedData.asInstanceOf[js.Any], onLoadedMetadata = onLoadedMetadata.asInstanceOf[js.Any], onMouseDown = onMouseDown.asInstanceOf[js.Any], onMouseEnter = onMouseEnter.asInstanceOf[js.Any], onMouseLeave = onMouseLeave.asInstanceOf[js.Any], onMouseMove = onMouseMove.asInstanceOf[js.Any], onMouseOut = onMouseOut.asInstanceOf[js.Any], onMouseOver = onMouseOver.asInstanceOf[js.Any], onMouseUp = onMouseUp.asInstanceOf[js.Any], onPaste = onPaste.asInstanceOf[js.Any], onPause = onPause.asInstanceOf[js.Any], onPlay = onPlay.asInstanceOf[js.Any], onPlaying = onPlaying.asInstanceOf[js.Any], onPointerCancel = onPointerCancel.asInstanceOf[js.Any], onPointerDown = onPointerDown.asInstanceOf[js.Any], onPointerEnter = onPointerEnter.asInstanceOf[js.Any], onPointerLeave = onPointerLeave.asInstanceOf[js.Any], onPointerMove = onPointerMove.asInstanceOf[js.Any], onPointerOut = onPointerOut.asInstanceOf[js.Any], onPointerOver = onPointerOver.asInstanceOf[js.Any], onPointerUp = onPointerUp.asInstanceOf[js.Any], onProgress = onProgress.asInstanceOf[js.Any], onRateChange = onRateChange.asInstanceOf[js.Any], onReset = onReset.asInstanceOf[js.Any], onScroll = onScroll.asInstanceOf[js.Any], onSeeked = onSeeked.asInstanceOf[js.Any], onSeeking = onSeeking.asInstanceOf[js.Any], onSelect = onSelect.asInstanceOf[js.Any], onStalled = onStalled.asInstanceOf[js.Any], onSubmit = onSubmit.asInstanceOf[js.Any], onSuspend = onSuspend.asInstanceOf[js.Any], onTimeUpdate = onTimeUpdate.asInstanceOf[js.Any], onTouchCancel = onTouchCancel.asInstanceOf[js.Any], onTouchEnd = onTouchEnd.asInstanceOf[js.Any], onTouchMove = onTouchMove.asInstanceOf[js.Any], onTouchStart = onTouchStart.asInstanceOf[js.Any], onTransitionEnd = onTransitionEnd.asInstanceOf[js.Any], onVolumeChange = onVolumeChange.asInstanceOf[js.Any], onWaiting = onWaiting.asInstanceOf[js.Any], onWheel = onWheel.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TextFieldProps]))
+  }
+  
   @JSImport("react-elemental", "TextField")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -301,10 +388,10 @@ object TextField {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -484,10 +571,10 @@ object TextField {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -500,90 +587,4 @@ object TextField {
   }
   
   def withProps(p: TextFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    onAbort: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onAnimationEnd: js.UndefOr[AnimationEventHandler[HTMLTextAreaElement]] with js.UndefOr[AnimationEventHandler[HTMLInputElement]],
-    onAnimationIteration: js.UndefOr[AnimationEventHandler[HTMLTextAreaElement]] with js.UndefOr[AnimationEventHandler[HTMLInputElement]],
-    onAnimationStart: js.UndefOr[AnimationEventHandler[HTMLTextAreaElement]] with js.UndefOr[AnimationEventHandler[HTMLInputElement]],
-    onAuxClick: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onBeforeInput: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]],
-    onBlur: js.UndefOr[FocusEventHandler[HTMLTextAreaElement]] with js.UndefOr[FocusEventHandler[HTMLInputElement]],
-    onCanPlay: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onCanPlayThrough: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onChange: js.UndefOr[ChangeEventHandler[HTMLTextAreaElement]] with js.UndefOr[ChangeEventHandler[HTMLInputElement]],
-    onClick: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onCompositionEnd: js.UndefOr[CompositionEventHandler[HTMLTextAreaElement]] with js.UndefOr[CompositionEventHandler[HTMLInputElement]],
-    onCompositionStart: js.UndefOr[CompositionEventHandler[HTMLTextAreaElement]] with js.UndefOr[CompositionEventHandler[HTMLInputElement]],
-    onCompositionUpdate: js.UndefOr[CompositionEventHandler[HTMLTextAreaElement]] with js.UndefOr[CompositionEventHandler[HTMLInputElement]],
-    onContextMenu: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onCopy: js.UndefOr[ClipboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[ClipboardEventHandler[HTMLInputElement]],
-    onCut: js.UndefOr[ClipboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[ClipboardEventHandler[HTMLInputElement]],
-    onDoubleClick: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onDrag: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
-    onDragEnd: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
-    onDragEnter: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
-    onDragExit: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
-    onDragLeave: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
-    onDragOver: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
-    onDragStart: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
-    onDrop: js.UndefOr[DragEventHandler[HTMLTextAreaElement]] with js.UndefOr[DragEventHandler[HTMLInputElement]],
-    onDurationChange: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onEmptied: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onEncrypted: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onEnded: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onError: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onFocus: js.UndefOr[FocusEventHandler[HTMLTextAreaElement]] with js.UndefOr[FocusEventHandler[HTMLInputElement]],
-    onInput: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]],
-    onInvalid: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]],
-    onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[KeyboardEventHandler[HTMLInputElement]],
-    onKeyPress: js.UndefOr[KeyboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[KeyboardEventHandler[HTMLInputElement]],
-    onKeyUp: js.UndefOr[KeyboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[KeyboardEventHandler[HTMLInputElement]],
-    onLoad: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onLoadStart: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onLoadedData: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onLoadedMetadata: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onMouseDown: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onMouseEnter: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onMouseLeave: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onMouseMove: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onMouseOut: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onMouseOver: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onMouseUp: js.UndefOr[MouseEventHandler[HTMLTextAreaElement]] with js.UndefOr[MouseEventHandler[HTMLInputElement]],
-    onPaste: js.UndefOr[ClipboardEventHandler[HTMLTextAreaElement]] with js.UndefOr[ClipboardEventHandler[HTMLInputElement]],
-    onPause: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onPlay: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onPlaying: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onPointerCancel: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
-    onPointerDown: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
-    onPointerEnter: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
-    onPointerLeave: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
-    onPointerMove: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
-    onPointerOut: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
-    onPointerOver: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
-    onPointerUp: js.UndefOr[PointerEventHandler[HTMLTextAreaElement]] with js.UndefOr[PointerEventHandler[HTMLInputElement]],
-    onProgress: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onRateChange: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onReset: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]],
-    onScroll: js.UndefOr[UIEventHandler[HTMLTextAreaElement]] with js.UndefOr[UIEventHandler[HTMLInputElement]],
-    onSeeked: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onSeeking: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onSelect: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onStalled: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onSubmit: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]],
-    onSuspend: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onTimeUpdate: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onTouchCancel: js.UndefOr[TouchEventHandler[HTMLTextAreaElement]] with js.UndefOr[TouchEventHandler[HTMLInputElement]],
-    onTouchEnd: js.UndefOr[TouchEventHandler[HTMLTextAreaElement]] with js.UndefOr[TouchEventHandler[HTMLInputElement]],
-    onTouchMove: js.UndefOr[TouchEventHandler[HTMLTextAreaElement]] with js.UndefOr[TouchEventHandler[HTMLInputElement]],
-    onTouchStart: js.UndefOr[TouchEventHandler[HTMLTextAreaElement]] with js.UndefOr[TouchEventHandler[HTMLInputElement]],
-    onTransitionEnd: js.UndefOr[TransitionEventHandler[HTMLTextAreaElement]] with js.UndefOr[TransitionEventHandler[HTMLInputElement]],
-    onVolumeChange: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onWaiting: js.UndefOr[ReactEventHandler[HTMLTextAreaElement]] with js.UndefOr[ReactEventHandler[HTMLInputElement]],
-    onWheel: js.UndefOr[WheelEventHandler[HTMLTextAreaElement]] with js.UndefOr[WheelEventHandler[HTMLInputElement]]
-  ): Builder = {
-    val __props = js.Dynamic.literal(onAbort = onAbort.asInstanceOf[js.Any], onAnimationEnd = onAnimationEnd.asInstanceOf[js.Any], onAnimationIteration = onAnimationIteration.asInstanceOf[js.Any], onAnimationStart = onAnimationStart.asInstanceOf[js.Any], onAuxClick = onAuxClick.asInstanceOf[js.Any], onBeforeInput = onBeforeInput.asInstanceOf[js.Any], onBlur = onBlur.asInstanceOf[js.Any], onCanPlay = onCanPlay.asInstanceOf[js.Any], onCanPlayThrough = onCanPlayThrough.asInstanceOf[js.Any], onChange = onChange.asInstanceOf[js.Any], onClick = onClick.asInstanceOf[js.Any], onCompositionEnd = onCompositionEnd.asInstanceOf[js.Any], onCompositionStart = onCompositionStart.asInstanceOf[js.Any], onCompositionUpdate = onCompositionUpdate.asInstanceOf[js.Any], onContextMenu = onContextMenu.asInstanceOf[js.Any], onCopy = onCopy.asInstanceOf[js.Any], onCut = onCut.asInstanceOf[js.Any], onDoubleClick = onDoubleClick.asInstanceOf[js.Any], onDrag = onDrag.asInstanceOf[js.Any], onDragEnd = onDragEnd.asInstanceOf[js.Any], onDragEnter = onDragEnter.asInstanceOf[js.Any], onDragExit = onDragExit.asInstanceOf[js.Any], onDragLeave = onDragLeave.asInstanceOf[js.Any], onDragOver = onDragOver.asInstanceOf[js.Any], onDragStart = onDragStart.asInstanceOf[js.Any], onDrop = onDrop.asInstanceOf[js.Any], onDurationChange = onDurationChange.asInstanceOf[js.Any], onEmptied = onEmptied.asInstanceOf[js.Any], onEncrypted = onEncrypted.asInstanceOf[js.Any], onEnded = onEnded.asInstanceOf[js.Any], onError = onError.asInstanceOf[js.Any], onFocus = onFocus.asInstanceOf[js.Any], onInput = onInput.asInstanceOf[js.Any], onInvalid = onInvalid.asInstanceOf[js.Any], onKeyDown = onKeyDown.asInstanceOf[js.Any], onKeyPress = onKeyPress.asInstanceOf[js.Any], onKeyUp = onKeyUp.asInstanceOf[js.Any], onLoad = onLoad.asInstanceOf[js.Any], onLoadStart = onLoadStart.asInstanceOf[js.Any], onLoadedData = onLoadedData.asInstanceOf[js.Any], onLoadedMetadata = onLoadedMetadata.asInstanceOf[js.Any], onMouseDown = onMouseDown.asInstanceOf[js.Any], onMouseEnter = onMouseEnter.asInstanceOf[js.Any], onMouseLeave = onMouseLeave.asInstanceOf[js.Any], onMouseMove = onMouseMove.asInstanceOf[js.Any], onMouseOut = onMouseOut.asInstanceOf[js.Any], onMouseOver = onMouseOver.asInstanceOf[js.Any], onMouseUp = onMouseUp.asInstanceOf[js.Any], onPaste = onPaste.asInstanceOf[js.Any], onPause = onPause.asInstanceOf[js.Any], onPlay = onPlay.asInstanceOf[js.Any], onPlaying = onPlaying.asInstanceOf[js.Any], onPointerCancel = onPointerCancel.asInstanceOf[js.Any], onPointerDown = onPointerDown.asInstanceOf[js.Any], onPointerEnter = onPointerEnter.asInstanceOf[js.Any], onPointerLeave = onPointerLeave.asInstanceOf[js.Any], onPointerMove = onPointerMove.asInstanceOf[js.Any], onPointerOut = onPointerOut.asInstanceOf[js.Any], onPointerOver = onPointerOver.asInstanceOf[js.Any], onPointerUp = onPointerUp.asInstanceOf[js.Any], onProgress = onProgress.asInstanceOf[js.Any], onRateChange = onRateChange.asInstanceOf[js.Any], onReset = onReset.asInstanceOf[js.Any], onScroll = onScroll.asInstanceOf[js.Any], onSeeked = onSeeked.asInstanceOf[js.Any], onSeeking = onSeeking.asInstanceOf[js.Any], onSelect = onSelect.asInstanceOf[js.Any], onStalled = onStalled.asInstanceOf[js.Any], onSubmit = onSubmit.asInstanceOf[js.Any], onSuspend = onSuspend.asInstanceOf[js.Any], onTimeUpdate = onTimeUpdate.asInstanceOf[js.Any], onTouchCancel = onTouchCancel.asInstanceOf[js.Any], onTouchEnd = onTouchEnd.asInstanceOf[js.Any], onTouchMove = onTouchMove.asInstanceOf[js.Any], onTouchStart = onTouchStart.asInstanceOf[js.Any], onTransitionEnd = onTransitionEnd.asInstanceOf[js.Any], onVolumeChange = onVolumeChange.asInstanceOf[js.Any], onWaiting = onWaiting.asInstanceOf[js.Any], onWheel = onWheel.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TextFieldProps]))
-  }
 }

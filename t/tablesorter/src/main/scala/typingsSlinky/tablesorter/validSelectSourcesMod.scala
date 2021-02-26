@@ -1,13 +1,12 @@
 package typingsSlinky.tablesorter
 
 import typingsSlinky.tablesorter.selectSourceMod.SelectSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tablesorter/Filtering/ValidSelectSources", JSImport.Namespace)
-@js.native
-object validSelectSourcesMod extends js.Object {
+object validSelectSourcesMod {
   
   type ValidSelectSources = String | Null | (js.Array[String | SelectSource])
 }

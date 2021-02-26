@@ -1,16 +1,14 @@
 package typingsSlinky.reactCartographer
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactCartographer.mapMod.MapProps
+import typingsSlinky.reactCartographer.mapMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-cartographer", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("react-cartographer", "Map")
   @js.native
-  class Map ()
-    extends Component[MapProps, js.Object, js.Any]
+  class Map () extends default
 }

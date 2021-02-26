@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoTooltip.chipMod.ChipProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Chip {
   
+  @scala.inline
+  def apply(color: String): Builder = {
+    val __props = js.Dynamic.literal(color = color.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ChipProps]))
+  }
+  
   @JSImport("@nivo/tooltip", "Chip")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,10 +34,4 @@ object Chip {
   }
   
   def withProps(p: ChipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(color: String): Builder = {
-    val __props = js.Dynamic.literal(color = color.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ChipProps]))
-  }
 }

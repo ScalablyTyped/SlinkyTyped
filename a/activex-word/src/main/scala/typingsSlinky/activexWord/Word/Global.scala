@@ -2,12 +2,13 @@ package typingsSlinky.activexWord.Word
 
 import typingsSlinky.activexOffice.Office.CommandBar
 import typingsSlinky.activexOffice.Office.CommandBars
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Global extends js.Object {
+trait Global extends StObject {
   
   val ActiveDocument: Document = js.native
   

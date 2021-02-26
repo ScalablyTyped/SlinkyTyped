@@ -9,6 +9,7 @@ import typingsSlinky.browserfs.fileSystemMod.FileSystemOptions
 import typingsSlinky.browserfs.html5fsMod.HTML5FS
 import typingsSlinky.browserfs.html5fsMod.HTML5FSOptions
 import typingsSlinky.browserfs.html5fsMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

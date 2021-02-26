@@ -1,23 +1,23 @@
 organization := "org.scalablytyped.slinky"
 name := "jest__globals"
-version := "26.6.2-870755"
+version := "26.6.2-38aab7"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "chalk" % "4.1.0-9090fb",
-  "org.scalablytyped.slinky" %%% "expect" % "26.6.2-4204c8",
-  "org.scalablytyped.slinky" %%% "istanbul-lib-coverage" % "2.0-dt-20200609Z-910fb5",
-  "org.scalablytyped.slinky" %%% "istanbul-lib-report" % "3.0-dt-20200515Z-3a73b1",
-  "org.scalablytyped.slinky" %%% "istanbul-reports" % "3.0-dt-20200720Z-e60b33",
-  "org.scalablytyped.slinky" %%% "jest-diff" % "26.6.2-47ace6",
-  "org.scalablytyped.slinky" %%% "jest-matcher-utils" % "26.6.2-26e185",
-  "org.scalablytyped.slinky" %%% "jest-mock" % "24.9.0-ca6cd1",
-  "org.scalablytyped.slinky" %%% "jest__environment" % "26.6.2-c33e9f",
-  "org.scalablytyped.slinky" %%% "jest__types" % "26.6.2-bf45bc",
-  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "chalk" % "4.1.0-126fe2",
+  "org.scalablytyped.slinky" %%% "expect" % "26.6.2-9515c3",
+  "org.scalablytyped.slinky" %%% "istanbul-lib-coverage" % "2.0-dt-20200609Z-6ff262",
+  "org.scalablytyped.slinky" %%% "istanbul-lib-report" % "3.0-dt-20200515Z-c42a24",
+  "org.scalablytyped.slinky" %%% "istanbul-reports" % "3.0-dt-20200720Z-fbf87f",
+  "org.scalablytyped.slinky" %%% "jest-diff" % "26.6.2-ee785a",
+  "org.scalablytyped.slinky" %%% "jest-matcher-utils" % "26.6.2-adcfce",
+  "org.scalablytyped.slinky" %%% "jest-mock" % "24.9.0-663935",
+  "org.scalablytyped.slinky" %%% "jest__environment" % "26.6.2-4129db",
+  "org.scalablytyped.slinky" %%% "jest__types" % "26.6.2-b224e8",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

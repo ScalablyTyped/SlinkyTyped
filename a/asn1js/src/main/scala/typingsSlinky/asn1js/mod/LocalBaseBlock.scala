@@ -1,12 +1,13 @@
 package typingsSlinky.asn1js.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("asn1js", "LocalBaseBlock")
 @js.native
-class LocalBaseBlock () extends js.Object {
+class LocalBaseBlock () extends StObject {
   def this(params: LocalBaseBlockParams) = this()
   
   var blockLength: Double = js.native
@@ -26,10 +27,7 @@ class LocalBaseBlock () extends js.Object {
   
   var warnings: js.Array[String] = js.native
 }
-/* static members */
-@JSImport("asn1js", "LocalBaseBlock")
-@js.native
-object LocalBaseBlock extends js.Object {
+object LocalBaseBlock {
   
   /**
     * Aux function, need to get a block name. Need to have it here for inhiritence
@@ -39,5 +37,8 @@ object LocalBaseBlock extends js.Object {
     * 
     * @memberOf LocalBaseBlock
     */
+  /* static member */
+  @JSImport("asn1js", "LocalBaseBlock.blockName")
+  @js.native
   def blockName(): String = js.native
 }

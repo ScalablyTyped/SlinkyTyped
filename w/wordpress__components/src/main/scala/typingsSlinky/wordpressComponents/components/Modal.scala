@@ -74,20 +74,30 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.wordpressComponents.anon.Describedby
 import typingsSlinky.wordpressComponents.modalMod.Modal.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Modal {
   
+  @scala.inline
+  def apply(onRequestClose: () => Unit, title: String): Builder = {
+    val __props = js.Dynamic.literal(onRequestClose = js.Any.fromFunction0(onRequestClose), title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@wordpress/components", "Modal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, HTMLDivElement] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -359,16 +369,13 @@ object Modal {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -437,10 +444,10 @@ object Modal {
     def httpEquiv(value: String): this.type = set("httpEquiv", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -941,10 +948,10 @@ object Modal {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -960,10 +967,4 @@ object Modal {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onRequestClose: () => Unit, title: String): Builder = {
-    val __props = js.Dynamic.literal(onRequestClose = js.Any.fromFunction0(onRequestClose), title = title.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

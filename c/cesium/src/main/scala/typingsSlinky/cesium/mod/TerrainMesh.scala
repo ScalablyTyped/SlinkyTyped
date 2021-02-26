@@ -1,12 +1,13 @@
 package typingsSlinky.cesium.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "TerrainMesh")
 @js.native
-class TerrainMesh protected () extends js.Object {
+class TerrainMesh protected () extends StObject {
   def this(
     center: Cartesian3,
     vertices: js.typedarray.Float32Array,

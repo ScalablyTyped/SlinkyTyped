@@ -1,6 +1,7 @@
 package typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet
 
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Date
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *     cell.setDataValidation(rule);
   */
 @js.native
-trait DataValidationBuilder extends js.Object {
+trait DataValidationBuilder extends StObject {
   
   def build(): DataValidation = js.native
   

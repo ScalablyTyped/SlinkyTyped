@@ -1,12 +1,13 @@
 package typingsSlinky.lodash.fpMod
 
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashForOwn extends js.Object {
+trait LodashForOwn extends StObject {
   
   def apply[T](iteratee: js.Function1[/* value */ T, _]): LodashForOwn1x1[T] = js.native
   def apply[T](

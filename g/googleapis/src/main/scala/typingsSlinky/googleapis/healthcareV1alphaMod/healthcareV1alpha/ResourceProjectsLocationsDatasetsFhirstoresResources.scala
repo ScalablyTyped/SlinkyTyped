@@ -4,13 +4,14 @@ import typingsSlinky.gaxios.commonMod.GaxiosPromise
 import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
 import typingsSlinky.googleapisCommon.apiMod.BodyResponseCallback
 import typingsSlinky.googleapisCommon.apiMod.MethodOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("googleapis/build/src/apis/healthcare/v1alpha", "healthcare_v1alpha.Resource$Projects$Locations$Datasets$Fhirstores$Resources")
 @js.native
-class ResourceProjectsLocationsDatasetsFhirstoresResources protected () extends js.Object {
+class ResourceProjectsLocationsDatasetsFhirstoresResources protected () extends StObject {
   def this(context: APIRequestContext) = this()
   
   var Patient: ResourceProjectsLocationsDatasetsFhirstoresResourcesPatient = js.native

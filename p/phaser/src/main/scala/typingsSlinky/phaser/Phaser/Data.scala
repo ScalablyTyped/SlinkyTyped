@@ -5,13 +5,12 @@ import typingsSlinky.phaser.DataEachCallback
 import typingsSlinky.phaser.Phaser.Events.EventEmitter
 import typingsSlinky.phaser.Phaser.Scenes.Systems
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Phaser.Data")
-@js.native
-object Data extends js.Object {
+object Data {
   
   /**
     * The Data Manager Component features a means to store pieces of data specific to a Game Object, System or Plugin.
@@ -19,7 +18,7 @@ object Data extends js.Object {
     * or have a property called `events` that is an instance of it.
     */
   @js.native
-  trait DataManager extends js.Object {
+  trait DataManager extends StObject {
     
     /**
       * Return the total number of entries in this Data Manager.

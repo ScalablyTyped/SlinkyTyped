@@ -3,14 +3,14 @@ package typingsSlinky.three
 import typingsSlinky.three.anon.Func
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.vector3Mod.Vector3
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/geometries/ParametricBufferGeometry", JSImport.Namespace)
-@js.native
-object parametricBufferGeometryMod extends js.Object {
+object parametricBufferGeometryMod {
   
+  @JSImport("three/src/geometries/ParametricBufferGeometry", "ParametricBufferGeometry")
   @js.native
   class ParametricBufferGeometry protected () extends BufferGeometry {
     def this(

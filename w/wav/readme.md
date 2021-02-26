@@ -10,9 +10,9 @@ Typings are for version 1.0
 | ------------------ | :-------------: |
 | Full name          | wav |
 | Keywords           | - |
-| # releases         | 2 |
-| # dependents       | 31 |
-| # downloads        | 74308 |
+| # releases         | 0 |
+| # dependents       | 35 |
+| # downloads        | 114552 |
 | # stars            | 1 |
 
 ## Links

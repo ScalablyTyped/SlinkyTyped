@@ -11,8 +11,8 @@ The lodash method `_.padEnd` exported as a module.
 | Full name          | lodash.padend |
 | Keywords           | lodash-modularized, padend |
 | # releases         | 0 |
-| # dependents       | 48 |
-| # downloads        | 35401453 |
+| # dependents       | 53 |
+| # downloads        | 32340862 |
 | # stars            | 0 |
 
 ## Links

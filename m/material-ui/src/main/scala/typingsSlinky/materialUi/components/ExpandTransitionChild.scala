@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.expandTransitionChildMod.ExpandTransitionChildProps
 import typingsSlinky.materialUi.expandTransitionChildMod.default
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object ExpandTransitionChild {
   
   @JSImport("material-ui/internal/ExpandTransitionChild", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,7 +34,7 @@ object ExpandTransitionChild {
     def transitionDuration(value: Double): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ExpandTransitionChildProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ExpandTransitionChild.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ExpandTransitionChildProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

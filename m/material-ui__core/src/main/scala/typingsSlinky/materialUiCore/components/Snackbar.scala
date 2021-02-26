@@ -81,15 +81,22 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Snackbar {
   
+  @scala.inline
+  def apply(open: Boolean): Builder = {
+    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SnackbarProps]))
+  }
+  
   @JSImport("@material-ui/core", "Snackbar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -103,13 +110,13 @@ object Snackbar {
     def ContentProps(value: PartialSnackbarContentPro): this.type = set("ContentProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TransitionComponentFunctionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
+    def TransitionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def TransitionComponentComponentClass(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TransitionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
+    def TransitionComponentFunctionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def TransitionProps(value: typingsSlinky.materialUiCore.transitionMod.TransitionProps): this.type = set("TransitionProps", value.asInstanceOf[js.Any])
@@ -121,10 +128,10 @@ object Snackbar {
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
+    def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
+    def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     
     @scala.inline
     def anchorOrigin(value: SnackbarOrigin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
@@ -312,10 +319,10 @@ object Snackbar {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -336,16 +343,16 @@ object Snackbar {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -372,10 +379,10 @@ object Snackbar {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def messageReactElement(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
+    def message(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def message(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
+    def messageReactElement(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -700,10 +707,4 @@ object Snackbar {
   }
   
   def withProps(p: SnackbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(open: Boolean): Builder = {
-    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SnackbarProps]))
-  }
 }

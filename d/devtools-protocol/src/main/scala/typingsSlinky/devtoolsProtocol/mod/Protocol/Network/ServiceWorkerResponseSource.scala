@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Network
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`fallback-code`
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.network
 */
-trait ServiceWorkerResponseSource extends js.Object
+trait ServiceWorkerResponseSource extends StObject
 object ServiceWorkerResponseSource {
   
   @scala.inline

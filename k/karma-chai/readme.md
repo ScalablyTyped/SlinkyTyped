@@ -10,9 +10,9 @@ Chai for Karma
 | ------------------ | :-------------: |
 | Full name          | karma-chai |
 | Keywords           | karma, karma-plugin, chai, mocha, should |
-| # releases         | 1 |
-| # dependents       | 110 |
-| # downloads        | 4822800 |
+| # releases         | 0 |
+| # dependents       | 118 |
+| # downloads        | 4838955 |
 | # stars            | 15 |
 
 ## Links

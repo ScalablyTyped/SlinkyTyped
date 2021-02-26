@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,11 +38,11 @@ class MotionBlurPostProcess protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "MotionBlurPostProcess")
-@js.native
-object MotionBlurPostProcess extends js.Object {
+object MotionBlurPostProcess {
   
   /** @hidden */
+  @JSImport("babylonjs/Legacy/legacy", "MotionBlurPostProcess._Parse")
+  @js.native
   def _Parse(
     parsedPostProcess: js.Any,
     targetCamera: typingsSlinky.babylonjs.cameraMod.Camera,

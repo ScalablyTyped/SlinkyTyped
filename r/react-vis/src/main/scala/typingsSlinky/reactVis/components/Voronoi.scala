@@ -6,15 +6,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactVis.mod.VoronoiPoint
 import typingsSlinky.reactVis.mod.VoronoiProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Voronoi {
   
+  @scala.inline
+  def apply(extent: js.Array[js.Array[Double]], nodes: js.Array[VoronoiPoint]): Builder = {
+    val __props = js.Dynamic.literal(extent = extent.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[VoronoiProps]))
+  }
+  
   @JSImport("react-vis", "Voronoi")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -47,10 +54,4 @@ object Voronoi {
   }
   
   def withProps(p: VoronoiProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(extent: js.Array[js.Array[Double]], nodes: js.Array[VoronoiPoint]): Builder = {
-    val __props = js.Dynamic.literal(extent = extent.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[VoronoiProps]))
-  }
 }

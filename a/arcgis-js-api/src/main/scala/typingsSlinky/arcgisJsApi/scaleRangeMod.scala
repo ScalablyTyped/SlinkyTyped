@@ -1,15 +1,21 @@
 package typingsSlinky.arcgisJsApi
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.Shortcut
 import typingsSlinky.arcgisJsApi.esri.ScaleRangeResult
 import typingsSlinky.arcgisJsApi.esri.scaleRangeScaleRangeParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("esri/smartMapping/heuristics/scaleRange", JSImport.Namespace)
-@js.native
-object scaleRangeMod
-  extends TopLevel[
-      js.Function1[/* params */ scaleRangeScaleRangeParams, js.Promise[ScaleRangeResult]]
-    ]
+object scaleRangeMod extends Shortcut {
+  
+  @JSImport("esri/smartMapping/heuristics/scaleRange", JSImport.Namespace)
+  @js.native
+  val ^ : js.Function1[/* params */ scaleRangeScaleRangeParams, js.Promise[ScaleRangeResult]] = js.native
+  
+  type _To = js.Function1[/* params */ scaleRangeScaleRangeParams, js.Promise[ScaleRangeResult]]
+  
+  /* This means you don't have to write `^`, but can instead just say `scaleRangeMod.foo` */
+  override def _to: js.Function1[/* params */ scaleRangeScaleRangeParams, js.Promise[ScaleRangeResult]] = ^
+}

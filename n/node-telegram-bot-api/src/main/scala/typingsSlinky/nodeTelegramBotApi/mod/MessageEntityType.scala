@@ -1,5 +1,6 @@
 package typingsSlinky.nodeTelegramBotApi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.text_link
   - typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.text_mention
 */
-trait MessageEntityType extends js.Object
+trait MessageEntityType extends StObject
 object MessageEntityType {
   
   @scala.inline

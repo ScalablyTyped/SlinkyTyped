@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.legacyMod
 
 import typingsSlinky.babylonjs.typesMod.DeepImmutable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,9 +32,11 @@ class Ray protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "Ray")
-@js.native
-object Ray extends js.Object {
+object Ray {
+  
+  @JSImport("babylonjs/Legacy/legacy", "Ray")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Creates a new ray from screen space and viewport
@@ -46,6 +49,8 @@ object Ray extends js.Object {
     * @param projection projection matrix
     * @returns new ray
     */
+  @JSImport("babylonjs/Legacy/legacy", "Ray.CreateNew")
+  @js.native
   def CreateNew(
     x: Double,
     y: Double,
@@ -64,10 +69,14 @@ object Ray extends js.Object {
     * @param world a matrix to transform the ray to. Default is the identity matrix.
     * @returns the new ray
     */
+  @JSImport("babylonjs/Legacy/legacy", "Ray.CreateNewFromTo")
+  @js.native
   def CreateNewFromTo(
     origin: typingsSlinky.babylonjs.mathVectorMod.Vector3,
     end: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): typingsSlinky.babylonjs.rayMod.Ray = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Ray.CreateNewFromTo")
+  @js.native
   def CreateNewFromTo(
     origin: typingsSlinky.babylonjs.mathVectorMod.Vector3,
     end: typingsSlinky.babylonjs.mathVectorMod.Vector3,
@@ -80,6 +89,8 @@ object Ray extends js.Object {
     * @param matrix matrix to apply
     * @returns the resulting new ray
     */
+  @JSImport("babylonjs/Legacy/legacy", "Ray.Transform")
+  @js.native
   def Transform(
     ray: DeepImmutable[typingsSlinky.babylonjs.rayMod.Ray],
     matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]
@@ -91,6 +102,8 @@ object Ray extends js.Object {
     * @param matrix matrix to apply
     * @param result ray to store result in
     */
+  @JSImport("babylonjs/Legacy/legacy", "Ray.TransformToRef")
+  @js.native
   def TransformToRef(
     ray: DeepImmutable[typingsSlinky.babylonjs.rayMod.Ray],
     matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
@@ -101,11 +114,23 @@ object Ray extends js.Object {
     * Creates a ray with origin and direction of 0,0,0
     * @returns the new ray
     */
+  @JSImport("babylonjs/Legacy/legacy", "Ray.Zero")
+  @js.native
   def Zero(): typingsSlinky.babylonjs.rayMod.Ray = js.native
   
+  @JSImport("babylonjs/Legacy/legacy", "Ray._TmpVector3")
+  @js.native
   val _TmpVector3: js.Any = js.native
   
-  var rayl: js.Any = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Ray.rayl")
+  @js.native
+  def rayl: js.Any = js.native
+  @scala.inline
+  def rayl_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("rayl")(x.asInstanceOf[js.Any])
   
-  var smallnum: js.Any = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Ray.smallnum")
+  @js.native
+  def smallnum: js.Any = js.native
+  @scala.inline
+  def smallnum_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("smallnum")(x.asInstanceOf[js.Any])
 }

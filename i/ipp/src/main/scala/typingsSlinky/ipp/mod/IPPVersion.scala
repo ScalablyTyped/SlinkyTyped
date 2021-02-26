@@ -1,5 +1,6 @@
 package typingsSlinky.ipp.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ipp.ippStrings.`2Dot1`
   - typingsSlinky.ipp.ippStrings.`2Dot2`
 */
-trait IPPVersion extends js.Object
+trait IPPVersion extends StObject
 object IPPVersion {
   
   @scala.inline

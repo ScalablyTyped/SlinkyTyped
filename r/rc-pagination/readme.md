@@ -9,14 +9,14 @@ pagination ui component for react
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | rc-pagination |
-| Keywords           | react, react-component, react-pagination, pagination |
-| # releases         | 39 |
-| # dependents       | 233 |
-| # downloads        | 11158758 |
+| Keywords           | react, react-component, react-pagination, pagination, antd, pager |
+| # releases         | 51 |
+| # dependents       | 281 |
+| # downloads        | 22090744 |
 | # stars            | 4 |
 
 ## Links
-- [Homepage](http://github.com/react-component/pagination)
+- [Homepage](https://react-component.github.io/pagination)
 - [Bugs](http://github.com/react-component/pagination/issues)
 - [Repository](https://github.com/react-component/pagination)
 - [Npm](https://www.npmjs.com/package/rc-pagination)

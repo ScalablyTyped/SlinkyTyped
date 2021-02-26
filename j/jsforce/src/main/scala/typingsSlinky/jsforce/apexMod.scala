@@ -3,16 +3,16 @@ package typingsSlinky.jsforce
 import typingsSlinky.jsforce.connectionMod.Callback
 import typingsSlinky.jsforce.connectionMod.Connection
 import typingsSlinky.jsforce.connectionMod.RestApiOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("jsforce/api/apex", JSImport.Namespace)
-@js.native
-object apexMod extends js.Object {
+object apexMod {
   
+  @JSImport("jsforce/api/apex", "Apex")
   @js.native
-  class Apex protected () extends js.Object {
+  class Apex protected () extends StObject {
     def this(conn: Connection) = this()
     
     def del[T](path: String): js.Promise[T] = js.native

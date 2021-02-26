@@ -4,56 +4,73 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.NodeList
 import typingsSlinky.jquery.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("autosize", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   /**
     * Attach autosize to JQuery collection
     */
+  @JSImport("autosize", JSImport.Namespace)
+  @js.native
   def apply(collection: JQuery[HTMLElement]): JQuery[HTMLElement] = js.native
-  /**
-    * Attach autosize to NodeList
-    */
-  def apply(elements: NodeList): NodeList = js.native
   /**
     * Attach autosize to Element
     */
+  @JSImport("autosize", JSImport.Namespace)
+  @js.native
   def apply(element: Element): Element = js.native
+  /**
+    * Attach autosize to NodeList
+    */
+  @JSImport("autosize", JSImport.Namespace)
+  @js.native
+  def apply(elements: NodeList): NodeList = js.native
   
   /**
     * Removes Autosize and reverts any changes it made to the textarea element.
     */
+  @JSImport("autosize", "destroy")
+  @js.native
   def destroy(collection: JQuery[HTMLElement]): JQuery[HTMLElement] = js.native
   /**
     * Removes Autosize and reverts any changes it made to the textarea element.
     */
-  def destroy(elements: NodeList): NodeList = js.native
+  @JSImport("autosize", "destroy")
+  @js.native
+  def destroy(element: Element): Element = js.native
   /**
     * Removes Autosize and reverts any changes it made to the textarea element.
     */
-  def destroy(element: Element): Element = js.native
+  @JSImport("autosize", "destroy")
+  @js.native
+  def destroy(elements: NodeList): NodeList = js.native
   
   /**
     * Triggers the height adjustment for an assigned textarea element.
     * Autosize will automatically adjust the textarea height on keyboard and window resize events.
     * There is no efficient way for Autosize to monitor for when another script has changed the textarea value or for changes in layout that impact the textarea element.
     */
+  @JSImport("autosize", "update")
+  @js.native
   def update(collection: JQuery[HTMLElement]): JQuery[HTMLElement] = js.native
   /**
     * Triggers the height adjustment for an assigned textarea element.
     * Autosize will automatically adjust the textarea height on keyboard and window resize events.
     * There is no efficient way for Autosize to monitor for when another script has changed the textarea value or for changes in layout that impact the textarea element.
     */
-  def update(elements: NodeList): NodeList = js.native
+  @JSImport("autosize", "update")
+  @js.native
+  def update(element: Element): Element = js.native
   /**
     * Triggers the height adjustment for an assigned textarea element.
     * Autosize will automatically adjust the textarea height on keyboard and window resize events.
     * There is no efficient way for Autosize to monitor for when another script has changed the textarea value or for changes in layout that impact the textarea element.
     */
-  def update(element: Element): Element = js.native
+  @JSImport("autosize", "update")
+  @js.native
+  def update(elements: NodeList): NodeList = js.native
 }

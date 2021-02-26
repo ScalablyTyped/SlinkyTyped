@@ -8,16 +8,16 @@ import typingsSlinky.parquetjs.metadataInterfaceMod.MetadataRowGroupsInterface
 import typingsSlinky.parquetjs.rowBufferInterfaceMod.RowBufferInterface
 import typingsSlinky.parquetjs.rowInterfaceMod.RowInterface
 import typingsSlinky.parquetjs.schemaMod.ParquetSchema
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("parquetjs/lib/reader", JSImport.Namespace)
-@js.native
-object readerMod extends js.Object {
+object readerMod {
   
+  @JSImport("parquetjs/lib/reader", "ParquetCursor")
   @js.native
-  class ParquetCursor protected () extends js.Object {
+  class ParquetCursor protected () extends StObject {
     def this(
       metadata: MetadataInterface,
       envelopeReader: ParquetEnvelopeReader,
@@ -42,8 +42,9 @@ object readerMod extends js.Object {
     var schema: ParquetSchema = js.native
   }
   
+  @JSImport("parquetjs/lib/reader", "ParquetEnvelopeReader")
   @js.native
-  class ParquetEnvelopeReader protected () extends js.Object {
+  class ParquetEnvelopeReader protected () extends StObject {
     def this(
       readFn: js.Function3[
             /* fd */ Double, 
@@ -74,14 +75,16 @@ object readerMod extends js.Object {
     ): RowBufferInterface = js.native
   }
   /* static members */
-  @js.native
-  object ParquetEnvelopeReader extends js.Object {
+  object ParquetEnvelopeReader {
     
+    @JSImport("parquetjs/lib/reader", "ParquetEnvelopeReader.openFile")
+    @js.native
     def openFile(filePath: String): ParquetReader = js.native
   }
   
+  @JSImport("parquetjs/lib/reader", "ParquetReader")
   @js.native
-  class ParquetReader protected () extends js.Object {
+  class ParquetReader protected () extends StObject {
     def this(metadata: MetadataInterface, envelopeReader: ParquetEnvelopeReader) = this()
     
     def close(): js.Promise[Unit] = js.native
@@ -102,9 +105,10 @@ object readerMod extends js.Object {
     var schema: ParquetSchema = js.native
   }
   /* static members */
-  @js.native
-  object ParquetReader extends js.Object {
+  object ParquetReader {
     
+    @JSImport("parquetjs/lib/reader", "ParquetReader.openFile")
+    @js.native
     def openFile(filePath: String): js.Promise[ParquetReader] = js.native
   }
 }

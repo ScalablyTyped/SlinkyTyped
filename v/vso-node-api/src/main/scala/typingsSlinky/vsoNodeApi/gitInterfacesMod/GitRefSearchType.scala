@@ -1,31 +1,28 @@
 package typingsSlinky.vsoNodeApi.gitInterfacesMod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait GitRefSearchType extends js.Object
+sealed trait GitRefSearchType extends StObject
 @JSImport("vso-node-api/interfaces/GitInterfaces", "GitRefSearchType")
 @js.native
-object GitRefSearchType extends js.Object {
+object GitRefSearchType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[GitRefSearchType with Double] = js.native
   
   @js.native
   sealed trait Contains extends GitRefSearchType
-  /* 2 */ @js.native
-  object Contains extends TopLevel[Contains with Double]
+  /* 2 */ val Contains: typingsSlinky.vsoNodeApi.gitInterfacesMod.GitRefSearchType.Contains with Double = js.native
   
   @js.native
   sealed trait Exact extends GitRefSearchType
-  /* 0 */ @js.native
-  object Exact extends TopLevel[Exact with Double]
+  /* 0 */ val Exact: typingsSlinky.vsoNodeApi.gitInterfacesMod.GitRefSearchType.Exact with Double = js.native
   
   @js.native
   sealed trait StartsWith extends GitRefSearchType
-  /* 1 */ @js.native
-  object StartsWith extends TopLevel[StartsWith with Double]
+  /* 1 */ val StartsWith: typingsSlinky.vsoNodeApi.gitInterfacesMod.GitRefSearchType.StartsWith with Double = js.native
 }

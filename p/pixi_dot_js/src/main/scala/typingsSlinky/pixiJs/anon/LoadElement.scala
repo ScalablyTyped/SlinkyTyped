@@ -3,12 +3,13 @@ package typingsSlinky.pixiJs.anon
 import org.scalajs.dom.raw.HTMLAudioElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LoadElement extends js.Object {
+trait LoadElement extends StObject {
   
   var loadElement: js.UndefOr[HTMLImageElement | HTMLAudioElement | HTMLVideoElement] = js.native
   
@@ -25,48 +26,36 @@ object LoadElement {
   }
   
   @scala.inline
-  implicit class LoadElementOps[Self <: LoadElement] (val x: Self) extends AnyVal {
+  implicit class LoadElementMutableBuilder[Self <: LoadElement] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setLoadElement(value: HTMLImageElement | HTMLAudioElement | HTMLVideoElement): Self = StObject.set(x, "loadElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setLoadElementHTMLAudioElement(value: HTMLAudioElement): Self = StObject.set(x, "loadElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setLoadElementHTMLImageElement(value: HTMLImageElement): Self = StObject.set(x, "loadElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLoadElementHTMLVideoElement(value: HTMLVideoElement): Self = this.set("loadElement", value.asInstanceOf[js.Any])
+    def setLoadElementHTMLVideoElement(value: HTMLVideoElement): Self = StObject.set(x, "loadElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLoadElementHTMLImageElement(value: HTMLImageElement): Self = this.set("loadElement", value.asInstanceOf[js.Any])
+    def setLoadElementUndefined: Self = StObject.set(x, "loadElement", js.undefined)
     
     @scala.inline
-    def setLoadElementHTMLAudioElement(value: HTMLAudioElement): Self = this.set("loadElement", value.asInstanceOf[js.Any])
+    def setMimeType(value: String | js.Array[String]): Self = StObject.set(x, "mimeType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLoadElement(value: HTMLImageElement | HTMLAudioElement | HTMLVideoElement): Self = this.set("loadElement", value.asInstanceOf[js.Any])
+    def setMimeTypeUndefined: Self = StObject.set(x, "mimeType", js.undefined)
     
     @scala.inline
-    def deleteLoadElement: Self = this.set("loadElement", js.undefined)
+    def setMimeTypeVarargs(value: String*): Self = StObject.set(x, "mimeType", js.Array(value :_*))
     
     @scala.inline
-    def setMimeTypeVarargs(value: String*): Self = this.set("mimeType", js.Array(value :_*))
+    def setSkipSource(value: Boolean): Self = StObject.set(x, "skipSource", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMimeType(value: String | js.Array[String]): Self = this.set("mimeType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMimeType: Self = this.set("mimeType", js.undefined)
-    
-    @scala.inline
-    def setSkipSource(value: Boolean): Self = this.set("skipSource", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSkipSource: Self = this.set("skipSource", js.undefined)
+    def setSkipSourceUndefined: Self = StObject.set(x, "skipSource", js.undefined)
   }
 }

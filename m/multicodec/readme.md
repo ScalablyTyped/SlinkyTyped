@@ -10,9 +10,9 @@ JavaScript implementation of the multicodec specification
 | ------------------ | :-------------: |
 | Full name          | multicodec |
 | Keywords           | IPFS, multiformats, multicodec, binary, packed, the, data! |
-| # releases         | 13 |
-| # dependents       | 27 |
-| # downloads        | 708408 |
+| # releases         | 20 |
+| # dependents       | 60 |
+| # downloads        | 3971531 |
 | # stars            | 0 |
 
 ## Links

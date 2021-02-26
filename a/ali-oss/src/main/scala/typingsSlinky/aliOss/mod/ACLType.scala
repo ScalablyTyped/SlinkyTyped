@@ -1,5 +1,6 @@
 package typingsSlinky.aliOss.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.aliOss.aliOssStrings.`public-read`
   - typingsSlinky.aliOss.aliOssStrings.`private`
 */
-trait ACLType extends js.Object
+trait ACLType extends StObject
 object ACLType {
   
   @scala.inline

@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.FieldsFilterKey
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.PartnerIdPrettyPrintQuotaUser
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.PrettyPrintQuotaUserUploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PartnersResource extends js.Object {
+trait PartnersResource extends StObject {
   
   /**
     * Bulk edits targeting options under a single partner. The operation will delete the assigned targeting options provided in

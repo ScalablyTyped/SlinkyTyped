@@ -11,6 +11,7 @@ import typingsSlinky.activexWord.activexWordNumbers.`6`
 import typingsSlinky.activexWord.activexWordNumbers.`7`
 import typingsSlinky.activexWord.activexWordNumbers.`8`
 import typingsSlinky.activexWord.activexWordNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWord.activexWordNumbers.`13`
   - typingsSlinky.activexWord.activexWordNumbers.`0`
 */
-trait WdCalendarType extends js.Object
+trait WdCalendarType extends StObject
 object WdCalendarType {
   
   @scala.inline

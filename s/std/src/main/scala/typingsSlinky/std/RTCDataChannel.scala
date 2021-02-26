@@ -5,6 +5,7 @@ import typingsSlinky.std.stdStrings.close
 import typingsSlinky.std.stdStrings.error
 import typingsSlinky.std.stdStrings.message
 import typingsSlinky.std.stdStrings.open
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -140,13 +141,13 @@ trait RTCDataChannel extends EventTarget {
   def removeEventListener_bufferedamountlow(
     `type`: bufferedamountlow,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_bufferedamountlow(
     `type`: bufferedamountlow,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
@@ -157,13 +158,13 @@ trait RTCDataChannel extends EventTarget {
   def removeEventListener_close(
     `type`: close,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
     `type`: close,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _]): Unit = js.native
@@ -171,13 +172,13 @@ trait RTCDataChannel extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
@@ -188,13 +189,13 @@ trait RTCDataChannel extends EventTarget {
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_open(
@@ -205,13 +206,13 @@ trait RTCDataChannel extends EventTarget {
   def removeEventListener_open(
     `type`: open,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_open(
     `type`: open,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   def send(data: java.lang.String): Unit = js.native

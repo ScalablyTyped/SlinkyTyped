@@ -10,9 +10,9 @@ A ping utility using TCP connection
 | ------------------ | :-------------: |
 | Full name          | tcp-ping |
 | Keywords           | ping, util, tcp, availability |
-| # releases         | 1 |
-| # dependents       | 42 |
-| # downloads        | 904267 |
+| # releases         | 0 |
+| # dependents       | 57 |
+| # downloads        | 1105172 |
 | # stars            | 13 |
 
 ## Links

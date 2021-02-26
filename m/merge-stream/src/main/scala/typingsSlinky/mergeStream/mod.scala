@@ -1,21 +1,20 @@
 package typingsSlinky.mergeStream
 
+import typingsSlinky.node.NodeJS.ReadWriteStream
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.node.NodeJS.WritableStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("merge-stream", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("merge-stream", JSImport.Namespace)
+  @js.native
   def apply[T /* <: ReadableStream */](streams: (T | js.Array[T])*): MergedStream = js.native
   
   @js.native
-  trait MergedStream
-    extends ReadableStream
-       with WritableStream {
+  trait MergedStream extends ReadWriteStream {
     
     def add(source: js.Array[ReadableStream]): MergedStream = js.native
     def add(source: ReadableStream): MergedStream = js.native

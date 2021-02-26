@@ -7,6 +7,7 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.reactColor.anon.PartialClassesMaterialPic
 import typingsSlinky.reactColor.mod.Color
 import typingsSlinky.reactColor.mod.ColorResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

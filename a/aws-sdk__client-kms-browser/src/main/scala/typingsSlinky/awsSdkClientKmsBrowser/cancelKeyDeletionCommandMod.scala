@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsBrowser.typesCancelKeyDeletionInputMod.Cance
 import typingsSlinky.awsSdkClientKmsBrowser.typesCancelKeyDeletionOutputMod.CancelKeyDeletionOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-browser/commands/CancelKeyDeletionCommand", JSImport.Namespace)
-@js.native
-object cancelKeyDeletionCommandMod extends js.Object {
+object cancelKeyDeletionCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-browser/commands/CancelKeyDeletionCommand", "CancelKeyDeletionCommand")
   @js.native
   class CancelKeyDeletionCommand protected () extends Command[
           InputTypesUnion, 

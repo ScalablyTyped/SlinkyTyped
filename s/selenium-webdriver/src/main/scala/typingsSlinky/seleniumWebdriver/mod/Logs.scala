@@ -1,13 +1,14 @@
 package typingsSlinky.seleniumWebdriver.mod
 
 import typingsSlinky.seleniumWebdriver.loggingMod.Entry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("selenium-webdriver", "Logs")
 @js.native
-class Logs protected () extends js.Object {
+class Logs protected () extends StObject {
   // region Constructors
   /**
     * @param {!WebDriver} driver The parent driver.

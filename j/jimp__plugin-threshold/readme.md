@@ -10,9 +10,9 @@ Lightens an image.
 | ------------------ | :-------------: |
 | Full name          | @jimp/plugin-threshold |
 | Keywords           | - |
-| # releases         | 100 |
-| # dependents       | 5 |
-| # downloads        | 6428752 |
+| # releases         | 102 |
+| # dependents       | 6 |
+| # downloads        | 21711020 |
 | # stars            | 0 |
 
 ## Links

@@ -2,16 +2,15 @@ package typingsSlinky.tizenCommonWeb
 
 import typingsSlinky.tizenCommonWeb.tizenMod.ErrorCallback
 import typingsSlinky.tizenCommonWeb.tizenMod.SuccessCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tizen-common-web/websetting", JSImport.Namespace)
-@js.native
-object websettingMod extends js.Object {
+object websettingMod {
   
   @js.native
-  trait WebSettingManager extends js.Object {
+  trait WebSettingManager extends StObject {
     
     /**
       * Sets the custom user agent string for your Web application.

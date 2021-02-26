@@ -2,14 +2,14 @@ package typingsSlinky.tensorflowTfjsData
 
 import typingsSlinky.tensorflowTfjsData.lazyIteratorMod.LazyIterator
 import typingsSlinky.tensorflowTfjsData.stringIteratorMod.StringIterator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-data/dist/iterators/byte_chunk_iterator", JSImport.Namespace)
-@js.native
-object byteChunkIteratorMod extends js.Object {
+object byteChunkIteratorMod {
   
+  @JSImport("@tensorflow/tfjs-data/dist/iterators/byte_chunk_iterator", "ByteChunkIterator")
   @js.native
   abstract class ByteChunkIterator ()
     extends LazyIterator[js.typedarray.Uint8Array] {

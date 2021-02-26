@@ -6,13 +6,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.TypedEventHandler
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.contactchanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a list of Contact objects. */
 @js.native
-trait ContactList extends js.Object {
+trait ContactList extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

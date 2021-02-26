@@ -7,6 +7,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.multipoint
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.point
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.polygon
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.polyline
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

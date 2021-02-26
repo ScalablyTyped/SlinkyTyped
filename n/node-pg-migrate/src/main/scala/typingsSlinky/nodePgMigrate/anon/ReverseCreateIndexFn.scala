@@ -4,12 +4,13 @@ import typingsSlinky.nodePgMigrate.indexesTypesMod.CreateIndexFn
 import typingsSlinky.nodePgMigrate.indexesTypesMod.CreateIndexOptions
 import typingsSlinky.nodePgMigrate.indexesTypesMod.DropIndexOptions
 import typingsSlinky.nodePgMigrate.indexesTypesMod.IndexColumn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReverseCreateIndexFn extends js.Object {
+trait ReverseCreateIndexFn extends StObject {
   
   def reverse(tableName: typingsSlinky.nodePgMigrate.generalTypesMod.Name, columns: String): String | js.Array[String] = js.native
   def reverse(

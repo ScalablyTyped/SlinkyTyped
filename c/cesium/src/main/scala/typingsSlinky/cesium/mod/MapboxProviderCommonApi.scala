@@ -3,13 +3,14 @@ package typingsSlinky.cesium.mod
 import org.scalajs.dom.experimental.Request
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "MapboxProviderCommonApi")
 @js.native
-abstract class MapboxProviderCommonApi () extends js.Object {
+abstract class MapboxProviderCommonApi () extends StObject {
   
   /**
     * Gets the credit to display when this imagery provider is active. Typically this is used to credit the source of the imagery.

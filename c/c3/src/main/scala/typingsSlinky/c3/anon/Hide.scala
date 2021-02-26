@@ -1,12 +1,13 @@
 package typingsSlinky.c3.anon
 
 import typingsSlinky.c3.mod.ArrayOrString
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Hide extends js.Object {
+trait Hide extends StObject {
   
   def apply(): Unit = js.native
   

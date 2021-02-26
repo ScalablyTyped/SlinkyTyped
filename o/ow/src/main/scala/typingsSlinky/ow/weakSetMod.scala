@@ -3,14 +3,14 @@ package typingsSlinky.ow
 import typingsSlinky.ow.predicateMod.Predicate
 import typingsSlinky.ow.predicateMod.PredicateOptions
 import typingsSlinky.std.WeakSet
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ow/dist/source/predicates/weak-set", JSImport.Namespace)
-@js.native
-object weakSetMod extends js.Object {
+object weakSetMod {
   
+  @JSImport("ow/dist/source/predicates/weak-set", "WeakSetPredicate")
   @js.native
   /**
     @hidden

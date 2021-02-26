@@ -5,6 +5,7 @@ import typingsSlinky.figma.figmaStrings.FIXED
 import typingsSlinky.figma.figmaStrings.HORIZONTAL
 import typingsSlinky.figma.figmaStrings.NONE
 import typingsSlinky.figma.figmaStrings.VERTICAL
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,13 +33,13 @@ trait DefaultFrameMixin
   
   var guides: js.Array[Guide] = js.native
   
-   // applicable only if layoutMode != "NONE"
+  // applicable only if layoutMode != "NONE"
   var horizontalPadding: Double = js.native
   
-   // applicable only if layoutMode != "NONE"
+  // applicable only if layoutMode != "NONE"
   var itemSpacing: Double = js.native
   
-   // applicable only if layoutMode != "NONE"
+  // applicable only if layoutMode != "NONE"
   var layoutGrids: js.Array[LayoutGrid] = js.native
   
   var layoutMode: NONE | HORIZONTAL | VERTICAL = js.native
@@ -53,6 +54,6 @@ trait DefaultFrameMixin
   
   val overlayPositionType: OverlayPositionType = js.native
   
-   // applicable only if layoutMode != "NONE"
+  // applicable only if layoutMode != "NONE"
   var verticalPadding: Double = js.native
 }

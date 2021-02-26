@@ -10,15 +10,22 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Modal {
   
+  @scala.inline
+  def apply(visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
+  }
+  
   @JSImport("@ant-design/react-native", "Modal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -44,10 +51,10 @@ object Modal {
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerVarargs(value: Action[TextStyle]*): this.type = set("footer", js.Array(value :_*))
+    def footer(value: js.Array[Action[TextStyle]]): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footer(value: js.Array[Action[TextStyle]]): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footerVarargs(value: Action[TextStyle]*): this.type = set("footer", js.Array(value :_*))
     
     @scala.inline
     def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
@@ -80,20 +87,14 @@ object Modal {
     def styles(value: Partial[ModalStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def transparent(value: Boolean): this.type = set("transparent", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(visible: Boolean): Builder = {
-    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
-  }
 }

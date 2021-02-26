@@ -2,6 +2,7 @@ package typingsSlinky.blessed.mod.Widgets
 
 import typingsSlinky.blessed.mod.Widgets.Types.TPosition
 import typingsSlinky.blessed.mod.Widgets.Types.TTopLeft
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

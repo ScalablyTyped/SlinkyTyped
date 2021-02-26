@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientSpanner.gapi.client.spanner
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientSpanner.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DatabaseOperationsResource extends js.Object {
+trait DatabaseOperationsResource extends StObject {
   
   /**
     * Lists database longrunning-operations. A database operation has a name of the form `projects//instances//databases//operations/`. The long-running operation metadata field type

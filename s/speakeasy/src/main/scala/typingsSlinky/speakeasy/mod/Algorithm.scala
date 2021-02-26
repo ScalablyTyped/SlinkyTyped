@@ -1,5 +1,6 @@
 package typingsSlinky.speakeasy.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.speakeasy.speakeasyStrings.sha256
   - typingsSlinky.speakeasy.speakeasyStrings.sha512
 */
-trait Algorithm extends js.Object
+trait Algorithm extends StObject
 object Algorithm {
   
   @scala.inline

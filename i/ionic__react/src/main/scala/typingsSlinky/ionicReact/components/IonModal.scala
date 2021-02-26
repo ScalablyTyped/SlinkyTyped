@@ -11,15 +11,22 @@ import typingsSlinky.ionicCore.componentsMod.global.HTMLIonModalElement
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
 import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicReact.anon.childrenReactNodeforwarde
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IonModal {
   
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[childrenReactNodeforwarde]))
+  }
+  
   @JSImport("@ionic/react", "IonModal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,16 +40,16 @@ object IonModal {
     def backdropDismiss(value: Boolean): this.type = set("backdropDismiss", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def children(value: ReactElement with js.UndefOr[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cssClassVarargs(value: String*): this.type = set("cssClass", js.Array(value :_*))
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def cssClass(value: String | js.Array[String]): this.type = set("cssClass", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def cssClassVarargs(value: String*): this.type = set("cssClass", js.Array(value :_*))
     
     @scala.inline
     def delegate(value: FrameworkDelegate): this.type = set("delegate", value.asInstanceOf[js.Any])
@@ -88,10 +95,4 @@ object IonModal {
   }
   
   def withProps(p: childrenReactNodeforwarde): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(isOpen: Boolean): Builder = {
-    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[childrenReactNodeforwarde]))
-  }
 }

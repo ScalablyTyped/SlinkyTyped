@@ -20,16 +20,16 @@ import typingsSlinky.reactNativeNavigation.eventsMod.BottomTabSelectedEvent
 import typingsSlinky.reactNativeNavigation.eventsMod.CommandCompletedEvent
 import typingsSlinky.reactNativeNavigation.nativeEventsReceiverMod.NativeEventsReceiver
 import typingsSlinky.reactNativeNavigation.navigationComponentListenerMod.NavigationComponentListener
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-navigation/lib/dist/events/EventsRegistry", JSImport.Namespace)
-@js.native
-object eventsRegistryMod extends js.Object {
+object eventsRegistryMod {
   
+  @JSImport("react-native-navigation/lib/dist/events/EventsRegistry", "EventsRegistry")
   @js.native
-  class EventsRegistry protected () extends js.Object {
+  class EventsRegistry protected () extends StObject {
     def this(
       nativeEventsReceiver: NativeEventsReceiver,
       commandsObserver: CommandsObserver,

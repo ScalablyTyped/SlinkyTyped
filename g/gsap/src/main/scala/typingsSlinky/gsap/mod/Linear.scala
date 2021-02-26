@@ -1,5 +1,6 @@
 package typingsSlinky.gsap.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,18 +9,46 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Linear ()
   extends typingsSlinky.gsap.gsap.Ease
-/* static members */
-@JSImport("gsap", "Linear")
-@js.native
-object Linear extends js.Object {
+object Linear {
   
-  var ease: typingsSlinky.gsap.gsap.Linear = js.native
+  @JSImport("gsap", "Linear")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var easeIn: typingsSlinky.gsap.gsap.Linear = js.native
+  /* static member */
+  @JSImport("gsap", "Linear.ease")
+  @js.native
+  def ease: typingsSlinky.gsap.gsap.Linear = js.native
   
-  var easeInOut: typingsSlinky.gsap.gsap.Linear = js.native
+  /* static member */
+  @JSImport("gsap", "Linear.easeIn")
+  @js.native
+  def easeIn: typingsSlinky.gsap.gsap.Linear = js.native
   
-  var easeNone: typingsSlinky.gsap.gsap.Linear = js.native
+  /* static member */
+  @JSImport("gsap", "Linear.easeInOut")
+  @js.native
+  def easeInOut: typingsSlinky.gsap.gsap.Linear = js.native
+  @scala.inline
+  def easeInOut_=(x: typingsSlinky.gsap.gsap.Linear): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("easeInOut")(x.asInstanceOf[js.Any])
   
-  var easeOut: typingsSlinky.gsap.gsap.Linear = js.native
+  @scala.inline
+  def easeIn_=(x: typingsSlinky.gsap.gsap.Linear): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("easeIn")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("gsap", "Linear.easeNone")
+  @js.native
+  def easeNone: typingsSlinky.gsap.gsap.Linear = js.native
+  @scala.inline
+  def easeNone_=(x: typingsSlinky.gsap.gsap.Linear): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("easeNone")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("gsap", "Linear.easeOut")
+  @js.native
+  def easeOut: typingsSlinky.gsap.gsap.Linear = js.native
+  @scala.inline
+  def easeOut_=(x: typingsSlinky.gsap.gsap.Linear): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("easeOut")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def ease_=(x: typingsSlinky.gsap.gsap.Linear): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ease")(x.asInstanceOf[js.Any])
 }

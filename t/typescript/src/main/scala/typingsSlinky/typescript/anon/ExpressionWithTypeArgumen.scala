@@ -15,13 +15,14 @@ import typingsSlinky.typescript.mod.SourceFile
 import typingsSlinky.typescript.mod.SourceFileLike
 import typingsSlinky.typescript.mod.SyntaxKind.ExpressionWithTypeArguments
 import typingsSlinky.typescript.mod.TypeNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined typescript.typescript.ExpressionWithTypeArguments & { readonly expression :typescript.typescript.Identifier | typescript.typescript.PropertyAccessEntityNameExpression} */
 @js.native
-trait ExpressionWithTypeArgumen extends js.Object {
+trait ExpressionWithTypeArgumen extends StObject {
   
   var _typeNodeBrand: js.Any = js.native
   

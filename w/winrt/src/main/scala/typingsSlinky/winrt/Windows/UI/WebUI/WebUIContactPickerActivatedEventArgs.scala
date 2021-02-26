@@ -5,6 +5,7 @@ import typingsSlinky.winrt.Windows.ApplicationModel.Activation.ApplicationExecut
 import typingsSlinky.winrt.Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs
 import typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen
 import typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Provider.ContactPickerUI
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

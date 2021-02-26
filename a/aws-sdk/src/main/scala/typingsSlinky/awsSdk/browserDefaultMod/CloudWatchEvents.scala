@@ -2,6 +2,7 @@ package typingsSlinky.awsSdk.browserDefaultMod
 
 import typingsSlinky.awsSdk.cloudwatcheventsMod.ClientConfiguration
 import typingsSlinky.awsSdk.cloudwatcheventsMod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

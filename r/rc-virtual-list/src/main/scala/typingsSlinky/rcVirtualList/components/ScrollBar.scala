@@ -4,17 +4,12 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.rcVirtualList.scrollBarMod.ScrollBarProps
 import typingsSlinky.rcVirtualList.scrollBarMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ScrollBar {
-  
-  @JSImport("rc-virtual-list/es/ScrollBar", JSImport.Default)
-  @js.native
-  object component extends js.Object
-  
-  def withProps(p: ScrollBarProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -30,4 +25,10 @@ object ScrollBar {
     val __props = js.Dynamic.literal(count = count.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], onScroll = js.Any.fromFunction1(onScroll), onStartMove = js.Any.fromFunction0(onStartMove), onStopMove = js.Any.fromFunction0(onStopMove), prefixCls = prefixCls.asInstanceOf[js.Any], scrollHeight = scrollHeight.asInstanceOf[js.Any], scrollTop = scrollTop.asInstanceOf[js.Any])
     new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[ScrollBarProps]))
   }
+  
+  @JSImport("rc-virtual-list/es/ScrollBar", JSImport.Default)
+  @js.native
+  val component: js.Object = js.native
+  
+  def withProps(p: ScrollBarProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

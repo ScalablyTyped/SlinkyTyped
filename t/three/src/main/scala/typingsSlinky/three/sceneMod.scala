@@ -10,14 +10,14 @@ import typingsSlinky.three.threeBooleans.`true`
 import typingsSlinky.three.webGLCubeRenderTargetMod.WebGLCubeRenderTarget
 import typingsSlinky.three.webGLRenderTargetMod.WebGLRenderTarget
 import typingsSlinky.three.webGLRendererMod.WebGLRenderer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/scenes/Scene", JSImport.Namespace)
-@js.native
-object sceneMod extends js.Object {
+object sceneMod {
   
+  @JSImport("three/src/scenes/Scene", "Scene")
   @js.native
   class Scene () extends Object3D {
     

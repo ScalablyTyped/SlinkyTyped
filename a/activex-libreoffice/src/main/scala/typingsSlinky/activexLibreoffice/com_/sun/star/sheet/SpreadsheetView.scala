@@ -7,7 +7,6 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XControlModel
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XEnhancedMouseClickHandler
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XKeyHandler
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XMouseClickHandler
-import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XUserInputInterception
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.PropertyValue
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyChangeListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfo
@@ -16,24 +15,20 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.container.XEnumeration
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XEnumerationAccess
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XIndexAccess
 import typingsSlinky.activexLibreoffice.com_.sun.star.datatransfer.XTransferable
-import typingsSlinky.activexLibreoffice.com_.sun.star.datatransfer.XTransferableSupplier
+import typingsSlinky.activexLibreoffice.com_.sun.star.frame.Controller
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.DispatchDescriptor
-import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XController
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XDispatch
-import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XDispatchProvider
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XFrame
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XModel
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.table.CellRangeAddress
 import typingsSlinky.activexLibreoffice.com_.sun.star.table.XCellRange
-import typingsSlinky.activexLibreoffice.com_.sun.star.ui.XContextMenuInterception
 import typingsSlinky.activexLibreoffice.com_.sun.star.ui.XContextMenuInterceptor
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.Color
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.URL
-import typingsSlinky.activexLibreoffice.com_.sun.star.view.XControlAccess
 import typingsSlinky.activexLibreoffice.com_.sun.star.view.XSelectionChangeListener
-import typingsSlinky.activexLibreoffice.com_.sun.star.view.XSelectionSupplier
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,16 +36,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** represents a view of a spreadsheet document. */
 @js.native
 trait SpreadsheetView
-  extends XController
-     with XDispatchProvider
-     with XContextMenuInterception
-     with XUserInputInterception
-     with XSelectionSupplier
-     with XTransferableSupplier
+  extends Controller
      with SpreadsheetViewSettings
-     with XViewPane
-     with XCellRangeReferrer
-     with XControlAccess
+     with SpreadsheetViewPane
      with XSpreadsheetView
      with XIndexAccess
      with XEnumerationAccess

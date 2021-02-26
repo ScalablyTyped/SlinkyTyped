@@ -9,15 +9,22 @@ import typingsSlinky.protonNative.protonNativeStrings.bevel
 import typingsSlinky.protonNative.protonNativeStrings.flat
 import typingsSlinky.protonNative.protonNativeStrings.miter
 import typingsSlinky.protonNative.protonNativeStrings.round
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AreaRectangle {
   
+  @scala.inline
+  def apply(height: Double | String, width: Double | String, x: Double | String, y: Double | String): Builder = {
+    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AreaRectangleProps]))
+  }
+  
   @JSImport("proton-native", "AreaRectangle")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -74,10 +81,4 @@ object AreaRectangle {
   }
   
   def withProps(p: AreaRectangleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(height: Double | String, width: Double | String, x: Double | String, y: Double | String): Builder = {
-    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AreaRectangleProps]))
-  }
 }

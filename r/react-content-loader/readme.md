@@ -10,9 +10,9 @@ SVG-Powered component to easily create placeholder loadings (like Facebook cards
 | ------------------ | :-------------: |
 | Full name          | react-content-loader |
 | Keywords           | react, react-native, skeleton, placeholder, loader, loading, content, svg |
-| # releases         | 26 |
-| # dependents       | 73 |
-| # downloads        | 3267258 |
+| # releases         | 32 |
+| # dependents       | 145 |
+| # downloads        | 7336719 |
 | # stars            | 4 |
 
 ## Links

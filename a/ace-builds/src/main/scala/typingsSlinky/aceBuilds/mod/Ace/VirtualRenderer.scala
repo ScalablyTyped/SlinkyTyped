@@ -24,6 +24,7 @@ import typingsSlinky.aceBuilds.aceBuildsStrings.showPrintMargin
 import typingsSlinky.aceBuilds.aceBuildsStrings.theme
 import typingsSlinky.aceBuilds.aceBuildsStrings.vScrollBarAlwaysVisible
 import typingsSlinky.aceBuilds.anon.PageX
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

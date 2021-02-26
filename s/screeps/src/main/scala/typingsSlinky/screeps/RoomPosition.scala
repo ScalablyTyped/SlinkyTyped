@@ -23,6 +23,7 @@ import typingsSlinky.screeps.screepsStrings.structure
 import typingsSlinky.screeps.screepsStrings.terrain
 import typingsSlinky.screeps.screepsStrings.tombstone
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * The position object of a custom location can be obtained using the Room.getPositionAt() method or using the constructor.
   */
 @js.native
-trait RoomPosition extends js.Object {
+trait RoomPosition extends StObject {
   
   /**
     * Create new ConstructionSite at the specified location.

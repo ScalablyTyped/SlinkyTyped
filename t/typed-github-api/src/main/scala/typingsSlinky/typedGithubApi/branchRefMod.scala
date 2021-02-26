@@ -3,14 +3,14 @@ package typingsSlinky.typedGithubApi
 import typingsSlinky.typedGithubApi.githubRefMod.GitHubRef
 import typingsSlinky.typedGithubApi.interfacesBranchMod.BranchRef
 import typingsSlinky.typedGithubApi.repositoryRefMod.RepositoryRefClass
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typed-github-api/dist/branch-ref", JSImport.Namespace)
-@js.native
-object branchRefMod extends js.Object {
+object branchRefMod {
   
+  @JSImport("typed-github-api/dist/branch-ref", "BranchRefClass")
   @js.native
   class BranchRefClass protected ()
     extends GitHubRef

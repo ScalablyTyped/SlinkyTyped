@@ -12,15 +12,27 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.clockwise
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.counterclockwise
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.horizontally
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.vertically
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Icon {
   
+  object Group {
+    
+    @JSImport("semantic-ui-react", "Icon.Group")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Group.type): SharedBuilder_IconGroupProps_1560966205 = new SharedBuilder_IconGroupProps_1560966205(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: IconGroupProps): SharedBuilder_IconGroupProps_1560966205 = new SharedBuilder_IconGroupProps_1560966205(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Icon")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -79,18 +91,7 @@ object Icon {
     def size(value: IconSizeProp): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Icon.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Group {
-    
-    @JSImport("semantic-ui-react", "Icon.Group")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: IconGroupProps): SharedBuilder_IconGroupProps_1560966205 = new SharedBuilder_IconGroupProps_1560966205(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Group.type): SharedBuilder_IconGroupProps_1560966205 = new SharedBuilder_IconGroupProps_1560966205(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: IconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

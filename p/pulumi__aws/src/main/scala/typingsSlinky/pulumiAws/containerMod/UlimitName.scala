@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.containerMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pulumiAws.pulumiAwsStrings.sigpending
   - typingsSlinky.pulumiAws.pulumiAwsStrings.stack
 */
-trait UlimitName extends js.Object
+trait UlimitName extends StObject
 object UlimitName {
   
   @scala.inline

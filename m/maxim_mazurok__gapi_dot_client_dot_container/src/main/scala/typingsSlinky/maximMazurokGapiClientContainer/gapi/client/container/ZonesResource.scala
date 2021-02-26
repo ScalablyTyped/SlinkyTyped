@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientContainer.gapi.client.container
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientContainer.anon.ProjectIdQuotaUserUploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ZonesResource extends js.Object {
+trait ZonesResource extends StObject {
   
   var clusters: ClustersResource = js.native
   

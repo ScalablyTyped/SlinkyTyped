@@ -10,9 +10,9 @@ Compressible Content-Type / mime checking
 | ------------------ | :-------------: |
 | Full name          | compressible |
 | Keywords           | compress, gzip, mime, content-type |
-| # releases         | 5 |
-| # dependents       | 105 |
-| # downloads        | 319323226 |
+| # releases         | 4 |
+| # dependents       | 159 |
+| # downloads        | 488336167 |
 | # stars            | 6 |
 
 ## Links

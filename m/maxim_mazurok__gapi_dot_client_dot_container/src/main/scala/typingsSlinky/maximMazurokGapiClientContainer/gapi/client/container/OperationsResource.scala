@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientContainer.anon.OauthtokenOperationId
 import typingsSlinky.maximMazurokGapiClientContainer.anon.OauthtokenParent
 import typingsSlinky.maximMazurokGapiClientContainer.anon.OperationId
 import typingsSlinky.maximMazurokGapiClientContainer.anon.OperationIdPrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OperationsResource extends js.Object {
+trait OperationsResource extends StObject {
   
   /** Cancels the specified operation. */
   def cancel(request: KeyNameOauthtoken): Request[js.Object] = js.native

@@ -1,11 +1,12 @@
 package typingsSlinky.activexPowerpoint.PowerPoint
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Table extends js.Object {
+trait Table extends StObject {
   
   var AlternativeText: String = js.native
   

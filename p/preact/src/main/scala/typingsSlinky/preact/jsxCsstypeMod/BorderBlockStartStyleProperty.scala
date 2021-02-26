@@ -1,5 +1,6 @@
 package typingsSlinky.preact.jsxCsstypeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.preact.preactStrings.ridge
   - typingsSlinky.preact.preactStrings.solid
 */
-trait BorderBlockStartStyleProperty extends js.Object
+trait BorderBlockStartStyleProperty extends StObject
 object BorderBlockStartStyleProperty {
   
   @scala.inline

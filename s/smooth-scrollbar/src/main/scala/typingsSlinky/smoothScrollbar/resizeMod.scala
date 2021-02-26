@@ -1,13 +1,14 @@
 package typingsSlinky.smoothScrollbar
 
 import typingsSlinky.smoothScrollbar.scrollbarMod.Scrollbar
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("smooth-scrollbar/events/resize", JSImport.Namespace)
-@js.native
-object resizeMod extends js.Object {
+object resizeMod {
   
+  @JSImport("smooth-scrollbar/events/resize", "resizeHandler")
+  @js.native
   def resizeHandler(scrollbar: Scrollbar): Unit = js.native
 }

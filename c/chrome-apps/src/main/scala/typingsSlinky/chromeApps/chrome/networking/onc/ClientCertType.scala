@@ -1,5 +1,6 @@
 package typingsSlinky.chromeApps.chrome.networking.onc
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.Ref
   - typingsSlinky.chromeApps.chromeAppsStrings.Pattern
 */
-trait ClientCertType extends js.Object
+trait ClientCertType extends StObject
 object ClientCertType {
   
   @scala.inline

@@ -7,16 +7,15 @@ import typingsSlinky.msRestAzure.modelsMod.LocationListResult
 import typingsSlinky.msRestAzure.modelsMod.Subscription
 import typingsSlinky.msRestAzure.modelsMod.SubscriptionListResult
 import typingsSlinky.msRestAzure.modelsMod.TenantListResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ms-rest-azure/lib/subscriptionManagement/operations", JSImport.Namespace)
-@js.native
-object operationsMod extends js.Object {
+object operationsMod {
   
   @js.native
-  trait Subscriptions extends js.Object {
+  trait Subscriptions extends StObject {
     
     /**
       * Gets details about a specified subscription.
@@ -252,7 +251,7 @@ object operationsMod extends js.Object {
   }
   
   @js.native
-  trait Tenants extends js.Object {
+  trait Tenants extends StObject {
     
     /**
       * Gets the tenants for your account.

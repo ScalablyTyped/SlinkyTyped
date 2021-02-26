@@ -1,12 +1,13 @@
 package typingsSlinky.babylonjs.BABYLON
 
 import org.scalajs.dom.raw.HTMLButtonElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VRExperienceHelper extends js.Object {
+trait VRExperienceHelper extends StObject {
   
   var _btnVR: js.Any = js.native
   

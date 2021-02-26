@@ -3,12 +3,13 @@ package typingsSlinky.rcMenu.anon
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DomEvent extends js.Object {
+trait DomEvent extends StObject {
   
   var domEvent: SyntheticMouseEvent[HTMLElement] | SyntheticKeyboardEvent[HTMLElement] = js.native
   
@@ -26,30 +27,18 @@ object DomEvent {
   }
   
   @scala.inline
-  implicit class DomEventOps[Self <: DomEvent] (val x: Self) extends AnyVal {
+  implicit class DomEventMutableBuilder[Self <: DomEvent] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDomEvent(value: SyntheticMouseEvent[HTMLElement] | SyntheticKeyboardEvent[HTMLElement]): Self = StObject.set(x, "domEvent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDomEventKeyboardEvent(value: SyntheticKeyboardEvent[HTMLElement]): Self = StObject.set(x, "domEvent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDomEventMouseEvent(value: SyntheticMouseEvent[HTMLElement]): Self = StObject.set(x, "domEvent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDomEventKeyboardEvent(value: SyntheticKeyboardEvent[HTMLElement]): Self = this.set("domEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDomEventMouseEvent(value: SyntheticMouseEvent[HTMLElement]): Self = this.set("domEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDomEvent(value: SyntheticMouseEvent[HTMLElement] | SyntheticKeyboardEvent[HTMLElement]): Self = this.set("domEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setKey(value: typingsSlinky.react.mod.Key): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setKey(value: typingsSlinky.react.mod.Key): Self = StObject.set(x, "key", value.asInstanceOf[js.Any])
   }
 }

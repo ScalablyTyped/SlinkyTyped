@@ -7,13 +7,19 @@ import typingsSlinky.vsoNodeApi.projectAnalysisInterfacesMod.ProjectLanguageAnal
 import typingsSlinky.vsoNodeApi.projectAnalysisInterfacesMod.RepositoryActivityMetrics
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestHandler
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vso-node-api/ProjectAnalysisApi", JSImport.Namespace)
-@js.native
-object projectAnalysisApiMod extends js.Object {
+object projectAnalysisApiMod {
+  
+  @JSImport("vso-node-api/ProjectAnalysisApi", "ProjectAnalysisApi")
+  @js.native
+  class ProjectAnalysisApi protected () extends IProjectAnalysisApi {
+    def this(baseUrl: String, handlers: js.Array[IRequestHandler]) = this()
+    def this(baseUrl: String, handlers: js.Array[IRequestHandler], options: IRequestOptions) = this()
+  }
   
   @js.native
   trait IProjectAnalysisApi extends ClientApiBase {
@@ -25,11 +31,5 @@ object projectAnalysisApiMod extends js.Object {
     def getProjectLanguageAnalytics(project: String): js.Promise[ProjectLanguageAnalytics] = js.native
     
     def getRepositoryActivityMetrics(project: String, repositoryId: String, fromDate: js.Date, aggregationType: AggregationType): js.Promise[RepositoryActivityMetrics] = js.native
-  }
-  
-  @js.native
-  class ProjectAnalysisApi protected () extends IProjectAnalysisApi {
-    def this(baseUrl: String, handlers: js.Array[IRequestHandler]) = this()
-    def this(baseUrl: String, handlers: js.Array[IRequestHandler], options: IRequestOptions) = this()
   }
 }

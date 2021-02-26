@@ -10,9 +10,9 @@ gaussian blur an image.
 | ------------------ | :-------------: |
 | Full name          | @jimp/plugin-gaussian |
 | Keywords           | - |
-| # releases         | 65 |
+| # releases         | 101 |
 | # dependents       | 1 |
-| # downloads        | 14392337 |
+| # downloads        | 42325218 |
 | # stars            | 0 |
 
 ## Links

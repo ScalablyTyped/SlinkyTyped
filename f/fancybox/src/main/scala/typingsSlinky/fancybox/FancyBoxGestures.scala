@@ -7,12 +7,13 @@ import typingsSlinky.jquery.JQuery.ScrollEvent
 import typingsSlinky.jquery.JQuery.TouchEndEvent
 import typingsSlinky.jquery.JQuery.TouchMoveEvent
 import typingsSlinky.jquery.JQuery.TouchStartEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FancyBoxGestures extends js.Object {
+trait FancyBoxGestures extends StObject {
   
   @JSName("$bg")
   var $bg: JQuery = js.native

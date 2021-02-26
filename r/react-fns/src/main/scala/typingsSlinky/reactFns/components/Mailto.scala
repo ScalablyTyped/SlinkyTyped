@@ -72,15 +72,22 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactFns.mailtoMod.MailtoProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Mailto {
   
+  @scala.inline
+  def apply(email: String): Builder = {
+    val __props = js.Dynamic.literal(email = email.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MailtoProps]))
+  }
+  
   @JSImport("react-fns/dist/Mailto", "Mailto")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -249,19 +256,19 @@ object Mailto {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def bccVarargs(value: String*): this.type = set("bcc", js.Array(value :_*))
+    def bcc(value: js.Array[String]): this.type = set("bcc", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def bcc(value: js.Array[String]): this.type = set("bcc", value.asInstanceOf[js.Any])
+    def bccVarargs(value: String*): this.type = set("bcc", js.Array(value :_*))
     
     @scala.inline
     def body(value: String): this.type = set("body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ccVarargs(value: String*): this.type = set("cc", js.Array(value :_*))
+    def cc(value: js.Array[String]): this.type = set("cc", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cc(value: js.Array[String]): this.type = set("cc", value.asInstanceOf[js.Any])
+    def ccVarargs(value: String*): this.type = set("cc", js.Array(value :_*))
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -285,10 +292,10 @@ object Mailto {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -628,10 +635,4 @@ object Mailto {
   }
   
   def withProps(p: MailtoProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(email: String): Builder = {
-    val __props = js.Dynamic.literal(email = email.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MailtoProps]))
-  }
 }

@@ -6,6 +6,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XHierarchicalPropert
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfo
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XChangesBatch
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,10 +28,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * com.sun.star.util.XChangesBatch} . For elements of a **set** or a **group** no additional interfaces are supported.
   * @see ConfigurationProvider Root instances of this service can be requested from a ConfigurationProvider
   */
-@js.native
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.container.XChild because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyWithState because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.beans.XProperty because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.container.XNamed because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.container.XHierarchicalName because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.lang.XLocalizable because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.util.XChangesNotifier because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.configuration.HierarchyElement because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.configuration.AccessRootElement because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.configuration.UpdateRootElement because var conflicts: Locale, Name, Parent. Inlined  */ @js.native
 trait ConfigurationUpdateAccess
   extends ConfigurationAccess
      with SetUpdate
+     with GroupUpdate
      with XChangesBatch {
   
   /**

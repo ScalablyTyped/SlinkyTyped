@@ -4,6 +4,7 @@ import typingsSlinky.googleAppsScript.GoogleAppsScript.Charts.ChartHiddenDimensi
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Charts.ChartMergeStrategy
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Charts.ChartType
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Builder for table charts. For more details, see the Gviz documentation.
   */
 @js.native
-trait EmbeddedTableChartBuilder extends js.Object {
+trait EmbeddedTableChartBuilder extends StObject {
   
   def addRange(range: Range): EmbeddedChartBuilder = js.native
   

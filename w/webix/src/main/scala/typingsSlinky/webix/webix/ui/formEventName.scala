@@ -1,5 +1,6 @@
 package typingsSlinky.webix.webix.ui
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webix.webixStrings.onValues
   - typingsSlinky.webix.webixStrings.onViewShow
 */
-trait formEventName extends js.Object
+trait formEventName extends StObject
 object formEventName {
   
   @scala.inline

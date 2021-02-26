@@ -2,16 +2,16 @@ package typingsSlinky.prex
 
 import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.prex.cancellationMod.CancellationToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("prex/out/lib/semaphore", JSImport.Namespace)
-@js.native
-object semaphoreMod extends js.Object {
+object semaphoreMod {
   
+  @JSImport("prex/out/lib/semaphore", "Semaphore")
   @js.native
-  class Semaphore protected () extends js.Object {
+  class Semaphore protected () extends StObject {
     /**
       * Initializes a new instance of the Semaphore class.
       *

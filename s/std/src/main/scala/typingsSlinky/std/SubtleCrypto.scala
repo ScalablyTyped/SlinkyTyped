@@ -4,13 +4,14 @@ import typingsSlinky.std.stdStrings.jwk
 import typingsSlinky.std.stdStrings.pkcs8
 import typingsSlinky.std.stdStrings.raw
 import typingsSlinky.std.stdStrings.spki
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This Web Crypto API interface provides a number of low-level cryptographic functions. It is accessed via the Crypto.subtle properties available in a window context (via Window.crypto). */
 @js.native
-trait SubtleCrypto extends js.Object {
+trait SubtleCrypto extends StObject {
   
   def decrypt(
     algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaOaepParams | org.scalajs.dom.crypto.AesCtrParams | org.scalajs.dom.crypto.AesCbcParams | org.scalajs.dom.crypto.AesCmacParams | org.scalajs.dom.crypto.AesGcmParams | org.scalajs.dom.crypto.AesCfbParams,
@@ -18,7 +19,6 @@ trait SubtleCrypto extends js.Object {
     data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
-  def deriveBits(algorithm: AlgorithmIdentifier, baseKey: org.scalajs.dom.crypto.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def deriveBits(
     algorithm: org.scalajs.dom.crypto.ConcatParams,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
@@ -34,56 +34,15 @@ trait SubtleCrypto extends js.Object {
     baseKey: org.scalajs.dom.crypto.CryptoKey,
     length: Double
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def deriveBits(algorithm: HkdfParams, baseKey: org.scalajs.dom.crypto.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def deriveBits(
     algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
     length: Double
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def deriveBits(algorithm: AlgorithmIdentifier, baseKey: org.scalajs.dom.crypto.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def deriveBits(algorithm: HkdfParams, baseKey: org.scalajs.dom.crypto.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
   def deriveKey(
-    algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: java.lang.String,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: HkdfParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
     algorithm: org.scalajs.dom.crypto.ConcatParams,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
     derivedKeyType: java.lang.String,
@@ -107,13 +66,6 @@ trait SubtleCrypto extends js.Object {
   def deriveKey(
     algorithm: org.scalajs.dom.crypto.ConcatParams,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: HkdfParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.ConcatParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
     derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
@@ -122,6 +74,13 @@ trait SubtleCrypto extends js.Object {
     algorithm: org.scalajs.dom.crypto.ConcatParams,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
     derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.ConcatParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: HkdfParams,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
@@ -149,13 +108,6 @@ trait SubtleCrypto extends js.Object {
   def deriveKey(
     algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: HkdfParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
     derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
@@ -168,6 +120,13 @@ trait SubtleCrypto extends js.Object {
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
   def deriveKey(
+    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: HkdfParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
     algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
     derivedKeyType: java.lang.String,
@@ -191,13 +150,6 @@ trait SubtleCrypto extends js.Object {
   def deriveKey(
     algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: HkdfParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
     derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
@@ -210,44 +162,9 @@ trait SubtleCrypto extends js.Object {
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
   def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: java.lang.String,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: HkdfParams,
+    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
     derivedKeyType: HkdfParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
@@ -275,13 +192,6 @@ trait SubtleCrypto extends js.Object {
   def deriveKey(
     algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: HkdfParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
     derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
@@ -290,6 +200,97 @@ trait SubtleCrypto extends js.Object {
     algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
     derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: HkdfParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: java.lang.String,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: HkdfParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: java.lang.String,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: HkdfParams,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
@@ -328,11 +329,6 @@ trait SubtleCrypto extends js.Object {
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
   def generateKey(
-    algorithm: AlgorithmIdentifier,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKeyPair | org.scalajs.dom.crypto.CryptoKey] = js.native
-  def generateKey(
     algorithm: org.scalajs.dom.crypto.DhKeyGenParams,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
@@ -357,6 +353,11 @@ trait SubtleCrypto extends js.Object {
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Promise[org.scalajs.dom.crypto.CryptoKeyPair] = js.native
+  def generateKey(
+    algorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKeyPair | org.scalajs.dom.crypto.CryptoKey] = js.native
   
   def importKey(
     format: raw | pkcs8 | spki,
@@ -377,14 +378,6 @@ trait SubtleCrypto extends js.Object {
     format: jwk,
     keyData: org.scalajs.dom.crypto.JsonWebKey,
     algorithm: org.scalajs.dom.crypto.AesKeyAlgorithm,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_jwk(
-    format: jwk,
-    keyData: org.scalajs.dom.crypto.JsonWebKey,
-    algorithm: AlgorithmIdentifier,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
@@ -420,6 +413,14 @@ trait SubtleCrypto extends js.Object {
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+  @JSName("importKey")
+  def importKey_jwk(
+    format: jwk,
+    keyData: org.scalajs.dom.crypto.JsonWebKey,
+    algorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
   
   def sign(
     algorithm: org.scalajs.dom.crypto.AesCmacParams,
@@ -477,61 +478,6 @@ trait SubtleCrypto extends js.Object {
     data: js.typedarray.Uint8ClampedArray
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.ArrayBuffer
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.DataView
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Float32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Float64Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int16Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint16Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint8Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint8ClampedArray
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
     algorithm: org.scalajs.dom.crypto.EcdsaParams,
     key: org.scalajs.dom.crypto.CryptoKey,
     data: js.typedarray.ArrayBuffer
@@ -638,6 +584,61 @@ trait SubtleCrypto extends js.Object {
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def sign(
     algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint8ClampedArray
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.ArrayBuffer
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.DataView
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Float32Array
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Float64Array
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int16Array
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int32Array
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int8Array
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint16Array
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint32Array
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint8Array
+  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
     key: org.scalajs.dom.crypto.CryptoKey,
     data: js.typedarray.Uint8ClampedArray
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
@@ -693,13 +694,13 @@ trait SubtleCrypto extends js.Object {
     format: java.lang.String,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: AlgorithmIdentifier
+    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def wrapKey(
     format: java.lang.String,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
+    wrapAlgorithm: AlgorithmIdentifier
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("wrapKey")
   def wrapKey_jwk(
@@ -741,14 +742,14 @@ trait SubtleCrypto extends js.Object {
     format: jwk,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: AlgorithmIdentifier
+    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("wrapKey")
   def wrapKey_jwk(
     format: jwk,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
+    wrapAlgorithm: AlgorithmIdentifier
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("wrapKey")
   def wrapKey_pkcs8(
@@ -790,14 +791,14 @@ trait SubtleCrypto extends js.Object {
     format: pkcs8,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: AlgorithmIdentifier
+    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("wrapKey")
   def wrapKey_pkcs8(
     format: pkcs8,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
+    wrapAlgorithm: AlgorithmIdentifier
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("wrapKey")
   def wrapKey_raw(
@@ -839,14 +840,14 @@ trait SubtleCrypto extends js.Object {
     format: raw,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: AlgorithmIdentifier
+    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("wrapKey")
   def wrapKey_raw(
     format: raw,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
+    wrapAlgorithm: AlgorithmIdentifier
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("wrapKey")
   def wrapKey_spki(
@@ -888,13 +889,13 @@ trait SubtleCrypto extends js.Object {
     format: spki,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: AlgorithmIdentifier
+    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("wrapKey")
   def wrapKey_spki(
     format: spki,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
+    wrapAlgorithm: AlgorithmIdentifier
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions
 
 import typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.ICodeActionParameter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

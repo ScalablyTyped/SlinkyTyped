@@ -4,15 +4,15 @@
 Typings are for version 1.4
 
 ## Library description:
-A node.js library for creating map images with polylines, markers and text.
+A node.js library for creating map images with markers, polylines, polygons and text.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | staticmaps |
 | Keywords           | openstreetmap, osm, staticmaps, staticmap, map, maps |
-| # releases         | 27 |
+| # releases         | 24 |
 | # dependents       | 1 |
-| # downloads        | 15584 |
+| # downloads        | 31960 |
 | # stars            | 3 |
 
 ## Links

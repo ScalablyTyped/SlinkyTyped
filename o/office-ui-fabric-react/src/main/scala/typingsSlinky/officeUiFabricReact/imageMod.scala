@@ -3,32 +3,46 @@ package typingsSlinky.officeUiFabricReact
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.anon.ShouldFadeIn
 import typingsSlinky.officeUiFabricReact.imageTypesMod.IImageProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/Image", JSImport.Namespace)
-@js.native
-object imageMod extends js.Object {
+object imageMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/Image", "Image")
+  @js.native
   val Image: ReactComponentClass[IImageProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/components/Image", "ImageBase")
   @js.native
   class ImageBase protected ()
     extends typingsSlinky.officeUiFabricReact.imageBaseMod.ImageBase {
     def this(props: IImageProps) = this()
   }
   /* static members */
-  @js.native
-  object ImageBase extends js.Object {
+  object ImageBase {
     
-    var _svgRegex: js.Any = js.native
+    @JSImport("office-ui-fabric-react/lib/components/Image", "ImageBase")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var defaultProps: ShouldFadeIn = js.native
+    @JSImport("office-ui-fabric-react/lib/components/Image", "ImageBase._svgRegex")
+    @js.native
+    def _svgRegex: js.Any = js.native
+    @scala.inline
+    def _svgRegex_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_svgRegex")(x.asInstanceOf[js.Any])
+    
+    @JSImport("office-ui-fabric-react/lib/components/Image", "ImageBase.defaultProps")
+    @js.native
+    def defaultProps: ShouldFadeIn = js.native
+    @scala.inline
+    def defaultProps_=(x: ShouldFadeIn): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
   }
   
+  @JSImport("office-ui-fabric-react/lib/components/Image", "ImageCoverStyle")
   @js.native
-  object ImageCoverStyle extends js.Object {
+  object ImageCoverStyle extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.imageTypesMod.ImageCoverStyle with Double] = js.native
@@ -38,8 +52,9 @@ object imageMod extends js.Object {
     /* 1 */ val portrait: typingsSlinky.officeUiFabricReact.imageTypesMod.ImageCoverStyle.portrait with Double = js.native
   }
   
+  @JSImport("office-ui-fabric-react/lib/components/Image", "ImageFit")
   @js.native
-  object ImageFit extends js.Object {
+  object ImageFit extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.imageTypesMod.ImageFit with Double] = js.native
@@ -57,8 +72,9 @@ object imageMod extends js.Object {
     /* 3 */ val none: typingsSlinky.officeUiFabricReact.imageTypesMod.ImageFit.none with Double = js.native
   }
   
+  @JSImport("office-ui-fabric-react/lib/components/Image", "ImageLoadState")
   @js.native
-  object ImageLoadState extends js.Object {
+  object ImageLoadState extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.imageTypesMod.ImageLoadState with Double] = js.native

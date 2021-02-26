@@ -3,14 +3,14 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.actionMod.Action
 import typingsSlinky.babylonjs.conditionMod.Condition
 import typingsSlinky.babylonjs.observableMod.Observable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Actions/interpolateValueAction", JSImport.Namespace)
-@js.native
-object interpolateValueActionMod extends js.Object {
+object interpolateValueActionMod {
   
+  @JSImport("babylonjs/Actions/interpolateValueAction", "InterpolateValueAction")
   @js.native
   class InterpolateValueAction protected () extends Action {
     /**

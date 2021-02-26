@@ -6,13 +6,12 @@ import typingsSlinky.openui5.sap.m.IconTabBar
 import typingsSlinky.openui5.sap.m.ListGrowingDirection
 import typingsSlinky.openui5.sap.ui.base.EventProvider
 import typingsSlinky.openui5.sap.ui.base.Object
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("sap.ui.core.delegate")
-@js.native
-object delegate extends js.Object {
+object delegate {
   
   @js.native
   trait ItemNavigation extends EventProvider {
@@ -125,13 +124,13 @@ object delegate extends js.Object {
   @js.native
   trait ScrollEnablement extends Object {
     
-    def getChildPosition(vElement: JQueryStatic): js.Any = js.native
     /**
       * Calculates scroll position of a child of a container.
       * @param vElement An element(DOM or jQuery) for which the scroll position will be calculated.
       * @returns Position object.
       */
     def getChildPosition(vElement: HTMLElement): js.Any = js.native
+    def getChildPosition(vElement: JQueryStatic): js.Any = js.native
     
     /**
       * Get current setting for horizontal scrolling.

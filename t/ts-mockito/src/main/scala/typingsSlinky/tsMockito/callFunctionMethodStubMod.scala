@@ -3,14 +3,14 @@ package typingsSlinky.tsMockito
 import typingsSlinky.tsMockito.abstractMethodStubMod.AbstractMethodStub
 import typingsSlinky.tsMockito.matcherMod.Matcher
 import typingsSlinky.tsMockito.methodStubMod.MethodStub
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ts-mockito/lib/stub/CallFunctionMethodStub", JSImport.Namespace)
-@js.native
-object callFunctionMethodStubMod extends js.Object {
+object callFunctionMethodStubMod {
   
+  @JSImport("ts-mockito/lib/stub/CallFunctionMethodStub", "CallFunctionMethodStub")
   @js.native
   class CallFunctionMethodStub protected ()
     extends AbstractMethodStub

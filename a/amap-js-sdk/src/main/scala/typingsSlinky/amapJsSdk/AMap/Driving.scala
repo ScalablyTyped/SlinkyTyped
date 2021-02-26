@@ -3,6 +3,7 @@ package typingsSlinky.amapJsSdk.AMap
 import typingsSlinky.amapJsSdk.anon.Destination
 import typingsSlinky.amapJsSdk.anon.Keyword
 import typingsSlinky.amapJsSdk.anon.Waypoints
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

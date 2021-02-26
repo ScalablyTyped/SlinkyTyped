@@ -1,5 +1,6 @@
 package typingsSlinky.reactNavigationStack.vendorTypesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNavigationStack.reactNavigationStackStrings.screen
   - typingsSlinky.reactNavigationStack.reactNavigationStackStrings.none
 */
-trait StackHeaderMode extends js.Object
+trait StackHeaderMode extends StObject
 object StackHeaderMode {
   
   @scala.inline

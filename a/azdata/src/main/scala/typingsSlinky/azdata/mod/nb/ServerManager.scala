@@ -2,12 +2,13 @@ package typingsSlinky.azdata.mod.nb
 
 import typingsSlinky.vscode.Thenable
 import typingsSlinky.vscode.mod.Disposable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServerManager extends js.Object {
+trait ServerManager extends StObject {
   
   /**
     * Indicates if the server is started at the current time

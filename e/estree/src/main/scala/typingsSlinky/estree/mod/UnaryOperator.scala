@@ -1,6 +1,7 @@
 package typingsSlinky.estree.mod
 
 import typingsSlinky.estree.estreeStrings.`-_`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.estree.estreeStrings.void
   - typingsSlinky.estree.estreeStrings.delete
 */
-trait UnaryOperator extends js.Object
+trait UnaryOperator extends StObject
 object UnaryOperator {
   
   @scala.inline

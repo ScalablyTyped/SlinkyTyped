@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.rangeSliderMod.IRangeSliderProps
 import typingsSlinky.blueprintjsCore.rangeSliderMod.NumberRange
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object RangeSlider {
   
   @JSImport("@blueprintjs/core", "RangeSlider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,19 +35,19 @@ object RangeSlider {
     def labelPrecision(value: Double): this.type = set("labelPrecision", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelRendererFunction1(value: /* value */ Double => String | ReactElement): this.type = set("labelRenderer", js.Any.fromFunction1(value))
+    def labelRenderer(value: Boolean | (js.Function1[/* value */ Double, String | ReactElement])): this.type = set("labelRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelRenderer(value: Boolean | (js.Function1[/* value */ Double, String | ReactElement])): this.type = set("labelRenderer", value.asInstanceOf[js.Any])
+    def labelRendererFunction1(value: /* value */ Double => String | ReactElement): this.type = set("labelRenderer", js.Any.fromFunction1(value))
     
     @scala.inline
     def labelStepSize(value: Double): this.type = set("labelStepSize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelValuesVarargs(value: Double*): this.type = set("labelValues", js.Array(value :_*))
+    def labelValues(value: js.Array[Double]): this.type = set("labelValues", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelValues(value: js.Array[Double]): this.type = set("labelValues", value.asInstanceOf[js.Any])
+    def labelValuesVarargs(value: Double*): this.type = set("labelValues", js.Array(value :_*))
     
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
@@ -73,7 +74,7 @@ object RangeSlider {
     def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IRangeSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RangeSlider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IRangeSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

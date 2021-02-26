@@ -73,6 +73,7 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactBootstrap.accordionMod.AccordionProps
 import typingsSlinky.reactBootstrap.mod.Sizes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -81,12 +82,15 @@ object Accordion {
   
   @JSImport("react-bootstrap", "Accordion")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Accordion] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -358,19 +362,16 @@ object Accordion {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultExpanded(value: Boolean): this.type = set("defaultExpanded", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -397,10 +398,10 @@ object Accordion {
     def expanded(value: Boolean): this.type = set("expanded", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
@@ -424,10 +425,10 @@ object Accordion {
     def frameBorder(value: Double | String): this.type = set("frameBorder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
     def headers(value: String): this.type = set("headers", value.asInstanceOf[js.Any])
@@ -952,10 +953,10 @@ object Accordion {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -970,7 +971,7 @@ object Accordion {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AccordionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Accordion.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AccordionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

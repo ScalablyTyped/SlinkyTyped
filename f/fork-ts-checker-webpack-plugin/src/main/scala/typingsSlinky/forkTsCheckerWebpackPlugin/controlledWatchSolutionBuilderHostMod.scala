@@ -10,14 +10,15 @@ import typingsSlinky.typescript.mod.DiagnosticReporter
 import typingsSlinky.typescript.mod.ParsedCommandLine
 import typingsSlinky.typescript.mod.SolutionBuilderWithWatchHost
 import typingsSlinky.typescript.mod.WatchStatusReporter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("fork-ts-checker-webpack-plugin/lib/typescript-reporter/reporter/ControlledWatchSolutionBuilderHost", JSImport.Namespace)
-@js.native
-object controlledWatchSolutionBuilderHostMod extends js.Object {
+object controlledWatchSolutionBuilderHostMod {
   
+  @JSImport("fork-ts-checker-webpack-plugin/lib/typescript-reporter/reporter/ControlledWatchSolutionBuilderHost", "createControlledWatchSolutionBuilderHost")
+  @js.native
   def createControlledWatchSolutionBuilderHost[TProgram /* <: BuilderProgram */](
     typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,

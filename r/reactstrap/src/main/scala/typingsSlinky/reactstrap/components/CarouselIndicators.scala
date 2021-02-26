@@ -73,15 +73,22 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactstrap.carouselIndicatorsMod.CarouselIndicatorsProps
 import typingsSlinky.reactstrap.mod.CSSModule
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CarouselIndicators {
   
-  @JSImport("reactstrap/es", "CarouselIndicators")
+  @scala.inline
+  def apply(activeIndex: Double, items: js.Array[js.Object], onClickHandler: Double => Unit): Builder = {
+    val __props = js.Dynamic.literal(activeIndex = activeIndex.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], onClickHandler = js.Any.fromFunction1(onClickHandler))
+    new Builder(js.Array(this.component, __props.asInstanceOf[CarouselIndicatorsProps]))
+  }
+  
+  @JSImport("reactstrap/lib", "CarouselIndicators")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -274,10 +281,10 @@ object CarouselIndicators {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -614,10 +621,4 @@ object CarouselIndicators {
   }
   
   def withProps(p: CarouselIndicatorsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(activeIndex: Double, items: js.Array[js.Object], onClickHandler: Double => Unit): Builder = {
-    val __props = js.Dynamic.literal(activeIndex = activeIndex.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], onClickHandler = js.Any.fromFunction1(onClickHandler))
-    new Builder(js.Array(this.component, __props.asInstanceOf[CarouselIndicatorsProps]))
-  }
 }

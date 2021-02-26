@@ -4,14 +4,14 @@ import typingsSlinky.inversify.interfacesMod.interfaces.Binding
 import typingsSlinky.inversify.interfacesMod.interfaces.BindingInSyntax
 import typingsSlinky.inversify.interfacesMod.interfaces.BindingOnSyntax
 import typingsSlinky.inversify.interfacesMod.interfaces.BindingWhenSyntax
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("inversify/dts/syntax/binding_in_when_on_syntax", JSImport.Namespace)
-@js.native
-object bindingInWhenOnSyntaxMod extends js.Object {
+object bindingInWhenOnSyntaxMod {
   
+  @JSImport("inversify/dts/syntax/binding_in_when_on_syntax", "BindingInWhenOnSyntax")
   @js.native
   class BindingInWhenOnSyntax[T] protected ()
     extends BindingInSyntax[T]

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsBrowser.typesCreateAliasInputMod.CreateAlias
 import typingsSlinky.awsSdkClientKmsBrowser.typesCreateAliasOutputMod.CreateAliasOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-browser/commands/CreateAliasCommand", JSImport.Namespace)
-@js.native
-object createAliasCommandMod extends js.Object {
+object createAliasCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-browser/commands/CreateAliasCommand", "CreateAliasCommand")
   @js.native
   class CreateAliasCommand protected () extends Command[
           InputTypesUnion, 

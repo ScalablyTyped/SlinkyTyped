@@ -5,6 +5,7 @@ import typingsSlinky.angularCompiler.angularCompilerNumbers.`1`
 import typingsSlinky.angularCompiler.angularCompilerNumbers.`2`
 import typingsSlinky.angularCompiler.angularCompilerNumbers.`3`
 import typingsSlinky.angularCompiler.angularCompilerNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCompiler.angularCompilerNumbers.`3`
   - typingsSlinky.angularCompiler.angularCompilerNumbers.`4`
 */
-trait QueryValueType extends js.Object
+trait QueryValueType extends StObject
 object QueryValueType {
   
   @scala.inline

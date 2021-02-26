@@ -38,6 +38,7 @@ import typingsSlinky.angularCore.angularCoreNumbers.`67108864`
 import typingsSlinky.angularCore.angularCoreNumbers.`8192`
 import typingsSlinky.angularCore.angularCoreNumbers.`8388608`
 import typingsSlinky.angularCore.angularCoreNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -82,7 +83,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCore.angularCoreNumbers.`201326592`
   - typingsSlinky.angularCore.angularCoreNumbers.`201347067`
 */
-trait ɵNodeFlags extends js.Object
+trait ɵNodeFlags extends StObject
 object ɵNodeFlags {
   
   @scala.inline

@@ -11,12 +11,13 @@ import typingsSlinky.growingIo.growingIoStrings.sendPage
 import typingsSlinky.growingIo.growingIoStrings.setUserId
 import typingsSlinky.growingIo.growingIoStrings.track
 import typingsSlinky.growingIo.growingIoStrings.visitDotset
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GrowingIO extends js.Object {
+trait GrowingIO extends StObject {
   
   /** app.set: 对于应用级变量，也就是 1.x 版本中的 CS2 - CS10, people.set: 用户级变量, page.set: 页面级变量 visit.set: 访问用户级变量, evar.set: 转化变量 */
   def apply(action: appDotset, key: String, value: String): Unit = js.native

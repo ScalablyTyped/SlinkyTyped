@@ -1,0 +1,142 @@
+package typingsSlinky.filterCss
+
+import typingsSlinky.css.mod.AtRule
+import typingsSlinky.css.mod.Comment
+import typingsSlinky.css.mod.Rule
+import org.scalablytyped.runtime.StObject
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+object mod {
+  
+  @JSImport("filter-css", JSImport.Namespace)
+  @js.native
+  def apply(inputStylesheet: String, ignorePattern: js.Array[Pattern]): String = js.native
+  @JSImport("filter-css", JSImport.Namespace)
+  @js.native
+  def apply(inputStylesheet: String, ignorePattern: js.Array[Pattern], options: Options): String = js.native
+  @JSImport("filter-css", JSImport.Namespace)
+  @js.native
+  def apply(inputStylesheet: String, ignorePattern: Pattern): String = js.native
+  @JSImport("filter-css", JSImport.Namespace)
+  @js.native
+  def apply(inputStylesheet: String, ignorePattern: Pattern, options: Options): String = js.native
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.filterCss.filterCssStrings.`type`
+    - typingsSlinky.filterCss.filterCssStrings.media
+    - typingsSlinky.filterCss.filterCssStrings.selector
+    - typingsSlinky.filterCss.filterCssStrings.declarationProperty
+    - typingsSlinky.filterCss.filterCssStrings.declarationValue
+  */
+  trait Context extends StObject
+  object Context {
+    
+    @scala.inline
+    def declarationProperty: typingsSlinky.filterCss.filterCssStrings.declarationProperty = "declarationProperty".asInstanceOf[typingsSlinky.filterCss.filterCssStrings.declarationProperty]
+    
+    @scala.inline
+    def declarationValue: typingsSlinky.filterCss.filterCssStrings.declarationValue = "declarationValue".asInstanceOf[typingsSlinky.filterCss.filterCssStrings.declarationValue]
+    
+    @scala.inline
+    def media: typingsSlinky.filterCss.filterCssStrings.media = "media".asInstanceOf[typingsSlinky.filterCss.filterCssStrings.media]
+    
+    @scala.inline
+    def selector: typingsSlinky.filterCss.filterCssStrings.selector = "selector".asInstanceOf[typingsSlinky.filterCss.filterCssStrings.selector]
+    
+    @scala.inline
+    def `type`: typingsSlinky.filterCss.filterCssStrings.`type` = "type".asInstanceOf[typingsSlinky.filterCss.filterCssStrings.`type`]
+  }
+  
+  @js.native
+  trait Options extends StObject {
+    
+    /**
+      * Whether to match CSS properties like `background-image`.
+      * @default true
+      */
+    var matchDeclarationProperties: js.UndefOr[Boolean] = js.native
+    
+    /**
+      * Whether to match CSS values like `url(...)`.
+      * @default true
+      */
+    var matchDeclarationValues: js.UndefOr[Boolean] = js.native
+    
+    /**
+      * Whether to match media queries like `min-device-pixel-ratio: 2`.
+      * @default true
+      */
+    var matchMedia: js.UndefOr[Boolean] = js.native
+    
+    /**
+      * Whether to match CSS selectors.
+      * @default true
+      */
+    var matchSelectors: js.UndefOr[Boolean] = js.native
+    
+    /**
+      * Whether to match [AST Node types]{@link https://github.com/reworkcss/css#types} like `font-face`.
+      * @default true
+      */
+    var matchTypes: js.UndefOr[Boolean] = js.native
+  }
+  object Options {
+    
+    @scala.inline
+    def apply(): Options = {
+      val __obj = js.Dynamic.literal()
+      __obj.asInstanceOf[Options]
+    }
+    
+    @scala.inline
+    implicit class OptionsMutableBuilder[Self <: Options] (val x: Self) extends AnyVal {
+      
+      @scala.inline
+      def setMatchDeclarationProperties(value: Boolean): Self = StObject.set(x, "matchDeclarationProperties", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setMatchDeclarationPropertiesUndefined: Self = StObject.set(x, "matchDeclarationProperties", js.undefined)
+      
+      @scala.inline
+      def setMatchDeclarationValues(value: Boolean): Self = StObject.set(x, "matchDeclarationValues", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setMatchDeclarationValuesUndefined: Self = StObject.set(x, "matchDeclarationValues", js.undefined)
+      
+      @scala.inline
+      def setMatchMedia(value: Boolean): Self = StObject.set(x, "matchMedia", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setMatchMediaUndefined: Self = StObject.set(x, "matchMedia", js.undefined)
+      
+      @scala.inline
+      def setMatchSelectors(value: Boolean): Self = StObject.set(x, "matchSelectors", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setMatchSelectorsUndefined: Self = StObject.set(x, "matchSelectors", js.undefined)
+      
+      @scala.inline
+      def setMatchTypes(value: Boolean): Self = StObject.set(x, "matchTypes", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setMatchTypesUndefined: Self = StObject.set(x, "matchTypes", js.undefined)
+    }
+  }
+  
+  type Pattern = String | js.RegExp | PatternFunction
+  
+  /**
+    * @param context The current matching context.
+    * @param value The current value.
+    * @param node The current AST node generated by [`css`]{@link https://github.com/reworkcss/css} being processed.
+    * @returns Whether the element should be discarded.
+    */
+  type PatternFunction = js.Function3[
+    /* context */ Context, 
+    /* value */ js.UndefOr[String], 
+    /* node */ Rule | Comment | AtRule, 
+    Boolean
+  ]
+}

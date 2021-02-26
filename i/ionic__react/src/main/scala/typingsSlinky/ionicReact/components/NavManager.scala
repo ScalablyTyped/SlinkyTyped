@@ -8,17 +8,12 @@ import typingsSlinky.ionicReact.navManagerMod.NavManagerProps
 import typingsSlinky.ionicReact.routeActionMod.RouteAction
 import typingsSlinky.ionicReact.routeInfoMod.RouteInfo
 import typingsSlinky.ionicReact.routerDirectionMod.RouterDirection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object NavManager {
-  
-  @JSImport("@ionic/react", "NavManager")
-  @js.native
-  object component extends js.Object
-  
-  def withProps(p: NavManagerProps): Default[tag.type, typingsSlinky.ionicReact.mod.NavManager] = new Default[tag.type, typingsSlinky.ionicReact.mod.NavManager](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -36,4 +31,10 @@ object NavManager {
     val __props = js.Dynamic.literal(ionRedirect = ionRedirect.asInstanceOf[js.Any], ionRoute = ionRoute.asInstanceOf[js.Any], locationHistory = locationHistory.asInstanceOf[js.Any], onChangeTab = js.Any.fromFunction3(onChangeTab), onNavigate = js.Any.fromFunction6(onNavigate), onNavigateBack = js.Any.fromFunction2(onNavigateBack), onResetTab = js.Any.fromFunction3(onResetTab), onSetCurrentTab = js.Any.fromFunction2(onSetCurrentTab), routeInfo = routeInfo.asInstanceOf[js.Any], stackManager = stackManager.asInstanceOf[js.Any])
     new Default[tag.type, typingsSlinky.ionicReact.mod.NavManager](js.Array(this.component, __props.asInstanceOf[NavManagerProps]))
   }
+  
+  @JSImport("@ionic/react", "NavManager")
+  @js.native
+  val component: js.Object = js.native
+  
+  def withProps(p: NavManagerProps): Default[tag.type, typingsSlinky.ionicReact.mod.NavManager] = new Default[tag.type, typingsSlinky.ionicReact.mod.NavManager](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

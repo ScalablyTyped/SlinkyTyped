@@ -1,12 +1,13 @@
 package typingsSlinky.playerframework.global.PlayerFramework
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("PlayerFramework.ImageErrorCode")
 @js.native
-object ImageErrorCode extends js.Object {
+object ImageErrorCode extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.playerframework.PlayerFramework.ImageErrorCode with Double] = js.native

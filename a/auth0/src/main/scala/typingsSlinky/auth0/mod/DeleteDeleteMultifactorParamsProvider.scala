@@ -1,5 +1,6 @@
 package typingsSlinky.auth0.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.auth0.auth0Strings.duo
   - typingsSlinky.auth0.auth0Strings.`google-authenticator`
 */
-trait DeleteDeleteMultifactorParamsProvider extends js.Object
+trait DeleteDeleteMultifactorParamsProvider extends StObject
 object DeleteDeleteMultifactorParamsProvider {
   
   @scala.inline

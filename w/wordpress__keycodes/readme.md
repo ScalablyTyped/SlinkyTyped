@@ -9,14 +9,14 @@ Keycodes utilities for WordPress. Used to check for keyboard events across brows
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @wordpress/keycodes |
-| Keywords           | wordpress, keycodes |
-| # releases         | 25 |
-| # dependents       | 12 |
-| # downloads        | 196545 |
+| Keywords           | wordpress, gutenberg, keycodes |
+| # releases         | 23 |
+| # dependents       | 20 |
+| # downloads        | 1064083 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/WordPress/gutenberg/tree/master/packages/keycodes/README.md)
+- [Homepage](https://github.com/WordPress/gutenberg/tree/HEAD/packages/keycodes/README.md)
 - [Bugs](https://github.com/WordPress/gutenberg/issues)
 - [Repository](https://github.com/WordPress/gutenberg)
 - [Npm](https://www.npmjs.com/package/%40wordpress%2Fkeycodes)

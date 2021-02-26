@@ -5,24 +5,23 @@ import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactInputCalendar.mod.^
 import typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendarProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactInputCalendar {
   
-  @JSGlobal("reactInputCalendar.ReactInputCalendar")
+  @JSImport("react-input-calendar", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[
-          tag.type, 
-          typingsSlinky.reactInputCalendar.global.reactInputCalendar.ReactInputCalendar
-        ] {
+       with StBuildingComponent[tag.type, ^] {
     
     @scala.inline
     def closeOnSelect(value: Boolean): this.type = set("closeOnSelect", value.asInstanceOf[js.Any])
@@ -31,10 +30,10 @@ object ReactInputCalendar {
     def computableFormat(value: String): this.type = set("computableFormat", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dateDate(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
+    def date(value: String | js.Date): this.type = set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def date(value: String | js.Date): this.type = set("date", value.asInstanceOf[js.Any])
+    def dateDate(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -49,16 +48,16 @@ object ReactInputCalendar {
     def inputFieldId(value: String): this.type = set("inputFieldId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def maxDate(value: String | js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def minDate(value: String | js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def minView(value: Double): this.type = set("minView", value.asInstanceOf[js.Any])
@@ -81,7 +80,7 @@ object ReactInputCalendar {
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactInputCalendarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactInputCalendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactInputCalendarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

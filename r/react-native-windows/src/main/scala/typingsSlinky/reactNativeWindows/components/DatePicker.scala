@@ -38,6 +38,7 @@ import typingsSlinky.reactNativeWindows.reactNativeWindowsStrings.`day month yea
 import typingsSlinky.reactNativeWindows.reactNativeWindowsStrings.`dayofweek day month`
 import typingsSlinky.reactNativeWindows.reactNativeWindowsStrings.longdate
 import typingsSlinky.reactNativeWindows.reactNativeWindowsStrings.shortdate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -46,7 +47,7 @@ object DatePicker {
   
   @JSImport("react-native-windows", "DatePicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +55,10 @@ object DatePicker {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeWindows.mod.DatePicker] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -84,10 +85,10 @@ object DatePicker {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -257,7 +258,7 @@ object DatePicker {
     def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IDatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DatePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IDatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

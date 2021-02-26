@@ -2,12 +2,13 @@ package typingsSlinky.bmapgl.BMapGL
 
 import typingsSlinky.bmapgl.anon.Fromitem
 import typingsSlinky.bmapgl.anon.Item
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Autocomplete extends js.Object {
+trait Autocomplete extends StObject {
   
   def dispose(): Unit = js.native
   

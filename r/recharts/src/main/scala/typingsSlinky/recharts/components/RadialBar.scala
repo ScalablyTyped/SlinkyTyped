@@ -29,15 +29,22 @@ import typingsSlinky.recharts.rechartsStrings.normal
 import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RadialBar {
   
+  @scala.inline
+  def apply(dataKey: DataKey): Builder = {
+    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RadialBarProps]))
+  }
+  
   @JSImport("recharts", "RadialBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,13 +52,13 @@ object RadialBar {
        with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.RadialBar] {
     
     @scala.inline
-    def activeShapeReactElement(value: ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
+    def activeShape(value: js.Object | ContentRenderer[_] | ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def activeShapeFunction1(value: _ => ReactElement): this.type = set("activeShape", js.Any.fromFunction1(value))
     
     @scala.inline
-    def activeShape(value: js.Object | ContentRenderer[_] | ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
+    def activeShapeReactElement(value: ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def alignmentBaseline(value: String): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
@@ -75,13 +82,13 @@ object RadialBar {
     def animationId(value: Double): this.type = set("animationId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def backgroundReactElement(value: ReactElement): this.type = set("background", value.asInstanceOf[js.Any])
+    def background(value: Boolean | ReactElement | ContentRenderer[_] | js.Object): this.type = set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
     def backgroundFunction1(value: _ => ReactElement): this.type = set("background", js.Any.fromFunction1(value))
     
     @scala.inline
-    def background(value: Boolean | ReactElement | ContentRenderer[_] | js.Object): this.type = set("background", value.asInstanceOf[js.Any])
+    def backgroundReactElement(value: ReactElement): this.type = set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
     def baselineShift(value: String): this.type = set("baselineShift", value.asInstanceOf[js.Any])
@@ -120,10 +127,10 @@ object RadialBar {
     def cursor(value: String): this.type = set("cursor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: RadialBarData*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[RadialBarData]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[RadialBarData]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: RadialBarData*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -206,13 +213,13 @@ object RadialBar {
     def kerning(value: Double | String): this.type = set("kerning", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: Boolean | ReactElement | ContentRenderer[_] | js.Object): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelFunction1(value: _ => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
     
     @scala.inline
-    def label(value: Boolean | ReactElement | ContentRenderer[_] | js.Object): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def legendType(value: LegendType): this.type = set("legendType", value.asInstanceOf[js.Any])
@@ -299,13 +306,13 @@ object RadialBar {
     def radiusAxisId(value: String | Double): this.type = set("radiusAxisId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
+    def shape(value: ContentRenderer[_] | ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shapeFunction1(value: _ => ReactElement): this.type = set("shape", js.Any.fromFunction1(value))
     
     @scala.inline
-    def shape(value: ContentRenderer[_] | ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
+    def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
@@ -378,10 +385,4 @@ object RadialBar {
   }
   
   def withProps(p: RadialBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(dataKey: DataKey): Builder = {
-    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RadialBarProps]))
-  }
 }

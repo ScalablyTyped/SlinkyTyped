@@ -15,12 +15,13 @@ import typingsSlinky.maximMazurokGapiClientDomains.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientDomains.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientDomains.anon.Resource
 import typingsSlinky.maximMazurokGapiClientDomains.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RegistrationsResource extends js.Object {
+trait RegistrationsResource extends StObject {
   
   /** Updates a `Registration`'s contact settings. Some changes require confirmation by the domain's registrant contact . */
   def configureContactSettings(request: Callback): Request[Operation] = js.native

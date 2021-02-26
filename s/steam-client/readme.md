@@ -10,9 +10,9 @@ SteamClient from node-steam with proper versioning and more features
 | ------------------ | :-------------: |
 | Full name          | steam-client |
 | Keywords           | steam, steam client |
-| # releases         | 4 |
-| # dependents       | 4 |
-| # downloads        | 35247 |
+| # releases         | 0 |
+| # dependents       | 5 |
+| # downloads        | 15181 |
 | # stars            | 3 |
 
 ## Links

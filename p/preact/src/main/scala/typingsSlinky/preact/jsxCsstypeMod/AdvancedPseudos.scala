@@ -1,5 +1,6 @@
 package typingsSlinky.preact.jsxCsstypeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.preact.preactStrings.`Colonnth-of-type`
   - typingsSlinky.preact.preactStrings.Colonwhere
 */
-trait AdvancedPseudos extends js.Object
+trait AdvancedPseudos extends StObject
 object AdvancedPseudos {
   
   @scala.inline

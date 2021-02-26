@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.imports
   - typingsSlinky.std.stdStrings.none
 */
-trait ServiceWorkerUpdateViaCache extends js.Object
+trait ServiceWorkerUpdateViaCache extends StObject
 object ServiceWorkerUpdateViaCache {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.w3cScreenOrientation
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.w3cScreenOrientation.w3cScreenOrientationStrings.`landscape-primary`
   - typingsSlinky.w3cScreenOrientation.w3cScreenOrientationStrings.`landscape-secondary`
 */
-trait ScreenOrientationLockType extends js.Object
+trait ScreenOrientationLockType extends StObject
 object ScreenOrientationLockType {
   
   @scala.inline

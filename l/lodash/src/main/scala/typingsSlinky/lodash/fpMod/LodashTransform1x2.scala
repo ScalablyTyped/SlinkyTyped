@@ -3,12 +3,13 @@ package typingsSlinky.lodash.fpMod
 import typingsSlinky.lodash.mod.Dictionary
 import typingsSlinky.lodash.mod.MemoVoidIteratorCapped
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashTransform1x2[TResult] extends js.Object {
+trait LodashTransform1x2[TResult] extends StObject {
   
   def apply[T](iteratee: MemoVoidIteratorCapped[T, TResult]): LodashTransform1x3[T, TResult] = js.native
   def apply[T](iteratee: MemoVoidIteratorCapped[T, TResult], `object`: js.Array[T]): TResult = js.native

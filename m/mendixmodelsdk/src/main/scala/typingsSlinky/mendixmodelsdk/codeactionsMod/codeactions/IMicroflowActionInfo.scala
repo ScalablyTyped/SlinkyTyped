@@ -4,6 +4,7 @@ import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.elementsMod.IElement
 import typingsSlinky.mendixmodelsdk.imagesMod.images.IImage
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

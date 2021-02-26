@@ -2,6 +2,7 @@ package typingsSlinky.reactSortableTree.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,54 +28,42 @@ object TreeItem {
   }
   
   @scala.inline
-  implicit class TreeItemOps[Self <: TreeItem] (val x: Self) extends AnyVal {
+  implicit class TreeItemMutableBuilder[Self <: TreeItem] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChildren(value: js.Array[TreeItem] | GetTreeItemChildrenFn): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChildrenFunction1(value: /* data */ GetTreeItemChildren => Unit): Self = StObject.set(x, "children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
     
     @scala.inline
-    def setChildrenVarargs(value: TreeItem*): Self = this.set("children", js.Array(value :_*))
+    def setChildrenVarargs(value: TreeItem*): Self = StObject.set(x, "children", js.Array(value :_*))
     
     @scala.inline
-    def setChildrenFunction1(value: /* data */ GetTreeItemChildren => Unit): Self = this.set("children", js.Any.fromFunction1(value))
+    def setExpanded(value: Boolean): Self = StObject.set(x, "expanded", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildren(value: js.Array[TreeItem] | GetTreeItemChildrenFn): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setExpandedUndefined: Self = StObject.set(x, "expanded", js.undefined)
     
     @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
+    def setSubtitle(value: ReactElement): Self = StObject.set(x, "subtitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExpanded(value: Boolean): Self = this.set("expanded", value.asInstanceOf[js.Any])
+    def setSubtitleReactElement(value: ReactElement): Self = StObject.set(x, "subtitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteExpanded: Self = this.set("expanded", js.undefined)
+    def setSubtitleUndefined: Self = StObject.set(x, "subtitle", js.undefined)
     
     @scala.inline
-    def setSubtitleReactElement(value: ReactElement): Self = this.set("subtitle", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSubtitle(value: ReactElement): Self = this.set("subtitle", value.asInstanceOf[js.Any])
+    def setTitleReactElement(value: ReactElement): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteSubtitle: Self = this.set("subtitle", js.undefined)
-    
-    @scala.inline
-    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTitle: Self = this.set("title", js.undefined)
+    def setTitleUndefined: Self = StObject.set(x, "title", js.undefined)
   }
 }

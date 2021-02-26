@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientDrive.anon.RequestId
 import typingsSlinky.maximMazurokGapiClientDrive.anon.Resource
 import typingsSlinky.maximMazurokGapiClientDrive.anon.UseDomainAdminAccess
 import typingsSlinky.maximMazurokGapiClientDrive.anon.UserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DrivesResource extends js.Object {
+trait DrivesResource extends StObject {
   
   /** Creates a new shared drive. */
   def create(request: QuotaUser): Request[Drive] = js.native

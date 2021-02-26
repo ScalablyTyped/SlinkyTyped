@@ -1,11 +1,12 @@
 package typingsSlinky.restify.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Route extends js.Object {
+trait Route extends StObject {
   
   var chain: Chain = js.native
   
@@ -26,36 +27,24 @@ object Route {
   }
   
   @scala.inline
-  implicit class RouteOps[Self <: Route] (val x: Self) extends AnyVal {
+  implicit class RouteMutableBuilder[Self <: Route] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChain(value: Chain): Self = StObject.set(x, "chain", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setMethod(value: String): Self = StObject.set(x, "method", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChain(value: Chain): Self = this.set("chain", value.asInstanceOf[js.Any])
+    def setPath(value: String | js.RegExp): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMethod(value: String): Self = this.set("method", value.asInstanceOf[js.Any])
+    def setPathRegExp(value: js.RegExp): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPathRegExp(value: js.RegExp): Self = this.set("path", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPath(value: String | js.RegExp): Self = this.set("path", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSpec(value: RouteSpec): Self = this.set("spec", value.asInstanceOf[js.Any])
+    def setSpec(value: RouteSpec): Self = StObject.set(x, "spec", value.asInstanceOf[js.Any])
   }
 }

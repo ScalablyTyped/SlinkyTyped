@@ -1,12 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.Graphics.Printing
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Arguments associated with the PrintTaskSourceRequestedHandler delegate. Provides a method for handing the content to be printed to the Print Task. */
 @js.native
-trait PrintTaskSourceRequestedArgs extends js.Object {
+trait PrintTaskSourceRequestedArgs extends StObject {
   
   /** Gets the DateTime object that indicates the deadline for a print task source request. */
   var deadline: js.Date = js.native
@@ -36,27 +37,15 @@ object PrintTaskSourceRequestedArgs {
   }
   
   @scala.inline
-  implicit class PrintTaskSourceRequestedArgsOps[Self <: PrintTaskSourceRequestedArgs] (val x: Self) extends AnyVal {
+  implicit class PrintTaskSourceRequestedArgsMutableBuilder[Self <: PrintTaskSourceRequestedArgs] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDeadline(value: js.Date): Self = StObject.set(x, "deadline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setGetDeferral(value: () => PrintTaskSourceRequestedDeferral): Self = StObject.set(x, "getDeferral", js.Any.fromFunction0(value))
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setDeadline(value: js.Date): Self = this.set("deadline", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setGetDeferral(value: () => PrintTaskSourceRequestedDeferral): Self = this.set("getDeferral", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setSetSource(value: IPrintDocumentSource => Unit): Self = this.set("setSource", js.Any.fromFunction1(value))
+    def setSetSource(value: IPrintDocumentSource => Unit): Self = StObject.set(x, "setSource", js.Any.fromFunction1(value))
   }
 }

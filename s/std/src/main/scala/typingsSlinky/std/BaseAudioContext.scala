@@ -1,6 +1,7 @@
 package typingsSlinky.std
 
 import typingsSlinky.std.stdStrings.statechange
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -64,6 +65,8 @@ trait BaseAudioContext extends EventTarget {
   def createPeriodicWave(real: js.Array[Double], imag: js.Array[Double], constraints: PeriodicWaveConstraints): org.scalajs.dom.raw.PeriodicWave = js.native
   def createPeriodicWave(real: js.Array[Double], imag: js.typedarray.Float32Array): org.scalajs.dom.raw.PeriodicWave = js.native
   def createPeriodicWave(real: js.Array[Double], imag: js.typedarray.Float32Array, constraints: PeriodicWaveConstraints): org.scalajs.dom.raw.PeriodicWave = js.native
+  def createPeriodicWave(real: js.Iterable[Double], imag: js.Iterable[Double]): org.scalajs.dom.raw.PeriodicWave = js.native
+  def createPeriodicWave(real: js.Iterable[Double], imag: js.Iterable[Double], constraints: PeriodicWaveConstraints): org.scalajs.dom.raw.PeriodicWave = js.native
   def createPeriodicWave(real: js.typedarray.Float32Array, imag: js.Array[Double]): org.scalajs.dom.raw.PeriodicWave = js.native
   def createPeriodicWave(real: js.typedarray.Float32Array, imag: js.Array[Double], constraints: PeriodicWaveConstraints): org.scalajs.dom.raw.PeriodicWave = js.native
   def createPeriodicWave(real: js.typedarray.Float32Array, imag: js.typedarray.Float32Array): org.scalajs.dom.raw.PeriodicWave = js.native
@@ -72,8 +75,6 @@ trait BaseAudioContext extends EventTarget {
     imag: js.typedarray.Float32Array,
     constraints: PeriodicWaveConstraints
   ): org.scalajs.dom.raw.PeriodicWave = js.native
-  def createPeriodicWave(real: js.Iterable[Double], imag: js.Iterable[Double]): org.scalajs.dom.raw.PeriodicWave = js.native
-  def createPeriodicWave(real: js.Iterable[Double], imag: js.Iterable[Double], constraints: PeriodicWaveConstraints): org.scalajs.dom.raw.PeriodicWave = js.native
   
   def createScriptProcessor(): ScriptProcessorNode = js.native
   def createScriptProcessor(
@@ -131,13 +132,13 @@ trait BaseAudioContext extends EventTarget {
   def removeEventListener_statechange(
     `type`: statechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_statechange(
     `type`: statechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   val sampleRate: Double = js.native

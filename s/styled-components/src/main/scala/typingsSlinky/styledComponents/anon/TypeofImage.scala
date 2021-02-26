@@ -8,6 +8,7 @@ import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.styledComponents.styledComponentsStrings.disk
 import typingsSlinky.styledComponents.styledComponentsStrings.diskSlashmemory
 import typingsSlinky.styledComponents.styledComponentsStrings.memory
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

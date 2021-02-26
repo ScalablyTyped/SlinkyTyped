@@ -1,12 +1,13 @@
 package typingsSlinky.googleVisualization.google.visualization
 
 import typingsSlinky.googleVisualization.anon.Max
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DataTable extends js.Object {
+trait DataTable extends StObject {
   
   def addColumn(descriptionObject: DataTableColumnDescription): Double = js.native
   def addColumn(`type`: String): Double = js.native

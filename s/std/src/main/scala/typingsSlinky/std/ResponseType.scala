@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,17 +13,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.opaque
   - typingsSlinky.std.stdStrings.opaqueredirect
 */
-trait ResponseType extends js.Object
+trait ResponseType extends StObject
 object ResponseType {
+  
+  @scala.inline
+  def default: typingsSlinky.std.stdStrings.default = "default".asInstanceOf[typingsSlinky.std.stdStrings.default]
   
   @scala.inline
   def basic: typingsSlinky.std.stdStrings.basic = "basic".asInstanceOf[typingsSlinky.std.stdStrings.basic]
   
   @scala.inline
   def cors: typingsSlinky.std.stdStrings.cors = "cors".asInstanceOf[typingsSlinky.std.stdStrings.cors]
-  
-  @scala.inline
-  def default: typingsSlinky.std.stdStrings.default = "default".asInstanceOf[typingsSlinky.std.stdStrings.default]
   
   @scala.inline
   def error: typingsSlinky.std.stdStrings.error = "error".asInstanceOf[typingsSlinky.std.stdStrings.error]

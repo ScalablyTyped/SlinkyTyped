@@ -4,6 +4,7 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`-1`
 import typingsSlinky.activexExcel.activexExcelNumbers.`0`
 import typingsSlinky.activexExcel.activexExcelNumbers.`1048576`
 import typingsSlinky.activexExcel.activexExcelNumbers.`32500`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`1048576`
   - typingsSlinky.activexExcel.activexExcelNumbers.`0`
 */
-trait XlPivotTableMissingItems extends js.Object
+trait XlPivotTableMissingItems extends StObject
 object XlPivotTableMissingItems {
   
   @scala.inline

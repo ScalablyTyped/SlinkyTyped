@@ -1,5 +1,6 @@
 package typingsSlinky.axeCore.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.axeCore.axeCoreStrings.structure
   - typingsSlinky.axeCore.axeCoreStrings.landmark
 */
-trait AriaRolesType extends js.Object
+trait AriaRolesType extends StObject
 object AriaRolesType {
   
   @scala.inline

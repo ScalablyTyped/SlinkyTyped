@@ -7,6 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.imagePickerMod.ImagePickerPropTypes
 import typingsSlinky.antdMobile.imagePickerPropsTypeMod.ImageFile
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object ImagePicker {
   
   @JSImport("antd-mobile", "ImagePicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,10 +36,10 @@ object ImagePicker {
     def disableDelete(value: Boolean): this.type = set("disableDelete", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filesVarargs(value: ImageFile*): this.type = set("files", js.Array(value :_*))
+    def files(value: js.Array[ImageFile]): this.type = set("files", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def files(value: js.Array[ImageFile]): this.type = set("files", value.asInstanceOf[js.Any])
+    def filesVarargs(value: ImageFile*): this.type = set("files", js.Array(value :_*))
     
     @scala.inline
     def length(value: Double | String): this.type = set("length", value.asInstanceOf[js.Any])
@@ -70,7 +71,7 @@ object ImagePicker {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ImagePickerPropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ImagePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ImagePickerPropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

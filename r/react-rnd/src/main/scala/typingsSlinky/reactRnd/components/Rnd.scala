@@ -27,6 +27,7 @@ import typingsSlinky.reactRnd.reactRndStrings.both
 import typingsSlinky.reactRnd.reactRndStrings.none
 import typingsSlinky.reactRnd.reactRndStrings.x
 import typingsSlinky.reactRnd.reactRndStrings.y
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,12 +36,15 @@ object Rnd {
   
   @JSImport("react-rnd", "Rnd")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactRnd.mod.Rnd] {
+    
+    @scala.inline
+    def default(value: xnumberynumberSize): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def allowAnyClick(value: Boolean): this.type = set("allowAnyClick", value.asInstanceOf[js.Any])
@@ -53,9 +57,6 @@ object Rnd {
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def default(value: xnumberynumberSize): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disableDragging(value: Boolean): this.type = set("disableDragging", value.asInstanceOf[js.Any])
@@ -157,7 +158,7 @@ object Rnd {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Rnd.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

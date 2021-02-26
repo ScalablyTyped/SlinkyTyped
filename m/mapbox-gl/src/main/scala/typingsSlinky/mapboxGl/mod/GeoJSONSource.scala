@@ -4,6 +4,7 @@ import typingsSlinky.geojson.mod.Feature
 import typingsSlinky.geojson.mod.FeatureCollection
 import typingsSlinky.geojson.mod.GeoJsonProperties
 import typingsSlinky.geojson.mod.Geometry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

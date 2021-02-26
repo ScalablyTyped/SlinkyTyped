@@ -2,6 +2,7 @@ package typingsSlinky.officeUiFabricReact.detailsListTypesMod
 
 import typingsSlinky.officeUiFabricReact.listTypesMod.IList
 import typingsSlinky.officeUiFabricReact.listTypesMod.ScrollToMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

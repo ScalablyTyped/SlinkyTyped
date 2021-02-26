@@ -8,14 +8,14 @@ import typingsSlinky.three.constantsMod.TextureFilter
 import typingsSlinky.three.constantsMod.Wrapping
 import typingsSlinky.three.textureMod.Texture
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/textures/VideoTexture", JSImport.Namespace)
-@js.native
-object videoTextureMod extends js.Object {
+object videoTextureMod {
   
+  @JSImport("three/src/textures/VideoTexture", "VideoTexture")
   @js.native
   class VideoTexture protected () extends Texture {
     /**

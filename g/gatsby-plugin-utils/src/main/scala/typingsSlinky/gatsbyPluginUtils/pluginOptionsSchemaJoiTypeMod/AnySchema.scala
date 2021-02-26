@@ -6,6 +6,7 @@ import typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.number
 import typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.set
 import typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.string
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,6 +15,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AnySchema
   extends SchemaInternals
      with _Schema {
+  
+  /**
+    * Sets a default value if the original value is `undefined` where:
+    * @param value - the default value. One of:
+    *    - a literal value (string, number, object, etc.)
+    *    - a [references](#refkey-options)
+    *    - a function which returns the default value using the signature `function(parent, helpers)` where:
+    *        - `parent` - a clone of the object containing the value being validated. Note that since specifying a
+    *          `parent` ragument performs cloning, do not declare format arguments if you are not using them.
+    *        - `helpers` - same as thsoe described in [`any.custom()`](anycustomermethod_description)
+    *
+    * When called without any `value` on an object schema type, a default value will be automatically generated
+    * based on the default values of the object keys.
+    *
+    * Note that if value is an object, any changes to the object after `default()` is called will change the
+    *  reference and any future assignment.
+    */
+  def default(): this.type = js.native
+  def default(value: js.Function2[/* parent */ js.Any, /* helpers */ CustomHelpers[_], BasicType | Reference]): this.type = js.native
+  def default(value: BasicType): this.type = js.native
+  def default(value: Reference): this.type = js.native
   
   /**
     * Starts a ruleset in order to apply multiple rule options. The set ends when `rule()`, `keep()`, `message()`, or `warn()` is called.
@@ -76,27 +98,6 @@ trait AnySchema
   def custom(fn: CustomValidator[_], description: String): this.type = js.native
   
   /**
-    * Sets a default value if the original value is `undefined` where:
-    * @param value - the default value. One of:
-    *    - a literal value (string, number, object, etc.)
-    *    - a [references](#refkey-options)
-    *    - a function which returns the default value using the signature `function(parent, helpers)` where:
-    *        - `parent` - a clone of the object containing the value being validated. Note that since specifying a
-    *          `parent` ragument performs cloning, do not declare format arguments if you are not using them.
-    *        - `helpers` - same as thsoe described in [`any.custom()`](anycustomermethod_description)
-    *
-    * When called without any `value` on an object schema type, a default value will be automatically generated
-    * based on the default values of the object keys.
-    *
-    * Note that if value is an object, any changes to the object after `default()` is called will change the
-    *  reference and any future assignment.
-    */
-  def default(): this.type = js.native
-  def default(value: js.Function2[/* parent */ js.Any, /* helpers */ CustomHelpers[_], BasicType | Reference]): this.type = js.native
-  def default(value: BasicType): this.type = js.native
-  def default(value: Reference): this.type = js.native
-  
-  /**
     * Returns a plain object representing the schema's rules and properties
     */
   def describe(): Description = js.native
@@ -130,7 +131,6 @@ trait AnySchema
     */
   def equal(values: js.Any*): this.type = js.native
   
-  def error(err: ValidationErrorFunction): this.type = js.native
   /**
     * Overrides the default joi error with a custom error if the rule fails where:
     * @param err - can be:
@@ -150,6 +150,7 @@ trait AnySchema
     * option has been set to `false`).
     */
   def error(err: js.Error): this.type = js.native
+  def error(err: ValidationErrorFunction): this.type = js.native
   
   /**
     * Annotates the key with an example value, must be valid.

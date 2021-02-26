@@ -12,6 +12,7 @@ import typingsSlinky.sparqljs.sparqljsStrings.insert
 import typingsSlinky.sparqljs.sparqljsStrings.insertdelete
 import typingsSlinky.sparqljs.sparqljsStrings.load
 import typingsSlinky.sparqljs.sparqljsStrings.move
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,40 +21,40 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.sparqljs.mod.InsertDeleteOperation
   - typingsSlinky.sparqljs.mod.ManagementOperation
 */
-trait UpdateOperation extends js.Object
+trait UpdateOperation extends StObject
 object UpdateOperation {
   
   @scala.inline
-  def ClearDropOperation(graph: GraphReference, silent: Boolean, `type`: clear | drop): UpdateOperation = {
+  def ClearDropOperation(graph: GraphReference, silent: Boolean, `type`: clear | drop): typingsSlinky.sparqljs.mod.ClearDropOperation = {
     val __obj = js.Dynamic.literal(graph = graph.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[UpdateOperation]
+    __obj.asInstanceOf[typingsSlinky.sparqljs.mod.ClearDropOperation]
   }
   
   @scala.inline
-  def InsertDeleteOperation(updateType: insert | delete | deletewhere | insertdelete): UpdateOperation = {
+  def CopyMoveAddOperation(destination: GraphOrDefault, silent: Boolean, source: GraphOrDefault, `type`: copy | move | add): typingsSlinky.sparqljs.mod.CopyMoveAddOperation = {
+    val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.sparqljs.mod.CopyMoveAddOperation]
+  }
+  
+  @scala.inline
+  def CreateOperation(graph: IriTerm, silent: Boolean, `type`: create): typingsSlinky.sparqljs.mod.CreateOperation = {
+    val __obj = js.Dynamic.literal(graph = graph.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.sparqljs.mod.CreateOperation]
+  }
+  
+  @scala.inline
+  def InsertDeleteOperation(updateType: insert | delete | deletewhere | insertdelete): typingsSlinky.sparqljs.mod.InsertDeleteOperation = {
     val __obj = js.Dynamic.literal(updateType = updateType.asInstanceOf[js.Any])
-    __obj.asInstanceOf[UpdateOperation]
+    __obj.asInstanceOf[typingsSlinky.sparqljs.mod.InsertDeleteOperation]
   }
   
   @scala.inline
-  def CopyMoveAddOperation(destination: GraphOrDefault, silent: Boolean, source: GraphOrDefault, `type`: copy | move | add): UpdateOperation = {
+  def LoadOperation(destination: IriTerm | `false`, silent: Boolean, source: IriTerm, `type`: load): typingsSlinky.sparqljs.mod.LoadOperation = {
     val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[UpdateOperation]
-  }
-  
-  @scala.inline
-  def CreateOperation(graph: IriTerm, silent: Boolean, `type`: create): UpdateOperation = {
-    val __obj = js.Dynamic.literal(graph = graph.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[UpdateOperation]
-  }
-  
-  @scala.inline
-  def LoadOperation(destination: IriTerm | `false`, silent: Boolean, source: IriTerm, `type`: load): UpdateOperation = {
-    val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[UpdateOperation]
+    __obj.asInstanceOf[typingsSlinky.sparqljs.mod.LoadOperation]
   }
 }

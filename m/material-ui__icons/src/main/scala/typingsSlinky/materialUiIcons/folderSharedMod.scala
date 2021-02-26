@@ -1,14 +1,21 @@
 package typingsSlinky.materialUiIcons
 
+import org.scalablytyped.runtime.Shortcut
 import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material-ui/icons/FolderShared", JSImport.Namespace)
-@js.native
-object folderSharedMod extends js.Object {
+object folderSharedMod extends Shortcut {
   
+  @JSImport("@material-ui/icons/FolderShared", JSImport.Default)
+  @js.native
   val default: ReactComponentClass[SvgIconProps] = js.native
+  
+  type _To = ReactComponentClass[SvgIconProps]
+  
+  /* This means you don't have to write `default`, but can instead just say `folderSharedMod.foo` */
+  override def _to: ReactComponentClass[SvgIconProps] = default
 }

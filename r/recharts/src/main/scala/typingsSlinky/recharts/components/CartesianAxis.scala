@@ -31,6 +31,7 @@ import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
 import typingsSlinky.recharts.rechartsStrings.right
 import typingsSlinky.recharts.rechartsStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -39,7 +40,7 @@ object CartesianAxis {
   
   @JSImport("recharts", "CartesianAxis")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -283,31 +284,31 @@ object CartesianAxis {
     def textRendering(value: auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit): this.type = set("textRendering", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tickReactElement(value: ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def tickFunction1(value: _ => ReactElement): this.type = set("tick", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def tick(value: Boolean | ContentRenderer[_] | js.Object | ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tickFormatter(value: /* value */ js.Any => js.Any): this.type = set("tickFormatter", js.Any.fromFunction1(value))
     
     @scala.inline
+    def tickFunction1(value: _ => ReactElement): this.type = set("tick", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def tickLine(value: Boolean | js.Object): this.type = set("tickLine", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tickSize(value: Double): this.type = set("tickSize", value.asInstanceOf[js.Any])
+    def tickReactElement(value: ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ticksVarargs(value: js.Any*): this.type = set("ticks", js.Array(value :_*))
+    def tickSize(value: Double): this.type = set("tickSize", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ticks(value: js.Array[_]): this.type = set("ticks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ticksGenerator(value: /* noTicksProps */ js.Object => js.Array[js.Any]): this.type = set("ticksGenerator", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def ticksVarargs(value: js.Any*): this.type = set("ticks", js.Array(value :_*))
     
     @scala.inline
     def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
@@ -337,7 +338,7 @@ object CartesianAxis {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CartesianAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: CartesianAxis.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CartesianAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

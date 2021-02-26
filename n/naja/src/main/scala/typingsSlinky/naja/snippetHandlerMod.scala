@@ -8,14 +8,14 @@ import typingsSlinky.naja.najaStrings.beforeUpdate
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import typingsSlinky.std.EventTarget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("naja/src/core/SnippetHandler", JSImport.Namespace)
-@js.native
-object snippetHandlerMod extends js.Object {
+object snippetHandlerMod {
   
+  @JSImport("naja/src/core/SnippetHandler", "SnippetHandler")
   @js.native
   class SnippetHandler () extends EventTarget {
     

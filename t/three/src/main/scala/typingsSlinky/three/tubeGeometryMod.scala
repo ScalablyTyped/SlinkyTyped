@@ -4,14 +4,14 @@ import typingsSlinky.three.anon.Closed
 import typingsSlinky.three.curveMod.Curve
 import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.vector3Mod.Vector3
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/geometries/TubeGeometry", JSImport.Namespace)
-@js.native
-object tubeGeometryMod extends js.Object {
+object tubeGeometryMod {
   
+  @JSImport("three/src/geometries/TubeGeometry", "TubeGeometry")
   @js.native
   class TubeGeometry protected () extends Geometry {
     /**

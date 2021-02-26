@@ -9,12 +9,13 @@ import typingsSlinky.astTypes.kindsMod.ImportNamespaceSpecifierKind
 import typingsSlinky.astTypes.kindsMod.ImportSpecifierKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ImportDeclaration
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ImportDeclarationBuilder extends js.Object {
+trait ImportDeclarationBuilder extends StObject {
   
   def apply(specifiers: js.UndefOr[scala.Nothing], source: LiteralKind): ImportDeclaration = js.native
   def apply(specifiers: js.UndefOr[scala.Nothing], source: LiteralKind, importKind: `type`): ImportDeclaration = js.native

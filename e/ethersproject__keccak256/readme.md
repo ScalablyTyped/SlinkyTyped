@@ -10,9 +10,9 @@ The keccak256 hash function for ethers.
 | ------------------ | :-------------: |
 | Full name          | @ethersproject/keccak256 |
 | Keywords           | Ethereum, ethers |
-| # releases         | 16 |
-| # dependents       | 12 |
-| # downloads        | 196291 |
+| # releases         | 25 |
+| # dependents       | 44 |
+| # downloads        | 2936118 |
 | # stars            | 0 |
 
 ## Links

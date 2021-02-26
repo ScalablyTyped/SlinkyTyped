@@ -17,6 +17,7 @@ import typingsSlinky.reactToastify.typesMod.ToastContainerProps
 import typingsSlinky.reactToastify.typesMod.ToastPosition
 import typingsSlinky.reactToastify.typesMod.ToastTransition
 import typingsSlinky.reactToastify.typesMod.ToastTransitionProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ object ToastContainer {
   
   @JSImport("react-toastify", "ToastContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,28 +37,28 @@ object ToastContainer {
     def autoClose(value: Double | `false`): this.type = set("autoClose", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def bodyClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("bodyClassName", js.Any.fromFunction1(value))
+    def bodyClassName(value: ToastClassName): this.type = set("bodyClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def bodyClassName(value: ToastClassName): this.type = set("bodyClassName", value.asInstanceOf[js.Any])
+    def bodyClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("bodyClassName", js.Any.fromFunction1(value))
     
     @scala.inline
     def bodyStyle(value: CSSProperties): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def classNameFunction1(value: /* context */ js.UndefOr[DefaultClassName] => String): this.type = set("className", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def className(value: ClassName): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeButtonReactElement(value: ReactElement): this.type = set("closeButton", value.asInstanceOf[js.Any])
+    def classNameFunction1(value: /* context */ js.UndefOr[DefaultClassName] => String): this.type = set("className", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def closeButton(value: ReactElement | (js.Function1[/* props */ js.Any, ReactElement]) | Boolean): this.type = set("closeButton", value.asInstanceOf[js.Any])
     
     @scala.inline
     def closeButtonFunction1(value: /* props */ js.Any => ReactElement): this.type = set("closeButton", js.Any.fromFunction1(value))
     
     @scala.inline
-    def closeButton(value: ReactElement | (js.Function1[/* props */ js.Any, ReactElement]) | Boolean): this.type = set("closeButton", value.asInstanceOf[js.Any])
+    def closeButtonReactElement(value: ReactElement): this.type = set("closeButton", value.asInstanceOf[js.Any])
     
     @scala.inline
     def closeOnClick(value: Boolean): this.type = set("closeOnClick", value.asInstanceOf[js.Any])
@@ -96,10 +97,10 @@ object ToastContainer {
     def position(value: ToastPosition): this.type = set("position", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def progressClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("progressClassName", js.Any.fromFunction1(value))
+    def progressClassName(value: ToastClassName): this.type = set("progressClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def progressClassName(value: ToastClassName): this.type = set("progressClassName", value.asInstanceOf[js.Any])
+    def progressClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("progressClassName", js.Any.fromFunction1(value))
     
     @scala.inline
     def progressStyle(value: CSSProperties): this.type = set("progressStyle", value.asInstanceOf[js.Any])
@@ -114,25 +115,25 @@ object ToastContainer {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def toastClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("toastClassName", js.Any.fromFunction1(value))
+    def toastClassName(value: ToastClassName): this.type = set("toastClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def toastClassName(value: ToastClassName): this.type = set("toastClassName", value.asInstanceOf[js.Any])
+    def toastClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("toastClassName", js.Any.fromFunction1(value))
     
     @scala.inline
     def toastStyle(value: CSSProperties): this.type = set("toastStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def transitionFunctionComponent(value: ReactComponentClass[ToastTransitionProps]): this.type = set("transition", value.asInstanceOf[js.Any])
+    def transition(value: ToastTransition): this.type = set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def transitionComponentClass(value: ReactComponentClass[ToastTransitionProps]): this.type = set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def transition(value: ToastTransition): this.type = set("transition", value.asInstanceOf[js.Any])
+    def transitionFunctionComponent(value: ReactComponentClass[ToastTransitionProps]): this.type = set("transition", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ToastContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ToastContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ToastContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

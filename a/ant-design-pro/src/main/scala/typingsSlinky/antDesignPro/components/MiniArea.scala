@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.anon.Y
 import typingsSlinky.antDesignPro.miniAreaMod.IAxis
 import typingsSlinky.antDesignPro.miniAreaMod.IMiniAreaProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MiniArea {
   
+  @scala.inline
+  def apply(data: js.Array[Y], height: Double): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IMiniAreaProps]))
+  }
+  
   @JSImport("ant-design-pro/lib/Charts", "MiniArea")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +47,4 @@ object MiniArea {
   }
   
   def withProps(p: IMiniAreaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[Y], height: Double): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IMiniAreaProps]))
-  }
 }

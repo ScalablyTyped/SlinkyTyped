@@ -6,12 +6,13 @@ import typingsSlinky.googleapis.googleapisStrings.v4
 import typingsSlinky.googleapis.googleapisStrings.v5
 import typingsSlinky.googleapis.pagespeedonlineV1Mod.pagespeedonlineV1.Options
 import typingsSlinky.googleapis.pagespeedonlineV1Mod.pagespeedonlineV1.Pagespeedonline
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Fn99 extends js.Object {
+trait Fn99 extends StObject {
   
   def apply(options: Options): Pagespeedonline = js.native
   def apply(options: typingsSlinky.googleapis.pagespeedonlineV2Mod.pagespeedonlineV2.Options): typingsSlinky.googleapis.pagespeedonlineV2Mod.pagespeedonlineV2.Pagespeedonline = js.native

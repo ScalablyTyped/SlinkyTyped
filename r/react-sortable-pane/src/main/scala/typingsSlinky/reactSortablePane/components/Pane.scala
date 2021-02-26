@@ -8,6 +8,7 @@ import typingsSlinky.reactSortablePane.anon.Height
 import typingsSlinky.reactSortablePane.paneMod.IsPaneResizable
 import typingsSlinky.reactSortablePane.paneMod.PaneProps
 import typingsSlinky.reactSortablePane.paneMod.PaneSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object Pane {
   
   @JSImport("react-sortable-pane", "Pane")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -24,10 +25,10 @@ object Pane {
        with StBuildingComponent[tag.type, typingsSlinky.reactSortablePane.mod.Pane] {
     
     @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    def children(value: String | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def children(value: String | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -63,7 +64,7 @@ object Pane {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PaneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Pane.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PaneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

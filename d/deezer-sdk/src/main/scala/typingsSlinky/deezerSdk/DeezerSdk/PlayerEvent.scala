@@ -1,5 +1,6 @@
 package typingsSlinky.deezerSdk.DeezerSdk
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +28,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.deezerSdk.deezerSdkStrings.track_end
   - typingsSlinky.deezerSdk.deezerSdkStrings.current_track
 */
-trait PlayerEvent extends js.Object
+trait PlayerEvent extends StObject
 object PlayerEvent {
   
   @scala.inline

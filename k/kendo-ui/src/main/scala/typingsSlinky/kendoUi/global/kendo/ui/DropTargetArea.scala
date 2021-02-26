@@ -2,6 +2,7 @@ package typingsSlinky.kendoUi.global.kendo.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.ui.DropTargetAreaOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

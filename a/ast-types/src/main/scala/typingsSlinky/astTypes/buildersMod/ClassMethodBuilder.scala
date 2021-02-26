@@ -11,12 +11,13 @@ import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
 import typingsSlinky.astTypes.kindsMod.PatternKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassMethod
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClassMethodBuilder extends js.Object {
+trait ClassMethodBuilder extends StObject {
   
   def apply(
     kind: js.UndefOr[get | set | method | constructor],

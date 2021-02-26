@@ -1,6 +1,7 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.std.PropertyKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,20 +14,47 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arcgisJsApi.esri.HeatmapRampElement
   - typingsSlinky.arcgisJsApi.esri.RelationshipRampElement
 */
-trait LegendElement extends js.Object
+trait LegendElement extends StObject
 object LegendElement {
   
   @scala.inline
-  def SymbolTableElement(
+  def ColorRampElement(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    infos: js.Array[SymbolTableElementType],
+    infos: js.Array[ColorRampStop],
+    propertyIsEnumerable: PropertyKey => Boolean,
+    title: String | RampTitle,
+    `type`: String
+  ): typingsSlinky.arcgisJsApi.esri.ColorRampElement = {
+    val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), infos = infos.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), title = title.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.ColorRampElement]
+  }
+  
+  @scala.inline
+  def HeatmapRampElement(
+    constructor: js.Function,
+    hasOwnProperty: PropertyKey => Boolean,
+    infos: js.Array[HeatmapRampStop],
     propertyIsEnumerable: PropertyKey => Boolean,
     `type`: String
-  ): LegendElement = {
+  ): typingsSlinky.arcgisJsApi.esri.HeatmapRampElement = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), infos = infos.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LegendElement]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.HeatmapRampElement]
+  }
+  
+  @scala.inline
+  def OpacityRampElement(
+    constructor: js.Function,
+    hasOwnProperty: PropertyKey => Boolean,
+    infos: js.Array[OpacityRampStop],
+    propertyIsEnumerable: PropertyKey => Boolean,
+    `type`: String
+  ): typingsSlinky.arcgisJsApi.esri.OpacityRampElement = {
+    val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), infos = infos.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.OpacityRampElement]
   }
   
   @scala.inline
@@ -40,10 +68,10 @@ object LegendElement {
     propertyIsEnumerable: PropertyKey => Boolean,
     rotation: Double,
     `type`: String
-  ): LegendElement = {
+  ): typingsSlinky.arcgisJsApi.esri.RelationshipRampElement = {
     val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), labels = labels.asInstanceOf[js.Any], numClasses = numClasses.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), rotation = rotation.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LegendElement]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.RelationshipRampElement]
   }
   
   @scala.inline
@@ -53,49 +81,22 @@ object LegendElement {
     infos: js.Array[SizeRampStop],
     propertyIsEnumerable: PropertyKey => Boolean,
     `type`: String
-  ): LegendElement = {
+  ): typingsSlinky.arcgisJsApi.esri.SizeRampElement = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), infos = infos.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LegendElement]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.SizeRampElement]
   }
   
   @scala.inline
-  def ColorRampElement(
+  def SymbolTableElement(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    infos: js.Array[ColorRampStop],
-    propertyIsEnumerable: PropertyKey => Boolean,
-    title: String | RampTitle,
-    `type`: String
-  ): LegendElement = {
-    val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), infos = infos.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), title = title.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LegendElement]
-  }
-  
-  @scala.inline
-  def OpacityRampElement(
-    constructor: js.Function,
-    hasOwnProperty: PropertyKey => Boolean,
-    infos: js.Array[OpacityRampStop],
+    infos: js.Array[SymbolTableElementType],
     propertyIsEnumerable: PropertyKey => Boolean,
     `type`: String
-  ): LegendElement = {
+  ): typingsSlinky.arcgisJsApi.esri.SymbolTableElement = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), infos = infos.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LegendElement]
-  }
-  
-  @scala.inline
-  def HeatmapRampElement(
-    constructor: js.Function,
-    hasOwnProperty: PropertyKey => Boolean,
-    infos: js.Array[HeatmapRampStop],
-    propertyIsEnumerable: PropertyKey => Boolean,
-    `type`: String
-  ): LegendElement = {
-    val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), infos = infos.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LegendElement]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.SymbolTableElement]
   }
 }

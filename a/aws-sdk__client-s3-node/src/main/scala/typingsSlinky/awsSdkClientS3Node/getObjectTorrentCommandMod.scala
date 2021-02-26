@@ -8,14 +8,14 @@ import typingsSlinky.awsSdkClientS3Node.typesGetObjectTorrentOutputMod.GetObject
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/GetObjectTorrentCommand", JSImport.Namespace)
-@js.native
-object getObjectTorrentCommandMod extends js.Object {
+object getObjectTorrentCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/GetObjectTorrentCommand", "GetObjectTorrentCommand")
   @js.native
   class GetObjectTorrentCommand protected () extends Command[
           InputTypesUnion, 

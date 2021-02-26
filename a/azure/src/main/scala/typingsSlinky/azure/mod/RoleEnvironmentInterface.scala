@@ -2,6 +2,7 @@ package typingsSlinky.azure.mod
 
 import typingsSlinky.azure.anon.Dictkey
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

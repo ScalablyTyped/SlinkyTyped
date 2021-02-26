@@ -10,9 +10,9 @@ LaunchDarkly SDK for JavaScript
 | ------------------ | :-------------: |
 | Full name          | ldclient-js |
 | Keywords           | launchdarkly, analytics, client |
-| # releases         | 55 |
-| # dependents       | 17 |
-| # downloads        | 2538143 |
+| # releases         | 13 |
+| # dependents       | 14 |
+| # downloads        | 2233511 |
 | # stars            | 1 |
 
 ## Links

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesListMultipartUploadsInputMod.Lis
 import typingsSlinky.awsSdkClientS3Browser.typesListMultipartUploadsOutputMod.ListMultipartUploadsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/ListMultipartUploadsCommand", JSImport.Namespace)
-@js.native
-object listMultipartUploadsCommandMod extends js.Object {
+object listMultipartUploadsCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/ListMultipartUploadsCommand", "ListMultipartUploadsCommand")
   @js.native
   class ListMultipartUploadsCommand protected () extends Command[
           InputTypesUnion, 

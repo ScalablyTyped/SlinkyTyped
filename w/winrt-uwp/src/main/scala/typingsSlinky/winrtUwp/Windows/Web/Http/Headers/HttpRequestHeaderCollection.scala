@@ -5,13 +5,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IKeyValuePair
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import typingsSlinky.winrtUwp.Windows.Networking.HostName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides a collection of the HTTP headers associated with an HTTP request. */
 @js.native
-trait HttpRequestHeaderCollection extends js.Object {
+trait HttpRequestHeaderCollection extends StObject {
   
   /** Gets the HttpMediaTypeWithQualityHeaderValueCollection of HttpMediaTypeWithQualityHeaderValue objects that represent the value of an Accept HTTP header on an HTTP request. */
   var accept: HttpMediaTypeWithQualityHeaderValueCollection = js.native

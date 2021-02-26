@@ -1,5 +1,6 @@
 package typingsSlinky.stremioAddonSdk.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.stremioAddonSdk.stremioAddonSdkStrings.genre
   - typingsSlinky.stremioAddonSdk.stremioAddonSdkStrings.skip
 */
-trait Extra extends js.Object
+trait Extra extends StObject
 object Extra {
   
   @scala.inline

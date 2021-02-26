@@ -7,6 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,16 +29,20 @@ class EnumerationType protected ()
     container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
-/* static members */
-@JSImport("mendixmodelsdk/dist/gen/all-model-classes", "javaactions.EnumerationType")
-@js.native
-object EnumerationType extends js.Object {
+object EnumerationType {
+  
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "javaactions.EnumerationType")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Creates and returns a new EnumerationType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "javaactions.EnumerationType.create")
+  @js.native
   def create(model: IModel): typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.EnumerationType = js.native
   
   /**
@@ -48,6 +53,9 @@ object EnumerationType extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.7.0 to 7.20.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "javaactions.EnumerationType.createInBasicParameterTypeUnderType")
+  @js.native
   def createInBasicParameterTypeUnderType(container: typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.BasicParameterType): typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.EnumerationType = js.native
   
   /**
@@ -58,6 +66,9 @@ object EnumerationType extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.6.0 to 6.6.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "javaactions.EnumerationType.createInJavaActionParameterUnderJavaType")
+  @js.native
   def createInJavaActionParameterUnderJavaType(container: typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.JavaActionParameter): typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.EnumerationType = js.native
   
   /**
@@ -68,9 +79,22 @@ object EnumerationType extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.6.0 to 7.20.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "javaactions.EnumerationType.createInJavaActionUnderJavaReturnType")
+  @js.native
   def createInJavaActionUnderJavaReturnType(container: typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.JavaAction): typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.EnumerationType = js.native
   
-  var structureTypeName: String = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "javaactions.EnumerationType.structureTypeName")
+  @js.native
+  def structureTypeName: String = js.native
+  @scala.inline
+  def structureTypeName_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("structureTypeName")(x.asInstanceOf[js.Any])
   
-  var versionInfo: StructureVersionInfo = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "javaactions.EnumerationType.versionInfo")
+  @js.native
+  def versionInfo: StructureVersionInfo = js.native
+  @scala.inline
+  def versionInfo_=(x: StructureVersionInfo): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(x.asInstanceOf[js.Any])
 }

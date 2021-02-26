@@ -8,14 +8,14 @@ import typingsSlinky.ionicCore.virtualScrollInterfaceMod.HeaderFn
 import typingsSlinky.ionicCore.virtualScrollInterfaceMod.HeaderHeightFn
 import typingsSlinky.ionicCore.virtualScrollInterfaceMod.ItemHeightFn
 import typingsSlinky.ionicCore.virtualScrollInterfaceMod.ItemRenderFn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/virtual-scroll/virtual-scroll", JSImport.Namespace)
-@js.native
-object virtualScrollMod extends js.Object {
+object virtualScrollMod {
   
+  @JSImport("@ionic/core/dist/types/components/virtual-scroll/virtual-scroll", "VirtualScroll")
   @js.native
   class VirtualScroll () extends ComponentInterface {
     

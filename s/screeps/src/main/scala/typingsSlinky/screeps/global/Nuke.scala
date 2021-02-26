@@ -1,18 +1,15 @@
 package typingsSlinky.screeps.global
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.screeps.Id
-import typingsSlinky.screeps.NukeConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Nuke")
 @js.native
 class Nuke protected ()
   extends typingsSlinky.screeps.Nuke {
   def this(id: Id[typingsSlinky.screeps.Nuke]) = this()
 }
-@JSGlobal("Nuke")
-@js.native
-object Nuke extends TopLevel[NukeConstructor]

@@ -11,8 +11,8 @@ A cli tool which automatically add references to issues, pull requests, user men
 | Full name          | linkify-markdown |
 | Keywords           | - |
 | # releases         | 0 |
-| # dependents       | 4 |
-| # downloads        | 694009 |
+| # dependents       | 8 |
+| # downloads        | 1066639 |
 | # stars            | 0 |
 
 ## Links

@@ -216,6 +216,7 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.yChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.z
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.zChanged
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -11,6 +11,7 @@ import typingsSlinky.mapboxGl.mapboxGlStrings.mousemove
 import typingsSlinky.mapboxGl.mapboxGlStrings.mouseout
 import typingsSlinky.mapboxGl.mapboxGlStrings.mouseover
 import typingsSlinky.mapboxGl.mapboxGlStrings.mouseup
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

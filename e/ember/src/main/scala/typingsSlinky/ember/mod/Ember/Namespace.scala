@@ -1,6 +1,6 @@
 package typingsSlinky.ember.mod.Ember
 
-import typingsSlinky.emberObject.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,4 +12,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("ember", "Ember.Namespace")
 @js.native
-class Namespace () extends default
+class Namespace () extends Object

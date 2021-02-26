@@ -16,6 +16,7 @@ import typingsSlinky.gestalt.gestaltStrings.start
 import typingsSlinky.gestalt.gestaltStrings.stretch
 import typingsSlinky.gestalt.mod.RowProps
 import typingsSlinky.gestalt.mod.UnsignedUpTo12
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ object Row {
   
   @JSImport("gestalt", "Row")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -74,7 +75,7 @@ object Row {
     def wrap(value: Boolean): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RowProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Row.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RowProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

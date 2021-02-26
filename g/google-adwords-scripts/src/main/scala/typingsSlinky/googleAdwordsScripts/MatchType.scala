@@ -1,5 +1,6 @@
 package typingsSlinky.googleAdwordsScripts
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.PHRASE
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.EXACT
 */
-trait MatchType extends js.Object
+trait MatchType extends StObject
 object MatchType {
   
   @scala.inline

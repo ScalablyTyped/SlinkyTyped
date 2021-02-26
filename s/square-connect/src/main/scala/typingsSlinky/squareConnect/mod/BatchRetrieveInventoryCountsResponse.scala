@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "BatchRetrieveInventoryCountsResponse")
 @js.native
-class BatchRetrieveInventoryCountsResponse () extends js.Object {
+class BatchRetrieveInventoryCountsResponse () extends StObject {
   
   /**
     * The current calculated inventory counts for the requested objects and locations.

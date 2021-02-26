@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.iconMod.IconGlyph
 import typingsSlinky.fundamentalReact.tabMod.TabProps
 import typingsSlinky.react.mod.PropsWithChildren
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object Tab {
   
   @JSImport("fundamental-react", "Tab")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,7 +52,7 @@ object Tab {
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PropsWithChildren[TabProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tab.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PropsWithChildren[TabProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

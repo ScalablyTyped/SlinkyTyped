@@ -4,17 +4,21 @@ import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialTab.typesMod.MDCTabInteractionEvent
 import typingsSlinky.materialTabBar.adapterMod.MDCTabBarAdapter
-import typingsSlinky.materialTabBar.anon.ARROWLEFTKEY
-import typingsSlinky.materialTabBar.anon.ARROWLEFTKEYCODE
 import typingsSlinky.materialTabBar.anon.PartialMDCTabBarAdapter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/tab-bar/foundation", JSImport.Namespace)
-@js.native
-object foundationMod extends js.Object {
+object foundationMod {
   
+  @JSImport("@material/tab-bar/foundation", JSImport.Default)
+  @js.native
+  class default () extends MDCTabBarFoundation {
+    def this(adapter: PartialMDCTabBarAdapter) = this()
+  }
+  
+  @JSImport("@material/tab-bar/foundation", "MDCTabBarFoundation")
   @js.native
   class MDCTabBarFoundation () extends MDCFoundation[MDCTabBarAdapter] {
     def this(adapter: PartialMDCTabBarAdapter) = this()
@@ -39,30 +43,5 @@ object foundationMod extends js.Object {
       * See https://www.w3.org/TR/wai-aria-practices/#tabpanel for examples.
       */
     def setUseAutomaticActivation(useAutomaticActivation: Boolean): Unit = js.native
-  }
-  /* static members */
-  @js.native
-  object MDCTabBarFoundation extends js.Object {
-    
-    def defaultAdapter: MDCTabBarAdapter = js.native
-    
-    def numbers: ARROWLEFTKEYCODE = js.native
-    
-    def strings: ARROWLEFTKEY = js.native
-  }
-  
-  @js.native
-  class default () extends MDCTabBarFoundation {
-    def this(adapter: PartialMDCTabBarAdapter) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    def defaultAdapter: MDCTabBarAdapter = js.native
-    
-    def numbers: ARROWLEFTKEYCODE = js.native
-    
-    def strings: ARROWLEFTKEY = js.native
   }
 }

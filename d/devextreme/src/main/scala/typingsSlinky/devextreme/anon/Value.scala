@@ -1,11 +1,12 @@
 package typingsSlinky.devextreme.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Value extends js.Object {
+trait Value extends StObject {
   
   var value: js.UndefOr[String | Double | js.Date] = js.native
   
@@ -20,33 +21,21 @@ object Value {
   }
   
   @scala.inline
-  implicit class ValueOps[Self <: Value] (val x: Self) extends AnyVal {
+  implicit class ValueMutableBuilder[Self <: Value] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setValue(value: String | Double | js.Date): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setValueDate(value: js.Date): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setValueText(value: String): Self = StObject.set(x, "valueText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValueDate(value: js.Date): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValueTextUndefined: Self = StObject.set(x, "valueText", js.undefined)
     
     @scala.inline
-    def setValue(value: String | Double | js.Date): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValue: Self = this.set("value", js.undefined)
-    
-    @scala.inline
-    def setValueText(value: String): Self = this.set("valueText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValueText: Self = this.set("valueText", js.undefined)
+    def setValueUndefined: Self = StObject.set(x, "value", js.undefined)
   }
 }

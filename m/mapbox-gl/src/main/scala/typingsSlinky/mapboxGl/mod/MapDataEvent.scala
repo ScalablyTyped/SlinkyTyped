@@ -1,5 +1,6 @@
 package typingsSlinky.mapboxGl.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mapboxGl.mod.MapSourceDataEvent
   - typingsSlinky.mapboxGl.mod.MapStyleDataEvent
 */
-trait MapDataEvent extends js.Object
+trait MapDataEvent extends StObject

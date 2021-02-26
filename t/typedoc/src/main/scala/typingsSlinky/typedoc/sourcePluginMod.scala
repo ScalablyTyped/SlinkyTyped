@@ -1,17 +1,19 @@
 package typingsSlinky.typedoc
 
-import typingsSlinky.typedoc.componentMod.AbstractComponent
+import typingsSlinky.typedoc.componentsMod.ConverterComponent
 import typingsSlinky.typedoc.converterConverterMod.Converter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/converter/plugins/SourcePlugin", JSImport.Namespace)
-@js.native
-object sourcePluginMod extends js.Object {
+object sourcePluginMod {
   
+  @JSImport("typedoc/dist/lib/converter/plugins/SourcePlugin", "SourcePlugin")
   @js.native
-  class SourcePlugin () extends AbstractComponent[Converter] {
+  class SourcePlugin protected () extends ConverterComponent {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
     
     var basePath: js.Any = js.native
     

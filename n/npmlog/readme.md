@@ -10,9 +10,9 @@ logger for npm
 | ------------------ | :-------------: |
 | Full name          | npmlog |
 | Keywords           | - |
-| # releases         | 0 |
-| # dependents       | 1083 |
-| # downloads        | 395131424 |
+| # releases         | 1 |
+| # dependents       | 1273 |
+| # downloads        | 500387761 |
 | # stars            | 26 |
 
 ## Links

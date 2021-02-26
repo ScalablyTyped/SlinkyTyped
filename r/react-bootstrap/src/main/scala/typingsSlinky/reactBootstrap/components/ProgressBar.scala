@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrap.mod.Sizes
 import typingsSlinky.reactBootstrap.progressBarMod.ProgressBarProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object ProgressBar {
   
   @JSImport("react-bootstrap", "ProgressBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +37,10 @@ object ProgressBar {
     def interpolatedClass(value: js.Any): this.type = set("interpolatedClass", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
@@ -57,7 +58,7 @@ object ProgressBar {
     def striped(value: Boolean): this.type = set("striped", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ProgressBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ProgressBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ProgressBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

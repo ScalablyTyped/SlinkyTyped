@@ -9,16 +9,16 @@ import typingsSlinky.three.webGLCubeMapsMod.WebGLCubeMaps
 import typingsSlinky.three.webGLExtensionsMod.WebGLExtensions
 import typingsSlinky.three.webGLProgramMod.WebGLProgram
 import typingsSlinky.three.webGLRendererMod.WebGLRenderer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/renderers/webgl/WebGLPrograms", JSImport.Namespace)
-@js.native
-object webGLProgramsMod extends js.Object {
+object webGLProgramsMod {
   
+  @JSImport("three/src/renderers/webgl/WebGLPrograms", "WebGLPrograms")
   @js.native
-  class WebGLPrograms protected () extends js.Object {
+  class WebGLPrograms protected () extends StObject {
     def this(
       renderer: WebGLRenderer,
       cubemaps: WebGLCubeMaps,

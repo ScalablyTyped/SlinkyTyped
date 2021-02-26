@@ -7,6 +7,7 @@ import typingsSlinky.reactNativeZssRichTextEditor.anon.PartialRichTextToolbarPro
 import typingsSlinky.reactNativeZssRichTextEditor.mod.ACTIONS
 import typingsSlinky.reactNativeZssRichTextEditor.mod.ElementStyles
 import typingsSlinky.reactNativeZssRichTextEditor.mod.IconsMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object RichTextToolbar {
   
   @JSImport("react-native-zss-rich-text-editor", "RichTextToolbar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -23,10 +24,10 @@ object RichTextToolbar {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeZssRichTextEditor.mod.RichTextToolbar] {
     
     @scala.inline
-    def actionsVarargs(value: ACTIONS*): this.type = set("actions", js.Array(value :_*))
+    def actions(value: js.Array[ACTIONS]): this.type = set("actions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def actions(value: js.Array[ACTIONS]): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actionsVarargs(value: ACTIONS*): this.type = set("actions", js.Array(value :_*))
     
     @scala.inline
     def getEditor(value: () => typingsSlinky.reactNativeZssRichTextEditor.mod.RichTextEditor): this.type = set("getEditor", js.Any.fromFunction0(value))
@@ -62,7 +63,7 @@ object RichTextToolbar {
     def unselectedButtonStyleNull: this.type = set("unselectedButtonStyle", null)
   }
   
-  def withProps(p: PartialRichTextToolbarPro): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RichTextToolbar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PartialRichTextToolbarPro): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

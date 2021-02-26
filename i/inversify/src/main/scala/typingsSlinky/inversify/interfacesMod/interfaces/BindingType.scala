@@ -1,5 +1,6 @@
 package typingsSlinky.inversify.interfacesMod.interfaces
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.inversify.inversifyStrings.Invalid
   - typingsSlinky.inversify.inversifyStrings.Provider
 */
-trait BindingType extends js.Object
+trait BindingType extends StObject
 object BindingType {
   
   @scala.inline

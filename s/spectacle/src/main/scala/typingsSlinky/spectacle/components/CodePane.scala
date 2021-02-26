@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.spectacle.anon.AutoFillHeight
 import typingsSlinky.spectacle.anon.Plain
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CodePane {
   
+  @scala.inline
+  def apply(autoFillHeight: Boolean, language: String): Builder = {
+    val __props = js.Dynamic.literal(autoFillHeight = autoFillHeight.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AutoFillHeight]))
+  }
+  
   @JSImport("spectacle", "CodePane")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +43,4 @@ object CodePane {
   }
   
   def withProps(p: AutoFillHeight): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(autoFillHeight: Boolean, language: String): Builder = {
-    val __props = js.Dynamic.literal(autoFillHeight = autoFillHeight.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AutoFillHeight]))
-  }
 }

@@ -11,12 +11,13 @@ import typingsSlinky.maximMazurokGapiClientContaineranalysis.anon.Name
 import typingsSlinky.maximMazurokGapiClientContaineranalysis.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientContaineranalysis.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientContaineranalysis.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OccurrencesResource extends js.Object {
+trait OccurrencesResource extends StObject {
   
   /** Creates new occurrences in batch. */
   def batchCreate(request: Alt): Request[BatchCreateOccurrencesResponse] = js.native

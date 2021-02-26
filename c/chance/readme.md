@@ -10,9 +10,9 @@ Chance - Utility library to generate anything random
 | ------------------ | :-------------: |
 | Full name          | chance |
 | Keywords           | chance, random, generator, test, mersenne, name, address, dice |
-| # releases         | 10 |
-| # dependents       | 491 |
-| # downloads        | 14902661 |
+| # releases         | 8 |
+| # dependents       | 623 |
+| # downloads        | 21400367 |
 | # stars            | 77 |
 
 ## Links

@@ -19,12 +19,13 @@ import typingsSlinky.typeahead.typeaheadStrings.typeaheadColonidle
 import typingsSlinky.typeahead.typeaheadStrings.typeaheadColonopen
 import typingsSlinky.typeahead.typeaheadStrings.typeaheadColonrender
 import typingsSlinky.typeahead.typeaheadStrings.typeaheadColonselect
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Remove an event handler.

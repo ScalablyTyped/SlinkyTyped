@@ -2,6 +2,7 @@ package typingsSlinky.winrt.Windows.Media.Devices
 
 import typingsSlinky.winrt.anon.SucceededBoolean
 import typingsSlinky.winrt.anon.SucceededValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

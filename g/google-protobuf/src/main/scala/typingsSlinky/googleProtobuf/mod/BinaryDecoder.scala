@@ -1,12 +1,13 @@
 package typingsSlinky.googleProtobuf.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("google-protobuf", "BinaryDecoder")
 @js.native
-class BinaryDecoder () extends js.Object {
+class BinaryDecoder () extends StObject {
   def this(bytes: ByteSource) = this()
   def this(bytes: js.UndefOr[ByteSource], start: Double) = this()
   def this(bytes: js.UndefOr[ByteSource], start: js.UndefOr[scala.Nothing], length: Double) = this()
@@ -106,13 +107,21 @@ class BinaryDecoder () extends js.Object {
   def unskipVarint(value: Double): Unit = js.native
 }
 /* static members */
-@JSImport("google-protobuf", "BinaryDecoder")
-@js.native
-object BinaryDecoder extends js.Object {
+object BinaryDecoder {
   
+  @JSImport("google-protobuf", "BinaryDecoder.alloc")
+  @js.native
   def alloc(): BinaryDecoder = js.native
+  @JSImport("google-protobuf", "BinaryDecoder.alloc")
+  @js.native
   def alloc(bytes: js.UndefOr[ByteSource], start: js.UndefOr[scala.Nothing], length: Double): BinaryDecoder = js.native
+  @JSImport("google-protobuf", "BinaryDecoder.alloc")
+  @js.native
   def alloc(bytes: js.UndefOr[ByteSource], start: Double): BinaryDecoder = js.native
+  @JSImport("google-protobuf", "BinaryDecoder.alloc")
+  @js.native
   def alloc(bytes: js.UndefOr[ByteSource], start: Double, length: Double): BinaryDecoder = js.native
+  @JSImport("google-protobuf", "BinaryDecoder.alloc")
+  @js.native
   def alloc(bytes: ByteSource): BinaryDecoder = js.native
 }

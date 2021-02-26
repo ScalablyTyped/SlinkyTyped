@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientHealthcare.anon.OauthtokenPrettyPrint
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.OptionsrequestedPolicyVersion
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.Resource
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.UpdateMask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Hl7V2StoresResource extends js.Object {
+trait Hl7V2StoresResource extends StObject {
   
   def create(request: FieldsHl7V2StoreId, body: Hl7V2Store): Request[Hl7V2Store] = js.native
   /** Creates a new HL7v2 store within the parent dataset. */

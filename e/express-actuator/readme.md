@@ -10,9 +10,9 @@ Provides endpoints to help you monitor and manage your application when it's pus
 | ------------------ | :-------------: |
 | Full name          | express-actuator |
 | Keywords           | actuator, express, middleware, health-check, ping, metrics, kubernetes |
-| # releases         | 6 |
+| # releases         | 11 |
 | # dependents       | 3 |
-| # downloads        | 21578 |
+| # downloads        | 56371 |
 | # stars            | 2 |
 
 ## Links

@@ -1,12 +1,11 @@
 package typingsSlinky.awsSdkClientGlacierNode
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/types/UploadArchiveExceptionsUnion", JSImport.Namespace)
-@js.native
-object uploadArchiveExceptionsUnionMod extends js.Object {
+object uploadArchiveExceptionsUnionMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientGlacierNode.typesResourceNotFoundExceptionMod.ResourceNotFoundException
@@ -15,5 +14,45 @@ object uploadArchiveExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientGlacierNode.typesRequestTimeoutExceptionMod.RequestTimeoutException
     - typingsSlinky.awsSdkClientGlacierNode.typesServiceUnavailableExceptionMod.ServiceUnavailableException
   */
-  trait UploadArchiveExceptionsUnion extends js.Object
+  trait UploadArchiveExceptionsUnion extends StObject
+  object UploadArchiveExceptionsUnion {
+    
+    @scala.inline
+    def InvalidParameterValueException(
+      name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.InvalidParameterValueException
+    ): typingsSlinky.awsSdkClientGlacierNode.typesInvalidParameterValueExceptionMod.InvalidParameterValueException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientGlacierNode.typesInvalidParameterValueExceptionMod.InvalidParameterValueException]
+    }
+    
+    @scala.inline
+    def MissingParameterValueException(
+      name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.MissingParameterValueException
+    ): typingsSlinky.awsSdkClientGlacierNode.typesMissingParameterValueExceptionMod.MissingParameterValueException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientGlacierNode.typesMissingParameterValueExceptionMod.MissingParameterValueException]
+    }
+    
+    @scala.inline
+    def RequestTimeoutException(name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.RequestTimeoutException): typingsSlinky.awsSdkClientGlacierNode.typesRequestTimeoutExceptionMod.RequestTimeoutException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientGlacierNode.typesRequestTimeoutExceptionMod.RequestTimeoutException]
+    }
+    
+    @scala.inline
+    def ResourceNotFoundException(
+      name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.ResourceNotFoundException
+    ): typingsSlinky.awsSdkClientGlacierNode.typesResourceNotFoundExceptionMod.ResourceNotFoundException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientGlacierNode.typesResourceNotFoundExceptionMod.ResourceNotFoundException]
+    }
+    
+    @scala.inline
+    def ServiceUnavailableException(
+      name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.ServiceUnavailableException
+    ): typingsSlinky.awsSdkClientGlacierNode.typesServiceUnavailableExceptionMod.ServiceUnavailableException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientGlacierNode.typesServiceUnavailableExceptionMod.ServiceUnavailableException]
+    }
+  }
 }

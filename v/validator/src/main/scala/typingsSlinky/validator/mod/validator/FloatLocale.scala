@@ -1,6 +1,7 @@
 package typingsSlinky.validator.mod.validator
 
 import typingsSlinky.validator.validatorStrings.`pl-Pl_`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -57,7 +58,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.validator.validatorStrings.`pt-BR`
   - typingsSlinky.validator.validatorStrings.`pl-Pl_`
 */
-trait FloatLocale extends js.Object
+trait FloatLocale extends StObject
 object FloatLocale {
   
   @scala.inline

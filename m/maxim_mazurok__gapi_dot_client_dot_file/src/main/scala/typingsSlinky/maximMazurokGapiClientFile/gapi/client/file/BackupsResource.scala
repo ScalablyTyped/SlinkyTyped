@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientFile.anon.Callback
 import typingsSlinky.maximMazurokGapiClientFile.anon.Fields
 import typingsSlinky.maximMazurokGapiClientFile.anon.Key
 import typingsSlinky.maximMazurokGapiClientFile.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BackupsResource extends js.Object {
+trait BackupsResource extends StObject {
   
   /** Creates a backup. */
   def create(request: Accesstoken): Request[Operation] = js.native

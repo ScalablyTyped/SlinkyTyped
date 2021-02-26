@@ -5,6 +5,7 @@ import typingsSlinky.angularCompiler.i18nAstMod.Message
 import typingsSlinky.angularCompiler.i18nAstMod.Node
 import typingsSlinky.angularCompiler.r3AstMod.BoundText
 import typingsSlinky.angularCompiler.r3AstMod.Icu
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

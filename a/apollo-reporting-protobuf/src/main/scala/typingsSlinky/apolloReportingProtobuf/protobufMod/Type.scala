@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,18 +33,26 @@ class Type () extends IType {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("apollo-reporting-protobuf/dist/protobuf", "Type")
-@js.native
-object Type extends js.Object {
+object Type {
   
   /**
     * Creates a new Type instance using the specified properties.
     * @param [properties] Properties to set
     * @returns Type instance
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.create")
+  @js.native
   def create(): Type = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.create")
+  @js.native
   def create(properties: IType): Type = js.native
   
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): Type = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Type = js.native
   /**
     * Decodes a Type message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -52,11 +61,16 @@ object Type extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.decode")
+  @js.native
   def decode(reader: Reader): Type = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.decode")
+  @js.native
   def decode(reader: Reader, length: Double): Type = js.native
-  def decode(reader: js.typedarray.Uint8Array): Type = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): Type = js.native
   
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Type = js.native
   /**
     * Decodes a Type message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -64,8 +78,9 @@ object Type extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): Type = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): Type = js.native
   
   /**
     * Encodes the specified Type message. Does not implicitly {@link Type.verify|verify} messages.
@@ -73,7 +88,11 @@ object Type extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.encode")
+  @js.native
   def encode(message: IType): Writer = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.encode")
+  @js.native
   def encode(message: IType, writer: Writer): Writer = js.native
   
   /**
@@ -82,7 +101,11 @@ object Type extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IType): Writer = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IType, writer: Writer): Writer = js.native
   
   /**
@@ -90,6 +113,8 @@ object Type extends js.Object {
     * @param object Plain object
     * @returns Type
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): Type = js.native
   
   /**
@@ -98,7 +123,11 @@ object Type extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.toObject")
+  @js.native
   def toObject(message: Type): StringDictionary[js.Any] = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.toObject")
+  @js.native
   def toObject(message: Type, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -106,5 +135,7 @@ object Type extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "Type.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

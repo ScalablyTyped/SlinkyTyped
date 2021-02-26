@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.legacyMod
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMinimalMotionControllerObject
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMotionControllerLayout
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandedness
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

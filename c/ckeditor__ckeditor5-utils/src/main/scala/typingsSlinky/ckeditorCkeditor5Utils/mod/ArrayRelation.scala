@@ -1,5 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Utils.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.same
   - typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.prefix
 */
-trait ArrayRelation extends js.Object
+trait ArrayRelation extends StObject
 object ArrayRelation {
   
   @scala.inline

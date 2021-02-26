@@ -15,16 +15,16 @@ import typingsSlinky.typedGithubApi.typedGithubApiStrings.public
 import typingsSlinky.typedGithubApi.typedGithubApiStrings.pushed
 import typingsSlinky.typedGithubApi.typedGithubApiStrings.sources
 import typingsSlinky.typedGithubApi.typedGithubApiStrings.updated
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typed-github-api/dist/organization-ref", JSImport.Namespace)
-@js.native
-object organizationRefMod extends js.Object {
+object organizationRefMod {
   
   /* import warning: RemoveDifficultInheritance.summarizeChanges 
-  - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OrganizationRef * / any */ @js.native
+  - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OrganizationRef * / any */ @JSImport("typed-github-api/dist/organization-ref", "OrganizationRefClass")
+  @js.native
   class OrganizationRefClass protected () extends GitHubRef {
     def this(login: String, options: OptionsOrRef) = this()
     

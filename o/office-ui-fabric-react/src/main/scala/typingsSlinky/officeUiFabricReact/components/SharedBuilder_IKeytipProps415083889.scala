@@ -10,6 +10,7 @@ import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.pointMod.Point
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,16 +42,16 @@ class SharedBuilder_IKeytipProps415083889[R <: js.Object] (val args: js.Array[js
   def onReturn(value: (/* executeTarget */ HTMLElement | Null, /* target */ HTMLElement | Null) => Unit): this.type = set("onReturn", js.Any.fromFunction2(value))
   
   @scala.inline
-  def overflowSetSequenceVarargs(value: String*): this.type = set("overflowSetSequence", js.Array(value :_*))
-  
-  @scala.inline
   def overflowSetSequence(value: js.Array[String]): this.type = set("overflowSetSequence", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def stylesFunction1(value: IKeytipStyleProps => DeepPartial[IKeytipStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def overflowSetSequenceVarargs(value: String*): this.type = set("overflowSetSequence", js.Array(value :_*))
   
   @scala.inline
   def styles(value: IStyleFunctionOrObject[IKeytipStyleProps, IKeytipStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def stylesFunction1(value: IKeytipStyleProps => DeepPartial[IKeytipStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   
   @scala.inline
   def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])

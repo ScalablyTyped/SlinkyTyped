@@ -5,6 +5,7 @@ import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.oauth2Server.oauth2ServerBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Instantiates Request using the supplied options.
   *
   */
-class Request () extends js.Object {
+class Request () extends StObject {
   def this(options: StringDictionary[js.Any]) = this()
   def this(options: Request_[ParamsDictionary, _, _, Query]) = this()
   

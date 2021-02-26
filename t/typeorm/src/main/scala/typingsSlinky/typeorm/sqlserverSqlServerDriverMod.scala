@@ -10,14 +10,14 @@ import typingsSlinky.typeorm.sqlserverMssqlParameterMod.MssqlParameter
 import typingsSlinky.typeorm.sqlserverSqlServerConnectionCredentialsOptionsMod.SqlServerConnectionCredentialsOptions
 import typingsSlinky.typeorm.sqlserverSqlServerConnectionOptionsMod.SqlServerConnectionOptions
 import typingsSlinky.typeorm.tableTableColumnMod.TableColumn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/driver/sqlserver/SqlServerDriver", JSImport.Namespace)
-@js.native
-object sqlserverSqlServerDriverMod extends js.Object {
+object sqlserverSqlServerDriverMod {
   
+  @JSImport("typeorm/driver/sqlserver/SqlServerDriver", "SqlServerDriver")
   @js.native
   class SqlServerDriver protected () extends Driver {
     def this(connection: Connection) = this()

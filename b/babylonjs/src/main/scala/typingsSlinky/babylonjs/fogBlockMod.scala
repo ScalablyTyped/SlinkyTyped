@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Dual/fogBlock", JSImport.Namespace)
-@js.native
-object fogBlockMod extends js.Object {
+object fogBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Dual/fogBlock", "FogBlock")
   @js.native
   class FogBlock protected () extends NodeMaterialBlock {
     /**

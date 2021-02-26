@@ -15,6 +15,7 @@ import typingsSlinky.officeUiFabricReact.selectedPeopleListMod.IExtendedPersonaP
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,13 +29,13 @@ class SharedBuilder_ISelectedPeopleProps528717756[R <: js.Object] (val args: js.
   def canRemoveItem(value: IExtendedPersonaProps => Boolean): this.type = set("canRemoveItem", js.Any.fromFunction1(value))
   
   @scala.inline
+  def componentRef(value: IRefObject[IBaseSelectedItemsList[IExtendedPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def componentRefFunction1(value: /* ref */ IBaseSelectedItemsList[IExtendedPersonaProps] | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
   
   @scala.inline
   def componentRefRefObject(value: ReactRef[IBaseSelectedItemsList[IExtendedPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def componentRef(value: IRefObject[IBaseSelectedItemsList[IExtendedPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def copyMenuItemText(value: String): this.type = set("copyMenuItemText", value.asInstanceOf[js.Any])
@@ -45,10 +46,10 @@ class SharedBuilder_ISelectedPeopleProps528717756[R <: js.Object] (val args: js.
   ): this.type = set("createGenericItem", js.Any.fromFunction2(value))
   
   @scala.inline
-  def defaultSelectedItemsVarargs(value: IExtendedPersonaProps*): this.type = set("defaultSelectedItems", js.Array(value :_*))
+  def defaultSelectedItems(value: js.Array[IExtendedPersonaProps]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultSelectedItems(value: js.Array[IExtendedPersonaProps]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
+  def defaultSelectedItemsVarargs(value: IExtendedPersonaProps*): this.type = set("defaultSelectedItems", js.Array(value :_*))
   
   @scala.inline
   def editMenuItemText(value: String): this.type = set("editMenuItemText", value.asInstanceOf[js.Any])
@@ -80,13 +81,13 @@ class SharedBuilder_ISelectedPeopleProps528717756[R <: js.Object] (val args: js.
   def onItemsDeleted(value: /* deletedItems */ js.Array[IExtendedPersonaProps] => Unit): this.type = set("onItemsDeleted", js.Any.fromFunction1(value))
   
   @scala.inline
-  def onRenderFloatingPickerFunctionComponent(value: ReactComponentClass[IBaseFloatingPickerProps[IPersonaProps]]): this.type = set("onRenderFloatingPicker", value.asInstanceOf[js.Any])
+  def onRenderFloatingPicker(value: ReactComponentClass[IBaseFloatingPickerProps[IPersonaProps]]): this.type = set("onRenderFloatingPicker", value.asInstanceOf[js.Any])
   
   @scala.inline
   def onRenderFloatingPickerComponentClass(value: ReactComponentClass[IBaseFloatingPickerProps[IPersonaProps]]): this.type = set("onRenderFloatingPicker", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def onRenderFloatingPicker(value: ReactComponentClass[IBaseFloatingPickerProps[IPersonaProps]]): this.type = set("onRenderFloatingPicker", value.asInstanceOf[js.Any])
+  def onRenderFloatingPickerFunctionComponent(value: ReactComponentClass[IBaseFloatingPickerProps[IPersonaProps]]): this.type = set("onRenderFloatingPicker", value.asInstanceOf[js.Any])
   
   @scala.inline
   def onRenderItem(value: /* props */ ISelectedItemProps[IExtendedPersonaProps] => ReactElement): this.type = set("onRenderItem", js.Any.fromFunction1(value))
@@ -98,10 +99,10 @@ class SharedBuilder_ISelectedPeopleProps528717756[R <: js.Object] (val args: js.
   def removeMenuItemText(value: String): this.type = set("removeMenuItemText", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def selectedItemsVarargs(value: IExtendedPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
+  def selectedItems(value: js.Array[IExtendedPersonaProps]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def selectedItems(value: js.Array[IExtendedPersonaProps]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
+  def selectedItemsVarargs(value: IExtendedPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
   
   @scala.inline
   def selection(value: Selection[IObjectWithKey]): this.type = set("selection", value.asInstanceOf[js.Any])

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientDynamodbNode.typesCreateBackupInputMod.CreateBa
 import typingsSlinky.awsSdkClientDynamodbNode.typesCreateBackupOutputMod.CreateBackupOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-node/commands/CreateBackupCommand", JSImport.Namespace)
-@js.native
-object createBackupCommandMod extends js.Object {
+object createBackupCommandMod {
   
+  @JSImport("@aws-sdk/client-dynamodb-node/commands/CreateBackupCommand", "CreateBackupCommand")
   @js.native
   class CreateBackupCommand protected () extends Command[
           InputTypesUnion, 

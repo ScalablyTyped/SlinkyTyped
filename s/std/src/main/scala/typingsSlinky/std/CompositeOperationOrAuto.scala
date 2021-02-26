@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.auto
   - typingsSlinky.std.stdStrings.replace
 */
-trait CompositeOperationOrAuto extends js.Object
+trait CompositeOperationOrAuto extends StObject
 object CompositeOperationOrAuto {
   
   @scala.inline

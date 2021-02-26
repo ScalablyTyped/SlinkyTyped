@@ -15,12 +15,13 @@ import typingsSlinky.maximMazurokGapiClientCloudbuild.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientCloudbuild.anon.ProjectId
 import typingsSlinky.maximMazurokGapiClientCloudbuild.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientCloudbuild.anon.Resource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BuildsResource extends js.Object {
+trait BuildsResource extends StObject {
   
   def cancel(request: Alt, body: CancelBuildRequest): Request[Build] = js.native
   /** Cancels a build in progress. */

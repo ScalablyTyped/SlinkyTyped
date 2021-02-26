@@ -19,6 +19,7 @@ import typingsSlinky.officeJs.officeJsStrings.Square
 import typingsSlinky.officeJs.officeJsStrings.Star
 import typingsSlinky.officeJs.officeJsStrings.Triangle
 import typingsSlinky.officeJs.officeJsStrings.X
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

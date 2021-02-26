@@ -3,6 +3,7 @@ package typingsSlinky.spotifyApi.SpotifyApi
 import typingsSlinky.spotifyApi.spotifyApiStrings.context
 import typingsSlinky.spotifyApi.spotifyApiStrings.off
 import typingsSlinky.spotifyApi.spotifyApiStrings.track
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

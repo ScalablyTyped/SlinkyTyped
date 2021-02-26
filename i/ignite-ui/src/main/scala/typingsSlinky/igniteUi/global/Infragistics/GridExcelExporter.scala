@@ -2,6 +2,7 @@ package typingsSlinky.igniteUi.global.Infragistics
 
 import typingsSlinky.igniteUi.GridExcelExporterCallbacks
 import typingsSlinky.igniteUi.GridExcelExporterSettings
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -5,13 +5,12 @@ import org.scalajs.dom.raw.Node
 import typingsSlinky.marko.componentMod.Component
 import typingsSlinky.marko.domElementMod.DomElement
 import typingsSlinky.marko.markoBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("marko/src/runtime/html/RenderResult", JSImport.Namespace)
-@js.native
-object renderResultMod extends js.Object {
+object renderResultMod {
   
   @js.native
   trait RenderResult extends DomElement {

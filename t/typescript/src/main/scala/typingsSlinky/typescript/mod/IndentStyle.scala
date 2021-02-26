@@ -1,32 +1,28 @@
 package typingsSlinky.typescript.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait IndentStyle extends js.Object
+sealed trait IndentStyle extends StObject
 @JSImport("typescript", "IndentStyle")
 @js.native
-object IndentStyle extends js.Object {
+object IndentStyle extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IndentStyle with Double] = js.native
   
   @js.native
   sealed trait Block extends IndentStyle
-  /* 1 */ @js.native
-  object Block
-    extends TopLevel[typingsSlinky.typescript.mod.IndentStyle.Block with Double]
+  /* 1 */ val Block: typingsSlinky.typescript.mod.IndentStyle.Block with Double = js.native
   
   @js.native
   sealed trait None extends IndentStyle
-  /* 0 */ @js.native
-  object None extends TopLevel[None with Double]
+  /* 0 */ val None: typingsSlinky.typescript.mod.IndentStyle.None with Double = js.native
   
   @js.native
   sealed trait Smart extends IndentStyle
-  /* 2 */ @js.native
-  object Smart extends TopLevel[Smart with Double]
+  /* 2 */ val Smart: typingsSlinky.typescript.mod.IndentStyle.Smart with Double = js.native
 }

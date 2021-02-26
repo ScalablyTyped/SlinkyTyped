@@ -1,6 +1,7 @@
 package typingsSlinky.pgTypes.mod
 
 import typingsSlinky.pgTypes.pgTypesStrings.text_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pgTypes.pgTypesStrings.text_
   - typingsSlinky.pgTypes.pgTypesStrings.binary
 */
-trait TypeFormat extends js.Object
+trait TypeFormat extends StObject
 object TypeFormat {
   
   @scala.inline

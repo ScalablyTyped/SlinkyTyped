@@ -10,9 +10,9 @@ A brute-force protection middleware for express routes that rate limits incoming
 | ------------------ | :-------------: |
 | Full name          | express-brute |
 | Keywords           | brute, force, bruteforce, attack, fibonacci, rate, limit, security |
-| # releases         | 1 |
-| # dependents       | 45 |
-| # downloads        | 815019 |
+| # releases         | 0 |
+| # dependents       | 49 |
+| # downloads        | 1220361 |
 | # stars            | 44 |
 
 ## Links

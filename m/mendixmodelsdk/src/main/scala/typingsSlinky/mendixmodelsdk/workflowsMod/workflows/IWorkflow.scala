@@ -3,6 +3,7 @@ package typingsSlinky.mendixmodelsdk.workflowsMod.workflows
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.IPage
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

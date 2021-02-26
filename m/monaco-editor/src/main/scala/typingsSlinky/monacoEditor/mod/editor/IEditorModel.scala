@@ -1,5 +1,6 @@
 package typingsSlinky.monacoEditor.mod.editor
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.monacoEditor.mod.editor.ITextModel
   - typingsSlinky.monacoEditor.mod.editor.IDiffEditorModel
 */
-trait IEditorModel extends js.Object
+trait IEditorModel extends StObject

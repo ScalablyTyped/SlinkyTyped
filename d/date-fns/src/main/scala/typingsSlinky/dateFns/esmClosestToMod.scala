@@ -1,17 +1,19 @@
 package typingsSlinky.dateFns
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("date-fns/esm/closestTo", JSImport.Namespace)
-@js.native
-object esmClosestToMod extends js.Object {
+object esmClosestToMod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
-    def apply(dateToCompare: Double, datesArray: js.Array[js.Date | Double]): js.Date = js.native
+    @JSImport("date-fns/esm/closestTo", JSImport.Default)
+    @js.native
     def apply(dateToCompare: js.Date, datesArray: js.Array[js.Date | Double]): js.Date = js.native
+    @JSImport("date-fns/esm/closestTo", JSImport.Default)
+    @js.native
+    def apply(dateToCompare: Double, datesArray: js.Array[js.Date | Double]): js.Date = js.native
   }
 }

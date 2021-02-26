@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "jest__environment"
-version := "26.6.2-c33e9f"
+version := "26.6.2-4129db"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "istanbul-lib-coverage" % "2.0-dt-20200609Z-910fb5",
-  "org.scalablytyped.slinky" %%% "istanbul-lib-report" % "3.0-dt-20200515Z-3a73b1",
-  "org.scalablytyped.slinky" %%% "istanbul-reports" % "3.0-dt-20200720Z-e60b33",
-  "org.scalablytyped.slinky" %%% "jest-mock" % "24.9.0-ca6cd1",
-  "org.scalablytyped.slinky" %%% "jest__types" % "26.6.2-bf45bc",
-  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "istanbul-lib-coverage" % "2.0-dt-20200609Z-6ff262",
+  "org.scalablytyped.slinky" %%% "istanbul-lib-report" % "3.0-dt-20200515Z-c42a24",
+  "org.scalablytyped.slinky" %%% "istanbul-reports" % "3.0-dt-20200720Z-fbf87f",
+  "org.scalablytyped.slinky" %%% "jest-mock" % "24.9.0-663935",
+  "org.scalablytyped.slinky" %%% "jest__types" % "26.6.2-b224e8",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

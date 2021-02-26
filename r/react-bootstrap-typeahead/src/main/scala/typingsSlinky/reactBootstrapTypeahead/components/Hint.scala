@@ -5,6 +5,7 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTypeahead.mod.HintProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object Hint {
   
   @JSImport("react-bootstrap-typeahead", "Hint")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,7 +28,7 @@ object Hint {
     def shouldSelect(value: (/* shouldSelect */ Boolean, /* e */ SyntheticKeyboardEvent[HTMLInputElement]) => Boolean): this.type = set("shouldSelect", js.Any.fromFunction2(value))
   }
   
-  def withProps(p: HintProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Hint.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HintProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

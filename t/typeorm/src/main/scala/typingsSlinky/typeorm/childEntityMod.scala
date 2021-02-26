@@ -1,14 +1,17 @@
 package typingsSlinky.typeorm
 
 import typingsSlinky.std.ClassDecorator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/decorator/entity/ChildEntity", JSImport.Namespace)
-@js.native
-object childEntityMod extends js.Object {
+object childEntityMod {
   
+  @JSImport("typeorm/browser/decorator/entity/ChildEntity", "ChildEntity")
+  @js.native
   def ChildEntity(): ClassDecorator = js.native
+  @JSImport("typeorm/browser/decorator/entity/ChildEntity", "ChildEntity")
+  @js.native
   def ChildEntity(discriminatorValue: js.Any): ClassDecorator = js.native
 }

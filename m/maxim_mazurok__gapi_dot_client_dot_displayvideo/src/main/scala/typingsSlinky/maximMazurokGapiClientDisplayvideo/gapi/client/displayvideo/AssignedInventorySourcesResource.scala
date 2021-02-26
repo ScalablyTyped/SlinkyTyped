@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.FieldsInventorySour
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.FilterInventorySourceGroupId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.InventorySourceGroupId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.InventorySourceGroupIdKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AssignedInventorySourcesResource extends js.Object {
+trait AssignedInventorySourcesResource extends StObject {
   
   def bulkEdit(request: FieldsInventorySourceGroupId, body: BulkEditAssignedInventorySourcesRequest): Request[BulkEditAssignedInventorySourcesResponse] = js.native
   /**

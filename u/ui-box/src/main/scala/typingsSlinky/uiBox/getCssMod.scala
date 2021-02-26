@@ -2,14 +2,17 @@ package typingsSlinky.uiBox
 
 import typingsSlinky.uiBox.getClassNameMod.PropertyInfo
 import typingsSlinky.uiBox.typesEnhancersMod.EnhancedProp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ui-box/dist/src/get-css", JSImport.Namespace)
-@js.native
-object getCssMod extends js.Object {
+object getCssMod {
   
+  @JSImport("ui-box/dist/src/get-css", JSImport.Default)
+  @js.native
   def default(propertyInfo: PropertyInfo, value: String): EnhancedProp | Null = js.native
+  @JSImport("ui-box/dist/src/get-css", JSImport.Default)
+  @js.native
   def default(propertyInfo: PropertyInfo, value: Double): EnhancedProp | Null = js.native
 }

@@ -80,6 +80,7 @@ import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.irawstyleMod.IRawStyle
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -88,6 +89,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class SharedBuilder_IShimmerCircleProps176458435 (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
+  
+  @scala.inline
+  def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
   
   @scala.inline
   def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -323,13 +327,13 @@ class SharedBuilder_IShimmerCircleProps176458435 (val args: js.Array[js.Any])
   def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def componentRef(value: IRefObject[IShimmerCircle]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def componentRefFunction1(value: /* ref */ IShimmerCircle | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
   
   @scala.inline
   def componentRefRefObject(value: ReactRef[IShimmerCircle]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def componentRef(value: IRefObject[IShimmerCircle]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
@@ -362,16 +366,13 @@ class SharedBuilder_IShimmerCircleProps176458435 (val args: js.Array[js.Any])
   def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -890,10 +891,10 @@ class SharedBuilder_IShimmerCircleProps176458435 (val args: js.Array[js.Any])
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def stylesFunction1(value: IShimmerCircleStyleProps => DeepPartial[IShimmerCircleStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def styles(value: IStyleFunctionOrObject[IShimmerCircleStyleProps, IShimmerCircleStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def styles(value: IStyleFunctionOrObject[IShimmerCircleStyleProps, IShimmerCircleStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+  def stylesFunction1(value: IShimmerCircleStyleProps => DeepPartial[IShimmerCircleStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   
   @scala.inline
   def summary(value: String): this.type = set("summary", value.asInstanceOf[js.Any])
@@ -932,10 +933,10 @@ class SharedBuilder_IShimmerCircleProps176458435 (val args: js.Array[js.Any])
   def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
   
   @scala.inline
   def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])

@@ -11,8 +11,8 @@ Stack Exchange's string format function.
 | Full name          | format-unicorn |
 | Keywords           | string, format, formatunicorn, stackexchange |
 | # releases         | 0 |
-| # dependents       | 3 |
-| # downloads        | 99560 |
+| # dependents       | 5 |
+| # downloads        | 4597669 |
 | # stars            | 0 |
 
 ## Links

@@ -2,12 +2,13 @@ package typingsSlinky.reactMdForm.typesMod
 
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SliderActionCreators extends js.Object {
+trait SliderActionCreators extends StObject {
   
   def decrement(): Unit = js.native
   

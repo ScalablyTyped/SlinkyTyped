@@ -10,9 +10,9 @@ split a Text Stream into a Line Stream, using Stream 3
 | ------------------ | :-------------: |
 | Full name          | split2 |
 | Keywords           | - |
-| # releases         | 4 |
-| # dependents       | 450 |
-| # downloads        | 86944501 |
+| # releases         | 5 |
+| # dependents       | 575 |
+| # downloads        | 192542137 |
 | # stars            | 13 |
 
 ## Links

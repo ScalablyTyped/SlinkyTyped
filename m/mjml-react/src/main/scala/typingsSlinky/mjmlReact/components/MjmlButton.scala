@@ -12,6 +12,7 @@ import typingsSlinky.mjmlReact.mod.HrefProps
 import typingsSlinky.mjmlReact.mod.MjmlButtonProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
 import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object MjmlButton {
   
   @JSImport("mjml-react", "MjmlButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -121,9 +122,9 @@ object MjmlButton {
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
+  implicit def make(companion: MjmlButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   def withProps(
     p: RequiredChildrenProps with MjmlButtonProps with PaddingProps with ClassNameProps with HrefProps with BorderProps
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: MjmlButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

@@ -4,17 +4,22 @@ import typingsSlinky.samchon.iclientdriverMod.IClientDriver
 import typingsSlinky.samchon.iserverMod.IServer
 import typingsSlinky.samchon.parallelSystemArrayMediatorMod.ParallelSystemArrayMediator
 import typingsSlinky.samchon.parallelSystemMod.ParallelSystem
-import typingsSlinky.tstl.dequeMod.Deque
-import typingsSlinky.tstl.dequeMod.Deque.Iterator
-import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/parallel/derived/ParallelClientArrayMediator", JSImport.Namespace)
-@js.native
-object parallelClientArrayMediatorMod extends js.Object {
+object parallelClientArrayMediatorMod {
   
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+  - typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher because Already inherited
+  - typingsSlinky.ecol.icollectionMod.ICollection because Already inherited
+  - typingsSlinky.ecol.dequeCollectionMod.DequeCollection because Already inherited
+  - typingsSlinky.ecol.mod.DequeCollection because Already inherited
+  - typingsSlinky.samchon.iprotocolMod.IProtocol because Already inherited
+  - typingsSlinky.samchon.entityCollectionMod.EntityDequeCollection because Already inherited
+  - typingsSlinky.samchon.externalSystemArrayMod.ExternalSystemArray because Already inherited
+  - typingsSlinky.samchon.iexternalclientarrayMod.IExternalClientArray because var conflicts: _Handle_system_erase, _Notify_erase, _Notify_insert, dispatcher_. Inlined  */ @JSImport("samchon/templates/parallel/derived/ParallelClientArrayMediator", "ParallelClientArrayMediator")
   @js.native
   /**
     * Default Constructor.
@@ -22,21 +27,6 @@ object parallelClientArrayMediatorMod extends js.Object {
   abstract class ParallelClientArrayMediator[System /* <: ParallelSystem */] ()
     extends ParallelSystemArrayMediator[System]
        with IServer {
-    
-    /**
-      * Range Assigner.
-      *
-      * @param first Input iteartor of the first position.
-      * @param last Input iterator of the last position.
-      */
-    /* InferMemberOverrides */
-    override def assign[InputIterator /* <: IForwardIterator[System, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
-    
-    /**
-      * @inheritDoc
-      */
-    /* InferMemberOverrides */
-    override def clear(): Unit = js.native
     
     /**
       * Factory method creating {@link ParallelSystem} object.
@@ -74,55 +64,8 @@ object parallelClientArrayMediatorMod extends js.Object {
     /* protected */ def createServerBase(): IServer = js.native
     
     /**
-      * Erase elements in range.
-      *
-      * @param first Range of the first position to erase.
-      * @param last Rangee of the last position to erase.
-      * @return Iterator following the last removed element, strained by the erasing.
-      */
-    /* InferMemberOverrides */
-    override def erase(first: Iterator[System], last: Iterator[System]): Iterator[System] = js.native
-    /**
-      * Erase an element.
-      *
-      * @param pos Position to erase.
-      * @return Iterator following the *pos*, strained by the erasing.
-      */
-    /* InferMemberOverrides */
-    override def erase(pos: Iterator[System]): Iterator[System] = js.native
-    
-    /**
-      * @inheritDoc
-      */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def front(): System = js.native
-    /**
-      * @inheritDoc
-      */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def front(`val`: System): Unit = js.native
-    
-    /**
       * @hidden
       */
     var server_base_ : js.Any = js.native
-    
-    /**
-      * Swap elements.
-      *
-      * @param obj Target container to swap.
-      */
-    /* InferMemberOverrides */
-    override def swap(obj: Deque[System]): Unit = js.native
-    
-    /**
-      * Native function for `JSON.stringify()`.
-      *
-      * @return An array containing children elements.
-      */
-    /* InferMemberOverrides */
-    override def toJSON(): js.Array[System] = js.native
   }
 }

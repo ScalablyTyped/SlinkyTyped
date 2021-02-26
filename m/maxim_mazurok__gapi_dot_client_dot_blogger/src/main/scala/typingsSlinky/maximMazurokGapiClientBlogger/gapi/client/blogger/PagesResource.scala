@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientBlogger.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientBlogger.anon.PageId
 import typingsSlinky.maximMazurokGapiClientBlogger.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientBlogger.anon.Publish
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PagesResource extends js.Object {
+trait PagesResource extends StObject {
   
   /** Deletes a page by blog id and page id. */
   def delete(): Request[Unit] = js.native

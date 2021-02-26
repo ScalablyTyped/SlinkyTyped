@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.typesPostCommentForComparedCommi
 import typingsSlinky.awsSdkClientCodecommitNode.typesPostCommentForComparedCommitOutputMod.PostCommentForComparedCommitOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-codecommit-node/commands/PostCommentForComparedCommitCommand", JSImport.Namespace)
-@js.native
-object postCommentForComparedCommitCommandMod extends js.Object {
+object postCommentForComparedCommitCommandMod {
   
+  @JSImport("@aws-sdk/client-codecommit-node/commands/PostCommentForComparedCommitCommand", "PostCommentForComparedCommitCommand")
   @js.native
   class PostCommentForComparedCommitCommand protected () extends Command[
           InputTypesUnion, 

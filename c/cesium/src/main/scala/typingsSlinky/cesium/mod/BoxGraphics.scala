@@ -1,13 +1,14 @@
 package typingsSlinky.cesium.mod
 
 import typingsSlinky.cesium.anon.Dimensions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "BoxGraphics")
 @js.native
-class BoxGraphics () extends js.Object {
+class BoxGraphics () extends StObject {
   def this(options: Dimensions) = this()
   
   def clone(result: BoxGraphics): BoxGraphics = js.native

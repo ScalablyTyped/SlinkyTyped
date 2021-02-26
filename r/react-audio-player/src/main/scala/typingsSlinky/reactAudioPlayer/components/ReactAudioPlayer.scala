@@ -9,6 +9,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactAudioPlayer.mod.Preload
 import typingsSlinky.reactAudioPlayer.mod.ReactAudioPlayerProps
 import typingsSlinky.reactAudioPlayer.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object ReactAudioPlayer {
   
   @JSImport("react-audio-player", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -100,7 +101,7 @@ object ReactAudioPlayer {
     def volume(value: Double): this.type = set("volume", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactAudioPlayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactAudioPlayer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactAudioPlayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

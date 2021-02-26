@@ -31,15 +31,22 @@ import typingsSlinky.recharts.rechartsStrings.normal
 import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Pie {
   
+  @scala.inline
+  def apply(dataKey: DataKey): Builder = {
+    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PieProps]))
+  }
+  
   @JSImport("recharts", "Pie")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -47,19 +54,19 @@ object Pie {
        with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.Pie] {
     
     @scala.inline
-    def activeIndexVarargs(value: Double*): this.type = set("activeIndex", js.Array(value :_*))
-    
-    @scala.inline
     def activeIndex(value: Double | js.Array[Double]): this.type = set("activeIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def activeShapeReactElement(value: ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
+    def activeIndexVarargs(value: Double*): this.type = set("activeIndex", js.Array(value :_*))
+    
+    @scala.inline
+    def activeShape(value: js.Object | ContentRenderer[_] | ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def activeShapeFunction1(value: _ => ReactElement): this.type = set("activeShape", js.Any.fromFunction1(value))
     
     @scala.inline
-    def activeShape(value: js.Object | ContentRenderer[_] | ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
+    def activeShapeReactElement(value: ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def alignmentBaseline(value: String): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
@@ -125,10 +132,10 @@ object Pie {
     def cy(value: Double | String): this.type = set("cy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: js.Object*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: js.Object*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -217,22 +224,22 @@ object Pie {
     def kerning(value: Double | String): this.type = set("kerning", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: OffsetRadius | ReactElement | ContentRenderer[PieLabelRenderProps] | Boolean): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelFunction1(value: PieLabelRenderProps => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
     
     @scala.inline
-    def label(value: OffsetRadius | ReactElement | ContentRenderer[PieLabelRenderProps] | Boolean): this.type = set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def labelLineReactElement(value: ReactElement): this.type = set("labelLine", value.asInstanceOf[js.Any])
+    def labelLine(value: js.Object | (ContentRenderer[LineProps with js.Any]) | ReactElement | Boolean): this.type = set("labelLine", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelLineFunction1(value: LineProps with js.Any => ReactElement): this.type = set("labelLine", js.Any.fromFunction1(value))
     
     @scala.inline
-    def labelLine(value: js.Object | (ContentRenderer[LineProps with js.Any]) | ReactElement | Boolean): this.type = set("labelLine", value.asInstanceOf[js.Any])
+    def labelLineReactElement(value: ReactElement): this.type = set("labelLine", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def legendType(value: LegendType): this.type = set("legendType", value.asInstanceOf[js.Any])
@@ -265,10 +272,10 @@ object Pie {
     def minAngle(value: Double): this.type = set("minAngle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nameKeyFunction1(value: /* dataObject */ js.Any => Double): this.type = set("nameKey", js.Any.fromFunction1(value))
+    def nameKey(value: String | Double | (js.Function1[/* dataObject */ js.Any, Double])): this.type = set("nameKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nameKey(value: String | Double | (js.Function1[/* dataObject */ js.Any, Double])): this.type = set("nameKey", value.asInstanceOf[js.Any])
+    def nameKeyFunction1(value: /* dataObject */ js.Any => Double): this.type = set("nameKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def onAnimationEnd(value: /* repeated */ js.Any => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
@@ -331,10 +338,10 @@ object Pie {
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sectorsVarargs(value: js.Object*): this.type = set("sectors", js.Array(value :_*))
+    def sectors(value: js.Array[js.Object]): this.type = set("sectors", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sectors(value: js.Array[js.Object]): this.type = set("sectors", value.asInstanceOf[js.Any])
+    def sectorsVarargs(value: js.Object*): this.type = set("sectors", js.Array(value :_*))
     
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
@@ -391,10 +398,10 @@ object Pie {
     def unicodeBidi(value: String): this.type = set("unicodeBidi", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueKeyFunction1(value: /* dataObject */ js.Any => Double): this.type = set("valueKey", js.Any.fromFunction1(value))
+    def valueKey(value: String | Double | (js.Function1[/* dataObject */ js.Any, Double])): this.type = set("valueKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueKey(value: String | Double | (js.Function1[/* dataObject */ js.Any, Double])): this.type = set("valueKey", value.asInstanceOf[js.Any])
+    def valueKeyFunction1(value: /* dataObject */ js.Any => Double): this.type = set("valueKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def visibility(value: String): this.type = set("visibility", value.asInstanceOf[js.Any])
@@ -416,10 +423,4 @@ object Pie {
   }
   
   def withProps(p: PieProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(dataKey: DataKey): Builder = {
-    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PieProps]))
-  }
 }

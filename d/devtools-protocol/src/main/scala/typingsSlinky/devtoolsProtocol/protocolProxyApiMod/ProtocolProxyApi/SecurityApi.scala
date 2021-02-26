@@ -9,12 +9,13 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Security.SecurityStateChanged
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Security.SetIgnoreCertificateErrorsRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Security.SetOverrideCertificateErrorsRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Security.VisibleSecurityStateChangedEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SecurityApi extends js.Object {
+trait SecurityApi extends StObject {
   
   /**
     * Disables tracking security state changes.

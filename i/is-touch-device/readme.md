@@ -11,8 +11,8 @@ Is the current JS environment a touch device?
 | Full name          | is-touch-device |
 | Keywords           | touch, is, documenttouch, maxtouchpoints, msmaxtouchpoints, touchpoints, ontouchstart |
 | # releases         | 1 |
-| # dependents       | 56 |
-| # downloads        | 10452444 |
+| # dependents       | 65 |
+| # downloads        | 19688852 |
 | # stars            | 0 |
 
 ## Links

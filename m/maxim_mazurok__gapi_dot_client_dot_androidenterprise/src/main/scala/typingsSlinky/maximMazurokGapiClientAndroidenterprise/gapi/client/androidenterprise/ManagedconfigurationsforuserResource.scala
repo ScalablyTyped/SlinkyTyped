@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.AccesstokenAlt
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.Alt
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.ManagedConfigurationForUserId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ManagedconfigurationsforuserResource extends js.Object {
+trait ManagedconfigurationsforuserResource extends StObject {
   
   /** Removes a per-user managed configuration for an app for the specified user. */
   def delete(): Request[Unit] = js.native

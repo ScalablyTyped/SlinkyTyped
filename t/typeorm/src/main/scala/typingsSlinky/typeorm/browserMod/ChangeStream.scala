@@ -2,6 +2,7 @@ package typingsSlinky.typeorm.browserMod
 
 import typingsSlinky.typeorm.typingsMod.ChangeStreamOptions
 import typingsSlinky.typeorm.typingsMod.Collection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,15 +1,15 @@
 package typingsSlinky.firebaseUtil
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/util/dist/src/sha1", JSImport.Namespace)
-@js.native
-object sha1Mod extends js.Object {
+object sha1Mod {
   
+  @JSImport("@firebase/util/dist/src/sha1", "Sha1")
   @js.native
-  class Sha1 () extends js.Object {
+  class Sha1 () extends StObject {
     
     /**
       * An array of 80 bytes, each a part of the message to be hashed.  Referred to

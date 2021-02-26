@@ -4,14 +4,15 @@ import typingsSlinky.rcTreeSelect.interfaceMod.FlattenDataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.Key
 import typingsSlinky.rcTreeSelect.interfaceMod.RawValueType
 import typingsSlinky.std.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-tree-select/es/hooks/useKeyValueMapping", JSImport.Namespace)
-@js.native
-object useKeyValueMappingMod extends js.Object {
+object useKeyValueMappingMod {
   
+  @JSImport("rc-tree-select/es/hooks/useKeyValueMapping", JSImport.Default)
+  @js.native
   def default(cacheKeyMap: Map[Key, FlattenDataNode], cacheValueMap: Map[RawValueType, FlattenDataNode]): js.Tuple2[
     js.Function3[
       /* key */ Key, 
@@ -27,9 +28,9 @@ object useKeyValueMappingMod extends js.Object {
     ]
   ] = js.native
   
+  @JSImport("rc-tree-select/es/hooks/useKeyValueMapping", "isDisabled")
+  @js.native
   def isDisabled(dataNode: FlattenDataNode, skipType: SkipType): Boolean = js.native
-  
-  trait _SkipType extends js.Object
   
   /* Rewritten from type alias, can be one of: 
     - scala.Null
@@ -37,4 +38,6 @@ object useKeyValueMappingMod extends js.Object {
     - typingsSlinky.rcTreeSelect.rcTreeSelectStrings.checkbox
   */
   type SkipType = _SkipType | Null
+  
+  trait _SkipType extends StObject
 }

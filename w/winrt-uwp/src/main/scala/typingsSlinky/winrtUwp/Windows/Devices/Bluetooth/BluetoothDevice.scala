@@ -11,13 +11,14 @@ import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.connectionstatuschanged
 import typingsSlinky.winrtUwp.winrtUwpStrings.namechanged
 import typingsSlinky.winrtUwp.winrtUwpStrings.sdprecordschanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a Bluetooth device. */
 @js.native
-trait BluetoothDevice extends js.Object {
+trait BluetoothDevice extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

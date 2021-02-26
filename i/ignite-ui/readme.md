@@ -4,19 +4,19 @@
 Typings are for version 20.1
 
 ## Library description:
-Ignite UI by Infragistics
+Ignite UI for jQuery by Infragistics
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | ignite-ui |
-| Keywords           | igniteui, ignite ui, infragistics, jquery controls, jquery widgets |
-| # releases         | 24 |
+| Keywords           | igniteui, ignite ui, ignite ui for jquery, infragistics, jquery controls, jquery widgets |
+| # releases         | 15 |
 | # dependents       | 0 |
-| # downloads        | 13700 |
+| # downloads        | 14201 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](http://www.igniteui.com/)
+- [Homepage](https://github.com/IgniteUI/ignite-ui#readme)
 - [Bugs](https://github.com/IgniteUI/ignite-ui/issues)
 - [Repository](https://github.com/IgniteUI/ignite-ui)
 - [Npm](https://www.npmjs.com/package/ignite-ui)

@@ -22,6 +22,7 @@ import typingsSlinky.antvG2.antvG2Strings.rect
 import typingsSlinky.antvG2.antvG2Strings.theme
 import typingsSlinky.antvG2.antvG2Strings.tree
 import typingsSlinky.antvG2.antvG2Strings.width
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

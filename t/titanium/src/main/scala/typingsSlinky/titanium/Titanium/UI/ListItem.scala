@@ -4,6 +4,7 @@ import typingsSlinky.titanium.Font
 import typingsSlinky.titanium.Gradient
 import typingsSlinky.titanium.RowActionType
 import typingsSlinky.titanium.Titanium.Proxy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -10,9 +10,9 @@ The Material Components for the web circular progress component
 | ------------------ | :-------------: |
 | Full name          | @material/circular-progress |
 | Keywords           | material components, material design, circular-progress |
-| # releases         | 324 |
+| # releases         | 403 |
 | # dependents       | 5 |
-| # downloads        | 117441 |
+| # downloads        | 188258 |
 | # stars            | 0 |
 
 ## Links

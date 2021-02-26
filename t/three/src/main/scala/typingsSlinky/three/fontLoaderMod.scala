@@ -5,14 +5,14 @@ import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.three.fontMod.Font
 import typingsSlinky.three.loaderMod.Loader
 import typingsSlinky.three.loadingManagerMod.LoadingManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/loaders/FontLoader", JSImport.Namespace)
-@js.native
-object fontLoaderMod extends js.Object {
+object fontLoaderMod {
   
+  @JSImport("three/src/loaders/FontLoader", "FontLoader")
   @js.native
   class FontLoader () extends Loader {
     def this(manager: LoadingManager) = this()

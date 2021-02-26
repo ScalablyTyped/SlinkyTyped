@@ -2,13 +2,14 @@ package typingsSlinky.semanticUiApi.anon
 
 import typingsSlinky.jquery.JQuery.jqXHR
 import typingsSlinky.semanticUiApi.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Pick<semantic-ui-api.SemanticUI.ApiSettings._Impl, 'onComplete'> */
 @js.native
-trait PickImplonComplete extends js.Object {
+trait PickImplonComplete extends StObject {
   
   def onComplete(response: js.Any, element: JQuery, xhr: jqXHR[_]): Unit = js.native
   @JSName("onComplete")

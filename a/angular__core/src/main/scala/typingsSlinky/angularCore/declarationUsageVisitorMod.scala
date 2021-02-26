@@ -1,19 +1,18 @@
 package typingsSlinky.angularCore
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Map
 import typingsSlinky.typescript.mod.Node
 import typingsSlinky.typescript.mod.TypeChecker
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/core/schematics/migrations/static-queries/strategies/usage_strategy/declaration_usage_visitor", JSImport.Namespace)
-@js.native
-object declarationUsageVisitorMod extends js.Object {
+object declarationUsageVisitorMod {
   
+  @JSImport("@angular/core/schematics/migrations/static-queries/strategies/usage_strategy/declaration_usage_visitor", "DeclarationUsageVisitor")
   @js.native
-  class DeclarationUsageVisitor protected () extends js.Object {
+  class DeclarationUsageVisitor protected () extends StObject {
     def this(declaration: Node, typeChecker: TypeChecker) = this()
     def this(declaration: Node, typeChecker: TypeChecker, baseContext: FunctionContext) = this()
     
@@ -97,27 +96,25 @@ object declarationUsageVisitorMod extends js.Object {
   }
   
   @js.native
-  sealed trait ResolvedUsage extends js.Object
+  sealed trait ResolvedUsage extends StObject
+  @JSImport("@angular/core/schematics/migrations/static-queries/strategies/usage_strategy/declaration_usage_visitor", "ResolvedUsage")
   @js.native
-  object ResolvedUsage extends js.Object {
+  object ResolvedUsage extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[ResolvedUsage with Double] = js.native
     
     @js.native
     sealed trait AMBIGUOUS extends ResolvedUsage
-    /* 2 */ @js.native
-    object AMBIGUOUS extends TopLevel[AMBIGUOUS with Double]
+    /* 2 */ val AMBIGUOUS: typingsSlinky.angularCore.declarationUsageVisitorMod.ResolvedUsage.AMBIGUOUS with Double = js.native
     
     @js.native
     sealed trait ASYNCHRONOUS extends ResolvedUsage
-    /* 1 */ @js.native
-    object ASYNCHRONOUS extends TopLevel[ASYNCHRONOUS with Double]
+    /* 1 */ val ASYNCHRONOUS: typingsSlinky.angularCore.declarationUsageVisitorMod.ResolvedUsage.ASYNCHRONOUS with Double = js.native
     
     @js.native
     sealed trait SYNCHRONOUS extends ResolvedUsage
-    /* 0 */ @js.native
-    object SYNCHRONOUS extends TopLevel[SYNCHRONOUS with Double]
+    /* 0 */ val SYNCHRONOUS: typingsSlinky.angularCore.declarationUsageVisitorMod.ResolvedUsage.SYNCHRONOUS with Double = js.native
   }
   
   type FunctionContext = Map[Node, Node]

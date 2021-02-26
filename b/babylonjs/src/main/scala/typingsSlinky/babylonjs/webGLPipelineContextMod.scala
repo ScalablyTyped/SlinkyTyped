@@ -5,14 +5,14 @@ import typingsSlinky.babylonjs.ipipelinecontextMod.IPipelineContext
 import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.std.WebGLTransformFeedback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Engines/WebGL/webGLPipelineContext", JSImport.Namespace)
-@js.native
-object webGLPipelineContextMod extends js.Object {
+object webGLPipelineContextMod {
   
+  @JSImport("babylonjs/Engines/WebGL/webGLPipelineContext", "WebGLPipelineContext")
   @js.native
   class WebGLPipelineContext () extends IPipelineContext {
     

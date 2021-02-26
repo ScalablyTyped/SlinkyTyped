@@ -1,12 +1,13 @@
 package typingsSlinky.webix.webix
 
 import typingsSlinky.webix.webix.ui.baseview
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DataStore extends js.Object {
+trait DataStore extends StObject {
   
   def add(obj: js.Any): String | Double = js.native
   def add(obj: js.Any, index: Double): String | Double = js.native

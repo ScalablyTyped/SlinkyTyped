@@ -2,12 +2,13 @@ package typingsSlinky.chromeApps.anon
 
 import typingsSlinky.chromeApps.chrome.permissions.PermissionEvent
 import typingsSlinky.chromeApps.chrome.permissions.Permissions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofpermissions extends js.Object {
+trait Typeofpermissions extends StObject {
   
   /**
     * Checks if the app has the specified permissions.

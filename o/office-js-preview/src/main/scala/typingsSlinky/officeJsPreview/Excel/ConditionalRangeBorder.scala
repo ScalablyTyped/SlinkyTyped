@@ -16,6 +16,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.EdgeLeft
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.EdgeRight
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.EdgeTop
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.None
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -84,6 +84,7 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.tree
 import typingsSlinky.reactMdForm.reactMdFormStrings.url
 import typingsSlinky.reactMdForm.reactMdFormStrings.vertical
 import typingsSlinky.reactMdForm.reactMdFormStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,7 +93,7 @@ object FileInput {
   
   @JSImport("@react-md/form", "FileInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -348,13 +349,13 @@ object FileInput {
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconAfter(value: Boolean): this.type = set("iconAfter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -729,7 +730,7 @@ object FileInput {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FileInputProps with RefAttributes[HTMLInputElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FileInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FileInputProps with RefAttributes[HTMLInputElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

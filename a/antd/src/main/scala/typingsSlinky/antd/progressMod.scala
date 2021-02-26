@@ -1,21 +1,28 @@
 package typingsSlinky.antd
 
 import typingsSlinky.antd.anon.GapDegree
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antd/lib/progress", JSImport.Namespace)
-@js.native
-object progressMod extends js.Object {
+object progressMod {
   
+  @JSImport("antd/lib/progress", JSImport.Default)
   @js.native
   class default ()
     extends typingsSlinky.antd.progressProgressMod.default
   /* static members */
-  @js.native
-  object default extends js.Object {
+  object default {
     
-    var defaultProps: GapDegree = js.native
+    @JSImport("antd/lib/progress", JSImport.Default)
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("antd/lib/progress", "default.defaultProps")
+    @js.native
+    def defaultProps: GapDegree = js.native
+    @scala.inline
+    def defaultProps_=(x: GapDegree): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
   }
 }

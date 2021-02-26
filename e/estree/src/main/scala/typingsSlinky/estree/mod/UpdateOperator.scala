@@ -1,5 +1,6 @@
 package typingsSlinky.estree.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.estree.estreeStrings.PlussignPlussign
   - typingsSlinky.estree.estreeStrings.`--`
 */
-trait UpdateOperator extends js.Object
+trait UpdateOperator extends StObject
 object UpdateOperator {
   
   @scala.inline

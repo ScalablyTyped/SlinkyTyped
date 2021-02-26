@@ -7,15 +7,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactImageMagnifiers.mod.MagnifierZoomProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MagnifierZoom {
   
+  @scala.inline
+  def apply(imageSrc: String): Builder = {
+    val __props = js.Dynamic.literal(imageSrc = imageSrc.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MagnifierZoomProps]))
+  }
+  
   @JSImport("react-image-magnifiers", "MagnifierZoom")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,10 +46,4 @@ object MagnifierZoom {
   }
   
   def withProps(p: MagnifierZoomProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(imageSrc: String): Builder = {
-    val __props = js.Dynamic.literal(imageSrc = imageSrc.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MagnifierZoomProps]))
-  }
 }

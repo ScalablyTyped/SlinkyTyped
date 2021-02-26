@@ -5,12 +5,13 @@ import typingsSlinky.sparkpost.mod.RelayWebhook
 import typingsSlinky.sparkpost.mod.ResultsCallback
 import typingsSlinky.sparkpost.mod.ResultsPromise
 import typingsSlinky.sparkpost.mod.UpdateRelayWebhook
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Get extends js.Object {
+trait Get extends StObject {
   
   /**
     * Create a relay webhook by providing a relay webhooks object as the POST request body.

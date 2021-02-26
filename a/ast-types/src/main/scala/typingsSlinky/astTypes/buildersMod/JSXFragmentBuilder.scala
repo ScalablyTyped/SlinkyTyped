@@ -10,12 +10,13 @@ import typingsSlinky.astTypes.kindsMod.JSXSpreadChildKind
 import typingsSlinky.astTypes.kindsMod.JSXTextKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXFragment
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JSXFragmentBuilder extends js.Object {
+trait JSXFragmentBuilder extends StObject {
   
   def apply(openingFragment: JSXOpeningFragmentKind, closingFragment: JSXClosingFragmentKind): JSXFragment = js.native
   def apply(

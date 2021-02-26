@@ -2,6 +2,7 @@ package typingsSlinky.babelTypes.ts36Mod
 
 import typingsSlinky.babelTypes.babelTypesStrings.DoWhileStatement
 import typingsSlinky.babelTypes.babelTypesStrings.WhileStatement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.babelTypes.ts36Mod.DoWhileStatement_
   - typingsSlinky.babelTypes.ts36Mod.WhileStatement_
 */
-trait While extends js.Object
+trait While extends StObject
 object While {
   
   @scala.inline
@@ -21,10 +22,10 @@ object While {
     start: Double,
     test: Expression,
     `type`: DoWhileStatement
-  ): While = {
+  ): typingsSlinky.babelTypes.ts36Mod.DoWhileStatement_ = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], test = test.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[While]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.DoWhileStatement_]
   }
   
   @scala.inline
@@ -35,9 +36,9 @@ object While {
     start: Double,
     test: Expression,
     `type`: WhileStatement
-  ): While = {
+  ): typingsSlinky.babelTypes.ts36Mod.WhileStatement_ = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], test = test.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[While]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.WhileStatement_]
   }
 }

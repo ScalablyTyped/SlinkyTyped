@@ -2,13 +2,14 @@ package typingsSlinky.squareConnect.mod
 
 import typingsSlinky.squareConnect.squareConnectStrings.CLOSED
 import typingsSlinky.squareConnect.squareConnectStrings.OPEN
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "Shift")
 @js.native
-class Shift () extends js.Object {
+class Shift () extends StObject {
   
   /**
     * A list of any paid or unpaid breaks that were taken during this shift.

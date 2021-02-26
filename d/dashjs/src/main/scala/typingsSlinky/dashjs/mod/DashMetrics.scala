@@ -2,12 +2,13 @@ package typingsSlinky.dashjs.mod
 
 import typingsSlinky.dashjs.dashjsStrings.audio
 import typingsSlinky.dashjs.dashjsStrings.video
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DashMetrics extends js.Object {
+trait DashMetrics extends StObject {
   
   def getBandwidthForRepresentation(representationId: String, periodIdx: Double): Double = js.native
   

@@ -10,15 +10,15 @@ Proper decorator-based transformation / serialization / deserialization of plain
 | ------------------ | :-------------: |
 | Full name          | class-transformer |
 | Keywords           | - |
-| # releases         | 7 |
-| # dependents       | 348 |
-| # downloads        | 5950442 |
+| # releases         | 5 |
+| # dependents       | 742 |
+| # downloads        | 18740489 |
 | # stars            | 3 |
 
 ## Links
-- [Homepage](https://github.com/pleerock/class-transformer#readme)
-- [Bugs](https://github.com/pleerock/class-transformer/issues)
-- [Repository](https://github.com/pleerock/class-transformer)
+- [Homepage](https://github.com/typestack/class-transformer#readme)
+- [Bugs](https://github.com/typestack/class-transformer/issues)
+- [Repository](https://github.com/typestack/class-transformer)
 - [Npm](https://www.npmjs.com/package/class-transformer)
     
 

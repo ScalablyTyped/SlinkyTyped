@@ -1,6 +1,6 @@
 package typingsSlinky.xadesjs.xmlMod
 
-import typingsSlinky.xmlCore.mod.XmlCollection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("xadesjs/build/types/xml", "AllDataObjectsTimeStampCollection")
 @js.native
 class AllDataObjectsTimeStampCollection ()
-  extends XmlCollection[typingsSlinky.xadesjs.signedDataObjectPropertiesMod.AllDataObjectsTimeStamp]
+  extends typingsSlinky.xadesjs.signedDataObjectPropertiesMod.AllDataObjectsTimeStampCollection {
+  def this(properties: js.Object) = this()
+}

@@ -1,16 +1,21 @@
 package typingsSlinky.anymatch
 
 import typingsSlinky.anymatch.anymatchBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("anymatch", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher): CurrriedMatcher = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: String): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: String,
@@ -18,7 +23,11 @@ object mod extends js.Object {
     startIndex: js.UndefOr[scala.Nothing],
     endIndex: Double
   ): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: String, returnIndex: js.UndefOr[scala.Nothing], startIndex: Double): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: String,
@@ -26,7 +35,11 @@ object mod extends js.Object {
     startIndex: Double,
     endIndex: Double
   ): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: String, returnIndex: Boolean): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: String,
@@ -34,9 +47,17 @@ object mod extends js.Object {
     startIndex: js.UndefOr[scala.Nothing],
     endIndex: Double
   ): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: String, returnIndex: Boolean, startIndex: Double): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: String, returnIndex: Boolean, startIndex: Double, endIndex: Double): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: String, returnIndex: `true`): Double = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: String,
@@ -44,9 +65,17 @@ object mod extends js.Object {
     startIndex: js.UndefOr[scala.Nothing],
     endIndex: Double
   ): Double = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: String, returnIndex: `true`, startIndex: Double): Double = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: String, returnIndex: `true`, startIndex: Double, endIndex: Double): Double = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: js.Array[String]): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: js.Array[String],
@@ -54,12 +83,16 @@ object mod extends js.Object {
     startIndex: js.UndefOr[scala.Nothing],
     endIndex: Double
   ): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: js.Array[String],
     returnIndex: js.UndefOr[scala.Nothing],
     startIndex: Double
   ): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: js.Array[String],
@@ -67,7 +100,11 @@ object mod extends js.Object {
     startIndex: Double,
     endIndex: Double
   ): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: js.Array[String], returnIndex: Boolean): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: js.Array[String],
@@ -75,7 +112,11 @@ object mod extends js.Object {
     startIndex: js.UndefOr[scala.Nothing],
     endIndex: Double
   ): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: js.Array[String], returnIndex: Boolean, startIndex: Double): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: js.Array[String],
@@ -83,7 +124,11 @@ object mod extends js.Object {
     startIndex: Double,
     endIndex: Double
   ): Boolean = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: js.Array[String], returnIndex: `true`): Double = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: js.Array[String],
@@ -91,7 +136,11 @@ object mod extends js.Object {
     startIndex: js.UndefOr[scala.Nothing],
     endIndex: Double
   ): Double = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(matcher: Matcher, testString: js.Array[String], returnIndex: `true`, startIndex: Double): Double = js.native
+  @JSImport("anymatch", JSImport.Namespace)
+  @js.native
   def apply(
     matcher: Matcher,
     testString: js.Array[String],
@@ -101,7 +150,7 @@ object mod extends js.Object {
   ): Double = js.native
   
   @js.native
-  trait CurrriedMatcher extends js.Object {
+  trait CurrriedMatcher extends StObject {
     
     def apply(testString: String): Boolean = js.native
     def apply(

@@ -14,12 +14,13 @@ import typingsSlinky.semanticUiSite.semanticUiSiteStrings.setting
 import typingsSlinky.semanticUiSite.semanticUiSiteStrings.silent
 import typingsSlinky.semanticUiSite.semanticUiSiteStrings.siteNamespace
 import typingsSlinky.semanticUiSite.semanticUiSiteStrings.verbose
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQueryStatic extends js.Object {
+trait JQueryStatic extends StObject {
   
   def site(): JQuery = js.native
   def site(behavior: setting, name: debug, value: js.UndefOr[scala.Nothing]): Boolean = js.native

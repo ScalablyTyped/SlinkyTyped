@@ -2,12 +2,13 @@ package typingsSlinky.wxServerSdk.mod
 
 import typingsSlinky.wxServerSdk.wxServerSdkStrings.asc
 import typingsSlinky.wxServerSdk.wxServerSdkStrings.desc
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Query extends js.Object {
+trait Query extends StObject {
   
   def count(): js.Promise[CountCollectionResult] = js.native
   

@@ -4,6 +4,7 @@ import typingsSlinky.activexAccess.activexAccessNumbers.`0`
 import typingsSlinky.activexAccess.activexAccessNumbers.`10`
 import typingsSlinky.activexAccess.activexAccessNumbers.`12`
 import typingsSlinky.activexAccess.activexAccessNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAccess.activexAccessNumbers.`12`
   - typingsSlinky.activexAccess.activexAccessNumbers.`0`
 */
-trait AcNewDatabaseFormat extends js.Object
+trait AcNewDatabaseFormat extends StObject
 object AcNewDatabaseFormat {
   
   @scala.inline

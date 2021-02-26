@@ -18,6 +18,7 @@ import typingsSlinky.hapi.mod.Lifecycle.Method
 import typingsSlinky.hapi.mod.Util.HTTP_METHODS
 import typingsSlinky.node.zlibMod.Gunzip_
 import typingsSlinky.node.zlibMod.Gzip_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @param options server configuration object.
   * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-serveroptions)
   */
-class Server () extends js.Object {
+class Server () extends StObject {
   def this(options: ServerOptions) = this()
   
   /**
@@ -604,7 +605,7 @@ class Server () extends js.Object {
     */
   val settings: ServerOptions = js.native
   
-   // TODO needs implementation
+  // TODO needs implementation
   /**
     * Starts the server by listening for incoming requests on the configured port (unless the connection was configured with autoListen set to false).
     * @return Return value: none.

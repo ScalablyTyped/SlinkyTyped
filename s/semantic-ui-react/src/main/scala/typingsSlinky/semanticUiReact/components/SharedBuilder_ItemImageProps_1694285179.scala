@@ -13,6 +13,7 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.labelLabelMod.LabelProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,13 +42,13 @@ class SharedBuilder_ItemImageProps_1694285179 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def dimmerReactElement(value: ReactElement): this.type = set("dimmer", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def dimmer(value: SemanticShorthandItem[DimmerProps]): this.type = set("dimmer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def dimmerFunction3(
@@ -55,7 +56,7 @@ class SharedBuilder_ItemImageProps_1694285179 (val args: js.Array[js.Any])
   ): this.type = set("dimmer", js.Any.fromFunction3(value))
   
   @scala.inline
-  def dimmer(value: SemanticShorthandItem[DimmerProps]): this.type = set("dimmer", value.asInstanceOf[js.Any])
+  def dimmerReactElement(value: ReactElement): this.type = set("dimmer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -76,7 +77,7 @@ class SharedBuilder_ItemImageProps_1694285179 (val args: js.Array[js.Any])
   def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+  def label(value: SemanticShorthandItem[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
   
   @scala.inline
   def labelFunction3(
@@ -84,7 +85,7 @@ class SharedBuilder_ItemImageProps_1694285179 (val args: js.Array[js.Any])
   ): this.type = set("label", js.Any.fromFunction3(value))
   
   @scala.inline
-  def label(value: SemanticShorthandItem[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
+  def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
   
   @scala.inline
   def rounded(value: Boolean): this.type = set("rounded", value.asInstanceOf[js.Any])

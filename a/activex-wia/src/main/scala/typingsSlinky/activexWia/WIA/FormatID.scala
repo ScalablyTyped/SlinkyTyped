@@ -5,6 +5,7 @@ import typingsSlinky.activexWia.activexWiaStrings.`LeftcurlybracketB96B3CAE-0728
 import typingsSlinky.activexWia.activexWiaStrings.`LeftcurlybracketB96B3CAF-0728-11D3-9D7B-0000F81EF32ERightcurlybracket`
 import typingsSlinky.activexWia.activexWiaStrings.`LeftcurlybracketB96B3CB0-0728-11D3-9D7B-0000F81EF32ERightcurlybracket`
 import typingsSlinky.activexWia.activexWiaStrings.`LeftcurlybracketB96B3CB1-0728-11D3-9D7B-0000F81EF32ERightcurlybracket`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWia.activexWiaStrings.`LeftcurlybracketB96B3CAF-0728-11D3-9D7B-0000F81EF32ERightcurlybracket`
   - typingsSlinky.activexWia.activexWiaStrings.`LeftcurlybracketB96B3CB1-0728-11D3-9D7B-0000F81EF32ERightcurlybracket`
 */
-trait FormatID extends js.Object
+trait FormatID extends StObject
 object FormatID {
   
   @scala.inline

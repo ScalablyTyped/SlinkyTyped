@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMdTransition.collapseMod.CollapseProps
 import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Collapse {
   
+  @scala.inline
+  def apply(collapsed: Boolean): Builder = {
+    val __props = js.Dynamic.literal(collapsed = collapsed.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CollapseProps]))
+  }
+  
   @JSImport("@react-md/transition", "Collapse")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -67,10 +74,4 @@ object Collapse {
   }
   
   def withProps(p: CollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(collapsed: Boolean): Builder = {
-    val __props = js.Dynamic.literal(collapsed = collapsed.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CollapseProps]))
-  }
 }

@@ -2,6 +2,7 @@ package typingsSlinky.minappEnv
 
 import org.scalablytyped.runtime.NumberDictionary
 import typingsSlinky.minappEnv.minappEnvStrings.UInt8Array
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

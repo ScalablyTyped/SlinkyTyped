@@ -2,12 +2,13 @@ package typingsSlinky.googleCloudCommon.utilMod
 
 import typingsSlinky.googleAuthLibrary.credentialsMod.CredentialBody
 import typingsSlinky.googleAuthLibrary.mod.GoogleAuth
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MakeAuthenticatedRequest extends js.Object {
+trait MakeAuthenticatedRequest extends StObject {
   
   def apply(reqOpts: DecorateRequestOptions): Duplexify = js.native
   def apply(reqOpts: DecorateRequestOptions, callback: BodyResponseCallback): Unit | Abortable = js.native

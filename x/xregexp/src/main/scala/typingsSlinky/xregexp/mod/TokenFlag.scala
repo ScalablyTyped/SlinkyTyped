@@ -26,6 +26,7 @@ import typingsSlinky.xregexp.xregexpStrings.w_
 import typingsSlinky.xregexp.xregexpStrings.x_
 import typingsSlinky.xregexp.xregexpStrings.y_
 import typingsSlinky.xregexp.xregexpStrings.z_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -99,7 +100,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xregexp.xregexpStrings._underscore
   - typingsSlinky.xregexp.xregexpStrings.$
 */
-trait TokenFlag extends js.Object
+trait TokenFlag extends StObject
 object TokenFlag {
   
   @scala.inline

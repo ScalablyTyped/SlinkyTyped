@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.undo
   - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.redo
 */
-trait SystemItemIcon extends js.Object
+trait SystemItemIcon extends StObject
 object SystemItemIcon {
   
   @scala.inline

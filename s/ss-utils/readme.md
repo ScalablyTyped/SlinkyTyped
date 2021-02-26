@@ -12,7 +12,7 @@ ServiceStack's JavaScript library providing a number of convenience utilities in
 | Keywords           | servicestack, utils, validation, form-binding, bootstrap-forms, ajax, serverevents, declarative, events, error-handling, data-binding |
 | # releases         | 3 |
 | # dependents       | 0 |
-| # downloads        | 4061 |
+| # downloads        | 1892 |
 | # stars            | 0 |
 
 ## Links

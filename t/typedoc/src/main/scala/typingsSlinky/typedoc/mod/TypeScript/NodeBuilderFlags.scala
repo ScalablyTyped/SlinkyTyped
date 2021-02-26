@@ -1,12 +1,13 @@
 package typingsSlinky.typedoc.mod.TypeScript
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.NodeBuilderFlags")
 @js.native
-object NodeBuilderFlags extends js.Object {
+object NodeBuilderFlags extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.typescript.mod.NodeBuilderFlags with Double] = js.native

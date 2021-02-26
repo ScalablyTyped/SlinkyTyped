@@ -90,15 +90,22 @@ import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObjec
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Breadcrumb {
   
+  @scala.inline
+  def apply(items: js.Array[IBreadcrumbItem]): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IBreadcrumbProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "Breadcrumb")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -276,13 +283,13 @@ object Breadcrumb {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IBreadcrumb]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IBreadcrumb | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IBreadcrumb]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IBreadcrumb]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -300,22 +307,22 @@ object Breadcrumb {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dividerAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IDividerAsProps]]): this.type = set("dividerAs", value.asInstanceOf[js.Any])
+    def dividerAs(value: IComponentAs[IDividerAsProps]): this.type = set("dividerAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dividerAsComponentClass(value: ReactComponentClass[IComponentAsProps[IDividerAsProps]]): this.type = set("dividerAs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dividerAs(value: IComponentAs[IDividerAsProps]): this.type = set("dividerAs", value.asInstanceOf[js.Any])
+    def dividerAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IDividerAsProps]]): this.type = set("dividerAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
@@ -616,13 +623,13 @@ object Breadcrumb {
     def overflowAriaLabel(value: String): this.type = set("overflowAriaLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overflowButtonAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
+    def overflowButtonAs(value: IComponentAs[IButtonProps]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def overflowButtonAsComponentClass(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overflowButtonAs(value: IComponentAs[IButtonProps]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
+    def overflowButtonAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def overflowIndex(value: Double): this.type = set("overflowIndex", value.asInstanceOf[js.Any])
@@ -661,10 +668,10 @@ object Breadcrumb {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IBreadcrumbStyleProps => DeepPartial[IBreadcrumbStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IBreadcrumbStyleProps, IBreadcrumbStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IBreadcrumbStyleProps, IBreadcrumbStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IBreadcrumbStyleProps => DeepPartial[IBreadcrumbStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -698,10 +705,4 @@ object Breadcrumb {
   }
   
   def withProps(p: IBreadcrumbProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(items: js.Array[IBreadcrumbItem]): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IBreadcrumbProps]))
-  }
 }

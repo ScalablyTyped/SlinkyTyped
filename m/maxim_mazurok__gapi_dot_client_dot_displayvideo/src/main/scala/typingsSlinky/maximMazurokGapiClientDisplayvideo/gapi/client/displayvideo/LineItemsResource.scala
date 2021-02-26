@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.OrderByPageSize
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.QuotaUserResource
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.QuotaUserUpdateMask
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.ResourceUpdateMask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LineItemsResource extends js.Object {
+trait LineItemsResource extends StObject {
   
   /**
     * Bulk edits targeting options under a single line item. The operation will delete the assigned targeting options provided in

@@ -2,6 +2,7 @@ package typingsSlinky.winjs.WinJS.UI
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * A control that lets the user switch an option between two states: on (checked is set to true) and off (checked is set to false).
   **/
 @js.native
-trait ToggleSwitch extends js.Object {
+trait ToggleSwitch extends StObject {
   
   //#endregion Events
   //#region Methods

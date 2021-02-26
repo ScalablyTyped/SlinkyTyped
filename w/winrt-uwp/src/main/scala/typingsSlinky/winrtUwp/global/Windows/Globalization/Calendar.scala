@@ -1,6 +1,7 @@
 package typingsSlinky.winrtUwp.global.Windows.Globalization
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -5,12 +5,13 @@ import typingsSlinky.intlTelInput.mod.intlTelInputUtils.numberFormat
 import typingsSlinky.intlTelInput.mod.intlTelInputUtils.numberType
 import typingsSlinky.intlTelInput.mod.intlTelInputUtils.placeholderNumberType
 import typingsSlinky.intlTelInput.mod.intlTelInputUtils.validationError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Plugin extends js.Object {
+trait Plugin extends StObject {
   
   /**
     * Remove the plugin from the input, and unbind any event listeners.

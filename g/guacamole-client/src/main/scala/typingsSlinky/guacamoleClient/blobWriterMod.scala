@@ -4,16 +4,16 @@ import org.scalajs.dom.raw.Blob
 import typingsSlinky.guacamoleClient.outputStreamMod.OutputStream
 import typingsSlinky.guacamoleClient.statusMod.Status
 import typingsSlinky.std.DOMError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("guacamole-client/lib/BlobWriter", JSImport.Namespace)
-@js.native
-object blobWriterMod extends js.Object {
+object blobWriterMod {
   
+  @JSImport("guacamole-client/lib/BlobWriter", "BlobWriter")
   @js.native
-  class BlobWriter protected () extends js.Object {
+  class BlobWriter protected () extends StObject {
     /**
       * @param stream The stream that data will be written to.
       */

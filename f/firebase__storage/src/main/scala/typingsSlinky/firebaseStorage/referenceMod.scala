@@ -6,14 +6,14 @@ import typingsSlinky.firebaseStorage.srcMetadataMod.Metadata
 import typingsSlinky.firebaseStorage.stringMod.StringFormat
 import typingsSlinky.firebaseStorageTypes.mod.Reference
 import typingsSlinky.firebaseStorageTypes.mod.UploadTask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/storage/dist/compat/reference", JSImport.Namespace)
-@js.native
-object referenceMod extends js.Object {
+object referenceMod {
   
+  @JSImport("@firebase/storage/dist/compat/reference", "ReferenceCompat")
   @js.native
   class ReferenceCompat protected () extends Reference {
     def this(_delegate: typingsSlinky.firebaseStorage.srcReferenceMod.Reference, storage: StorageServiceCompat) = this()
@@ -39,8 +39,8 @@ object referenceMod extends js.Object {
     def parent_MReferenceCompat: Reference | Null = js.native
     
     def put(data: js.typedarray.ArrayBuffer, metadata: Metadata): UploadTask = js.native
-    def put(data: Blob, metadata: Metadata): UploadTask = js.native
     def put(data: js.typedarray.Uint8Array, metadata: Metadata): UploadTask = js.native
+    def put(data: Blob, metadata: Metadata): UploadTask = js.native
     
     def putString(value: String, format: js.UndefOr[scala.Nothing], metadata: Metadata): UploadTask = js.native
     def putString(value: String, format: StringFormat, metadata: Metadata): UploadTask = js.native

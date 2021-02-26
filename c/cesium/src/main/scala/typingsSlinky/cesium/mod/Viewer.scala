@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.cesium.anon.Duration
 import typingsSlinky.cesium.mod.Viewer.ViewerMixin
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "Viewer")
 @js.native
-class Viewer protected () extends js.Object {
+class Viewer protected () extends StObject {
   def this(container: String) = this()
   def this(container: Element) = this()
   def this(container: String, options: typingsSlinky.cesium.anon.Animation) = this()
@@ -131,9 +132,7 @@ class Viewer protected () extends js.Object {
   def zoomTo(target: EntityCollection, offset: HeadingPitchRange): js.Promise[Boolean] = js.native
   def zoomTo(target: Entity, offset: HeadingPitchRange): js.Promise[Boolean] = js.native
 }
-@JSImport("cesium", "Viewer")
-@js.native
-object Viewer extends js.Object {
+object Viewer {
   
   type ViewerMixin = js.Function2[/* viewer */ Viewer, /* options */ js.Any, Unit]
 }

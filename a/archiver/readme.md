@@ -1,7 +1,7 @@
 
 # Scala.js typings for archiver
 
-Typings are for version 3.1
+Typings are for version 5.1
 
 ## Library description:
 a streaming interface for archive generation
@@ -10,9 +10,9 @@ a streaming interface for archive generation
 | ------------------ | :-------------: |
 | Full name          | archiver |
 | Keywords           | archive, archiver, stream, zip, tar |
-| # releases         | 7 |
-| # dependents       | 1907 |
-| # downloads        | 68563916 |
+| # releases         | 13 |
+| # dependents       | 2439 |
+| # downloads        | 140880735 |
 | # stars            | 77 |
 
 ## Links

@@ -10,9 +10,9 @@ Robust RSS Atom and RDF feed parsing using sax js
 | ------------------ | :-------------: |
 | Full name          | feedparser |
 | Keywords           | rss, feed, atom, rdf, xml, syndication, rsscloud, pubsubhubbub |
-| # releases         | 3 |
-| # dependents       | 225 |
-| # downloads        | 1145183 |
+| # releases         | 2 |
+| # dependents       | 239 |
+| # downloads        | 1272012 |
 | # stars            | 43 |
 
 ## Links

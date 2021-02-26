@@ -103,15 +103,22 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FontAwesomeIcon {
   
+  @scala.inline
+  def apply(icon: IconProp): Builder = {
+    val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[FontAwesomeIconProps]))
+  }
+  
   @JSImport("@fortawesome/react-fontawesome", "FontAwesomeIcon")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -495,13 +502,13 @@ object FontAwesomeIcon {
     def format(value: Double | String): this.type = set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def forwardedRefRefObject(value: ReactRef[_]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
+    def forwardedRef(value: (js.Function1[/* e */ js.Any, Unit]) | ReactRef[_]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def forwardedRefFunction1(value: /* e */ js.Any => Unit): this.type = set("forwardedRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def forwardedRef(value: (js.Function1[/* e */ js.Any, Unit]) | ReactRef[_]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
+    def forwardedRefRefObject(value: ReactRef[_]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def from(value: Double | String): this.type = set("from", value.asInstanceOf[js.Any])
@@ -1330,10 +1337,4 @@ object FontAwesomeIcon {
   }
   
   def withProps(p: FontAwesomeIconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(icon: IconProp): Builder = {
-    val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[FontAwesomeIconProps]))
-  }
 }

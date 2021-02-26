@@ -10,9 +10,9 @@ It's a very fast and efficient glob library for Node.js
 | ------------------ | :-------------: |
 | Full name          | fast-glob |
 | Keywords           | glob, patterns, fast, implementation |
-| # releases         | 22 |
-| # dependents       | 631 |
-| # downloads        | 205581060 |
+| # releases         | 19 |
+| # dependents       | 1108 |
+| # downloads        | 587901360 |
 | # stars            | 3 |
 
 ## Links

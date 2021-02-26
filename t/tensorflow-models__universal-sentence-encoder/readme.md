@@ -10,9 +10,9 @@ Universal Sentence Encoder lite in TensorFlow.js
 | ------------------ | :-------------: |
 | Full name          | @tensorflow-models/universal-sentence-encoder |
 | Keywords           | - |
-| # releases         | 14 |
-| # dependents       | 6 |
-| # downloads        | 8467 |
+| # releases         | 12 |
+| # dependents       | 15 |
+| # downloads        | 42868 |
 | # stars            | 0 |
 
 ## Links

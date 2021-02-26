@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeSimpleRadioButton.anon.Label
 import typingsSlinky.reactNativeSimpleRadioButton.mod.ReactNativeRadioFormProps
 import typingsSlinky.reactNativeSimpleRadioButton.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object ReactNativeSimpleRadioButton {
   
   @JSImport("react-native-simple-radio-button", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -48,16 +49,16 @@ object ReactNativeSimpleRadioButton {
     def onPress(value: /* val */ js.UndefOr[js.Any] => _): this.type = set("onPress", js.Any.fromFunction1(value))
     
     @scala.inline
-    def radio_propsVarargs(value: Label*): this.type = set("radio_props", js.Array(value :_*))
+    def radio_props(value: js.Array[Label]): this.type = set("radio_props", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def radio_props(value: js.Array[Label]): this.type = set("radio_props", value.asInstanceOf[js.Any])
+    def radio_propsVarargs(value: Label*): this.type = set("radio_props", js.Array(value :_*))
     
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactNativeRadioFormProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeSimpleRadioButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactNativeRadioFormProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

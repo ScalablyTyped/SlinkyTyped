@@ -17,6 +17,7 @@ import typingsSlinky.mathjs.mathjsStrings.sparse
 import typingsSlinky.mathjs.mathjsStrings.unbiased
 import typingsSlinky.mathjs.mathjsStrings.uncorrected
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

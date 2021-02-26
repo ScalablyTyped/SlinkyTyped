@@ -98,15 +98,16 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TextInput {
   
-  @JSImport("grommet/es6", "TextInput")
+  @JSImport("grommet", "TextInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -317,10 +318,10 @@ object TextInput {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -677,10 +678,10 @@ object TextInput {
     def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: PlaceHolderType): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholder(value: PlaceHolderType): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
     def plain(value: Boolean | full): this.type = set("plain", value.asInstanceOf[js.Any])
@@ -734,10 +735,10 @@ object TextInput {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suggestionsVarargs(value: (LabelValue | String)*): this.type = set("suggestions", js.Array(value :_*))
+    def suggestions(value: js.Array[LabelValue | String]): this.type = set("suggestions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suggestions(value: js.Array[LabelValue | String]): this.type = set("suggestions", value.asInstanceOf[js.Any])
+    def suggestionsVarargs(value: (LabelValue | String)*): this.type = set("suggestions", js.Array(value :_*))
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -773,12 +774,12 @@ object TextInput {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
+  implicit def make(companion: TextInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   def withProps(
     p: TextInputProps with (Omit[
       DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
       onSelect | size | placeholder
     ])
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: TextInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

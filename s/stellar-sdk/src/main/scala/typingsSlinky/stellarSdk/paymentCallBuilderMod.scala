@@ -3,14 +3,14 @@ package typingsSlinky.stellarSdk
 import typingsSlinky.stellarSdk.callBuilderMod.CallBuilder
 import typingsSlinky.stellarSdk.serverApiMod.ServerApi.CollectionPage
 import typingsSlinky.stellarSdk.serverApiMod.ServerApi.PaymentOperationRecord
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("stellar-sdk/lib/payment_call_builder", JSImport.Namespace)
-@js.native
-object paymentCallBuilderMod extends js.Object {
+object paymentCallBuilderMod {
   
+  @JSImport("stellar-sdk/lib/payment_call_builder", "PaymentCallBuilder")
   @js.native
   class PaymentCallBuilder protected () extends CallBuilder[CollectionPage[PaymentOperationRecord]] {
     def this(serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify URI */ js.Any) = this()

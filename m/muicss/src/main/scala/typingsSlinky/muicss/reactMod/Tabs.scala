@@ -1,11 +1,11 @@
 package typingsSlinky.muicss.reactMod
 
-import typingsSlinky.react.mod.Component
+import typingsSlinky.muicss.tabsMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("muicss/react", "Tabs")
 @js.native
-class Tabs ()
-  extends Component[TabsProps, js.Object, js.Any]
+class Tabs () extends default

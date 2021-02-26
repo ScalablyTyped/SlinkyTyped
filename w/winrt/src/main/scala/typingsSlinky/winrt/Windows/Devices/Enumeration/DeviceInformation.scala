@@ -2,6 +2,7 @@ package typingsSlinky.winrt.Windows.Devices.Enumeration
 
 import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

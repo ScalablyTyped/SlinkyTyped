@@ -10,9 +10,9 @@ Sendmail without setting up SMTP server
 | ------------------ | :-------------: |
 | Full name          | sendmail |
 | Keywords           | email sender, send mail, sendmail, node sendmail, no smtp, without server, without smtp server, dev mode, dkim sign mail |
-| # releases         | 7 |
-| # dependents       | 60 |
-| # downloads        | 1115153 |
+| # releases         | 4 |
+| # dependents       | 90 |
+| # downloads        | 3479238 |
 | # stars            | 9 |
 
 ## Links

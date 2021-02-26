@@ -1,12 +1,13 @@
 package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs/dist/index_with_polyfills", "Rank")
 @js.native
-object Rank extends js.Object {
+object Rank extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank with String] = js.native

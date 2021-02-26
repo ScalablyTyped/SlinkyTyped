@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.spectacle.anon.childrenReactNodeLayoutPr
 import typingsSlinky.styledSystem.mod.RequiredTheme
 import typingsSlinky.styledSystem.mod.ResponsiveValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,15 +14,12 @@ object Grid {
   
   @JSImport("spectacle", "Grid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
-    
-    @scala.inline
-    def bottomVarargs(value: (js.Any | Null)*): this.type = set("bottom", js.Array(value :_*))
     
     @scala.inline
     def bottom(
@@ -35,7 +33,7 @@ object Grid {
     def bottomNull: this.type = set("bottom", null)
     
     @scala.inline
-    def displayVarargs(value: (js.Any | Null)*): this.type = set("display", js.Array(value :_*))
+    def bottomVarargs(value: (js.Any | Null)*): this.type = set("bottom", js.Array(value :_*))
     
     @scala.inline
     def display(
@@ -49,7 +47,7 @@ object Grid {
     def displayNull: this.type = set("display", null)
     
     @scala.inline
-    def gridAreaVarargs(value: (js.Any | Null)*): this.type = set("gridArea", js.Array(value :_*))
+    def displayVarargs(value: (js.Any | Null)*): this.type = set("display", js.Array(value :_*))
     
     @scala.inline
     def gridArea(
@@ -63,7 +61,7 @@ object Grid {
     def gridAreaNull: this.type = set("gridArea", null)
     
     @scala.inline
-    def gridAutoColumnsVarargs(value: (js.Any | Null)*): this.type = set("gridAutoColumns", js.Array(value :_*))
+    def gridAreaVarargs(value: (js.Any | Null)*): this.type = set("gridArea", js.Array(value :_*))
     
     @scala.inline
     def gridAutoColumns(
@@ -77,7 +75,7 @@ object Grid {
     def gridAutoColumnsNull: this.type = set("gridAutoColumns", null)
     
     @scala.inline
-    def gridAutoFlowVarargs(value: (js.Any | Null)*): this.type = set("gridAutoFlow", js.Array(value :_*))
+    def gridAutoColumnsVarargs(value: (js.Any | Null)*): this.type = set("gridAutoColumns", js.Array(value :_*))
     
     @scala.inline
     def gridAutoFlow(
@@ -91,7 +89,7 @@ object Grid {
     def gridAutoFlowNull: this.type = set("gridAutoFlow", null)
     
     @scala.inline
-    def gridAutoRowsVarargs(value: (js.Any | Null)*): this.type = set("gridAutoRows", js.Array(value :_*))
+    def gridAutoFlowVarargs(value: (js.Any | Null)*): this.type = set("gridAutoFlow", js.Array(value :_*))
     
     @scala.inline
     def gridAutoRows(
@@ -105,7 +103,7 @@ object Grid {
     def gridAutoRowsNull: this.type = set("gridAutoRows", null)
     
     @scala.inline
-    def gridColumnVarargs(value: (js.Any | Null)*): this.type = set("gridColumn", js.Array(value :_*))
+    def gridAutoRowsVarargs(value: (js.Any | Null)*): this.type = set("gridAutoRows", js.Array(value :_*))
     
     @scala.inline
     def gridColumn(
@@ -114,12 +112,6 @@ object Grid {
           RequiredTheme
         ]
     ): this.type = set("gridColumn", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def gridColumnNull: this.type = set("gridColumn", null)
-    
-    @scala.inline
-    def gridColumnGapVarargs(value: (js.Any | Null)*): this.type = set("gridColumnGap", js.Array(value :_*))
     
     @scala.inline
     def gridColumnGap(
@@ -133,7 +125,13 @@ object Grid {
     def gridColumnGapNull: this.type = set("gridColumnGap", null)
     
     @scala.inline
-    def gridGapVarargs(value: (js.Any | Null)*): this.type = set("gridGap", js.Array(value :_*))
+    def gridColumnGapVarargs(value: (js.Any | Null)*): this.type = set("gridColumnGap", js.Array(value :_*))
+    
+    @scala.inline
+    def gridColumnNull: this.type = set("gridColumn", null)
+    
+    @scala.inline
+    def gridColumnVarargs(value: (js.Any | Null)*): this.type = set("gridColumn", js.Array(value :_*))
     
     @scala.inline
     def gridGap(
@@ -147,7 +145,7 @@ object Grid {
     def gridGapNull: this.type = set("gridGap", null)
     
     @scala.inline
-    def gridRowVarargs(value: (js.Any | Null)*): this.type = set("gridRow", js.Array(value :_*))
+    def gridGapVarargs(value: (js.Any | Null)*): this.type = set("gridGap", js.Array(value :_*))
     
     @scala.inline
     def gridRow(
@@ -156,12 +154,6 @@ object Grid {
           RequiredTheme
         ]
     ): this.type = set("gridRow", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def gridRowNull: this.type = set("gridRow", null)
-    
-    @scala.inline
-    def gridRowGapVarargs(value: (js.Any | Null)*): this.type = set("gridRowGap", js.Array(value :_*))
     
     @scala.inline
     def gridRowGap(
@@ -175,7 +167,13 @@ object Grid {
     def gridRowGapNull: this.type = set("gridRowGap", null)
     
     @scala.inline
-    def gridTemplateAreasVarargs(value: (js.Any | Null)*): this.type = set("gridTemplateAreas", js.Array(value :_*))
+    def gridRowGapVarargs(value: (js.Any | Null)*): this.type = set("gridRowGap", js.Array(value :_*))
+    
+    @scala.inline
+    def gridRowNull: this.type = set("gridRow", null)
+    
+    @scala.inline
+    def gridRowVarargs(value: (js.Any | Null)*): this.type = set("gridRow", js.Array(value :_*))
     
     @scala.inline
     def gridTemplateAreas(
@@ -189,7 +187,7 @@ object Grid {
     def gridTemplateAreasNull: this.type = set("gridTemplateAreas", null)
     
     @scala.inline
-    def gridTemplateColumnsVarargs(value: (js.Any | Null)*): this.type = set("gridTemplateColumns", js.Array(value :_*))
+    def gridTemplateAreasVarargs(value: (js.Any | Null)*): this.type = set("gridTemplateAreas", js.Array(value :_*))
     
     @scala.inline
     def gridTemplateColumns(
@@ -203,7 +201,7 @@ object Grid {
     def gridTemplateColumnsNull: this.type = set("gridTemplateColumns", null)
     
     @scala.inline
-    def gridTemplateRowsVarargs(value: (js.Any | Null)*): this.type = set("gridTemplateRows", js.Array(value :_*))
+    def gridTemplateColumnsVarargs(value: (js.Any | Null)*): this.type = set("gridTemplateColumns", js.Array(value :_*))
     
     @scala.inline
     def gridTemplateRows(
@@ -217,7 +215,7 @@ object Grid {
     def gridTemplateRowsNull: this.type = set("gridTemplateRows", null)
     
     @scala.inline
-    def heightVarargs(value: (js.Any | Null)*): this.type = set("height", js.Array(value :_*))
+    def gridTemplateRowsVarargs(value: (js.Any | Null)*): this.type = set("gridTemplateRows", js.Array(value :_*))
     
     @scala.inline
     def height(
@@ -231,7 +229,7 @@ object Grid {
     def heightNull: this.type = set("height", null)
     
     @scala.inline
-    def leftVarargs(value: (js.Any | Null)*): this.type = set("left", js.Array(value :_*))
+    def heightVarargs(value: (js.Any | Null)*): this.type = set("height", js.Array(value :_*))
     
     @scala.inline
     def left(
@@ -245,7 +243,7 @@ object Grid {
     def leftNull: this.type = set("left", null)
     
     @scala.inline
-    def maxHeightVarargs(value: (js.Any | Null)*): this.type = set("maxHeight", js.Array(value :_*))
+    def leftVarargs(value: (js.Any | Null)*): this.type = set("left", js.Array(value :_*))
     
     @scala.inline
     def maxHeight(
@@ -259,7 +257,7 @@ object Grid {
     def maxHeightNull: this.type = set("maxHeight", null)
     
     @scala.inline
-    def maxWidthVarargs(value: (js.Any | Null)*): this.type = set("maxWidth", js.Array(value :_*))
+    def maxHeightVarargs(value: (js.Any | Null)*): this.type = set("maxHeight", js.Array(value :_*))
     
     @scala.inline
     def maxWidth(
@@ -273,7 +271,7 @@ object Grid {
     def maxWidthNull: this.type = set("maxWidth", null)
     
     @scala.inline
-    def minHeightVarargs(value: (js.Any | Null)*): this.type = set("minHeight", js.Array(value :_*))
+    def maxWidthVarargs(value: (js.Any | Null)*): this.type = set("maxWidth", js.Array(value :_*))
     
     @scala.inline
     def minHeight(
@@ -287,7 +285,7 @@ object Grid {
     def minHeightNull: this.type = set("minHeight", null)
     
     @scala.inline
-    def minWidthVarargs(value: (js.Any | Null)*): this.type = set("minWidth", js.Array(value :_*))
+    def minHeightVarargs(value: (js.Any | Null)*): this.type = set("minHeight", js.Array(value :_*))
     
     @scala.inline
     def minWidth(
@@ -301,7 +299,7 @@ object Grid {
     def minWidthNull: this.type = set("minWidth", null)
     
     @scala.inline
-    def overflowVarargs(value: (js.Any | Null)*): this.type = set("overflow", js.Array(value :_*))
+    def minWidthVarargs(value: (js.Any | Null)*): this.type = set("minWidth", js.Array(value :_*))
     
     @scala.inline
     def overflow(
@@ -315,7 +313,7 @@ object Grid {
     def overflowNull: this.type = set("overflow", null)
     
     @scala.inline
-    def overflowXVarargs(value: (js.Any | Null)*): this.type = set("overflowX", js.Array(value :_*))
+    def overflowVarargs(value: (js.Any | Null)*): this.type = set("overflow", js.Array(value :_*))
     
     @scala.inline
     def overflowX(
@@ -329,7 +327,7 @@ object Grid {
     def overflowXNull: this.type = set("overflowX", null)
     
     @scala.inline
-    def overflowYVarargs(value: (js.Any | Null)*): this.type = set("overflowY", js.Array(value :_*))
+    def overflowXVarargs(value: (js.Any | Null)*): this.type = set("overflowX", js.Array(value :_*))
     
     @scala.inline
     def overflowY(
@@ -343,7 +341,7 @@ object Grid {
     def overflowYNull: this.type = set("overflowY", null)
     
     @scala.inline
-    def positionVarargs(value: (js.Any | Null)*): this.type = set("position", js.Array(value :_*))
+    def overflowYVarargs(value: (js.Any | Null)*): this.type = set("overflowY", js.Array(value :_*))
     
     @scala.inline
     def position(
@@ -357,7 +355,7 @@ object Grid {
     def positionNull: this.type = set("position", null)
     
     @scala.inline
-    def rightVarargs(value: (js.Any | Null)*): this.type = set("right", js.Array(value :_*))
+    def positionVarargs(value: (js.Any | Null)*): this.type = set("position", js.Array(value :_*))
     
     @scala.inline
     def right(
@@ -371,7 +369,7 @@ object Grid {
     def rightNull: this.type = set("right", null)
     
     @scala.inline
-    def sizeVarargs(value: (js.Any | Null)*): this.type = set("size", js.Array(value :_*))
+    def rightVarargs(value: (js.Any | Null)*): this.type = set("right", js.Array(value :_*))
     
     @scala.inline
     def size(
@@ -385,7 +383,7 @@ object Grid {
     def sizeNull: this.type = set("size", null)
     
     @scala.inline
-    def topVarargs(value: (js.Any | Null)*): this.type = set("top", js.Array(value :_*))
+    def sizeVarargs(value: (js.Any | Null)*): this.type = set("size", js.Array(value :_*))
     
     @scala.inline
     def top(
@@ -399,7 +397,7 @@ object Grid {
     def topNull: this.type = set("top", null)
     
     @scala.inline
-    def verticalAlignVarargs(value: (js.Any | Null)*): this.type = set("verticalAlign", js.Array(value :_*))
+    def topVarargs(value: (js.Any | Null)*): this.type = set("top", js.Array(value :_*))
     
     @scala.inline
     def verticalAlign(
@@ -413,7 +411,7 @@ object Grid {
     def verticalAlignNull: this.type = set("verticalAlign", null)
     
     @scala.inline
-    def widthVarargs(value: (js.Any | Null)*): this.type = set("width", js.Array(value :_*))
+    def verticalAlignVarargs(value: (js.Any | Null)*): this.type = set("verticalAlign", js.Array(value :_*))
     
     @scala.inline
     def width(
@@ -427,7 +425,7 @@ object Grid {
     def widthNull: this.type = set("width", null)
     
     @scala.inline
-    def zIndexVarargs(value: (js.Any | Null)*): this.type = set("zIndex", js.Array(value :_*))
+    def widthVarargs(value: (js.Any | Null)*): this.type = set("width", js.Array(value :_*))
     
     @scala.inline
     def zIndex(
@@ -439,9 +437,12 @@ object Grid {
     
     @scala.inline
     def zIndexNull: this.type = set("zIndex", null)
+    
+    @scala.inline
+    def zIndexVarargs(value: (js.Any | Null)*): this.type = set("zIndex", js.Array(value :_*))
   }
   
-  def withProps(p: childrenReactNodeLayoutPr): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Grid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: childrenReactNodeLayoutPr): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

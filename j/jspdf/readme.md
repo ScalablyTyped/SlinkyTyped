@@ -11,8 +11,8 @@ PDF Document creation from JavaScript
 | Full name          | jspdf |
 | Keywords           | pdf |
 | # releases         | 6 |
-| # dependents       | 147 |
-| # downloads        | 4302246 |
+| # dependents       | 338 |
+| # downloads        | 10542237 |
 | # stars            | 21 |
 
 ## Links

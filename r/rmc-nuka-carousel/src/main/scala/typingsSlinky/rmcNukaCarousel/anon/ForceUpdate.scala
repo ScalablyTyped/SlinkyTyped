@@ -6,12 +6,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.rmcNukaCarousel.decoratorsMod.IDecoratorProps
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ForceUpdate extends js.Object {
+trait ForceUpdate extends StObject {
   
   var context: js.Any = js.native
   

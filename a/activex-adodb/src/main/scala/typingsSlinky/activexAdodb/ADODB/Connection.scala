@@ -2,12 +2,13 @@ package typingsSlinky.activexAdodb.ADODB
 
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`-1`
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Connection extends js.Object {
+trait Connection extends StObject {
   
   @JSName("ADODB.Connection_typekey")
   var ADODBDotConnection_typekey: Connection = js.native

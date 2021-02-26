@@ -1,5 +1,6 @@
 package typingsSlinky.sketchapp
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.sketchapp.sketchappNumbers.`2`
   - typingsSlinky.sketchapp.sketchappNumbers.`3`
 */
-trait SketchMSLayerResizingType extends js.Object
+trait SketchMSLayerResizingType extends StObject
 object SketchMSLayerResizingType {
   
   @scala.inline

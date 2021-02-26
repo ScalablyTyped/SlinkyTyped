@@ -10,6 +10,7 @@ import typingsSlinky.reactMotionSlider.reactMotionSliderStrings.left
 import typingsSlinky.reactMotionSlider.reactMotionSliderStrings.mouse
 import typingsSlinky.reactMotionSlider.reactMotionSliderStrings.right
 import typingsSlinky.reactMotionSlider.reactMotionSliderStrings.touch
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object ReactMotionSlider {
   
   @JSImport("react-motion-slider", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -62,7 +63,7 @@ object ReactMotionSlider {
     def swipeThreshold(value: Double): this.type = set("swipeThreshold", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactMotionSlider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

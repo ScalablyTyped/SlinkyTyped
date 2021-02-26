@@ -5,6 +5,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`dot-density`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`unique-value`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.dictionary
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.simple
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

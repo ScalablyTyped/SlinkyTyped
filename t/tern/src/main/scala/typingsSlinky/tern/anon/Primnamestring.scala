@@ -7,13 +7,14 @@ import typingsSlinky.tern.inferMod.Type
 import typingsSlinky.tern.ternStrings.bool
 import typingsSlinky.tern.ternStrings.number
 import typingsSlinky.tern.ternStrings.string
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined tern.tern/lib/infer.Prim & {  name :'string'} */
 @js.native
-trait Primnamestring extends js.Object {
+trait Primnamestring extends StObject {
   
   def addType(args: js.Any*): Unit = js.native
   

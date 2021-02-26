@@ -23,15 +23,25 @@ import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object GroupedListBase {
   
+  @scala.inline
+  def apply(
+    items: js.Array[_],
+    onRenderCell: (js.UndefOr[Double], js.UndefOr[js.Any], js.UndefOr[Double]) => ReactElement
+  ): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], onRenderCell = js.Any.fromFunction3(onRenderCell))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IGroupedListProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "GroupedListBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,13 +55,13 @@ object GroupedListBase {
     def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IGroupedList]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IGroupedList | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IGroupedList]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IGroupedList]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dragDropEvents(value: IDragDropEvents): this.type = set("dragDropEvents", value.asInstanceOf[js.Any])
@@ -60,10 +70,10 @@ object GroupedListBase {
     def dragDropHelper(value: IDragDropHelper): this.type = set("dragDropHelper", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventsToRegisterVarargs(value: Callback*): this.type = set("eventsToRegister", js.Array(value :_*))
+    def eventsToRegister(value: js.Array[Callback]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventsToRegister(value: js.Array[Callback]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
+    def eventsToRegisterVarargs(value: Callback*): this.type = set("eventsToRegister", js.Array(value :_*))
     
     @scala.inline
     def focusZoneProps(value: IFocusZoneProps): this.type = set("focusZoneProps", value.asInstanceOf[js.Any])
@@ -75,10 +85,10 @@ object GroupedListBase {
     def groupProps(value: IGroupRenderProps): this.type = set("groupProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
+    def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
+    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
     
     @scala.inline
     def listProps(value: IListProps[_]): this.type = set("listProps", value.asInstanceOf[js.Any])
@@ -99,10 +109,10 @@ object GroupedListBase {
     def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IGroupedListStyleProps => DeepPartial[IGroupedListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IGroupedListStyleProps, IGroupedListStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IGroupedListStyleProps, IGroupedListStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IGroupedListStyleProps => DeepPartial[IGroupedListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -115,13 +125,4 @@ object GroupedListBase {
   }
   
   def withProps(p: IGroupedListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    items: js.Array[_],
-    onRenderCell: (js.UndefOr[Double], js.UndefOr[js.Any], js.UndefOr[Double]) => ReactElement
-  ): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], onRenderCell = js.Any.fromFunction3(onRenderCell))
-    new Builder(js.Array(this.component, __props.asInstanceOf[IGroupedListProps]))
-  }
 }

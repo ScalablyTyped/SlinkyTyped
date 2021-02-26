@@ -2,12 +2,13 @@ package typingsSlinky.mfiles
 
 import typingsSlinky.mfiles.MFiles.MFBuiltInValueList
 import typingsSlinky.mfiles.MFiles.MFExternalDBRefreshType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultValueListOperationsAsync extends js.Object {
+trait IVaultValueListOperationsAsync extends StObject {
   
   def AddValueListAdmin(ValueList: IObjectTypeAdmin): Unit = js.native
   def AddValueListAdmin(

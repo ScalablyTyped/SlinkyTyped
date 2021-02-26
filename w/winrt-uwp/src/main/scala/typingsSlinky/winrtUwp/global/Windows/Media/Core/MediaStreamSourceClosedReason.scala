@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Core
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Specifies the reason why a MediaStreamSource was closed. */
 @JSGlobal("Windows.Media.Core.MediaStreamSourceClosedReason")
 @js.native
-object MediaStreamSourceClosedReason extends js.Object {
+object MediaStreamSourceClosedReason extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[

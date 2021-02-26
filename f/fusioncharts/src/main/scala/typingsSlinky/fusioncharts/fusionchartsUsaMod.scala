@@ -1,13 +1,14 @@
 package typingsSlinky.fusioncharts
 
 import typingsSlinky.fusioncharts.mod.FusionChartStatic
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("fusioncharts/maps/fusioncharts.usa", JSImport.Namespace)
-@js.native
-object fusionchartsUsaMod extends js.Object {
+object fusionchartsUsaMod {
   
+  @JSImport("fusioncharts/maps/fusioncharts.usa", JSImport.Namespace)
+  @js.native
   def apply(H: FusionChartStatic): FusionChartStatic = js.native
 }

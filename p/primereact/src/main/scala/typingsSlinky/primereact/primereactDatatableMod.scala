@@ -1,14 +1,22 @@
 package typingsSlinky.primereact
 
+import typingsSlinky.primereact.dataTableMod.DataTableProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/datatable", JSImport.Namespace)
-@js.native
-object primereactDatatableMod extends js.Object {
+object primereactDatatableMod {
   
+  @JSImport("primereact/datatable", "DataTable")
   @js.native
-  class DataTable ()
-    extends typingsSlinky.primereact.dataTableMod.DataTable
+  class DataTable protected ()
+    extends typingsSlinky.primereact.dataTableMod.DataTable {
+    def this(props: DataTableProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: DataTableProps, context: js.Any) = this()
+  }
 }

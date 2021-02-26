@@ -3,6 +3,7 @@ package typingsSlinky.apolloProtobufjs.minimalMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloProtobufjs.mod.IOneOf
 import typingsSlinky.apolloProtobufjs.mod.OneOfDecorator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -61,15 +62,15 @@ class OneOf protected ()
   ) = this()
 }
 /* static members */
-@JSImport("@apollo/protobufjs/minimal", "OneOf")
-@js.native
-object OneOf extends js.Object {
+object OneOf {
   
   /**
     * OneOf decorator (TypeScript).
     * @param fieldNames Field names
     * @returns Decorator function
     */
+  @JSImport("@apollo/protobufjs/minimal", "OneOf.d")
+  @js.native
   def d[T /* <: String */](fieldNames: String*): OneOfDecorator = js.native
   
   /**
@@ -79,5 +80,7 @@ object OneOf extends js.Object {
     * @returns Created oneof
     * @throws {TypeError} If arguments are invalid
     */
+  @JSImport("@apollo/protobufjs/minimal", "OneOf.fromJSON")
+  @js.native
   def fromJSON(name: String, json: IOneOf): typingsSlinky.apolloProtobufjs.mod.OneOf = js.native
 }

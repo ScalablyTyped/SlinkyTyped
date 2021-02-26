@@ -10,9 +10,9 @@ Curve fitting method in javascript
 | ------------------ | :-------------: |
 | Full name          | ml-levenberg-marquardt |
 | Keywords           | machine, learning, data, mining, datamining, levenberg, marquardt |
-| # releases         | 5 |
-| # dependents       | 2 |
-| # downloads        | 10494 |
+| # releases         | 8 |
+| # dependents       | 5 |
+| # downloads        | 32042 |
 | # stars            | 1 |
 
 ## Links

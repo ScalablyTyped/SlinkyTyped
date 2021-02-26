@@ -1,8 +1,9 @@
 package typingsSlinky.awsSdk.lightsailMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IsVpcPeeredRequest extends js.Object
+trait IsVpcPeeredRequest extends StObject

@@ -1,5 +1,6 @@
 package typingsSlinky.stripeV2.stripe
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.stripeV2.stripeV2Strings.`Diners Club`
   - typingsSlinky.stripeV2.stripeV2Strings.Unknown
 */
-trait StripeCardDataBrand extends js.Object
+trait StripeCardDataBrand extends StObject
 object StripeCardDataBrand {
   
   @scala.inline

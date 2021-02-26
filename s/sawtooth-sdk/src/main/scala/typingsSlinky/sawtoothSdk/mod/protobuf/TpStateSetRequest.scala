@@ -5,6 +5,7 @@ import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.ITpStateSetRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,18 +21,26 @@ class TpStateSetRequest ()
   def this(properties: ITpStateSetRequest) = this()
 }
 /* static members */
-@JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest")
-@js.native
-object TpStateSetRequest extends js.Object {
+object TpStateSetRequest {
   
   /**
     * Creates a new TpStateSetRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns TpStateSetRequest instance
     */
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.create")
+  @js.native
   def create(): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.create")
+  @js.native
   def create(properties: ITpStateSetRequest): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
   /**
     * Decodes a TpStateSetRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -40,11 +49,16 @@ object TpStateSetRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
   /**
     * Decodes a TpStateSetRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,8 +66,9 @@ object TpStateSetRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
   
   /**
     * Encodes the specified TpStateSetRequest message. Does not implicitly {@link TpStateSetRequest.verify|verify} messages.
@@ -61,7 +76,11 @@ object TpStateSetRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.encode")
+  @js.native
   def encode(message: ITpStateSetRequest): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.encode")
+  @js.native
   def encode(message: ITpStateSetRequest, writer: Writer): Writer = js.native
   
   /**
@@ -70,7 +89,11 @@ object TpStateSetRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITpStateSetRequest): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITpStateSetRequest, writer: Writer): Writer = js.native
   
   /**
@@ -78,6 +101,8 @@ object TpStateSetRequest extends js.Object {
     * @param object Plain object
     * @returns TpStateSetRequest
     */
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest = js.native
   
   /**
@@ -86,7 +111,11 @@ object TpStateSetRequest extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.toObject")
+  @js.native
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.toObject")
+  @js.native
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.TpStateSetRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -94,5 +123,7 @@ object TpStateSetRequest extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk", "protobuf.TpStateSetRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

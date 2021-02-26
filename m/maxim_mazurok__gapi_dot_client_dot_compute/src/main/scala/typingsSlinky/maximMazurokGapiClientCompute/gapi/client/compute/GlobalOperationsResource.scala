@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientCompute.gapi.client.compute
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientCompute.anon.Alt
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GlobalOperationsResource extends js.Object {
+trait GlobalOperationsResource extends StObject {
   
   /** Retrieves an aggregated list of all operations. */
   def aggregatedList(): Request[OperationAggregatedList] = js.native

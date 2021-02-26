@@ -6,13 +6,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.AsyncStatus
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IAsyncOperationWithProgress
 import typingsSlinky.winrtUwp.Windows.WinRTError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Supports the retrieval of messages. */
 @js.native
-trait GetSmsMessagesOperation extends js.Object {
+trait GetSmsMessagesOperation extends StObject {
   
   /** Cancels the asynchronous operations. */
   def cancel(): Unit = js.native

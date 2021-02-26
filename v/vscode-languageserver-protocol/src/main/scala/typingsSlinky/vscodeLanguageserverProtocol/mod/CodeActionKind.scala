@@ -1,26 +1,31 @@
 package typingsSlinky.vscodeLanguageserverProtocol.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageserver-protocol", "CodeActionKind")
-@js.native
-object CodeActionKind extends js.Object {
+object CodeActionKind {
   
   /**
     * Empty kind.
     */
+  @JSImport("vscode-languageserver-protocol", "CodeActionKind.Empty")
+  @js.native
   val Empty: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
   
   /**
     * Base kind for quickfix actions: 'quickfix'
     */
+  @JSImport("vscode-languageserver-protocol", "CodeActionKind.QuickFix")
+  @js.native
   val QuickFix: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
   
   /**
     * Base kind for refactoring actions: 'refactor'
     */
+  @JSImport("vscode-languageserver-protocol", "CodeActionKind.Refactor")
+  @js.native
   val Refactor: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
   
   /**
@@ -34,6 +39,8 @@ object CodeActionKind extends js.Object {
     * - Extract interface from class
     * - ...
     */
+  @JSImport("vscode-languageserver-protocol", "CodeActionKind.RefactorExtract")
+  @js.native
   val RefactorExtract: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
   
   /**
@@ -46,6 +53,8 @@ object CodeActionKind extends js.Object {
     * - Inline constant
     * - ...
     */
+  @JSImport("vscode-languageserver-protocol", "CodeActionKind.RefactorInline")
+  @js.native
   val RefactorInline: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
   
   /**
@@ -60,6 +69,8 @@ object CodeActionKind extends js.Object {
     * - Move method to base class
     * - ...
     */
+  @JSImport("vscode-languageserver-protocol", "CodeActionKind.RefactorRewrite")
+  @js.native
   val RefactorRewrite: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
   
   /**
@@ -67,6 +78,8 @@ object CodeActionKind extends js.Object {
     *
     * Source code actions apply to the entire file.
     */
+  @JSImport("vscode-languageserver-protocol", "CodeActionKind.Source")
+  @js.native
   val Source: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
   
   /**
@@ -77,10 +90,14 @@ object CodeActionKind extends js.Object {
     *
     * @since 3.15.0
     */
+  @JSImport("vscode-languageserver-protocol", "CodeActionKind.SourceFixAll")
+  @js.native
   val SourceFixAll: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
   
   /**
     * Base kind for an organize imports source action: `source.organizeImports`
     */
+  @JSImport("vscode-languageserver-protocol", "CodeActionKind.SourceOrganizeImports")
+  @js.native
   val SourceOrganizeImports: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
 }

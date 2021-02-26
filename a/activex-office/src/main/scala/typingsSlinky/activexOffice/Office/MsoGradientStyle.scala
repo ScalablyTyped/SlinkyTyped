@@ -8,6 +8,7 @@ import typingsSlinky.activexOffice.activexOfficeNumbers.`4`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`5`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`6`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`7`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`-2`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`2`
 */
-trait MsoGradientStyle extends js.Object
+trait MsoGradientStyle extends StObject
 object MsoGradientStyle {
   
   @scala.inline

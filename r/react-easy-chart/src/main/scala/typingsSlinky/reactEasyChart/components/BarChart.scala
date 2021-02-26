@@ -11,15 +11,22 @@ import typingsSlinky.reactEasyChart.mod.LineData
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.linear
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.text
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.time
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object BarChart {
   
+  @scala.inline
+  def apply(data: js.Array[BarData]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BarChartProps]))
+  }
+  
   @JSImport("react-easy-chart", "BarChart")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +61,10 @@ object BarChart {
     def interpolate(value: String): this.type = set("interpolate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lineDataVarargs(value: LineData*): this.type = set("lineData", js.Array(value :_*))
+    def lineData(value: js.Array[LineData]): this.type = set("lineData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lineData(value: js.Array[LineData]): this.type = set("lineData", value.asInstanceOf[js.Any])
+    def lineDataVarargs(value: LineData*): this.type = set("lineData", js.Array(value :_*))
     
     @scala.inline
     def margin(value: Bottom): this.type = set("margin", value.asInstanceOf[js.Any])
@@ -78,10 +85,10 @@ object BarChart {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def xDomainRangeVarargs(value: (js.Date | Double | String)*): this.type = set("xDomainRange", js.Array(value :_*))
+    def xDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("xDomainRange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def xDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("xDomainRange", value.asInstanceOf[js.Any])
+    def xDomainRangeVarargs(value: (js.Date | Double | String)*): this.type = set("xDomainRange", js.Array(value :_*))
     
     @scala.inline
     def xTickNumber(value: Double): this.type = set("xTickNumber", value.asInstanceOf[js.Any])
@@ -96,20 +103,14 @@ object BarChart {
     def yAxisOrientRight(value: Boolean): this.type = set("yAxisOrientRight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def yDomainRangeVarargs(value: Double*): this.type = set("yDomainRange", js.Array(value :_*))
+    def yDomainRange(value: js.Array[Double]): this.type = set("yDomainRange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def yDomainRange(value: js.Array[Double]): this.type = set("yDomainRange", value.asInstanceOf[js.Any])
+    def yDomainRangeVarargs(value: Double*): this.type = set("yDomainRange", js.Array(value :_*))
     
     @scala.inline
     def yTickNumber(value: Double): this.type = set("yTickNumber", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: BarChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[BarData]): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[BarChartProps]))
-  }
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.osrm.mod
 
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * https://github.com/Project-OSRM/node-osrm/blob/master/docs/api.md
   */
 @js.native
-trait OSRM extends js.Object {
+trait OSRM extends StObject {
   
   /**
     * matches given coordinates to the road network

@@ -10,9 +10,9 @@ Variant of merge that's useful for webpack configuration
 | ------------------ | :-------------: |
 | Full name          | webpack-merge |
 | Keywords           | webpack, merge |
-| # releases         | 7 |
-| # dependents       | 2093 |
-| # downloads        | 129600309 |
+| # releases         | 27 |
+| # dependents       | 2878 |
+| # downloads        | 205623320 |
 | # stars            | 81 |
 
 ## Links

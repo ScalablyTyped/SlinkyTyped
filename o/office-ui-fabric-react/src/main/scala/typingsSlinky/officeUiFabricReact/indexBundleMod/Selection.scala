@@ -2,6 +2,7 @@ package typingsSlinky.officeUiFabricReact.indexBundleMod
 
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptions
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptionsWithRequiredGetKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

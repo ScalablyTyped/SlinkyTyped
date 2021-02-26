@@ -11,6 +11,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.instant
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.max
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.min
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.wide
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

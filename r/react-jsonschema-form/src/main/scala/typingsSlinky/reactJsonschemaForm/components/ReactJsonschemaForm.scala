@@ -16,15 +16,22 @@ import typingsSlinky.reactJsonschemaForm.mod.ISubmitEvent
 import typingsSlinky.reactJsonschemaForm.mod.ObjectFieldTemplateProps
 import typingsSlinky.reactJsonschemaForm.mod.UiSchema
 import typingsSlinky.reactJsonschemaForm.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactJsonschemaForm {
   
+  @scala.inline
+  def apply[T](schema: JSONSchema6): Builder[T] = {
+    val __props = js.Dynamic.literal(schema = schema.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[FormProps[T]]))
+  }
+  
   @JSImport("react-jsonschema-form", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -50,10 +57,10 @@ object ReactJsonschemaForm {
     def action(value: String): this.type = set("action", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def additionalMetaSchemasVarargs(value: js.Object*): this.type = set("additionalMetaSchemas", js.Array(value :_*))
+    def additionalMetaSchemas(value: js.Array[js.Object]): this.type = set("additionalMetaSchemas", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def additionalMetaSchemas(value: js.Array[js.Object]): this.type = set("additionalMetaSchemas", value.asInstanceOf[js.Any])
+    def additionalMetaSchemasVarargs(value: js.Object*): this.type = set("additionalMetaSchemas", js.Array(value :_*))
     
     @scala.inline
     def autocomplete(value: String): this.type = set("autocomplete", value.asInstanceOf[js.Any])
@@ -138,10 +145,4 @@ object ReactJsonschemaForm {
   }
   
   def withProps[T](p: FormProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](schema: JSONSchema6): Builder[T] = {
-    val __props = js.Dynamic.literal(schema = schema.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[FormProps[T]]))
-  }
 }

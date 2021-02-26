@@ -4,14 +4,14 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.stormReactDiagrams.abstractLinkFactoryMod.AbstractLinkFactory
 import typingsSlinky.stormReactDiagrams.defaultLinkModelMod.DefaultLinkModel
 import typingsSlinky.stormReactDiagrams.defaultLinkWidgetMod.DefaultLinkWidget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("storm-react-diagrams/dist/src/defaults/factories/DefaultLinkFactory", JSImport.Namespace)
-@js.native
-object defaultLinkFactoryMod extends js.Object {
+object defaultLinkFactoryMod {
   
+  @JSImport("storm-react-diagrams/dist/src/defaults/factories/DefaultLinkFactory", "DefaultLinkFactory")
   @js.native
   class DefaultLinkFactory () extends AbstractLinkFactory[DefaultLinkModel] {
     

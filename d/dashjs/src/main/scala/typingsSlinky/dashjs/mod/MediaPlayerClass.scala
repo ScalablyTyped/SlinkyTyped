@@ -9,12 +9,13 @@ import typingsSlinky.dashjs.dashjsStrings.image
 import typingsSlinky.dashjs.dashjsStrings.stream
 import typingsSlinky.dashjs.dashjsStrings.text
 import typingsSlinky.dashjs.dashjsStrings.video
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MediaPlayerClass extends js.Object {
+trait MediaPlayerClass extends StObject {
   
   def addABRCustomRule(`type`: String, rulename: String, rule: js.Object): Unit = js.native
   

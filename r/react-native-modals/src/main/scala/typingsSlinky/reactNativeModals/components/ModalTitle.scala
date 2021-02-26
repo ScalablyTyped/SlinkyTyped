@@ -7,15 +7,22 @@ import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeModals.mod.AlignTypes
 import typingsSlinky.reactNativeModals.mod.ModalTitleProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ModalTitle {
   
+  @scala.inline
+  def apply(title: String): Builder = {
+    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ModalTitleProps]))
+  }
+  
   @JSImport("react-native-modals", "ModalTitle")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,10 +49,4 @@ object ModalTitle {
   }
   
   def withProps(p: ModalTitleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(title: String): Builder = {
-    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ModalTitleProps]))
-  }
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.novaEditorNode
 
 import typingsSlinky.novaEditorNode.anon.Focus
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

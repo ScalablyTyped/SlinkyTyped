@@ -1,6 +1,7 @@
 package typingsSlinky.extjs.Ext.grid
 
 import typingsSlinky.extjs.Ext.data.IStore
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,5 +1,6 @@
 package typingsSlinky.karma
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,5 +25,17 @@ package object mod {
   
   type ServerCallback = js.Function1[/* exitCode */ scala.Double, scala.Unit]
   
+  @scala.inline
+  def VERSION: java.lang.String = typingsSlinky.karma.mod.^.asInstanceOf[js.Dynamic].selectDynamic("VERSION").asInstanceOf[java.lang.String]
+  
   type ValueType = js.Tuple2[typingsSlinky.karma.karmaStrings.value, js.Any]
+  
+  @scala.inline
+  def runner: typingsSlinky.karma.mod.Runner_ = typingsSlinky.karma.mod.^.asInstanceOf[js.Dynamic].selectDynamic("runner").asInstanceOf[typingsSlinky.karma.mod.Runner_]
+  
+  @scala.inline
+  def server: typingsSlinky.karma.mod.DeprecatedServer = typingsSlinky.karma.mod.^.asInstanceOf[js.Dynamic].selectDynamic("server").asInstanceOf[typingsSlinky.karma.mod.DeprecatedServer]
+  
+  @scala.inline
+  def stopper: typingsSlinky.karma.mod.Stopper_ = typingsSlinky.karma.mod.^.asInstanceOf[js.Dynamic].selectDynamic("stopper").asInstanceOf[typingsSlinky.karma.mod.Stopper_]
 }

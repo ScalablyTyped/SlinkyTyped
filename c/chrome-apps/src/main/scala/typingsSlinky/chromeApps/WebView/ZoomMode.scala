@@ -1,6 +1,7 @@
 package typingsSlinky.chromeApps.WebView
 
 import typingsSlinky.chromeApps.chromeAppsStrings.disabled__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,7 +33,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.`per-view`
   - typingsSlinky.chromeApps.chromeAppsStrings.disabled__
 */
-trait ZoomMode extends js.Object
+trait ZoomMode extends StObject
 object ZoomMode {
   
   @scala.inline

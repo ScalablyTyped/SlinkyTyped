@@ -5,6 +5,7 @@ import typingsSlinky.vexflow.anon.Family
 import typingsSlinky.vexflow.anon.Firstindices
 import typingsSlinky.vexflow.anon.Firstxpx
 import typingsSlinky.vexflow.anon.Lastindices
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

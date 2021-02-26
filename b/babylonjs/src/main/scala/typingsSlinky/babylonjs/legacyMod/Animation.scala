@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import typingsSlinky.babylonjs.animatableInterfaceMod.IAnimatable
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -71,80 +72,114 @@ class Animation protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "Animation")
-@js.native
-object Animation extends js.Object {
+object Animation {
+  
+  @JSImport("babylonjs/Legacy/legacy", "Animation")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Constant Loop Mode
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONLOOPMODE_CONSTANT")
+  @js.native
   val ANIMATIONLOOPMODE_CONSTANT: Double = js.native
   
   /**
     * Cycle Loop Mode
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONLOOPMODE_CYCLE")
+  @js.native
   val ANIMATIONLOOPMODE_CYCLE: Double = js.native
   
   /**
     * Relative Loop Mode
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONLOOPMODE_RELATIVE")
+  @js.native
   val ANIMATIONLOOPMODE_RELATIVE: Double = js.native
   
   /**
     * Color3 animation type
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONTYPE_COLOR3")
+  @js.native
   val ANIMATIONTYPE_COLOR3: Double = js.native
   
   /**
     * Color3 animation type
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONTYPE_COLOR4")
+  @js.native
   val ANIMATIONTYPE_COLOR4: Double = js.native
   
   /**
     * Float animation type
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONTYPE_FLOAT")
+  @js.native
   val ANIMATIONTYPE_FLOAT: Double = js.native
   
   /**
     * Matrix animation type
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONTYPE_MATRIX")
+  @js.native
   val ANIMATIONTYPE_MATRIX: Double = js.native
   
   /**
     * Quaternion animation type
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONTYPE_QUATERNION")
+  @js.native
   val ANIMATIONTYPE_QUATERNION: Double = js.native
   
   /**
     * Size animation type
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONTYPE_SIZE")
+  @js.native
   val ANIMATIONTYPE_SIZE: Double = js.native
   
   /**
     * Vector2 animation type
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONTYPE_VECTOR2")
+  @js.native
   val ANIMATIONTYPE_VECTOR2: Double = js.native
   
   /**
     * Vector3 animation type
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ANIMATIONTYPE_VECTOR3")
+  @js.native
   val ANIMATIONTYPE_VECTOR3: Double = js.native
   
   /**
     * Use matrix interpolation instead of using direct key value when animating matrices
     */
-  var AllowMatricesInterpolation: Boolean = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.AllowMatricesInterpolation")
+  @js.native
+  def AllowMatricesInterpolation: Boolean = js.native
+  @scala.inline
+  def AllowMatricesInterpolation_=(x: Boolean): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("AllowMatricesInterpolation")(x.asInstanceOf[js.Any])
   
   /**
     * When matrix interpolation is enabled, this boolean forces the system to use Matrix.DecomposeLerp instead of Matrix.Lerp. Interpolation is more precise but slower
     */
-  var AllowMatrixDecomposeForInterpolation: Boolean = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.AllowMatrixDecomposeForInterpolation")
+  @js.native
+  def AllowMatrixDecomposeForInterpolation: Boolean = js.native
+  @scala.inline
+  def AllowMatrixDecomposeForInterpolation_=(x: Boolean): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("AllowMatrixDecomposeForInterpolation")(x.asInstanceOf[js.Any])
   
   /**
     * Appends the serialized animations from the source animations
     * @param source Source containing the animations
     * @param destination Target to store the animations
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.AppendSerializedAnimations")
+  @js.native
   def AppendSerializedAnimations(source: IAnimatable, destination: js.Any): Unit = js.native
   
   /**
@@ -161,6 +196,8 @@ object Animation extends js.Object {
     * @param onAnimationEnd defines the callback to call when animation end
     * @returns the animatable created for this animation
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartAnimation")
+  @js.native
   def CreateAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -170,6 +207,8 @@ object Animation extends js.Object {
     from: js.Any,
     to: js.Any
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartAnimation")
+  @js.native
   def CreateAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -182,6 +221,8 @@ object Animation extends js.Object {
     easingFunction: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.Function0[Unit]
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartAnimation")
+  @js.native
   def CreateAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -193,6 +234,8 @@ object Animation extends js.Object {
     loopMode: js.UndefOr[scala.Nothing],
     easingFunction: typingsSlinky.babylonjs.easingMod.EasingFunction
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartAnimation")
+  @js.native
   def CreateAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -205,6 +248,8 @@ object Animation extends js.Object {
     easingFunction: typingsSlinky.babylonjs.easingMod.EasingFunction,
     onAnimationEnd: js.Function0[Unit]
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartAnimation")
+  @js.native
   def CreateAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -215,6 +260,8 @@ object Animation extends js.Object {
     to: js.Any,
     loopMode: Double
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartAnimation")
+  @js.native
   def CreateAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -227,6 +274,8 @@ object Animation extends js.Object {
     easingFunction: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.Function0[Unit]
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartAnimation")
+  @js.native
   def CreateAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -238,6 +287,8 @@ object Animation extends js.Object {
     loopMode: Double,
     easingFunction: typingsSlinky.babylonjs.easingMod.EasingFunction
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartAnimation")
+  @js.native
   def CreateAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -267,6 +318,8 @@ object Animation extends js.Object {
     * @returns the list of animatables created for all nodes
     * @example https://www.babylonjs-playground.com/#MH0VLI
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartHierarchyAnimation")
+  @js.native
   def CreateAndStartHierarchyAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -277,6 +330,8 @@ object Animation extends js.Object {
     from: js.Any,
     to: js.Any
   ): Nullable[js.Array[typingsSlinky.babylonjs.animatableMod.Animatable]] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartHierarchyAnimation")
+  @js.native
   def CreateAndStartHierarchyAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -290,6 +345,8 @@ object Animation extends js.Object {
     easingFunction: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.Function0[Unit]
   ): Nullable[js.Array[typingsSlinky.babylonjs.animatableMod.Animatable]] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartHierarchyAnimation")
+  @js.native
   def CreateAndStartHierarchyAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -302,6 +359,8 @@ object Animation extends js.Object {
     loopMode: js.UndefOr[scala.Nothing],
     easingFunction: typingsSlinky.babylonjs.easingMod.EasingFunction
   ): Nullable[js.Array[typingsSlinky.babylonjs.animatableMod.Animatable]] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartHierarchyAnimation")
+  @js.native
   def CreateAndStartHierarchyAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -315,6 +374,8 @@ object Animation extends js.Object {
     easingFunction: typingsSlinky.babylonjs.easingMod.EasingFunction,
     onAnimationEnd: js.Function0[Unit]
   ): Nullable[js.Array[typingsSlinky.babylonjs.animatableMod.Animatable]] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartHierarchyAnimation")
+  @js.native
   def CreateAndStartHierarchyAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -326,6 +387,8 @@ object Animation extends js.Object {
     to: js.Any,
     loopMode: Double
   ): Nullable[js.Array[typingsSlinky.babylonjs.animatableMod.Animatable]] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartHierarchyAnimation")
+  @js.native
   def CreateAndStartHierarchyAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -339,6 +402,8 @@ object Animation extends js.Object {
     easingFunction: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.Function0[Unit]
   ): Nullable[js.Array[typingsSlinky.babylonjs.animatableMod.Animatable]] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartHierarchyAnimation")
+  @js.native
   def CreateAndStartHierarchyAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -351,6 +416,8 @@ object Animation extends js.Object {
     loopMode: Double,
     easingFunction: typingsSlinky.babylonjs.easingMod.EasingFunction
   ): Nullable[js.Array[typingsSlinky.babylonjs.animatableMod.Animatable]] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAndStartHierarchyAnimation")
+  @js.native
   def CreateAndStartHierarchyAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -373,6 +440,8 @@ object Animation extends js.Object {
     * @param easingFunction The easing function used in the animation
     * @returns The created animation
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateAnimation")
+  @js.native
   def CreateAnimation(
     property: String,
     animationType: Double,
@@ -385,6 +454,8 @@ object Animation extends js.Object {
     * @param snippetId defines the snippet to load
     * @returns a promise that will resolve to the new animation or a new array of animations
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateFromSnippetAsync")
+  @js.native
   def CreateFromSnippetAsync(snippetId: String): js.Promise[
     typingsSlinky.babylonjs.animationMod.Animation | js.Array[typingsSlinky.babylonjs.animationMod.Animation]
   ] = js.native
@@ -403,6 +474,8 @@ object Animation extends js.Object {
     * @param onAnimationEnd Callback to run once the animation is complete
     * @returns Nullable animation
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateMergeAndStartAnimation")
+  @js.native
   def CreateMergeAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -412,6 +485,8 @@ object Animation extends js.Object {
     from: js.Any,
     to: js.Any
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateMergeAndStartAnimation")
+  @js.native
   def CreateMergeAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -424,6 +499,8 @@ object Animation extends js.Object {
     easingFunction: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.Function0[Unit]
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateMergeAndStartAnimation")
+  @js.native
   def CreateMergeAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -435,6 +512,8 @@ object Animation extends js.Object {
     loopMode: js.UndefOr[scala.Nothing],
     easingFunction: typingsSlinky.babylonjs.easingMod.EasingFunction
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateMergeAndStartAnimation")
+  @js.native
   def CreateMergeAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -447,6 +526,8 @@ object Animation extends js.Object {
     easingFunction: typingsSlinky.babylonjs.easingMod.EasingFunction,
     onAnimationEnd: js.Function0[Unit]
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateMergeAndStartAnimation")
+  @js.native
   def CreateMergeAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -457,6 +538,8 @@ object Animation extends js.Object {
     to: js.Any,
     loopMode: Double
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateMergeAndStartAnimation")
+  @js.native
   def CreateMergeAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -469,6 +552,8 @@ object Animation extends js.Object {
     easingFunction: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.Function0[Unit]
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateMergeAndStartAnimation")
+  @js.native
   def CreateMergeAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -480,6 +565,8 @@ object Animation extends js.Object {
     loopMode: Double,
     easingFunction: typingsSlinky.babylonjs.easingMod.EasingFunction
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.CreateMergeAndStartAnimation")
+  @js.native
   def CreateMergeAndStartAnimation(
     name: String,
     node: typingsSlinky.babylonjs.nodeMod.Node,
@@ -502,7 +589,11 @@ object Animation extends js.Object {
     * @param clonedName defines the name of the resulting cloned Animation if cloneOriginal is true
     * @returns a new Animation if cloneOriginal is true or the original Animation if cloneOriginal is false
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: js.UndefOr[scala.Nothing],
@@ -510,12 +601,16 @@ object Animation extends js.Object {
     cloneOriginal: js.UndefOr[scala.Nothing],
     clonedName: String
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: js.UndefOr[scala.Nothing],
     range: js.UndefOr[scala.Nothing],
     cloneOriginal: Boolean
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: js.UndefOr[scala.Nothing],
@@ -523,11 +618,15 @@ object Animation extends js.Object {
     cloneOriginal: Boolean,
     clonedName: String
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: js.UndefOr[scala.Nothing],
     range: String
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: js.UndefOr[scala.Nothing],
@@ -535,12 +634,16 @@ object Animation extends js.Object {
     cloneOriginal: js.UndefOr[scala.Nothing],
     clonedName: String
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: js.UndefOr[scala.Nothing],
     range: String,
     cloneOriginal: Boolean
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: js.UndefOr[scala.Nothing],
@@ -548,7 +651,11 @@ object Animation extends js.Object {
     cloneOriginal: Boolean,
     clonedName: String
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation, referenceFrame: Double): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: Double,
@@ -556,12 +663,16 @@ object Animation extends js.Object {
     cloneOriginal: js.UndefOr[scala.Nothing],
     clonedName: String
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: Double,
     range: js.UndefOr[scala.Nothing],
     cloneOriginal: Boolean
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: Double,
@@ -569,11 +680,15 @@ object Animation extends js.Object {
     cloneOriginal: Boolean,
     clonedName: String
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: Double,
     range: String
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: Double,
@@ -581,12 +696,16 @@ object Animation extends js.Object {
     cloneOriginal: js.UndefOr[scala.Nothing],
     clonedName: String
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: Double,
     range: String,
     cloneOriginal: Boolean
   ): typingsSlinky.babylonjs.animationMod.Animation = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.MakeAnimationAdditive")
+  @js.native
   def MakeAnimationAdditive(
     sourceAnimation: typingsSlinky.babylonjs.animationMod.Animation,
     referenceFrame: Double,
@@ -600,6 +719,8 @@ object Animation extends js.Object {
     * @param parsedAnimation Parsed animation object
     * @returns Animation object
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.Parse")
+  @js.native
   def Parse(parsedAnimation: js.Any): typingsSlinky.babylonjs.animationMod.Animation = js.native
   
   /**
@@ -608,12 +729,18 @@ object Animation extends js.Object {
     * @param url defines the url to load from
     * @returns a promise that will resolve to the new animation or an array of animations
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.ParseFromFileAsync")
+  @js.native
   def ParseFromFileAsync(name: Nullable[String], url: String): js.Promise[
     typingsSlinky.babylonjs.animationMod.Animation | js.Array[typingsSlinky.babylonjs.animationMod.Animation]
   ] = js.native
   
   /** Define the Url to load snippets */
-  var SnippetUrl: String = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.SnippetUrl")
+  @js.native
+  def SnippetUrl: String = js.native
+  @scala.inline
+  def SnippetUrl_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SnippetUrl")(x.asInstanceOf[js.Any])
   
   /**
     * Transition property of an host to the target Value
@@ -627,6 +754,8 @@ object Animation extends js.Object {
     * @param onAnimationEnd Callback trigger at the end of the animation
     * @returns Nullable animation
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation.TransitionTo")
+  @js.native
   def TransitionTo(
     property: String,
     targetValue: js.Any,
@@ -636,6 +765,8 @@ object Animation extends js.Object {
     transition: typingsSlinky.babylonjs.animationMod.Animation,
     duration: Double
   ): Nullable[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation.TransitionTo")
+  @js.native
   def TransitionTo(
     property: String,
     targetValue: js.Any,
@@ -650,6 +781,8 @@ object Animation extends js.Object {
   /**
     * @hidden Internal use
     */
+  @JSImport("babylonjs/Legacy/legacy", "Animation._PrepareAnimation")
+  @js.native
   def _PrepareAnimation(
     name: String,
     targetProperty: String,
@@ -658,6 +791,8 @@ object Animation extends js.Object {
     from: js.Any,
     to: js.Any
   ): Nullable[typingsSlinky.babylonjs.animationMod.Animation] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation._PrepareAnimation")
+  @js.native
   def _PrepareAnimation(
     name: String,
     targetProperty: String,
@@ -668,6 +803,8 @@ object Animation extends js.Object {
     loopMode: js.UndefOr[scala.Nothing],
     easingFunction: typingsSlinky.babylonjs.easingMod.EasingFunction
   ): Nullable[typingsSlinky.babylonjs.animationMod.Animation] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation._PrepareAnimation")
+  @js.native
   def _PrepareAnimation(
     name: String,
     targetProperty: String,
@@ -677,6 +814,8 @@ object Animation extends js.Object {
     to: js.Any,
     loopMode: Double
   ): Nullable[typingsSlinky.babylonjs.animationMod.Animation] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Animation._PrepareAnimation")
+  @js.native
   def _PrepareAnimation(
     name: String,
     targetProperty: String,
@@ -689,5 +828,7 @@ object Animation extends js.Object {
   ): Nullable[typingsSlinky.babylonjs.animationMod.Animation] = js.native
   
   /** @hidden */
+  @JSImport("babylonjs/Legacy/legacy", "Animation._UniversalLerp")
+  @js.native
   def _UniversalLerp(left: js.Any, right: js.Any, amount: Double): js.Any = js.native
 }

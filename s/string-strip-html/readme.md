@@ -4,21 +4,21 @@
 Typings are for version 5.0
 
 ## Library description:
-Strips HTML tags from strings. Detects legit unencoded brackets.
+Strips HTML tags from strings. No parser, accepts mixed sources.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | string-strip-html |
-| Keywords           | amount, currency, digits, from, numbers, remove, separator, separators, string, thousand, thousands |
-| # releases         | 93 |
-| # dependents       | 13 |
-| # downloads        | 200684 |
+| Keywords           | code, extract, from, html, jsp, mixed, remove, separate, stri, string, strip, tags, templating, text, xhtml |
+| # releases         | 89 |
+| # dependents       | 26 |
+| # downloads        | 1101224 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://gitlab.com/codsen/codsen/tree/master/packages/string-strip-html)
-- [Bugs](https://gitlab.com/codsen/codsen/issues)
-- [Repository](https://gitlab.com/codsen/codsen)
+- [Homepage](https://codsen.com/os/string-strip-html/)
+- [Bugs](https://github.com/codsen/codsen/issues)
+- [Repository](https://github.com/codsen/codsen)
 - [Npm](https://www.npmjs.com/package/string-strip-html)
     
 

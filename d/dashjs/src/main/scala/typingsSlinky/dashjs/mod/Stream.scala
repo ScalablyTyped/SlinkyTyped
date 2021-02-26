@@ -4,12 +4,13 @@ import typingsSlinky.dashjs.dashjsStrings.audio
 import typingsSlinky.dashjs.dashjsStrings.image
 import typingsSlinky.dashjs.dashjsStrings.video
 import typingsSlinky.std.MediaSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Stream extends js.Object {
+trait Stream extends StObject {
   
   def activate(MediaSource: MediaSource): Unit = js.native
   

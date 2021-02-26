@@ -3,14 +3,14 @@ package typingsSlinky.androiduix.global.android
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.std.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("android.webkit")
-@js.native
-object webkit extends js.Object {
+object webkit {
   
+  @JSGlobal("android.webkit.WebView")
   @js.native
   class WebView protected ()
     extends typingsSlinky.androiduix.android.webkit.WebView {
@@ -20,6 +20,7 @@ object webkit extends js.Object {
     def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
   }
   
+  @JSGlobal("android.webkit.WebViewClient")
   @js.native
   class WebViewClient ()
     extends typingsSlinky.androiduix.android.webkit.WebViewClient

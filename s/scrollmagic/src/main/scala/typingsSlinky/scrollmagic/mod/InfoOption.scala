@@ -1,5 +1,6 @@
 package typingsSlinky.scrollmagic.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.scrollmagic.scrollmagicStrings.container
   - typingsSlinky.scrollmagic.scrollmagicStrings.isDocument
 */
-trait InfoOption extends js.Object
+trait InfoOption extends StObject
 object InfoOption {
   
   @scala.inline

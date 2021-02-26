@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactLazylog.scrollFollowMod.ScrollFollowProps
 import typingsSlinky.reactLazylog.scrollFollowMod.ScrollFollowRenderProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ScrollFollow {
   
+  @scala.inline
+  def apply(render: ScrollFollowRenderProps => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(render = js.Any.fromFunction1(render))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ScrollFollowProps]))
+  }
+  
   @JSImport("react-lazylog", "ScrollFollow")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,10 +32,4 @@ object ScrollFollow {
   }
   
   def withProps(p: ScrollFollowProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(render: ScrollFollowRenderProps => ReactElement): Builder = {
-    val __props = js.Dynamic.literal(render = js.Any.fromFunction1(render))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ScrollFollowProps]))
-  }
 }

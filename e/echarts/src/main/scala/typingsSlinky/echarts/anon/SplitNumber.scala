@@ -1,11 +1,12 @@
 package typingsSlinky.echarts.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SplitNumber extends js.Object {
+trait SplitNumber extends StObject {
   
   /**
     * The length of tick line, can be a pecentage value relative
@@ -52,42 +53,30 @@ object SplitNumber {
   }
   
   @scala.inline
-  implicit class SplitNumberOps[Self <: SplitNumber] (val x: Self) extends AnyVal {
+  implicit class SplitNumberMutableBuilder[Self <: SplitNumber] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setLength(value: Double | String): Self = StObject.set(x, "length", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setLengthUndefined: Self = StObject.set(x, "length", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setLineStyle(value: ShadowBlur): Self = StObject.set(x, "lineStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLength(value: Double | String): Self = this.set("length", value.asInstanceOf[js.Any])
+    def setLineStyleUndefined: Self = StObject.set(x, "lineStyle", js.undefined)
     
     @scala.inline
-    def deleteLength: Self = this.set("length", js.undefined)
+    def setShow(value: Boolean): Self = StObject.set(x, "show", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLineStyle(value: ShadowBlur): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
+    def setShowUndefined: Self = StObject.set(x, "show", js.undefined)
     
     @scala.inline
-    def deleteLineStyle: Self = this.set("lineStyle", js.undefined)
+    def setSplitNumber(value: Double): Self = StObject.set(x, "splitNumber", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setShow(value: Boolean): Self = this.set("show", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteShow: Self = this.set("show", js.undefined)
-    
-    @scala.inline
-    def setSplitNumber(value: Double): Self = this.set("splitNumber", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSplitNumber: Self = this.set("splitNumber", js.undefined)
+    def setSplitNumberUndefined: Self = StObject.set(x, "splitNumber", js.undefined)
   }
 }

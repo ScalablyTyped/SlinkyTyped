@@ -12,15 +12,22 @@ import typingsSlinky.reactDates.mod.IconPositionShape
 import typingsSlinky.reactDates.mod.OpenDirectionShape
 import typingsSlinky.reactDates.mod.SingleDatePickerInputPhrases
 import typingsSlinky.reactDates.mod.SingleDatePickerInputShape
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SingleDatePickerInput {
   
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SingleDatePickerInputShape]))
+  }
+  
   @JSImport("react-dates", "SingleDatePickerInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,16 +41,16 @@ object SingleDatePickerInput {
     def block(value: Boolean): this.type = set("block", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customCloseIconReactElement(value: ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def customCloseIcon(value: ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customInputIconReactElement(value: ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
+    def customCloseIconReactElement(value: ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customInputIcon(value: ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def customInputIconReactElement(value: ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -125,10 +132,4 @@ object SingleDatePickerInput {
   }
   
   def withProps(p: SingleDatePickerInputShape): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SingleDatePickerInputShape]))
-  }
 }

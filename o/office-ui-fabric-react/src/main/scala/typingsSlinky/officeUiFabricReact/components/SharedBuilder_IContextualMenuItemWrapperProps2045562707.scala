@@ -12,6 +12,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuItemProps
 import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenuItem
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,6 +21,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class SharedBuilder_IContextualMenuItemWrapperProps2045562707[R <: js.Object] (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, R] {
+  
+  @scala.inline
+  def componentRef(
+    value: IRefObject[
+      typingsSlinky.officeUiFabricReact.contextualMenuItemWrapperContextualMenuItemWrapperMod.ContextualMenuItemWrapper
+    ]
+  ): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def componentRefFunction1(
@@ -34,20 +42,13 @@ class SharedBuilder_IContextualMenuItemWrapperProps2045562707[R <: js.Object] (v
   ): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def componentRef(
-    value: IRefObject[
-      typingsSlinky.officeUiFabricReact.contextualMenuItemWrapperContextualMenuItemWrapperMod.ContextualMenuItemWrapper
-    ]
-  ): this.type = set("componentRef", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def contextualMenuItemAsFunctionComponent(value: ReactComponentClass[IContextualMenuItemProps]): this.type = set("contextualMenuItemAs", value.asInstanceOf[js.Any])
+  def contextualMenuItemAs(value: ReactComponentClass[IContextualMenuItemProps]): this.type = set("contextualMenuItemAs", value.asInstanceOf[js.Any])
   
   @scala.inline
   def contextualMenuItemAsComponentClass(value: ReactComponentClass[IContextualMenuItemProps]): this.type = set("contextualMenuItemAs", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contextualMenuItemAs(value: ReactComponentClass[IContextualMenuItemProps]): this.type = set("contextualMenuItemAs", value.asInstanceOf[js.Any])
+  def contextualMenuItemAsFunctionComponent(value: ReactComponentClass[IContextualMenuItemProps]): this.type = set("contextualMenuItemAs", value.asInstanceOf[js.Any])
   
   @scala.inline
   def dismissMenu(value: (/* ev */ js.UndefOr[js.Any], /* dismissAll */ js.UndefOr[Boolean]) => Unit): this.type = set("dismissMenu", js.Any.fromFunction2(value))

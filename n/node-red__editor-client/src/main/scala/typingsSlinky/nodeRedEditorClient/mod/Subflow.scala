@@ -7,12 +7,13 @@ import typingsSlinky.nodeRedEditorClient.anon.SubflowInputs
 import typingsSlinky.nodeRedEditorClient.anon.SubflowOutputs
 import typingsSlinky.nodeRedEditorClient.anon.Subflows
 import typingsSlinky.nodeRedEditorClient.mod.global.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Subflow extends js.Object {
+trait Subflow extends StObject {
   
   def buildEditForm(`type`: String, node: js.Object): Unit = js.native
   

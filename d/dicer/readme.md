@@ -10,9 +10,9 @@ A very fast streaming multipart parser for node.js
 | ------------------ | :-------------: |
 | Full name          | dicer |
 | Keywords           | parser, parse, parsing, multipart, form-data, streaming |
-| # releases         | 2 |
-| # dependents       | 18 |
-| # downloads        | 61738179 |
+| # releases         | 0 |
+| # dependents       | 20 |
+| # downloads        | 141794687 |
 | # stars            | 4 |
 
 ## Links

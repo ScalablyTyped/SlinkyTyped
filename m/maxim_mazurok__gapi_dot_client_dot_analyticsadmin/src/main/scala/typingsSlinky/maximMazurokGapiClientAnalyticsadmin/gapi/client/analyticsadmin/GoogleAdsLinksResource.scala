@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.KeyName
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.Name
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.UpdateMask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GoogleAdsLinksResource extends js.Object {
+trait GoogleAdsLinksResource extends StObject {
   
   def create(request: Alt, body: GoogleAnalyticsAdminV1alphaGoogleAdsLink): Request[GoogleAnalyticsAdminV1alphaGoogleAdsLink] = js.native
   /** Creates a GoogleAdsLink. */

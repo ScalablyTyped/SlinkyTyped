@@ -16,6 +16,7 @@ import typingsSlinky.angularCore.angularCoreNumbers.`512`
 import typingsSlinky.angularCore.angularCoreNumbers.`64`
 import typingsSlinky.angularCore.angularCoreNumbers.`768`
 import typingsSlinky.angularCore.angularCoreNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,7 +42,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCore.angularCoreNumbers.`12`
   - typingsSlinky.angularCore.angularCoreNumbers.`13`
 */
-trait ViewState extends js.Object
+trait ViewState extends StObject
 object ViewState {
   
   @scala.inline

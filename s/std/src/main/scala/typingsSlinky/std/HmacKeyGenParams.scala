@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,36 +15,24 @@ trait HmacKeyGenParams extends Algorithm {
 object HmacKeyGenParams {
   
   @scala.inline
-  def apply(hash: HashAlgorithmIdentifier, name: java.lang.String): HmacKeyGenParams = {
+  def apply(hash: HashAlgorithmIdentifier, name: java.lang.String): org.scalajs.dom.crypto.HmacKeyGenParams = {
     val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[HmacKeyGenParams]
+    __obj.asInstanceOf[org.scalajs.dom.crypto.HmacKeyGenParams]
   }
   
   @scala.inline
-  implicit class HmacKeyGenParamsOps[Self <: org.scalajs.dom.crypto.HmacKeyGenParams] (val x: Self) extends AnyVal {
+  implicit class HmacKeyGenParamsMutableBuilder[Self <: org.scalajs.dom.crypto.HmacKeyGenParams] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setHash(value: HashAlgorithmIdentifier): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setHashAlgorithm(value: org.scalajs.dom.crypto.Algorithm): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setLength(value: Double): Self = StObject.set(x, "length", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHashAlgorithm(value: org.scalajs.dom.crypto.Algorithm): Self = this.set("hash", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHash(value: HashAlgorithmIdentifier): Self = this.set("hash", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setLength(value: Double): Self = this.set("length", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLength: Self = this.set("length", js.undefined)
+    def setLengthUndefined: Self = StObject.set(x, "length", js.undefined)
   }
 }

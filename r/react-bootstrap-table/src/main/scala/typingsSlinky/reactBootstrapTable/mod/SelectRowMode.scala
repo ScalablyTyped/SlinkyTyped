@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTable.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.radio
   - typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.checkbox
 */
-trait SelectRowMode extends js.Object
+trait SelectRowMode extends StObject
 object SelectRowMode {
   
   @scala.inline

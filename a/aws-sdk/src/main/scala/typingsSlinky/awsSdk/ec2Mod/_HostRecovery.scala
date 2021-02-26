@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.ec2Mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _HostRecovery extends js.Object
+trait _HostRecovery extends StObject

@@ -1,12 +1,11 @@
 package typingsSlinky.awsSdkClientGlacierNode
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/types/PurchaseProvisionedCapacityExceptionsUnion", JSImport.Namespace)
-@js.native
-object purchaseProvisionedCapacityExceptionsUnionMod extends js.Object {
+object purchaseProvisionedCapacityExceptionsUnionMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientGlacierNode.typesInvalidParameterValueExceptionMod.InvalidParameterValueException
@@ -14,5 +13,37 @@ object purchaseProvisionedCapacityExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientGlacierNode.typesLimitExceededExceptionMod.LimitExceededException
     - typingsSlinky.awsSdkClientGlacierNode.typesServiceUnavailableExceptionMod.ServiceUnavailableException
   */
-  trait PurchaseProvisionedCapacityExceptionsUnion extends js.Object
+  trait PurchaseProvisionedCapacityExceptionsUnion extends StObject
+  object PurchaseProvisionedCapacityExceptionsUnion {
+    
+    @scala.inline
+    def InvalidParameterValueException(
+      name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.InvalidParameterValueException
+    ): typingsSlinky.awsSdkClientGlacierNode.typesInvalidParameterValueExceptionMod.InvalidParameterValueException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientGlacierNode.typesInvalidParameterValueExceptionMod.InvalidParameterValueException]
+    }
+    
+    @scala.inline
+    def LimitExceededException(name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.LimitExceededException): typingsSlinky.awsSdkClientGlacierNode.typesLimitExceededExceptionMod.LimitExceededException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientGlacierNode.typesLimitExceededExceptionMod.LimitExceededException]
+    }
+    
+    @scala.inline
+    def MissingParameterValueException(
+      name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.MissingParameterValueException
+    ): typingsSlinky.awsSdkClientGlacierNode.typesMissingParameterValueExceptionMod.MissingParameterValueException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientGlacierNode.typesMissingParameterValueExceptionMod.MissingParameterValueException]
+    }
+    
+    @scala.inline
+    def ServiceUnavailableException(
+      name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.ServiceUnavailableException
+    ): typingsSlinky.awsSdkClientGlacierNode.typesServiceUnavailableExceptionMod.ServiceUnavailableException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientGlacierNode.typesServiceUnavailableExceptionMod.ServiceUnavailableException]
+    }
+  }
 }

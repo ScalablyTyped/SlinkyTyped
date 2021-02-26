@@ -6,6 +6,7 @@ import typingsSlinky.std.EventListener
 import typingsSlinky.std.EventTarget
 import typingsSlinky.webAnimationsJs.webAnimationsJsStrings.cancel
 import typingsSlinky.webAnimationsJs.webAnimationsJsStrings.finish
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

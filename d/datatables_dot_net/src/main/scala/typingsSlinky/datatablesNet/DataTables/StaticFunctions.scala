@@ -3,6 +3,7 @@ package typingsSlinky.datatablesNet.DataTables
 import org.scalablytyped.runtime.Instantiable1
 import org.scalajs.dom.raw.Node
 import typingsSlinky.datatablesNet.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 //#endregion "Namespaces"
 //#region "Static-Methods"
 @js.native
-trait StaticFunctions extends js.Object {
+trait StaticFunctions extends StObject {
   
   /**
     * Returns JQuery object
@@ -49,9 +50,9 @@ trait StaticFunctions extends js.Object {
     * @param table The table to check.
     */
   def isDataTable(table: String): Boolean = js.native
+  def isDataTable(table: Node): Boolean = js.native
   def isDataTable(table: Api): Boolean = js.native
   def isDataTable(table: JQuery): Boolean = js.native
-  def isDataTable(table: Node): Boolean = js.native
   
   /**
     * Helpers for `columns.render`.

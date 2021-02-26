@@ -4,6 +4,7 @@ import typingsSlinky.node.anon.Data
 import typingsSlinky.node.cryptoMod._KeyLike
 import typingsSlinky.node.fsMod._PathLike
 import typingsSlinky.std.Uint8Array
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -147,15 +148,6 @@ trait Buffer
   def fill(value: java.lang.String, offset: Double, end: js.UndefOr[scala.Nothing], encoding: BufferEncoding): this.type = js.native
   def fill(value: java.lang.String, offset: Double, end: Double): this.type = js.native
   def fill(value: java.lang.String, offset: Double, end: Double, encoding: BufferEncoding): this.type = js.native
-  def fill(
-    value: Double,
-    offset: js.UndefOr[scala.Nothing],
-    end: js.UndefOr[scala.Nothing],
-    encoding: BufferEncoding
-  ): this.type = js.native
-  def fill(value: Double, offset: js.UndefOr[scala.Nothing], end: Double, encoding: BufferEncoding): this.type = js.native
-  def fill(value: Double, offset: Double, end: js.UndefOr[scala.Nothing], encoding: BufferEncoding): this.type = js.native
-  def fill(value: Double, offset: Double, end: Double, encoding: BufferEncoding): this.type = js.native
   def fill(value: js.typedarray.Uint8Array): this.type = js.native
   def fill(
     value: js.typedarray.Uint8Array,
@@ -179,6 +171,15 @@ trait Buffer
   ): this.type = js.native
   def fill(value: js.typedarray.Uint8Array, offset: Double, end: Double): this.type = js.native
   def fill(value: js.typedarray.Uint8Array, offset: Double, end: Double, encoding: BufferEncoding): this.type = js.native
+  def fill(
+    value: Double,
+    offset: js.UndefOr[scala.Nothing],
+    end: js.UndefOr[scala.Nothing],
+    encoding: BufferEncoding
+  ): this.type = js.native
+  def fill(value: Double, offset: js.UndefOr[scala.Nothing], end: Double, encoding: BufferEncoding): this.type = js.native
+  def fill(value: Double, offset: Double, end: js.UndefOr[scala.Nothing], encoding: BufferEncoding): this.type = js.native
+  def fill(value: Double, offset: Double, end: Double, encoding: BufferEncoding): this.type = js.native
   
   def includes(value: java.lang.String): Boolean = js.native
   def includes(value: java.lang.String, byteOffset: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Boolean = js.native
@@ -195,23 +196,23 @@ trait Buffer
   def indexOf(value: java.lang.String, byteOffset: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Double = js.native
   def indexOf(value: java.lang.String, byteOffset: Double): Double = js.native
   def indexOf(value: java.lang.String, byteOffset: Double, encoding: BufferEncoding): Double = js.native
-  def indexOf(value: Double, byteOffset: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Double = js.native
-  def indexOf(value: Double, byteOffset: Double, encoding: BufferEncoding): Double = js.native
   def indexOf(value: js.typedarray.Uint8Array): Double = js.native
   def indexOf(value: js.typedarray.Uint8Array, byteOffset: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Double = js.native
   def indexOf(value: js.typedarray.Uint8Array, byteOffset: Double): Double = js.native
   def indexOf(value: js.typedarray.Uint8Array, byteOffset: Double, encoding: BufferEncoding): Double = js.native
+  def indexOf(value: Double, byteOffset: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Double = js.native
+  def indexOf(value: Double, byteOffset: Double, encoding: BufferEncoding): Double = js.native
   
   def lastIndexOf(value: java.lang.String): Double = js.native
   def lastIndexOf(value: java.lang.String, byteOffset: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Double = js.native
   def lastIndexOf(value: java.lang.String, byteOffset: Double): Double = js.native
   def lastIndexOf(value: java.lang.String, byteOffset: Double, encoding: BufferEncoding): Double = js.native
-  def lastIndexOf(value: Double, byteOffset: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Double = js.native
-  def lastIndexOf(value: Double, byteOffset: Double, encoding: BufferEncoding): Double = js.native
   def lastIndexOf(value: js.typedarray.Uint8Array): Double = js.native
   def lastIndexOf(value: js.typedarray.Uint8Array, byteOffset: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Double = js.native
   def lastIndexOf(value: js.typedarray.Uint8Array, byteOffset: Double): Double = js.native
   def lastIndexOf(value: js.typedarray.Uint8Array, byteOffset: Double, encoding: BufferEncoding): Double = js.native
+  def lastIndexOf(value: Double, byteOffset: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Double = js.native
+  def lastIndexOf(value: Double, byteOffset: Double, encoding: BufferEncoding): Double = js.native
   
   def readBigInt64BE(): js.BigInt = js.native
   def readBigInt64BE(offset: Double): js.BigInt = js.native

@@ -4,12 +4,13 @@ import typingsSlinky.pgwmodal.pgwmodalStrings.close
 import typingsSlinky.pgwmodal.pgwmodalStrings.getData
 import typingsSlinky.pgwmodal.pgwmodalStrings.isOpen
 import typingsSlinky.pgwmodal.pgwmodalStrings.reposition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQueryStatic extends js.Object {
+trait JQueryStatic extends StObject {
   
   def pgwModal(action: String): js.Any = js.native
   def pgwModal(option: PgwModalOption): Boolean = js.native

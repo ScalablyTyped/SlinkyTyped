@@ -1,5 +1,6 @@
 package typingsSlinky.mapboxMapboxSdk.directionsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polyline
   - typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polyline6
 */
-trait DirectionsGeometry extends js.Object
+trait DirectionsGeometry extends StObject
 object DirectionsGeometry {
   
   @scala.inline

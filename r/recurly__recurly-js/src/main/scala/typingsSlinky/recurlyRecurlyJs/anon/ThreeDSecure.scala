@@ -2,12 +2,13 @@ package typingsSlinky.recurlyRecurlyJs.anon
 
 import typingsSlinky.recurlyRecurlyJs.`3dSecureMod`.RiskOptions
 import typingsSlinky.recurlyRecurlyJs.`3dSecureMod`.ThreeDSecureEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ThreeDSecure extends js.Object {
+trait ThreeDSecure extends StObject {
   
   /**
     * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-recurlythreedsecure|ThreeDSecure}

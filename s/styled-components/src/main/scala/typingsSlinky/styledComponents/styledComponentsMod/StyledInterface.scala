@@ -175,13 +175,14 @@ import typingsSlinky.styledComponents.styledComponentsStrings.video
 import typingsSlinky.styledComponents.styledComponentsStrings.view
 import typingsSlinky.styledComponents.styledComponentsStrings.wbr
 import typingsSlinky.styledComponents.styledComponentsStrings.webview
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined styled-components.styled-components.ThemedStyledInterface<styled-components.styled-components.DefaultTheme> */
 @js.native
-trait StyledInterface extends js.Object {
+trait StyledInterface extends StObject {
   
   def apply(
     // unfortunately using a conditional type to validate that it can receive a `theme?: Theme`

@@ -3,14 +3,14 @@ package typingsSlinky.awsSdkSha256TreeHash
 import typingsSlinky.awsSdkTypes.cryptoMod.Hash
 import typingsSlinky.awsSdkTypes.cryptoMod.HashConstructor
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/sha256-tree-hash", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@aws-sdk/sha256-tree-hash", "TreeHash")
   @js.native
   class TreeHash protected () extends Hash {
     /**

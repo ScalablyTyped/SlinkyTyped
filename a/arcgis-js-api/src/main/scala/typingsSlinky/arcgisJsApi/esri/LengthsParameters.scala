@@ -3,6 +3,7 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`preserve-shape`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.geodesic
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.planar
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

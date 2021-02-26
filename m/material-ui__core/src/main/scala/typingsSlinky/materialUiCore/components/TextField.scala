@@ -91,6 +91,7 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -99,9 +100,15 @@ object TextField {
   
   object FilledTextFieldProps {
     
+    @scala.inline
+    def apply(variant: filled): Builder = {
+      val __props = js.Dynamic.literal(variant = variant.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.materialUiCore.textFieldTextFieldMod.FilledTextFieldProps]))
+    }
+    
     @JSImport("@material-ui/core", "TextField")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -297,13 +304,13 @@ object TextField {
       def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def componentFunctionComponent(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
+      def component(value: ReactType[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
       def componentComponentClass(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def component(value: ReactType[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
+      def componentFunctionComponent(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -339,10 +346,10 @@ object TextField {
       def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -354,31 +361,31 @@ object TextField {
       def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+      def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
       
       @scala.inline
-      def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+      def innerRefNull: this.type = set("innerRef", null)
       
       @scala.inline
-      def innerRefNull: this.type = set("innerRef", null)
+      def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+      def inputRef(value: Ref[_] | ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def inputRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
       
       @scala.inline
-      def inputRef(value: Ref[_] | ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+      def inputRefNull: this.type = set("inputRef", null)
       
       @scala.inline
-      def inputRefNull: this.type = set("inputRef", null)
+      def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -399,10 +406,10 @@ object TextField {
       def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+      def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       
       @scala.inline
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
@@ -726,29 +733,29 @@ object TextField {
       def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
+      def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
+      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
       
       @scala.inline
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
     def withProps(p: typingsSlinky.materialUiCore.textFieldTextFieldMod.FilledTextFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(variant: filled): Builder = {
-      val __props = js.Dynamic.literal(variant = variant.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.materialUiCore.textFieldTextFieldMod.FilledTextFieldProps]))
-    }
   }
   
   object OutlinedTextFieldProps {
     
+    @scala.inline
+    def apply(variant: outlined): Builder = {
+      val __props = js.Dynamic.literal(variant = variant.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.materialUiCore.textFieldTextFieldMod.OutlinedTextFieldProps]))
+    }
+    
     @JSImport("@material-ui/core", "TextField")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -944,13 +951,13 @@ object TextField {
       def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def componentFunctionComponent(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
+      def component(value: ReactType[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
       def componentComponentClass(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def component(value: ReactType[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
+      def componentFunctionComponent(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -986,10 +993,10 @@ object TextField {
       def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -1001,31 +1008,31 @@ object TextField {
       def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+      def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
       
       @scala.inline
-      def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+      def innerRefNull: this.type = set("innerRef", null)
       
       @scala.inline
-      def innerRefNull: this.type = set("innerRef", null)
+      def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+      def inputRef(value: Ref[_] | ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def inputRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
       
       @scala.inline
-      def inputRef(value: Ref[_] | ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+      def inputRefNull: this.type = set("inputRef", null)
       
       @scala.inline
-      def inputRefNull: this.type = set("inputRef", null)
+      def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -1046,10 +1053,10 @@ object TextField {
       def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+      def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       
       @scala.inline
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
@@ -1373,29 +1380,23 @@ object TextField {
       def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
+      def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
+      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
       
       @scala.inline
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
     def withProps(p: typingsSlinky.materialUiCore.textFieldTextFieldMod.OutlinedTextFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(variant: outlined): Builder = {
-      val __props = js.Dynamic.literal(variant = variant.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.materialUiCore.textFieldTextFieldMod.OutlinedTextFieldProps]))
-    }
   }
   
   object StandardTextFieldProps {
     
     @JSImport("@material-ui/core", "TextField")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -1591,13 +1592,13 @@ object TextField {
       def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def componentFunctionComponent(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
+      def component(value: ReactType[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
       def componentComponentClass(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def component(value: ReactType[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
+      def componentFunctionComponent(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -1633,10 +1634,10 @@ object TextField {
       def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -1648,31 +1649,31 @@ object TextField {
       def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+      def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
       
       @scala.inline
-      def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+      def innerRefNull: this.type = set("innerRef", null)
       
       @scala.inline
-      def innerRefNull: this.type = set("innerRef", null)
+      def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+      def inputRef(value: Ref[_] | ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def inputRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
       
       @scala.inline
-      def inputRef(value: Ref[_] | ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+      def inputRefNull: this.type = set("inputRef", null)
       
       @scala.inline
-      def inputRefNull: this.type = set("inputRef", null)
+      def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -1693,10 +1694,10 @@ object TextField {
       def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+      def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       
       @scala.inline
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
@@ -2020,10 +2021,10 @@ object TextField {
       def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
+      def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
+      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
       
       @scala.inline
       def variant(value: standard): this.type = set("variant", value.asInstanceOf[js.Any])
@@ -2032,8 +2033,8 @@ object TextField {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.materialUiCore.textFieldTextFieldMod.StandardTextFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: StandardTextFieldProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: typingsSlinky.materialUiCore.textFieldTextFieldMod.StandardTextFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
 }

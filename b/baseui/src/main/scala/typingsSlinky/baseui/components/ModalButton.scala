@@ -27,6 +27,7 @@ import typingsSlinky.baseui.buttonMod.ButtonProps
 import typingsSlinky.styletronReact.mod.StyleProp
 import typingsSlinky.styletronReact.mod.StyletronBase
 import typingsSlinky.styletronStandard.mod.StyleObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,7 @@ object ModalButton {
   
   @JSImport("baseui/modal", "ModalButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,19 +44,19 @@ object ModalButton {
        with StBuildingComponent[tag.type, typingsSlinky.baseui.modalMod.ModalButton] {
     
     @scala.inline
-    def $asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("$as", value.asInstanceOf[js.Any])
+    def $as(value: StyletronBase): this.type = set("$as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def $asComponentClass(value: ReactComponentClass[js.Any]): this.type = set("$as", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def $as(value: StyletronBase): this.type = set("$as", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def $styleFunction1(value: ButtonProps => StyleObject): this.type = set("$style", js.Any.fromFunction1(value))
+    def $asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("$as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def $style(value: StyleProp[ButtonProps]): this.type = set("$style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def $styleFunction1(value: ButtonProps => StyleObject): this.type = set("$style", js.Any.fromFunction1(value))
     
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
@@ -64,10 +65,10 @@ object ModalButton {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    def endEnhancer(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def endEnhancer(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
@@ -94,10 +95,10 @@ object ModalButton {
     def size(value: compact | default_ | large_ | mini): this.type = set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def startEnhancerReactElement(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    def startEnhancer(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def startEnhancer(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    def startEnhancerReactElement(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
@@ -106,7 +107,7 @@ object ModalButton {
     def `type`(value: submit | reset | button): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ButtonPropsautoFocusboole): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ModalButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ButtonPropsautoFocusboole): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

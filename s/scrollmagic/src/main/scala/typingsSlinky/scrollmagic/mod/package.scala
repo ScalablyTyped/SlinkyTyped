@@ -1,5 +1,6 @@
 package typingsSlinky.scrollmagic
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,4 +32,7 @@ package object mod {
     - typingsSlinky.scrollmagic.scrollmagicStrings.onLeave
   */
   type TriggerHook = typingsSlinky.scrollmagic.mod._TriggerHook | scala.Double
+  
+  @scala.inline
+  def version: java.lang.String = typingsSlinky.scrollmagic.mod.^.asInstanceOf[js.Dynamic].selectDynamic("version").asInstanceOf[java.lang.String]
 }

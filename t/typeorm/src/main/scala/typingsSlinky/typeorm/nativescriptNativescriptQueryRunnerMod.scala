@@ -3,14 +3,14 @@ package typingsSlinky.typeorm
 import typingsSlinky.typeorm.commonObjectLiteralMod.ObjectLiteral
 import typingsSlinky.typeorm.nativescriptNativescriptDriverMod.NativescriptDriver
 import typingsSlinky.typeorm.sqliteAbstractAbstractSqliteQueryRunnerMod.AbstractSqliteQueryRunner
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/driver/nativescript/NativescriptQueryRunner", JSImport.Namespace)
-@js.native
-object nativescriptNativescriptQueryRunnerMod extends js.Object {
+object nativescriptNativescriptQueryRunnerMod {
   
+  @JSImport("typeorm/driver/nativescript/NativescriptQueryRunner", "NativescriptQueryRunner")
   @js.native
   class NativescriptQueryRunner protected () extends AbstractSqliteQueryRunner {
     def this(driver: NativescriptDriver) = this()

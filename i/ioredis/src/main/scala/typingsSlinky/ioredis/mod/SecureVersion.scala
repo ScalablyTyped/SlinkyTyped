@@ -1,5 +1,6 @@
 package typingsSlinky.ioredis.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ioredis.ioredisStrings.TLSv1Dot1
   - typingsSlinky.ioredis.ioredisStrings.TLSv1
 */
-trait SecureVersion extends js.Object
+trait SecureVersion extends StObject
 object SecureVersion {
   
   @scala.inline

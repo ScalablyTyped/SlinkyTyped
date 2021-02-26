@@ -1,17 +1,42 @@
 package typingsSlinky.awsSdkClientKinesisBrowser
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kinesis-browser/types/CreateStreamExceptionsUnion", JSImport.Namespace)
-@js.native
-object createStreamExceptionsUnionMod extends js.Object {
+object createStreamExceptionsUnionMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientKinesisBrowser.typesResourceInUseExceptionMod.ResourceInUseException
     - typingsSlinky.awsSdkClientKinesisBrowser.typesLimitExceededExceptionMod.LimitExceededException
     - typingsSlinky.awsSdkClientKinesisBrowser.typesInvalidArgumentExceptionMod.InvalidArgumentException
   */
-  trait CreateStreamExceptionsUnion extends js.Object
+  trait CreateStreamExceptionsUnion extends StObject
+  object CreateStreamExceptionsUnion {
+    
+    @scala.inline
+    def InvalidArgumentException(
+      name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.InvalidArgumentException
+    ): typingsSlinky.awsSdkClientKinesisBrowser.typesInvalidArgumentExceptionMod.InvalidArgumentException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientKinesisBrowser.typesInvalidArgumentExceptionMod.InvalidArgumentException]
+    }
+    
+    @scala.inline
+    def LimitExceededException(
+      name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.LimitExceededException
+    ): typingsSlinky.awsSdkClientKinesisBrowser.typesLimitExceededExceptionMod.LimitExceededException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientKinesisBrowser.typesLimitExceededExceptionMod.LimitExceededException]
+    }
+    
+    @scala.inline
+    def ResourceInUseException(
+      name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ResourceInUseException
+    ): typingsSlinky.awsSdkClientKinesisBrowser.typesResourceInUseExceptionMod.ResourceInUseException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientKinesisBrowser.typesResourceInUseExceptionMod.ResourceInUseException]
+    }
+  }
 }

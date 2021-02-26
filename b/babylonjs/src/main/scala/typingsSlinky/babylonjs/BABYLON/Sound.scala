@@ -4,12 +4,13 @@ import org.scalajs.dom.raw.AudioBuffer
 import org.scalajs.dom.raw.AudioBufferSourceNode
 import org.scalajs.dom.raw.AudioNode
 import org.scalajs.dom.raw.GainNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Sound extends js.Object {
+trait Sound extends StObject {
   
   var _audioBuffer: js.Any = js.native
   

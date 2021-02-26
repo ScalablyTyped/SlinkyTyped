@@ -10,9 +10,9 @@ Highly customizable React component for inputing tags
 | ------------------ | :-------------: |
 | Full name          | react-tagsinput |
 | Keywords           | react, tags, input, component, javascript, react-component |
-| # releases         | 1 |
-| # dependents       | 66 |
-| # downloads        | 2155675 |
+| # releases         | 0 |
+| # dependents       | 81 |
+| # downloads        | 2987795 |
 | # stars            | 8 |
 
 ## Links

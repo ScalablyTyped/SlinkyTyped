@@ -1,6 +1,7 @@
 package typingsSlinky.smartFoxServer.global.SFS2X
 
 import typingsSlinky.smartFoxServer.SFS2X.IconfigObj
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

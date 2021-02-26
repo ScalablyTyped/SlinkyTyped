@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactInfinite.mod.InfiniteProps
 import typingsSlinky.reactInfinite.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactInfinite {
   
+  @scala.inline
+  def apply(elementHeight: Double | js.Array[Double]): Builder = {
+    val __props = js.Dynamic.literal(elementHeight = elementHeight.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteProps]))
+  }
+  
   @JSImport("react-infinite", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,10 +68,4 @@ object ReactInfinite {
   }
   
   def withProps(p: InfiniteProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(elementHeight: Double | js.Array[Double]): Builder = {
-    val __props = js.Dynamic.literal(elementHeight = elementHeight.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteProps]))
-  }
 }

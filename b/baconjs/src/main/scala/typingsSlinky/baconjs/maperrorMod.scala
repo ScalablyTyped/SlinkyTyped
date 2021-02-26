@@ -1,14 +1,17 @@
 package typingsSlinky.baconjs
 
 import typingsSlinky.baconjs.transformMod.Transformer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("baconjs/types/maperror", JSImport.Namespace)
-@js.native
-object maperrorMod extends js.Object {
+object maperrorMod {
   
+  @JSImport("baconjs/types/maperror", JSImport.Default)
+  @js.native
   def default[V](f: V): Transformer[V, V] = js.native
+  @JSImport("baconjs/types/maperror", JSImport.Default)
+  @js.native
   def default[V](f: js.Function1[/* error */ js.Any, V]): Transformer[V, V] = js.native
 }

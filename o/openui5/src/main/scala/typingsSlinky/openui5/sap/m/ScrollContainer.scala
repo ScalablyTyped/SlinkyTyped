@@ -3,6 +3,7 @@ package typingsSlinky.openui5.sap.m
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.openui5.sap.ui.core.Control
 import typingsSlinky.openui5.sap.ui.core.Element
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -120,8 +121,6 @@ trait ScrollContainer extends Control {
     */
   def scrollTo(x: Double, y: Double, time: Double): ScrollContainer = js.native
   
-  def scrollToElement(element: Element): ScrollContainer = js.native
-  def scrollToElement(element: Element, time: Double): ScrollContainer = js.native
   /**
     * Scrolls to an element(DOM or sap.ui.core.Element) within the page if the element is rendered.
     * @since 1.30
@@ -132,6 +131,8 @@ trait ScrollContainer extends Control {
     */
   def scrollToElement(element: HTMLElement): ScrollContainer = js.native
   def scrollToElement(element: HTMLElement, time: Double): ScrollContainer = js.native
+  def scrollToElement(element: Element): ScrollContainer = js.native
+  def scrollToElement(element: Element, time: Double): ScrollContainer = js.native
   
   /**
     * Sets a new value for property <code>focusable</code>.Whether the scroll container can be

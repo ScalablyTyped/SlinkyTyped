@@ -11,6 +11,7 @@ import typingsSlinky.std.stdStrings.NFC
 import typingsSlinky.std.stdStrings.NFD
 import typingsSlinky.std.stdStrings.NFKC
 import typingsSlinky.std.stdStrings.NFKD
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

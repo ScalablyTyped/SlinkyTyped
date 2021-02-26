@@ -6,19 +6,30 @@ import typingsSlinky.pg.mod.ClientBase
 import typingsSlinky.pg.mod.ClientConfig
 import typingsSlinky.pg.mod.QueryArrayConfig
 import typingsSlinky.pg.mod.QueryConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("node-pg-migrate/dist/db", JSImport.Namespace)
-@js.native
-object dbMod extends js.Object {
+object dbMod {
   
+  @JSImport("node-pg-migrate/dist/db", JSImport.Default)
+  @js.native
   def default(connection: String): DBConnection = js.native
+  @JSImport("node-pg-migrate/dist/db", JSImport.Default)
+  @js.native
   def default(connection: String, logger: Logger): DBConnection = js.native
+  @JSImport("node-pg-migrate/dist/db", JSImport.Default)
+  @js.native
   def default(connection: ClientBase): DBConnection = js.native
+  @JSImport("node-pg-migrate/dist/db", JSImport.Default)
+  @js.native
   def default(connection: ClientBase, logger: Logger): DBConnection = js.native
+  @JSImport("node-pg-migrate/dist/db", JSImport.Default)
+  @js.native
   def default(connection: ClientConfig): DBConnection = js.native
+  @JSImport("node-pg-migrate/dist/db", JSImport.Default)
+  @js.native
   def default(connection: ClientConfig, logger: Logger): DBConnection = js.native
   
   @js.native

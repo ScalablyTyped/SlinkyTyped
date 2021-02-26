@@ -43,6 +43,7 @@ import typingsSlinky.recharts.rechartsStrings.square
 import typingsSlinky.recharts.rechartsStrings.star
 import typingsSlinky.recharts.rechartsStrings.triangle
 import typingsSlinky.recharts.rechartsStrings.wye
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -51,7 +52,7 @@ object Scatter {
   
   @JSImport("recharts", "Scatter")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -62,13 +63,13 @@ object Scatter {
     def activeIndex(value: Double): this.type = set("activeIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def activeShapeReactElement(value: ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
+    def activeShape(value: js.Object | RechartsFunction | ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def activeShapeFunction1(value: /* repeated */ js.Any => Unit): this.type = set("activeShape", js.Any.fromFunction1(value))
     
     @scala.inline
-    def activeShape(value: js.Object | RechartsFunction | ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
+    def activeShapeReactElement(value: ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def alignmentBaseline(value: String): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
@@ -119,16 +120,16 @@ object Scatter {
     def cursor(value: String): this.type = set("cursor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: js.Object*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataKey(value: DataKey): this.type = set("dataKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dataKeyFunction1(value: /* dataObject */ js.Any => String | Double | (js.Tuple2[Double, Double]) | Null): this.type = set("dataKey", js.Any.fromFunction1(value))
     
     @scala.inline
-    def dataKey(value: DataKey): this.type = set("dataKey", value.asInstanceOf[js.Any])
+    def dataVarargs(value: js.Object*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -223,19 +224,19 @@ object Scatter {
     def lightingColor(value: String): this.type = set("lightingColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lineReactElement(value: ReactElement): this.type = set("line", value.asInstanceOf[js.Any])
+    def line(value: Boolean | js.Object | RechartsFunction | ReactElement): this.type = set("line", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lineFunction1(value: /* repeated */ js.Any => Unit): this.type = set("line", js.Any.fromFunction1(value))
     
     @scala.inline
-    def line(value: Boolean | js.Object | RechartsFunction | ReactElement): this.type = set("line", value.asInstanceOf[js.Any])
+    def lineJointType(value: LineType): this.type = set("lineJointType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lineJointTypeFunction1(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("lineJointType", js.Any.fromFunction1(value))
     
     @scala.inline
-    def lineJointType(value: LineType): this.type = set("lineJointType", value.asInstanceOf[js.Any])
+    def lineReactElement(value: ReactElement): this.type = set("line", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lineType(value: joint | fitting): this.type = set("lineType", value.asInstanceOf[js.Any])
@@ -307,24 +308,24 @@ object Scatter {
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pointsVarargs(value: ScatterPoint*): this.type = set("points", js.Array(value :_*))
+    def points(value: js.Array[ScatterPoint]): this.type = set("points", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def points(value: js.Array[ScatterPoint]): this.type = set("points", value.asInstanceOf[js.Any])
+    def pointsVarargs(value: ScatterPoint*): this.type = set("points", js.Array(value :_*))
     
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
+    def shape(
+      value: circle | cross | diamond | square | star | triangle | wye | ReactElement | ContentRenderer[_]
+    ): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shapeFunction1(value: _ => ReactElement): this.type = set("shape", js.Any.fromFunction1(value))
     
     @scala.inline
-    def shape(
-      value: circle | cross | diamond | square | star | triangle | wye | ReactElement | ContentRenderer[_]
-    ): this.type = set("shape", value.asInstanceOf[js.Any])
+    def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
@@ -405,7 +406,7 @@ object Scatter {
     def zAxisId(value: String | Double): this.type = set("zAxisId", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ScatterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Scatter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ScatterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

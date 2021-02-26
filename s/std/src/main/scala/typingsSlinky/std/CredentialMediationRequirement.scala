@@ -1,6 +1,7 @@
 package typingsSlinky.std
 
 import typingsSlinky.std.stdStrings.required_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.required_
   - typingsSlinky.std.stdStrings.silent
 */
-trait CredentialMediationRequirement extends js.Object
+trait CredentialMediationRequirement extends StObject
 object CredentialMediationRequirement {
   
   @scala.inline

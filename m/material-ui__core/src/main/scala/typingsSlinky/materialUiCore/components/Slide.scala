@@ -9,15 +9,22 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.right
 import typingsSlinky.materialUiCore.materialUiCoreStrings.up
 import typingsSlinky.materialUiCore.slideSlideMod.SlideProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Slide {
   
+  @scala.inline
+  def apply(direction: left | right | up | down): Builder = {
+    val __props = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SlideProps]))
+  }
+  
   @JSImport("@material-ui/core", "Slide")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -74,10 +81,4 @@ object Slide {
   }
   
   def withProps(p: SlideProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(direction: left | right | up | down): Builder = {
-    val __props = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SlideProps]))
-  }
 }

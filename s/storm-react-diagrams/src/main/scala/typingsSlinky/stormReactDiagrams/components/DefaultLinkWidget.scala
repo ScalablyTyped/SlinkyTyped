@@ -7,15 +7,22 @@ import typingsSlinky.stormReactDiagrams.defaultLinkModelMod.DefaultLinkModel
 import typingsSlinky.stormReactDiagrams.defaultLinkWidgetMod.DefaultLinkProps
 import typingsSlinky.stormReactDiagrams.diagramEngineMod.DiagramEngine
 import typingsSlinky.stormReactDiagrams.pointModelMod.PointModel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DefaultLinkWidget {
   
+  @scala.inline
+  def apply(diagramEngine: DiagramEngine, link: DefaultLinkModel): Builder = {
+    val __props = js.Dynamic.literal(diagramEngine = diagramEngine.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DefaultLinkProps]))
+  }
+  
   @JSImport("storm-react-diagrams", "DefaultLinkWidget")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,10 +52,4 @@ object DefaultLinkWidget {
   }
   
   def withProps(p: DefaultLinkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(diagramEngine: DiagramEngine, link: DefaultLinkModel): Builder = {
-    val __props = js.Dynamic.literal(diagramEngine = diagramEngine.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DefaultLinkProps]))
-  }
 }

@@ -1,16 +1,16 @@
 package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Misc/stringDictionary", JSImport.Namespace)
-@js.native
-object stringDictionaryMod extends js.Object {
+object stringDictionaryMod {
   
+  @JSImport("babylonjs/Misc/stringDictionary", "StringDictionary")
   @js.native
-  class StringDictionary[T] () extends js.Object {
+  class StringDictionary[T] () extends StObject {
     
     var _count: js.Any = js.native
     

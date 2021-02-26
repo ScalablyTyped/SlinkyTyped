@@ -11,15 +11,22 @@ import typingsSlinky.antdMobile.customInputMod.default
 import typingsSlinky.antdMobile.inputItemPropsTypeMod.InputKey
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CustomInput {
   
+  @scala.inline
+  def apply(backspaceLabel: js.Any, cancelKeyboardLabel: js.Any, confirmLabel: js.Any): Builder = {
+    val __props = js.Dynamic.literal(backspaceLabel = backspaceLabel.asInstanceOf[js.Any], cancelKeyboardLabel = cancelKeyboardLabel.asInstanceOf[js.Any], confirmLabel = confirmLabel.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[NumberInputProps]))
+  }
+  
   @JSImport("antd-mobile/lib/input-item/CustomInput", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,13 +40,13 @@ object CustomInput {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabledKeysVarargs(value: InputKey*): this.type = set("disabledKeys", js.Array(value :_*))
-    
-    @scala.inline
     def disabledKeys(value: js.Array[InputKey]): this.type = set("disabledKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabledKeysNull: this.type = set("disabledKeys", null)
+    
+    @scala.inline
+    def disabledKeysVarargs(value: InputKey*): this.type = set("disabledKeys", js.Array(value :_*))
     
     @scala.inline
     def editable(value: Boolean): this.type = set("editable", value.asInstanceOf[js.Any])
@@ -54,10 +61,10 @@ object CustomInput {
     def moneyKeyboardAlign(value: left | right | String): this.type = set("moneyKeyboardAlign", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def moneyKeyboardHeaderReactElement(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
+    def moneyKeyboardHeader(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def moneyKeyboardHeader(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
+    def moneyKeyboardHeaderReactElement(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
     def moneyKeyboardWrapProps(value: js.Object): this.type = set("moneyKeyboardWrapProps", value.asInstanceOf[js.Any])
@@ -91,10 +98,4 @@ object CustomInput {
   }
   
   def withProps(p: NumberInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(backspaceLabel: js.Any, cancelKeyboardLabel: js.Any, confirmLabel: js.Any): Builder = {
-    val __props = js.Dynamic.literal(backspaceLabel = backspaceLabel.asInstanceOf[js.Any], cancelKeyboardLabel = cancelKeyboardLabel.asInstanceOf[js.Any], confirmLabel = confirmLabel.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[NumberInputProps]))
-  }
 }

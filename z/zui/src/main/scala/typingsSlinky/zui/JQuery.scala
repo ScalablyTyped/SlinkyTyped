@@ -1,12 +1,13 @@
 package typingsSlinky.zui
 
 import typingsSlinky.zui.zuiStrings.DateTimePicker
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def affix(): JQuery = js.native
   def affix(options: AffixOptions): JQuery = js.native
@@ -48,7 +49,7 @@ trait JQuery extends js.Object {
   // on(events: 'dp.error', handler: (eventObject: DatetimepickerEventObject) => any): JQuery;
   @JSName("data")
   def data_DateTimePicker(key: DateTimePicker): Datetimepicker = js.native
-   // $('#modal').modalTrigger()
+  // $('#modal').modalTrigger()
   @JSName("data")
   def data_JQuery(value: String): JQuery = js.native
   

@@ -1,5 +1,6 @@
 package typingsSlinky.officeJs.global.Office
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("Office.ProjectProjectFields")
 @js.native
-object ProjectProjectFields extends js.Object {
+object ProjectProjectFields extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.officeJs.Office.ProjectProjectFields with Double] = js.native

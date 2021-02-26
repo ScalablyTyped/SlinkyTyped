@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import typingsSlinky.babylonjs.typesMod.DeepImmutable
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -39,9 +40,7 @@ class Quaternion ()
   def this(x: Double, y: Double, z: Double, w: Double) = this()
 }
 /* static members */
-@JSImport("babylonjs/index", "Quaternion")
-@js.native
-object Quaternion extends js.Object {
+object Quaternion {
   
   /**
     * Checks if the two quaternions are close to each other
@@ -49,6 +48,8 @@ object Quaternion extends js.Object {
     * @param quat1 defines the second quaternion to check
     * @returns true if the two quaternions are close to each other
     */
+  @JSImport("babylonjs/index", "Quaternion.AreClose")
+  @js.native
   def AreClose(
     quat0: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
     quat1: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion]
@@ -60,6 +61,8 @@ object Quaternion extends js.Object {
     * @param right defines the right operand
     * @returns the dot product
     */
+  @JSImport("babylonjs/index", "Quaternion.Dot")
+  @js.native
   def Dot(
     left: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
     right: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion]
@@ -71,7 +74,11 @@ object Quaternion extends js.Object {
     * @param offset defines the offset in the source array where the data starts
     * @returns a new quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.FromArray")
+  @js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]]): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
+  @JSImport("babylonjs/index", "Quaternion.FromArray")
+  @js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
   
   /**
@@ -80,6 +87,8 @@ object Quaternion extends js.Object {
     * @param offset the offset into the array to start at
     * @param result the quaternion to store the result in
     */
+  @JSImport("babylonjs/index", "Quaternion.FromArrayToRef")
+  @js.native
   def FromArrayToRef(
     array: DeepImmutable[ArrayLike[Double]],
     offset: Double,
@@ -93,6 +102,8 @@ object Quaternion extends js.Object {
     * @param z Roll
     * @returns the new Quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.FromEulerAngles")
+  @js.native
   def FromEulerAngles(x: Double, y: Double, z: Double): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
   
   /**
@@ -103,6 +114,8 @@ object Quaternion extends js.Object {
     * @param result the quaternion to store the result
     * @returns the updated quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.FromEulerAnglesToRef")
+  @js.native
   def FromEulerAnglesToRef(x: Double, y: Double, z: Double, result: typingsSlinky.babylonjs.mathVectorMod.Quaternion): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
   
   /**
@@ -110,6 +123,8 @@ object Quaternion extends js.Object {
     * @param vec the Euler vector (x Pitch, y Yaw, z Roll)
     * @returns the new Quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.FromEulerVector")
+  @js.native
   def FromEulerVector(vec: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
   
   /**
@@ -118,6 +133,8 @@ object Quaternion extends js.Object {
     * @param result the quaternion to store the result
     * @returns the updated quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.FromEulerVectorToRef")
+  @js.native
   def FromEulerVectorToRef(
     vec: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     result: typingsSlinky.babylonjs.mathVectorMod.Quaternion
@@ -128,6 +145,8 @@ object Quaternion extends js.Object {
     * @param matrix defines the source matrix
     * @returns a new quaternion created from the given rotation matrix values
     */
+  @JSImport("babylonjs/index", "Quaternion.FromRotationMatrix")
+  @js.native
   def FromRotationMatrix(matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
   
   /**
@@ -135,6 +154,8 @@ object Quaternion extends js.Object {
     * @param matrix defines the source matrix
     * @param result defines the target quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.FromRotationMatrixToRef")
+  @js.native
   def FromRotationMatrixToRef(
     matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.mathVectorMod.Quaternion
@@ -149,6 +170,8 @@ object Quaternion extends js.Object {
     * @param amount defines the target quaternion
     * @returns the new interpolated quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.Hermite")
+  @js.native
   def Hermite(
     value1: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
     tangent1: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
@@ -161,6 +184,8 @@ object Quaternion extends js.Object {
     * Creates an identity quaternion
     * @returns the identity quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.Identity")
+  @js.native
   def Identity(): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
   
   /**
@@ -168,6 +193,8 @@ object Quaternion extends js.Object {
     * @param q defines the source quaternion
     * @returns a new quaternion as the inverted current quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.Inverse")
+  @js.native
   def Inverse(q: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion]): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
   
   /**
@@ -176,6 +203,8 @@ object Quaternion extends js.Object {
     * @param result the quaternion the result will be stored in
     * @returns the result quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.InverseToRef")
+  @js.native
   def InverseToRef(
     q: typingsSlinky.babylonjs.mathVectorMod.Quaternion,
     result: typingsSlinky.babylonjs.mathVectorMod.Quaternion
@@ -186,6 +215,8 @@ object Quaternion extends js.Object {
     * @param quaternion defines the quaternion to check
     * @returns true if the quaternion is identity
     */
+  @JSImport("babylonjs/index", "Quaternion.IsIdentity")
+  @js.native
   def IsIdentity(quaternion: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion]): Boolean = js.native
   
   /**
@@ -195,6 +226,8 @@ object Quaternion extends js.Object {
     * @param gamma defines the rotation around third axis
     * @returns the new quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.RotationAlphaBetaGamma")
+  @js.native
   def RotationAlphaBetaGamma(alpha: Double, beta: Double, gamma: Double): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
   
   /**
@@ -204,6 +237,8 @@ object Quaternion extends js.Object {
     * @param gamma defines the rotation around third axis
     * @param result defines the target quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.RotationAlphaBetaGammaToRef")
+  @js.native
   def RotationAlphaBetaGammaToRef(
     alpha: Double,
     beta: Double,
@@ -217,6 +252,8 @@ object Quaternion extends js.Object {
     * @param angle defines the angle to use
     * @returns a new quaternion created from the given axis (Vector3) and angle in radians (float)
     */
+  @JSImport("babylonjs/index", "Quaternion.RotationAxis")
+  @js.native
   def RotationAxis(axis: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3], angle: Double): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
   
   /**
@@ -226,6 +263,8 @@ object Quaternion extends js.Object {
     * @param result defines the target quaternion
     * @returns the target quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.RotationAxisToRef")
+  @js.native
   def RotationAxisToRef(
     axis: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     angle: Double,
@@ -239,6 +278,8 @@ object Quaternion extends js.Object {
     * @param axis3 defines the third axis
     * @returns the new quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.RotationQuaternionFromAxis")
+  @js.native
   def RotationQuaternionFromAxis(
     axis1: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     axis2: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
@@ -252,6 +293,8 @@ object Quaternion extends js.Object {
     * @param axis3 defines the third axis
     * @param ref defines the target quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.RotationQuaternionFromAxisToRef")
+  @js.native
   def RotationQuaternionFromAxisToRef(
     axis1: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     axis2: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
@@ -266,6 +309,8 @@ object Quaternion extends js.Object {
     * @param roll defines the rotation around Z axis
     * @returns the new quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.RotationYawPitchRoll")
+  @js.native
   def RotationYawPitchRoll(yaw: Double, pitch: Double, roll: Double): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
   
   /**
@@ -275,6 +320,8 @@ object Quaternion extends js.Object {
     * @param roll defines the rotation around Z axis
     * @param result defines the target quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.RotationYawPitchRollToRef")
+  @js.native
   def RotationYawPitchRollToRef(yaw: Double, pitch: Double, roll: Double, result: typingsSlinky.babylonjs.mathVectorMod.Quaternion): Unit = js.native
   
   /**
@@ -284,6 +331,8 @@ object Quaternion extends js.Object {
     * @param amount defines the gradient to use
     * @returns the new interpolated quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.Slerp")
+  @js.native
   def Slerp(
     left: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
     right: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
@@ -297,6 +346,8 @@ object Quaternion extends js.Object {
     * @param amount defines the gradient to use
     * @param result defines the target quaternion
     */
+  @JSImport("babylonjs/index", "Quaternion.SlerpToRef")
+  @js.native
   def SlerpToRef(
     left: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
     right: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
@@ -308,5 +359,7 @@ object Quaternion extends js.Object {
     * Creates an empty quaternion
     * @returns a new quaternion set to (0.0, 0.0, 0.0)
     */
+  @JSImport("babylonjs/index", "Quaternion.Zero")
+  @js.native
   def Zero(): typingsSlinky.babylonjs.mathVectorMod.Quaternion = js.native
 }

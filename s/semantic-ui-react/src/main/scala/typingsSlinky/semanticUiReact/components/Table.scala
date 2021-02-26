@@ -36,6 +36,8 @@ import typingsSlinky.react.reactStrings.ascending
 import typingsSlinky.react.reactStrings.assertive
 import typingsSlinky.react.reactStrings.baseline
 import typingsSlinky.react.reactStrings.both
+import typingsSlinky.react.reactStrings.bottom
+import typingsSlinky.react.reactStrings.center
 import typingsSlinky.react.reactStrings.char
 import typingsSlinky.react.reactStrings.copy
 import typingsSlinky.react.reactStrings.date
@@ -49,6 +51,7 @@ import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
 import typingsSlinky.react.reactStrings.inherit
 import typingsSlinky.react.reactStrings.justify
+import typingsSlinky.react.reactStrings.left
 import typingsSlinky.react.reactStrings.link
 import typingsSlinky.react.reactStrings.list
 import typingsSlinky.react.reactStrings.listbox
@@ -67,12 +70,14 @@ import typingsSlinky.react.reactStrings.page
 import typingsSlinky.react.reactStrings.polite
 import typingsSlinky.react.reactStrings.popup
 import typingsSlinky.react.reactStrings.removals
+import typingsSlinky.react.reactStrings.right
 import typingsSlinky.react.reactStrings.search
 import typingsSlinky.react.reactStrings.spelling
 import typingsSlinky.react.reactStrings.step
 import typingsSlinky.react.reactStrings.tel
 import typingsSlinky.react.reactStrings.text
 import typingsSlinky.react.reactStrings.time
+import typingsSlinky.react.reactStrings.top
 import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
@@ -84,14 +89,9 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.center
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.internally
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.large
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.small
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.very
 import typingsSlinky.semanticUiReact.tableBodyMod.TableBodyProps
 import typingsSlinky.semanticUiReact.tableCellMod.StrictTableCellProps
@@ -100,181 +100,29 @@ import typingsSlinky.semanticUiReact.tableHeaderCellMod.TableHeaderCellProps
 import typingsSlinky.semanticUiReact.tableHeaderMod.TableHeaderProps
 import typingsSlinky.semanticUiReact.tableRowMod.TableRowProps
 import typingsSlinky.semanticUiReact.tableTableMod.TableProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Table {
   
-  @JSImport("semantic-ui-react", "Table")
-  @js.native
-  object component extends js.Object
-  
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
-    
-    @scala.inline
-    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def attached(value: Boolean | top | bottom): this.type = set("attached", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def basic(value: Boolean | very): this.type = set("basic", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def celled(value: Boolean | internally): this.type = set("celled", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def collapsing(value: Boolean): this.type = set("collapsing", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def color(value: SemanticCOLORS): this.type = set("color", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def columns(value: SemanticWIDTHS): this.type = set("columns", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def compact(value: Boolean | very): this.type = set("compact", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def definition(value: Boolean): this.type = set("definition", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def fixed(value: Boolean): this.type = set("fixed", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def footerRowReactElement(value: ReactElement): this.type = set("footerRow", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def footerRowFunction3(
-      value: (/* component */ ReactElement, TableRowProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
-    ): this.type = set("footerRow", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def footerRow(value: SemanticShorthandItem[TableRowProps]): this.type = set("footerRow", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def headerRowReactElement(value: ReactElement): this.type = set("headerRow", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def headerRowFunction3(
-      value: (/* component */ ReactElement, TableRowProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
-    ): this.type = set("headerRow", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def headerRow(value: SemanticShorthandItem[TableRowProps]): this.type = set("headerRow", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def headerRowsVarargs(value: SemanticShorthandItem[TableRowProps]*): this.type = set("headerRows", js.Array(value :_*))
-    
-    @scala.inline
-    def headerRows(value: SemanticShorthandCollection[TableRowProps]): this.type = set("headerRows", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def padded(value: Boolean | very): this.type = set("padded", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def renderBodyRow(value: (/* data */ js.Any, /* index */ Double) => _): this.type = set("renderBodyRow", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def singleLine(value: Boolean): this.type = set("singleLine", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def size(value: small | large): this.type = set("size", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def sortable(value: Boolean): this.type = set("sortable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def stackable(value: Boolean): this.type = set("stackable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def striped(value: Boolean): this.type = set("striped", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def structured(value: Boolean): this.type = set("structured", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def tableDataVarargs(value: js.Any*): this.type = set("tableData", js.Array(value :_*))
-    
-    @scala.inline
-    def tableData(value: js.Array[_]): this.type = set("tableData", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def textAlign(value: center | left | right): this.type = set("textAlign", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def unstackable(value: Boolean): this.type = set("unstackable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def verticalAlign(value: SemanticVERTICALALIGNMENTS): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: TableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: Table.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
-  
-  object Row {
-    
-    @JSImport("semantic-ui-react", "Table.Row")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: TableRowProps): SharedBuilder_TableRowProps1849714678 = new SharedBuilder_TableRowProps1849714678(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Row.type): SharedBuilder_TableRowProps1849714678 = new SharedBuilder_TableRowProps1849714678(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
   object Body {
     
     @JSImport("semantic-ui-react", "Table.Body")
     @js.native
-    object component extends js.Object
-    
-    def withProps(p: TableBodyProps): SharedBuilder_TableBodyProps_274813113 = new SharedBuilder_TableBodyProps_274813113(js.Array(this.component, p.asInstanceOf[js.Any]))
+    val component: js.Object = js.native
     
     implicit def make(companion: Body.type): SharedBuilder_TableBodyProps_274813113 = new SharedBuilder_TableBodyProps_274813113(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Footer {
     
-    @JSImport("semantic-ui-react", "Table.Footer")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: TableFooterProps): SharedBuilder_TableFooterProps2133173170 = new SharedBuilder_TableFooterProps2133173170(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Footer.type): SharedBuilder_TableFooterProps2133173170 = new SharedBuilder_TableFooterProps2133173170(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Header {
-    
-    @JSImport("semantic-ui-react", "Table.Header")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: TableHeaderProps): SharedBuilder_TableHeaderProps_2100104401 = new SharedBuilder_TableHeaderProps_2100104401(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Header.type): SharedBuilder_TableHeaderProps_2100104401 = new SharedBuilder_TableHeaderProps_2100104401(js.Array(this.component, js.Dictionary.empty))()
+    def withProps(p: TableBodyProps): SharedBuilder_TableBodyProps_274813113 = new SharedBuilder_TableBodyProps_274813113(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object Cell {
     
     @JSImport("semantic-ui-react", "Table.Cell")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -294,9 +142,7 @@ object Table {
       def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def align(
-        value: typingsSlinky.react.reactStrings.left | typingsSlinky.react.reactStrings.center | typingsSlinky.react.reactStrings.right | justify | char
-      ): this.type = set("align", value.asInstanceOf[js.Any])
+      def align(value: left | center | right | justify | char): this.type = set("align", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
@@ -469,13 +315,13 @@ object Table {
       def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
@@ -490,10 +336,10 @@ object Table {
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -517,7 +363,7 @@ object Table {
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+      def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def iconFunction3(
@@ -525,7 +371,7 @@ object Table {
       ): this.type = set("icon", js.Any.fromFunction3(value))
       
       @scala.inline
-      def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+      def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -855,7 +701,9 @@ object Table {
       def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def textAlign(value: center | left | right): this.type = set("textAlign", value.asInstanceOf[js.Any])
+      def textAlign(
+        value: typingsSlinky.semanticUiReact.semanticUiReactStrings.center | typingsSlinky.semanticUiReact.semanticUiReactStrings.left | typingsSlinky.semanticUiReact.semanticUiReactStrings.right
+      ): this.type = set("textAlign", value.asInstanceOf[js.Any])
       
       @scala.inline
       def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -870,9 +718,7 @@ object Table {
       def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def valign(
-        value: typingsSlinky.react.reactStrings.top | middle | typingsSlinky.react.reactStrings.bottom | baseline
-      ): this.type = set("valign", value.asInstanceOf[js.Any])
+      def valign(value: top | middle | bottom | baseline): this.type = set("valign", value.asInstanceOf[js.Any])
       
       @scala.inline
       def verticalAlign(value: SemanticVERTICALALIGNMENTS): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
@@ -887,19 +733,176 @@ object Table {
       def width(value: SemanticWIDTHS): this.type = set("width", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: StrictTableCellProps): typingsSlinky.semanticUiReact.components.Table.Cell.Builder = new typingsSlinky.semanticUiReact.components.Table.Cell.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: Cell.type): typingsSlinky.semanticUiReact.components.Table.Cell.Builder = new typingsSlinky.semanticUiReact.components.Table.Cell.Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: StrictTableCellProps): typingsSlinky.semanticUiReact.components.Table.Cell.Builder = new typingsSlinky.semanticUiReact.components.Table.Cell.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Footer {
+    
+    @JSImport("semantic-ui-react", "Table.Footer")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Footer.type): SharedBuilder_TableFooterProps2133173170 = new SharedBuilder_TableFooterProps2133173170(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TableFooterProps): SharedBuilder_TableFooterProps2133173170 = new SharedBuilder_TableFooterProps2133173170(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Header {
+    
+    @JSImport("semantic-ui-react", "Table.Header")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Header.type): SharedBuilder_TableHeaderProps_2100104401 = new SharedBuilder_TableHeaderProps_2100104401(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TableHeaderProps): SharedBuilder_TableHeaderProps_2100104401 = new SharedBuilder_TableHeaderProps_2100104401(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object HeaderCell {
     
     @JSImport("semantic-ui-react", "Table.HeaderCell")
     @js.native
-    object component extends js.Object
-    
-    def withProps(p: TableHeaderCellProps): SharedBuilder_TableHeaderCellProps1382588088 = new SharedBuilder_TableHeaderCellProps1382588088(js.Array(this.component, p.asInstanceOf[js.Any]))
+    val component: js.Object = js.native
     
     implicit def make(companion: HeaderCell.type): SharedBuilder_TableHeaderCellProps1382588088 = new SharedBuilder_TableHeaderCellProps1382588088(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TableHeaderCellProps): SharedBuilder_TableHeaderCellProps1382588088 = new SharedBuilder_TableHeaderCellProps1382588088(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
+  
+  object Row {
+    
+    @JSImport("semantic-ui-react", "Table.Row")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Row.type): SharedBuilder_TableRowProps1849714678 = new SharedBuilder_TableRowProps1849714678(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TableRowProps): SharedBuilder_TableRowProps1849714678 = new SharedBuilder_TableRowProps1849714678(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  @JSImport("semantic-ui-react", "Table")
+  @js.native
+  val component: js.Object = js.native
+  
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def attached(
+      value: Boolean | typingsSlinky.semanticUiReact.semanticUiReactStrings.top | typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
+    ): this.type = set("attached", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def basic(value: Boolean | very): this.type = set("basic", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def celled(value: Boolean | internally): this.type = set("celled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def collapsing(value: Boolean): this.type = set("collapsing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def color(value: SemanticCOLORS): this.type = set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def columns(value: SemanticWIDTHS): this.type = set("columns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def compact(value: Boolean | very): this.type = set("compact", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def definition(value: Boolean): this.type = set("definition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def fixed(value: Boolean): this.type = set("fixed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def footerRow(value: SemanticShorthandItem[TableRowProps]): this.type = set("footerRow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def footerRowFunction3(
+      value: (/* component */ ReactElement, TableRowProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("footerRow", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def footerRowReactElement(value: ReactElement): this.type = set("footerRow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def headerRow(value: SemanticShorthandItem[TableRowProps]): this.type = set("headerRow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def headerRowFunction3(
+      value: (/* component */ ReactElement, TableRowProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("headerRow", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def headerRowReactElement(value: ReactElement): this.type = set("headerRow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def headerRows(value: SemanticShorthandCollection[TableRowProps]): this.type = set("headerRows", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def headerRowsVarargs(value: SemanticShorthandItem[TableRowProps]*): this.type = set("headerRows", js.Array(value :_*))
+    
+    @scala.inline
+    def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def padded(value: Boolean | very): this.type = set("padded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def renderBodyRow(value: (/* data */ js.Any, /* index */ Double) => _): this.type = set("renderBodyRow", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def singleLine(value: Boolean): this.type = set("singleLine", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def size(value: small | large): this.type = set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def sortable(value: Boolean): this.type = set("sortable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def stackable(value: Boolean): this.type = set("stackable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def striped(value: Boolean): this.type = set("striped", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def structured(value: Boolean): this.type = set("structured", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def tableData(value: js.Array[_]): this.type = set("tableData", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def tableDataVarargs(value: js.Any*): this.type = set("tableData", js.Array(value :_*))
+    
+    @scala.inline
+    def textAlign(
+      value: typingsSlinky.semanticUiReact.semanticUiReactStrings.center | typingsSlinky.semanticUiReact.semanticUiReactStrings.left | typingsSlinky.semanticUiReact.semanticUiReactStrings.right
+    ): this.type = set("textAlign", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def unstackable(value: Boolean): this.type = set("unstackable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def verticalAlign(value: SemanticVERTICALALIGNMENTS): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
+  }
+  
+  implicit def make(companion: Table.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

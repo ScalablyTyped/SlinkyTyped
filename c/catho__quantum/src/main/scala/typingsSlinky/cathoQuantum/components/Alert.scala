@@ -12,15 +12,22 @@ import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.success
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.warning
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Alert {
   
+  @scala.inline
+  def apply(onClose: SyntheticMouseEvent[HTMLButtonElement] => Unit): Builder = {
+    val __props = js.Dynamic.literal(onClose = js.Any.fromFunction1(onClose))
+    new Builder(js.Array(this.component, __props.asInstanceOf[AlertProps]))
+  }
+  
   @JSImport("@catho/quantum/Alert", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +45,4 @@ object Alert {
   }
   
   def withProps(p: AlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onClose: SyntheticMouseEvent[HTMLButtonElement] => Unit): Builder = {
-    val __props = js.Dynamic.literal(onClose = js.Any.fromFunction1(onClose))
-    new Builder(js.Array(this.component, __props.asInstanceOf[AlertProps]))
-  }
 }

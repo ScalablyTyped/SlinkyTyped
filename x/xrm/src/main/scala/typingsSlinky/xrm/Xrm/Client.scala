@@ -1,5 +1,6 @@
 package typingsSlinky.xrm.Xrm
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.Mobile
   - typingsSlinky.xrm.xrmStrings.UnifiedServiceDesk
 */
-trait Client extends js.Object
+trait Client extends StObject
 object Client {
   
   @scala.inline

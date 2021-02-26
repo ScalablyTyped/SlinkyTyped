@@ -1,5 +1,6 @@
 package typingsSlinky.reactWindow.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactWindow.reactWindowStrings.vertical
   - typingsSlinky.reactWindow.reactWindowStrings.horizontal
 */
-trait Layout extends js.Object
+trait Layout extends StObject
 object Layout {
   
   @scala.inline

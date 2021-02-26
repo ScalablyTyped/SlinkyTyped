@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientRecommendationengine.anon.Fields
 import typingsSlinky.maximMazurokGapiClientRecommendationengine.anon.Filter
 import typingsSlinky.maximMazurokGapiClientRecommendationengine.anon.Key
 import typingsSlinky.maximMazurokGapiClientRecommendationengine.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CatalogItemsResource extends js.Object {
+trait CatalogItemsResource extends StObject {
   
   /** Creates a catalog item. */
   def create(request: Accesstoken): Request[GoogleCloudRecommendationengineV1beta1CatalogItem] = js.native

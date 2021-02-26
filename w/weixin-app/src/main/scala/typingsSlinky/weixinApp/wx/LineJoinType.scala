@@ -1,5 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.weixinApp.weixinAppStrings.round
   - typingsSlinky.weixinApp.weixinAppStrings.miter
 */
-trait LineJoinType extends js.Object
+trait LineJoinType extends StObject
 object LineJoinType {
   
   @scala.inline

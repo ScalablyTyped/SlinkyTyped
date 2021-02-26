@@ -10,9 +10,9 @@ An Angular module that gives you access to the browsers local storage
 | ------------------ | :-------------: |
 | Full name          | angular-local-storage |
 | Keywords           | AngularJS, local, storage |
-| # releases         | 1 |
-| # dependents       | 39 |
-| # downloads        | 1259940 |
+| # releases         | 0 |
+| # dependents       | 40 |
+| # downloads        | 1396191 |
 | # stars            | 7 |
 
 ## Links

@@ -2,12 +2,13 @@ package typingsSlinky.chartJs.mod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Chart extends js.Object {
+trait Chart extends StObject {
   
   var aspectRatio: Double | Null = js.native
   
@@ -15,7 +16,7 @@ trait Chart extends js.Object {
   
   var chartArea: ChartArea = js.native
   
-  def clear(): Chart = js.native
+  def clear(): typingsSlinky.chartJs.mod.Chart = js.native
   
   var config: ChartConfiguration = js.native
   
@@ -48,11 +49,11 @@ trait Chart extends js.Object {
   def render(): js.Object = js.native
   def render(hasDurationLazyEasing: ChartRenderProps): js.Object = js.native
   
-  def resize(): Chart = js.native
+  def resize(): typingsSlinky.chartJs.mod.Chart = js.native
   
   def setDatasetVisibility(datasetIndex: Double, visible: Boolean): Unit = js.native
   
-  def stop(): Chart = js.native
+  def stop(): typingsSlinky.chartJs.mod.Chart = js.native
   
   def toBase64Image(): String = js.native
   

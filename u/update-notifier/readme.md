@@ -10,10 +10,10 @@ Update notifications for your CLI app
 | ------------------ | :-------------: |
 | Full name          | update-notifier |
 | Keywords           | npm, update, updater, notify, notifier, check, checker, cli, module, package, version |
-| # releases         | 7 |
-| # dependents       | 2909 |
-| # downloads        | 190421921 |
-| # stars            | 97 |
+| # releases         | 11 |
+| # dependents       | 3497 |
+| # downloads        | 350872249 |
+| # stars            | 99 |
 
 ## Links
 - [Homepage](https://github.com/yeoman/update-notifier#readme)

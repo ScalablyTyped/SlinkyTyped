@@ -14,6 +14,7 @@ import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.contai
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.cover
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.none
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.stretch
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ object ReactNativeVideoPlayer {
   
   @JSImport("react-native-video-player", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +55,10 @@ object ReactNativeVideoPlayer {
     def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def endThumbnailVarargs(value: ImageURISource*): this.type = set("endThumbnail", js.Array(value :_*))
+    def endThumbnail(value: ImageSourcePropType): this.type = set("endThumbnail", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def endThumbnail(value: ImageSourcePropType): this.type = set("endThumbnail", value.asInstanceOf[js.Any])
+    def endThumbnailVarargs(value: ImageURISource*): this.type = set("endThumbnail", js.Array(value :_*))
     
     @scala.inline
     def endWithThumbnail(value: Boolean): this.type = set("endWithThumbnail", value.asInstanceOf[js.Any])
@@ -114,10 +115,10 @@ object ReactNativeVideoPlayer {
     def styleNull: this.type = set("style", null)
     
     @scala.inline
-    def thumbnailVarargs(value: ImageURISource*): this.type = set("thumbnail", js.Array(value :_*))
+    def thumbnail(value: ImageSourcePropType): this.type = set("thumbnail", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def thumbnail(value: ImageSourcePropType): this.type = set("thumbnail", value.asInstanceOf[js.Any])
+    def thumbnailVarargs(value: ImageURISource*): this.type = set("thumbnail", js.Array(value :_*))
     
     @scala.inline
     def video(value: MainVer | Double): this.type = set("video", value.asInstanceOf[js.Any])
@@ -129,7 +130,7 @@ object ReactNativeVideoPlayer {
     def videoWidth(value: Double): this.type = set("videoWidth", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: VideoPlayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeVideoPlayer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: VideoPlayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

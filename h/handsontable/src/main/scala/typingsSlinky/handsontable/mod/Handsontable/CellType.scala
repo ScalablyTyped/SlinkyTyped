@@ -1,5 +1,6 @@
 package typingsSlinky.handsontable.mod.Handsontable
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.handsontable.handsontableStrings.text
   - typingsSlinky.handsontable.handsontableStrings.time
 */
-trait CellType extends js.Object
+trait CellType extends StObject
 object CellType {
   
   @scala.inline

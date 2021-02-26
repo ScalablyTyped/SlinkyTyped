@@ -9,15 +9,16 @@ WordPress URL utilities.
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @wordpress/url |
-| Keywords           | wordpress, url |
-| # releases         | 26 |
-| # dependents       | 14 |
-| # downloads        | 297278 |
+| Keywords           | wordpress, gutenberg, url |
+| # releases         | 22 |
+| # dependents       | 24 |
+| # downloads        | 1120782 |
 | # stars            | 1 |
 
 ## Links
 - [Homepage](https://github.com/WordPress/gutenberg/tree/master/packages/url/README.md)
 - [Bugs](https://github.com/WordPress/gutenberg/issues)
+- [Repository](https://github.com/WordPress/gutenberg)
 - [Npm](https://www.npmjs.com/package/%40wordpress%2Furl)
     
 

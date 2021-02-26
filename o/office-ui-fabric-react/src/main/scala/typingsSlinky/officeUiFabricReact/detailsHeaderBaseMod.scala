@@ -5,14 +5,14 @@ import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeader
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeaderBaseProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeaderState
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/DetailsList/DetailsHeader.base", JSImport.Namespace)
-@js.native
-object detailsHeaderBaseMod extends js.Object {
+object detailsHeaderBaseMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/DetailsList/DetailsHeader.base", "DetailsHeaderBase")
   @js.native
   class DetailsHeaderBase protected ()
     extends Component[IDetailsHeaderBaseProps, IDetailsHeaderState, js.Any]
@@ -139,9 +139,16 @@ object detailsHeaderBaseMod extends js.Object {
     def componentWillUnmount_MDetailsHeaderBase(): Unit = js.native
   }
   /* static members */
-  @js.native
-  object DetailsHeaderBase extends js.Object {
+  object DetailsHeaderBase {
     
-    var defaultProps: CollapseAllVisibility = js.native
+    @JSImport("office-ui-fabric-react/lib/components/DetailsList/DetailsHeader.base", "DetailsHeaderBase")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("office-ui-fabric-react/lib/components/DetailsList/DetailsHeader.base", "DetailsHeaderBase.defaultProps")
+    @js.native
+    def defaultProps: CollapseAllVisibility = js.native
+    @scala.inline
+    def defaultProps_=(x: CollapseAllVisibility): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
   }
 }

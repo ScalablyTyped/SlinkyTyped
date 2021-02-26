@@ -7,13 +7,12 @@ import typingsSlinky.backbone.mod.Model
 import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.backbonePaginator.mod.PageableCollection
 import typingsSlinky.backbonePaginator.mod.PageableInitialOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
   trait TypeofPageableCollection

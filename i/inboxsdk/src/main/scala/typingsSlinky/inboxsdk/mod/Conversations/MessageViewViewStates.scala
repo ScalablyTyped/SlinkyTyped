@@ -1,5 +1,6 @@
 package typingsSlinky.inboxsdk.mod.Conversations
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.inboxsdk.inboxsdkStrings.COLLAPSED
   - typingsSlinky.inboxsdk.inboxsdkStrings.EXPANDED
 */
-trait MessageViewViewStates extends js.Object
+trait MessageViewViewStates extends StObject
 object MessageViewViewStates {
   
   @scala.inline

@@ -4,21 +4,21 @@
 Typings are for version 5.2
 
 ## Library description:
-A React wrapper for MapboxGL-js and overlay API.
+React components for Mapbox GL JS-compatible libraries
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | react-map-gl |
 | Keywords           | mapbox, mapbox-gl, react, react-mapbox-gl, react mapbox |
-| # releases         | 91 |
-| # dependents       | 56 |
-| # downloads        | 2021384 |
+| # releases         | 79 |
+| # dependents       | 110 |
+| # downloads        | 4201223 |
 | # stars            | 3 |
 
 ## Links
-- [Homepage](https://github.com/uber/react-map-gl#readme)
-- [Bugs](https://github.com/uber/react-map-gl/issues)
-- [Repository](https://github.com/uber/react-map-gl)
+- [Homepage](https://github.com/visgl/react-map-gl#readme)
+- [Bugs](https://github.com/visgl/react-map-gl/issues)
+- [Repository](https://github.com/visgl/react-map-gl)
 - [Npm](https://www.npmjs.com/package/react-map-gl)
     
 

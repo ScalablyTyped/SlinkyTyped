@@ -3,6 +3,7 @@ package typingsSlinky.reactFileUtils.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFileUtils.anon.HandleClose
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ object Thumbnail {
   
   @JSImport("react-file-utils", "Thumbnail")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,7 +35,7 @@ object Thumbnail {
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HandleClose): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Thumbnail.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HandleClose): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

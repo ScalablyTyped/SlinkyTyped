@@ -3,14 +3,14 @@ package typingsSlinky.officeUiFabricReact
 import typingsSlinky.officeUiFabricReact.editingItemTypesMod.IEditingSelectedPeopleItemProps
 import typingsSlinky.officeUiFabricReact.extendedSelectedItemMod.IPeoplePickerItemState
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/SelectedItemsList/SelectedPeopleList/Items/EditingItem", JSImport.Namespace)
-@js.native
-object editingItemMod extends js.Object {
+object editingItemMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/SelectedItemsList/SelectedPeopleList/Items/EditingItem", "EditingItem")
   @js.native
   class EditingItem protected ()
     extends Component[IEditingSelectedPeopleItemProps, IPeoplePickerItemState, js.Any] {

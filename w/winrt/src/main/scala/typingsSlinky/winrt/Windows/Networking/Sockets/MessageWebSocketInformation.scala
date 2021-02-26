@@ -1,6 +1,7 @@
 package typingsSlinky.winrt.Windows.Networking.Sockets
 
 import typingsSlinky.winrt.Windows.Networking.HostName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

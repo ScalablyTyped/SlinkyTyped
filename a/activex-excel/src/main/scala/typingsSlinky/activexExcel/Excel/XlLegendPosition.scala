@@ -6,6 +6,7 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`-4152`
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4160`
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4161`
 import typingsSlinky.activexExcel.activexExcelNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4152`
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4160`
 */
-trait XlLegendPosition extends js.Object
+trait XlLegendPosition extends StObject
 object XlLegendPosition {
   
   @scala.inline

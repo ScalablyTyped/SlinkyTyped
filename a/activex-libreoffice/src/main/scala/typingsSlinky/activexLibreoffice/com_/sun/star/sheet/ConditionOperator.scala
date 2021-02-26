@@ -10,6 +10,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`6`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`7`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`8`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +28,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`8`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
 */
-trait ConditionOperator extends js.Object
+trait ConditionOperator extends StObject
 object ConditionOperator {
   
   /** the value has to be between the two specified values. */

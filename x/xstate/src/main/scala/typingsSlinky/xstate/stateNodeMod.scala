@@ -31,16 +31,16 @@ import typingsSlinky.xstate.xstateStrings.deep
 import typingsSlinky.xstate.xstateStrings.history
 import typingsSlinky.xstate.xstateStrings.parallel
 import typingsSlinky.xstate.xstateStrings.shallow
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xstate/lib/StateNode", JSImport.Namespace)
-@js.native
-object stateNodeMod extends js.Object {
+object stateNodeMod {
   
+  @JSImport("xstate/lib/StateNode", "StateNode")
   @js.native
-  class StateNode[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */, TTypestate /* <: Typestate[TContext] */] protected () extends js.Object {
+  class StateNode[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */, TTypestate /* <: Typestate[TContext] */] protected () extends StObject {
     def this(/**
       * The raw config used to create the machine.
       */

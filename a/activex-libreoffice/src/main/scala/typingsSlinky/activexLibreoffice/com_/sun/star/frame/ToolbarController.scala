@@ -6,6 +6,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XWindow
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.EventObject
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XInitialization
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XUpdatable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -10,9 +10,9 @@ Simple /etc/hosts manipulation
 | ------------------ | :-------------: |
 | Full name          | hostile |
 | Keywords           | /etc/hosts, change hosts, etc hosts, hostname, hosts file |
-| # releases         | 3 |
-| # dependents       | 76 |
-| # downloads        | 983595 |
+| # releases         | 2 |
+| # dependents       | 90 |
+| # downloads        | 2164807 |
 | # stars            | 12 |
 
 ## Links

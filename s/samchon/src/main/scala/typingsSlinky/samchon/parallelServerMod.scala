@@ -3,14 +3,14 @@ package typingsSlinky.samchon
 import typingsSlinky.samchon.iparallelserverMod.IParallelServer
 import typingsSlinky.samchon.iserverconnectorMod.IServerConnector
 import typingsSlinky.samchon.parallelSystemArrayMod.ParallelSystemArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/parallel/derived/ParallelServer", JSImport.Namespace)
-@js.native
-object parallelServerMod extends js.Object {
+object parallelServerMod {
   
+  @JSImport("samchon/templates/parallel/derived/ParallelServer", "ParallelServer")
   @js.native
   abstract class ParallelServer protected () extends IParallelServer {
     /**

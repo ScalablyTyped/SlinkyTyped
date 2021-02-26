@@ -13,6 +13,7 @@ import typingsSlinky.node.nodeStrings.unpipe
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.node.tlsMod.TLSSocket
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

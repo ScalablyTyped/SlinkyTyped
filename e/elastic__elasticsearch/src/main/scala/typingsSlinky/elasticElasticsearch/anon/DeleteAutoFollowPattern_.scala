@@ -18,12 +18,13 @@ import typingsSlinky.elasticElasticsearch.transportMod.RequestBody
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DeleteAutoFollowPattern_ extends js.Object {
+trait DeleteAutoFollowPattern_ extends StObject {
   
   def deleteAutoFollowPattern[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteAutoFollowPattern[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native

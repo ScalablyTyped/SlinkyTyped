@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAndroidmanagement.anon.EnterpriseToke
 import typingsSlinky.maximMazurokGapiClientAndroidmanagement.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientAndroidmanagement.anon.ProjectId
 import typingsSlinky.maximMazurokGapiClientAndroidmanagement.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EnterprisesResource extends js.Object {
+trait EnterprisesResource extends StObject {
   
   var applications: ApplicationsResource = js.native
   

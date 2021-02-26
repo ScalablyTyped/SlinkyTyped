@@ -10,9 +10,9 @@ Simple star rating component for your React projects
 | ------------------ | :-------------: |
 | Full name          | react-stars |
 | Keywords           | star, rating, react, star, rating, component, raty |
-| # releases         | 1 |
-| # dependents       | 6 |
-| # downloads        | 314795 |
+| # releases         | 0 |
+| # dependents       | 8 |
+| # downloads        | 349534 |
 | # stars            | 3 |
 
 ## Links

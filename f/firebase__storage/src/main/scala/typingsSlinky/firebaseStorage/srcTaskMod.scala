@@ -12,16 +12,16 @@ import typingsSlinky.firebaseStorage.srcReferenceMod.Reference
 import typingsSlinky.firebaseStorage.srcTasksnapshotMod.UploadTaskSnapshot
 import typingsSlinky.firebaseStorage.taskenumsMod.InternalTaskState
 import typingsSlinky.firebaseStorage.taskenumsMod.TaskEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/storage/dist/src/task", JSImport.Namespace)
-@js.native
-object srcTaskMod extends js.Object {
+object srcTaskMod {
   
+  @JSImport("@firebase/storage/dist/src/task", "UploadTask")
   @js.native
-  class UploadTask protected () extends js.Object {
+  class UploadTask protected () extends StObject {
     /**
       * @param ref - The firebaseStorage.Reference object this task came
       *     from, untyped to avoid cyclic dependencies.

@@ -83,6 +83,7 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -91,7 +92,7 @@ object FocusZone {
   
   @JSImport("@fluentui/react-focus", "FocusZone")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -263,13 +264,13 @@ object FocusZone {
     def ariaLabelledBy(value: String): this.type = set("ariaLabelledBy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def asFunctionComponent(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: ReactElement): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def asComponentClass(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def as(value: ReactElement): this.type = set("as", value.asInstanceOf[js.Any])
+    def asFunctionComponent(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def autoCapitalize(value: String): this.type = set("autoCapitalize", value.asInstanceOf[js.Any])
@@ -290,13 +291,13 @@ object FocusZone {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IFocusZone]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IFocusZone | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IFocusZone]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IFocusZone]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -317,16 +318,16 @@ object FocusZone {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultTabbableElementFunction1(value: /* root */ HTMLElement => HTMLElement): this.type = set("defaultTabbableElement", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def defaultTabbableElement(value: String | (js.Function1[/* root */ HTMLElement, HTMLElement])): this.type = set("defaultTabbableElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultTabbableElementFunction1(value: /* root */ HTMLElement => HTMLElement): this.type = set("defaultTabbableElement", js.Any.fromFunction1(value))
     
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -344,16 +345,16 @@ object FocusZone {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def elementRefRefObject(value: ReactRef[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+    def elementRef(value: Ref[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def elementRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("elementRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def elementRef(value: Ref[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+    def elementRefNull: this.type = set("elementRef", null)
     
     @scala.inline
-    def elementRefNull: this.type = set("elementRef", null)
+    def elementRefRefObject(value: ReactRef[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def elementType(value: js.Any): this.type = set("elementType", value.asInstanceOf[js.Any])
@@ -993,7 +994,7 @@ object FocusZone {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IFocusZoneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FocusZone.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IFocusZoneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

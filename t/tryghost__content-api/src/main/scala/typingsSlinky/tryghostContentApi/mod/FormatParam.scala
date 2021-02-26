@@ -1,5 +1,6 @@
 package typingsSlinky.tryghostContentApi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.tryghostContentApi.tryghostContentApiStrings.html
   - typingsSlinky.tryghostContentApi.tryghostContentApiStrings.plaintext
 */
-trait FormatParam extends js.Object
+trait FormatParam extends StObject
 object FormatParam {
   
   @scala.inline

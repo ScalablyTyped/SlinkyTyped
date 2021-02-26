@@ -9,6 +9,7 @@ import typingsSlinky.fridaGum.fridaGumStrings.pimm
 import typingsSlinky.fridaGum.fridaGumStrings.reg
 import typingsSlinky.fridaGum.fridaGumStrings.setend
 import typingsSlinky.fridaGum.fridaGumStrings.sysreg
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,62 +24,62 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fridaGum.ArmSetendOperand
   - typingsSlinky.fridaGum.ArmSysregOperand
 */
-trait ArmOperand extends js.Object
+trait ArmOperand extends StObject
 object ArmOperand {
   
   @scala.inline
-  def ArmPimmOperand(subtracted: Boolean, `type`: pimm, value: Double): ArmOperand = {
+  def ArmCimmOperand(subtracted: Boolean, `type`: cimm, value: Double): typingsSlinky.fridaGum.ArmCimmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ArmOperand]
+    __obj.asInstanceOf[typingsSlinky.fridaGum.ArmCimmOperand]
   }
   
   @scala.inline
-  def ArmRegOperand(subtracted: Boolean, `type`: reg, value: ArmRegister): ArmOperand = {
+  def ArmFpOperand(subtracted: Boolean, `type`: fp, value: Double): typingsSlinky.fridaGum.ArmFpOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ArmOperand]
+    __obj.asInstanceOf[typingsSlinky.fridaGum.ArmFpOperand]
   }
   
   @scala.inline
-  def ArmSysregOperand(subtracted: Boolean, `type`: sysreg, value: ArmRegister): ArmOperand = {
+  def ArmImmOperand(subtracted: Boolean, `type`: imm, value: Double): typingsSlinky.fridaGum.ArmImmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ArmOperand]
+    __obj.asInstanceOf[typingsSlinky.fridaGum.ArmImmOperand]
   }
   
   @scala.inline
-  def ArmMemOperand(subtracted: Boolean, `type`: mem, value: Disp): ArmOperand = {
+  def ArmMemOperand(subtracted: Boolean, `type`: mem, value: Disp): typingsSlinky.fridaGum.ArmMemOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ArmOperand]
+    __obj.asInstanceOf[typingsSlinky.fridaGum.ArmMemOperand]
   }
   
   @scala.inline
-  def ArmImmOperand(subtracted: Boolean, `type`: imm, value: Double): ArmOperand = {
+  def ArmPimmOperand(subtracted: Boolean, `type`: pimm, value: Double): typingsSlinky.fridaGum.ArmPimmOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ArmOperand]
+    __obj.asInstanceOf[typingsSlinky.fridaGum.ArmPimmOperand]
   }
   
   @scala.inline
-  def ArmFpOperand(subtracted: Boolean, `type`: fp, value: Double): ArmOperand = {
+  def ArmRegOperand(subtracted: Boolean, `type`: reg, value: ArmRegister): typingsSlinky.fridaGum.ArmRegOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ArmOperand]
+    __obj.asInstanceOf[typingsSlinky.fridaGum.ArmRegOperand]
   }
   
   @scala.inline
-  def ArmCimmOperand(subtracted: Boolean, `type`: cimm, value: Double): ArmOperand = {
+  def ArmSetendOperand(subtracted: Boolean, `type`: setend, value: Endian): typingsSlinky.fridaGum.ArmSetendOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ArmOperand]
+    __obj.asInstanceOf[typingsSlinky.fridaGum.ArmSetendOperand]
   }
   
   @scala.inline
-  def ArmSetendOperand(subtracted: Boolean, `type`: setend, value: Endian): ArmOperand = {
+  def ArmSysregOperand(subtracted: Boolean, `type`: sysreg, value: ArmRegister): typingsSlinky.fridaGum.ArmSysregOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ArmOperand]
+    __obj.asInstanceOf[typingsSlinky.fridaGum.ArmSysregOperand]
   }
 }

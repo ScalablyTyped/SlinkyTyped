@@ -9,6 +9,7 @@ import typingsSlinky.reactReduxToastr.mod.default
 import typingsSlinky.reactReduxToastr.mod.positionType
 import typingsSlinky.reactReduxToastr.mod.transitionInType
 import typingsSlinky.reactReduxToastr.mod.transitionOutType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object ReactReduxToastr {
   
   @JSImport("react-redux-toastr", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,7 +62,7 @@ object ReactReduxToastr {
     def transitionOut(value: transitionOutType): this.type = set("transitionOut", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReduxToastrProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactReduxToastr.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReduxToastrProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

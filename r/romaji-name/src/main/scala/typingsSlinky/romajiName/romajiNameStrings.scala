@@ -1,21 +1,20 @@
 package typingsSlinky.romajiName
 
 import typingsSlinky.romajiName.mod.Locale
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object romajiNameStrings {
   
+  @js.native
+  sealed trait _empty extends Locale
   @scala.inline
   def _empty: _empty = "".asInstanceOf[_empty]
   
-  @scala.inline
-  def ja: ja = "ja".asInstanceOf[ja]
-  
-  @js.native
-  sealed trait _empty extends Locale
-  
   @js.native
   sealed trait ja extends Locale
+  @scala.inline
+  def ja: ja = "ja".asInstanceOf[ja]
 }

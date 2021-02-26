@@ -14,12 +14,13 @@ import typingsSlinky.maximMazurokGapiClientCloudsearch.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientCloudsearch.anon.Resource
 import typingsSlinky.maximMazurokGapiClientCloudsearch.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientCloudsearch.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ItemsResource extends js.Object {
+trait ItemsResource extends StObject {
   
   /** Checks whether an item is accessible by specified principal. **Note:** This API requires an admin account to execute. */
   def checkAccess(request: Callback): Request[CheckAccessResponse] = js.native

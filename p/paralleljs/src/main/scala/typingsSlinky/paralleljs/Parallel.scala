@@ -1,11 +1,12 @@
 package typingsSlinky.paralleljs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Parallel[T] extends js.Object {
+trait Parallel[T] extends StObject {
   
   /**
     * Data

@@ -10,9 +10,9 @@ JSS plugin that enables support for nested selectors
 | ------------------ | :-------------: |
 | Full name          | jss-plugin-nested |
 | Keywords           | cssinjs, css-in-js, css in js, jss, plugin, nested, nesting |
-| # releases         | 32 |
-| # dependents       | 16 |
-| # downloads        | 11539471 |
+| # releases         | 30 |
+| # dependents       | 18 |
+| # downloads        | 57002351 |
 | # stars            | 0 |
 
 ## Links

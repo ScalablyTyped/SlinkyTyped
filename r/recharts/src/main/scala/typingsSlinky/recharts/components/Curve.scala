@@ -30,6 +30,7 @@ import typingsSlinky.recharts.rechartsStrings.normal
 import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,7 +39,7 @@ object Curve {
   
   @JSImport("recharts", "Curve")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,10 +53,10 @@ object Curve {
     def angle(value: Double): this.type = set("angle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def baseLineVarargs(value: js.Any*): this.type = set("baseLine", js.Array(value :_*))
+    def baseLine(value: Double | js.Array[_]): this.type = set("baseLine", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def baseLine(value: Double | js.Array[_]): this.type = set("baseLine", value.asInstanceOf[js.Any])
+    def baseLineVarargs(value: js.Any*): this.type = set("baseLine", js.Array(value :_*))
     
     @scala.inline
     def baselineShift(value: String): this.type = set("baselineShift", value.asInstanceOf[js.Any])
@@ -231,25 +232,25 @@ object Curve {
     def path(value: String): this.type = set("path", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pathRefRefObject(value: ReactRef[_]): this.type = set("pathRef", value.asInstanceOf[js.Any])
+    def pathRef(value: Ref[_]): this.type = set("pathRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def pathRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("pathRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def pathRef(value: Ref[_]): this.type = set("pathRef", value.asInstanceOf[js.Any])
+    def pathRefNull: this.type = set("pathRef", null)
     
     @scala.inline
-    def pathRefNull: this.type = set("pathRef", null)
+    def pathRefRefObject(value: ReactRef[_]): this.type = set("pathRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pointsVarargs(value: js.Object*): this.type = set("points", js.Array(value :_*))
+    def points(value: js.Array[js.Object]): this.type = set("points", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def points(value: js.Array[js.Object]): this.type = set("points", value.asInstanceOf[js.Any])
+    def pointsVarargs(value: js.Object*): this.type = set("points", js.Array(value :_*))
     
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
@@ -303,10 +304,10 @@ object Curve {
     def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def typeFunction1(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("type", js.Any.fromFunction1(value))
+    def `type`(value: LineType): this.type = set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `type`(value: LineType): this.type = set("type", value.asInstanceOf[js.Any])
+    def typeFunction1(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("type", js.Any.fromFunction1(value))
     
     @scala.inline
     def unicodeBidi(value: String): this.type = set("unicodeBidi", value.asInstanceOf[js.Any])
@@ -330,7 +331,7 @@ object Curve {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CurveProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Curve.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CurveProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

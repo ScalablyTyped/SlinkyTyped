@@ -1,19 +1,25 @@
 package typingsSlinky.dateFns
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("date-fns/isBefore/index", JSImport.Namespace)
-@js.native
-object dateFnsIsBeforeIndexMod extends js.Object {
+object dateFnsIsBeforeIndexMod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
-    def apply(date: Double, dateToCompare: Double): Boolean = js.native
-    def apply(date: Double, dateToCompare: js.Date): Boolean = js.native
-    def apply(date: js.Date, dateToCompare: Double): Boolean = js.native
+    @JSImport("date-fns/isBefore/index", JSImport.Default)
+    @js.native
     def apply(date: js.Date, dateToCompare: js.Date): Boolean = js.native
+    @JSImport("date-fns/isBefore/index", JSImport.Default)
+    @js.native
+    def apply(date: js.Date, dateToCompare: Double): Boolean = js.native
+    @JSImport("date-fns/isBefore/index", JSImport.Default)
+    @js.native
+    def apply(date: Double, dateToCompare: js.Date): Boolean = js.native
+    @JSImport("date-fns/isBefore/index", JSImport.Default)
+    @js.native
+    def apply(date: Double, dateToCompare: Double): Boolean = js.native
   }
 }

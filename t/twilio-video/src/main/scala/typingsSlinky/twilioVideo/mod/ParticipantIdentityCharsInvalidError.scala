@@ -2,6 +2,7 @@ package typingsSlinky.twilioVideo.mod
 
 import typingsSlinky.twilioVideo.twilioVideoNumbers.`53202`
 import typingsSlinky.twilioVideo.twilioVideoStrings.`Participant identity contains invalid characters`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

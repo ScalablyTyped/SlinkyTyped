@@ -2,14 +2,14 @@ package typingsSlinky.inversify
 
 import typingsSlinky.inversify.interfacesMod.interfaces.ContainerOptions
 import typingsSlinky.inversify.interfacesMod.interfaces.ServiceIdentifier
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("inversify/dts/container/container", JSImport.Namespace)
-@js.native
-object containerMod extends js.Object {
+object containerMod {
   
+  @JSImport("inversify/dts/container/container", "Container")
   @js.native
   class Container ()
     extends typingsSlinky.inversify.interfacesMod.interfaces.Container {
@@ -46,10 +46,11 @@ object containerMod extends js.Object {
     def getAllTagged[T](serviceIdentifier: ServiceIdentifier[T], key: js.Symbol, value: js.Any): js.Array[T] = js.native
     def getAllTagged[T](serviceIdentifier: ServiceIdentifier[T], key: Double, value: js.Any): js.Array[T] = js.native
   }
-  /* static members */
-  @js.native
-  object Container extends js.Object {
+  object Container {
     
+    /* static member */
+    @JSImport("inversify/dts/container/container", "Container.merge")
+    @js.native
     def merge(
       container1: typingsSlinky.inversify.interfacesMod.interfaces.Container,
       container2: typingsSlinky.inversify.interfacesMod.interfaces.Container

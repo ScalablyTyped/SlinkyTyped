@@ -3,14 +3,14 @@ package typingsSlinky.appBuilderLib
 import typingsSlinky.appBuilderLib.configurationMod.AfterPackContext
 import typingsSlinky.appBuilderLib.coreMod.Platform
 import typingsSlinky.appBuilderLib.frameworkMod.Framework
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("app-builder-lib/out/frameworks/LibUiFramework", JSImport.Namespace)
-@js.native
-object libUiFrameworkMod extends js.Object {
+object libUiFrameworkMod {
   
+  @JSImport("app-builder-lib/out/frameworks/LibUiFramework", "LibUiFramework")
   @js.native
   class LibUiFramework protected () extends Framework {
     def this(version: String, distMacOsAppName: String, isUseLaunchUi: Boolean) = this()

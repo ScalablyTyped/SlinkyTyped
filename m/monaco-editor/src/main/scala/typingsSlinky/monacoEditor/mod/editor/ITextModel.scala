@@ -9,6 +9,7 @@ import typingsSlinky.monacoEditor.mod.Selection
 import typingsSlinky.monacoEditor.mod.Uri
 import typingsSlinky.monacoEditor.monacoEditorBooleans.`false`
 import typingsSlinky.monacoEditor.monacoEditorBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

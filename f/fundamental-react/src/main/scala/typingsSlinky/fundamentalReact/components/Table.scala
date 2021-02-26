@@ -7,15 +7,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.RowData
 import typingsSlinky.fundamentalReact.tableMod.TableProps
 import typingsSlinky.react.mod.PropsWithChildren
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Table {
   
+  @scala.inline
+  def apply(headers: js.Array[String | ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[TableProps]]))
+  }
+  
   @JSImport("fundamental-react", "Table")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,21 +42,21 @@ object Table {
     def tableBodyProps(value: js.Any): this.type = set("tableBodyProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tableBodyRowPropsFunction2(value: (/* rowData */ js.Array[String], /* index */ Double) => Unit): this.type = set("tableBodyRowProps", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def tableBodyRowProps(
       value: StringDictionary[js.Any] | (js.Function2[/* rowData */ js.Array[String], /* index */ Double, Unit])
     ): this.type = set("tableBodyRowProps", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def tableBodyRowPropsFunction2(value: (/* rowData */ js.Array[String], /* index */ Double) => Unit): this.type = set("tableBodyRowProps", js.Any.fromFunction2(value))
+    
+    @scala.inline
     def tableCellClassName(value: String): this.type = set("tableCellClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tableDataVarargs(value: RowData*): this.type = set("tableData", js.Array(value :_*))
+    def tableData(value: js.Array[RowData]): this.type = set("tableData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tableData(value: js.Array[RowData]): this.type = set("tableData", value.asInstanceOf[js.Any])
+    def tableDataVarargs(value: RowData*): this.type = set("tableData", js.Array(value :_*))
     
     @scala.inline
     def tableHeaderClassName(value: String): this.type = set("tableHeaderClassName", value.asInstanceOf[js.Any])
@@ -68,10 +75,4 @@ object Table {
   }
   
   def withProps(p: PropsWithChildren[TableProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(headers: js.Array[String | ReactElement]): Builder = {
-    val __props = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[TableProps]]))
-  }
 }

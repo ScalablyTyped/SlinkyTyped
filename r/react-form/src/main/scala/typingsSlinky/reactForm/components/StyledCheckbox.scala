@@ -80,15 +80,22 @@ import typingsSlinky.reactForm.reactFormStrings.tree
 import typingsSlinky.reactForm.reactFormStrings.url
 import typingsSlinky.reactForm.reactFormStrings.vertical
 import typingsSlinky.reactForm.reactFormStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StyledCheckbox {
   
+  @scala.inline
+  def apply(label: String): Builder = {
+    val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StyledPropsInputHTMLAttri]))
+  }
+  
   @JSImport("react-form", "StyledCheckbox")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -299,10 +306,10 @@ object StyledCheckbox {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -320,10 +327,10 @@ object StyledCheckbox {
     def errorBefore(value: Boolean): this.type = set("errorBefore", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fieldVarargs(value: (js.Array[ReactText] | ReactText | String)*): this.type = set("field", js.Array(value :_*))
+    def field(value: String | (js.Array[js.Array[ReactText] | ReactText | String])): this.type = set("field", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def field(value: String | (js.Array[js.Array[ReactText] | ReactText | String])): this.type = set("field", value.asInstanceOf[js.Any])
+    def fieldVarargs(value: (js.Array[ReactText] | ReactText | String)*): this.type = set("field", js.Array(value :_*))
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
@@ -728,10 +735,10 @@ object StyledCheckbox {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -741,10 +748,4 @@ object StyledCheckbox {
   }
   
   def withProps(p: StyledPropsInputHTMLAttri): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(label: String): Builder = {
-    val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StyledPropsInputHTMLAttri]))
-  }
 }

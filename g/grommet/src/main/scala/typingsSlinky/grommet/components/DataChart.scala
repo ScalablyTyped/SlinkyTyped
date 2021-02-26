@@ -25,15 +25,22 @@ import typingsSlinky.grommet.utilsMod.GapType
 import typingsSlinky.grommet.utilsMod.GridAreaType
 import typingsSlinky.grommet.utilsMod.MarginType
 import typingsSlinky.grommet.utilsMod.PadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DataChart {
   
-  @JSImport("grommet/es6", "DataChart")
+  @scala.inline
+  def apply(data: js.Array[js.Object], series: SeriesType | js.Array[SeriesType]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], series = series.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DataChartProps]))
+  }
+  
+  @JSImport("grommet", "DataChart")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -50,16 +57,16 @@ object DataChart {
     def bounds(value: align): this.type = set("bounds", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def chartVarargs(value: ChartType*): this.type = set("chart", js.Array(value :_*))
-    
-    @scala.inline
     def chart(value: ChartType | js.Array[ChartType]): this.type = set("chart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def detailFunction2(value: (/* datum */ js.Object, /* index */ Double) => ReactElement): this.type = set("detail", js.Any.fromFunction2(value))
+    def chartVarargs(value: ChartType*): this.type = set("chart", js.Array(value :_*))
     
     @scala.inline
     def detail(value: Boolean | (js.Function2[/* datum */ js.Object, /* index */ Double, ReactElement])): this.type = set("detail", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def detailFunction2(value: (/* datum */ js.Object, /* index */ Double) => ReactElement): this.type = set("detail", js.Any.fromFunction2(value))
     
     @scala.inline
     def gap(value: GapType | Column): this.type = set("gap", value.asInstanceOf[js.Any])
@@ -84,10 +91,4 @@ object DataChart {
   }
   
   def withProps(p: DataChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[js.Object], series: SeriesType | js.Array[SeriesType]): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], series = series.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DataChartProps]))
-  }
 }

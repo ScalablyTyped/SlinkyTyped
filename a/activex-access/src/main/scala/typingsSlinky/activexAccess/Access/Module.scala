@@ -1,12 +1,13 @@
 package typingsSlinky.activexAccess.Access
 
 import typingsSlinky.activexVbide.VBIDE.vbextProcKind
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Module extends js.Object {
+trait Module extends StObject {
   
   @JSName("Access.Module_typekey")
   var AccessDotModule_typekey: Module = js.native

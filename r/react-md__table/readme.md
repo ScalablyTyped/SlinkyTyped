@@ -10,9 +10,9 @@ Create responsive data tables and accessible fixed tables
 | ------------------ | :-------------: |
 | Full name          | @react-md/table |
 | Keywords           | accessibility, a11y, react-md, material design, react, table, component, components |
-| # releases         | 22 |
+| # releases         | 42 |
 | # dependents       | 1 |
-| # downloads        | 3276 |
+| # downloads        | 17615 |
 | # stars            | 0 |
 
 ## Links

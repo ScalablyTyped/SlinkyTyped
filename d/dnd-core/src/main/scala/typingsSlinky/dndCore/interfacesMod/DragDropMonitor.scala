@@ -2,12 +2,13 @@ package typingsSlinky.dndCore.interfacesMod
 
 import typingsSlinky.dndCore.anon.`0`
 import typingsSlinky.dndCore.anon.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DragDropMonitor extends js.Object {
+trait DragDropMonitor extends StObject {
   
   def canDragSource(): Boolean = js.native
   def canDragSource(sourceId: Identifier): Boolean = js.native

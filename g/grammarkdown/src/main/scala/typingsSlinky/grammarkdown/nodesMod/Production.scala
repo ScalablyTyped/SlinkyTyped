@@ -1,6 +1,7 @@
 package typingsSlinky.grammarkdown.nodesMod
 
 import typingsSlinky.grammarkdown.tokensMod.ProductionSeperatorKind
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "Production")
 @js.native
 class Production protected ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Production]
+  extends SourceElementBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Production]
      with Declaration
      with SourceElement {
   def this(name: Identifier) = this()

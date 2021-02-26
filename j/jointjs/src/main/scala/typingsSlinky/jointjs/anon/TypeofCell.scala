@@ -1,22 +1,16 @@
 package typingsSlinky.jointjs.anon
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.jointjs.mod.dia.Cell
-import typingsSlinky.jointjs.mod.dia.Cell.Attributes
 import typingsSlinky.jointjs.mod.dia.Cell.Constructor
-import typingsSlinky.jointjs.mod.dia.Graph.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofCell
-  extends Instantiable0[Cell]
-     with Instantiable1[/* attributes */ Attributes, Cell]
-     with Instantiable2[js.UndefOr[/* attributes */ Attributes], /* opt */ Options, Cell] {
+trait TypeofCell extends StObject {
   
+  /* static member */
   def define(`type`: String): Constructor[Cell] = js.native
   def define(
     `type`: String,

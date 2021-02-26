@@ -10,9 +10,9 @@ Plugin for loglevel message prefixing
 | ------------------ | :-------------: |
 | Full name          | loglevel-plugin-prefix |
 | Keywords           | log, logger, logging, browser, node, prefix, colored, loglevel, plugin |
-| # releases         | 9 |
-| # dependents       | 46 |
-| # downloads        | 4683958 |
+| # releases         | 0 |
+| # dependents       | 74 |
+| # downloads        | 24221772 |
 | # stars            | 0 |
 
 ## Links

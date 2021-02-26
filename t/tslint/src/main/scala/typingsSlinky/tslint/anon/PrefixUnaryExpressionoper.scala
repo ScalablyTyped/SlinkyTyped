@@ -11,13 +11,14 @@ import typingsSlinky.typescript.mod.SourceFile
 import typingsSlinky.typescript.mod.SourceFileLike
 import typingsSlinky.typescript.mod.SyntaxKind.PrefixUnaryExpression
 import typingsSlinky.typescript.mod.UnaryExpression
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined typescript.typescript.PrefixUnaryExpression & {  operand :typescript.typescript.NumericLiteral} */
 @js.native
-trait PrefixUnaryExpressionoper extends js.Object {
+trait PrefixUnaryExpressionoper extends StObject {
   
   var _expressionBrand: js.Any = js.native
   

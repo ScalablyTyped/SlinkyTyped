@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "polygon-lookup"
-version := "2.6-dt-20200728Z-c7be30"
+version := "2.6-dt-20200728Z-b0c8f0"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20201002Z-de1c1d",
-  "org.scalablytyped.slinky" %%% "rbush" % "3.0-dt-20201002Z-24079e",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20201002Z-d847cc",
+  "org.scalablytyped.slinky" %%% "rbush" % "3.0-dt-20201002Z-ff8faa",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

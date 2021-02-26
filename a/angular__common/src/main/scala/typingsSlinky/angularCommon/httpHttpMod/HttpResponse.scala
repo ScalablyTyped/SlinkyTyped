@@ -4,6 +4,7 @@ import typingsSlinky.angularCommon.anon.Body
 import typingsSlinky.angularCommon.anon.Headers
 import typingsSlinky.angularCommon.anon.Status
 import typingsSlinky.angularCommon.httpHttpMod.HttpEventType.Response
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

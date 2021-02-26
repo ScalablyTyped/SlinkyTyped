@@ -3,13 +3,12 @@ package typingsSlinky.sipJs
 import org.scalajs.dom.experimental.mediastream.MediaStream
 import org.scalajs.dom.experimental.mediastream.MediaStreamConstraints
 import typingsSlinky.sipJs.sessionDescriptionHandlerSessionDescriptionHandlerMod.SessionDescriptionHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/platform/web/session-description-handler/media-stream-factory", JSImport.Namespace)
-@js.native
-object mediaStreamFactoryMod extends js.Object {
+object mediaStreamFactoryMod {
   
   type MediaStreamFactory = js.Function2[
     /* constraints */ MediaStreamConstraints, 

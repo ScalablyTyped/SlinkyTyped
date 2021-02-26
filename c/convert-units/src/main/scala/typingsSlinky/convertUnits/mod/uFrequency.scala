@@ -1,10 +1,12 @@
 package typingsSlinky.convertUnits.mod
 
 import typingsSlinky.convertUnits.convertUnitsStrings.mHz_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// Time
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.convertUnits.convertUnitsStrings.Hz
   - typingsSlinky.convertUnits.convertUnitsStrings.mHz_
@@ -16,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.convertUnits.convertUnitsStrings.degSlashs
   - typingsSlinky.convertUnits.convertUnitsStrings.radSlashs
 */
-trait uFrequency extends js.Object
+trait uFrequency extends StObject
 object uFrequency {
   
   @scala.inline

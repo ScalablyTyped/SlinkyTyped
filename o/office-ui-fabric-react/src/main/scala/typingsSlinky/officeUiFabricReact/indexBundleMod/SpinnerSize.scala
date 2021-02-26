@@ -1,12 +1,13 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "SpinnerSize")
 @js.native
-object SpinnerSize extends js.Object {
+object SpinnerSize extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.spinnerTypesMod.SpinnerSize with Double] = js.native

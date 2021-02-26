@@ -75,6 +75,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -83,12 +84,15 @@ object NavBar {
   
   @JSImport("antd-mobile", "NavBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.NavBar] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -351,16 +355,13 @@ object NavBar {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -426,10 +427,10 @@ object NavBar {
     def httpEquiv(value: String): this.type = set("httpEquiv", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -477,10 +478,10 @@ object NavBar {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftContentReactElement(value: ReactElement): this.type = set("leftContent", value.asInstanceOf[js.Any])
+    def leftContent(value: ReactElement): this.type = set("leftContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftContent(value: ReactElement): this.type = set("leftContent", value.asInstanceOf[js.Any])
+    def leftContentReactElement(value: ReactElement): this.type = set("leftContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
@@ -831,10 +832,10 @@ object NavBar {
     def reversed(value: Boolean): this.type = set("reversed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightContentReactElement(value: ReactElement): this.type = set("rightContent", value.asInstanceOf[js.Any])
+    def rightContent(value: ReactElement): this.type = set("rightContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightContent(value: ReactElement): this.type = set("rightContent", value.asInstanceOf[js.Any])
+    def rightContentReactElement(value: ReactElement): this.type = set("rightContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
@@ -939,10 +940,10 @@ object NavBar {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -957,7 +958,7 @@ object NavBar {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: NavBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: NavBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: NavBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

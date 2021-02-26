@@ -12,12 +12,13 @@ import typingsSlinky.maximMazurokGapiClientCloudresourcemanager.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientCloudresourcemanager.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientCloudresourcemanager.anon.Resource
 import typingsSlinky.maximMazurokGapiClientCloudresourcemanager.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FoldersResource extends js.Object {
+trait FoldersResource extends StObject {
   
   /**
     * Creates a Folder in the resource hierarchy. Returns an Operation which can be used to track the progress of the folder creation workflow. Upon success the Operation.response field

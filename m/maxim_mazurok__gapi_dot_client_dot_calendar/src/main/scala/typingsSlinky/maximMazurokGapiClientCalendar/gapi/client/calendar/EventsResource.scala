@@ -14,12 +14,13 @@ import typingsSlinky.maximMazurokGapiClientCalendar.anon.SendNotifications
 import typingsSlinky.maximMazurokGapiClientCalendar.anon.SendUpdates
 import typingsSlinky.maximMazurokGapiClientCalendar.anon.SupportsAttachments
 import typingsSlinky.maximMazurokGapiClientCalendar.anon.Text
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EventsResource extends js.Object {
+trait EventsResource extends StObject {
   
   /** Deletes an event. */
   def delete(): Request[Unit] = js.native

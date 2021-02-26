@@ -10,6 +10,7 @@ import typingsSlinky.semanticUiReact.feedMetaMod.FeedMetaProps
 import typingsSlinky.semanticUiReact.feedSummaryMod.FeedSummaryProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,13 +27,13 @@ class SharedBuilder_FeedContentProps380343706 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def dateReactElement(value: ReactElement): this.type = set("date", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def date(value: SemanticShorthandItem[FeedDateProps]): this.type = set("date", value.asInstanceOf[js.Any])
   
   @scala.inline
   def dateFunction3(
@@ -40,10 +41,10 @@ class SharedBuilder_FeedContentProps380343706 (val args: js.Array[js.Any])
   ): this.type = set("date", js.Any.fromFunction3(value))
   
   @scala.inline
-  def date(value: SemanticShorthandItem[FeedDateProps]): this.type = set("date", value.asInstanceOf[js.Any])
+  def dateReactElement(value: ReactElement): this.type = set("date", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def extraImagesReactElement(value: ReactElement): this.type = set("extraImages", value.asInstanceOf[js.Any])
+  def extraImages(value: SemanticShorthandItem[FeedExtraProps]): this.type = set("extraImages", value.asInstanceOf[js.Any])
   
   @scala.inline
   def extraImagesFunction3(
@@ -51,10 +52,10 @@ class SharedBuilder_FeedContentProps380343706 (val args: js.Array[js.Any])
   ): this.type = set("extraImages", js.Any.fromFunction3(value))
   
   @scala.inline
-  def extraImages(value: SemanticShorthandItem[FeedExtraProps]): this.type = set("extraImages", value.asInstanceOf[js.Any])
+  def extraImagesReactElement(value: ReactElement): this.type = set("extraImages", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def extraTextReactElement(value: ReactElement): this.type = set("extraText", value.asInstanceOf[js.Any])
+  def extraText(value: SemanticShorthandItem[FeedExtraProps]): this.type = set("extraText", value.asInstanceOf[js.Any])
   
   @scala.inline
   def extraTextFunction3(
@@ -62,10 +63,10 @@ class SharedBuilder_FeedContentProps380343706 (val args: js.Array[js.Any])
   ): this.type = set("extraText", js.Any.fromFunction3(value))
   
   @scala.inline
-  def extraText(value: SemanticShorthandItem[FeedExtraProps]): this.type = set("extraText", value.asInstanceOf[js.Any])
+  def extraTextReactElement(value: ReactElement): this.type = set("extraText", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def metaReactElement(value: ReactElement): this.type = set("meta", value.asInstanceOf[js.Any])
+  def meta(value: SemanticShorthandItem[FeedMetaProps]): this.type = set("meta", value.asInstanceOf[js.Any])
   
   @scala.inline
   def metaFunction3(
@@ -73,10 +74,10 @@ class SharedBuilder_FeedContentProps380343706 (val args: js.Array[js.Any])
   ): this.type = set("meta", js.Any.fromFunction3(value))
   
   @scala.inline
-  def meta(value: SemanticShorthandItem[FeedMetaProps]): this.type = set("meta", value.asInstanceOf[js.Any])
+  def metaReactElement(value: ReactElement): this.type = set("meta", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def summaryReactElement(value: ReactElement): this.type = set("summary", value.asInstanceOf[js.Any])
+  def summary(value: SemanticShorthandItem[FeedSummaryProps]): this.type = set("summary", value.asInstanceOf[js.Any])
   
   @scala.inline
   def summaryFunction3(
@@ -84,5 +85,5 @@ class SharedBuilder_FeedContentProps380343706 (val args: js.Array[js.Any])
   ): this.type = set("summary", js.Any.fromFunction3(value))
   
   @scala.inline
-  def summary(value: SemanticShorthandItem[FeedSummaryProps]): this.type = set("summary", value.asInstanceOf[js.Any])
+  def summaryReactElement(value: ReactElement): this.type = set("summary", value.asInstanceOf[js.Any])
 }

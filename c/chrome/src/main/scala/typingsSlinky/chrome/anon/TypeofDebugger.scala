@@ -4,12 +4,13 @@ import typingsSlinky.chrome.chrome.debugger.Debuggee
 import typingsSlinky.chrome.chrome.debugger.DebuggerDetachedEvent
 import typingsSlinky.chrome.chrome.debugger.DebuggerEventEvent
 import typingsSlinky.chrome.chrome.debugger.TargetInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofDebugger extends js.Object {
+trait TypeofDebugger extends StObject {
   
   def attach(target: Debuggee, requiredVersion: String): Unit = js.native
   def attach(target: Debuggee, requiredVersion: String, callback: js.Function0[Unit]): Unit = js.native

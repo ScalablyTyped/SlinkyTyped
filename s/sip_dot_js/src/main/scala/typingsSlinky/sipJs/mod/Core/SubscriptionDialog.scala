@@ -2,6 +2,7 @@ package typingsSlinky.sipJs.mod.Core
 
 import typingsSlinky.sipJs.dialogStateMod.DialogState
 import typingsSlinky.sipJs.subscriptionSubscriptionDelegateMod.SubscriptionDelegate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,9 +28,7 @@ class SubscriptionDialog protected ()
   ) = this()
 }
 /* static members */
-@JSImport("sip.js", "Core.SubscriptionDialog")
-@js.native
-object SubscriptionDialog extends js.Object {
+object SubscriptionDialog {
   
   /**
     * When a UAC receives a response that establishes a dialog, it
@@ -39,6 +38,8 @@ object SubscriptionDialog extends js.Object {
     * @param outgoingRequestMessage - Outgoing request message for dialog.
     * @param incomingResponseMessage - Incoming response message creating dialog.
     */
+  @JSImport("sip.js", "Core.SubscriptionDialog.initialDialogStateForSubscription")
+  @js.native
   def initialDialogStateForSubscription(
     outgoingSubscribeRequestMessage: typingsSlinky.sipJs.messagesMod.OutgoingRequestMessage,
     incomingNotifyRequestMessage: typingsSlinky.sipJs.messagesMod.IncomingRequestMessage

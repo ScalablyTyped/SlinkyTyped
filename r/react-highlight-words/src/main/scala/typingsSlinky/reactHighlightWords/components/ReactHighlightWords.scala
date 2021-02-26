@@ -8,15 +8,22 @@ import typingsSlinky.reactHighlightWords.mod.Chunk
 import typingsSlinky.reactHighlightWords.mod.FindChunks
 import typingsSlinky.reactHighlightWords.mod.HighlighterProps
 import typingsSlinky.reactHighlightWords.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactHighlightWords {
   
+  @scala.inline
+  def apply(searchWords: js.Array[String], textToHighlight: String): Builder = {
+    val __props = js.Dynamic.literal(searchWords = searchWords.asInstanceOf[js.Any], textToHighlight = textToHighlight.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[HighlighterProps]))
+  }
+  
   @JSImport("react-highlight-words", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,13 +58,13 @@ object ReactHighlightWords {
     def highlightStyle(value: CSSProperties): this.type = set("highlightStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def highlightTagFunctionComponent(value: ReactComponentClass[_]): this.type = set("highlightTag", value.asInstanceOf[js.Any])
+    def highlightTag(value: String | ReactComponentClass[_]): this.type = set("highlightTag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def highlightTagComponentClass(value: ReactComponentClass[_]): this.type = set("highlightTag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def highlightTag(value: String | ReactComponentClass[_]): this.type = set("highlightTag", value.asInstanceOf[js.Any])
+    def highlightTagFunctionComponent(value: ReactComponentClass[_]): this.type = set("highlightTag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def sanitize(value: /* text */ String => String): this.type = set("sanitize", js.Any.fromFunction1(value))
@@ -70,10 +77,4 @@ object ReactHighlightWords {
   }
   
   def withProps(p: HighlighterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(searchWords: js.Array[String], textToHighlight: String): Builder = {
-    val __props = js.Dynamic.literal(searchWords = searchWords.asInstanceOf[js.Any], textToHighlight = textToHighlight.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[HighlighterProps]))
-  }
 }

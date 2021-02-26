@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,18 +33,26 @@ class TpStateDeleteRequest () extends ITpStateDeleteRequest {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest")
-@js.native
-object TpStateDeleteRequest extends js.Object {
+object TpStateDeleteRequest {
   
   /**
     * Creates a new TpStateDeleteRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns TpStateDeleteRequest instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.create")
+  @js.native
   def create(): TpStateDeleteRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.create")
+  @js.native
   def create(properties: ITpStateDeleteRequest): TpStateDeleteRequest = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): TpStateDeleteRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): TpStateDeleteRequest = js.native
   /**
     * Decodes a TpStateDeleteRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -52,11 +61,16 @@ object TpStateDeleteRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.decode")
+  @js.native
   def decode(reader: Reader): TpStateDeleteRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): TpStateDeleteRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): TpStateDeleteRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): TpStateDeleteRequest = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): TpStateDeleteRequest = js.native
   /**
     * Decodes a TpStateDeleteRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -64,8 +78,9 @@ object TpStateDeleteRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): TpStateDeleteRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): TpStateDeleteRequest = js.native
   
   /**
     * Encodes the specified TpStateDeleteRequest message. Does not implicitly {@link TpStateDeleteRequest.verify|verify} messages.
@@ -73,7 +88,11 @@ object TpStateDeleteRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.encode")
+  @js.native
   def encode(message: ITpStateDeleteRequest): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.encode")
+  @js.native
   def encode(message: ITpStateDeleteRequest, writer: Writer): Writer = js.native
   
   /**
@@ -82,7 +101,11 @@ object TpStateDeleteRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITpStateDeleteRequest): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITpStateDeleteRequest, writer: Writer): Writer = js.native
   
   /**
@@ -90,6 +113,8 @@ object TpStateDeleteRequest extends js.Object {
     * @param object Plain object
     * @returns TpStateDeleteRequest
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): TpStateDeleteRequest = js.native
   
   /**
@@ -98,7 +123,11 @@ object TpStateDeleteRequest extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.toObject")
+  @js.native
   def toObject(message: TpStateDeleteRequest): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.toObject")
+  @js.native
   def toObject(message: TpStateDeleteRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -106,5 +135,7 @@ object TpStateDeleteRequest extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "TpStateDeleteRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

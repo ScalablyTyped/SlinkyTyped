@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientDatafusion.anon.Key
 import typingsSlinky.maximMazurokGapiClientDatafusion.anon.Name
 import typingsSlinky.maximMazurokGapiClientDatafusion.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientDatafusion.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InstancesResource extends js.Object {
+trait InstancesResource extends StObject {
   
   /** Creates a new Data Fusion instance in the specified project and location. */
   def create(request: Accesstoken): Request[Operation] = js.native

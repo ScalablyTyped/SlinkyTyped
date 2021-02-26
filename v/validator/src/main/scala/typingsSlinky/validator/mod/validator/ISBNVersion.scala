@@ -1,5 +1,6 @@
 package typingsSlinky.validator.mod.validator
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.validator.validatorStrings.`10`
   - typingsSlinky.validator.validatorStrings.`13`
 */
-trait ISBNVersion extends js.Object
+trait ISBNVersion extends StObject
 object ISBNVersion {
   
   @scala.inline

@@ -1,20 +1,18 @@
 package typingsSlinky.calendar
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("calendar", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  val version: String = js.native
-  
+  @JSImport("calendar", "Calendar")
   @js.native
   /**
     * @param firstWeekDay default is `0` (Sunday)
     */
-  class Calendar () extends js.Object {
+  class Calendar () extends StObject {
     def this(firstWeekDay: Double) = this()
     
     def monthDates(year: Double, month: Double): js.Array[js.Date] = js.native
@@ -29,6 +27,10 @@ object mod extends js.Object {
     
     def weekStartDate(date: js.Date): js.Date = js.native
   }
+  
+  @JSImport("calendar", "version")
+  @js.native
+  val version: String = js.native
   
   type DayFormatter = js.Function1[/* day */ js.Date, js.Date | String]
   

@@ -1,12 +1,13 @@
 package typingsSlinky.ndnJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ndn-js", "ComponentType")
 @js.native
-object ComponentType extends js.Object {
+object ComponentType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.ndnJs.nameMod.ComponentType with Double] = js.native

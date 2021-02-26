@@ -2,13 +2,14 @@ package typingsSlinky.jest.mod.jest
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // should be R extends void|Promise<void> but getting dtslint error
 @js.native
-trait Matchers[R, T] extends js.Object {
+trait Matchers[R, T] extends StObject {
   
   /**
     * Ensures the last call to a mock function was provided specific args.
@@ -402,18 +403,18 @@ trait Matchers[R, T] extends js.Object {
     */
   def toThrow(): R = js.native
   def toThrow(error: String): R = js.native
-  def toThrow(error: Constructable): R = js.native
   def toThrow(error: js.Error): R = js.native
   def toThrow(error: js.RegExp): R = js.native
+  def toThrow(error: Constructable): R = js.native
   
   /**
     * If you want to test that a specific error is thrown inside a function.
     */
   def toThrowError(): R = js.native
   def toThrowError(error: String): R = js.native
-  def toThrowError(error: Constructable): R = js.native
   def toThrowError(error: js.Error): R = js.native
   def toThrowError(error: js.RegExp): R = js.native
+  def toThrowError(error: Constructable): R = js.native
   
   /**
     * Used to test that a function throws a error matching the most recent snapshot when it is called.

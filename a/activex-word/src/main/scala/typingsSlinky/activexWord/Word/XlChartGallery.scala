@@ -3,6 +3,7 @@ package typingsSlinky.activexWord.Word
 import typingsSlinky.activexWord.activexWordNumbers.`21`
 import typingsSlinky.activexWord.activexWordNumbers.`22`
 import typingsSlinky.activexWord.activexWordNumbers.`23`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWord.activexWordNumbers.`21`
   - typingsSlinky.activexWord.activexWordNumbers.`22`
 */
-trait XlChartGallery extends js.Object
+trait XlChartGallery extends StObject
 object XlChartGallery {
   
   @scala.inline

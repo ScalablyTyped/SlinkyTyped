@@ -11,8 +11,8 @@ List of standard HTML tags
 | Full name          | html-tags |
 | Keywords           | html, html5, tags, elements, list, whatwg, w3c, void, self-closing |
 | # releases         | 3 |
-| # dependents       | 74 |
-| # downloads        | 71473242 |
+| # dependents       | 101 |
+| # downloads        | 168919206 |
 | # stars            | 7 |
 
 ## Links

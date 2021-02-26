@@ -91,12 +91,13 @@ import typingsSlinky.three.webGLStateMod.WebGLState
 import typingsSlinky.three.webGLUtilsMod.WebGLUtils
 import typingsSlinky.three.webXRMod.XRRigidTransform
 import typingsSlinky.three.webXRMod.XRSession
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofTHREE extends js.Object {
+trait TypeofTHREE extends StObject {
   
   val ACESFilmicToneMapping: ToneMapping = js.native
   
@@ -464,7 +465,7 @@ trait TypeofTHREE extends js.Object {
   
   var DirectionalLightHelper: Instantiable1[/* light */ DirectionalLight, typingsSlinky.three.mod.DirectionalLightHelper] = js.native
   
-  var DirectionalLightShadow: Instantiable0[typingsSlinky.three.mod.DirectionalLightShadow] = js.native
+  var DirectionalLightShadow: Instantiable1[/* camera */ Camera, typingsSlinky.three.mod.DirectionalLightShadow] = js.native
   
   var DiscreteInterpolant: Instantiable3[
     /* parameterPositions */ js.Any, 
@@ -937,7 +938,7 @@ trait TypeofTHREE extends js.Object {
   
   var PointLightHelper: Instantiable1[/* light */ PointLight, typingsSlinky.three.mod.PointLightHelper] = js.native
   
-  var PointLightShadow: Instantiable0[typingsSlinky.three.mod.PointLightShadow] = js.native
+  var PointLightShadow: Instantiable1[/* camera */ Camera, typingsSlinky.three.mod.PointLightShadow] = js.native
   
   var Points: Instantiable0[
     typingsSlinky.three.mod.Points[Geometry | BufferGeometry, Material | js.Array[Material]]
@@ -1156,9 +1157,9 @@ trait TypeofTHREE extends js.Object {
   
   val SceneUtils: TypeofSceneUtils = js.native
   
-  var ShaderChunk: Alphamapfragment = js.native
+  val ShaderChunk: TypeofShaderChunk = js.native
   
-  var ShaderLib: Dictname = js.native
+  val ShaderLib: TypeofShaderLib = js.native
   
   var ShaderMaterial: Instantiable0[typingsSlinky.three.mod.ShaderMaterial] = js.native
   
@@ -1228,7 +1229,7 @@ trait TypeofTHREE extends js.Object {
   
   var SpotLightHelper: Instantiable1[/* light */ Light, typingsSlinky.three.mod.SpotLightHelper] = js.native
   
-  var SpotLightShadow: Instantiable0[typingsSlinky.three.mod.SpotLightShadow] = js.native
+  var SpotLightShadow: Instantiable1[/* camera */ Camera, typingsSlinky.three.mod.SpotLightShadow] = js.native
   
   var Sprite: Instantiable0[typingsSlinky.three.mod.Sprite] = js.native
   
@@ -1363,7 +1364,7 @@ trait TypeofTHREE extends js.Object {
   
   var Uniform: Instantiable1[/* value */ js.Any, typingsSlinky.three.mod.Uniform] = js.native
   
-  var UniformsLib: Aomap = js.native
+  val UniformsLib: TypeofUniformsLib = js.native
   
   val UniformsUtils: js.Any = js.native
   

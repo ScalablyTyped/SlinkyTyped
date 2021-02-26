@@ -2,6 +2,7 @@ package typingsSlinky.microsoftAjax.global.Sys
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.microsoftAjax.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,10 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 class Component ()
   extends typingsSlinky.microsoftAjax.Sys.Component
-/* static members */
-@JSGlobal("Sys.Component")
-@js.native
-object Component extends js.Object {
+object Component {
   
   /**
     * Creates and initializes a component of the specified type. This method is static and can be called without creating an instance of the class.
@@ -38,7 +36,12 @@ object Component extends js.Object {
     *
     * @returns A new instance of a component that uses the specified parameters.
     */
+  /* static member */
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(`type`: Type): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(
     `type`: Type,
     properties: js.UndefOr[scala.Nothing],
@@ -46,12 +49,16 @@ object Component extends js.Object {
     references: js.UndefOr[scala.Nothing],
     element: HTMLElement
   ): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(
     `type`: Type,
     properties: js.UndefOr[scala.Nothing],
     events: js.UndefOr[scala.Nothing],
     references: js.Any
   ): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(
     `type`: Type,
     properties: js.UndefOr[scala.Nothing],
@@ -59,7 +66,11 @@ object Component extends js.Object {
     references: js.Any,
     element: HTMLElement
   ): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(`type`: Type, properties: js.UndefOr[scala.Nothing], events: js.Any): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(
     `type`: Type,
     properties: js.UndefOr[scala.Nothing],
@@ -67,7 +78,11 @@ object Component extends js.Object {
     references: js.UndefOr[scala.Nothing],
     element: HTMLElement
   ): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(`type`: Type, properties: js.UndefOr[scala.Nothing], events: js.Any, references: js.Any): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(
     `type`: Type,
     properties: js.UndefOr[scala.Nothing],
@@ -75,7 +90,11 @@ object Component extends js.Object {
     references: js.Any,
     element: HTMLElement
   ): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(`type`: Type, properties: js.Any): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(
     `type`: Type,
     properties: js.Any,
@@ -83,7 +102,11 @@ object Component extends js.Object {
     references: js.UndefOr[scala.Nothing],
     element: HTMLElement
   ): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(`type`: Type, properties: js.Any, events: js.UndefOr[scala.Nothing], references: js.Any): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(
     `type`: Type,
     properties: js.Any,
@@ -91,7 +114,11 @@ object Component extends js.Object {
     references: js.Any,
     element: HTMLElement
   ): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(`type`: Type, properties: js.Any, events: js.Any): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(
     `type`: Type,
     properties: js.Any,
@@ -99,6 +126,10 @@ object Component extends js.Object {
     references: js.UndefOr[scala.Nothing],
     element: HTMLElement
   ): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(`type`: Type, properties: js.Any, events: js.Any, references: js.Any): typingsSlinky.microsoftAjax.Sys.Component = js.native
+  @JSGlobal("Sys.Component.create")
+  @js.native
   def create(`type`: Type, properties: js.Any, events: js.Any, references: js.Any, element: HTMLElement): typingsSlinky.microsoftAjax.Sys.Component = js.native
 }

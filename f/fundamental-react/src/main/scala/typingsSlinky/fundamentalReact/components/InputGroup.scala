@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.State
 import typingsSlinky.fundamentalReact.inputGroupMod.InputGroupProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object InputGroup {
   
   @JSImport("fundamental-react", "InputGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,7 +39,7 @@ object InputGroup {
     def validationState(value: State): this.type = set("validationState", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: InputGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: InputGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: InputGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

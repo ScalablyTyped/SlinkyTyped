@@ -5,16 +5,18 @@ import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialTab.componentMod.MDCTabFactory
 import typingsSlinky.materialTabBar.foundationMod.MDCTabBarFoundation
 import typingsSlinky.materialTabScroller.componentMod.MDCTabScrollerFactory
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/tab-bar/component", JSImport.Namespace)
-@js.native
-object componentMod extends js.Object {
+object componentMod {
   
+  @JSImport("@material/tab-bar/component", "MDCTabBar")
   @js.native
-  class MDCTabBar () extends MDCComponent[MDCTabBarFoundation] {
+  class MDCTabBar protected () extends MDCComponent[MDCTabBarFoundation] {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(root: Element, foundation: MDCTabBarFoundation, args: js.Any*) = this()
     
     /**
       * Activates the tab at the given index
@@ -38,9 +40,10 @@ object componentMod extends js.Object {
     def useAutomaticActivation_=(useAutomaticActivation: Boolean): Unit = js.native
   }
   /* static members */
-  @js.native
-  object MDCTabBar extends js.Object {
+  object MDCTabBar {
     
+    @JSImport("@material/tab-bar/component", "MDCTabBar.attachTo")
+    @js.native
     def attachTo(root: Element): MDCTabBar = js.native
   }
 }

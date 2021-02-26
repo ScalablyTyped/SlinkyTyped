@@ -12,7 +12,7 @@ Add notification bubbles in the favicon
 | Keywords           | - |
 | # releases         | 0 |
 | # dependents       | 2 |
-| # downloads        | 204619 |
+| # downloads        | 258219 |
 | # stars            | 2 |
 
 ## Links

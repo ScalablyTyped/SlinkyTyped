@@ -6,15 +6,28 @@ import typingsSlinky.react.mod.ReactChildren
 import typingsSlinky.reactAuthKit.reactAuthKitStrings.cookie
 import typingsSlinky.reactAuthKit.reactAuthKitStrings.localstorage
 import typingsSlinky.reactAuthKit.typesMod.AuthProviderProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AuthProvider {
   
+  @scala.inline
+  def apply(
+    authStorageName: String,
+    authStorageType: cookie | localstorage,
+    authTimeStorageName: String,
+    children: ReactChildren,
+    stateStorageName: String
+  ): Builder = {
+    val __props = js.Dynamic.literal(authStorageName = authStorageName.asInstanceOf[js.Any], authStorageType = authStorageType.asInstanceOf[js.Any], authTimeStorageName = authTimeStorageName.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], stateStorageName = stateStorageName.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AuthProviderProps]))
+  }
+  
   @JSImport("react-auth-kit", "AuthProvider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,16 +42,4 @@ object AuthProvider {
   }
   
   def withProps(p: AuthProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    authStorageName: String,
-    authStorageType: cookie | localstorage,
-    authTimeStorageName: String,
-    children: ReactChildren,
-    stateStorageName: String
-  ): Builder = {
-    val __props = js.Dynamic.literal(authStorageName = authStorageName.asInstanceOf[js.Any], authStorageType = authStorageType.asInstanceOf[js.Any], authTimeStorageName = authTimeStorageName.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], stateStorageName = stateStorageName.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AuthProviderProps]))
-  }
 }

@@ -2,6 +2,7 @@ package typingsSlinky.orientjs.mod
 
 import typingsSlinky.orientjs.orientjsStrings.CACHED
 import typingsSlinky.orientjs.orientjsStrings.ORDERED
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("orientjs", "OSequence")
 @js.native
-class OSequence () extends js.Object {
+class OSequence () extends StObject {
   
   var cache: js.UndefOr[Double] = js.native
   

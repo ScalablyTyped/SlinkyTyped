@@ -9,9 +9,9 @@ Typings are for version 4.8.0
 | ------------------ | :-------------: |
 | Full name          | @algolia/client-account |
 | Keywords           | - |
-| # releases         | 27 |
-| # dependents       | 1 |
-| # downloads        | 1728225 |
+| # releases         | 37 |
+| # dependents       | 2 |
+| # downloads        | 6720031 |
 | # stars            | 0 |
 
 ## Links

@@ -84,6 +84,7 @@ import typingsSlinky.reactNumericInput.reactNumericInputStrings.tree
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.url
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.vertical
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,7 +93,7 @@ object ReactNumericInput {
   
   @JSImport("react-numeric-input", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -384,28 +385,28 @@ object ReactNumericInput {
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maxFunction1(value: ReactComponentClass[NumericInputProps] => js.UndefOr[Double]): this.type = set("max", js.Any.fromFunction1(value))
+    def max(value: BoundsFunctionProp): this.type = set("max", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def max(value: BoundsFunctionProp): this.type = set("max", value.asInstanceOf[js.Any])
+    def maxFunction1(value: ReactComponentClass[NumericInputProps] => js.UndefOr[Double]): this.type = set("max", js.Any.fromFunction1(value))
     
     @scala.inline
     def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def minFunction1(value: ReactComponentClass[NumericInputProps] => js.UndefOr[Double]): this.type = set("min", js.Any.fromFunction1(value))
+    def min(value: BoundsFunctionProp): this.type = set("min", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def min(value: BoundsFunctionProp): this.type = set("min", value.asInstanceOf[js.Any])
+    def minFunction1(value: ReactComponentClass[NumericInputProps] => js.UndefOr[Double]): this.type = set("min", js.Any.fromFunction1(value))
     
     @scala.inline
     def minLength(value: Double): this.type = set("minLength", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def mobileFunction1(value: ReactComponentClass[NumericInputProps] => Boolean): this.type = set("mobile", js.Any.fromFunction1(value))
+    def mobile(value: Boolean | auto | (js.Function1[ReactComponentClass[NumericInputProps], Boolean])): this.type = set("mobile", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def mobile(value: Boolean | auto | (js.Function1[ReactComponentClass[NumericInputProps], Boolean])): this.type = set("mobile", value.asInstanceOf[js.Any])
+    def mobileFunction1(value: ReactComponentClass[NumericInputProps] => Boolean): this.type = set("mobile", js.Any.fromFunction1(value))
     
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
@@ -669,10 +670,10 @@ object ReactNumericInput {
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def precisionFunction1(value: ReactComponentClass[NumericInputProps] => js.UndefOr[Double | Null]): this.type = set("precision", js.Any.fromFunction1(value))
+    def precision(value: Double | (js.Function1[ReactComponentClass[NumericInputProps], js.UndefOr[Double | Null]])): this.type = set("precision", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def precision(value: Double | (js.Function1[ReactComponentClass[NumericInputProps], js.UndefOr[Double | Null]])): this.type = set("precision", value.asInstanceOf[js.Any])
+    def precisionFunction1(value: ReactComponentClass[NumericInputProps] => js.UndefOr[Double | Null]): this.type = set("precision", js.Any.fromFunction1(value))
     
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
@@ -717,12 +718,12 @@ object ReactNumericInput {
     def src(value: String): this.type = set("src", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stepFunction2(value: (ReactComponentClass[NumericInputProps], /* direction */ String) => js.UndefOr[Double]): this.type = set("step", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def step(
       value: Double | (js.Function2[ReactComponentClass[NumericInputProps], /* direction */ String, js.UndefOr[Double]])
     ): this.type = set("step", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def stepFunction2(value: (ReactComponentClass[NumericInputProps], /* direction */ String) => js.UndefOr[Double]): this.type = set("step", js.Any.fromFunction2(value))
     
     @scala.inline
     def strict(value: Boolean): this.type = set("strict", value.asInstanceOf[js.Any])
@@ -764,7 +765,7 @@ object ReactNumericInput {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: NumericInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNumericInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: NumericInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

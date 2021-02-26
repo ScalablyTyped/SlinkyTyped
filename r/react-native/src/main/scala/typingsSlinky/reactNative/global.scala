@@ -1,45 +1,16 @@
 package typingsSlinky.reactNative
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
-import org.scalablytyped.runtime.Instantiable3
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.reactNative.anon.DictoptionName
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
-  def cancelAnimationFrame(handle: Double): Unit = js.native
-  
-  def clearImmediate(handle: Double): Unit = js.native
-  
-  def clearInterval(handle: Double): Unit = js.native
-  
-  def clearTimeout(handle: Double): Unit = js.native
-  
-  def fetch(input: RequestInfo): js.Promise[typingsSlinky.reactNative.Response] = js.native
-  def fetch(input: RequestInfo, init: RequestInit): js.Promise[typingsSlinky.reactNative.Response] = js.native
-  
-  def fetchBundle(bundleId: Double, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
-  
-  def requestAnimationFrame(callback: js.Function1[/* time */ Double, Unit]): Double = js.native
-  
-  def setImmediate(handler: js.Function1[/* repeated */ js.Any, Unit]): Double = js.native
-  
-  def setInterval(handler: js.Any, timeout: js.UndefOr[scala.Nothing], args: js.Any*): Double = js.native
-  def setInterval(handler: js.Any, timeout: js.Any, args: js.Any*): Double = js.native
-  def setInterval(handler: js.Function1[/* repeated */ js.Any, Unit], timeout: Double): Double = js.native
-  
-  def setTimeout(handler: js.Any, timeout: js.UndefOr[scala.Nothing], args: js.Any*): Double = js.native
-  def setTimeout(handler: js.Any, timeout: js.Any, args: js.Any*): Double = js.native
-  def setTimeout(handler: js.Function1[/* repeated */ js.Any, Unit], timeout: Double): Double = js.native
-  
+  @JSGlobal("AbortController")
   @js.native
   /**
     * Initialize this controller.
@@ -47,6 +18,7 @@ object global extends js.Object {
   class AbortController ()
     extends typingsSlinky.reactNative.AbortController
   
+  @JSGlobal("AbortSignal")
   @js.native
   /**
     * AbortSignal cannot be constructed directly.
@@ -54,31 +26,36 @@ object global extends js.Object {
   class AbortSignal ()
     extends typingsSlinky.reactNative.AbortSignal
   
+  @JSGlobal("FormData")
   @js.native
   class FormData ()
     extends typingsSlinky.reactNative.FormData
   
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSGlobal("Headers")
   @js.native
   class Headers ()
     extends typingsSlinky.reactNative.Headers {
     def this(init: HeadersInit) = this()
   }
-  @js.native
-  object Headers
-    extends Instantiable0[typingsSlinky.reactNative.Headers]
-       with Instantiable1[/* init */ HeadersInit, typingsSlinky.reactNative.Headers]
   
+  @JSGlobal("MessageQueue")
   @js.native
   class MessageQueue ()
     extends typingsSlinky.reactNative.MessageQueue
-  /* static members */
-  @js.native
-  object MessageQueue extends js.Object {
+  object MessageQueue {
     
+    @JSGlobal("MessageQueue.spy")
+    @js.native
     def spy(spyOrToggle: js.Function1[/* data */ SpyData, Unit]): Unit = js.native
+    /* static member */
+    @JSGlobal("MessageQueue.spy")
+    @js.native
     def spy(spyOrToggle: Boolean): Unit = js.native
   }
   
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSGlobal("Request")
   @js.native
   class Request protected ()
     extends typingsSlinky.reactNative.Request {
@@ -87,37 +64,26 @@ object global extends js.Object {
     def this(input: String, init: RequestInit) = this()
     def this(input: typingsSlinky.reactNative.Request, init: RequestInit) = this()
   }
-  @js.native
-  object Request
-    extends Instantiable1[
-          (/* input */ typingsSlinky.reactNative.Request) | (/* input */ String), 
-          typingsSlinky.reactNative.Request
-        ]
-       with Instantiable2[
-          (/* input */ typingsSlinky.reactNative.Request) | (/* input */ String), 
-          /* init */ RequestInit, 
-          typingsSlinky.reactNative.Request
-        ]
   
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSGlobal("Response")
   @js.native
   class Response ()
     extends typingsSlinky.reactNative.Response {
     def this(body: BodyInit) = this()
     def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
   }
-  @js.native
-  object Response
-    extends Instantiable0[typingsSlinky.reactNative.Response]
-       with Instantiable1[/* body */ BodyInit, typingsSlinky.reactNative.Response]
-       with Instantiable2[
-          js.UndefOr[/* body */ BodyInit], 
-          /* init */ ResponseInit, 
-          typingsSlinky.reactNative.Response
-        ] {
+  object Response {
     
+    @JSGlobal("Response.error")
+    @js.native
     def error(): typingsSlinky.reactNative.Response = js.native
     
+    @JSGlobal("Response.redirect")
+    @js.native
     def redirect(url: String): typingsSlinky.reactNative.Response = js.native
+    @JSGlobal("Response.redirect")
+    @js.native
     def redirect(url: String, status: Double): typingsSlinky.reactNative.Response = js.native
   }
   
@@ -126,24 +92,30 @@ object global extends js.Object {
     * The properties are mutable to support users that use a `URL` polyfill, but the implementation
     * built into React Native (as of 0.63) does not implement all the properties.
     */
+  @JSGlobal("URL")
   @js.native
   class URL protected ()
     extends typingsSlinky.reactNative.URL {
     def this(url: String) = this()
     def this(url: String, base: String) = this()
   }
-  /* static members */
-  @js.native
-  object URL extends js.Object {
+  object URL {
     
+    /* static member */
+    @JSGlobal("URL.createObjectURL")
+    @js.native
     def createObjectURL(blob: Blob): String = js.native
     
+    /* static member */
+    @JSGlobal("URL.revokeObjectURL")
+    @js.native
     def revokeObjectURL(url: String): Unit = js.native
   }
   
   /**
     * Based on definitions of lib.dom and lib.dom.iterable
     */
+  @JSGlobal("URLSearchParams")
   @js.native
   class URLSearchParams ()
     extends typingsSlinky.reactNative.URLSearchParams {
@@ -153,6 +125,8 @@ object global extends js.Object {
     def this(init: Record[String, String]) = this()
   }
   
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSGlobal("WebSocket")
   @js.native
   class WebSocket protected ()
     extends typingsSlinky.reactNative.WebSocket {
@@ -164,54 +138,111 @@ object global extends js.Object {
     def this(uri: String, protocols: js.Array[String], options: DictoptionName) = this()
     def this(uri: String, protocols: Null, options: DictoptionName) = this()
   }
-  @js.native
-  object WebSocket
-    extends Instantiable1[/* uri */ String, typingsSlinky.reactNative.WebSocket]
-       with Instantiable2[
-          /* uri */ String, 
-          (/* protocols */ js.Array[String]) | (/* protocols */ String), 
-          typingsSlinky.reactNative.WebSocket
-        ]
-       with Instantiable3[
-          /* uri */ String, 
-          js.UndefOr[
-            (/* protocols */ js.Array[String]) | (/* protocols */ Null) | (/* protocols */ String)
-          ], 
-          /* options */ DictoptionName, 
-          typingsSlinky.reactNative.WebSocket
-        ] {
+  object WebSocket {
     
+    @JSGlobal("WebSocket.CLOSED")
+    @js.native
     val CLOSED: Double = js.native
     
+    @JSGlobal("WebSocket.CLOSING")
+    @js.native
     val CLOSING: Double = js.native
     
+    @JSGlobal("WebSocket.CONNECTING")
+    @js.native
     val CONNECTING: Double = js.native
     
+    @JSGlobal("WebSocket.OPEN")
+    @js.native
     val OPEN: Double = js.native
   }
   
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSGlobal("XMLHttpRequest")
   @js.native
   class XMLHttpRequest ()
     extends typingsSlinky.reactNative.XMLHttpRequest
-  @js.native
-  object XMLHttpRequest
-    extends Instantiable0[typingsSlinky.reactNative.XMLHttpRequest] {
+  object XMLHttpRequest {
     
+    @JSGlobal("XMLHttpRequest.DONE")
+    @js.native
     val DONE: Double = js.native
     
+    @JSGlobal("XMLHttpRequest.HEADERS_RECEIVED")
+    @js.native
     val HEADERS_RECEIVED: Double = js.native
     
+    @JSGlobal("XMLHttpRequest.LOADING")
+    @js.native
     val LOADING: Double = js.native
     
+    @JSGlobal("XMLHttpRequest.OPENED")
+    @js.native
     val OPENED: Double = js.native
     
+    @JSGlobal("XMLHttpRequest.UNSENT")
+    @js.native
     val UNSENT: Double = js.native
   }
   
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSGlobal("XMLHttpRequestUpload")
   @js.native
   class XMLHttpRequestUpload ()
     extends typingsSlinky.reactNative.XMLHttpRequestUpload
+  
+  @JSGlobal("cancelAnimationFrame")
   @js.native
-  object XMLHttpRequestUpload
-    extends Instantiable0[typingsSlinky.reactNative.XMLHttpRequestUpload]
+  def cancelAnimationFrame(handle: Double): Unit = js.native
+  
+  @JSGlobal("clearImmediate")
+  @js.native
+  def clearImmediate(handle: Double): Unit = js.native
+  
+  @JSGlobal("clearInterval")
+  @js.native
+  def clearInterval(handle: Double): Unit = js.native
+  
+  @JSGlobal("clearTimeout")
+  @js.native
+  def clearTimeout(handle: Double): Unit = js.native
+  
+  @JSGlobal("fetch")
+  @js.native
+  def fetch(input: RequestInfo): js.Promise[typingsSlinky.reactNative.Response] = js.native
+  @JSGlobal("fetch")
+  @js.native
+  def fetch(input: RequestInfo, init: RequestInit): js.Promise[typingsSlinky.reactNative.Response] = js.native
+  
+  @JSGlobal("fetchBundle")
+  @js.native
+  def fetchBundle(bundleId: Double, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  
+  @JSGlobal("requestAnimationFrame")
+  @js.native
+  def requestAnimationFrame(callback: js.Function1[/* time */ Double, Unit]): Double = js.native
+  
+  @JSGlobal("setImmediate")
+  @js.native
+  def setImmediate(handler: js.Function1[/* repeated */ js.Any, Unit]): Double = js.native
+  
+  @JSGlobal("setInterval")
+  @js.native
+  def setInterval(handler: js.Any, timeout: js.UndefOr[scala.Nothing], args: js.Any*): Double = js.native
+  @JSGlobal("setInterval")
+  @js.native
+  def setInterval(handler: js.Any, timeout: js.Any, args: js.Any*): Double = js.native
+  @JSGlobal("setInterval")
+  @js.native
+  def setInterval(handler: js.Function1[/* repeated */ js.Any, Unit], timeout: Double): Double = js.native
+  
+  @JSGlobal("setTimeout")
+  @js.native
+  def setTimeout(handler: js.Any, timeout: js.UndefOr[scala.Nothing], args: js.Any*): Double = js.native
+  @JSGlobal("setTimeout")
+  @js.native
+  def setTimeout(handler: js.Any, timeout: js.Any, args: js.Any*): Double = js.native
+  @JSGlobal("setTimeout")
+  @js.native
+  def setTimeout(handler: js.Function1[/* repeated */ js.Any, Unit], timeout: Double): Double = js.native
 }

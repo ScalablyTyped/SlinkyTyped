@@ -5,13 +5,16 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.rmcCalendar.anon.OnFinish
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.MonthData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rmc-calendar/lib/DatePicker", JSImport.Namespace)
-@js.native
-object datePickerMod extends js.Object {
+object datePickerMod {
+  
+  @JSImport("rmc-calendar/lib/DatePicker", JSImport.Default)
+  @js.native
+  class default () extends DatePicker
   
   @js.native
   trait DatePicker
@@ -36,7 +39,4 @@ object datePickerMod extends js.Object {
     
     var transform: String = js.native
   }
-  
-  @js.native
-  class default () extends DatePicker
 }

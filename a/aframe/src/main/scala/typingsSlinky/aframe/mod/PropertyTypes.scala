@@ -1,5 +1,6 @@
 package typingsSlinky.aframe.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.aframe.aframeStrings.vec3
   - typingsSlinky.aframe.aframeStrings.vec4
 */
-trait PropertyTypes extends js.Object
+trait PropertyTypes extends StObject
 object PropertyTypes {
   
   @scala.inline

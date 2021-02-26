@@ -1,6 +1,5 @@
 package typingsSlinky.tern.ternMod
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.tern.inferMod.Context
 import typingsSlinky.tern.ternStrings.afterLoad
 import typingsSlinky.tern.ternStrings.beforeLoad
@@ -11,12 +10,13 @@ import typingsSlinky.tern.ternStrings.preInfer
 import typingsSlinky.tern.ternStrings.preParse
 import typingsSlinky.tern.ternStrings.reset
 import typingsSlinky.tern.ternStrings.typeAt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Server extends js.Object {
+trait Server extends StObject {
   
   /**
     * Add a set of type definitions to the server. If `atFront` is true, they will be added before all other
@@ -94,6 +94,3 @@ trait Server extends js.Object {
     file: File
   ): Unit = js.native
 }
-@JSImport("tern/lib/tern", "Server")
-@js.native
-object Server extends TopLevel[TernConstructor]

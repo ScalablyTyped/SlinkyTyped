@@ -1,21 +1,38 @@
 package typingsSlinky.xhrMock
 
+import org.scalablytyped.runtime.Shortcut
+import typingsSlinky.std.XMLHttpRequest
 import typingsSlinky.xhrMock.anon.Instantiable
 import typingsSlinky.xhrMock.typesMod.ErrorCallbackEvent
 import typingsSlinky.xhrMock.typesMod.Mock
 import typingsSlinky.xhrMock.typesMod.MockFunction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xhr-mock/lib/XHRMock", JSImport.Namespace)
-@js.native
-object xhrmockMod extends js.Object {
+object xhrmockMod {
   
-  val default: XHRMock = js.native
+  object default extends Shortcut {
+    
+    @JSImport("xhr-mock/lib/XHRMock", JSImport.Default)
+    @js.native
+    val ^ : XHRMock = js.native
+    
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("xhr-mock/lib/XHRMock", "default.RealXMLHttpRequest")
+    @js.native
+    class RealXMLHttpRequest () extends XMLHttpRequest
+    
+    type _To = XHRMock
+    
+    /* This means you don't have to write `^`, but can instead just say `default.foo` */
+    override def _to: XHRMock = ^
+  }
   
+  @JSImport("xhr-mock/lib/XHRMock", "XHRMock")
   @js.native
-  class XHRMock () extends js.Object {
+  class XHRMock () extends StObject {
     
     var RealXMLHttpRequest: Instantiable = js.native
     

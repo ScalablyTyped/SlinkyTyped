@@ -1,6 +1,7 @@
 package typingsSlinky.highcharts.mod
 
 import typingsSlinky.highcharts.highchartsStrings.solid_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.circle
   - typingsSlinky.highcharts.highchartsStrings.solid_
 */
-trait PaneBackgroundShapeValue extends js.Object
+trait PaneBackgroundShapeValue extends StObject
 object PaneBackgroundShapeValue {
   
   @scala.inline

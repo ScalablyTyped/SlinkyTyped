@@ -3,14 +3,14 @@ package typingsSlinky.appBuilderLib
 import typingsSlinky.appBuilderLib.coreMod.Platform
 import typingsSlinky.appBuilderLib.libUiFrameworkMod.LibUiFramework
 import typingsSlinky.builderUtil.fsMod.FileTransformer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("app-builder-lib/out/ProtonFramework", JSImport.Namespace)
-@js.native
-object protonFrameworkMod extends js.Object {
+object protonFrameworkMod {
   
+  @JSImport("app-builder-lib/out/ProtonFramework", "ProtonFramework")
   @js.native
   class ProtonFramework protected () extends LibUiFramework {
     def this(version: String, distMacOsAppName: String, isUseLaunchUi: Boolean) = this()

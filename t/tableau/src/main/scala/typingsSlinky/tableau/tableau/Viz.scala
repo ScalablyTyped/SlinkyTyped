@@ -12,12 +12,13 @@ import typingsSlinky.tableau.tableau.TableauEventName.STORY_POINT_SWITCH
 import typingsSlinky.tableau.tableau.TableauEventName.TAB_SWITCH
 import typingsSlinky.tableau.tableau.TableauEventName.TOOLBAR_STATE_CHANGE
 import typingsSlinky.tableau.tableau.TableauEventName.VIZ_RESIZE
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Viz extends js.Object {
+trait Viz extends StObject {
   
   def addEventListener(event: CUSTOM_VIEW_LOAD, f: ListenerFunction[CustomViewEvent]): Unit = js.native
   def addEventListener(event: CUSTOM_VIEW_REMOVE, f: ListenerFunction[CustomViewEvent]): Unit = js.native

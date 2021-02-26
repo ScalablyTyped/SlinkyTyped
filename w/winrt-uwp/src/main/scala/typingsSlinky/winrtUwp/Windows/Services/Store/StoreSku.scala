@@ -2,13 +2,14 @@ package typingsSlinky.winrtUwp.Windows.Services.Store
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides info for a SKU of a product in the Windows Store. */
 @js.native
-trait StoreSku extends js.Object {
+trait StoreSku extends StObject {
   
   /** Gets the availabilities for the current product SKU. Each product SKU can have one or more availabilities that have different prices. */
   var availabilities: IVectorView[StoreAvailability] = js.native

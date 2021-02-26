@@ -10,9 +10,9 @@ Material-UI Styles - The styling solution of Material-UI.
 | ------------------ | :-------------: |
 | Full name          | @material-ui/styles |
 | Keywords           | react, react-component, material design, material-ui, styles |
-| # releases         | 44 |
-| # dependents       | 340 |
-| # downloads        | 18090086 |
+| # releases         | 57 |
+| # dependents       | 509 |
+| # downloads        | 55908821 |
 | # stars            | 0 |
 
 ## Links

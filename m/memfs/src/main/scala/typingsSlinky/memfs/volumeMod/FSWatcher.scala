@@ -5,6 +5,7 @@ import typingsSlinky.memfs.nodeMod.Link
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.fsMod.PathLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

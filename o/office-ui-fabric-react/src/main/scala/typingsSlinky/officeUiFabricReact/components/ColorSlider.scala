@@ -18,6 +18,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ object ColorSlider {
   
   @JSImport("office-ui-fabric-react/lib/components/ColorPicker/ColorSlider/ColorSlider", "ColorSlider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,13 +41,13 @@ object ColorSlider {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IColorSlider]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IColorSlider | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IColorSlider]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IColorSlider]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def isAlpha(value: Boolean): this.type = set("isAlpha", value.asInstanceOf[js.Any])
@@ -69,10 +70,10 @@ object ColorSlider {
     def overlayStyle(value: CSSProperties): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IColorSliderStyleProps => DeepPartial[IColorSliderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IColorSliderStyleProps, IColorSliderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IColorSliderStyleProps, IColorSliderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IColorSliderStyleProps => DeepPartial[IColorSliderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -87,7 +88,7 @@ object ColorSlider {
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IColorSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ColorSlider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IColorSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -5,6 +5,7 @@ import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.KeyEvent
 import typingsSlinky.activexLibreoffice.com_.sun.star.embed.XStorage
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -46,21 +47,9 @@ object ModuleAcceleratorConfiguration {
   }
   
   @scala.inline
-  implicit class ModuleAcceleratorConfigurationOps[Self <: ModuleAcceleratorConfiguration] (val x: Self) extends AnyVal {
+  implicit class ModuleAcceleratorConfigurationMutableBuilder[Self <: ModuleAcceleratorConfiguration] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setCreateWithModuleIdentifier(value: String => Unit): Self = this.set("createWithModuleIdentifier", js.Any.fromFunction1(value))
+    def setCreateWithModuleIdentifier(value: String => Unit): Self = StObject.set(x, "createWithModuleIdentifier", js.Any.fromFunction1(value))
   }
 }

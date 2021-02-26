@@ -1,5 +1,6 @@
 package typingsSlinky.dfVisible
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.dfVisible.dfVisibleStrings.vertical
   - typingsSlinky.dfVisible.dfVisibleStrings.both
 */
-trait Direction extends js.Object
+trait Direction extends StObject
 object Direction {
   
   @scala.inline

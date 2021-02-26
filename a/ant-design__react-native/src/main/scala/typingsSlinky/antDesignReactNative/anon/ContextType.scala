@@ -5,6 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.antDesignReactNative.pickerMixinMod.ItemProps
 import typingsSlinky.antDesignReactNative.pickerTypesMod.PickerProps
 import typingsSlinky.react.mod.Context
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

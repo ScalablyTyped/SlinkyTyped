@@ -5,14 +5,14 @@ import typingsSlinky.pulumiAws.notificationRuleMod.NotificationRuleState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws/codestarnotifications", JSImport.Namespace)
-@js.native
-object codestarnotificationsMod extends js.Object {
+object codestarnotificationsMod {
   
+  @JSImport("@pulumi/aws/codestarnotifications", "NotificationRule")
   @js.native
   class NotificationRule protected ()
     extends typingsSlinky.pulumiAws.notificationRuleMod.NotificationRule {
@@ -27,8 +27,7 @@ object codestarnotificationsMod extends js.Object {
     def this(name: String, args: NotificationRuleArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object NotificationRule extends js.Object {
+  object NotificationRule {
     
     /**
       * Get an existing NotificationRule resource's state with the given name, ID, and optional extra
@@ -39,15 +38,25 @@ object codestarnotificationsMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/codestarnotifications", "NotificationRule.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.notificationRuleMod.NotificationRule = js.native
+    @JSImport("@pulumi/aws/codestarnotifications", "NotificationRule.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.notificationRuleMod.NotificationRule = js.native
+    @JSImport("@pulumi/aws/codestarnotifications", "NotificationRule.get")
+    @js.native
     def get(name: String, id: Input[ID], state: NotificationRuleState): typingsSlinky.pulumiAws.notificationRuleMod.NotificationRule = js.native
+    @JSImport("@pulumi/aws/codestarnotifications", "NotificationRule.get")
+    @js.native
     def get(name: String, id: Input[ID], state: NotificationRuleState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.notificationRuleMod.NotificationRule = js.native
     
     /**
       * Returns true if the given object is an instance of NotificationRule.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/codestarnotifications", "NotificationRule.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codestarnotifications/notificationRule.NotificationRule */ Boolean = js.native
   }
 }

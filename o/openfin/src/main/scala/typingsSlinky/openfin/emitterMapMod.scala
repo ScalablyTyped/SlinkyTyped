@@ -6,16 +6,16 @@ import typingsSlinky.openfin.openfinStrings.`global-hotkey`
 import typingsSlinky.openfin.openfinStrings.application
 import typingsSlinky.openfin.openfinStrings.system
 import typingsSlinky.openfin.openfinStrings.window
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("openfin/_v2/api/events/emitterMap", JSImport.Namespace)
-@js.native
-object emitterMapMod extends js.Object {
+object emitterMapMod {
   
+  @JSImport("openfin/_v2/api/events/emitterMap", "EmitterMap")
   @js.native
-  class EmitterMap () extends js.Object {
+  class EmitterMap () extends StObject {
     
     def delete(keys: EmitterAccessor): Boolean = js.native
     

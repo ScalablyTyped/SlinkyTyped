@@ -9,15 +9,22 @@ import typingsSlinky.reactVirtualized.esTableMod.SortDirectionType
 import typingsSlinky.reactVirtualized.esTableMod.TableCellDataGetterParams
 import typingsSlinky.reactVirtualized.esTableMod.TableCellProps
 import typingsSlinky.reactVirtualized.esTableMod.TableHeaderProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Column {
   
+  @scala.inline
+  def apply(dataKey: js.Any, width: Double): Builder = {
+    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ColumnProps]))
+  }
+  
   @JSImport("react-virtualized", "Column")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -64,10 +71,10 @@ object Column {
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maxWidth(value: Double): this.type = set("maxWidth", value.asInstanceOf[js.Any])
@@ -80,10 +87,4 @@ object Column {
   }
   
   def withProps(p: ColumnProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(dataKey: js.Any, width: Double): Builder = {
-    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ColumnProps]))
-  }
 }

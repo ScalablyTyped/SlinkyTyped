@@ -10,9 +10,9 @@ A lightweight library that provides tools for organizing asynchronous code
 | ------------------ | :-------------: |
 | Full name          | rsvp |
 | Keywords           | futures, promises |
-| # releases         | 7 |
-| # dependents       | 784 |
-| # downloads        | 228357651 |
+| # releases         | 2 |
+| # dependents       | 837 |
+| # downloads        | 418849627 |
 | # stars            | 17 |
 
 ## Links

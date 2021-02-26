@@ -10,9 +10,9 @@ A Minimalist DateTime utility for Node.js and the browser
 | ------------------ | :-------------: |
 | Full name          | date-and-time |
 | Keywords           | date, time, format, parse, utility |
-| # releases         | 7 |
-| # dependents       | 63 |
-| # downloads        | 19138044 |
+| # releases         | 12 |
+| # dependents       | 97 |
+| # downloads        | 51612286 |
 | # stars            | 6 |
 
 ## Links

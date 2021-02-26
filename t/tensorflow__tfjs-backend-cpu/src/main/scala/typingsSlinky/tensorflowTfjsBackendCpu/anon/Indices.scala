@@ -1,12 +1,13 @@
 package typingsSlinky.tensorflowTfjsBackendCpu.anon
 
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.BackendValues
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Indices extends js.Object {
+trait Indices extends StObject {
   
   var indices: BackendValues = js.native
   
@@ -23,54 +24,42 @@ object Indices {
   }
   
   @scala.inline
-  implicit class IndicesOps[Self <: Indices] (val x: Self) extends AnyVal {
+  implicit class IndicesMutableBuilder[Self <: Indices] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setIndices(value: BackendValues): Self = StObject.set(x, "indices", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setIndicesFloat32Array(value: js.typedarray.Float32Array): Self = StObject.set(x, "indices", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setIndicesInt32Array(value: js.typedarray.Int32Array): Self = StObject.set(x, "indices", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIndicesVarargs(value: js.typedarray.Uint8Array*): Self = this.set("indices", js.Array(value :_*))
+    def setIndicesUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "indices", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIndicesInt32Array(value: js.typedarray.Int32Array): Self = this.set("indices", value.asInstanceOf[js.Any])
+    def setIndicesVarargs(value: js.typedarray.Uint8Array*): Self = StObject.set(x, "indices", js.Array(value :_*))
     
     @scala.inline
-    def setIndicesFloat32Array(value: js.typedarray.Float32Array): Self = this.set("indices", value.asInstanceOf[js.Any])
+    def setOutputShape(value: js.Array[Double]): Self = StObject.set(x, "outputShape", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIndicesUint8Array(value: js.typedarray.Uint8Array): Self = this.set("indices", value.asInstanceOf[js.Any])
+    def setOutputShapeVarargs(value: Double*): Self = StObject.set(x, "outputShape", js.Array(value :_*))
     
     @scala.inline
-    def setIndices(value: BackendValues): Self = this.set("indices", value.asInstanceOf[js.Any])
+    def setOutputValues(value: BackendValues): Self = StObject.set(x, "outputValues", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOutputShapeVarargs(value: Double*): Self = this.set("outputShape", js.Array(value :_*))
+    def setOutputValuesFloat32Array(value: js.typedarray.Float32Array): Self = StObject.set(x, "outputValues", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOutputShape(value: js.Array[Double]): Self = this.set("outputShape", value.asInstanceOf[js.Any])
+    def setOutputValuesInt32Array(value: js.typedarray.Int32Array): Self = StObject.set(x, "outputValues", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOutputValuesFloat32Array(value: js.typedarray.Float32Array): Self = this.set("outputValues", value.asInstanceOf[js.Any])
+    def setOutputValuesUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "outputValues", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOutputValuesVarargs(value: js.typedarray.Uint8Array*): Self = this.set("outputValues", js.Array(value :_*))
-    
-    @scala.inline
-    def setOutputValuesInt32Array(value: js.typedarray.Int32Array): Self = this.set("outputValues", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOutputValues(value: BackendValues): Self = this.set("outputValues", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOutputValuesUint8Array(value: js.typedarray.Uint8Array): Self = this.set("outputValues", value.asInstanceOf[js.Any])
+    def setOutputValuesVarargs(value: js.typedarray.Uint8Array*): Self = StObject.set(x, "outputValues", js.Array(value :_*))
   }
 }

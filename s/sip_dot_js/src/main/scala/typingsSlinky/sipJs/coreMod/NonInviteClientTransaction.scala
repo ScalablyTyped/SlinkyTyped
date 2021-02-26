@@ -2,6 +2,7 @@ package typingsSlinky.sipJs.coreMod
 
 import typingsSlinky.sipJs.coreTransportMod.Transport
 import typingsSlinky.sipJs.transactionUserMod.ClientTransactionUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

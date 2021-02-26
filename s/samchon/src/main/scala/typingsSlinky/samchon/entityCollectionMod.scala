@@ -1,18 +1,18 @@
 package typingsSlinky.samchon
 
-import typingsSlinky.ecol.arrayCollectionMod.ArrayCollection
-import typingsSlinky.ecol.dequeCollectionMod.DequeCollection
-import typingsSlinky.ecol.listCollectionMod.ListCollection
+import typingsSlinky.ecol.mod.ArrayCollection
+import typingsSlinky.ecol.mod.DequeCollection
+import typingsSlinky.ecol.mod.ListCollection
 import typingsSlinky.samchon.ientityMod.IEntity
 import typingsSlinky.sxml.mod.XML
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/protocol/entity/EntityCollection", JSImport.Namespace)
-@js.native
-object entityCollectionMod extends js.Object {
+object entityCollectionMod {
   
+  @JSImport("samchon/protocol/entity/EntityCollection", "EntityArrayCollection")
   @js.native
   abstract class EntityArrayCollection[T /* <: IEntity */] () extends ArrayCollection[T] {
     
@@ -62,6 +62,7 @@ object entityCollectionMod extends js.Object {
     def toXML(): XML = js.native
   }
   
+  @JSImport("samchon/protocol/entity/EntityCollection", "EntityDequeCollection")
   @js.native
   abstract class EntityDequeCollection[T /* <: IEntity */] () extends DequeCollection[T] {
     
@@ -111,6 +112,7 @@ object entityCollectionMod extends js.Object {
     def toXML(): XML = js.native
   }
   
+  @JSImport("samchon/protocol/entity/EntityCollection", "EntityListCollection")
   @js.native
   abstract class EntityListCollection[T /* <: IEntity */] () extends ListCollection[T] {
     

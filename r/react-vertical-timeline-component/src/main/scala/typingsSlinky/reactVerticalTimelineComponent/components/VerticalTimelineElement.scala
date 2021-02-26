@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactVerticalTimelineComponent.mod.VerticalTimelineElementProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object VerticalTimelineElement {
   
   @JSImport("react-vertical-timeline-component", "VerticalTimelineElement")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,9 +37,6 @@ object VerticalTimelineElement {
     def dateClassName(value: String): this.type = set("dateClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -46,6 +44,9 @@ object VerticalTimelineElement {
     
     @scala.inline
     def iconOnClick(value: () => Unit): this.type = set("iconOnClick", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconStyle(value: CSSProperties): this.type = set("iconStyle", value.asInstanceOf[js.Any])
@@ -69,7 +70,7 @@ object VerticalTimelineElement {
     def textClassName(value: String): this.type = set("textClassName", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: VerticalTimelineElementProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: VerticalTimelineElement.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: VerticalTimelineElementProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

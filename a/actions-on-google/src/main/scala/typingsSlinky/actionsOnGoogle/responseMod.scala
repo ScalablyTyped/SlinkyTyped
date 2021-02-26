@@ -21,14 +21,14 @@ import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsOrdersV3OrderUpdate
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2OrdersOrderUpdate
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2UiElementsCarouselBrowseItem
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2UiElementsHtmlResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("actions-on-google/dist/service/actionssdk/conversation/response", JSImport.Namespace)
-@js.native
-object responseMod extends js.Object {
+object responseMod {
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "BasicCard")
   @js.native
   class BasicCard protected ()
     extends typingsSlinky.actionsOnGoogle.cardMod.BasicCard {
@@ -36,6 +36,7 @@ object responseMod extends js.Object {
     def this(options: BasicCardOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "BrowseCarousel")
   @js.native
   class BrowseCarousel protected ()
     extends typingsSlinky.actionsOnGoogle.browseMod.BrowseCarousel {
@@ -56,6 +57,7 @@ object responseMod extends js.Object {
     def this(options: BrowseCarouselOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "BrowseCarouselItem")
   @js.native
   class BrowseCarouselItem protected ()
     extends typingsSlinky.actionsOnGoogle.browseMod.BrowseCarouselItem {
@@ -66,6 +68,7 @@ object responseMod extends js.Object {
     def this(options: BrowseCarouselItemOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "Button")
   @js.native
   class Button protected ()
     extends typingsSlinky.actionsOnGoogle.cardMod.Button {
@@ -76,6 +79,7 @@ object responseMod extends js.Object {
     def this(options: ButtonOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "HtmlResponse")
   @js.native
   /**
     * @param options Canvas options
@@ -87,6 +91,7 @@ object responseMod extends js.Object {
     def this(options: GoogleActionsV2UiElementsHtmlResponse) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "Image")
   @js.native
   class Image protected ()
     extends typingsSlinky.actionsOnGoogle.imageMod.Image
@@ -98,6 +103,7 @@ object responseMod extends js.Object {
     def this(option: ImageOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "LinkOutSuggestion")
   @js.native
   class LinkOutSuggestion protected ()
     extends typingsSlinky.actionsOnGoogle.linkoutMod.LinkOutSuggestion {
@@ -108,6 +114,7 @@ object responseMod extends js.Object {
     def this(options: LinkOutSuggestionOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "MediaObject")
   @js.native
   class MediaObject protected ()
     extends typingsSlinky.actionsOnGoogle.responseMediaMod.MediaObject
@@ -120,6 +127,7 @@ object responseMod extends js.Object {
     def this(options: MediaObjectOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "MediaResponse")
   @js.native
   class MediaResponse protected ()
     extends typingsSlinky.actionsOnGoogle.responseMediaMod.MediaResponse {
@@ -140,6 +148,7 @@ object responseMod extends js.Object {
     def this(options: MediaResponseOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "OpenUrlAction")
   @js.native
   class OpenUrlAction protected ()
     extends typingsSlinky.actionsOnGoogle.urlMod.OpenUrlAction {
@@ -147,6 +156,7 @@ object responseMod extends js.Object {
     def this(options: OpenUrlActionOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "OrderUpdate")
   @js.native
   class OrderUpdate protected ()
     extends typingsSlinky.actionsOnGoogle.orderMod.OrderUpdate {
@@ -160,6 +170,7 @@ object responseMod extends js.Object {
     def this(options: GoogleActionsV2OrdersOrderUpdate) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "RichResponse")
   @js.native
   class RichResponse protected ()
     extends typingsSlinky.actionsOnGoogle.richMod.RichResponse
@@ -181,6 +192,7 @@ object responseMod extends js.Object {
     def this(options: RichResponseOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "SimpleResponse")
   @js.native
   class SimpleResponse protected ()
     extends typingsSlinky.actionsOnGoogle.simpleMod.SimpleResponse {
@@ -192,6 +204,7 @@ object responseMod extends js.Object {
     def this(options: SimpleResponseOptions) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "Suggestions")
   @js.native
   class Suggestions protected ()
     extends typingsSlinky.actionsOnGoogle.suggestionMod.Suggestions
@@ -203,6 +216,7 @@ object responseMod extends js.Object {
     def this(suggestions: (js.Array[String] | String)*) = this()
   }
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/response", "Table")
   @js.native
   class Table protected ()
     extends typingsSlinky.actionsOnGoogle.cardMod.Table {

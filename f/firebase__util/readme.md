@@ -10,9 +10,9 @@ _NOTE: This is specifically tailored for Firebase JS SDK usage, if you are not a
 | ------------------ | :-------------: |
 | Full name          | @firebase/util |
 | Keywords           | - |
-| # releases         | 942 |
-| # dependents       | 35 |
-| # downloads        | 37329378 |
+| # releases         | 1335 |
+| # dependents       | 44 |
+| # downloads        | 73275721 |
 | # stars            | 0 |
 
 ## Links

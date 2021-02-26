@@ -1,5 +1,6 @@
 package typingsSlinky.gm.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gm.gmStrings.unframe
   - typingsSlinky.gm.gmStrings.concatenate
 */
-trait OperationMode extends js.Object
+trait OperationMode extends StObject
 object OperationMode {
   
   @scala.inline

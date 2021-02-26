@@ -1,5 +1,6 @@
 package typingsSlinky.angularCompiler.compilerMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@angular/compiler/compiler", "TransitiveCompileNgModuleMetadata")
 @js.native
 class TransitiveCompileNgModuleMetadata ()
-  extends typingsSlinky.angularCompiler.compileMetadataMod.TransitiveCompileNgModuleMetadata
+  extends typingsSlinky.angularCompiler.publicApiMod.TransitiveCompileNgModuleMetadata

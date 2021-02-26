@@ -4,16 +4,15 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.twineSugarcube.twineSugarcubeStrings.idle
 import typingsSlinky.twineSugarcube.twineSugarcubeStrings.playing
 import typingsSlinky.twineSugarcube.twineSugarcubeStrings.rendering
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("twine-sugarcube/engine", JSImport.Namespace)
-@js.native
-object engineMod extends js.Object {
+object engineMod {
   
   @js.native
-  trait EngineAPI extends js.Object {
+  trait EngineAPI extends StObject {
     
     /**
       * Moves backward one moment within the full history (past + future), if possible, activating and showing the

@@ -10,9 +10,9 @@ Bluebird — longStackTraces: true, cancellation: true
 | ------------------ | :-------------: |
 | Full name          | bluebird-lst |
 | Keywords           | - |
-| # releases         | 5 |
-| # dependents       | 69 |
-| # downloads        | 4195257 |
+| # releases         | 4 |
+| # dependents       | 77 |
+| # downloads        | 6412747 |
 | # stars            | 0 |
 
 ## Links

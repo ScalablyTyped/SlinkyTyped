@@ -1,5 +1,6 @@
 package typingsSlinky.fridaGum
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,18 +12,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fridaGum.ScriptInvocationListenerCallbacks
   - typingsSlinky.fridaGum.NativeInvocationListenerCallbacks
 */
-trait InvocationListenerCallbacks extends js.Object
+trait InvocationListenerCallbacks extends StObject
 object InvocationListenerCallbacks {
   
   @scala.inline
-  def ScriptInvocationListenerCallbacks(): InvocationListenerCallbacks = {
+  def NativeInvocationListenerCallbacks(): typingsSlinky.fridaGum.NativeInvocationListenerCallbacks = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[InvocationListenerCallbacks]
+    __obj.asInstanceOf[typingsSlinky.fridaGum.NativeInvocationListenerCallbacks]
   }
   
   @scala.inline
-  def NativeInvocationListenerCallbacks(): InvocationListenerCallbacks = {
+  def ScriptInvocationListenerCallbacks(): typingsSlinky.fridaGum.ScriptInvocationListenerCallbacks = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[InvocationListenerCallbacks]
+    __obj.asInstanceOf[typingsSlinky.fridaGum.ScriptInvocationListenerCallbacks]
   }
 }

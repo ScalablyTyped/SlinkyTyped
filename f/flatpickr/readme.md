@@ -10,13 +10,13 @@ A lightweight, powerful javascript datetime picker
 | ------------------ | :-------------: |
 | Full name          | flatpickr |
 | Keywords           | javascript, datetimepicker, calendar, date, time, picker, lightweight |
-| # releases         | 29 |
-| # dependents       | 236 |
-| # downloads        | 9805245 |
+| # releases         | 15 |
+| # dependents       | 330 |
+| # downloads        | 18736730 |
 | # stars            | 17 |
 
 ## Links
-- [Homepage](https://chmln.github.io/flatpickr)
+- [Homepage](https://flatpickr.js.org)
 - [Bugs](https://github.com/chmln/flatpickr/issues)
 - [Repository](https://github.com/chmln/flatpickr)
 - [Npm](https://www.npmjs.com/package/flatpickr)

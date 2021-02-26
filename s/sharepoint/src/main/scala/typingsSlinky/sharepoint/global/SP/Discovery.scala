@@ -1,19 +1,20 @@
 package typingsSlinky.sharepoint.global.SP
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("SP.Discovery")
-@js.native
-object Discovery extends js.Object {
+object Discovery {
   
+  @JSGlobal("SP.Discovery.Case")
   @js.native
   class Case protected ()
     extends typingsSlinky.sharepoint.SP.Discovery.Case {
     def this(context: typingsSlinky.sharepoint.SP.ClientRuntimeContext, web: typingsSlinky.sharepoint.SP.Web) = this()
   }
   
+  @JSGlobal("SP.Discovery.Export")
   @js.native
   class Export protected ()
     extends typingsSlinky.sharepoint.SP.Discovery.Export {
@@ -23,8 +24,9 @@ object Discovery extends js.Object {
     ) = this()
   }
   
+  @JSGlobal("SP.Discovery.ExportStatus")
   @js.native
-  object ExportStatus extends js.Object {
+  object ExportStatus extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.sharepoint.SP.Discovery.ExportStatus with Double] = js.native

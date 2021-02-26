@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.materialsIndexMod
 
 import typingsSlinky.babylonjs.fresnelParametersMod.IFresnelParametersCreationOptions
 import typingsSlinky.babylonjs.fresnelParametersMod.IFresnelParametersSerialized
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,14 +19,14 @@ class FresnelParameters ()
   def this(options: IFresnelParametersCreationOptions) = this()
 }
 /* static members */
-@JSImport("babylonjs/Materials/index", "FresnelParameters")
-@js.native
-object FresnelParameters extends js.Object {
+object FresnelParameters {
   
   /**
     * Parse a JSON object and deserialize it to a new Fresnel parameter object.
     * @param parsedFresnelParameters Define the JSON representation
     * @returns the parsed parameters
     */
+  @JSImport("babylonjs/Materials/index", "FresnelParameters.Parse")
+  @js.native
   def Parse(parsedFresnelParameters: IFresnelParametersSerialized): typingsSlinky.babylonjs.fresnelParametersMod.FresnelParameters = js.native
 }

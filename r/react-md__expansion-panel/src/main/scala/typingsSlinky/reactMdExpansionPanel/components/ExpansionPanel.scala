@@ -77,15 +77,22 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactMdExpansionPanel.expansionPanelMod.ExpansionPanelProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ExpansionPanel {
   
+  @scala.inline
+  def apply(expanded: Boolean, id: String, onExpandClick: SyntheticMouseEvent[HTMLButtonElement] => Unit): Builder = {
+    val __props = js.Dynamic.literal(expanded = expanded.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onExpandClick = js.Any.fromFunction1(onExpandClick))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ExpansionPanelProps with RefAttributes[HTMLDivElement]]))
+  }
+  
   @JSImport("@react-md/expansion-panel", "ExpansionPanel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -275,10 +282,10 @@ object ExpansionPanel {
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customHeaderReactElement(value: ReactElement): this.type = set("customHeader", value.asInstanceOf[js.Any])
+    def customHeader(value: ReactElement): this.type = set("customHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customHeader(value: ReactElement): this.type = set("customHeader", value.asInstanceOf[js.Any])
+    def customHeaderReactElement(value: ReactElement): this.type = set("customHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
@@ -290,10 +297,10 @@ object ExpansionPanel {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -317,16 +324,13 @@ object ExpansionPanel {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def expanderIconReactElement(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def expanderIcon(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
+    def expanderIconReactElement(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
@@ -335,16 +339,19 @@ object ExpansionPanel {
     def headerClassName(value: String): this.type = set("headerClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headerRefRefObject(value: ReactRef[HTMLButtonElement]): this.type = set("headerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def headerRefFunction1(value: /* instance */ HTMLButtonElement | Null => Unit): this.type = set("headerRef", js.Any.fromFunction1(value))
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
     def headerRef(value: Ref[HTMLButtonElement]): this.type = set("headerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def headerRefFunction1(value: /* instance */ HTMLButtonElement | Null => Unit): this.type = set("headerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def headerRefNull: this.type = set("headerRef", null)
+    
+    @scala.inline
+    def headerRefRefObject(value: ReactRef[HTMLButtonElement]): this.type = set("headerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def headerStyle(value: CSSProperties): this.type = set("headerStyle", value.asInstanceOf[js.Any])
@@ -684,10 +691,4 @@ object ExpansionPanel {
   }
   
   def withProps(p: ExpansionPanelProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(expanded: Boolean, id: String, onExpandClick: SyntheticMouseEvent[HTMLButtonElement] => Unit): Builder = {
-    val __props = js.Dynamic.literal(expanded = expanded.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onExpandClick = js.Any.fromFunction1(onExpandClick))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ExpansionPanelProps with RefAttributes[HTMLDivElement]]))
-  }
 }

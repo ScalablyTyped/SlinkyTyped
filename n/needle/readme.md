@@ -11,8 +11,8 @@ The leanest and most handsome HTTP client in the Nodelands.
 | Full name          | needle |
 | Keywords           | http, https, simple, request, client, multipart, upload, proxy, deflate, timeout, charset, iconv, cookie, redirect |
 | # releases         | 11 |
-| # dependents       | 492 |
-| # downloads        | 247936362 |
+| # dependents       | 594 |
+| # downloads        | 283039997 |
 | # stars            | 52 |
 
 ## Links

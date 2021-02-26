@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.`portrait-primary`
   - typingsSlinky.std.stdStrings.`portrait-secondary`
 */
-trait OrientationLockType extends js.Object
+trait OrientationLockType extends StObject
 object OrientationLockType {
   
   @scala.inline

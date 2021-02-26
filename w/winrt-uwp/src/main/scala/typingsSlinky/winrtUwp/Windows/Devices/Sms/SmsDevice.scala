@@ -5,13 +5,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithOperation
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.smsdevicestatuschanged
 import typingsSlinky.winrtUwp.winrtUwpStrings.smsmessagereceived
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Supports the operation of a mobile broadband SMS device. */
 @js.native
-trait SmsDevice extends js.Object {
+trait SmsDevice extends StObject {
   
   /** Returns the phone number associated with the SMS device. The phone number can be used to associate incoming messages with the account and possibly an external storage mechanism such as an account inbox. */
   var accountPhoneNumber: String = js.native

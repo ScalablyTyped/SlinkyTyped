@@ -4,15 +4,22 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeActionsheet.mod.ActionSheetCustomProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ActionSheetCustom {
   
+  @scala.inline
+  def apply(onPress: Double => Unit, options: js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(onPress = js.Any.fromFunction1(onPress), options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ActionSheetCustomProps]))
+  }
+  
   @JSImport("react-native-actionsheet", "ActionSheetCustom")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,17 +45,11 @@ object ActionSheetCustom {
     def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ActionSheetCustomProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onPress: Double => Unit, options: js.Array[ReactElement]): Builder = {
-    val __props = js.Dynamic.literal(onPress = js.Any.fromFunction1(onPress), options = options.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ActionSheetCustomProps]))
-  }
 }

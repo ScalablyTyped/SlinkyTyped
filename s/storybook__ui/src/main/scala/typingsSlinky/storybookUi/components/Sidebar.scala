@@ -1,24 +1,18 @@
 package typingsSlinky.storybookUi.components
 
-import typingsSlinky.storybookUi.sidebarMod.SidebarProps
+import slinky.web.html.`*`.tag
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Sidebar {
   
-  @JSImport("@storybook/ui/dist/components/sidebar/Sidebar", JSImport.Default)
+  @JSImport("@storybook/ui/dist/containers/sidebar", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
-  def withProps(p: SidebarProps): SharedBuilder_SidebarProps_1274792856 = new SharedBuilder_SidebarProps_1274792856(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Sidebar.type): typingsSlinky.StBuildingComponent.Default[tag.type, js.Object] = new typingsSlinky.StBuildingComponent.Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
   
-  @scala.inline
-  def apply(
-    menu: js.Array[_],
-    stories: /* import warning: importer.ImportType#apply Failed type conversion: @storybook/api.@storybook/api.State['StoriesHash'] */ js.Any
-  ): SharedBuilder_SidebarProps_1274792856 = {
-    val __props = js.Dynamic.literal(menu = menu.asInstanceOf[js.Any], stories = stories.asInstanceOf[js.Any])
-    new SharedBuilder_SidebarProps_1274792856(js.Array(this.component, __props.asInstanceOf[SidebarProps]))
-  }
+  def withProps(p: js.Object): typingsSlinky.StBuildingComponent.Default[tag.type, js.Object] = new typingsSlinky.StBuildingComponent.Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

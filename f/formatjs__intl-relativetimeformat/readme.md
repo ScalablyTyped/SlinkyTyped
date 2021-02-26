@@ -10,9 +10,9 @@ Formats JavaScript dates to relative time strings.
 | ------------------ | :-------------: |
 | Full name          | @formatjs/intl-relativetimeformat |
 | Keywords           | intl, i18n, relative, time, moment, format, date |
-| # releases         | 54 |
-| # dependents       | 18 |
-| # downloads        | 2070921 |
+| # releases         | 117 |
+| # dependents       | 61 |
+| # downloads        | 21770374 |
 | # stars            | 0 |
 
 ## Links

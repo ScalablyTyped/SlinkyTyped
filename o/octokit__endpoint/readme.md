@@ -10,9 +10,9 @@ Turns REST API endpoints into generic request options
 | ------------------ | :-------------: |
 | Full name          | @octokit/endpoint |
 | Keywords           | octokit, github, api, rest |
-| # releases         | 52 |
-| # dependents       | 3 |
-| # downloads        | 32717729 |
+| # releases         | 51 |
+| # dependents       | 4 |
+| # downloads        | 117361277 |
 | # stars            | 0 |
 
 ## Links

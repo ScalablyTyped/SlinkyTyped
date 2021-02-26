@@ -1,12 +1,13 @@
 package typingsSlinky.iscroll
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IScroll extends js.Object {
+trait IScroll extends StObject {
   
   def destroy(): Unit = js.native
   

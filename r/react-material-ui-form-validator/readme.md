@@ -4,15 +4,15 @@
 Typings are for version 2.1
 
 ## Library description:
-Simple validator for forms designed with material-ui v1/v3 components.
+Simple validator for forms designed with material-ui v1/v3/v4 components.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | react-material-ui-form-validator |
 | Keywords           | material-ui, form, validation |
-| # releases         | 24 |
-| # dependents       | 5 |
-| # downloads        | 515830 |
+| # releases         | 10 |
+| # dependents       | 16 |
+| # downloads        | 831690 |
 | # stars            | 3 |
 
 ## Links

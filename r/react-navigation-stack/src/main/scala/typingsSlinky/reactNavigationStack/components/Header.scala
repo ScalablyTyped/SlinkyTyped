@@ -14,26 +14,12 @@ import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderInterpolated
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderInterpolationProps
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderProps
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackNavigationProp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Header {
-  
-  @JSImport("react-navigation-stack", "Header")
-  @js.native
-  object component extends js.Object
-  
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
-    
-    @scala.inline
-    def previous(value: Scene[Route[String]]): this.type = set("previous", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: StackHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -47,4 +33,19 @@ object Header {
     val __props = js.Dynamic.literal(insets = insets.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any], styleInterpolator = js.Any.fromFunction1(styleInterpolator))
     new Builder(js.Array(this.component, __props.asInstanceOf[StackHeaderProps]))
   }
+  
+  @JSImport("react-navigation-stack", "Header")
+  @js.native
+  val component: js.Object = js.native
+  
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    
+    @scala.inline
+    def previous(value: Scene[Route[String]]): this.type = set("previous", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: StackHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

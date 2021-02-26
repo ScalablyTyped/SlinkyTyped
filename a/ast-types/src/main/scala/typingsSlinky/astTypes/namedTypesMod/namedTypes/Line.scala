@@ -1,9 +1,9 @@
 package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.PrintableKind
 import typingsSlinky.astTypes.typesMod.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,6 +17,16 @@ trait Line
   
   var `type`: typingsSlinky.astTypes.astTypesStrings.Line = js.native
 }
-@JSImport("ast-types/gen/namedTypes", "namedTypes.Line")
-@js.native
-object Line extends TopLevel[Type[Line]]
+object Line {
+  
+  @JSImport("ast-types/gen/namedTypes", "namedTypes.Line")
+  @js.native
+  val ^ : Type[Line] = js.native
+  
+  @scala.inline
+  implicit class LineMutableBuilder[Self <: Line] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setType(value: typingsSlinky.astTypes.astTypesStrings.Line): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+  }
+}

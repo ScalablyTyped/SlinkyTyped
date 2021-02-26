@@ -1,13 +1,16 @@
 package typingsSlinky.jqueryGalleria
 
 import typingsSlinky.jqueryGalleria.GalleriaJS.GalleriaFactory
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
-  var Galleria: GalleriaFactory = js.native
+  @JSGlobal("Galleria")
+  @js.native
+  def Galleria: GalleriaFactory = js.native
+  @scala.inline
+  def Galleria_=(x: GalleriaFactory): Unit = js.Dynamic.global.updateDynamic("Galleria")(x.asInstanceOf[js.Any])
 }

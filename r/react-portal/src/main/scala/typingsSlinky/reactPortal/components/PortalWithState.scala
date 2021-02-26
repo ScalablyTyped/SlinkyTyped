@@ -6,15 +6,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactPortal.mod.PortalFunctionParams
 import typingsSlinky.reactPortal.mod.PortalWithStateProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PortalWithState {
   
+  @scala.inline
+  def apply(children: PortalFunctionParams => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[PortalWithStateProps]))
+  }
+  
   @JSImport("react-portal", "PortalWithState")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -47,10 +54,4 @@ object PortalWithState {
   }
   
   def withProps(p: PortalWithStateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: PortalFunctionParams => ReactElement): Builder = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
-    new Builder(js.Array(this.component, __props.asInstanceOf[PortalWithStateProps]))
-  }
 }

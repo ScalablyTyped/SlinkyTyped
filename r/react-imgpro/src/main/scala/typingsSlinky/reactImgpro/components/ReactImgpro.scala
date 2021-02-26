@@ -10,15 +10,22 @@ import typingsSlinky.reactImgpro.mod.ReactImgpro.ProcessImageProps
 import typingsSlinky.reactImgpro.mod.ReactImgpro.Shape
 import typingsSlinky.reactImgpro.mod.ReactImgpro.Size
 import typingsSlinky.reactImgpro.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactImgpro {
   
+  @scala.inline
+  def apply(image: String, onProcessFinish: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(image = image.asInstanceOf[js.Any], onProcessFinish = js.Any.fromFunction0(onProcessFinish))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ProcessImageProps]))
+  }
+  
   @JSImport("react-imgpro", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -102,10 +109,4 @@ object ReactImgpro {
   }
   
   def withProps(p: ProcessImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(image: String, onProcessFinish: () => Unit): Builder = {
-    val __props = js.Dynamic.literal(image = image.asInstanceOf[js.Any], onProcessFinish = js.Any.fromFunction0(onProcessFinish))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ProcessImageProps]))
-  }
 }

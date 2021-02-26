@@ -9,12 +9,13 @@ import typingsSlinky.elasticElasticsearch.transportMod.RequestBody
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DeleteAutoscalingPolicy_ extends js.Object {
+trait DeleteAutoscalingPolicy_ extends StObject {
   
   def deleteAutoscalingPolicy[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteAutoscalingPolicy[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native

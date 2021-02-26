@@ -4,18 +4,21 @@
 Typings are for version 0.2
 
 ## Library description:
-A Babel preset let you `import` application configs from **.env** file (zero runtime dependency)
+Load environment variables using import statements.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | react-native-dotenv |
-| Keywords           | dotenv, react-native |
-| # releases         | 3 |
-| # dependents       | 1 |
-| # downloads        | 824335 |
+| Keywords           | dotenv, babel-plugin, react, react-native |
+| # releases         | 14 |
+| # dependents       | 19 |
+| # downloads        | 2128545 |
 | # stars            | 1 |
 
 ## Links
+- [Homepage](https://github.com/goatandsheep/react-native-dotenv)
+- [Bugs](https://github.com/goatandsheep/react-native-dotenv/issues)
+- [Repository](https://github.com/goatandsheep/react-native-dotenv)
 - [Npm](https://www.npmjs.com/package/react-native-dotenv)
     
 

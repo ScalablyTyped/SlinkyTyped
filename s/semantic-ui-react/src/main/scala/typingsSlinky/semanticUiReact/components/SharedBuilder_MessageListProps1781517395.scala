@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.messageItemMod.MessageItemProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,8 +22,8 @@ class SharedBuilder_MessageListProps1781517395 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def itemsVarargs(value: SemanticShorthandItem[MessageItemProps]*): this.type = set("items", js.Array(value :_*))
+  def items(value: SemanticShorthandCollection[MessageItemProps]): this.type = set("items", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def items(value: SemanticShorthandCollection[MessageItemProps]): this.type = set("items", value.asInstanceOf[js.Any])
+  def itemsVarargs(value: SemanticShorthandItem[MessageItemProps]*): this.type = set("items", js.Array(value :_*))
 }

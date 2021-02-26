@@ -4,21 +4,21 @@
 Typings are for version 7.33.2
 
 ## Library description:
-Office UI Fabric utilities for building React components.
+Fluent UI React utilities for building components.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @uifabric/utilities |
 | Keywords           | - |
-| # releases         | 193 |
-| # dependents       | 24 |
-| # downloads        | 2466546 |
+| # releases         | 178 |
+| # dependents       | 48 |
+| # downloads        | 5171500 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/OfficeDev/office-ui-fabric-react#readme)
-- [Bugs](https://github.com/OfficeDev/office-ui-fabric-react/issues)
-- [Repository](https://github.com/OfficeDev/office-ui-fabric-react)
+- [Homepage](https://github.com/microsoft/fluentui#readme)
+- [Bugs](https://github.com/microsoft/fluentui/issues)
+- [Repository](https://github.com/microsoft/fluentui)
 - [Npm](https://www.npmjs.com/package/%40uifabric%2Futilities)
     
 

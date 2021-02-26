@@ -1,5 +1,6 @@
 package typingsSlinky.wechatMiniprogram
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,18 +9,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.wechatMiniprogram.IAPISuccessParam
   - typingsSlinky.wechatMiniprogram.IAPIError
 */
-trait IAPICompleteParam extends js.Object
+trait IAPICompleteParam extends StObject
 object IAPICompleteParam {
   
   @scala.inline
-  def IAPISuccessParam(errMsg: String): IAPICompleteParam = {
+  def IAPIError(errMsg: String): typingsSlinky.wechatMiniprogram.IAPIError = {
     val __obj = js.Dynamic.literal(errMsg = errMsg.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IAPICompleteParam]
+    __obj.asInstanceOf[typingsSlinky.wechatMiniprogram.IAPIError]
   }
   
   @scala.inline
-  def IAPIError(errMsg: String): IAPICompleteParam = {
+  def IAPISuccessParam(errMsg: String): typingsSlinky.wechatMiniprogram.IAPISuccessParam = {
     val __obj = js.Dynamic.literal(errMsg = errMsg.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IAPICompleteParam]
+    __obj.asInstanceOf[typingsSlinky.wechatMiniprogram.IAPISuccessParam]
   }
 }

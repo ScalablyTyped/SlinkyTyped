@@ -7,14 +7,14 @@ import typingsSlinky.pulumiAws.worklinkFleetMod.FleetState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws/worklink", JSImport.Namespace)
-@js.native
-object worklinkMod extends js.Object {
+object worklinkMod {
   
+  @JSImport("@pulumi/aws/worklink", "Fleet")
   @js.native
   class Fleet protected ()
     extends typingsSlinky.pulumiAws.worklinkFleetMod.Fleet {
@@ -31,8 +31,7 @@ object worklinkMod extends js.Object {
     def this(name: String, args: FleetArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object Fleet extends js.Object {
+  object Fleet {
     
     /**
       * Get an existing Fleet resource's state with the given name, ID, and optional extra
@@ -43,18 +42,29 @@ object worklinkMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/worklink", "Fleet.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.worklinkFleetMod.Fleet = js.native
+    @JSImport("@pulumi/aws/worklink", "Fleet.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.worklinkFleetMod.Fleet = js.native
+    @JSImport("@pulumi/aws/worklink", "Fleet.get")
+    @js.native
     def get(name: String, id: Input[ID], state: FleetState): typingsSlinky.pulumiAws.worklinkFleetMod.Fleet = js.native
+    @JSImport("@pulumi/aws/worklink", "Fleet.get")
+    @js.native
     def get(name: String, id: Input[ID], state: FleetState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.worklinkFleetMod.Fleet = js.native
     
     /**
       * Returns true if the given object is an instance of Fleet.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/worklink", "Fleet.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/worklink/fleet.Fleet */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/worklink", "WebsiteCertificateAuthorityAssociation")
   @js.native
   class WebsiteCertificateAuthorityAssociation protected ()
     extends typingsSlinky.pulumiAws.websiteCertificateAuthorityAssociationMod.WebsiteCertificateAuthorityAssociation {
@@ -69,8 +79,7 @@ object worklinkMod extends js.Object {
     def this(name: String, args: WebsiteCertificateAuthorityAssociationArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object WebsiteCertificateAuthorityAssociation extends js.Object {
+  object WebsiteCertificateAuthorityAssociation {
     
     /**
       * Get an existing WebsiteCertificateAuthorityAssociation resource's state with the given name, ID, and optional extra
@@ -81,9 +90,17 @@ object worklinkMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/worklink", "WebsiteCertificateAuthorityAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.websiteCertificateAuthorityAssociationMod.WebsiteCertificateAuthorityAssociation = js.native
+    @JSImport("@pulumi/aws/worklink", "WebsiteCertificateAuthorityAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.websiteCertificateAuthorityAssociationMod.WebsiteCertificateAuthorityAssociation = js.native
+    @JSImport("@pulumi/aws/worklink", "WebsiteCertificateAuthorityAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID], state: WebsiteCertificateAuthorityAssociationState): typingsSlinky.pulumiAws.websiteCertificateAuthorityAssociationMod.WebsiteCertificateAuthorityAssociation = js.native
+    @JSImport("@pulumi/aws/worklink", "WebsiteCertificateAuthorityAssociation.get")
+    @js.native
     def get(
       name: String,
       id: Input[ID],
@@ -95,6 +112,8 @@ object worklinkMod extends js.Object {
       * Returns true if the given object is an instance of WebsiteCertificateAuthorityAssociation.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/worklink", "WebsiteCertificateAuthorityAssociation.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/worklink/websiteCertificateAuthorityAssociation.WebsiteCertificateAuthorityAssociation */ Boolean = js.native
   }
 }

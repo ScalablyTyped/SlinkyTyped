@@ -1,6 +1,7 @@
 package typingsSlinky.typescriptServices.mod
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,11 +16,11 @@ class PositionedElement protected ()
     fullStart: Double
   ) = this()
 }
-/* static members */
-@JSImport("typescript-services", "PositionedElement")
-@js.native
-object PositionedElement extends js.Object {
+object PositionedElement {
   
+  /* static member */
+  @JSImport("typescript-services", "PositionedElement.create")
+  @js.native
   def create(
     parent: typingsSlinky.typescriptServices.TypeScript.PositionedElement,
     element: ISyntaxElement,

@@ -2,6 +2,7 @@ package typingsSlinky.grammarkdown.grammarkdownMod
 
 import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.prex.mod.CancellationToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,12 +29,18 @@ class SyncHost () extends HostBase {
   var writeFileSyncCallback: js.Any = js.native
 }
 /* static members */
-@JSImport("grammarkdown/dist/grammarkdown", "SyncHost")
-@js.native
-object SyncHost extends js.Object {
+object SyncHost {
   
+  @JSImport("grammarkdown/dist/grammarkdown", "SyncHost.forFile")
+  @js.native
   def forFile(content: String): SyncSingleFileHost = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "SyncHost.forFile")
+  @js.native
   def forFile(content: String, file: js.UndefOr[scala.Nothing], hostFallback: SyncHost): SyncSingleFileHost = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "SyncHost.forFile")
+  @js.native
   def forFile(content: String, file: String): SyncSingleFileHost = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "SyncHost.forFile")
+  @js.native
   def forFile(content: String, file: String, hostFallback: SyncHost): SyncSingleFileHost = js.native
 }

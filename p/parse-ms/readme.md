@@ -10,9 +10,9 @@ Parse milliseconds into an object
 | ------------------ | :-------------: |
 | Full name          | parse-ms |
 | Keywords           | browser, parse, time, ms, milliseconds, microseconds, nanoseconds, duration, period, range, interval |
-| # releases         | 3 |
-| # dependents       | 23 |
-| # downloads        | 33770834 |
+| # releases         | 2 |
+| # dependents       | 50 |
+| # downloads        | 57598187 |
 | # stars            | 4 |
 
 ## Links

@@ -3,13 +3,14 @@ package typingsSlinky.mangopay2NodejsSdk.mod
 import typingsSlinky.mangopay2NodejsSdk.mod.hook.CreateHook
 import typingsSlinky.mangopay2NodejsSdk.mod.hook.HookData
 import typingsSlinky.mangopay2NodejsSdk.mod.hook.UpdateHook
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mangopay2-nodejs-sdk", "Hooks")
 @js.native
-class Hooks () extends js.Object {
+class Hooks () extends StObject {
   
   /**
     * Create new hook

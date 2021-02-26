@@ -4,13 +4,14 @@ import typingsSlinky.gaxios.commonMod.GaxiosPromise
 import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
 import typingsSlinky.googleapisCommon.apiMod.BodyResponseCallback
 import typingsSlinky.googleapisCommon.apiMod.MethodOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("googleapis/build/src/apis/tasks/v1", "tasks_v1.Resource$Tasks")
 @js.native
-class ResourceTasks protected () extends js.Object {
+class ResourceTasks protected () extends StObject {
   def this(context: APIRequestContext) = this()
   
   /**

@@ -6,14 +6,14 @@ import typingsSlinky.firebaseMessaging.internalDependenciesMod.FirebaseInternalD
 import typingsSlinky.firebaseMessaging.mod.FirebaseApp
 import typingsSlinky.firebaseMessagingTypes.mod.FirebaseMessaging
 import typingsSlinky.firebaseUtil.subscribeMod.Unsubscribe
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/messaging/dist/controllers/window-controller", JSImport.Namespace)
-@js.native
-object windowControllerMod extends js.Object {
+object windowControllerMod {
   
+  @JSImport("@firebase/messaging/dist/controllers/window-controller", "WindowController")
   @js.native
   class WindowController protected ()
     extends FirebaseMessaging

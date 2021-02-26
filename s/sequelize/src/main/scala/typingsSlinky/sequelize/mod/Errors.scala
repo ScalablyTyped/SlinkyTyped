@@ -1,5 +1,6 @@
 package typingsSlinky.sequelize.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * base JS error object.
   */
 @js.native
-trait Errors extends js.Object {
+trait Errors extends StObject {
   
   def AccessDeniedError(): js.Error = js.native
   def AccessDeniedError(message: String): js.Error = js.native

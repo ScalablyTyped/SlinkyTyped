@@ -9,15 +9,31 @@ import typingsSlinky.blueprintjsTable.rectMod.Rect
 import typingsSlinky.blueprintjsTable.renderModeMod.RenderMode.BATCH
 import typingsSlinky.blueprintjsTable.renderModeMod.RenderMode.NONE
 import typingsSlinky.blueprintjsTable.tableBodyCellsMod.ITableBodyCellsProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TableBodyCells {
   
+  @scala.inline
+  def apply(
+    cellRenderer: (/* rowIndex */ Double, /* columnIndex */ Double) => ReactElement,
+    columnIndexEnd: Double,
+    columnIndexStart: Double,
+    grid: Grid,
+    loading: Boolean,
+    rowIndexEnd: Double,
+    rowIndexStart: Double,
+    viewportRect: Rect
+  ): Builder = {
+    val __props = js.Dynamic.literal(cellRenderer = js.Any.fromFunction2(cellRenderer), columnIndexEnd = columnIndexEnd.asInstanceOf[js.Any], columnIndexStart = columnIndexStart.asInstanceOf[js.Any], grid = grid.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any], rowIndexEnd = rowIndexEnd.asInstanceOf[js.Any], rowIndexStart = rowIndexStart.asInstanceOf[js.Any], viewportRect = viewportRect.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITableBodyCellsProps]))
+  }
+  
   @JSImport("@blueprintjs/table/lib/esm/tableBodyCells", "TableBodyCells")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,19 +54,4 @@ object TableBodyCells {
   }
   
   def withProps(p: ITableBodyCellsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    cellRenderer: (/* rowIndex */ Double, /* columnIndex */ Double) => ReactElement,
-    columnIndexEnd: Double,
-    columnIndexStart: Double,
-    grid: Grid,
-    loading: Boolean,
-    rowIndexEnd: Double,
-    rowIndexStart: Double,
-    viewportRect: Rect
-  ): Builder = {
-    val __props = js.Dynamic.literal(cellRenderer = js.Any.fromFunction2(cellRenderer), columnIndexEnd = columnIndexEnd.asInstanceOf[js.Any], columnIndexStart = columnIndexStart.asInstanceOf[js.Any], grid = grid.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any], rowIndexEnd = rowIndexEnd.asInstanceOf[js.Any], rowIndexStart = rowIndexStart.asInstanceOf[js.Any], viewportRect = viewportRect.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ITableBodyCellsProps]))
-  }
 }

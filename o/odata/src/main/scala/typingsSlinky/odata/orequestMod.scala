@@ -4,16 +4,16 @@ import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
 import org.scalajs.dom.experimental.URL
 import typingsSlinky.odata.odataQueryMod.OdataQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("odata/dist/types/ORequest", JSImport.Namespace)
-@js.native
-object orequestMod extends js.Object {
+object orequestMod {
   
+  @JSImport("odata/dist/types/ORequest", "ORequest")
   @js.native
-  class ORequest protected () extends js.Object {
+  class ORequest protected () extends StObject {
     def this(url: String, config: RequestInit) = this()
     def this(url: URL, config: RequestInit) = this()
     

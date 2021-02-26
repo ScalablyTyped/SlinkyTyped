@@ -1,5 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @param [halfExtents] - Half the distance across the box in each axis. The constructor takes a reference of this parameter.
   */
 @js.native
-trait BoundingBox extends js.Object {
+trait BoundingBox extends StObject {
   
   /**
     * Combines two bounding boxes into one, enclosing both.

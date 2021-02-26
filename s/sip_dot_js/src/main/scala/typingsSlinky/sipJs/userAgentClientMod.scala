@@ -13,14 +13,14 @@ import typingsSlinky.sipJs.outgoingRequestMod.OutgoingRequestDelegate
 import typingsSlinky.sipJs.transactionUserMod.ClientTransactionUser
 import typingsSlinky.sipJs.transactionsMod.ClientTransaction
 import typingsSlinky.sipJs.userAgentCoreMod.UserAgentCore
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/core/user-agents/user-agent-client", JSImport.Namespace)
-@js.native
-object userAgentClientMod extends js.Object {
+object userAgentClientMod {
   
+  @JSImport("sip.js/lib/core/user-agents/user-agent-client", "UserAgentClient")
   @js.native
   class UserAgentClient protected () extends OutgoingRequest {
     def this(

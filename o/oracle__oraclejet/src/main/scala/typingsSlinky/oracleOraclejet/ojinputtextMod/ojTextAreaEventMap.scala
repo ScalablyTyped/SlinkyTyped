@@ -16,6 +16,7 @@ import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -158,30 +159,18 @@ object ojTextAreaEventMap {
   }
   
   @scala.inline
-  implicit class ojTextAreaEventMapOps[Self <: ojTextAreaEventMap] (val x: Self) extends AnyVal {
+  implicit class ojTextAreaEventMapMutableBuilder[Self <: ojTextAreaEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setConverterChanged(value: CustomEvent): Self = StObject.set(x, "converterChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setOjAnimateEnd(value: CustomEvent): Self = StObject.set(x, "ojAnimateEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setOjAnimateStart(value: CustomEvent): Self = StObject.set(x, "ojAnimateStart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setConverterChanged(value: CustomEvent): Self = this.set("converterChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOjAnimateEnd(value: CustomEvent): Self = this.set("ojAnimateEnd", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOjAnimateStart(value: CustomEvent): Self = this.set("ojAnimateStart", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRowsChanged(value: CustomEvent): Self = this.set("rowsChanged", value.asInstanceOf[js.Any])
+    def setRowsChanged(value: CustomEvent): Self = StObject.set(x, "rowsChanged", value.asInstanceOf[js.Any])
   }
 }

@@ -1,18 +1,20 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.igtvBrowseFeedResponseMod.IgtvBrowseFeedResponseBrowseItemsItem
 import typingsSlinky.instagramPrivateApi.igtvBrowseFeedResponseMod.IgtvBrowseFeedResponseRootObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/igtv.browse.feed", JSImport.Namespace)
-@js.native
-object igtvBrowseFeedMod extends js.Object {
+object igtvBrowseFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/igtv.browse.feed", "IgtvBrowseFeed")
   @js.native
-  class IgtvBrowseFeed () extends Feed[IgtvBrowseFeedResponseRootObject, IgtvBrowseFeedResponseBrowseItemsItem] {
+  class IgtvBrowseFeed protected () extends Feed[IgtvBrowseFeedResponseRootObject, IgtvBrowseFeedResponseBrowseItemsItem] {
+    def this(client: IgApiClient) = this()
     
     var isPrefetch: Boolean = js.native
     

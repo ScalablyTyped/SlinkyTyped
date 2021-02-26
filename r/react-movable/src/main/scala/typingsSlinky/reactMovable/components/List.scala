@@ -10,15 +10,31 @@ import typingsSlinky.reactMovable.typesMod.IVoiceover
 import typingsSlinky.reactMovable.typesMod.OnChangeMeta
 import typingsSlinky.reactMovable.typesMod.RenderItemParams
 import typingsSlinky.reactMovable.typesMod.RenderListParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object List {
   
+  @scala.inline
+  def apply[Value](
+    lockVertically: Boolean,
+    onChange: OnChangeMeta => Unit,
+    removableByMove: Boolean,
+    renderItem: RenderItemParams[Value] => ReactElement,
+    renderList: RenderListParams => ReactElement,
+    transitionDuration: Double,
+    values: js.Array[Value],
+    voiceover: IVoiceover
+  ): Builder[Value] = {
+    val __props = js.Dynamic.literal(lockVertically = lockVertically.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), removableByMove = removableByMove.asInstanceOf[js.Any], renderItem = js.Any.fromFunction1(renderItem), renderList = js.Any.fromFunction1(renderList), transitionDuration = transitionDuration.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any], voiceover = voiceover.asInstanceOf[js.Any])
+    new Builder[Value](js.Array(this.component, __props.asInstanceOf[IProps[Value]]))
+  }
+  
   @JSImport("react-movable", "List")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[Value] (val args: js.Array[js.Any])
@@ -36,19 +52,4 @@ object List {
   }
   
   def withProps[Value](p: IProps[Value]): Builder[Value] = new Builder[Value](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[Value](
-    lockVertically: Boolean,
-    onChange: OnChangeMeta => Unit,
-    removableByMove: Boolean,
-    renderItem: RenderItemParams[Value] => ReactElement,
-    renderList: RenderListParams => ReactElement,
-    transitionDuration: Double,
-    values: js.Array[Value],
-    voiceover: IVoiceover
-  ): Builder[Value] = {
-    val __props = js.Dynamic.literal(lockVertically = lockVertically.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), removableByMove = removableByMove.asInstanceOf[js.Any], renderItem = js.Any.fromFunction1(renderItem), renderList = js.Any.fromFunction1(renderList), transitionDuration = transitionDuration.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any], voiceover = voiceover.asInstanceOf[js.Any])
-    new Builder[Value](js.Array(this.component, __props.asInstanceOf[IProps[Value]]))
-  }
 }

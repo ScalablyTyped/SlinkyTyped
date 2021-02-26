@@ -10,9 +10,9 @@ Feature flags/toggles for Ember apps
 | ------------------ | :-------------: |
 | Full name          | ember-feature-flags |
 | Keywords           | ember-addon, feature-flag, feature-toggle, features-switch |
-| # releases         | 7 |
-| # dependents       | 2 |
-| # downloads        | 371305 |
+| # releases         | 2 |
+| # dependents       | 3 |
+| # downloads        | 419262 |
 | # stars            | 9 |
 
 ## Links

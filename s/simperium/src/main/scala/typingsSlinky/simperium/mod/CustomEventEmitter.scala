@@ -25,6 +25,7 @@ import typingsSlinky.simperium.simperiumStrings.stopPropagation
 import typingsSlinky.simperium.simperiumStrings.target
 import typingsSlinky.simperium.simperiumStrings.timeStamp
 import typingsSlinky.std.Parameters
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,12 +1,13 @@
 package typingsSlinky.mfiles
 
 import typingsSlinky.mfiles.MFiles.MFBuiltInObjectType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultClassGroupOperationsAsync extends js.Object {
+trait IVaultClassGroupOperationsAsync extends StObject {
   
   def AddClassGroup(ClassGroup: IClassGroup): Unit = js.native
   def AddClassGroup(

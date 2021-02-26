@@ -1,5 +1,6 @@
 package typingsSlinky.jsforce.describeResultMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jsforce.jsforceStrings.urnColonSearchLayoutButtonsDisplayed
   - typingsSlinky.jsforce.jsforceStrings.urnColonSearchLayoutFieldsDisplayed
 */
-trait SOAPType extends js.Object
+trait SOAPType extends StObject
 object SOAPType {
   
   @scala.inline

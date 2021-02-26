@@ -2,6 +2,7 @@ package typingsSlinky.ssh2.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.ssh2.ssh2Strings.abort
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

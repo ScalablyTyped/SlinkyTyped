@@ -8,13 +8,18 @@ import typingsSlinky.antvGBase.mod.Base
 import typingsSlinky.antvGBase.typesMod.BBox
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/abstract/component", JSImport.Namespace)
-@js.native
-object componentMod extends js.Object {
+object componentMod {
+  
+  @JSImport("@antv/component/lib/abstract/component", JSImport.Default)
+  @js.native
+  abstract class default[T /* <: ComponentCfg */] protected () extends Component[T] {
+    def this(cfg: T) = this()
+  }
   
   @js.native
   trait Component[T /* <: ComponentCfg */]
@@ -101,10 +106,5 @@ object componentMod extends js.Object {
     def update(cfg: Partial[T]): Unit = js.native
     
     /* protected */ def updateInner(cfg: Partial[T]): Unit = js.native
-  }
-  
-  @js.native
-  abstract class default[T /* <: ComponentCfg */] protected () extends Component[T] {
-    def this(cfg: T) = this()
   }
 }

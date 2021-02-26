@@ -10,9 +10,9 @@ Generate YouTube-like ids from numbers. Use Hashids when you do not want to expo
 | ------------------ | :-------------: |
 | Full name          | hashids |
 | Keywords           | hashids, hashid, hash, ids, youtube, bitly, obfuscate, encode, decode, encrypt, decrypt |
-| # releases         | 11 |
-| # dependents       | 166 |
-| # downloads        | 4854964 |
+| # releases         | 17 |
+| # dependents       | 190 |
+| # downloads        | 6968450 |
 | # stars            | 44 |
 
 ## Links

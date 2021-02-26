@@ -1,12 +1,13 @@
 package typingsSlinky.winrt.global.Windows.Storage
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Windows.Storage.ApplicationDataCreateDisposition")
 @js.native
-object ApplicationDataCreateDisposition extends js.Object {
+object ApplicationDataCreateDisposition extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Storage.ApplicationDataCreateDisposition with Double] = js.native

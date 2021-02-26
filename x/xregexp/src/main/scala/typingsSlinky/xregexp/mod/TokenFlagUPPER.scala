@@ -1,5 +1,6 @@
 package typingsSlinky.xregexp.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xregexp.xregexpStrings.Y
   - typingsSlinky.xregexp.xregexpStrings.Z
 */
-trait TokenFlagUPPER extends js.Object
+trait TokenFlagUPPER extends StObject
 object TokenFlagUPPER {
   
   @scala.inline

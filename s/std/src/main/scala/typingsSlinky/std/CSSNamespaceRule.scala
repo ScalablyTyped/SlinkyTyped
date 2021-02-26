@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,31 +31,19 @@ object CSSNamespaceRule {
     namespaceURI: java.lang.String,
     prefix: java.lang.String,
     `type`: Double
-  ): CSSNamespaceRule = {
+  ): org.scalajs.dom.raw.CSSNamespaceRule = {
     val __obj = js.Dynamic.literal(CHARSET_RULE = CHARSET_RULE.asInstanceOf[js.Any], FONT_FACE_RULE = FONT_FACE_RULE.asInstanceOf[js.Any], IMPORT_RULE = IMPORT_RULE.asInstanceOf[js.Any], KEYFRAMES_RULE = KEYFRAMES_RULE.asInstanceOf[js.Any], KEYFRAME_RULE = KEYFRAME_RULE.asInstanceOf[js.Any], MEDIA_RULE = MEDIA_RULE.asInstanceOf[js.Any], NAMESPACE_RULE = NAMESPACE_RULE.asInstanceOf[js.Any], PAGE_RULE = PAGE_RULE.asInstanceOf[js.Any], STYLE_RULE = STYLE_RULE.asInstanceOf[js.Any], SUPPORTS_RULE = SUPPORTS_RULE.asInstanceOf[js.Any], cssText = cssText.asInstanceOf[js.Any], namespaceURI = namespaceURI.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CSSNamespaceRule]
+    __obj.asInstanceOf[org.scalajs.dom.raw.CSSNamespaceRule]
   }
   
   @scala.inline
-  implicit class CSSNamespaceRuleOps[Self <: org.scalajs.dom.raw.CSSNamespaceRule] (val x: Self) extends AnyVal {
+  implicit class CSSNamespaceRuleMutableBuilder[Self <: org.scalajs.dom.raw.CSSNamespaceRule] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setNamespaceURI(value: java.lang.String): Self = StObject.set(x, "namespaceURI", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setNamespaceURI(value: java.lang.String): Self = this.set("namespaceURI", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPrefix(value: java.lang.String): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    def setPrefix(value: java.lang.String): Self = StObject.set(x, "prefix", value.asInstanceOf[js.Any])
   }
 }

@@ -10,9 +10,9 @@ Fastest, most accurate & effecient user agent string parser, uses Browserscope's
 | ------------------ | :-------------: |
 | Full name          | useragent |
 | Keywords           | agent, browser, browserscope, os, parse, parser, ua, ua-parse, ua-parser, user agent, user, user-agent, useragent, version |
-| # releases         | 2 |
-| # dependents       | 242 |
-| # downloads        | 79717174 |
+| # releases         | 0 |
+| # dependents       | 265 |
+| # downloads        | 80992787 |
 | # stars            | 45 |
 
 ## Links

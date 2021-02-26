@@ -3,12 +3,13 @@ package typingsSlinky.materializeCss.M
 import typingsSlinky.materializeCss.materializeCssStrings.`pin-bottom`
 import typingsSlinky.materializeCss.materializeCssStrings.`pin-top`
 import typingsSlinky.materializeCss.materializeCssStrings.pinned
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PushpinOptions extends js.Object {
+trait PushpinOptions extends StObject {
   
   /**
     * The distance in pixels from the top of the page where the elements stops being fixed

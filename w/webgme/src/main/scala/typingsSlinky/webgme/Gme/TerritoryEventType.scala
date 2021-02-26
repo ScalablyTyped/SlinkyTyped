@@ -1,5 +1,6 @@
 package typingsSlinky.webgme.Gme
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webgme.webgmeStrings.complete
   - typingsSlinky.webgme.webgmeStrings.incomplete
 */
-trait TerritoryEventType extends js.Object
+trait TerritoryEventType extends StObject
 object TerritoryEventType {
   
   @scala.inline

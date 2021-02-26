@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactJsPagination.mod.ReactJsPaginationProps
 import typingsSlinky.reactJsPagination.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactJsPagination {
   
+  @scala.inline
+  def apply(activePage: Double, onChange: Double => Unit, totalItemsCount: Double): Builder = {
+    val __props = js.Dynamic.literal(activePage = activePage.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), totalItemsCount = totalItemsCount.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactJsPaginationProps]))
+  }
+  
   @JSImport("react-js-pagination", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +37,10 @@ object ReactJsPagination {
     def disabledClass(value: String): this.type = set("disabledClass", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def firstPageTextReactElement(value: ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
+    def firstPageText(value: String | ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def firstPageText(value: String | ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
+    def firstPageTextReactElement(value: ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def getPageUrl(value: /* pageNumber */ Double => String): this.type = set("getPageUrl", js.Any.fromFunction1(value))
@@ -69,10 +76,10 @@ object ReactJsPagination {
     def itemsCountPerPage(value: Double): this.type = set("itemsCountPerPage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lastPageTextReactElement(value: ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
+    def lastPageText(value: String | ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lastPageText(value: String | ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
+    def lastPageTextReactElement(value: ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def linkClass(value: String): this.type = set("linkClass", value.asInstanceOf[js.Any])
@@ -90,26 +97,20 @@ object ReactJsPagination {
     def linkClassPrev(value: String): this.type = set("linkClassPrev", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextPageTextReactElement(value: ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
+    def nextPageText(value: String | ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextPageText(value: String | ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
+    def nextPageTextReactElement(value: ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def pageRangeDisplayed(value: Double): this.type = set("pageRangeDisplayed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prevPageTextReactElement(value: ReactElement): this.type = set("prevPageText", value.asInstanceOf[js.Any])
+    def prevPageText(value: String | ReactElement): this.type = set("prevPageText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prevPageText(value: String | ReactElement): this.type = set("prevPageText", value.asInstanceOf[js.Any])
+    def prevPageTextReactElement(value: ReactElement): this.type = set("prevPageText", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ReactJsPaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(activePage: Double, onChange: Double => Unit, totalItemsCount: Double): Builder = {
-    val __props = js.Dynamic.literal(activePage = activePage.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), totalItemsCount = totalItemsCount.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactJsPaginationProps]))
-  }
 }

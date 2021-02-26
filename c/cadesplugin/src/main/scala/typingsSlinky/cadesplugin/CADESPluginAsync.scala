@@ -16,6 +16,7 @@ import typingsSlinky.cadesplugin.cadespluginStrings.CAdESCOMDotHashedData
 import typingsSlinky.cadesplugin.cadespluginStrings.CAdESCOMDotRawSignature
 import typingsSlinky.cadesplugin.cadespluginStrings.CAdESCOMDotSignedXML
 import typingsSlinky.cadesplugin.cadespluginStrings.CAdESCOMDotStore
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

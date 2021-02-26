@@ -2,6 +2,7 @@ package typingsSlinky.stellarSdk.serverApiMod.ServerApi
 
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.Claimant
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.createClaimableBalance
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

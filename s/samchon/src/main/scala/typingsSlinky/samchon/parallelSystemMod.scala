@@ -6,14 +6,14 @@ import typingsSlinky.samchon.invokeHistoryMod.InvokeHistory
 import typingsSlinky.samchon.invokeMod.Invoke
 import typingsSlinky.samchon.parallelSystemArrayMod.ParallelSystemArray
 import typingsSlinky.sxml.mod.XML
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/parallel/ParallelSystem", JSImport.Namespace)
-@js.native
-object parallelSystemMod extends js.Object {
+object parallelSystemMod {
   
+  @JSImport("samchon/templates/parallel/ParallelSystem", "ParallelSystem")
   @js.native
   abstract class ParallelSystem protected () extends ExternalSystem {
     /**

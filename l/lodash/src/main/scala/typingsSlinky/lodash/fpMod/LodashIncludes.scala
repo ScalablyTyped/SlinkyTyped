@@ -3,12 +3,13 @@ package typingsSlinky.lodash.fpMod
 import typingsSlinky.lodash.mod.Dictionary
 import typingsSlinky.lodash.mod.NumericDictionary
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashIncludes extends js.Object {
+trait LodashIncludes extends StObject {
   
   def apply[T](target: T): Boolean = js.native
   def apply[T](target: T, collection: Dictionary[T]): Boolean = js.native

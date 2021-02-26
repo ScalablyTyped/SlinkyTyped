@@ -3,6 +3,7 @@ package typingsSlinky.webcl.WEBCL
 import typingsSlinky.webcl.webclNumbers.`0x0`
 import typingsSlinky.webcl.webclNumbers.`0x1`
 import typingsSlinky.webcl.webclNumbers.`0x2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webcl.webclNumbers.`0x1`
   - typingsSlinky.webcl.webclNumbers.`0x2`
 */
-trait DeviceMemCacheType extends js.Object
+trait DeviceMemCacheType extends StObject
 object DeviceMemCacheType {
   
   @scala.inline

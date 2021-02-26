@@ -3,17 +3,22 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.logoTypesMod.ILogoViewConfig
 import typingsSlinky.playable.logoTypesMod.ILogoViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/controls/logo/logo.view", JSImport.Namespace)
-@js.native
-object logoViewMod extends js.Object {
+object logoViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/controls/logo/logo.view", JSImport.Default)
+  @js.native
+  class default protected () extends LogoView {
+    def this(config: ILogoViewConfig) = this()
+  }
   
   @js.native
   trait LogoView
-    extends typingsSlinky.playable.stylableMod.default[ILogoViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[ILogoViewStyles] {
     
     @JSName("_$logoButton")
     var _$logoButton: js.Any = js.native
@@ -58,10 +63,5 @@ object logoViewMod extends js.Object {
     def showAsImage(): Unit = js.native
     
     def showAsInput(): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends LogoView {
-    def this(config: ILogoViewConfig) = this()
   }
 }

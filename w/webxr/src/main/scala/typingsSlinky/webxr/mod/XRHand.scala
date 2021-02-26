@@ -3,6 +3,7 @@ package typingsSlinky.webxr.mod
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.std.Iterable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

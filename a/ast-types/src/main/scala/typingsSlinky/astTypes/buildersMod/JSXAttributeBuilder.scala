@@ -8,12 +8,13 @@ import typingsSlinky.astTypes.kindsMod.JSXIdentifierKind
 import typingsSlinky.astTypes.kindsMod.JSXNamespacedNameKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXAttribute
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JSXAttributeBuilder extends js.Object {
+trait JSXAttributeBuilder extends StObject {
   
   def apply(name: JSXIdentifierKind): JSXAttribute = js.native
   def apply(name: JSXIdentifierKind, value: JSXElementKind): JSXAttribute = js.native

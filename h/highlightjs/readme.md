@@ -10,9 +10,9 @@ Syntax highlighting for the Web
 | ------------------ | :-------------: |
 | Full name          | highlightjs |
 | Keywords           | - |
-| # releases         | 3 |
-| # dependents       | 98 |
-| # downloads        | 764094 |
+| # releases         | 2 |
+| # dependents       | 109 |
+| # downloads        | 1138252 |
 | # stars            | 2 |
 
 ## Links

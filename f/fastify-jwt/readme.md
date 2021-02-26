@@ -10,9 +10,9 @@ JWT utils for Fastify
 | ------------------ | :-------------: |
 | Full name          | fastify-jwt |
 | Keywords           | jwt, json, token, jsonwebtoken, fastify |
-| # releases         | 27 |
-| # dependents       | 25 |
-| # downloads        | 272343 |
+| # releases         | 21 |
+| # dependents       | 29 |
+| # downloads        | 415872 |
 | # stars            | 0 |
 
 ## Links

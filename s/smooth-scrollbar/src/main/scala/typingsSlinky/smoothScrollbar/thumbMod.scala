@@ -1,14 +1,14 @@
 package typingsSlinky.smoothScrollbar
 
 import typingsSlinky.smoothScrollbar.directionMod.TrackDirection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("smooth-scrollbar/track/thumb", JSImport.Namespace)
-@js.native
-object thumbMod extends js.Object {
+object thumbMod {
   
+  @JSImport("smooth-scrollbar/track/thumb", "ScrollbarThumb")
   @js.native
   class ScrollbarThumb protected ()
     extends typingsSlinky.smoothScrollbar.trackMod.ScrollbarThumb {

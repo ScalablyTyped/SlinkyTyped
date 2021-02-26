@@ -4,14 +4,14 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.nodegit.mod.Index
 import typingsSlinky.nodegit.strArrayMod.Strarray
 import typingsSlinky.nodegit.treeMod.Tree
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("nodegit/checkout-options", JSImport.Namespace)
-@js.native
-object checkoutOptionsMod extends js.Object {
+object checkoutOptionsMod {
   
+  @JSImport("nodegit/checkout-options", "CheckoutOptions")
   @js.native
   class CheckoutOptions ()
     extends /* key */ StringDictionary[js.Any] {

@@ -2,6 +2,7 @@ package typingsSlinky.xrm.XrmEnum
 
 import typingsSlinky.xrm.xrmNumbers.`0`
 import typingsSlinky.xrm.xrmNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmNumbers.`0`
   - typingsSlinky.xrm.xrmNumbers.`1`
 */
-trait RelationshipType extends js.Object
+trait RelationshipType extends StObject
 object RelationshipType {
   
   @scala.inline

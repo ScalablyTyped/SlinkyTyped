@@ -4,15 +4,15 @@
 Typings are for version 2.7
 
 ## Library description:
-Twilio Video JavaScript library
+Twilio Video JavaScript Library
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | twilio-video |
 | Keywords           | twilio, webrtc, library, javascript, video, rooms |
 | # releases         | 41 |
-| # dependents       | 6 |
-| # downloads        | 670450 |
+| # dependents       | 15 |
+| # downloads        | 2540771 |
 | # stars            | 0 |
 
 ## Links

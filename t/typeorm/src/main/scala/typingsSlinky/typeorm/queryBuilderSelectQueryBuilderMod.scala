@@ -7,6 +7,7 @@ import typingsSlinky.typeorm.anon.Raw
 import typingsSlinky.typeorm.anon.`4`
 import typingsSlinky.typeorm.commonEntityTargetMod.EntityTarget
 import typingsSlinky.typeorm.commonObjectLiteralMod.ObjectLiteral
+import typingsSlinky.typeorm.connectionConnectionMod.Connection
 import typingsSlinky.typeorm.findOptionsOrderByConditionMod.OrderByCondition
 import typingsSlinky.typeorm.metadataEntityMetadataMod.EntityMetadata
 import typingsSlinky.typeorm.platformPlatformToolsMod.ReadStream
@@ -28,18 +29,27 @@ import typingsSlinky.typeorm.typeormStrings.pessimistic_partial_write
 import typingsSlinky.typeorm.typeormStrings.pessimistic_read
 import typingsSlinky.typeorm.typeormStrings.pessimistic_write
 import typingsSlinky.typeorm.typeormStrings.pessimistic_write_or_fail
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/query-builder/SelectQueryBuilder", JSImport.Namespace)
-@js.native
-object queryBuilderSelectQueryBuilderMod extends js.Object {
+object queryBuilderSelectQueryBuilderMod {
   
+  @JSImport("typeorm/query-builder/SelectQueryBuilder", "SelectQueryBuilder")
   @js.native
-  class SelectQueryBuilder[Entity] ()
+  class SelectQueryBuilder[Entity] protected ()
     extends QueryBuilder[Entity]
        with WhereExpression {
+    /**
+      * QueryBuilder can be initialized from given Connection and QueryRunner objects or from given other QueryBuilder.
+      */
+    def this(connection: Connection) = this()
+    /**
+      * QueryBuilder can be initialized from given Connection and QueryRunner objects or from given other QueryBuilder.
+      */
+    def this(queryBuilder: QueryBuilder[_]) = this()
+    def this(connection: Connection, queryRunner: QueryRunner) = this()
     
     /**
       * Specifies FROM which entity's table select/update/delete will be executed.
@@ -933,12 +943,12 @@ object queryBuilderSelectQueryBuilderMod extends js.Object {
       * Sets locking mode.
       */
     @JSName("setLock")
-    def setLock_optimistic(lockMode: optimistic, lockVersion: Double): this.type = js.native
+    def setLock_optimistic(lockMode: optimistic, lockVersion: js.Date): this.type = js.native
     /**
       * Sets locking mode.
       */
     @JSName("setLock")
-    def setLock_optimistic(lockMode: optimistic, lockVersion: js.Date): this.type = js.native
+    def setLock_optimistic(lockMode: optimistic, lockVersion: Double): this.type = js.native
     @JSName("setLock")
     def setLock_pessimisticpartialwrite(lockMode: pessimistic_partial_write): this.type = js.native
     /**

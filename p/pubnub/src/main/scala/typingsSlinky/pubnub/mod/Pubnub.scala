@@ -3,12 +3,13 @@ package typingsSlinky.pubnub.mod
 import typingsSlinky.pubnub.anon.DataMessageAction
 import typingsSlinky.pubnub.anon.GetAllChannelMetadata
 import typingsSlinky.pubnub.anon.`0`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Pubnub extends js.Object {
+trait Pubnub extends StObject {
   
   def addListener(params: ListenerParameters): Unit = js.native
   

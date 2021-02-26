@@ -1,12 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.ApplicationModel.Store
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides info about a license that is associated with an in-app product. */
 @js.native
-trait ProductLicense extends js.Object {
+trait ProductLicense extends StObject {
   
   /** Gets the current expiration date and time of the in-app product license. */
   var expirationDate: js.Date = js.native
@@ -29,30 +30,18 @@ object ProductLicense {
   }
   
   @scala.inline
-  implicit class ProductLicenseOps[Self <: ProductLicense] (val x: Self) extends AnyVal {
+  implicit class ProductLicenseMutableBuilder[Self <: ProductLicense] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setExpirationDate(value: js.Date): Self = StObject.set(x, "expirationDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setIsActive(value: Boolean): Self = StObject.set(x, "isActive", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setIsConsumable(value: Boolean): Self = StObject.set(x, "isConsumable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExpirationDate(value: js.Date): Self = this.set("expirationDate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIsActive(value: Boolean): Self = this.set("isActive", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIsConsumable(value: Boolean): Self = this.set("isConsumable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setProductId(value: String): Self = this.set("productId", value.asInstanceOf[js.Any])
+    def setProductId(value: String): Self = StObject.set(x, "productId", value.asInstanceOf[js.Any])
   }
 }

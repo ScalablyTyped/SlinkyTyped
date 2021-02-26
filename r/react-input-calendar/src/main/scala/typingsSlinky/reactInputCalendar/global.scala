@@ -1,24 +1,24 @@
 package typingsSlinky.reactInputCalendar
 
-import org.scalablytyped.runtime.Instantiable0
-import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendarProps
 import typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendarState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
-  @JSName("ReactInputCalendar")
-  var ReactInputCalendar_ : Instantiable0[ReactComponentClass[ReactInputCalendarProps]] = js.native
-  
+  /* was `typeof reactInputCalendar.ReactInputCalendar` */
+  @JSGlobal("ReactInputCalendar")
   @js.native
-  object reactInputCalendar extends js.Object {
+  class ReactInputCalendar_ ()
+    extends Component[ReactInputCalendarProps, ReactInputCalendarState, js.Any]
+  
+  object reactInputCalendar {
     
+    @JSGlobal("reactInputCalendar.ReactInputCalendar")
     @js.native
     class ReactInputCalendar ()
       extends Component[ReactInputCalendarProps, ReactInputCalendarState, js.Any]

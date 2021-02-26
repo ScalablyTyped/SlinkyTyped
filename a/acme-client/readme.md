@@ -11,8 +11,8 @@ Simple and unopinionated ACME client
 | Full name          | acme-client |
 | Keywords           | acme, client, lets, encrypt, acmev2, boulder |
 | # releases         | 14 |
-| # dependents       | 11 |
-| # downloads        | 16497 |
+| # dependents       | 21 |
+| # downloads        | 61177 |
 | # stars            | 0 |
 
 ## Links

@@ -10,9 +10,9 @@ Handsontable is a JavaScript Spreadsheet Component available for React, Angular 
 | ------------------ | :-------------: |
 | Full name          | handsontable |
 | Keywords           | data, grid, table, editor, grid-editor, data-grid, data-table, spreadsheet, excel, tabular-data, edit-cell, editable-table, data-spreadsheet |
-| # releases         | 30 |
-| # dependents       | 62 |
-| # downloads        | 1993283 |
+| # releases         | 19 |
+| # dependents       | 86 |
+| # downloads        | 2560278 |
 | # stars            | 5 |
 
 ## Links

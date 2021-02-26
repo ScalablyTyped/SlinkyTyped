@@ -2,14 +2,15 @@ package typingsSlinky.streamEach
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("stream-each", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("stream-each", JSImport.Namespace)
+  @js.native
   def apply(
     stream: ReadableStream,
     iterator: js.Function2[

@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.svgiconMod.SVGIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/VisibilityOffSVGIcon", JSImport.Namespace)
-@js.native
-object visibilityOffSVGIconMod extends js.Object {
+object visibilityOffSVGIconMod {
   
+  @JSImport("@react-md/material-icons/types/VisibilityOffSVGIcon", "VisibilityOffSVGIcon")
+  @js.native
   val VisibilityOffSVGIcon: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
 }

@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.attachments
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.list
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.preview
 import typingsSlinky.arcgisJsApi.esri.content.Content
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

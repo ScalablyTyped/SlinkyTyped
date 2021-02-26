@@ -3,17 +3,22 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.timeTypesMod.ITimeViewConfig
 import typingsSlinky.playable.timeTypesMod.ITimeViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/controls/time/time.view", JSImport.Namespace)
-@js.native
-object timeViewMod extends js.Object {
+object timeViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/controls/time/time.view", JSImport.Default)
+  @js.native
+  class default protected () extends TimeView {
+    def this(config: ITimeViewConfig) = this()
+  }
   
   @js.native
   trait TimeView
-    extends typingsSlinky.playable.stylableMod.default[ITimeViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[ITimeViewStyles] {
     
     @JSName("_$currentTime")
     var _$currentTime: js.Any = js.native
@@ -53,10 +58,5 @@ object timeViewMod extends js.Object {
     def show(): Unit = js.native
     
     def showDuration(): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends TimeView {
-    def this(config: ITimeViewConfig) = this()
   }
 }

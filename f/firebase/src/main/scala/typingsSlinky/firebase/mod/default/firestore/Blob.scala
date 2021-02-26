@@ -1,12 +1,13 @@
 package typingsSlinky.firebase.mod.default.firestore
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("firebase", "firestore.Blob")
+@JSImport("firebase", "default.firestore.Blob")
 @js.native
-class Blob protected () extends js.Object {
+class Blob protected () extends StObject {
   
   /**
     * Returns true if this `Blob` is equal to the provided one.
@@ -33,9 +34,7 @@ class Blob protected () extends js.Object {
   def toUint8Array(): js.typedarray.Uint8Array = js.native
 }
 /* static members */
-@JSImport("firebase", "firestore.Blob")
-@js.native
-object Blob extends js.Object {
+object Blob {
   
   /**
     * Creates a new Blob from the given Base64 string, converting it to
@@ -44,6 +43,8 @@ object Blob extends js.Object {
     * @param base64
     *   The Base64 string used to create the Blob object.
     */
+  @JSImport("firebase", "default.firestore.Blob.fromBase64String")
+  @js.native
   def fromBase64String(base64: String): typingsSlinky.firebase.mod.firebase.firestore.Blob = js.native
   
   /**
@@ -52,5 +53,7 @@ object Blob extends js.Object {
     * @param array
     *   The Uint8Array used to create the Blob object.
     */
+  @JSImport("firebase", "default.firestore.Blob.fromUint8Array")
+  @js.native
   def fromUint8Array(array: js.typedarray.Uint8Array): typingsSlinky.firebase.mod.firebase.firestore.Blob = js.native
 }

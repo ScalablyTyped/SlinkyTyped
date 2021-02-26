@@ -2,12 +2,13 @@ package typingsSlinky.stylus.mod.Stylus
 
 import typingsSlinky.stylus.mod.Stylus.Nodes.Expression
 import typingsSlinky.stylus.mod.Stylus.Nodes.Node
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Utils extends js.Object {
+trait Utils extends StObject {
   
   /**
     * Check if `path` looks absolute.

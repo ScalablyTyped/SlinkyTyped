@@ -1,11 +1,12 @@
 package typingsSlinky.awsSdk.medialiveMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DescribeInputDeviceThumbnailResponse extends js.Object {
+trait DescribeInputDeviceThumbnailResponse extends StObject {
   
   /**
     * The binary data for the thumbnail that the Link device has most recently sent to MediaLive.
@@ -41,51 +42,39 @@ object DescribeInputDeviceThumbnailResponse {
   }
   
   @scala.inline
-  implicit class DescribeInputDeviceThumbnailResponseOps[Self <: DescribeInputDeviceThumbnailResponse] (val x: Self) extends AnyVal {
+  implicit class DescribeInputDeviceThumbnailResponseMutableBuilder[Self <: DescribeInputDeviceThumbnailResponse] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBody(value: InputDeviceThumbnail): Self = StObject.set(x, "Body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setBodyUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "Body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setBodyUndefined: Self = StObject.set(x, "Body", js.undefined)
     
     @scala.inline
-    def setBodyUint8Array(value: js.typedarray.Uint8Array): Self = this.set("Body", value.asInstanceOf[js.Any])
+    def setContentLength(value: long): Self = StObject.set(x, "ContentLength", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBody(value: InputDeviceThumbnail): Self = this.set("Body", value.asInstanceOf[js.Any])
+    def setContentLengthUndefined: Self = StObject.set(x, "ContentLength", js.undefined)
     
     @scala.inline
-    def deleteBody: Self = this.set("Body", js.undefined)
+    def setContentType(value: ContentType): Self = StObject.set(x, "ContentType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContentLength(value: long): Self = this.set("ContentLength", value.asInstanceOf[js.Any])
+    def setContentTypeUndefined: Self = StObject.set(x, "ContentType", js.undefined)
     
     @scala.inline
-    def deleteContentLength: Self = this.set("ContentLength", js.undefined)
+    def setETag(value: string): Self = StObject.set(x, "ETag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContentType(value: ContentType): Self = this.set("ContentType", value.asInstanceOf[js.Any])
+    def setETagUndefined: Self = StObject.set(x, "ETag", js.undefined)
     
     @scala.inline
-    def deleteContentType: Self = this.set("ContentType", js.undefined)
+    def setLastModified(value: js.Date): Self = StObject.set(x, "LastModified", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setETag(value: string): Self = this.set("ETag", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteETag: Self = this.set("ETag", js.undefined)
-    
-    @scala.inline
-    def setLastModified(value: js.Date): Self = this.set("LastModified", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLastModified: Self = this.set("LastModified", js.undefined)
+    def setLastModifiedUndefined: Self = StObject.set(x, "LastModified", js.undefined)
   }
 }

@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.CompanionCreativeIds
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.UploadprotocolXgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CreativesResource extends js.Object {
+trait CreativesResource extends StObject {
   
   /** Gets one creative by ID. */
   def get(): Request[Creative] = js.native

@@ -10,12 +10,13 @@ import typingsSlinky.babylonjs.HTMLCanvasElement
 import typingsSlinky.babylonjs.ImageBitmap
 import typingsSlinky.std.OffscreenCanvas
 import typingsSlinky.std.OffscreenCanvasRenderingContext2D
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InternalTexture extends js.Object {
+trait InternalTexture extends StObject {
   
   /** @hidden */
   var _MSAAFramebuffer: Nullable[WebGLFramebuffer] = js.native

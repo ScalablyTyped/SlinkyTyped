@@ -10,9 +10,9 @@ The composable date & time picker.
 | ------------------ | :-------------: |
 | Full name          | pickadate |
 | Keywords           | date, time, picker, input, responsive |
-| # releases         | 12 |
-| # dependents       | 14 |
-| # downloads        | 476832 |
+| # releases         | 7 |
+| # dependents       | 16 |
+| # downloads        | 443366 |
 | # stars            | 5 |
 
 ## Links

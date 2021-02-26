@@ -2,6 +2,7 @@ package typingsSlinky.officeJsPreview.Office
 
 import typingsSlinky.officeJsPreview.Office.MailboxEnums.RestVersion
 import typingsSlinky.officeJsPreview.anon.AsyncContextOptionsisRest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
 @js.native
-trait Mailbox extends js.Object {
+trait Mailbox extends StObject {
   
   def addHandlerAsync(eventType: String, handler: js.Function1[/* type */ EventType, Unit]): Unit = js.native
   def addHandlerAsync(

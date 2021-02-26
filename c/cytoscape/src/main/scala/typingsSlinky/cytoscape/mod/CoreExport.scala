@@ -1,12 +1,13 @@
 package typingsSlinky.cytoscape.mod
 
 import org.scalajs.dom.raw.Blob
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CoreExport extends js.Object {
+trait CoreExport extends StObject {
   
   /**
     * Export the current graph view as a JPG image in Base64 representation.

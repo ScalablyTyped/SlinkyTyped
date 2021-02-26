@@ -11,8 +11,8 @@ pretty (non-compressed) json response middleware
 | Full name          | koa-json |
 | Keywords           | koa, json |
 | # releases         | 0 |
-| # dependents       | 157 |
-| # downloads        | 1063913 |
+| # dependents       | 185 |
+| # downloads        | 2553176 |
 | # stars            | 5 |
 
 ## Links

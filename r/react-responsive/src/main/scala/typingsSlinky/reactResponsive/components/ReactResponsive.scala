@@ -15,6 +15,7 @@ import typingsSlinky.reactResponsive.reactResponsiveStrings.interlace
 import typingsSlinky.reactResponsive.reactResponsiveStrings.landscape
 import typingsSlinky.reactResponsive.reactResponsiveStrings.portrait
 import typingsSlinky.reactResponsive.reactResponsiveStrings.progressive
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ object ReactResponsive {
   
   @JSImport("react-responsive", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,13 +44,13 @@ object ReactResponsive {
     def braille(value: Boolean): this.type = set("braille", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    def children(value: ReactElement | (js.Function1[/* matches */ Boolean, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenFunction1(value: /* matches */ Boolean => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def children(value: ReactElement | (js.Function1[/* matches */ Boolean, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -61,13 +62,13 @@ object ReactResponsive {
     def colorIndex(value: Boolean): this.type = set("colorIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentFunctionComponent(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: String | ReactComponentClass[_] | (ClassType[_, _, _])): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def component(value: String | ReactComponentClass[_] | (ClassType[_, _, _])): this.type = set("component", value.asInstanceOf[js.Any])
+    def componentFunctionComponent(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def device(value: MediaQueryMatchers): this.type = set("device", value.asInstanceOf[js.Any])
@@ -202,7 +203,7 @@ object ReactResponsive {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MediaQueryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactResponsive.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MediaQueryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

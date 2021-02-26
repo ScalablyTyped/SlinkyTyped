@@ -10,9 +10,9 @@ Markdown parser, done right. 100% Commonmark support, extensions, syntax plugins
 | ------------------ | :-------------: |
 | Full name          | remarkable |
 | Keywords           | commonmark, markdown, md, parse, parser, process, remarkable, render, renderer, text |
-| # releases         | 5 |
-| # dependents       | 249 |
-| # downloads        | 10066657 |
+| # releases         | 6 |
+| # dependents       | 283 |
+| # downloads        | 14277210 |
 | # stars            | 22 |
 
 ## Links

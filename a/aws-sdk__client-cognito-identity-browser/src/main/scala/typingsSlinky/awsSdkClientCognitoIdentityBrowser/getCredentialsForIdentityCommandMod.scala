@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesGetCredentialsForId
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesGetCredentialsForIdentityOutputMod.GetCredentialsForIdentityOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity-browser/commands/GetCredentialsForIdentityCommand", JSImport.Namespace)
-@js.native
-object getCredentialsForIdentityCommandMod extends js.Object {
+object getCredentialsForIdentityCommandMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity-browser/commands/GetCredentialsForIdentityCommand", "GetCredentialsForIdentityCommand")
   @js.native
   class GetCredentialsForIdentityCommand protected () extends Command[
           InputTypesUnion, 

@@ -88,15 +88,22 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.vertical
 import typingsSlinky.reactMdForm.reactMdFormStrings.yes
 import typingsSlinky.reactMdForm.textFieldTextFieldMod.SupportedInputTypes
 import typingsSlinky.reactMdForm.textFieldTextFieldMod.TextFieldProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TextField {
   
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TextFieldProps with RefAttributes[HTMLInputElement]]))
+  }
+  
   @JSImport("@react-md/form", "TextField")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -292,16 +299,16 @@ object TextField {
     def containerProps(value: OmitHTMLAttributesHTMLDiv): this.type = set("containerProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerRefRefObject(value: ReactRef[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
+    def containerRef(value: Ref[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerRefFunction1(value: /* instance */ HTMLDivElement | Null => Unit): this.type = set("containerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def containerRef(value: Ref[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
+    def containerRefNull: this.type = set("containerRef", null)
     
     @scala.inline
-    def containerRefNull: this.type = set("containerRef", null)
+    def containerRefRefObject(value: ReactRef[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -406,13 +413,13 @@ object TextField {
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelClassName(value: String): this.type = set("labelClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelStyle(value: CSSProperties): this.type = set("labelStyle", value.asInstanceOf[js.Any])
@@ -421,10 +428,10 @@ object TextField {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftChildrenReactElement(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
+    def leftChildren(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftChildren(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
+    def leftChildrenReactElement(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
@@ -712,10 +719,10 @@ object TextField {
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightChildrenReactElement(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
+    def rightChildren(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightChildren(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
+    def rightChildrenReactElement(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
@@ -782,10 +789,4 @@ object TextField {
   }
   
   def withProps(p: TextFieldProps with RefAttributes[HTMLInputElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TextFieldProps with RefAttributes[HTMLInputElement]]))
-  }
 }

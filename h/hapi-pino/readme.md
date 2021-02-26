@@ -10,9 +10,9 @@ Hapi plugin for the Pino logger
 | ------------------ | :-------------: |
 | Full name          | hapi-pino |
 | Keywords           | hapi, pino, logger, fast, slow, json |
-| # releases         | 20 |
-| # dependents       | 28 |
-| # downloads        | 444937 |
+| # releases         | 15 |
+| # dependents       | 44 |
+| # downloads        | 1124788 |
 | # stars            | 4 |
 
 ## Links

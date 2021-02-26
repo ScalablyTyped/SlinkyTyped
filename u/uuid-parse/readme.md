@@ -11,8 +11,8 @@ RFC4122 UUID parser
 | Full name          | uuid-parse |
 | Keywords           | uuid, parse, guid, rfc4122 |
 | # releases         | 2 |
-| # dependents       | 22 |
-| # downloads        | 1973053 |
+| # dependents       | 32 |
+| # downloads        | 4086974 |
 | # stars            | 1 |
 
 ## Links

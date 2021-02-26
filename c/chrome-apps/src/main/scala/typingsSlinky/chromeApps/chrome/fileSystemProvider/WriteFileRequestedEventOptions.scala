@@ -2,6 +2,7 @@ package typingsSlinky.chromeApps.chrome.fileSystemProvider
 
 import typingsSlinky.chromeApps.chrome.fileSystemProvider.internal.RequestedEventOptions
 import typingsSlinky.chromeApps.chrome.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,27 +34,15 @@ object WriteFileRequestedEventOptions {
   }
   
   @scala.inline
-  implicit class WriteFileRequestedEventOptionsOps[Self <: WriteFileRequestedEventOptions] (val x: Self) extends AnyVal {
+  implicit class WriteFileRequestedEventOptionsMutableBuilder[Self <: WriteFileRequestedEventOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setData(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setOffset(value: integer): Self = StObject.set(x, "offset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setData(value: js.typedarray.ArrayBuffer): Self = this.set("data", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOffset(value: integer): Self = this.set("offset", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOpenRequestId(value: integer): Self = this.set("openRequestId", value.asInstanceOf[js.Any])
+    def setOpenRequestId(value: integer): Self = StObject.set(x, "openRequestId", value.asInstanceOf[js.Any])
   }
 }

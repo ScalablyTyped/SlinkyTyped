@@ -3,6 +3,7 @@ package typingsSlinky.activexOffice.Office
 import typingsSlinky.activexOffice.activexOfficeNumbers.`-4105`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`2`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`3`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`2`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`3`
 */
-trait XlCategoryType extends js.Object
+trait XlCategoryType extends StObject
 object XlCategoryType {
   
   @scala.inline

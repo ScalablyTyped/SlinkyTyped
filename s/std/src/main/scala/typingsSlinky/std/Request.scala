@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -108,69 +109,57 @@ object Request {
     signal: org.scalajs.dom.experimental.AbortSignal,
     text: () => js.Promise[java.lang.String],
     url: java.lang.String
-  ): Request = {
+  ): org.scalajs.dom.experimental.Request = {
     val __obj = js.Dynamic.literal(arrayBuffer = js.Any.fromFunction0(arrayBuffer), blob = js.Any.fromFunction0(blob), bodyUsed = bodyUsed.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], credentials = credentials.asInstanceOf[js.Any], destination = destination.asInstanceOf[js.Any], formData = js.Any.fromFunction0(formData), headers = headers.asInstanceOf[js.Any], integrity = integrity.asInstanceOf[js.Any], isHistoryNavigation = isHistoryNavigation.asInstanceOf[js.Any], isReloadNavigation = isReloadNavigation.asInstanceOf[js.Any], json = js.Any.fromFunction0(json), keepalive = keepalive.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], redirect = redirect.asInstanceOf[js.Any], referrer = referrer.asInstanceOf[js.Any], referrerPolicy = referrerPolicy.asInstanceOf[js.Any], signal = signal.asInstanceOf[js.Any], text = js.Any.fromFunction0(text), url = url.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Request]
+    __obj.asInstanceOf[org.scalajs.dom.experimental.Request]
   }
   
   @scala.inline
-  implicit class RequestOps[Self <: org.scalajs.dom.experimental.Request] (val x: Self) extends AnyVal {
+  implicit class RequestMutableBuilder[Self <: org.scalajs.dom.experimental.Request] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCache(value: org.scalajs.dom.experimental.RequestCache): Self = StObject.set(x, "cache", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setCredentials(value: org.scalajs.dom.experimental.RequestCredentials): Self = StObject.set(x, "credentials", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDestination(value: org.scalajs.dom.experimental.RequestDestination): Self = StObject.set(x, "destination", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCache(value: org.scalajs.dom.experimental.RequestCache): Self = this.set("cache", value.asInstanceOf[js.Any])
+    def setHeaders(value: org.scalajs.dom.experimental.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCredentials(value: org.scalajs.dom.experimental.RequestCredentials): Self = this.set("credentials", value.asInstanceOf[js.Any])
+    def setIntegrity(value: java.lang.String): Self = StObject.set(x, "integrity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDestination(value: org.scalajs.dom.experimental.RequestDestination): Self = this.set("destination", value.asInstanceOf[js.Any])
+    def setIsHistoryNavigation(value: scala.Boolean): Self = StObject.set(x, "isHistoryNavigation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeaders(value: org.scalajs.dom.experimental.Headers): Self = this.set("headers", value.asInstanceOf[js.Any])
+    def setIsReloadNavigation(value: scala.Boolean): Self = StObject.set(x, "isReloadNavigation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIntegrity(value: java.lang.String): Self = this.set("integrity", value.asInstanceOf[js.Any])
+    def setKeepalive(value: scala.Boolean): Self = StObject.set(x, "keepalive", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIsHistoryNavigation(value: scala.Boolean): Self = this.set("isHistoryNavigation", value.asInstanceOf[js.Any])
+    def setMethod(value: java.lang.String): Self = StObject.set(x, "method", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIsReloadNavigation(value: scala.Boolean): Self = this.set("isReloadNavigation", value.asInstanceOf[js.Any])
+    def setMode(value: org.scalajs.dom.experimental.RequestMode): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setKeepalive(value: scala.Boolean): Self = this.set("keepalive", value.asInstanceOf[js.Any])
+    def setRedirect(value: org.scalajs.dom.experimental.RequestRedirect): Self = StObject.set(x, "redirect", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMethod(value: java.lang.String): Self = this.set("method", value.asInstanceOf[js.Any])
+    def setReferrer(value: java.lang.String): Self = StObject.set(x, "referrer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMode(value: org.scalajs.dom.experimental.RequestMode): Self = this.set("mode", value.asInstanceOf[js.Any])
+    def setReferrerPolicy(value: org.scalajs.dom.experimental.ReferrerPolicy): Self = StObject.set(x, "referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRedirect(value: org.scalajs.dom.experimental.RequestRedirect): Self = this.set("redirect", value.asInstanceOf[js.Any])
+    def setSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setReferrer(value: java.lang.String): Self = this.set("referrer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setReferrerPolicy(value: org.scalajs.dom.experimental.ReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = this.set("signal", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUrl(value: java.lang.String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
   }
 }

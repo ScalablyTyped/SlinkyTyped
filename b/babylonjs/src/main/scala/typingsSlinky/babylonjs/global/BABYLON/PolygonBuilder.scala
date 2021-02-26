@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.Wrap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,9 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class PolygonBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.PolygonBuilder
 /* static members */
-@JSGlobal("BABYLON.PolygonBuilder")
-@js.native
-object PolygonBuilder extends js.Object {
+object PolygonBuilder {
   
   /**
     * Creates a polygon mesh
@@ -29,13 +28,19 @@ object PolygonBuilder extends js.Object {
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns the polygon mesh
     */
+  @JSGlobal("BABYLON.PolygonBuilder.CreatePolygon")
+  @js.native
   def CreatePolygon(name: String, options: Wrap): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
+  @JSGlobal("BABYLON.PolygonBuilder.CreatePolygon")
+  @js.native
   def CreatePolygon(
     name: String,
     options: Wrap,
     scene: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.Scene]],
     earcutInjection: js.Any
   ): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
+  @JSGlobal("BABYLON.PolygonBuilder.CreatePolygon")
+  @js.native
   def CreatePolygon(name: String, options: Wrap, scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
   
   /**
@@ -48,12 +53,18 @@ object PolygonBuilder extends js.Object {
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns the polygon mesh
     */
+  @JSGlobal("BABYLON.PolygonBuilder.ExtrudePolygon")
+  @js.native
   def ExtrudePolygon(name: String, options: Wrap): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
+  @JSGlobal("BABYLON.PolygonBuilder.ExtrudePolygon")
+  @js.native
   def ExtrudePolygon(
     name: String,
     options: Wrap,
     scene: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.Scene]],
     earcutInjection: js.Any
   ): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
+  @JSGlobal("BABYLON.PolygonBuilder.ExtrudePolygon")
+  @js.native
   def ExtrudePolygon(name: String, options: Wrap, scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }

@@ -2,6 +2,7 @@ package typingsSlinky.agGrid.mainMod
 
 import typingsSlinky.agGrid.contextMod.ContextParams
 import typingsSlinky.agGrid.iLoggerMod.ILogger
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

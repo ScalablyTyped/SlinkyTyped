@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.BABYLON.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,11 +35,11 @@ class RawCubeTexture protected ()
   ) = this()
 }
 /* static members */
-@JSGlobal("BABYLON.RawCubeTexture")
-@js.native
-object RawCubeTexture extends js.Object {
+object RawCubeTexture {
   
   /** @hidden */
+  @JSGlobal("BABYLON.RawCubeTexture._UpdateRGBDAsync")
+  @js.native
   def _UpdateRGBDAsync(
     internalTexture: typingsSlinky.babylonjs.BABYLON.InternalTexture,
     data: js.Array[js.Array[js.typedarray.ArrayBufferView]],

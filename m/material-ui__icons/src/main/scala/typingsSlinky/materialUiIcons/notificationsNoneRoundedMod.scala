@@ -1,14 +1,21 @@
 package typingsSlinky.materialUiIcons
 
+import org.scalablytyped.runtime.Shortcut
 import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material-ui/icons/NotificationsNoneRounded", JSImport.Namespace)
-@js.native
-object notificationsNoneRoundedMod extends js.Object {
+object notificationsNoneRoundedMod extends Shortcut {
   
+  @JSImport("@material-ui/icons/NotificationsNoneRounded", JSImport.Default)
+  @js.native
   val default: ReactComponentClass[SvgIconProps] = js.native
+  
+  type _To = ReactComponentClass[SvgIconProps]
+  
+  /* This means you don't have to write `default`, but can instead just say `notificationsNoneRoundedMod.foo` */
+  override def _to: ReactComponentClass[SvgIconProps] = default
 }

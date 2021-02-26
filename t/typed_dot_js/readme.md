@@ -10,9 +10,9 @@ A JavaScript Typing Animation Library
 | ------------------ | :-------------: |
 | Full name          | typed.js |
 | Keywords           | typed, animation |
-| # releases         | 6 |
-| # dependents       | 18 |
-| # downloads        | 626534 |
+| # releases         | 2 |
+| # dependents       | 27 |
+| # downloads        | 1236938 |
 | # stars            | 2 |
 
 ## Links

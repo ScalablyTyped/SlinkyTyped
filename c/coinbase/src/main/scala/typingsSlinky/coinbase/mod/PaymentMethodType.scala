@@ -1,5 +1,6 @@
 package typingsSlinky.coinbase.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.coinbase.coinbaseStrings.eft_bank_account
   - typingsSlinky.coinbase.coinbaseStrings.interac
 */
-trait PaymentMethodType extends js.Object
+trait PaymentMethodType extends StObject
 object PaymentMethodType {
   
   @scala.inline

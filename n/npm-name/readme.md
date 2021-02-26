@@ -10,9 +10,9 @@ Check whether a package or organization name is available on npm
 | ------------------ | :-------------: |
 | Full name          | npm-name |
 | Keywords           | name, available, package, organization, npm, pkg, app, check, taken |
-| # releases         | 11 |
-| # dependents       | 108 |
-| # downloads        | 934158 |
+| # releases         | 7 |
+| # dependents       | 118 |
+| # downloads        | 1762313 |
 | # stars            | 4 |
 
 ## Links

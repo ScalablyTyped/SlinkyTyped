@@ -1,5 +1,6 @@
 package typingsSlinky.hasura.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.hasura.hasuraBooleans.`false`
   - typingsSlinky.hasura.hasuraBooleans.`true`
 */
-trait Equals[X, Y] extends js.Object
+trait Equals[X, Y] extends StObject

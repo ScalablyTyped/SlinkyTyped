@@ -2,13 +2,14 @@ package typingsSlinky.sjcl.mod
 
 import typingsSlinky.sjcl.mod.TypeHelpers.BigNumberBinaryOperator
 import typingsSlinky.sjcl.mod.TypeHelpers.BigNumberTrinaryOperator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // ________________________________________________________________________
 @js.native
-trait BigNumber extends js.Object {
+trait BigNumber extends StObject {
   
   /// this + that.  Does not normalize.
   var add: BigNumberBinaryOperator = js.native

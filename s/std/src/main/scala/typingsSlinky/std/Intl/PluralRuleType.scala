@@ -1,5 +1,6 @@
 package typingsSlinky.std.Intl
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.cardinal
   - typingsSlinky.std.stdStrings.ordinal
 */
-trait PluralRuleType extends js.Object
+trait PluralRuleType extends StObject
 object PluralRuleType {
   
   @scala.inline

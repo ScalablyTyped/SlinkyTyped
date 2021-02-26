@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDisplayvideo.gapi.client.displayvide
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.InventorySourceId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.PartnerIdPrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InventorySourcesResource extends js.Object {
+trait InventorySourcesResource extends StObject {
   
   /** Gets an inventory source. */
   def get(): Request[InventorySource] = js.native

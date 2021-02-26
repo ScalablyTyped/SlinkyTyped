@@ -1,20 +1,20 @@
 package typingsSlinky.ol
 
 import typingsSlinky.ol.baseImageMod.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/layer/Image", JSImport.Namespace)
-@js.native
-object imageMod extends js.Object {
+object imageMod {
   
-  @js.native
-  trait ImageLayer
-    extends typingsSlinky.ol.baseImageMod.default
-  
+  @JSImport("ol/layer/Image", JSImport.Default)
   @js.native
   class default () extends ImageLayer {
     def this(opt_options: Options) = this()
   }
+  
+  @js.native
+  trait ImageLayer
+    extends typingsSlinky.ol.baseImageMod.default
 }

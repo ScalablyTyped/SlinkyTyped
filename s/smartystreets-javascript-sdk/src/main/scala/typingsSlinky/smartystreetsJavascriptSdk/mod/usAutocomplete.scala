@@ -1,13 +1,13 @@
 package typingsSlinky.smartystreetsJavascriptSdk.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("smartystreets-javascript-sdk", "usAutocomplete")
-@js.native
-object usAutocomplete extends js.Object {
+object usAutocomplete {
   
+  @JSImport("smartystreets-javascript-sdk", "usAutocomplete.Lookup")
   @js.native
   class Lookup protected ()
     extends typingsSlinky.smartystreetsJavascriptSdk.mod.core.Lookup {
@@ -23,15 +23,18 @@ object usAutocomplete extends js.Object {
     
     var prefer: js.Array[_] = js.native
     
-    var preferRation: js.Any = js.native
+    var preferRatio: js.Any = js.native
     
     var prefix: String = js.native
+    
+    var result: js.Array[_] = js.native
     
     var stateFilter: js.Array[_] = js.native
   }
   
+  @JSImport("smartystreets-javascript-sdk", "usAutocomplete.Suggestion")
   @js.native
-  class Suggestion protected () extends js.Object {
+  class Suggestion protected () extends StObject {
     def this(responseData: js.Any) = this()
     
     var city: String = js.native

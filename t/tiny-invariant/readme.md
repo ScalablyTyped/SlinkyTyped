@@ -10,9 +10,9 @@ A tiny invariant function
 | ------------------ | :-------------: |
 | Full name          | tiny-invariant |
 | Keywords           | invariant, error |
-| # releases         | 12 |
-| # dependents       | 200 |
-| # downloads        | 69337278 |
+| # releases         | 7 |
+| # dependents       | 519 |
+| # downloads        | 174760419 |
 | # stars            | 0 |
 
 ## Links

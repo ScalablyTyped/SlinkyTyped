@@ -10,10 +10,10 @@ Open stuff like URLs, files, executables. Cross-platform.
 | ------------------ | :-------------: |
 | Full name          | open |
 | Keywords           | app, open, opener, opens, launch, start, xdg-open, xdg, default, cmd, browser, editor, executable, exe, url, urls, arguments, args, spawn, exec, child, process, website, file |
-| # releases         | 7 |
-| # dependents       | 2471 |
-| # downloads        | 93371133 |
-| # stars            | 82 |
+| # releases         | 17 |
+| # dependents       | 3941 |
+| # downloads        | 424697300 |
+| # stars            | 83 |
 
 ## Links
 - [Homepage](https://github.com/sindresorhus/open#readme)

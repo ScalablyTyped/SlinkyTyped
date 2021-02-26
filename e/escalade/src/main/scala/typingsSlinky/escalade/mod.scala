@@ -1,14 +1,15 @@
 package typingsSlinky.escalade
 
 import typingsSlinky.escalade.escaladeBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("escalade", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("escalade", JSImport.Default)
+  @js.native
   def default(directory: String, callback: Callback): js.Promise[String | Unit] = js.native
   
   type Callback = js.Function2[

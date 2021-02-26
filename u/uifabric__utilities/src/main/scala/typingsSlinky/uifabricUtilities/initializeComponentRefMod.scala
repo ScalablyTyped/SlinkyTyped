@@ -2,13 +2,14 @@ package typingsSlinky.uifabricUtilities
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uifabric/utilities/lib/initializeComponentRef", JSImport.Namespace)
-@js.native
-object initializeComponentRefMod extends js.Object {
+object initializeComponentRefMod {
   
+  @JSImport("@uifabric/utilities/lib/initializeComponentRef", "initializeComponentRef")
+  @js.native
   def initializeComponentRef[TProps /* <: IBaseProps[_] */, TState](obj: ReactComponentClass[TProps]): Unit = js.native
 }

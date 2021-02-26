@@ -9,6 +9,7 @@ import typingsSlinky.chromeApps.chrome.bluetoothSocket.OnReceiveEvent
 import typingsSlinky.chromeApps.chrome.bluetoothSocket.SocketInfo
 import typingsSlinky.chromeApps.chrome.bluetoothSocket.SocketProperties
 import typingsSlinky.chromeApps.chrome.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,9 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @requires Important: This API works only on OS X, Windows and Chrome OS.
   * Use the chrome.bluetoothSocket API to send and receive data to Bluetooth devices using RFCOMM and L2CAP connections.
   */
-@JSGlobal("chrome.bluetoothSocket")
-@js.native
-object bluetoothSocket extends js.Object {
+object bluetoothSocket {
   
   /**
     * Disconnects and destroys the socket.
@@ -33,6 +32,8 @@ object bluetoothSocket extends js.Object {
     * @param socketId The socket identifier.
     * @param callback Called when the `close` operation completes
     */
+  @JSGlobal("chrome.bluetoothSocket.close")
+  @js.native
   def close(socketId: integer, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -50,18 +51,24 @@ object bluetoothSocket extends js.Object {
     * @param uuid The UUID of the service to connect to.
     * @param callback Called when the connect attempt is complete.
     */
+  @JSGlobal("chrome.bluetoothSocket.connect")
+  @js.native
   def connect(socketId: integer, address: String, uuid: String, callback: js.Function0[Unit]): Unit = js.native
   
   /**
     * Creates a Bluetooth socket.
     * @param callback Called when the socket has been created
     * */
+  @JSGlobal("chrome.bluetoothSocket.create")
+  @js.native
   def create(callback: js.Function1[/* createInfo */ CreateInfo, Unit]): Unit = js.native
   /**
     * Creates a Bluetooth socket.
     * @param properties The socket properties (optional)
     * @param callback Called when the socket has been created
     */
+  @JSGlobal("chrome.bluetoothSocket.create")
+  @js.native
   def create(properties: SocketProperties, callback: js.Function1[/* createInfo */ CreateInfo, Unit]): Unit = js.native
   
   /**
@@ -69,7 +76,11 @@ object bluetoothSocket extends js.Object {
     * @param socketId The socket identifier.
     * @param [callback] Called when the disconnect attempt is complete.
     */
+  @JSGlobal("chrome.bluetoothSocket.disconnect")
+  @js.native
   def disconnect(socketId: integer): Unit = js.native
+  @JSGlobal("chrome.bluetoothSocket.disconnect")
+  @js.native
   def disconnect(socketId: integer, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -78,6 +89,8 @@ object bluetoothSocket extends js.Object {
     * @param callback Called when the socket state is available.
     *                 Callback returning object containing the socket information.
     */
+  @JSGlobal("chrome.bluetoothSocket.getInfo")
+  @js.native
   def getInfo(socketId: integer, callback: js.Function1[/* socketInfo */ SocketInfo, Unit]): Unit = js.native
   
   /**
@@ -85,6 +98,8 @@ object bluetoothSocket extends js.Object {
     * @param callback Called when the list of sockets is available.
     *                 Returns an array of socket info.
     */
+  @JSGlobal("chrome.bluetoothSocket.getSockets")
+  @js.native
   def getSockets(callback: js.Function1[/* sockets */ js.Array[SocketInfo], Unit]): Unit = js.native
   
   /**
@@ -94,6 +109,8 @@ object bluetoothSocket extends js.Object {
     * @param uuid Service UUID to listen on.
     * @param callback Called when listen operation completes.
     */
+  @JSGlobal("chrome.bluetoothSocket.listenUsingL2cap")
+  @js.native
   def listenUsingL2cap(socketId: integer, uuid: String, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Listen for connections using the L2CAP protocol.
@@ -103,6 +120,8 @@ object bluetoothSocket extends js.Object {
     * @param options Optional additional options for the service.
     * @param callback Called when listen operation completes.
     */
+  @JSGlobal("chrome.bluetoothSocket.listenUsingL2cap")
+  @js.native
   def listenUsingL2cap(socketId: integer, uuid: String, options: ListenOptions, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -112,6 +131,8 @@ object bluetoothSocket extends js.Object {
     * @param uuid Service UUID to listen on.
     * @param callback Called when listen operation completes.
     */
+  @JSGlobal("chrome.bluetoothSocket.listenUsingRfcomm")
+  @js.native
   def listenUsingRfcomm(socketId: integer, uuid: String, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Listen for connections using the RFCOMM protocol.
@@ -121,12 +142,16 @@ object bluetoothSocket extends js.Object {
     * @param options Optional additional options for the service.
     * @param callback Called when listen operation completes.
     */
+  @JSGlobal("chrome.bluetoothSocket.listenUsingRfcomm")
+  @js.native
   def listenUsingRfcomm(socketId: integer, uuid: String, options: ListenOptions, callback: js.Function0[Unit]): Unit = js.native
   
   /**
     * Event raised when a connection has been established
     * for a given socket.
     */
+  @JSGlobal("chrome.bluetoothSocket.onAccept")
+  @js.native
   val onAccept: OnAcceptEvent = js.native
   
   /**
@@ -136,11 +161,15 @@ object bluetoothSocket extends js.Object {
     * to paused and no more onAccept events are raised for
     * this socket.
     */
+  @JSGlobal("chrome.bluetoothSocket.onAcceptError")
+  @js.native
   val onAcceptError: OnAcceptErrorEvent = js.native
   
   /**
     * Event raised when data has been received for a given socket.
     */
+  @JSGlobal("chrome.bluetoothSocket.onReceive")
+  @js.native
   val onReceive: OnReceiveEvent = js.native
   
   /**
@@ -149,6 +178,8 @@ object bluetoothSocket extends js.Object {
     * the socket is set to paused and no more onReceive events are
     * raised for this socket.
     */
+  @JSGlobal("chrome.bluetoothSocket.onReceiveError")
+  @js.native
   val onReceiveError: OnReceiveErrorEvent = js.native
   
   /**
@@ -157,7 +188,11 @@ object bluetoothSocket extends js.Object {
     * @param data The data to send.
     * @param [callback] Called with the number of bytes sent.
     */
+  @JSGlobal("chrome.bluetoothSocket.send")
+  @js.native
   def send(socketId: integer, data: js.typedarray.ArrayBuffer): Unit = js.native
+  @JSGlobal("chrome.bluetoothSocket.send")
+  @js.native
   def send(
     socketId: integer,
     data: js.typedarray.ArrayBuffer,
@@ -187,7 +222,11 @@ object bluetoothSocket extends js.Object {
     * See setPaused. The default value is 'false'.
     * @param [callback] Callback from the setPaused method.
     */
+  @JSGlobal("chrome.bluetoothSocket.setPaused")
+  @js.native
   def setPaused(socketId: integer, paused: Boolean): Unit = js.native
+  @JSGlobal("chrome.bluetoothSocket.setPaused")
+  @js.native
   def setPaused(socketId: integer, paused: Boolean, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -196,6 +235,10 @@ object bluetoothSocket extends js.Object {
     * @param properties  The properties to update.
     * @param [callback] Called when the properties are updated.
     */
+  @JSGlobal("chrome.bluetoothSocket.update")
+  @js.native
   def update(socketId: integer, properties: SocketProperties): Unit = js.native
+  @JSGlobal("chrome.bluetoothSocket.update")
+  @js.native
   def update(socketId: integer, properties: SocketProperties, callback: js.Function0[Unit]): Unit = js.native
 }

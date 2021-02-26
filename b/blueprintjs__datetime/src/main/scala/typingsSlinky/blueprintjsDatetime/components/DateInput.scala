@@ -5,8 +5,8 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
-import typingsSlinky.blueprintjsDatetime.anon.FormatDate
 import typingsSlinky.blueprintjsDatetime.anon.PartialIPopoverProps
+import typingsSlinky.blueprintjsDatetime.anon.TypeofLocaleUtils
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`false`
 import typingsSlinky.blueprintjsDatetime.dateInputMod.IDateInputProps
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerModifiers
@@ -14,15 +14,25 @@ import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDatePickerShortcut
 import typingsSlinky.blueprintjsDatetime.timePickerMod.ITimePickerProps
 import typingsSlinky.blueprintjsDatetime.timePickerMod.TimePrecision
 import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DateInput {
   
+  @scala.inline
+  def apply(
+    formatDate: (js.Date, js.UndefOr[String]) => String,
+    parseDate: (String, js.UndefOr[String]) => js.Date | Null | `false`
+  ): Builder = {
+    val __props = js.Dynamic.literal(formatDate = js.Any.fromFunction2(formatDate), parseDate = js.Any.fromFunction2(parseDate))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDateInputProps]))
+  }
+  
   @JSImport("@blueprintjs/datetime", "DateInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -69,7 +79,7 @@ object DateInput {
     def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def localeUtils(value: FormatDate): this.type = set("localeUtils", value.asInstanceOf[js.Any])
+    def localeUtils(value: TypeofLocaleUtils): this.type = set("localeUtils", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
@@ -102,10 +112,10 @@ object DateInput {
     def rightElement(value: ReactElement): this.type = set("rightElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shortcutsVarargs(value: IDatePickerShortcut*): this.type = set("shortcuts", js.Array(value :_*))
+    def shortcuts(value: Boolean | js.Array[IDatePickerShortcut]): this.type = set("shortcuts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shortcuts(value: Boolean | js.Array[IDatePickerShortcut]): this.type = set("shortcuts", value.asInstanceOf[js.Any])
+    def shortcutsVarargs(value: IDatePickerShortcut*): this.type = set("shortcuts", js.Array(value :_*))
     
     @scala.inline
     def showActionsBar(value: Boolean): this.type = set("showActionsBar", value.asInstanceOf[js.Any])
@@ -127,13 +137,4 @@ object DateInput {
   }
   
   def withProps(p: IDateInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    formatDate: (js.Date, js.UndefOr[String]) => String,
-    parseDate: (String, js.UndefOr[String]) => js.Date | Null | `false`
-  ): Builder = {
-    val __props = js.Dynamic.literal(formatDate = js.Any.fromFunction2(formatDate), parseDate = js.Any.fromFunction2(parseDate))
-    new Builder(js.Array(this.component, __props.asInstanceOf[IDateInputProps]))
-  }
 }

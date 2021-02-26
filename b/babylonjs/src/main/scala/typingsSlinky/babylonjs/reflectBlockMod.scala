@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/reflectBlock", JSImport.Namespace)
-@js.native
-object reflectBlockMod extends js.Object {
+object reflectBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/reflectBlock", "ReflectBlock")
   @js.native
   class ReflectBlock protected () extends NodeMaterialBlock {
     /**

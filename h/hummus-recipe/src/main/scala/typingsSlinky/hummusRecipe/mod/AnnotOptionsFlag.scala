@@ -1,5 +1,6 @@
 package typingsSlinky.hummusRecipe.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.hummusRecipe.hummusRecipeStrings.locked
   - typingsSlinky.hummusRecipe.hummusRecipeStrings.togglenoview
 */
-trait AnnotOptionsFlag extends js.Object
+trait AnnotOptionsFlag extends StObject
 object AnnotOptionsFlag {
   
   @scala.inline

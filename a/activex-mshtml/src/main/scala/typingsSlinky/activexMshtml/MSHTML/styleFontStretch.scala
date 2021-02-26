@@ -13,6 +13,7 @@ import typingsSlinky.activexMshtml.activexMshtmlNumbers.`6`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`7`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`8`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,7 +33,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`11`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`1`
 */
-trait styleFontStretch extends js.Object
+trait styleFontStretch extends StObject
 object styleFontStretch {
   
   @scala.inline

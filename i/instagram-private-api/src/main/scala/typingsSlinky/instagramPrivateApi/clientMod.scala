@@ -40,16 +40,16 @@ import typingsSlinky.instagramPrivateApi.tagRepositoryMod.TagRepository
 import typingsSlinky.instagramPrivateApi.uploadRepositoryMod.UploadRepository
 import typingsSlinky.instagramPrivateApi.userRepositoryMod.UserRepository
 import typingsSlinky.instagramPrivateApi.zrRepositoryMod.ZrRepository
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/core/client", JSImport.Namespace)
-@js.native
-object clientMod extends js.Object {
+object clientMod {
   
+  @JSImport("instagram-private-api/dist/core/client", "IgApiClient")
   @js.native
-  class IgApiClient () extends js.Object {
+  class IgApiClient () extends StObject {
     
     var account: AccountRepository = js.native
     

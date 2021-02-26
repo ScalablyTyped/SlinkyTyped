@@ -17,7 +17,7 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
-import slinky.web.html.div.tag
+import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.menuContextMod.MenuTheme
 import typingsSlinky.antd.menuMod.MenuProps
@@ -88,20 +88,50 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Menu {
   
+  object Divider {
+    
+    @JSImport("antd", "Menu.Divider")
+    @js.native
+    val component: js.Object = js.native
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def rootPrefixCls(value: String): this.type = set("rootPrefixCls", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    }
+    
+    implicit def make(companion: Divider.type): typingsSlinky.antd.components.Menu.Divider.Builder = new typingsSlinky.antd.components.Menu.Divider.Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: DividerProps): typingsSlinky.antd.components.Menu.Divider.Builder = new typingsSlinky.antd.components.Menu.Divider.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd", "Menu")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Menu] {
+       with StBuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.antd.mod.Menu] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -301,22 +331,22 @@ object Menu {
     def defaultMotions(value: PartialkeyinMenuModeother): this.type = set("defaultMotions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultOpenKeysVarargs(value: String*): this.type = set("defaultOpenKeys", js.Array(value :_*))
-    
-    @scala.inline
     def defaultOpenKeys(value: js.Array[String]): this.type = set("defaultOpenKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultSelectedKeysVarargs(value: String*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
+    def defaultOpenKeysVarargs(value: String*): this.type = set("defaultOpenKeys", js.Array(value :_*))
     
     @scala.inline
     def defaultSelectedKeys(value: js.Array[String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultSelectedKeysVarargs(value: String*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
     
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -328,13 +358,13 @@ object Menu {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    def expandIcon(value: RenderIconType): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def expandIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("expandIcon", js.Any.fromFunction1(value))
     
     @scala.inline
-    def expandIcon(value: RenderIconType): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
@@ -370,13 +400,13 @@ object Menu {
     def itemID(value: String): this.type = set("itemID", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemIconReactElement(value: ReactElement): this.type = set("itemIcon", value.asInstanceOf[js.Any])
+    def itemIcon(value: RenderIconType): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def itemIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("itemIcon", js.Any.fromFunction1(value))
     
     @scala.inline
-    def itemIcon(value: RenderIconType): this.type = set("itemIcon", value.asInstanceOf[js.Any])
+    def itemIconReactElement(value: ReactElement): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def itemProp(value: String): this.type = set("itemProp", value.asInstanceOf[js.Any])
@@ -655,19 +685,19 @@ object Menu {
     def openAnimation(value: OpenAnimation): this.type = set("openAnimation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def openKeysVarargs(value: String*): this.type = set("openKeys", js.Array(value :_*))
+    def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
+    def openKeysVarargs(value: String*): this.type = set("openKeys", js.Array(value :_*))
     
     @scala.inline
     def openTransitionName(value: String): this.type = set("openTransitionName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overflowedIndicatorReactElement(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
+    def overflowedIndicator(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overflowedIndicator(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
+    def overflowedIndicatorReactElement(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -700,10 +730,10 @@ object Menu {
     def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
+    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
     
     @scala.inline
     def siderCollapsed(value: Boolean): this.type = set("siderCollapsed", value.asInstanceOf[js.Any])
@@ -754,36 +784,7 @@ object Menu {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Menu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Divider {
-    
-    @JSImport("antd", "Menu.Divider")
-    @js.native
-    object component extends js.Object
-    
-    @scala.inline
-    class Builder (val args: js.Array[js.Any])
-      extends AnyVal
-         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
-      
-      @scala.inline
-      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def rootPrefixCls(value: String): this.type = set("rootPrefixCls", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
-    }
-    
-    def withProps(p: DividerProps): typingsSlinky.antd.components.Menu.Divider.Builder = new typingsSlinky.antd.components.Menu.Divider.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Divider.type): typingsSlinky.antd.components.Menu.Divider.Builder = new typingsSlinky.antd.components.Menu.Divider.Builder(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: MenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

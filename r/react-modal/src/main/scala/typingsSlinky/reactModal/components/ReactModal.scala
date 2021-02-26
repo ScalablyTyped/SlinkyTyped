@@ -13,15 +13,22 @@ import typingsSlinky.reactModal.mod.OnAfterOpenCallbackOptions
 import typingsSlinky.reactModal.mod.Props
 import typingsSlinky.reactModal.mod.Styles
 import typingsSlinky.reactModal.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactModal {
   
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("react-modal", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,10 +36,10 @@ object ReactModal {
        with StBuildingComponent[tag.type, ^] {
     
     @scala.inline
-    def appElementHTMLElement(value: HTMLElement): this.type = set("appElement", value.asInstanceOf[js.Any])
+    def appElement(value: HTMLElement | js.Object): this.type = set("appElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def appElement(value: HTMLElement | js.Object): this.type = set("appElement", value.asInstanceOf[js.Any])
+    def appElementHTMLElement(value: HTMLElement): this.type = set("appElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def aria(value: Aria): this.type = set("aria", value.asInstanceOf[js.Any])
@@ -117,10 +124,4 @@ object ReactModal {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(isOpen: Boolean): Builder = {
-    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

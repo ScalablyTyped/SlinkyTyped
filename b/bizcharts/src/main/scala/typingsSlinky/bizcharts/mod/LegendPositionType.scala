@@ -1,5 +1,6 @@
 package typingsSlinky.bizcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.bizcharts.bizchartsStrings.`bottom-center`
   - typingsSlinky.bizcharts.bizchartsStrings.`bottom-right`
 */
-trait LegendPositionType extends js.Object
+trait LegendPositionType extends StObject
 object LegendPositionType {
   
   @scala.inline

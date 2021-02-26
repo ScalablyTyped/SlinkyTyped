@@ -1,12 +1,13 @@
 package typingsSlinky.lodash.fpMod
 
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashFlatMapDepth2x1[T, TResult] extends js.Object {
+trait LodashFlatMapDepth2x1[T, TResult] extends StObject {
   
   def apply(depth: Double): js.Array[TResult] = js.native
   def apply(depth: Double, collection: T): js.Array[TResult] = js.native

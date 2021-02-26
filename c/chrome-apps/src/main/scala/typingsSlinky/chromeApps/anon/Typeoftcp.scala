@@ -9,12 +9,13 @@ import typingsSlinky.chromeApps.chrome.sockets.SendInfo
 import typingsSlinky.chromeApps.chrome.sockets.SocketInfo
 import typingsSlinky.chromeApps.chrome.sockets.SocketProperties
 import typingsSlinky.chromeApps.chrome.sockets.tcp.SecureOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeoftcp extends js.Object {
+trait Typeoftcp extends StObject {
   
   /**
     * Closes the socket and releases the address/port the socket is bound to.

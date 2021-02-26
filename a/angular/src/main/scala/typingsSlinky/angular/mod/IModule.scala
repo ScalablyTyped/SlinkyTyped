@@ -3,6 +3,7 @@ package typingsSlinky.angular.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.angular.JQLite
 import typingsSlinky.angular.mod.global.Function
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 // see http://docs.angularjs.org/api/angular.Module
 ///////////////////////////////////////////////////////////////////////////
 @js.native
-trait IModule extends js.Object {
+trait IModule extends StObject {
   
   /**
     * Use this method to register a component.

@@ -3,12 +3,13 @@ package typingsSlinky.braintreeWebDropIn.mod
 import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.noPaymentMethodRequestable
 import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.paymentMethodRequestable
 import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.paymentOptionSelected
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Dropin extends js.Object {
+trait Dropin extends StObject {
   
   def clearSelectedPaymentMethod(): Unit = js.native
   

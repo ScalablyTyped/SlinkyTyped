@@ -3,10 +3,12 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameId
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import typingsSlinky.reactOnsenui.anon.VerticalAlign
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.bottom
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.center
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +17,7 @@ object Col {
   
   @JSImport("react-onsenui", "Col")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,7 +40,7 @@ object Col {
     def width(value: String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HTMLAttributesidclassNameId): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Col.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HTMLAttributesidclassName with VerticalAlign): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

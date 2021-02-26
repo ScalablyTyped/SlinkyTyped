@@ -9,10 +9,10 @@ Flexible react notification system
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | rr-notifications |
-| Keywords           | react, styled-components, notifications |
-| # releases         | 16 |
+| Keywords           | react, notifications |
+| # releases         | 9 |
 | # dependents       | 0 |
-| # downloads        | 948 |
+| # downloads        | 1387 |
 | # stars            | 0 |
 
 ## Links

@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.Checked
 import typingsSlinky.fundamentalReact.switchMod.SwitchProps
 import typingsSlinky.react.mod.PropsWithChildren
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object Switch {
   
   @JSImport("fundamental-react", "Switch")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,7 +55,7 @@ object Switch {
     def semantic(value: Boolean): this.type = set("semantic", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PropsWithChildren[SwitchProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Switch.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PropsWithChildren[SwitchProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

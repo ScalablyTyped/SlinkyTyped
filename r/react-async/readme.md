@@ -10,9 +10,9 @@ React component for declarative promise resolution and data fetching
 | ------------------ | :-------------: |
 | Full name          | react-async |
 | Keywords           | react, async, promise, fetch, hook |
-| # releases         | 64 |
-| # dependents       | 17 |
-| # downloads        | 267689 |
+| # releases         | 33 |
+| # dependents       | 25 |
+| # downloads        | 1074396 |
 | # stars            | 1 |
 
 ## Links

@@ -2,13 +2,18 @@ package typingsSlinky.koaUseragent
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.expressUseragent.mod.Details
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("koa-useragent/dist/lib/useragent", JSImport.Namespace)
-@js.native
-object useragentMod extends js.Object {
+object useragentMod {
+  
+  @JSImport("koa-useragent/dist/lib/useragent", JSImport.Default)
+  @js.native
+  class default () extends UserAgent {
+    def this(source: String) = this()
+  }
   
   @js.native
   trait UserAgent extends Details {
@@ -162,10 +167,5 @@ object useragentMod extends js.Object {
     
     @JSName("version")
     def version_MUserAgent: String = js.native
-  }
-  
-  @js.native
-  class default () extends UserAgent {
-    def this(source: String) = this()
   }
 }

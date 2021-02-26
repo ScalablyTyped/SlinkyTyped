@@ -7,15 +7,22 @@ import typingsSlinky.reactNative.mod.TextProps
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeAppIntroSlider.mod.AppIntroProps
 import typingsSlinky.reactNativeAppIntroSlider.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeAppIntroSlider {
   
+  @scala.inline
+  def apply(slides: js.Array[_]): Builder = {
+    val __props = js.Dynamic.literal(slides = slides.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AppIntroProps]))
+  }
+  
   @JSImport("react-native-app-intro-slider", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -93,10 +100,4 @@ object ReactNativeAppIntroSlider {
   }
   
   def withProps(p: AppIntroProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(slides: js.Array[_]): Builder = {
-    val __props = js.Dynamic.literal(slides = slides.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AppIntroProps]))
-  }
 }

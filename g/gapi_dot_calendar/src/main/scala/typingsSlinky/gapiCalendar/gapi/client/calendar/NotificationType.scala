@@ -1,5 +1,6 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gapiCalendar.gapiCalendarStrings.eventResponse
   - typingsSlinky.gapiCalendar.gapiCalendarStrings.agenda
 */
-trait NotificationType extends js.Object
+trait NotificationType extends StObject
 object NotificationType {
   
   @scala.inline

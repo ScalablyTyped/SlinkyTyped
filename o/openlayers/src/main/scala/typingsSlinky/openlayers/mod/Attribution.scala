@@ -1,13 +1,14 @@
 package typingsSlinky.openlayers.mod
 
 import typingsSlinky.openlayers.mod.olx.AttributionOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openlayers", "Attribution")
 @js.native
-class Attribution protected () extends js.Object {
+class Attribution protected () extends StObject {
   /**
     * @classdesc
     * An attribution for a layer source.

@@ -4,14 +4,14 @@ import typingsSlinky.sipJs.clientTransactionMod.ClientTransaction
 import typingsSlinky.sipJs.coreTransportMod.Transport
 import typingsSlinky.sipJs.messagesMod.OutgoingRequestMessage
 import typingsSlinky.sipJs.transactionUserMod.ClientTransactionUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/core/transactions/invite-client-transaction", JSImport.Namespace)
-@js.native
-object inviteClientTransactionMod extends js.Object {
+object inviteClientTransactionMod {
   
+  @JSImport("sip.js/lib/core/transactions/invite-client-transaction", "InviteClientTransaction")
   @js.native
   class InviteClientTransaction protected () extends ClientTransaction {
     /**

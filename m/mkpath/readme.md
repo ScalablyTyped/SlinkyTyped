@@ -11,8 +11,8 @@ Make all directories in a path, like mkdir -p
 | Full name          | mkpath |
 | Keywords           | mkdir, mkdirp, directory, path, tree |
 | # releases         | 0 |
-| # dependents       | 218 |
-| # downloads        | 19215455 |
+| # dependents       | 235 |
+| # downloads        | 22475169 |
 | # stars            | 5 |
 
 ## Links

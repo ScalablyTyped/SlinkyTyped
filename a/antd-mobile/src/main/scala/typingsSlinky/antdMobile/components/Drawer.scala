@@ -9,6 +9,7 @@ import typingsSlinky.antdMobile.antdMobileStrings.right
 import typingsSlinky.antdMobile.antdMobileStrings.top
 import typingsSlinky.antdMobile.drawerPropsTypeMod.DrawerWebProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object Drawer {
   
   @JSImport("antd-mobile", "Drawer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -58,10 +59,10 @@ object Drawer {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sidebarReactElement(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
+    def sidebar(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sidebar(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
+    def sidebarReactElement(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def sidebarStyle(value: CSSProperties): this.type = set("sidebarStyle", value.asInstanceOf[js.Any])
@@ -76,7 +77,7 @@ object Drawer {
     def transitions(value: Boolean): this.type = set("transitions", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DrawerWebProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Drawer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DrawerWebProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -5,12 +5,13 @@ import typingsSlinky.nodeRedEditorClient.anon.Dir
 import typingsSlinky.nodeRedEditorClient.nodeRedEditorClientStrings.email
 import typingsSlinky.nodeRedEditorClient.nodeRedEditorClientStrings.filepath
 import typingsSlinky.nodeRedEditorClient.nodeRedEditorClientStrings.url
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TextFormat extends js.Object {
+trait TextFormat extends StObject {
   
   @JSName("attach")
   def attach_email(element: HTMLDivElement, `type`: email, args: js.Any, isRtl: Boolean, locale: String): Boolean = js.native

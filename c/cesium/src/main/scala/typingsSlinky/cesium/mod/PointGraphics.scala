@@ -1,13 +1,14 @@
 package typingsSlinky.cesium.mod
 
 import typingsSlinky.cesium.anon.DisableDepthTestDistance
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "PointGraphics")
 @js.native
-class PointGraphics () extends js.Object {
+class PointGraphics () extends StObject {
   def this(options: DisableDepthTestDistance) = this()
   
   def clone(result: PointGraphics): PointGraphics = js.native

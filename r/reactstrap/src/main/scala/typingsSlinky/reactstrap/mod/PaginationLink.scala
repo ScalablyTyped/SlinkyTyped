@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.paginationLinkMod.PaginationLinkProps
+import typingsSlinky.reactstrap.paginationLinkMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "PaginationLink")
+@JSImport("reactstrap/lib", "PaginationLink")
 @js.native
-class PaginationLink ()
-  extends Component[PaginationLinkProps, js.Object, js.Any]
+class PaginationLink () extends default

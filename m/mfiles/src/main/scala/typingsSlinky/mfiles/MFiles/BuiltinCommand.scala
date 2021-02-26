@@ -176,6 +176,7 @@ import typingsSlinky.mfiles.mfilesNumbers.`97`
 import typingsSlinky.mfiles.mfilesNumbers.`98`
 import typingsSlinky.mfiles.mfilesNumbers.`99`
 import typingsSlinky.mfiles.mfilesNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -358,7 +359,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mfiles.mfilesNumbers.`174`
   - typingsSlinky.mfiles.mfilesNumbers.`268435455`
 */
-trait BuiltinCommand extends js.Object
+trait BuiltinCommand extends StObject
 object BuiltinCommand {
   
   @scala.inline

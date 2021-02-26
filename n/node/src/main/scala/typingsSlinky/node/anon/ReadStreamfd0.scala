@@ -25,16 +25,17 @@ import typingsSlinky.node.streamMod.DuplexOptions
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.ReadableOptions
 import typingsSlinky.node.streamMod.WritableOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined node.process.<global>.NodeJS.ReadStream & {  fd :0} */
 @js.native
-trait ReadStreamfd0 extends js.Object {
+trait ReadStreamfd0 extends StObject {
   
-  def _destroy(error: Null, callback: js.Function1[js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _destroy(error: js.Error, callback: js.Function1[js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  def _destroy(error: Null, callback: js.Function1[js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   
   def _final(callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   

@@ -3,6 +3,7 @@ package typingsSlinky.readableStream.mod
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.streamMod.TransformCallback
 import typingsSlinky.readableStream.anon.AfterTransform
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

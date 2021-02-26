@@ -10,9 +10,9 @@ Chained and parallel async iterator in one elegant function
 | ------------------ | :-------------: |
 | Full name          | each |
 | Keywords           | array, asynchronous, control flow, each, object |
-| # releases         | 6 |
-| # dependents       | 25 |
-| # downloads        | 62871 |
+| # releases         | 2 |
+| # dependents       | 28 |
+| # downloads        | 115128 |
 | # stars            | 4 |
 
 ## Links

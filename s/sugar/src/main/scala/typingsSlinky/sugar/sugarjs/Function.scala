@@ -2,16 +2,17 @@ package typingsSlinky.sugar.sugarjs
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("sugarjs.Function")
-@js.native
-object Function extends js.Object {
+object Function {
+  
+  type Chainable[RawValue] = ChainableBase[RawValue] with typingsSlinky.sugar.sugarjs.Object.ChainableBase[RawValue]
   
   @js.native
-  trait ChainableBase[RawValue] extends js.Object {
+  trait ChainableBase[RawValue] extends StObject {
     
     def after(n: Double): SugarDefaultChainable[typingsSlinky.sugar.Function] = js.native
     
@@ -127,6 +128,4 @@ object Function extends js.Object {
     def throttle(instance: typingsSlinky.sugar.Function): typingsSlinky.sugar.Function = js.native
     def throttle(instance: typingsSlinky.sugar.Function, ms: Double): typingsSlinky.sugar.Function = js.native
   }
-  
-  type Chainable[RawValue] = ChainableBase[RawValue] with typingsSlinky.sugar.sugarjs.Object.ChainableBase[RawValue]
 }

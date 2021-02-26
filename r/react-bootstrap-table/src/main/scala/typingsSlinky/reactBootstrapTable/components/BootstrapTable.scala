@@ -16,15 +16,22 @@ import typingsSlinky.reactBootstrapTable.mod.Options
 import typingsSlinky.reactBootstrapTable.mod.RemoteObjSpec
 import typingsSlinky.reactBootstrapTable.mod.ScrollPosition
 import typingsSlinky.reactBootstrapTable.mod.SelectRow
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object BootstrapTable {
   
+  @scala.inline
+  def apply(data: js.Array[js.Object]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BootstrapTableProps]))
+  }
+  
   @JSImport("react-bootstrap-table", "BootstrapTable")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,10 +66,10 @@ object BootstrapTable {
     def containerStyle(value: CSSProperties): this.type = set("containerStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def csvFileNameFunction0(value: () => String): this.type = set("csvFileName", js.Any.fromFunction0(value))
+    def csvFileName(value: String | js.Function0[String]): this.type = set("csvFileName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def csvFileName(value: String | js.Function0[String]): this.type = set("csvFileName", value.asInstanceOf[js.Any])
+    def csvFileNameFunction0(value: () => String): this.type = set("csvFileName", js.Any.fromFunction0(value))
     
     @scala.inline
     def deleteRow(value: Boolean): this.type = set("deleteRow", value.asInstanceOf[js.Any])
@@ -89,10 +96,10 @@ object BootstrapTable {
     def footer(value: Boolean): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerDataVarargs(value: js.Array[FooterData]*): this.type = set("footerData", js.Array(value :_*))
+    def footerData(value: js.Array[js.Array[FooterData]]): this.type = set("footerData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerData(value: js.Array[js.Array[FooterData]]): this.type = set("footerData", value.asInstanceOf[js.Any])
+    def footerDataVarargs(value: js.Array[FooterData]*): this.type = set("footerData", js.Array(value :_*))
     
     @scala.inline
     def headerContainerClass(value: String): this.type = set("headerContainerClass", value.asInstanceOf[js.Any])
@@ -134,10 +141,10 @@ object BootstrapTable {
     def pagination(value: Boolean): this.type = set("pagination", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def remoteFunction1(value: /* remobeObj */ RemoteObjSpec => RemoteObjSpec): this.type = set("remote", js.Any.fromFunction1(value))
+    def remote(value: Boolean | (js.Function1[/* remobeObj */ RemoteObjSpec, RemoteObjSpec])): this.type = set("remote", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def remote(value: Boolean | (js.Function1[/* remobeObj */ RemoteObjSpec, RemoteObjSpec])): this.type = set("remote", value.asInstanceOf[js.Any])
+    def remoteFunction1(value: /* remobeObj */ RemoteObjSpec => RemoteObjSpec): this.type = set("remote", js.Any.fromFunction1(value))
     
     @scala.inline
     def renderAlert(value: Boolean): this.type = set("renderAlert", value.asInstanceOf[js.Any])
@@ -176,16 +183,16 @@ object BootstrapTable {
     def tableStyle(value: CSSProperties): this.type = set("tableStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def trClassNameFunction2(value: (/* rowData */ js.Any, /* rowIndex */ Double) => String): this.type = set("trClassName", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def trClassName(value: String | (js.Function2[/* rowData */ js.Any, /* rowIndex */ Double, String])): this.type = set("trClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def trStyleFunction2(value: (/* rowData */ js.Any, /* rowIndex */ Double) => CSSProperties): this.type = set("trStyle", js.Any.fromFunction2(value))
+    def trClassNameFunction2(value: (/* rowData */ js.Any, /* rowIndex */ Double) => String): this.type = set("trClassName", js.Any.fromFunction2(value))
     
     @scala.inline
     def trStyle(value: CSSProperties | (js.Function2[/* rowData */ js.Any, /* rowIndex */ Double, CSSProperties])): this.type = set("trStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def trStyleFunction2(value: (/* rowData */ js.Any, /* rowIndex */ Double) => CSSProperties): this.type = set("trStyle", js.Any.fromFunction2(value))
     
     @scala.inline
     def version(value: BootstrapVersion): this.type = set("version", value.asInstanceOf[js.Any])
@@ -195,10 +202,4 @@ object BootstrapTable {
   }
   
   def withProps(p: BootstrapTableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[js.Object]): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[BootstrapTableProps]))
-  }
 }

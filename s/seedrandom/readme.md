@@ -10,9 +10,9 @@ Seeded random number generator for Javascript.
 | ------------------ | :-------------: |
 | Full name          | seedrandom |
 | Keywords           | seed, random, crypto |
-| # releases         | 8 |
-| # dependents       | 273 |
-| # downloads        | 8271651 |
+| # releases         | 7 |
+| # dependents       | 399 |
+| # downloads        | 14193953 |
 | # stars            | 10 |
 
 ## Links

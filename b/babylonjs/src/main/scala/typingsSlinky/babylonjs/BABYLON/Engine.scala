@@ -11,6 +11,7 @@ import typingsSlinky.babylonjs.WebGLProgram
 import typingsSlinky.babylonjs.WebGLUniformLocation
 import typingsSlinky.std.WebGLQuery
 import typingsSlinky.std.WebGLTransformFeedback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -162,10 +163,6 @@ trait Engine extends ThinEngine {
   
   var _timeStep: js.Any = js.native
   
-  def _uploadImageToTexture(texture: InternalTexture, image: ImageBitmap): Unit = js.native
-  def _uploadImageToTexture(texture: InternalTexture, image: ImageBitmap, faceIndex: js.UndefOr[scala.Nothing], lod: Double): Unit = js.native
-  def _uploadImageToTexture(texture: InternalTexture, image: ImageBitmap, faceIndex: Double): Unit = js.native
-  def _uploadImageToTexture(texture: InternalTexture, image: ImageBitmap, faceIndex: Double, lod: Double): Unit = js.native
   /** @hidden */
   def _uploadImageToTexture(texture: InternalTexture, image: HTMLImageElement): Unit = js.native
   def _uploadImageToTexture(
@@ -176,6 +173,10 @@ trait Engine extends ThinEngine {
   ): Unit = js.native
   def _uploadImageToTexture(texture: InternalTexture, image: HTMLImageElement, faceIndex: Double): Unit = js.native
   def _uploadImageToTexture(texture: InternalTexture, image: HTMLImageElement, faceIndex: Double, lod: Double): Unit = js.native
+  def _uploadImageToTexture(texture: InternalTexture, image: ImageBitmap): Unit = js.native
+  def _uploadImageToTexture(texture: InternalTexture, image: ImageBitmap, faceIndex: js.UndefOr[scala.Nothing], lod: Double): Unit = js.native
+  def _uploadImageToTexture(texture: InternalTexture, image: ImageBitmap, faceIndex: Double): Unit = js.native
+  def _uploadImageToTexture(texture: InternalTexture, image: ImageBitmap, faceIndex: Double, lod: Double): Unit = js.native
   
   /** @hidden */
   var _vrDisplay: js.Any = js.native

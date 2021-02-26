@@ -10,9 +10,9 @@ JavaScript library of crypto standards.
 | ------------------ | :-------------: |
 | Full name          | crypto-js |
 | Keywords           | security, crypto, Hash, MD5, SHA1, SHA-1, SHA256, SHA-256, RC4, Rabbit, AES, DES, PBKDF2, HMAC, OFB, CFB, CTR, CBC, Base64 |
-| # releases         | 1 |
-| # dependents       | 2380 |
-| # downloads        | 44653871 |
+| # releases         | 5 |
+| # dependents       | 3205 |
+| # downloads        | 76812415 |
 | # stars            | 149 |
 
 ## Links

@@ -1,16 +1,15 @@
 package typingsSlinky.qlikVisualizationextensions
 
 import typingsSlinky.angular.mod.IPromise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("VariableAPI")
-@js.native
-object VariableAPI extends js.Object {
+object VariableAPI {
   
   @js.native
-  trait IVariable extends js.Object {
+  trait IVariable extends StObject {
     
     /**
       * Creates a variable.

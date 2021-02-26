@@ -3,13 +3,14 @@ package typingsSlinky.winrtUwp.Windows.Services.Store
 import typingsSlinky.winrtUwp.Windows.ApplicationModel.Package
 import typingsSlinky.winrtUwp.Windows.Foundation.TypedEventHandler
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides license info for a downloadable content (DLC) package for the current app. */
 @js.native
-trait StorePackageLicense extends js.Object {
+trait StorePackageLicense extends StObject {
   
   /** Gets the downloadable content (DLC) package that is associated with the license. */
   @JSName("package")

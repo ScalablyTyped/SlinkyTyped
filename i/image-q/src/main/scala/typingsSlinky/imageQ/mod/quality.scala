@@ -1,14 +1,14 @@
 package typingsSlinky.imageQ.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("image-q", "quality")
-@js.native
-object quality extends js.Object {
+object quality {
   
+  @JSImport("image-q", "quality.SSIM")
   @js.native
   class SSIM ()
-    extends typingsSlinky.imageQ.ssimMod.SSIM
+    extends typingsSlinky.imageQ.qualityMod.SSIM
 }

@@ -10,9 +10,9 @@ Check if servers are reachable
 | ------------------ | :-------------: |
 | Full name          | is-reachable |
 | Keywords           | browser, online, offline, network, connected, connectivity, internet, is, has, detect, reachable, reachability, server, host, accessible, socket |
-| # releases         | 5 |
-| # dependents       | 55 |
-| # downloads        | 2051859 |
+| # releases         | 4 |
+| # dependents       | 68 |
+| # downloads        | 3765116 |
 | # stars            | 7 |
 
 ## Links

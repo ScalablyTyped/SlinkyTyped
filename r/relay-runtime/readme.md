@@ -10,9 +10,9 @@ A core runtime for building GraphQL-driven applications.
 | ------------------ | :-------------: |
 | Full name          | relay-runtime |
 | Keywords           | graphql, relay |
-| # releases         | 187 |
-| # dependents       | 69 |
-| # downloads        | 12612870 |
+| # releases         | 1519 |
+| # dependents       | 76 |
+| # downloads        | 37870598 |
 | # stars            | 1 |
 
 ## Links

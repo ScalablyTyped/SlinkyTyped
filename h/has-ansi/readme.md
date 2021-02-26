@@ -11,8 +11,8 @@ Check if a string has ANSI escape codes
 | Full name          | has-ansi |
 | Keywords           | ansi, styles, color, colour, colors, terminal, console, string, tty, escape, shell, xterm, command-line, text, regex, regexp, match, test, find, pattern, has |
 | # releases         | 2 |
-| # dependents       | 114 |
-| # downloads        | 452315140 |
+| # dependents       | 152 |
+| # downloads        | 639118622 |
 | # stars            | 6 |
 
 ## Links

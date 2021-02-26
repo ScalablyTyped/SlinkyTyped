@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.Priority
 import typingsSlinky.maximMazurokGapiClientCompute.anon.QuotaUserSecurityPolicy
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RequestIdSecurityPolicy
 import typingsSlinky.maximMazurokGapiClientCompute.anon.ResourceSecurityPolicy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SecurityPoliciesResource extends js.Object {
+trait SecurityPoliciesResource extends StObject {
   
   def addRule(request: QuotaUserSecurityPolicy, body: SecurityPolicyRule): Request[Operation] = js.native
   /** Inserts a rule into a security policy. */

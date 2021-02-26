@@ -10,9 +10,9 @@ Download and extract files
 | ------------------ | :-------------: |
 | Full name          | download |
 | Keywords           | download, extract, http, request, url |
-| # releases         | 3 |
-| # dependents       | 893 |
-| # downloads        | 80881192 |
+| # releases         | 2 |
+| # dependents       | 1088 |
+| # downloads        | 160099134 |
 | # stars            | 99 |
 
 ## Links

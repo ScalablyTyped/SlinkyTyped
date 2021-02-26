@@ -7,17 +7,21 @@ import typingsSlinky.ow.predicateMod.PredicateOptions
 import typingsSlinky.std.ArrayBufferLike
 import typingsSlinky.std.SharedArrayBuffer
 import typingsSlinky.typeFest.basicMod.TypedArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ow/dist/source/predicates", JSImport.Namespace)
-@js.native
-object predicatesMod extends js.Object {
+object predicatesMod {
   
+  @JSImport("ow/dist/source/predicates", JSImport.Default)
+  @js.native
   def default[T](`object`: T): T with Predicates = js.native
+  @JSImport("ow/dist/source/predicates", JSImport.Default)
+  @js.native
   def default[T](`object`: T, options: PredicateOptions): T with Predicates = js.native
   
+  @JSImport("ow/dist/source/predicates", "AnyPredicate")
   @js.native
   class AnyPredicate[T] protected ()
     extends typingsSlinky.ow.anyMod.AnyPredicate[T] {
@@ -25,10 +29,15 @@ object predicatesMod extends js.Object {
     def this(predicates: js.Array[BasePredicate[_]], options: PredicateOptions) = this()
   }
   
+  @JSImport("ow/dist/source/predicates", "ArrayBufferPredicate")
   @js.native
-  class ArrayBufferPredicate[T /* <: ArrayBufferLike */] ()
-    extends typingsSlinky.ow.arrayBufferMod.ArrayBufferPredicate[T]
+  class ArrayBufferPredicate[T /* <: ArrayBufferLike */] protected ()
+    extends typingsSlinky.ow.arrayBufferMod.ArrayBufferPredicate[T] {
+    def this(`type`: String) = this()
+    def this(`type`: String, options: PredicateOptions) = this()
+  }
   
+  @JSImport("ow/dist/source/predicates", "ArrayPredicate")
   @js.native
   /**
     @hidden
@@ -38,6 +47,7 @@ object predicatesMod extends js.Object {
     def this(options: PredicateOptions) = this()
   }
   
+  @JSImport("ow/dist/source/predicates", "BooleanPredicate")
   @js.native
   /**
     @hidden
@@ -47,6 +57,7 @@ object predicatesMod extends js.Object {
     def this(options: PredicateOptions) = this()
   }
   
+  @JSImport("ow/dist/source/predicates", "DataViewPredicate")
   @js.native
   /**
     @hidden
@@ -56,6 +67,7 @@ object predicatesMod extends js.Object {
     def this(options: PredicateOptions) = this()
   }
   
+  @JSImport("ow/dist/source/predicates", "DatePredicate")
   @js.native
   /**
     @hidden
@@ -65,6 +77,7 @@ object predicatesMod extends js.Object {
     def this(options: PredicateOptions) = this()
   }
   
+  @JSImport("ow/dist/source/predicates", "ErrorPredicate")
   @js.native
   /**
     @hidden
@@ -74,6 +87,7 @@ object predicatesMod extends js.Object {
     def this(options: PredicateOptions) = this()
   }
   
+  @JSImport("ow/dist/source/predicates", "MapPredicate")
   @js.native
   /**
     @hidden
@@ -83,6 +97,7 @@ object predicatesMod extends js.Object {
     def this(options: PredicateOptions) = this()
   }
   
+  @JSImport("ow/dist/source/predicates", "NumberPredicate")
   @js.native
   /**
     @hidden
@@ -92,6 +107,7 @@ object predicatesMod extends js.Object {
     def this(options: PredicateOptions) = this()
   }
   
+  @JSImport("ow/dist/source/predicates", "ObjectPredicate")
   @js.native
   /**
     @hidden
@@ -101,8 +117,56 @@ object predicatesMod extends js.Object {
     def this(options: PredicateOptions) = this()
   }
   
+  @JSImport("ow/dist/source/predicates", "SetPredicate")
   @js.native
-  trait Predicates extends js.Object {
+  /**
+    @hidden
+    */
+  class SetPredicate[T] ()
+    extends typingsSlinky.ow.setMod.SetPredicate[T] {
+    def this(options: PredicateOptions) = this()
+  }
+  
+  @JSImport("ow/dist/source/predicates", "StringPredicate")
+  @js.native
+  /**
+    @hidden
+    */
+  class StringPredicate ()
+    extends typingsSlinky.ow.stringMod.StringPredicate {
+    def this(options: PredicateOptions) = this()
+  }
+  
+  @JSImport("ow/dist/source/predicates", "TypedArrayPredicate")
+  @js.native
+  class TypedArrayPredicate[T /* <: TypedArray */] protected ()
+    extends typingsSlinky.ow.typedArrayMod.TypedArrayPredicate[T] {
+    def this(`type`: String) = this()
+    def this(`type`: String, options: PredicateOptions) = this()
+  }
+  
+  @JSImport("ow/dist/source/predicates", "WeakMapPredicate")
+  @js.native
+  /**
+    @hidden
+    */
+  class WeakMapPredicate[KeyType /* <: js.Object */] ()
+    extends typingsSlinky.ow.weakMapMod.WeakMapPredicate[KeyType] {
+    def this(options: PredicateOptions) = this()
+  }
+  
+  @JSImport("ow/dist/source/predicates", "WeakSetPredicate")
+  @js.native
+  /**
+    @hidden
+    */
+  class WeakSetPredicate[T /* <: js.Object */] ()
+    extends typingsSlinky.ow.weakSetMod.WeakSetPredicate[T] {
+    def this(options: PredicateOptions) = this()
+  }
+  
+  @js.native
+  trait Predicates extends StObject {
     
     def any(predicate: BasePredicate[_]*): typingsSlinky.ow.anyMod.AnyPredicate[_] = js.native
     /**
@@ -339,45 +403,5 @@ object predicatesMod extends js.Object {
       Test the value to be a WeakSet.
       */
     val weakSet: typingsSlinky.ow.weakSetMod.WeakSetPredicate[js.Object] = js.native
-  }
-  
-  @js.native
-  /**
-    @hidden
-    */
-  class SetPredicate[T] ()
-    extends typingsSlinky.ow.setMod.SetPredicate[T] {
-    def this(options: PredicateOptions) = this()
-  }
-  
-  @js.native
-  /**
-    @hidden
-    */
-  class StringPredicate ()
-    extends typingsSlinky.ow.stringMod.StringPredicate {
-    def this(options: PredicateOptions) = this()
-  }
-  
-  @js.native
-  class TypedArrayPredicate[T /* <: TypedArray */] ()
-    extends typingsSlinky.ow.typedArrayMod.TypedArrayPredicate[T]
-  
-  @js.native
-  /**
-    @hidden
-    */
-  class WeakMapPredicate[KeyType /* <: js.Object */] ()
-    extends typingsSlinky.ow.weakMapMod.WeakMapPredicate[KeyType] {
-    def this(options: PredicateOptions) = this()
-  }
-  
-  @js.native
-  /**
-    @hidden
-    */
-  class WeakSetPredicate[T /* <: js.Object */] ()
-    extends typingsSlinky.ow.weakSetMod.WeakSetPredicate[T] {
-    def this(options: PredicateOptions) = this()
   }
 }

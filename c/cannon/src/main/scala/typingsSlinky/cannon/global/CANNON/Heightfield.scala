@@ -1,6 +1,7 @@
 package typingsSlinky.cannon.global.CANNON
 
 import typingsSlinky.cannon.CANNON.IHightfield
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

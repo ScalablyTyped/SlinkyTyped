@@ -10,9 +10,9 @@ libxml bindings for v8 javascript engine
 | ------------------ | :-------------: |
 | Full name          | libxmljs |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 231 |
-| # downloads        | 2083460 |
+| # releases         | 2 |
+| # dependents       | 229 |
+| # downloads        | 2031722 |
 | # stars            | 25 |
 
 ## Links

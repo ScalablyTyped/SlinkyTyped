@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.carouselCarouselMod.CarouselProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/carousel", JSImport.Namespace)
-@js.native
-object carouselMod extends js.Object {
+object carouselMod {
   
+  @JSImport("primereact/carousel", "Carousel")
   @js.native
-  class Carousel ()
-    extends Component[CarouselProps, js.Any, js.Any]
+  class Carousel protected ()
+    extends typingsSlinky.primereact.carouselCarouselMod.Carousel {
+    def this(props: CarouselProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: CarouselProps, context: js.Any) = this()
+  }
 }

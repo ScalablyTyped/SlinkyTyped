@@ -9,10 +9,10 @@ Runs typescript type checker and linter on separate process.
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | fork-ts-checker-webpack-plugin |
-| Keywords           | awesome-typescript-loader, checker, fast, fork, increment, linter, plugin, speed, ts-loader, type, typescript, webpack, webpack-plugin |
-| # releases         | 69 |
-| # dependents       | 589 |
-| # downloads        | 75828625 |
+| Keywords           | fast, fork, linter, webpack, plugin, ts-loader, typescript, webpack |
+| # releases         | 113 |
+| # dependents       | 838 |
+| # downloads        | 258952762 |
 | # stars            | 3 |
 
 ## Links

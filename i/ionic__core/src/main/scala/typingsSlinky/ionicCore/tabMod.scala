@@ -4,14 +4,14 @@ import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTabElement
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/tab/tab", JSImport.Namespace)
-@js.native
-object tabMod extends js.Object {
+object tabMod {
   
+  @JSImport("@ionic/core/dist/types/components/tab/tab", "Tab")
   @js.native
   class Tab () extends ComponentInterface {
     

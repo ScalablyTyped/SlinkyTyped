@@ -10,9 +10,9 @@ A set of utility functions for expect and related packages
 | ------------------ | :-------------: |
 | Full name          | jest-matcher-utils |
 | Keywords           | - |
-| # releases         | 54 |
-| # dependents       | 68 |
-| # downloads        | 259575203 |
+| # releases         | 50 |
+| # dependents       | 120 |
+| # downloads        | 452805777 |
 | # stars            | 0 |
 
 ## Links

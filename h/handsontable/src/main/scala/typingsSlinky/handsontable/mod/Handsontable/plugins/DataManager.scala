@@ -1,12 +1,13 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins
 
 import typingsSlinky.handsontable.mod._Handsontable.Core
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DataManager extends js.Object {
+trait DataManager extends StObject {
   
   def addChild(parent: js.Object): Unit = js.native
   def addChild(parent: js.Object, element: js.Object): Unit = js.native
@@ -57,7 +58,7 @@ trait DataManager extends js.Object {
   
   var parentReference: js.Any = js.native
   
-   //WeakMap
+  //WeakMap
   var plugin: NestedRows = js.native
   
   def rewriteCache(): Unit = js.native

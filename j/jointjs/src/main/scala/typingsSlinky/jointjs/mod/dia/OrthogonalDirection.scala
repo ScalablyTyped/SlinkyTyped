@@ -1,5 +1,6 @@
 package typingsSlinky.jointjs.mod.dia
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jointjs.jointjsStrings.right
   - typingsSlinky.jointjs.jointjsStrings.bottom
 */
-trait OrthogonalDirection extends js.Object
+trait OrthogonalDirection extends StObject
 object OrthogonalDirection {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.agGrid.eventsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.agGrid.agGridStrings.rowModelUpdated
   - typingsSlinky.agGrid.agGridStrings.api
 */
-trait ColumnEventType extends js.Object
+trait ColumnEventType extends StObject
 object ColumnEventType {
   
   @scala.inline

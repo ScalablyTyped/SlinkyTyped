@@ -1,33 +1,41 @@
 package typingsSlinky.storybookAddonJest
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.react.mod.Context
 import typingsSlinky.storybookAddonJest.anon.Active
 import typingsSlinky.storybookAddonJest.anon.ComponentDidCatch
 import typingsSlinky.storybookAddonJest.anon.ReadonlyHocProps
 import typingsSlinky.storybookAddonJest.provideJestResultMod.HocProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@storybook/addon-jest/dist/components/Panel", JSImport.Namespace)
-@js.native
-object panelMod extends js.Object {
+object panelMod {
   
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSImport("@storybook/addon-jest/dist/components/Panel", JSImport.Default)
   @js.native
   class default protected () extends ComponentDidCatch {
     def this(props: ReadonlyHocProps) = this()
     def this(props: HocProps) = this()
     def this(props: HocProps, context: js.Any) = this()
   }
-  @js.native
-  object default
-    extends Instantiable1[(/* props */ HocProps) | (/* props */ ReadonlyHocProps), ComponentDidCatch]
-       with Instantiable2[/* props */ HocProps, /* context */ js.Any, ComponentDidCatch] {
+  object default {
     
-    var contextType: js.UndefOr[Context[_]] = js.native
+    @JSImport("@storybook/addon-jest/dist/components/Panel", JSImport.Default)
+    @js.native
+    val ^ : js.Any = js.native
     
-    var defaultProps: Active = js.native
+    @JSImport("@storybook/addon-jest/dist/components/Panel", "default.contextType")
+    @js.native
+    def contextType: js.UndefOr[Context[js.Any]] = js.native
+    @scala.inline
+    def contextType_=(x: js.UndefOr[Context[js.Any]]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("contextType")(x.asInstanceOf[js.Any])
+    
+    @JSImport("@storybook/addon-jest/dist/components/Panel", "default.defaultProps")
+    @js.native
+    def defaultProps: Active = js.native
+    @scala.inline
+    def defaultProps_=(x: Active): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
   }
 }

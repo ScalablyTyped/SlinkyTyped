@@ -5,6 +5,7 @@ import typingsSlinky.vegaTypings.vegaTypingsStrings.lognormal
 import typingsSlinky.vegaTypings.vegaTypingsStrings.mixture
 import typingsSlinky.vegaTypings.vegaTypingsStrings.normal
 import typingsSlinky.vegaTypings.vegaTypingsStrings.uniform
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,36 +17,36 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.transformMod.DistributionKDE
   - typingsSlinky.vegaTypings.transformMod.DistributionMixture
 */
-trait Distribution extends js.Object
+trait Distribution extends StObject
 object Distribution {
   
   @scala.inline
-  def DistributionKDE(field: String | TransformField, function: kde): Distribution = {
+  def DistributionKDE(field: String | TransformField, function: kde): typingsSlinky.vegaTypings.transformMod.DistributionKDE = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], function = function.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Distribution]
+    __obj.asInstanceOf[typingsSlinky.vegaTypings.transformMod.DistributionKDE]
   }
   
   @scala.inline
-  def DistributionMixture(field: String | TransformField, function: mixture): Distribution = {
+  def DistributionLogNormal(function: lognormal): typingsSlinky.vegaTypings.transformMod.DistributionLogNormal = {
+    val __obj = js.Dynamic.literal(function = function.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.vegaTypings.transformMod.DistributionLogNormal]
+  }
+  
+  @scala.inline
+  def DistributionMixture(field: String | TransformField, function: mixture): typingsSlinky.vegaTypings.transformMod.DistributionMixture = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], function = function.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Distribution]
+    __obj.asInstanceOf[typingsSlinky.vegaTypings.transformMod.DistributionMixture]
   }
   
   @scala.inline
-  def DistributionUniform(function: uniform): Distribution = {
+  def DistributionNormal(function: normal): typingsSlinky.vegaTypings.transformMod.DistributionNormal = {
     val __obj = js.Dynamic.literal(function = function.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Distribution]
+    __obj.asInstanceOf[typingsSlinky.vegaTypings.transformMod.DistributionNormal]
   }
   
   @scala.inline
-  def DistributionNormal(function: normal): Distribution = {
+  def DistributionUniform(function: uniform): typingsSlinky.vegaTypings.transformMod.DistributionUniform = {
     val __obj = js.Dynamic.literal(function = function.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Distribution]
-  }
-  
-  @scala.inline
-  def DistributionLogNormal(function: lognormal): Distribution = {
-    val __obj = js.Dynamic.literal(function = function.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Distribution]
+    __obj.asInstanceOf[typingsSlinky.vegaTypings.transformMod.DistributionUniform]
   }
 }

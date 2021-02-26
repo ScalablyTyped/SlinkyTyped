@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientCompute.anon.QuotaUserTargetGrpcProxy
 import typingsSlinky.maximMazurokGapiClientCompute.anon.ResourceTargetGrpcProxy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TargetGrpcProxiesResource extends js.Object {
+trait TargetGrpcProxiesResource extends StObject {
   
   /** Deletes the specified TargetGrpcProxy in the given scope */
   def delete(): Request[Operation] = js.native

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.typesDeleteCommentContentInputMo
 import typingsSlinky.awsSdkClientCodecommitNode.typesDeleteCommentContentOutputMod.DeleteCommentContentOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-codecommit-node/commands/DeleteCommentContentCommand", JSImport.Namespace)
-@js.native
-object deleteCommentContentCommandMod extends js.Object {
+object deleteCommentContentCommandMod {
   
+  @JSImport("@aws-sdk/client-codecommit-node/commands/DeleteCommentContentCommand", "DeleteCommentContentCommand")
   @js.native
   class DeleteCommentContentCommand protected () extends Command[
           InputTypesUnion, 

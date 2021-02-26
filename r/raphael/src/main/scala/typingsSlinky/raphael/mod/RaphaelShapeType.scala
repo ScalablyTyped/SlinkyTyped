@@ -1,5 +1,6 @@
 package typingsSlinky.raphael.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.raphael.raphaelStrings.path
   - typingsSlinky.raphael.raphaelStrings.set
 */
-trait RaphaelShapeType extends js.Object
+trait RaphaelShapeType extends StObject
 object RaphaelShapeType {
   
   @scala.inline

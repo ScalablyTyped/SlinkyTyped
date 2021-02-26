@@ -1,5 +1,6 @@
 package typingsSlinky.googleAdwordsScripts
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.CONVERSION_OPTIMIZER
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.PERCENT_CPA
 */
-trait BiddingStrategyString extends js.Object
+trait BiddingStrategyString extends StObject
 object BiddingStrategyString {
   
   @scala.inline

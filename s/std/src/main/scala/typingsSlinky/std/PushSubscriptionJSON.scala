@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PushSubscriptionJSON extends js.Object {
+trait PushSubscriptionJSON extends StObject {
   
   var endpoint: js.UndefOr[java.lang.String] = js.native
   
@@ -16,45 +17,33 @@ trait PushSubscriptionJSON extends js.Object {
 object PushSubscriptionJSON {
   
   @scala.inline
-  def apply(): PushSubscriptionJSON = {
+  def apply(): org.scalajs.dom.experimental.push.PushSubscriptionJSON = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[PushSubscriptionJSON]
+    __obj.asInstanceOf[org.scalajs.dom.experimental.push.PushSubscriptionJSON]
   }
   
   @scala.inline
-  implicit class PushSubscriptionJSONOps[Self <: org.scalajs.dom.experimental.push.PushSubscriptionJSON] (val x: Self) extends AnyVal {
+  implicit class PushSubscriptionJSONMutableBuilder[Self <: org.scalajs.dom.experimental.push.PushSubscriptionJSON] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setEndpoint(value: java.lang.String): Self = StObject.set(x, "endpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setEndpointUndefined: Self = StObject.set(x, "endpoint", js.undefined)
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setExpirationTime(value: Double): Self = StObject.set(x, "expirationTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEndpoint(value: java.lang.String): Self = this.set("endpoint", value.asInstanceOf[js.Any])
+    def setExpirationTimeNull: Self = StObject.set(x, "expirationTime", null)
     
     @scala.inline
-    def deleteEndpoint: Self = this.set("endpoint", js.undefined)
+    def setExpirationTimeUndefined: Self = StObject.set(x, "expirationTime", js.undefined)
     
     @scala.inline
-    def setExpirationTime(value: Double): Self = this.set("expirationTime", value.asInstanceOf[js.Any])
+    def setKeys(value: Record[java.lang.String, java.lang.String]): Self = StObject.set(x, "keys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteExpirationTime: Self = this.set("expirationTime", js.undefined)
-    
-    @scala.inline
-    def setExpirationTimeNull: Self = this.set("expirationTime", null)
-    
-    @scala.inline
-    def setKeys(value: Record[java.lang.String, java.lang.String]): Self = this.set("keys", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteKeys: Self = this.set("keys", js.undefined)
+    def setKeysUndefined: Self = StObject.set(x, "keys", js.undefined)
   }
 }

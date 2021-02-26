@@ -1,5 +1,6 @@
 package typingsSlinky.exceljs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +28,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.exceljs.exceljsStrings.`3TrafficLights2`
   - typingsSlinky.exceljs.exceljsStrings.`3Triangles`
 */
-trait IconSetTypes extends js.Object
+trait IconSetTypes extends StObject
 object IconSetTypes {
   
   @scala.inline

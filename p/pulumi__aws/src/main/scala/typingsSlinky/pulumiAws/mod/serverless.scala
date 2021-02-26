@@ -3,14 +3,14 @@ package typingsSlinky.pulumiAws.mod
 import typingsSlinky.pulumiAws.serverlessFunctionMod.FunctionOptions
 import typingsSlinky.pulumiAws.serverlessFunctionMod.Handler
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws", "serverless")
-@js.native
-object serverless extends js.Object {
+object serverless {
   
+  @JSImport("@pulumi/aws", "serverless.Function")
   @js.native
   class Function protected ()
     extends typingsSlinky.pulumiAws.serverlessMod.Function {

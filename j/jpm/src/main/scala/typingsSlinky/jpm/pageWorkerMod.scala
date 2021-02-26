@@ -5,6 +5,7 @@ import typingsSlinky.jpm.anon.Allow
 import typingsSlinky.jpm.anon.Script
 import typingsSlinky.jpm.jpmStrings.error
 import typingsSlinky.jpm.jpmStrings.message
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,14 +13,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * Create a permanent, invisible page and access its DOM
   */
-@JSImport("sdk/page-worker", JSImport.Namespace)
-@js.native
-object pageWorkerMod extends js.Object {
+object pageWorkerMod {
   
+  @JSImport("sdk/page-worker", "Page")
+  @js.native
   def Page(options: Allow): PageWorker = js.native
   
   @js.native
-  trait PageWorker extends js.Object {
+  trait PageWorker extends StObject {
     
     var allow: js.UndefOr[Script] = js.native
     

@@ -5,12 +5,13 @@ import typingsSlinky.firebaseMessaging.firebaseMessagingStrings.notificationclic
 import typingsSlinky.firebaseMessaging.firebaseMessagingStrings.push
 import typingsSlinky.firebaseMessaging.firebaseMessagingStrings.pushsubscriptionchange
 import typingsSlinky.std.AddEventListenerOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServiceWorkerGlobalScope extends js.Object {
+trait ServiceWorkerGlobalScope extends StObject {
   
   @JSName("addEventListener")
   def addEventListener_notificationclick(

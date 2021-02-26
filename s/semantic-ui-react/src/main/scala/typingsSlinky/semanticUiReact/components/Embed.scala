@@ -16,6 +16,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.`21Colon9`
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`4Colon3`
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.vimeo
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.youtube
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ object Embed {
   
   @JSImport("semantic-ui-react", "Embed")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -53,10 +54,10 @@ object Embed {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultActive(value: Boolean): this.type = set("defaultActive", value.asInstanceOf[js.Any])
@@ -65,7 +66,7 @@ object Embed {
     def hd(value: Boolean): this.type = set("hd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconFunction3(
@@ -73,13 +74,13 @@ object Embed {
     ): this.type = set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
-    def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iframeReactElement(value: ReactElement): this.type = set("iframe", value.asInstanceOf[js.Any])
+    def iframe(value: SemanticShorthandItem[HtmlIframeProps]): this.type = set("iframe", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iframeFunction3(
@@ -87,7 +88,7 @@ object Embed {
     ): this.type = set("iframe", js.Any.fromFunction3(value))
     
     @scala.inline
-    def iframe(value: SemanticShorthandItem[HtmlIframeProps]): this.type = set("iframe", value.asInstanceOf[js.Any])
+    def iframeReactElement(value: ReactElement): this.type = set("iframe", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ EmbedProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
@@ -102,7 +103,7 @@ object Embed {
     def url(value: String): this.type = set("url", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: EmbedProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Embed.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: EmbedProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

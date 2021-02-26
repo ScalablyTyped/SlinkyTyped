@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "boxen"
-version := "4.2.0-2882bd"
+version := "4.2.0-c29812"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "cli-boxes" % "2.2.1-405c36",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
-  "org.scalablytyped.slinky" %%% "type-fest" % "0.8.1-513a4b")
+  "org.scalablytyped.slinky" %%% "cli-boxes" % "2.2.1-909e5b",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27",
+  "org.scalablytyped.slinky" %%% "type-fest" % "0.8.1-07bb63")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

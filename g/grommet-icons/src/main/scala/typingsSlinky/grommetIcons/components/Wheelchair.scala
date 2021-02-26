@@ -3,17 +3,18 @@ package typingsSlinky.grommetIcons.components
 import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.grommetIcons.iconsMod.IconProps
 import typingsSlinky.react.mod.SVGProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Wheelchair {
   
-  @JSImport("grommet-icons/es6", "Wheelchair")
+  @JSImport("grommet-icons", "Wheelchair")
   @js.native
-  object component extends js.Object
-  
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps443126004[SVGSVGElement] = new SharedBuilder_IconPropsSVGProps443126004[SVGSVGElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  val component: js.Object = js.native
   
   implicit def make(companion: Wheelchair.type): SharedBuilder_IconPropsSVGProps443126004[SVGSVGElement] = new SharedBuilder_IconPropsSVGProps443126004[SVGSVGElement](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps443126004[SVGSVGElement] = new SharedBuilder_IconPropsSVGProps443126004[SVGSVGElement](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

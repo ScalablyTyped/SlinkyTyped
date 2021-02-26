@@ -1,5 +1,6 @@
 package typingsSlinky.hapiHapi
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -91,4 +92,9 @@ package object mod {
   type StopEventHandler = js.Function0[scala.Unit]
   
   type ValidationObject = typingsSlinky.joi.mod.SchemaMap[js.Any]
+  
+  @scala.inline
+  def server(): typingsSlinky.hapiHapi.mod.Server_ = typingsSlinky.hapiHapi.mod.^.asInstanceOf[js.Dynamic].applyDynamic("server")().asInstanceOf[typingsSlinky.hapiHapi.mod.Server_]
+  @scala.inline
+  def server(opts: typingsSlinky.hapiHapi.mod.ServerOptions): typingsSlinky.hapiHapi.mod.Server_ = typingsSlinky.hapiHapi.mod.^.asInstanceOf[js.Dynamic].applyDynamic("server")(opts.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.hapiHapi.mod.Server_]
 }

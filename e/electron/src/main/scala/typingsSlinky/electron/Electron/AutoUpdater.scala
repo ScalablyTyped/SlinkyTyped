@@ -7,6 +7,7 @@ import typingsSlinky.electron.electronStrings.`update-downloaded`
 import typingsSlinky.electron.electronStrings.`update-not-available`
 import typingsSlinky.electron.electronStrings.error
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

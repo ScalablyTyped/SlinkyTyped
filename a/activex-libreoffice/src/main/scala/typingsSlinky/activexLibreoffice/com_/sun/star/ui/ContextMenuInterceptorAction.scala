@@ -4,6 +4,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`3`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 */
-trait ContextMenuInterceptorAction extends js.Object
+trait ContextMenuInterceptorAction extends StObject
 object ContextMenuInterceptorAction {
   
   /** the context menu must not be executed. The next registered {@link XContextMenuInterceptor} should not be notified. */

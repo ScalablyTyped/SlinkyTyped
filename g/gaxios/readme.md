@@ -10,15 +10,15 @@ A simple common HTTP client specifically for Google APIs and services.
 | ------------------ | :-------------: |
 | Full name          | gaxios |
 | Keywords           | google |
-| # releases         | 37 |
-| # dependents       | 21 |
-| # downloads        | 63537278 |
+| # releases         | 29 |
+| # dependents       | 39 |
+| # downloads        | 190986908 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/JustinBeckwith/gaxios#readme)
-- [Bugs](https://github.com/JustinBeckwith/gaxios/issues)
-- [Repository](https://github.com/JustinBeckwith/gaxios)
+- [Homepage](https://github.com/googleapis/gaxios#readme)
+- [Bugs](https://github.com/googleapis/gaxios/issues)
+- [Repository](https://github.com/googleapis/gaxios)
 - [Npm](https://www.npmjs.com/package/gaxios)
     
 

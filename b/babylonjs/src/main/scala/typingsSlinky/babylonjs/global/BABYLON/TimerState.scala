@@ -1,12 +1,13 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.TimerState")
 @js.native
-object TimerState extends js.Object {
+object TimerState extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.babylonjs.BABYLON.TimerState with Double] = js.native

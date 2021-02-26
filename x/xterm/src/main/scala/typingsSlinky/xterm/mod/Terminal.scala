@@ -51,6 +51,7 @@ import typingsSlinky.xterm.xtermStrings.visual
 import typingsSlinky.xterm.xtermStrings.visualBell
 import typingsSlinky.xterm.xtermStrings.windowsMode
 import typingsSlinky.xterm.xtermStrings.wordSeparator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -738,12 +739,18 @@ class Terminal () extends IDisposable {
   def writeln(data: js.typedarray.Uint8Array, callback: js.Function0[Unit]): Unit = js.native
 }
 /* static members */
-@JSImport("xterm", "Terminal")
-@js.native
-object Terminal extends js.Object {
+object Terminal {
+  
+  @JSImport("xterm", "Terminal")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Natural language strings that can be localized.
     */
-  var strings: ILocalizableStrings = js.native
+  @JSImport("xterm", "Terminal.strings")
+  @js.native
+  def strings: ILocalizableStrings = js.native
+  @scala.inline
+  def strings_=(x: ILocalizableStrings): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("strings")(x.asInstanceOf[js.Any])
 }

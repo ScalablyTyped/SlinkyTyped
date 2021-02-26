@@ -7,15 +7,22 @@ import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMaterialUiFormValidator.mod.ValidatorFormProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ValidatorForm {
   
+  @scala.inline
+  def apply(onSubmit: SyntheticEvent[EventTarget with Element, Event] => Unit): Builder = {
+    val __props = js.Dynamic.literal(onSubmit = js.Any.fromFunction1(onSubmit))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ValidatorFormProps]))
+  }
+  
   @JSImport("react-material-ui-form-validator", "ValidatorForm")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +43,4 @@ object ValidatorForm {
   }
   
   def withProps(p: ValidatorFormProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onSubmit: SyntheticEvent[EventTarget with Element, Event] => Unit): Builder = {
-    val __props = js.Dynamic.literal(onSubmit = js.Any.fromFunction1(onSubmit))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ValidatorFormProps]))
-  }
 }

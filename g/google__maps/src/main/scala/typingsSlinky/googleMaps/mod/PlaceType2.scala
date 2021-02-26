@@ -1,5 +1,6 @@
 package typingsSlinky.googleMaps.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,7 +45,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleMaps.googleMapsStrings.sublocality_level_1
   - typingsSlinky.googleMaps.googleMapsStrings.subpremise
 */
-trait PlaceType2 extends js.Object
+trait PlaceType2 extends StObject
 object PlaceType2 {
   
   @scala.inline

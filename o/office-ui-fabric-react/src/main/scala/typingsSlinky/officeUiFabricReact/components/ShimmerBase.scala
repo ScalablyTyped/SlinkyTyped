@@ -83,6 +83,7 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -91,12 +92,15 @@ object ShimmerBase {
   
   @JSImport("office-ui-fabric-react", "ShimmerBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.ShimmerBase] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -332,13 +336,13 @@ object ShimmerBase {
     def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IShimmer]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IShimmer | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IShimmer]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IShimmer]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
@@ -359,10 +363,10 @@ object ShimmerBase {
     def crossOrigin(value: String): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customElementsGroupReactElement(value: ReactElement): this.type = set("customElementsGroup", value.asInstanceOf[js.Any])
+    def customElementsGroup(value: ReactElement): this.type = set("customElementsGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customElementsGroup(value: ReactElement): this.type = set("customElementsGroup", value.asInstanceOf[js.Any])
+    def customElementsGroupReactElement(value: ReactElement): this.type = set("customElementsGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
@@ -377,16 +381,13 @@ object ShimmerBase {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -875,10 +876,10 @@ object ShimmerBase {
     def shimmerColors(value: IShimmerColors): this.type = set("shimmerColors", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shimmerElementsVarargs(value: IShimmerElement*): this.type = set("shimmerElements", js.Array(value :_*))
+    def shimmerElements(value: js.Array[IShimmerElement]): this.type = set("shimmerElements", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shimmerElements(value: js.Array[IShimmerElement]): this.type = set("shimmerElements", value.asInstanceOf[js.Any])
+    def shimmerElementsVarargs(value: IShimmerElement*): this.type = set("shimmerElements", js.Array(value :_*))
     
     @scala.inline
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
@@ -917,10 +918,10 @@ object ShimmerBase {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IShimmerStyleProps => DeepPartial[IShimmerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IShimmerStyleProps, IShimmerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IShimmerStyleProps, IShimmerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IShimmerStyleProps => DeepPartial[IShimmerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def summary(value: String): this.type = set("summary", value.asInstanceOf[js.Any])
@@ -959,10 +960,10 @@ object ShimmerBase {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -977,7 +978,7 @@ object ShimmerBase {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IShimmerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ShimmerBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IShimmerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

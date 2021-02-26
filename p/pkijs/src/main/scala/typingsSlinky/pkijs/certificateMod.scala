@@ -4,16 +4,35 @@ import org.scalajs.dom.crypto.CryptoKey
 import typingsSlinky.asn1js.mod.BitString
 import typingsSlinky.asn1js.mod.Integer
 import typingsSlinky.asn1js.mod.Sequence
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("pkijs/src/Certificate", JSImport.Namespace)
-@js.native
-object certificateMod extends js.Object {
+object certificateMod {
+  
+  @JSImport("pkijs/src/Certificate", JSImport.Default)
+  @js.native
+  class default () extends Certificate {
+    def this(params: js.Any) = this()
+  }
+  /* static members */
+  object default {
+    
+    @JSImport("pkijs/src/Certificate", "default.defaultValues")
+    @js.native
+    def defaultValues(memberName: String): js.Any = js.native
+    
+    @JSImport("pkijs/src/Certificate", "default.schema")
+    @js.native
+    def schema(): js.Any = js.native
+    @JSImport("pkijs/src/Certificate", "default.schema")
+    @js.native
+    def schema(parameters: js.Any): js.Any = js.native
+  }
   
   @js.native
-  trait Certificate extends js.Object {
+  trait Certificate extends StObject {
     
     /**
       * Create ASN.1 schema for existing values of TBS part for the certificate
@@ -83,19 +102,5 @@ object certificateMod extends js.Object {
     def verify(issuerCertificate: Certificate): js.Thenable[Boolean] = js.native
     
     var version: Double = js.native
-  }
-  
-  @js.native
-  class default () extends Certificate {
-    def this(params: js.Any) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    def defaultValues(memberName: String): js.Any = js.native
-    
-    def schema(): js.Any = js.native
-    def schema(parameters: js.Any): js.Any = js.native
   }
 }

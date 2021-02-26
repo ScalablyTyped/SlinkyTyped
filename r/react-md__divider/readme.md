@@ -10,9 +10,9 @@ This package is used to create horizontal or vertical dividers in your applicati
 | ------------------ | :-------------: |
 | Full name          | @react-md/divider |
 | Keywords           | react-md, material design, react, divider, component, components |
-| # releases         | 22 |
+| # releases         | 37 |
 | # dependents       | 6 |
-| # downloads        | 4558 |
+| # downloads        | 22481 |
 | # stars            | 0 |
 
 ## Links

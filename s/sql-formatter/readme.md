@@ -4,15 +4,15 @@
 Typings are for version 2.3
 
 ## Library description:
-Formats whitespaces in a SQL query to make it more readable
+Format whitespace in a SQL query to make it more readable
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | sql-formatter |
-| Keywords           | sql, formatter, format, n1ql, whitespaces |
-| # releases         | 8 |
-| # dependents       | 35 |
-| # downloads        | 697276 |
+| Keywords           | sql, formatter, format, n1ql, redshift, spark, whitespace, mysql, mariadb, postgresql, pl/sql, transact-sql, db2 |
+| # releases         | 14 |
+| # dependents       | 86 |
+| # downloads        | 1718964 |
 | # stars            | 0 |
 
 ## Links

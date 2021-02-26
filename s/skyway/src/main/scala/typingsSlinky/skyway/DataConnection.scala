@@ -2,12 +2,13 @@ package typingsSlinky.skyway
 
 import typingsSlinky.skyway.skywayStrings.close
 import typingsSlinky.skyway.skywayStrings.data
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DataConnection extends js.Object {
+trait DataConnection extends StObject {
   
   def close(): js.UndefOr[Unit] = js.native
   

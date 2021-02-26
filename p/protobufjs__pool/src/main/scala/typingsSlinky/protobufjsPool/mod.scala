@@ -1,12 +1,11 @@
 package typingsSlinky.protobufjsPool
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@protobufjs/pool", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   /**
     * A general purpose buffer pool.
@@ -17,7 +16,11 @@ object mod extends js.Object {
     * @param {number} [size=8192] Slab size
     * @returns {PoolAllocator} Pooled allocator
     */
+  @JSImport("@protobufjs/pool", JSImport.Namespace)
+  @js.native
   def apply(alloc: PoolAllocator, slice: PoolSlicer): PoolAllocator = js.native
+  @JSImport("@protobufjs/pool", JSImport.Namespace)
+  @js.native
   def apply(alloc: PoolAllocator, slice: PoolSlicer, size: Double): PoolAllocator = js.native
   
   /**

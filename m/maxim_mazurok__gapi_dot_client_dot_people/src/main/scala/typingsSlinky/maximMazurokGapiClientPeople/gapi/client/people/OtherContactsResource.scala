@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientPeople.anon.Alt
 import typingsSlinky.maximMazurokGapiClientPeople.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientPeople.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OtherContactsResource extends js.Object {
+trait OtherContactsResource extends StObject {
   
   def copyOtherContactToMyContactsGroup(request: Alt, body: CopyOtherContactToMyContactsGroupRequest): Request[Person] = js.native
   /** Copies an "Other contact" to a new contact in the user's "myContacts" group */

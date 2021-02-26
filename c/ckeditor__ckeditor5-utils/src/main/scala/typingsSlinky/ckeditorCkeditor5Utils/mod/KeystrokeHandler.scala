@@ -1,13 +1,14 @@
 package typingsSlinky.ckeditorCkeditor5Utils.mod
 
 import typingsSlinky.ckeditorCkeditor5Utils.anon.Priority
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ckeditor/ckeditor5-utils", "KeystrokeHandler")
 @js.native
-class KeystrokeHandler () extends js.Object {
+class KeystrokeHandler () extends StObject {
   
   def destroy(): Unit = js.native
   

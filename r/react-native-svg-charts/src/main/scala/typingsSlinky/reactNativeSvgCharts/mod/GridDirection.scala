@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeSvgCharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.HORIZONTAL
   - typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.BOTH
 */
-trait GridDirection extends js.Object
+trait GridDirection extends StObject
 object GridDirection {
   
   @scala.inline

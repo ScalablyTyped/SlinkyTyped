@@ -4,13 +4,14 @@ import typingsSlinky.eventKit.mod.Disposable
 import typingsSlinky.textBuffer.anon.ExclusiveInvalidate
 import typingsSlinky.textBuffer.anon.Invalidate
 import typingsSlinky.textBuffer.mod.global.TextBuffer.Options.FindMarker
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Experimental: A container for a related set of markers. */
 @js.native
-trait MarkerLayer extends js.Object {
+trait MarkerLayer extends StObject {
   
   /** Remove all markers from this layer. */
   def clear(): Unit = js.native

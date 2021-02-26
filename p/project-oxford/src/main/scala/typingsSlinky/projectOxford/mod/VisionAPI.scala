@@ -5,13 +5,14 @@ import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.projectOxford.mod.Options.Analyze
 import typingsSlinky.projectOxford.mod.Options.Ocr
 import typingsSlinky.projectOxford.mod.Options.Thumbnail
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("project-oxford", "VisionAPI")
 @js.native
-class VisionAPI () extends js.Object {
+class VisionAPI () extends StObject {
   
   /**
     * This operation does a deep analysis on the given image and then extracts a

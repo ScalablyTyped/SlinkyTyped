@@ -1,36 +1,39 @@
 package typingsSlinky.googleGax
 
-import typingsSlinky.googleGax.apiCallerMod.APICaller
 import typingsSlinky.googleGax.descriptorMod.Descriptor
-import typingsSlinky.googleGax.gaxMod.CallSettings
+import typingsSlinky.googleGax.longRunningApiCallerMod.LongrunningApiCaller
 import typingsSlinky.googleGax.operationsClientMod.OperationsClient
 import typingsSlinky.protobufjs.mod.Message
 import typingsSlinky.protobufjs.mod.Reader
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("google-gax/build/src/longRunningCalls/longRunningDescriptor", JSImport.Namespace)
-@js.native
-object longRunningDescriptorMod extends js.Object {
+object longRunningDescriptorMod {
+  
+  @JSImport("google-gax/build/src/longRunningCalls/longRunningDescriptor", "LongRunningDescriptor")
   @js.native
   class LongRunningDescriptor protected () extends Descriptor {
     def this(operationsClient: OperationsClient, responseDecoder: AnyDecoder, metadataDecoder: AnyDecoder) = this()
-    @JSName("metadataDecoder")
-    var metadataDecoder_Original: AnyDecoder = js.native
-    var operationsClient: OperationsClient = js.native
-    @JSName("responseDecoder")
-    var responseDecoder_Original: AnyDecoder = js.native
-    /* CompleteClass */
-    override def getApiCaller(settings: CallSettings): APICaller = js.native
-    def metadataDecoder(reader: Reader): Message[js.Object] = js.native
-    def metadataDecoder(reader: Reader, length: Double): Message[js.Object] = js.native
+    
+    def getApiCaller(): LongrunningApiCaller = js.native
+    
     def metadataDecoder(reader: js.typedarray.Uint8Array): Message[js.Object] = js.native
     def metadataDecoder(reader: js.typedarray.Uint8Array, length: Double): Message[js.Object] = js.native
-    def responseDecoder(reader: Reader): Message[js.Object] = js.native
-    def responseDecoder(reader: Reader, length: Double): Message[js.Object] = js.native
+    def metadataDecoder(reader: Reader): Message[js.Object] = js.native
+    def metadataDecoder(reader: Reader, length: Double): Message[js.Object] = js.native
+    @JSName("metadataDecoder")
+    var metadataDecoder_Original: AnyDecoder = js.native
+    
+    var operationsClient: OperationsClient = js.native
+    
     def responseDecoder(reader: js.typedarray.Uint8Array): Message[js.Object] = js.native
     def responseDecoder(reader: js.typedarray.Uint8Array, length: Double): Message[js.Object] = js.native
+    def responseDecoder(reader: Reader): Message[js.Object] = js.native
+    def responseDecoder(reader: Reader, length: Double): Message[js.Object] = js.native
+    @JSName("responseDecoder")
+    var responseDecoder_Original: AnyDecoder = js.native
   }
   
   type AnyDecoder = js.Function2[
@@ -39,4 +42,3 @@ object longRunningDescriptorMod extends js.Object {
     Message[js.Object]
   ]
 }
-

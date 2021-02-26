@@ -1,12 +1,13 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DrawerSectionItem extends js.Object {
+trait DrawerSectionItem extends StObject {
   
   var active: js.UndefOr[Boolean] = js.native
   
@@ -31,63 +32,51 @@ object DrawerSectionItem {
   }
   
   @scala.inline
-  implicit class DrawerSectionItemOps[Self <: DrawerSectionItem] (val x: Self) extends AnyVal {
+  implicit class DrawerSectionItemMutableBuilder[Self <: DrawerSectionItem] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setActive(value: Boolean): Self = StObject.set(x, "active", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setActiveUndefined: Self = StObject.set(x, "active", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDisabled(value: Boolean): Self = StObject.set(x, "disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
+    def setDisabledUndefined: Self = StObject.set(x, "disabled", js.undefined)
     
     @scala.inline
-    def deleteActive: Self = this.set("active", js.undefined)
+    def setIcon(value: String): Self = StObject.set(x, "icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    def setIconUndefined: Self = StObject.set(x, "icon", js.undefined)
     
     @scala.inline
-    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    def setLabel(value: String): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIcon(value: String): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setLabelUndefined: Self = StObject.set(x, "label", js.undefined)
     
     @scala.inline
-    def deleteIcon: Self = this.set("icon", js.undefined)
+    def setOnLongPress(value: () => Unit): Self = StObject.set(x, "onLongPress", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setOnLongPressUndefined: Self = StObject.set(x, "onLongPress", js.undefined)
     
     @scala.inline
-    def deleteLabel: Self = this.set("label", js.undefined)
+    def setOnPress(value: () => Unit): Self = StObject.set(x, "onPress", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setOnLongPress(value: () => Unit): Self = this.set("onLongPress", js.Any.fromFunction0(value))
+    def setOnPressUndefined: Self = StObject.set(x, "onPress", js.undefined)
     
     @scala.inline
-    def deleteOnLongPress: Self = this.set("onLongPress", js.undefined)
+    def setValue(value: String | ReactElement): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnPress(value: () => Unit): Self = this.set("onPress", js.Any.fromFunction0(value))
+    def setValueReactElement(value: ReactElement): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteOnPress: Self = this.set("onPress", js.undefined)
-    
-    @scala.inline
-    def setValueReactElement(value: ReactElement): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValue(value: String | ReactElement): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValue: Self = this.set("value", js.undefined)
+    def setValueUndefined: Self = StObject.set(x, "value", js.undefined)
   }
 }

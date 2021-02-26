@@ -5,6 +5,7 @@ import typingsSlinky.rx.Rx.special.FlatMapResultSelector
 import typingsSlinky.rx.Set
 import typingsSlinky.rx.anon.Instantiable
 import typingsSlinky.rx.anon.InstantiableTPromise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -457,8 +458,8 @@ trait Observable[T] extends IObservable[T] {
     * @param {Scheduler} [scheduler] Scheduler to run the delay timers on. If not specified, the timeout scheduler is used.
     * @returns {Observable} Time-shifted sequence.
     */
-  def delay(dueTime: Double): Observable[T] = js.native
-  def delay(dueTime: Double, scheduler: IScheduler): Observable[T] = js.native
+  def delay(dueTime: js.Date): Observable[T] = js.native
+  def delay(dueTime: js.Date, scheduler: IScheduler): Observable[T] = js.native
   /**
     *  Time shifts the observable sequence by dueTime. The relative time intervals between the values are preserved.
     *
@@ -473,8 +474,8 @@ trait Observable[T] extends IObservable[T] {
     * @param {Scheduler} [scheduler] Scheduler to run the delay timers on. If not specified, the timeout scheduler is used.
     * @returns {Observable} Time-shifted sequence.
     */
-  def delay(dueTime: js.Date): Observable[T] = js.native
-  def delay(dueTime: js.Date, scheduler: IScheduler): Observable[T] = js.native
+  def delay(dueTime: Double): Observable[T] = js.native
+  def delay(dueTime: Double, scheduler: IScheduler): Observable[T] = js.native
   /**
     *  Time shifts the observable sequence based on a subscription delay and a delay selector function for each element.
     *
@@ -1535,7 +1536,7 @@ trait Observable[T] extends IObservable[T] {
   ): ConnectableObservable[T] = js.native
   def replay(selector: js.UndefOr[scala.Nothing], bufferSize: Double, window: Double): ConnectableObservable[T] = js.native
   def replay(selector: js.UndefOr[scala.Nothing], bufferSize: Double, window: Double, scheduler: IScheduler): ConnectableObservable[T] = js.native
-  	// hack to catch first omitted parameter
+  // hack to catch first omitted parameter
   /**
     * Returns an observable sequence that is the result of invoking the selector on a connectable observable sequence that shares a single subscription to the underlying sequence replaying notifications subject to a maximum time length for the replay buffer.
     * This operator is a specialization of Multicast using a ReplaySubject.
@@ -2470,6 +2471,17 @@ trait Observable[T] extends IObservable[T] {
   /**
     *  Returns the source observable sequence or the other observable sequence if dueTime elapses.
     * @param {Number} dueTime Absolute (specified as a Date object) or relative time (specified as an integer denoting milliseconds) when a timeout occurs.
+    * @param {Scheduler} [scheduler]  Scheduler to run the timeout timers on. If not specified, the timeout scheduler is used.
+    * @returns {Observable} The source sequence switching to the other sequence in case of a timeout.
+    */
+  def timeout(dueTime: js.Date): Observable[T] = js.native
+  def timeout(dueTime: js.Date, other: js.UndefOr[scala.Nothing], scheduler: IScheduler): Observable[T] = js.native
+  def timeout(dueTime: js.Date, other: Observable[T]): Observable[T] = js.native
+  def timeout(dueTime: js.Date, other: Observable[T], scheduler: IScheduler): Observable[T] = js.native
+  def timeout(dueTime: js.Date, scheduler: IScheduler): Observable[T] = js.native
+  /**
+    *  Returns the source observable sequence or the other observable sequence if dueTime elapses.
+    * @param {Number} dueTime Absolute (specified as a Date object) or relative time (specified as an integer denoting milliseconds) when a timeout occurs.
     * @param {Observable} [other]  Sequence to return in case of a timeout. If not specified, a timeout error throwing sequence will be used.
     * @param {Scheduler} [scheduler]  Scheduler to run the timeout timers on. If not specified, the timeout scheduler is used.
     * @returns {Observable} The source sequence switching to the other sequence in case of a timeout.
@@ -2479,17 +2491,6 @@ trait Observable[T] extends IObservable[T] {
   def timeout(dueTime: Double, other: Observable[T]): Observable[T] = js.native
   def timeout(dueTime: Double, other: Observable[T], scheduler: IScheduler): Observable[T] = js.native
   def timeout(dueTime: Double, scheduler: IScheduler): Observable[T] = js.native
-  /**
-    *  Returns the source observable sequence or the other observable sequence if dueTime elapses.
-    * @param {Number} dueTime Absolute (specified as a Date object) or relative time (specified as an integer denoting milliseconds) when a timeout occurs.
-    * @param {Scheduler} [scheduler]  Scheduler to run the timeout timers on. If not specified, the timeout scheduler is used.
-    * @returns {Observable} The source sequence switching to the other sequence in case of a timeout.
-    */
-  def timeout(dueTime: js.Date): Observable[T] = js.native
-  def timeout(dueTime: js.Date, other: js.UndefOr[scala.Nothing], scheduler: IScheduler): Observable[T] = js.native
-  def timeout(dueTime: js.Date, other: Observable[T]): Observable[T] = js.native
-  def timeout(dueTime: js.Date, other: Observable[T], scheduler: IScheduler): Observable[T] = js.native
-  def timeout(dueTime: js.Date, scheduler: IScheduler): Observable[T] = js.native
   /**
     *  Returns the source observable sequence, switching to the other observable sequence if a timeout is signaled.
     * @param {Observable} [firstTimeout]  Observable sequence that represents the timeout for the first element. If not provided, this defaults to Observable.never().

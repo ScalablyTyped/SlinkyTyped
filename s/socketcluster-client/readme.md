@@ -9,14 +9,14 @@ SocketCluster JavaScript client
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | socketcluster-client |
-| Keywords           | - |
-| # releases         | 25 |
-| # dependents       | 57 |
-| # downloads        | 2866928 |
+| Keywords           | websocket, realtime, client, socketcluster |
+| # releases         | 10 |
+| # dependents       | 74 |
+| # downloads        | 2464838 |
 | # stars            | 1 |
 
 ## Links
-- [Homepage](http://socketcluster.io)
+- [Homepage](https://socketcluster.io/)
 - [Bugs](https://github.com/SocketCluster/socketcluster-client/issues)
 - [Repository](https://github.com/SocketCluster/socketcluster-client)
 - [Npm](https://www.npmjs.com/package/socketcluster-client)

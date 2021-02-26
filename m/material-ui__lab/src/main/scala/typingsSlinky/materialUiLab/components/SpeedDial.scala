@@ -20,15 +20,22 @@ import typingsSlinky.materialUiLab.speedDialSpeedDialMod.SpeedDialProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SpeedDial {
   
+  @scala.inline
+  def apply(ariaLabel: String, open: Boolean): Builder = {
+    val __props = js.Dynamic.literal(ariaLabel = ariaLabel.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SpeedDialProps]))
+  }
+  
   @JSImport("@material-ui/lab", "SpeedDial")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,7 +46,7 @@ object SpeedDial {
     def FabProps(value: PartialFabProps): this.type = set("FabProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TransitionComponentFunctionComponent(
+    def TransitionComponent(
       value: ReactComponentClass[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ _
         ]
@@ -53,7 +60,7 @@ object SpeedDial {
     ): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TransitionComponent(
+    def TransitionComponentFunctionComponent(
       value: ReactComponentClass[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ _
         ]
@@ -77,22 +84,22 @@ object SpeedDial {
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def innerRefNull: this.type = set("innerRef", null)
+    
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onClose(value: (/* event */ SyntheticEvent[Event, js.Object], /* reason */ CloseReason) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
@@ -101,10 +108,10 @@ object SpeedDial {
     def onOpen(value: (/* event */ SyntheticEvent[Event, js.Object], /* reason */ OpenReason) => Unit): this.type = set("onOpen", js.Any.fromFunction2(value))
     
     @scala.inline
-    def openIconReactElement(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
+    def openIcon(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def openIcon(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
+    def openIconReactElement(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
@@ -116,10 +123,4 @@ object SpeedDial {
   }
   
   def withProps(p: SpeedDialProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(ariaLabel: String, open: Boolean): Builder = {
-    val __props = js.Dynamic.literal(ariaLabel = ariaLabel.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SpeedDialProps]))
-  }
 }

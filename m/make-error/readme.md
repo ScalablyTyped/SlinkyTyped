@@ -10,9 +10,9 @@ Make your own error types!
 | ------------------ | :-------------: |
 | Full name          | make-error |
 | Keywords           | create, custom, derive, error, errors, extend, extending, extension, factory, inherit, make, subclass |
-| # releases         | 4 |
-| # dependents       | 109 |
-| # downloads        | 149091316 |
+| # releases         | 2 |
+| # dependents       | 148 |
+| # downloads        | 319987925 |
 | # stars            | 4 |
 
 ## Links

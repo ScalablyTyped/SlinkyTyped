@@ -8,6 +8,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.full
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.long
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.medium
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.short
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

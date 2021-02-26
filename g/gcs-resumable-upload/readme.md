@@ -10,9 +10,9 @@ Upload a file to Google Cloud Storage with built-in resumable behavior
 | ------------------ | :-------------: |
 | Full name          | gcs-resumable-upload |
 | Keywords           | google, gcloud, storage, gcs, upload, resumable |
-| # releases         | 25 |
-| # dependents       | 9 |
-| # downloads        | 49284440 |
+| # releases         | 19 |
+| # dependents       | 10 |
+| # downloads        | 77962178 |
 | # stars            | 0 |
 
 ## Links

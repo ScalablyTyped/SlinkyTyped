@@ -9,9 +9,9 @@ JavaScript timezone library based on Olson timezone data
 | ------------------ | :-------------: |
 | Full name          | timezone-js |
 | Keywords           | - |
-| # releases         | 0 |
+| # releases         | 1 |
 | # dependents       | 2 |
-| # downloads        | 534920 |
+| # downloads        | 969685 |
 | # stars            | 3 |
 
 ## Links

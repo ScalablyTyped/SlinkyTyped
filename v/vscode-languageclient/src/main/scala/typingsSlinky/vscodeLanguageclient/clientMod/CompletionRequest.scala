@@ -4,19 +4,24 @@ import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocume
 import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.CompletionParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.CompletionRegistrationOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageclient/lib/client", "CompletionRequest")
-@js.native
-object CompletionRequest extends js.Object {
+object CompletionRequest {
   
+  @JSImport("vscode-languageclient/lib/client", "CompletionRequest.method")
+  @js.native
   val method: textDocumentSlashcompletion = js.native
   
   /** @deprecated Use CompletionRequest.type */
+  @JSImport("vscode-languageclient/lib/client", "CompletionRequest.resultType")
+  @js.native
   val resultType: typingsSlinky.vscodeJsonrpc.mod.ProgressType[js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.CompletionItem]] = js.native
   
+  @JSImport("vscode-languageclient/lib/client", "CompletionRequest.type")
+  @js.native
   val `type`: ProtocolRequestType[
     CompletionParams, 
     typingsSlinky.vscodeLanguageserverTypes.mod.CompletionList | js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.CompletionItem] | Null, 

@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.encodeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.vegaTypingsStrings.select
   - typingsSlinky.vegaTypings.vegaTypingsStrings.release
 */
-trait EncodeEntryName extends js.Object
+trait EncodeEntryName extends StObject
 object EncodeEntryName {
   
   @scala.inline

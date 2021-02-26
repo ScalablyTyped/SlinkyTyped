@@ -11,6 +11,7 @@ import typingsSlinky.rcDialog.anon.X
 import typingsSlinky.rcDialog.rcDialogBooleans.`false`
 import typingsSlinky.rcUtil.portalWrapperMod.GetContainer
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,10 +43,10 @@ class SharedBuilder_IDialogPropTypes1703481267 (val args: js.Array[js.Any])
   def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+  def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+  def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def destroyOnClose(value: Boolean): this.type = set("destroyOnClose", value.asInstanceOf[js.Any])
@@ -54,22 +55,22 @@ class SharedBuilder_IDialogPropTypes1703481267 (val args: js.Array[js.Any])
   def focusTriggerAfterClose(value: Boolean): this.type = set("focusTriggerAfterClose", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+  def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+  def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def forceRender(value: Boolean): this.type = set("forceRender", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
+  def getContainer(value: GetContainer | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def getContainerFunction0(value: () => HTMLElement): this.type = set("getContainer", js.Any.fromFunction0(value))
   
   @scala.inline
-  def getContainer(value: GetContainer | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
+  def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
@@ -111,10 +112,10 @@ class SharedBuilder_IDialogPropTypes1703481267 (val args: js.Array[js.Any])
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   
   @scala.inline
   def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])

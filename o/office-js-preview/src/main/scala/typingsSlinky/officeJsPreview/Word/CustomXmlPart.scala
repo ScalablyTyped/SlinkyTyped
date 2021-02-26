@@ -5,6 +5,7 @@ import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.Word.Interfaces.CustomXmlPartData
 import typingsSlinky.officeJsPreview.Word.Interfaces.CustomXmlPartLoadOptions
 import typingsSlinky.officeJsPreview.anon.Expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

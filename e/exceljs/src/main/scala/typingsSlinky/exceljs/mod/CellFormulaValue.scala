@@ -1,6 +1,7 @@
 package typingsSlinky.exceljs.mod
 
 import typingsSlinky.exceljs.anon.Error
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,33 +24,21 @@ object CellFormulaValue {
   }
   
   @scala.inline
-  implicit class CellFormulaValueOps[Self <: CellFormulaValue] (val x: Self) extends AnyVal {
+  implicit class CellFormulaValueMutableBuilder[Self <: CellFormulaValue] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDate1904(value: Boolean): Self = StObject.set(x, "date1904", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setFormula(value: String): Self = StObject.set(x, "formula", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setResult(value: Double | String | js.Date | Error): Self = StObject.set(x, "result", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDate1904(value: Boolean): Self = this.set("date1904", value.asInstanceOf[js.Any])
+    def setResultDate(value: js.Date): Self = StObject.set(x, "result", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFormula(value: String): Self = this.set("formula", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setResultDate(value: js.Date): Self = this.set("result", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setResult(value: Double | String | js.Date | Error): Self = this.set("result", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteResult: Self = this.set("result", js.undefined)
+    def setResultUndefined: Self = StObject.set(x, "result", js.undefined)
   }
 }

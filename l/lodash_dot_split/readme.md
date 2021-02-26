@@ -12,7 +12,7 @@ The lodash method `_.split` exported as a module.
 | Keywords           | lodash-modularized, split |
 | # releases         | 0 |
 | # dependents       | 15 |
-| # downloads        | 262548 |
+| # downloads        | 784959 |
 | # stars            | 0 |
 
 ## Links

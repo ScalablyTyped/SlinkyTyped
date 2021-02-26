@@ -6,6 +6,7 @@ import typingsSlinky.bizcharts.anon.DodgeBy
 import typingsSlinky.bizcharts.anon.Name
 import typingsSlinky.bizcharts.mod.GeomProps
 import typingsSlinky.bizcharts.mod.GeomType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Geom {
   
   @JSImport("ant-design-pro/lib/Charts/bizcharts", "Geom")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,10 +26,10 @@ object Geom {
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def adjustVarargs(value: (DodgeBy | String)*): this.type = set("adjust", js.Array(value :_*))
+    def adjust(value: String | (js.Array[DodgeBy | String])): this.type = set("adjust", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def adjust(value: String | (js.Array[DodgeBy | String])): this.type = set("adjust", value.asInstanceOf[js.Any])
+    def adjustVarargs(value: (DodgeBy | String)*): this.type = set("adjust", js.Array(value :_*))
     
     @scala.inline
     def animate(value: js.Any): this.type = set("animate", value.asInstanceOf[js.Any])
@@ -76,7 +77,7 @@ object Geom {
     def `type`(value: GeomType): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GeomProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Geom.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GeomProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

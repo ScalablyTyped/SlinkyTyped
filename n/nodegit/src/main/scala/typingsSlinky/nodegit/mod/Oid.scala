@@ -1,5 +1,6 @@
 package typingsSlinky.nodegit.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Oid ()
   extends typingsSlinky.nodegit.oidMod.Oid
 /* static members */
-@JSImport("nodegit", "Oid")
-@js.native
-object Oid extends js.Object {
+object Oid {
   
+  @JSImport("nodegit", "Oid.fromString")
+  @js.native
   def fromString(str: String): typingsSlinky.nodegit.oidMod.Oid = js.native
 }

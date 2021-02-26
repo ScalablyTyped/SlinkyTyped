@@ -11,8 +11,8 @@ The lodash method `_.truncate` exported as a module.
 | Full name          | lodash.truncate |
 | Keywords           | lodash-modularized, truncate |
 | # releases         | 0 |
-| # dependents       | 21 |
-| # downloads        | 4385898 |
+| # dependents       | 33 |
+| # downloads        | 6466774 |
 | # stars            | 0 |
 
 ## Links

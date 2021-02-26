@@ -3,6 +3,7 @@ package typingsSlinky.winrt.Windows.UI.Core
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrt.Windows.System.VirtualKeyModifiers
 import typingsSlinky.winrt.Windows.UI.Input.PointerPoint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -14,6 +14,7 @@ import typingsSlinky.std.CanvasState
 import typingsSlinky.std.CanvasText
 import typingsSlinky.std.CanvasTextDrawingStyles
 import typingsSlinky.std.CanvasTransform
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

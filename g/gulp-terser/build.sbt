@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "gulp-terser"
-version := "1.2-dt-20200515Z-4a0ccd"
+version := "1.2-dt-20200515Z-b37062"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
-  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-07892e",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
-  "org.scalablytyped.slinky" %%% "terser" % "5.5.0-3c4cac")
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-09416f",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27",
+  "org.scalablytyped.slinky" %%% "terser" % "5.5.0-333388")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

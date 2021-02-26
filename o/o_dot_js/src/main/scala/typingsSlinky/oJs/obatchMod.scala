@@ -4,16 +4,16 @@ import org.scalajs.dom.experimental.URL
 import typingsSlinky.oJs.odataConfigMod.OdataConfig
 import typingsSlinky.oJs.odataQueryMod.OdataQuery
 import typingsSlinky.oJs.orequestMod.ORequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("o.js/dist/types/OBatch", JSImport.Namespace)
-@js.native
-object obatchMod extends js.Object {
+object obatchMod {
   
+  @JSImport("o.js/dist/types/OBatch", "OBatch")
   @js.native
-  class OBatch protected () extends js.Object {
+  class OBatch protected () extends StObject {
     def this(resources: js.Array[ORequest], config: OdataConfig) = this()
     def this(resources: js.Array[ORequest], config: OdataConfig, query: OdataQuery) = this()
     def this(

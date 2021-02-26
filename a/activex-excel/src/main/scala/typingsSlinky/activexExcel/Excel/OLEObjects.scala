@@ -2,12 +2,13 @@ package typingsSlinky.activexExcel.Excel
 
 import typingsSlinky.activexExcel.activexExcelBooleans.`false`
 import typingsSlinky.activexExcel.activexExcelBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OLEObjects extends js.Object {
+trait OLEObjects extends StObject {
   
   def Add(ClassType: String): OLEObject = js.native
   def Add(

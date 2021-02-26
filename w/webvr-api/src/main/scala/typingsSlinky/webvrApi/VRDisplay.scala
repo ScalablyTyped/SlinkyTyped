@@ -2,6 +2,7 @@ package typingsSlinky.webvrApi
 
 import typingsSlinky.std.EventTarget
 import typingsSlinky.std.FrameRequestCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

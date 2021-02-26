@@ -1,18 +1,18 @@
 package typingsSlinky.blueprintjsCore
 
 import typingsSlinky.blueprintjsCore.anon.Children
-import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.PureComponent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@blueprintjs/core/lib/esm/common/abstractPureComponent", JSImport.Namespace)
-@js.native
-object abstractPureComponentMod extends js.Object {
+object abstractPureComponentMod {
   
+  @JSImport("@blueprintjs/core/lib/esm/common/abstractPureComponent", "AbstractPureComponent")
   @js.native
   abstract class AbstractPureComponent[P, S] protected ()
-    extends Component[P, S, js.Any] {
+    extends PureComponent[P, S, js.Any] {
     def this(props: P) = this()
     def this(props: P, context: js.Any) = this()
     

@@ -10,6 +10,7 @@ import typingsSlinky.node.processMod.global.NodeJS.Signals
 import typingsSlinky.node.streamMod.Pipe
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -174,10 +175,14 @@ trait ChildProcess extends EventEmitter {
   
   val stdio: js.Tuple5[
     Writable | Null, 
-    Readable | Null, 
-    Readable | Null, 
-    js.UndefOr[Readable | Writable | Null], 
-    js.UndefOr[Readable | Writable | Null]
+    (// stdin
+  Readable) | Null, 
+    (// stdout
+  Readable) | Null, 
+    js.UndefOr[(// stderr
+  Readable) | Writable | Null], 
+    js.UndefOr[(// extra
+  Readable) | Writable | Null]
   ] = js.native
   
   var stdout: Readable | Null = js.native

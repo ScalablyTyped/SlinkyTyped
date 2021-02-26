@@ -5,14 +5,14 @@ import typingsSlinky.jupyterlabDocumentsearch.interfacesMod.ISearchMatch
 import typingsSlinky.jupyterlabDocumentsearch.interfacesMod.ISearchProvider
 import typingsSlinky.luminoSignaling.mod.ISignal
 import typingsSlinky.luminoWidgets.mod.Widget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/documentsearch/lib/providers/genericsearchprovider", JSImport.Namespace)
-@js.native
-object genericsearchproviderMod extends js.Object {
+object genericsearchproviderMod {
   
+  @JSImport("@jupyterlab/documentsearch/lib/providers/genericsearchprovider", "GenericSearchProvider")
   @js.native
   class GenericSearchProvider () extends ISearchProvider[Widget] {
     
@@ -78,8 +78,11 @@ object genericsearchproviderMod extends js.Object {
     def startQuery(query: js.RegExp, searchTarget: Widget, filters: js.Object): js.Promise[js.Array[ISearchMatch]] = js.native
   }
   /* static members */
-  @js.native
-  object GenericSearchProvider extends js.Object {
+  object GenericSearchProvider {
+    
+    @JSImport("@jupyterlab/documentsearch/lib/providers/genericsearchprovider", "GenericSearchProvider")
+    @js.native
+    val ^ : js.Any = js.native
     
     /**
       * We choose opt out as most node types should be searched (e.g. script).
@@ -87,11 +90,17 @@ object genericsearchproviderMod extends js.Object {
       *
       * Note: nodeName is capitalized, so we do the same here
       */
-    var UNSUPPORTED_ELEMENTS: APPLET = js.native
+    @JSImport("@jupyterlab/documentsearch/lib/providers/genericsearchprovider", "GenericSearchProvider.UNSUPPORTED_ELEMENTS")
+    @js.native
+    def UNSUPPORTED_ELEMENTS: APPLET = js.native
+    @scala.inline
+    def UNSUPPORTED_ELEMENTS_=(x: APPLET): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("UNSUPPORTED_ELEMENTS")(x.asInstanceOf[js.Any])
     
     /**
       * Report whether or not this provider has the ability to search on the given object
       */
+    @JSImport("@jupyterlab/documentsearch/lib/providers/genericsearchprovider", "GenericSearchProvider.canSearchOn")
+    @js.native
     def canSearchOn(domain: Widget): Boolean = js.native
   }
 }

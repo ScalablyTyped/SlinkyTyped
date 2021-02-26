@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientSqsNode.typesListDeadLetterSourceQueuesInputMod
 import typingsSlinky.awsSdkClientSqsNode.typesListDeadLetterSourceQueuesOutputMod.ListDeadLetterSourceQueuesOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-sqs-node/commands/ListDeadLetterSourceQueuesCommand", JSImport.Namespace)
-@js.native
-object listDeadLetterSourceQueuesCommandMod extends js.Object {
+object listDeadLetterSourceQueuesCommandMod {
   
+  @JSImport("@aws-sdk/client-sqs-node/commands/ListDeadLetterSourceQueuesCommand", "ListDeadLetterSourceQueuesCommand")
   @js.native
   class ListDeadLetterSourceQueuesCommand protected () extends Command[
           InputTypesUnion, 

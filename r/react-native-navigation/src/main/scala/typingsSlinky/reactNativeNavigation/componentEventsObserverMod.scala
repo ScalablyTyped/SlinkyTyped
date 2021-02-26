@@ -12,16 +12,16 @@ import typingsSlinky.reactNativeNavigation.eventSubscriptionMod.EventSubscriptio
 import typingsSlinky.reactNativeNavigation.nativeEventsReceiverMod.NativeEventsReceiver
 import typingsSlinky.reactNativeNavigation.navigationComponentListenerMod.NavigationComponentListener
 import typingsSlinky.reactNativeNavigation.storeMod.Store
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-navigation/lib/dist/events/ComponentEventsObserver", JSImport.Namespace)
-@js.native
-object componentEventsObserverMod extends js.Object {
+object componentEventsObserverMod {
   
+  @JSImport("react-native-navigation/lib/dist/events/ComponentEventsObserver", "ComponentEventsObserver")
   @js.native
-  class ComponentEventsObserver protected () extends js.Object {
+  class ComponentEventsObserver protected () extends StObject {
     def this(nativeEventsReceiver: NativeEventsReceiver, store: Store) = this()
     
     var alreadyRegistered: js.Any = js.native

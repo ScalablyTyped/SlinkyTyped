@@ -1,13 +1,17 @@
 package typingsSlinky.aframe.mod.global.AFRAME.THREE
 
-import typingsSlinky.three.animationClipMod.AnimationClip
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("AFRAME.THREE.AnimationAction")
 @js.native
 class AnimationAction protected ()
   extends typingsSlinky.three.mod.AnimationAction {
-  def this(mixer: typingsSlinky.three.animationMixerMod.AnimationMixer, clip: AnimationClip) = this()
+  def this(
+    mixer: typingsSlinky.three.animationMixerMod.AnimationMixer,
+    clip: typingsSlinky.three.animationClipMod.AnimationClip
+  ) = this()
 }

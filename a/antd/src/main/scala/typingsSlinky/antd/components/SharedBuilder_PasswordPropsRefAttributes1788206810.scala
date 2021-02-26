@@ -96,6 +96,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -118,16 +119,16 @@ class SharedBuilder_PasswordPropsRefAttributes1788206810[R <: js.Object] (val ar
   def action(value: String): this.type = set("action", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def addonAfterReactElement(value: ReactElement): this.type = set("addonAfter", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def addonAfter(value: ReactElement): this.type = set("addonAfter", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def addonBeforeReactElement(value: ReactElement): this.type = set("addonBefore", value.asInstanceOf[js.Any])
+  def addonAfterReactElement(value: ReactElement): this.type = set("addonAfter", value.asInstanceOf[js.Any])
   
   @scala.inline
   def addonBefore(value: ReactElement): this.type = set("addonBefore", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def addonBeforeReactElement(value: ReactElement): this.type = set("addonBefore", value.asInstanceOf[js.Any])
   
   @scala.inline
   def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
@@ -330,10 +331,10 @@ class SharedBuilder_PasswordPropsRefAttributes1788206810[R <: js.Object] (val ar
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -675,13 +676,13 @@ class SharedBuilder_PasswordPropsRefAttributes1788206810[R <: js.Object] (val ar
   def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def prefixReactElement(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def prefix(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
   
   @scala.inline
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def prefixReactElement(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
   
   @scala.inline
   def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -726,10 +727,10 @@ class SharedBuilder_PasswordPropsRefAttributes1788206810[R <: js.Object] (val ar
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def suffixReactElement(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
+  def suffix(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def suffix(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
+  def suffixReactElement(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
   
   @scala.inline
   def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -761,10 +762,10 @@ class SharedBuilder_PasswordPropsRefAttributes1788206810[R <: js.Object] (val ar
   def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
   
   @scala.inline
   def visibilityToggle(value: Boolean): this.type = set("visibilityToggle", value.asInstanceOf[js.Any])

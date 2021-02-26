@@ -1,5 +1,6 @@
 package typingsSlinky.preact.jsxCsstypeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,14 +14,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.preact.preactStrings.revert
   - typingsSlinky.preact.preactStrings.unset
 */
-trait WebkitTouchCalloutProperty extends js.Object
+trait WebkitTouchCalloutProperty extends StObject
 object WebkitTouchCalloutProperty {
   
   @scala.inline
-  def `-moz-initial`: typingsSlinky.preact.preactStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.preact.preactStrings.`-moz-initial`]
+  def default: typingsSlinky.preact.preactStrings.default = "default".asInstanceOf[typingsSlinky.preact.preactStrings.default]
   
   @scala.inline
-  def default: typingsSlinky.preact.preactStrings.default = "default".asInstanceOf[typingsSlinky.preact.preactStrings.default]
+  def `-moz-initial`: typingsSlinky.preact.preactStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.preact.preactStrings.`-moz-initial`]
   
   @scala.inline
   def inherit: typingsSlinky.preact.preactStrings.inherit = "inherit".asInstanceOf[typingsSlinky.preact.preactStrings.inherit]

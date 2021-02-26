@@ -4,15 +4,15 @@
 Typings are for version 6.6.3
 
 ## Library description:
-<img src="doc/asset/Rx_Logo_S.png" alt="RxJS Logo" width="86" height="86"> RxJS: Reactive Extensions For JavaScript ======================================
+[![CircleCI](https://circleci.com/gh/ReactiveX/rxjs/tree/6.x.svg?style=svg)](https://circleci.com/gh/ReactiveX/rxjs/tree/6.x) [![npm version](https://badge.fury.io/js/%40reactivex%2Frxjs.svg)](http://badge.fury.io/js/%40reactivex%2Frxjs) [![Join the chat
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | rxjs-compat |
 | Keywords           | - |
-| # releases         | 31 |
-| # dependents       | 552 |
-| # downloads        | 14877035 |
+| # releases         | 11 |
+| # dependents       | 683 |
+| # downloads        | 19597429 |
 | # stars            | 0 |
 
 ## Links

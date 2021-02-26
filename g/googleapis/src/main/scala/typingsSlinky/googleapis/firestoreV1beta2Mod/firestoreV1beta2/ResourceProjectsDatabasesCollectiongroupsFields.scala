@@ -4,13 +4,14 @@ import typingsSlinky.gaxios.commonMod.GaxiosPromise
 import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
 import typingsSlinky.googleapisCommon.apiMod.BodyResponseCallback
 import typingsSlinky.googleapisCommon.apiMod.MethodOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("googleapis/build/src/apis/firestore/v1beta2", "firestore_v1beta2.Resource$Projects$Databases$Collectiongroups$Fields")
 @js.native
-class ResourceProjectsDatabasesCollectiongroupsFields protected () extends js.Object {
+class ResourceProjectsDatabasesCollectiongroupsFields protected () extends StObject {
   def this(context: APIRequestContext) = this()
   
   var context: APIRequestContext = js.native

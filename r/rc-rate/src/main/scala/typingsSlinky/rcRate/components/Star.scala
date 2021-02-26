@@ -8,6 +8,7 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcRate.starMod.StarProps
 import typingsSlinky.rcRate.starMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object Star {
   
   @JSImport("rc-rate/es/Star", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,10 +28,10 @@ object Star {
     def allowHalf(value: Boolean): this.type = set("allowHalf", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def characterReactElement(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
+    def character(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def character(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
+    def characterReactElement(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
     
     @scala.inline
     def characterRender(value: (/* origin */ ReactElement, StarProps) => ReactElement): this.type = set("characterRender", js.Any.fromFunction2(value))
@@ -62,7 +63,7 @@ object Star {
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Star.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -11,8 +11,8 @@ An opentracing implementation for zipkin
 | Full name          | zipkin-javascript-opentracing |
 | Keywords           | zipkin, opentracing, tracing, tracking, performance, benchmarking |
 | # releases         | 4 |
-| # dependents       | 2 |
-| # downloads        | 104219 |
+| # dependents       | 4 |
+| # downloads        | 124344 |
 | # stars            | 0 |
 
 ## Links

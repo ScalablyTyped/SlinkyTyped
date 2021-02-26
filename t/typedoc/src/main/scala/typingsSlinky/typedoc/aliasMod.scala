@@ -1,15 +1,19 @@
 package typingsSlinky.typedoc
 
 import typingsSlinky.typedoc.componentsMod.ConverterNodeComponent
+import typingsSlinky.typedoc.converterConverterMod.Converter
 import typingsSlinky.typescript.mod.TypeAliasDeclaration
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/converter/nodes/alias", JSImport.Namespace)
-@js.native
-object aliasMod extends js.Object {
+object aliasMod {
   
+  @JSImport("typedoc/dist/lib/converter/nodes/alias", "AliasConverter")
   @js.native
-  class AliasConverter () extends ConverterNodeComponent[TypeAliasDeclaration]
+  class AliasConverter protected () extends ConverterNodeComponent[TypeAliasDeclaration] {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
+  }
 }

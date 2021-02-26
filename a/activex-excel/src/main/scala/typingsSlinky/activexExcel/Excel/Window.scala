@@ -4,12 +4,13 @@ import typingsSlinky.activexExcel.activexExcelBooleans.`true`
 import typingsSlinky.activexExcel.activexExcelNumbers.`0`
 import typingsSlinky.activexExcel.activexExcelNumbers.`1`
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Window extends js.Object {
+trait Window extends StObject {
   
   def Activate(): js.Any = js.native
   

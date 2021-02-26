@@ -1,22 +1,15 @@
 package typingsSlinky.std.global
 
-import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.OfflineAudioCompletionEventInit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("OfflineAudioCompletionEvent")
 @js.native
 class OfflineAudioCompletionEvent protected ()
   extends typingsSlinky.std.OfflineAudioCompletionEvent {
   def this(`type`: java.lang.String, eventInitDict: OfflineAudioCompletionEventInit) = this()
 }
-@JSGlobal("OfflineAudioCompletionEvent")
-@js.native
-object OfflineAudioCompletionEvent
-  extends Instantiable2[
-      /* type */ java.lang.String, 
-      /* eventInitDict */ OfflineAudioCompletionEventInit, 
-      org.scalajs.dom.raw.OfflineAudioCompletionEvent
-    ]

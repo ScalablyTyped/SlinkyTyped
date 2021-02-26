@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.history.mod.Location
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.rrc.mod.OnUpdateProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OnUpdate {
   
+  @scala.inline
+  def apply(call: /* location */ Location[LocationState] => Unit): Builder = {
+    val __props = js.Dynamic.literal(call = js.Any.fromFunction1(call))
+    new Builder(js.Array(this.component, __props.asInstanceOf[OnUpdateProps]))
+  }
+  
   @JSImport("rrc", "OnUpdate")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,10 +32,4 @@ object OnUpdate {
   }
   
   def withProps(p: OnUpdateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(call: /* location */ Location[LocationState] => Unit): Builder = {
-    val __props = js.Dynamic.literal(call = js.Any.fromFunction1(call))
-    new Builder(js.Array(this.component, __props.asInstanceOf[OnUpdateProps]))
-  }
 }

@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientFirebaserules.anon.Alt
 import typingsSlinky.maximMazurokGapiClientFirebaserules.anon.Fields
 import typingsSlinky.maximMazurokGapiClientFirebaserules.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RulesetsResource extends js.Object {
+trait RulesetsResource extends StObject {
   
   def create(request: Alt, body: Ruleset): Request[Ruleset] = js.native
   /**

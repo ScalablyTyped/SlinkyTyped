@@ -6,6 +6,7 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Web.Http.HttpMethod
 import typingsSlinky.winrtUwp.anon.Index
 import typingsSlinky.winrtUwp.anon.ItemsHttpMethod
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

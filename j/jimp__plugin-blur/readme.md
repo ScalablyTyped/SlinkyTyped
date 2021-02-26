@@ -10,9 +10,9 @@ blur an image.
 | ------------------ | :-------------: |
 | Full name          | @jimp/plugin-blur |
 | Keywords           | - |
-| # releases         | 65 |
-| # dependents       | 1 |
-| # downloads        | 14395286 |
+| # releases         | 101 |
+| # dependents       | 3 |
+| # downloads        | 42338346 |
 | # stars            | 0 |
 
 ## Links

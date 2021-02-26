@@ -10,13 +10,13 @@ Typings are for version 1.9.6
 | ------------------ | :-------------: |
 | Full name          | dayjs |
 | Keywords           | dayjs, date, time, immutable, moment |
-| # releases         | 73 |
-| # dependents       | 866 |
-| # downloads        | 14193458 |
+| # releases         | 49 |
+| # dependents       | 2127 |
+| # downloads        | 110596079 |
 | # stars            | 2 |
 
 ## Links
-- [Homepage](https://github.com/iamkun/dayjs#readme)
+- [Homepage](https://day.js.org)
 - [Bugs](https://github.com/iamkun/dayjs/issues)
 - [Repository](https://github.com/iamkun/dayjs)
 - [Npm](https://www.npmjs.com/package/dayjs)

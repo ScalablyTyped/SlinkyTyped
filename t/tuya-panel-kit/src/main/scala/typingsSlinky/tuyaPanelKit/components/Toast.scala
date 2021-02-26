@@ -10,15 +10,22 @@ import typingsSlinky.tuyaPanelKit.mod.ToastProps
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.bottom
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.center
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Toast {
   
+  @scala.inline
+  def apply(onFinish: () => Unit, show: Boolean): Builder = {
+    val __props = js.Dynamic.literal(onFinish = js.Any.fromFunction0(onFinish), show = show.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ToastProps]))
+  }
+  
   @JSImport("tuya-panel-kit", "Toast")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,10 +67,4 @@ object Toast {
   }
   
   def withProps(p: ToastProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onFinish: () => Unit, show: Boolean): Builder = {
-    val __props = js.Dynamic.literal(onFinish = js.Any.fromFunction0(onFinish), show = show.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ToastProps]))
-  }
 }

@@ -6,19 +6,26 @@ import typingsSlinky.vueComponentCompilerUtils.compileTemplateMod.TemplateCompil
 import typingsSlinky.vueComponentCompilerUtils.compileTemplateMod.TemplateCompileResult
 import typingsSlinky.vueComponentCompilerUtils.parseMod.ParseOptions
 import typingsSlinky.vueComponentCompilerUtils.parseMod.SFCDescriptor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@vue/component-compiler-utils", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@vue/component-compiler-utils", "compileStyle")
+  @js.native
   def compileStyle(options: StyleCompileOptions): StyleCompileResults = js.native
   
+  @JSImport("@vue/component-compiler-utils", "compileStyleAsync")
+  @js.native
   def compileStyleAsync(options: StyleCompileOptions): js.Promise[StyleCompileResults] = js.native
   
+  @JSImport("@vue/component-compiler-utils", "compileTemplate")
+  @js.native
   def compileTemplate(options: TemplateCompileOptions): TemplateCompileResult = js.native
   
+  @JSImport("@vue/component-compiler-utils", "parse")
+  @js.native
   def parse(options: ParseOptions): SFCDescriptor = js.native
 }

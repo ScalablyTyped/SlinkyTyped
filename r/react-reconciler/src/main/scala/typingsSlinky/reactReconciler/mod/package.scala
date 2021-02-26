@@ -1,10 +1,30 @@
 package typingsSlinky.reactReconciler
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
+  @scala.inline
+  def apply[Type, Props, Container, Instance, TextInstance, HydratableInstance, PublicInstance, HostContext, UpdatePayload, ChildSet, TimeoutHandle, NoTimeout](
+    // tslint:disable-next-line:no-unnecessary-generics
+  config: typingsSlinky.reactReconciler.mod.HostConfig[
+      Type, 
+      Props, 
+      Container, 
+      Instance, 
+      TextInstance, 
+      HydratableInstance, 
+      PublicInstance, 
+      HostContext, 
+      UpdatePayload, 
+      ChildSet, 
+      TimeoutHandle, 
+      NoTimeout
+    ]
+  ): typingsSlinky.reactReconciler.mod.Reconciler[Instance, TextInstance, Container, PublicInstance] = typingsSlinky.reactReconciler.mod.^.asInstanceOf[js.Dynamic].apply(config.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.reactReconciler.mod.Reconciler[Instance, TextInstance, Container, PublicInstance]]
   
   // react-reconciler/ReactFiberExpirationTime
   type ExpirationTime = scala.Double

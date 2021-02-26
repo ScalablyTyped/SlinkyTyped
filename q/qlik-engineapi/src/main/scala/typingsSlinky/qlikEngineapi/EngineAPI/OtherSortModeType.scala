@@ -1,5 +1,6 @@
 package typingsSlinky.qlikEngineapi.EngineAPI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.OTHER_SORT_DESCENDING
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.OTHER_SORT_ASCENDING
 */
-trait OtherSortModeType extends js.Object
+trait OtherSortModeType extends StObject
 object OtherSortModeType {
   
   @scala.inline

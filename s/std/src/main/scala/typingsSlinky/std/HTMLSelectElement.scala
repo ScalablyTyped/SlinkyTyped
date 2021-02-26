@@ -1,6 +1,7 @@
 package typingsSlinky.std
 
 import org.scalablytyped.runtime.NumberDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,16 +13,16 @@ trait HTMLSelectElement
      with /* name */ NumberDictionary[org.scalajs.dom.raw.HTMLOptionElement | org.scalajs.dom.raw.HTMLOptGroupElement] {
   
   def add(element: org.scalajs.dom.raw.HTMLOptGroupElement): Unit = js.native
-  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: Double): Unit = js.native
   def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: org.scalajs.dom.raw.HTMLElement): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: Double): Unit = js.native
   /**
     * Adds an element to the areas, controlRange, or options collection.
     * @param element Variant of type Number that specifies the index position in the collection where the element is placed. If no value is given, the method places the element at the end of the collection.
     * @param before Variant of type Object that specifies an element to insert before, or null to append the object to the collection.
     */
   def add(element: org.scalajs.dom.raw.HTMLOptionElement): Unit = js.native
-  def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: Double): Unit = js.native
   def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: org.scalajs.dom.raw.HTMLElement): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: Double): Unit = js.native
   
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
@@ -88,13 +89,13 @@ trait HTMLSelectElement
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
-  override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
-  /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
   def reportValidity(): scala.Boolean = js.native
   

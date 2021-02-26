@@ -17,15 +17,22 @@ import typingsSlinky.reactPdf.reactPdfStrings._top
 import typingsSlinky.reactPdf.reactPdfStrings.canvas
 import typingsSlinky.reactPdf.reactPdfStrings.none
 import typingsSlinky.reactPdf.reactPdfStrings.svg
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Document {
   
+  @scala.inline
+  def apply(file: js.Any): Builder = {
+    val __props = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("react-pdf", "Document")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,52 +40,52 @@ object Document {
        with StBuildingComponent[tag.type, typingsSlinky.reactPdf.mod.Document] {
     
     @scala.inline
-    def classNameVarargs(value: String*): this.type = set("className", js.Array(value :_*))
-    
-    @scala.inline
     def className(value: String | js.Array[String]): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def errorFunction0(value: () => ReactElement): this.type = set("error", js.Any.fromFunction0(value))
+    def classNameVarargs(value: String*): this.type = set("className", js.Array(value :_*))
     
     @scala.inline
     def error(value: String | ReactElement | RenderFunction): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def errorFunction0(value: () => ReactElement): this.type = set("error", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def externalLinkTarget(value: _self | _blank | _parent | _top): this.type = set("externalLinkTarget", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def inputRefRefObject(value: ReactRef[HTMLDivElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def inputRefFunction1(value: /* instance */ HTMLDivElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def inputRef(value: LegacyRef[HTMLDivElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def inputRefFunction1(value: /* instance */ HTMLDivElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def inputRefNull: this.type = set("inputRef", null)
     
     @scala.inline
-    def loadingReactElement(value: ReactElement): this.type = set("loading", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def loadingFunction0(value: () => ReactElement): this.type = set("loading", js.Any.fromFunction0(value))
+    def inputRefRefObject(value: ReactRef[HTMLDivElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def loading(value: String | ReactElement | RenderFunction): this.type = set("loading", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noDataReactElement(value: ReactElement): this.type = set("noData", value.asInstanceOf[js.Any])
+    def loadingFunction0(value: () => ReactElement): this.type = set("loading", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def loadingReactElement(value: ReactElement): this.type = set("loading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def noData(value: String | ReactElement | RenderFunction): this.type = set("noData", value.asInstanceOf[js.Any])
     
     @scala.inline
     def noDataFunction0(value: () => ReactElement): this.type = set("noData", js.Any.fromFunction0(value))
     
     @scala.inline
-    def noData(value: String | ReactElement | RenderFunction): this.type = set("noData", value.asInstanceOf[js.Any])
+    def noDataReactElement(value: ReactElement): this.type = set("noData", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onItemClick(value: /* hasPageNumber */ PageNumber => Unit): this.type = set("onItemClick", js.Any.fromFunction1(value))
@@ -109,10 +116,4 @@ object Document {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(file: js.Any): Builder = {
-    val __props = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

@@ -2,6 +2,7 @@ package typingsSlinky.rangy
 
 import org.scalajs.dom.raw.Node
 import typingsSlinky.std.Selection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

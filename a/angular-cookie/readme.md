@@ -12,7 +12,7 @@ Lightweight Angular module for access to cookies
 | Keywords           | angular, cookie |
 | # releases         | 0 |
 | # dependents       | 4 |
-| # downloads        | 257299 |
+| # downloads        | 255921 |
 | # stars            | 0 |
 
 ## Links

@@ -3,6 +3,7 @@ package typingsSlinky.activexShdocvw.SHDocVw
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`1`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`2`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexShdocvw.activexShdocvwNumbers.`2`
   - typingsSlinky.activexShdocvw.activexShdocvwNumbers.`1`
 */
-trait ShellWindowFindWindowOptions extends js.Object
+trait ShellWindowFindWindowOptions extends StObject
 object ShellWindowFindWindowOptions {
   
   @scala.inline

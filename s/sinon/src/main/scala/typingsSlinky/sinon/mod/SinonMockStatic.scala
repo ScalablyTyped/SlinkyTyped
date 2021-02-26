@@ -1,11 +1,12 @@
 package typingsSlinky.sinon.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SinonMockStatic extends js.Object {
+trait SinonMockStatic extends StObject {
   
   def apply(): SinonExpectation = js.native
   /**

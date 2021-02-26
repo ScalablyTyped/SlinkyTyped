@@ -16,6 +16,7 @@ import typingsSlinky.reactMapGl.mod.TransitionInterpolator
 import typingsSlinky.reactMapGl.mod.ViewState
 import typingsSlinky.reactMapGl.mod.ViewportProps
 import typingsSlinky.reactMapGl.reactMapGlStrings.auto
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -65,10 +66,10 @@ class SharedBuilder_InteractiveMapProps_704888348[R <: js.Object] (val args: js.
   def gl(value: js.Object): this.type = set("gl", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def interactiveLayerIdsVarargs(value: String*): this.type = set("interactiveLayerIds", js.Array(value :_*))
+  def interactiveLayerIds(value: js.Array[String]): this.type = set("interactiveLayerIds", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def interactiveLayerIds(value: js.Array[String]): this.type = set("interactiveLayerIds", value.asInstanceOf[js.Any])
+  def interactiveLayerIdsVarargs(value: String*): this.type = set("interactiveLayerIds", js.Array(value :_*))
   
   @scala.inline
   def keyboard(value: Boolean): this.type = set("keyboard", value.asInstanceOf[js.Any])

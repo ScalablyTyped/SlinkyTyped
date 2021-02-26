@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TextTrackListEventMap extends js.Object {
+trait TextTrackListEventMap extends StObject {
   
   var addtrack: org.scalajs.dom.raw.TrackEvent = js.native
   
@@ -26,27 +27,15 @@ object TextTrackListEventMap {
   }
   
   @scala.inline
-  implicit class TextTrackListEventMapOps[Self <: TextTrackListEventMap] (val x: Self) extends AnyVal {
+  implicit class TextTrackListEventMapMutableBuilder[Self <: TextTrackListEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAddtrack(value: org.scalajs.dom.raw.TrackEvent): Self = StObject.set(x, "addtrack", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "change", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setAddtrack(value: org.scalajs.dom.raw.TrackEvent): Self = this.set("addtrack", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setChange(value: org.scalajs.dom.raw.Event): Self = this.set("change", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRemovetrack(value: org.scalajs.dom.raw.TrackEvent): Self = this.set("removetrack", value.asInstanceOf[js.Any])
+    def setRemovetrack(value: org.scalajs.dom.raw.TrackEvent): Self = StObject.set(x, "removetrack", value.asInstanceOf[js.Any])
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri.CIM
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,76 +17,76 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementInsidePolygon
   - typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementPolygonCenter
 */
-trait CIMMarkerPlacementType extends js.Object
+trait CIMMarkerPlacementType extends StObject
 object CIMMarkerPlacementType {
   
   @scala.inline
-  def CIMMarkerPlacementInsidePolygon(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementInsidePolygon): CIMMarkerPlacementType = {
+  def CIMMarkerPlacementAlongLineRandomSize(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAlongLineRandomSize): typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAlongLineRandomSize = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CIMMarkerPlacementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAlongLineRandomSize]
   }
   
   @scala.inline
-  def CIMMarkerPlacementOnLine(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementOnLine): CIMMarkerPlacementType = {
+  def CIMMarkerPlacementAlongLineSameSize(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAlongLineSameSize): typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAlongLineSameSize = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CIMMarkerPlacementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAlongLineSameSize]
   }
   
   @scala.inline
-  def CIMMarkerPlacementAtMeasuredUnits(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAtMeasuredUnits): CIMMarkerPlacementType = {
+  def CIMMarkerPlacementAlongLineVariableSize(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAlongLineVariableSize): typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAlongLineVariableSize = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CIMMarkerPlacementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAlongLineVariableSize]
   }
   
   @scala.inline
-  def CIMMarkerPlacementAlongLineVariableSize(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAlongLineVariableSize): CIMMarkerPlacementType = {
+  def CIMMarkerPlacementAtExtremities(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAtExtremities): typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAtExtremities = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CIMMarkerPlacementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAtExtremities]
   }
   
   @scala.inline
-  def CIMMarkerPlacementAtRatioPositions(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAtRatioPositions): CIMMarkerPlacementType = {
+  def CIMMarkerPlacementAtMeasuredUnits(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAtMeasuredUnits): typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAtMeasuredUnits = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CIMMarkerPlacementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAtMeasuredUnits]
   }
   
   @scala.inline
-  def CIMMarkerPlacementAtExtremities(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAtExtremities): CIMMarkerPlacementType = {
+  def CIMMarkerPlacementAtRatioPositions(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAtRatioPositions): typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAtRatioPositions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CIMMarkerPlacementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementAtRatioPositions]
   }
   
   @scala.inline
-  def CIMMarkerPlacementPolygonCenter(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementPolygonCenter): CIMMarkerPlacementType = {
+  def CIMMarkerPlacementInsidePolygon(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementInsidePolygon): typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementInsidePolygon = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CIMMarkerPlacementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementInsidePolygon]
   }
   
   @scala.inline
-  def CIMMarkerPlacementOnVertices(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementOnVertices): CIMMarkerPlacementType = {
+  def CIMMarkerPlacementOnLine(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementOnLine): typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementOnLine = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CIMMarkerPlacementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementOnLine]
   }
   
   @scala.inline
-  def CIMMarkerPlacementAlongLineSameSize(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAlongLineSameSize): CIMMarkerPlacementType = {
+  def CIMMarkerPlacementOnVertices(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementOnVertices): typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementOnVertices = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CIMMarkerPlacementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementOnVertices]
   }
   
   @scala.inline
-  def CIMMarkerPlacementAlongLineRandomSize(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementAlongLineRandomSize): CIMMarkerPlacementType = {
+  def CIMMarkerPlacementPolygonCenter(`type`: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.CIMMarkerPlacementPolygonCenter): typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementPolygonCenter = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CIMMarkerPlacementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.CIM.CIMMarkerPlacementPolygonCenter]
   }
 }

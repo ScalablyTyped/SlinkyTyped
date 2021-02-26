@@ -1,5 +1,6 @@
 package typingsSlinky.loginWithAmazonSdkBrowser
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.temporarily_unavailable
   - typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.unauthorized_client
 */
-trait AuthorizeRequestErrorType extends js.Object
+trait AuthorizeRequestErrorType extends StObject
 object AuthorizeRequestErrorType {
   
   @scala.inline

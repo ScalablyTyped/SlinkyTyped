@@ -87,6 +87,7 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -282,13 +283,13 @@ class SharedBuilder_TableHeaderCellProps1382588088 (val args: js.Array[js.Any])
   def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
   def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
   def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
@@ -303,10 +304,10 @@ class SharedBuilder_TableHeaderCellProps1382588088 (val args: js.Array[js.Any])
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -330,7 +331,7 @@ class SharedBuilder_TableHeaderCellProps1382588088 (val args: js.Array[js.Any])
   def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+  def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def iconFunction3(
@@ -338,7 +339,7 @@ class SharedBuilder_TableHeaderCellProps1382588088 (val args: js.Array[js.Any])
   ): this.type = set("icon", js.Any.fromFunction3(value))
   
   @scala.inline
-  def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])

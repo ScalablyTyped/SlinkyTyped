@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrap.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBootstrap.reactBootstrapStrings.lg
   - typingsSlinky.reactBootstrap.reactBootstrapStrings.large
 */
-trait Sizes extends js.Object
+trait Sizes extends StObject
 object Sizes {
   
   @scala.inline

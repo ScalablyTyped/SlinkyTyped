@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientSqsNode.typesUntagQueueInputMod.UntagQueueInput
 import typingsSlinky.awsSdkClientSqsNode.typesUntagQueueOutputMod.UntagQueueOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-sqs-node/commands/UntagQueueCommand", JSImport.Namespace)
-@js.native
-object untagQueueCommandMod extends js.Object {
+object untagQueueCommandMod {
   
+  @JSImport("@aws-sdk/client-sqs-node/commands/UntagQueueCommand", "UntagQueueCommand")
   @js.native
   class UntagQueueCommand protected () extends Command[
           InputTypesUnion, 

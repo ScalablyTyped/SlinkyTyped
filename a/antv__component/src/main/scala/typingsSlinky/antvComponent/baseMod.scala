@@ -1,23 +1,25 @@
 package typingsSlinky.antvComponent
 
-import typingsSlinky.antvComponent.groupComponentMod.GroupComponent
 import typingsSlinky.antvComponent.interfacesMod.IList
 import typingsSlinky.antvComponent.typesMod.AxisBaseCfg
 import typingsSlinky.antvComponent.typesMod.ListItem
 import typingsSlinky.antvEventEmitter.mod.EventType
 import typingsSlinky.antvGBase.typesMod.Point
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/axis/base", JSImport.Namespace)
-@js.native
-object baseMod extends js.Object {
+object baseMod {
+  
+  @JSImport("@antv/component/lib/axis/base", JSImport.Default)
+  @js.native
+  abstract class default[T /* <: AxisBaseCfg */] () extends AxisBase[T]
   
   @js.native
   trait AxisBase[T /* <: AxisBaseCfg */]
-    extends GroupComponent[T]
+    extends typingsSlinky.antvComponent.groupComponentMod.default[T]
        with IList {
     
     var applyTickStates: js.Any = js.native
@@ -121,7 +123,4 @@ object baseMod extends js.Object {
     
     var updateTickStates: js.Any = js.native
   }
-  
-  @js.native
-  abstract class default[T /* <: AxisBaseCfg */] () extends AxisBase[T]
 }

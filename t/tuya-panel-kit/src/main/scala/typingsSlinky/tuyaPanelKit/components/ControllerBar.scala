@@ -36,15 +36,22 @@ import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.normal
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.primary
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.pure
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.small
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ControllerBar {
   
+  @scala.inline
+  def apply(button: js.Array[ButtonProps]): Builder = {
+    val __props = js.Dynamic.literal(button = button.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ControllerBarProps]))
+  }
+  
   @JSImport("tuya-panel-kit", "ControllerBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,10 +59,10 @@ object ControllerBar {
        with StBuildingComponent[tag.type, typingsSlinky.tuyaPanelKit.mod.ControllerBar] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -82,10 +89,10 @@ object ControllerBar {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -248,10 +255,4 @@ object ControllerBar {
   }
   
   def withProps(p: ControllerBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(button: js.Array[ButtonProps]): Builder = {
-    val __props = js.Dynamic.literal(button = button.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ControllerBarProps]))
-  }
 }

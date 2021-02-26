@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdk
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -65,8 +66,6 @@ package object budgetsMod {
   type BudgetType = typingsSlinky.awsSdk.budgetsMod._BudgetType | java.lang.String
   
   type BudgetedAndActualAmountsList = js.Array[typingsSlinky.awsSdk.budgetsMod.BudgetedAndActualAmounts]
-  
-  type Budgets = js.Array[typingsSlinky.awsSdk.budgetsMod.Budget]
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.budgetsMod.ClientApiVersions
   

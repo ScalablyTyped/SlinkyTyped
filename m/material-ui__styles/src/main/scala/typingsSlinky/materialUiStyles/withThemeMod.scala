@@ -14,14 +14,15 @@ import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.FunctionComponent
 import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material-ui/styles/withTheme", JSImport.Namespace)
-@js.native
-object withThemeMod extends js.Object {
+object withThemeMod {
   
+  @JSImport("@material-ui/styles/withTheme", JSImport.Default)
+  @js.native
   def default[Theme](component: ComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]], js.Object]): ReactComponentClass[
     (Omit[
       LibraryManagedAttributes[
@@ -31,6 +32,8 @@ object withThemeMod extends js.Object {
       /* keyof @material-ui/styles.@material-ui/styles/withTheme/withTheme.WithTheme<Theme> */ theme | innerRef
     ]) with Partial[WithTheme[Theme]] with ThemedComponentProps
   ] = js.native
+  @JSImport("@material-ui/styles/withTheme", JSImport.Default)
+  @js.native
   def default[Theme](component: FunctionComponent[ConsistentWith[ComponentProps[_], WithTheme[Theme]]]): ReactComponentClass[
     (Omit[
       LibraryManagedAttributes[
@@ -41,6 +44,10 @@ object withThemeMod extends js.Object {
     ]) with Partial[WithTheme[Theme]] with ThemedComponentProps
   ] = js.native
   
+  @JSImport("@material-ui/styles/withTheme", "withThemeCreator")
+  @js.native
   def withThemeCreator[Theme](): PropInjector[WithTheme[Theme], ThemedComponentProps] = js.native
+  @JSImport("@material-ui/styles/withTheme", "withThemeCreator")
+  @js.native
   def withThemeCreator[Theme](option: WithThemeCreatorOption[Theme]): PropInjector[WithTheme[Theme], ThemedComponentProps] = js.native
 }

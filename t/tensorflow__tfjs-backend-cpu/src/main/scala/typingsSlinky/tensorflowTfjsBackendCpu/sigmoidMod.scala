@@ -2,15 +2,18 @@ package typingsSlinky.tensorflowTfjsBackendCpu
 
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelConfig
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelFunc
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/Sigmoid", JSImport.Namespace)
-@js.native
-object sigmoidMod extends js.Object {
+object sigmoidMod {
   
+  @JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/Sigmoid", "sigmoid")
+  @js.native
   val sigmoid: KernelFunc = js.native
   
+  @JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/Sigmoid", "sigmoidConfig")
+  @js.native
   val sigmoidConfig: KernelConfig = js.native
 }

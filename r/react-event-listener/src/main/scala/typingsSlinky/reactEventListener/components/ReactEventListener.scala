@@ -28,15 +28,22 @@ import typingsSlinky.reactEventListener.mod.default
 import typingsSlinky.std.MSGestureEvent
 import typingsSlinky.std.MSPointerEvent
 import typingsSlinky.std.PageTransitionEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactEventListener {
   
+  @scala.inline
+  def apply[T /* <: EventTarget | WindowEventTargets */](target: T): Builder[T] = {
+    val __props = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[EventListenerProps[T]]))
+  }
+  
   @JSImport("react-event-listener", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T /* <: EventTarget | WindowEventTargets */] (val args: js.Array[js.Any])
@@ -643,10 +650,4 @@ object ReactEventListener {
   }
   
   def withProps[T /* <: EventTarget | WindowEventTargets */](p: EventListenerProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T /* <: EventTarget | WindowEventTargets */](target: T): Builder[T] = {
-    val __props = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[EventListenerProps[T]]))
-  }
 }

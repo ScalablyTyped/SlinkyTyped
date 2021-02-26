@@ -10,9 +10,9 @@ Virtual Keyboard using jQuery UI
 | ------------------ | :-------------: |
 | Full name          | virtual-keyboard |
 | Keywords           | customizable, keyboard, ui, accessibility, osk, jquery-plugin |
-| # releases         | 13 |
-| # dependents       | 12 |
-| # downloads        | 70221 |
+| # releases         | 7 |
+| # dependents       | 10 |
+| # downloads        | 80100 |
 | # stars            | 1 |
 
 ## Links

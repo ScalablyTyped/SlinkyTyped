@@ -2,13 +2,14 @@ package typingsSlinky.zipkin.mod
 
 import typingsSlinky.zipkin.anon.CtxImpl
 import typingsSlinky.zipkin.mod.option.IOption
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("zipkin", "Tracer")
 @js.native
-class Tracer protected () extends js.Object {
+class Tracer protected () extends StObject {
   def this(args: CtxImpl) = this()
   
   /** Creates a child of the current trace ID or a new root span. */

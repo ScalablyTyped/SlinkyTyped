@@ -34,16 +34,15 @@ import typingsSlinky.expressValidator.optionsMod.PassportCountryCode
 import typingsSlinky.expressValidator.optionsMod.PostalCodeLocale
 import typingsSlinky.expressValidator.optionsMod.TaxIDLocale
 import typingsSlinky.expressValidator.optionsMod.UUIDVersion
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("express-validator/src/chain/validators", JSImport.Namespace)
-@js.native
-object validatorsMod extends js.Object {
+object validatorsMod {
   
   @js.native
-  trait Validators[Return] extends js.Object {
+  trait Validators[Return] extends StObject {
     
     def contains(elem: js.Any): Return = js.native
     def contains(elem: js.Any, options: ContainsOptions): Return = js.native

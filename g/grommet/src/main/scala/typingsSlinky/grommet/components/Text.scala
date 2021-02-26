@@ -94,15 +94,16 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Text {
   
-  @JSImport("grommet/es6", "Text")
+  @JSImport("grommet", "Text")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -268,13 +269,13 @@ object Text {
     def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def asComponentClass(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
+    def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def autoCapitalize(value: String): this.type = set("autoCapitalize", value.asInstanceOf[js.Any])
@@ -307,10 +308,10 @@ object Text {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -640,13 +641,13 @@ object Text {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tagFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: PolymorphicType): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tagComponentClass(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tag(value: PolymorphicType): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tagFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def textAlign(value: TextAlignType): this.type = set("textAlign", value.asInstanceOf[js.Any])
@@ -676,9 +677,9 @@ object Text {
     def wordBreak(value: normal | `break-all` | `keep-all` | `break-word`): this.type = set("wordBreak", value.asInstanceOf[js.Any])
   }
   
+  implicit def make(companion: Text.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   def withProps(
     p: TextProps with (Omit[DetailedHTMLProps[HTMLAttributes[HTMLSpanElement], HTMLSpanElement], color])
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: Text.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

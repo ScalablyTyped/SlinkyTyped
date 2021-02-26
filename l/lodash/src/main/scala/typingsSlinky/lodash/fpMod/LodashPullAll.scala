@@ -2,12 +2,13 @@ package typingsSlinky.lodash.fpMod
 
 import typingsSlinky.lodash.mod.List
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashPullAll extends js.Object {
+trait LodashPullAll extends StObject {
   
   def apply[T](values: List[T]): LodashPullAll1x1[T] = js.native
   def apply[T](values: List[T], array: js.Array[T]): js.Array[T] = js.native

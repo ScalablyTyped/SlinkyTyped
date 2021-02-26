@@ -9,6 +9,7 @@ import typingsSlinky.atlaskitSingleSelect.mod.GroupType
 import typingsSlinky.atlaskitSingleSelect.mod.ItemType
 import typingsSlinky.atlaskitSingleSelect.mod.Props
 import typingsSlinky.atlaskitSingleSelect.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object SingleSelect {
   
   @JSImport("@atlaskit/single-select", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +41,10 @@ object SingleSelect {
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def invalidMessageReactElement(value: ReactElement): this.type = set("invalidMessage", value.asInstanceOf[js.Any])
+    def invalidMessage(value: ReactElement): this.type = set("invalidMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def invalidMessage(value: ReactElement): this.type = set("invalidMessage", value.asInstanceOf[js.Any])
+    def invalidMessageReactElement(value: ReactElement): this.type = set("invalidMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def isDefaultOpen(value: Boolean): this.type = set("isDefaultOpen", value.asInstanceOf[js.Any])
@@ -61,10 +62,10 @@ object SingleSelect {
     def isRequired(value: Boolean): this.type = set("isRequired", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemsVarargs(value: GroupType*): this.type = set("items", js.Array(value :_*))
+    def items(value: js.Array[GroupType]): this.type = set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def items(value: js.Array[GroupType]): this.type = set("items", value.asInstanceOf[js.Any])
+    def itemsVarargs(value: GroupType*): this.type = set("items", js.Array(value :_*))
     
     @scala.inline
     def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
@@ -103,7 +104,7 @@ object SingleSelect {
     def shouldFocus(value: Boolean): this.type = set("shouldFocus", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SingleSelect.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

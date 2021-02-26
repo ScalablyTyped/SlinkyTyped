@@ -2,13 +2,12 @@ package typingsSlinky.uifabricMergeStyles
 
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylesetMod.IStyleSet
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uifabric/merge-styles/lib/IStyleFunction", JSImport.Namespace)
-@js.native
-object istylefunctionMod extends js.Object {
+object istylefunctionMod {
   
   type IStyleFunction[TStylesProps, TStyleSet /* <: IStyleSet[TStyleSet] */] = js.Function1[/* props */ TStylesProps, DeepPartial[TStyleSet]]
   

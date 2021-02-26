@@ -7,6 +7,7 @@ import typingsSlinky.figma.figmaStrings.MAX
 import typingsSlinky.figma.figmaStrings.MIN
 import typingsSlinky.figma.figmaStrings.ROWS
 import typingsSlinky.figma.figmaStrings.STRETCH
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,8 +16,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.figma.mod.global.RowsColsLayoutGrid
   - typingsSlinky.figma.mod.global.GridLayoutGrid
 */
-trait LayoutGrid extends js.Object
+trait LayoutGrid extends StObject
 object LayoutGrid {
+  
+  @scala.inline
+  def GridLayoutGrid(pattern: GRID, sectionSize: Double): typingsSlinky.figma.mod.global.GridLayoutGrid = {
+    val __obj = js.Dynamic.literal(pattern = pattern.asInstanceOf[js.Any], sectionSize = sectionSize.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.figma.mod.global.GridLayoutGrid]
+  }
   
   @scala.inline
   def RowsColsLayoutGrid(
@@ -24,14 +31,8 @@ object LayoutGrid {
     count: Double,
     gutterSize: Double,
     pattern: ROWS | COLUMNS
-  ): LayoutGrid = {
+  ): typingsSlinky.figma.mod.global.RowsColsLayoutGrid = {
     val __obj = js.Dynamic.literal(alignment = alignment.asInstanceOf[js.Any], count = count.asInstanceOf[js.Any], gutterSize = gutterSize.asInstanceOf[js.Any], pattern = pattern.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LayoutGrid]
-  }
-  
-  @scala.inline
-  def GridLayoutGrid(pattern: GRID, sectionSize: Double): LayoutGrid = {
-    val __obj = js.Dynamic.literal(pattern = pattern.asInstanceOf[js.Any], sectionSize = sectionSize.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LayoutGrid]
+    __obj.asInstanceOf[typingsSlinky.figma.mod.global.RowsColsLayoutGrid]
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.ServiceWorker
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.activated
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.redundant
 */
-trait ServiceWorkerVersionStatus extends js.Object
+trait ServiceWorkerVersionStatus extends StObject
 object ServiceWorkerVersionStatus {
   
   @scala.inline

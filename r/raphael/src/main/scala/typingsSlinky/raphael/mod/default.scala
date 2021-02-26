@@ -1,14 +1,15 @@
 package typingsSlinky.raphael.mod
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
 import typingsSlinky.raphael.raphaelStrings.SVG
 import typingsSlinky.raphael.raphaelStrings.VML
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSImport("raphael", JSImport.Default)
 @js.native
 /**
@@ -62,6 +63,3 @@ class default () extends RaphaelPaper[SVG | VML] {
     callback: js.ThisFunction0[/* this */ RaphaelPaper[SVG | VML], Unit]
   ) = this()
 }
-@JSImport("raphael", JSImport.Default)
-@js.native
-object default extends TopLevel[RaphaelStatic[SVG | VML]]

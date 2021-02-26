@@ -10,9 +10,9 @@ Modern JavaScript date utility library
 | ------------------ | :-------------: |
 | Full name          | date-fns |
 | Keywords           | - |
-| # releases         | 46 |
-| # dependents       | 2181 |
-| # downloads        | 169674209 |
+| # releases         | 38 |
+| # dependents       | 3859 |
+| # downloads        | 365328291 |
 | # stars            | 50 |
 
 ## Links

@@ -6,6 +6,7 @@ import typingsSlinky.materialUi.MaterialUI.CircularProgressProps
 import typingsSlinky.materialUi.materialUiStrings.determinate
 import typingsSlinky.materialUi.materialUiStrings.indeterminate
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object CircularProgress {
   
   @JSImport("material-ui", "CircularProgress")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,7 +50,7 @@ object CircularProgress {
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CircularProgressProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: CircularProgress.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CircularProgressProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -2,12 +2,13 @@ package typingsSlinky.ionicCore.componentsMod.Components
 
 import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IonRouter extends js.Object {
+trait IonRouter extends StObject {
   
   /**
     * Go back to previous page in the window.history.

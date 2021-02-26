@@ -16,6 +16,7 @@ import typingsSlinky.phaser.Phaser.Tilemaps.StaticTilemapLayer
 import typingsSlinky.phaser.Phaser.Tilemaps.Tile
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterDebugConfig
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterRunnerConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesGetBucketAccelerateConfigurationInp
 import typingsSlinky.awsSdkClientS3Node.typesGetBucketAccelerateConfigurationOutputMod.GetBucketAccelerateConfigurationOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/GetBucketAccelerateConfigurationCommand", JSImport.Namespace)
-@js.native
-object getBucketAccelerateConfigurationCommandMod extends js.Object {
+object getBucketAccelerateConfigurationCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/GetBucketAccelerateConfigurationCommand", "GetBucketAccelerateConfigurationCommand")
   @js.native
   class GetBucketAccelerateConfigurationCommand protected () extends Command[
           InputTypesUnion, 

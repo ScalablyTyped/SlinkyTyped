@@ -2,16 +2,15 @@ package typingsSlinky.googleOneTap
 
 import typingsSlinky.googleOneTap.mod.IdConfiguration
 import typingsSlinky.googleOneTap.mod.PromptMomentNotification
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait Cancel extends js.Object {
+  trait Cancel extends StObject {
     
     def cancel(): Unit = js.native
     

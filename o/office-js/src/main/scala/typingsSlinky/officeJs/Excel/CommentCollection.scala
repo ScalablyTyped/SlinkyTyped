@@ -9,6 +9,7 @@ import typingsSlinky.officeJs.OfficeExtension.EventHandlers
 import typingsSlinky.officeJs.OfficeExtension.LoadOption
 import typingsSlinky.officeJs.officeJsStrings.Mention
 import typingsSlinky.officeJs.officeJsStrings.Plain
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -11,6 +11,7 @@ import typingsSlinky.recharts.mod.Coordinate
 import typingsSlinky.recharts.mod.TooltipPayload
 import typingsSlinky.recharts.mod.TooltipProps
 import typingsSlinky.recharts.mod.ViewBox
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object Tooltip {
   
   @JSImport("recharts", "Tooltip")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,7 +46,7 @@ object Tooltip {
     def animationId(value: Double): this.type = set("animationId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement | ReactComponentClass[_] | ContentRenderer[TooltipProps]): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentFunction1(value: TooltipProps => ReactElement): this.type = set("content", js.Any.fromFunction1(value))
@@ -54,7 +55,7 @@ object Tooltip {
     def contentFunctionComponent(value: ReactComponentClass[_]): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: ReactElement | ReactComponentClass[_] | ContentRenderer[TooltipProps]): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentStyle(value: js.Object): this.type = set("contentStyle", value.asInstanceOf[js.Any])
@@ -63,13 +64,13 @@ object Tooltip {
     def coordinate(value: Coordinate): this.type = set("coordinate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cursorReactElement(value: ReactElement): this.type = set("cursor", value.asInstanceOf[js.Any])
+    def cursor(value: Boolean | js.Object | ReactElement | ReactComponentClass[_]): this.type = set("cursor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def cursorFunctionComponent(value: ReactComponentClass[_]): this.type = set("cursor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cursor(value: Boolean | js.Object | ReactElement | ReactComponentClass[_]): this.type = set("cursor", value.asInstanceOf[js.Any])
+    def cursorReactElement(value: ReactElement): this.type = set("cursor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def filterNull(value: Boolean): this.type = set("filterNull", value.asInstanceOf[js.Any])
@@ -110,10 +111,10 @@ object Tooltip {
     def onAnimationStart(value: /* repeated */ js.Any => Unit): this.type = set("onAnimationStart", js.Any.fromFunction1(value))
     
     @scala.inline
-    def payloadVarargs(value: TooltipPayload*): this.type = set("payload", js.Array(value :_*))
+    def payload(value: js.Array[TooltipPayload]): this.type = set("payload", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def payload(value: js.Array[TooltipPayload]): this.type = set("payload", value.asInstanceOf[js.Any])
+    def payloadVarargs(value: TooltipPayload*): this.type = set("payload", js.Array(value :_*))
     
     @scala.inline
     def position(value: Coordinate): this.type = set("position", value.asInstanceOf[js.Any])
@@ -131,7 +132,7 @@ object Tooltip {
     def wrapperStyle(value: js.Object): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tooltip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -10,13 +10,15 @@ JupyterLab - Log Console
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/logconsole |
 | Keywords           | - |
-| # releases         | 15 |
-| # dependents       | 5 |
-| # downloads        | 121172 |
+| # releases         | 98 |
+| # dependents       | 11 |
+| # downloads        | 1416982 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/jupyterlab/jupyterlab)
 - [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
+- [Repository](https://github.com/jupyterlab/jupyterlab)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Flogconsole)
     
 

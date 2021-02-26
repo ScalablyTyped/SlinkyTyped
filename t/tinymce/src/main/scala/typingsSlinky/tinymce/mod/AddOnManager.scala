@@ -1,12 +1,13 @@
 package typingsSlinky.tinymce.mod
 
 import typingsSlinky.std.Plugin
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AddOnManager extends js.Object {
+trait AddOnManager extends StObject {
   
   def add(id: String, addOn: js.Function2[/* editor */ Editor, /* url */ String, Unit]): Theme | Plugin = js.native
   

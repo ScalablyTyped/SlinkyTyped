@@ -3,17 +3,22 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.volumeTypesMod.IVolumeViewConfig
 import typingsSlinky.playable.volumeTypesMod.IVolumeViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/controls/volume/volume.view", JSImport.Namespace)
-@js.native
-object volumeViewMod extends js.Object {
+object volumeViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/controls/volume/volume.view", JSImport.Default)
+  @js.native
+  class default protected () extends VolumeView {
+    def this(config: IVolumeViewConfig) = this()
+  }
   
   @js.native
   trait VolumeView
-    extends typingsSlinky.playable.stylableMod.default[IVolumeViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[IVolumeViewStyles] {
     
     @JSName("_$hitbox")
     var _$hitbox: js.Any = js.native
@@ -83,10 +88,5 @@ object volumeViewMod extends js.Object {
     def setVolume(volume: Double): Unit = js.native
     
     def show(): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends VolumeView {
-    def this(config: IVolumeViewConfig) = this()
   }
 }

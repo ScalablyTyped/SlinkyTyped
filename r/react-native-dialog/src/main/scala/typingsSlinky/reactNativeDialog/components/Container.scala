@@ -40,15 +40,22 @@ import typingsSlinky.reactNativeModal.modalMod.OnSwipeCompleteParams
 import typingsSlinky.reactNativeModal.typesMod.Direction
 import typingsSlinky.reactNativeModal.typesMod.Orientation
 import typingsSlinky.reactNativeModal.typesMod.PresentationStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Container {
   
+  @scala.inline
+  def apply(children: js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ContainerProps with ViewProps with reactNativeModalContainerProps]))
+  }
+  
   @JSImport("react-native-dialog", "Dialog.Container")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -56,10 +63,10 @@ object Container {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeDialog.mod.Dialog.Container] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -86,10 +93,10 @@ object Container {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -128,10 +135,10 @@ object Container {
     def backdropTransitionOutTiming(value: Double): this.type = set("backdropTransitionOutTiming", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def blurComponentIOSReactElement(value: ReactElement): this.type = set("blurComponentIOS", value.asInstanceOf[js.Any])
+    def blurComponentIOS(value: ReactElement): this.type = set("blurComponentIOS", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def blurComponentIOS(value: ReactElement): this.type = set("blurComponentIOS", value.asInstanceOf[js.Any])
+    def blurComponentIOSReactElement(value: ReactElement): this.type = set("blurComponentIOS", value.asInstanceOf[js.Any])
     
     @scala.inline
     def buttonSeparatorStyle(value: ViewStyle): this.type = set("buttonSeparatorStyle", value.asInstanceOf[js.Any])
@@ -146,10 +153,10 @@ object Container {
     def coverScreen(value: Boolean): this.type = set("coverScreen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customBackdropReactElement(value: ReactElement): this.type = set("customBackdrop", value.asInstanceOf[js.Any])
+    def customBackdrop(value: ReactElement): this.type = set("customBackdrop", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customBackdrop(value: ReactElement): this.type = set("customBackdrop", value.asInstanceOf[js.Any])
+    def customBackdropReactElement(value: ReactElement): this.type = set("customBackdrop", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deviceHeight(value: Double): this.type = set("deviceHeight", value.asInstanceOf[js.Any])
@@ -338,16 +345,16 @@ object Container {
     def styleNull: this.type = set("style", null)
     
     @scala.inline
-    def supportedOrientationsVarargs(value: Orientation*): this.type = set("supportedOrientations", js.Array(value :_*))
-    
-    @scala.inline
     def supportedOrientations(value: js.Array[Orientation]): this.type = set("supportedOrientations", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def swipeDirectionVarargs(value: Direction*): this.type = set("swipeDirection", js.Array(value :_*))
+    def supportedOrientationsVarargs(value: Orientation*): this.type = set("supportedOrientations", js.Array(value :_*))
     
     @scala.inline
     def swipeDirection(value: Direction | js.Array[Direction]): this.type = set("swipeDirection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def swipeDirectionVarargs(value: Direction*): this.type = set("swipeDirection", js.Array(value :_*))
     
     @scala.inline
     def swipeThreshold(value: Double): this.type = set("swipeThreshold", value.asInstanceOf[js.Any])
@@ -378,10 +385,4 @@ object Container {
   }
   
   def withProps(p: ContainerProps with ViewProps with reactNativeModalContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: js.Array[ReactElement]): Builder = {
-    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ContainerProps with ViewProps with reactNativeModalContainerProps]))
-  }
 }

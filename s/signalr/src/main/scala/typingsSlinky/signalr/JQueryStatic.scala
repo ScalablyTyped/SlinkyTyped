@@ -3,12 +3,13 @@ package typingsSlinky.signalr
 import typingsSlinky.signalr.SignalR.Connection
 import typingsSlinky.signalr.SignalR.Hub.HubCreator
 import typingsSlinky.signalr.SignalR.Hub.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQueryStatic extends js.Object {
+trait JQueryStatic extends StObject {
   
   /**
     * Creates a new SignalR connection for the given url

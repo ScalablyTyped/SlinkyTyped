@@ -10,9 +10,9 @@ Throw better errors.
 | ------------------ | :-------------: |
 | Full name          | @jsdevtools/ono |
 | Keywords           | throw, error, errors, exception, printf, format, wrap, inner, original, stack, properties |
-| # releases         | 7 |
-| # dependents       | 20 |
-| # downloads        | 1838756 |
+| # releases         | 9 |
+| # dependents       | 27 |
+| # downloads        | 13145726 |
 | # stars            | 0 |
 
 ## Links

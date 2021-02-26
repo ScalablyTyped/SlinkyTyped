@@ -7,6 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,16 +28,20 @@ class BooleanType protected ()
     container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
-/* static members */
-@JSImport("mendixmodelsdk", "codeactions.BooleanType")
-@js.native
-object BooleanType extends js.Object {
+object BooleanType {
+  
+  @JSImport("mendixmodelsdk", "codeactions.BooleanType")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
+  /* static member */
+  @JSImport("mendixmodelsdk", "codeactions.BooleanType.create")
+  @js.native
   def create(model: IModel): typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.BooleanType = js.native
   
   /**
@@ -47,6 +52,9 @@ object BooleanType extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.21.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk", "codeactions.BooleanType.createInBasicParameterTypeUnderType")
+  @js.native
   def createInBasicParameterTypeUnderType(container: typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.BasicParameterType): typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.BooleanType = js.native
   
   /**
@@ -57,9 +65,22 @@ object BooleanType extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  7.21.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk", "codeactions.BooleanType.createInCodeActionUnderActionReturnType")
+  @js.native
   def createInCodeActionUnderActionReturnType(container: typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.CodeAction): typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.BooleanType = js.native
   
-  var structureTypeName: String = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk", "codeactions.BooleanType.structureTypeName")
+  @js.native
+  def structureTypeName: String = js.native
+  @scala.inline
+  def structureTypeName_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("structureTypeName")(x.asInstanceOf[js.Any])
   
-  var versionInfo: StructureVersionInfo = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk", "codeactions.BooleanType.versionInfo")
+  @js.native
+  def versionInfo: StructureVersionInfo = js.native
+  @scala.inline
+  def versionInfo_=(x: StructureVersionInfo): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(x.asInstanceOf[js.Any])
 }

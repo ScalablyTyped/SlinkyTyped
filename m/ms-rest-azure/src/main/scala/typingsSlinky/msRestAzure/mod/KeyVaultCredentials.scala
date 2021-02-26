@@ -3,6 +3,7 @@ package typingsSlinky.msRestAzure.mod
 import typingsSlinky.msRest.mod.ServiceCallback
 import typingsSlinky.msRest.mod.ServiceClientCredentials
 import typingsSlinky.msRest.mod.WebResource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

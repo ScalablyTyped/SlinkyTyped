@@ -4,6 +4,7 @@ import typingsSlinky.pulumiKubernetes.eventListMod.EventListArgs
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,9 +26,7 @@ class EventList protected ()
   def this(name: String, args: EventListArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/kubernetes/core/v1", "EventList")
-@js.native
-object EventList extends js.Object {
+object EventList {
   
   /**
     * Get an existing EventList resource's state with the given name, ID, and optional extra
@@ -37,12 +36,18 @@ object EventList extends js.Object {
     * @param id The _unique_ provider ID of the resource to lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/kubernetes/core/v1", "EventList.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.eventListMod.EventList = js.native
+  @JSImport("@pulumi/kubernetes/core/v1", "EventList.get")
+  @js.native
   def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.eventListMod.EventList = js.native
   
   /**
     * Returns true if the given object is an instance of EventList.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/kubernetes/core/v1", "EventList.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/core/v1/eventList.EventList */ Boolean = js.native
 }

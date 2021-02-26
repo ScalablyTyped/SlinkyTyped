@@ -2,6 +2,7 @@ package typingsSlinky.sequelize.mod
 
 import typingsSlinky.sequelize.anon.Query
 import typingsSlinky.sequelize.anon.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

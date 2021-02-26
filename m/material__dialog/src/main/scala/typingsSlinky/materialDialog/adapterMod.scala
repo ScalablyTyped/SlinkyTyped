@@ -3,16 +3,15 @@ package typingsSlinky.materialDialog
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/dialog/adapter", JSImport.Namespace)
-@js.native
-object adapterMod extends js.Object {
+object adapterMod {
   
   @js.native
-  trait MDCDialogAdapter extends js.Object {
+  trait MDCDialogAdapter extends StObject {
     
     def addBodyClass(className: String): Unit = js.native
     
@@ -22,8 +21,8 @@ object adapterMod extends js.Object {
     
     def clickDefaultButton(): Unit = js.native
     
-    def eventTargetMatches(target: Null, selector: String): Boolean = js.native
     def eventTargetMatches(target: EventTarget, selector: String): Boolean = js.native
+    def eventTargetMatches(target: Null, selector: String): Boolean = js.native
     
     def getActionFromEvent(evt: Event): String | Null = js.native
     

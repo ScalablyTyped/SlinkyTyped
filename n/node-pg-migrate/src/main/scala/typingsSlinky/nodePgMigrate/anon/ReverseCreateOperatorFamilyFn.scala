@@ -2,12 +2,13 @@ package typingsSlinky.nodePgMigrate.anon
 
 import typingsSlinky.nodePgMigrate.generalTypesMod.DropOptions
 import typingsSlinky.nodePgMigrate.operatorsTypesMod.CreateOperatorFamilyFn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReverseCreateOperatorFamilyFn extends js.Object {
+trait ReverseCreateOperatorFamilyFn extends StObject {
   
   def reverse(
     operatorFamilyName: typingsSlinky.nodePgMigrate.generalTypesMod.Name,

@@ -5,12 +5,13 @@ import typingsSlinky.bootstrapMaxlength.bootstrapMaxlengthStrings.maxlengthDothi
 import typingsSlinky.bootstrapMaxlength.bootstrapMaxlengthStrings.maxlengthDotreposition
 import typingsSlinky.bootstrapMaxlength.bootstrapMaxlengthStrings.maxlengthDotshown
 import typingsSlinky.jquery.JQueryEventObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /** Apply the maxlength plugin on the selected elemens */
   def maxlength(): JQuery = js.native

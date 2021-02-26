@@ -1,5 +1,6 @@
 package typingsSlinky.angularCore.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCore.angularCoreStrings.window
   - typingsSlinky.angularCore.angularCoreStrings.body
 */
-trait GlobalTargetName extends js.Object
+trait GlobalTargetName extends StObject
 object GlobalTargetName {
   
   @scala.inline

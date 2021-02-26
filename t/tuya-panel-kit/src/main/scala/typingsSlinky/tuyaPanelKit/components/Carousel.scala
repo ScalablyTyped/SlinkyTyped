@@ -39,6 +39,7 @@ import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.tuyaPanelKit.anon.CurrentIndex
 import typingsSlinky.tuyaPanelKit.mod.CarouselProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -47,7 +48,7 @@ object Carousel {
   
   @JSImport("tuya-panel-kit", "Carousel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -55,10 +56,10 @@ object Carousel {
        with StBuildingComponent[tag.type, typingsSlinky.tuyaPanelKit.mod.Carousel] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -85,10 +86,10 @@ object Carousel {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -133,16 +134,16 @@ object Carousel {
     def dotWrapperStyleNull: this.type = set("dotWrapperStyle", null)
     
     @scala.inline
-    def dotsFunction1(value: /* params */ CurrentIndex => ReactElement): this.type = set("dots", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def dotsFunctionComponent(value: ReactComponentClass[_]): this.type = set("dots", value.asInstanceOf[js.Any])
+    def dots(value: ReactElement | (js.Function1[/* params */ CurrentIndex, ReactElement])): this.type = set("dots", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dotsComponentClass(value: ReactComponentClass[_]): this.type = set("dots", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dots(value: ReactElement | (js.Function1[/* params */ CurrentIndex, ReactElement])): this.type = set("dots", value.asInstanceOf[js.Any])
+    def dotsFunction1(value: /* params */ CurrentIndex => ReactElement): this.type = set("dots", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def dotsFunctionComponent(value: ReactComponentClass[_]): this.type = set("dots", value.asInstanceOf[js.Any])
     
     @scala.inline
     def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
@@ -316,7 +317,7 @@ object Carousel {
     def useViewPagerOnAndroid(value: Boolean): this.type = set("useViewPagerOnAndroid", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Carousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

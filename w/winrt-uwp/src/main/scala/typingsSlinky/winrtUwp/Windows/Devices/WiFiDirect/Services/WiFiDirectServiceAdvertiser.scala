@@ -10,13 +10,14 @@ import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.advertisementstatuschanged
 import typingsSlinky.winrtUwp.winrtUwpStrings.autoacceptsessionconnected
 import typingsSlinky.winrtUwp.winrtUwpStrings.sessionrequested
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a Service Advertiser. This class is used by code on a device that advertises Wi-Fi Direct Services, to advertise the service. */
 @js.native
-trait WiFiDirectServiceAdvertiser extends js.Object {
+trait WiFiDirectServiceAdvertiser extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

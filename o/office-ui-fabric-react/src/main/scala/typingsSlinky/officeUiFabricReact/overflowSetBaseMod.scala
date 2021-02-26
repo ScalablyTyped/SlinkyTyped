@@ -3,14 +3,14 @@ package typingsSlinky.officeUiFabricReact
 import typingsSlinky.officeUiFabricReact.overflowSetTypesMod.IOverflowSet
 import typingsSlinky.officeUiFabricReact.overflowSetTypesMod.IOverflowSetProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/OverflowSet/OverflowSet.base", JSImport.Namespace)
-@js.native
-object overflowSetBaseMod extends js.Object {
+object overflowSetBaseMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/OverflowSet/OverflowSet.base", "OverflowSetBase")
   @js.native
   class OverflowSetBase protected ()
     extends Component[IOverflowSetProps, js.Object, js.Any]

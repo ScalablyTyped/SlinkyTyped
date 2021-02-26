@@ -1,5 +1,6 @@
 package typingsSlinky.hummusRecipe.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.hummusRecipe.hummusRecipeStrings.FileAttachment
   - typingsSlinky.hummusRecipe.hummusRecipeStrings.Sound
 */
-trait AnnotSubtype extends js.Object
+trait AnnotSubtype extends StObject
 object AnnotSubtype {
   
   @scala.inline

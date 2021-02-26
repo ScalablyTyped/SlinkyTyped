@@ -4,7 +4,8 @@ import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameAnimation
+import typingsSlinky.reactOnsenui.anon.Animation
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.collapse
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.default
@@ -14,6 +15,7 @@ import typingsSlinky.reactOnsenui.reactOnsenuiStrings.overlay
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.portrait
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.right
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.split
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +24,7 @@ object SplitterSide {
   
   @JSImport("react-onsenui", "SplitterSide")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -84,7 +86,7 @@ object SplitterSide {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HTMLAttributesidclassNameAnimation): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SplitterSide.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HTMLAttributesidclassName with Animation): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

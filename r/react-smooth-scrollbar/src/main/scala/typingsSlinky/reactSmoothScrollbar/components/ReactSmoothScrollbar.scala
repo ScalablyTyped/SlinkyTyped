@@ -8,6 +8,7 @@ import typingsSlinky.reactSmoothScrollbar.mod.ScrollbarProps
 import typingsSlinky.reactSmoothScrollbar.mod.^
 import typingsSlinky.smoothScrollbar.mod.default
 import typingsSlinky.smoothScrollbar.scrollbarMod.ScrollStatus
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object ReactSmoothScrollbar {
   
   @JSImport("react-smooth-scrollbar", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -63,7 +64,7 @@ object ReactSmoothScrollbar {
     def wheelEventTargetNull: this.type = set("wheelEventTarget", null)
   }
   
-  def withProps(p: ScrollbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactSmoothScrollbar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ScrollbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

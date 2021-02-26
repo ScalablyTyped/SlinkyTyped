@@ -4,15 +4,15 @@
 Typings are for version 3.5.4
 
 ## Library description:
-light - weight css preprocessor
+A Light–weight CSS Preprocessor
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | stylis |
-| Keywords           | css, preprocessor |
-| # releases         | 9 |
-| # dependents       | 105 |
-| # downloads        | 77251574 |
+| Keywords           | - |
+| # releases         | 7 |
+| # dependents       | 163 |
+| # downloads        | 106643912 |
 | # stars            | 1 |
 
 ## Links

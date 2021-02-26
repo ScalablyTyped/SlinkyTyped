@@ -1,5 +1,6 @@
 package typingsSlinky.arangodb.ArangoDB
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arangodb.arangodbStrings.geo
   - typingsSlinky.arangodb.arangodbStrings.ttl
 */
-trait IndexType extends js.Object
+trait IndexType extends StObject
 object IndexType {
   
   @scala.inline

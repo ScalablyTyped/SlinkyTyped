@@ -1,6 +1,7 @@
 package typingsSlinky.winjs.WinJS.UI
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Provides backwards navigation in the form of a button.
   **/
 @js.native
-trait BackButton extends js.Object {
+trait BackButton extends StObject {
   
   //#endregion Constructors
   //#region Methods

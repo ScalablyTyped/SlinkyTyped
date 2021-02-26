@@ -6,13 +6,14 @@ import typingsSlinky.codemirror.codemirrorStrings.beforeCursorEnter
 import typingsSlinky.codemirror.codemirrorStrings.clear
 import typingsSlinky.codemirror.codemirrorStrings.hide
 import typingsSlinky.codemirror.codemirrorStrings.unhide
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent std.Partial<codemirror.codemirror.TextMarkerOptions> */
 @js.native
-trait TextMarker extends js.Object {
+trait TextMarker extends StObject {
   
   var addToHistory: js.UndefOr[Boolean] = js.native
   

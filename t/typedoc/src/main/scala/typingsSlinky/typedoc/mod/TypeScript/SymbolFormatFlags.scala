@@ -1,12 +1,13 @@
 package typingsSlinky.typedoc.mod.TypeScript
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.SymbolFormatFlags")
 @js.native
-object SymbolFormatFlags extends js.Object {
+object SymbolFormatFlags extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.typescript.mod.SymbolFormatFlags with Double] = js.native

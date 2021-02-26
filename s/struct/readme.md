@@ -10,9 +10,9 @@ Pack/Unpack multibyte binary values from/to buffers
 | ------------------ | :-------------: |
 | Full name          | struct |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 15 |
-| # downloads        | 20402 |
+| # releases         | 0 |
+| # dependents       | 20 |
+| # downloads        | 22779 |
 | # stars            | 3 |
 
 ## Links

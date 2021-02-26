@@ -3,16 +3,16 @@ package typingsSlinky.smoothScrollbar
 import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.smoothScrollbar.anon.X
 import typingsSlinky.smoothScrollbar.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("smooth-scrollbar/plugins/overscroll/glow", JSImport.Namespace)
-@js.native
-object glowMod extends js.Object {
+object glowMod {
   
+  @JSImport("smooth-scrollbar/plugins/overscroll/glow", "Glow")
   @js.native
-  class Glow protected () extends js.Object {
+  class Glow protected () extends StObject {
     def this(_scrollbar: default) = this()
     
     var _canvas: js.Any = js.native

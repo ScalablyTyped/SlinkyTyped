@@ -1,6 +1,7 @@
 package typingsSlinky.heredatalens.H.datalens
 
 import typingsSlinky.heredatalens.H.datalens.Service.Data
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

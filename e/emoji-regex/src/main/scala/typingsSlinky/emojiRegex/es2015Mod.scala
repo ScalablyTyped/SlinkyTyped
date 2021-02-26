@@ -1,12 +1,13 @@
 package typingsSlinky.emojiRegex
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("emoji-regex/es2015", JSImport.Namespace)
-@js.native
-object es2015Mod extends js.Object {
+object es2015Mod {
   
+  @JSImport("emoji-regex/es2015", JSImport.Default)
+  @js.native
   def default(): js.RegExp = js.native
 }

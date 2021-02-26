@@ -10,9 +10,9 @@ A monadic LL(infinity) parser combinator library
 | ------------------ | :-------------: |
 | Full name          | parsimmon |
 | Keywords           | parsing, parse, parsers, parser combinators |
-| # releases         | 13 |
-| # dependents       | 67 |
-| # downloads        | 1110872 |
+| # releases         | 6 |
+| # dependents       | 96 |
+| # downloads        | 2225337 |
 | # stars            | 2 |
 
 ## Links

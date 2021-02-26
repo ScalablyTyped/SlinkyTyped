@@ -1,6 +1,7 @@
 package typingsSlinky.xrm.Xrm.Controls
 
 import typingsSlinky.xrm.Xrm.OptionSetValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -4,21 +4,21 @@
 Typings are for version 1.9.4
 
 ## Library description:
-A simpler (and smaller) rewrite of Google Android's popular libphonenumber library
+A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | libphonenumber-js |
-| Keywords           | javascript, telephone, phone, number, input, mobile, android, iphone, international, libphonenumber |
-| # releases         | 123 |
-| # dependents       | 188 |
-| # downloads        | 13989053 |
+| Keywords           | telephone, phone, number, input, mobile, libphonenumber |
+| # releases         | 68 |
+| # dependents       | 311 |
+| # downloads        | 30341056 |
 | # stars            | 12 |
 
 ## Links
-- [Homepage](https://github.com/catamphetamine/libphonenumber-js#readme)
-- [Bugs](https://github.com/catamphetamine/libphonenumber-js/issues)
-- [Repository](https://github.com/catamphetamine/libphonenumber-js)
+- [Homepage](https://gitlab.com/catamphetamine/libphonenumber-js#readme)
+- [Bugs](https://gitlab.com/catamphetamine/libphonenumber-js/issues)
+- [Repository](https://gitlab.com/catamphetamine/libphonenumber-js)
 - [Npm](https://www.npmjs.com/package/libphonenumber-js)
     
 

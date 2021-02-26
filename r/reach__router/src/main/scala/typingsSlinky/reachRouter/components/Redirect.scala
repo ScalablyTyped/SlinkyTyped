@@ -7,15 +7,22 @@ import typingsSlinky.reachRouter.mod.NavigateFn
 import typingsSlinky.reachRouter.mod.RedirectProps
 import typingsSlinky.reachRouter.mod.RouteComponentProps
 import typingsSlinky.reachRouter.mod.WindowLocation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Redirect {
   
+  @scala.inline
+  def apply[TState](to: String): Builder[TState] = {
+    val __props = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
+    new Builder[TState](js.Array(this.component, __props.asInstanceOf[RouteComponentProps[RedirectProps[TState]]]))
+  }
+  
   @JSImport("@reach/router", "Redirect")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[TState] (val args: js.Array[js.Any])
@@ -51,10 +58,4 @@ object Redirect {
   }
   
   def withProps[TState](p: RouteComponentProps[RedirectProps[TState]]): Builder[TState] = new Builder[TState](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[TState](to: String): Builder[TState] = {
-    val __props = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
-    new Builder[TState](js.Array(this.component, __props.asInstanceOf[RouteComponentProps[RedirectProps[TState]]]))
-  }
 }

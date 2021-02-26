@@ -36,15 +36,22 @@ import typingsSlinky.reactSketchapp.reactSketchappStrings.nonzero
 import typingsSlinky.reactSketchapp.reactSketchappStrings.round
 import typingsSlinky.reactSketchapp.reactSketchappStrings.square
 import typingsSlinky.reactSketchapp.textPathMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TextPath {
   
+  @scala.inline
+  def apply(href: String): Builder = {
+    val __props = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TextPathProps]))
+  }
+  
   @JSImport("react-sketchapp/lib/components/Svg/TextPath", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -55,10 +62,10 @@ object TextPath {
     def alignmentBaseline(value: AlignmentBaseline): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def baselineShiftVarargs(value: NumberProp*): this.type = set("baselineShift", js.Array(value :_*))
+    def baselineShift(value: BaselineShift): this.type = set("baselineShift", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def baselineShift(value: BaselineShift): this.type = set("baselineShift", value.asInstanceOf[js.Any])
+    def baselineShiftVarargs(value: NumberProp*): this.type = set("baselineShift", js.Array(value :_*))
     
     @scala.inline
     def clipPath(value: String): this.type = set("clipPath", value.asInstanceOf[js.Any])
@@ -169,10 +176,10 @@ object TextPath {
     def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
+    def strokeDasharray(value: NumberArrayProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDasharray(value: NumberArrayProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
+    def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
     
     @scala.inline
     def strokeDashoffset(value: NumberProp): this.type = set("strokeDashoffset", value.asInstanceOf[js.Any])
@@ -227,10 +234,4 @@ object TextPath {
   }
   
   def withProps(p: TextPathProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(href: String): Builder = {
-    val __props = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TextPathProps]))
-  }
 }

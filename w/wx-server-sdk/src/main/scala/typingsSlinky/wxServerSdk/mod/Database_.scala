@@ -1,11 +1,12 @@
 package typingsSlinky.wxServerSdk.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Database_ extends js.Object {
+trait Database_ extends StObject {
   
   var Geo: typingsSlinky.wxServerSdk.mod.Geo = js.native
   

@@ -1,11 +1,12 @@
 package typingsSlinky.dashjs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait KeySystem extends js.Object {
+trait KeySystem extends StObject {
   
   def getCDMData(): js.typedarray.ArrayBuffer | Null = js.native
   
@@ -44,45 +45,33 @@ object KeySystem {
   }
   
   @scala.inline
-  implicit class KeySystemOps[Self <: KeySystem] (val x: Self) extends AnyVal {
+  implicit class KeySystemMutableBuilder[Self <: KeySystem] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setGetCDMData(value: () => js.typedarray.ArrayBuffer | Null): Self = StObject.set(x, "getCDMData", js.Any.fromFunction0(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setGetInitData(value: js.Object => js.typedarray.ArrayBuffer): Self = StObject.set(x, "getInitData", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setGetLicenseRequestFromMessage(value: js.typedarray.ArrayBuffer => js.typedarray.Uint8Array): Self = StObject.set(x, "getLicenseRequestFromMessage", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setGetCDMData(value: () => js.typedarray.ArrayBuffer | Null): Self = this.set("getCDMData", js.Any.fromFunction0(value))
+    def setGetLicenseServerURLFromInitData(value: js.typedarray.ArrayBuffer => String | Null): Self = StObject.set(x, "getLicenseServerURLFromInitData", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setGetInitData(value: js.Object => js.typedarray.ArrayBuffer): Self = this.set("getInitData", js.Any.fromFunction1(value))
+    def setGetRequestHeadersFromMessage(value: js.typedarray.ArrayBuffer => js.Object | Null): Self = StObject.set(x, "getRequestHeadersFromMessage", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setGetLicenseRequestFromMessage(value: js.typedarray.ArrayBuffer => js.typedarray.Uint8Array): Self = this.set("getLicenseRequestFromMessage", js.Any.fromFunction1(value))
+    def setGetSessionId(value: () => String | Null): Self = StObject.set(x, "getSessionId", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGetLicenseServerURLFromInitData(value: js.typedarray.ArrayBuffer => String | Null): Self = this.set("getLicenseServerURLFromInitData", js.Any.fromFunction1(value))
+    def setSchemeIdURI(value: String): Self = StObject.set(x, "schemeIdURI", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetRequestHeadersFromMessage(value: js.typedarray.ArrayBuffer => js.Object | Null): Self = this.set("getRequestHeadersFromMessage", js.Any.fromFunction1(value))
+    def setSystemString(value: String): Self = StObject.set(x, "systemString", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetSessionId(value: () => String | Null): Self = this.set("getSessionId", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setSchemeIdURI(value: String): Self = this.set("schemeIdURI", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSystemString(value: String): Self = this.set("systemString", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUuid(value: String): Self = this.set("uuid", value.asInstanceOf[js.Any])
+    def setUuid(value: String): Self = StObject.set(x, "uuid", value.asInstanceOf[js.Any])
   }
 }

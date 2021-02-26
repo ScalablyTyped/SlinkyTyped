@@ -6,6 +6,7 @@ import typingsSlinky.reactVis.anon.CSSPropertieslineCSSPrope
 import typingsSlinky.reactVis.mod.XAxisProps
 import typingsSlinky.reactVis.reactVisStrings.bottom
 import typingsSlinky.reactVis.reactVisStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object XAxis {
   
   @JSImport("react-vis", "XAxis")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -91,10 +92,10 @@ object XAxis {
     def tickTotal(value: Double): this.type = set("tickTotal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tickValuesVarargs(value: js.Any*): this.type = set("tickValues", js.Array(value :_*))
+    def tickValues(value: js.Array[_]): this.type = set("tickValues", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tickValues(value: js.Array[_]): this.type = set("tickValues", value.asInstanceOf[js.Any])
+    def tickValuesVarargs(value: js.Any*): this.type = set("tickValues", js.Array(value :_*))
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -106,7 +107,7 @@ object XAxis {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: XAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: XAxis.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: XAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

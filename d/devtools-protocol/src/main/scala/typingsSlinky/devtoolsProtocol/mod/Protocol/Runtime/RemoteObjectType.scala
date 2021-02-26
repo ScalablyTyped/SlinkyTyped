@@ -9,6 +9,7 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.string
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.symbol
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.undefined
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.wasm
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.bigint
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.wasm
 */
-trait RemoteObjectType extends js.Object
+trait RemoteObjectType extends StObject
 object RemoteObjectType {
   
   @scala.inline

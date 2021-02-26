@@ -1,5 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.webRequest
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.blocking
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.asyncBlocking
 */
-trait OnAuthRequiredOptions extends js.Object
+trait OnAuthRequiredOptions extends StObject
 object OnAuthRequiredOptions {
   
   @scala.inline

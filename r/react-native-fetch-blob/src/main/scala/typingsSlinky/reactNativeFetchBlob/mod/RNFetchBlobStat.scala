@@ -2,13 +2,14 @@ package typingsSlinky.reactNativeFetchBlob.mod
 
 import typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.directory
 import typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.file
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-fetch-blob", "RNFetchBlobStat")
 @js.native
-class RNFetchBlobStat () extends js.Object {
+class RNFetchBlobStat () extends StObject {
   
   var filename: String = js.native
   

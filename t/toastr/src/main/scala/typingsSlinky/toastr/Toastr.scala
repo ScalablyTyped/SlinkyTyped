@@ -3,12 +3,13 @@ package typingsSlinky.toastr
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery
 import typingsSlinky.toastr.anon.Force
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Toastr extends js.Object {
+trait Toastr extends StObject {
   
   /**
     * Clear toasts

@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.AccesstokenAltCallb
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.IdsKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TargetingTemplatesResource extends js.Object {
+trait TargetingTemplatesResource extends StObject {
   
   /** Gets one targeting template by ID. */
   def get(): Request[TargetingTemplate] = js.native

@@ -6,12 +6,14 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.DatePicker.DatePickerDialogProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
+import typingsSlinky.materialUi.anon.TypeofDateTimeFormat
 import typingsSlinky.materialUi.datePickerDialogMod.default
 import typingsSlinky.materialUi.materialUiStrings.`inline`
 import typingsSlinky.materialUi.materialUiStrings.dialog
 import typingsSlinky.materialUi.materialUiStrings.landscape
 import typingsSlinky.materialUi.materialUiStrings.portrait
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +22,7 @@ object DatePickerDialog {
   
   @JSImport("material-ui/DatePicker/DatePickerDialog", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -28,7 +30,7 @@ object DatePickerDialog {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def DateTimeFormat(value: typingsSlinky.materialUi.anon.Call): this.type = set("DateTimeFormat", value.asInstanceOf[js.Any])
+    def DateTimeFormat(value: TypeofDateTimeFormat): this.type = set("DateTimeFormat", value.asInstanceOf[js.Any])
     
     @scala.inline
     def animation(value: ReactComponentClass[PopoverAnimationProps]): this.type = set("animation", value.asInstanceOf[js.Any])
@@ -37,10 +39,10 @@ object DatePickerDialog {
     def autoOk(value: Boolean): this.type = set("autoOk", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelLabelReactElement(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    def cancelLabel(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelLabel(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    def cancelLabelReactElement(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def container(value: dialog | `inline`): this.type = set("container", value.asInstanceOf[js.Any])
@@ -67,10 +69,10 @@ object DatePickerDialog {
     def mode(value: portrait | landscape): this.type = set("mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okLabelReactElement(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    def okLabel(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okLabel(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    def okLabelReactElement(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAccept(value: /* d */ js.Date => Unit): this.type = set("onAccept", js.Any.fromFunction1(value))
@@ -91,7 +93,7 @@ object DatePickerDialog {
     def utils(value: typingsSlinky.materialUi.MaterialUI.propTypes.utils): this.type = set("utils", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DatePickerDialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DatePickerDialog.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DatePickerDialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientBigqueryconnection.anon.Key
 import typingsSlinky.maximMazurokGapiClientBigqueryconnection.anon.Name
 import typingsSlinky.maximMazurokGapiClientBigqueryconnection.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientBigqueryconnection.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ConnectionsResource extends js.Object {
+trait ConnectionsResource extends StObject {
   
   /** Creates a new connection. */
   def create(request: Accesstoken): Request[Connection] = js.native

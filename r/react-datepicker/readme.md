@@ -10,9 +10,9 @@ A simple and reusable datepicker component for React
 | ------------------ | :-------------: |
 | Full name          | react-datepicker |
 | Keywords           | react, datepicker, calendar, date, react-component |
-| # releases         | 28 |
-| # dependents       | 470 |
-| # downloads        | 18176022 |
+| # releases         | 31 |
+| # dependents       | 733 |
+| # downloads        | 35169121 |
 | # stars            | 21 |
 
 ## Links

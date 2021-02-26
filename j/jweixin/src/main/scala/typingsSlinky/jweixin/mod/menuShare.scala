@@ -1,9 +1,11 @@
 package typingsSlinky.jweixin.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// 查看公众号（未添加）
 // 传播类
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonappMessage
@@ -14,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonfacebook
   - typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonQZone
 */
-trait menuShare extends js.Object
+trait menuShare extends StObject
 object menuShare {
   
   @scala.inline

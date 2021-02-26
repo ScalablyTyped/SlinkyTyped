@@ -10,15 +10,22 @@ import typingsSlinky.idyllDocument.anon.Children
 import typingsSlinky.idyllDocument.mod.IdyllDocumentProps
 import typingsSlinky.idyllDocument.mod.default
 import typingsSlinky.react.mod.ReactType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IdyllDocument {
   
+  @scala.inline
+  def apply(components: js.Any): Builder = {
+    val __props = js.Dynamic.literal(components = components.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IdyllDocumentProps]))
+  }
+  
   @JSImport("idyll-document", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -26,10 +33,10 @@ object IdyllDocument {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def astVarargs(value: Node*): this.type = set("ast", js.Array(value :_*))
+    def ast(value: AST): this.type = set("ast", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ast(value: AST): this.type = set("ast", value.asInstanceOf[js.Any])
+    def astVarargs(value: Node*): this.type = set("ast", js.Array(value :_*))
     
     @scala.inline
     def compilerOptions(value: Options): this.type = set("compilerOptions", value.asInstanceOf[js.Any])
@@ -41,13 +48,13 @@ object IdyllDocument {
     def datasets(value: js.Object): this.type = set("datasets", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorComponentFunctionComponent(value: ReactComponentClass[Children]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
+    def errorComponent(value: ReactType[Children]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def errorComponentComponentClass(value: ReactComponentClass[Children]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorComponent(value: ReactType[Children]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
+    def errorComponentFunctionComponent(value: ReactComponentClass[Children]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def initialState(value: js.Any): this.type = set("initialState", value.asInstanceOf[js.Any])
@@ -66,10 +73,4 @@ object IdyllDocument {
   }
   
   def withProps(p: IdyllDocumentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(components: js.Any): Builder = {
-    val __props = js.Dynamic.literal(components = components.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IdyllDocumentProps]))
-  }
 }

@@ -6,14 +6,15 @@ import typingsSlinky.babelTraverse.anon.Typeofvisitors
 import typingsSlinky.babelTraverse.mod.Scope
 import typingsSlinky.babelTraverse.mod.TraverseOptions
 import typingsSlinky.babelTraverse.mod.Visitor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@babel/core", "traverse")
-@js.native
-object traverse extends js.Object {
+object traverse {
   
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply(
     parent: js.UndefOr[
       typingsSlinky.babelTypes.mod.Node | js.Array[typingsSlinky.babelTypes.mod.Node] | Null
@@ -23,12 +24,16 @@ object traverse extends js.Object {
     state: js.UndefOr[js.Any],
     parentPath: js.UndefOr[typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node]]
   ): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](
     parent: js.UndefOr[typingsSlinky.babelTypes.mod.Node],
     opts: TraverseOptions[S],
     scope: js.UndefOr[scala.Nothing],
     state: S
   ): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](
     parent: js.UndefOr[typingsSlinky.babelTypes.mod.Node],
     opts: TraverseOptions[S],
@@ -36,12 +41,16 @@ object traverse extends js.Object {
     state: S,
     parentPath: typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node]
   ): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](
     parent: js.UndefOr[typingsSlinky.babelTypes.mod.Node],
     opts: TraverseOptions[S],
     scope: Scope,
     state: S
   ): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](
     parent: js.UndefOr[typingsSlinky.babelTypes.mod.Node],
     opts: TraverseOptions[S],
@@ -49,12 +58,16 @@ object traverse extends js.Object {
     state: S,
     parentPath: typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node]
   ): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](
     parent: js.Array[typingsSlinky.babelTypes.mod.Node],
     opts: TraverseOptions[S],
     scope: js.UndefOr[scala.Nothing],
     state: S
   ): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](
     parent: js.Array[typingsSlinky.babelTypes.mod.Node],
     opts: TraverseOptions[S],
@@ -62,12 +75,16 @@ object traverse extends js.Object {
     state: S,
     parentPath: typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node]
   ): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](
     parent: js.Array[typingsSlinky.babelTypes.mod.Node],
     opts: TraverseOptions[S],
     scope: Scope,
     state: S
   ): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](
     parent: js.Array[typingsSlinky.babelTypes.mod.Node],
     opts: TraverseOptions[S],
@@ -75,7 +92,11 @@ object traverse extends js.Object {
     state: S,
     parentPath: typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node]
   ): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](parent: Null, opts: TraverseOptions[S], scope: js.UndefOr[scala.Nothing], state: S): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](
     parent: Null,
     opts: TraverseOptions[S],
@@ -83,7 +104,11 @@ object traverse extends js.Object {
     state: S,
     parentPath: typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node]
   ): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](parent: Null, opts: TraverseOptions[S], scope: Scope, state: S): Unit = js.native
+  @JSImport("@babel/core", "traverse.<apply>")
+  @js.native
   def apply[S](
     parent: Null,
     opts: TraverseOptions[S],
@@ -92,15 +117,33 @@ object traverse extends js.Object {
     parentPath: typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node]
   ): Unit = js.native
   
+  @JSImport("@babel/core", "traverse")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  @JSImport("@babel/core", "traverse.explode")
+  @js.native
+  def explode: FnCall = js.native
+  @JSImport("@babel/core", "traverse.explode")
+  @js.native
   def explode[S](visitor: Visitor[S]): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ Type in 'AnyTypeAnnotation' | 'ArgumentPlaceholder' | 'ArrayExpression' | 'ArrayPattern' | 'ArrayTypeAnnotation' | 'ArrowFunctionExpression' | 'AssignmentExpression' | 'AssignmentPattern' | 'AwaitExpression' | 'BigIntLiteral' | 'BinaryExpression' | 'LogicalExpression' | 'BindExpression' | 'BlockStatement' | 'Program' | 'TSModuleBlock' | 'CatchClause' | 'DoWhileStatement' | 'ForInStatement' | 'ForStatement' | 'FunctionDeclaration' | 'FunctionExpression' | 'ObjectMethod' | 'SwitchStatement' | 'WhileStatement' | 'ForOfStatement' | 'ClassMethod' | 'ClassPrivateMethod' | 'StaticBlock' | 'BooleanLiteral' | 'BooleanLiteralTypeAnnotation' | 'BooleanTypeAnnotation' | 'BreakStatement' | 'CallExpression' | 'ClassExpression' | 'ClassDeclaration' | 'ClassBody' | 'ClassImplements' | 'ClassPrivateProperty' | 'ClassProperty' | 'ContinueStatement' | 'ReturnStatement' | 'ThrowStatement' | 'ConditionalExpression' | 'IfStatement' | 'DebuggerStatement' | 'DecimalLiteral' | 'VariableDeclaration' | 'ExportAllDeclaration' | 'ExportDefaultDeclaration' | 'ExportNamedDeclaration' | 'ImportDeclaration' | 'DeclareClass' | 'DeclareFunction' | 'DeclareInterface' | 'DeclareModule' | 'DeclareModuleExports' | 'DeclareTypeAlias' | 'DeclareOpaqueType' | 'DeclareVariable' | 'DeclareExportDeclaration' | 'DeclareExportAllDeclaration' | 'InterfaceDeclaration' | 'OpaqueType' | 'TypeAlias' | 'EnumDeclaration' | 'TSDeclareFunction' | 'TSInterfaceDeclaration' | 'TSTypeAliasDeclaration' | 'TSEnumDeclaration' | 'TSModuleDeclaration' | 'DeclaredPredicate' | 'Decorator' | 'Directive' | 'DirectiveLiteral' | 'DoExpression' | 'EmptyStatement' | 'EmptyTypeAnnotation' | 'EnumBooleanBody' | 'EnumNumberBody' | 'EnumStringBody' | 'EnumSymbolBody' | 'EnumBooleanMember' | 'EnumDefaultedMember' | 'EnumNumberMember' | 'EnumStringMember' | 'ExistsTypeAnnotation' | 'ExportDefaultSpecifier' | 'ExportNamespaceSpecifier' | 'ExportSpecifier' | 'Identifier' | 'StringLiteral' | 'NumericLiteral' | 'NullLiteral' | 'RegExpLiteral' | 'MemberExpression' | 'NewExpression' | 'ObjectExpression' | 'SequenceExpression' | 'ParenthesizedExpression' | 'ThisExpression' | 'UnaryExpression' | 'UpdateExpression' | 'MetaProperty' | 'Super' | 'TaggedTemplateExpression' | 'TemplateLiteral' | 'YieldExpression' | 'Import' | 'OptionalMemberExpression' | 'OptionalCallExpression' | 'TypeCastExpression' | 'JSXElement' | 'JSXFragment' | 'PipelinePrimaryTopicReference' | 'RecordExpression' | 'TupleExpression' | 'TSAsExpression' | 'TSTypeAssertion' | 'TSNonNullExpression' | 'ExpressionStatement' | 'File' | 'NullLiteralTypeAnnotation' | 'FunctionTypeAnnotation' | 'FunctionTypeParam' | 'GenericTypeAnnotation' | 'InferredPredicate' | 'InterfaceExtends' | 'InterfaceTypeAnnotation' | 'IntersectionTypeAnnotation' | 'MixedTypeAnnotation' | 'NullableTypeAnnotation' | 'NumberLiteralTypeAnnotation' | 'NumberTypeAnnotation' | 'ObjectTypeAnnotation' | 'ObjectTypeInternalSlot' | 'ObjectTypeCallProperty' | 'ObjectTypeIndexer' | 'ObjectTypeProperty' | 'ObjectTypeSpreadProperty' | 'QualifiedTypeIdentifier' | 'StringLiteralTypeAnnotation' | 'StringTypeAnnotation' | 'SymbolTypeAnnotation' | 'ThisTypeAnnotation' | 'TupleTypeAnnotation' | 'TypeofTypeAnnotation' | 'TypeAnnotation' | 'TypeParameter' | 'TypeParameterDeclaration' | 'TypeParameterInstantiation' | 'UnionTypeAnnotation' | 'Variance' | 'VoidTypeAnnotation' | 'JSXAttribute' | 'JSXClosingElement' | 'JSXExpressionContainer' | 'JSXSpreadChild' | 'JSXOpeningElement' | 'JSXText' | 'JSXOpeningFragment' | 'JSXClosingFragment' | 'ImportAttribute' | 'ImportDefaultSpecifier' | 'ImportNamespaceSpecifier' | 'ImportSpecifier' | 'InterpreterDirective' | 'JSXEmptyExpression' | 'JSXIdentifier' | 'JSXMemberExpression' | 'JSXNamespacedName' | 'JSXSpreadAttribute' | 'RestElement' | 'ObjectPattern' | 'TSParameterProperty' | 'LabeledStatement' | 'Noop' | 'ObjectProperty' | 'PipelineBareFunction' | 'PipelineTopicExpression' | 'Placeholder' | 'PrivateName' | 'SpreadElement' | 'TryStatement' | 'WithStatement' | 'TSImportEqualsDeclaration' | 'TSExportAssignment' | 'TSNamespaceExportDeclaration' | 'SwitchCase' | 'TSAnyKeyword' | 'TSArrayType' | 'TSBooleanKeyword' | 'TSBigIntKeyword' | 'TSIntrinsicKeyword' | 'TSNeverKeyword' | 'TSNullKeyword' | 'TSNumberKeyword' | 'TSObjectKeyword' | 'TSStringKeyword' | 'TSSymbolKeyword' | 'TSUndefinedKeyword' | 'TSUnknownKeyword' | 'TSVoidKeyword' | 'TSThisType' | 'TSLiteralType' | 'TSCallSignatureDeclaration' | 'TSConditionalType' | 'TSConstructSignatureDeclaration' | 'TSConstructorType' | 'TSDeclareMethod' | 'TSQualifiedName' | 'TSEnumMember' | 'TSExpressionWithTypeArguments' | 'TSExternalModuleReference' | 'TSFunctionType' | 'TSImportType' | 'TSIndexSignature' | 'TSIndexedAccessType' | 'TSInferType' | 'TSInterfaceBody' | 'TSIntersectionType' | 'TSMappedType' | 'TSMethodSignature' | 'TSNamedTupleMember' | 'TSOptionalType' | 'TSParenthesizedType' | 'TSPropertySignature' | 'TSRestType' | 'TSTupleType' | 'TSTypeReference' | 'TSTypePredicate' | 'TSTypeQuery' | 'TSTypeLiteral' | 'TSUnionType' | 'TSTypeOperator' | 'TSTypeAnnotation' | 'TSTypeParameter' | 'TSTypeParameterDeclaration' | 'TSTypeParameterInstantiation' | 'TemplateElement' | 'V8IntrinsicIdentifier' | 'VariableDeclarator' ]:? @babel/traverse.@babel/traverse.VisitNodeObject<S, std.Extract<@babel/types.@babel/types.Node, {  type :Type}>>}
-    */ typingsSlinky.babelCore.babelCoreStrings.traverse with TopLevel[js.Any] = js.native
-  @JSName("explode")
-  var explode_Original: FnCall = js.native
+    */ typingsSlinky.babelCore.babelCoreStrings.explode with TopLevel[js.Any] = js.native
+  @scala.inline
+  def explode_=(x: FnCall): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("explode")(x.asInstanceOf[js.Any])
   
+  @JSImport("@babel/core", "traverse.verify")
+  @js.native
+  def verify: js.Function1[/* visitor */ Visitor[js.Object], Unit] = js.native
+  @JSImport("@babel/core", "traverse.verify")
+  @js.native
   def verify(visitor: Visitor[js.Object]): Unit = js.native
-  @JSName("verify")
-  var verify_Original: js.Function1[/* visitor */ Visitor[js.Object], Unit] = js.native
+  @scala.inline
+  def verify_=(x: js.Function1[/* visitor */ Visitor[js.Object], Unit]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("verify")(x.asInstanceOf[js.Any])
   
-  var visitors: Typeofvisitors = js.native
+  @JSImport("@babel/core", "traverse.visitors")
+  @js.native
+  def visitors: Typeofvisitors = js.native
+  @scala.inline
+  def visitors_=(x: Typeofvisitors): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("visitors")(x.asInstanceOf[js.Any])
 }

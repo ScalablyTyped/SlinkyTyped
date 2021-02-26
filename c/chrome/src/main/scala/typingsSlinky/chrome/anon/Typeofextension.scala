@@ -4,12 +4,13 @@ import typingsSlinky.chrome.Window
 import typingsSlinky.chrome.chrome.extension.FetchProperties
 import typingsSlinky.chrome.chrome.extension.LastError
 import typingsSlinky.chrome.chrome.extension.OnRequestEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofextension extends js.Object {
+trait Typeofextension extends StObject {
   
   def getBackgroundPage(): Window | Null = js.native
   

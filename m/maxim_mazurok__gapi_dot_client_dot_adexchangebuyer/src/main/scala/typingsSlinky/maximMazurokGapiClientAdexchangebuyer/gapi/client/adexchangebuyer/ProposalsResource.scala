@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.OauthtokenPretty
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.RevisionNumber
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.UpdateAction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProposalsResource extends js.Object {
+trait ProposalsResource extends StObject {
   
   /** Get a proposal given its id */
   def get(): Request[Proposal] = js.native

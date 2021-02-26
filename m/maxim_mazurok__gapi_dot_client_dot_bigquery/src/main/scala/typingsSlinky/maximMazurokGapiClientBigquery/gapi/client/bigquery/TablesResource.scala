@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientBigquery.anon.DatasetIdFields
 import typingsSlinky.maximMazurokGapiClientBigquery.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientBigquery.anon.KeyOauthtoken
 import typingsSlinky.maximMazurokGapiClientBigquery.anon.MaxResults
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TablesResource extends js.Object {
+trait TablesResource extends StObject {
   
   /** Deletes the table specified by tableId from the dataset. If the table contains data, all the data will be deleted. */
   def delete(): Request[Unit] = js.native

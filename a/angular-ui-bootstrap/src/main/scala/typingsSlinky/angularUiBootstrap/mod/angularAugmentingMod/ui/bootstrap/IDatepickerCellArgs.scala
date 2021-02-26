@@ -1,11 +1,12 @@
 package typingsSlinky.angularUiBootstrap.mod.angularAugmentingMod.ui.bootstrap
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IDatepickerCellArgs extends js.Object {
+trait IDatepickerCellArgs extends StObject {
   
   var date: js.Date = js.native
   
@@ -20,24 +21,12 @@ object IDatepickerCellArgs {
   }
   
   @scala.inline
-  implicit class IDatepickerCellArgsOps[Self <: IDatepickerCellArgs] (val x: Self) extends AnyVal {
+  implicit class IDatepickerCellArgsMutableBuilder[Self <: IDatepickerCellArgs] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDate(value: js.Date): Self = StObject.set(x, "date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setDate(value: js.Date): Self = this.set("date", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMode(value: DatepickerMode): Self = this.set("mode", value.asInstanceOf[js.Any])
+    def setMode(value: DatepickerMode): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
   }
 }

@@ -4,12 +4,13 @@ import typingsSlinky.octokitTypes.endpointsMod.MigrationsListReposForOrgEndpoint
 import typingsSlinky.octokitTypes.endpointsMod.MigrationsListReposForOrgRequestOptions
 import typingsSlinky.octokitTypes.endpointsMod.MigrationsListReposForOrgResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ParametersMigrationsListReposForOrgEndpoint extends js.Object {
+trait ParametersMigrationsListReposForOrgEndpoint extends StObject {
   
   var parameters: MigrationsListReposForOrgEndpoint = js.native
   
@@ -30,27 +31,15 @@ object ParametersMigrationsListReposForOrgEndpoint {
   }
   
   @scala.inline
-  implicit class ParametersMigrationsListReposForOrgEndpointOps[Self <: ParametersMigrationsListReposForOrgEndpoint] (val x: Self) extends AnyVal {
+  implicit class ParametersMigrationsListReposForOrgEndpointMutableBuilder[Self <: ParametersMigrationsListReposForOrgEndpoint] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setParameters(value: MigrationsListReposForOrgEndpoint): Self = StObject.set(x, "parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setRequest(value: MigrationsListReposForOrgRequestOptions): Self = StObject.set(x, "request", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setParameters(value: MigrationsListReposForOrgEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRequest(value: MigrationsListReposForOrgRequestOptions): Self = this.set("request", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setResponse(value: OctokitResponse[MigrationsListReposForOrgResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[MigrationsListReposForOrgResponseData]): Self = StObject.set(x, "response", value.asInstanceOf[js.Any])
   }
 }

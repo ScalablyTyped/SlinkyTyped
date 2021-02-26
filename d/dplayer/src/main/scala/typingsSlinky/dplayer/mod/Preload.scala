@@ -1,5 +1,6 @@
 package typingsSlinky.dplayer.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.dplayer.dplayerStrings.metadata
   - typingsSlinky.dplayer.dplayerStrings.auto
 */
-trait Preload extends js.Object
+trait Preload extends StObject
 object Preload {
   
   @scala.inline

@@ -1,6 +1,7 @@
 package typingsSlinky.reactVirtualized.mod
 
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.CellMeasurerCacheParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

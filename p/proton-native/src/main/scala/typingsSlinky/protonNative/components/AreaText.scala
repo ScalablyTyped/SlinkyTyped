@@ -10,6 +10,7 @@ import typingsSlinky.protonNative.protonNativeStrings.bevel
 import typingsSlinky.protonNative.protonNativeStrings.flat
 import typingsSlinky.protonNative.protonNativeStrings.miter
 import typingsSlinky.protonNative.protonNativeStrings.round
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object AreaText {
   
   @JSImport("proton-native", "AreaText")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -83,7 +84,7 @@ object AreaText {
     def y(value: Double | String): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AreaTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: AreaText.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AreaTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

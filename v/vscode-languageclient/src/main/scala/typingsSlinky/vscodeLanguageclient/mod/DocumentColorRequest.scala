@@ -4,19 +4,24 @@ import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocume
 import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolColorProviderMod.DocumentColorParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolColorProviderMod.DocumentColorRegistrationOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageclient", "DocumentColorRequest")
-@js.native
-object DocumentColorRequest extends js.Object {
+object DocumentColorRequest {
   
+  @JSImport("vscode-languageclient", "DocumentColorRequest.method")
+  @js.native
   val method: textDocumentSlashdocumentColor = js.native
   
   /** @deprecated Use DocumentColorRequest.type */
+  @JSImport("vscode-languageclient", "DocumentColorRequest.resultType")
+  @js.native
   val resultType: typingsSlinky.vscodeJsonrpc.mod.ProgressType[js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.ColorInformation]] = js.native
   
+  @JSImport("vscode-languageclient", "DocumentColorRequest.type")
+  @js.native
   val `type`: ProtocolRequestType[
     DocumentColorParams, 
     js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.ColorInformation], 

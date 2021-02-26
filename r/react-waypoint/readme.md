@@ -10,9 +10,9 @@ A React component to execute a function whenever you scroll to an element.
 | ------------------ | :-------------: |
 | Full name          | react-waypoint |
 | Keywords           | react, component, react-component, scroll, onscroll, scrollspy |
-| # releases         | 8 |
-| # dependents       | 118 |
-| # downloads        | 6544218 |
+| # releases         | 5 |
+| # dependents       | 145 |
+| # downloads        | 9100879 |
 | # stars            | 17 |
 
 ## Links

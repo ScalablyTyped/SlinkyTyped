@@ -4,14 +4,15 @@ import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.uifabricMergeStyles.irawstyleMod.IRawStyle
 import typingsSlinky.uifabricStyling.uifabricStylingStrings.horizontal
 import typingsSlinky.uifabricStyling.uifabricStylingStrings.vertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uifabric/styling/lib/styles/getFadedOverflowStyle", JSImport.Namespace)
-@js.native
-object getFadedOverflowStyleMod extends js.Object {
+object getFadedOverflowStyleMod {
   
+  @JSImport("@uifabric/styling/lib/styles/getFadedOverflowStyle", "getFadedOverflowStyle")
+  @js.native
   def getFadedOverflowStyle(
     theme: ITheme,
     color: js.UndefOr[

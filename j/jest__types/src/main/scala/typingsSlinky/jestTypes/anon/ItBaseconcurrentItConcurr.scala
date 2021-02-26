@@ -4,13 +4,14 @@ import typingsSlinky.jestTypes.globalMod.Each
 import typingsSlinky.jestTypes.globalMod.ItConcurrentBase
 import typingsSlinky.jestTypes.globalMod.TestFn
 import typingsSlinky.jestTypes.globalMod.TestName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined @jest/types.@jest/types/build/Global.ItBase & {  concurrent :@jest/types.@jest/types/build/Global.ItConcurrentBase | undefined} */
 @js.native
-trait ItBaseconcurrentItConcurr extends js.Object {
+trait ItBaseconcurrentItConcurr extends StObject {
   
   def apply(testName: TestName, fn: TestFn): Unit = js.native
   def apply(testName: TestName, fn: TestFn, timeout: Double): Unit = js.native

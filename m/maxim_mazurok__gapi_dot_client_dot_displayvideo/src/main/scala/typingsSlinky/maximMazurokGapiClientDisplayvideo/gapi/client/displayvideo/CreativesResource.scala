@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.CreativeId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.CreativeIdFields
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.Fields
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.KeyOauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CreativesResource extends js.Object {
+trait CreativesResource extends StObject {
   
   def create(request: AdvertiserId, body: Creative): Request[Creative] = js.native
   /** Creates a new creative. Returns the newly created creative if successful. */

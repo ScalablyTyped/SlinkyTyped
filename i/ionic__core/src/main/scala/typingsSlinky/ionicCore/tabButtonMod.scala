@@ -7,14 +7,14 @@ import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import typingsSlinky.ionicCore.tabBarInterfaceMod.TabButtonClickEventDetail
 import typingsSlinky.ionicCore.tabBarInterfaceMod.TabButtonLayout
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/tab-button/tab-button", JSImport.Namespace)
-@js.native
-object tabButtonMod extends js.Object {
+object tabButtonMod {
   
+  @JSImport("@ionic/core/dist/types/components/tab-button/tab-button", "TabButton")
   @js.native
   class TabButton ()
     extends ComponentInterface

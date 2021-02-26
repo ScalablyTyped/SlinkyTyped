@@ -15,12 +15,13 @@ import typingsSlinky.maximMazurokGapiClientRealtimebidding.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientRealtimebidding.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientRealtimebidding.anon.Uploadprotocol
 import typingsSlinky.maximMazurokGapiClientRealtimebidding.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PretargetingConfigsResource extends js.Object {
+trait PretargetingConfigsResource extends StObject {
   
   /** Activates a pretargeting configuration. */
   def activate(request: PrettyPrint): Request[PretargetingConfig] = js.native

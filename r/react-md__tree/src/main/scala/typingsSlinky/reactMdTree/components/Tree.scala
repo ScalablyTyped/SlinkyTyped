@@ -84,15 +84,31 @@ import typingsSlinky.reactMdTree.typesMod.TreeData
 import typingsSlinky.reactMdTree.typesMod.TreeItemId
 import typingsSlinky.reactMdTree.typesMod.TreeItemStates
 import typingsSlinky.reactMdTree.typesMod.TreeProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tree {
   
+  @scala.inline
+  def apply(
+    data: TreeData[js.Any],
+    expandedIds: ExpandedIds,
+    id: String,
+    onItemExpansion: (TreeItemId, Boolean) => Unit,
+    onItemSelect: TreeItemId => Unit,
+    onMultiItemExpansion: ExpandedIds => Unit,
+    onMultiItemSelect: SelectedIds => Unit,
+    selectedIds: SelectedIds
+  ): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], expandedIds = expandedIds.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onItemExpansion = js.Any.fromFunction2(onItemExpansion), onItemSelect = js.Any.fromFunction1(onItemSelect), onMultiItemExpansion = js.Any.fromFunction1(onMultiItemExpansion), onMultiItemSelect = js.Any.fromFunction1(onMultiItemSelect), selectedIds = selectedIds.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TreeProps[js.Any] with RefAttributes[ListElement]]))
+  }
+  
   @JSImport("@react-md/tree", "Tree")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -282,10 +298,10 @@ object Tree {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dense(value: Boolean): this.type = set("dense", value.asInstanceOf[js.Any])
@@ -297,10 +313,10 @@ object Tree {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def expanderIconReactElement(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
+    def expanderIcon(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def expanderIcon(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
+    def expanderIconReactElement(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def expanderLeft(value: Boolean): this.type = set("expanderLeft", value.asInstanceOf[js.Any])
@@ -356,13 +372,13 @@ object Tree {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def linkComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("linkComponent", value.asInstanceOf[js.Any])
+    def linkComponent(value: ReactElement): this.type = set("linkComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def linkComponentComponentClass(value: ReactComponentClass[_]): this.type = set("linkComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def linkComponent(value: ReactElement): this.type = set("linkComponent", value.asInstanceOf[js.Any])
+    def linkComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("linkComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def multiSelect(value: Boolean): this.type = set("multiSelect", value.asInstanceOf[js.Any])
@@ -678,19 +694,4 @@ object Tree {
   }
   
   def withProps(p: TreeProps[js.Any] with RefAttributes[ListElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    data: TreeData[js.Any],
-    expandedIds: ExpandedIds,
-    id: String,
-    onItemExpansion: (TreeItemId, Boolean) => Unit,
-    onItemSelect: TreeItemId => Unit,
-    onMultiItemExpansion: ExpandedIds => Unit,
-    onMultiItemSelect: SelectedIds => Unit,
-    selectedIds: SelectedIds
-  ): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], expandedIds = expandedIds.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onItemExpansion = js.Any.fromFunction2(onItemExpansion), onItemSelect = js.Any.fromFunction1(onItemSelect), onMultiItemExpansion = js.Any.fromFunction1(onMultiItemExpansion), onMultiItemSelect = js.Any.fromFunction1(onMultiItemSelect), selectedIds = selectedIds.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TreeProps[js.Any] with RefAttributes[ListElement]]))
-  }
 }

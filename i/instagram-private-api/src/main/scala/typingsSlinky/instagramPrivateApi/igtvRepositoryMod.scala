@@ -1,19 +1,21 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.igtvSearchResponseMod.IgtvSearchResponseRootObject
 import typingsSlinky.instagramPrivateApi.igtvWriteSeenStateOptionsMod.IgtvWriteSeenStateOptions
 import typingsSlinky.instagramPrivateApi.repositoryMod.Repository
 import typingsSlinky.instagramPrivateApi.statusResponseMod.StatusResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/repositories/igtv.repository", JSImport.Namespace)
-@js.native
-object igtvRepositoryMod extends js.Object {
+object igtvRepositoryMod {
   
+  @JSImport("instagram-private-api/dist/repositories/igtv.repository", "IgtvRepository")
   @js.native
-  class IgtvRepository () extends Repository {
+  class IgtvRepository protected () extends Repository {
+    def this(client: IgApiClient) = this()
     
     def allUserSeries(user: String): js.Promise[_] = js.native
     def allUserSeries(user: String, data: js.Object): js.Promise[_] = js.native

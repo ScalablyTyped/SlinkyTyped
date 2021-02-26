@@ -5,14 +5,14 @@ import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.std.MimeType
 import typingsSlinky.three.loaderMod.Loader
 import typingsSlinky.three.loadingManagerMod.LoadingManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/loaders/FileLoader", JSImport.Namespace)
-@js.native
-object fileLoaderMod extends js.Object {
+object fileLoaderMod {
   
+  @JSImport("three/src/loaders/FileLoader", "FileLoader")
   @js.native
   class FileLoader () extends Loader {
     def this(manager: LoadingManager) = this()

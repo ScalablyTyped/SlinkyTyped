@@ -3,17 +3,20 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.previewFullSizeTypesMod.IPreviewFullSizeViewStyles
 import typingsSlinky.playable.previewServiceTypesMod.INormalizedFramesQuality
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/preview-full-size/preview-full-size.view", JSImport.Namespace)
-@js.native
-object previewFullSizeViewMod extends js.Object {
+object previewFullSizeViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/preview-full-size/preview-full-size.view", JSImport.Default)
+  @js.native
+  class default () extends PreviewFullSizeView
   
   @js.native
   trait PreviewFullSizeView
-    extends typingsSlinky.playable.stylableMod.default[IPreviewFullSizeViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[IPreviewFullSizeViewStyles] {
     
     @JSName("_$frame")
     var _$frame: js.Any = js.native
@@ -37,7 +40,4 @@ object previewFullSizeViewMod extends js.Object {
     
     def show(): Unit = js.native
   }
-  
-  @js.native
-  class default () extends PreviewFullSizeView
 }

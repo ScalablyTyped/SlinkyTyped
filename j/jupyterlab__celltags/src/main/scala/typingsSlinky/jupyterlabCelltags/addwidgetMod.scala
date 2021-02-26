@@ -3,14 +3,14 @@ package typingsSlinky.jupyterlabCelltags
 import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabCelltags.toolMod.TagTool
 import typingsSlinky.luminoWidgets.mod.Widget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/celltags/lib/addwidget", JSImport.Namespace)
-@js.native
-object addwidgetMod extends js.Object {
+object addwidgetMod {
   
+  @JSImport("@jupyterlab/celltags/lib/addwidget", "AddWidget")
   @js.native
   /**
     * Construct a new tag widget.

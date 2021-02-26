@@ -23,6 +23,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`short-date`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`short-month-year`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.default
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.year
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

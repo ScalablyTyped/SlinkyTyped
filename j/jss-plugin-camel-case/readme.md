@@ -10,9 +10,9 @@ JSS plugin that allows to write camel cased rule properties
 | ------------------ | :-------------: |
 | Full name          | jss-plugin-camel-case |
 | Keywords           | cssinjs, css-in-js, css in js, jss, plugin, camel case |
-| # releases         | 34 |
-| # dependents       | 13 |
-| # downloads        | 11438725 |
+| # releases         | 31 |
+| # dependents       | 17 |
+| # downloads        | 56929748 |
 | # stars            | 0 |
 
 ## Links

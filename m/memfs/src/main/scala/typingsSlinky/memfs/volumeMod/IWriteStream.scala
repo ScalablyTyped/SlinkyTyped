@@ -3,6 +3,7 @@ package typingsSlinky.memfs.volumeMod
 import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.streamMod.Writable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

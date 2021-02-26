@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.BABYLON
 import typingsSlinky.babylonjs.anon.DragAxisDragPlaneNormal
 import typingsSlinky.babylonjs.anon.DragPlaneNormal
 import typingsSlinky.babylonjs.anon.PointerId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

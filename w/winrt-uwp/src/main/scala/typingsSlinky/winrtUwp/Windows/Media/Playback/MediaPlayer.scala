@@ -20,13 +20,14 @@ import typingsSlinky.winrtUwp.winrtUwpStrings.mediaplayerratechanged
 import typingsSlinky.winrtUwp.winrtUwpStrings.playbackmediamarkerreached
 import typingsSlinky.winrtUwp.winrtUwpStrings.seekcompleted
 import typingsSlinky.winrtUwp.winrtUwpStrings.volumechanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides access to media playback functionality such as play, pause, fast-forward, rewind, and volume. */
 @js.native
-trait MediaPlayer extends js.Object {
+trait MediaPlayer extends StObject {
   
   /**
     * Adds an audio effect to the playback stream of the MediaPlayer .

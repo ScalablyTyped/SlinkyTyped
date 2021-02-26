@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.imageProcessingConfigurationMod.ImageProcessingConfiguration
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,17 +1,16 @@
 package typingsSlinky.agGrid
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.agGrid.componentMod.Component
 import typingsSlinky.agGrid.dragAndDropServiceMod.DropTarget
 import typingsSlinky.agGrid.iComponentMod.IComponent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/headerRendering/headerRowComp", JSImport.Namespace)
-@js.native
-object headerRowCompMod extends js.Object {
+object headerRowCompMod {
   
+  @JSImport("ag-grid/dist/lib/headerRendering/headerRowComp", "HeaderRowComp")
   @js.native
   class HeaderRowComp protected () extends Component {
     def this(dept: Double, `type`: HeaderRowType, pinned: String, dropTarget: DropTarget) = this()
@@ -69,26 +68,24 @@ object headerRowCompMod extends js.Object {
   }
   
   @js.native
-  sealed trait HeaderRowType extends js.Object
+  sealed trait HeaderRowType extends StObject
+  @JSImport("ag-grid/dist/lib/headerRendering/headerRowComp", "HeaderRowType")
   @js.native
-  object HeaderRowType extends js.Object {
+  object HeaderRowType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[HeaderRowType with Double] = js.native
     
     @js.native
     sealed trait COLUMN extends HeaderRowType
-    /* 1 */ @js.native
-    object COLUMN extends TopLevel[COLUMN with Double]
+    /* 1 */ val COLUMN: typingsSlinky.agGrid.headerRowCompMod.HeaderRowType.COLUMN with Double = js.native
     
     @js.native
     sealed trait COLUMN_GROUP extends HeaderRowType
-    /* 0 */ @js.native
-    object COLUMN_GROUP extends TopLevel[COLUMN_GROUP with Double]
+    /* 0 */ val COLUMN_GROUP: typingsSlinky.agGrid.headerRowCompMod.HeaderRowType.COLUMN_GROUP with Double = js.native
     
     @js.native
     sealed trait FLOATING_FILTER extends HeaderRowType
-    /* 2 */ @js.native
-    object FLOATING_FILTER extends TopLevel[FLOATING_FILTER with Double]
+    /* 2 */ val FLOATING_FILTER: typingsSlinky.agGrid.headerRowCompMod.HeaderRowType.FLOATING_FILTER with Double = js.native
   }
 }

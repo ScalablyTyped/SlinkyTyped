@@ -14,14 +14,14 @@ import typingsSlinky.uirouterCore.urlMatcherFactoryMod.UrlMatcherFactory
 import typingsSlinky.uirouterCore.urlRouterMod.UrlRouter
 import typingsSlinky.uirouterCore.urlServiceMod.UrlService
 import typingsSlinky.uirouterCore.viewViewMod.ViewService
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/router", JSImport.Namespace)
-@js.native
-object routerMod extends js.Object {
+object routerMod {
   
+  @JSImport("@uirouter/core/lib/router", "UIRouter")
   @js.native
   /**
     * Creates a new `UIRouter` object
@@ -30,7 +30,7 @@ object routerMod extends js.Object {
     * @param locationConfig a [[LocationConfig]] implementation
     * @internal
     */
-  class UIRouter () extends js.Object {
+  class UIRouter () extends StObject {
     def this(locationService: LocationServices) = this()
     def this(locationService: js.UndefOr[scala.Nothing], locationConfig: LocationConfig) = this()
     def this(locationService: LocationServices, locationConfig: LocationConfig) = this()

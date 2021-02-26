@@ -7,13 +7,18 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.olFeatureMod.FeatureLike
 import typingsSlinky.ol.pixelMod.Pixel
 import typingsSlinky.ol.pluggableMapMod.FrameState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/renderer/Layer", JSImport.Namespace)
-@js.native
-object rendererLayerMod extends js.Object {
+object rendererLayerMod {
+  
+  @JSImport("ol/renderer/Layer", JSImport.Default)
+  @js.native
+  class default[LayerType /* <: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default] */] protected () extends LayerRenderer[LayerType] {
+    def this(layer: LayerType) = this()
+  }
   
   @js.native
   trait LayerRenderer[LayerType /* <: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default] */]
@@ -81,10 +86,5 @@ object rendererLayerMod extends js.Object {
     def renderFrame(frameState: FrameState, target: HTMLElement): HTMLElement = js.native
     
     /* protected */ def renderIfReadyAndVisible(): Unit = js.native
-  }
-  
-  @js.native
-  class default[LayerType /* <: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default] */] protected () extends LayerRenderer[LayerType] {
-    def this(layer: LayerType) = this()
   }
 }

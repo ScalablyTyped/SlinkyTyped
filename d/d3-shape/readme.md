@@ -11,8 +11,8 @@ Graphical primitives for visualization, such as lines and areas.
 | Full name          | d3-shape |
 | Keywords           | d3, d3-module, graphics, visualization, canvas, svg |
 | # releases         | 11 |
-| # dependents       | 494 |
-| # downloads        | 45484111 |
+| # dependents       | 653 |
+| # downloads        | 73432501 |
 | # stars            | 2 |
 
 ## Links

@@ -12,7 +12,7 @@ The lodash method `_.toPlainObject` exported as a module.
 | Keywords           | lodash-modularized, toplainobject |
 | # releases         | 0 |
 | # dependents       | 5 |
-| # downloads        | 6805736 |
+| # downloads        | 5419919 |
 | # stars            | 0 |
 
 ## Links

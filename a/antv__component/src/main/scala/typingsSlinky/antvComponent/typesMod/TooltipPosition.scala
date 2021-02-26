@@ -1,5 +1,6 @@
 package typingsSlinky.antvComponent.typesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.antvComponent.antvComponentStrings.bottom
   - typingsSlinky.antvComponent.antvComponentStrings.auto
 */
-trait TooltipPosition extends js.Object
+trait TooltipPosition extends StObject
 object TooltipPosition {
   
   @scala.inline

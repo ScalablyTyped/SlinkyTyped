@@ -10,9 +10,9 @@ Normalizes and denormalizes JSON according to schema for Redux and Flux applicat
 | ------------------ | :-------------: |
 | Full name          | normalizr |
 | Keywords           | flux, redux, normalize, denormalize, api, json |
-| # releases         | 4 |
-| # dependents       | 284 |
-| # downloads        | 9471952 |
+| # releases         | 6 |
+| # dependents       | 332 |
+| # downloads        | 12488716 |
 | # stars            | 59 |
 
 ## Links

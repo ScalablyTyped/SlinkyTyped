@@ -4,14 +4,14 @@ import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.lightShadowMod.LightShadow
 import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/lights/Light", JSImport.Namespace)
-@js.native
-object lightMod extends js.Object {
+object lightMod {
   
+  @JSImport("three/src/lights/Light", "Light")
   @js.native
   class Light () extends Object3D {
     def this(hex: String) = this()

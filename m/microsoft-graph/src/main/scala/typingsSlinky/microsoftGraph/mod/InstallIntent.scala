@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.uninstall
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.availableWithoutEnrollment
 */
-trait InstallIntent extends js.Object
+trait InstallIntent extends StObject
 object InstallIntent {
   
   @scala.inline

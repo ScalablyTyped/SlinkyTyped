@@ -6,12 +6,13 @@ import typingsSlinky.echarts.anon.BackgroundColor
 import typingsSlinky.echarts.anon.Data
 import typingsSlinky.echarts.anon.ExcludeComponents
 import typingsSlinky.echarts.echarts.EChartOption.Series
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ECharts extends js.Object {
+trait ECharts extends StObject {
   
   /**
     * The method is used in rendering millions of data

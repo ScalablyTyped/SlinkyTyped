@@ -6,13 +6,14 @@ import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.canceled
 import typingsSlinky.winrtUwp.winrtUwpStrings.completed
 import typingsSlinky.winrtUwp.winrtUwpStrings.starting
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides access to the events that notify an app of triggers to its edge-based UI. */
 @js.native
-trait EdgeGesture extends js.Object {
+trait EdgeGesture extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

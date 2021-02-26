@@ -12,15 +12,28 @@ import typingsSlinky.reactVirtualized.esGridMod.ScrollParams
 import typingsSlinky.reactVirtualized.esGridMod.SectionRenderedParams
 import typingsSlinky.reactVirtualized.mod.Alignment
 import typingsSlinky.reactVirtualized.mod.Index
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Collection {
   
+  @scala.inline
+  def apply(
+    cellCount: Double,
+    cellRenderer: /* params */ CollectionCellRendererParams => ReactElement,
+    cellSizeAndPositionGetter: /* params */ Index => CollectionCellSizeAndPosition,
+    height: Double,
+    width: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(cellCount = cellCount.asInstanceOf[js.Any], cellRenderer = js.Any.fromFunction1(cellRenderer), cellSizeAndPositionGetter = js.Any.fromFunction1(cellSizeAndPositionGetter), height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CollectionProps]))
+  }
+  
   @JSImport("react-virtualized", "Collection")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -77,16 +90,4 @@ object Collection {
   }
   
   def withProps(p: CollectionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    cellCount: Double,
-    cellRenderer: /* params */ CollectionCellRendererParams => ReactElement,
-    cellSizeAndPositionGetter: /* params */ Index => CollectionCellSizeAndPosition,
-    height: Double,
-    width: Double
-  ): Builder = {
-    val __props = js.Dynamic.literal(cellCount = cellCount.asInstanceOf[js.Any], cellRenderer = js.Any.fromFunction1(cellRenderer), cellSizeAndPositionGetter = js.Any.fromFunction1(cellSizeAndPositionGetter), height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CollectionProps]))
-  }
 }

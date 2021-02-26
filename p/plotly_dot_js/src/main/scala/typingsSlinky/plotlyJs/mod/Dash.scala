@@ -1,5 +1,6 @@
 package typingsSlinky.plotlyJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.plotlyJs.plotlyJsStrings.dashdot
   - typingsSlinky.plotlyJs.plotlyJsStrings.longdashdot
 */
-trait Dash extends js.Object
+trait Dash extends StObject
 object Dash {
   
   @scala.inline

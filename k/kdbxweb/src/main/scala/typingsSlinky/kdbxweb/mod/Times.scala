@@ -1,13 +1,14 @@
 package typingsSlinky.kdbxweb.mod
 
 import org.scalajs.dom.raw.Node
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("kdbxweb", "Times")
 @js.native
-class Times () extends js.Object {
+class Times () extends StObject {
   
   var creationTime: js.Date = js.native
   
@@ -28,11 +29,13 @@ class Times () extends js.Object {
   def write(parentNode: Node, ctx: Context): Unit = js.native
 }
 /* static members */
-@JSImport("kdbxweb", "Times")
-@js.native
-object Times extends js.Object {
+object Times {
   
+  @JSImport("kdbxweb", "Times.create")
+  @js.native
   def create(): Times = js.native
   
+  @JSImport("kdbxweb", "Times.read")
+  @js.native
   def read(xmlNode: Node): Times = js.native
 }

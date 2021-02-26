@@ -2,6 +2,7 @@ package typingsSlinky.microsoftGraph.mod
 
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.completed_
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.notStarted_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.waitingOnOthers
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.deferred
 */
-trait TaskStatus extends js.Object
+trait TaskStatus extends StObject
 object TaskStatus {
   
   @scala.inline

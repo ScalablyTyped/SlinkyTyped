@@ -10,15 +10,30 @@ import typingsSlinky.reactVirtualized.esMasonryMod.MasonryCellProps
 import typingsSlinky.reactVirtualized.esMasonryMod.MasonryProps
 import typingsSlinky.reactVirtualized.esMasonryMod.Positioner
 import typingsSlinky.reactVirtualized.mod.IndexRange
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Masonry {
   
+  @scala.inline
+  def apply(
+    autoHeight: Boolean,
+    cellCount: Double,
+    cellMeasurerCache: CellMeasurerCacheInterface,
+    cellPositioner: Positioner,
+    cellRenderer: /* props */ MasonryCellProps => ReactElement,
+    height: Double,
+    width: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(autoHeight = autoHeight.asInstanceOf[js.Any], cellCount = cellCount.asInstanceOf[js.Any], cellMeasurerCache = cellMeasurerCache.asInstanceOf[js.Any], cellPositioner = cellPositioner.asInstanceOf[js.Any], cellRenderer = js.Any.fromFunction1(cellRenderer), height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MasonryProps]))
+  }
+  
   @JSImport("react-virtualized", "Masonry")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,18 +75,4 @@ object Masonry {
   }
   
   def withProps(p: MasonryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    autoHeight: Boolean,
-    cellCount: Double,
-    cellMeasurerCache: CellMeasurerCacheInterface,
-    cellPositioner: Positioner,
-    cellRenderer: /* props */ MasonryCellProps => ReactElement,
-    height: Double,
-    width: Double
-  ): Builder = {
-    val __props = js.Dynamic.literal(autoHeight = autoHeight.asInstanceOf[js.Any], cellCount = cellCount.asInstanceOf[js.Any], cellMeasurerCache = cellMeasurerCache.asInstanceOf[js.Any], cellPositioner = cellPositioner.asInstanceOf[js.Any], cellRenderer = js.Any.fromFunction1(cellRenderer), height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MasonryProps]))
-  }
 }

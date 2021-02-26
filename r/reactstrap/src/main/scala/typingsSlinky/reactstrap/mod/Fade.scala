@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.fadeMod.FadeProps
+import typingsSlinky.reactstrap.fadeMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "Fade")
+@JSImport("reactstrap/lib", "Fade")
 @js.native
-class Fade ()
-  extends Component[FadeProps, js.Object, js.Any]
+class Fade () extends default

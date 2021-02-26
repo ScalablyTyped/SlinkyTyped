@@ -1,6 +1,7 @@
 package typingsSlinky.vexflow.mod.Flow
 
 import typingsSlinky.vexflow.anon.Leftshift
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,12 +15,14 @@ class StringNumber protected ()
   // like it is a string. But from the use of it it might be a number ?!
   def this(number: Double) = this()
 }
-/* static members */
-@JSImport("vexflow", "Flow.StringNumber")
-@js.native
-object StringNumber extends js.Object {
+object StringNumber {
   
+  @JSImport("vexflow", "Flow.StringNumber.CATEGORY")
+  @js.native
   val CATEGORY: String = js.native
   
+  /* static member */
+  @JSImport("vexflow", "Flow.StringNumber.format")
+  @js.native
   def format(nums: js.Array[typingsSlinky.vexflow.Vex.Flow.StringNumber], state: Leftshift): Boolean = js.native
 }

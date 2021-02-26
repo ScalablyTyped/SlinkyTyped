@@ -2,12 +2,13 @@ package typingsSlinky.chromeApps.anon
 
 import typingsSlinky.chromeApps.chrome.management.ExtensionInfo
 import typingsSlinky.chromeApps.chrome.management.UninstallOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofmanagement extends js.Object {
+trait Typeofmanagement extends StObject {
   
   val ExtensionDisabledReason: PERMISSIONSINCREASE = js.native
   

@@ -6,17 +6,12 @@ import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
 import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.ValueType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object LoadingMessage {
-  
-  @JSImport("react-select", "components.LoadingMessage")
-  @js.native
-  object component extends js.Object
-  
-  def withProps(p: NoticeProps[js.Any]): SharedBuilder_NoticeProps1503326161 = new SharedBuilder_NoticeProps1503326161(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -34,4 +29,10 @@ object LoadingMessage {
     val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
     new SharedBuilder_NoticeProps1503326161(js.Array(this.component, __props.asInstanceOf[NoticeProps[js.Any]]))
   }
+  
+  @JSImport("react-select", "components.LoadingMessage")
+  @js.native
+  val component: js.Object = js.native
+  
+  def withProps(p: NoticeProps[js.Any]): SharedBuilder_NoticeProps1503326161 = new SharedBuilder_NoticeProps1503326161(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

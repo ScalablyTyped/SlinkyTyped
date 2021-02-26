@@ -1,12 +1,13 @@
 package typingsSlinky.rcFieldForm.interfaceMod
 
 import typingsSlinky.rcFieldForm.anon.Dependencies
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FieldEntity extends js.Object {
+trait FieldEntity extends StObject {
   
   def getErrors(): js.Array[String] = js.native
   

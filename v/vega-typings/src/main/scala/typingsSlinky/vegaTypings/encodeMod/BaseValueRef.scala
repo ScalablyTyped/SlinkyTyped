@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.encodeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,20 +14,20 @@ trait BaseValueRef[T] extends ScaledValueRef[T]
 object BaseValueRef {
   
   @scala.inline
-  def SignalRef[T](signal: String): BaseValueRef[T] = {
-    val __obj = js.Dynamic.literal(signal = signal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BaseValueRef[T]]
-  }
-  
-  @scala.inline
-  def Value[T](): BaseValueRef[T] = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[BaseValueRef[T]]
-  }
-  
-  @scala.inline
-  def Field[T](field: typingsSlinky.vegaTypings.encodeMod.Field): BaseValueRef[T] = {
+  def Field(field: typingsSlinky.vegaTypings.encodeMod.Field): typingsSlinky.vegaTypings.anon.Field = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BaseValueRef[T]]
+    __obj.asInstanceOf[typingsSlinky.vegaTypings.anon.Field]
+  }
+  
+  @scala.inline
+  def SignalRef(signal: String): typingsSlinky.vegaTypings.signalMod.SignalRef = {
+    val __obj = js.Dynamic.literal(signal = signal.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.vegaTypings.signalMod.SignalRef]
+  }
+  
+  @scala.inline
+  def Value[T](): typingsSlinky.vegaTypings.anon.Value[T] = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[typingsSlinky.vegaTypings.anon.Value[T]]
   }
 }

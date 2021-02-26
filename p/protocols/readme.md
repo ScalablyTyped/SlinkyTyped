@@ -11,8 +11,8 @@ Get the protocols of an input url.
 | Full name          | protocols |
 | Keywords           | protocols, protocol, url, parse |
 | # releases         | 2 |
-| # dependents       | 6 |
-| # downloads        | 31443327 |
+| # dependents       | 25 |
+| # downloads        | 91208585 |
 | # stars            | 0 |
 
 ## Links

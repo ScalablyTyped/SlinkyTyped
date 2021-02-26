@@ -4,12 +4,13 @@ import typingsSlinky.stormReactDiagrams.baseEntityMod.BaseEntity
 import typingsSlinky.stormReactDiagrams.baseEntityMod.BaseListener
 import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModel
 import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModelListener
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Element extends js.Object {
+trait Element extends StObject {
   
   var element: org.scalajs.dom.raw.Element = js.native
   
@@ -27,24 +28,12 @@ object Element {
   }
   
   @scala.inline
-  implicit class ElementOps[Self <: Element] (val x: Self) extends AnyVal {
+  implicit class ElementMutableBuilder[Self <: Element] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "element", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setElement(value: org.scalajs.dom.raw.Element): Self = this.set("element", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setModel(value: BaseModel[BaseEntity[BaseListener[_]], BaseModelListener]): Self = this.set("model", value.asInstanceOf[js.Any])
+    def setModel(value: BaseModel[BaseEntity[BaseListener[_]], BaseModelListener]): Self = StObject.set(x, "model", value.asInstanceOf[js.Any])
   }
 }

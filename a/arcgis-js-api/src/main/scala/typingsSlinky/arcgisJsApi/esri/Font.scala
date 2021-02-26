@@ -9,6 +9,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.none
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.normal
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.oblique
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.underline
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

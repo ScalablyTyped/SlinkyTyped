@@ -2,13 +2,14 @@ package typingsSlinky.semanticUiDropdown.anon
 
 import typingsSlinky.semanticUiDropdown.JQuery
 import typingsSlinky.semanticUiDropdown.semanticUiDropdownBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Pick<semantic-ui-dropdown.SemanticUI.DropdownSettings._Impl, 'onLabelRemove'> */
 @js.native
-trait PickImplonLabelRemove extends js.Object {
+trait PickImplonLabelRemove extends StObject {
   
   def onLabelRemove(value: js.Any): `false` | Unit = js.native
   @JSName("onLabelRemove")

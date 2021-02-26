@@ -22,15 +22,22 @@ import typingsSlinky.cathoQuantum.cathoQuantumStrings.xlarge
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.xsmall
 import typingsSlinky.cathoQuantum.socialButtonMod.SocialButtonProps
 import typingsSlinky.cathoQuantum.socialButtonMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SocialButton {
   
+  @scala.inline
+  def apply(provider: String): Builder = {
+    val __props = js.Dynamic.literal(provider = provider.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SocialButtonProps]))
+  }
+  
   @JSImport("@catho/quantum/SocialButton", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,22 +45,22 @@ object SocialButton {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def $asReactElement(value: ReactElement): this.type = set("$as", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def $as(value: ReactElement | String): this.type = set("$as", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def $asReactElement(value: ReactElement): this.type = set("$as", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def center(value: Boolean): this.type = set("center", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
-    
-    @scala.inline
-    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -87,10 +94,4 @@ object SocialButton {
   }
   
   def withProps(p: SocialButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(provider: String): Builder = {
-    val __props = js.Dynamic.literal(provider = provider.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SocialButtonProps]))
-  }
 }

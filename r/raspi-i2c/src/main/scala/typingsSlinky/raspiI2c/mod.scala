@@ -2,14 +2,14 @@ package typingsSlinky.raspiI2c
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.raspiPeripheral.mod.Peripheral
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("raspi-i2c", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("raspi-i2c", "I2C")
   @js.native
   class I2C () extends Peripheral {
     

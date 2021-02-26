@@ -1,14 +1,16 @@
 package typingsSlinky.videoJs.mod.default
 
+import typingsSlinky.videoJs.mod.videojs.MenuItem
 import typingsSlinky.videoJs.mod.videojs.MenuItemOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("video.js", "MenuItem")
+/* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
+@JSImport("video.js", "default.MenuItem")
 @js.native
-class MenuItemCls protected ()
-  extends typingsSlinky.videoJs.mod.videojs.MenuItem {
+class MenuItemCls protected () extends MenuItem {
   /**
     * Creates an instance of the this class.
     *

@@ -3,6 +3,7 @@ package typingsSlinky.mapboxGl.mod
 import typingsSlinky.mapboxGl.mapboxGlStrings.content
 import typingsSlinky.mapboxGl.mapboxGlStrings.metadata
 import typingsSlinky.mapboxGl.mapboxGlStrings.source_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

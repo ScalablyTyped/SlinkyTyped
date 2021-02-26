@@ -3,14 +3,14 @@ package typingsSlinky.three
 import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.lightMod.Light
 import typingsSlinky.three.pointLightShadowMod.PointLightShadow
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/lights/PointLight", JSImport.Namespace)
-@js.native
-object pointLightMod extends js.Object {
+object pointLightMod {
   
+  @JSImport("three/src/lights/PointLight", "PointLight")
   @js.native
   class PointLight () extends Light {
     def this(color: String) = this()

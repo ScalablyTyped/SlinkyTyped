@@ -1,12 +1,13 @@
 package typingsSlinky.dynogels.mod
 
 import typingsSlinky.node.streamMod.Readable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Query extends js.Object {
+trait Query extends StObject {
   
   def addFilterCondition(condition: js.Any): Query = js.native
   

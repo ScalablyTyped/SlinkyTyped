@@ -1,5 +1,6 @@
 package typingsSlinky.qlikEngineapi.EngineAPI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -63,7 +64,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.GEO
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXT
 */
-trait FunctionGroupType extends js.Object
+trait FunctionGroupType extends StObject
 object FunctionGroupType {
   
   @scala.inline

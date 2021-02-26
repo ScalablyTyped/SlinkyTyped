@@ -7,12 +7,13 @@ import typingsSlinky.cordovaPluginCanvascamera.cordovaPluginCanvascameraStrings.
 import typingsSlinky.cordovaPluginCanvascamera.cordovaPluginCanvascameraStrings.front
 import typingsSlinky.cordovaPluginCanvascamera.cordovaPluginCanvascameraStrings.landscape
 import typingsSlinky.cordovaPluginCanvascamera.cordovaPluginCanvascameraStrings.portrait
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CanvasCamera extends js.Object {
+trait CanvasCamera extends StObject {
   
   @JSName("cameraPosition")
   def cameraPosition_back(cameraFacing: back): Unit = js.native

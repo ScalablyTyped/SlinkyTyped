@@ -17,6 +17,7 @@ import typingsSlinky.victory.victoryStrings.bottom
 import typingsSlinky.victory.victoryStrings.left
 import typingsSlinky.victory.victoryStrings.right
 import typingsSlinky.victory.victoryStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ object Flyout {
   
   @JSImport("victory", "Flyout")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,10 +52,10 @@ object Flyout {
     def cornerRadius(value: Double): this.type = set("cornerRadius", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def datum(value: js.Object): this.type = set("datum", value.asInstanceOf[js.Any])
@@ -147,7 +148,7 @@ object Flyout {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FlyoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Flyout.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FlyoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

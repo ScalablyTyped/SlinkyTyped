@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,18 +29,26 @@ class PolicyList () extends IPolicyList {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "PolicyList")
-@js.native
-object PolicyList extends js.Object {
+object PolicyList {
   
   /**
     * Creates a new PolicyList instance using the specified properties.
     * @param [properties] Properties to set
     * @returns PolicyList instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.create")
+  @js.native
   def create(): PolicyList = js.native
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.create")
+  @js.native
   def create(properties: IPolicyList): PolicyList = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): PolicyList = js.native
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): PolicyList = js.native
   /**
     * Decodes a PolicyList message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -48,11 +57,16 @@ object PolicyList extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.decode")
+  @js.native
   def decode(reader: Reader): PolicyList = js.native
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.decode")
+  @js.native
   def decode(reader: Reader, length: Double): PolicyList = js.native
-  def decode(reader: js.typedarray.Uint8Array): PolicyList = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): PolicyList = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): PolicyList = js.native
   /**
     * Decodes a PolicyList message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -60,8 +74,9 @@ object PolicyList extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): PolicyList = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): PolicyList = js.native
   
   /**
     * Encodes the specified PolicyList message. Does not implicitly {@link PolicyList.verify|verify} messages.
@@ -69,7 +84,11 @@ object PolicyList extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.encode")
+  @js.native
   def encode(message: IPolicyList): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.encode")
+  @js.native
   def encode(message: IPolicyList, writer: Writer): Writer = js.native
   
   /**
@@ -78,7 +97,11 @@ object PolicyList extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IPolicyList): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IPolicyList, writer: Writer): Writer = js.native
   
   /**
@@ -86,6 +109,8 @@ object PolicyList extends js.Object {
     * @param object Plain object
     * @returns PolicyList
     */
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): PolicyList = js.native
   
   /**
@@ -94,7 +119,11 @@ object PolicyList extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.toObject")
+  @js.native
   def toObject(message: PolicyList): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.toObject")
+  @js.native
   def toObject(message: PolicyList, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -102,5 +131,7 @@ object PolicyList extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "PolicyList.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

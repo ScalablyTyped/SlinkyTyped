@@ -15,15 +15,30 @@ import typingsSlinky.reactVirtualized.esGridMod.ScrollbarPresenceParams
 import typingsSlinky.reactVirtualized.esGridMod.SectionRenderedParams
 import typingsSlinky.reactVirtualized.mod.Alignment
 import typingsSlinky.reactVirtualized.mod.Index
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Grid {
   
+  @scala.inline
+  def apply(
+    cellRenderer: /* props */ GridCellProps => ReactElement,
+    columnCount: Double,
+    columnWidth: Double | (js.Function1[/* params */ Index, Double]),
+    height: Double,
+    rowCount: Double,
+    rowHeight: Double | (js.Function1[/* params */ Index, Double]),
+    width: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(cellRenderer = js.Any.fromFunction1(cellRenderer), columnCount = columnCount.asInstanceOf[js.Any], columnWidth = columnWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[GridProps]))
+  }
+  
   @JSImport("react-virtualized", "Grid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -131,18 +146,4 @@ object Grid {
   }
   
   def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    cellRenderer: /* props */ GridCellProps => ReactElement,
-    columnCount: Double,
-    columnWidth: Double | (js.Function1[/* params */ Index, Double]),
-    height: Double,
-    rowCount: Double,
-    rowHeight: Double | (js.Function1[/* params */ Index, Double]),
-    width: Double
-  ): Builder = {
-    val __props = js.Dynamic.literal(cellRenderer = js.Any.fromFunction1(cellRenderer), columnCount = columnCount.asInstanceOf[js.Any], columnWidth = columnWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[GridProps]))
-  }
 }

@@ -11,8 +11,8 @@ read variables from a .env.js file and make them available to webpack as globals
 | Full name          | webpack-env |
 | Keywords           | weback, env |
 | # releases         | 0 |
-| # dependents       | 2 |
-| # downloads        | 57207 |
+| # dependents       | 4 |
+| # downloads        | 147348 |
 | # stars            | 0 |
 
 ## Links

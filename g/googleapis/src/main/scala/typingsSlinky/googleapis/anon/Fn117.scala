@@ -5,12 +5,13 @@ import typingsSlinky.googleapis.googleapisStrings.v1alpha1
 import typingsSlinky.googleapis.googleapisStrings.v1beta1
 import typingsSlinky.googleapis.servicebrokerV1Mod.servicebrokerV1.Options
 import typingsSlinky.googleapis.servicebrokerV1Mod.servicebrokerV1.Servicebroker
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Fn117 extends js.Object {
+trait Fn117 extends StObject {
   
   def apply(options: Options): Servicebroker = js.native
   def apply(options: typingsSlinky.googleapis.servicebrokerV1alpha1Mod.servicebrokerV1alpha1.Options): typingsSlinky.googleapis.servicebrokerV1alpha1Mod.servicebrokerV1alpha1.Servicebroker = js.native

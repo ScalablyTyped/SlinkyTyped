@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.truncatedFormatMod.ITrucatedFormateMeasureByApproximateOptions
 import typingsSlinky.blueprintjsTable.truncatedFormatMod.ITruncatedFormatProps
 import typingsSlinky.blueprintjsTable.truncatedFormatMod.TruncatedPopoverMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object TruncatedFormat {
   
   @JSImport("@blueprintjs/table", "TruncatedFormat")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,7 +52,7 @@ object TruncatedFormat {
     def truncationSuffix(value: String): this.type = set("truncationSuffix", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ITruncatedFormatProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TruncatedFormat.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ITruncatedFormatProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.actionsOnGoogle.conversationMod
 
 import typingsSlinky.actionsOnGoogle.carouselMod.CarouselOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

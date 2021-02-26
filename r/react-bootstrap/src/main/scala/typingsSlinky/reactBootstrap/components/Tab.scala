@@ -4,16 +4,53 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactBootstrap.tabContainerMod.TabContainerProps
+import typingsSlinky.reactBootstrap.tabContentMod.TabContentProps
 import typingsSlinky.reactBootstrap.tabMod.TabProps
+import typingsSlinky.reactBootstrap.tabPaneMod.TabPaneProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tab {
   
+  object Container {
+    
+    @JSImport("react-bootstrap", "Tab.Container")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Container.type): SharedBuilder_TabContainerProps_263453577[typingsSlinky.reactBootstrap.mod.Tab.Container] = new SharedBuilder_TabContainerProps_263453577[typingsSlinky.reactBootstrap.mod.Tab.Container](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TabContainerProps): SharedBuilder_TabContainerProps_263453577[typingsSlinky.reactBootstrap.mod.Tab.Container] = new SharedBuilder_TabContainerProps_263453577[typingsSlinky.reactBootstrap.mod.Tab.Container](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Content {
+    
+    @JSImport("react-bootstrap", "Tab.Content")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Content.type): SharedBuilder_TabContentProps_163508119[typingsSlinky.reactBootstrap.mod.Tab.Content] = new SharedBuilder_TabContentProps_163508119[typingsSlinky.reactBootstrap.mod.Tab.Content](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TabContentProps): SharedBuilder_TabContentProps_163508119[typingsSlinky.reactBootstrap.mod.Tab.Content] = new SharedBuilder_TabContentProps_163508119[typingsSlinky.reactBootstrap.mod.Tab.Content](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Pane {
+    
+    @JSImport("react-bootstrap", "Tab.Pane")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Pane.type): SharedBuilder_TabPaneProps_1019548123[typingsSlinky.reactBootstrap.mod.Tab.Pane] = new SharedBuilder_TabPaneProps_1019548123[typingsSlinky.reactBootstrap.mod.Tab.Pane](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TabPaneProps): SharedBuilder_TabPaneProps_1019548123[typingsSlinky.reactBootstrap.mod.Tab.Pane] = new SharedBuilder_TabPaneProps_1019548123[typingsSlinky.reactBootstrap.mod.Tab.Pane](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("react-bootstrap", "Tab")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,16 +91,16 @@ object Tab {
     def tabClassName(value: String): this.type = set("tabClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def unmountOnExit(value: Boolean): this.type = set("unmountOnExit", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tab.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

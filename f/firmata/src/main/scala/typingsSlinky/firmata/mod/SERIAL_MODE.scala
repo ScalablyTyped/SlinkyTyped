@@ -2,6 +2,7 @@ package typingsSlinky.firmata.mod
 
 import typingsSlinky.firmata.firmataNumbers.`0x00`
 import typingsSlinky.firmata.firmataNumbers.`0x01`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firmata.firmataNumbers.`0x00`
   - typingsSlinky.firmata.firmataNumbers.`0x01`
 */
-trait SERIAL_MODE extends js.Object
+trait SERIAL_MODE extends StObject
 object SERIAL_MODE {
   
   @scala.inline

@@ -77,6 +77,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -85,7 +86,7 @@ object ChartCard {
   
   @JSImport("ant-design-pro/lib/Charts", "ChartCard")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -99,16 +100,16 @@ object ChartCard {
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def actionsVarargs(value: ReactElement*): this.type = set("actions", js.Array(value :_*))
+    def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     
     @scala.inline
     def actions(value: js.Array[ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def actionsVarargs(value: ReactElement*): this.type = set("actions", js.Array(value :_*))
     
     @scala.inline
     def activeTabKey(value: String): this.type = set("activeTabKey", value.asInstanceOf[js.Any])
@@ -269,10 +270,10 @@ object ChartCard {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
+    def avatar(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def avatar(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
+    def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def bodyStyle(value: CSSProperties): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
@@ -296,10 +297,10 @@ object ChartCard {
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def coverReactElement(value: ReactElement): this.type = set("cover", value.asInstanceOf[js.Any])
+    def cover(value: ReactElement): this.type = set("cover", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cover(value: ReactElement): this.type = set("cover", value.asInstanceOf[js.Any])
+    def coverReactElement(value: ReactElement): this.type = set("cover", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
@@ -314,10 +315,10 @@ object ChartCard {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -326,16 +327,16 @@ object ChartCard {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
     def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def headStyle(value: CSSProperties): this.type = set("headStyle", value.asInstanceOf[js.Any])
@@ -665,22 +666,22 @@ object ChartCard {
     def suppressHydrationWarning(value: Boolean): this.type = set("suppressHydrationWarning", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tabBarExtraContentReactElement(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def tabBarExtraContent(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tabBarExtraContentNull: this.type = set("tabBarExtraContent", null)
     
     @scala.inline
+    def tabBarExtraContentReactElement(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tabListVarargs(value: CardTabListType*): this.type = set("tabList", js.Array(value :_*))
+    def tabList(value: js.Array[CardTabListType]): this.type = set("tabList", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tabList(value: js.Array[CardTabListType]): this.type = set("tabList", value.asInstanceOf[js.Any])
+    def tabListVarargs(value: CardTabListType*): this.type = set("tabList", js.Array(value :_*))
     
     @scala.inline
     def tabProps(value: TabsProps): this.type = set("tabProps", value.asInstanceOf[js.Any])
@@ -689,13 +690,13 @@ object ChartCard {
     def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def totalReactElement(value: ReactElement): this.type = set("total", value.asInstanceOf[js.Any])
+    def total(value: ReactElement | Double | (js.Function0[ReactElement | Double])): this.type = set("total", value.asInstanceOf[js.Any])
     
     @scala.inline
     def totalFunction0(value: () => ReactElement | Double): this.type = set("total", js.Any.fromFunction0(value))
     
     @scala.inline
-    def total(value: ReactElement | Double | (js.Function0[ReactElement | Double])): this.type = set("total", value.asInstanceOf[js.Any])
+    def totalReactElement(value: ReactElement): this.type = set("total", value.asInstanceOf[js.Any])
     
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
@@ -713,7 +714,7 @@ object ChartCard {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IChartCardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ChartCard.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IChartCardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

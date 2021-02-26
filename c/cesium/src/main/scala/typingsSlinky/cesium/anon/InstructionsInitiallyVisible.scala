@@ -1,12 +1,13 @@
 package typingsSlinky.cesium.anon
 
 import org.scalajs.dom.raw.Element
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InstructionsInitiallyVisible extends js.Object {
+trait InstructionsInitiallyVisible extends StObject {
   
   var container: Element | String = js.native
   
@@ -21,30 +22,18 @@ object InstructionsInitiallyVisible {
   }
   
   @scala.inline
-  implicit class InstructionsInitiallyVisibleOps[Self <: InstructionsInitiallyVisible] (val x: Self) extends AnyVal {
+  implicit class InstructionsInitiallyVisibleMutableBuilder[Self <: InstructionsInitiallyVisible] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setContainer(value: Element | String): Self = StObject.set(x, "container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setContainerElement(value: Element): Self = StObject.set(x, "container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setInstructionsInitiallyVisible(value: Boolean): Self = StObject.set(x, "instructionsInitiallyVisible", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContainerElement(value: Element): Self = this.set("container", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setContainer(value: Element | String): Self = this.set("container", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setInstructionsInitiallyVisible(value: Boolean): Self = this.set("instructionsInitiallyVisible", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteInstructionsInitiallyVisible: Self = this.set("instructionsInitiallyVisible", js.undefined)
+    def setInstructionsInitiallyVisibleUndefined: Self = StObject.set(x, "instructionsInitiallyVisible", js.undefined)
   }
 }

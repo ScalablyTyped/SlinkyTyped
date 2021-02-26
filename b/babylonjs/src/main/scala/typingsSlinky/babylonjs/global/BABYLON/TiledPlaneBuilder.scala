@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.AlignVerticalBackUVs
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,9 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class TiledPlaneBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.TiledPlaneBuilder
 /* static members */
-@JSGlobal("BABYLON.TiledPlaneBuilder")
-@js.native
-object TiledPlaneBuilder extends js.Object {
+object TiledPlaneBuilder {
   
   /**
     * Creates a tiled plane mesh
@@ -36,7 +35,11 @@ object TiledPlaneBuilder extends js.Object {
     * @param scene defines the hosting scene
     * @returns the box mesh
     */
+  @JSGlobal("BABYLON.TiledPlaneBuilder.CreateTiledPlane")
+  @js.native
   def CreateTiledPlane(name: String, options: AlignVerticalBackUVs): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
+  @JSGlobal("BABYLON.TiledPlaneBuilder.CreateTiledPlane")
+  @js.native
   def CreateTiledPlane(
     name: String,
     options: AlignVerticalBackUVs,

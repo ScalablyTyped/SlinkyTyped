@@ -1,19 +1,21 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.directInboxFeedResponseMod.DirectInboxFeedResponse
 import typingsSlinky.instagramPrivateApi.entitiesMod.DirectThreadEntity
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.responsesMod.DirectInboxFeedResponseThreadsItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/direct-inbox.feed", JSImport.Namespace)
-@js.native
-object directInboxFeedMod extends js.Object {
+object directInboxFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/direct-inbox.feed", "DirectInboxFeed")
   @js.native
-  class DirectInboxFeed () extends Feed[DirectInboxFeedResponse, DirectInboxFeedResponseThreadsItem] {
+  class DirectInboxFeed protected () extends Feed[DirectInboxFeedResponse, DirectInboxFeedResponseThreadsItem] {
+    def this(client: IgApiClient) = this()
     
     var cursor: js.Any = js.native
     

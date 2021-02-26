@@ -9,15 +9,22 @@ import typingsSlinky.antd.baseMod.EllipsisConfig
 import typingsSlinky.antd.baseMod.InternalBlockProps
 import typingsSlinky.antd.baseMod.default
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Base {
   
+  @scala.inline
+  def apply(component: String): Builder = {
+    val __props = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[InternalBlockProps]))
+  }
+  
   @JSImport("antd/lib/typography/Base", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -77,10 +84,4 @@ object Base {
   }
   
   def withProps(p: InternalBlockProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(component: String): Builder = {
-    val __props = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[InternalBlockProps]))
-  }
 }

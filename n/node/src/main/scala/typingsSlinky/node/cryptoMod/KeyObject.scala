@@ -3,6 +3,7 @@ package typingsSlinky.node.cryptoMod
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.nodeStrings.der
 import typingsSlinky.node.nodeStrings.pem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

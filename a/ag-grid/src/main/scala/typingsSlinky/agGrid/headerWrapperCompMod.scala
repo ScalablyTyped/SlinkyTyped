@@ -3,14 +3,14 @@ package typingsSlinky.agGrid
 import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.componentMod.Component
 import typingsSlinky.agGrid.dragAndDropServiceMod.DropTarget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/headerRendering/header/headerWrapperComp", JSImport.Namespace)
-@js.native
-object headerWrapperCompMod extends js.Object {
+object headerWrapperCompMod {
   
+  @JSImport("ag-grid/dist/lib/headerRendering/header/headerWrapperComp", "HeaderWrapperComp")
   @js.native
   class HeaderWrapperComp protected () extends Component {
     def this(column: Column, dragSourceDropTarget: DropTarget, pinned: String) = this()
@@ -101,9 +101,16 @@ object headerWrapperCompMod extends js.Object {
     var sortController: js.Any = js.native
   }
   /* static members */
-  @js.native
-  object HeaderWrapperComp extends js.Object {
+  object HeaderWrapperComp {
     
-    var TEMPLATE: js.Any = js.native
+    @JSImport("ag-grid/dist/lib/headerRendering/header/headerWrapperComp", "HeaderWrapperComp")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("ag-grid/dist/lib/headerRendering/header/headerWrapperComp", "HeaderWrapperComp.TEMPLATE")
+    @js.native
+    def TEMPLATE: js.Any = js.native
+    @scala.inline
+    def TEMPLATE_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("TEMPLATE")(x.asInstanceOf[js.Any])
   }
 }

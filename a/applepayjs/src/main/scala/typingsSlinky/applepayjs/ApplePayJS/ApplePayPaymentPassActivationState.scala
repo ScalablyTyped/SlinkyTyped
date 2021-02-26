@@ -1,5 +1,6 @@
 package typingsSlinky.applepayjs.ApplePayJS
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.applepayjs.applepayjsStrings.suspended
   - typingsSlinky.applepayjs.applepayjsStrings.deactivated
 */
-trait ApplePayPaymentPassActivationState extends js.Object
+trait ApplePayPaymentPassActivationState extends StObject
 object ApplePayPaymentPassActivationState {
   
   @scala.inline

@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/alert/error", JSImport.Namespace)
-@js.native
-object errorMod extends js.Object {
+object errorMod {
   
+  @JSImport("material-ui/svg-icons/alert/error", JSImport.Default)
+  @js.native
+  class default () extends AlertError
+  
+  @JSImport("material-ui/svg-icons/alert/error", "AlertError")
   @js.native
   class AlertError ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

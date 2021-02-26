@@ -6,16 +6,28 @@ import typingsSlinky.ol.objectMod.ObjectEvent
 import typingsSlinky.ol.olStrings.changeColongeometry
 import typingsSlinky.ol.styleStyleMod.StyleFunction
 import typingsSlinky.ol.styleStyleMod.StyleLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/Feature", JSImport.Namespace)
-@js.native
-object olFeatureMod extends js.Object {
+object olFeatureMod {
   
+  @JSImport("ol/Feature", JSImport.Default)
+  @js.native
+  class default[GeomType /* <: typingsSlinky.ol.geometryMod.default */] () extends Feature[GeomType] {
+    def this(opt_geometryOrProperties: GeomType) = this()
+    def this(opt_geometryOrProperties: StringDictionary[js.Any]) = this()
+  }
+  
+  @JSImport("ol/Feature", "createStyleFunction")
+  @js.native
   def createStyleFunction(obj: js.Array[typingsSlinky.ol.styleStyleMod.default]): StyleFunction = js.native
+  @JSImport("ol/Feature", "createStyleFunction")
+  @js.native
   def createStyleFunction(obj: StyleFunction): StyleFunction = js.native
+  @JSImport("ol/Feature", "createStyleFunction")
+  @js.native
   def createStyleFunction(obj: typingsSlinky.ol.styleStyleMod.default): StyleFunction = js.native
   
   @js.native
@@ -94,12 +106,6 @@ object olFeatureMod extends js.Object {
     
     @JSName("un")
     def un_changegeometry(`type`: changeColongeometry, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
-  }
-  
-  @js.native
-  class default[GeomType /* <: typingsSlinky.ol.geometryMod.default */] () extends Feature[GeomType] {
-    def this(opt_geometryOrProperties: GeomType) = this()
-    def this(opt_geometryOrProperties: StringDictionary[js.Any]) = this()
   }
   
   type FeatureClass = Feature[typingsSlinky.ol.geometryMod.default] | typingsSlinky.ol.renderFeatureMod.default

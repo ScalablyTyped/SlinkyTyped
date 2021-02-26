@@ -1,20 +1,20 @@
 package typingsSlinky.prex
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("prex/out/lib/queue", JSImport.Namespace)
-@js.native
-object queueMod extends js.Object {
+object queueMod {
   
+  @JSImport("prex/out/lib/queue", "AsyncQueue")
   @js.native
   /**
     * Initializes a new instance of the AsyncQueue class.
     *
     * @param iterable An optional iterable of values or promises.
     */
-  class AsyncQueue[T] () extends js.Object {
+  class AsyncQueue[T] () extends StObject {
     def this(iterable: js.Iterable[T | js.Thenable[T]]) = this()
     
     var _available: js.Any = js.native

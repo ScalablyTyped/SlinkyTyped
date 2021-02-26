@@ -1,16 +1,18 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.repositoryMod.Repository
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/repositories/launcher.repository", JSImport.Namespace)
-@js.native
-object launcherRepositoryMod extends js.Object {
+object launcherRepositoryMod {
   
+  @JSImport("instagram-private-api/dist/repositories/launcher.repository", "LauncherRepository")
   @js.native
-  class LauncherRepository () extends Repository {
+  class LauncherRepository protected () extends Repository {
+    def this(client: IgApiClient) = this()
     
     def postLoginSync(): js.Promise[_] = js.native
     

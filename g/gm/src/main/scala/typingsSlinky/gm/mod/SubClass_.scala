@@ -2,12 +2,13 @@ package typingsSlinky.gm.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SubClass_ extends js.Object {
+trait SubClass_ extends StObject {
   
   def apply(image: String): State = js.native
   def apply(stream: Buffer): State = js.native

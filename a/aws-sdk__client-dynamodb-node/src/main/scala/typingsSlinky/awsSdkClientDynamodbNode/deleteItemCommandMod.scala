@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientDynamodbNode.typesDeleteItemInputMod.DeleteItem
 import typingsSlinky.awsSdkClientDynamodbNode.typesDeleteItemOutputMod.DeleteItemOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-node/commands/DeleteItemCommand", JSImport.Namespace)
-@js.native
-object deleteItemCommandMod extends js.Object {
+object deleteItemCommandMod {
   
+  @JSImport("@aws-sdk/client-dynamodb-node/commands/DeleteItemCommand", "DeleteItemCommand")
   @js.native
   class DeleteItemCommand protected () extends Command[
           InputTypesUnion, 

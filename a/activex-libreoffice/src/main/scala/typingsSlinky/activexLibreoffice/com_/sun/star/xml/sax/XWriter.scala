@@ -3,6 +3,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.xml.sax
 import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.io.XActiveDataSource
 import typingsSlinky.activexLibreoffice.com_.sun.star.io.XOutputStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

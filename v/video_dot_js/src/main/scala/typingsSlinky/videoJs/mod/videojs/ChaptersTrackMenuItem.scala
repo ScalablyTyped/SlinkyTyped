@@ -2,6 +2,7 @@ package typingsSlinky.videoJs.mod.videojs
 
 import typingsSlinky.videoJs.mod.videojs.EventTarget.Event
 import typingsSlinky.videoJs.mod.videojs.TextTrackCueList.TextTrackCue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

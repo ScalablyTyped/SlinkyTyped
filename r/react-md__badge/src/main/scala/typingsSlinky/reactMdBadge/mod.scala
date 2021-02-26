@@ -7,17 +7,22 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdBadge.badgeContainerMod.BadgeContainerProps
 import typingsSlinky.reactMdBadge.badgeMod.BadgeProps
 import typingsSlinky.reactMdBadge.badgedButtonMod.BadgedButtonProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/badge", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@react-md/badge", "Badge")
+  @js.native
   val Badge: ForwardRefExoticComponent[BadgeProps with RefAttributes[HTMLSpanElement]] = js.native
   
+  @JSImport("@react-md/badge", "BadgeContainer")
+  @js.native
   val BadgeContainer: ForwardRefExoticComponent[BadgeContainerProps with RefAttributes[HTMLSpanElement]] = js.native
   
+  @JSImport("@react-md/badge", "BadgedButton")
+  @js.native
   val BadgedButton: ForwardRefExoticComponent[BadgedButtonProps with RefAttributes[HTMLButtonElement]] = js.native
 }

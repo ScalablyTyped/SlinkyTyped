@@ -42,6 +42,7 @@ import typingsSlinky.reactNativePhotoView.reactNativePhotoViewStrings.fitCenter
 import typingsSlinky.reactNativePhotoView.reactNativePhotoViewStrings.fitEnd
 import typingsSlinky.reactNativePhotoView.reactNativePhotoViewStrings.fitStart
 import typingsSlinky.reactNativePhotoView.reactNativePhotoViewStrings.fitXY
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -50,7 +51,7 @@ object ReactNativePhotoView {
   
   @JSImport("react-native-photo-view", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -58,10 +59,10 @@ object ReactNativePhotoView {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -88,10 +89,10 @@ object ReactNativePhotoView {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -130,10 +131,10 @@ object ReactNativePhotoView {
     def isTVSelectable(value: Boolean): this.type = set("isTVSelectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingIndicatorSourceVarargs(value: ImageURISource*): this.type = set("loadingIndicatorSource", js.Array(value :_*))
+    def loadingIndicatorSource(value: ImageSourcePropType): this.type = set("loadingIndicatorSource", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingIndicatorSource(value: ImageSourcePropType): this.type = set("loadingIndicatorSource", value.asInstanceOf[js.Any])
+    def loadingIndicatorSourceVarargs(value: ImageURISource*): this.type = set("loadingIndicatorSource", js.Array(value :_*))
     
     @scala.inline
     def maximumZoomScale(value: Double): this.type = set("maximumZoomScale", value.asInstanceOf[js.Any])
@@ -256,10 +257,10 @@ object ReactNativePhotoView {
     def showsVerticalScrollIndicator(value: Boolean): this.type = set("showsVerticalScrollIndicator", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sourceVarargs(value: ImageURISource*): this.type = set("source", js.Array(value :_*))
+    def source(value: ImageSourcePropType): this.type = set("source", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def source(value: ImageSourcePropType): this.type = set("source", value.asInstanceOf[js.Any])
+    def sourceVarargs(value: ImageURISource*): this.type = set("source", js.Array(value :_*))
     
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
@@ -286,7 +287,7 @@ object ReactNativePhotoView {
     def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactNativePhotoViewProps with ViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativePhotoView.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactNativePhotoViewProps with ViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

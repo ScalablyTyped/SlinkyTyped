@@ -1,14 +1,15 @@
 package typingsSlinky.firebaseInstallations
 
 import typingsSlinky.std.Headers
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/installations/dist/src/testing/compare-headers", JSImport.Namespace)
-@js.native
-object compareHeadersMod extends js.Object {
+object compareHeadersMod {
   
+  @JSImport("@firebase/installations/dist/src/testing/compare-headers", "compareHeaders")
+  @js.native
   def compareHeaders(expectedHeaders: HeadersWithEntries, actualHeaders: HeadersWithEntries): Unit = js.native
   
   @js.native

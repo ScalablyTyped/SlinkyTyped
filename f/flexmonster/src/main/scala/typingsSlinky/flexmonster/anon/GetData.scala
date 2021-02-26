@@ -2,12 +2,13 @@ package typingsSlinky.flexmonster.anon
 
 import typingsSlinky.flexmonster.mod.GetDataErrorObject
 import typingsSlinky.flexmonster.mod.GetDataValueObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GetData extends js.Object {
+trait GetData extends StObject {
   
   def getData(options: PrepareDataFunction, callbackHandler: String): Unit = js.native
   def getData(options: PrepareDataFunction, callbackHandler: String, updateHandler: String): Unit = js.native

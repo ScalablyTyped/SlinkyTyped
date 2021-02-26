@@ -7,14 +7,14 @@ import typingsSlinky.typeorm.mysqlMysqlConnectionCredentialsOptionsMod.MysqlConn
 import typingsSlinky.typeorm.mysqlMysqlConnectionOptionsMod.MysqlConnectionOptions
 import typingsSlinky.typeorm.tableTableColumnMod.TableColumn
 import typingsSlinky.typeorm.typesColumnTypesMod.ColumnType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/driver/mysql/MysqlDriver", JSImport.Namespace)
-@js.native
-object mysqlMysqlDriverMod extends js.Object {
+object mysqlMysqlDriverMod {
   
+  @JSImport("typeorm/driver/mysql/MysqlDriver", "MysqlDriver")
   @js.native
   class MysqlDriver protected () extends Driver {
     def this(connection: Connection) = this()

@@ -9,9 +9,9 @@ the definitive JavaScript type testing library
 | ------------------ | :-------------: |
 | Full name          | is |
 | Keywords           | util, type, test |
-| # releases         | 2 |
-| # dependents       | 404 |
-| # downloads        | 67369480 |
+| # releases         | 0 |
+| # dependents       | 428 |
+| # downloads        | 82821380 |
 | # stars            | 27 |
 
 ## Links

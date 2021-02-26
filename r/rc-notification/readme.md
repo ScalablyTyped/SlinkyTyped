@@ -10,9 +10,9 @@ notification ui component for react
 | ------------------ | :-------------: |
 | Full name          | rc-notification |
 | Keywords           | react, react-component, react-notification, notification |
-| # releases         | 7 |
-| # dependents       | 260 |
-| # downloads        | 10830878 |
+| # releases         | 8 |
+| # dependents       | 304 |
+| # downloads        | 16726879 |
 | # stars            | 2 |
 
 ## Links

@@ -3,6 +3,7 @@ package typingsSlinky.babelTypes.ts36Mod
 import typingsSlinky.babelTypes.babelTypesStrings.ArrayPattern
 import typingsSlinky.babelTypes.babelTypesStrings.AssignmentPattern
 import typingsSlinky.babelTypes.babelTypesStrings.ObjectPattern
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,8 +13,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.babelTypes.ts36Mod.ArrayPattern_
   - typingsSlinky.babelTypes.ts36Mod.ObjectPattern_
 */
-trait Pattern extends js.Object
+trait Pattern extends StObject
 object Pattern {
+  
+  @scala.inline
+  def ArrayPattern_(
+    elements: js.Array[Expression],
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: ArrayPattern
+  ): typingsSlinky.babelTypes.ts36Mod.ArrayPattern_ = {
+    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.ArrayPattern_]
+  }
   
   @scala.inline
   def AssignmentPattern_(
@@ -23,23 +37,10 @@ object Pattern {
     right: Expression,
     start: Double,
     `type`: AssignmentPattern
-  ): Pattern = {
+  ): typingsSlinky.babelTypes.ts36Mod.AssignmentPattern_ = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Pattern]
-  }
-  
-  @scala.inline
-  def ArrayPattern_(
-    elements: js.Array[Expression],
-    end: Double,
-    loc: SourceLocation,
-    start: Double,
-    `type`: ArrayPattern
-  ): Pattern = {
-    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Pattern]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.AssignmentPattern_]
   }
   
   @scala.inline
@@ -49,9 +50,9 @@ object Pattern {
     properties: js.Array[AssignmentProperty | RestProperty_],
     start: Double,
     `type`: ObjectPattern
-  ): Pattern = {
+  ): typingsSlinky.babelTypes.ts36Mod.ObjectPattern_ = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Pattern]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.ObjectPattern_]
   }
 }

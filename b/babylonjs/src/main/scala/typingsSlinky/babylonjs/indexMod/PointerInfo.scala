@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.indexMod
 import org.scalajs.dom.raw.PointerEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,14 +12,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class PointerInfo protected ()
   extends typingsSlinky.babylonjs.eventsIndexMod.PointerInfo {
-  def this(
-    `type`: Double,
-    event: WheelEvent,
-    /**
-    * Defines the picking info associated to the info (if any)\
-    */
-  pickInfo: Nullable[typingsSlinky.babylonjs.pickingInfoMod.PickingInfo]
-  ) = this()
   /**
     * Instantiates a PointerInfo to store pointer related info to the onPointerObservable event.
     * @param type Defines the type of event (PointerEventTypes)
@@ -28,6 +21,14 @@ class PointerInfo protected ()
   def this(
     `type`: Double,
     event: PointerEvent,
+    /**
+    * Defines the picking info associated to the info (if any)\
+    */
+  pickInfo: Nullable[typingsSlinky.babylonjs.pickingInfoMod.PickingInfo]
+  ) = this()
+  def this(
+    `type`: Double,
+    event: WheelEvent,
     /**
     * Defines the picking info associated to the info (if any)\
     */

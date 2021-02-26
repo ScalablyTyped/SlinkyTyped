@@ -3,12 +3,13 @@ package typingsSlinky.reactRelay.anon
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Disposable
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType
 import typingsSlinky.relayRuntime.requestSubscriptionMod.GraphQLSubscriptionConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FnCall extends js.Object {
+trait FnCall extends StObject {
   
   def apply[TSubscription /* <: OperationType */](
     environment: typingsSlinky.relayRuntime.relayStoreTypesMod.Environment,

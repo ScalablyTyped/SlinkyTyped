@@ -10,9 +10,9 @@ ChromeDriver for Selenium
 | ------------------ | :-------------: |
 | Full name          | chromedriver |
 | Keywords           | chromedriver, selenium |
-| # releases         | 33 |
-| # dependents       | 226 |
-| # downloads        | 14857230 |
+| # releases         | 34 |
+| # dependents       | 265 |
+| # downloads        | 24680910 |
 | # stars            | 39 |
 
 ## Links

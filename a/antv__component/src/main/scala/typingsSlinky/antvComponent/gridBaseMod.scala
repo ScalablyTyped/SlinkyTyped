@@ -1,18 +1,21 @@
 package typingsSlinky.antvComponent
 
-import typingsSlinky.antvComponent.groupComponentMod.GroupComponent
 import typingsSlinky.antvComponent.typesMod.GroupComponentCfg
 import typingsSlinky.antvGBase.typesMod.Point
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/grid/base", JSImport.Namespace)
-@js.native
-object gridBaseMod extends js.Object {
+object gridBaseMod {
+  
+  @JSImport("@antv/component/lib/grid/base", JSImport.Default)
+  @js.native
+  abstract class default[T /* <: GroupComponentCfg */] () extends GridBase[T]
   
   @js.native
-  trait GridBase[T /* <: GroupComponentCfg */] extends GroupComponent[T] {
+  trait GridBase[T /* <: GroupComponentCfg */]
+    extends typingsSlinky.antvComponent.groupComponentMod.default[T] {
     
     var drawAlternateRegion: js.Any = js.native
     
@@ -37,7 +40,4 @@ object gridBaseMod extends js.Object {
     
     var getPathStyle: js.Any = js.native
   }
-  
-  @js.native
-  abstract class default[T /* <: GroupComponentCfg */] () extends GridBase[T]
 }

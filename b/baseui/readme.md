@@ -10,9 +10,9 @@ A React Component library implementing the Base design language
 | ------------------ | :-------------: |
 | Full name          | baseui |
 | Keywords           | react, uber, baseui, baseweb |
-| # releases         | 239 |
-| # dependents       | 24 |
-| # downloads        | 538727 |
+| # releases         | 320 |
+| # dependents       | 38 |
+| # downloads        | 795877 |
 | # stars            | 0 |
 
 ## Links

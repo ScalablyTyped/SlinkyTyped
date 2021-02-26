@@ -1,5 +1,6 @@
 package typingsSlinky.summernote.mod.global.Summernote
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.summernote.summernoteStrings.floatRight
   - typingsSlinky.summernote.summernoteStrings.floatNone
 */
-trait popoverImageOptionsFloat extends js.Object
+trait popoverImageOptionsFloat extends StObject
 object popoverImageOptionsFloat {
   
   @scala.inline

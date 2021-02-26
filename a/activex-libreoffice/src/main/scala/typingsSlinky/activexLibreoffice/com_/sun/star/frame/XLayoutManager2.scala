@@ -12,6 +12,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.ui.XDockingAreaAcceptor
 import typingsSlinky.activexLibreoffice.com_.sun.star.ui.XUIConfigurationListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.ui.XUIElement
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

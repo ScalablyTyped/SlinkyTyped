@@ -10,9 +10,9 @@ Brand checking of React Elements.
 | ------------------ | :-------------: |
 | Full name          | react-is |
 | Keywords           | react |
-| # releases         | 107 |
-| # dependents       | 308 |
-| # downloads        | 310659129 |
+| # releases         | 135 |
+| # dependents       | 724 |
+| # downloads        | 707402207 |
 | # stars            | 2 |
 
 ## Links

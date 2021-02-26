@@ -10,12 +10,15 @@ Typings are for version 0.65.1
 | ------------------ | :-------------: |
 | Full name          | @nivo/tooltip |
 | Keywords           | - |
-| # releases         | 6 |
-| # dependents       | 23 |
-| # downloads        | 411978 |
+| # releases         | 13 |
+| # dependents       | 32 |
+| # downloads        | 3321595 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/plouc/nivo#readme)
+- [Bugs](https://github.com/plouc/nivo/issues)
+- [Repository](https://github.com/plouc/nivo)
 - [Npm](https://www.npmjs.com/package/%40nivo%2Ftooltip)
     
 

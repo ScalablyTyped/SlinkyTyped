@@ -1,5 +1,6 @@
 package typingsSlinky.vexflow.global.Vex.Flow
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,10 +11,10 @@ class BoundingBox protected ()
   extends typingsSlinky.vexflow.Vex.Flow.BoundingBox {
   def this(x: Double, y: Double, w: Double, h: Double) = this()
 }
-/* static members */
-@JSGlobal("Vex.Flow.BoundingBox")
-@js.native
-object BoundingBox extends js.Object {
+object BoundingBox {
   
+  /* static member */
+  @JSGlobal("Vex.Flow.BoundingBox.copy")
+  @js.native
   def copy(that: typingsSlinky.vexflow.Vex.Flow.BoundingBox): typingsSlinky.vexflow.Vex.Flow.BoundingBox = js.native
 }

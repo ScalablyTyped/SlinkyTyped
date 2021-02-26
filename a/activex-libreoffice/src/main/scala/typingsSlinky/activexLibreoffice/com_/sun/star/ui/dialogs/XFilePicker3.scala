@@ -8,6 +8,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.Color
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XCancellable
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

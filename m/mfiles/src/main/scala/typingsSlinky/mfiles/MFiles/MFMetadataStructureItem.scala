@@ -16,6 +16,7 @@ import typingsSlinky.mfiles.mfilesNumbers.`6`
 import typingsSlinky.mfiles.mfilesNumbers.`7`
 import typingsSlinky.mfiles.mfilesNumbers.`8`
 import typingsSlinky.mfiles.mfilesNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,7 +39,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mfiles.mfilesNumbers.`16`
   - typingsSlinky.mfiles.mfilesNumbers.`10000`
 */
-trait MFMetadataStructureItem extends js.Object
+trait MFMetadataStructureItem extends StObject
 object MFMetadataStructureItem {
   
   @scala.inline

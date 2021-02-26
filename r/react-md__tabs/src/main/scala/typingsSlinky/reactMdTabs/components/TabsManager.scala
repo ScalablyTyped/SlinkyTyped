@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMdTabs.tabsManagerMod.TabsManagerProps
 import typingsSlinky.reactMdTabs.typesMod.TabConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TabsManager {
   
+  @scala.inline
+  def apply(tabs: js.Array[TabConfig | ReactElement | String], tabsId: String): Builder = {
+    val __props = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any], tabsId = tabsId.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabsManagerProps]))
+  }
+  
   @JSImport("@react-md/tabs", "TabsManager")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,10 +44,4 @@ object TabsManager {
   }
   
   def withProps(p: TabsManagerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(tabs: js.Array[TabConfig | ReactElement | String], tabsId: String): Builder = {
-    val __props = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any], tabsId = tabsId.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TabsManagerProps]))
-  }
 }

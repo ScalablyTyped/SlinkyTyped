@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.typesDescribePullRequestEventsIn
 import typingsSlinky.awsSdkClientCodecommitNode.typesDescribePullRequestEventsOutputMod.DescribePullRequestEventsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-codecommit-node/commands/DescribePullRequestEventsCommand", JSImport.Namespace)
-@js.native
-object describePullRequestEventsCommandMod extends js.Object {
+object describePullRequestEventsCommandMod {
   
+  @JSImport("@aws-sdk/client-codecommit-node/commands/DescribePullRequestEventsCommand", "DescribePullRequestEventsCommand")
   @js.native
   class DescribePullRequestEventsCommand protected () extends Command[
           InputTypesUnion, 

@@ -1,12 +1,13 @@
 package typingsSlinky.braintree.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("braintree", "Address")
 @js.native
-class Address () extends js.Object {
+class Address () extends StObject {
   
   var company: js.UndefOr[String] = js.native
   

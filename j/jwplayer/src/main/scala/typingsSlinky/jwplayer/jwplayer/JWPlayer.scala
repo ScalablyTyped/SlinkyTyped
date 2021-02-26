@@ -41,12 +41,13 @@ import typingsSlinky.jwplayer.jwplayerStrings.setupError
 import typingsSlinky.jwplayer.jwplayerStrings.time
 import typingsSlinky.jwplayer.jwplayerStrings.visualQuality
 import typingsSlinky.jwplayer.jwplayerStrings.volume
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JWPlayer extends js.Object {
+trait JWPlayer extends StObject {
   
   def addButton(icon: String, label: String, handler: js.Function0[Unit], id: String): Unit = js.native
   

@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.AcceptsInStreamVide
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.CallbackFieldsKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DirectorySitesResource extends js.Object {
+trait DirectorySitesResource extends StObject {
   
   /** Gets one directory site by ID. */
   def get(): Request[DirectorySite] = js.native

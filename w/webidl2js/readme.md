@@ -10,9 +10,9 @@ Auto-generates class structures for WebIDL specifications
 | ------------------ | :-------------: |
 | Full name          | webidl2js |
 | Keywords           | - |
-| # releases         | 13 |
+| # releases         | 15 |
 | # dependents       | 1 |
-| # downloads        | 25676 |
+| # downloads        | 17445 |
 | # stars            | 0 |
 
 ## Links

@@ -1,23 +1,43 @@
 package typingsSlinky.expoVectorIcons
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.Shortcut
 import typingsSlinky.expoVectorIcons.createIconSetMod.Icon
+import typingsSlinky.expoVectorIcons.createIconSetMod.IconButtonProps
 import typingsSlinky.expoVectorIcons.createIconSetMod.IconProps
 import typingsSlinky.expoVectorIcons.expoVectorIconsStrings.FontAwesome
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@expo/vector-icons/build/FontAwesome", JSImport.Namespace)
-@js.native
-object fontAwesomeMod extends js.Object {
+object fontAwesomeMod {
   
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSImport("@expo/vector-icons/build/FontAwesome", JSImport.Default)
   @js.native
   class default protected ()
     extends Component[IconProps[String], js.Object, js.Any] {
     def this(props: IconProps[String]) = this()
   }
-  @js.native
-  object default extends TopLevel[Icon[String, FontAwesome]]
+  object default extends Shortcut {
+    
+    @JSImport("@expo/vector-icons/build/FontAwesome", JSImport.Default)
+    @js.native
+    val ^ : Icon[String, FontAwesome] = js.native
+    
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("@expo/vector-icons/build/FontAwesome", "default.Button")
+    @js.native
+    class Button protected ()
+      extends Component[IconButtonProps[String], js.Object, js.Any] {
+      def this(props: IconButtonProps[String]) = this()
+      def this(props: IconButtonProps[String], context: js.Any) = this()
+    }
+    
+    type _To = Icon[String, FontAwesome]
+    
+    /* This means you don't have to write `^`, but can instead just say `default.foo` */
+    override def _to: Icon[String, FontAwesome] = ^
+  }
 }

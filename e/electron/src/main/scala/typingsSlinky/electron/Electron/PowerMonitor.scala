@@ -12,6 +12,7 @@ import typingsSlinky.electron.electronStrings.shutdown
 import typingsSlinky.electron.electronStrings.suspend
 import typingsSlinky.electron.electronStrings.unknown_
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

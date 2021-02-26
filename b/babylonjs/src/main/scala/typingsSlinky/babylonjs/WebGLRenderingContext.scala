@@ -7,6 +7,7 @@ import org.scalajs.dom.raw.WebGLTexture
 import typingsSlinky.std.WebGLQuery
 import typingsSlinky.std.WebGLTransformFeedback
 import typingsSlinky.std.WebGLVertexArrayObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,23 +17,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 // Definitions by: Nico Kemnitz <https://github.com/nkemnitz/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 @js.native
-trait WebGLRenderingContext extends js.Object {
+trait WebGLRenderingContext extends StObject {
   
   var ANY_SAMPLES_PASSED: Double = js.native
   
-                               // 0x8CE4
+  // 0x8CE4
   // Occlusion Query
   var ANY_SAMPLES_PASSED_CONSERVATIVE: Double = js.native
   
   val COLOR_ATTACHMENT0: Double = js.native
   
-                               // 0x8CE1
+  // 0x8CE1
   val COLOR_ATTACHMENT1: Double = js.native
   
-                               // 0x8CE2
+  // 0x8CE2
   val COLOR_ATTACHMENT2: Double = js.native
   
-                               // 0x8CE3
+  // 0x8CE3
   val COLOR_ATTACHMENT3: Double = js.native
   
   val COMPARE_REF_TO_TEXTURE: Double = js.native
@@ -298,8 +299,8 @@ trait WebGLRenderingContext extends js.Object {
   
   def endTransformFeedback(): Unit = js.native
   
-  def framebufferTextureLayer(target: Double, attachment: Double, texture: Null, level: Double, layer: Double): Unit = js.native
   def framebufferTextureLayer(target: Double, attachment: Double, texture: WebGLTexture, level: Double, layer: Double): Unit = js.native
+  def framebufferTextureLayer(target: Double, attachment: Double, texture: Null, level: Double, layer: Double): Unit = js.native
   
   def getQuery(target: Double, pname: Double): js.Any = js.native
   
@@ -330,42 +331,6 @@ trait WebGLRenderingContext extends js.Object {
     border: Double,
     format: Double,
     `type`: Double
-  ): Unit = js.native
-  def texImage3D(
-    target: Double,
-    level: Double,
-    internalformat: Double,
-    width: Double,
-    height: Double,
-    depth: Double,
-    border: Double,
-    format: Double,
-    `type`: Double,
-    pixels: HTMLCanvasElement
-  ): Unit = js.native
-  def texImage3D(
-    target: Double,
-    level: Double,
-    internalformat: Double,
-    width: Double,
-    height: Double,
-    depth: Double,
-    border: Double,
-    format: Double,
-    `type`: Double,
-    pixels: HTMLVideoElement
-  ): Unit = js.native
-  def texImage3D(
-    target: Double,
-    level: Double,
-    internalformat: Double,
-    width: Double,
-    height: Double,
-    depth: Double,
-    border: Double,
-    format: Double,
-    `type`: Double,
-    pixels: ImageBitmap
   ): Unit = js.native
   def texImage3D(
     target: Double,
@@ -415,6 +380,42 @@ trait WebGLRenderingContext extends js.Object {
     format: Double,
     `type`: Double,
     pixels: ImageData
+  ): Unit = js.native
+  def texImage3D(
+    target: Double,
+    level: Double,
+    internalformat: Double,
+    width: Double,
+    height: Double,
+    depth: Double,
+    border: Double,
+    format: Double,
+    `type`: Double,
+    pixels: HTMLCanvasElement
+  ): Unit = js.native
+  def texImage3D(
+    target: Double,
+    level: Double,
+    internalformat: Double,
+    width: Double,
+    height: Double,
+    depth: Double,
+    border: Double,
+    format: Double,
+    `type`: Double,
+    pixels: HTMLVideoElement
+  ): Unit = js.native
+  def texImage3D(
+    target: Double,
+    level: Double,
+    internalformat: Double,
+    width: Double,
+    height: Double,
+    depth: Double,
+    border: Double,
+    format: Double,
+    `type`: Double,
+    pixels: ImageBitmap
   ): Unit = js.native
   
   def transformFeedbackVaryings(program: WebGLProgram, varyings: js.Array[String], bufferMode: Double): Unit = js.native

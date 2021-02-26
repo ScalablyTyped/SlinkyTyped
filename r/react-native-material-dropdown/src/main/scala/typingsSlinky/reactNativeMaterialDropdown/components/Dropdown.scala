@@ -35,15 +35,22 @@ import typingsSlinky.reactNativeMaterialDropdown.mod.DropDownMargins
 import typingsSlinky.reactNativeMaterialDropdown.mod.DropDownOffset
 import typingsSlinky.reactNativeMaterialDropdown.mod.DropDownProps
 import typingsSlinky.reactNativeMaterialDropdown.mod.RenderBaseProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Dropdown {
   
+  @scala.inline
+  def apply(data: js.Array[DropDownData]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DropDownProps]))
+  }
+  
   @JSImport("react-native-material-dropdown", "Dropdown")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +61,10 @@ object Dropdown {
     def absoluteRTLLayout(value: Boolean): this.type = set("absoluteRTLLayout", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -84,10 +91,10 @@ object Dropdown {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -273,10 +280,10 @@ object Dropdown {
     def styleNull: this.type = set("style", null)
     
     @scala.inline
-    def supportedOrientationsVarargs(value: String*): this.type = set("supportedOrientations", js.Array(value :_*))
+    def supportedOrientations(value: js.Array[String]): this.type = set("supportedOrientations", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def supportedOrientations(value: js.Array[String]): this.type = set("supportedOrientations", value.asInstanceOf[js.Any])
+    def supportedOrientationsVarargs(value: String*): this.type = set("supportedOrientations", js.Array(value :_*))
     
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
@@ -304,10 +311,4 @@ object Dropdown {
   }
   
   def withProps(p: DropDownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[DropDownData]): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DropDownProps]))
-  }
 }

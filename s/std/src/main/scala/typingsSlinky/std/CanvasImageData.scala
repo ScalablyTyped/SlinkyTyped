@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CanvasImageData extends js.Object {
+trait CanvasImageData extends StObject {
   
   def createImageData(imagedata: org.scalajs.dom.raw.ImageData): org.scalajs.dom.raw.ImageData = js.native
   def createImageData(sw: Double, sh: Double): org.scalajs.dom.raw.ImageData = js.native

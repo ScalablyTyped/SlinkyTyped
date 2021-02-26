@@ -3,16 +3,21 @@ package typingsSlinky.ethereumjsBlockchain
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.bnJs.mod.^
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ethereumjs-blockchain/dist/dbManager", JSImport.Namespace)
-@js.native
-object dbManagerMod extends js.Object {
+object dbManagerMod {
+  
+  @JSImport("ethereumjs-blockchain/dist/dbManager", JSImport.Default)
+  @js.native
+  class default protected () extends DBManager {
+    def this(db: js.Any, common: js.Any) = this()
+  }
   
   @js.native
-  trait DBManager extends js.Object {
+  trait DBManager extends StObject {
     
     var _cache: StringDictionary[typingsSlinky.ethereumjsBlockchain.cacheMod.default[Buffer]] = js.native
     
@@ -82,10 +87,5 @@ object dbManagerMod extends js.Object {
       * Performs a block number to block hash lookup.
       */
     def numberToHash(number: ^): js.Promise[Buffer] = js.native
-  }
-  
-  @js.native
-  class default protected () extends DBManager {
-    def this(db: js.Any, common: js.Any) = this()
   }
 }

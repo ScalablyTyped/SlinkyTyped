@@ -3,12 +3,12 @@ package typingsSlinky.pgPromise.mod
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.pgMinify.mod.IMinifyOptions
-import typingsSlinky.pgPromise.anon.Call
 import typingsSlinky.pgPromise.anon.Typeoferrors
 import typingsSlinky.pgPromise.anon.Typeofpg
 import typingsSlinky.pgPromise.pgSubsetMod.IClient
 import typingsSlinky.pgPromise.pgSubsetMod.IConnectionParameters
 import typingsSlinky.spex.mod.ISpex
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 // Post-initialization interface;
 // API: http://vitaly-t.github.io/pg-promise/module-pg-promise.html
 @js.native
-trait IMain[Ext, C /* <: IClient */] extends js.Object {
+trait IMain[Ext, C /* <: IClient */] extends StObject {
   
   def apply[T, C /* <: IClient */](cn: String): (IDatabase[T, C]) with T = js.native
   def apply[T, C /* <: IClient */](cn: String, dc: js.Any): (IDatabase[T, C]) with T = js.native
@@ -51,8 +51,6 @@ trait IMain[Ext, C /* <: IClient */] extends js.Object {
   
   def minify(sql: String): String = js.native
   def minify(sql: String, options: IMinifyOptions): String = js.native
-  @JSName("minify")
-  val minify_Original: Call = js.native
   
   val pg: Typeofpg = js.native
   

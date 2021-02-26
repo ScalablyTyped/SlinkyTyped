@@ -14,16 +14,17 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactOverlays.anon.PreventScroll
 import typingsSlinky.reactOverlays.anon.inbooleanappearbooleanund
-import typingsSlinky.reactOverlays.modalManagerMod.default
-import typingsSlinky.reactOverlays.modalMod.ModalHandle
-import typingsSlinky.reactOverlays.modalMod.ModalProps
-import typingsSlinky.reactOverlays.modalMod.ModalTransitionComponent
-import typingsSlinky.reactOverlays.modalMod.RenderModalBackdropProps
-import typingsSlinky.reactOverlays.modalMod.RenderModalDialogProps
+import typingsSlinky.reactOverlays.esmModalManagerMod.default
+import typingsSlinky.reactOverlays.esmModalMod.ModalHandle
+import typingsSlinky.reactOverlays.esmModalMod.ModalProps
+import typingsSlinky.reactOverlays.esmModalMod.ModalTransitionComponent
+import typingsSlinky.reactOverlays.esmModalMod.RenderModalBackdropProps
+import typingsSlinky.reactOverlays.esmModalMod.RenderModalDialogProps
+import typingsSlinky.reactOverlays.esmUseWaitForDOMRefMod.DOMContainer
 import typingsSlinky.reactOverlays.reactOverlaysBooleans.`false`
 import typingsSlinky.reactOverlays.reactOverlaysBooleans.`true`
 import typingsSlinky.reactOverlays.reactOverlaysStrings.static
-import typingsSlinky.reactOverlays.useWaitForDOMRefMod.DOMContainer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,7 +33,7 @@ object Modal {
   
   @JSImport("react-overlays/esm", "Modal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -46,34 +47,34 @@ object Modal {
     def backdrop(value: `true` | `false` | static): this.type = set("backdrop", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def backdropTransitionFunctionComponent(value: ReactComponentClass[inbooleanappearbooleanund]): this.type = set("backdropTransition", value.asInstanceOf[js.Any])
+    def backdropTransition(value: ModalTransitionComponent): this.type = set("backdropTransition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def backdropTransitionComponentClass(value: ReactComponentClass[inbooleanappearbooleanund]): this.type = set("backdropTransition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def backdropTransition(value: ModalTransitionComponent): this.type = set("backdropTransition", value.asInstanceOf[js.Any])
+    def backdropTransitionFunctionComponent(value: ReactComponentClass[inbooleanappearbooleanund]): this.type = set("backdropTransition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerRefObject(value: ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    def container(value: DOMContainer[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerHTMLElement(value: HTMLElement): this.type = set("container", value.asInstanceOf[js.Any])
+    def containerClassName(value: String): this.type = set("containerClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerFunction0(value: () => HTMLElement | ReactRef[HTMLElement] | Null): this.type = set("container", js.Any.fromFunction0(value))
     
     @scala.inline
-    def container(value: DOMContainer[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    def containerHTMLElement(value: HTMLElement): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerNull: this.type = set("container", null)
     
     @scala.inline
-    def containerClassName(value: String): this.type = set("containerClassName", value.asInstanceOf[js.Any])
+    def containerRefObject(value: ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def enforceFocus(value: Boolean): this.type = set("enforceFocus", value.asInstanceOf[js.Any])
@@ -136,16 +137,16 @@ object Modal {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def transitionFunctionComponent(value: ReactComponentClass[inbooleanappearbooleanund]): this.type = set("transition", value.asInstanceOf[js.Any])
+    def transition(value: ModalTransitionComponent): this.type = set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def transitionComponentClass(value: ReactComponentClass[inbooleanappearbooleanund]): this.type = set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def transition(value: ModalTransitionComponent): this.type = set("transition", value.asInstanceOf[js.Any])
+    def transitionFunctionComponent(value: ReactComponentClass[inbooleanappearbooleanund]): this.type = set("transition", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ModalProps with RefAttributes[ModalHandle]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Modal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ModalProps with RefAttributes[ModalHandle]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

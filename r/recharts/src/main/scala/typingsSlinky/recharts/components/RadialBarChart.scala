@@ -8,6 +8,7 @@ import typingsSlinky.recharts.mod.BaseValueType
 import typingsSlinky.recharts.mod.RadialBarChartProps
 import typingsSlinky.recharts.mod.StackOffsetType
 import typingsSlinky.recharts.rechartsStrings.radial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object RadialBarChart {
   
   @JSImport("recharts", "RadialBarChart")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,13 +37,13 @@ object RadialBarChart {
     def baseValue(value: BaseValueType): this.type = set("baseValue", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
-    
-    @scala.inline
-    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -57,10 +58,10 @@ object RadialBarChart {
     def cy(value: String | Double): this.type = set("cy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: js.Object*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: js.Object*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def endAngle(value: Double): this.type = set("endAngle", value.asInstanceOf[js.Any])
@@ -123,7 +124,7 @@ object RadialBarChart {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RadialBarChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RadialBarChart.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RadialBarChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

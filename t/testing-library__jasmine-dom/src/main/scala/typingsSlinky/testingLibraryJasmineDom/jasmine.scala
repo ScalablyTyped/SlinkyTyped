@@ -4,16 +4,15 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.std.Record
 import typingsSlinky.testingLibraryJasmineDom.anon.NormalizeWhitespace
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("jasmine")
-@js.native
-object jasmine extends js.Object {
+object jasmine {
   
   @js.native
-  trait Matchers[T] extends js.Object {
+  trait Matchers[T] extends StObject {
     
     /**
       * @description

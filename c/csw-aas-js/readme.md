@@ -10,9 +10,9 @@ This library is a javascript adapter for csw-aas. This is a wrapper over keycloa
 | ------------------ | :-------------: |
 | Full name          | csw-aas-js |
 | Keywords           | - |
-| # releases         | 29 |
+| # releases         | 44 |
 | # dependents       | 0 |
-| # downloads        | 2090 |
+| # downloads        | 1824 |
 | # stars            | 0 |
 
 ## Links

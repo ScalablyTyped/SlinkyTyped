@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
 import typingsSlinky.wordpressComponents.shortcutMod.Shortcut.ShortcutType
 import typingsSlinky.wordpressComponents.tooltipMod.Tooltip.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tooltip {
   
+  @scala.inline
+  def apply(children: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@wordpress/components", "Tooltip")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -28,17 +35,11 @@ object Tooltip {
     def shortcut(value: ShortcutType): this.type = set("shortcut", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: ReactElement): Builder = {
-    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

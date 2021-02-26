@@ -2,14 +2,17 @@ package typingsSlinky.rxjs
 
 import typingsSlinky.rxjs.typesMod.ObservableInput
 import typingsSlinky.rxjs.typesMod.OperatorFunction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rxjs/internal/operators/mergeAll", JSImport.Namespace)
-@js.native
-object mergeAllMod extends js.Object {
+object mergeAllMod {
   
+  @JSImport("rxjs/internal/operators/mergeAll", "mergeAll")
+  @js.native
   def mergeAll[T](): OperatorFunction[ObservableInput[T], T] = js.native
+  @JSImport("rxjs/internal/operators/mergeAll", "mergeAll")
+  @js.native
   def mergeAll[T](concurrent: Double): OperatorFunction[ObservableInput[T], T] = js.native
 }

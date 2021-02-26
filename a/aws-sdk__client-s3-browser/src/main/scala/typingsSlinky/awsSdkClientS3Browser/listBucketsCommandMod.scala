@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesListBucketsInputMod.ListBucketsI
 import typingsSlinky.awsSdkClientS3Browser.typesListBucketsOutputMod.ListBucketsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/ListBucketsCommand", JSImport.Namespace)
-@js.native
-object listBucketsCommandMod extends js.Object {
+object listBucketsCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/ListBucketsCommand", "ListBucketsCommand")
   @js.native
   class ListBucketsCommand protected () extends Command[
           InputTypesUnion, 

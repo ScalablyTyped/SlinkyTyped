@@ -11,6 +11,7 @@ import typingsSlinky.reactVis.mod.RVNearestXYData
 import typingsSlinky.reactVis.mod.RectSeriesPoint
 import typingsSlinky.reactVis.mod.RectSeriesProps
 import typingsSlinky.reactVis.mod.Scale
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object RectSeries {
   
   @JSImport("react-vis", "RectSeries")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,11 +60,6 @@ object RectSeries {
     def colorDistance(value: Double): this.type = set("colorDistance", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def colorDomainVarargs(
-      value: (/* import warning: importer.ImportType#apply Failed type conversion: T['color'] */ js.Any)*
-    ): this.type = set("colorDomain", js.Array(value :_*))
-    
-    @scala.inline
     def colorDomain(
       value: js.Array[
           /* import warning: importer.ImportType#apply Failed type conversion: T['color'] */ js.Any
@@ -71,9 +67,9 @@ object RectSeries {
     ): this.type = set("colorDomain", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def colorRangeVarargs(
+    def colorDomainVarargs(
       value: (/* import warning: importer.ImportType#apply Failed type conversion: T['color'] */ js.Any)*
-    ): this.type = set("colorRange", js.Array(value :_*))
+    ): this.type = set("colorDomain", js.Array(value :_*))
     
     @scala.inline
     def colorRange(
@@ -83,13 +79,18 @@ object RectSeries {
     ): this.type = set("colorRange", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def colorRangeVarargs(
+      value: (/* import warning: importer.ImportType#apply Failed type conversion: T['color'] */ js.Any)*
+    ): this.type = set("colorRange", js.Array(value :_*))
+    
+    @scala.inline
     def colorType(value: Scale): this.type = set("colorType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: (RectSeriesPoint | js.Array[js.Any])*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[RectSeriesPoint | js.Array[_]]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[RectSeriesPoint | js.Array[_]]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: (RectSeriesPoint | js.Array[js.Any])*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def fill(value: String | Double): this.type = set("fill", value.asInstanceOf[js.Any])
@@ -193,11 +194,6 @@ object RectSeries {
     def opacityDistance(value: Double): this.type = set("opacityDistance", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def opacityDomainVarargs(
-      value: (/* import warning: importer.ImportType#apply Failed type conversion: T['opacity'] */ js.Any)*
-    ): this.type = set("opacityDomain", js.Array(value :_*))
-    
-    @scala.inline
     def opacityDomain(
       value: js.Array[
           /* import warning: importer.ImportType#apply Failed type conversion: T['opacity'] */ js.Any
@@ -205,9 +201,9 @@ object RectSeries {
     ): this.type = set("opacityDomain", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def opacityRangeVarargs(
+    def opacityDomainVarargs(
       value: (/* import warning: importer.ImportType#apply Failed type conversion: T['opacity'] */ js.Any)*
-    ): this.type = set("opacityRange", js.Array(value :_*))
+    ): this.type = set("opacityDomain", js.Array(value :_*))
     
     @scala.inline
     def opacityRange(
@@ -215,6 +211,11 @@ object RectSeries {
           /* import warning: importer.ImportType#apply Failed type conversion: T['opacity'] */ js.Any
         ]
     ): this.type = set("opacityRange", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def opacityRangeVarargs(
+      value: (/* import warning: importer.ImportType#apply Failed type conversion: T['opacity'] */ js.Any)*
+    ): this.type = set("opacityRange", js.Array(value :_*))
     
     @scala.inline
     def opacityType(value: Scale): this.type = set("opacityType", value.asInstanceOf[js.Any])
@@ -226,9 +227,6 @@ object RectSeries {
     def sizeDistance(value: Double): this.type = set("sizeDistance", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sizeDomainVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['size'] */ js.Any)*): this.type = set("sizeDomain", js.Array(value :_*))
-    
-    @scala.inline
     def sizeDomain(
       value: js.Array[
           /* import warning: importer.ImportType#apply Failed type conversion: T['size'] */ js.Any
@@ -236,7 +234,7 @@ object RectSeries {
     ): this.type = set("sizeDomain", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sizeRangeVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['size'] */ js.Any)*): this.type = set("sizeRange", js.Array(value :_*))
+    def sizeDomainVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['size'] */ js.Any)*): this.type = set("sizeDomain", js.Array(value :_*))
     
     @scala.inline
     def sizeRange(
@@ -244,6 +242,9 @@ object RectSeries {
           /* import warning: importer.ImportType#apply Failed type conversion: T['size'] */ js.Any
         ]
     ): this.type = set("sizeRange", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def sizeRangeVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['size'] */ js.Any)*): this.type = set("sizeRange", js.Array(value :_*))
     
     @scala.inline
     def sizeType(value: Scale): this.type = set("sizeType", value.asInstanceOf[js.Any])
@@ -273,9 +274,6 @@ object RectSeries {
     def xDistance(value: Double): this.type = set("xDistance", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def xDomainVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['x'] */ js.Any)*): this.type = set("xDomain", js.Array(value :_*))
-    
-    @scala.inline
     def xDomain(
       value: js.Array[
           /* import warning: importer.ImportType#apply Failed type conversion: T['x'] */ js.Any
@@ -283,7 +281,7 @@ object RectSeries {
     ): this.type = set("xDomain", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def xRangeVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['x'] */ js.Any)*): this.type = set("xRange", js.Array(value :_*))
+    def xDomainVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['x'] */ js.Any)*): this.type = set("xDomain", js.Array(value :_*))
     
     @scala.inline
     def xRange(
@@ -291,6 +289,9 @@ object RectSeries {
           /* import warning: importer.ImportType#apply Failed type conversion: T['x'] */ js.Any
         ]
     ): this.type = set("xRange", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def xRangeVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['x'] */ js.Any)*): this.type = set("xRange", js.Array(value :_*))
     
     @scala.inline
     def xType(value: Scale): this.type = set("xType", value.asInstanceOf[js.Any])
@@ -302,9 +303,6 @@ object RectSeries {
     def yDistance(value: Double): this.type = set("yDistance", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def yDomainVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['y'] */ js.Any)*): this.type = set("yDomain", js.Array(value :_*))
-    
-    @scala.inline
     def yDomain(
       value: js.Array[
           /* import warning: importer.ImportType#apply Failed type conversion: T['y'] */ js.Any
@@ -312,7 +310,7 @@ object RectSeries {
     ): this.type = set("yDomain", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def yRangeVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['y'] */ js.Any)*): this.type = set("yRange", js.Array(value :_*))
+    def yDomainVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['y'] */ js.Any)*): this.type = set("yDomain", js.Array(value :_*))
     
     @scala.inline
     def yRange(
@@ -322,10 +320,13 @@ object RectSeries {
     ): this.type = set("yRange", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def yRangeVarargs(value: (/* import warning: importer.ImportType#apply Failed type conversion: T['y'] */ js.Any)*): this.type = set("yRange", js.Array(value :_*))
+    
+    @scala.inline
     def yType(value: Scale): this.type = set("yType", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RectSeriesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RectSeries.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RectSeriesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

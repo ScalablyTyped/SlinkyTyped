@@ -1,5 +1,6 @@
 package typingsSlinky.braintree.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.braintree.braintreeStrings.Lost
   - typingsSlinky.braintree.braintreeStrings.Won
 */
-trait DisputeStatus extends js.Object
+trait DisputeStatus extends StObject
 object DisputeStatus {
   
   @scala.inline

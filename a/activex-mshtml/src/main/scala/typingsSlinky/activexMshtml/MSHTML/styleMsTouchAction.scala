@@ -11,6 +11,7 @@ import typingsSlinky.activexMshtml.activexMshtmlNumbers.`32`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`4`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`64`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`16`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`32`
 */
-trait styleMsTouchAction extends js.Object
+trait styleMsTouchAction extends StObject
 object styleMsTouchAction {
   
   @scala.inline

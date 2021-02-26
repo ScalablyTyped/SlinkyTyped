@@ -18,12 +18,13 @@ import typingsSlinky.wegameApi.wx.types.StatParams
 import typingsSlinky.wegameApi.wx.types.UnlinkParams
 import typingsSlinky.wegameApi.wx.types.UnzipParams
 import typingsSlinky.wegameApi.wx.types.WritefileParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FileSystemManager extends js.Object {
+trait FileSystemManager extends StObject {
   
   /**
     * 判断文件/目录是否存在

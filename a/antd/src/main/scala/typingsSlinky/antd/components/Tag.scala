@@ -79,15 +79,31 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tag {
   
+  object CheckableTag {
+    
+    @scala.inline
+    def apply(checked: Boolean): SharedBuilder_CheckableTagProps2088584901 = {
+      val __props = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any])
+      new SharedBuilder_CheckableTagProps2088584901(js.Array(this.component, __props.asInstanceOf[CheckableTagProps]))
+    }
+    
+    @JSImport("antd", "Tag.CheckableTag")
+    @js.native
+    val component: js.Object = js.native
+    
+    def withProps(p: CheckableTagProps): SharedBuilder_CheckableTagProps2088584901 = new SharedBuilder_CheckableTagProps2088584901(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd", "Tag")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -262,10 +278,10 @@ object Tag {
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def color(value: LiteralUnion[PresetColorType | PresetStatusColorType, String]): this.type = set("color", value.asInstanceOf[js.Any])
@@ -286,10 +302,10 @@ object Tag {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -301,10 +317,10 @@ object Tag {
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -640,22 +656,7 @@ object Tag {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TagProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tag.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object CheckableTag {
-    
-    @JSImport("antd", "Tag.CheckableTag")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: CheckableTagProps): SharedBuilder_CheckableTagProps2088584901 = new SharedBuilder_CheckableTagProps2088584901(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(checked: Boolean): SharedBuilder_CheckableTagProps2088584901 = {
-      val __props = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any])
-      new SharedBuilder_CheckableTagProps2088584901(js.Array(this.component, __props.asInstanceOf[CheckableTagProps]))
-    }
-  }
+  def withProps(p: TagProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.openlayers.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.openlayers.openlayersStrings.pixel
   - typingsSlinky.openlayers.openlayersStrings.image
 */
-trait RasterOperationType extends js.Object
+trait RasterOperationType extends StObject
 object RasterOperationType {
   
   @scala.inline

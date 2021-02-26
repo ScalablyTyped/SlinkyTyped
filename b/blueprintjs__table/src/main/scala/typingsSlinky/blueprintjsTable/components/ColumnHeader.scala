@@ -12,15 +12,35 @@ import typingsSlinky.blueprintjsTable.commonMod.Grid
 import typingsSlinky.blueprintjsTable.dragTypesMod.ICoordinateData
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
 import typingsSlinky.blueprintjsTable.locatorMod.ILocator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ColumnHeader {
   
+  @scala.inline
+  def apply(
+    cellRenderer: /* columnIndex */ Double => ReactElement,
+    columnIndexEnd: Double,
+    columnIndexStart: Double,
+    grid: Grid,
+    locator: ILocator,
+    onColumnWidthChanged: (/* index */ Double, /* size */ Double) => Unit,
+    onFocusedCell: IFocusedCellCoordinates => Unit,
+    onLayoutLock: js.UndefOr[Boolean] => Unit,
+    onReordered: (Double, Double, Double) => Unit,
+    onReordering: (Double, Double, Double) => Unit,
+    onResizeGuide: js.Array[Double] => Unit,
+    onSelection: js.Array[IRegion] => Unit
+  ): Builder = {
+    val __props = js.Dynamic.literal(cellRenderer = js.Any.fromFunction1(cellRenderer), columnIndexEnd = columnIndexEnd.asInstanceOf[js.Any], columnIndexStart = columnIndexStart.asInstanceOf[js.Any], grid = grid.asInstanceOf[js.Any], locator = locator.asInstanceOf[js.Any], onColumnWidthChanged = js.Any.fromFunction2(onColumnWidthChanged), onFocusedCell = js.Any.fromFunction1(onFocusedCell), onLayoutLock = js.Any.fromFunction1(onLayoutLock), onReordered = js.Any.fromFunction3(onReordered), onReordering = js.Any.fromFunction3(onReordering), onResizeGuide = js.Any.fromFunction1(onResizeGuide), onSelection = js.Any.fromFunction1(onSelection))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IColumnHeaderProps]))
+  }
+  
   @JSImport("@blueprintjs/table/lib/esm/headers/columnHeader", "ColumnHeader")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,30 +80,11 @@ object ColumnHeader {
     ): this.type = set("selectedRegionTransform", js.Any.fromFunction3(value))
     
     @scala.inline
-    def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
+    def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
+    def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
   }
   
   def withProps(p: IColumnHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    cellRenderer: /* columnIndex */ Double => ReactElement,
-    columnIndexEnd: Double,
-    columnIndexStart: Double,
-    grid: Grid,
-    locator: ILocator,
-    onColumnWidthChanged: (/* index */ Double, /* size */ Double) => Unit,
-    onFocusedCell: IFocusedCellCoordinates => Unit,
-    onLayoutLock: js.UndefOr[Boolean] => Unit,
-    onReordered: (Double, Double, Double) => Unit,
-    onReordering: (Double, Double, Double) => Unit,
-    onResizeGuide: js.Array[Double] => Unit,
-    onSelection: js.Array[IRegion] => Unit
-  ): Builder = {
-    val __props = js.Dynamic.literal(cellRenderer = js.Any.fromFunction1(cellRenderer), columnIndexEnd = columnIndexEnd.asInstanceOf[js.Any], columnIndexStart = columnIndexStart.asInstanceOf[js.Any], grid = grid.asInstanceOf[js.Any], locator = locator.asInstanceOf[js.Any], onColumnWidthChanged = js.Any.fromFunction2(onColumnWidthChanged), onFocusedCell = js.Any.fromFunction1(onFocusedCell), onLayoutLock = js.Any.fromFunction1(onLayoutLock), onReordered = js.Any.fromFunction3(onReordered), onReordering = js.Any.fromFunction3(onReordering), onResizeGuide = js.Any.fromFunction1(onResizeGuide), onSelection = js.Any.fromFunction1(onSelection))
-    new Builder(js.Array(this.component, __props.asInstanceOf[IColumnHeaderProps]))
-  }
 }

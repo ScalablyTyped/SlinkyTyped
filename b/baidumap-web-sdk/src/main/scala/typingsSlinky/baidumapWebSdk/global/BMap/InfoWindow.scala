@@ -2,6 +2,7 @@ package typingsSlinky.baidumapWebSdk.global.BMap
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.baidumapWebSdk.BMap.InfoWindowOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -10,9 +10,9 @@ C like scanf/sscanf module for node.js.
 | ------------------ | :-------------: |
 | Full name          | scanf |
 | Keywords           | scanf, sscanf, readSync from stdin, shell input |
-| # releases         | 5 |
-| # dependents       | 10 |
-| # downloads        | 13788 |
+| # releases         | 4 |
+| # dependents       | 11 |
+| # downloads        | 22935 |
 | # stars            | 1 |
 
 ## Links

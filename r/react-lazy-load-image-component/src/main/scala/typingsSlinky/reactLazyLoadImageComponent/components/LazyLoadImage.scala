@@ -87,6 +87,7 @@ import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStri
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.url
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.vertical
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -95,7 +96,7 @@ object LazyLoadImage {
   
   @JSImport("react-lazy-load-image-component", "LazyLoadImage")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -300,10 +301,10 @@ object LazyLoadImage {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def delayMethod(value: DelayMethod): this.type = set("delayMethod", value.asInstanceOf[js.Any])
@@ -696,7 +697,7 @@ object LazyLoadImage {
     def wrapperProps(value: HTMLAttributes[HTMLSpanElement]): this.type = set("wrapperProps", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: LazyLoadImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: LazyLoadImage.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: LazyLoadImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

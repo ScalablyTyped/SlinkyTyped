@@ -10,13 +10,15 @@ Modular and customizable Material Design UI components for the web
 | ------------------ | :-------------: |
 | Full name          | material-components-web |
 | Keywords           | material components, material design |
-| # releases         | 179 |
-| # dependents       | 110 |
-| # downloads        | 1206888 |
-| # stars            | 14 |
+| # releases         | 813 |
+| # dependents       | 153 |
+| # downloads        | 1739395 |
+| # stars            | 13 |
 
 ## Links
+- [Homepage](https://github.com/material-components/material-components-web#readme)
 - [Bugs](https://github.com/material-components/material-components-web/issues)
+- [Repository](https://github.com/material-components/material-components-web)
 - [Npm](https://www.npmjs.com/package/material-components-web)
     
 

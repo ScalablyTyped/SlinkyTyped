@@ -1,5 +1,6 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ITEM_UNAVAILABLE
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_ITEM_CHANGE_REQUESTED
 */
-trait GoogleActionsTransactionsV3CompletePurchaseValuePurchaseStatus extends js.Object
+trait GoogleActionsTransactionsV3CompletePurchaseValuePurchaseStatus extends StObject
 object GoogleActionsTransactionsV3CompletePurchaseValuePurchaseStatus {
   
   @scala.inline

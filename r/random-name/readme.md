@@ -10,9 +10,9 @@ return random last names.
 | ------------------ | :-------------: |
 | Full name          | random-name |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 7 |
-| # downloads        | 192522 |
+| # releases         | 0 |
+| # dependents       | 8 |
+| # downloads        | 174228 |
 | # stars            | 3 |
 
 ## Links

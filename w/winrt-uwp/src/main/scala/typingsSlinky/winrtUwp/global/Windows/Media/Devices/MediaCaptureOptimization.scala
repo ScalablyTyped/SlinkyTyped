@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Devices
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Defines the optimizations that the media capture device can use. */
 @JSGlobal("Windows.Media.Devices.MediaCaptureOptimization")
 @js.native
-object MediaCaptureOptimization extends js.Object {
+object MediaCaptureOptimization extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[

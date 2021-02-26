@@ -2,6 +2,7 @@ package typingsSlinky.fridaGum.global
 
 import typingsSlinky.fridaGum.MipsWriterOptions
 import typingsSlinky.fridaGum.NativePointerValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

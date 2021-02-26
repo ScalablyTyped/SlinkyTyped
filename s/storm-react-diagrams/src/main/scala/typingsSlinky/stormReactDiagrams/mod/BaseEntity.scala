@@ -1,6 +1,7 @@
 package typingsSlinky.stormReactDiagrams.mod
 
 import typingsSlinky.stormReactDiagrams.baseEntityMod.BaseListener
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

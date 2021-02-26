@@ -9,12 +9,13 @@ import typingsSlinky.rcSlider.rcSliderStrings.visibles
 import typingsSlinky.react.mod.ErrorInfo
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ComponentDidCatch[Props /* <: GenericSliderProps */] extends js.Object {
+trait ComponentDidCatch[Props /* <: GenericSliderProps */] extends StObject {
   
   var UNSAFE_componentWillMount: js.UndefOr[js.Function0[Unit]] = js.native
   

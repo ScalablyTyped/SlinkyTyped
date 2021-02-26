@@ -1,13 +1,14 @@
 package typingsSlinky.cesium.mod
 
 import typingsSlinky.cesium.anon.DebugShowBoundingVolume
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "EllipsoidPrimitive")
 @js.native
-class EllipsoidPrimitive () extends js.Object {
+class EllipsoidPrimitive () extends StObject {
   def this(options: DebugShowBoundingVolume) = this()
   
   var center: Cartesian3 = js.native

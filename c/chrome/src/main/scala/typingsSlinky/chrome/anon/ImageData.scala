@@ -1,12 +1,13 @@
 package typingsSlinky.chrome.anon
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ImageData extends js.Object {
+trait ImageData extends StObject {
   
   var imageData: js.UndefOr[org.scalajs.dom.raw.ImageData | StringDictionary[org.scalajs.dom.raw.ImageData]] = js.native
 }
@@ -19,27 +20,15 @@ object ImageData {
   }
   
   @scala.inline
-  implicit class ImageDataOps[Self <: ImageData] (val x: Self) extends AnyVal {
+  implicit class ImageDataMutableBuilder[Self <: ImageData] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setImageData(value: org.scalajs.dom.raw.ImageData | StringDictionary[org.scalajs.dom.raw.ImageData]): Self = StObject.set(x, "imageData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setImageDataImageData(value: org.scalajs.dom.raw.ImageData): Self = StObject.set(x, "imageData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setImageDataImageData(value: org.scalajs.dom.raw.ImageData): Self = this.set("imageData", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setImageData(value: org.scalajs.dom.raw.ImageData | StringDictionary[org.scalajs.dom.raw.ImageData]): Self = this.set("imageData", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteImageData: Self = this.set("imageData", js.undefined)
+    def setImageDataUndefined: Self = StObject.set(x, "imageData", js.undefined)
   }
 }

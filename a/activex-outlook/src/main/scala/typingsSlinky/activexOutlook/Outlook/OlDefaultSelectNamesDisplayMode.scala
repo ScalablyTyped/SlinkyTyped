@@ -8,6 +8,7 @@ import typingsSlinky.activexOutlook.activexOutlookNumbers.`5`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`6`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`7`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOutlook.activexOutlookNumbers.`7`
   - typingsSlinky.activexOutlook.activexOutlookNumbers.`3`
 */
-trait OlDefaultSelectNamesDisplayMode extends js.Object
+trait OlDefaultSelectNamesDisplayMode extends StObject
 object OlDefaultSelectNamesDisplayMode {
   
   @scala.inline

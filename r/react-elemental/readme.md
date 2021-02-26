@@ -3,24 +3,6 @@
 
 Typings are for version 1.2
 
-## Library description:
-Flat UI library for React
-
-|                    |                 |
-| ------------------ | :-------------: |
-| Full name          | react-elemental |
-| Keywords           | - |
-| # releases         | 6 |
-| # dependents       | 0 |
-| # downloads        | 1444 |
-| # stars            | 1 |
-
-## Links
-- [Homepage](https://github.com/LINKIWI/react-elemental#readme)
-- [Bugs](https://github.com/LINKIWI/react-elemental/issues)
-- [Repository](https://github.com/LINKIWI/react-elemental)
-- [Npm](https://www.npmjs.com/package/react-elemental)
-    
 
 
 ## Note

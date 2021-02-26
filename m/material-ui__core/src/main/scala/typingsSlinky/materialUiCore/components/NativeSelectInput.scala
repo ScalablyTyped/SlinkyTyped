@@ -12,6 +12,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.standard
 import typingsSlinky.materialUiCore.nativeSelectInputMod.NativeSelectInputProps
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.ReactType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object NativeSelectInput {
   
   @JSImport("@material-ui/core/NativeSelect/NativeSelectInput", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -28,13 +29,13 @@ object NativeSelectInput {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def IconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    def IconComponent(value: ReactType[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def IconComponentComponentClass(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def IconComponent(value: ReactType[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    def IconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -49,16 +50,16 @@ object NativeSelectInput {
     def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     
     @scala.inline
-    def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
+    def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def variant(value: standard | outlined | filled): this.type = set("variant", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: NativeSelectInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: NativeSelectInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: NativeSelectInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -3,6 +3,7 @@ package typingsSlinky.gatsbyPluginUtils.pluginOptionsSchemaJoiTypeMod
 import typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.all
 import typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.any
 import typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.one
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

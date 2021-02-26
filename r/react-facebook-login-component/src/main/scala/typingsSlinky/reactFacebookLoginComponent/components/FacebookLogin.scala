@@ -76,15 +76,22 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactFacebookLoginComponent.mod.FacebookLoginInfo
 import typingsSlinky.reactFacebookLoginComponent.mod.FacebookLoginProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FacebookLogin {
   
+  @scala.inline
+  def apply(responseHandler: FacebookLoginInfo => Unit, socialId: String): Builder = {
+    val __props = js.Dynamic.literal(responseHandler = js.Any.fromFunction1(responseHandler), socialId = socialId.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[FacebookLoginProps]))
+  }
+  
   @JSImport("react-facebook-login-component", "FacebookLogin")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -280,10 +287,10 @@ object FacebookLogin {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -646,10 +653,10 @@ object FacebookLogin {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def version(value: String): this.type = set("version", value.asInstanceOf[js.Any])
@@ -662,10 +669,4 @@ object FacebookLogin {
   }
   
   def withProps(p: FacebookLoginProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(responseHandler: FacebookLoginInfo => Unit, socialId: String): Builder = {
-    val __props = js.Dynamic.literal(responseHandler = js.Any.fromFunction1(responseHandler), socialId = socialId.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[FacebookLoginProps]))
-  }
 }

@@ -2,16 +2,16 @@ package typingsSlinky.asmcryptoJs
 
 import typingsSlinky.asmcryptoJs.aesAsmMod.AESAsm
 import typingsSlinky.asmcryptoJs.aesAsmMod.AESMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("asmcrypto.js/dist_es8/aes/aes", JSImport.Namespace)
-@js.native
-object aesMod extends js.Object {
+object aesMod {
   
+  @JSImport("asmcrypto.js/dist_es8/aes/aes", "AES")
   @js.native
-  abstract class AES protected () extends js.Object {
+  abstract class AES protected () extends StObject {
     protected def this(
       key: js.typedarray.Uint8Array,
       iv: js.UndefOr[scala.Nothing],

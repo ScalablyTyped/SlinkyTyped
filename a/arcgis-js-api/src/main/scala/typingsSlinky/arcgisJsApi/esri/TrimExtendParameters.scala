@@ -6,6 +6,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`no-end-attributes`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`no-extend-at-from`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`no-extend-at-to`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`relocate-ends`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

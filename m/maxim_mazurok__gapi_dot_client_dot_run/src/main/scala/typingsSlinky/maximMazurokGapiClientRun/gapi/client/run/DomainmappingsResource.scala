@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientRun.anon.ApiVersion
 import typingsSlinky.maximMazurokGapiClientRun.anon.Callback
 import typingsSlinky.maximMazurokGapiClientRun.anon.Fields
 import typingsSlinky.maximMazurokGapiClientRun.anon.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DomainmappingsResource extends js.Object {
+trait DomainmappingsResource extends StObject {
   
   /** Create a new domain mapping. */
   def create(request: Fields): Request[DomainMapping] = js.native

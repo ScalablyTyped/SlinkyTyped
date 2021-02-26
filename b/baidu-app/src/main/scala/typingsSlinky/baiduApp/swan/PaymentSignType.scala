@@ -1,5 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.baiduApp.baiduAppStrings.MD5
   - typingsSlinky.baiduApp.baiduAppStrings.`HMAC-SHA256`
 */
-trait PaymentSignType extends js.Object
+trait PaymentSignType extends StObject
 object PaymentSignType {
   
   @scala.inline

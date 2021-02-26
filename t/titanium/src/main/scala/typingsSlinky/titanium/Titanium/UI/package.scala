@@ -1,10 +1,28 @@
 package typingsSlinky.titanium.Titanium
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object UI {
+  
+  /**
+    * The Android-specific UI capabilities. All properties, methods and events in this namespace will
+    * only work on Android systems.
+    */
+  type Android = typingsSlinky.titanium.Titanium.Module
+  
+  /**
+    * Apple iOS specific UI capabilities.  All properties, methods and events in this namespace will
+    * only work on Apple iOS devices.
+    */
+  type iOS = typingsSlinky.titanium.Titanium.Module
+  
+  /**
+    * iPad specific UI capabilities.
+    */
+  type iPad = typingsSlinky.titanium.Titanium.Module
   
   /**
     * Fired when the view element gains focus.
@@ -40,12 +58,6 @@ package object UI {
     * Fired when a layout cycle is finished.
     */
   type AlertDialogPostlayoutEvent = typingsSlinky.titanium.Titanium.UI.AlertDialogBaseEvent
-  
-  /**
-    * The Android-specific UI capabilities. All properties, methods and events in this namespace will
-    * only work on Android systems.
-    */
-  type Android = typingsSlinky.titanium.Titanium.Module
   
   /**
     * Fired when the animation completes.
@@ -636,15 +648,4 @@ package object UI {
     * Fired when a layout cycle is finished.
     */
   type WindowPostlayoutEvent = typingsSlinky.titanium.Titanium.UI.WindowBaseEvent
-  
-  /**
-    * Apple iOS specific UI capabilities.  All properties, methods and events in this namespace will
-    * only work on Apple iOS devices.
-    */
-  type iOS = typingsSlinky.titanium.Titanium.Module
-  
-  /**
-    * iPad specific UI capabilities.
-    */
-  type iPad = typingsSlinky.titanium.Titanium.Module
 }

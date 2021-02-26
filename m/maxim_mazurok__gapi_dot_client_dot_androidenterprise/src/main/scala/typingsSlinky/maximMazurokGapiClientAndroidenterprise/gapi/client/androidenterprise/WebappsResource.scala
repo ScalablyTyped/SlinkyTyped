@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.ResourceUploadType
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.UploadTypeUploadprotocol
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.WebAppId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebappsResource extends js.Object {
+trait WebappsResource extends StObject {
   
   /** Deletes an existing web app. */
   def delete(): Request[Unit] = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTypeahead.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.left
   - typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.right
 */
-trait TypeaheadAlign extends js.Object
+trait TypeaheadAlign extends StObject
 object TypeaheadAlign {
   
   @scala.inline

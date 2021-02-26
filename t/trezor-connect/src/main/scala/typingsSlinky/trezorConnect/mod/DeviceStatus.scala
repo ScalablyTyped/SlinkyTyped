@@ -1,5 +1,6 @@
 package typingsSlinky.trezorConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.trezorConnect.trezorConnectStrings.occupied
   - typingsSlinky.trezorConnect.trezorConnectStrings.used
 */
-trait DeviceStatus extends js.Object
+trait DeviceStatus extends StObject
 object DeviceStatus {
   
   @scala.inline

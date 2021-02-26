@@ -1,5 +1,6 @@
 package typingsSlinky.cytoscape.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,7 +34,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.cytoscape.cytoscapeStrings.boxselect
   - typingsSlinky.cytoscape.cytoscapeStrings.box
 */
-trait UserInputDeviceEventNameExt extends js.Object
+trait UserInputDeviceEventNameExt extends StObject
 object UserInputDeviceEventNameExt {
   
   @scala.inline

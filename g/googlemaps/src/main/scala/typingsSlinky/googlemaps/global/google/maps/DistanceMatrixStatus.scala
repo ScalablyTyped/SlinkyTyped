@@ -1,5 +1,6 @@
 package typingsSlinky.googlemaps.global.google.maps
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("google.maps.DistanceMatrixStatus")
 @js.native
-object DistanceMatrixStatus extends js.Object {
+object DistanceMatrixStatus extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.googlemaps.google.maps.DistanceMatrixStatus with String] = js.native

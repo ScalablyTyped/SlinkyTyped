@@ -1,6 +1,7 @@
 package typingsSlinky.googlepay.google.payments.api
 
 import typingsSlinky.googlepay.googlepayStrings.default_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,14 +26,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googlepay.googlepayStrings.black
   - typingsSlinky.googlepay.googlepayStrings.white
 */
-trait ButtonColor extends js.Object
+trait ButtonColor extends StObject
 object ButtonColor {
   
   @scala.inline
-  def black: typingsSlinky.googlepay.googlepayStrings.black = "black".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.black]
+  def default: default_ = "default".asInstanceOf[default_]
   
   @scala.inline
-  def default: default_ = "default".asInstanceOf[default_]
+  def black: typingsSlinky.googlepay.googlepayStrings.black = "black".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.black]
   
   @scala.inline
   def white: typingsSlinky.googlepay.googlepayStrings.white = "white".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.white]

@@ -1,21 +1,31 @@
 package typingsSlinky.tslint
 
+import typingsSlinky.tslint.mod.Rules.TypedRule
+import typingsSlinky.tslint.ruleMod.IOptions
 import typingsSlinky.tslint.ruleMod.IRuleMetadata
-import typingsSlinky.tslint.typedRuleMod.TypedRule
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tslint/lib/rules/preferReadonlyRule", JSImport.Namespace)
-@js.native
-object preferReadonlyRuleMod extends js.Object {
+object preferReadonlyRuleMod {
   
+  @JSImport("tslint/lib/rules/preferReadonlyRule", "Rule")
   @js.native
-  class Rule () extends TypedRule
+  class Rule protected () extends TypedRule {
+    def this(options: IOptions) = this()
+  }
   /* static members */
-  @js.native
-  object Rule extends js.Object {
+  object Rule {
     
-    var metadata: IRuleMetadata = js.native
+    @JSImport("tslint/lib/rules/preferReadonlyRule", "Rule")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("tslint/lib/rules/preferReadonlyRule", "Rule.metadata")
+    @js.native
+    def metadata: IRuleMetadata = js.native
+    @scala.inline
+    def metadata_=(x: IRuleMetadata): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("metadata")(x.asInstanceOf[js.Any])
   }
 }

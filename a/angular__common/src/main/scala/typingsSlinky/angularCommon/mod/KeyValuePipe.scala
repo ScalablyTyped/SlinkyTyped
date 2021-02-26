@@ -4,6 +4,7 @@ import typingsSlinky.angularCore.mod.KeyValueDiffers
 import typingsSlinky.angularCore.mod.PipeTransform
 import typingsSlinky.std.ReadonlyMap
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -34,6 +34,7 @@ import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
 import typingsSlinky.recharts.rechartsStrings.right
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,7 +43,7 @@ object PolarRadiusAxis {
   
   @JSImport("recharts", "PolarRadiusAxis")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -250,10 +251,10 @@ object PolarRadiusAxis {
     def radiusAxisId(value: String | Double): this.type = set("radiusAxisId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scaleFunction1(value: /* repeated */ js.Any => Unit): this.type = set("scale", js.Any.fromFunction1(value))
+    def scale(value: ScaleType | RechartsFunction): this.type = set("scale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scale(value: ScaleType | RechartsFunction): this.type = set("scale", value.asInstanceOf[js.Any])
+    def scaleFunction1(value: /* repeated */ js.Any => Unit): this.type = set("scale", js.Any.fromFunction1(value))
     
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
@@ -301,12 +302,6 @@ object PolarRadiusAxis {
     def textRendering(value: auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit): this.type = set("textRendering", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tickReactElement(value: ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def tickFunction1(value: _ => ReactElement): this.type = set("tick", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def tick(value: Boolean | js.Object | ReactElement | ContentRenderer[_]): this.type = set("tick", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -316,10 +311,16 @@ object PolarRadiusAxis {
     def tickFormatter(value: /* value */ js.Any => js.Any): this.type = set("tickFormatter", js.Any.fromFunction1(value))
     
     @scala.inline
-    def ticksVarargs(value: PolarRadiusAxisTick*): this.type = set("ticks", js.Array(value :_*))
+    def tickFunction1(value: _ => ReactElement): this.type = set("tick", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def tickReactElement(value: ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ticks(value: js.Array[PolarRadiusAxisTick]): this.type = set("ticks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def ticksVarargs(value: PolarRadiusAxisTick*): this.type = set("ticks", js.Array(value :_*))
     
     @scala.inline
     def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
@@ -349,7 +350,7 @@ object PolarRadiusAxis {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PolarRadiusAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: PolarRadiusAxis.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PolarRadiusAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

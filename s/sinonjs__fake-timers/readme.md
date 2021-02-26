@@ -10,9 +10,9 @@ Fake JavaScript timers
 | ------------------ | :-------------: |
 | Full name          | @sinonjs/fake-timers |
 | Keywords           | - |
-| # releases         | 3 |
-| # dependents       | 2 |
-| # downloads        | 225376 |
+| # releases         | 7 |
+| # dependents       | 6 |
+| # downloads        | 114344408 |
 | # stars            | 0 |
 
 ## Links

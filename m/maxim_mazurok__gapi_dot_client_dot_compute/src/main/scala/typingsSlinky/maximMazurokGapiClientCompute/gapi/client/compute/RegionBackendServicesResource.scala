@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.BackendServiceFieldsKey
 import typingsSlinky.maximMazurokGapiClientCompute.anon.Filter
 import typingsSlinky.maximMazurokGapiClientCompute.anon.PrettyPrintProjectQuotaUserRegion
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RegionUserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RegionBackendServicesResource extends js.Object {
+trait RegionBackendServicesResource extends StObject {
   
   /** Deletes the specified regional BackendService resource. */
   def delete(): Request[Operation] = js.native

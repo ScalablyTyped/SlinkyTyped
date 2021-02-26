@@ -1,18 +1,18 @@
 package typingsSlinky.antvComponent
 
-import typingsSlinky.antvComponent.gridBaseMod.GridBase
 import typingsSlinky.antvComponent.typesMod.CircleGridCfg
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/grid/circle", JSImport.Namespace)
-@js.native
-object gridCircleMod extends js.Object {
+object gridCircleMod {
   
-  @js.native
-  trait Circle extends GridBase[CircleGridCfg]
-  
+  @JSImport("@antv/component/lib/grid/circle", JSImport.Default)
   @js.native
   class default () extends Circle
+  
+  @js.native
+  trait Circle
+    extends typingsSlinky.antvComponent.gridBaseMod.default[CircleGridCfg]
 }

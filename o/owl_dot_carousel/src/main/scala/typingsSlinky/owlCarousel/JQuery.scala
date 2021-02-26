@@ -5,12 +5,13 @@ import typingsSlinky.owlCarousel.OwlCarousel.OnEvent
 import typingsSlinky.owlCarousel.OwlCarousel.Options
 import typingsSlinky.owlCarousel.OwlCarousel.TriggerEvent
 import typingsSlinky.owlCarousel.owlCarouselStrings.destroy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def on(event: OnEvent, handler: HandlerCallback): JQuery = js.native
   

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientGlacierNode.typesGetDataRetrievalPolicyInputMod
 import typingsSlinky.awsSdkClientGlacierNode.typesGetDataRetrievalPolicyOutputMod.GetDataRetrievalPolicyOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/commands/GetDataRetrievalPolicyCommand", JSImport.Namespace)
-@js.native
-object getDataRetrievalPolicyCommandMod extends js.Object {
+object getDataRetrievalPolicyCommandMod {
   
+  @JSImport("@aws-sdk/client-glacier-node/commands/GetDataRetrievalPolicyCommand", "GetDataRetrievalPolicyCommand")
   @js.native
   class GetDataRetrievalPolicyCommand protected () extends Command[
           InputTypesUnion, 

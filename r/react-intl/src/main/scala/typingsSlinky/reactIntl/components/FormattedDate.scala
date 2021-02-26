@@ -1,23 +1,18 @@
 package typingsSlinky.reactIntl.components
 
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.formatjsEcma402Abstract.typesDateTimeMod.DateTimeFormatOptions
-import typingsSlinky.reactIntl.anon.Value
+import typingsSlinky.reactIntl.anon.DateTimeFormatOptionsCust
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.formatjsEcma402Abstract.typesDateTimeMod.DateTimeFormatOptions with (/ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CustomFormatConfig * / js.Any) with typingsSlinky.reactIntl.anon.Value because: IArray(Could't extract props from / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CustomFormatConfig * / js.Any because couldn't resolve ClassTree.) */
 object FormattedDate {
   
   @JSImport("react-intl", "FormattedDate")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
-  def apply(
-    p: DateTimeFormatOptions with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CustomFormatConfig */ js.Any) with Value
-  ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FormattedDate.type): SharedBuilder_DateTimeFormatOptionsCust276893233 = new SharedBuilder_DateTimeFormatOptionsCust276893233(js.Array(this.component, js.Dictionary.empty))()
   
-  implicit def make(companion: FormattedDate.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: DateTimeFormatOptionsCust): SharedBuilder_DateTimeFormatOptionsCust276893233 = new SharedBuilder_DateTimeFormatOptionsCust276893233(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

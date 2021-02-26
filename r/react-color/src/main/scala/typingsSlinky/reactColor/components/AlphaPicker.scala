@@ -8,6 +8,7 @@ import typingsSlinky.reactColor.alphaMod.AlphaPickerProps
 import typingsSlinky.reactColor.anon.PartialClassesAlphaPicker
 import typingsSlinky.reactColor.mod.Color
 import typingsSlinky.reactColor.mod.ColorResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object AlphaPicker {
   
   @JSImport("react-color", "AlphaPicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,7 +46,7 @@ object AlphaPicker {
     def width(value: String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AlphaPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: AlphaPicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AlphaPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

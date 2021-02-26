@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.IdKey
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.MaxResults
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ContentCategoriesResource extends js.Object {
+trait ContentCategoriesResource extends StObject {
   
   /** Deletes an existing content category. */
   def delete(): Request[Unit] = js.native

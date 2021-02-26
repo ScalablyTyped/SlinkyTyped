@@ -10,6 +10,7 @@ import typingsSlinky.ink.inkStrings.middle
 import typingsSlinky.ink.inkStrings.truncate
 import typingsSlinky.ink.textMod.Props
 import typingsSlinky.typeFest.literalUnionMod.LiteralUnion
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object Text {
   
   @JSImport("ink", "Text")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -65,7 +66,7 @@ object Text {
     ): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Text.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

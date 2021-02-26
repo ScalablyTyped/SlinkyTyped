@@ -7,14 +7,14 @@ import typingsSlinky.ionicCore.ionicCoreStrings.bounded
 import typingsSlinky.ionicCore.ionicCoreStrings.unbounded
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/back-button/back-button", JSImport.Namespace)
-@js.native
-object backButtonMod extends js.Object {
+object backButtonMod {
   
+  @JSImport("@ionic/core/dist/types/components/back-button/back-button", "BackButton")
   @js.native
   class BackButton ()
     extends ComponentInterface

@@ -10,9 +10,9 @@ Instagram private API wrapper for full access to instagram
 | ------------------ | :-------------: |
 | Full name          | instagram-private-api |
 | Keywords           | - |
-| # releases         | 59 |
-| # dependents       | 26 |
-| # downloads        | 229546 |
+| # releases         | 69 |
+| # dependents       | 31 |
+| # downloads        | 161172 |
 | # stars            | 11 |
 
 ## Links

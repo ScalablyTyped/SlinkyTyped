@@ -15,13 +15,12 @@ import typingsSlinky.storybookAddonKnobs.anon.PickRadiosTypeKnobvalueop
 import typingsSlinky.storybookAddonKnobs.anon.PickSelectTypeKnobSelectT
 import typingsSlinky.storybookAddonKnobs.anon.PickTextTypeKnobvalue
 import typingsSlinky.storybookAddonKnobs.typesMod.KnobType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@storybook/addon-knobs/dist/type-defs", JSImport.Namespace)
-@js.native
-object typeDefsMod extends js.Object {
+object typeDefsMod {
   
   type Knob[T /* <: KnobType */] = KnobPlus[
     T, 

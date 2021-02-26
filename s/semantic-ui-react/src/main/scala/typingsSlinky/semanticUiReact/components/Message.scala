@@ -18,20 +18,65 @@ import typingsSlinky.semanticUiReact.messageMessageMod.MessageProps
 import typingsSlinky.semanticUiReact.messageMessageMod.MessageSizeProp
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Message {
   
+  object Content {
+    
+    @JSImport("semantic-ui-react", "Message.Content")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Content.type): SharedBuilder_MessageContentProps596902138 = new SharedBuilder_MessageContentProps596902138(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: MessageContentProps): SharedBuilder_MessageContentProps596902138 = new SharedBuilder_MessageContentProps596902138(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Header {
+    
+    @JSImport("semantic-ui-react", "Message.Header")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Header.type): SharedBuilder_MessageHeaderProps325359624 = new SharedBuilder_MessageHeaderProps325359624(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: MessageHeaderProps): SharedBuilder_MessageHeaderProps325359624 = new SharedBuilder_MessageHeaderProps325359624(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Item {
+    
+    @JSImport("semantic-ui-react", "Message.Item")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Item.type): SharedBuilder_MessageItemProps_528637509 = new SharedBuilder_MessageItemProps_528637509(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: MessageItemProps): SharedBuilder_MessageItemProps_528637509 = new SharedBuilder_MessageItemProps_528637509(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object List {
+    
+    @JSImport("semantic-ui-react", "Message.List")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: List.type): SharedBuilder_MessageListProps1781517395 = new SharedBuilder_MessageListProps1781517395(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: MessageListProps): SharedBuilder_MessageListProps1781517395 = new SharedBuilder_MessageListProps1781517395(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Message")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Message] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
@@ -49,10 +94,10 @@ object Message {
     def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
@@ -61,7 +106,7 @@ object Message {
     def floating(value: Boolean): this.type = set("floating", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    def header(value: SemanticShorthandItem[MessageHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
     def headerFunction3(
@@ -69,7 +114,7 @@ object Message {
     ): this.type = set("header", js.Any.fromFunction3(value))
     
     @scala.inline
-    def header(value: SemanticShorthandItem[MessageHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -81,10 +126,10 @@ object Message {
     def info(value: Boolean): this.type = set("info", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def listVarargs(value: SemanticShorthandItem[MessageItemProps]*): this.type = set("list", js.Array(value :_*))
+    def list(value: SemanticShorthandCollection[MessageItemProps]): this.type = set("list", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def list(value: SemanticShorthandCollection[MessageItemProps]): this.type = set("list", value.asInstanceOf[js.Any])
+    def listVarargs(value: SemanticShorthandItem[MessageItemProps]*): this.type = set("list", js.Array(value :_*))
     
     @scala.inline
     def negative(value: Boolean): this.type = set("negative", value.asInstanceOf[js.Any])
@@ -108,51 +153,7 @@ object Message {
     def warning(value: Boolean): this.type = set("warning", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MessageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Message.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Content {
-    
-    @JSImport("semantic-ui-react", "Message.Content")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: MessageContentProps): SharedBuilder_MessageContentProps596902138 = new SharedBuilder_MessageContentProps596902138(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Content.type): SharedBuilder_MessageContentProps596902138 = new SharedBuilder_MessageContentProps596902138(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Header {
-    
-    @JSImport("semantic-ui-react", "Message.Header")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: MessageHeaderProps): SharedBuilder_MessageHeaderProps325359624 = new SharedBuilder_MessageHeaderProps325359624(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Header.type): SharedBuilder_MessageHeaderProps325359624 = new SharedBuilder_MessageHeaderProps325359624(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Item {
-    
-    @JSImport("semantic-ui-react", "Message.Item")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: MessageItemProps): SharedBuilder_MessageItemProps_528637509 = new SharedBuilder_MessageItemProps_528637509(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Item.type): SharedBuilder_MessageItemProps_528637509 = new SharedBuilder_MessageItemProps_528637509(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object List {
-    
-    @JSImport("semantic-ui-react", "Message.List")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: MessageListProps): SharedBuilder_MessageListProps1781517395 = new SharedBuilder_MessageListProps1781517395(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: List.type): SharedBuilder_MessageListProps1781517395 = new SharedBuilder_MessageListProps1781517395(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: MessageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

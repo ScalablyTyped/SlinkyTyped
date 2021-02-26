@@ -14,6 +14,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.shared
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.text
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.update
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.xml
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

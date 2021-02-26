@@ -28,89 +28,90 @@ import typingsSlinky.parameter.parameterStrings.string
 import typingsSlinky.parameter.parameterStrings.stringQuestionmark
 import typingsSlinky.parameter.parameterStrings.url
 import typingsSlinky.parameter.parameterStrings.urlQuestionmark
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _ParameterRuleItem extends js.Object
+trait _ParameterRuleItem extends StObject
 object _ParameterRuleItem {
   
   @scala.inline
-  def ParameterRuleCustom(`type`: String): _ParameterRuleItem = {
+  def ParameterRuleArray(`type`: array | arrayQuestionmark): typingsSlinky.parameter.mod.ParameterRuleArray = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRuleArray]
+  }
+  
+  @scala.inline
+  def ParameterRuleCustom(`type`: String): typingsSlinky.parameter.mod.ParameterRuleCustom = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRuleCustom]
   }
   
   @scala.inline
   def ParameterRuleDateTime(
     `type`: date | dateQuestionmark | dateTime | dateTimeQuestionmark | datetime_ | datetimeQuestionmark
-  ): _ParameterRuleItem = {
+  ): typingsSlinky.parameter.mod.ParameterRuleDateTime = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRuleDateTime]
   }
   
   @scala.inline
-  def ParameterRuleArray(`type`: array | arrayQuestionmark): _ParameterRuleItem = {
+  def ParameterRuleEmail(`type`: email | emailQuestionmark): typingsSlinky.parameter.mod.ParameterRuleEmail = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRuleEmail]
   }
   
   @scala.inline
-  def ParameterRuleUrl(`type`: url | urlQuestionmark): _ParameterRuleItem = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
-  }
-  
-  @scala.inline
-  def ParameterRuleEnum(`type`: enum | enumQuestionmark, values: js.Array[_]): _ParameterRuleItem = {
+  def ParameterRuleEnum(`type`: enum | enumQuestionmark, values: js.Array[_]): typingsSlinky.parameter.mod.ParameterRuleEnum = {
     val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRuleEnum]
   }
   
   @scala.inline
-  def ParameterRuleNumber(`type`: int | integer | number | intQuestionmark | integerQuestionmark | numberQuestionmark): _ParameterRuleItem = {
+  def ParameterRuleID(`type`: id | idQuestionmark): typingsSlinky.parameter.mod.ParameterRuleID = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRuleID]
   }
   
   @scala.inline
-  def ParameterRuleEmail(`type`: email | emailQuestionmark): _ParameterRuleItem = {
+  def ParameterRuleNumber(`type`: int | integer | number | intQuestionmark | integerQuestionmark | numberQuestionmark): typingsSlinky.parameter.mod.ParameterRuleNumber = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRuleNumber]
   }
   
   @scala.inline
-  def ParameterRulePassword(`type`: password | passwordQuestionmark): _ParameterRuleItem = {
+  def ParameterRuleObject(`type`: `object` | objectQuestionmark): typingsSlinky.parameter.mod.ParameterRuleObject = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRuleObject]
   }
   
   @scala.inline
-  def ParameterRuleID(`type`: id | idQuestionmark): _ParameterRuleItem = {
+  def ParameterRulePassword(`type`: password | passwordQuestionmark): typingsSlinky.parameter.mod.ParameterRulePassword = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRulePassword]
   }
   
   @scala.inline
-  def ParameterRuleObject(`type`: `object` | objectQuestionmark): _ParameterRuleItem = {
+  def ParameterRuleString(`type`: string | stringQuestionmark): typingsSlinky.parameter.mod.ParameterRuleString = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRuleString]
   }
   
   @scala.inline
-  def ParameterRuleString(`type`: string | stringQuestionmark): _ParameterRuleItem = {
+  def ParameterRuleUrl(`type`: url | urlQuestionmark): typingsSlinky.parameter.mod.ParameterRuleUrl = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_ParameterRuleItem]
+    __obj.asInstanceOf[typingsSlinky.parameter.mod.ParameterRuleUrl]
   }
 }

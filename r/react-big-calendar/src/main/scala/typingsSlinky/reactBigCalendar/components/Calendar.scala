@@ -24,15 +24,22 @@ import typingsSlinky.reactBigCalendar.mod.View
 import typingsSlinky.reactBigCalendar.mod.ViewsProps
 import typingsSlinky.reactBigCalendar.mod.stringOrDate
 import typingsSlinky.reactBigCalendar.reactBigCalendarStrings.ignoreEvents
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Calendar {
   
+  @scala.inline
+  def apply[TEvent /* <: js.Object */, TResource /* <: js.Object */](localizer: DateLocalizer): Builder[TEvent, TResource] = {
+    val __props = js.Dynamic.literal(localizer = localizer.asInstanceOf[js.Any])
+    new Builder[TEvent, TResource](js.Array(this.component, __props.asInstanceOf[CalendarProps[TEvent, TResource]]))
+  }
+  
   @JSImport("react-big-calendar", "Calendar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[TEvent /* <: js.Object */, TResource /* <: js.Object */] (val args: js.Array[js.Any])
@@ -40,10 +47,10 @@ object Calendar {
        with StBuildingComponent[tag.type, typingsSlinky.reactBigCalendar.mod.Calendar[TEvent, TResource]] {
     
     @scala.inline
-    def allDayAccessorFunction1(value: TEvent => Boolean): this.type = set("allDayAccessor", js.Any.fromFunction1(value))
+    def allDayAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, Boolean])): this.type = set("allDayAccessor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def allDayAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, Boolean])): this.type = set("allDayAccessor", value.asInstanceOf[js.Any])
+    def allDayAccessorFunction1(value: TEvent => Boolean): this.type = set("allDayAccessor", js.Any.fromFunction1(value))
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -55,16 +62,16 @@ object Calendar {
     def culture(value: String): this.type = set("culture", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dateDate(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def date(value: stringOrDate): this.type = set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dayLayoutAlgorithmFunction1(value: /* _ */ Accessors[TEvent] => js.Array[Event[TEvent]]): this.type = set("dayLayoutAlgorithm", js.Any.fromFunction1(value))
+    def dateDate(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dayLayoutAlgorithm(value: DayLayoutAlgorithm | DayLayoutFunction[TEvent]): this.type = set("dayLayoutAlgorithm", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dayLayoutAlgorithmFunction1(value: /* _ */ Accessors[TEvent] => js.Array[Event[TEvent]]): this.type = set("dayLayoutAlgorithm", js.Any.fromFunction1(value))
     
     @scala.inline
     def dayPropGetter(
@@ -87,10 +94,10 @@ object Calendar {
     def elementProps(value: HTMLAttributes[HTMLElement]): this.type = set("elementProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def endAccessorFunction1(value: TEvent => js.Date): this.type = set("endAccessor", js.Any.fromFunction1(value))
+    def endAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, js.Date])): this.type = set("endAccessor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def endAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, js.Date])): this.type = set("endAccessor", value.asInstanceOf[js.Any])
+    def endAccessorFunction1(value: TEvent => js.Date): this.type = set("endAccessor", js.Any.fromFunction1(value))
     
     @scala.inline
     def eventPropGetter(
@@ -98,10 +105,10 @@ object Calendar {
     ): this.type = set("eventPropGetter", js.Any.fromFunction4(value))
     
     @scala.inline
-    def eventsVarargs(value: TEvent*): this.type = set("events", js.Array(value :_*))
+    def events(value: js.Array[TEvent]): this.type = set("events", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def events(value: js.Array[TEvent]): this.type = set("events", value.asInstanceOf[js.Any])
+    def eventsVarargs(value: TEvent*): this.type = set("events", js.Array(value :_*))
     
     @scala.inline
     def formats(value: Formats): this.type = set("formats", value.asInstanceOf[js.Any])
@@ -127,19 +134,19 @@ object Calendar {
     def longPressThreshold(value: Double): this.type = set("longPressThreshold", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maxDate(value: js.Date): this.type = set("max", value.asInstanceOf[js.Any])
+    def max(value: stringOrDate): this.type = set("max", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def max(value: stringOrDate): this.type = set("max", value.asInstanceOf[js.Any])
+    def maxDate(value: js.Date): this.type = set("max", value.asInstanceOf[js.Any])
     
     @scala.inline
     def messages(value: Messages): this.type = set("messages", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def minDate(value: js.Date): this.type = set("min", value.asInstanceOf[js.Any])
+    def min(value: stringOrDate): this.type = set("min", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def min(value: stringOrDate): this.type = set("min", value.asInstanceOf[js.Any])
+    def minDate(value: js.Date): this.type = set("min", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onDoubleClickEvent(value: (TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit): this.type = set("onDoubleClickEvent", js.Any.fromFunction2(value))
@@ -175,28 +182,28 @@ object Calendar {
     def popupOffset(value: Double | X): this.type = set("popupOffset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def resourceAccessorFunction1(value: TEvent => _): this.type = set("resourceAccessor", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def resourceAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, _])): this.type = set("resourceAccessor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def resourceIdAccessorFunction1(value: TResource => _): this.type = set("resourceIdAccessor", js.Any.fromFunction1(value))
+    def resourceAccessorFunction1(value: TEvent => _): this.type = set("resourceAccessor", js.Any.fromFunction1(value))
     
     @scala.inline
     def resourceIdAccessor(value: (/* keyof TResource */ String) | (js.Function1[TResource, _])): this.type = set("resourceIdAccessor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def resourceTitleAccessorFunction1(value: TResource => _): this.type = set("resourceTitleAccessor", js.Any.fromFunction1(value))
+    def resourceIdAccessorFunction1(value: TResource => _): this.type = set("resourceIdAccessor", js.Any.fromFunction1(value))
     
     @scala.inline
     def resourceTitleAccessor(value: (/* keyof TResource */ String) | (js.Function1[TResource, _])): this.type = set("resourceTitleAccessor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def resourcesVarargs(value: TResource*): this.type = set("resources", js.Array(value :_*))
+    def resourceTitleAccessorFunction1(value: TResource => _): this.type = set("resourceTitleAccessor", js.Any.fromFunction1(value))
     
     @scala.inline
     def resources(value: js.Array[TResource]): this.type = set("resources", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def resourcesVarargs(value: TResource*): this.type = set("resources", js.Array(value :_*))
     
     @scala.inline
     def rtl(value: Boolean): this.type = set("rtl", value.asInstanceOf[js.Any])
@@ -222,10 +229,10 @@ object Calendar {
     ): this.type = set("slotPropGetter", js.Any.fromFunction2(value))
     
     @scala.inline
-    def startAccessorFunction1(value: TEvent => js.Date): this.type = set("startAccessor", js.Any.fromFunction1(value))
+    def startAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, js.Date])): this.type = set("startAccessor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def startAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, js.Date])): this.type = set("startAccessor", value.asInstanceOf[js.Any])
+    def startAccessorFunction1(value: TEvent => js.Date): this.type = set("startAccessor", js.Any.fromFunction1(value))
     
     @scala.inline
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
@@ -237,35 +244,29 @@ object Calendar {
     def timeslots(value: Double): this.type = set("timeslots", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleAccessorFunction1(value: TEvent => String): this.type = set("titleAccessor", js.Any.fromFunction1(value))
+    def titleAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, String])): this.type = set("titleAccessor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, String])): this.type = set("titleAccessor", value.asInstanceOf[js.Any])
+    def titleAccessorFunction1(value: TEvent => String): this.type = set("titleAccessor", js.Any.fromFunction1(value))
     
     @scala.inline
     def toolbar(value: Boolean): this.type = set("toolbar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tooltipAccessorFunction1(value: TEvent => String): this.type = set("tooltipAccessor", js.Any.fromFunction1(value))
+    def tooltipAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, String])): this.type = set("tooltipAccessor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tooltipAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, String])): this.type = set("tooltipAccessor", value.asInstanceOf[js.Any])
+    def tooltipAccessorFunction1(value: TEvent => String): this.type = set("tooltipAccessor", js.Any.fromFunction1(value))
     
     @scala.inline
     def view(value: View): this.type = set("view", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def viewsVarargs(value: View*): this.type = set("views", js.Array(value :_*))
+    def views(value: ViewsProps[TEvent, TResource]): this.type = set("views", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def views(value: ViewsProps[TEvent, TResource]): this.type = set("views", value.asInstanceOf[js.Any])
+    def viewsVarargs(value: View*): this.type = set("views", js.Array(value :_*))
   }
   
   def withProps[TEvent /* <: js.Object */, TResource /* <: js.Object */](p: CalendarProps[TEvent, TResource]): Builder[TEvent, TResource] = new Builder[TEvent, TResource](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[TEvent /* <: js.Object */, TResource /* <: js.Object */](localizer: DateLocalizer): Builder[TEvent, TResource] = {
-    val __props = js.Dynamic.literal(localizer = localizer.asInstanceOf[js.Any])
-    new Builder[TEvent, TResource](js.Array(this.component, __props.asInstanceOf[CalendarProps[TEvent, TResource]]))
-  }
 }

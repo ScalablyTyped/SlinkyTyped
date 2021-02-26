@@ -1,5 +1,6 @@
 package typingsSlinky.googleAdwordsScripts
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ROTATE
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ROTATE_FOREVER
 */
-trait AdRotationType extends js.Object
+trait AdRotationType extends StObject
 object AdRotationType {
   
   @scala.inline

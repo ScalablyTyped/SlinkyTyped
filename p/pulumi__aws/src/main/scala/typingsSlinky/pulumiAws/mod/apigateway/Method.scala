@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.methodMod.MethodState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,9 +25,7 @@ class Method protected ()
   def this(name: String, args: MethodArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/aws", "apigateway.Method")
-@js.native
-object Method extends js.Object {
+object Method {
   
   /**
     * Get an existing Method resource's state with the given name, ID, and optional extra
@@ -37,14 +36,24 @@ object Method extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/aws", "apigateway.Method.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.methodMod.Method = js.native
+  @JSImport("@pulumi/aws", "apigateway.Method.get")
+  @js.native
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.methodMod.Method = js.native
+  @JSImport("@pulumi/aws", "apigateway.Method.get")
+  @js.native
   def get(name: String, id: Input[ID], state: MethodState): typingsSlinky.pulumiAws.methodMod.Method = js.native
+  @JSImport("@pulumi/aws", "apigateway.Method.get")
+  @js.native
   def get(name: String, id: Input[ID], state: MethodState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.methodMod.Method = js.native
   
   /**
     * Returns true if the given object is an instance of Method.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/aws", "apigateway.Method.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/apigateway/method.Method */ Boolean = js.native
 }

@@ -4,6 +4,7 @@ import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.BigIntegerParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.HexParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.IntegerParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.StringParam
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

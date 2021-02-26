@@ -1,14 +1,15 @@
 package typingsSlinky.scryptJs
 
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("scrypt-js", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("scrypt-js", "scrypt")
+  @js.native
   def scrypt(
     password: ArrayLike[Double],
     salt: ArrayLike[Double],
@@ -17,6 +18,8 @@ object mod extends js.Object {
     p: Double,
     dkLen: Double
   ): js.Promise[js.typedarray.Uint8Array] = js.native
+  @JSImport("scrypt-js", "scrypt")
+  @js.native
   def scrypt(
     password: ArrayLike[Double],
     salt: ArrayLike[Double],
@@ -27,6 +30,8 @@ object mod extends js.Object {
     callback: ProgressCallback
   ): js.Promise[js.typedarray.Uint8Array] = js.native
   
+  @JSImport("scrypt-js", "syncScrypt")
+  @js.native
   def syncScrypt(
     password: ArrayLike[Double],
     salt: ArrayLike[Double],

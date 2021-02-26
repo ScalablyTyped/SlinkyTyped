@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesPutBucketAclInputMod.PutBucketAclIn
 import typingsSlinky.awsSdkClientS3Node.typesPutBucketAclOutputMod.PutBucketAclOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/PutBucketAclCommand", JSImport.Namespace)
-@js.native
-object putBucketAclCommandMod extends js.Object {
+object putBucketAclCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/PutBucketAclCommand", "PutBucketAclCommand")
   @js.native
   class PutBucketAclCommand protected () extends Command[
           InputTypesUnion, 

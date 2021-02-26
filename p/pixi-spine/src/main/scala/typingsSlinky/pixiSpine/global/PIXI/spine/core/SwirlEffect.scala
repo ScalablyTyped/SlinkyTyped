@@ -1,5 +1,6 @@
 package typingsSlinky.pixiSpine.global.PIXI.spine.core
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,10 +11,16 @@ class SwirlEffect protected ()
   extends typingsSlinky.pixiSpine.PIXI.spine.core.SwirlEffect {
   def this(radius: Double) = this()
 }
-/* static members */
-@JSGlobal("PIXI.spine.core.SwirlEffect")
-@js.native
-object SwirlEffect extends js.Object {
+object SwirlEffect {
   
-  var interpolation: typingsSlinky.pixiSpine.PIXI.spine.core.PowOut = js.native
+  @JSGlobal("PIXI.spine.core.SwirlEffect")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSGlobal("PIXI.spine.core.SwirlEffect.interpolation")
+  @js.native
+  def interpolation: typingsSlinky.pixiSpine.PIXI.spine.core.PowOut = js.native
+  @scala.inline
+  def interpolation_=(x: typingsSlinky.pixiSpine.PIXI.spine.core.PowOut): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("interpolation")(x.asInstanceOf[js.Any])
 }

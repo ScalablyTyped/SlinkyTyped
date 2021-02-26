@@ -10,9 +10,9 @@ A package for creating an accessible tree component following the tree role.
 | ------------------ | :-------------: |
 | Full name          | @react-md/tree |
 | Keywords           | react-md, material design, react, transition, component, components, collapse |
-| # releases         | 24 |
+| # releases         | 43 |
 | # dependents       | 2 |
-| # downloads        | 3839 |
+| # downloads        | 18685 |
 | # stars            | 0 |
 
 ## Links

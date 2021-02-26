@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientContent.anon.Key
 import typingsSlinky.maximMazurokGapiClientContent.anon.OauthtokenPrettyPrintQuotaUserResource
 import typingsSlinky.maximMazurokGapiClientContent.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientContent.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ShippingsettingsResource extends js.Object {
+trait ShippingsettingsResource extends StObject {
   
   def custombatch(request: Key, body: ShippingsettingsCustomBatchRequest): Request[ShippingsettingsCustomBatchResponse] = js.native
   /** Retrieves and updates the shipping settings of multiple accounts in a single request. */

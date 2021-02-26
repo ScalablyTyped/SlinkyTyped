@@ -27,6 +27,7 @@ import typingsSlinky.vueCompilerCore.vueCompilerCoreNumbers.`6`
 import typingsSlinky.vueCompilerCore.vueCompilerCoreNumbers.`7`
 import typingsSlinky.vueCompilerCore.vueCompilerCoreNumbers.`8`
 import typingsSlinky.vueCompilerCore.vueCompilerCoreNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -60,7 +61,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vueCompilerCore.vueCompilerCoreNumbers.`25`
   - typingsSlinky.vueCompilerCore.vueCompilerCoreNumbers.`26`
 */
-trait NodeTypes extends js.Object
+trait NodeTypes extends StObject
 object NodeTypes {
   
   @scala.inline

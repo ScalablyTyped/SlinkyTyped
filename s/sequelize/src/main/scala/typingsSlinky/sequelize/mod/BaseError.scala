@@ -1,7 +1,7 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.std.Error
 import typingsSlinky.std.ErrorConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,5 +17,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait BaseError
-  extends Error
+  extends typingsSlinky.std.Error
      with ErrorConstructor

@@ -10,9 +10,9 @@ Default Jimp bmp encoder/decoder.
 | ------------------ | :-------------: |
 | Full name          | @jimp/bmp |
 | Keywords           | - |
-| # releases         | 69 |
-| # dependents       | 1 |
-| # downloads        | 14432827 |
+| # releases         | 102 |
+| # dependents       | 3 |
+| # downloads        | 43222544 |
 | # stars            | 0 |
 
 ## Links

@@ -8,18 +8,20 @@ import typingsSlinky.uirouterCore.resolveInterfaceMod.PolicyWhen
 import typingsSlinky.uirouterCore.resolveInterfaceMod.ResolvePolicy
 import typingsSlinky.uirouterCore.stateObjectMod.StateObject
 import typingsSlinky.uirouterCore.transitionTransitionMod.Transition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/resolve/resolveContext", JSImport.Namespace)
-@js.native
-object resolveContextMod extends js.Object {
+object resolveContextMod {
   
+  @JSImport("@uirouter/core/lib/resolve/resolveContext", "NATIVE_INJECTOR_TOKEN")
+  @js.native
   val NATIVE_INJECTOR_TOKEN: String = js.native
   
+  @JSImport("@uirouter/core/lib/resolve/resolveContext", "ResolveContext")
   @js.native
-  class ResolveContext protected () extends js.Object {
+  class ResolveContext protected () extends StObject {
     def this(_path: js.Array[PathNode]) = this()
     
     var _injector: UIInjector = js.native

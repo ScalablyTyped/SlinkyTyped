@@ -8,6 +8,7 @@ import typingsSlinky.winrt.Windows.Foundation.Point
 import typingsSlinky.winrt.Windows.Foundation.Rect
 import typingsSlinky.winrt.Windows.Storage.Streams.IInputStream
 import typingsSlinky.winrt.Windows.Storage.Streams.IOutputStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

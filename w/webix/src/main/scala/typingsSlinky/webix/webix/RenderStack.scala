@@ -3,12 +3,13 @@ package typingsSlinky.webix.webix
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RenderStack extends js.Object {
+trait RenderStack extends StObject {
   
   def customize(obj: js.Any): Unit = js.native
   

@@ -1,13 +1,14 @@
 package typingsSlinky.materialUiLab.anon
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Partial<std.Record<@material-ui/lab.@material-ui/lab/Alert/Alert.Color, react.react.ReactNode>> */
 @js.native
-trait PartialRecordColorReactNo extends js.Object {
+trait PartialRecordColorReactNo extends StObject {
   
   var error: js.UndefOr[ReactElement] = js.native
   
@@ -26,54 +27,42 @@ object PartialRecordColorReactNo {
   }
   
   @scala.inline
-  implicit class PartialRecordColorReactNoOps[Self <: PartialRecordColorReactNo] (val x: Self) extends AnyVal {
+  implicit class PartialRecordColorReactNoMutableBuilder[Self <: PartialRecordColorReactNo] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setError(value: ReactElement): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setErrorReactElement(value: ReactElement): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setErrorUndefined: Self = StObject.set(x, "error", js.undefined)
     
     @scala.inline
-    def setErrorReactElement(value: ReactElement): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setInfo(value: ReactElement): Self = StObject.set(x, "info", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setError(value: ReactElement): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setInfoReactElement(value: ReactElement): Self = StObject.set(x, "info", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteError: Self = this.set("error", js.undefined)
+    def setInfoUndefined: Self = StObject.set(x, "info", js.undefined)
     
     @scala.inline
-    def setInfoReactElement(value: ReactElement): Self = this.set("info", value.asInstanceOf[js.Any])
+    def setSuccess(value: ReactElement): Self = StObject.set(x, "success", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInfo(value: ReactElement): Self = this.set("info", value.asInstanceOf[js.Any])
+    def setSuccessReactElement(value: ReactElement): Self = StObject.set(x, "success", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteInfo: Self = this.set("info", js.undefined)
+    def setSuccessUndefined: Self = StObject.set(x, "success", js.undefined)
     
     @scala.inline
-    def setSuccessReactElement(value: ReactElement): Self = this.set("success", value.asInstanceOf[js.Any])
+    def setWarning(value: ReactElement): Self = StObject.set(x, "warning", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSuccess(value: ReactElement): Self = this.set("success", value.asInstanceOf[js.Any])
+    def setWarningReactElement(value: ReactElement): Self = StObject.set(x, "warning", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteSuccess: Self = this.set("success", js.undefined)
-    
-    @scala.inline
-    def setWarningReactElement(value: ReactElement): Self = this.set("warning", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setWarning(value: ReactElement): Self = this.set("warning", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteWarning: Self = this.set("warning", js.undefined)
+    def setWarningUndefined: Self = StObject.set(x, "warning", js.undefined)
   }
 }

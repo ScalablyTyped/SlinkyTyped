@@ -1,5 +1,6 @@
 package typingsSlinky.reactDates.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactDates.reactDatesStrings.vertical
   - typingsSlinky.reactDates.reactDatesStrings.verticalScrollable
 */
-trait ScrollableOrientationShape extends js.Object
+trait ScrollableOrientationShape extends StObject
 object ScrollableOrientationShape {
   
   @scala.inline

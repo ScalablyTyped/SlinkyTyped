@@ -7,15 +7,33 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.blueprintjsCore.tabMod.TabId
 import typingsSlinky.blueprintjsCore.tabsMod.ITabsProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tabs {
   
+  @scala.inline
+  def apply(id: TabId): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITabsProps]))
+  }
+  
+  object Expander {
+    
+    @JSImport("@blueprintjs/core", "Tabs.Expander")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Expander.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: js.Object): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("@blueprintjs/core", "Tabs")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -50,21 +68,4 @@ object Tabs {
   }
   
   def withProps(p: ITabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: TabId): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ITabsProps]))
-  }
-  
-  object Expander {
-    
-    @JSImport("@blueprintjs/core", "Tabs.Expander")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: js.Object): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Expander.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
-  }
 }

@@ -10,9 +10,9 @@ Accessible tooltips
 | ------------------ | :-------------: |
 | Full name          | @reach/tooltip |
 | Keywords           | - |
-| # releases         | 26 |
-| # dependents       | 10 |
-| # downloads        | 289828 |
+| # releases         | 49 |
+| # dependents       | 42 |
+| # downloads        | 5513357 |
 | # stars            | 0 |
 
 ## Links

@@ -7,12 +7,13 @@ import typingsSlinky.astTypes.kindsMod.LiteralKind
 import typingsSlinky.astTypes.kindsMod.TSTypeAnnotationKind
 import typingsSlinky.astTypes.kindsMod.TypeAnnotationKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassProperty
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClassPropertyBuilder extends js.Object {
+trait ClassPropertyBuilder extends StObject {
   
   def apply(key: ExpressionKind): ClassProperty = js.native
   def apply(key: ExpressionKind, value: Null, typeAnnotation: js.UndefOr[scala.Nothing], staticParam: Boolean): ClassProperty = js.native

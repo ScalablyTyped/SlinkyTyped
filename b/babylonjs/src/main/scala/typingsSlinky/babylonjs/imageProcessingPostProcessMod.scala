@@ -9,14 +9,14 @@ import typingsSlinky.babylonjs.mathColorMod.Color4
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/PostProcesses/imageProcessingPostProcess", JSImport.Namespace)
-@js.native
-object imageProcessingPostProcessMod extends js.Object {
+object imageProcessingPostProcessMod {
   
+  @JSImport("babylonjs/PostProcesses/imageProcessingPostProcess", "ImageProcessingPostProcess")
   @js.native
   class ImageProcessingPostProcess protected () extends PostProcess {
     def this(

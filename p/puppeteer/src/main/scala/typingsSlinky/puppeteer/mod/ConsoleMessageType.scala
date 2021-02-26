@@ -1,5 +1,6 @@
 package typingsSlinky.puppeteer.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.puppeteer.puppeteerStrings.count
   - typingsSlinky.puppeteer.puppeteerStrings.timeEnd
 */
-trait ConsoleMessageType extends js.Object
+trait ConsoleMessageType extends StObject
 object ConsoleMessageType {
   
   @scala.inline

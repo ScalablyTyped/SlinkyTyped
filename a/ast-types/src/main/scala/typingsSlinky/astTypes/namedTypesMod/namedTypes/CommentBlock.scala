@@ -1,9 +1,9 @@
 package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.PrintableKind
 import typingsSlinky.astTypes.typesMod.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,6 +17,16 @@ trait CommentBlock
   
   var `type`: typingsSlinky.astTypes.astTypesStrings.CommentBlock = js.native
 }
-@JSImport("ast-types/gen/namedTypes", "namedTypes.CommentBlock")
-@js.native
-object CommentBlock extends TopLevel[Type[CommentBlock]]
+object CommentBlock {
+  
+  @JSImport("ast-types/gen/namedTypes", "namedTypes.CommentBlock")
+  @js.native
+  val ^ : Type[CommentBlock] = js.native
+  
+  @scala.inline
+  implicit class CommentBlockMutableBuilder[Self <: CommentBlock] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setType(value: typingsSlinky.astTypes.astTypesStrings.CommentBlock): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+  }
+}

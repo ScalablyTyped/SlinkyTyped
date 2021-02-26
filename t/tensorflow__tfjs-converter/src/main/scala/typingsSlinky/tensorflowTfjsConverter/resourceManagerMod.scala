@@ -5,16 +5,16 @@ import typingsSlinky.tensorflowTfjsConverter.typesMod.HashTableMap
 import typingsSlinky.tensorflowTfjsConverter.typesMod.NamedTensorMap
 import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-converter/dist/executor/resource_manager", JSImport.Namespace)
-@js.native
-object resourceManagerMod extends js.Object {
+object resourceManagerMod {
   
+  @JSImport("@tensorflow/tfjs-converter/dist/executor/resource_manager", "ResourceManager")
   @js.native
-  class ResourceManager () extends js.Object {
+  class ResourceManager () extends StObject {
     def this(hashTableNameToHandle: NamedTensorMap) = this()
     def this(hashTableNameToHandle: js.UndefOr[scala.Nothing], hashTableMap: HashTableMap) = this()
     def this(hashTableNameToHandle: NamedTensorMap, hashTableMap: HashTableMap) = this()

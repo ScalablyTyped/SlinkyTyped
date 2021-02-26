@@ -1,6 +1,7 @@
 package typingsSlinky.jaegerClient.mod
 
-import typingsSlinky.opentracing.tracerMod.Tracer
+import typingsSlinky.opentracing.mod.Tracer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

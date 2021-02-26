@@ -90,15 +90,22 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.tree
 import typingsSlinky.reactMdForm.reactMdFormStrings.url
 import typingsSlinky.reactMdForm.reactMdFormStrings.vertical
 import typingsSlinky.reactMdForm.reactMdFormStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Password {
   
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PasswordProps with RefAttributes[HTMLInputElement]]))
+  }
+  
   @JSImport("@react-md/form", "Password")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -294,16 +301,16 @@ object Password {
     def containerProps(value: OmitHTMLAttributesHTMLDiv): this.type = set("containerProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerRefRefObject(value: ReactRef[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
+    def containerRef(value: Ref[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerRefFunction1(value: /* instance */ HTMLDivElement | Null => Unit): this.type = set("containerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def containerRef(value: Ref[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
+    def containerRefNull: this.type = set("containerRef", null)
     
     @scala.inline
-    def containerRefNull: this.type = set("containerRef", null)
+    def containerRefRefObject(value: ReactRef[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -414,13 +421,13 @@ object Password {
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelClassName(value: String): this.type = set("labelClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelStyle(value: CSSProperties): this.type = set("labelStyle", value.asInstanceOf[js.Any])
@@ -429,10 +436,10 @@ object Password {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftChildrenReactElement(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
+    def leftChildren(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftChildren(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
+    def leftChildrenReactElement(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
@@ -780,10 +787,10 @@ object Password {
     def visibilityClassName(value: String): this.type = set("visibilityClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def visibilityIconReactElement(value: ReactElement): this.type = set("visibilityIcon", value.asInstanceOf[js.Any])
+    def visibilityIcon(value: ReactElement | ConfigurableVisibilityIcon): this.type = set("visibilityIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def visibilityIcon(value: ReactElement | ConfigurableVisibilityIcon): this.type = set("visibilityIcon", value.asInstanceOf[js.Any])
+    def visibilityIconReactElement(value: ReactElement): this.type = set("visibilityIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def visibilityLabel(value: String): this.type = set("visibilityLabel", value.asInstanceOf[js.Any])
@@ -799,10 +806,4 @@ object Password {
   }
   
   def withProps(p: PasswordProps with RefAttributes[HTMLInputElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PasswordProps with RefAttributes[HTMLInputElement]]))
-  }
 }

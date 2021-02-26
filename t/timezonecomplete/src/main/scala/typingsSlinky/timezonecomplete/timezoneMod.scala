@@ -1,27 +1,16 @@
 package typingsSlinky.timezonecomplete
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.timezonecomplete.basicsMod.TimeStruct
 import typingsSlinky.timezonecomplete.javascriptMod.DateFunctions
 import typingsSlinky.timezonecomplete.tzDatabaseMod.NormalizeOption
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("timezonecomplete/dist/lib/timezone", JSImport.Namespace)
-@js.native
-object timezoneMod extends js.Object {
+object timezoneMod {
   
-  def isTimeZone(value: js.Any): /* is timezonecomplete.timezonecomplete/dist/lib/timezone.TimeZone */ Boolean = js.native
-  
-  def local(): TimeZone = js.native
-  
-  def utc(): TimeZone = js.native
-  
-  def zone(name: String): TimeZone = js.native
-  def zone(name: String, dst: Boolean): TimeZone = js.native
-  def zone(offset: Double): TimeZone = js.native
-  
+  @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone")
   @js.native
   /**
     * Do not use this constructor, use the static
@@ -31,7 +20,7 @@ object timezoneMod extends js.Object {
     * @throws timezonecomplete.NotFound.Zone if the given zone name doesn't exist
     * @throws timezonecomplete.InvalidTimeZoneData if the time zone database is invalid
     */
-  class TimeZone protected () extends js.Object {
+  class TimeZone protected () extends StObject {
     
     /**
       * Adhere to Daylight Saving Time if applicable
@@ -305,13 +294,20 @@ object timezoneMod extends js.Object {
     ): Double = js.native
   }
   /* static members */
-  @js.native
-  object TimeZone extends js.Object {
+  object TimeZone {
+    
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone")
+    @js.native
+    val ^ : js.Any = js.native
     
     /**
       * Time zone cache.
       */
-    var _cache: js.Any = js.native
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone._cache")
+    @js.native
+    def _cache: js.Any = js.native
+    @scala.inline
+    def _cache_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_cache")(x.asInstanceOf[js.Any])
     
     /**
       * Find in cache or create zone
@@ -319,20 +315,32 @@ object timezoneMod extends js.Object {
       * @param dst	Adhere to Daylight Saving Time?
       * @throws timezonecomplete.NotFound.Zone if the zone doesn't exist in the time zone database
       */
-    var _findOrCreate: js.Any = js.native
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone._findOrCreate")
+    @js.native
+    def _findOrCreate: js.Any = js.native
+    @scala.inline
+    def _findOrCreate_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_findOrCreate")(x.asInstanceOf[js.Any])
     
     /**
       * Returns true iff the first non-whitespace character of s is +, -, or Z
       * @param s
       * @throws nothing
       */
-    var _isOffsetString: js.Any = js.native
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone._isOffsetString")
+    @js.native
+    def _isOffsetString: js.Any = js.native
+    @scala.inline
+    def _isOffsetString_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_isOffsetString")(x.asInstanceOf[js.Any])
     
     /**
       * Normalize a string so it can be used as a key for a cache lookup
       * @throws Argument.S if s is empty
       */
-    var _normalizeString: js.Any = js.native
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone._normalizeString")
+    @js.native
+    def _normalizeString: js.Any = js.native
+    @scala.inline
+    def _normalizeString_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_normalizeString")(x.asInstanceOf[js.Any])
     
     /**
       * The local time zone for a given date. Note that
@@ -340,6 +348,8 @@ object timezoneMod extends js.Object {
       * 2014-01-01 is +01:00 and amsterdam time for 2014-07-01 is +02:00
       * @throws nothing
       */
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone.local")
+    @js.native
     def local(): TimeZone = js.native
     
     /**
@@ -348,6 +358,8 @@ object timezoneMod extends js.Object {
       * @return the offset in ISO notation "+01:30" for +90 minutes
       * @throws Argument.Offset if offset is not a finite number or not within -24 * 60 ... +24 * 60 minutes
       */
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone.offsetToString")
+    @js.native
     def offsetToString(offset: Double): String = js.native
     
     /**
@@ -356,12 +368,16 @@ object timezoneMod extends js.Object {
       * @return offset w.r.t. UTC in minutes
       * @throws timezonecomplete.Argument.S if s cannot be parsed
       */
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone.stringToOffset")
+    @js.native
     def stringToOffset(s: String): Double = js.native
     
     /**
       * The UTC time zone.
       * @throws timezonecomplete.NotFound.Zone if the UTC time zone doesn't exist in the time zone database
       */
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone.utc")
+    @js.native
     def utc(): TimeZone = js.native
     
     /**
@@ -369,6 +385,8 @@ object timezoneMod extends js.Object {
       * @param offset	offset w.r.t. UTC in minutes, e.g. 90 for +01:30
       * @throws timezonecomplete.Argument.Offset if the offset is not within -24h...+24h (in minutes)
       */
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone.zone")
+    @js.native
     def zone(offset: Double): TimeZone = js.native
     /**
       * Time zone for an offset string or an IANA time zone string. Note that time zones are cached
@@ -385,14 +403,19 @@ object timezoneMod extends js.Object {
       * @throws timezonecomplete.Argument.S if s cannot be parsed
       * @throws timezonecomplete.NotFound.Zone if the zone name doesn't exist in the time zone database
       */
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone.zone")
+    @js.native
     def zone(s: String): TimeZone = js.native
+    @JSImport("timezonecomplete/dist/lib/timezone", "TimeZone.zone")
+    @js.native
     def zone(s: String, dst: Boolean): TimeZone = js.native
   }
   
   @js.native
-  sealed trait TimeZoneKind extends js.Object
+  sealed trait TimeZoneKind extends StObject
+  @JSImport("timezonecomplete/dist/lib/timezone", "TimeZoneKind")
   @js.native
-  object TimeZoneKind extends js.Object {
+  object TimeZoneKind extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[TimeZoneKind with Double] = js.native
@@ -402,16 +425,14 @@ object timezoneMod extends js.Object {
       */
     @js.native
     sealed trait Local extends TimeZoneKind
-    /* 0 */ @js.native
-    object Local extends TopLevel[Local with Double]
+    /* 0 */ val Local: typingsSlinky.timezonecomplete.timezoneMod.TimeZoneKind.Local with Double = js.native
     
     /**
       * Fixed offset from UTC, without DST.
       */
     @js.native
     sealed trait Offset extends TimeZoneKind
-    /* 1 */ @js.native
-    object Offset extends TopLevel[Offset with Double]
+    /* 1 */ val Offset: typingsSlinky.timezonecomplete.timezoneMod.TimeZoneKind.Offset with Double = js.native
     
     /**
       * IANA timezone managed through Olsen TZ database. Includes
@@ -419,7 +440,28 @@ object timezoneMod extends js.Object {
       */
     @js.native
     sealed trait Proper extends TimeZoneKind
-    /* 2 */ @js.native
-    object Proper extends TopLevel[Proper with Double]
+    /* 2 */ val Proper: typingsSlinky.timezonecomplete.timezoneMod.TimeZoneKind.Proper with Double = js.native
   }
+  
+  @JSImport("timezonecomplete/dist/lib/timezone", "isTimeZone")
+  @js.native
+  def isTimeZone(value: js.Any): /* is timezonecomplete.timezonecomplete/dist/lib/timezone.TimeZone */ Boolean = js.native
+  
+  @JSImport("timezonecomplete/dist/lib/timezone", "local")
+  @js.native
+  def local(): TimeZone = js.native
+  
+  @JSImport("timezonecomplete/dist/lib/timezone", "utc")
+  @js.native
+  def utc(): TimeZone = js.native
+  
+  @JSImport("timezonecomplete/dist/lib/timezone", "zone")
+  @js.native
+  def zone(name: String): TimeZone = js.native
+  @JSImport("timezonecomplete/dist/lib/timezone", "zone")
+  @js.native
+  def zone(name: String, dst: Boolean): TimeZone = js.native
+  @JSImport("timezonecomplete/dist/lib/timezone", "zone")
+  @js.native
+  def zone(offset: Double): TimeZone = js.native
 }

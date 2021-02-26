@@ -10,10 +10,10 @@ Loads environment variables from .env file
 | ------------------ | :-------------: |
 | Full name          | dotenv |
 | Keywords           | dotenv, env, .env, environment, variables, config, settings |
-| # releases         | 12 |
-| # dependents       | 8734 |
-| # downloads        | 286419664 |
-| # stars            | 443 |
+| # releases         | 5 |
+| # dependents       | 12707 |
+| # downloads        | 583510759 |
+| # stars            | 444 |
 
 ## Links
 - [Homepage](https://github.com/motdotla/dotenv#readme)

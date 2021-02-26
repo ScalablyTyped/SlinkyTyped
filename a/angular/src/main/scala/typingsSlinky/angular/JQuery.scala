@@ -6,12 +6,13 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Text
 import typingsSlinky.angular.mod.IScope
 import typingsSlinky.angular.mod.auto.IInjectorService
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Adds the specified class(es) to each of the set of matched elements.
@@ -23,6 +24,9 @@ trait JQuery extends js.Object {
   
   def after(content1: String, content2: js.Any*): this.type = js.native
   def after(content1: js.Array[_], content2: js.Any*): this.type = js.native
+  def after(content1: DocumentFragment, content2: js.Any*): this.type = js.native
+  def after(content1: Element, content2: js.Any*): this.type = js.native
+  def after(content1: Text, content2: js.Any*): this.type = js.native
   /**
     * Insert content, specified by the parameter, after each element in the set of matched elements.
     *
@@ -31,9 +35,6 @@ trait JQuery extends js.Object {
     * @see {@link https://api.jquery.com/after/#after-content-content}
     */
   def after(content1: JQuery, content2: js.Any*): this.type = js.native
-  def after(content1: DocumentFragment, content2: js.Any*): this.type = js.native
-  def after(content1: Element, content2: js.Any*): this.type = js.native
-  def after(content1: Text, content2: js.Any*): this.type = js.native
   /**
     * Insert content, specified by the parameter, after each element in the set of matched elements.
     *
@@ -44,6 +45,9 @@ trait JQuery extends js.Object {
   
   def append(content1: String, content2: js.Any*): this.type = js.native
   def append(content1: js.Array[_], content2: js.Any*): this.type = js.native
+  def append(content1: DocumentFragment, content2: js.Any*): this.type = js.native
+  def append(content1: Element, content2: js.Any*): this.type = js.native
+  def append(content1: Text, content2: js.Any*): this.type = js.native
   /**
     * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
     *
@@ -52,9 +56,6 @@ trait JQuery extends js.Object {
     * @see {@link https://api.jquery.com/append/#append-content-content}
     */
   def append(content1: JQuery, content2: js.Any*): this.type = js.native
-  def append(content1: DocumentFragment, content2: js.Any*): this.type = js.native
-  def append(content1: Element, content2: js.Any*): this.type = js.native
-  def append(content1: Text, content2: js.Any*): this.type = js.native
   /**
     * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
     *
@@ -486,6 +487,9 @@ trait JQuery extends js.Object {
   
   def prepend(content1: String, content2: js.Any*): this.type = js.native
   def prepend(content1: js.Array[_], content2: js.Any*): this.type = js.native
+  def prepend(content1: DocumentFragment, content2: js.Any*): this.type = js.native
+  def prepend(content1: Element, content2: js.Any*): this.type = js.native
+  def prepend(content1: Text, content2: js.Any*): this.type = js.native
   /**
     * Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
     *
@@ -494,9 +498,6 @@ trait JQuery extends js.Object {
     * @see {@link https://api.jquery.com/prepend/#prepend-content-content}
     */
   def prepend(content1: JQuery, content2: js.Any*): this.type = js.native
-  def prepend(content1: DocumentFragment, content2: js.Any*): this.type = js.native
-  def prepend(content1: Element, content2: js.Any*): this.type = js.native
-  def prepend(content1: Text, content2: js.Any*): this.type = js.native
   /**
     * Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
     *
@@ -601,6 +602,8 @@ trait JQuery extends js.Object {
   def replaceWith(func: js.Function0[Element | this.type]): this.type = js.native
   def replaceWith(newContent: String): this.type = js.native
   def replaceWith(newContent: js.Array[_]): this.type = js.native
+  def replaceWith(newContent: Element): this.type = js.native
+  def replaceWith(newContent: Text): this.type = js.native
   /**
     * Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.
     *
@@ -608,8 +611,6 @@ trait JQuery extends js.Object {
     * @see {@link https://api.jquery.com/replaceWith/#replaceWith-newContent}
     */
   def replaceWith(newContent: JQuery): this.type = js.native
-  def replaceWith(newContent: Element): this.type = js.native
-  def replaceWith(newContent: Text): this.type = js.native
   
   /**
     * Returns the `$scope` of the element.
@@ -737,6 +738,7 @@ trait JQuery extends js.Object {
     */
   def wrap(func: js.Function1[/* index */ Double, String | this.type]): this.type = js.native
   def wrap(wrappingElement: String): this.type = js.native
+  def wrap(wrappingElement: Element): this.type = js.native
   /**
     * Wrap an HTML structure around each element in the set of matched elements.
     *
@@ -744,5 +746,4 @@ trait JQuery extends js.Object {
     * @see {@link https://api.jquery.com/wrap/#wrap-wrappingElement}
     */
   def wrap(wrappingElement: JQuery): this.type = js.native
-  def wrap(wrappingElement: Element): this.type = js.native
 }

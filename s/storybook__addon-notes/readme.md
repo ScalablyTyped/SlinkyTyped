@@ -10,13 +10,13 @@ Write notes for your Storybook stories.
 | ------------------ | :-------------: |
 | Full name          | @storybook/addon-notes |
 | Keywords           | addon, notes, storybook |
-| # releases         | 416 |
-| # dependents       | 42 |
-| # downloads        | 6693425 |
+| # releases         | 324 |
+| # dependents       | 47 |
+| # downloads        | 11715760 |
 | # stars            | 1 |
 
 ## Links
-- [Homepage](https://github.com/storybookjs/storybook/tree/master/addons/notes)
+- [Homepage](https://github.com/storybookjs/storybook#readme)
 - [Bugs](https://github.com/storybookjs/storybook/issues)
 - [Repository](https://github.com/storybookjs/storybook)
 - [Npm](https://www.npmjs.com/package/%40storybook%2Faddon-notes)

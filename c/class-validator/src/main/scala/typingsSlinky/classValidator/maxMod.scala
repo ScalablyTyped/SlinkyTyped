@@ -2,20 +2,25 @@ package typingsSlinky.classValidator
 
 import typingsSlinky.classValidator.validationOptionsMod.ValidationOptions
 import typingsSlinky.std.PropertyDecorator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("class-validator/types/decorator/number/Max", JSImport.Namespace)
-@js.native
-object maxMod extends js.Object {
+object maxMod {
   
+  @JSImport("class-validator/types/decorator/number/Max", "MAX")
+  @js.native
   val MAX: /* "max" */ String = js.native
   
-  @JSName("Max")
+  @JSImport("class-validator/types/decorator/number/Max", "Max")
+  @js.native
   def Max_(maxValue: Double): PropertyDecorator = js.native
-  @JSName("Max")
+  @JSImport("class-validator/types/decorator/number/Max", "Max")
+  @js.native
   def Max_(maxValue: Double, validationOptions: ValidationOptions): PropertyDecorator = js.native
   
+  @JSImport("class-validator/types/decorator/number/Max", "max")
+  @js.native
   def max(num: js.Any, max: Double): Boolean = js.native
 }

@@ -79,6 +79,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -87,7 +88,7 @@ object Tag {
   
   @JSImport("@blueprintjs/core", "Tag")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -280,10 +281,10 @@ object Tag {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -292,10 +293,10 @@ object Tag {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def elementRefFunction1(value: /* ref */ HTMLSpanElement | Null => js.Any): this.type = set("elementRef", js.Any.fromFunction1(value))
+    def elementRef(value: IRef[HTMLSpanElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def elementRef(value: IRef[HTMLSpanElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+    def elementRefFunction1(value: /* ref */ HTMLSpanElement | Null => js.Any): this.type = set("elementRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def fill(value: Boolean): this.type = set("fill", value.asInstanceOf[js.Any])
@@ -307,13 +308,13 @@ object Tag {
     def htmlTitle(value: String): this.type = set("htmlTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: IconName | MaybeElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconNull: this.type = set("icon", null)
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -619,13 +620,13 @@ object Tag {
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def rightIcon(value: IconName | MaybeElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rightIconNull: this.type = set("rightIcon", null)
+    
+    @scala.inline
+    def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
@@ -670,7 +671,7 @@ object Tag {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ITagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tag.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ITagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

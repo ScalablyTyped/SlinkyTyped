@@ -6,12 +6,13 @@ import typingsSlinky.lokijs.lokijsStrings.localStorage
 import typingsSlinky.lokijs.lokijsStrings.memory
 import typingsSlinky.lokijs.lokijsStrings.normal
 import typingsSlinky.lokijs.lokijsStrings.pretty
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LokiConfigOptions extends js.Object {
+trait LokiConfigOptions extends StObject {
   
   var adapter: LokiPersistenceAdapter | Null = js.native
   

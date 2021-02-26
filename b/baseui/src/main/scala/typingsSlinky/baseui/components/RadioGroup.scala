@@ -15,6 +15,7 @@ import typingsSlinky.baseui.radioMod.RadioGroupOverrides
 import typingsSlinky.baseui.radioMod.RadioGroupProps
 import typingsSlinky.baseui.radioMod.RadioOverrides
 import typingsSlinky.react.mod.ChangeEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ object RadioGroup {
   
   @JSImport("baseui/radio", "RadioGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -88,7 +89,7 @@ object RadioGroup {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RadioGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RadioGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RadioGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,16 +1,15 @@
 package typingsSlinky.downshift.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.react.mod.HTMLProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GetMenuPropsOptions
-  extends AllHTMLAttributes[HTMLElement]
-     with ClassAttributes[HTMLElement]
+  extends HTMLProps[HTMLElement]
      with GetPropsWithRefKey
 object GetMenuPropsOptions {
   

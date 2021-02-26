@@ -4,6 +4,7 @@ import typingsSlinky.angularCompiler.metaMod.I18nMeta
 import typingsSlinky.angularCompiler.outputAstMod.LiteralPiece
 import typingsSlinky.angularCompiler.outputAstMod.LocalizedString_
 import typingsSlinky.angularCompiler.outputAstMod.PlaceholderPiece
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -13,6 +13,7 @@ import typingsSlinky.ssh2.ssh2Strings.signal
 import typingsSlinky.ssh2.ssh2Strings.subsystem
 import typingsSlinky.ssh2.ssh2Strings.x11
 import typingsSlinky.ssh2Streams.mod.SFTPStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

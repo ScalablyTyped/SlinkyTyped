@@ -1,5 +1,6 @@
 package typingsSlinky.ebml.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ebml.ebmlStrings.d
   - typingsSlinky.ebml.ebmlStrings.b
 */
-trait TagType extends js.Object
+trait TagType extends StObject
 object TagType {
   
   @scala.inline

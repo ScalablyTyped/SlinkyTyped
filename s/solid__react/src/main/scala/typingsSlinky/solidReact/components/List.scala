@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.solidReact.mod.LDflexValue
 import typingsSlinky.solidReact.mod.ListProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object List {
   
+  @scala.inline
+  def apply(src: String): Builder = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ListProps]))
+  }
+  
   @JSImport("@solid/react", "List")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,10 +46,4 @@ object List {
   }
   
   def withProps(p: ListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(src: String): Builder = {
-    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ListProps]))
-  }
 }

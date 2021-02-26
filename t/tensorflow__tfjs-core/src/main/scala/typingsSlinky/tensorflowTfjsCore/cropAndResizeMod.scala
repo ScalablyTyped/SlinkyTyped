@@ -6,14 +6,15 @@ import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.bilinear
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.nearest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-core/dist/ops/image/crop_and_resize", JSImport.Namespace)
-@js.native
-object cropAndResizeMod extends js.Object {
+object cropAndResizeMod {
   
+  @JSImport("@tensorflow/tfjs-core/dist/ops/image/crop_and_resize", "cropAndResize")
+  @js.native
   val cropAndResize: js.Function6[
     /* image */ Tensor4D | TensorLike, 
     /* boxes */ Tensor2D | TensorLike, 

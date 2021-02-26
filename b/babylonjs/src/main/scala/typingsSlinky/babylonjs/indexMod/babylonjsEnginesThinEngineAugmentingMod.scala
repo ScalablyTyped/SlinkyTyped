@@ -16,17 +16,16 @@ import typingsSlinky.babylonjs.typesMod.FloatArray
 import typingsSlinky.babylonjs.typesMod.IndicesArray
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.std.OffscreenCanvas
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
-@JSImport("babylonjs/index", "babylonjs/Engines/thinEngine")
-@js.native
-object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
+object babylonjsEnginesThinEngineAugmentingMod {
   
   @js.native
-  trait ThinEngine extends js.Object {
+  trait ThinEngine extends StObject {
     
     /** @hidden */
     def _cascadeLoadFiles(

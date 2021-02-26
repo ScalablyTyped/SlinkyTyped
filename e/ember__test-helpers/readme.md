@@ -10,9 +10,9 @@ Helpers for testing Ember.js applications
 | ------------------ | :-------------: |
 | Full name          | @ember/test-helpers |
 | Keywords           | ember-addon |
-| # releases         | 30 |
-| # dependents       | 4 |
-| # downloads        | 4840297 |
+| # releases         | 21 |
+| # dependents       | 3 |
+| # downloads        | 6644960 |
 | # stars            | 0 |
 
 ## Links

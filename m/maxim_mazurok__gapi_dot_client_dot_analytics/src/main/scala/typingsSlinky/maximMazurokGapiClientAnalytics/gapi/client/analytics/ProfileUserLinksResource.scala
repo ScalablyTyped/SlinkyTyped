@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAnalytics.anon.KeyLinkId
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.KeyMaxresults
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.QuotaUserResource
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.ResourceUserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProfileUserLinksResource extends js.Object {
+trait ProfileUserLinksResource extends StObject {
   
   /** Removes a user from the given view (profile). */
   def delete(): Request[Unit] = js.native

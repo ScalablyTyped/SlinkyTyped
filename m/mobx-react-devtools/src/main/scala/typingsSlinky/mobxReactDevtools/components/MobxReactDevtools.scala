@@ -10,6 +10,7 @@ import typingsSlinky.mobxReactDevtools.mobxReactDevtoolsStrings.topRight
 import typingsSlinky.mobxReactDevtools.mod.IDevToolProps
 import typingsSlinky.mobxReactDevtools.mod.default
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object MobxReactDevtools {
   
   @JSImport("mobx-react-devtools", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,7 +42,7 @@ object MobxReactDevtools {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IDevToolProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MobxReactDevtools.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IDevToolProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

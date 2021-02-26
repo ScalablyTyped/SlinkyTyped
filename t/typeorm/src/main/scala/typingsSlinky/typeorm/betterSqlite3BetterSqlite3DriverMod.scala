@@ -3,14 +3,14 @@ package typingsSlinky.typeorm
 import typingsSlinky.typeorm.betterSqlite3BetterSqlite3ConnectionOptionsMod.BetterSqlite3ConnectionOptions
 import typingsSlinky.typeorm.connectionConnectionMod.Connection
 import typingsSlinky.typeorm.sqliteAbstractAbstractSqliteDriverMod.AbstractSqliteDriver
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/driver/better-sqlite3/BetterSqlite3Driver", JSImport.Namespace)
-@js.native
-object betterSqlite3BetterSqlite3DriverMod extends js.Object {
+object betterSqlite3BetterSqlite3DriverMod {
   
+  @JSImport("typeorm/driver/better-sqlite3/BetterSqlite3Driver", "BetterSqlite3Driver")
   @js.native
   class BetterSqlite3Driver protected () extends AbstractSqliteDriver {
     def this(connection: Connection) = this()

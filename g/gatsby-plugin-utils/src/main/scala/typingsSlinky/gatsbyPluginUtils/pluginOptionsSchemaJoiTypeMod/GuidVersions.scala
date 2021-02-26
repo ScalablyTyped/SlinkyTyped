@@ -1,5 +1,6 @@
 package typingsSlinky.gatsbyPluginUtils.pluginOptionsSchemaJoiTypeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.uuidv4
   - typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.uuidv5
 */
-trait GuidVersions extends js.Object
+trait GuidVersions extends StObject
 object GuidVersions {
   
   @scala.inline

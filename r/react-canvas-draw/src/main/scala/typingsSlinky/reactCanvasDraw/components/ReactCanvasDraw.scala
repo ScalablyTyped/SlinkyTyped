@@ -6,6 +6,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactCanvasDraw.mod.CanvasDraw
 import typingsSlinky.reactCanvasDraw.mod.CanvasDrawProps
 import typingsSlinky.reactCanvasDraw.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ReactCanvasDraw {
   
   @JSImport("react-canvas-draw", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -79,7 +80,7 @@ object ReactCanvasDraw {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CanvasDrawProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactCanvasDraw.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CanvasDrawProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

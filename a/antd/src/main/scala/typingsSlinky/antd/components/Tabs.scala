@@ -1,5 +1,6 @@
 package typingsSlinky.antd.components
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
@@ -17,7 +18,7 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
-import slinky.web.html.div.tag
+import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
@@ -86,20 +87,83 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tabs {
   
+  object TabPane {
+    
+    @JSImport("antd", "Tabs.TabPane")
+    @js.native
+    val component: js.Object = js.native
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      
+      @scala.inline
+      def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def destroyInactiveTabPane(value: Boolean): this.type = set("destroyInactiveTabPane", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def forceRender(value: Boolean): this.type = set("forceRender", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def tab(value: ReactElement): this.type = set("tab", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def tabKey(value: String): this.type = set("tabKey", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def tabReactElement(value: ReactElement): this.type = set("tab", value.asInstanceOf[js.Any])
+    }
+    
+    implicit def make(companion: TabPane.type): typingsSlinky.antd.components.Tabs.TabPane.Builder = new typingsSlinky.antd.components.Tabs.TabPane.Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TabPaneProps): typingsSlinky.antd.components.Tabs.TabPane.Builder = new typingsSlinky.antd.components.Tabs.TabPane.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd", "Tabs")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
+       with StBuildingComponent[slinky.web.html.div.tag.type, js.Object] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -111,10 +175,10 @@ object Tabs {
     def activeKey(value: String): this.type = set("activeKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def addIconReactElement(value: ReactElement): this.type = set("addIcon", value.asInstanceOf[js.Any])
+    def addIcon(value: ReactElement): this.type = set("addIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def addIcon(value: ReactElement): this.type = set("addIcon", value.asInstanceOf[js.Any])
+    def addIconReactElement(value: ReactElement): this.type = set("addIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def animated(value: Boolean | AnimatedConfig): this.type = set("animated", value.asInstanceOf[js.Any])
@@ -302,10 +366,10 @@ object Tabs {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def destroyInactiveTabPane(value: Boolean): this.type = set("destroyInactiveTabPane", value.asInstanceOf[js.Any])
@@ -359,10 +423,10 @@ object Tabs {
     def locale(value: TabsLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def moreIconReactElement(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
+    def moreIcon(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def moreIcon(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
+    def moreIconReactElement(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def moreTransitionName(value: String): this.type = set("moreTransitionName", value.asInstanceOf[js.Any])
@@ -450,7 +514,7 @@ object Tabs {
     
     @scala.inline
     def onEdit(
-      value: (/* e */ SyntheticMouseEvent[org.scalajs.dom.raw.Element] | SyntheticKeyboardEvent[org.scalajs.dom.raw.Element] | String, /* action */ add | remove) => Unit
+      value: (/* e */ SyntheticMouseEvent[Element] | SyntheticKeyboardEvent[Element] | String, /* action */ add | remove) => Unit
     ): this.type = set("onEdit", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -584,7 +648,7 @@ object Tabs {
     
     @scala.inline
     def onTabClick(
-      value: (/* activeKey */ String, /* e */ SyntheticKeyboardEvent[org.scalajs.dom.raw.Element] | SyntheticMouseEvent[org.scalajs.dom.raw.Element]) => Unit
+      value: (/* activeKey */ String, /* e */ SyntheticKeyboardEvent[Element] | SyntheticMouseEvent[Element]) => Unit
     ): this.type = set("onTabClick", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -666,10 +730,10 @@ object Tabs {
     def suppressHydrationWarning(value: Boolean): this.type = set("suppressHydrationWarning", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tabBarExtraContentReactElement(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
+    def tabBarExtraContent(value: TabBarExtraContent): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tabBarExtraContent(value: TabBarExtraContent): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
+    def tabBarExtraContentReactElement(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tabBarGutter(value: Double): this.type = set("tabBarGutter", value.asInstanceOf[js.Any])
@@ -702,71 +766,7 @@ object Tabs {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tabs.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object TabPane {
-    
-    @JSImport("antd", "Tabs.TabPane")
-    @js.native
-    object component extends js.Object
-    
-    @scala.inline
-    class Builder (val args: js.Array[js.Any])
-      extends AnyVal
-         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
-      
-      @scala.inline
-      def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def destroyInactiveTabPane(value: Boolean): this.type = set("destroyInactiveTabPane", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def forceRender(value: Boolean): this.type = set("forceRender", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def tabReactElement(value: ReactElement): this.type = set("tab", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def tab(value: ReactElement): this.type = set("tab", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def tabKey(value: String): this.type = set("tabKey", value.asInstanceOf[js.Any])
-    }
-    
-    def withProps(
-      p: /* hasPrefixClsForceRenderClassNameStyleIdActiveAnimatedDestroyInactiveTabPaneTabKeyChildren */ TabPaneProps
-    ): typingsSlinky.antd.components.Tabs.TabPane.Builder = new typingsSlinky.antd.components.Tabs.TabPane.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: TabPane.type): typingsSlinky.antd.components.Tabs.TabPane.Builder = new typingsSlinky.antd.components.Tabs.TabPane.Builder(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

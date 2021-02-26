@@ -1,17 +1,18 @@
 package typingsSlinky.xmldsigjs
 
-import typingsSlinky.xmlCore.mod.XmlObject
 import typingsSlinky.xmldsigjs.dataObjectMod.DataObjects
+import typingsSlinky.xmldsigjs.xmlObjectMod.XmlSignatureObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xmldsigjs/build/types/xml/signature", JSImport.Namespace)
-@js.native
-object signatureMod extends js.Object {
+object signatureMod {
   
+  @JSImport("xmldsigjs/build/types/xml/signature", "Signature")
   @js.native
-  class Signature () extends XmlObject {
+  class Signature () extends XmlSignatureObject {
+    def this(properties: js.Object) = this()
     
     /**
       * Gets or sets the ID of the current Signature.

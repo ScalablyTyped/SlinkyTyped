@@ -78,15 +78,22 @@ import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.tooltipMod.TooltipChildren
 import typingsSlinky.reactstrap.tooltipMod.TooltipChildrenRenderProps
 import typingsSlinky.reactstrap.tooltipMod.UncontrolledTooltipProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object UncontrolledTooltip {
   
-  @JSImport("reactstrap/es", "UncontrolledTooltip")
+  @scala.inline
+  def apply(target: String | HTMLElement | ReactRef[HTMLElement]): Builder = {
+    val __props = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[UncontrolledTooltipProps]))
+  }
+  
+  @JSImport("reactstrap/lib", "UncontrolledTooltip")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -258,13 +265,13 @@ object UncontrolledTooltip {
     def autohide(value: Boolean): this.type = set("autohide", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    def children(value: TooltipChildren): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenFunction1(value: /* props */ TooltipChildrenRenderProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def children(value: TooltipChildren): this.type = set("children", value.asInstanceOf[js.Any])
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -273,13 +280,13 @@ object UncontrolledTooltip {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerRefObject(value: ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    def container(value: String | HTMLElement | ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerHTMLElement(value: HTMLElement): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def container(value: String | HTMLElement | ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    def containerRefObject(value: ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -300,10 +307,10 @@ object UncontrolledTooltip {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def delay(value: Double | Hide): this.type = set("delay", value.asInstanceOf[js.Any])
@@ -665,10 +672,4 @@ object UncontrolledTooltip {
   }
   
   def withProps(p: UncontrolledTooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(target: String | HTMLElement | ReactRef[HTMLElement]): Builder = {
-    val __props = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[UncontrolledTooltipProps]))
-  }
 }

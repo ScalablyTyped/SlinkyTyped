@@ -10,9 +10,9 @@ A fast push & pull stream library for Reason/OCaml, Flow, and TypeScript
 | ------------------ | :-------------: |
 | Full name          | wonka |
 | Keywords           | wonka, reason, bucklescript, callbag, callback, observable, iterable, stream |
-| # releases         | 52 |
-| # dependents       | 21 |
-| # downloads        | 870261 |
+| # releases         | 53 |
+| # dependents       | 25 |
+| # downloads        | 6168858 |
 | # stars            | 0 |
 
 ## Links

@@ -1,15 +1,12 @@
 package typingsSlinky.std.global
 
-import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("HTMLTableRowElement")
 @js.native
 class HTMLTableRowElement ()
   extends typingsSlinky.std.HTMLTableRowElement
-@JSGlobal("HTMLTableRowElement")
-@js.native
-object HTMLTableRowElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLTableRowElement]

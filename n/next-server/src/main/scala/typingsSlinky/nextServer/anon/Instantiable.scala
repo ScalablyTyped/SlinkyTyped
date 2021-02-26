@@ -3,6 +3,7 @@ package typingsSlinky.nextServer.anon
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.nextServer.sideEffectMod.State
 import typingsSlinky.react.mod.Context
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

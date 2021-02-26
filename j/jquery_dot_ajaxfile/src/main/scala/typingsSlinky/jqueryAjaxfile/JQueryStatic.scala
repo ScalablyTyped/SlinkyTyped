@@ -7,6 +7,7 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import typingsSlinky.jqueryAjaxfile.anon.Interval
 import typingsSlinky.std.XMLDocument
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Static members of jQuery (those on $ and jQuery themselves)
   */
 @js.native
-trait JQueryStatic extends js.Object {
+trait JQueryStatic extends StObject {
   
   /**
     * Specify a function to execute when the DOM is fully loaded.
@@ -72,8 +73,8 @@ trait JQueryStatic extends js.Object {
     * @param ownerDocument A document in which the new elements will be created.
     */
   def apply(selector: String): JQuery = js.native
-  def apply(selector: String, context: JQuery): JQuery = js.native
   def apply(selector: String, context: Element): JQuery = js.native
+  def apply(selector: String, context: JQuery): JQuery = js.native
   
   /**
     * A multi-purpose callbacks list object that provides a powerful way to manage callback lists.
@@ -420,7 +421,7 @@ trait JQueryStatic extends js.Object {
     */
   def isPlainObject(obj: js.Any): Boolean = js.native
   
-    //TODO: Decide how we want to type this
+  //TODO: Decide how we want to type this
   var isReady: Boolean = js.native
   
   /**

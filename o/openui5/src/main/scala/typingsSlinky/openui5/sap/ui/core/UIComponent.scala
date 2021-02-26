@@ -4,6 +4,7 @@ import typingsSlinky.openui5.sap.m.routing.Router
 import typingsSlinky.openui5.sap.ui.core.mvc.Controller
 import typingsSlinky.openui5.sap.ui.core.mvc.View
 import typingsSlinky.openui5.sap.ui.core.routing.Targets
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -10,10 +10,10 @@ A Test-Anything-Protocol library for JavaScript
 | ------------------ | :-------------: |
 | Full name          | tap |
 | Keywords           | assert, tap, test, testing |
-| # releases         | 132 |
-| # dependents       | 216 |
-| # downloads        | 4358901 |
-| # stars            | 68 |
+| # releases         | 117 |
+| # dependents       | 223 |
+| # downloads        | 4934037 |
+| # stars            | 71 |
 
 ## Links
 - [Homepage](http://www.node-tap.org/)

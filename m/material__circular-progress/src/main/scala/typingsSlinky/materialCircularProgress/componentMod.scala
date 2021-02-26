@@ -4,18 +4,20 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialCircularProgress.foundationMod.MDCCircularProgressFoundation
 import typingsSlinky.materialProgressIndicator.mod.MDCProgressIndicator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/circular-progress/component", JSImport.Namespace)
-@js.native
-object componentMod extends js.Object {
+object componentMod {
   
+  @JSImport("@material/circular-progress/component", "MDCCircularProgress")
   @js.native
-  class MDCCircularProgress ()
+  class MDCCircularProgress protected ()
     extends MDCComponent[MDCCircularProgressFoundation]
        with MDCProgressIndicator {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(root: Element, foundation: MDCCircularProgressFoundation, args: js.Any*) = this()
     
     def initialize(): Unit = js.native
     
@@ -25,9 +27,10 @@ object componentMod extends js.Object {
     def isClosed: Boolean = js.native
   }
   /* static members */
-  @js.native
-  object MDCCircularProgress extends js.Object {
+  object MDCCircularProgress {
     
+    @JSImport("@material/circular-progress/component", "MDCCircularProgress.attachTo")
+    @js.native
     def attachTo(root: Element): MDCCircularProgress = js.native
   }
 }

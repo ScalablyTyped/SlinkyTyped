@@ -9,14 +9,14 @@ import typingsSlinky.dndCore.interfacesMod.Unsubscribe
 import typingsSlinky.dndCore.reducersMod.State
 import typingsSlinky.redux.mod.AnyAction
 import typingsSlinky.redux.mod.Store
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("dnd-core/lib/DragDropMonitorImpl", JSImport.Namespace)
-@js.native
-object dragDropMonitorImplMod extends js.Object {
+object dragDropMonitorImplMod {
   
+  @JSImport("dnd-core/lib/DragDropMonitorImpl", "DragDropMonitorImpl")
   @js.native
   class DragDropMonitorImpl protected () extends DragDropMonitor {
     def this(store: Store[State, AnyAction], registry: HandlerRegistry) = this()

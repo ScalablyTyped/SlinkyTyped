@@ -10,9 +10,9 @@ Esprima-compatible implementation of the Mozilla JS Parser API
 | ------------------ | :-------------: |
 | Full name          | ast-types |
 | Keywords           | ast, abstract syntax tree, hierarchy, mozilla, spidermonkey, parser api, esprima, types, type system, type checking, dynamic types, parsing, transformation, syntax |
-| # releases         | 18 |
-| # dependents       | 174 |
-| # downloads        | 266831373 |
+| # releases         | 11 |
+| # dependents       | 211 |
+| # downloads        | 458371231 |
 | # stars            | 6 |
 
 ## Links

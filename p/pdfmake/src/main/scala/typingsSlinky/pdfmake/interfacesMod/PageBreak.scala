@@ -1,5 +1,6 @@
 package typingsSlinky.pdfmake.interfacesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pdfmake.pdfmakeStrings.before
   - typingsSlinky.pdfmake.pdfmakeStrings.after
 */
-trait PageBreak extends js.Object
+trait PageBreak extends StObject
 object PageBreak {
   
   @scala.inline

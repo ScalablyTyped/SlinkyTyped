@@ -9,13 +9,14 @@ import typingsSlinky.pixiSpine.PIXI.spine.core.Skeleton
 import typingsSlinky.pixiSpine.PIXI.spine.core.SkeletonData
 import typingsSlinky.pixiSpine.PIXI.spine.core.Slot
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
 - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PIXI.Container * / any */ @js.native
-trait Spine extends js.Object {
+trait Spine extends StObject {
   
   var _autoUpdate: js.Any = js.native
   

@@ -12,7 +12,7 @@ Chai oequal() that uses object's equality method.
 | Keywords           | chai |
 | # releases         | 0 |
 | # dependents       | 0 |
-| # downloads        | 139 |
+| # downloads        | 570 |
 | # stars            | 0 |
 
 ## Links

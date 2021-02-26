@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcTrigger.lazyRenderBoxMod.ILazyRenderBoxProps
 import typingsSlinky.rmcTrigger.lazyRenderBoxMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object LazyRenderBox {
   
   @JSImport("rmc-trigger/lib/LazyRenderBox", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,7 +33,7 @@ object LazyRenderBox {
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ILazyRenderBoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: LazyRenderBox.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ILazyRenderBoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -3,14 +3,14 @@ package typingsSlinky.typeorm
 import typingsSlinky.typeorm.auroraDataApiPgAuroraDataApiPostgresDriverMod.AuroraDataApiPostgresDriver
 import typingsSlinky.typeorm.postgresPostgresQueryRunnerMod.PostgresQueryRunner
 import typingsSlinky.typeorm.typesReplicationModeMod.ReplicationMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/driver/aurora-data-api-pg/AuroraDataApiPostgresQueryRunner", JSImport.Namespace)
-@js.native
-object auroraDataApiPgAuroraDataApiPostgresQueryRunnerMod extends js.Object {
+object auroraDataApiPgAuroraDataApiPostgresQueryRunnerMod {
   
+  @JSImport("typeorm/driver/aurora-data-api-pg/AuroraDataApiPostgresQueryRunner", "AuroraDataApiPostgresQueryRunner")
   @js.native
   class AuroraDataApiPostgresQueryRunner protected () extends PostgresQueryRunnerWrapper {
     def this(driver: AuroraDataApiPostgresDriver, mode: ReplicationMode) = this()

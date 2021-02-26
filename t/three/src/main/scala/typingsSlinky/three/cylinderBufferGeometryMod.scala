@@ -2,14 +2,14 @@ package typingsSlinky.three
 
 import typingsSlinky.three.anon.HeightSegments
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/geometries/CylinderBufferGeometry", JSImport.Namespace)
-@js.native
-object cylinderBufferGeometryMod extends js.Object {
+object cylinderBufferGeometryMod {
   
+  @JSImport("three/src/geometries/CylinderBufferGeometry", "CylinderBufferGeometry")
   @js.native
   class CylinderBufferGeometry protected () extends BufferGeometry {
     /**

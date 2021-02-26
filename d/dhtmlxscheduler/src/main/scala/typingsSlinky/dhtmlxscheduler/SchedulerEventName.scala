@@ -1,5 +1,6 @@
 package typingsSlinky.dhtmlxscheduler
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -79,7 +80,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.dhtmlxscheduler.dhtmlxschedulerStrings.onYScaleClick
   - typingsSlinky.dhtmlxscheduler.dhtmlxschedulerStrings.onYScaleDblClick
 */
-trait SchedulerEventName extends js.Object
+trait SchedulerEventName extends StObject
 object SchedulerEventName {
   
   @scala.inline

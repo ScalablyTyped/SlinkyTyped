@@ -2,6 +2,7 @@ package typingsSlinky.tizenCommonWeb.tizenMod
 
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.INTERSECTION
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.UNION
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

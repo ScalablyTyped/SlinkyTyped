@@ -12,6 +12,7 @@ import typingsSlinky.jpm.jpmStrings.message
 import typingsSlinky.jpm.jpmStrings.ready
 import typingsSlinky.jpm.jpmStrings.show
 import typingsSlinky.jpm.jpmStrings.start
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,13 +20,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * Creates transient dialogs to implement part of an add-on's user interface
   */
-@JSImport("sdk/panel", JSImport.Namespace)
-@js.native
-object panelMod extends js.Object {
+object panelMod {
   
-  def Panel(options: ContentScriptFile): Panel = js.native
   @js.native
-  trait Panel extends js.Object {
+  trait Panel extends StObject {
     
     var allow: js.UndefOr[Script] = js.native
     
@@ -71,11 +69,14 @@ object panelMod extends js.Object {
     
     var width: Double = js.native
   }
+  @JSImport("sdk/panel", "Panel")
+  @js.native
+  def Panel(options: ContentScriptFile): Panel = js.native
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.jpm.FFAddonSDK.ToggleButton
     - typingsSlinky.jpm.FFAddonSDK.Widget
     - typingsSlinky.jpm.anon.Bottom
   */
-  trait PanelPosition extends js.Object
+  trait PanelPosition extends StObject
 }

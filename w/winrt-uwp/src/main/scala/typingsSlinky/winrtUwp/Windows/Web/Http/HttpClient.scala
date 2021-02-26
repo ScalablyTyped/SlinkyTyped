@@ -5,13 +5,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStream
 import typingsSlinky.winrtUwp.Windows.Web.Http.Headers.HttpRequestHeaderCollection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Sends HTTP requests and receives HTTP responses from a resource identified by a URI. */
 @js.native
-trait HttpClient extends js.Object {
+trait HttpClient extends StObject {
   
   /** Closes the HttpClient instance and releases allocated resources. */
   def close(): Unit = js.native

@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientStreetviewpublish.anon.Fields
 import typingsSlinky.maximMazurokGapiClientStreetviewpublish.anon.Id
 import typingsSlinky.maximMazurokGapiClientStreetviewpublish.anon.Key
 import typingsSlinky.maximMazurokGapiClientStreetviewpublish.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PhotoResource extends js.Object {
+trait PhotoResource extends StObject {
   
   /**
     * After the client finishes uploading the photo with the returned UploadRef, CreatePhoto publishes the uploaded Photo to Street View on Google Maps. Currently, the only way to set

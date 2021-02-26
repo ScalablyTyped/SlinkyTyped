@@ -3,6 +3,7 @@ package typingsSlinky.activexPowerpoint.PowerPoint
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`21`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`22`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`23`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`21`
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`22`
 */
-trait XlChartGallery extends js.Object
+trait XlChartGallery extends StObject
 object XlChartGallery {
   
   @scala.inline

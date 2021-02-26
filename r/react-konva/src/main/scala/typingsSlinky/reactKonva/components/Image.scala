@@ -26,6 +26,7 @@ import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.reactKonva.reactKonvaCoreMod.KonvaNodeEvents
 import typingsSlinky.std.CanvasImageSource
 import typingsSlinky.std.Number
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,7 +35,7 @@ object Image {
   
   @JSImport("react-konva", "Image")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,9 +46,6 @@ object Image {
     def crop(value: IRect): this.type = set("crop", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dashVarargs(value: Double*): this.type = set("dash", js.Array(value :_*))
-    
-    @scala.inline
     def dash(value: js.Array[Double]): this.type = set("dash", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -55,6 +53,9 @@ object Image {
     
     @scala.inline
     def dashOffset(value: Double): this.type = set("dashOffset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dashVarargs(value: Double*): this.type = set("dash", js.Array(value :_*))
     
     @scala.inline
     def dragBoundFunc(value: js.ThisFunction1[/* this */ Node[ImageConfig], /* pos */ Vector2d, Vector2d]): this.type = set("dragBoundFunc", value.asInstanceOf[js.Any])
@@ -72,10 +73,10 @@ object Image {
     def fillEnabled(value: Boolean): this.type = set("fillEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fillLinearGradientColorStopsVarargs(value: (Double | String)*): this.type = set("fillLinearGradientColorStops", js.Array(value :_*))
+    def fillLinearGradientColorStops(value: js.Array[Double | String]): this.type = set("fillLinearGradientColorStops", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fillLinearGradientColorStops(value: js.Array[Double | String]): this.type = set("fillLinearGradientColorStops", value.asInstanceOf[js.Any])
+    def fillLinearGradientColorStopsVarargs(value: (Double | String)*): this.type = set("fillLinearGradientColorStops", js.Array(value :_*))
     
     @scala.inline
     def fillLinearGradientEndPoint(value: Vector2d): this.type = set("fillLinearGradientEndPoint", value.asInstanceOf[js.Any])
@@ -132,10 +133,10 @@ object Image {
     def fillPriority(value: String): this.type = set("fillPriority", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fillRadialGradientColorStopsVarargs(value: (Double | String)*): this.type = set("fillRadialGradientColorStops", js.Array(value :_*))
+    def fillRadialGradientColorStops(value: js.Array[Double | String]): this.type = set("fillRadialGradientColorStops", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fillRadialGradientColorStops(value: js.Array[Double | String]): this.type = set("fillRadialGradientColorStops", value.asInstanceOf[js.Any])
+    def fillRadialGradientColorStopsVarargs(value: (Double | String)*): this.type = set("fillRadialGradientColorStops", js.Array(value :_*))
     
     @scala.inline
     def fillRadialGradientEndPoint(value: Vector2d): this.type = set("fillRadialGradientEndPoint", value.asInstanceOf[js.Any])
@@ -162,10 +163,10 @@ object Image {
     def fillRadialGradientStartRadius(value: Double): this.type = set("fillRadialGradientStartRadius", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filtersVarargs(value: Filter*): this.type = set("filters", js.Array(value :_*))
+    def filters(value: js.Array[Filter]): this.type = set("filters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filters(value: js.Array[Filter]): this.type = set("filters", value.asInstanceOf[js.Any])
+    def filtersVarargs(value: Filter*): this.type = set("filters", js.Array(value :_*))
     
     @scala.inline
     def globalCompositeOperation(value: globalCompositeOperationType): this.type = set("globalCompositeOperation", value.asInstanceOf[js.Any])
@@ -192,10 +193,10 @@ object Image {
     def imageHTMLImageElement(value: HTMLImageElement): this.type = set("image", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def imageSVGImageElement(value: SVGImageElement): this.type = set("image", value.asInstanceOf[js.Any])
+    def imageHTMLVideoElement(value: HTMLVideoElement): this.type = set("image", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def imageHTMLVideoElement(value: HTMLVideoElement): this.type = set("image", value.asInstanceOf[js.Any])
+    def imageSVGImageElement(value: SVGImageElement): this.type = set("image", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lineCap(value: LineCap): this.type = set("lineCap", value.asInstanceOf[js.Any])
@@ -363,9 +364,9 @@ object Image {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
+  implicit def make(companion: Image.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   def withProps(
     p: typingsSlinky.konva.mod.Konva.ImageConfig with KonvaNodeEvents with ClassAttributes[typingsSlinky.konva.mod.Konva.Image]
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: Image.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

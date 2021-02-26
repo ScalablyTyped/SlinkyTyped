@@ -23,6 +23,7 @@ import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.pre_checkout_q
 import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.shipping_query
 import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.webhook_error
 import typingsSlinky.std.RegExpExecArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

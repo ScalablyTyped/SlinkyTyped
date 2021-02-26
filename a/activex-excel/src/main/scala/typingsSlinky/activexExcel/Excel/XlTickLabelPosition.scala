@@ -4,6 +4,7 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`-4127`
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4134`
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4142`
 import typingsSlinky.activexExcel.activexExcelNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`4`
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4142`
 */
-trait XlTickLabelPosition extends js.Object
+trait XlTickLabelPosition extends StObject
 object XlTickLabelPosition {
   
   @scala.inline

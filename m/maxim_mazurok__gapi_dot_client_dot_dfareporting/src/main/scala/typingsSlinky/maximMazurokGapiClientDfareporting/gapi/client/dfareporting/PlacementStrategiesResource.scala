@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.AltCallbackFieldsKe
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.CallbackFieldsIdKey
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.MaxResults
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PlacementStrategiesResource extends js.Object {
+trait PlacementStrategiesResource extends StObject {
   
   /** Deletes an existing placement strategy. */
   def delete(): Request[Unit] = js.native

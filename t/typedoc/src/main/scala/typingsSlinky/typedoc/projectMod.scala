@@ -6,14 +6,14 @@ import typingsSlinky.typedoc.abstractMod.ReflectionKind
 import typingsSlinky.typedoc.containerMod.ContainerReflection
 import typingsSlinky.typedoc.sourcesMod.SourceDirectory
 import typingsSlinky.typedoc.sourcesMod.SourceFile
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/models/reflections/project", JSImport.Namespace)
-@js.native
-object projectMod extends js.Object {
+object projectMod {
   
+  @JSImport("typedoc/dist/lib/models/reflections/project", "ProjectReflection")
   @js.native
   class ProjectReflection protected () extends ContainerReflection {
     def this(name: String) = this()

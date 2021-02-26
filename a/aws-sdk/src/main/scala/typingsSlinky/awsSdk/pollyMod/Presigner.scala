@@ -1,6 +1,7 @@
 package typingsSlinky.awsSdk.pollyMod
 
 import typingsSlinky.awsSdk.presignerMod.Presigner.PresignerOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

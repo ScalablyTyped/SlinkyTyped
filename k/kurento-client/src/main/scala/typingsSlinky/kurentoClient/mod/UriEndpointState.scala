@@ -1,5 +1,6 @@
 package typingsSlinky.kurentoClient.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.kurentoClient.kurentoClientStrings.START
   - typingsSlinky.kurentoClient.kurentoClientStrings.PAUSE
 */
-trait UriEndpointState extends js.Object
+trait UriEndpointState extends StObject
 object UriEndpointState {
   
   @scala.inline

@@ -12,6 +12,7 @@ import typingsSlinky.reactDraftWysiwyg.mod.ContentBlock
 import typingsSlinky.reactDraftWysiwyg.mod.EditorProps
 import typingsSlinky.reactDraftWysiwyg.mod.EditorState
 import typingsSlinky.reactDraftWysiwyg.mod.RawDraftContentState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object Editor {
   
   @JSImport("react-draft-wysiwyg", "Editor")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -55,10 +56,10 @@ object Editor {
     def customBlockRenderFunc(value: /* block */ ContentBlock => _): this.type = set("customBlockRenderFunc", js.Any.fromFunction1(value))
     
     @scala.inline
-    def customDecoratorsVarargs(value: js.Object*): this.type = set("customDecorators", js.Array(value :_*))
+    def customDecorators(value: js.Array[js.Object]): this.type = set("customDecorators", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customDecorators(value: js.Array[js.Object]): this.type = set("customDecorators", value.asInstanceOf[js.Any])
+    def customDecoratorsVarargs(value: js.Object*): this.type = set("customDecorators", js.Array(value :_*))
     
     @scala.inline
     def customStyleMap(value: js.Object): this.type = set("customStyleMap", value.asInstanceOf[js.Any])
@@ -144,10 +145,10 @@ object Editor {
     def toolbarClassName(value: String): this.type = set("toolbarClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def toolbarCustomButtonsVarargs(value: ReactElement*): this.type = set("toolbarCustomButtons", js.Array(value :_*))
+    def toolbarCustomButtons(value: js.Array[ReactElement]): this.type = set("toolbarCustomButtons", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def toolbarCustomButtons(value: js.Array[ReactElement]): this.type = set("toolbarCustomButtons", value.asInstanceOf[js.Any])
+    def toolbarCustomButtonsVarargs(value: ReactElement*): this.type = set("toolbarCustomButtons", js.Array(value :_*))
     
     @scala.inline
     def toolbarHidden(value: Boolean): this.type = set("toolbarHidden", value.asInstanceOf[js.Any])
@@ -171,7 +172,7 @@ object Editor {
     def wrapperStyle(value: CSSProperties): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: EditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Editor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: EditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

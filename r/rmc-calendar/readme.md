@@ -10,9 +10,9 @@ React Mobile Calendar Component(web and react-native)
 | ------------------ | :-------------: |
 | Full name          | rmc-calendar |
 | Keywords           | react, react-component, react-m-calendar, m-calendar |
-| # releases         | 3 |
-| # dependents       | 24 |
-| # downloads        | 599387 |
+| # releases         | 0 |
+| # dependents       | 30 |
+| # downloads        | 1038153 |
 | # stars            | 0 |
 
 ## Links

@@ -5,12 +5,13 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ErrorInfo
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ComponentDidCatch extends js.Object {
+trait ComponentDidCatch extends StObject {
   
   var UNSAFE_componentWillMount: js.UndefOr[js.Function0[Unit]] = js.native
   

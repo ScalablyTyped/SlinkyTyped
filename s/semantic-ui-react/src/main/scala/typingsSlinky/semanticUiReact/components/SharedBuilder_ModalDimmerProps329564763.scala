@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,10 +27,10 @@ class SharedBuilder_ModalDimmerProps329564763 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
   def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])

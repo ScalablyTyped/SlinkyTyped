@@ -1,6 +1,7 @@
 package typingsSlinky.figma.mod.global
 
 import typingsSlinky.figma.figmaStrings.FRAME
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

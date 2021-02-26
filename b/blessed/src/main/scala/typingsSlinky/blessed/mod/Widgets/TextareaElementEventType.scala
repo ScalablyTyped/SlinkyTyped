@@ -1,5 +1,6 @@
 package typingsSlinky.blessed.mod.Widgets
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.blessed.blessedStrings.cancel
   - typingsSlinky.blessed.blessedStrings.action
 */
-trait TextareaElementEventType extends js.Object
+trait TextareaElementEventType extends StObject
 object TextareaElementEventType {
   
   @scala.inline

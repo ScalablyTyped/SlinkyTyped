@@ -18,6 +18,7 @@ import typingsSlinky.officeUiFabricReact.stackItemTypesMod.IStackItemTokens
 import typingsSlinky.uifabricFoundation.ihtmlslotsMod.IHTMLSlot
 import typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunctionOrObject
 import typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,10 +50,10 @@ class SharedBuilder_IStackItemProps1971397930 (val args: js.Array[js.Any])
   def shrink(value: Boolean | Double | inherit | initial | unset): this.type = set("shrink", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def stylesFunction3(value: (IStackItemProps, /* theme */ ITheme, IStackItemTokens) => IStackItemStyles): this.type = set("styles", js.Any.fromFunction3(value))
+  def styles(value: IStylesFunctionOrObject[IStackItemProps, IStackItemTokens, IStackItemStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def styles(value: IStylesFunctionOrObject[IStackItemProps, IStackItemTokens, IStackItemStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+  def stylesFunction3(value: (IStackItemProps, /* theme */ ITheme, IStackItemTokens) => IStackItemStyles): this.type = set("styles", js.Any.fromFunction3(value))
   
   @scala.inline
   def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])

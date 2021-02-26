@@ -4,6 +4,7 @@ import typingsSlinky.officeJsPreview.Excel.Interfaces.NumberFormatInfoData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.NumberFormatInfoLoadOptions
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.anon.Expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

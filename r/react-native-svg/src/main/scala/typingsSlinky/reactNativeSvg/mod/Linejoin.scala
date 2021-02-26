@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeSvg.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeSvg.reactNativeSvgStrings.bevel
   - typingsSlinky.reactNativeSvg.reactNativeSvgStrings.round
 */
-trait Linejoin extends js.Object
+trait Linejoin extends StObject
 object Linejoin {
   
   @scala.inline

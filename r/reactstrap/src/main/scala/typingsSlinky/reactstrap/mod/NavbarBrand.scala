@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.navbarBrandMod.NavbarBrandProps
+import typingsSlinky.reactstrap.navbarBrandMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "NavbarBrand")
+@JSImport("reactstrap/lib", "NavbarBrand")
 @js.native
-class NavbarBrand ()
-  extends Component[NavbarBrandProps, js.Object, js.Any]
+class NavbarBrand () extends default

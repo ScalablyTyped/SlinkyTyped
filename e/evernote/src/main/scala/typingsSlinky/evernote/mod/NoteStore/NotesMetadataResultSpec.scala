@@ -1,13 +1,14 @@
 package typingsSlinky.evernote.mod.NoteStore
 
 import typingsSlinky.evernote.anon.IncludeAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("evernote", "NoteStore.NotesMetadataResultSpec")
 @js.native
-class NotesMetadataResultSpec () extends js.Object {
+class NotesMetadataResultSpec () extends StObject {
   def this(args: IncludeAttributes) = this()
   
   var includeAttributes: js.UndefOr[Boolean] = js.native

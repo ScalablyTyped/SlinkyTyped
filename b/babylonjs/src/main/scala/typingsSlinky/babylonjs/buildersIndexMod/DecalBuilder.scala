@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.buildersIndexMod
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.anon.Angle
 import typingsSlinky.babylonjs.meshMod.Mesh
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,9 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class DecalBuilder ()
   extends typingsSlinky.babylonjs.decalBuilderMod.DecalBuilder
 /* static members */
-@JSImport("babylonjs/Meshes/Builders/index", "DecalBuilder")
-@js.native
-object DecalBuilder extends js.Object {
+object DecalBuilder {
   
   /**
     * Creates a decal mesh.
@@ -30,5 +29,7 @@ object DecalBuilder extends js.Object {
     * @returns the decal mesh
     * @see https://doc.babylonjs.com/how_to/decals
     */
+  @JSImport("babylonjs/Meshes/Builders/index", "DecalBuilder.CreateDecal")
+  @js.native
   def CreateDecal(name: String, sourceMesh: AbstractMesh, options: Angle): Mesh = js.native
 }

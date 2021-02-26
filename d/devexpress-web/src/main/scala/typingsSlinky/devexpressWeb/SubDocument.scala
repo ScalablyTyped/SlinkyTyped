@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressWeb
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Exposes the settings providing the information about the essential document functionality.
   */
 @js.native
-trait SubDocument extends js.Object {
+trait SubDocument extends StObject {
   
   /**
     * Provides information about document bookmarks.
@@ -22,13 +23,13 @@ trait SubDocument extends js.Object {
   
   def findBookmarks(arg: String): js.Array[Bookmark] = js.native
   def findBookmarks(arg: js.Array[Interval]): js.Array[Bookmark] = js.native
+  def findBookmarks(arg: js.RegExp): js.Array[Bookmark] = js.native
   /**
     * Returns an array of bookmarks that match the search conditions. An array of the Bookmark objects.
     * @param arg Contains a position or interval(s) where to search bookmarks, or a bookmark name, or a regular expression.
     */
   def findBookmarks(arg: Double): js.Array[Bookmark] = js.native
   def findBookmarks(arg: Interval): js.Array[Bookmark] = js.native
-  def findBookmarks(arg: js.RegExp): js.Array[Bookmark] = js.native
   
   /**
     * Returns an array of fields that match the search conditions. An array of the Field objects.

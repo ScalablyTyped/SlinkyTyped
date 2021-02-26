@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootAtScheduledTime
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootWithoutEndUserControl
 */
-trait AutomaticUpdateMode extends js.Object
+trait AutomaticUpdateMode extends StObject
 object AutomaticUpdateMode {
   
   @scala.inline

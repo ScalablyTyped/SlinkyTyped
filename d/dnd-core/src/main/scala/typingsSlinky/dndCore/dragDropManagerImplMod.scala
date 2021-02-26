@@ -3,14 +3,14 @@ package typingsSlinky.dndCore
 import typingsSlinky.dndCore.interfacesMod.Backend
 import typingsSlinky.dndCore.interfacesMod.DragDropManager
 import typingsSlinky.redux.mod.Action
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("dnd-core/lib/DragDropManagerImpl", JSImport.Namespace)
-@js.native
-object dragDropManagerImplMod extends js.Object {
+object dragDropManagerImplMod {
   
+  @JSImport("dnd-core/lib/DragDropManagerImpl", "DragDropManagerImpl")
   @js.native
   class DragDropManagerImpl () extends DragDropManager {
     def this(debugMode: Boolean) = this()

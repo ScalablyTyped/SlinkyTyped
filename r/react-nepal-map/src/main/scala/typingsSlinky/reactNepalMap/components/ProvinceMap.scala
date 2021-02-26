@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNepalMap.mod.ProvinceMapPropsTypes
 import typingsSlinky.reactNepalMap.mod.itemProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object ProvinceMap {
   
   @JSImport("react-nepal-map", "ProvinceMap")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +33,10 @@ object ProvinceMap {
     def onMapClick(value: /* item */ itemProps => Unit): this.type = set("onMapClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def provinceColorVarargs(value: String*): this.type = set("provinceColor", js.Array(value :_*))
+    def provinceColor(value: js.Array[String]): this.type = set("provinceColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def provinceColor(value: js.Array[String]): this.type = set("provinceColor", value.asInstanceOf[js.Any])
+    def provinceColorVarargs(value: String*): this.type = set("provinceColor", js.Array(value :_*))
     
     @scala.inline
     def randomSectorColor(value: Boolean): this.type = set("randomSectorColor", value.asInstanceOf[js.Any])
@@ -50,7 +51,7 @@ object ProvinceMap {
     def strokeWidth(value: Double): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ProvinceMapPropsTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ProvinceMap.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ProvinceMapPropsTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

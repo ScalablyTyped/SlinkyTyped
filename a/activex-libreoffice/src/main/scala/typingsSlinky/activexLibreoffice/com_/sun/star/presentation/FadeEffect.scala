@@ -57,6 +57,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`6`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`7`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`8`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -121,7 +122,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`34`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`33`
 */
-trait FadeEffect extends js.Object
+trait FadeEffect extends StObject
 object FadeEffect {
   
   /**

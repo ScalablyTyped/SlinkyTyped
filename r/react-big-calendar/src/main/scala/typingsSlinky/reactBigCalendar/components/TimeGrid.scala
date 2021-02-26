@@ -11,15 +11,22 @@ import typingsSlinky.reactBigCalendar.mod.TimeGridProps
 import typingsSlinky.reactBigCalendar.mod.View
 import typingsSlinky.reactBigCalendar.mod.stringOrDate
 import typingsSlinky.reactBigCalendar.reactBigCalendarStrings.ignoreEvents
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TimeGrid {
   
+  @scala.inline
+  def apply[TEvent /* <: js.Object */, TResource /* <: js.Object */](eventOffset: Double): Builder[TEvent, TResource] = {
+    val __props = js.Dynamic.literal(eventOffset = eventOffset.asInstanceOf[js.Any])
+    new Builder[TEvent, TResource](js.Array(this.component, __props.asInstanceOf[TimeGridProps[TEvent, TResource]]))
+  }
+  
   @JSImport("react-big-calendar", "TimeGrid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[TEvent /* <: js.Object */, TResource /* <: js.Object */] (val args: js.Array[js.Any])
@@ -36,10 +43,10 @@ object TimeGrid {
     def dayLayoutAlgorithm(value: js.Any): this.type = set("dayLayoutAlgorithm", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventsVarargs(value: TEvent*): this.type = set("events", js.Array(value :_*))
+    def events(value: js.Array[TEvent]): this.type = set("events", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def events(value: js.Array[TEvent]): this.type = set("events", value.asInstanceOf[js.Any])
+    def eventsVarargs(value: TEvent*): this.type = set("events", js.Array(value :_*))
     
     @scala.inline
     def getDrilldownView(
@@ -62,16 +69,16 @@ object TimeGrid {
     def longPressThreshold(value: Double): this.type = set("longPressThreshold", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maxDate(value: js.Date): this.type = set("max", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def max(value: stringOrDate): this.type = set("max", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def minDate(value: js.Date): this.type = set("min", value.asInstanceOf[js.Any])
+    def maxDate(value: js.Date): this.type = set("max", value.asInstanceOf[js.Any])
     
     @scala.inline
     def min(value: stringOrDate): this.type = set("min", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("min", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onDoubleClickEvent(value: (TEvent, /* e */ SyntheticEvent[Event, HTMLElement]) => Unit): this.type = set("onDoubleClickEvent", js.Any.fromFunction2(value))
@@ -98,16 +105,16 @@ object TimeGrid {
     def onSelectStart(value: /* repeated */ js.Any => _): this.type = set("onSelectStart", js.Any.fromFunction1(value))
     
     @scala.inline
-    def rangeVarargs(value: js.Any*): this.type = set("range", js.Array(value :_*))
-    
-    @scala.inline
     def range(value: js.Array[_]): this.type = set("range", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def resourcesVarargs(value: TResource*): this.type = set("resources", js.Array(value :_*))
+    def rangeVarargs(value: js.Any*): this.type = set("range", js.Array(value :_*))
     
     @scala.inline
     def resources(value: js.Array[TResource]): this.type = set("resources", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def resourcesVarargs(value: TResource*): this.type = set("resources", js.Array(value :_*))
     
     @scala.inline
     def rtl(value: Boolean): this.type = set("rtl", value.asInstanceOf[js.Any])
@@ -135,10 +142,4 @@ object TimeGrid {
   }
   
   def withProps[TEvent /* <: js.Object */, TResource /* <: js.Object */](p: TimeGridProps[TEvent, TResource]): Builder[TEvent, TResource] = new Builder[TEvent, TResource](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[TEvent /* <: js.Object */, TResource /* <: js.Object */](eventOffset: Double): Builder[TEvent, TResource] = {
-    val __props = js.Dynamic.literal(eventOffset = eventOffset.asInstanceOf[js.Any])
-    new Builder[TEvent, TResource](js.Array(this.component, __props.asInstanceOf[TimeGridProps[TEvent, TResource]]))
-  }
 }

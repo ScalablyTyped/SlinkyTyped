@@ -1,5 +1,6 @@
 package typingsSlinky.stripe.mod.paymentIntents
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.stripe.stripeStrings.requested_by_customer
   - typingsSlinky.stripe.stripeStrings.abandoned
 */
-trait PaymentIntentUserProvidedCancellationReason extends js.Object
+trait PaymentIntentUserProvidedCancellationReason extends StObject
 object PaymentIntentUserProvidedCancellationReason {
   
   @scala.inline

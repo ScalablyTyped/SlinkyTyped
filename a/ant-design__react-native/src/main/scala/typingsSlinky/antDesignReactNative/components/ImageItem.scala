@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.imageItemMod.ImageItemProps
 import typingsSlinky.antDesignReactNative.imageItemMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ImageItem {
   
+  @scala.inline
+  def apply(imageMargin: Double, imagesPerRow: Double): Builder = {
+    val __props = js.Dynamic.literal(imageMargin = imageMargin.asInstanceOf[js.Any], imagesPerRow = imagesPerRow.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ImageItemProps]))
+  }
+  
   @JSImport("@ant-design/react-native/lib/image-picker/ImageItem", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,10 +44,4 @@ object ImageItem {
   }
   
   def withProps(p: ImageItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(imageMargin: Double, imagesPerRow: Double): Builder = {
-    val __props = js.Dynamic.literal(imageMargin = imageMargin.asInstanceOf[js.Any], imagesPerRow = imagesPerRow.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ImageItemProps]))
-  }
 }

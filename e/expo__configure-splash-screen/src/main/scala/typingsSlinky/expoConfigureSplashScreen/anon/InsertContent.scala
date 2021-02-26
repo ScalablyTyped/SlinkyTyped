@@ -1,11 +1,12 @@
 package typingsSlinky.expoConfigureSplashScreen.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InsertContent extends js.Object {
+trait InsertContent extends StObject {
   
   var insertContent: String = js.native
   
@@ -20,27 +21,15 @@ object InsertContent {
   }
   
   @scala.inline
-  implicit class InsertContentOps[Self <: InsertContent] (val x: Self) extends AnyVal {
+  implicit class InsertContentMutableBuilder[Self <: InsertContent] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setInsertContent(value: String): Self = StObject.set(x, "insertContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setInsertPattern(value: js.RegExp | String): Self = StObject.set(x, "insertPattern", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setInsertContent(value: String): Self = this.set("insertContent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setInsertPatternRegExp(value: js.RegExp): Self = this.set("insertPattern", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setInsertPattern(value: js.RegExp | String): Self = this.set("insertPattern", value.asInstanceOf[js.Any])
+    def setInsertPatternRegExp(value: js.RegExp): Self = StObject.set(x, "insertPattern", value.asInstanceOf[js.Any])
   }
 }

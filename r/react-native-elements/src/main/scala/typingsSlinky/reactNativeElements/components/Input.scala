@@ -104,6 +104,7 @@ import typingsSlinky.reactNative.reactNativeStrings.yesExcludeDescendants
 import typingsSlinky.reactNativeElements.mod.IconNode
 import typingsSlinky.reactNativeElements.mod.InputProps
 import typingsSlinky.reactNativeElements.mod.TextProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -112,7 +113,7 @@ object Input {
   
   @JSImport("react-native-elements", "Input")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -120,19 +121,19 @@ object Input {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Input] {
     
     @scala.inline
-    def InputComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
+    def InputComponent(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def InputComponentComponentClass(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def InputComponent(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def InputComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -159,10 +160,10 @@ object Input {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -215,10 +216,10 @@ object Input {
     def contextMenuHidden(value: Boolean): this.type = set("contextMenuHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataDetectorTypesVarargs(value: DataDetectorTypes*): this.type = set("dataDetectorTypes", js.Array(value :_*))
+    def dataDetectorTypes(value: DataDetectorTypes | js.Array[DataDetectorTypes]): this.type = set("dataDetectorTypes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataDetectorTypes(value: DataDetectorTypes | js.Array[DataDetectorTypes]): this.type = set("dataDetectorTypes", value.asInstanceOf[js.Any])
+    def dataDetectorTypesVarargs(value: DataDetectorTypes*): this.type = set("dataDetectorTypes", js.Array(value :_*))
     
     @scala.inline
     def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
@@ -299,22 +300,19 @@ object Input {
     def keyboardType(value: KeyboardTypeOptions): this.type = set("keyboardType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def label(value: String | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelProps(value: TextProps): this.type = set("labelProps", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def labelStyle(value: StyleProp[TextStyle]): this.type = set("labelStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelStyleNull: this.type = set("labelStyle", null)
-    
-    @scala.inline
-    def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftIcon(value: IconNode): this.type = set("leftIcon", value.asInstanceOf[js.Any])
@@ -324,6 +322,9 @@ object Input {
     
     @scala.inline
     def leftIconContainerStyleNull: this.type = set("leftIconContainerStyle", null)
+    
+    @scala.inline
+    def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maxFontSizeMultiplier(value: Double): this.type = set("maxFontSizeMultiplier", value.asInstanceOf[js.Any])
@@ -482,9 +483,6 @@ object Input {
     def returnKeyType(value: ReturnKeyTypeOptions): this.type = set("returnKeyType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def rightIcon(value: IconNode): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -492,6 +490,9 @@ object Input {
     
     @scala.inline
     def rightIconContainerStyleNull: this.type = set("rightIconContainerStyle", null)
+    
+    @scala.inline
+    def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def scrollEnabled(value: Boolean): this.type = set("scrollEnabled", value.asInstanceOf[js.Any])
@@ -562,7 +563,7 @@ object Input {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Input.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

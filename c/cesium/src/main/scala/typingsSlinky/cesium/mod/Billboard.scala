@@ -3,13 +3,14 @@ package typingsSlinky.cesium.mod
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.cesium.mod.Billboard.CreateImageCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "Billboard")
 @js.native
-class Billboard () extends js.Object {
+class Billboard () extends StObject {
   
   var alignedAxis: Cartesian3 = js.native
   
@@ -51,9 +52,9 @@ class Billboard () extends js.Object {
   var scaleByDistance: NearFarScalar = js.native
   
   def setImage(id: String, image: String): Unit = js.native
-  def setImage(id: String, image: CreateImageCallback): Unit = js.native
   def setImage(id: String, image: HTMLCanvasElement): Unit = js.native
   def setImage(id: String, image: HTMLImageElement): Unit = js.native
+  def setImage(id: String, image: CreateImageCallback): Unit = js.native
   
   def setImageSubRegion(id: String, subRegion: BoundingRectangle): Unit = js.native
   
@@ -67,9 +68,7 @@ class Billboard () extends js.Object {
   
   var width: Double = js.native
 }
-@JSImport("cesium", "Billboard")
-@js.native
-object Billboard extends js.Object {
+object Billboard {
   
   type CreateImageCallback = js.Function1[
     /* id */ String, 

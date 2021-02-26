@@ -8,14 +8,14 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/PostProcesses/depthOfFieldBlurPostProcess", JSImport.Namespace)
-@js.native
-object depthOfFieldBlurPostProcessMod extends js.Object {
+object depthOfFieldBlurPostProcessMod {
   
+  @JSImport("babylonjs/PostProcesses/depthOfFieldBlurPostProcess", "DepthOfFieldBlurPostProcess")
   @js.native
   class DepthOfFieldBlurPostProcess protected () extends BlurPostProcess {
     /**

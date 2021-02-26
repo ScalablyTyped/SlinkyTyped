@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.anon.PartialMargin
 import typingsSlinky.recharts.mod.BrushProps
 import typingsSlinky.recharts.mod.DataKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object Brush {
   
   @JSImport("recharts", "Brush")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -24,16 +25,16 @@ object Brush {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataKey(value: DataKey): this.type = set("dataKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dataKeyFunction1(value: /* dataObject */ js.Any => String | Double | (js.Tuple2[Double, Double]) | Null): this.type = set("dataKey", js.Any.fromFunction1(value))
     
     @scala.inline
-    def dataKey(value: DataKey): this.type = set("dataKey", value.asInstanceOf[js.Any])
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def endIndex(value: Double): this.type = set("endIndex", value.asInstanceOf[js.Any])
@@ -81,7 +82,7 @@ object Brush {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: BrushProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Brush.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: BrushProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

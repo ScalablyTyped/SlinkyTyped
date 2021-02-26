@@ -5,18 +5,18 @@ import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.lineMod.Line
 import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/objects/LineSegments", JSImport.Namespace)
-@js.native
-object lineSegmentsMod extends js.Object {
+object lineSegmentsMod {
   
+  @JSImport("three/src/objects/LineSegments", "LinePieces")
+  @js.native
   val LinePieces: Double = js.native
   
-  val LineStrip: Double = js.native
-  
+  @JSImport("three/src/objects/LineSegments", "LineSegments")
   @js.native
   class LineSegments[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: Material | js.Array[Material] */] () extends Line[TGeometry, TMaterial] {
     def this(geometry: TGeometry) = this()
@@ -31,4 +31,8 @@ object lineSegmentsMod extends js.Object {
     @JSName("type")
     var type_LineSegments: typingsSlinky.three.threeStrings.LineSegments | String = js.native
   }
+  
+  @JSImport("three/src/objects/LineSegments", "LineStrip")
+  @js.native
+  val LineStrip: Double = js.native
 }

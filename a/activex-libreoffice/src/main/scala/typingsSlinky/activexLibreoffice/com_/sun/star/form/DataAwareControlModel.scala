@@ -2,6 +2,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.form
 
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySet
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

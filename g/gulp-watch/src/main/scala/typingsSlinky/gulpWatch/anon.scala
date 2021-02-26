@@ -5,17 +5,16 @@ import org.scalajs.dom.raw.Blob
 import typingsSlinky.gulpWatch.gulpWatchStrings.add
 import typingsSlinky.gulpWatch.gulpWatchStrings.change
 import typingsSlinky.gulpWatch.gulpWatchStrings.unlink
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   /* Inlined std.File & {  event :'add' | 'change' | 'unlink'} */
   @js.native
-  trait Fileeventaddchangeunlink extends js.Object {
+  trait Fileeventaddchangeunlink extends StObject {
     
     def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
     

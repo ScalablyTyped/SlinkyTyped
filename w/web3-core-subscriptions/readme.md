@@ -10,9 +10,9 @@ Manages web3 subscriptions. This is an internal package.
 | ------------------ | :-------------: |
 | Full name          | web3-core-subscriptions |
 | Keywords           | - |
-| # releases         | 36 |
-| # dependents       | 24 |
-| # downloads        | 4378835 |
+| # releases         | 43 |
+| # dependents       | 41 |
+| # downloads        | 7309017 |
 | # stars            | 0 |
 
 ## Links

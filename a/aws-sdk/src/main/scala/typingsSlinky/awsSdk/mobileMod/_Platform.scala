@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.mobileMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _Platform extends js.Object
+trait _Platform extends StObject

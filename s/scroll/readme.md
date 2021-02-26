@@ -10,9 +10,9 @@ animates the scroll top/left position of an element
 | ------------------ | :-------------: |
 | Full name          | scroll |
 | Keywords           | - |
-| # releases         | 5 |
+| # releases         | 2 |
 | # dependents       | 73 |
-| # downloads        | 4082451 |
+| # downloads        | 5481317 |
 | # stars            | 9 |
 
 ## Links

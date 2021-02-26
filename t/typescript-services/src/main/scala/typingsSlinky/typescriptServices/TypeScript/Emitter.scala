@@ -1,12 +1,13 @@
 package typingsSlinky.typescriptServices.TypeScript
 
 import typingsSlinky.typescriptServices.anon.DependencyList
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Emitter extends js.Object {
+trait Emitter extends StObject {
   
   /* private */ def canEmitDottedNameMemberAccessExpression(expression: js.Any): js.Any = js.native
   

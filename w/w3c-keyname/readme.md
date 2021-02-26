@@ -11,8 +11,8 @@ Get a KeyboardEvent.key-style string from an event
 | Full name          | w3c-keyname |
 | Keywords           | browser, key, event, key code |
 | # releases         | 7 |
-| # dependents       | 10 |
-| # downloads        | 2558670 |
+| # dependents       | 16 |
+| # downloads        | 7109662 |
 | # stars            | 0 |
 
 ## Links

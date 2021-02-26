@@ -4,6 +4,7 @@ import typingsSlinky.firmata.anon.Address
 import typingsSlinky.firmata.anon.Baud
 import typingsSlinky.firmata.anon.Delay
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

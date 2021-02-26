@@ -15,19 +15,15 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.std.DocumentAndElementEventHandlersEventMap
-import typingsSlinky.std.ElementEventMap
-import typingsSlinky.std.GlobalEventHandlersEventMap
+import typingsSlinky.std.HTMLElementEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ojDiagramNodeEventMap
-  extends ElementEventMap
-     with GlobalEventHandlersEventMap
-     with DocumentAndElementEventHandlersEventMap {
+trait ojDiagramNodeEventMap extends HTMLElementEventMap {
   
   var categoriesChanged: CustomEvent = js.native
   
@@ -158,45 +154,33 @@ object ojDiagramNodeEventMap {
   }
   
   @scala.inline
-  implicit class ojDiagramNodeEventMapOps[Self <: ojDiagramNodeEventMap] (val x: Self) extends AnyVal {
+  implicit class ojDiagramNodeEventMapMutableBuilder[Self <: ojDiagramNodeEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCategoriesChanged(value: CustomEvent): Self = StObject.set(x, "categoriesChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDescendantsConnectivityChanged(value: CustomEvent): Self = StObject.set(x, "descendantsConnectivityChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setIconChanged(value: CustomEvent): Self = StObject.set(x, "iconChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCategoriesChanged(value: CustomEvent): Self = this.set("categoriesChanged", value.asInstanceOf[js.Any])
+    def setLabelChanged(value: CustomEvent): Self = StObject.set(x, "labelChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDescendantsConnectivityChanged(value: CustomEvent): Self = this.set("descendantsConnectivityChanged", value.asInstanceOf[js.Any])
+    def setLabelStyleChanged(value: CustomEvent): Self = StObject.set(x, "labelStyleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIconChanged(value: CustomEvent): Self = this.set("iconChanged", value.asInstanceOf[js.Any])
+    def setOverviewChanged(value: CustomEvent): Self = StObject.set(x, "overviewChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLabelChanged(value: CustomEvent): Self = this.set("labelChanged", value.asInstanceOf[js.Any])
+    def setSelectableChanged(value: CustomEvent): Self = StObject.set(x, "selectableChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLabelStyleChanged(value: CustomEvent): Self = this.set("labelStyleChanged", value.asInstanceOf[js.Any])
+    def setShortDescChanged(value: CustomEvent): Self = StObject.set(x, "shortDescChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverviewChanged(value: CustomEvent): Self = this.set("overviewChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSelectableChanged(value: CustomEvent): Self = this.set("selectableChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setShortDescChanged(value: CustomEvent): Self = this.set("shortDescChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setShowDisclosureChanged(value: CustomEvent): Self = this.set("showDisclosureChanged", value.asInstanceOf[js.Any])
+    def setShowDisclosureChanged(value: CustomEvent): Self = StObject.set(x, "showDisclosureChanged", value.asInstanceOf[js.Any])
   }
 }

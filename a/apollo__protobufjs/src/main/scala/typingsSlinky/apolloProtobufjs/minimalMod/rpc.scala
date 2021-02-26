@@ -1,15 +1,15 @@
 package typingsSlinky.apolloProtobufjs.minimalMod
 
 import typingsSlinky.apolloProtobufjs.mod.RPCImpl
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@apollo/protobufjs/minimal", "rpc")
-@js.native
-object rpc extends js.Object {
+object rpc {
   
   /** An RPC service as returned by {@link Service#create}. */
+  @JSImport("@apollo/protobufjs/minimal", "rpc.Service")
   @js.native
   class Service protected ()
     extends typingsSlinky.apolloProtobufjs.mod.rpc.Service {

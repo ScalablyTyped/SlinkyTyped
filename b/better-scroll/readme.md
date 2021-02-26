@@ -4,15 +4,15 @@
 Typings are for version 1.12
 
 ## Library description:
-inspired by iscroll, and it has a better scroll perfermance
+Full-featured BetterScroll
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | better-scroll |
-| Keywords           | scroll, iscroll, javascript, ios |
-| # releases         | 49 |
-| # dependents       | 308 |
-| # downloads        | 499203 |
+| Keywords           | scroll, iscroll, javascript, typescript, ios |
+| # releases         | 39 |
+| # dependents       | 416 |
+| # downloads        | 581863 |
 | # stars            | 22 |
 
 ## Links

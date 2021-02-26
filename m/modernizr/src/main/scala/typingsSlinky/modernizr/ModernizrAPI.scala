@@ -2,12 +2,13 @@ package typingsSlinky.modernizr
 
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ModernizrAPI extends js.Object {
+trait ModernizrAPI extends StObject {
   
   var _domPrefixes: js.Array[String] = js.native
   

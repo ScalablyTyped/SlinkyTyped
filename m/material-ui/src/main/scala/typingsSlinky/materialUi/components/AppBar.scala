@@ -6,6 +6,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.AppBarProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object AppBar {
   
   @JSImport("material-ui", "AppBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -58,10 +59,10 @@ object AppBar {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def titleStyle(value: CSSProperties): this.type = set("titleStyle", value.asInstanceOf[js.Any])
@@ -70,7 +71,7 @@ object AppBar {
     def zDepth(value: Double): this.type = set("zDepth", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AppBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: AppBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AppBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

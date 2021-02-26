@@ -1,5 +1,6 @@
 package typingsSlinky.auth0.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.auth0.auth0Strings.auth0_managed_certs
   - typingsSlinky.auth0.auth0Strings.self_managed_certs
 */
-trait CustomDomainType extends js.Object
+trait CustomDomainType extends StObject
 object CustomDomainType {
   
   @scala.inline

@@ -10,28 +10,20 @@ import typingsSlinky.storybookComponents.anon.Compact
 import typingsSlinky.storybookComponents.argsTableArgsTableMod.ArgsTableProps
 import typingsSlinky.storybookComponents.tabbedArgsTableMod.TabbedArgsTableProps
 import typingsSlinky.storybookTheming.typesMod.Theme
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@storybook/components/dist/blocks/ArgsTable", JSImport.Namespace)
-@js.native
-object argsTableMod extends js.Object {
+object argsTableMod {
   
+  @JSImport("@storybook/components/dist/blocks/ArgsTable", "ArgsTable")
+  @js.native
   val ArgsTable: ReactComponentClass[ArgsTableProps] = js.native
   
-  def NoControlsWarning(): ReactElement = js.native
-  
-  val TabbedArgsTable: ReactComponentClass[TabbedArgsTableProps] = js.native
-  
-  val TableWrapper: StyledComponent[
-    DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement], 
-    Compact, 
-    Theme
-  ] = js.native
-  
+  @JSImport("@storybook/components/dist/blocks/ArgsTable", "ArgsTableError")
   @js.native
-  object ArgsTableError extends js.Object {
+  object ArgsTableError extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[
@@ -42,4 +34,20 @@ object argsTableMod extends js.Object {
     
     /* "No component found." */ val NO_COMPONENT: typingsSlinky.storybookComponents.argsTableArgsTableMod.ArgsTableError.NO_COMPONENT with String = js.native
   }
+  
+  @JSImport("@storybook/components/dist/blocks/ArgsTable", "NoControlsWarning")
+  @js.native
+  def NoControlsWarning(): ReactElement = js.native
+  
+  @JSImport("@storybook/components/dist/blocks/ArgsTable", "TabbedArgsTable")
+  @js.native
+  val TabbedArgsTable: ReactComponentClass[TabbedArgsTableProps] = js.native
+  
+  @JSImport("@storybook/components/dist/blocks/ArgsTable", "TableWrapper")
+  @js.native
+  val TableWrapper: StyledComponent[
+    DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement], 
+    Compact, 
+    Theme
+  ] = js.native
 }

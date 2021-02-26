@@ -1,11 +1,12 @@
 package typingsSlinky.azure.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Expiry extends js.Object {
+trait Expiry extends StObject {
   
   var Expiry: js.Date = js.native
   
@@ -22,33 +23,21 @@ object Expiry {
   }
   
   @scala.inline
-  implicit class ExpiryOps[Self <: Expiry] (val x: Self) extends AnyVal {
+  implicit class ExpiryMutableBuilder[Self <: Expiry] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setExpiry(value: js.Date): Self = StObject.set(x, "Expiry", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setPermission(value: String): Self = StObject.set(x, "Permission", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setPermissionUndefined: Self = StObject.set(x, "Permission", js.undefined)
     
     @scala.inline
-    def setExpiry(value: js.Date): Self = this.set("Expiry", value.asInstanceOf[js.Any])
+    def setStart(value: js.Date): Self = StObject.set(x, "Start", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPermission(value: String): Self = this.set("Permission", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePermission: Self = this.set("Permission", js.undefined)
-    
-    @scala.inline
-    def setStart(value: js.Date): Self = this.set("Start", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStart: Self = this.set("Start", js.undefined)
+    def setStartUndefined: Self = StObject.set(x, "Start", js.undefined)
   }
 }

@@ -10,9 +10,9 @@ This is a simple URI template implementation following the [RFC 6570 URI Templat
 | ------------------ | :-------------: |
 | Full name          | url-template |
 | Keywords           | uri-template, uri template, uri, url, rfc 6570, url template, url-template |
-| # releases         | 1 |
-| # dependents       | 117 |
-| # downloads        | 42231240 |
+| # releases         | 0 |
+| # dependents       | 148 |
+| # downloads        | 47934342 |
 | # stars            | 8 |
 
 ## Links

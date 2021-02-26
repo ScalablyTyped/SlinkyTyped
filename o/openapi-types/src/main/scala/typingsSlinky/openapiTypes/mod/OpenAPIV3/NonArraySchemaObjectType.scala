@@ -1,5 +1,6 @@
 package typingsSlinky.openapiTypes.mod.OpenAPIV3
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.openapiTypes.openapiTypesStrings.string
   - typingsSlinky.openapiTypes.openapiTypesStrings.integer
 */
-trait NonArraySchemaObjectType extends js.Object
+trait NonArraySchemaObjectType extends StObject
 object NonArraySchemaObjectType {
   
   @scala.inline

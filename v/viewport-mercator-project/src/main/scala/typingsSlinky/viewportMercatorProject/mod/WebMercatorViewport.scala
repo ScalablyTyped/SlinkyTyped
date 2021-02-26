@@ -2,6 +2,7 @@ package typingsSlinky.viewportMercatorProject.mod
 
 import typingsSlinky.viewportMercatorProject.anon.LngLat
 import typingsSlinky.viewportMercatorProject.anon.Offset
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -5,6 +5,7 @@ import typingsSlinky.activexOffice.activexOfficeNumbers.`-4142`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`2`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`4`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`2`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`4`
 */
-trait XlUnderlineStyle extends js.Object
+trait XlUnderlineStyle extends StObject
 object XlUnderlineStyle {
   
   @scala.inline

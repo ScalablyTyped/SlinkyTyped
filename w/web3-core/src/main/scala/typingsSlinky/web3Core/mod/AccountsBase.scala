@@ -1,13 +1,14 @@
 package typingsSlinky.web3Core.mod
 
 import typingsSlinky.node.netMod.Socket
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("web3-core", "AccountsBase")
 @js.native
-class AccountsBase () extends js.Object {
+class AccountsBase () extends StObject {
   def this(provider: typingsSlinky.web3Core.mod.provider) = this()
   def this(provider: typingsSlinky.web3Core.mod.provider, net: Socket) = this()
   

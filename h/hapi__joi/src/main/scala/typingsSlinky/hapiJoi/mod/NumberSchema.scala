@@ -2,6 +2,7 @@ package typingsSlinky.hapiJoi.mod
 
 import typingsSlinky.hapiJoi.hapiJoiStrings.negative
 import typingsSlinky.hapiJoi.hapiJoiStrings.positive
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

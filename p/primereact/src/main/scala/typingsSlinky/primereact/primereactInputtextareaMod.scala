@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.inputTextareaMod.InputTextareaProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/inputtextarea", JSImport.Namespace)
-@js.native
-object primereactInputtextareaMod extends js.Object {
+object primereactInputtextareaMod {
   
+  @JSImport("primereact/inputtextarea", "InputTextarea")
   @js.native
-  class InputTextarea ()
-    extends Component[InputTextareaProps, js.Any, js.Any]
+  class InputTextarea protected ()
+    extends typingsSlinky.primereact.inputTextareaMod.InputTextarea {
+    def this(props: InputTextareaProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: InputTextareaProps, context: js.Any) = this()
+  }
 }

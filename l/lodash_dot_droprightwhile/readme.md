@@ -11,8 +11,8 @@ The lodash method `_.dropRightWhile` exported as a module.
 | Full name          | lodash.droprightwhile |
 | Keywords           | lodash-modularized, droprightwhile |
 | # releases         | 0 |
-| # dependents       | 4 |
-| # downloads        | 8056 |
+| # dependents       | 5 |
+| # downloads        | 8154 |
 | # stars            | 0 |
 
 ## Links

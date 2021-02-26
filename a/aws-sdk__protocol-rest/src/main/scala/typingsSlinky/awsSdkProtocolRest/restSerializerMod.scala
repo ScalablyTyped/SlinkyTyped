@@ -5,14 +5,14 @@ import typingsSlinky.awsSdkTypes.httpMod.HttpRequest
 import typingsSlinky.awsSdkTypes.serdeMod.RequestSerializer
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/protocol-rest/build/RestSerializer", JSImport.Namespace)
-@js.native
-object restSerializerMod extends js.Object {
+object restSerializerMod {
   
+  @JSImport("@aws-sdk/protocol-rest/build/RestSerializer", "RestSerializer")
   @js.native
   class RestSerializer[StreamType] protected ()
     extends RequestSerializer[StreamType, js.Any] {

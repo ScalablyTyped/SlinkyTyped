@@ -23,6 +23,7 @@ import typingsSlinky.baseui.phoneInputMod.Country
 import typingsSlinky.baseui.phoneInputMod.PhoneInputOverrides
 import typingsSlinky.baseui.selectMod.OnChangeParams
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -69,13 +70,13 @@ class SharedBuilder_PhoneInputProps953736929 (val args: js.Array[js.Any])
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+  def endEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def endEnhancerFunction1(value: /* args */ SharedProps => ReactElement): this.type = set("endEnhancer", js.Any.fromFunction1(value))
   
   @scala.inline
-  def endEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+  def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
@@ -87,16 +88,16 @@ class SharedBuilder_PhoneInputProps953736929 (val args: js.Array[js.Any])
   def inputMode(value: String): this.type = set("inputMode", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+  def inputRef(value: Ref[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def inputRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
   
   @scala.inline
-  def inputRef(value: Ref[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+  def inputRefNull: this.type = set("inputRef", null)
   
   @scala.inline
-  def inputRefNull: this.type = set("inputRef", null)
+  def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def mapIsoToLabel(value: /* iso */ String => String): this.type = set("mapIsoToLabel", js.Any.fromFunction1(value))
@@ -165,13 +166,13 @@ class SharedBuilder_PhoneInputProps953736929 (val args: js.Array[js.Any])
   def size(value: mini | default_ | compact | large_): this.type = set("size", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def startEnhancerReactElement(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+  def startEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def startEnhancerFunction1(value: /* args */ SharedProps => ReactElement): this.type = set("startEnhancer", js.Any.fromFunction1(value))
   
   @scala.inline
-  def startEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+  def startEnhancerReactElement(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])

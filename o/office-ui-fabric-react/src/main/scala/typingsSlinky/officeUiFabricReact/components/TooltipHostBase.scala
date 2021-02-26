@@ -86,6 +86,7 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -94,7 +95,7 @@ object TooltipHostBase {
   
   @JSImport("office-ui-fabric-react", "TooltipHostBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -275,25 +276,25 @@ object TooltipHostBase {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[ITooltipHost]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ ITooltipHost | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[ITooltipHost]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentRef(value: IRefObject[ITooltipHost]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    def content(value: String | ReactElement | js.Array[ReactElement]): this.type = set("content", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentVarargs(value: ReactElement*): this.type = set("content", js.Array(value :_*))
-    
-    @scala.inline
-    def content(value: String | ReactElement | js.Array[ReactElement]): this.type = set("content", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
@@ -308,10 +309,10 @@ object TooltipHostBase {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def delay(value: TooltipDelay): this.type = set("delay", value.asInstanceOf[js.Any])
@@ -991,10 +992,10 @@ object TooltipHostBase {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: ITooltipHostStyleProps => DeepPartial[ITooltipHostStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[ITooltipHostStyleProps, ITooltipHostStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[ITooltipHostStyleProps, ITooltipHostStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: ITooltipHostStyleProps => DeepPartial[ITooltipHostStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -1027,7 +1028,7 @@ object TooltipHostBase {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ITooltipHostProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TooltipHostBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ITooltipHostProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

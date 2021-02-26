@@ -4,19 +4,26 @@ import typingsSlinky.azdata.mod.window.ModelViewPanel
 import typingsSlinky.vscode.Thenable
 import typingsSlinky.vscode.mod.Event
 import typingsSlinky.vscode.mod.ViewColumn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("azdata", "workspace")
-@js.native
-object workspace extends js.Object {
+object workspace {
   
+  @JSImport("azdata", "workspace.createModelViewEditor")
+  @js.native
   def createModelViewEditor(title: String): ModelViewEditor = js.native
+  @JSImport("azdata", "workspace.createModelViewEditor")
+  @js.native
   def createModelViewEditor(title: String, options: ModelViewEditorOptions): ModelViewEditor = js.native
   
+  @JSImport("azdata", "workspace.onDidChangeToDashboard")
+  @js.native
   val onDidChangeToDashboard: Event[DashboardDocument] = js.native
   
+  @JSImport("azdata", "workspace.onDidOpenDashboard")
+  @js.native
   val onDidOpenDashboard: Event[DashboardDocument] = js.native
   
   @js.native

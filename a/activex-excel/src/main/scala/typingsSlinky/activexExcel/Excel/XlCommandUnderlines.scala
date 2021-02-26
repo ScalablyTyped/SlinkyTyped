@@ -3,6 +3,7 @@ package typingsSlinky.activexExcel.Excel
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4105`
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4146`
 import typingsSlinky.activexExcel.activexExcelNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4146`
   - typingsSlinky.activexExcel.activexExcelNumbers.`1`
 */
-trait XlCommandUnderlines extends js.Object
+trait XlCommandUnderlines extends StObject
 object XlCommandUnderlines {
   
   @scala.inline

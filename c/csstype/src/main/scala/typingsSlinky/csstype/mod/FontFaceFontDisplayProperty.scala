@@ -1,5 +1,6 @@
 package typingsSlinky.csstype.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.optional
   - typingsSlinky.csstype.csstypeStrings.swap
 */
-trait FontFaceFontDisplayProperty extends js.Object
+trait FontFaceFontDisplayProperty extends StObject
 object FontFaceFontDisplayProperty {
   
   @scala.inline

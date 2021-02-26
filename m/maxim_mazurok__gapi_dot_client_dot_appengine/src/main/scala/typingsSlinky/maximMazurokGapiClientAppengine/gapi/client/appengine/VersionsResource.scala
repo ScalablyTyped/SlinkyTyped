@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientAppengine.anon.CallbackFields
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.VersionsId
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.View
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VersionsResource extends js.Object {
+trait VersionsResource extends StObject {
   
   /** Deploys code and resource files to a new version. */
   def create(request: AccesstokenAlt): Request[Operation] = js.native

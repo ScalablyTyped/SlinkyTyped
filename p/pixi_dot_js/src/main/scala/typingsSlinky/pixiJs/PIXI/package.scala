@@ -1,14 +1,11 @@
 package typingsSlinky.pixiJs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object PIXI {
-  
-  type AnimatedSprite = typingsSlinky.pixiJs.PIXI.AnimatedSprite_
-  
-  type Application = typingsSlinky.pixiJs.PIXI.Application_
   
   /**
     * {@link PIXI.Loader Loader} middleware for loading
@@ -29,8 +26,6 @@ package object PIXI {
   type IResourceDictionary = org.scalablytyped.runtime.StringDictionary[typingsSlinky.pixiJs.PIXI.LoaderResource]
   
   type ITextureDictionary = org.scalablytyped.runtime.StringDictionary[typingsSlinky.pixiJs.PIXI.Texture]
-  
-  type LoaderResource = typingsSlinky.pixiJs.PIXI.LoaderResource_
   
   /**
     * {@link PIXI.Loader Loader} middleware for loading texture atlases that have been created with

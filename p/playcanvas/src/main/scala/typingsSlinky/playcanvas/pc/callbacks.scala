@@ -1,5 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,9 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * Namespace for callback definitions.
   */
-@JSGlobal("pc.callbacks")
-@js.native
-object callbacks extends js.Object {
+object callbacks {
   
   /**
     * Callback used by {@link pc.ModelHandler#addParser} to decide on which parser to use.

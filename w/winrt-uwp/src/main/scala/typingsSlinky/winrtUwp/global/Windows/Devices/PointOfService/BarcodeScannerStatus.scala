@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices.PointOfService
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Defines the constants that indicates the barcode scanner status. */
 @JSGlobal("Windows.Devices.PointOfService.BarcodeScannerStatus")
 @js.native
-object BarcodeScannerStatus extends js.Object {
+object BarcodeScannerStatus extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[

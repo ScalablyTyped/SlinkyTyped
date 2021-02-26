@@ -4,12 +4,13 @@ import typingsSlinky.amapJsApi.AMap.EventEmitter
 import typingsSlinky.amapJsApi.AMap.event.EventListener
 import typingsSlinky.amapJsApi.amapJsApiNumbers.`0`
 import typingsSlinky.amapJsApi.amapJsApiNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofevent extends js.Object {
+trait Typeofevent extends StObject {
   
   /**
     * 注册DOM对象事件

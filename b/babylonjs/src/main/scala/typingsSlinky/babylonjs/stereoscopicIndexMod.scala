@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/Stereoscopic/index", JSImport.Namespace)
-@js.native
-object stereoscopicIndexMod extends js.Object {
+object stereoscopicIndexMod {
   
+  @JSImport("babylonjs/Cameras/Stereoscopic/index", "AnaglyphArcRotateCamera")
   @js.native
   class AnaglyphArcRotateCamera protected ()
     extends typingsSlinky.babylonjs.anaglyphArcRotateCameraMod.AnaglyphArcRotateCamera {
@@ -34,6 +34,7 @@ object stereoscopicIndexMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("babylonjs/Cameras/Stereoscopic/index", "AnaglyphFreeCamera")
   @js.native
   class AnaglyphFreeCamera protected ()
     extends typingsSlinky.babylonjs.anaglyphFreeCameraMod.AnaglyphFreeCamera {
@@ -47,6 +48,7 @@ object stereoscopicIndexMod extends js.Object {
     def this(name: String, position: Vector3, interaxialDistance: Double, scene: Scene) = this()
   }
   
+  @JSImport("babylonjs/Cameras/Stereoscopic/index", "AnaglyphGamepadCamera")
   @js.native
   class AnaglyphGamepadCamera protected ()
     extends typingsSlinky.babylonjs.anaglyphGamepadCameraMod.AnaglyphGamepadCamera {
@@ -60,6 +62,7 @@ object stereoscopicIndexMod extends js.Object {
     def this(name: String, position: Vector3, interaxialDistance: Double, scene: Scene) = this()
   }
   
+  @JSImport("babylonjs/Cameras/Stereoscopic/index", "AnaglyphUniversalCamera")
   @js.native
   class AnaglyphUniversalCamera protected ()
     extends typingsSlinky.babylonjs.anaglyphUniversalCameraMod.AnaglyphUniversalCamera {
@@ -73,6 +76,7 @@ object stereoscopicIndexMod extends js.Object {
     def this(name: String, position: Vector3, interaxialDistance: Double, scene: Scene) = this()
   }
   
+  @JSImport("babylonjs/Cameras/Stereoscopic/index", "StereoscopicArcRotateCamera")
   @js.native
   class StereoscopicArcRotateCamera protected ()
     extends typingsSlinky.babylonjs.stereoscopicArcRotateCameraMod.StereoscopicArcRotateCamera {
@@ -99,6 +103,7 @@ object stereoscopicIndexMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("babylonjs/Cameras/Stereoscopic/index", "StereoscopicFreeCamera")
   @js.native
   class StereoscopicFreeCamera protected ()
     extends typingsSlinky.babylonjs.stereoscopicFreeCameraMod.StereoscopicFreeCamera {
@@ -119,6 +124,7 @@ object stereoscopicIndexMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("babylonjs/Cameras/Stereoscopic/index", "StereoscopicGamepadCamera")
   @js.native
   class StereoscopicGamepadCamera protected ()
     extends typingsSlinky.babylonjs.stereoscopicGamepadCameraMod.StereoscopicGamepadCamera {
@@ -139,6 +145,7 @@ object stereoscopicIndexMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("babylonjs/Cameras/Stereoscopic/index", "StereoscopicUniversalCamera")
   @js.native
   class StereoscopicUniversalCamera protected ()
     extends typingsSlinky.babylonjs.stereoscopicUniversalCameraMod.StereoscopicUniversalCamera {

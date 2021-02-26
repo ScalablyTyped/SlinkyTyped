@@ -2,6 +2,7 @@ package typingsSlinky.activexMshtml.MSHTML
 
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`-2147483647`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`-2147483647`
 */
-trait styleZIndex extends js.Object
+trait styleZIndex extends StObject
 object styleZIndex {
   
   @scala.inline

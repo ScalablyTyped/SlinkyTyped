@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDfareporting.gapi.client.dfareportin
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Directories
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MobileAppsResource extends js.Object {
+trait MobileAppsResource extends StObject {
   
   /** Gets one mobile app by ID. */
   def get(): Request[MobileApp] = js.native

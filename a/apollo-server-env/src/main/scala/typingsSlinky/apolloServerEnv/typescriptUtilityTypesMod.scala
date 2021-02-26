@@ -2,13 +2,12 @@ package typingsSlinky.apolloServerEnv
 
 import typingsSlinky.std.Pick
 import typingsSlinky.std.Required
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("apollo-server-env/dist/typescript-utility-types", JSImport.Namespace)
-@js.native
-object typescriptUtilityTypesMod extends js.Object {
+object typescriptUtilityTypesMod {
   
   type ValueOrPromise[T] = T | js.Promise[T]
   

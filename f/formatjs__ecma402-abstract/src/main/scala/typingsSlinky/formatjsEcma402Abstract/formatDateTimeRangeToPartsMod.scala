@@ -3,14 +3,15 @@ package typingsSlinky.formatjsEcma402Abstract
 import typingsSlinky.formatjsEcma402Abstract.formatDateTimePatternMod.FormatDateTimePatternImplDetails
 import typingsSlinky.formatjsEcma402Abstract.toLocalTimeMod.ToLocalTimeImplDetails
 import typingsSlinky.std.Intl.DateTimeFormat
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@formatjs/ecma402-abstract/lib/DateTimeFormat/FormatDateTimeRangeToParts", JSImport.Namespace)
-@js.native
-object formatDateTimeRangeToPartsMod extends js.Object {
+object formatDateTimeRangeToPartsMod {
   
+  @JSImport("@formatjs/ecma402-abstract/lib/DateTimeFormat/FormatDateTimeRangeToParts", "FormatDateTimeRangeToParts")
+  @js.native
   def FormatDateTimeRangeToParts(
     dtf: DateTimeFormat,
     x: Double,

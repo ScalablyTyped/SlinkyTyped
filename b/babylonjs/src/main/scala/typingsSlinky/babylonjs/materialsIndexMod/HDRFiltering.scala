@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.materialsIndexMod
 
 import typingsSlinky.babylonjs.hdrFilteringMod.IHDRFilteringOptions
 import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

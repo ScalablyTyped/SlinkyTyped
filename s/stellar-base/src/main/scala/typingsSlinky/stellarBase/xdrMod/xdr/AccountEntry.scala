@@ -4,12 +4,13 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.stellarBase.stellarBaseStrings.base64
 import typingsSlinky.stellarBase.stellarBaseStrings.hex
 import typingsSlinky.stellarBase.stellarBaseStrings.raw
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AccountEntry extends js.Object {
+trait AccountEntry extends StObject {
   
   def accountId(): AccountId = js.native
   def accountId(value: AccountId): AccountId = js.native

@@ -16,12 +16,13 @@ import typingsSlinky.uniApp.uniAppStrings.`zoom-fade-in`
 import typingsSlinky.uniApp.uniAppStrings.`zoom-fade-out`
 import typingsSlinky.uniApp.uniAppStrings.`zoom-in`
 import typingsSlinky.uniApp.uniAppStrings.`zoom-out`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SubNVue extends js.Object {
+trait SubNVue extends StObject {
   
   /**
     * 隐藏原生子窗体

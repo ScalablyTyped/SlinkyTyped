@@ -11,8 +11,8 @@ Parses a Dockerfile and returns an array of commands.
 | Full name          | docker-file-parser |
 | Keywords           | dockerfile, docker, parser |
 | # releases         | 2 |
-| # dependents       | 21 |
-| # downloads        | 371003 |
+| # dependents       | 26 |
+| # downloads        | 951023 |
 | # stars            | 2 |
 
 ## Links

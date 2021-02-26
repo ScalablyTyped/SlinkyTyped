@@ -11,12 +11,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.RequestIdResourceTargetH
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RequestIdResourceTargetHttpsProxyUserIp
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RequestIdTargetHttpsProxy
 import typingsSlinky.maximMazurokGapiClientCompute.anon.ResourceTargetHttpsProxyUserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TargetHttpsProxiesResource extends js.Object {
+trait TargetHttpsProxiesResource extends StObject {
   
   /** Retrieves the list of all TargetHttpsProxy resources, regional and global, available to the specified project. */
   def aggregatedList(): Request[TargetHttpsProxyAggregatedList] = js.native

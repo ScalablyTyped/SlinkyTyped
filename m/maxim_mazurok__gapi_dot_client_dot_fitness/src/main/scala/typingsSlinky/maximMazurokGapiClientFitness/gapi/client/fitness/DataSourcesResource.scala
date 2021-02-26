@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientFitness.anon.DataTypeName
 import typingsSlinky.maximMazurokGapiClientFitness.anon.Key
 import typingsSlinky.maximMazurokGapiClientFitness.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientFitness.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DataSourcesResource extends js.Object {
+trait DataSourcesResource extends StObject {
   
   def create(request: Alt, body: DataSource): Request[DataSource] = js.native
   /**

@@ -8,6 +8,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsDatetime.timePickerMod.ITimePickerProps
 import typingsSlinky.blueprintjsDatetime.timePickerMod.TimePrecision
 import typingsSlinky.blueprintjsDatetime.timeUnitMod.TimeUnit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object TimePicker {
   
   @JSImport("@blueprintjs/datetime", "TimePicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -75,7 +76,7 @@ object TimePicker {
     def valueNull: this.type = set("value", null)
   }
   
-  def withProps(p: ITimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TimePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ITimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

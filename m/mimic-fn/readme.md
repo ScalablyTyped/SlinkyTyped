@@ -11,8 +11,8 @@ Make a function mimic another one
 | Full name          | mimic-fn |
 | Keywords           | function, mimic, imitate, rename, copy, inherit, properties, name, func, fn, set, infer, change |
 | # releases         | 5 |
-| # dependents       | 71 |
-| # downloads        | 616267956 |
+| # dependents       | 118 |
+| # downloads        | 956193186 |
 | # stars            | 0 |
 
 ## Links

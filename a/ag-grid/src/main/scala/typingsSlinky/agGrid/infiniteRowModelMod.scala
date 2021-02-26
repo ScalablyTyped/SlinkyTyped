@@ -5,14 +5,14 @@ import typingsSlinky.agGrid.clientSideRowModelMod.RowDataTransaction
 import typingsSlinky.agGrid.iDatasourceMod.IDatasource
 import typingsSlinky.agGrid.iRowModelMod.IRowModel
 import typingsSlinky.agGrid.rowNodeMod.RowNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/rowModels/infinite/infiniteRowModel", JSImport.Namespace)
-@js.native
-object infiniteRowModelMod extends js.Object {
+object infiniteRowModelMod {
   
+  @JSImport("ag-grid/dist/lib/rowModels/infinite/infiniteRowModel", "InfiniteRowModel")
   @js.native
   class InfiniteRowModel ()
     extends BeanStub

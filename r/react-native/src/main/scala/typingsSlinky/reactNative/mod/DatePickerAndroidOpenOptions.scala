@@ -3,12 +3,13 @@ package typingsSlinky.reactNative.mod
 import typingsSlinky.reactNative.reactNativeStrings.calendar
 import typingsSlinky.reactNative.reactNativeStrings.default
 import typingsSlinky.reactNative.reactNativeStrings.spinner
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DatePickerAndroidOpenOptions extends js.Object {
+trait DatePickerAndroidOpenOptions extends StObject {
   
   var date: js.UndefOr[js.Date | Double] = js.native
   
@@ -27,51 +28,39 @@ object DatePickerAndroidOpenOptions {
   }
   
   @scala.inline
-  implicit class DatePickerAndroidOpenOptionsOps[Self <: DatePickerAndroidOpenOptions] (val x: Self) extends AnyVal {
+  implicit class DatePickerAndroidOpenOptionsMutableBuilder[Self <: DatePickerAndroidOpenOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDate(value: js.Date | Double): Self = StObject.set(x, "date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDateDate(value: js.Date): Self = StObject.set(x, "date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDateUndefined: Self = StObject.set(x, "date", js.undefined)
     
     @scala.inline
-    def setDateDate(value: js.Date): Self = this.set("date", value.asInstanceOf[js.Any])
+    def setMaxDate(value: js.Date | Double): Self = StObject.set(x, "maxDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDate(value: js.Date | Double): Self = this.set("date", value.asInstanceOf[js.Any])
+    def setMaxDateDate(value: js.Date): Self = StObject.set(x, "maxDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDate: Self = this.set("date", js.undefined)
+    def setMaxDateUndefined: Self = StObject.set(x, "maxDate", js.undefined)
     
     @scala.inline
-    def setMaxDateDate(value: js.Date): Self = this.set("maxDate", value.asInstanceOf[js.Any])
+    def setMinDate(value: js.Date | Double): Self = StObject.set(x, "minDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMaxDate(value: js.Date | Double): Self = this.set("maxDate", value.asInstanceOf[js.Any])
+    def setMinDateDate(value: js.Date): Self = StObject.set(x, "minDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteMaxDate: Self = this.set("maxDate", js.undefined)
+    def setMinDateUndefined: Self = StObject.set(x, "minDate", js.undefined)
     
     @scala.inline
-    def setMinDateDate(value: js.Date): Self = this.set("minDate", value.asInstanceOf[js.Any])
+    def setMode(value: calendar | spinner | default): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMinDate(value: js.Date | Double): Self = this.set("minDate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMinDate: Self = this.set("minDate", js.undefined)
-    
-    @scala.inline
-    def setMode(value: calendar | spinner | default): Self = this.set("mode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMode: Self = this.set("mode", js.undefined)
+    def setModeUndefined: Self = StObject.set(x, "mode", js.undefined)
   }
 }

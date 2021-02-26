@@ -1,5 +1,6 @@
 package typingsSlinky.reactSketchapp.typesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactSketchapp.reactSketchappStrings.dotted
   - typingsSlinky.reactSketchapp.reactSketchappStrings.dashed
 */
-trait BorderStyle extends js.Object
+trait BorderStyle extends StObject
 object BorderStyle {
   
   @scala.inline

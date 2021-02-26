@@ -8,15 +8,22 @@ import typingsSlinky.reactNativeTags.mod.RenderTag
 import typingsSlinky.reactNativeTags.mod.TagsProps
 import typingsSlinky.reactNativeTags.mod.TextInputProps
 import typingsSlinky.reactNativeTags.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeTags {
   
+  @scala.inline
+  def apply(renderTag: RenderTag => Unit): Builder = {
+    val __props = js.Dynamic.literal(renderTag = js.Any.fromFunction1(renderTag))
+    new Builder(js.Array(this.component, __props.asInstanceOf[TagsProps]))
+  }
+  
   @JSImport("react-native-tags", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,19 +37,19 @@ object ReactNativeTags {
     def createTagOnReturn(value: Boolean): this.type = set("createTagOnReturn", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def createTagOnStringVarargs(value: String*): this.type = set("createTagOnString", js.Array(value :_*))
+    def createTagOnString(value: js.Array[String]): this.type = set("createTagOnString", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def createTagOnString(value: js.Array[String]): this.type = set("createTagOnString", value.asInstanceOf[js.Any])
+    def createTagOnStringVarargs(value: String*): this.type = set("createTagOnString", js.Array(value :_*))
     
     @scala.inline
     def deleteTagOnPress(value: Boolean): this.type = set("deleteTagOnPress", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def initialTagsVarargs(value: String*): this.type = set("initialTags", js.Array(value :_*))
+    def initialTags(value: js.Array[String]): this.type = set("initialTags", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def initialTags(value: js.Array[String]): this.type = set("initialTags", value.asInstanceOf[js.Any])
+    def initialTagsVarargs(value: String*): this.type = set("initialTags", js.Array(value :_*))
     
     @scala.inline
     def initialText(value: String): this.type = set("initialText", value.asInstanceOf[js.Any])
@@ -81,10 +88,4 @@ object ReactNativeTags {
   }
   
   def withProps(p: TagsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(renderTag: RenderTag => Unit): Builder = {
-    val __props = js.Dynamic.literal(renderTag = js.Any.fromFunction1(renderTag))
-    new Builder(js.Array(this.component, __props.asInstanceOf[TagsProps]))
-  }
 }

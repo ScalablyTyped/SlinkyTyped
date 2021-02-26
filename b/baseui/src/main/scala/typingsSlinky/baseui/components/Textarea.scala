@@ -21,6 +21,7 @@ import typingsSlinky.baseui.inputMod.BaseInputOverrides
 import typingsSlinky.baseui.inputMod.SharedProps
 import typingsSlinky.baseui.textareaMod.TextareaProps
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ object Textarea {
   
   @JSImport("baseui/textarea", "Textarea")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -79,16 +80,16 @@ object Textarea {
     def inputMode(value: String): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRefRefObject(value: ReactRef[HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRef(value: Ref[HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputRefFunction1(value: /* instance */ HTMLTextAreaElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def inputRef(value: Ref[HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRefNull: this.type = set("inputRef", null)
     
     @scala.inline
-    def inputRefNull: this.type = set("inputRef", null)
+    def inputRefRefObject(value: ReactRef[HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
@@ -151,7 +152,7 @@ object Textarea {
     def value(value: String | Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TextareaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Textarea.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TextareaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

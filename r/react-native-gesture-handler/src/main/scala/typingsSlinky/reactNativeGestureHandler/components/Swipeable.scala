@@ -15,6 +15,7 @@ import typingsSlinky.reactNativeGestureHandler.anon.Left
 import typingsSlinky.reactNativeGestureHandler.anon.Right
 import typingsSlinky.reactNativeGestureHandler.swipeableMod.SwipeableProperties
 import typingsSlinky.reactNativeGestureHandler.swipeableMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ object Swipeable {
   
   @JSImport("react-native-gesture-handler/Swipeable", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,16 +32,16 @@ object Swipeable {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def activeOffsetXVarargs(value: Double*): this.type = set("activeOffsetX", js.Array(value :_*))
-    
-    @scala.inline
     def activeOffsetX(value: Double | js.Array[Double]): this.type = set("activeOffsetX", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def activeOffsetYVarargs(value: Double*): this.type = set("activeOffsetY", js.Array(value :_*))
+    def activeOffsetXVarargs(value: Double*): this.type = set("activeOffsetX", js.Array(value :_*))
     
     @scala.inline
     def activeOffsetY(value: Double | js.Array[Double]): this.type = set("activeOffsetY", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def activeOffsetYVarargs(value: Double*): this.type = set("activeOffsetY", js.Array(value :_*))
     
     @scala.inline
     def avgTouches(value: Boolean): this.type = set("avgTouches", value.asInstanceOf[js.Any])
@@ -61,16 +62,16 @@ object Swipeable {
     def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def failOffsetXVarargs(value: Double*): this.type = set("failOffsetX", js.Array(value :_*))
-    
-    @scala.inline
     def failOffsetX(value: Double | js.Array[Double]): this.type = set("failOffsetX", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def failOffsetYVarargs(value: Double*): this.type = set("failOffsetY", js.Array(value :_*))
+    def failOffsetXVarargs(value: Double*): this.type = set("failOffsetX", js.Array(value :_*))
     
     @scala.inline
     def failOffsetY(value: Double | js.Array[Double]): this.type = set("failOffsetY", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def failOffsetYVarargs(value: Double*): this.type = set("failOffsetY", js.Array(value :_*))
     
     @scala.inline
     def friction(value: Double): this.type = set("friction", value.asInstanceOf[js.Any])
@@ -170,40 +171,40 @@ object Swipeable {
     def shouldCancelWhenOutside(value: Boolean): this.type = set("shouldCancelWhenOutside", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def simultaneousHandlersVarargs(value: Ref[js.Any]*): this.type = set("simultaneousHandlers", js.Array(value :_*))
-    
-    @scala.inline
-    def simultaneousHandlersRefObject(value: ReactRef[_]): this.type = set("simultaneousHandlers", value.asInstanceOf[js.Any])
+    def simultaneousHandlers(value: Ref[_] | js.Array[Ref[_]]): this.type = set("simultaneousHandlers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def simultaneousHandlersFunction1(value: /* instance */ _ | Null => Unit): this.type = set("simultaneousHandlers", js.Any.fromFunction1(value))
     
     @scala.inline
-    def simultaneousHandlers(value: Ref[_] | js.Array[Ref[_]]): this.type = set("simultaneousHandlers", value.asInstanceOf[js.Any])
+    def simultaneousHandlersNull: this.type = set("simultaneousHandlers", null)
     
     @scala.inline
-    def simultaneousHandlersNull: this.type = set("simultaneousHandlers", null)
+    def simultaneousHandlersRefObject(value: ReactRef[_]): this.type = set("simultaneousHandlers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def simultaneousHandlersVarargs(value: Ref[js.Any]*): this.type = set("simultaneousHandlers", js.Array(value :_*))
     
     @scala.inline
     def useNativeAnimations(value: Boolean): this.type = set("useNativeAnimations", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def waitForVarargs(value: Ref[js.Any]*): this.type = set("waitFor", js.Array(value :_*))
-    
-    @scala.inline
-    def waitForRefObject(value: ReactRef[_]): this.type = set("waitFor", value.asInstanceOf[js.Any])
+    def waitFor(value: Ref[_] | js.Array[Ref[_]]): this.type = set("waitFor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def waitForFunction1(value: /* instance */ _ | Null => Unit): this.type = set("waitFor", js.Any.fromFunction1(value))
     
     @scala.inline
-    def waitFor(value: Ref[_] | js.Array[Ref[_]]): this.type = set("waitFor", value.asInstanceOf[js.Any])
+    def waitForNull: this.type = set("waitFor", null)
     
     @scala.inline
-    def waitForNull: this.type = set("waitFor", null)
+    def waitForRefObject(value: ReactRef[_]): this.type = set("waitFor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def waitForVarargs(value: Ref[js.Any]*): this.type = set("waitFor", js.Array(value :_*))
   }
   
-  def withProps(p: SwipeableProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Swipeable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SwipeableProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

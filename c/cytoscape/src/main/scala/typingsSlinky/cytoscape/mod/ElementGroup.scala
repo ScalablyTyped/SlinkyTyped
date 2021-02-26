@@ -1,5 +1,6 @@
 package typingsSlinky.cytoscape.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.cytoscape.cytoscapeStrings.nodes
   - typingsSlinky.cytoscape.cytoscapeStrings.edges
 */
-trait ElementGroup extends js.Object
+trait ElementGroup extends StObject
 object ElementGroup {
   
   @scala.inline

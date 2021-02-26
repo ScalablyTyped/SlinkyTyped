@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientContent.anon.Key
 import typingsSlinky.maximMazurokGapiClientContent.anon.KeyOauthtokenPrettyPrintQuotaUser
 import typingsSlinky.maximMazurokGapiClientContent.anon.ReturnPolicyId
 import typingsSlinky.maximMazurokGapiClientContent.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReturnpolicyResource extends js.Object {
+trait ReturnpolicyResource extends StObject {
   
   /** Batches multiple return policy related calls in a single request. */
   def custombatch(request: KeyOauthtokenPrettyPrintQuotaUser): Request[ReturnpolicyCustomBatchResponse] = js.native

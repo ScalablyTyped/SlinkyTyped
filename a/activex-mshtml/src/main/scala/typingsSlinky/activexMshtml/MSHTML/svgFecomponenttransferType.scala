@@ -7,6 +7,7 @@ import typingsSlinky.activexMshtml.activexMshtmlNumbers.`2`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`3`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`4`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`0`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
 */
-trait svgFecomponenttransferType extends js.Object
+trait svgFecomponenttransferType extends StObject
 object svgFecomponenttransferType {
   
   @scala.inline

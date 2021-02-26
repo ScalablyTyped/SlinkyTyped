@@ -16,15 +16,22 @@ import typingsSlinky.reactSortablePane.mod.PaneSize
 import typingsSlinky.reactSortablePane.mod.SortablePaneProps
 import typingsSlinky.reactSortablePane.reactSortablePaneStrings.horizontal
 import typingsSlinky.reactSortablePane.reactSortablePaneStrings.vertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SortablePane {
   
+  @scala.inline
+  def apply(children: js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SortablePaneProps]))
+  }
+  
   @JSImport("react-sortable-pane", "SortablePane")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,10 +42,10 @@ object SortablePane {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultOrderVarargs(value: String*): this.type = set("defaultOrder", js.Array(value :_*))
+    def defaultOrder(value: js.Array[String]): this.type = set("defaultOrder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultOrder(value: js.Array[String]): this.type = set("defaultOrder", value.asInstanceOf[js.Any])
+    def defaultOrderVarargs(value: String*): this.type = set("defaultOrder", js.Array(value :_*))
     
     @scala.inline
     def direction(value: horizontal | vertical): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -84,10 +91,10 @@ object SortablePane {
     ): this.type = set("onResizeStop", js.Any.fromFunction5(value))
     
     @scala.inline
-    def orderVarargs(value: String*): this.type = set("order", js.Array(value :_*))
+    def order(value: js.Array[String]): this.type = set("order", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def order(value: js.Array[String]): this.type = set("order", value.asInstanceOf[js.Any])
+    def orderVarargs(value: String*): this.type = set("order", js.Array(value :_*))
     
     @scala.inline
     def springConfig(value: SpringHelperConfig): this.type = set("springConfig", value.asInstanceOf[js.Any])
@@ -97,10 +104,4 @@ object SortablePane {
   }
   
   def withProps(p: SortablePaneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: js.Array[ReactElement]): Builder = {
-    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SortablePaneProps]))
-  }
 }

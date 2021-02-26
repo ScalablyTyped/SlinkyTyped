@@ -3,12 +3,13 @@ package typingsSlinky.popperjsCore.typesMod
 import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.Element
 import typingsSlinky.popperjsCore.anon.FnCall
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Window extends js.Object {
+trait Window extends StObject {
   
   var Element: org.scalajs.dom.raw.Element = js.native
   

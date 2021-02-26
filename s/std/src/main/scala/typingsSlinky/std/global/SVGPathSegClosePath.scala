@@ -1,15 +1,12 @@
 package typingsSlinky.std.global
 
-import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("SVGPathSegClosePath")
 @js.native
 class SVGPathSegClosePath ()
   extends typingsSlinky.std.SVGPathSeg
-@JSGlobal("SVGPathSegClosePath")
-@js.native
-object SVGPathSegClosePath
-  extends Instantiable0[org.scalajs.dom.raw.SVGPathSegClosePath]

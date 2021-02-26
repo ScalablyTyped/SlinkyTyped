@@ -7,16 +7,18 @@ import typingsSlinky.googleAuthLibrary.googleAuthLibraryStrings.tokens
 import typingsSlinky.googleAuthLibrary.oauth2clientMod.Headers
 import typingsSlinky.googleAuthLibrary.transportersMod.DefaultTransporter
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitterOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("google-auth-library/build/src/auth/authclient", JSImport.Namespace)
-@js.native
-object authclientMod extends js.Object {
+object authclientMod {
   
+  @JSImport("google-auth-library/build/src/auth/authclient", "AuthClient")
   @js.native
   abstract class AuthClient () extends EventEmitter {
+    def this(options: EventEmitterOptions) = this()
     
     /**
       * Append additional headers, e.g., x-goog-user-project, shared across the

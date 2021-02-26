@@ -106,6 +106,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -363,13 +364,13 @@ class SharedBuilder_SvgIconProps144760471[R <: js.Object] (val args: js.Array[js
   def colorRendering(value: Double | String): this.type = set("colorRendering", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def componentFunctionComponent(value: ReactComponentClass[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
+  def component(value: ReactType[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
   
   @scala.inline
   def componentComponentClass(value: ReactComponentClass[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def component(value: ReactType[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
+  def componentFunctionComponent(value: ReactComponentClass[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
   
   @scala.inline
   def contentScriptType(value: Double | String): this.type = set("contentScriptType", value.asInstanceOf[js.Any])
@@ -558,16 +559,16 @@ class SharedBuilder_SvgIconProps144760471[R <: js.Object] (val args: js.Array[js
   def in2(value: Double | String): this.type = set("in2", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+  def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
   
   @scala.inline
-  def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+  def innerRefNull: this.type = set("innerRef", null)
   
   @scala.inline
-  def innerRefNull: this.type = set("innerRef", null)
+  def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def intercept(value: Double | String): this.type = set("intercept", value.asInstanceOf[js.Any])

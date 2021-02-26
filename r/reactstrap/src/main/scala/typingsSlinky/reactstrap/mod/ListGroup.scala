@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.listGroupMod.ListGroupProps
+import typingsSlinky.reactstrap.listGroupMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "ListGroup")
+@JSImport("reactstrap/lib", "ListGroup")
 @js.native
-class ListGroup ()
-  extends Component[ListGroupProps, js.Object, js.Any]
+class ListGroup () extends default

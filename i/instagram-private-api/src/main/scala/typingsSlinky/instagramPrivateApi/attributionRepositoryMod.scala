@@ -1,16 +1,18 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.repositoryMod.Repository
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/repositories/attribution.repository", JSImport.Namespace)
-@js.native
-object attributionRepositoryMod extends js.Object {
+object attributionRepositoryMod {
   
+  @JSImport("instagram-private-api/dist/repositories/attribution.repository", "AttributionRepository")
   @js.native
-  class AttributionRepository () extends Repository {
+  class AttributionRepository protected () extends Repository {
+    def this(client: IgApiClient) = this()
     
     def logAttribution(): js.Promise[_] = js.native
     

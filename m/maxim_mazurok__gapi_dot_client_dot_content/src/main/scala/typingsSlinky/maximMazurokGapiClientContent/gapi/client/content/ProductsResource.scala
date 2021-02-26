@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientContent.anon.FeedIdFields
 import typingsSlinky.maximMazurokGapiClientContent.anon.Key
 import typingsSlinky.maximMazurokGapiClientContent.anon.KeyOauthtokenPrettyPrint
 import typingsSlinky.maximMazurokGapiClientContent.anon.PrettyPrintProductId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProductsResource extends js.Object {
+trait ProductsResource extends StObject {
   
   /** Retrieves, inserts, and deletes multiple products in a single request. */
   def custombatch(request: KeyOauthtokenPrettyPrint): Request[ProductsCustomBatchResponse] = js.native

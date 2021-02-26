@@ -1,5 +1,6 @@
 package typingsSlinky.vexflow.global.Vex.Flow
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,12 +11,11 @@ class Volta protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Volta {
   def this(`type`: typingsSlinky.vexflow.Vex.Flow.Volta.`type`, number: Double, x: Double, y_shift: Double) = this()
 }
-@JSGlobal("Vex.Flow.Volta")
-@js.native
-object Volta extends js.Object {
+object Volta {
   
+  @JSGlobal("Vex.Flow.Volta.type")
   @js.native
-  object `type` extends js.Object {
+  object `type` extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.vexflow.Vex.Flow.Volta.`type` with Double] = js.native

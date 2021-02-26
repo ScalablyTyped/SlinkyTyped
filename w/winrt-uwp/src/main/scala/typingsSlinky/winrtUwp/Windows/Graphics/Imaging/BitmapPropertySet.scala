@@ -3,13 +3,14 @@ package typingsSlinky.winrtUwp.Windows.Graphics.Imaging
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IKeyValuePair
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IMapView
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a property set of BitmapTypedValue objects. */
 @js.native
-trait BitmapPropertySet extends js.Object {
+trait BitmapPropertySet extends StObject {
   
   /** Removes all items from the property set. */
   def clear(): Unit = js.native

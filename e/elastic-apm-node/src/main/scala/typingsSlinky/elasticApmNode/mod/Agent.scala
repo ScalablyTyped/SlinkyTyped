@@ -3,6 +3,7 @@ package typingsSlinky.elasticApmNode.mod
 import typingsSlinky.elasticApmNode.anon.Name
 import typingsSlinky.elasticApmNode.anon.Spanid
 import typingsSlinky.elasticApmNode.mod.AwsLambda.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,6 +32,12 @@ trait Agent
   def captureError(err: String, options: js.UndefOr[scala.Nothing], callback: CaptureErrorCallback): Unit = js.native
   def captureError(err: String, options: CaptureErrorOptions): Unit = js.native
   def captureError(err: String, options: CaptureErrorOptions, callback: CaptureErrorCallback): Unit = js.native
+  // Errors
+  def captureError(err: js.Error): Unit = js.native
+  def captureError(err: js.Error, callback: CaptureErrorCallback): Unit = js.native
+  def captureError(err: js.Error, options: js.UndefOr[scala.Nothing], callback: CaptureErrorCallback): Unit = js.native
+  def captureError(err: js.Error, options: CaptureErrorOptions): Unit = js.native
+  def captureError(err: js.Error, options: CaptureErrorOptions, callback: CaptureErrorCallback): Unit = js.native
   def captureError(err: ParameterizedMessageObject): Unit = js.native
   def captureError(err: ParameterizedMessageObject, callback: CaptureErrorCallback): Unit = js.native
   def captureError(
@@ -40,12 +47,6 @@ trait Agent
   ): Unit = js.native
   def captureError(err: ParameterizedMessageObject, options: CaptureErrorOptions): Unit = js.native
   def captureError(err: ParameterizedMessageObject, options: CaptureErrorOptions, callback: CaptureErrorCallback): Unit = js.native
-  // Errors
-  def captureError(err: js.Error): Unit = js.native
-  def captureError(err: js.Error, callback: CaptureErrorCallback): Unit = js.native
-  def captureError(err: js.Error, options: js.UndefOr[scala.Nothing], callback: CaptureErrorCallback): Unit = js.native
-  def captureError(err: js.Error, options: CaptureErrorOptions): Unit = js.native
-  def captureError(err: js.Error, options: CaptureErrorOptions, callback: CaptureErrorCallback): Unit = js.native
   
   def clearPatches(modules: String): Unit = js.native
   def clearPatches(modules: js.Array[String]): Unit = js.native

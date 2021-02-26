@@ -2,14 +2,15 @@ package typingsSlinky.rcSlider
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcSlider.anon.ActiveDotStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-slider/lib/common/Steps", JSImport.Namespace)
-@js.native
-object stepsMod extends js.Object {
+object stepsMod {
   
+  @JSImport("rc-slider/lib/common/Steps", JSImport.Default)
+  @js.native
   def default(
     hasPrefixClsVerticalReverseMarksDotsStepIncludedLowerBoundUpperBoundMaxMinDotStyleActiveDotStyle: ActiveDotStyle
   ): ReactElement = js.native

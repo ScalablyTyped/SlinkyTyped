@@ -2,16 +2,16 @@ package typingsSlinky.babylonjs
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.babylonjs.shaderProcessingOptionsMod.ProcessingOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Engines/Processors/shaderCodeNode", JSImport.Namespace)
-@js.native
-object shaderCodeNodeMod extends js.Object {
+object shaderCodeNodeMod {
   
+  @JSImport("babylonjs/Engines/Processors/shaderCodeNode", "ShaderCodeNode")
   @js.native
-  class ShaderCodeNode () extends js.Object {
+  class ShaderCodeNode () extends StObject {
     
     var additionalDefineKey: js.UndefOr[String] = js.native
     

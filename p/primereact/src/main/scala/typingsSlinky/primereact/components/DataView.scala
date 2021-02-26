@@ -7,6 +7,7 @@ import typingsSlinky.primereact.anon.Rows
 import typingsSlinky.primereact.dataViewMod.DataViewProps
 import typingsSlinky.primereact.primereactStrings.grid
 import typingsSlinky.primereact.primereactStrings.list
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object DataView {
   
   @JSImport("primereact/dataview", "DataView")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,16 +39,16 @@ object DataView {
     def first(value: Double): this.type = set("first", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def footer(value: ReactElement | String): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def header(value: ReactElement | String): this.type = set("header", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -95,10 +96,10 @@ object DataView {
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
+    def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
+    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
     
     @scala.inline
     def sortField(value: String): this.type = set("sortField", value.asInstanceOf[js.Any])
@@ -113,13 +114,13 @@ object DataView {
     def totalRecords(value: Double): this.type = set("totalRecords", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
   }
   
-  def withProps(p: DataViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DataView.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DataViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

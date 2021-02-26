@@ -1,12 +1,13 @@
 package typingsSlinky.std
 
 import typingsSlinky.std.stdStrings.error
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AbstractWorker extends js.Object {
+trait AbstractWorker extends StObject {
   
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
@@ -36,12 +37,12 @@ trait AbstractWorker extends js.Object {
   var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ErrorEvent, _]) | Null = js.native
   
   def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
-  def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
@@ -51,12 +52,12 @@ trait AbstractWorker extends js.Object {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ErrorEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ErrorEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
 }

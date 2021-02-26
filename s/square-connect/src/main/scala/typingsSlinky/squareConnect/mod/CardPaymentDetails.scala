@@ -3,13 +3,14 @@ package typingsSlinky.squareConnect.mod
 import typingsSlinky.squareConnect.squareConnectStrings.FAILURE
 import typingsSlinky.squareConnect.squareConnectStrings.SUCCESS
 import typingsSlinky.squareConnect.squareConnectStrings.UNKNOWN
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "CardPaymentDetails")
 @js.native
-class CardPaymentDetails () extends js.Object {
+class CardPaymentDetails () extends StObject {
   
   /**
     * For EMV payments, the cryptogram generated for the payment.

@@ -2,13 +2,14 @@ package typingsSlinky.mapsjs.mod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mapsjs", "styledGeometry")
 @js.native
-class styledGeometry protected () extends js.Object {
+class styledGeometry protected () extends StObject {
   def this(geom: geometry) = this()
   def this(geom: geometry, gStyle: geometryStyle) = this()
   

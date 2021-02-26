@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDataflow.gapi.client.dataflow
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.AltCallbackFields
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.QuotaUserUploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationsResource extends js.Object {
+trait LocationsResource extends StObject {
   
   var flexTemplates: FlexTemplatesResource = js.native
   

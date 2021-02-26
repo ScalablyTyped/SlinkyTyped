@@ -10,9 +10,9 @@ Javascript client for HashiCorp's Vault
 | ------------------ | :-------------: |
 | Full name          | node-vault |
 | Keywords           | vault, hashicorp, secrets, manage, client |
-| # releases         | 14 |
-| # dependents       | 33 |
-| # downloads        | 1126089 |
+| # releases         | 16 |
+| # dependents       | 46 |
+| # downloads        | 2083514 |
 | # stars            | 3 |
 
 ## Links

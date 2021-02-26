@@ -6,6 +6,7 @@ import typingsSlinky.officeJsPreview.OneNote.Interfaces.TableCellData
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.TableCellLoadOptions
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.TableCellUpdateData
 import typingsSlinky.officeJsPreview.anon.Expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

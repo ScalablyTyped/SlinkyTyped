@@ -10,9 +10,9 @@ Create a BIP32 extended public key
 | ------------------ | :-------------: |
 | Full name          | create-xpub |
 | Keywords           | xpub, bip32, bitcoin, cryptocurrency |
-| # releases         | 13 |
-| # dependents       | 1 |
-| # downloads        | 6715 |
+| # releases         | 0 |
+| # dependents       | 3 |
+| # downloads        | 11636 |
 | # stars            | 0 |
 
 ## Links

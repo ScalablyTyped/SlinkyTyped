@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.FieldsIds
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.ProfileIdQuotaUserResource
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.QuotaUserResourceUploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FloodlightConfigurationsResource extends js.Object {
+trait FloodlightConfigurationsResource extends StObject {
   
   /** Gets one floodlight configuration by ID. */
   def get(): Request[FloodlightConfiguration] = js.native

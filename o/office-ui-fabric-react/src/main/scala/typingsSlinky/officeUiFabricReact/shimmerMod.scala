@@ -6,46 +6,48 @@ import typingsSlinky.officeUiFabricReact.shimmerElementsGroupTypesMod.IShimmerEl
 import typingsSlinky.officeUiFabricReact.shimmerGapTypesMod.IShimmerGapProps
 import typingsSlinky.officeUiFabricReact.shimmerLineTypesMod.IShimmerLineProps
 import typingsSlinky.officeUiFabricReact.shimmerTypesMod.IShimmerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/Shimmer", JSImport.Namespace)
-@js.native
-object shimmerMod extends js.Object {
+object shimmerMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "Shimmer")
+  @js.native
   val Shimmer: ReactComponentClass[IShimmerProps] = js.native
   
-  val ShimmerCircle: ReactComponentClass[IShimmerCircleProps] = js.native
-  
-  val ShimmerCircleBase: ReactComponentClass[IShimmerCircleProps] = js.native
-  
-  val ShimmerElementsGroup: ReactComponentClass[IShimmerElementsGroupProps] = js.native
-  
-  val ShimmerElementsGroupBase: ReactComponentClass[IShimmerElementsGroupProps] = js.native
-  
-  val ShimmerGap: ReactComponentClass[IShimmerGapProps] = js.native
-  
-  val ShimmerGapBase: ReactComponentClass[IShimmerGapProps] = js.native
-  
-  val ShimmerLine: ReactComponentClass[IShimmerLineProps] = js.native
-  
-  val ShimmerLineBase: ReactComponentClass[IShimmerLineProps] = js.native
-  
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerBase")
   @js.native
   class ShimmerBase protected ()
     extends typingsSlinky.officeUiFabricReact.shimmerBaseMod.ShimmerBase {
     def this(props: IShimmerProps) = this()
   }
   /* static members */
-  @js.native
-  object ShimmerBase extends js.Object {
+  object ShimmerBase {
     
-    var defaultProps: IShimmerProps = js.native
+    @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerBase")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerBase.defaultProps")
+    @js.native
+    def defaultProps: IShimmerProps = js.native
+    @scala.inline
+    def defaultProps_=(x: IShimmerProps): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
   }
   
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerCircle")
   @js.native
-  object ShimmerElementType extends js.Object {
+  val ShimmerCircle: ReactComponentClass[IShimmerCircleProps] = js.native
+  
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerCircleBase")
+  @js.native
+  val ShimmerCircleBase: ReactComponentClass[IShimmerCircleProps] = js.native
+  
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerElementType")
+  @js.native
+  object ShimmerElementType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.shimmerTypesMod.ShimmerElementType with Double] = js.native
@@ -57,8 +59,9 @@ object shimmerMod extends js.Object {
     /* 1 */ val line: typingsSlinky.officeUiFabricReact.shimmerTypesMod.ShimmerElementType.line with Double = js.native
   }
   
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerElementsDefaultHeights")
   @js.native
-  object ShimmerElementsDefaultHeights extends js.Object {
+  object ShimmerElementsDefaultHeights extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -71,4 +74,28 @@ object shimmerMod extends js.Object {
     
     /* 16 */ val line: typingsSlinky.officeUiFabricReact.shimmerTypesMod.ShimmerElementsDefaultHeights.line with Double = js.native
   }
+  
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerElementsGroup")
+  @js.native
+  val ShimmerElementsGroup: ReactComponentClass[IShimmerElementsGroupProps] = js.native
+  
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerElementsGroupBase")
+  @js.native
+  val ShimmerElementsGroupBase: ReactComponentClass[IShimmerElementsGroupProps] = js.native
+  
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerGap")
+  @js.native
+  val ShimmerGap: ReactComponentClass[IShimmerGapProps] = js.native
+  
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerGapBase")
+  @js.native
+  val ShimmerGapBase: ReactComponentClass[IShimmerGapProps] = js.native
+  
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerLine")
+  @js.native
+  val ShimmerLine: ReactComponentClass[IShimmerLineProps] = js.native
+  
+  @JSImport("office-ui-fabric-react/lib/components/Shimmer", "ShimmerLineBase")
+  @js.native
+  val ShimmerLineBase: ReactComponentClass[IShimmerLineProps] = js.native
 }

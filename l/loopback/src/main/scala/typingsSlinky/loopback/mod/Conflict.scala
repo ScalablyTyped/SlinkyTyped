@@ -1,5 +1,6 @@
 package typingsSlinky.loopback.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("loopback", "Conflict")
 @js.native
-class Conflict protected () extends js.Object {
+class Conflict protected () extends StObject {
   def this(modelId: js.Any, SourceModel: PersistedModel, TargetModel: PersistedModel) = this()
   
   /**

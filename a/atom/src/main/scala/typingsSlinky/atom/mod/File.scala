@@ -2,13 +2,14 @@ package typingsSlinky.atom.mod
 
 import typingsSlinky.node.fsMod.ReadStream
 import typingsSlinky.node.fsMod.WriteStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("atom", "File")
 @js.native
-class File protected () extends js.Object {
+class File protected () extends StObject {
   // Construction
   /** Configures a new File instance, no files are accessed. */
   def this(filePath: String) = this()

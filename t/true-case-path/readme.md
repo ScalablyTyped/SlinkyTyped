@@ -10,9 +10,9 @@ Given a possibly case-variant version of an existing filesystem path, returns th
 | ------------------ | :-------------: |
 | Full name          | true-case-path |
 | Keywords           | - |
-| # releases         | 5 |
-| # dependents       | 39 |
-| # downloads        | 163803463 |
+| # releases         | 4 |
+| # dependents       | 47 |
+| # downloads        | 235146929 |
 | # stars            | 2 |
 
 ## Links

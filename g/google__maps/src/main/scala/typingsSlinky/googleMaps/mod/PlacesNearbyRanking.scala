@@ -1,5 +1,6 @@
 package typingsSlinky.googleMaps.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleMaps.googleMapsStrings.prominence
   - typingsSlinky.googleMaps.googleMapsStrings.distance
 */
-trait PlacesNearbyRanking extends js.Object
+trait PlacesNearbyRanking extends StObject
 object PlacesNearbyRanking {
   
   @scala.inline

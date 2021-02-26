@@ -3,14 +3,14 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.cameraInputsManagerMod.ICameraInput
 import typingsSlinky.babylonjs.freeCameraMod.FreeCamera
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/Inputs/freeCameraGamepadInput", JSImport.Namespace)
-@js.native
-object freeCameraGamepadInputMod extends js.Object {
+object freeCameraGamepadInputMod {
   
+  @JSImport("babylonjs/Cameras/Inputs/freeCameraGamepadInput", "FreeCameraGamepadInput")
   @js.native
   class FreeCameraGamepadInput () extends ICameraInput[FreeCamera] {
     

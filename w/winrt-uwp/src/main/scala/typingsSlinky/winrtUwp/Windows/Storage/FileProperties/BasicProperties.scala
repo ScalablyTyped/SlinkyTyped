@@ -5,13 +5,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IKeyValuePair
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IMap
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides access to the basic properties, like the size of the item or the date the item was last modified, of the item (like a file or folder). */
 @js.native
-trait BasicProperties extends js.Object {
+trait BasicProperties extends StObject {
   
   /** Gets the timestamp of the last time the file was modified. */
   var dateModified: js.Date = js.native

@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDisplayvideo.gapi.client.displayvide
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.TargetingOptionId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.TargetingTypeUploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TargetingOptionsResource extends js.Object {
+trait TargetingOptionsResource extends StObject {
   
   /** Gets a single targeting option. */
   def get(): Request[TargetingOption] = js.native

@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "RetrieveCashDrawerShiftResponse")
 @js.native
-class RetrieveCashDrawerShiftResponse () extends js.Object {
+class RetrieveCashDrawerShiftResponse () extends StObject {
   
   /**
     * The cash drawer shift queried for.

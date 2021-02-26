@@ -4,16 +4,16 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import typingsSlinky.winrtUwp.Windows.Security.Credentials.PasswordCredential
 import typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus
 import typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationTextType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Manages syndication feeds. */
-@JSGlobal("Windows.Web.Syndication")
-@js.native
-object Syndication extends js.Object {
+object Syndication {
   
   /** Represents a custom attribute not defined in the specification. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationAttribute")
   @js.native
   /** Creates a new SyndicationAttribute object. */
   class SyndicationAttribute ()
@@ -28,6 +28,7 @@ object Syndication extends js.Object {
   }
   
   /** Represents the category of a feed or an item. This class encapsulates information in the /rss/channel/item/category element in RSS 2.0 or the atom:category element in Atom 1.0. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationCategory")
   @js.native
   /** Creates a SyndicationCategory object. */
   class SyndicationCategory ()
@@ -47,6 +48,7 @@ object Syndication extends js.Object {
   }
   
   /** Implements the ISyndicationClient interface which retrieves feeds from a URI asynchronously. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationClient")
   @js.native
   /** Creates a new SyndicationClient object. */
   class SyndicationClient ()
@@ -59,6 +61,7 @@ object Syndication extends js.Object {
   }
   
   /** Represents feed content including Text, HTML, XHTML, URL, and XML. This object encapsulates the atom:content element in Atom 1.0 and can contain a link to external content. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationContent")
   @js.native
   /** Creates a new SyndicationContent object. */
   class SyndicationContent ()
@@ -77,24 +80,27 @@ object Syndication extends js.Object {
   }
   
   /** Represents an error encountered during a Syndication operation. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationError")
   @js.native
   abstract class SyndicationError ()
     extends typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationError
-  /* static members */
-  @js.native
-  object SyndicationError extends js.Object {
+  object SyndicationError {
     
     /**
       * Gets the specific error using the returned HRESULT value. Possible values are defined by SyndicationErrorStatus .
       * @param hresult An HRESULT returned during the operation.
       * @return The error encountered.
       */
+    /* static member */
+    @JSGlobal("Windows.Web.Syndication.SyndicationError.getStatus")
+    @js.native
     def getStatus(hresult: Double): SyndicationErrorStatus = js.native
   }
   
   /** Defines errors encountered during a Syndication operation. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationErrorStatus")
   @js.native
-  object SyndicationErrorStatus extends js.Object {
+  object SyndicationErrorStatus extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -115,6 +121,7 @@ object Syndication extends js.Object {
   }
   
   /** Contains information about a feed. This class encapsulates the information in the /rss/channel element in RSS 2.0 or the atom:feed element in Atom 1.0. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationFeed")
   @js.native
   /** Creates a new SyndicationFeed object. */
   class SyndicationFeed ()
@@ -129,8 +136,9 @@ object Syndication extends js.Object {
   }
   
   /** Specifies the syndication formats supported by the API. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationFormat")
   @js.native
-  object SyndicationFormat extends js.Object {
+  object SyndicationFormat extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat with Double] = js.native
@@ -149,6 +157,7 @@ object Syndication extends js.Object {
   }
   
   /** Describes the agent or the tool used to generate the feed. This class encapsulates information in the /rss/channel/generator element in RSS 2.0 or the /atom:feed/atom:generator element in Atom 1.0. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationGenerator")
   @js.native
   /** Creates a new SyndicationGenerator object. */
   class SyndicationGenerator ()
@@ -161,6 +170,7 @@ object Syndication extends js.Object {
   }
   
   /** Represents an item in the feed. This class encapsulates information in the /rss/channel/item element in RSS 2.0 or the atom:entry element in Atom 1.0. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationItem")
   @js.native
   /** Creates a new SyndicationItem object. */
   class SyndicationItem ()
@@ -179,6 +189,7 @@ object Syndication extends js.Object {
   }
   
   /** Represents a link within a syndication feed or item. This class encapsulates information in the /rss/channel/link or / rss/channel/item/link element in RSS 2.0 or the atom:link element in Atom 1.0. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationLink")
   @js.native
   /** Creates a new SyndicationLink object. */
   class SyndicationLink ()
@@ -200,6 +211,7 @@ object Syndication extends js.Object {
   }
   
   /** Implements the ISyndicationNode interface which represents a generic XML syndication element. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationNode")
   @js.native
   /** Creates a new SyndicationNode object. */
   class SyndicationNode ()
@@ -214,6 +226,7 @@ object Syndication extends js.Object {
   }
   
   /** Represents an author or contributor of syndication content. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationPerson")
   @js.native
   /** Creates a SyndicationPerson object. */
   class SyndicationPerson ()
@@ -233,6 +246,7 @@ object Syndication extends js.Object {
   }
   
   /** Implements the ISyndicationText interface that encapsulates elements in RSS 2.0 or Atom 1.0 that can have either text, HTML, or XHTML. In Atom 1.0, this object maps to an atomTextConstruct in the schema, which can be atom:title, atom:subtitle, atom:rights, or atom:summary elements. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationText")
   @js.native
   /** Creates a new SyndicationText object. */
   class SyndicationText ()
@@ -251,8 +265,9 @@ object Syndication extends js.Object {
   }
   
   /** Specifies the text types supported for syndication content. */
+  @JSGlobal("Windows.Web.Syndication.SyndicationTextType")
   @js.native
-  object SyndicationTextType extends js.Object {
+  object SyndicationTextType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationTextType with Double] = js.native

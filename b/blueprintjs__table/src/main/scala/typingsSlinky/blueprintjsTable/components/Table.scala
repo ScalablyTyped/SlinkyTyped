@@ -16,6 +16,7 @@ import typingsSlinky.blueprintjsTable.gridMod.IRowIndices
 import typingsSlinky.blueprintjsTable.menuContextMod.IMenuContext
 import typingsSlinky.blueprintjsTable.renderModeMod.RenderMode
 import typingsSlinky.blueprintjsTable.tableMod.ITableProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ object Table {
   
   @JSImport("@blueprintjs/table", "Table")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,22 +36,22 @@ object Table {
     def bodyContextMenuRenderer(value: /* context */ IMenuContext => ReactElement): this.type = set("bodyContextMenuRenderer", js.Any.fromFunction1(value))
     
     @scala.inline
+    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
     
     @scala.inline
-    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columnWidthsVarargs(value: (js.UndefOr[Double | Null])*): this.type = set("columnWidths", js.Array(value :_*))
+    def columnWidths(value: js.Array[js.UndefOr[Double | Null]]): this.type = set("columnWidths", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columnWidths(value: js.Array[js.UndefOr[Double | Null]]): this.type = set("columnWidths", value.asInstanceOf[js.Any])
+    def columnWidthsVarargs(value: (js.UndefOr[Double | Null])*): this.type = set("columnWidths", js.Array(value :_*))
     
     @scala.inline
     def defaultColumnWidth(value: Double): this.type = set("defaultColumnWidth", value.asInstanceOf[js.Any])
@@ -95,10 +96,10 @@ object Table {
     def getCellClipboardData(value: (/* row */ Double, /* col */ Double) => _): this.type = set("getCellClipboardData", js.Any.fromFunction2(value))
     
     @scala.inline
-    def loadingOptionsVarargs(value: TableLoadingOption*): this.type = set("loadingOptions", js.Array(value :_*))
+    def loadingOptions(value: js.Array[TableLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingOptions(value: js.Array[TableLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
+    def loadingOptionsVarargs(value: TableLoadingOption*): this.type = set("loadingOptions", js.Array(value :_*))
     
     @scala.inline
     def maxColumnWidth(value: Double): this.type = set("maxColumnWidth", value.asInstanceOf[js.Any])
@@ -155,10 +156,10 @@ object Table {
     def rowHeaderCellRenderer(value: /* rowIndex */ Double => ReactElement): this.type = set("rowHeaderCellRenderer", js.Any.fromFunction1(value))
     
     @scala.inline
-    def rowHeightsVarargs(value: (js.UndefOr[Double | Null])*): this.type = set("rowHeights", js.Array(value :_*))
+    def rowHeights(value: js.Array[js.UndefOr[Double | Null]]): this.type = set("rowHeights", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowHeights(value: js.Array[js.UndefOr[Double | Null]]): this.type = set("rowHeights", value.asInstanceOf[js.Any])
+    def rowHeightsVarargs(value: (js.UndefOr[Double | Null])*): this.type = set("rowHeights", js.Array(value :_*))
     
     @scala.inline
     def selectedRegionTransform(
@@ -166,25 +167,25 @@ object Table {
     ): this.type = set("selectedRegionTransform", js.Any.fromFunction3(value))
     
     @scala.inline
-    def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
-    
-    @scala.inline
     def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectionModesVarargs(value: RegionCardinality*): this.type = set("selectionModes", js.Array(value :_*))
+    def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
     
     @scala.inline
     def selectionModes(value: js.Array[RegionCardinality]): this.type = set("selectionModes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styledRegionGroupsVarargs(value: IStyledRegionGroup*): this.type = set("styledRegionGroups", js.Array(value :_*))
+    def selectionModesVarargs(value: RegionCardinality*): this.type = set("selectionModes", js.Array(value :_*))
     
     @scala.inline
     def styledRegionGroups(value: js.Array[IStyledRegionGroup]): this.type = set("styledRegionGroups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def styledRegionGroupsVarargs(value: IStyledRegionGroup*): this.type = set("styledRegionGroups", js.Array(value :_*))
   }
   
-  def withProps(p: ITableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Table.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ITableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

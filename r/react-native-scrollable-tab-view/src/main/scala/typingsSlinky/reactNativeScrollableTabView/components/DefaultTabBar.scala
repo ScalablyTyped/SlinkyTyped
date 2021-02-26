@@ -10,6 +10,7 @@ import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeScrollableTabView.anon.TabBarPropsDefaultTabBarP
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object DefaultTabBar {
   
   @JSImport("react-native-scrollable-tab-view", "DefaultTabBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -58,10 +59,10 @@ object DefaultTabBar {
     def tabStyle(value: ViewStyle): this.type = set("tabStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tabsVarargs(value: ReactElement*): this.type = set("tabs", js.Array(value :_*))
+    def tabs(value: js.Array[ReactElement]): this.type = set("tabs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tabs(value: js.Array[ReactElement]): this.type = set("tabs", value.asInstanceOf[js.Any])
+    def tabsVarargs(value: ReactElement*): this.type = set("tabs", js.Array(value :_*))
     
     @scala.inline
     def textStyle(value: TextStyle): this.type = set("textStyle", value.asInstanceOf[js.Any])
@@ -70,7 +71,7 @@ object DefaultTabBar {
     def underlineStyle(value: ViewStyle): this.type = set("underlineStyle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TabBarPropsDefaultTabBarP): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DefaultTabBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TabBarPropsDefaultTabBarP): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

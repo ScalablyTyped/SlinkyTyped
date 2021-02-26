@@ -8,16 +8,18 @@ import typingsSlinky.wordpressCustomizeBrowser.externalMod.Theme
 import typingsSlinky.wordpressCustomizeBrowser.sectionMod.Section
 import typingsSlinky.wordpressCustomizeBrowser.themeControlMod.ThemeControl
 import typingsSlinky.wordpressCustomizeBrowser.wordpressCustomizeBrowserBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@wordpress/customize-browser/ThemesSection", JSImport.Namespace)
-@js.native
-object themesSectionMod extends js.Object {
+object themesSectionMod {
   
+  @JSImport("@wordpress/customize-browser/ThemesSection", "ThemesSection")
   @js.native
-  class ThemesSection () extends Section {
+  class ThemesSection protected () extends Section {
+    def this(applicator: js.Object, argsArray: js.Object) = this()
+    def this(applicator: js.Object, argsArray: js.Object, options: js.Object) = this()
     
     @JSName("$body")
     var $body: JQuery[HTMLElement] | Null = js.native

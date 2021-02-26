@@ -1,6 +1,7 @@
 package typingsSlinky.gm.mod
 
 import typingsSlinky.gm.gmStrings.Grayscale_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gm.gmStrings.ColorSeparationMatte
   - typingsSlinky.gm.gmStrings.Optimize
 */
-trait ImageType extends js.Object
+trait ImageType extends StObject
 object ImageType {
   
   @scala.inline

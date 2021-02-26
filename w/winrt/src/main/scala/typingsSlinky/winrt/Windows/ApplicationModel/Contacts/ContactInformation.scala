@@ -3,6 +3,7 @@ package typingsSlinky.winrt.Windows.ApplicationModel.Contacts
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStreamWithContentType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -3,12 +3,13 @@ package typingsSlinky.canvasGauges
 import typingsSlinky.canvasGauges.CanvasGauges.BaseGauge
 import typingsSlinky.canvasGauges.CanvasGauges.LinearGauge
 import typingsSlinky.canvasGauges.CanvasGauges.RadialGauge
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Window extends js.Object {
+trait Window extends StObject {
   
   var BaseGauge: typingsSlinky.canvasGauges.CanvasGauges.BaseGauge = js.native
   
@@ -25,27 +26,15 @@ object Window {
   }
   
   @scala.inline
-  implicit class WindowOps[Self <: Window] (val x: Self) extends AnyVal {
+  implicit class WindowMutableBuilder[Self <: Window] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBaseGauge(value: BaseGauge): Self = StObject.set(x, "BaseGauge", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setLinearGauge(value: LinearGauge): Self = StObject.set(x, "LinearGauge", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setBaseGauge(value: BaseGauge): Self = this.set("BaseGauge", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setLinearGauge(value: LinearGauge): Self = this.set("LinearGauge", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRadialGauge(value: RadialGauge): Self = this.set("RadialGauge", value.asInstanceOf[js.Any])
+    def setRadialGauge(value: RadialGauge): Self = StObject.set(x, "RadialGauge", value.asInstanceOf[js.Any])
   }
 }

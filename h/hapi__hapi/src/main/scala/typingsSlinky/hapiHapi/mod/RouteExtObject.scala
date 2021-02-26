@@ -2,12 +2,13 @@ package typingsSlinky.hapiHapi.mod
 
 import typingsSlinky.hapiHapi.mod.Lifecycle.Method
 import typingsSlinky.hapiHapi.mod.Lifecycle.ReturnValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RouteExtObject extends js.Object {
+trait RouteExtObject extends StObject {
   
   def method(request: Request, h: ResponseToolkit): ReturnValue = js.native
   def method(request: Request, h: ResponseToolkit, err: js.Error): ReturnValue = js.native

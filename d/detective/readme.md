@@ -10,9 +10,9 @@ find all require() calls by walking the AST
 | ------------------ | :-------------: |
 | Full name          | detective |
 | Keywords           | analyze, ast, require, source |
-| # releases         | 3 |
-| # dependents       | 174 |
-| # downloads        | 57100456 |
+| # releases         | 1 |
+| # dependents       | 189 |
+| # downloads        | 80919425 |
 | # stars            | 18 |
 
 ## Links

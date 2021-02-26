@@ -12,15 +12,28 @@ import typingsSlinky.reactNativeCollapsible.mod.EasingMode
 import typingsSlinky.reactNativeCollapsible.reactNativeCollapsibleStrings.bottom
 import typingsSlinky.reactNativeCollapsible.reactNativeCollapsibleStrings.center
 import typingsSlinky.reactNativeCollapsible.reactNativeCollapsibleStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Accordion {
   
+  @scala.inline
+  def apply[T](
+    activeSections: js.Array[Double],
+    onChange: js.Array[Double] => Unit,
+    renderContent: (T, Double, Boolean, js.Array[T]) => ReactElement,
+    renderHeader: (T, Double, Boolean, js.Array[T]) => ReactElement,
+    sections: js.Array[T]
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(activeSections = activeSections.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), renderContent = js.Any.fromFunction4(renderContent), renderHeader = js.Any.fromFunction4(renderHeader), sections = sections.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[AccordionProps[T]]))
+  }
+  
   @JSImport("react-native-collapsible/Accordion", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -74,16 +87,4 @@ object Accordion {
   }
   
   def withProps[T](p: AccordionProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](
-    activeSections: js.Array[Double],
-    onChange: js.Array[Double] => Unit,
-    renderContent: (T, Double, Boolean, js.Array[T]) => ReactElement,
-    renderHeader: (T, Double, Boolean, js.Array[T]) => ReactElement,
-    sections: js.Array[T]
-  ): Builder[T] = {
-    val __props = js.Dynamic.literal(activeSections = activeSections.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), renderContent = js.Any.fromFunction4(renderContent), renderHeader = js.Any.fromFunction4(renderHeader), sections = sections.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[AccordionProps[T]]))
-  }
 }

@@ -2,6 +2,7 @@ package typingsSlinky.angularCompiler.srcCompilerMod
 
 import typingsSlinky.angularCompiler.astMod.LiteralMap
 import typingsSlinky.angularCompiler.astMod.LiteralMapKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

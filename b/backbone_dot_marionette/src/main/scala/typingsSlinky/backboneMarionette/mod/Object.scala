@@ -2,6 +2,7 @@ package typingsSlinky.backboneMarionette.mod
 
 import typingsSlinky.backbone.mod.EventsMixin
 import typingsSlinky.backboneRadio.mod.Channel_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

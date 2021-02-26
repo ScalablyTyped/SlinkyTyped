@@ -3,14 +3,14 @@ package typingsSlinky.luminoDatagrid
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.luminoDatagrid.datagridMod.DataGrid
 import typingsSlinky.luminoDatagrid.datagridMod.DataGrid.IKeyHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@lumino/datagrid/lib/basickeyhandler", JSImport.Namespace)
-@js.native
-object basickeyhandlerMod extends js.Object {
+object basickeyhandlerMod {
   
+  @JSImport("@lumino/datagrid/lib/basickeyhandler", "BasicKeyHandler")
   @js.native
   class BasicKeyHandler () extends IKeyHandler {
     

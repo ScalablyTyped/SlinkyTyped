@@ -10,9 +10,9 @@ Official React bindings for Redux
 | ------------------ | :-------------: |
 | Full name          | react-redux |
 | Keywords           | react, reactjs, redux |
-| # releases         | 34 |
-| # dependents       | 5675 |
-| # downloads        | 132031046 |
+| # releases         | 25 |
+| # dependents       | 7067 |
+| # downloads        | 188140985 |
 | # stars            | 173 |
 
 ## Links

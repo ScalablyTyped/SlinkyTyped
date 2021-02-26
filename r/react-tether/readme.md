@@ -10,9 +10,9 @@ Drop content anywhere on the page.
 | ------------------ | :-------------: |
 | Full name          | react-tether |
 | Keywords           | react, react-tether, tether, component, drop |
-| # releases         | 16 |
-| # dependents       | 80 |
-| # downloads        | 1613778 |
+| # releases         | 9 |
+| # dependents       | 85 |
+| # downloads        | 1883513 |
 | # stars            | 2 |
 
 ## Links

@@ -2,14 +2,14 @@ package typingsSlinky.three
 
 import typingsSlinky.three.anon.InnerRadius
 import typingsSlinky.three.geometryMod.Geometry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/geometries/RingGeometry", JSImport.Namespace)
-@js.native
-object ringGeometryMod extends js.Object {
+object ringGeometryMod {
   
+  @JSImport("three/src/geometries/RingGeometry", "RingGeometry")
   @js.native
   class RingGeometry protected () extends Geometry {
     /**

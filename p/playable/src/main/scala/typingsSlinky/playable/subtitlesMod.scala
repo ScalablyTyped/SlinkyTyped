@@ -1,16 +1,46 @@
 package typingsSlinky.playable
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.anon.EventEmitterRootContainer
 import typingsSlinky.playable.subtitlesTypesMod.ISubtitles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/subtitles/subtitles", JSImport.Namespace)
-@js.native
-object subtitlesMod extends js.Object {
+object subtitlesMod {
+  
+  @JSImport("playable/dist/src/modules/ui/subtitles/subtitles", JSImport.Default)
+  @js.native
+  class default protected () extends Subtitles {
+    def this(hasRootContainerEngineEventEmitter: EventEmitterRootContainer) = this()
+  }
+  object default {
+    
+    @JSImport("playable/dist/src/modules/ui/subtitles/subtitles", JSImport.Default)
+    @js.native
+    val ^ : js.Any = js.native
+    
+    /* was `typeof SubtitlesView` */
+    @JSImport("playable/dist/src/modules/ui/subtitles/subtitles", "default.View")
+    @js.native
+    class View ()
+      extends typingsSlinky.playable.subtitlesViewMod.default
+    
+    /* static member */
+    @JSImport("playable/dist/src/modules/ui/subtitles/subtitles", "default.dependencies")
+    @js.native
+    def dependencies: js.Array[String] = js.native
+    @scala.inline
+    def dependencies_=(x: js.Array[String]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(x.asInstanceOf[js.Any])
+    
+    /* static member */
+    @JSImport("playable/dist/src/modules/ui/subtitles/subtitles", "default.moduleName")
+    @js.native
+    def moduleName: String = js.native
+    @scala.inline
+    def moduleName_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("moduleName")(x.asInstanceOf[js.Any])
+  }
   
   @js.native
   trait Subtitles extends ISubtitles {
@@ -45,19 +75,9 @@ object subtitlesMod extends js.Object {
     
     var view: typingsSlinky.playable.subtitlesViewMod.default = js.native
   }
-  
-  @js.native
-  class default protected () extends Subtitles {
-    def this(hasRootContainerEngineEventEmitter: EventEmitterRootContainer) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
+  object Subtitles {
     
-    var View: Instantiable0[typingsSlinky.playable.subtitlesViewMod.default] = js.native
-    
-    var dependencies: js.Array[String] = js.native
-    
-    var moduleName: String = js.native
+    /* was `typeof SubtitlesView` */
+    type View = typingsSlinky.playable.subtitlesViewMod.default
   }
 }

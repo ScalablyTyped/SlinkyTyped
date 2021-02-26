@@ -10,9 +10,9 @@ PHP strip_tags in Node.js
 | ------------------ | :-------------: |
 | Full name          | striptags |
 | Keywords           | striptags, strip_tags, html, strip, tags |
-| # releases         | 1 |
-| # dependents       | 371 |
-| # downloads        | 10172505 |
+| # releases         | 4 |
+| # dependents       | 445 |
+| # downloads        | 16164716 |
 | # stars            | 26 |
 
 ## Links

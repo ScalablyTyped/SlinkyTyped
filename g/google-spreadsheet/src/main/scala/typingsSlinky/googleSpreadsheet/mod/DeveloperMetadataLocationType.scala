@@ -1,5 +1,6 @@
 package typingsSlinky.googleSpreadsheet.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleSpreadsheet.googleSpreadsheetStrings.SHEET
   - typingsSlinky.googleSpreadsheet.googleSpreadsheetStrings.SPREADSHEET
 */
-trait DeveloperMetadataLocationType extends js.Object
+trait DeveloperMetadataLocationType extends StObject
 object DeveloperMetadataLocationType {
   
   @scala.inline

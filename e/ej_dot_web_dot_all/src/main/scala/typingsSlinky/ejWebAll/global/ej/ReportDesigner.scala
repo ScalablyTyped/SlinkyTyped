@@ -2,6 +2,7 @@ package typingsSlinky.ejWebAll.global.ej
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,22 +11,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ReportDesigner protected ()
   extends typingsSlinky.ejWebAll.ej.ReportDesigner {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.ReportDesigner.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.ReportDesigner.Model) = this()
+  def this(element: JQuery) = this()
+  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Model) = this()
+  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Model) = this()
 }
-/* static members */
-@JSGlobal("ej.ReportDesigner")
-@js.native
-object ReportDesigner extends js.Object {
+object ReportDesigner {
   
-  var Locale: js.Any = js.native
-  
-  var fn: typingsSlinky.ejWebAll.ej.ReportDesigner = js.native
-  
+  @JSGlobal("ej.ReportDesigner")
   @js.native
-  object ConfigureItems extends js.Object {
+  val ^ : js.Any = js.native
+  
+  @JSGlobal("ej.ReportDesigner.ConfigureItems")
+  @js.native
+  object ConfigureItems extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.ReportDesigner.ConfigureItems with Double] = js.native
@@ -41,8 +40,16 @@ object ReportDesigner extends js.Object {
     /* 0 */ val Property: typingsSlinky.ejWebAll.ej.ReportDesigner.ConfigureItems.Property with Double = js.native
   }
   
+  /* static member */
+  @JSGlobal("ej.ReportDesigner.Locale")
   @js.native
-  object Permission extends js.Object {
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("ej.ReportDesigner.Permission")
+  @js.native
+  object Permission extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.ReportDesigner.Permission with Double] = js.native
@@ -56,8 +63,9 @@ object ReportDesigner extends js.Object {
     /* 1 */ val Edit: typingsSlinky.ejWebAll.ej.ReportDesigner.Permission.Edit with Double = js.native
   }
   
+  @JSGlobal("ej.ReportDesigner.ToolbarItems")
   @js.native
-  object ToolbarItems extends js.Object {
+  object ToolbarItems extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.ReportDesigner.ToolbarItems with Double] = js.native
@@ -102,4 +110,11 @@ object ReportDesigner extends js.Object {
     
     /* 9 */ val Zoom: typingsSlinky.ejWebAll.ej.ReportDesigner.ToolbarItems.Zoom with Double = js.native
   }
+  
+  /* static member */
+  @JSGlobal("ej.ReportDesigner.fn")
+  @js.native
+  def fn: typingsSlinky.ejWebAll.ej.ReportDesigner = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.ReportDesigner): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

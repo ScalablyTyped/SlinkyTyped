@@ -5,17 +5,16 @@ import typingsSlinky.babylonjs.anon.DeepImmutableObjectMatrix
 import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.meshSimplificationMod.ISimplificationSettings
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
-@JSImport("babylonjs/Meshes/index", "babylonjs/Meshes/mesh")
-@js.native
-object babylonjsMeshesMeshAugmentingMod extends js.Object {
+object babylonjsMeshesMeshAugmentingMod {
   
   @js.native
-  trait Mesh extends js.Object {
+  trait Mesh extends StObject {
     
     /** @hidden */
     def _thinInstanceInitializeUserStorage(): Unit = js.native

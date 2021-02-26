@@ -9,13 +9,14 @@ import typingsSlinky.winrtUwp.winrtUwpStrings.downloadcompleted
 import typingsSlinky.winrtUwp.winrtUwpStrings.downloadfailed
 import typingsSlinky.winrtUwp.winrtUwpStrings.downloadrequested
 import typingsSlinky.winrtUwp.winrtUwpStrings.playbackbitratechanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents the source of adaptive streaming content. */
 @js.native
-trait AdaptiveMediaSource extends js.Object {
+trait AdaptiveMediaSource extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")
@@ -46,7 +47,8 @@ trait AdaptiveMediaSource extends js.Object {
   
   var advancedSettings: js.Any = js.native
   
-   /* unmapped type */ /** Gets a value indicating if the content streamed by the media source contains only audio. */
+  /* unmapped type */
+  /** Gets a value indicating if the content streamed by the media source contains only audio. */
   var audioOnlyPlayback: Boolean = js.native
   
   /** Gets the available adaptive bit rates of the adaptive streaming manifest that is the source of the adaptive streaming object. */

@@ -9,10 +9,10 @@ Yet another Base64 transcoder in pure-JS
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | js-base64 |
-| Keywords           | base64 |
-| # releases         | 12 |
-| # dependents       | 660 |
-| # downloads        | 257241521 |
+| Keywords           | base64, binary |
+| # releases         | 32 |
+| # dependents       | 1079 |
+| # downloads        | 309604007 |
 | # stars            | 36 |
 
 ## Links

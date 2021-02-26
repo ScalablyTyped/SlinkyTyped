@@ -3,12 +3,13 @@ package typingsSlinky.mfiles
 import typingsSlinky.mfiles.MFiles.MFAuthType
 import typingsSlinky.mfiles.MFiles.MFLoginAccountType
 import typingsSlinky.mfiles.MFiles.MFServerConnection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IMFilesServerApplication extends js.Object {
+trait IMFilesServerApplication extends StObject {
   
   def Connect(
     AuthType: MFAuthType,

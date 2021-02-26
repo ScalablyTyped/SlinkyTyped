@@ -3,6 +3,7 @@ package typingsSlinky.vscode.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.vscode.Thenable
 import typingsSlinky.vscode.anon.DefaultLanguageValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

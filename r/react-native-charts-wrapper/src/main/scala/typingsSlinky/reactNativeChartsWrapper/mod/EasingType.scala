@@ -1,6 +1,7 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.Linear_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.EaseOutBounce
   - typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.EaseInOutBounce
 */
-trait EasingType extends js.Object
+trait EasingType extends StObject
 object EasingType {
   
   @scala.inline

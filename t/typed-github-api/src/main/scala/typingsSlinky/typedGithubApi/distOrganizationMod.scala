@@ -7,14 +7,14 @@ import typingsSlinky.typedGithubApi.organizationMod.MyOrganization
 import typingsSlinky.typedGithubApi.userMod.Organization
 import typingsSlinky.typedGithubApi.userMod.OrganizationSummary
 import typingsSlinky.typedGithubApi.userMod.PrivateOrganization
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typed-github-api/dist/organization", JSImport.Namespace)
-@js.native
-object distOrganizationMod extends js.Object {
+object distOrganizationMod {
   
+  @JSImport("typed-github-api/dist/organization", "MyOrganizationClass")
   @js.native
   class MyOrganizationClass protected ()
     extends OrganizationClass
@@ -25,7 +25,8 @@ object distOrganizationMod extends js.Object {
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.typedGithubApi.ownerRefMod.OwnerRef because Already inherited
   - typingsSlinky.typedGithubApi.organizationMod.OrganizationSummary because Already inherited
-  - typingsSlinky.typedGithubApi.organizationMod.Organization because var conflicts: avatarUri, description, id, login. Inlined name, company, blog, location, email, publicRepos, publicGists, followers, following, createdAt, updatedAt, htmlUri, hasOrganizationProjects, hasRepositoryProjects */ @js.native
+  - typingsSlinky.typedGithubApi.organizationMod.Organization because var conflicts: avatarUri, description, id, login. Inlined name, company, blog, location, email, publicRepos, publicGists, followers, following, createdAt, updatedAt, htmlUri, hasOrganizationProjects, hasRepositoryProjects */ @JSImport("typed-github-api/dist/organization", "OrganizationClass")
+  @js.native
   class OrganizationClass protected () extends OrganizationSummaryClass {
     def this(data: Organization, options: OptionsOrRef) = this()
     
@@ -60,7 +61,8 @@ object distOrganizationMod extends js.Object {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.typedGithubApi.ownerRefMod.OwnerRef because Already inherited
-  - typingsSlinky.typedGithubApi.organizationMod.OrganizationSummary because var conflicts: login. Inlined id, avatarUri, description */ @js.native
+  - typingsSlinky.typedGithubApi.organizationMod.OrganizationSummary because var conflicts: login. Inlined id, avatarUri, description */ @JSImport("typed-github-api/dist/organization", "OrganizationSummaryClass")
+  @js.native
   class OrganizationSummaryClass protected () extends OwnerRefClass {
     def this(data: OrganizationSummary, options: OptionsOrRef) = this()
     

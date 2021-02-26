@@ -7,15 +7,22 @@ import typingsSlinky.glReact.anon.Dst
 import typingsSlinky.glReact.mod.NodeProps
 import typingsSlinky.glReact.mod.ShaderDefinition
 import typingsSlinky.glReact.mod.ShaderIdentifier
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Node {
   
+  @scala.inline
+  def apply(shader: ShaderIdentifier | ShaderDefinition): Builder = {
+    val __props = js.Dynamic.literal(shader = shader.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[NodeProps]))
+  }
+  
   @JSImport("gl-react", "Node")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +45,10 @@ object Node {
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ignoreUnusedUniformsVarargs(value: String*): this.type = set("ignoreUnusedUniforms", js.Array(value :_*))
+    def ignoreUnusedUniforms(value: js.Array[String] | Boolean): this.type = set("ignoreUnusedUniforms", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ignoreUnusedUniforms(value: js.Array[String] | Boolean): this.type = set("ignoreUnusedUniforms", value.asInstanceOf[js.Any])
+    def ignoreUnusedUniformsVarargs(value: String*): this.type = set("ignoreUnusedUniforms", js.Array(value :_*))
     
     @scala.inline
     def onDraw(value: () => Unit): this.type = set("onDraw", js.Any.fromFunction0(value))
@@ -57,10 +64,4 @@ object Node {
   }
   
   def withProps(p: NodeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(shader: ShaderIdentifier | ShaderDefinition): Builder = {
-    val __props = js.Dynamic.literal(shader = shader.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[NodeProps]))
-  }
 }

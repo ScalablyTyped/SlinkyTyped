@@ -1,12 +1,11 @@
 package typingsSlinky.electron.Electron
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Electron.Renderer")
-@js.native
-object Renderer extends js.Object {
+object Renderer {
   
   type AboutPanelOptionsOptions = typingsSlinky.electron.Electron.AboutPanelOptionsOptions
   

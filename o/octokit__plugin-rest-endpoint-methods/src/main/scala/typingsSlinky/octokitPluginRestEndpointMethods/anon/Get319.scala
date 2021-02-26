@@ -5,12 +5,13 @@ import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointM
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Get319 extends js.Object {
+trait Get319 extends StObject {
   
   /**
     * **Note:** Accessing this endpoint does not count against your REST API rate limit.

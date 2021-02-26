@@ -4,15 +4,15 @@
 Typings are for version 12.2.2
 
 ## Library description:
-Simulate user events for react-testing-library
+Fire events the same way the user does
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @testing-library/user-event |
 | Keywords           | react-testing-library, dom-testing-library, react, testing |
-| # releases         | 21 |
-| # dependents       | 140 |
-| # downloads        | 1212614 |
+| # releases         | 106 |
+| # dependents       | 2759 |
+| # downloads        | 58688036 |
 | # stars            | 0 |
 
 ## Links

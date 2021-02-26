@@ -4,6 +4,7 @@ import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.Rect
 import typingsSlinky.winrtUwp.Windows.UI.Popups.Placement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,16 +14,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 abstract class AppointmentManager ()
   extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentManager
-/* static members */
-@JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager")
-@js.native
-object AppointmentManager extends js.Object {
+object AppointmentManager {
   
   /**
     * Requests the AppointmentStore object associated with the calling application.
     * @param options An AppointmentStoreAccessType value indicating the level of access the returned appointment store will have.
     * @return An asynchronous operation that returns an AppointmentStore upon successful completion.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.requestStoreAsync")
+  @js.native
   def requestStoreAsync(options: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStoreAccessType): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStore] = js.native
   
   /**
@@ -31,6 +32,9 @@ object AppointmentManager extends js.Object {
     * @param selection The Rect is the rectangular area of user selection (for example, pressing a button), around which the operating system displays the Add Appointment UI, not within that rectangular area. For example, if an app uses a button to show the Rect, pass the Rect of the button so the Add Appointment UI displays around the button, not overlapping it.
     * @return When this method completes, it returns a String object that represents the appointment. This serves as an appointment identifier for future reference when updating or removing. If the appointment identifier returned is an empty string, the appointment was not added to the Appointments provider app.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showAddAppointmentAsync")
+  @js.native
   def showAddAppointmentAsync(
     appointment: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.Appointment,
     selection: Rect
@@ -42,6 +46,9 @@ object AppointmentManager extends js.Object {
     * @param preferredPlacement The Placement that describes the preferred placement of the Add Appointment UI.
     * @return When this method completes, it returns a String object that represents the appointment. This serves as an appointment identifier for future reference when updating or removing. If the appointment identifier returned is an empty string, the appointment was not added to the Appointments provider app.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showAddAppointmentAsync")
+  @js.native
   def showAddAppointmentAsync(
     appointment: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.Appointment,
     selection: Rect,
@@ -53,6 +60,9 @@ object AppointmentManager extends js.Object {
     * @param appointmentId The LocalId of the appointment to be displayed.
     * @return An asynchronous action.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showAppointmentDetailsAsync")
+  @js.native
   def showAppointmentDetailsAsync(appointmentId: String): IPromiseWithIAsyncAction = js.native
   /**
     * Shows the Appointments provider Appointment Details UI, to enable the user to view the specified appointment.
@@ -60,6 +70,9 @@ object AppointmentManager extends js.Object {
     * @param instanceStartDate A DateTime object with the start time of the appointment instance to be displayed.
     * @return An asynchronous action.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showAppointmentDetailsAsync")
+  @js.native
   def showAppointmentDetailsAsync(appointmentId: String, instanceStartDate: js.Date): IPromiseWithIAsyncAction = js.native
   
   /**
@@ -67,6 +80,9 @@ object AppointmentManager extends js.Object {
     * @param appointment The appointment to be added.
     * @return An asynchronous operation that returns a string containing an appointment ID upon successful completion.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showEditNewAppointmentAsync")
+  @js.native
   def showEditNewAppointmentAsync(appointment: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.Appointment): IPromiseWithIAsyncOperation[String] = js.native
   
   /**
@@ -75,6 +91,9 @@ object AppointmentManager extends js.Object {
     * @param selection The Rect is the rectangular area of user selection (for example, pressing a button), around which the operating system displays the Remove Appointment UI, not within that rectangular area. For example, if an app uses a button to show the Rect, pass the Rect of the button so the Remove Appointment UI displays around the button, not overlapping it.
     * @return When this method completes, it returns a Boolean value that indicates whether the Appointment provider app removed the appointment.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showRemoveAppointmentAsync")
+  @js.native
   def showRemoveAppointmentAsync(appointmentId: String, selection: Rect): IPromiseWithIAsyncOperation[Boolean] = js.native
   /**
     * Shows the Appointments provider Remove Appointment UI, to enable the user to remove an appointment.
@@ -83,6 +102,9 @@ object AppointmentManager extends js.Object {
     * @param preferredPlacement The Placement that describes the preferred placement of the Remove Appointment UI.
     * @return When this method completes, it returns a Boolean value that indicates whether the Appointment provider app removed the appointment.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showRemoveAppointmentAsync")
+  @js.native
   def showRemoveAppointmentAsync(appointmentId: String, selection: Rect, preferredPlacement: Placement): IPromiseWithIAsyncOperation[Boolean] = js.native
   /**
     * Shows the Appointments provider Remove Appointment UI, to enable the user to remove an appointment.
@@ -92,6 +114,9 @@ object AppointmentManager extends js.Object {
     * @param instanceStartDate The start date and time of the appointment instance to remove.
     * @return When this method completes, it returns a Boolean value that indicates whether the Appointment provider app removed the appointment.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showRemoveAppointmentAsync")
+  @js.native
   def showRemoveAppointmentAsync(appointmentId: String, selection: Rect, preferredPlacement: Placement, instanceStartDate: js.Date): IPromiseWithIAsyncOperation[Boolean] = js.native
   
   /**
@@ -101,6 +126,9 @@ object AppointmentManager extends js.Object {
     * @param selection The Rect is the rectangular area of user selection (for example, pressing a button), around which the operating system displays the Replace Appointment UI, not within that rectangular area. For example, if an app uses a button to show the Rect, pass the Rect of the button so the Replace Appointment UI displays around the button, not overlapping it.
     * @return When this method completes, it returns a String object that represents the appointment. This serves as an appointment identifier for future reference when updating or removing. If the appointment identifier returned is an empty string, the appointment was not replaced in the Appointments provider app.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showReplaceAppointmentAsync")
+  @js.native
   def showReplaceAppointmentAsync(
     appointmentId: String,
     appointment: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.Appointment,
@@ -114,6 +142,9 @@ object AppointmentManager extends js.Object {
     * @param preferredPlacement The Placement that describes the preferred placement of the Replace Appointment UI.
     * @return When this method completes, it returns a String object that represents the appointment. This serves as an appointment identifier for future reference when updating or removing. If the appointment identifier returned is an empty string, the appointment was not replaced in the Appointments provider app.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showReplaceAppointmentAsync")
+  @js.native
   def showReplaceAppointmentAsync(
     appointmentId: String,
     appointment: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.Appointment,
@@ -129,6 +160,9 @@ object AppointmentManager extends js.Object {
     * @param instanceStartDate The start date and time of the appointment instance to replace.
     * @return When this method completes, it returns a String object that represents the appointment. This serves as an appointment identifier for future reference when updating or removing. If the appointment identifier returned is an empty string, the appointment was not replaced in the Appointments provider app.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showReplaceAppointmentAsync")
+  @js.native
   def showReplaceAppointmentAsync(
     appointmentId: String,
     appointment: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.Appointment,
@@ -143,5 +177,8 @@ object AppointmentManager extends js.Object {
     * @param duration A timespan that hints to the Appointments provider app how long the time frame shown should be.
     * @return When this method returns, it does not return a result. On completion, the AsyncActionCompletedHandler specified by get_Completed / Completed is invoked.
     */
+  /* static member */
+  @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager.showTimeFrameAsync")
+  @js.native
   def showTimeFrameAsync(timeToShow: js.Date, duration: Double): IPromiseWithIAsyncAction = js.native
 }

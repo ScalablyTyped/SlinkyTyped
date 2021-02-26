@@ -1,6 +1,7 @@
 package typingsSlinky.phaser.global.MatterJS
 
 import typingsSlinky.phaser.MatterJS.IMouseConstraintDefinition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,10 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class MouseConstraint ()
   extends typingsSlinky.phaser.MatterJS.MouseConstraint
-/* static members */
-@JSGlobal("MatterJS.MouseConstraint")
-@js.native
-object MouseConstraint extends js.Object {
+object MouseConstraint {
   
   /**
     * Creates a new mouse constraint.
@@ -31,6 +29,11 @@ object MouseConstraint extends js.Object {
     * @param {} options
     * @return {MouseConstraint} A new MouseConstraint
     */
+  /* static member */
+  @JSGlobal("MatterJS.MouseConstraint.create")
+  @js.native
   def create(engine: typingsSlinky.phaser.MatterJS.Engine): typingsSlinky.phaser.MatterJS.MouseConstraint = js.native
+  @JSGlobal("MatterJS.MouseConstraint.create")
+  @js.native
   def create(engine: typingsSlinky.phaser.MatterJS.Engine, options: IMouseConstraintDefinition): typingsSlinky.phaser.MatterJS.MouseConstraint = js.native
 }

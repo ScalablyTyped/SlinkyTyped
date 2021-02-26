@@ -6,23 +6,26 @@ import org.scalajs.dom.experimental.Request
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.std.RequestInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("isomorphic-unfetch", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
+    /* was `typeof fetch` */
+    @JSImport("isomorphic-unfetch", JSImport.Default)
+    @js.native
     def apply(input: RequestInfo): js.Promise[Response] = js.native
+    /* was `typeof fetch` */
+    @JSImport("isomorphic-unfetch", JSImport.Default)
+    @js.native
     def apply(input: RequestInfo, init: RequestInit): js.Promise[Response] = js.native
   }
   
-  @js.native
-  object unfetch extends js.Object {
+  object unfetch {
     
     type IsomorphicBody = Body | typingsSlinky.nodeFetch.mod.Body
     

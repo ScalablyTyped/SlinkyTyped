@@ -13,14 +13,14 @@ import typingsSlinky.pulumiAws.standardsSubscriptionMod.StandardsSubscriptionSta
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws/securityhub", JSImport.Namespace)
-@js.native
-object securityhubMod extends js.Object {
+object securityhubMod {
   
+  @JSImport("@pulumi/aws/securityhub", "Account")
   @js.native
   class Account protected ()
     extends typingsSlinky.pulumiAws.securityhubAccountMod.Account {
@@ -37,8 +37,7 @@ object securityhubMod extends js.Object {
     def this(name: String, args: AccountArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object Account extends js.Object {
+  object Account {
     
     /**
       * Get an existing Account resource's state with the given name, ID, and optional extra
@@ -49,18 +48,29 @@ object securityhubMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/securityhub", "Account.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.securityhubAccountMod.Account = js.native
+    @JSImport("@pulumi/aws/securityhub", "Account.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.securityhubAccountMod.Account = js.native
+    @JSImport("@pulumi/aws/securityhub", "Account.get")
+    @js.native
     def get(name: String, id: Input[ID], state: AccountState): typingsSlinky.pulumiAws.securityhubAccountMod.Account = js.native
+    @JSImport("@pulumi/aws/securityhub", "Account.get")
+    @js.native
     def get(name: String, id: Input[ID], state: AccountState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.securityhubAccountMod.Account = js.native
     
     /**
       * Returns true if the given object is an instance of Account.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/securityhub", "Account.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/securityhub/account.Account */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/securityhub", "ActionTarget")
   @js.native
   class ActionTarget protected ()
     extends typingsSlinky.pulumiAws.actionTargetMod.ActionTarget {
@@ -75,8 +85,7 @@ object securityhubMod extends js.Object {
     def this(name: String, args: ActionTargetArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object ActionTarget extends js.Object {
+  object ActionTarget {
     
     /**
       * Get an existing ActionTarget resource's state with the given name, ID, and optional extra
@@ -87,18 +96,29 @@ object securityhubMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/securityhub", "ActionTarget.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.actionTargetMod.ActionTarget = js.native
+    @JSImport("@pulumi/aws/securityhub", "ActionTarget.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.actionTargetMod.ActionTarget = js.native
+    @JSImport("@pulumi/aws/securityhub", "ActionTarget.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ActionTargetState): typingsSlinky.pulumiAws.actionTargetMod.ActionTarget = js.native
+    @JSImport("@pulumi/aws/securityhub", "ActionTarget.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ActionTargetState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.actionTargetMod.ActionTarget = js.native
     
     /**
       * Returns true if the given object is an instance of ActionTarget.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/securityhub", "ActionTarget.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/securityhub/actionTarget.ActionTarget */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/securityhub", "Member")
   @js.native
   class Member protected ()
     extends typingsSlinky.pulumiAws.securityhubMemberMod.Member {
@@ -113,8 +133,7 @@ object securityhubMod extends js.Object {
     def this(name: String, args: MemberArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object Member extends js.Object {
+  object Member {
     
     /**
       * Get an existing Member resource's state with the given name, ID, and optional extra
@@ -125,18 +144,29 @@ object securityhubMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/securityhub", "Member.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.securityhubMemberMod.Member = js.native
+    @JSImport("@pulumi/aws/securityhub", "Member.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.securityhubMemberMod.Member = js.native
+    @JSImport("@pulumi/aws/securityhub", "Member.get")
+    @js.native
     def get(name: String, id: Input[ID], state: MemberState): typingsSlinky.pulumiAws.securityhubMemberMod.Member = js.native
+    @JSImport("@pulumi/aws/securityhub", "Member.get")
+    @js.native
     def get(name: String, id: Input[ID], state: MemberState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.securityhubMemberMod.Member = js.native
     
     /**
       * Returns true if the given object is an instance of Member.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/securityhub", "Member.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/securityhub/member.Member */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/securityhub", "ProductSubscription")
   @js.native
   class ProductSubscription protected ()
     extends typingsSlinky.pulumiAws.productSubscriptionMod.ProductSubscription {
@@ -151,8 +181,7 @@ object securityhubMod extends js.Object {
     def this(name: String, args: ProductSubscriptionArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object ProductSubscription extends js.Object {
+  object ProductSubscription {
     
     /**
       * Get an existing ProductSubscription resource's state with the given name, ID, and optional extra
@@ -163,18 +192,29 @@ object securityhubMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/securityhub", "ProductSubscription.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.productSubscriptionMod.ProductSubscription = js.native
+    @JSImport("@pulumi/aws/securityhub", "ProductSubscription.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.productSubscriptionMod.ProductSubscription = js.native
+    @JSImport("@pulumi/aws/securityhub", "ProductSubscription.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ProductSubscriptionState): typingsSlinky.pulumiAws.productSubscriptionMod.ProductSubscription = js.native
+    @JSImport("@pulumi/aws/securityhub", "ProductSubscription.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ProductSubscriptionState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.productSubscriptionMod.ProductSubscription = js.native
     
     /**
       * Returns true if the given object is an instance of ProductSubscription.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/securityhub", "ProductSubscription.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/securityhub/productSubscription.ProductSubscription */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/securityhub", "StandardsSubscription")
   @js.native
   class StandardsSubscription protected ()
     extends typingsSlinky.pulumiAws.standardsSubscriptionMod.StandardsSubscription {
@@ -189,8 +229,7 @@ object securityhubMod extends js.Object {
     def this(name: String, args: StandardsSubscriptionArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object StandardsSubscription extends js.Object {
+  object StandardsSubscription {
     
     /**
       * Get an existing StandardsSubscription resource's state with the given name, ID, and optional extra
@@ -201,15 +240,25 @@ object securityhubMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/securityhub", "StandardsSubscription.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.standardsSubscriptionMod.StandardsSubscription = js.native
+    @JSImport("@pulumi/aws/securityhub", "StandardsSubscription.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.standardsSubscriptionMod.StandardsSubscription = js.native
+    @JSImport("@pulumi/aws/securityhub", "StandardsSubscription.get")
+    @js.native
     def get(name: String, id: Input[ID], state: StandardsSubscriptionState): typingsSlinky.pulumiAws.standardsSubscriptionMod.StandardsSubscription = js.native
+    @JSImport("@pulumi/aws/securityhub", "StandardsSubscription.get")
+    @js.native
     def get(name: String, id: Input[ID], state: StandardsSubscriptionState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.standardsSubscriptionMod.StandardsSubscription = js.native
     
     /**
       * Returns true if the given object is an instance of StandardsSubscription.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/securityhub", "StandardsSubscription.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/securityhub/standardsSubscription.StandardsSubscription */ Boolean = js.native
   }
 }

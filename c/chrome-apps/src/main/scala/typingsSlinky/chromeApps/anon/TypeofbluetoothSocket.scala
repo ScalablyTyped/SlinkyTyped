@@ -9,12 +9,13 @@ import typingsSlinky.chromeApps.chrome.bluetoothSocket.OnReceiveEvent
 import typingsSlinky.chromeApps.chrome.bluetoothSocket.SocketInfo
 import typingsSlinky.chromeApps.chrome.bluetoothSocket.SocketProperties
 import typingsSlinky.chromeApps.chrome.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofbluetoothSocket extends js.Object {
+trait TypeofbluetoothSocket extends StObject {
   
   /**
     * Disconnects and destroys the socket.

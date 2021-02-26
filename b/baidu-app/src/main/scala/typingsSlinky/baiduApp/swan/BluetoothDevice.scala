@@ -1,5 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * 蓝牙设备信息
   */
 @js.native
-trait BluetoothDevice extends js.Object {
+trait BluetoothDevice extends StObject {
   
   /**
     * int 当前蓝牙设备的信号强度
@@ -39,30 +40,18 @@ object BluetoothDevice {
   }
   
   @scala.inline
-  implicit class BluetoothDeviceOps[Self <: BluetoothDevice] (val x: Self) extends AnyVal {
+  implicit class BluetoothDeviceMutableBuilder[Self <: BluetoothDevice] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAdvertisData(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "advertisData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDeviceId(value: String): Self = StObject.set(x, "deviceId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRSSI(value: Double): Self = this.set("RSSI", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAdvertisData(value: js.typedarray.ArrayBuffer): Self = this.set("advertisData", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDeviceId(value: String): Self = this.set("deviceId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setRSSI(value: Double): Self = StObject.set(x, "RSSI", value.asInstanceOf[js.Any])
   }
 }

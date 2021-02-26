@@ -1,12 +1,13 @@
 package typingsSlinky.babylonjs.legacyMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "Xbox360Dpad")
 @js.native
-object Xbox360Dpad extends js.Object {
+object Xbox360Dpad extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.babylonjs.xboxGamepadMod.Xbox360Dpad with Double] = js.native

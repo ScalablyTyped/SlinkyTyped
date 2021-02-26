@@ -4,16 +4,16 @@ import typingsSlinky.devexpressUtils.mapIteratorMod.SparseIntervalsMapIterator
 import typingsSlinky.devexpressUtils.mutableMod.MutableInterval
 import typingsSlinky.devexpressUtils.reproducibleMod.IReproducibleInterval
 import typingsSlinky.devexpressUtils.typesMod.CmpFunc
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@devexpress/utils/lib/intervals/sparse/map-collector", JSImport.Namespace)
-@js.native
-object mapCollectorMod extends js.Object {
+object mapCollectorMod {
   
+  @JSImport("@devexpress/utils/lib/intervals/sparse/map-collector", "SparseIntervalsMapCollector")
   @js.native
-  class SparseIntervalsMapCollector[IntervalT /* <: MutableInterval */, TemplateT /* <: IReproducibleInterval[IntervalT] */, ObjT] protected () extends js.Object {
+  class SparseIntervalsMapCollector[IntervalT /* <: MutableInterval */, TemplateT /* <: IReproducibleInterval[IntervalT] */, ObjT] protected () extends StObject {
     def this(cmp: CmpFunc[ObjT], template: TemplateT) = this()
     
     def add(index: Double, value: ObjT): Unit = js.native

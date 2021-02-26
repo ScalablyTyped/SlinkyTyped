@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.vis.anon.End
 import typingsSlinky.vis.anon.Groups
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vis", "Graph2d")
 @js.native
-class Graph2d protected () extends js.Object {
+class Graph2d protected () extends StObject {
   def this(container: HTMLElement, items: DataItemCollectionType) = this()
   def this(container: HTMLElement, items: DataItemCollectionType, groups: DataGroupCollectionType) = this()
   def this(container: HTMLElement, items: DataItemCollectionType, options: Graph2dOptions) = this()
@@ -46,7 +47,7 @@ class Graph2d protected () extends js.Object {
   
   def getLegend(): TimelineWindow = js.native
   
-   // TODO
+  // TODO
   def getSelection(): js.Array[IdType] = js.native
   
   def getVisibleItems(): js.Array[IdType] = js.native

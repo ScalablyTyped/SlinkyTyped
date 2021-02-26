@@ -1,5 +1,6 @@
 package typingsSlinky.dropboxjs.global.Dropbox
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,10 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class AccountInfo ()
   extends typingsSlinky.dropboxjs.Dropbox.AccountInfo
-/* static members */
-@JSGlobal("Dropbox.AccountInfo")
-@js.native
-object AccountInfo extends js.Object {
+object AccountInfo {
   
+  /* static member */
+  @JSGlobal("Dropbox.AccountInfo.parse")
+  @js.native
   def parse(acountInfo: js.Object): typingsSlinky.dropboxjs.Dropbox.AccountInfo = js.native
 }

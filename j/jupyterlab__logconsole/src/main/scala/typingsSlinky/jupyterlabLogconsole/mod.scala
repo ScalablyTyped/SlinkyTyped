@@ -3,16 +3,18 @@ package typingsSlinky.jupyterlabLogconsole
 import typingsSlinky.jupyterlabLogconsole.loggerMod.LogOutputModel.IOptions
 import typingsSlinky.luminoCoreutils.mod.Token
 import typingsSlinky.luminoWidgets.mod.Widget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/logconsole", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@jupyterlab/logconsole", "ILoggerRegistry")
+  @js.native
   val ILoggerRegistry: Token[typingsSlinky.jupyterlabLogconsole.tokensMod.ILoggerRegistry] = js.native
   
+  @JSImport("@jupyterlab/logconsole", "LogConsolePanel")
   @js.native
   class LogConsolePanel protected ()
     extends typingsSlinky.jupyterlabLogconsole.widgetMod.LogConsolePanel {
@@ -25,6 +27,7 @@ object mod extends js.Object {
     def this(loggerRegistry: typingsSlinky.jupyterlabLogconsole.tokensMod.ILoggerRegistry) = this()
   }
   
+  @JSImport("@jupyterlab/logconsole", "LogOutputModel")
   @js.native
   class LogOutputModel protected ()
     extends typingsSlinky.jupyterlabLogconsole.loggerMod.LogOutputModel {
@@ -38,9 +41,9 @@ object mod extends js.Object {
   /**
     * Log Output Model namespace that defines initialization options.
     */
-  @js.native
-  object LogOutputModel extends js.Object
+  object LogOutputModel
   
+  @JSImport("@jupyterlab/logconsole", "Logger")
   @js.native
   class Logger protected ()
     extends typingsSlinky.jupyterlabLogconsole.loggerMod.Logger {
@@ -52,12 +55,14 @@ object mod extends js.Object {
     def this(options: typingsSlinky.jupyterlabLogconsole.loggerMod.Logger.IOptions) = this()
   }
   
+  @JSImport("@jupyterlab/logconsole", "LoggerOutputAreaModel")
   @js.native
   class LoggerOutputAreaModel protected ()
     extends typingsSlinky.jupyterlabLogconsole.loggerMod.LoggerOutputAreaModel {
     def this(hasMaxLengthOptions: typingsSlinky.jupyterlabLogconsole.loggerMod.LoggerOutputAreaModel.IOptions) = this()
   }
   
+  @JSImport("@jupyterlab/logconsole", "LoggerRegistry")
   @js.native
   class LoggerRegistry protected ()
     extends typingsSlinky.jupyterlabLogconsole.registryMod.LoggerRegistry {
@@ -70,6 +75,7 @@ object mod extends js.Object {
     def this(options: typingsSlinky.jupyterlabLogconsole.registryMod.LoggerRegistry.IOptions) = this()
   }
   
+  @JSImport("@jupyterlab/logconsole", "ScrollingWidget")
   @js.native
   class ScrollingWidget[T /* <: Widget */] protected ()
     extends typingsSlinky.jupyterlabLogconsole.widgetMod.ScrollingWidget[T] {

@@ -6,14 +6,15 @@ import typingsSlinky.firebaseAnalyticsTypes.mod.Gtag
 import typingsSlinky.firebaseAnalyticsTypes.mod.MinimalDynamicConfig
 import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
 import typingsSlinky.firebaseInstallationsTypes.mod.FirebaseInstallations
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/analytics/dist/src/initialize-ids", JSImport.Namespace)
-@js.native
-object initializeIdsMod extends js.Object {
+object initializeIdsMod {
   
+  @JSImport("@firebase/analytics/dist/src/initialize-ids", "initializeIds")
+  @js.native
   def initializeIds(
     app: FirebaseApp,
     dynamicConfigPromisesList: js.Array[js.Promise[DynamicConfig | MinimalDynamicConfig]],

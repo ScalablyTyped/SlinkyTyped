@@ -3,6 +3,7 @@ package typingsSlinky.athenajs.mod
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Iterable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,8 +16,8 @@ trait _Dom[TElement]
   def addClass(classes: String): _Dom[TElement] = js.native
   
   def appendTo(selector: String): _Dom[TElement] = js.native
-  def appendTo(selector: _Dom[TElement]): _Dom[TElement] = js.native
   def appendTo(selector: HTMLElement): _Dom[TElement] = js.native
+  def appendTo(selector: _Dom[TElement]): _Dom[TElement] = js.native
   
   def attr(att: String, `val`: String): _Dom[TElement] = js.native
   def attr(att: JSObject): _Dom[TElement] = js.native

@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.HTMLVideoElement
 import typingsSlinky.babylonjs.anon.AutoPlay
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -64,22 +65,26 @@ abstract class TextureDome[T /* <: typingsSlinky.babylonjs.BABYLON.Texture */] p
   ) = this()
 }
 /* static members */
-@JSGlobal("BABYLON.TextureDome")
-@js.native
-object TextureDome extends js.Object {
+object TextureDome {
   
   /**
     * Define the source as a Monoscopic panoramic 360/180.
     */
+  @JSGlobal("BABYLON.TextureDome.MODE_MONOSCOPIC")
+  @js.native
   val MODE_MONOSCOPIC: Double = js.native
   
   /**
     * Define the source as a Stereoscopic Side by Side panoramic 360/180.
     */
+  @JSGlobal("BABYLON.TextureDome.MODE_SIDEBYSIDE")
+  @js.native
   val MODE_SIDEBYSIDE: Double = js.native
   
   /**
     * Define the source as a Stereoscopic TopBottom/OverUnder panoramic 360/180.
     */
+  @JSGlobal("BABYLON.TextureDome.MODE_TOPBOTTOM")
+  @js.native
   val MODE_TOPBOTTOM: Double = js.native
 }

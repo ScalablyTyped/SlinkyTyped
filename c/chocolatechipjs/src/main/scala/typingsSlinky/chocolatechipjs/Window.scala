@@ -2,12 +2,13 @@ package typingsSlinky.chocolatechipjs
 
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Window extends js.Object {
+trait Window extends StObject {
   
   /**
     * If no argument is provided, return the document as a ChocolateChipElementArray.
@@ -44,13 +45,13 @@ trait Window extends js.Object {
   @JSName("$")
   def $(selector: String): ChocolateChipElementArray = js.native
   @JSName("$")
-  def $(selector: String, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
-  @JSName("$")
   def $(selector: String, context: HTMLElement): ChocolateChipElementArray = js.native
   @JSName("$")
-  def $(selector: Document, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
+  def $(selector: String, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   @JSName("$")
   def $(selector: Document, context: HTMLElement): ChocolateChipElementArray = js.native
+  @JSName("$")
+  def $(selector: Document, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     *
@@ -59,9 +60,9 @@ trait Window extends js.Object {
   @JSName("$")
   def $(selector: HTMLElement): ChocolateChipElementArray = js.native
   @JSName("$")
-  def $(selector: HTMLElement, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
-  @JSName("$")
   def $(selector: HTMLElement, context: HTMLElement): ChocolateChipElementArray = js.native
+  @JSName("$")
+  def $(selector: HTMLElement, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   @JSName("$")
   def $_ChocolateChipElementArray(selector: Document): ChocolateChipElementArray = js.native
   @JSName("$")
@@ -96,18 +97,18 @@ trait Window extends js.Object {
     * @param context A DOM HTMLElement to use as context
     */
   def chocolatechipjs(selector: String): ChocolateChipElementArray = js.native
-  def chocolatechipjs(selector: String, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   def chocolatechipjs(selector: String, context: HTMLElement): ChocolateChipElementArray = js.native
-  def chocolatechipjs(selector: Document, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
+  def chocolatechipjs(selector: String, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   def chocolatechipjs(selector: Document, context: HTMLElement): ChocolateChipElementArray = js.native
+  def chocolatechipjs(selector: Document, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     *
     * @param element A DOM element to wrap in an array.
     */
   def chocolatechipjs(selector: HTMLElement): ChocolateChipElementArray = js.native
-  def chocolatechipjs(selector: HTMLElement, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   def chocolatechipjs(selector: HTMLElement, context: HTMLElement): ChocolateChipElementArray = js.native
+  def chocolatechipjs(selector: HTMLElement, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   @JSName("chocolatechipjs")
   def chocolatechipjs_ChocolateChipElementArray(selector: Document): ChocolateChipElementArray = js.native
   @JSName("chocolatechipjs")

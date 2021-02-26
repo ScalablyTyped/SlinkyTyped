@@ -78,6 +78,7 @@ import typingsSlinky.reactMdMenu.reactMdMenuStrings.yes
 import typingsSlinky.reactMdPortal.getContainerMod.PortalInto
 import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
 import typingsSlinky.reactMdUtils.typesMod.PositionAnchor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -86,9 +87,16 @@ object Menu {
   
   object PickBaseMenuPropshiddenvi {
     
+    @scala.inline
+    def apply(`aria-label`: String, controlId: String, id: String, onRequestClose: () => Unit, visible: Boolean): Builder = {
+      val __props = js.Dynamic.literal(controlId = controlId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
+      __props.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenvi]))
+    }
+    
     @JSImport("@react-md/menu", "Menu")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -293,10 +301,10 @@ object Menu {
       def defaultFocus(value: first | last | String): this.type = set("defaultFocus", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -857,19 +865,19 @@ object Menu {
       def portal(value: Boolean): this.type = set("portal", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
+      def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
       
       @scala.inline
       def portalIntoFunction0(value: () => HTMLElement | Null): this.type = set("portalInto", js.Any.fromFunction0(value))
       
       @scala.inline
-      def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def portalIntoNull: this.type = set("portalInto", null)
+      def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
       
       @scala.inline
       def portalIntoId(value: String): this.type = set("portalIntoId", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def portalIntoNull: this.type = set("portalInto", null)
       
       @scala.inline
       def positionOptions(value: MenuPositionOptions): this.type = set("positionOptions", value.asInstanceOf[js.Any])
@@ -936,20 +944,26 @@ object Menu {
     }
     
     def withProps(p: typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenvi): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(`aria-label`: String, controlId: String, id: String, onRequestClose: () => Unit, visible: Boolean): Builder = {
-      val __props = js.Dynamic.literal(controlId = controlId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
-      __props.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenvi]))
-    }
   }
   
   object PickBaseMenuPropshiddenviAbout {
     
+    @scala.inline
+    def apply(
+      `aria-labelledby`: String,
+      controlId: String,
+      id: String,
+      onRequestClose: () => Unit,
+      visible: Boolean
+    ): Builder = {
+      val __props = js.Dynamic.literal(controlId = controlId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
+      __props.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenviAbout]))
+    }
+    
     @JSImport("@react-md/menu", "Menu")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -1154,10 +1168,10 @@ object Menu {
       def defaultFocus(value: first | last | String): this.type = set("defaultFocus", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -1718,19 +1732,19 @@ object Menu {
       def portal(value: Boolean): this.type = set("portal", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
+      def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
       
       @scala.inline
       def portalIntoFunction0(value: () => HTMLElement | Null): this.type = set("portalInto", js.Any.fromFunction0(value))
       
       @scala.inline
-      def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def portalIntoNull: this.type = set("portalInto", null)
+      def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
       
       @scala.inline
       def portalIntoId(value: String): this.type = set("portalIntoId", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def portalIntoNull: this.type = set("portalInto", null)
       
       @scala.inline
       def positionOptions(value: MenuPositionOptions): this.type = set("positionOptions", value.asInstanceOf[js.Any])
@@ -1797,18 +1811,5 @@ object Menu {
     }
     
     def withProps(p: typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenviAbout): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(
-      `aria-labelledby`: String,
-      controlId: String,
-      id: String,
-      onRequestClose: () => Unit,
-      visible: Boolean
-    ): Builder = {
-      val __props = js.Dynamic.literal(controlId = controlId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
-      __props.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenviAbout]))
-    }
   }
 }

@@ -21,16 +21,16 @@ import typingsSlinky.typeorm.selectQueryBuilderMod.SelectQueryBuilder
 import typingsSlinky.typeorm.treeRepositoryMod.TreeRepository
 import typingsSlinky.typeorm.typingsMod.ObjectID
 import typingsSlinky.typeorm.updateResultMod.UpdateResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/entity-manager/EntityManager", JSImport.Namespace)
-@js.native
-object entityManagerMod extends js.Object {
+object entityManagerMod {
   
+  @JSImport("typeorm/browser/entity-manager/EntityManager", "EntityManager")
   @js.native
-  class EntityManager protected () extends js.Object {
+  class EntityManager protected () extends StObject {
     def this(connection: Connection) = this()
     def this(connection: Connection, queryRunner: QueryRunner) = this()
     
@@ -98,8 +98,8 @@ object entityManagerMod extends js.Object {
     def delete[Entity](targetOrEntity: EntityTarget[Entity], criteria: String): js.Promise[DeleteResult] = js.native
     def delete[Entity](targetOrEntity: EntityTarget[Entity], criteria: js.Any): js.Promise[DeleteResult] = js.native
     def delete[Entity](targetOrEntity: EntityTarget[Entity], criteria: js.Array[js.Date | Double | ObjectID | String]): js.Promise[DeleteResult] = js.native
-    def delete[Entity](targetOrEntity: EntityTarget[Entity], criteria: Double): js.Promise[DeleteResult] = js.native
     def delete[Entity](targetOrEntity: EntityTarget[Entity], criteria: js.Date): js.Promise[DeleteResult] = js.native
+    def delete[Entity](targetOrEntity: EntityTarget[Entity], criteria: Double): js.Promise[DeleteResult] = js.native
     def delete[Entity](targetOrEntity: EntityTarget[Entity], criteria: ObjectID): js.Promise[DeleteResult] = js.native
     
     /**
@@ -139,10 +139,10 @@ object entityManagerMod extends js.Object {
     def findOne[Entity](entityClass: EntityTarget[Entity], id: js.UndefOr[scala.Nothing], options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne[Entity](entityClass: EntityTarget[Entity], id: String): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne[Entity](entityClass: EntityTarget[Entity], id: String, options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
-    def findOne[Entity](entityClass: EntityTarget[Entity], id: Double): js.Promise[js.UndefOr[Entity]] = js.native
-    def findOne[Entity](entityClass: EntityTarget[Entity], id: Double, options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne[Entity](entityClass: EntityTarget[Entity], id: js.Date): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne[Entity](entityClass: EntityTarget[Entity], id: js.Date, options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
+    def findOne[Entity](entityClass: EntityTarget[Entity], id: Double): js.Promise[js.UndefOr[Entity]] = js.native
+    def findOne[Entity](entityClass: EntityTarget[Entity], id: Double, options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne[Entity](entityClass: EntityTarget[Entity], id: ObjectID): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne[Entity](entityClass: EntityTarget[Entity], id: ObjectID, options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne[Entity](entityClass: EntityTarget[Entity], options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
@@ -160,10 +160,10 @@ object entityManagerMod extends js.Object {
     def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: js.UndefOr[scala.Nothing], options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
     def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: String): js.Promise[Entity] = js.native
     def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: String, options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
-    def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: Double): js.Promise[Entity] = js.native
-    def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: Double, options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
     def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: js.Date): js.Promise[Entity] = js.native
     def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: js.Date, options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
+    def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: Double): js.Promise[Entity] = js.native
+    def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: Double, options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
     def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: ObjectID): js.Promise[Entity] = js.native
     def findOneOrFail[Entity](entityClass: EntityTarget[Entity], id: ObjectID, options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
     def findOneOrFail[Entity](entityClass: EntityTarget[Entity], options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
@@ -323,8 +323,8 @@ object entityManagerMod extends js.Object {
     def restore[Entity](targetOrEntity: EntityTarget[Entity], criteria: String): js.Promise[UpdateResult] = js.native
     def restore[Entity](targetOrEntity: EntityTarget[Entity], criteria: js.Any): js.Promise[UpdateResult] = js.native
     def restore[Entity](targetOrEntity: EntityTarget[Entity], criteria: js.Array[js.Date | Double | ObjectID | String]): js.Promise[UpdateResult] = js.native
-    def restore[Entity](targetOrEntity: EntityTarget[Entity], criteria: Double): js.Promise[UpdateResult] = js.native
     def restore[Entity](targetOrEntity: EntityTarget[Entity], criteria: js.Date): js.Promise[UpdateResult] = js.native
+    def restore[Entity](targetOrEntity: EntityTarget[Entity], criteria: Double): js.Promise[UpdateResult] = js.native
     def restore[Entity](targetOrEntity: EntityTarget[Entity], criteria: ObjectID): js.Promise[UpdateResult] = js.native
     
     /**
@@ -362,8 +362,8 @@ object entityManagerMod extends js.Object {
     def softDelete[Entity](targetOrEntity: EntityTarget[Entity], criteria: String): js.Promise[UpdateResult] = js.native
     def softDelete[Entity](targetOrEntity: EntityTarget[Entity], criteria: js.Any): js.Promise[UpdateResult] = js.native
     def softDelete[Entity](targetOrEntity: EntityTarget[Entity], criteria: js.Array[js.Date | Double | ObjectID | String]): js.Promise[UpdateResult] = js.native
-    def softDelete[Entity](targetOrEntity: EntityTarget[Entity], criteria: Double): js.Promise[UpdateResult] = js.native
     def softDelete[Entity](targetOrEntity: EntityTarget[Entity], criteria: js.Date): js.Promise[UpdateResult] = js.native
+    def softDelete[Entity](targetOrEntity: EntityTarget[Entity], criteria: Double): js.Promise[UpdateResult] = js.native
     def softDelete[Entity](targetOrEntity: EntityTarget[Entity], criteria: ObjectID): js.Promise[UpdateResult] = js.native
     
     /**
@@ -415,8 +415,8 @@ object entityManagerMod extends js.Object {
       criteria: js.Array[js.Date | Double | ObjectID | String],
       partialEntity: QueryDeepPartialEntity[Entity]
     ): js.Promise[UpdateResult] = js.native
-    def update[Entity](target: EntityTarget[Entity], criteria: Double, partialEntity: QueryDeepPartialEntity[Entity]): js.Promise[UpdateResult] = js.native
     def update[Entity](target: EntityTarget[Entity], criteria: js.Date, partialEntity: QueryDeepPartialEntity[Entity]): js.Promise[UpdateResult] = js.native
+    def update[Entity](target: EntityTarget[Entity], criteria: Double, partialEntity: QueryDeepPartialEntity[Entity]): js.Promise[UpdateResult] = js.native
     def update[Entity](target: EntityTarget[Entity], criteria: ObjectID, partialEntity: QueryDeepPartialEntity[Entity]): js.Promise[UpdateResult] = js.native
   }
 }

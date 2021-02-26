@@ -12,7 +12,7 @@ Walks your node_modules tree
 | Keywords           | prune, production |
 | # releases         | 2 |
 | # dependents       | 1 |
-| # downloads        | 1649717 |
+| # downloads        | 2477564 |
 | # stars            | 0 |
 
 ## Links

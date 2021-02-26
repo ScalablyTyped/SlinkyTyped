@@ -4,6 +4,7 @@ import typingsSlinky.angularForms.anon.EmitEvent
 import typingsSlinky.angularForms.anon.OnlySelf
 import typingsSlinky.angularForms.anon.`0`
 import typingsSlinky.rxjs.mod.Observable_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @param asyncValidators The function or array of functions that is used to determine validity of
   *     this control asynchronously.
   */
-abstract class AbstractControl () extends js.Object {
+abstract class AbstractControl () extends StObject {
   def this(validators: js.Array[ValidatorFn]) = this()
   def this(validators: ValidatorFn) = this()
   def this(validators: js.Array[ValidatorFn], asyncValidators: js.Array[AsyncValidatorFn]) = this()

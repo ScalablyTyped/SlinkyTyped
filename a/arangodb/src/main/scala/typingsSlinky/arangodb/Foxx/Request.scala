@@ -6,12 +6,13 @@ import typingsSlinky.arangodb.anon.Algorithm
 import typingsSlinky.arangodb.anon.Basic
 import typingsSlinky.arangodb.arangodbBooleans.`false`
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Request extends js.Object {
+trait Request extends StObject {
   
   def accepts(types: String*): String | `false` = js.native
   def accepts(types: js.Array[String]): String | `false` = js.native

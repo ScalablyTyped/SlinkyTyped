@@ -4,31 +4,38 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.curriable.anon.Arity
 import typingsSlinky.std.Parameters
 import typingsSlinky.std.ReturnType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("curriable", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  val __ : Placeholder = js.native
-  
-  def curry[Fn /* <: Handler */](fn: Fn): Curried[Fn] = js.native
-  def curry[Fn /* <: Handler */](fn: Fn, arityOverride: Double): Handler = js.native
-  
+  @JSImport("curriable", JSImport.Default)
+  @js.native
   def default[Fn /* <: Handler */](fn: Fn): Curried[Fn] = js.native
+  @JSImport("curriable", JSImport.Default)
+  @js.native
   def default[Fn /* <: Handler */](fn: Fn, arityOverride: Double): Handler = js.native
   
+  @JSImport("curriable", "__")
+  @js.native
+  val __ : Placeholder = js.native
+  
+  @JSImport("curriable", "curry")
+  @js.native
+  def curry[Fn /* <: Handler */](fn: Fn): Curried[Fn] = js.native
+  @JSImport("curriable", "curry")
+  @js.native
+  def curry[Fn /* <: Handler */](fn: Fn, arityOverride: Double): Handler = js.native
+  
+  @JSImport("curriable", "isPlaceholder")
+  @js.native
   def isPlaceholder(value: js.Any): /* is curriable.curriable.Placeholder */ Boolean = js.native
   
+  @JSImport("curriable", "uncurry")
+  @js.native
   def uncurry[Fn /* <: Handler */](curried: Curried[Fn]): Fn = js.native
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.curriable.curriableBooleans.`true`
-    - typingsSlinky.curriable.curriableBooleans.`false`
-  */
-  trait HasTail[T /* <: js.Array[_] */] extends js.Object
   
   type Append[E, T /* <: js.Array[_] */] = Concat[T, js.Array[E]]
   
@@ -59,6 +66,12 @@ object mod extends js.Object {
   type GapsOf[T1 /* <: js.Array[_] */, T2 /* <: js.Array[_] */, TN /* <: js.Array[_] */, I /* <: js.Array[_] */] = /* import warning: importer.ImportType#apply Failed type conversion: curriable.anon.0Object<TN, I, T2>[curriable.curriable.Pos<I> extends curriable.curriable.Length<T1> ? 1 : 0] */ js.Any
   
   type Handler = js.Function1[/* repeated */ js.Any, js.Any]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.curriable.curriableBooleans.`true`
+    - typingsSlinky.curriable.curriableBooleans.`false`
+  */
+  trait HasTail[T /* <: js.Array[_] */] extends StObject
   
   type Head[T /* <: js.Array[_] */] = /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
   

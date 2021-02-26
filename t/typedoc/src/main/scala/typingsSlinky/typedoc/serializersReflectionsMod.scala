@@ -1,66 +1,118 @@
 package typingsSlinky.typedoc
 
+import typingsSlinky.typedoc.serializerMod.Serializer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/serialization/serializers/reflections", JSImport.Namespace)
-@js.native
-object serializersReflectionsMod extends js.Object {
+object serializersReflectionsMod {
   
+  @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ContainerReflectionSerializer")
   @js.native
-  class ContainerReflectionSerializer ()
-    extends typingsSlinky.typedoc.reflectionsContainerMod.ContainerReflectionSerializer
-  
-  @js.native
-  class DeclarationReflectionSerializer ()
-    extends typingsSlinky.typedoc.serializersReflectionsDeclarationMod.DeclarationReflectionSerializer
-  /* static members */
-  @js.native
-  object DeclarationReflectionSerializer extends js.Object {
-    
-    var PRIORITY: Double = js.native
+  class ContainerReflectionSerializer protected ()
+    extends typingsSlinky.typedoc.reflectionsContainerMod.ContainerReflectionSerializer {
+    def this(owner: Serializer) = this()
   }
   
+  @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "DeclarationReflectionSerializer")
   @js.native
-  class ParameterReflectionSerializer ()
-    extends typingsSlinky.typedoc.serializersReflectionsParameterMod.ParameterReflectionSerializer
-  
-  @js.native
-  class ProjectReflectionSerializer ()
-    extends typingsSlinky.typedoc.reflectionsProjectMod.ProjectReflectionSerializer
+  class DeclarationReflectionSerializer protected ()
+    extends typingsSlinky.typedoc.serializersReflectionsDeclarationMod.DeclarationReflectionSerializer {
+    def this(owner: Serializer) = this()
+  }
   /* static members */
-  @js.native
-  object ProjectReflectionSerializer extends js.Object {
+  object DeclarationReflectionSerializer {
     
-    var PRIORITY: Double = js.native
+    @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "DeclarationReflectionSerializer")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "DeclarationReflectionSerializer.PRIORITY")
+    @js.native
+    def PRIORITY: Double = js.native
+    @scala.inline
+    def PRIORITY_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("PRIORITY")(x.asInstanceOf[js.Any])
   }
   
+  @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ParameterReflectionSerializer")
   @js.native
-  class ReferenceReflectionSerializer ()
-    extends typingsSlinky.typedoc.serializersReflectionsReferenceMod.ReferenceReflectionSerializer
-  /* static members */
-  @js.native
-  object ReferenceReflectionSerializer extends js.Object {
-    
-    var PRIORITY: Double = js.native
+  class ParameterReflectionSerializer protected ()
+    extends typingsSlinky.typedoc.serializersReflectionsParameterMod.ParameterReflectionSerializer {
+    def this(owner: Serializer) = this()
   }
   
+  @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ProjectReflectionSerializer")
   @js.native
-  class ReflectionSerializer ()
-    extends typingsSlinky.typedoc.reflectionsAbstractMod.ReflectionSerializer
+  class ProjectReflectionSerializer protected ()
+    extends typingsSlinky.typedoc.reflectionsProjectMod.ProjectReflectionSerializer {
+    def this(owner: Serializer) = this()
+  }
   /* static members */
-  @js.native
-  object ReflectionSerializer extends js.Object {
+  object ProjectReflectionSerializer {
     
-    var PRIORITY: Double = js.native
+    @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ProjectReflectionSerializer")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ProjectReflectionSerializer.PRIORITY")
+    @js.native
+    def PRIORITY: Double = js.native
+    @scala.inline
+    def PRIORITY_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("PRIORITY")(x.asInstanceOf[js.Any])
   }
   
+  @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ReferenceReflectionSerializer")
   @js.native
-  class SignatureReflectionSerializer ()
-    extends typingsSlinky.typedoc.serializersReflectionsSignatureMod.SignatureReflectionSerializer
+  class ReferenceReflectionSerializer protected ()
+    extends typingsSlinky.typedoc.serializersReflectionsReferenceMod.ReferenceReflectionSerializer {
+    def this(owner: Serializer) = this()
+  }
+  /* static members */
+  object ReferenceReflectionSerializer {
+    
+    @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ReferenceReflectionSerializer")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ReferenceReflectionSerializer.PRIORITY")
+    @js.native
+    def PRIORITY: Double = js.native
+    @scala.inline
+    def PRIORITY_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("PRIORITY")(x.asInstanceOf[js.Any])
+  }
   
+  @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ReflectionSerializer")
   @js.native
-  class TypeParameterReflectionSerializer ()
-    extends typingsSlinky.typedoc.serializersReflectionsTypeParameterMod.TypeParameterReflectionSerializer
+  class ReflectionSerializer protected ()
+    extends typingsSlinky.typedoc.reflectionsAbstractMod.ReflectionSerializer {
+    def this(owner: Serializer) = this()
+  }
+  /* static members */
+  object ReflectionSerializer {
+    
+    @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ReflectionSerializer")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "ReflectionSerializer.PRIORITY")
+    @js.native
+    def PRIORITY: Double = js.native
+    @scala.inline
+    def PRIORITY_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("PRIORITY")(x.asInstanceOf[js.Any])
+  }
+  
+  @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "SignatureReflectionSerializer")
+  @js.native
+  class SignatureReflectionSerializer protected ()
+    extends typingsSlinky.typedoc.serializersReflectionsSignatureMod.SignatureReflectionSerializer {
+    def this(owner: Serializer) = this()
+  }
+  
+  @JSImport("typedoc/dist/lib/serialization/serializers/reflections", "TypeParameterReflectionSerializer")
+  @js.native
+  class TypeParameterReflectionSerializer protected ()
+    extends typingsSlinky.typedoc.serializersReflectionsTypeParameterMod.TypeParameterReflectionSerializer {
+    def this(owner: Serializer) = this()
+  }
 }

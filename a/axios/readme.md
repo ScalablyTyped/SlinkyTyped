@@ -10,10 +10,10 @@ Promise based HTTP client for the browser and node.js
 | ------------------ | :-------------: |
 | Full name          | axios |
 | Keywords           | xhr, http, ajax, promise, node |
-| # releases         | 5 |
-| # dependents       | 19474 |
-| # downloads        | 247185102 |
-| # stars            | 555 |
+| # releases         | 8 |
+| # dependents       | 35415 |
+| # downloads        | 600593143 |
+| # stars            | 564 |
 
 ## Links
 - [Homepage](https://github.com/axios/axios)

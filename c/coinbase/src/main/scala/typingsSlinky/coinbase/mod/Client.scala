@@ -1,12 +1,13 @@
 package typingsSlinky.coinbase.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("coinbase", "Client")
 @js.native
-class Client protected () extends js.Object {
+class Client protected () extends StObject {
   def this(opts: ClientConstructOpts) = this()
   
   /**

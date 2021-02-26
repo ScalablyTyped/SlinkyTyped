@@ -2,6 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.playcanvas.anon.AssetPrefix
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,10 +32,7 @@ class Application protected ()
   extends typingsSlinky.playcanvas.pc.Application {
   def this(canvas: Element, options: AssetPrefix) = this()
 }
-/* static members */
-@JSGlobal("pc.Application")
-@js.native
-object Application extends js.Object {
+object Application {
   
   /**
     * Get the current application. In the case where there are multiple running
@@ -46,6 +44,11 @@ object Application extends js.Object {
     * @param [id] - If defined, the returned application should use the canvas which has this id. Otherwise current application will be returned.
     * @returns The running application, if any.
     */
+  /* static member */
+  @JSGlobal("pc.Application.getApplication")
+  @js.native
   def getApplication(): js.UndefOr[typingsSlinky.playcanvas.pc.Application] = js.native
+  @JSGlobal("pc.Application.getApplication")
+  @js.native
   def getApplication(id: String): js.UndefOr[typingsSlinky.playcanvas.pc.Application] = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.reactDates.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactDates.reactDatesStrings.before
   - typingsSlinky.reactDates.reactDatesStrings.after
 */
-trait CalendarInfoPositionShape extends js.Object
+trait CalendarInfoPositionShape extends StObject
 object CalendarInfoPositionShape {
   
   @scala.inline

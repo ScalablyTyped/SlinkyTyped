@@ -5,13 +5,16 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
 import typingsSlinky.ol.featureMod.ReadOptions
 import typingsSlinky.ol.featureMod.WriteOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/format/XMLFeature", JSImport.Namespace)
-@js.native
-object xmlfeatureMod extends js.Object {
+object xmlfeatureMod {
+  
+  @JSImport("ol/format/XMLFeature", JSImport.Default)
+  @js.native
+  abstract class default () extends XMLFeature
   
   @js.native
   trait XMLFeature
@@ -54,7 +57,4 @@ object xmlfeatureMod extends js.Object {
     def writeGeometryNode(geometry: typingsSlinky.ol.geometryMod.default): Node = js.native
     def writeGeometryNode(geometry: typingsSlinky.ol.geometryMod.default, opt_options: WriteOptions): Node = js.native
   }
-  
-  @js.native
-  abstract class default () extends XMLFeature
 }

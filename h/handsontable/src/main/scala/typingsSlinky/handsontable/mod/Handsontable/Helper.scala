@@ -3,13 +3,13 @@ package typingsSlinky.handsontable.mod.Handsontable
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLTableElement
 import typingsSlinky.handsontable.anon.A
-import typingsSlinky.handsontable.mod._Handsontable.Core
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Helper extends js.Object {
+trait Helper extends StObject {
   
   val KEY_CODES: A = js.native
   
@@ -131,7 +131,7 @@ trait Helper extends js.Object {
   
   def inherit(Child: js.Object, Parent: js.Object): js.Object = js.native
   
-  def instanceToHTML(instance: Core): String = js.native
+  def instanceToHTML(instance: typingsSlinky.handsontable.mod._Handsontable.Core): String = js.native
   
   def isChrome(): Boolean = js.native
   

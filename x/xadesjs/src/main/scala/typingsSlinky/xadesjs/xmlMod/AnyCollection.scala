@@ -1,11 +1,13 @@
 package typingsSlinky.xadesjs.xmlMod
 
-import typingsSlinky.xadesjs.xmlBaseMod.XadesObject
-import typingsSlinky.xmlCore.mod.XmlCollection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xadesjs/build/types/xml", "AnyCollection")
 @js.native
-class AnyCollection () extends XmlCollection[XadesObject]
+class AnyCollection ()
+  extends typingsSlinky.xadesjs.anyMod.AnyCollection {
+  def this(properties: js.Object) = this()
+}

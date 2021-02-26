@@ -4,15 +4,15 @@
 Typings are for version 1.51
 
 ## Library description:
-## ⚠️ Use @types/vscode and vscode-test instead ⚠️
+## ⚠️ Deprecated, use @types/vscode and vscode-test instead ⚠️
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | vscode |
 | Keywords           | - |
-| # releases         | 27 |
-| # dependents       | 22 |
-| # downloads        | 1613566 |
+| # releases         | 17 |
+| # dependents       | 25 |
+| # downloads        | 2466041 |
 | # stars            | 4 |
 
 ## Links

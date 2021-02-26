@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteSmsChannelInputMod.D
 import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteSmsChannelOutputMod.DeleteSmsChannelOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteSmsChannelCommand", JSImport.Namespace)
-@js.native
-object deleteSmsChannelCommandMod extends js.Object {
+object deleteSmsChannelCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteSmsChannelCommand", "DeleteSmsChannelCommand")
   @js.native
   class DeleteSmsChannelCommand protected () extends Command[
           InputTypesUnion, 

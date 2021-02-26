@@ -15,12 +15,13 @@ import typingsSlinky.activexOffice.Office.MsoZOrderCmd
 import typingsSlinky.activexOffice.Office.ReflectionFormat
 import typingsSlinky.activexOffice.Office.SmartArtLayout
 import typingsSlinky.activexOffice.Office.SoftEdgeFormat
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ShapeRange extends js.Object {
+trait ShapeRange extends StObject {
   
   val ActionSettings: typingsSlinky.activexPowerpoint.PowerPoint.ActionSettings = js.native
   

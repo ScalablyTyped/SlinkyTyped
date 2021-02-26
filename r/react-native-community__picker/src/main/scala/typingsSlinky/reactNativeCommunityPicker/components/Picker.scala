@@ -33,15 +33,46 @@ import typingsSlinky.reactNativeCommunityPicker.pickerMod.PickerItemProps
 import typingsSlinky.reactNativeCommunityPicker.pickerMod.PickerProps
 import typingsSlinky.reactNativeCommunityPicker.reactNativeCommunityPickerStrings.dialog
 import typingsSlinky.reactNativeCommunityPicker.reactNativeCommunityPickerStrings.dropdown
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Picker {
   
+  object Item {
+    
+    @scala.inline
+    def apply(value: ItemValue): typingsSlinky.reactNativeCommunityPicker.components.Picker.Item.Builder = {
+      val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+      new typingsSlinky.reactNativeCommunityPicker.components.Picker.Item.Builder(js.Array(this.component, __props.asInstanceOf[PickerItemProps]))
+    }
+    
+    @JSImport("@react-native-community/picker", "Picker.Item")
+    @js.native
+    val component: js.Object = js.native
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      
+      @scala.inline
+      def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: PickerItemProps): typingsSlinky.reactNativeCommunityPicker.components.Picker.Item.Builder = new typingsSlinky.reactNativeCommunityPicker.components.Picker.Item.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("@react-native-community/picker", "Picker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,10 +80,10 @@ object Picker {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeCommunityPicker.mod.Picker] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -79,10 +110,10 @@ object Picker {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -241,37 +272,7 @@ object Picker {
     def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Picker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Item {
-    
-    @JSImport("@react-native-community/picker", "Picker.Item")
-    @js.native
-    object component extends js.Object
-    
-    @scala.inline
-    class Builder (val args: js.Array[js.Any])
-      extends AnyVal
-         with StBuildingComponent[tag.type, js.Object] {
-      
-      @scala.inline
-      def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
-    }
-    
-    def withProps(p: PickerItemProps): typingsSlinky.reactNativeCommunityPicker.components.Picker.Item.Builder = new typingsSlinky.reactNativeCommunityPicker.components.Picker.Item.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(value: ItemValue): typingsSlinky.reactNativeCommunityPicker.components.Picker.Item.Builder = {
-      val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-      new typingsSlinky.reactNativeCommunityPicker.components.Picker.Item.Builder(js.Array(this.component, __props.asInstanceOf[PickerItemProps]))
-    }
-  }
+  def withProps(p: PickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

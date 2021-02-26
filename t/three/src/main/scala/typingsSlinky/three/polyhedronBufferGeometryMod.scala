@@ -2,14 +2,14 @@ package typingsSlinky.three
 
 import typingsSlinky.three.anon.Indices
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/geometries/PolyhedronBufferGeometry", JSImport.Namespace)
-@js.native
-object polyhedronBufferGeometryMod extends js.Object {
+object polyhedronBufferGeometryMod {
   
+  @JSImport("three/src/geometries/PolyhedronBufferGeometry", "PolyhedronBufferGeometry")
   @js.native
   class PolyhedronBufferGeometry protected () extends BufferGeometry {
     /**

@@ -10,15 +10,22 @@ import typingsSlinky.reactNativeMaterialUi.reactNativeMaterialUiNumbers.`1`
 import typingsSlinky.reactNativeMaterialUi.reactNativeMaterialUiNumbers.`2`
 import typingsSlinky.reactNativeMaterialUi.reactNativeMaterialUiNumbers.`3`
 import typingsSlinky.reactNativeMaterialUi.reactNativeMaterialUiStrings.dynamic
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ListItem {
   
+  @scala.inline
+  def apply(centerElement: ReactElement | String | ListItemCenterElement): Builder = {
+    val __props = js.Dynamic.literal(centerElement = centerElement.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ListItemProps]))
+  }
+  
   @JSImport("react-native-material-ui", "ListItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +39,10 @@ object ListItem {
     def divider(value: Boolean): this.type = set("divider", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftElementReactElement(value: ReactElement): this.type = set("leftElement", value.asInstanceOf[js.Any])
+    def leftElement(value: ReactElement | String): this.type = set("leftElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftElement(value: ReactElement | String): this.type = set("leftElement", value.asInstanceOf[js.Any])
+    def leftElementReactElement(value: ReactElement): this.type = set("leftElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def numberOfLines(value: `1` | `2` | `3` | dynamic): this.type = set("numberOfLines", value.asInstanceOf[js.Any])
@@ -50,10 +57,10 @@ object ListItem {
     def onRightElementPress(value: () => Unit): this.type = set("onRightElementPress", js.Any.fromFunction0(value))
     
     @scala.inline
-    def rightElementReactElement(value: ReactElement): this.type = set("rightElement", value.asInstanceOf[js.Any])
+    def rightElement(value: ReactElement | String): this.type = set("rightElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightElement(value: ReactElement | String): this.type = set("rightElement", value.asInstanceOf[js.Any])
+    def rightElementReactElement(value: ReactElement): this.type = set("rightElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def style(value: ListItemStyle): this.type = set("style", value.asInstanceOf[js.Any])
@@ -63,10 +70,4 @@ object ListItem {
   }
   
   def withProps(p: ListItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(centerElement: ReactElement | String | ListItemCenterElement): Builder = {
-    val __props = js.Dynamic.literal(centerElement = centerElement.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ListItemProps]))
-  }
 }

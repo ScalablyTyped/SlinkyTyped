@@ -1,12 +1,13 @@
 package typingsSlinky.aframe.mod.THREE
 
-import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSImport("aframe", "THREE.LineLoop")
 @js.native
-class LineLoop[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material] */] ()
+class LineLoop[TGeometry /* <: Geometry | typingsSlinky.three.bufferGeometryMod.BufferGeometry */, TMaterial /* <: typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material] */] ()
   extends typingsSlinky.three.mod.LineLoop[TGeometry, TMaterial]

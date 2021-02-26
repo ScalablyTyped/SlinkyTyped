@@ -1,20 +1,22 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.ranked
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.recent
 import typingsSlinky.instagramPrivateApi.locationFeedResponseMod.LocationFeedResponse
 import typingsSlinky.instagramPrivateApi.locationFeedResponseMod.LocationFeedResponseMedia
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/location.feed", JSImport.Namespace)
-@js.native
-object locationFeedMod extends js.Object {
+object locationFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/location.feed", "LocationFeed")
   @js.native
-  class LocationFeed () extends Feed[LocationFeedResponse, LocationFeedResponseMedia] {
+  class LocationFeed protected () extends Feed[LocationFeedResponse, LocationFeedResponseMedia] {
+    def this(client: IgApiClient) = this()
     
     var id: String | Double = js.native
     

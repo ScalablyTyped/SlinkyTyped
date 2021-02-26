@@ -12,6 +12,7 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.center
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,13 +29,13 @@ class SharedBuilder_CardContentProps516196698 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def description(value: SemanticShorthandItem[CardDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
   
   @scala.inline
   def descriptionFunction3(
@@ -42,13 +43,13 @@ class SharedBuilder_CardContentProps516196698 (val args: js.Array[js.Any])
   ): this.type = set("description", js.Any.fromFunction3(value))
   
   @scala.inline
-  def description(value: SemanticShorthandItem[CardDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
+  def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
   
   @scala.inline
   def extra(value: Boolean): this.type = set("extra", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+  def header(value: SemanticShorthandItem[CardHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
   
   @scala.inline
   def headerFunction3(
@@ -56,10 +57,10 @@ class SharedBuilder_CardContentProps516196698 (val args: js.Array[js.Any])
   ): this.type = set("header", js.Any.fromFunction3(value))
   
   @scala.inline
-  def header(value: SemanticShorthandItem[CardHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
+  def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def metaReactElement(value: ReactElement): this.type = set("meta", value.asInstanceOf[js.Any])
+  def meta(value: SemanticShorthandItem[CardMetaProps]): this.type = set("meta", value.asInstanceOf[js.Any])
   
   @scala.inline
   def metaFunction3(
@@ -67,7 +68,7 @@ class SharedBuilder_CardContentProps516196698 (val args: js.Array[js.Any])
   ): this.type = set("meta", js.Any.fromFunction3(value))
   
   @scala.inline
-  def meta(value: SemanticShorthandItem[CardMetaProps]): this.type = set("meta", value.asInstanceOf[js.Any])
+  def metaReactElement(value: ReactElement): this.type = set("meta", value.asInstanceOf[js.Any])
   
   @scala.inline
   def textAlign(value: center | left | right): this.type = set("textAlign", value.asInstanceOf[js.Any])

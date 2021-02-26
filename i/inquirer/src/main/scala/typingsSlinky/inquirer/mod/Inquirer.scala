@@ -1,9 +1,11 @@
 package typingsSlinky.inquirer.mod
 
+import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.inquirer.anon.BottomBar
 import typingsSlinky.inquirer.anon.TypeofSeparator
 import typingsSlinky.inquirer.anon.Ui
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +16,7 @@ trait Inquirer extends PromptModuleBase {
   /**
     * Represents a choice-item separator.
     */
-  var Separator: TypeofSeparator = js.native
+  var Separator: TypeofSeparator with (Instantiable1[/* line */ js.UndefOr[String], typingsSlinky.inquirer.separatorMod.^]) = js.native
   
   /**
     * Creates a prompt-module.

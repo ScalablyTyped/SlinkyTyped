@@ -1,5 +1,6 @@
 package typingsSlinky.babelPluginReactHtmlAttrs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.babelPluginReactHtmlAttrs.babelPluginReactHtmlAttrsStrings.collapsed
   - typingsSlinky.babelPluginReactHtmlAttrs.babelPluginReactHtmlAttrsStrings.hidden
 */
-trait SuspenseListTailMode extends js.Object
+trait SuspenseListTailMode extends StObject
 object SuspenseListTailMode {
   
   @scala.inline

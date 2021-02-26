@@ -10,15 +10,22 @@ import typingsSlinky.blueprintjsTable.esmRegionsMod.TableLoadingOption
 import typingsSlinky.blueprintjsTable.gridMod.Grid
 import typingsSlinky.blueprintjsTable.tableQuadrantMod.QuadrantType
 import typingsSlinky.blueprintjsTable.tableQuadrantStackMod.ITableQuadrantStackProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TableQuadrantStack {
   
+  @scala.inline
+  def apply(bodyRenderer: (QuadrantType, js.UndefOr[Boolean], js.UndefOr[Boolean]) => ReactElement, grid: Grid): Builder = {
+    val __props = js.Dynamic.literal(bodyRenderer = js.Any.fromFunction3(bodyRenderer), grid = grid.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITableQuadrantStackProps]))
+  }
+  
   @JSImport("@blueprintjs/table/lib/esm/quadrants/tableQuadrantStack", "TableQuadrantStack")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -64,10 +71,10 @@ object TableQuadrantStack {
     def isVerticalScrollDisabled(value: Boolean): this.type = set("isVerticalScrollDisabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingOptionsVarargs(value: TableLoadingOption*): this.type = set("loadingOptions", js.Array(value :_*))
+    def loadingOptions(value: js.Array[TableLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingOptions(value: js.Array[TableLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
+    def loadingOptionsVarargs(value: TableLoadingOption*): this.type = set("loadingOptions", js.Array(value :_*))
     
     @scala.inline
     def menuRenderer(value: /* refHandler */ js.Function1[/* ref */ HTMLElement, Unit] => ReactElement): this.type = set("menuRenderer", js.Any.fromFunction1(value))
@@ -109,10 +116,4 @@ object TableQuadrantStack {
   }
   
   def withProps(p: ITableQuadrantStackProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(bodyRenderer: (QuadrantType, js.UndefOr[Boolean], js.UndefOr[Boolean]) => ReactElement, grid: Grid): Builder = {
-    val __props = js.Dynamic.literal(bodyRenderer = js.Any.fromFunction3(bodyRenderer), grid = grid.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ITableQuadrantStackProps]))
-  }
 }

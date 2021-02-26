@@ -3,14 +3,14 @@ package typingsSlinky.samchon
 import typingsSlinky.samchon.mediatorSystemMod.MediatorSystem
 import typingsSlinky.samchon.parallelSystemArrayMod.ParallelSystemArray
 import typingsSlinky.samchon.parallelSystemMod.ParallelSystem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/parallel/ParallelSystemArrayMediator", JSImport.Namespace)
-@js.native
-object parallelSystemArrayMediatorMod extends js.Object {
+object parallelSystemArrayMediatorMod {
   
+  @JSImport("samchon/templates/parallel/ParallelSystemArrayMediator", "ParallelSystemArrayMediator")
   @js.native
   /**
     * Default Constructor.

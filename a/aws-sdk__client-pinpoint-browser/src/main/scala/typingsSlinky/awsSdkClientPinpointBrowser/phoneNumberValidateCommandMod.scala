@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesPhoneNumberValidateInputMo
 import typingsSlinky.awsSdkClientPinpointBrowser.typesPhoneNumberValidateOutputMod.PhoneNumberValidateOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/PhoneNumberValidateCommand", JSImport.Namespace)
-@js.native
-object phoneNumberValidateCommandMod extends js.Object {
+object phoneNumberValidateCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/PhoneNumberValidateCommand", "PhoneNumberValidateCommand")
   @js.native
   class PhoneNumberValidateCommand protected () extends Command[
           InputTypesUnion, 

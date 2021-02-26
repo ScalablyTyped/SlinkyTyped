@@ -5,14 +5,14 @@ import typingsSlinky.three.directionalLightShadowMod.DirectionalLightShadow
 import typingsSlinky.three.lightMod.Light
 import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/lights/DirectionalLight", JSImport.Namespace)
-@js.native
-object directionalLightMod extends js.Object {
+object directionalLightMod {
   
+  @JSImport("three/src/lights/DirectionalLight", "DirectionalLight")
   @js.native
   class DirectionalLight () extends Light {
     def this(color: String) = this()

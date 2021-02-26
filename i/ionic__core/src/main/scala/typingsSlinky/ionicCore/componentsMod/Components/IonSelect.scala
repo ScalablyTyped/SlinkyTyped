@@ -5,12 +5,13 @@ import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectCompareFn
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IonSelect extends js.Object {
+trait IonSelect extends StObject {
   
   /**
     * The text to display on the cancel button.

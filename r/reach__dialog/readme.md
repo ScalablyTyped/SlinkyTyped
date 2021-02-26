@@ -10,9 +10,9 @@ Accessible React Modal Dialog.
 | ------------------ | :-------------: |
 | Full name          | @reach/dialog |
 | Keywords           | - |
-| # releases         | 30 |
-| # dependents       | 38 |
-| # downloads        | 1024358 |
+| # releases         | 48 |
+| # dependents       | 88 |
+| # downloads        | 8064417 |
 | # stars            | 0 |
 
 ## Links

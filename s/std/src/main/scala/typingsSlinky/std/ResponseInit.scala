@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ResponseInit extends js.Object {
+trait ResponseInit extends StObject {
   
   var headers: js.UndefOr[HeadersInit] = js.native
   
@@ -16,48 +17,36 @@ trait ResponseInit extends js.Object {
 object ResponseInit {
   
   @scala.inline
-  def apply(): ResponseInit = {
+  def apply(): org.scalajs.dom.experimental.ResponseInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ResponseInit]
+    __obj.asInstanceOf[org.scalajs.dom.experimental.ResponseInit]
   }
   
   @scala.inline
-  implicit class ResponseInitOps[Self <: org.scalajs.dom.experimental.ResponseInit] (val x: Self) extends AnyVal {
+  implicit class ResponseInitMutableBuilder[Self <: org.scalajs.dom.experimental.ResponseInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setHeaders(value: HeadersInit): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setHeadersHeaders(value: org.scalajs.dom.experimental.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setHeadersUndefined: Self = StObject.set(x, "headers", js.undefined)
     
     @scala.inline
-    def setHeadersVarargs(value: js.Array[java.lang.String]*): Self = this.set("headers", js.Array(value :_*))
+    def setHeadersVarargs(value: js.Array[java.lang.String]*): Self = StObject.set(x, "headers", js.Array(value :_*))
     
     @scala.inline
-    def setHeadersHeaders(value: org.scalajs.dom.experimental.Headers): Self = this.set("headers", value.asInstanceOf[js.Any])
+    def setStatus(value: Double): Self = StObject.set(x, "status", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeaders(value: HeadersInit): Self = this.set("headers", value.asInstanceOf[js.Any])
+    def setStatusText(value: java.lang.String): Self = StObject.set(x, "statusText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteHeaders: Self = this.set("headers", js.undefined)
+    def setStatusTextUndefined: Self = StObject.set(x, "statusText", js.undefined)
     
     @scala.inline
-    def setStatus(value: Double): Self = this.set("status", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStatus: Self = this.set("status", js.undefined)
-    
-    @scala.inline
-    def setStatusText(value: java.lang.String): Self = this.set("statusText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStatusText: Self = this.set("statusText", js.undefined)
+    def setStatusUndefined: Self = StObject.set(x, "status", js.undefined)
   }
 }

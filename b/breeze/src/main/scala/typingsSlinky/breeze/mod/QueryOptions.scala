@@ -1,6 +1,7 @@
 package typingsSlinky.breeze.mod
 
 import typingsSlinky.breeze.breeze.QueryOptionsConfiguration
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,9 +13,15 @@ class QueryOptions ()
   def this(config: QueryOptionsConfiguration) = this()
 }
 /* static members */
-@JSImport("breeze", "QueryOptions")
-@js.native
-object QueryOptions extends js.Object {
+object QueryOptions {
   
-  var defaultInstance: typingsSlinky.breeze.breeze.QueryOptions = js.native
+  @JSImport("breeze", "QueryOptions")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  @JSImport("breeze", "QueryOptions.defaultInstance")
+  @js.native
+  def defaultInstance: typingsSlinky.breeze.breeze.QueryOptions = js.native
+  @scala.inline
+  def defaultInstance_=(x: typingsSlinky.breeze.breeze.QueryOptions): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultInstance")(x.asInstanceOf[js.Any])
 }

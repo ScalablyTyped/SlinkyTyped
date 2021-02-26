@@ -2,6 +2,7 @@ package typingsSlinky.twilioVideo.mod
 
 import typingsSlinky.twilioVideo.twilioVideoNumbers.`53403`
 import typingsSlinky.twilioVideo.twilioVideoStrings.`Server is unable to apply a remote media description`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

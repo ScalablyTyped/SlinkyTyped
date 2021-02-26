@@ -1,11 +1,12 @@
 package typingsSlinky.angularUiBootstrap.mod.angularAugmentingMod.ui.bootstrap
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IModalStackService extends js.Object {
+trait IModalStackService extends StObject {
   
   /**
     * Closes a modal instance with an optional result.

@@ -10,9 +10,9 @@ Primitive React Interfaces Across Targets
 | ------------------ | :-------------: |
 | Full name          | react-primitives |
 | Keywords           | react |
-| # releases         | 8 |
-| # dependents       | 40 |
-| # downloads        | 119592 |
+| # releases         | 4 |
+| # dependents       | 46 |
+| # downloads        | 62102 |
 | # stars            | 2 |
 
 ## Links

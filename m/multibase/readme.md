@@ -10,9 +10,9 @@ JavaScript implementation of the multibase specification
 | ------------------ | :-------------: |
 | Full name          | multibase |
 | Keywords           | IPFS, multiformats, multibase, encode, decode, formats |
-| # releases         | 3 |
-| # dependents       | 26 |
-| # downloads        | 930339 |
+| # releases         | 11 |
+| # dependents       | 66 |
+| # downloads        | 5176146 |
 | # stars            | 0 |
 
 ## Links

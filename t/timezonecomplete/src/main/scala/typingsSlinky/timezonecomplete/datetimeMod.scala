@@ -8,29 +8,20 @@ import typingsSlinky.timezonecomplete.javascriptMod.DateFunctions
 import typingsSlinky.timezonecomplete.localeMod.PartialLocale
 import typingsSlinky.timezonecomplete.timesourceMod.TimeSource
 import typingsSlinky.timezonecomplete.timezoneMod.TimeZone
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("timezonecomplete/dist/lib/datetime", JSImport.Namespace)
-@js.native
-object datetimeMod extends js.Object {
+object datetimeMod {
   
-  def isDateTime(value: js.Any): /* is timezonecomplete.timezonecomplete/dist/lib/datetime.DateTime */ Boolean = js.native
-  
-  def now(): DateTime = js.native
-  def now(timeZone: TimeZone): DateTime = js.native
-  
-  def nowLocal(): DateTime = js.native
-  
-  def nowUtc(): DateTime = js.native
-  
+  @JSImport("timezonecomplete/dist/lib/datetime", "DateTime")
   @js.native
   /**
     * Constructor. Creates current time in local timezone.
     * @throws nothing
     */
-  class DateTime () extends js.Object {
+  class DateTime () extends StObject {
     /**
       * Constructor. Parses ISO timestamp string.
       * Non-existing local times are normalized by rounding up to the next DST offset.
@@ -904,14 +895,21 @@ object datetimeMod extends js.Object {
     /* private */ def zoneDate_=(value: js.Any): Unit = js.native
   }
   /* static members */
-  @js.native
-  object DateTime extends js.Object {
+  object DateTime {
+    
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime")
+    @js.native
+    val ^ : js.Any = js.native
     
     /**
       * Split a combined ISO datetime and timezone into datetime and timezone
       * @throws nothing
       */
-    var _splitDateFromTimeZone: js.Any = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime._splitDateFromTimeZone")
+    @js.native
+    def _splitDateFromTimeZone: js.Any = js.native
+    @scala.inline
+    def _splitDateFromTimeZone_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_splitDateFromTimeZone")(x.asInstanceOf[js.Any])
     
     /**
       * Check whether a given date exists in the given time zone.
@@ -924,6 +922,8 @@ object datetimeMod extends js.Object {
       * @param allowPre1970 (optional, default false): return true for pre-1970 dates
       * @throws nothing
       */
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.exists")
+    @js.native
     def exists(
       year: Double,
       month: js.UndefOr[Double],
@@ -946,7 +946,11 @@ object datetimeMod extends js.Object {
       * @throws timezonecomplete.Argument.N if n is not a finite number
       * @throws timezonecomplete.Argument.TimeZone if the given time zone is invalid
       */
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.fromExcel")
+    @js.native
     def fromExcel(n: Double): DateTime = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.fromExcel")
+    @js.native
     def fromExcel(n: Double, timeZone: TimeZone): DateTime = js.native
     
     /**
@@ -954,19 +958,27 @@ object datetimeMod extends js.Object {
       * @param timeZone	The desired time zone (optional, defaults to UTC).
       * @throws timezonecomplete.NotFound.Zone if the UTC time zone doesn't exist in the time zone database
       */
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.now")
+    @js.native
     def now(): DateTime = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.now")
+    @js.native
     def now(timeZone: TimeZone): DateTime = js.native
     
     /**
       * Current date+time in local time
       * @throws nothing
       */
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.nowLocal")
+    @js.native
     def nowLocal(): DateTime = js.native
     
     /**
       * Current date+time in UTC time
       * @throws timezonecomplete.NotFound.Zone if the UTC time zone doesn't exist in the time zone database
       */
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.nowUtc")
+    @js.native
     def nowUtc(): DateTime = js.native
     
     /**
@@ -979,7 +991,11 @@ object datetimeMod extends js.Object {
       * @throws timezonecomplete.ParseError if the given dateTimeString is wrong or not according to the pattern
       * @throws timezonecomplete.Argument.FormatString if the given format string is invalid
       */
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.parse")
+    @js.native
     def parse(s: String, format: String): DateTime = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.parse")
+    @js.native
     def parse(
       s: String,
       format: String,
@@ -987,7 +1003,11 @@ object datetimeMod extends js.Object {
       locale: js.UndefOr[scala.Nothing],
       allowTrailing: Boolean
     ): DateTime = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.parse")
+    @js.native
     def parse(s: String, format: String, zone: js.UndefOr[scala.Nothing], locale: PartialLocale): DateTime = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.parse")
+    @js.native
     def parse(
       s: String,
       format: String,
@@ -995,7 +1015,11 @@ object datetimeMod extends js.Object {
       locale: PartialLocale,
       allowTrailing: Boolean
     ): DateTime = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.parse")
+    @js.native
     def parse(s: String, format: String, zone: TimeZone): DateTime = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.parse")
+    @js.native
     def parse(
       s: String,
       format: String,
@@ -1003,7 +1027,11 @@ object datetimeMod extends js.Object {
       locale: js.UndefOr[scala.Nothing],
       allowTrailing: Boolean
     ): DateTime = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.parse")
+    @js.native
     def parse(s: String, format: String, zone: TimeZone, locale: PartialLocale): DateTime = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.parse")
+    @js.native
     def parse(s: String, format: String, zone: TimeZone, locale: PartialLocale, allowTrailing: Boolean): DateTime = js.native
     
     /**
@@ -1011,6 +1039,29 @@ object datetimeMod extends js.Object {
       * fake time in tests. DateTime.nowLocal() and DateTime.nowUtc()
       * use this property for obtaining the current time.
       */
-    var timeSource: TimeSource = js.native
+    @JSImport("timezonecomplete/dist/lib/datetime", "DateTime.timeSource")
+    @js.native
+    def timeSource: TimeSource = js.native
+    @scala.inline
+    def timeSource_=(x: TimeSource): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("timeSource")(x.asInstanceOf[js.Any])
   }
+  
+  @JSImport("timezonecomplete/dist/lib/datetime", "isDateTime")
+  @js.native
+  def isDateTime(value: js.Any): /* is timezonecomplete.timezonecomplete/dist/lib/datetime.DateTime */ Boolean = js.native
+  
+  @JSImport("timezonecomplete/dist/lib/datetime", "now")
+  @js.native
+  def now(): DateTime = js.native
+  @JSImport("timezonecomplete/dist/lib/datetime", "now")
+  @js.native
+  def now(timeZone: TimeZone): DateTime = js.native
+  
+  @JSImport("timezonecomplete/dist/lib/datetime", "nowLocal")
+  @js.native
+  def nowLocal(): DateTime = js.native
+  
+  @JSImport("timezonecomplete/dist/lib/datetime", "nowUtc")
+  @js.native
+  def nowUtc(): DateTime = js.native
 }

@@ -17,8 +17,8 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignIcons.antdIconMod.IconComponentProps
-import typingsSlinky.antDesignIcons.twoTonePrimaryColorMod.TwoToneColor
+import typingsSlinky.antDesignIcons.componentsAntdIconMod.IconComponentProps
+import typingsSlinky.antDesignIcons.componentsTwoTonePrimaryColorMod.TwoToneColor
 import typingsSlinky.antDesignIconsSvg.typesMod.IconDefinition
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -75,20 +75,30 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AntdIcon {
   
-  @JSImport("@ant-design/icons/es/components/AntdIcon", JSImport.Default)
+  @scala.inline
+  def apply(icon: IconDefinition): Builder = {
+    val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IconComponentProps with RefAttributes[HTMLSpanElement]]))
+  }
+  
+  @JSImport("@ant-design/icons/lib/components/AntdIcon", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, HTMLSpanElement] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -351,16 +361,13 @@ object AntdIcon {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -921,10 +928,10 @@ object AntdIcon {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -940,10 +947,4 @@ object AntdIcon {
   }
   
   def withProps(p: IconComponentProps with RefAttributes[HTMLSpanElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(icon: IconDefinition): Builder = {
-    val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IconComponentProps with RefAttributes[HTMLSpanElement]]))
-  }
 }

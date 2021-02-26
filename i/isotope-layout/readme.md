@@ -10,9 +10,9 @@ Filter and sort magical layouts
 | ------------------ | :-------------: |
 | Full name          | isotope-layout |
 | Keywords           | DOM, browser, masonry, layout, filter, sort, jquery-plugin |
-| # releases         | 2 |
-| # dependents       | 23 |
-| # downloads        | 537622 |
+| # releases         | 0 |
+| # dependents       | 28 |
+| # downloads        | 851560 |
 | # stars            | 10 |
 
 ## Links

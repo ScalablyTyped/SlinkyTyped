@@ -1,6 +1,7 @@
 package typingsSlinky.paper.global.paper
 
 import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Project protected ()
   extends typingsSlinky.paper.paper.Project {
   def this(element: String) = this()
-  def this(element: typingsSlinky.paper.paper.Size) = this()
   /** 
     * Creates a Paper.js project containing one empty {@link Layer}, referenced
     * by {@link Project#activeLayer}.
@@ -42,4 +42,5 @@ class Project protected ()
     * a web worker.
     */
   def this(element: HTMLCanvasElement) = this()
+  def this(element: typingsSlinky.paper.paper.Size) = this()
 }

@@ -2,12 +2,13 @@ package typingsSlinky.electron.Electron
 
 import typingsSlinky.electron.electronStrings.critical
 import typingsSlinky.electron.electronStrings.informational
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Dock extends js.Object {
+trait Dock extends StObject {
   
   // Docs: https://electronjs.org/docs/api/dock
   /**

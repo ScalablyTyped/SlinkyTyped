@@ -10,9 +10,9 @@ sql builder
 | ------------------ | :-------------: |
 | Full name          | node-sql-2 |
 | Keywords           | - |
-| # releases         | 3 |
+| # releases         | 4 |
 | # dependents       | 3 |
-| # downloads        | 29100 |
+| # downloads        | 54660 |
 | # stars            | 0 |
 
 ## Links

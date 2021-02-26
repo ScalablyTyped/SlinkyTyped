@@ -2,13 +2,14 @@ package typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Core.WebProviderError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a get token silently operation. */
 @js.native
-trait WebAccountProviderGetTokenSilentOperation extends js.Object {
+trait WebAccountProviderGetTokenSilentOperation extends StObject {
   
   /** Gets or sets the cache expiration time. */
   var cacheExpirationTime: js.Date = js.native

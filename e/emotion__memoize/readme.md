@@ -10,9 +10,9 @@ emotion's memoize utility
 | ------------------ | :-------------: |
 | Full name          | @emotion/memoize |
 | Keywords           | - |
-| # releases         | 15 |
-| # dependents       | 10 |
-| # downloads        | 111382935 |
+| # releases         | 5 |
+| # dependents       | 14 |
+| # downloads        | 225847122 |
 | # stars            | 0 |
 
 ## Links

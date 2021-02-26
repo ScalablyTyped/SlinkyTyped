@@ -1,5 +1,6 @@
 package typingsSlinky.uirouterCore.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,13 +15,13 @@ class PathNode protected ()
   def this(state: typingsSlinky.uirouterCore.stateObjectMod.StateObject) = this()
 }
 /* static members */
-@JSImport("@uirouter/core", "PathNode")
-@js.native
-object PathNode extends js.Object {
+object PathNode {
   
   /**
     * Returns a clone of the PathNode
     * @deprecated use instance method `node.clone()`
     */
+  @JSImport("@uirouter/core", "PathNode.clone")
+  @js.native
   def clone(node: typingsSlinky.uirouterCore.pathNodeMod.PathNode): typingsSlinky.uirouterCore.pathNodeMod.PathNode = js.native
 }

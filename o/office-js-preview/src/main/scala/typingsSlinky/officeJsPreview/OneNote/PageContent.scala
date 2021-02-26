@@ -8,6 +8,7 @@ import typingsSlinky.officeJsPreview.OneNote.Interfaces.PageContentUpdateData
 import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Ink
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Other
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -10,9 +10,9 @@ Arbitrary precision decimal/hexadecimal converter.
 | ------------------ | :-------------: |
 | Full name          | hex2dec |
 | Keywords           | decimal, hexadecimal, converter, precision, int64, long, hex |
-| # releases         | 4 |
-| # dependents       | 18 |
-| # downloads        | 9493384 |
+| # releases         | 0 |
+| # dependents       | 21 |
+| # downloads        | 12414045 |
 | # stars            | 0 |
 
 ## Links

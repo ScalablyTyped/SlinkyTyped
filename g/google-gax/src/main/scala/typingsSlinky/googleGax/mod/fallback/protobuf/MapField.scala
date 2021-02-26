@@ -20,9 +20,10 @@ import typingsSlinky.protobufjs.mod.Constructor
 import typingsSlinky.protobufjs.mod.FieldDecorator
 import typingsSlinky.protobufjs.mod.IMapField
 import typingsSlinky.protobufjs.mod.Long
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("google-gax", "fallback.protobuf.MapField")
 @js.native
@@ -44,15 +45,21 @@ class MapField protected ()
     id: Double,
     keyType: String,
     `type`: String,
+    options: js.UndefOr[scala.Nothing],
+    comment: String
+  ) = this()
+  def this(
+    name: String,
+    id: Double,
+    keyType: String,
+    `type`: String,
     options: StringDictionary[js.Any],
     comment: String
   ) = this()
 }
-
 /* static members */
-@JSImport("google-gax", "fallback.protobuf.MapField")
-@js.native
-object MapField extends js.Object {
+object MapField {
+  
   /**
     * Map field decorator (TypeScript).
     * @param fieldId Field id
@@ -60,6 +67,8 @@ object MapField extends js.Object {
     * @param fieldValueType Field value type
     * @returns Decorator function
     */
+  @JSImport("google-gax", "fallback.protobuf.MapField.d")
+  @js.native
   def d[T /* <: StringDictionary[
     Double | Long | String | Boolean | js.typedarray.Uint8Array | js.Array[Double] | typingsSlinky.protobufjs.mod.Message[js.Object]
   ] */](
@@ -67,6 +76,7 @@ object MapField extends js.Object {
     fieldKeyType: int32 | uint32 | sint32 | fixed32 | sfixed32 | int64 | uint64 | sint64 | fixed64 | sfixed64 | bool | string,
     fieldValueType: double | float | int32 | uint32 | sint32 | fixed32 | sfixed32 | int64 | uint64 | sint64 | fixed64 | sfixed64 | bool | string | bytes | js.Object | Constructor[js.Object]
   ): FieldDecorator = js.native
+  
   /**
     * Constructs a map field from a map field descriptor.
     * @param name Field name
@@ -74,6 +84,7 @@ object MapField extends js.Object {
     * @returns Created map field
     * @throws {TypeError} If arguments are invalid
     */
+  @JSImport("google-gax", "fallback.protobuf.MapField.fromJSON")
+  @js.native
   def fromJSON(name: String, json: IMapField): typingsSlinky.protobufjs.mod.MapField = js.native
 }
-

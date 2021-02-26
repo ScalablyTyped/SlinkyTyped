@@ -3,6 +3,7 @@ package typingsSlinky.phaser.Phaser.GameObjects
 import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Scenes.Systems
 import typingsSlinky.phaser.Phaser.Structs.ProcessQueue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

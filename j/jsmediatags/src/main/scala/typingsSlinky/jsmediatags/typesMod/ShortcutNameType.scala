@@ -1,5 +1,6 @@
 package typingsSlinky.jsmediatags.typesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jsmediatags.jsmediatagsStrings.picture
   - typingsSlinky.jsmediatags.jsmediatagsStrings.lyrics
 */
-trait ShortcutNameType extends js.Object
+trait ShortcutNameType extends StObject
 object ShortcutNameType {
   
   @scala.inline

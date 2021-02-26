@@ -10,9 +10,9 @@ A minimal API wrapper for localStorage
 | ------------------ | :-------------: |
 | Full name          | lockr |
 | Keywords           | - |
-| # releases         | 2 |
-| # dependents       | 20 |
-| # downloads        | 356617 |
+| # releases         | 0 |
+| # dependents       | 24 |
+| # downloads        | 473266 |
 | # stars            | 0 |
 
 ## Links

@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressWeb.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("HeaderFooterType")
 @js.native
-object HeaderFooterType extends js.Object {
+object HeaderFooterType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.devexpressWeb.HeaderFooterType with Double] = js.native

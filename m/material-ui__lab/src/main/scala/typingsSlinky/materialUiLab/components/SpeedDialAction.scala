@@ -93,6 +93,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -101,7 +102,7 @@ object SpeedDialAction {
   
   @JSImport("@material-ui/lab", "SpeedDialAction")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -118,13 +119,13 @@ object SpeedDialAction {
     def TooltipClasses(value: PartialClassNameMapToolti): this.type = set("TooltipClasses", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TransitionComponentFunctionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
+    def TransitionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def TransitionComponentComponentClass(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TransitionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
+    def TransitionComponentFunctionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def TransitionProps(value: typingsSlinky.materialUiCore.transitionMod.TransitionProps): this.type = set("TransitionProps", value.asInstanceOf[js.Any])
@@ -315,10 +316,10 @@ object SpeedDialAction {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
@@ -348,10 +349,10 @@ object SpeedDialAction {
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -360,16 +361,16 @@ object SpeedDialAction {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -698,10 +699,10 @@ object SpeedDialAction {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tooltipOpen(value: Boolean): this.type = set("tooltipOpen", value.asInstanceOf[js.Any])
@@ -712,10 +713,10 @@ object SpeedDialAction {
     ): this.type = set("tooltipPlacement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tooltipTitleReactElement(value: ReactElement): this.type = set("tooltipTitle", value.asInstanceOf[js.Any])
+    def tooltipTitle(value: ReactElement): this.type = set("tooltipTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tooltipTitle(value: ReactElement): this.type = set("tooltipTitle", value.asInstanceOf[js.Any])
+    def tooltipTitleReactElement(value: ReactElement): this.type = set("tooltipTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
@@ -730,7 +731,7 @@ object SpeedDialAction {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SpeedDialActionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SpeedDialAction.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SpeedDialActionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

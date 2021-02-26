@@ -3,14 +3,14 @@ package typingsSlinky.typeorm
 import typingsSlinky.typeorm.anon.ParentId
 import typingsSlinky.typeorm.repositoryMod.Repository
 import typingsSlinky.typeorm.selectQueryBuilderMod.SelectQueryBuilder
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/repository/TreeRepository", JSImport.Namespace)
-@js.native
-object treeRepositoryMod extends js.Object {
+object treeRepositoryMod {
   
+  @JSImport("typeorm/browser/repository/TreeRepository", "TreeRepository")
   @js.native
   class TreeRepository[Entity] () extends Repository[Entity] {
     

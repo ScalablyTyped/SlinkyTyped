@@ -42,6 +42,7 @@ import typingsSlinky.officeJs.officeJsStrings.Thousands
 import typingsSlinky.officeJs.officeJsStrings.Trillions
 import typingsSlinky.officeJs.officeJsStrings.Value
 import typingsSlinky.officeJs.officeJsStrings.Years
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

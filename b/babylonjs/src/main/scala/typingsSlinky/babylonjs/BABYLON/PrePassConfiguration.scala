@@ -1,12 +1,13 @@
 package typingsSlinky.babylonjs.BABYLON
 
 import org.scalablytyped.runtime.NumberDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PrePassConfiguration extends js.Object {
+trait PrePassConfiguration extends StObject {
   
   /**
     * Binds the material data.
@@ -50,30 +51,18 @@ object PrePassConfiguration {
   }
   
   @scala.inline
-  implicit class PrePassConfigurationOps[Self <: PrePassConfiguration] (val x: Self) extends AnyVal {
+  implicit class PrePassConfigurationMutableBuilder[Self <: PrePassConfiguration] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBindForSubMesh(value: (Effect, Scene, Mesh, Matrix, Boolean) => Unit): Self = StObject.set(x, "bindForSubMesh", js.Any.fromFunction5(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setPreviousBones(value: NumberDictionary[js.typedarray.Float32Array]): Self = StObject.set(x, "previousBones", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setPreviousViewProjection(value: Matrix): Self = StObject.set(x, "previousViewProjection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBindForSubMesh(value: (Effect, Scene, Mesh, Matrix, Boolean) => Unit): Self = this.set("bindForSubMesh", js.Any.fromFunction5(value))
-    
-    @scala.inline
-    def setPreviousBones(value: NumberDictionary[js.typedarray.Float32Array]): Self = this.set("previousBones", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPreviousViewProjection(value: Matrix): Self = this.set("previousViewProjection", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPreviousWorldMatrices(value: NumberDictionary[Matrix]): Self = this.set("previousWorldMatrices", value.asInstanceOf[js.Any])
+    def setPreviousWorldMatrices(value: NumberDictionary[Matrix]): Self = StObject.set(x, "previousWorldMatrices", value.asInstanceOf[js.Any])
   }
 }

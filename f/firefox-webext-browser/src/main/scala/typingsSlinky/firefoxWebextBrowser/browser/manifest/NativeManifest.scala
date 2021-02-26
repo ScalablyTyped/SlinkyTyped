@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.pkcs11
 import typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.stdio
 import typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.storage
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firefoxWebextBrowser.anon.Allowedextensions
   - typingsSlinky.firefoxWebextBrowser.anon.Data
 */
-trait NativeManifest extends js.Object
+trait NativeManifest extends StObject
 object NativeManifest {
   
   @scala.inline
@@ -23,16 +24,16 @@ object NativeManifest {
     name: String,
     path: String,
     `type`: pkcs11 | stdio
-  ): NativeManifest = {
+  ): typingsSlinky.firefoxWebextBrowser.anon.Allowedextensions = {
     val __obj = js.Dynamic.literal(allowed_extensions = allowed_extensions.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NativeManifest]
+    __obj.asInstanceOf[typingsSlinky.firefoxWebextBrowser.anon.Allowedextensions]
   }
   
   @scala.inline
-  def Data(data: StringDictionary[js.Any], description: String, name: ExtensionID, `type`: storage): NativeManifest = {
+  def Data(data: StringDictionary[js.Any], description: String, name: ExtensionID, `type`: storage): typingsSlinky.firefoxWebextBrowser.anon.Data = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NativeManifest]
+    __obj.asInstanceOf[typingsSlinky.firefoxWebextBrowser.anon.Data]
   }
 }

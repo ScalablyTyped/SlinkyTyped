@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.dropdownMod.DropdownProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Dropdown {
   
   @JSImport("primereact/dropdown", "Dropdown")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -109,10 +110,10 @@ object Dropdown {
     def optionValue(value: String): this.type = set("optionValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def optionsVarargs(value: js.Any*): this.type = set("options", js.Array(value :_*))
+    def options(value: js.Array[_]): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: js.Array[_]): this.type = set("options", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: js.Any*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def panelClassName(value: String): this.type = set("panelClassName", value.asInstanceOf[js.Any])
@@ -154,7 +155,7 @@ object Dropdown {
     def valueTemplate(value: (/* option */ js.Any, /* props */ js.Object) => _): this.type = set("valueTemplate", js.Any.fromFunction2(value))
   }
   
-  def withProps(p: DropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Dropdown.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

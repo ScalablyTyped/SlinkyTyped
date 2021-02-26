@@ -8,6 +8,7 @@ import typingsSlinky.antdMobile.menuPropsTypeMod.DataItem
 import typingsSlinky.antdMobile.menuPropsTypeMod.MenuProps
 import typingsSlinky.antdMobile.menuPropsTypeMod.ValueType
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object Menu {
   
   @JSImport("antd-mobile", "Menu")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,16 +31,16 @@ object Menu {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: DataItem*): this.type = set("data", js.Array(value :_*))
-    
-    @scala.inline
     def data(value: js.Array[DataItem]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: (String | js.Array[String])*): this.type = set("defaultValue", js.Array(value :_*))
+    def dataVarargs(value: DataItem*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def defaultValue(value: ValueType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def defaultValueVarargs(value: (String | js.Array[String])*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
@@ -75,13 +76,13 @@ object Menu {
     def subMenuPrefixCls(value: String): this.type = set("subMenuPrefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: (String | js.Array[String])*): this.type = set("value", js.Array(value :_*))
+    def value(value: ValueType): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: ValueType): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: (String | js.Array[String])*): this.type = set("value", js.Array(value :_*))
   }
   
-  def withProps(p: MenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Menu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

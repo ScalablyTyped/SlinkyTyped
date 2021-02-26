@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/dotBlock", JSImport.Namespace)
-@js.native
-object dotBlockMod extends js.Object {
+object dotBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/dotBlock", "DotBlock")
   @js.native
   class DotBlock protected () extends NodeMaterialBlock {
     /**

@@ -10,9 +10,9 @@ Common interfaces for promise-based request libraries
 | ------------------ | :-------------: |
 | Full name          | @algolia/requester-common |
 | Keywords           | - |
-| # releases         | 28 |
-| # dependents       | 10 |
-| # downloads        | 1744623 |
+| # releases         | 38 |
+| # dependents       | 11 |
+| # downloads        | 6788209 |
 | # stars            | 0 |
 
 ## Links

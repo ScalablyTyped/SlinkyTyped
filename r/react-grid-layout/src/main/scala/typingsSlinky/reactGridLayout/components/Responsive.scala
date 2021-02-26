@@ -15,6 +15,7 @@ import typingsSlinky.reactGridLayout.mod.ResizeHandle
 import typingsSlinky.reactGridLayout.mod.ResponsiveProps
 import typingsSlinky.reactGridLayout.reactGridLayoutStrings.horizontal
 import typingsSlinky.reactGridLayout.reactGridLayoutStrings.vertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ object Responsive {
   
   @JSImport("react-grid-layout", "Responsive")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -123,19 +124,19 @@ object Responsive {
     def preventCollision(value: Boolean): this.type = set("preventCollision", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def resizeHandleReactElement(value: ReactElement): this.type = set("resizeHandle", value.asInstanceOf[js.Any])
+    def resizeHandle(value: ReactElement | (js.Function1[/* resizeHandle */ ResizeHandle, ReactElement])): this.type = set("resizeHandle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def resizeHandleFunction1(value: /* resizeHandle */ ResizeHandle => ReactElement): this.type = set("resizeHandle", js.Any.fromFunction1(value))
     
     @scala.inline
-    def resizeHandle(value: ReactElement | (js.Function1[/* resizeHandle */ ResizeHandle, ReactElement])): this.type = set("resizeHandle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def resizeHandlesVarargs(value: ResizeHandle*): this.type = set("resizeHandles", js.Array(value :_*))
+    def resizeHandleReactElement(value: ReactElement): this.type = set("resizeHandle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def resizeHandles(value: js.Array[ResizeHandle]): this.type = set("resizeHandles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def resizeHandlesVarargs(value: ResizeHandle*): this.type = set("resizeHandles", js.Array(value :_*))
     
     @scala.inline
     def rowHeight(value: Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
@@ -156,7 +157,7 @@ object Responsive {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ResponsiveProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Responsive.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ResponsiveProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

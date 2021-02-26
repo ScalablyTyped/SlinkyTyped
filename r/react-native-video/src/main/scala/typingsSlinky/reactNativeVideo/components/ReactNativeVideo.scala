@@ -53,15 +53,22 @@ import typingsSlinky.reactNativeVideo.reactNativeVideoStrings.landscape
 import typingsSlinky.reactNativeVideo.reactNativeVideoStrings.obey
 import typingsSlinky.reactNativeVideo.reactNativeVideoStrings.portrait
 import typingsSlinky.reactNativeVideo.reactNativeVideoStrings.stretch
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeVideo {
   
+  @scala.inline
+  def apply(source: Headers | Double): Builder = {
+    val __props = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[VideoProperties]))
+  }
+  
   @JSImport("react-native-video", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -69,10 +76,10 @@ object ReactNativeVideo {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -99,10 +106,10 @@ object ReactNativeVideo {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -438,10 +445,10 @@ object ReactNativeVideo {
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def textTracksVarargs(value: Language*): this.type = set("textTracks", js.Array(value :_*))
+    def textTracks(value: js.Array[Language]): this.type = set("textTracks", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def textTracks(value: js.Array[Language]): this.type = set("textTracks", value.asInstanceOf[js.Any])
+    def textTracksVarargs(value: Language*): this.type = set("textTracks", js.Array(value :_*))
     
     @scala.inline
     def translateX(value: Double): this.type = set("translateX", value.asInstanceOf[js.Any])
@@ -472,10 +479,4 @@ object ReactNativeVideo {
   }
   
   def withProps(p: VideoProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(source: Headers | Double): Builder = {
-    val __props = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[VideoProperties]))
-  }
 }

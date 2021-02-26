@@ -4,6 +4,7 @@ import typingsSlinky.angularCommon.mod.LocationStrategy
 import typingsSlinky.angularCore.mod.ElementRef
 import typingsSlinky.angularRouter.mod.Router
 import typingsSlinky.angularRouter.mod.RouterLink
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -7,6 +7,7 @@ import typingsSlinky.csstype.mod.VerticalAlignProperty
 import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.MjmlGroupProps
 import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object MjmlGroup {
   
   @JSImport("mjml-react", "MjmlGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,7 +36,7 @@ object MjmlGroup {
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MjmlGroupProps with RequiredChildrenProps with ClassNameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MjmlGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MjmlGroupProps with RequiredChildrenProps with ClassNameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

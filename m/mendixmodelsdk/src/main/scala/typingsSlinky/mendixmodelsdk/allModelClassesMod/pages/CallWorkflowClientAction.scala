@@ -9,6 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.menusMod.menus.MenuItem
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,16 +34,20 @@ class CallWorkflowClientAction protected ()
     container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
-/* static members */
-@JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction")
-@js.native
-object CallWorkflowClientAction extends js.Object {
+object CallWorkflowClientAction {
+  
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Creates and returns a new CallWorkflowClientAction instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.create")
+  @js.native
   def create(model: IModel): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -53,6 +58,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInActionButtonUnderAction")
+  @js.native
   def createInActionButtonUnderAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ActionButton): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -63,6 +71,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInActionItemUnderAction")
+  @js.native
   def createInActionItemUnderAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ActionItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -73,6 +84,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInAssociationWidgetUnderOnChangeAction")
+  @js.native
   def createInAssociationWidgetUnderOnChangeAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.AssociationWidget): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -83,6 +97,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInAttributeWidgetUnderOnChangeAction")
+  @js.native
   def createInAttributeWidgetUnderOnChangeAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.AttributeWidget): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -93,6 +110,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInAttributeWidgetUnderOnEnterAction")
+  @js.native
   def createInAttributeWidgetUnderOnEnterAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.AttributeWidget): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -103,6 +123,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInAttributeWidgetUnderOnLeaveAction")
+  @js.native
   def createInAttributeWidgetUnderOnLeaveAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.AttributeWidget): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -113,6 +136,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInDivContainerUnderOnClickAction")
+  @js.native
   def createInDivContainerUnderOnClickAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DivContainer): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -123,6 +149,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInDynamicImageViewerUnderClickAction")
+  @js.native
   def createInDynamicImageViewerUnderClickAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DynamicImageViewer): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -133,6 +162,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInGridActionButtonUnderAction")
+  @js.native
   def createInGridActionButtonUnderAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.GridActionButton): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -143,6 +175,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInListViewUnderClickAction")
+  @js.native
   def createInListViewUnderClickAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -153,6 +188,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInListViewUnderPullDownAction")
+  @js.native
   def createInListViewUnderPullDownAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -163,6 +201,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInMenuItemUnderAction")
+  @js.native
   def createInMenuItemUnderAction(container: MenuItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -173,6 +214,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInReferenceSetSelectorUnderOnChangeAction")
+  @js.native
   def createInReferenceSetSelectorUnderOnChangeAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ReferenceSetSelector): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -183,6 +227,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInStaticImageViewerUnderClickAction")
+  @js.native
   def createInStaticImageViewerUnderClickAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.StaticImageViewer): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -193,6 +240,9 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInTextBoxUnderOnEnterKeyPressAction")
+  @js.native
   def createInTextBoxUnderOnEnterKeyPressAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TextBox): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
   /**
@@ -203,9 +253,22 @@ object CallWorkflowClientAction extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.15.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.createInWidgetValueUnderAction")
+  @js.native
   def createInWidgetValueUnderAction(container: WidgetValue): typingsSlinky.mendixmodelsdk.pagesMod.pages.CallWorkflowClientAction = js.native
   
-  var structureTypeName: String = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.structureTypeName")
+  @js.native
+  def structureTypeName: String = js.native
+  @scala.inline
+  def structureTypeName_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("structureTypeName")(x.asInstanceOf[js.Any])
   
-  var versionInfo: StructureVersionInfo = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.CallWorkflowClientAction.versionInfo")
+  @js.native
+  def versionInfo: StructureVersionInfo = js.native
+  @scala.inline
+  def versionInfo_=(x: StructureVersionInfo): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(x.asInstanceOf[js.Any])
 }

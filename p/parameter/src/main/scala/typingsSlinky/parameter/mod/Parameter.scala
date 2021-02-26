@@ -1,11 +1,12 @@
 package typingsSlinky.parameter.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Parameter extends js.Object {
+trait Parameter extends StObject {
   
   /**
     * Add custom rules

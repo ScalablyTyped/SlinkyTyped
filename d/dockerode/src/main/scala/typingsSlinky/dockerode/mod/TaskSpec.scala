@@ -3,6 +3,7 @@ package typingsSlinky.dockerode.mod
 import typingsSlinky.dockerode.anon.ContainerID
 import typingsSlinky.dockerode.dockerodeStrings.attachment
 import typingsSlinky.dockerode.dockerodeStrings.plugin
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,24 +13,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.dockerode.mod.PluginTaskSpec
   - typingsSlinky.dockerode.mod.NetworkAttachmentTaskSpec
 */
-trait TaskSpec extends js.Object
+trait TaskSpec extends StObject
 object TaskSpec {
   
   @scala.inline
-  def ContainerTaskSpec(): TaskSpec = {
+  def ContainerTaskSpec(): typingsSlinky.dockerode.mod.ContainerTaskSpec = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[TaskSpec]
+    __obj.asInstanceOf[typingsSlinky.dockerode.mod.ContainerTaskSpec]
   }
   
   @scala.inline
-  def PluginTaskSpec(PluginSpec: PluginSpec, Runtime: plugin): TaskSpec = {
-    val __obj = js.Dynamic.literal(PluginSpec = PluginSpec.asInstanceOf[js.Any], Runtime = Runtime.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TaskSpec]
-  }
-  
-  @scala.inline
-  def NetworkAttachmentTaskSpec(NetworkAttachmentSpec: ContainerID, Runtime: attachment): TaskSpec = {
+  def NetworkAttachmentTaskSpec(NetworkAttachmentSpec: ContainerID, Runtime: attachment): typingsSlinky.dockerode.mod.NetworkAttachmentTaskSpec = {
     val __obj = js.Dynamic.literal(NetworkAttachmentSpec = NetworkAttachmentSpec.asInstanceOf[js.Any], Runtime = Runtime.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TaskSpec]
+    __obj.asInstanceOf[typingsSlinky.dockerode.mod.NetworkAttachmentTaskSpec]
+  }
+  
+  @scala.inline
+  def PluginTaskSpec(PluginSpec: PluginSpec, Runtime: plugin): typingsSlinky.dockerode.mod.PluginTaskSpec = {
+    val __obj = js.Dynamic.literal(PluginSpec = PluginSpec.asInstanceOf[js.Any], Runtime = Runtime.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.dockerode.mod.PluginTaskSpec]
   }
 }

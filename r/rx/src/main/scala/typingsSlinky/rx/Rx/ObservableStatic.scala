@@ -4,12 +4,13 @@ import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.rx.anon.Off
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ObservableStatic extends js.Object {
+trait ObservableStatic extends StObject {
   
   /**
     * Propagates the observable sequence or Promise that reacts first.
@@ -1049,8 +1050,8 @@ trait ObservableStatic extends js.Object {
     * @param {Function} [selector] A selector which takes the arguments from the event handler to produce a single item to yield on next.
     * @returns {Observable} An observable sequence of events from the specified element and the specified event.
     */
-  def fromEvent[T](element: Off, eventName: String): Observable[T] = js.native
-  def fromEvent[T](element: Off, eventName: String, selector: js.Function1[/* arguments */ js.Array[_], T]): Observable[T] = js.native
+  def fromEvent[T](element: EventTarget, eventName: String): Observable[T] = js.native
+  def fromEvent[T](element: EventTarget, eventName: String, selector: js.Function1[/* arguments */ js.Array[_], T]): Observable[T] = js.native
   /**
     * Creates an observable sequence by adding an event listener to the matching DOMElement or each item in the NodeList.
     * @param {Object} element The DOMElement or NodeList to attach a listener.
@@ -1058,8 +1059,8 @@ trait ObservableStatic extends js.Object {
     * @param {Function} [selector] A selector which takes the arguments from the event handler to produce a single item to yield on next.
     * @returns {Observable} An observable sequence of events from the specified element and the specified event.
     */
-  def fromEvent[T](element: EventTarget, eventName: String): Observable[T] = js.native
-  def fromEvent[T](element: EventTarget, eventName: String, selector: js.Function1[/* arguments */ js.Array[_], T]): Observable[T] = js.native
+  def fromEvent[T](element: Off, eventName: String): Observable[T] = js.native
+  def fromEvent[T](element: Off, eventName: String, selector: js.Function1[/* arguments */ js.Array[_], T]): Observable[T] = js.native
   
   /**
     * Creates an observable sequence from an event emitter via an addHandler/removeHandler pair.

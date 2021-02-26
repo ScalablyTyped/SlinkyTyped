@@ -1,13 +1,14 @@
 package typingsSlinky.luxon.mod
 
 import typingsSlinky.luxon.anon.Separator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("luxon", "Interval")
 @js.native
-class Interval () extends js.Object {
+class Interval () extends StObject {
   
   def abutsEnd(other: Interval): Boolean = js.native
   
@@ -83,49 +84,115 @@ class Interval () extends js.Object {
   def union(other: Interval): Interval = js.native
 }
 /* static members */
-@JSImport("luxon", "Interval")
-@js.native
-object Interval extends js.Object {
+object Interval {
   
-  def after(start: DateObject, duration: Double): Interval = js.native
-  def after(start: DateObject, duration: Duration): Interval = js.native
-  def after(start: DateObject, duration: DurationObject): Interval = js.native
-  def after(start: DateTime, duration: Double): Interval = js.native
-  def after(start: DateTime, duration: Duration): Interval = js.native
-  def after(start: DateTime, duration: DurationObject): Interval = js.native
+  @JSImport("luxon", "Interval.after")
+  @js.native
   def after(start: js.Date, duration: Double): Interval = js.native
+  @JSImport("luxon", "Interval.after")
+  @js.native
   def after(start: js.Date, duration: Duration): Interval = js.native
+  @JSImport("luxon", "Interval.after")
+  @js.native
   def after(start: js.Date, duration: DurationObject): Interval = js.native
+  @JSImport("luxon", "Interval.after")
+  @js.native
+  def after(start: DateObject, duration: Double): Interval = js.native
+  @JSImport("luxon", "Interval.after")
+  @js.native
+  def after(start: DateObject, duration: Duration): Interval = js.native
+  @JSImport("luxon", "Interval.after")
+  @js.native
+  def after(start: DateObject, duration: DurationObject): Interval = js.native
+  @JSImport("luxon", "Interval.after")
+  @js.native
+  def after(start: DateTime, duration: Double): Interval = js.native
+  @JSImport("luxon", "Interval.after")
+  @js.native
+  def after(start: DateTime, duration: Duration): Interval = js.native
+  @JSImport("luxon", "Interval.after")
+  @js.native
+  def after(start: DateTime, duration: DurationObject): Interval = js.native
   
-  def before(end: DateObject, duration: Double): Interval = js.native
-  def before(end: DateObject, duration: Duration): Interval = js.native
-  def before(end: DateObject, duration: DurationObject): Interval = js.native
-  def before(end: DateTime, duration: Double): Interval = js.native
-  def before(end: DateTime, duration: Duration): Interval = js.native
-  def before(end: DateTime, duration: DurationObject): Interval = js.native
+  @JSImport("luxon", "Interval.before")
+  @js.native
   def before(end: js.Date, duration: Double): Interval = js.native
+  @JSImport("luxon", "Interval.before")
+  @js.native
   def before(end: js.Date, duration: Duration): Interval = js.native
+  @JSImport("luxon", "Interval.before")
+  @js.native
   def before(end: js.Date, duration: DurationObject): Interval = js.native
+  @JSImport("luxon", "Interval.before")
+  @js.native
+  def before(end: DateObject, duration: Double): Interval = js.native
+  @JSImport("luxon", "Interval.before")
+  @js.native
+  def before(end: DateObject, duration: Duration): Interval = js.native
+  @JSImport("luxon", "Interval.before")
+  @js.native
+  def before(end: DateObject, duration: DurationObject): Interval = js.native
+  @JSImport("luxon", "Interval.before")
+  @js.native
+  def before(end: DateTime, duration: Double): Interval = js.native
+  @JSImport("luxon", "Interval.before")
+  @js.native
+  def before(end: DateTime, duration: Duration): Interval = js.native
+  @JSImport("luxon", "Interval.before")
+  @js.native
+  def before(end: DateTime, duration: DurationObject): Interval = js.native
   
-  def fromDateTimes(start: DateObject, end: DateObject): Interval = js.native
-  def fromDateTimes(start: DateObject, end: DateTime): Interval = js.native
-  def fromDateTimes(start: DateObject, end: js.Date): Interval = js.native
-  def fromDateTimes(start: DateTime, end: DateObject): Interval = js.native
-  def fromDateTimes(start: DateTime, end: DateTime): Interval = js.native
-  def fromDateTimes(start: DateTime, end: js.Date): Interval = js.native
-  def fromDateTimes(start: js.Date, end: DateObject): Interval = js.native
-  def fromDateTimes(start: js.Date, end: DateTime): Interval = js.native
+  @JSImport("luxon", "Interval.fromDateTimes")
+  @js.native
   def fromDateTimes(start: js.Date, end: js.Date): Interval = js.native
+  @JSImport("luxon", "Interval.fromDateTimes")
+  @js.native
+  def fromDateTimes(start: js.Date, end: DateObject): Interval = js.native
+  @JSImport("luxon", "Interval.fromDateTimes")
+  @js.native
+  def fromDateTimes(start: js.Date, end: DateTime): Interval = js.native
+  @JSImport("luxon", "Interval.fromDateTimes")
+  @js.native
+  def fromDateTimes(start: DateObject, end: js.Date): Interval = js.native
+  @JSImport("luxon", "Interval.fromDateTimes")
+  @js.native
+  def fromDateTimes(start: DateObject, end: DateObject): Interval = js.native
+  @JSImport("luxon", "Interval.fromDateTimes")
+  @js.native
+  def fromDateTimes(start: DateObject, end: DateTime): Interval = js.native
+  @JSImport("luxon", "Interval.fromDateTimes")
+  @js.native
+  def fromDateTimes(start: DateTime, end: js.Date): Interval = js.native
+  @JSImport("luxon", "Interval.fromDateTimes")
+  @js.native
+  def fromDateTimes(start: DateTime, end: DateObject): Interval = js.native
+  @JSImport("luxon", "Interval.fromDateTimes")
+  @js.native
+  def fromDateTimes(start: DateTime, end: DateTime): Interval = js.native
   
+  @JSImport("luxon", "Interval.fromISO")
+  @js.native
   def fromISO(string: String): Interval = js.native
+  @JSImport("luxon", "Interval.fromISO")
+  @js.native
   def fromISO(string: String, options: DateTimeOptions): Interval = js.native
   
+  @JSImport("luxon", "Interval.invalid")
+  @js.native
   def invalid(): Interval = js.native
+  @JSImport("luxon", "Interval.invalid")
+  @js.native
   def invalid(reason: String): Interval = js.native
   
+  @JSImport("luxon", "Interval.isInterval")
+  @js.native
   def isInterval(o: js.Any): /* is luxon.luxon.Interval */ Boolean = js.native
   
+  @JSImport("luxon", "Interval.merge")
+  @js.native
   def merge(intervals: js.Array[Interval]): js.Array[Interval] = js.native
   
+  @JSImport("luxon", "Interval.xor")
+  @js.native
   def xor(intervals: js.Array[Interval]): js.Array[Interval] = js.native
 }

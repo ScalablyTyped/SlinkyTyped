@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoTooltip.basicTooltipMod.BasicTooltipProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object BasicTooltip {
   
   @JSImport("@nivo/tooltip", "BasicTooltip")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,13 +38,13 @@ object BasicTooltip {
     def renderContent(value: () => ReactElement): this.type = set("renderContent", js.Any.fromFunction0(value))
     
     @scala.inline
-    def valueDate(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
+    def value(value: Double | String | js.Date): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: Double | String | js.Date): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueDate(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: BasicTooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: BasicTooltip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: BasicTooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

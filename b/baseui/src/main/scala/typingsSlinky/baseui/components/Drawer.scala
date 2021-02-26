@@ -15,6 +15,7 @@ import typingsSlinky.baseui.baseuiStrings.right
 import typingsSlinky.baseui.baseuiStrings.top
 import typingsSlinky.baseui.drawerMod.DrawerOverrides
 import typingsSlinky.baseui.drawerMod.DrawerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ object Drawer {
   
   @JSImport("baseui/drawer", "Drawer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -70,7 +71,7 @@ object Drawer {
     def size(value: default_ | full | auto | String): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DrawerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Drawer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DrawerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

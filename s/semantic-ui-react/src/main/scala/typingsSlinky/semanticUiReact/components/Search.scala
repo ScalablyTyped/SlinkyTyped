@@ -7,7 +7,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.inputInputMod.InputProps
 import typingsSlinky.semanticUiReact.searchCategoryMod.SearchCategoryProps
@@ -23,15 +22,53 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.mini
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.small
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Search {
   
+  object Category {
+    
+    @JSImport("semantic-ui-react", "Search.Category")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Category.type): SharedBuilder_SearchCategoryProps1350341774 = new SharedBuilder_SearchCategoryProps1350341774(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: SearchCategoryProps): SharedBuilder_SearchCategoryProps1350341774 = new SharedBuilder_SearchCategoryProps1350341774(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Result {
+    
+    @scala.inline
+    def apply(title: String): SharedBuilder_SearchResultProps580171124[typingsSlinky.semanticUiReact.mod.Search.Result] = {
+      val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+      new SharedBuilder_SearchResultProps580171124[typingsSlinky.semanticUiReact.mod.Search.Result](js.Array(this.component, __props.asInstanceOf[SearchResultProps]))
+    }
+    
+    @JSImport("semantic-ui-react", "Search.Result")
+    @js.native
+    val component: js.Object = js.native
+    
+    def withProps(p: SearchResultProps): SharedBuilder_SearchResultProps580171124[typingsSlinky.semanticUiReact.mod.Search.Result] = new SharedBuilder_SearchResultProps580171124[typingsSlinky.semanticUiReact.mod.Search.Result](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Results {
+    
+    @JSImport("semantic-ui-react", "Search.Results")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Results.type): SharedBuilder_SearchResultsProps_397260772 = new SharedBuilder_SearchResultsProps_397260772(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: SearchResultsProps): SharedBuilder_SearchResultsProps_397260772 = new SharedBuilder_SearchResultsProps_397260772(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Search")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -69,7 +106,7 @@ object Search {
     def icon(value: js.Any): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputReactElement(value: ReactElement): this.type = set("input", value.asInstanceOf[js.Any])
+    def input(value: SemanticShorthandItem[InputProps]): this.type = set("input", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputFunction3(
@@ -77,7 +114,7 @@ object Search {
     ): this.type = set("input", js.Any.fromFunction3(value))
     
     @scala.inline
-    def input(value: SemanticShorthandItem[InputProps]): this.type = set("input", value.asInstanceOf[js.Any])
+    def inputReactElement(value: ReactElement): this.type = set("input", value.asInstanceOf[js.Any])
     
     @scala.inline
     def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
@@ -86,16 +123,16 @@ object Search {
     def minCharacters(value: Double): this.type = set("minCharacters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noResultsDescriptionReactElement(value: ReactElement): this.type = set("noResultsDescription", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def noResultsDescription(value: ReactElement): this.type = set("noResultsDescription", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noResultsMessageReactElement(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
+    def noResultsDescriptionReactElement(value: ReactElement): this.type = set("noResultsDescription", value.asInstanceOf[js.Any])
     
     @scala.inline
     def noResultsMessage(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def noResultsMessageReactElement(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onBlur(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchProps) => Unit): this.type = set("onBlur", js.Any.fromFunction2(value))
@@ -122,10 +159,10 @@ object Search {
     def resultRenderer(value: /* props */ SearchResultProps => ReactElement): this.type = set("resultRenderer", js.Any.fromFunction1(value))
     
     @scala.inline
-    def resultsVarargs(value: js.Any*): this.type = set("results", js.Array(value :_*))
+    def results(value: js.Array[_] | (Record[String, _])): this.type = set("results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def results(value: js.Array[_] | (Record[String, _])): this.type = set("results", value.asInstanceOf[js.Any])
+    def resultsVarargs(value: js.Any*): this.type = set("results", js.Array(value :_*))
     
     @scala.inline
     def selectFirstResult(value: Boolean): this.type = set("selectFirstResult", value.asInstanceOf[js.Any])
@@ -140,83 +177,7 @@ object Search {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SearchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Search.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Category {
-    
-    @JSImport("semantic-ui-react", "Search.Category")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: SearchCategoryProps): SharedBuilder_SearchCategoryProps1350341774 = new SharedBuilder_SearchCategoryProps1350341774(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Category.type): SharedBuilder_SearchCategoryProps1350341774 = new SharedBuilder_SearchCategoryProps1350341774(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Result {
-    
-    @JSImport("semantic-ui-react", "Search.Result")
-    @js.native
-    object component extends js.Object
-    
-    @scala.inline
-    class Builder (val args: js.Array[js.Any])
-      extends AnyVal
-         with StBuildingComponent[tag.type, js.Object] {
-      
-      @scala.inline
-      def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def description(value: String): this.type = set("description", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def id(value: Double | String): this.type = set("id", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def image(value: String): this.type = set("image", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def onClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ SearchResultProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
-      
-      @scala.inline
-      def price(value: String): this.type = set("price", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def renderer(value: /* props */ SearchResultProps => js.Array[ReactElement]): this.type = set("renderer", js.Any.fromFunction1(value))
-    }
-    
-    def withProps(p: SearchResultProps): typingsSlinky.semanticUiReact.components.Search.Result.Builder = new typingsSlinky.semanticUiReact.components.Search.Result.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(title: String): typingsSlinky.semanticUiReact.components.Search.Result.Builder = {
-      val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-      new typingsSlinky.semanticUiReact.components.Search.Result.Builder(js.Array(this.component, __props.asInstanceOf[SearchResultProps]))
-    }
-  }
-  
-  object Results {
-    
-    @JSImport("semantic-ui-react", "Search.Results")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: SearchResultsProps): SharedBuilder_SearchResultsProps_397260772 = new SharedBuilder_SearchResultsProps_397260772(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Results.type): SharedBuilder_SearchResultsProps_397260772 = new SharedBuilder_SearchResultsProps_397260772(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: SearchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

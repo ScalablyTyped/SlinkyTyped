@@ -1,13 +1,14 @@
 package typingsSlinky.angularCommon.httpHttpMod
 
 import typingsSlinky.rxjs.mod.Observable_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/common/http/http", "JsonpInterceptor")
 @js.native
-class JsonpInterceptor protected () extends js.Object {
+class JsonpInterceptor protected () extends StObject {
   def this(jsonp: JsonpClientBackend) = this()
   
   /**

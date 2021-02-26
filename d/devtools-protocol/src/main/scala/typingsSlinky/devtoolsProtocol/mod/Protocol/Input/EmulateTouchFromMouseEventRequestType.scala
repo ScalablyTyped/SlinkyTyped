@@ -4,6 +4,7 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.mouseMoved
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.mousePressed
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.mouseReleased
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.mouseWheel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.mouseMoved
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.mouseWheel
 */
-trait EmulateTouchFromMouseEventRequestType extends js.Object
+trait EmulateTouchFromMouseEventRequestType extends StObject
 object EmulateTouchFromMouseEventRequestType {
   
   @scala.inline

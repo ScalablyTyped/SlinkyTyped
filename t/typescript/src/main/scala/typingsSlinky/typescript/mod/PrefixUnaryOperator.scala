@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,4 +13,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.typescript.mod.SyntaxKind.TildeToken
   - typingsSlinky.typescript.mod.SyntaxKind.ExclamationToken
 */
-trait PrefixUnaryOperator extends js.Object
+trait PrefixUnaryOperator extends StObject

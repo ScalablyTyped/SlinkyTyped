@@ -1,9 +1,10 @@
 package typingsSlinky.emberData.mod.DS
 
+import typingsSlinky.ember.mod.default.Service
 import typingsSlinky.emberData.anon.AdapterOptions
 import typingsSlinky.emberData.anon.BackgroundReload
-import typingsSlinky.emberObject.mod.default
 import typingsSlinky.rsvp.mod.default.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("ember-data", "DS.Store")
 @js.native
-class Store () extends default {
+class Store () extends Service {
   
   /**
     * The default adapter to use to communicate to a backend server or

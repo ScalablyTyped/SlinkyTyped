@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.global.SP
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,11 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ObjectSharingInformation ()
   extends typingsSlinky.sharepoint.SP.ObjectSharingInformation
-/* static members */
-@JSGlobal("SP.ObjectSharingInformation")
-@js.native
-object ObjectSharingInformation extends js.Object {
+object ObjectSharingInformation {
   
+  /* static member */
+  @JSGlobal("SP.ObjectSharingInformation.getListItemSharingInformation")
+  @js.native
   def getListItemSharingInformation(
     context: typingsSlinky.sharepoint.SP.ClientRuntimeContext,
     listID: typingsSlinky.sharepoint.SP.Guid,
@@ -25,6 +26,9 @@ object ObjectSharingInformation extends js.Object {
     checkForAccessRequests: Boolean
   ): typingsSlinky.sharepoint.SP.ObjectSharingInformation = js.native
   
+  /* static member */
+  @JSGlobal("SP.ObjectSharingInformation.getObjectSharingInformation")
+  @js.native
   def getObjectSharingInformation(
     context: typingsSlinky.sharepoint.SP.ClientRuntimeContext,
     securableObject: typingsSlinky.sharepoint.SP.SecurableObject,
@@ -37,6 +41,9 @@ object ObjectSharingInformation extends js.Object {
     retrievePermissionLevels: Boolean
   ): typingsSlinky.sharepoint.SP.ObjectSharingInformation = js.native
   
+  /* static member */
+  @JSGlobal("SP.ObjectSharingInformation.getWebSharingInformation")
+  @js.native
   def getWebSharingInformation(
     context: typingsSlinky.sharepoint.SP.ClientRuntimeContext,
     excludeCurrentUser: Boolean,

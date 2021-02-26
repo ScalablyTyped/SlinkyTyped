@@ -2,12 +2,13 @@ package typingsSlinky.mfiles
 
 import typingsSlinky.mfiles.MFiles.MFAuthType
 import typingsSlinky.mfiles.MFiles.MFVaultConnectionTestResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultConnection extends js.Object {
+trait IVaultConnection extends StObject {
   
   var AuthType: MFAuthType = js.native
   

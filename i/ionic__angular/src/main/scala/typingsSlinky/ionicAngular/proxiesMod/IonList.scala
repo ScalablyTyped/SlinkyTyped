@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.angularCore.mod.ChangeDetectorRef
 import typingsSlinky.angularCore.mod.ElementRef
 import typingsSlinky.angularCore.mod.NgZone
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -7,6 +7,7 @@ import typingsSlinky.oracleOraclejet.anon.FooterLayout
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.timePicker
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.timePickerChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -50,9 +51,7 @@ trait ojInputDateTime[SP /* <: ojInputDateTimeSettableProperties */] extends ojI
   @JSName("translations")
   var translations_ojInputDateTime: Cancel = js.native
 }
-@JSImport("@oracle/oraclejet/ojdatetimepicker", "ojInputDateTime")
-@js.native
-object ojInputDateTime extends js.Object {
+object ojInputDateTime {
   
   type ojAnimateEnd = CustomEvent
   

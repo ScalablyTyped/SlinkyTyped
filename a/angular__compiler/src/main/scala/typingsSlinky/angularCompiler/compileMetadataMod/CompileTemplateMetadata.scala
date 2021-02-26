@@ -3,13 +3,14 @@ package typingsSlinky.angularCompiler.compileMetadataMod
 import typingsSlinky.angularCompiler.anon.Animations
 import typingsSlinky.angularCompiler.coreMod.ViewEncapsulation
 import typingsSlinky.angularCompiler.mlParserParserMod.ParseTreeResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/compile_metadata", "CompileTemplateMetadata")
 @js.native
-class CompileTemplateMetadata protected () extends js.Object {
+class CompileTemplateMetadata protected () extends StObject {
   def this(hasEncapsulationTemplateTemplateUrlHtmlAstStylesStyleUrlsExternalStylesheetsAnimationsNgContentSelectorsInterpolationIsInlinePreserveWhitespaces: Animations) = this()
   
   var animations: js.Array[_] = js.native

@@ -5,6 +5,7 @@ import typingsSlinky.mfiles.mfilesNumbers.`1`
 import typingsSlinky.mfiles.mfilesNumbers.`268435455`
 import typingsSlinky.mfiles.mfilesNumbers.`2`
 import typingsSlinky.mfiles.mfilesNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mfiles.mfilesNumbers.`4`
   - typingsSlinky.mfiles.mfilesNumbers.`268435455`
 */
-trait CommandLocation extends js.Object
+trait CommandLocation extends StObject
 object CommandLocation {
   
   @scala.inline

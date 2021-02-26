@@ -6,15 +6,27 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactWindowInfiniteLoader.anon.OnItemsRendered
 import typingsSlinky.reactWindowInfiniteLoader.mod.InfiniteLoaderProps
 import typingsSlinky.reactWindowInfiniteLoader.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactWindowInfiniteLoader {
   
+  @scala.inline
+  def apply(
+    children: OnItemsRendered => ReactElement,
+    isItemLoaded: Double => Boolean,
+    itemCount: Double,
+    loadMoreItems: (Double, Double) => js.Promise[_] | Null
+  ): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), isItemLoaded = js.Any.fromFunction1(isItemLoaded), itemCount = itemCount.asInstanceOf[js.Any], loadMoreItems = js.Any.fromFunction2(loadMoreItems))
+    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteLoaderProps]))
+  }
+  
   @JSImport("react-window-infinite-loader", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,15 +41,4 @@ object ReactWindowInfiniteLoader {
   }
   
   def withProps(p: InfiniteLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    children: OnItemsRendered => ReactElement,
-    isItemLoaded: Double => Boolean,
-    itemCount: Double,
-    loadMoreItems: (Double, Double) => js.Promise[_] | Null
-  ): Builder = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), isItemLoaded = js.Any.fromFunction1(isItemLoaded), itemCount = itemCount.asInstanceOf[js.Any], loadMoreItems = js.Any.fromFunction2(loadMoreItems))
-    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteLoaderProps]))
-  }
 }

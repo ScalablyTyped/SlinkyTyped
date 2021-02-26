@@ -3,6 +3,7 @@ package typingsSlinky.openlayers.mod.source
 import typingsSlinky.openlayers.mod.SourceUrlTileOptions
 import typingsSlinky.openlayers.mod.TileLoadFunctionType
 import typingsSlinky.openlayers.mod.TileUrlFunctionType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

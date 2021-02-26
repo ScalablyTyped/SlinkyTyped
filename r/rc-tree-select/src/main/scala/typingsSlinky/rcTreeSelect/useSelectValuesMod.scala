@@ -11,21 +11,22 @@ import typingsSlinky.rcTreeSelect.interfaceMod.RawValueType
 import typingsSlinky.rcTreeSelect.strategyUtilMod.CheckedStrategy
 import typingsSlinky.rcTreeSelect.useKeyValueMappingMod.SkipType
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-tree-select/es/hooks/useSelectValues", JSImport.Namespace)
-@js.native
-object useSelectValuesMod extends js.Object {
+object useSelectValuesMod {
   
+  @JSImport("rc-tree-select/es/hooks/useSelectValues", JSImport.Default)
+  @js.native
   def default(
     rawValues: js.Array[RawValueType],
     hasValueGetEntityByValueGetEntityByKeyTreeConductionShowCheckedStrategyConductKeyEntitiesGetLabelProp: Config
   ): js.Array[LabelValueType] = js.native
   
   @js.native
-  trait Config extends js.Object {
+  trait Config extends StObject {
     
     var conductKeyEntities: Record[Key, DataEntity] = js.native
     

@@ -11,6 +11,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.clockwise
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.counterclockwise
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.horizontally
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.vertically
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

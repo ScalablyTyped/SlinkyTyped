@@ -8,12 +8,13 @@ import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IonModal extends js.Object {
+trait IonModal extends StObject {
   
   /**
     * If `true`, the modal will animate.

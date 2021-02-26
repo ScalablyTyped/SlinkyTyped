@@ -1,5 +1,6 @@
 package typingsSlinky.stripe.mod.paymentIntents
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.stripe.stripeStrings.on_session
   - typingsSlinky.stripe.stripeStrings.off_session
 */
-trait PaymentIntendDataFutureUsageOptions extends js.Object
+trait PaymentIntendDataFutureUsageOptions extends StObject
 object PaymentIntendDataFutureUsageOptions {
   
   @scala.inline

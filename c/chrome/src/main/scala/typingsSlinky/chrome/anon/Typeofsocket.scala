@@ -7,12 +7,13 @@ import typingsSlinky.chrome.chrome.socket.ReadInfo
 import typingsSlinky.chrome.chrome.socket.RecvFromInfo
 import typingsSlinky.chrome.chrome.socket.SocketInfo
 import typingsSlinky.chrome.chrome.socket.WriteInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofsocket extends js.Object {
+trait Typeofsocket extends StObject {
   
   def accept(socketId: Double): Unit = js.native
   def accept(socketId: Double, callback: js.Function1[/* acceptInfo */ AcceptInfo, Unit]): Unit = js.native

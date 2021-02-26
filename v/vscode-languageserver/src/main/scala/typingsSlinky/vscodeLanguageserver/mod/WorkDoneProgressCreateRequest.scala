@@ -2,13 +2,14 @@ package typingsSlinky.vscodeLanguageserver.mod
 
 import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolProgressMod.WorkDoneProgressCreateParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageserver", "WorkDoneProgressCreateRequest")
-@js.native
-object WorkDoneProgressCreateRequest extends js.Object {
+object WorkDoneProgressCreateRequest {
   
+  @JSImport("vscode-languageserver", "WorkDoneProgressCreateRequest.type")
+  @js.native
   val `type`: ProtocolRequestType[WorkDoneProgressCreateParams, Unit, scala.Nothing, Unit, Unit] = js.native
 }

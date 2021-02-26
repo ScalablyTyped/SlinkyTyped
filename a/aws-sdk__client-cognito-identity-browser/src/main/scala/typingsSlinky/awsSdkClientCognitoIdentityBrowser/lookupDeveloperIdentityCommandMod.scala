@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesLookupDeveloperIden
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesLookupDeveloperIdentityOutputMod.LookupDeveloperIdentityOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity-browser/commands/LookupDeveloperIdentityCommand", JSImport.Namespace)
-@js.native
-object lookupDeveloperIdentityCommandMod extends js.Object {
+object lookupDeveloperIdentityCommandMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity-browser/commands/LookupDeveloperIdentityCommand", "LookupDeveloperIdentityCommand")
   @js.native
   class LookupDeveloperIdentityCommand protected () extends Command[
           InputTypesUnion, 

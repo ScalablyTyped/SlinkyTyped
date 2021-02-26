@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactElemental.anon.LabelValue
 import typingsSlinky.reactElemental.mod.TabsProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object Tabs {
   
   @JSImport("react-elemental", "Tabs")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +31,10 @@ object Tabs {
     def onChange(value: /* value */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def optionsVarargs(value: LabelValue*): this.type = set("options", js.Array(value :_*))
+    def options(value: js.Array[LabelValue]): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: js.Array[LabelValue]): this.type = set("options", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: LabelValue*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def secondary(value: Boolean): this.type = set("secondary", value.asInstanceOf[js.Any])
@@ -45,7 +46,7 @@ object Tabs {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tabs.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

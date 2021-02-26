@@ -1,6 +1,7 @@
 package typingsSlinky.microsoftGraph.mod.CallRecords
 
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.unknown_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.wifi80211ax
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue
 */
-trait WifiRadioType extends js.Object
+trait WifiRadioType extends StObject
 object WifiRadioType {
   
   @scala.inline

@@ -3,17 +3,20 @@ package typingsSlinky.simplecrawler
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.simplecrawler.cacheBackendFsMod.FSBackend
 import typingsSlinky.simplecrawler.queueMod.QueueItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("simplecrawler/cache", JSImport.Namespace)
-@js.native
-object cacheMod extends js.Object {
+object cacheMod {
   
-  def FilesystemBackend(): FSBackend = js.native
-  def FilesystemBackend(loadParameter: String): FSBackend = js.native
+  @JSImport("simplecrawler/cache", JSImport.Default)
+  @js.native
+  class default protected () extends Cache {
+    def this(cacheLoadParameter: js.Array[String], cacheBackend: js.Function0[Unit]) = this()
+  }
   
+  @JSImport("simplecrawler/cache", "Cache")
   @js.native
   class Cache protected () extends EventEmitter {
     def this(cacheLoadParameter: js.Array[String], cacheBackend: js.Function0[Unit]) = this()
@@ -32,8 +35,10 @@ object cacheMod extends js.Object {
     def setCacheData(queueObject: QueueItem, data: js.Any, callback: js.Function0[Unit]): Unit = js.native
   }
   
+  @JSImport("simplecrawler/cache", "FilesystemBackend")
   @js.native
-  class default protected () extends Cache {
-    def this(cacheLoadParameter: js.Array[String], cacheBackend: js.Function0[Unit]) = this()
-  }
+  def FilesystemBackend(): FSBackend = js.native
+  @JSImport("simplecrawler/cache", "FilesystemBackend")
+  @js.native
+  def FilesystemBackend(loadParameter: String): FSBackend = js.native
 }

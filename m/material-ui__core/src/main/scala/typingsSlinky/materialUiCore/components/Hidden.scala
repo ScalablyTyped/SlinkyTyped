@@ -11,6 +11,7 @@ import typingsSlinky.materialUiCore.withStylesMod.ClassNameMap
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object Hidden {
   
   @JSImport("@material-ui/core", "Hidden")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,16 +40,16 @@ object Hidden {
     def initialWidth(value: Breakpoint): this.type = set("initialWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lgDown(value: Boolean): this.type = set("lgDown", value.asInstanceOf[js.Any])
@@ -63,10 +64,10 @@ object Hidden {
     def mdUp(value: Boolean): this.type = set("mdUp", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onlyVarargs(value: Breakpoint*): this.type = set("only", js.Array(value :_*))
+    def only(value: Breakpoint | js.Array[Breakpoint]): this.type = set("only", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def only(value: Breakpoint | js.Array[Breakpoint]): this.type = set("only", value.asInstanceOf[js.Any])
+    def onlyVarargs(value: Breakpoint*): this.type = set("only", js.Array(value :_*))
     
     @scala.inline
     def smDown(value: Boolean): this.type = set("smDown", value.asInstanceOf[js.Any])
@@ -90,7 +91,7 @@ object Hidden {
     def xsUp(value: Boolean): this.type = set("xsUp", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HiddenProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Hidden.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HiddenProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

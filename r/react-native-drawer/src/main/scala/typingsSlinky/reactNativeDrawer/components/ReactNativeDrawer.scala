@@ -18,6 +18,7 @@ import typingsSlinky.reactNativeDrawer.reactNativeDrawerStrings.overlay
 import typingsSlinky.reactNativeDrawer.reactNativeDrawerStrings.right
 import typingsSlinky.reactNativeDrawer.reactNativeDrawerStrings.static
 import typingsSlinky.reactNativeDrawer.reactNativeDrawerStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ object ReactNativeDrawer {
   
   @JSImport("react-native-drawer", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,16 +50,16 @@ object ReactNativeDrawer {
     def captureGestures(value: Boolean | open | closed): this.type = set("captureGestures", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closedDrawerOffsetFunction0(value: () => Double): this.type = set("closedDrawerOffset", js.Any.fromFunction0(value))
-    
-    @scala.inline
     def closedDrawerOffset(value: js.Function0[Double] | Double): this.type = set("closedDrawerOffset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def closedDrawerOffsetFunction0(value: () => Double): this.type = set("closedDrawerOffset", js.Any.fromFunction0(value))
     
     @scala.inline
     def content(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -91,10 +92,10 @@ object ReactNativeDrawer {
     def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def openDrawerOffsetFunction1(value: /* viewport */ ScaledSize => Double): this.type = set("openDrawerOffset", js.Any.fromFunction1(value))
+    def openDrawerOffset(value: (js.Function1[/* viewport */ ScaledSize, Double]) | Double): this.type = set("openDrawerOffset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def openDrawerOffset(value: (js.Function1[/* viewport */ ScaledSize, Double]) | Double): this.type = set("openDrawerOffset", value.asInstanceOf[js.Any])
+    def openDrawerOffsetFunction1(value: /* viewport */ ScaledSize => Double): this.type = set("openDrawerOffset", js.Any.fromFunction1(value))
     
     @scala.inline
     def panCloseMask(value: Double): this.type = set("panCloseMask", value.asInstanceOf[js.Any])
@@ -130,7 +131,7 @@ object ReactNativeDrawer {
     def useInteractionManager(value: Boolean): this.type = set("useInteractionManager", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DrawerProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeDrawer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DrawerProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

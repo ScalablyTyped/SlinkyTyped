@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.Key
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClientsResource extends js.Object {
+trait ClientsResource extends StObject {
   
   /** Creates a new client buyer. */
   def create(request: Key): Request[Client] = js.native

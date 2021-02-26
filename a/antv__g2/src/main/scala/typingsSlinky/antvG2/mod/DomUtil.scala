@@ -110,13 +110,14 @@ import typingsSlinky.antvG2.antvG2Strings.volumechange
 import typingsSlinky.antvG2.antvG2Strings.waiting
 import typingsSlinky.antvG2.antvG2Strings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@antv/g2", "DomUtil")
 @js.native
-class DomUtil () extends js.Object {
+class DomUtil () extends StObject {
   
   def addEventListener(target: HTMLElement, eventType: String, listener: js.Function1[/* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")

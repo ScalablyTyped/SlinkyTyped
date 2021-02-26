@@ -2,12 +2,13 @@ package typingsSlinky.officeUiFabricReact.anon
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ContainsFocus extends js.Object {
+trait ContainsFocus extends StObject {
   
   var containsFocus: Boolean = js.native
   
@@ -24,36 +25,24 @@ object ContainsFocus {
   }
   
   @scala.inline
-  implicit class ContainsFocusOps[Self <: ContainsFocus] (val x: Self) extends AnyVal {
+  implicit class ContainsFocusMutableBuilder[Self <: ContainsFocus] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setContainsFocus(value: Boolean): Self = StObject.set(x, "containsFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDocumentContainsFocus(value: Boolean): Self = StObject.set(x, "documentContainsFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setOriginalElement(value: HTMLElement | Window): Self = StObject.set(x, "originalElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContainsFocus(value: Boolean): Self = this.set("containsFocus", value.asInstanceOf[js.Any])
+    def setOriginalElementHTMLElement(value: HTMLElement): Self = StObject.set(x, "originalElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDocumentContainsFocus(value: Boolean): Self = this.set("documentContainsFocus", value.asInstanceOf[js.Any])
+    def setOriginalElementUndefined: Self = StObject.set(x, "originalElement", js.undefined)
     
     @scala.inline
-    def setOriginalElementWindow(value: Window): Self = this.set("originalElement", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOriginalElementHTMLElement(value: HTMLElement): Self = this.set("originalElement", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOriginalElement(value: HTMLElement | Window): Self = this.set("originalElement", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOriginalElement: Self = this.set("originalElement", js.undefined)
+    def setOriginalElementWindow(value: Window): Self = StObject.set(x, "originalElement", value.asInstanceOf[js.Any])
   }
 }

@@ -1,8 +1,9 @@
 package typingsSlinky.awsSdk.autoscalingMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CompleteLifecycleActionAnswer extends js.Object
+trait CompleteLifecycleActionAnswer extends StObject

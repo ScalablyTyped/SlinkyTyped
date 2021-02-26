@@ -13,12 +13,13 @@ import typingsSlinky.i18next.i18nextStrings.ltr
 import typingsSlinky.i18next.i18nextStrings.missingKey
 import typingsSlinky.i18next.i18nextStrings.removed
 import typingsSlinky.i18next.i18nextStrings.rtl
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait i18n extends js.Object {
+trait i18n extends StObject {
   
   /**
     * Adds one key/value.

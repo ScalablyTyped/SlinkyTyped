@@ -1,5 +1,6 @@
 package typingsSlinky.oauth2orize.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.oauth2orize.oauth2orizeStrings.unsupported_grant_type
   - typingsSlinky.oauth2orize.oauth2orizeStrings.invalid_scope
 */
-trait TokenErrorCode extends js.Object
+trait TokenErrorCode extends StObject
 object TokenErrorCode {
   
   @scala.inline

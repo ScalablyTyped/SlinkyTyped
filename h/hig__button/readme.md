@@ -10,9 +10,9 @@ HIG Button
 | ------------------ | :-------------: |
 | Full name          | @hig/button |
 | Keywords           | - |
-| # releases         | 147 |
+| # releases         | 9 |
 | # dependents       | 1 |
-| # downloads        | 101642 |
+| # downloads        | 6417 |
 | # stars            | 0 |
 
 ## Links

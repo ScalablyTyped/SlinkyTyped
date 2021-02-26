@@ -16,6 +16,7 @@ import typingsSlinky.babylonjs.babylonjsStrings.timeout
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.BodyInit
 import typingsSlinky.std.XMLHttpRequestResponseType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -180,13 +181,13 @@ trait WebRequest extends IWebRequest {
   def removeEventListener_abort(
     `type`: abort,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_abort(
     `type`: abort,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -194,13 +195,13 @@ trait WebRequest extends IWebRequest {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -208,13 +209,13 @@ trait WebRequest extends IWebRequest {
   def removeEventListener_load(
     `type`: load,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
     `type`: load,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadend(`type`: loadend, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -222,13 +223,13 @@ trait WebRequest extends IWebRequest {
   def removeEventListener_loadend(
     `type`: loadend,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadend(
     `type`: loadend,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(
@@ -239,13 +240,13 @@ trait WebRequest extends IWebRequest {
   def removeEventListener_loadstart(
     `type`: loadstart,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(
     `type`: loadstart,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(`type`: progress, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -253,13 +254,13 @@ trait WebRequest extends IWebRequest {
   def removeEventListener_progress(
     `type`: progress,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(
     `type`: progress,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   /** @hidden */
   @JSName("removeEventListener")
@@ -268,13 +269,13 @@ trait WebRequest extends IWebRequest {
   def removeEventListener_readystatechange(
     `type`: readystatechange,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readystatechange(
     `type`: readystatechange,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_timeout(`type`: timeout, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -282,13 +283,13 @@ trait WebRequest extends IWebRequest {
   def removeEventListener_timeout(
     `type`: timeout,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_timeout(
     `type`: timeout,
     listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   
   /**
@@ -318,8 +319,8 @@ trait WebRequest extends IWebRequest {
     * @param body defines an optional request body
     */
   def send(): Unit = js.native
-  def send(body: BodyInit): Unit = js.native
   def send(body: Document): Unit = js.native
+  def send(body: BodyInit): Unit = js.native
   
   /**
     * Sets the value of a request header.

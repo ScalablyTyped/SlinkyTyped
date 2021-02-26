@@ -8,14 +8,14 @@ import typingsSlinky.ionicCore.selectInterfaceMod.SelectCompareFn
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/select/select", JSImport.Namespace)
-@js.native
-object selectMod extends js.Object {
+object selectMod {
   
+  @JSImport("@ionic/core/dist/types/components/select/select", "Select")
   @js.native
   class Select () extends ComponentInterface {
     

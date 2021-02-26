@@ -6,6 +6,7 @@ import typingsSlinky.sugar.sugarjs.Object.QueryStringParseOptions
 import typingsSlinky.sugar.sugarjs.Object.mapFn
 import typingsSlinky.sugar.sugarjs.Object.searchFn
 import typingsSlinky.sugar.sugarjs._NativeConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

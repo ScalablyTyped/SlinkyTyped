@@ -3,12 +3,13 @@ package typingsSlinky.ariClient.mod
 import typingsSlinky.ariClient.anon.DestinationRecordingName
 import typingsSlinky.ariClient.anon.RecordingName
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Recordings extends js.Object {
+trait Recordings extends StObject {
   
   /**
     * Stop a live recording and discard it.

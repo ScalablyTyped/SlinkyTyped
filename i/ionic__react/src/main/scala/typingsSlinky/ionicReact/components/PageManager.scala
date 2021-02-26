@@ -7,6 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.ionicReact.pageManagerMod.PageManagerProps
 import typingsSlinky.ionicReact.pageManagerMod.default
 import typingsSlinky.ionicReact.routeInfoMod.RouteInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object PageManager {
   
   @JSImport("@ionic/react/dist/types/routing/PageManager", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,7 +33,7 @@ object PageManager {
     def routeInfo(value: RouteInfo[_]): this.type = set("routeInfo", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PageManagerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: PageManager.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PageManagerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

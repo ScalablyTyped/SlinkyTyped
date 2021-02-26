@@ -3,6 +3,7 @@ package typingsSlinky.orientjs.mod
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.orientjs.mod.Migration.MigrationManager
 import typingsSlinky.orientjs.mod.Migration.MigrationManagerConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,11 +38,13 @@ class OrientDBClient () extends EventEmitter {
   def sessions(): js.Promise[ODatabaseSessionPool] = js.native
   def sessions(options: ODatabaseSessionPoolOptions): js.Promise[ODatabaseSessionPool] = js.native
 }
-/* static members */
-@JSImport("orientjs", "OrientDBClient")
-@js.native
-object OrientDBClient extends js.Object {
+object OrientDBClient {
   
+  /* static member */
+  @JSImport("orientjs", "OrientDBClient.connect")
+  @js.native
   def connect(): js.Promise[OrientDBClient] = js.native
+  @JSImport("orientjs", "OrientDBClient.connect")
+  @js.native
   def connect(options: OrientDBClientConfig): js.Promise[OrientDBClient] = js.native
 }

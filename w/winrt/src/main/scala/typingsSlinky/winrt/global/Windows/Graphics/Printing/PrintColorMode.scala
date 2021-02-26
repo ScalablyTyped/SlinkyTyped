@@ -1,19 +1,20 @@
 package typingsSlinky.winrt.global.Windows.Graphics.Printing
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Windows.Graphics.Printing.PrintColorMode")
 @js.native
-object PrintColorMode extends js.Object {
+object PrintColorMode extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Graphics.Printing.PrintColorMode with Double] = js.native
   
-  /* 3 */ val color: typingsSlinky.winrt.Windows.Graphics.Printing.PrintColorMode.color with Double = js.native
-  
   /* 0 */ val default: typingsSlinky.winrt.Windows.Graphics.Printing.PrintColorMode.default with Double = js.native
+  
+  /* 3 */ val color: typingsSlinky.winrt.Windows.Graphics.Printing.PrintColorMode.color with Double = js.native
   
   /* 4 */ val grayscale: typingsSlinky.winrt.Windows.Graphics.Printing.PrintColorMode.grayscale with Double = js.native
   

@@ -1,12 +1,13 @@
 package typingsSlinky.braintree.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("braintree", "Subscription")
 @js.native
-class Subscription () extends js.Object {
+class Subscription () extends StObject {
   
   var addOns: js.UndefOr[js.Array[AddOn]] = js.native
   

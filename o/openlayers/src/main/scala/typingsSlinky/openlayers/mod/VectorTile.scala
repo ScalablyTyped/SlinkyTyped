@@ -2,6 +2,7 @@ package typingsSlinky.openlayers.mod
 
 import typingsSlinky.openlayers.mod.Tile.State
 import typingsSlinky.openlayers.mod.proj.Projection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -4,16 +4,15 @@ import typingsSlinky.ranjs.anon.Closed
 import typingsSlinky.ranjs.anon.Statistics
 import typingsSlinky.ranjs.ranjsStrings.continuous
 import typingsSlinky.ranjs.ranjsStrings.discrete
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ranjs", "_dist")
-@js.native
-object _dist extends js.Object {
+object _dist {
   
   @js.native
-  trait Distribution[T] extends js.Object {
+  trait Distribution[T] extends StObject {
     
     def aic(data: js.Array[Double]): Double = js.native
     
@@ -53,5 +52,5 @@ object _dist extends js.Object {
   }
   
   @js.native
-  trait State[T] extends js.Object
+  trait State[T] extends StObject
 }

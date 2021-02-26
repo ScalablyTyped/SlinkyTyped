@@ -1,13 +1,14 @@
 package typingsSlinky.screeps.anon
 
 import typingsSlinky.screeps.ResourceConstant
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined screeps.Store<screeps.RESOURCE_ENERGY | screeps.MineralConstant | screeps.MineralCompoundConstant, false> */
 @js.native
-trait StoreRESOURCEENERGYMinera extends js.Object {
+trait StoreRESOURCEENERGYMinera extends StObject {
   
   var G: Double = js.native
   

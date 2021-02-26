@@ -1,5 +1,6 @@
 package typingsSlinky.cytoscape.mod.Css
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.cytoscape.cytoscapeStrings.chevron
   - typingsSlinky.cytoscape.cytoscapeStrings.none
 */
-trait ArrowShape extends js.Object
+trait ArrowShape extends StObject
 object ArrowShape {
   
   @scala.inline

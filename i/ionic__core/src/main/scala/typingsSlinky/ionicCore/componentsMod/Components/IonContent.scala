@@ -2,12 +2,13 @@ package typingsSlinky.ionicCore.componentsMod.Components
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.mod.Color
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IonContent extends js.Object {
+trait IonContent extends StObject {
   
   /**
     * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).

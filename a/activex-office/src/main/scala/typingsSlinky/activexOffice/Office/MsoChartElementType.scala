@@ -126,6 +126,7 @@ import typingsSlinky.activexOffice.activexOfficeNumbers.`803`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`804`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`900`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`901`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -258,7 +259,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`900`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`901`
 */
-trait MsoChartElementType extends js.Object
+trait MsoChartElementType extends StObject
 object MsoChartElementType {
   
   @scala.inline

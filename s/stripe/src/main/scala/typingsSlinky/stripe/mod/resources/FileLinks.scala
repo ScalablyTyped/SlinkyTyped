@@ -5,18 +5,21 @@ import typingsSlinky.stripe.mod.IDataOptions
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.fileLinks.IFileLink
 import typingsSlinky.stripe.mod.fileLinks.IFileLinksCreationOptions
 import typingsSlinky.stripe.mod.fileLinks.IFileLinksListOptions
 import typingsSlinky.stripe.mod.fileLinks.IFileLinksUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.FileLinks")
 @js.native
-class FileLinks () extends StripeResource {
+class FileLinks protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(data: IFileLinksCreationOptions): js.Promise[IFileLink] = js.native
   /**

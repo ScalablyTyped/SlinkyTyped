@@ -19,6 +19,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.small
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.value
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +28,7 @@ object Progress {
   
   @JSImport("semantic-ui-react", "Progress")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -53,10 +54,10 @@ object Progress {
     def color(value: SemanticCOLORS): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -71,7 +72,7 @@ object Progress {
     def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: SemanticShorthandItem[HtmlLabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelFunction3(
@@ -79,7 +80,7 @@ object Progress {
     ): this.type = set("label", js.Any.fromFunction3(value))
     
     @scala.inline
-    def label(value: SemanticShorthandItem[HtmlLabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def percent(value: Double | String): this.type = set("percent", value.asInstanceOf[js.Any])
@@ -106,7 +107,7 @@ object Progress {
     def warning(value: Boolean): this.type = set("warning", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ProgressProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Progress.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ProgressProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

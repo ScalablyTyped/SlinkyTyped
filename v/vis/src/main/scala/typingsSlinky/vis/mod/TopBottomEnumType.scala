@@ -1,5 +1,6 @@
 package typingsSlinky.vis.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vis.visStrings.top
   - typingsSlinky.vis.visStrings.bottom
 */
-trait TopBottomEnumType extends js.Object
+trait TopBottomEnumType extends StObject
 object TopBottomEnumType {
   
   @scala.inline

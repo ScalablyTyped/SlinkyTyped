@@ -6,12 +6,13 @@ import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.ObjectPatternKind
 import typingsSlinky.astTypes.kindsMod.RestElementKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSConstructorType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TSConstructorTypeBuilder extends js.Object {
+trait TSConstructorTypeBuilder extends StObject {
   
   def apply(parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind]): TSConstructorType = js.native
   

@@ -29,15 +29,22 @@ import typingsSlinky.reactDataGrid.reactDataGridStrings.loopOverRow
 import typingsSlinky.reactDataGrid.reactDataGridStrings.multi
 import typingsSlinky.reactDataGrid.reactDataGridStrings.none_
 import typingsSlinky.reactDataGrid.reactDataGridStrings.single
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactDataGrid {
   
+  @scala.inline
+  def apply[T](rowGetter: js.Array[T] | (js.Function1[/* rowIdx */ Double, T]), rowsCount: Double): Builder[T] = {
+    val __props = js.Dynamic.literal(rowGetter = rowGetter.asInstanceOf[js.Any], rowsCount = rowsCount.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[GridProps[T]]))
+  }
+  
   @JSImport("react-data-grid", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -48,22 +55,22 @@ object ReactDataGrid {
     def cellNavigationMode(value: none_ | loopOverRow | changeRow): this.type = set("cellNavigationMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columnsVarargs(value: Column[T]*): this.type = set("columns", js.Array(value :_*))
+    def columns(value: js.Array[Column[T]]): this.type = set("columns", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columns(value: js.Array[Column[T]]): this.type = set("columns", value.asInstanceOf[js.Any])
+    def columnsVarargs(value: Column[T]*): this.type = set("columns", js.Array(value :_*))
     
     @scala.inline
     def contextMenu(value: ReactElement): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def emptyRowsViewFunctionComponent(value: ReactComponentClass[_]): this.type = set("emptyRowsView", value.asInstanceOf[js.Any])
+    def emptyRowsView(value: ReactComponentClass[_]): this.type = set("emptyRowsView", value.asInstanceOf[js.Any])
     
     @scala.inline
     def emptyRowsViewComponentClass(value: ReactComponentClass[_]): this.type = set("emptyRowsView", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def emptyRowsView(value: ReactComponentClass[_]): this.type = set("emptyRowsView", value.asInstanceOf[js.Any])
+    def emptyRowsViewFunctionComponent(value: ReactComponentClass[_]): this.type = set("emptyRowsView", value.asInstanceOf[js.Any])
     
     @scala.inline
     def enableCellSelect(value: Boolean): this.type = set("enableCellSelect", value.asInstanceOf[js.Any])
@@ -147,22 +154,22 @@ object ReactDataGrid {
     def onScroll(value: /* scrollState */ ScrollState => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     
     @scala.inline
-    def rowActionsCellFunctionComponent(value: ReactComponentClass[_]): this.type = set("rowActionsCell", value.asInstanceOf[js.Any])
+    def rowActionsCell(value: ReactComponentClass[_]): this.type = set("rowActionsCell", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rowActionsCellComponentClass(value: ReactComponentClass[_]): this.type = set("rowActionsCell", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowActionsCell(value: ReactComponentClass[_]): this.type = set("rowActionsCell", value.asInstanceOf[js.Any])
+    def rowActionsCellFunctionComponent(value: ReactComponentClass[_]): this.type = set("rowActionsCell", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowGroupRendererFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("rowGroupRenderer", value.asInstanceOf[js.Any])
+    def rowGroupRenderer(value: ReactComponentClass[js.Object]): this.type = set("rowGroupRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rowGroupRendererComponentClass(value: ReactComponentClass[js.Object]): this.type = set("rowGroupRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowGroupRenderer(value: ReactComponentClass[js.Object]): this.type = set("rowGroupRenderer", value.asInstanceOf[js.Any])
+    def rowGroupRendererFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("rowGroupRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rowHeight(value: Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
@@ -171,16 +178,16 @@ object ReactDataGrid {
     def rowKey(value: String): this.type = set("rowKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowRendererReactElement(value: ReactElement): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def rowRendererFunctionComponent(value: ReactComponentClass[_]): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
+    def rowRenderer(value: ReactElement | ReactComponentClass[_]): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rowRendererComponentClass(value: ReactComponentClass[_]): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowRenderer(value: ReactElement | ReactComponentClass[_]): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
+    def rowRendererFunctionComponent(value: ReactComponentClass[_]): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def rowRendererReactElement(value: ReactElement): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rowScrollTimeout(value: Double): this.type = set("rowScrollTimeout", value.asInstanceOf[js.Any])
@@ -189,13 +196,13 @@ object ReactDataGrid {
     def rowSelection(value: EnableShiftSelect[T]): this.type = set("rowSelection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectAllRendererFunctionComponent(value: ReactComponentClass[_]): this.type = set("selectAllRenderer", value.asInstanceOf[js.Any])
+    def selectAllRenderer(value: ReactComponentClass[_]): this.type = set("selectAllRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def selectAllRendererComponentClass(value: ReactComponentClass[_]): this.type = set("selectAllRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectAllRenderer(value: ReactComponentClass[_]): this.type = set("selectAllRenderer", value.asInstanceOf[js.Any])
+    def selectAllRendererFunctionComponent(value: ReactComponentClass[_]): this.type = set("selectAllRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def sortColumn(value: String): this.type = set("sortColumn", value.asInstanceOf[js.Any])
@@ -208,10 +215,4 @@ object ReactDataGrid {
   }
   
   def withProps[T](p: GridProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](rowGetter: js.Array[T] | (js.Function1[/* rowIdx */ Double, T]), rowsCount: Double): Builder[T] = {
-    val __props = js.Dynamic.literal(rowGetter = rowGetter.asInstanceOf[js.Any], rowsCount = rowsCount.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[GridProps[T]]))
-  }
 }

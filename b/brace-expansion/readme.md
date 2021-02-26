@@ -10,9 +10,9 @@ Brace expansion as known from sh/bash
 | ------------------ | :-------------: |
 | Full name          | brace-expansion |
 | Keywords           | - |
-| # releases         | 4 |
-| # dependents       | 145 |
-| # downloads        | 576372446 |
+| # releases         | 1 |
+| # dependents       | 247 |
+| # downloads        | 889702989 |
 | # stars            | 5 |
 
 ## Links

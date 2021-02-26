@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientCloudbilling.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientCloudbilling.anon.Alt
 import typingsSlinky.maximMazurokGapiClientCloudbilling.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProjectsResource extends js.Object {
+trait ProjectsResource extends StObject {
   
   /**
     * Gets the billing information for a project. The current authenticated user must have [permission to view the

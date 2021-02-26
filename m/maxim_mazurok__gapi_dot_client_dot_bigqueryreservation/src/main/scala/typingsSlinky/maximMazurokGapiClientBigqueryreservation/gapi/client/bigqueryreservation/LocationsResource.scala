@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationsResource extends js.Object {
+trait LocationsResource extends StObject {
   
   var capacityCommitments: CapacityCommitmentsResource = js.native
   

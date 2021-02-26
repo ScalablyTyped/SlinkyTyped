@@ -9,10 +9,10 @@ Generic browser priority queue.
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @wordpress/priority-queue |
-| Keywords           | wordpress, browser, async |
-| # releases         | 7 |
-| # dependents       | 1 |
-| # downloads        | 147450 |
+| Keywords           | wordpress, gutenberg, browser, async |
+| # releases         | 17 |
+| # dependents       | 3 |
+| # downloads        | 853783 |
 | # stars            | 0 |
 
 ## Links

@@ -6,6 +6,7 @@ import typingsSlinky.minecraftScriptingTypesShared.IQuery
 import typingsSlinky.minecraftScriptingTypesShared.ISystem
 import typingsSlinky.minecraftScriptingTypesShared.ITickingArea
 import typingsSlinky.minecraftScriptingTypesShared.VectorXYZ
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

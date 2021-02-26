@@ -3,6 +3,7 @@ package typingsSlinky.openseadragon.mod
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.openseadragon.openseadragonBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

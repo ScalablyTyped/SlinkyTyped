@@ -1,16 +1,16 @@
 package typingsSlinky.ionicAngular
 
 import typingsSlinky.ionicCore.animationInterfaceMod.Animation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/angular/providers/animation-controller", JSImport.Namespace)
-@js.native
-object animationControllerMod extends js.Object {
+object animationControllerMod {
   
+  @JSImport("@ionic/angular/providers/animation-controller", "AnimationController")
   @js.native
-  class AnimationController () extends js.Object {
+  class AnimationController () extends StObject {
     
     /**
       * Create a new animation

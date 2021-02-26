@@ -8,6 +8,7 @@ import typingsSlinky.tuyaPanelKit.mod.CollapsibleProps
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.bottom
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.center
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object Collapsible {
   
   @JSImport("tuya-panel-kit", "Collapsible")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +37,10 @@ object Collapsible {
     def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def easingFunction0(value: () => Unit): this.type = set("easing", js.Any.fromFunction0(value))
+    def easing(value: String | js.Function0[Unit]): this.type = set("easing", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def easing(value: String | js.Function0[Unit]): this.type = set("easing", value.asInstanceOf[js.Any])
+    def easingFunction0(value: () => Unit): this.type = set("easing", js.Any.fromFunction0(value))
     
     @scala.inline
     def onChange(value: () => Unit): this.type = set("onChange", js.Any.fromFunction0(value))
@@ -51,7 +52,7 @@ object Collapsible {
     def styleNull: this.type = set("style", null)
   }
   
-  def withProps(p: CollapsibleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Collapsible.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CollapsibleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

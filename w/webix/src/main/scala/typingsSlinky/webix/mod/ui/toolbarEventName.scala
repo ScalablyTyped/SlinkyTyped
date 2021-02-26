@@ -1,5 +1,6 @@
 package typingsSlinky.webix.mod.ui
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webix.webixStrings.onValues
   - typingsSlinky.webix.webixStrings.onViewShow
 */
-trait toolbarEventName extends js.Object
+trait toolbarEventName extends StObject
 object toolbarEventName {
   
   @scala.inline

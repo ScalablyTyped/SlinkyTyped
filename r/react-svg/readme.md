@@ -10,9 +10,9 @@ A React component that injects SVG into the DOM.
 | ------------------ | :-------------: |
 | Full name          | react-svg |
 | Keywords           | dom, html, images, img, javascript, react, scalable vector graphics, svg, svginjector, typescript |
-| # releases         | 158 |
-| # dependents       | 64 |
-| # downloads        | 1981533 |
+| # releases         | 105 |
+| # dependents       | 108 |
+| # downloads        | 3515025 |
 | # stars            | 6 |
 
 ## Links

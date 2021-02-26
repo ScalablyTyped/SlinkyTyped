@@ -3,6 +3,7 @@ package typingsSlinky.electron.Electron
 import typingsSlinky.electron.electronStrings.detach
 import typingsSlinky.electron.electronStrings.message
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

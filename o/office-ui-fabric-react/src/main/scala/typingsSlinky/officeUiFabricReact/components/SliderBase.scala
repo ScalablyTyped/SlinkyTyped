@@ -16,6 +16,7 @@ import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ object SliderBase {
   
   @JSImport("office-ui-fabric-react", "SliderBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -44,13 +45,13 @@ object SliderBase {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[ISlider]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ ISlider | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[ISlider]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[ISlider]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultValue(value: Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
@@ -86,10 +87,10 @@ object SliderBase {
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: ISliderStyleProps => DeepPartial[ISliderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[ISliderStyleProps, ISliderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[ISliderStyleProps, ISliderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: ISliderStyleProps => DeepPartial[ISliderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -104,7 +105,7 @@ object SliderBase {
     def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ISliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SliderBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ISliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

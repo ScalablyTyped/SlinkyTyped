@@ -9,8 +9,8 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.WheelEvent
 import slinky.web.html.img.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.konva.arcMod.ArcConfig
 import typingsSlinky.konva.contextMod.Context
+import typingsSlinky.konva.mod.Konva.ArcConfig
 import typingsSlinky.konva.mod.Konva.KonvaEventObject
 import typingsSlinky.konva.nodeMod.Filter
 import typingsSlinky.konva.nodeMod.Node
@@ -21,15 +21,22 @@ import typingsSlinky.konva.typesMod.Vector2d
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.reactKonva.reactKonvaCoreMod.KonvaNodeEvents
 import typingsSlinky.std.Number
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Arc {
   
+  @scala.inline
+  def apply(angle: Double, innerRadius: Double, outerRadius: Double): Builder = {
+    val __props = js.Dynamic.literal(angle = angle.asInstanceOf[js.Any], innerRadius = innerRadius.asInstanceOf[js.Any], outerRadius = outerRadius.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ArcConfig with KonvaNodeEvents with ClassAttributes[typingsSlinky.konva.mod.Konva.Arc]]))
+  }
+  
   @JSImport("react-konva", "Arc")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,9 +45,6 @@ object Arc {
     
     @scala.inline
     def clockwise(value: Boolean): this.type = set("clockwise", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def dashVarargs(value: Double*): this.type = set("dash", js.Array(value :_*))
     
     @scala.inline
     def dash(value: js.Array[Double]): this.type = set("dash", value.asInstanceOf[js.Any])
@@ -52,7 +56,12 @@ object Arc {
     def dashOffset(value: Double): this.type = set("dashOffset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dragBoundFunc(value: js.ThisFunction1[/* this */ Node[ArcConfig], /* pos */ Vector2d, Vector2d]): this.type = set("dragBoundFunc", value.asInstanceOf[js.Any])
+    def dashVarargs(value: Double*): this.type = set("dash", js.Array(value :_*))
+    
+    @scala.inline
+    def dragBoundFunc(
+      value: js.ThisFunction1[/* this */ Node[typingsSlinky.konva.arcMod.ArcConfig], /* pos */ Vector2d, Vector2d]
+    ): this.type = set("dragBoundFunc", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dragDistance(value: Double): this.type = set("dragDistance", value.asInstanceOf[js.Any])
@@ -67,10 +76,10 @@ object Arc {
     def fillEnabled(value: Boolean): this.type = set("fillEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fillLinearGradientColorStopsVarargs(value: (Double | String)*): this.type = set("fillLinearGradientColorStops", js.Array(value :_*))
+    def fillLinearGradientColorStops(value: js.Array[Double | String]): this.type = set("fillLinearGradientColorStops", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fillLinearGradientColorStops(value: js.Array[Double | String]): this.type = set("fillLinearGradientColorStops", value.asInstanceOf[js.Any])
+    def fillLinearGradientColorStopsVarargs(value: (Double | String)*): this.type = set("fillLinearGradientColorStops", js.Array(value :_*))
     
     @scala.inline
     def fillLinearGradientEndPoint(value: Vector2d): this.type = set("fillLinearGradientEndPoint", value.asInstanceOf[js.Any])
@@ -127,10 +136,10 @@ object Arc {
     def fillPriority(value: String): this.type = set("fillPriority", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fillRadialGradientColorStopsVarargs(value: (Double | String)*): this.type = set("fillRadialGradientColorStops", js.Array(value :_*))
+    def fillRadialGradientColorStops(value: js.Array[Double | String]): this.type = set("fillRadialGradientColorStops", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fillRadialGradientColorStops(value: js.Array[Double | String]): this.type = set("fillRadialGradientColorStops", value.asInstanceOf[js.Any])
+    def fillRadialGradientColorStopsVarargs(value: (Double | String)*): this.type = set("fillRadialGradientColorStops", js.Array(value :_*))
     
     @scala.inline
     def fillRadialGradientEndPoint(value: Vector2d): this.type = set("fillRadialGradientEndPoint", value.asInstanceOf[js.Any])
@@ -157,10 +166,10 @@ object Arc {
     def fillRadialGradientStartRadius(value: Double): this.type = set("fillRadialGradientStartRadius", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filtersVarargs(value: Filter*): this.type = set("filters", js.Array(value :_*))
+    def filters(value: js.Array[Filter]): this.type = set("filters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filters(value: js.Array[Filter]): this.type = set("filters", value.asInstanceOf[js.Any])
+    def filtersVarargs(value: Filter*): this.type = set("filters", js.Array(value :_*))
     
     @scala.inline
     def globalCompositeOperation(value: globalCompositeOperationType): this.type = set("globalCompositeOperation", value.asInstanceOf[js.Any])
@@ -169,7 +178,9 @@ object Arc {
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def hitFunc(value: (/* con */ Context, /* shape */ typingsSlinky.konva.shapeMod.Shape[ArcConfig]) => Unit): this.type = set("hitFunc", js.Any.fromFunction2(value))
+    def hitFunc(
+      value: (/* con */ Context, /* shape */ typingsSlinky.konva.shapeMod.Shape[typingsSlinky.konva.arcMod.ArcConfig]) => Unit
+    ): this.type = set("hitFunc", js.Any.fromFunction2(value))
     
     @scala.inline
     def hitStrokeWidth(value: Double | String): this.type = set("hitStrokeWidth", value.asInstanceOf[js.Any])
@@ -289,7 +300,9 @@ object Arc {
     def scaleY(value: Double): this.type = set("scaleY", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sceneFunc(value: (/* con */ Context, /* shape */ typingsSlinky.konva.shapeMod.Shape[ArcConfig]) => Unit): this.type = set("sceneFunc", js.Any.fromFunction2(value))
+    def sceneFunc(
+      value: (/* con */ Context, /* shape */ typingsSlinky.konva.shapeMod.Shape[typingsSlinky.konva.arcMod.ArcConfig]) => Unit
+    ): this.type = set("sceneFunc", js.Any.fromFunction2(value))
     
     @scala.inline
     def shadowBlur(value: Double): this.type = set("shadowBlur", value.asInstanceOf[js.Any])
@@ -343,13 +356,5 @@ object Arc {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(
-    p: typingsSlinky.konva.mod.Konva.ArcConfig with KonvaNodeEvents with ClassAttributes[typingsSlinky.konva.mod.Konva.Arc]
-  ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(angle: Double, innerRadius: Double, outerRadius: Double): Builder = {
-    val __props = js.Dynamic.literal(angle = angle.asInstanceOf[js.Any], innerRadius = innerRadius.asInstanceOf[js.Any], outerRadius = outerRadius.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.konva.mod.Konva.ArcConfig with KonvaNodeEvents with ClassAttributes[typingsSlinky.konva.mod.Konva.Arc]]))
-  }
+  def withProps(p: ArcConfig with KonvaNodeEvents with ClassAttributes[typingsSlinky.konva.mod.Konva.Arc]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

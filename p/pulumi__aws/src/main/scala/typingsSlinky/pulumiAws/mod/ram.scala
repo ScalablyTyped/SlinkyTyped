@@ -14,17 +14,14 @@ import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws", "ram")
-@js.native
-object ram extends js.Object {
+object ram {
   
-  def getResourceShare(args: GetResourceShareArgs): js.Promise[GetResourceShareResult] = js.native
-  def getResourceShare(args: GetResourceShareArgs, opts: InvokeOptions): js.Promise[GetResourceShareResult] = js.native
-  
+  @JSImport("@pulumi/aws", "ram.PrincipalAssociation")
   @js.native
   class PrincipalAssociation protected ()
     extends typingsSlinky.pulumiAws.ramMod.PrincipalAssociation {
@@ -39,8 +36,7 @@ object ram extends js.Object {
     def this(name: String, args: PrincipalAssociationArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object PrincipalAssociation extends js.Object {
+  object PrincipalAssociation {
     
     /**
       * Get an existing PrincipalAssociation resource's state with the given name, ID, and optional extra
@@ -51,18 +47,29 @@ object ram extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws", "ram.PrincipalAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.principalAssociationMod.PrincipalAssociation = js.native
+    @JSImport("@pulumi/aws", "ram.PrincipalAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.principalAssociationMod.PrincipalAssociation = js.native
+    @JSImport("@pulumi/aws", "ram.PrincipalAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID], state: PrincipalAssociationState): typingsSlinky.pulumiAws.principalAssociationMod.PrincipalAssociation = js.native
+    @JSImport("@pulumi/aws", "ram.PrincipalAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID], state: PrincipalAssociationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.principalAssociationMod.PrincipalAssociation = js.native
     
     /**
       * Returns true if the given object is an instance of PrincipalAssociation.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws", "ram.PrincipalAssociation.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/ram/principalAssociation.PrincipalAssociation */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws", "ram.ResourceAssociation")
   @js.native
   class ResourceAssociation protected ()
     extends typingsSlinky.pulumiAws.ramMod.ResourceAssociation {
@@ -77,8 +84,7 @@ object ram extends js.Object {
     def this(name: String, args: ResourceAssociationArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object ResourceAssociation extends js.Object {
+  object ResourceAssociation {
     
     /**
       * Get an existing ResourceAssociation resource's state with the given name, ID, and optional extra
@@ -89,18 +95,29 @@ object ram extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws", "ram.ResourceAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.resourceAssociationMod.ResourceAssociation = js.native
+    @JSImport("@pulumi/aws", "ram.ResourceAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.resourceAssociationMod.ResourceAssociation = js.native
+    @JSImport("@pulumi/aws", "ram.ResourceAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ResourceAssociationState): typingsSlinky.pulumiAws.resourceAssociationMod.ResourceAssociation = js.native
+    @JSImport("@pulumi/aws", "ram.ResourceAssociation.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ResourceAssociationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.resourceAssociationMod.ResourceAssociation = js.native
     
     /**
       * Returns true if the given object is an instance of ResourceAssociation.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws", "ram.ResourceAssociation.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/ram/resourceAssociation.ResourceAssociation */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws", "ram.ResourceShare")
   @js.native
   class ResourceShare protected ()
     extends typingsSlinky.pulumiAws.ramMod.ResourceShare {
@@ -117,8 +134,7 @@ object ram extends js.Object {
     def this(name: String, args: ResourceShareArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object ResourceShare extends js.Object {
+  object ResourceShare {
     
     /**
       * Get an existing ResourceShare resource's state with the given name, ID, and optional extra
@@ -129,18 +145,29 @@ object ram extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws", "ram.ResourceShare.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.resourceShareMod.ResourceShare = js.native
+    @JSImport("@pulumi/aws", "ram.ResourceShare.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.resourceShareMod.ResourceShare = js.native
+    @JSImport("@pulumi/aws", "ram.ResourceShare.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ResourceShareState): typingsSlinky.pulumiAws.resourceShareMod.ResourceShare = js.native
+    @JSImport("@pulumi/aws", "ram.ResourceShare.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ResourceShareState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.resourceShareMod.ResourceShare = js.native
     
     /**
       * Returns true if the given object is an instance of ResourceShare.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws", "ram.ResourceShare.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/ram/resourceShare.ResourceShare */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws", "ram.ResourceShareAccepter")
   @js.native
   class ResourceShareAccepter protected ()
     extends typingsSlinky.pulumiAws.ramMod.ResourceShareAccepter {
@@ -155,8 +182,7 @@ object ram extends js.Object {
     def this(name: String, args: ResourceShareAccepterArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object ResourceShareAccepter extends js.Object {
+  object ResourceShareAccepter {
     
     /**
       * Get an existing ResourceShareAccepter resource's state with the given name, ID, and optional extra
@@ -167,15 +193,32 @@ object ram extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws", "ram.ResourceShareAccepter.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.resourceShareAccepterMod.ResourceShareAccepter = js.native
+    @JSImport("@pulumi/aws", "ram.ResourceShareAccepter.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.resourceShareAccepterMod.ResourceShareAccepter = js.native
+    @JSImport("@pulumi/aws", "ram.ResourceShareAccepter.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ResourceShareAccepterState): typingsSlinky.pulumiAws.resourceShareAccepterMod.ResourceShareAccepter = js.native
+    @JSImport("@pulumi/aws", "ram.ResourceShareAccepter.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ResourceShareAccepterState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.resourceShareAccepterMod.ResourceShareAccepter = js.native
     
     /**
       * Returns true if the given object is an instance of ResourceShareAccepter.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws", "ram.ResourceShareAccepter.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/ram/resourceShareAccepter.ResourceShareAccepter */ Boolean = js.native
   }
+  
+  @JSImport("@pulumi/aws", "ram.getResourceShare")
+  @js.native
+  def getResourceShare(args: GetResourceShareArgs): js.Promise[GetResourceShareResult] = js.native
+  @JSImport("@pulumi/aws", "ram.getResourceShare")
+  @js.native
+  def getResourceShare(args: GetResourceShareArgs, opts: InvokeOptions): js.Promise[GetResourceShareResult] = js.native
 }

@@ -10,9 +10,9 @@ Remove Markdown formatting from text
 | ------------------ | :-------------: |
 | Full name          | remove-markdown |
 | Keywords           | markdown |
-| # releases         | 2 |
-| # dependents       | 96 |
-| # downloads        | 2985415 |
+| # releases         | 0 |
+| # dependents       | 123 |
+| # downloads        | 6116367 |
 | # stars            | 1 |
 
 ## Links

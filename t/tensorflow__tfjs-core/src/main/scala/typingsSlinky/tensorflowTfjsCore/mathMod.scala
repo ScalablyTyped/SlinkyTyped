@@ -3,14 +3,15 @@ package typingsSlinky.tensorflowTfjsCore
 import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor2D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-core/dist/math", JSImport.Namespace)
-@js.native
-object mathMod extends js.Object {
+object mathMod {
   
+  @JSImport("@tensorflow/tfjs-core/dist/math", "confusionMatrix")
+  @js.native
   val confusionMatrix: js.Function3[
     /* labels */ Tensor1D | TensorLike, 
     /* predictions */ Tensor1D | TensorLike, 

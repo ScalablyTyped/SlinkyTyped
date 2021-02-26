@@ -4,6 +4,7 @@ import typingsSlinky.openlayers.mod.Extent_
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.events.Event
 import typingsSlinky.openlayers.mod.olx.FrameState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

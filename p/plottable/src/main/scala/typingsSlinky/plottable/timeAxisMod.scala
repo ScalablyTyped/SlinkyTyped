@@ -2,27 +2,49 @@ package typingsSlinky.plottable
 
 import typingsSlinky.plottable.axisMod.Axis
 import typingsSlinky.plottable.formattersMod.Formatter
+import typingsSlinky.plottable.plottableStrings.between
+import typingsSlinky.plottable.plottableStrings.bottom
+import typingsSlinky.plottable.plottableStrings.center
+import typingsSlinky.plottable.plottableStrings.day
+import typingsSlinky.plottable.plottableStrings.hour
+import typingsSlinky.plottable.plottableStrings.minute
+import typingsSlinky.plottable.plottableStrings.month
+import typingsSlinky.plottable.plottableStrings.second
+import typingsSlinky.plottable.plottableStrings.top
+import typingsSlinky.plottable.plottableStrings.week
+import typingsSlinky.plottable.plottableStrings.year
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("plottable/build/src/axes/timeAxis", JSImport.Namespace)
-@js.native
-object timeAxisMod extends js.Object {
+object timeAxisMod {
   
   /* keyof plottable.anon.Between */ /* Rewritten from type alias, can be one of: 
     - typingsSlinky.plottable.plottableStrings.center
     - typingsSlinky.plottable.plottableStrings.between
   */
-  trait TierLabelPosition extends js.Object
-  @js.native
-  object TierLabelPosition extends js.Object {
+  trait TierLabelPosition extends StObject
+  object TierLabelPosition {
     
-    var between: typingsSlinky.plottable.plottableStrings.between = js.native
+    @JSImport("plottable/build/src/axes/timeAxis", "TierLabelPosition")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var center: typingsSlinky.plottable.plottableStrings.center = js.native
+    @JSImport("plottable/build/src/axes/timeAxis", "TierLabelPosition.between")
+    @js.native
+    def between: typingsSlinky.plottable.plottableStrings.between = js.native
+    @scala.inline
+    def between_=(x: between): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("between")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "TierLabelPosition.center")
+    @js.native
+    def center: typingsSlinky.plottable.plottableStrings.center = js.native
+    @scala.inline
+    def center_=(x: center): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("center")(x.asInstanceOf[js.Any])
   }
   
+  @JSImport("plottable/build/src/axes/timeAxis", "Time")
   @js.native
   class Time protected ()
     extends Axis[js.Date] {
@@ -151,36 +173,127 @@ object timeAxisMod extends js.Object {
     def tierLabelPositions(newPositions: js.Array[TierLabelPosition]): this.type = js.native
   }
   /* static members */
-  @js.native
-  object Time extends js.Object {
+  object Time {
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "Time")
+    @js.native
+    val ^ : js.Any = js.native
     
     /**
       * The CSS class applied to each Time Axis tier
       */
-    var TIME_AXIS_TIER_CLASS: String = js.native
+    @JSImport("plottable/build/src/axes/timeAxis", "Time.TIME_AXIS_TIER_CLASS")
+    @js.native
+    def TIME_AXIS_TIER_CLASS: String = js.native
+    @scala.inline
+    def TIME_AXIS_TIER_CLASS_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("TIME_AXIS_TIER_CLASS")(x.asInstanceOf[js.Any])
     
-    var _DEFAULT_TIME_AXIS_CONFIGURATIONS: js.Any = js.native
+    @JSImport("plottable/build/src/axes/timeAxis", "Time._DEFAULT_TIME_AXIS_CONFIGURATIONS")
+    @js.native
+    def _DEFAULT_TIME_AXIS_CONFIGURATIONS: js.Any = js.native
+    @scala.inline
+    def _DEFAULT_TIME_AXIS_CONFIGURATIONS_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_DEFAULT_TIME_AXIS_CONFIGURATIONS")(x.asInstanceOf[js.Any])
     
-    var _LONG_DATE: js.Any = js.native
+    @JSImport("plottable/build/src/axes/timeAxis", "Time._LONG_DATE")
+    @js.native
+    def _LONG_DATE: js.Any = js.native
+    @scala.inline
+    def _LONG_DATE_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_LONG_DATE")(x.asInstanceOf[js.Any])
     
-    var _SORTED_TIME_INTERVAL_INDEX: js.Any = js.native
+    @JSImport("plottable/build/src/axes/timeAxis", "Time._SORTED_TIME_INTERVAL_INDEX")
+    @js.native
+    def _SORTED_TIME_INTERVAL_INDEX: js.Any = js.native
+    @scala.inline
+    def _SORTED_TIME_INTERVAL_INDEX_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_SORTED_TIME_INTERVAL_INDEX")(x.asInstanceOf[js.Any])
   }
   
   /* keyof plottable.anon.Top */ /* Rewritten from type alias, can be one of: 
     - typingsSlinky.plottable.plottableStrings.top
     - typingsSlinky.plottable.plottableStrings.bottom
   */
-  trait TimeAxisOrientation extends js.Object
-  @js.native
-  object TimeAxisOrientation extends js.Object {
+  trait TimeAxisOrientation extends StObject
+  object TimeAxisOrientation {
     
-    var bottom: typingsSlinky.plottable.plottableStrings.bottom = js.native
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeAxisOrientation")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var top: typingsSlinky.plottable.plottableStrings.top = js.native
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeAxisOrientation.bottom")
+    @js.native
+    def bottom: typingsSlinky.plottable.plottableStrings.bottom = js.native
+    @scala.inline
+    def bottom_=(x: bottom): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("bottom")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeAxisOrientation.top")
+    @js.native
+    def top: typingsSlinky.plottable.plottableStrings.top = js.native
+    @scala.inline
+    def top_=(x: top): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("top")(x.asInstanceOf[js.Any])
   }
   
+  /* keyof plottable.anon.Day */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.second
+    - typingsSlinky.plottable.plottableStrings.minute
+    - typingsSlinky.plottable.plottableStrings.hour
+    - typingsSlinky.plottable.plottableStrings.day
+    - typingsSlinky.plottable.plottableStrings.week
+    - typingsSlinky.plottable.plottableStrings.month
+    - typingsSlinky.plottable.plottableStrings.year
+  */
+  trait TimeInterval extends StObject
+  object TimeInterval {
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeInterval")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeInterval.day")
+    @js.native
+    def day: typingsSlinky.plottable.plottableStrings.day = js.native
+    @scala.inline
+    def day_=(x: day): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("day")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeInterval.hour")
+    @js.native
+    def hour: typingsSlinky.plottable.plottableStrings.hour = js.native
+    @scala.inline
+    def hour_=(x: hour): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("hour")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeInterval.minute")
+    @js.native
+    def minute: typingsSlinky.plottable.plottableStrings.minute = js.native
+    @scala.inline
+    def minute_=(x: minute): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("minute")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeInterval.month")
+    @js.native
+    def month: typingsSlinky.plottable.plottableStrings.month = js.native
+    @scala.inline
+    def month_=(x: month): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("month")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeInterval.second")
+    @js.native
+    def second: typingsSlinky.plottable.plottableStrings.second = js.native
+    @scala.inline
+    def second_=(x: second): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("second")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeInterval.week")
+    @js.native
+    def week: typingsSlinky.plottable.plottableStrings.week = js.native
+    @scala.inline
+    def week_=(x: week): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("week")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/axes/timeAxis", "TimeInterval.year")
+    @js.native
+    def year: typingsSlinky.plottable.plottableStrings.year = js.native
+    @scala.inline
+    def year_=(x: year): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("year")(x.asInstanceOf[js.Any])
+  }
+  
+  type TimeAxisConfiguration = js.Array[TimeAxisTierConfiguration]
+  
   @js.native
-  trait TimeAxisTierConfiguration extends js.Object {
+  trait TimeAxisTierConfiguration extends StObject {
     
     /**
       * Formatter used to format tick labels. Tick values will be passed through the formatter
@@ -204,34 +317,4 @@ object timeAxisMod extends js.Object {
       */
     var step: Double = js.native
   }
-  
-  /* keyof plottable.anon.Day */ /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.plottable.plottableStrings.second
-    - typingsSlinky.plottable.plottableStrings.minute
-    - typingsSlinky.plottable.plottableStrings.hour
-    - typingsSlinky.plottable.plottableStrings.day
-    - typingsSlinky.plottable.plottableStrings.week
-    - typingsSlinky.plottable.plottableStrings.month
-    - typingsSlinky.plottable.plottableStrings.year
-  */
-  trait TimeInterval extends js.Object
-  @js.native
-  object TimeInterval extends js.Object {
-    
-    var day: typingsSlinky.plottable.plottableStrings.day = js.native
-    
-    var hour: typingsSlinky.plottable.plottableStrings.hour = js.native
-    
-    var minute: typingsSlinky.plottable.plottableStrings.minute = js.native
-    
-    var month: typingsSlinky.plottable.plottableStrings.month = js.native
-    
-    var second: typingsSlinky.plottable.plottableStrings.second = js.native
-    
-    var week: typingsSlinky.plottable.plottableStrings.week = js.native
-    
-    var year: typingsSlinky.plottable.plottableStrings.year = js.native
-  }
-  
-  type TimeAxisConfiguration = js.Array[TimeAxisTierConfiguration]
 }

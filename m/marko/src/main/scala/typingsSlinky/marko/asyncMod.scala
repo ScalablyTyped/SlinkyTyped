@@ -1,13 +1,12 @@
 package typingsSlinky.marko
 
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("marko/src/runtime/Async", JSImport.Namespace)
-@js.native
-object asyncMod extends js.Object {
+object asyncMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - js.Thenable because Inheritance from two classes. Inlined 

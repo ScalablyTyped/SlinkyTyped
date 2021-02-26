@@ -27,17 +27,34 @@ import typingsSlinky.std.AlgorithmIdentifier
 import typingsSlinky.std.BufferSource
 import typingsSlinky.std.HkdfParams
 import typingsSlinky.std.SubtleCrypto
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("pkijs/src/CryptoEngine", JSImport.Namespace)
-@js.native
-object cryptoEngineMod extends js.Object {
+object cryptoEngineMod {
+  
+  @JSImport("pkijs/src/CryptoEngine", JSImport.Default)
+  @js.native
+  /**
+    * Constructor for CryptoEngine class
+    * @param {*} [parameters={}]
+    */
+  class default () extends CryptoEngine {
+    def this(parameters: js.Any) = this()
+  }
   
   @js.native
   trait CryptoEngine extends SubtleCrypto {
     
+    def convert(
+      inputFormat: String,
+      outputFormat: String,
+      keyData: JsonWebKey,
+      algorithm: Algorithm,
+      extractable: Boolean,
+      keyUsages: js.Array[String]
+    ): js.Thenable[BufferSource | JsonWebKey] = js.native
     /**
       * Convert WebCrypto keys between different export formats
       * @param {string} inputFormat
@@ -52,14 +69,6 @@ object cryptoEngineMod extends js.Object {
       inputFormat: String,
       outputFormat: String,
       keyData: BufferSource,
-      algorithm: Algorithm,
-      extractable: Boolean,
-      keyUsages: js.Array[String]
-    ): js.Thenable[BufferSource | JsonWebKey] = js.native
-    def convert(
-      inputFormat: String,
-      outputFormat: String,
-      keyData: JsonWebKey,
       algorithm: Algorithm,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -101,13 +110,6 @@ object cryptoEngineMod extends js.Object {
     def deriveKey(
       algorithm: String,
       baseKey: CryptoKey,
-      derivedKeyType: HkdfParams,
-      extractable: Boolean,
-      keyUsages: js.Array[String]
-    ): js.Promise[CryptoKey] = js.native
-    def deriveKey(
-      algorithm: String,
-      baseKey: CryptoKey,
       derivedKeyType: HmacImportParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -116,6 +118,13 @@ object cryptoEngineMod extends js.Object {
       algorithm: String,
       baseKey: CryptoKey,
       derivedKeyType: Pbkdf2Params,
+      extractable: Boolean,
+      keyUsages: js.Array[String]
+    ): js.Promise[CryptoKey] = js.native
+    def deriveKey(
+      algorithm: String,
+      baseKey: CryptoKey,
+      derivedKeyType: HkdfParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
     ): js.Promise[CryptoKey] = js.native
@@ -143,41 +152,6 @@ object cryptoEngineMod extends js.Object {
     
     def importKey(
       format: String,
-      keyData: BufferSource,
-      algorithm: String,
-      extractable: Boolean,
-      keyUsages: js.Array[String]
-    ): js.Thenable[CryptoKey] = js.native
-    def importKey(
-      format: String,
-      keyData: BufferSource,
-      algorithm: DhImportKeyParams,
-      extractable: Boolean,
-      keyUsages: js.Array[String]
-    ): js.Thenable[CryptoKey] = js.native
-    def importKey(
-      format: String,
-      keyData: BufferSource,
-      algorithm: EcKeyImportParams,
-      extractable: Boolean,
-      keyUsages: js.Array[String]
-    ): js.Thenable[CryptoKey] = js.native
-    def importKey(
-      format: String,
-      keyData: BufferSource,
-      algorithm: HmacImportParams,
-      extractable: Boolean,
-      keyUsages: js.Array[String]
-    ): js.Thenable[CryptoKey] = js.native
-    def importKey(
-      format: String,
-      keyData: BufferSource,
-      algorithm: RsaHashedImportParams,
-      extractable: Boolean,
-      keyUsages: js.Array[String]
-    ): js.Thenable[CryptoKey] = js.native
-    def importKey(
-      format: String,
       keyData: JsonWebKey,
       algorithm: String,
       extractable: Boolean,
@@ -211,10 +185,45 @@ object cryptoEngineMod extends js.Object {
       extractable: Boolean,
       keyUsages: js.Array[String]
     ): js.Thenable[CryptoKey] = js.native
+    def importKey(
+      format: String,
+      keyData: BufferSource,
+      algorithm: String,
+      extractable: Boolean,
+      keyUsages: js.Array[String]
+    ): js.Thenable[CryptoKey] = js.native
+    def importKey(
+      format: String,
+      keyData: BufferSource,
+      algorithm: DhImportKeyParams,
+      extractable: Boolean,
+      keyUsages: js.Array[String]
+    ): js.Thenable[CryptoKey] = js.native
+    def importKey(
+      format: String,
+      keyData: BufferSource,
+      algorithm: EcKeyImportParams,
+      extractable: Boolean,
+      keyUsages: js.Array[String]
+    ): js.Thenable[CryptoKey] = js.native
+    def importKey(
+      format: String,
+      keyData: BufferSource,
+      algorithm: HmacImportParams,
+      extractable: Boolean,
+      keyUsages: js.Array[String]
+    ): js.Thenable[CryptoKey] = js.native
+    def importKey(
+      format: String,
+      keyData: BufferSource,
+      algorithm: RsaHashedImportParams,
+      extractable: Boolean,
+      keyUsages: js.Array[String]
+    ): js.Thenable[CryptoKey] = js.native
     @JSName("importKey")
     def importKey_Promise(
       format: String,
-      keyData: BufferSource,
+      keyData: JsonWebKey,
       algorithm: String,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -222,7 +231,7 @@ object cryptoEngineMod extends js.Object {
     @JSName("importKey")
     def importKey_Promise(
       format: String,
-      keyData: BufferSource,
+      keyData: JsonWebKey,
       algorithm: DhImportKeyParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -230,7 +239,7 @@ object cryptoEngineMod extends js.Object {
     @JSName("importKey")
     def importKey_Promise(
       format: String,
-      keyData: BufferSource,
+      keyData: JsonWebKey,
       algorithm: EcKeyImportParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -238,7 +247,7 @@ object cryptoEngineMod extends js.Object {
     @JSName("importKey")
     def importKey_Promise(
       format: String,
-      keyData: BufferSource,
+      keyData: JsonWebKey,
       algorithm: HmacImportParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -246,7 +255,7 @@ object cryptoEngineMod extends js.Object {
     @JSName("importKey")
     def importKey_Promise(
       format: String,
-      keyData: BufferSource,
+      keyData: JsonWebKey,
       algorithm: RsaHashedImportParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -254,7 +263,7 @@ object cryptoEngineMod extends js.Object {
     @JSName("importKey")
     def importKey_Promise(
       format: String,
-      keyData: JsonWebKey,
+      keyData: BufferSource,
       algorithm: String,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -262,7 +271,7 @@ object cryptoEngineMod extends js.Object {
     @JSName("importKey")
     def importKey_Promise(
       format: String,
-      keyData: JsonWebKey,
+      keyData: BufferSource,
       algorithm: DhImportKeyParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -270,7 +279,7 @@ object cryptoEngineMod extends js.Object {
     @JSName("importKey")
     def importKey_Promise(
       format: String,
-      keyData: JsonWebKey,
+      keyData: BufferSource,
       algorithm: EcKeyImportParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -278,7 +287,7 @@ object cryptoEngineMod extends js.Object {
     @JSName("importKey")
     def importKey_Promise(
       format: String,
-      keyData: JsonWebKey,
+      keyData: BufferSource,
       algorithm: HmacImportParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -286,7 +295,7 @@ object cryptoEngineMod extends js.Object {
     @JSName("importKey")
     def importKey_Promise(
       format: String,
-      keyData: JsonWebKey,
+      keyData: BufferSource,
       algorithm: RsaHashedImportParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
@@ -633,14 +642,5 @@ object cryptoEngineMod extends js.Object {
     def verify(algorithm: AesCmacParams, key: CryptoKey, signature: BufferSource, data: BufferSource): js.Promise[Boolean] = js.native
     def verify(algorithm: EcdsaParams, key: CryptoKey, signature: BufferSource, data: BufferSource): js.Promise[Boolean] = js.native
     def verify(algorithm: RsaPssParams, key: CryptoKey, signature: BufferSource, data: BufferSource): js.Promise[Boolean] = js.native
-  }
-  
-  @js.native
-  /**
-    * Constructor for CryptoEngine class
-    * @param {*} [parameters={}]
-    */
-  class default () extends CryptoEngine {
-    def this(parameters: js.Any) = this()
   }
 }

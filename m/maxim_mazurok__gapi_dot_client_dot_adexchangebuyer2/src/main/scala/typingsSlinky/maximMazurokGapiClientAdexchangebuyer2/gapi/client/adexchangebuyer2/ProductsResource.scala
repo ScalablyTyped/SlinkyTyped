@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.gapi.client.adexcha
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.AccountIdAlt
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.ProductId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProductsResource extends js.Object {
+trait ProductsResource extends StObject {
   
   /** Gets the requested product by ID. */
   def get(): Request[Product] = js.native

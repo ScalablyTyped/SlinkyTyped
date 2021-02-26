@@ -1,5 +1,6 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WHITE
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CROPPED
 */
-trait GoogleActionsV2UiElementsCollectionSelectImageDisplayOptions extends js.Object
+trait GoogleActionsV2UiElementsCollectionSelectImageDisplayOptions extends StObject
 object GoogleActionsV2UiElementsCollectionSelectImageDisplayOptions {
   
   @scala.inline

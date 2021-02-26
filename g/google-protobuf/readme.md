@@ -10,9 +10,9 @@ Protocol Buffers for JavaScript
 | ------------------ | :-------------: |
 | Full name          | google-protobuf |
 | Keywords           | - |
-| # releases         | 20 |
-| # dependents       | 382 |
-| # downloads        | 7468695 |
+| # releases         | 36 |
+| # dependents       | 658 |
+| # downloads        | 18415770 |
 | # stars            | 7 |
 
 ## Links

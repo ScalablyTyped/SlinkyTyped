@@ -27,12 +27,13 @@ import typingsSlinky.std.OffscreenCanvas
 import typingsSlinky.std.OffscreenCanvasRenderingContext2D
 import typingsSlinky.std.WebGLContextEvent
 import typingsSlinky.std.WebGLVertexArrayObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ThinEngine extends js.Object {
+trait ThinEngine extends StObject {
   
   var _activateCurrentTexture: js.Any = js.native
   

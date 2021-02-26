@@ -1,12 +1,13 @@
 package typingsSlinky.activexInfopath.InfoPath
 
 import typingsSlinky.activexMsxml2.MSXML2.IXMLDOMNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ViewObject extends js.Object {
+trait ViewObject extends StObject {
   
   def DisableAutoUpdate(): Unit = js.native
   

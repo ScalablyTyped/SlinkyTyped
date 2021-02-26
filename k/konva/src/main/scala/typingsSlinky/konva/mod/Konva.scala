@@ -1,12 +1,11 @@
 package typingsSlinky.konva.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("konva", "Konva")
-@js.native
-object Konva extends js.Object {
+object Konva {
   
   type Animation = typingsSlinky.konva.animationMod.Animation
   

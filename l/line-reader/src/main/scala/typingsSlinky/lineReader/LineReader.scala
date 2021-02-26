@@ -1,12 +1,13 @@
 package typingsSlinky.lineReader
 
 import typingsSlinky.node.NodeJS.ReadableStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LineReader extends js.Object {
+trait LineReader extends StObject {
   
   def close(cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   
@@ -54,7 +55,7 @@ trait LineReader extends js.Object {
   
   def nextLine(cb: js.Function2[/* err */ js.Error, /* line */ String, Unit]): Unit = js.native
   
-   // For Promise.promisify;
+  // For Promise.promisify;
   def open(): js.Function = js.native
   def open(file: String, cb: js.Function2[/* err */ js.Error, /* reader */ this.type, Unit]): Unit = js.native
   def open(

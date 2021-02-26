@@ -2,6 +2,7 @@ package typingsSlinky.std
 
 import typingsSlinky.std.stdStrings.resize
 import typingsSlinky.std.stdStrings.scroll
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -67,13 +68,13 @@ trait VisualViewport extends EventTarget {
   def removeEventListener_resize(
     `type`: resize,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.UIEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_resize(
     `type`: resize,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.UIEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_scroll(
@@ -84,13 +85,13 @@ trait VisualViewport extends EventTarget {
   def removeEventListener_scroll(
     `type`: scroll,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_scroll(
     `type`: scroll,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   val scale: Double = js.native

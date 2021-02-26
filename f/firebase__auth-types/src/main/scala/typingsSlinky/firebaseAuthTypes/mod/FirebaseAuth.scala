@@ -4,13 +4,14 @@ import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
 import typingsSlinky.firebaseAuthTypes.anon.LOCAL
 import typingsSlinky.firebaseUtil.subscribeMod.Observer
 import typingsSlinky.firebaseUtil.subscribeMod.Unsubscribe
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@firebase/auth-types", "FirebaseAuth")
 @js.native
-class FirebaseAuth protected () extends js.Object {
+class FirebaseAuth protected () extends StObject {
   
   var app: FirebaseApp = js.native
   
@@ -106,9 +107,15 @@ class FirebaseAuth protected () extends js.Object {
   def verifyPasswordResetCode(code: String): js.Promise[String] = js.native
 }
 /* static members */
-@JSImport("@firebase/auth-types", "FirebaseAuth")
-@js.native
-object FirebaseAuth extends js.Object {
+object FirebaseAuth {
   
-  var Persistence: LOCAL = js.native
+  @JSImport("@firebase/auth-types", "FirebaseAuth")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  @JSImport("@firebase/auth-types", "FirebaseAuth.Persistence")
+  @js.native
+  def Persistence: LOCAL = js.native
+  @scala.inline
+  def Persistence_=(x: LOCAL): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Persistence")(x.asInstanceOf[js.Any])
 }

@@ -6,6 +6,7 @@ import typingsSlinky.reactGoogleRecaptcha.mod.Badge
 import typingsSlinky.reactGoogleRecaptcha.mod.Size
 import typingsSlinky.reactGoogleRecaptcha.mod.Theme
 import typingsSlinky.reactGoogleRecaptcha.mod.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

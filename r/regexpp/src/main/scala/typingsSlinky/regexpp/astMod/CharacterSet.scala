@@ -5,6 +5,7 @@ import typingsSlinky.regexpp.regexppStrings.digit
 import typingsSlinky.regexpp.regexppStrings.property
 import typingsSlinky.regexpp.regexppStrings.space
 import typingsSlinky.regexpp.regexppStrings.word
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,10 +28,10 @@ object CharacterSet {
     raw: String,
     start: Double,
     `type`: typingsSlinky.regexpp.regexppStrings.CharacterSet
-  ): CharacterSet = {
+  ): typingsSlinky.regexpp.astMod.AnyCharacterSet = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CharacterSet]
+    __obj.asInstanceOf[typingsSlinky.regexpp.astMod.AnyCharacterSet]
   }
   
   @scala.inline
@@ -42,10 +43,10 @@ object CharacterSet {
     raw: String,
     start: Double,
     `type`: typingsSlinky.regexpp.regexppStrings.CharacterSet
-  ): CharacterSet = {
+  ): typingsSlinky.regexpp.astMod.EscapeCharacterSet = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], negate = negate.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CharacterSet]
+    __obj.asInstanceOf[typingsSlinky.regexpp.astMod.EscapeCharacterSet]
   }
   
   @scala.inline
@@ -58,9 +59,9 @@ object CharacterSet {
     raw: String,
     start: Double,
     `type`: typingsSlinky.regexpp.regexppStrings.CharacterSet
-  ): CharacterSet = {
+  ): typingsSlinky.regexpp.astMod.UnicodePropertyCharacterSet = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], negate = negate.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CharacterSet]
+    __obj.asInstanceOf[typingsSlinky.regexpp.astMod.UnicodePropertyCharacterSet]
   }
 }

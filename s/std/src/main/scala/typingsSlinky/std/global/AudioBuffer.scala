@@ -1,18 +1,15 @@
 package typingsSlinky.std.global
 
-import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.std.AudioBufferOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("AudioBuffer")
 @js.native
 class AudioBuffer protected ()
   extends typingsSlinky.std.AudioBuffer {
   def this(options: AudioBufferOptions) = this()
 }
-@JSGlobal("AudioBuffer")
-@js.native
-object AudioBuffer
-  extends Instantiable1[/* options */ AudioBufferOptions, org.scalajs.dom.raw.AudioBuffer]

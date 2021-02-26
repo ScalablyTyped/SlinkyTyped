@@ -1,5 +1,6 @@
 package typingsSlinky.arangodb.ArangoDB
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -306,7 +307,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arangodb.arangodbStrings.ERROR_QUEUE_UNKNOWN
   - typingsSlinky.arangodb.arangodbStrings.ERROR_QUEUE_FULL
 */
-trait ErrorName extends js.Object
+trait ErrorName extends StObject
 object ErrorName {
   
   @scala.inline

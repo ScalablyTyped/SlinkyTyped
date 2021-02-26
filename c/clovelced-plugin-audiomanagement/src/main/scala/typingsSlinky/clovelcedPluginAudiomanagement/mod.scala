@@ -1,92 +1,95 @@
 package typingsSlinky.clovelcedPluginAudiomanagement
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.clovelcedPluginAudiomanagement.anon.MaxVolume
 import typingsSlinky.clovelcedPluginAudiomanagement.anon.Volume
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("clovelced-plugin-audiomanagement", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
-  
-  def getAudioMode(
-    onSuccess: js.Function1[/* results */ typingsSlinky.clovelcedPluginAudiomanagement.anon.AudioMode, Unit],
-    onError: js.Function1[/* error */ js.Any, Unit]
-  ): Unit = js.native
-  
-  def getMaxVolume(
-    `type`: VolumeType,
-    onSuccess: js.Function1[/* results */ MaxVolume, Unit],
-    onError: js.Function1[/* error */ js.Any, Unit]
-  ): Unit = js.native
-  
-  def getVolume(
-    `type`: VolumeType,
-    onSuccess: js.Function1[/* results */ Volume, Unit],
-    onError: js.Function1[/* error */ js.Any, Unit]
-  ): Unit = js.native
-  
-  def setAudioMode(mode: AudioMode, onSuccess: js.Function0[Unit], onError: js.Function1[/* error */ js.Any, Unit]): Unit = js.native
-  
-  def setVolume(
-    `type`: VolumeType,
-    volume: Double,
-    onSuccess: js.Function0[Unit],
-    onError: js.Function1[/* error */ js.Any, Unit]
-  ): Unit = js.native
+object mod {
   
   @js.native
-  sealed trait AudioMode extends js.Object
+  sealed trait AudioMode extends StObject
+  @JSImport("clovelced-plugin-audiomanagement", "AudioMode")
   @js.native
-  object AudioMode extends js.Object {
+  object AudioMode extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[AudioMode with Double] = js.native
     
     @js.native
     sealed trait NORMAL extends AudioMode
-    /* 1 */ @js.native
-    object NORMAL extends TopLevel[NORMAL with Double]
+    /* 1 */ val NORMAL: typingsSlinky.clovelcedPluginAudiomanagement.mod.AudioMode.NORMAL with Double = js.native
     
     @js.native
     sealed trait SILENT extends AudioMode
-    /* 0 */ @js.native
-    object SILENT extends TopLevel[SILENT with Double]
+    /* 0 */ val SILENT: typingsSlinky.clovelcedPluginAudiomanagement.mod.AudioMode.SILENT with Double = js.native
     
     @js.native
     sealed trait VIBRATE extends AudioMode
-    /* 0 */ @js.native
-    object VIBRATE extends TopLevel[VIBRATE with Double]
+    /* 0 */ val VIBRATE: typingsSlinky.clovelcedPluginAudiomanagement.mod.AudioMode.VIBRATE with Double = js.native
   }
   
   @js.native
-  sealed trait VolumeType extends js.Object
+  sealed trait VolumeType extends StObject
+  @JSImport("clovelced-plugin-audiomanagement", "VolumeType")
   @js.native
-  object VolumeType extends js.Object {
+  object VolumeType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[VolumeType with Double] = js.native
     
     @js.native
     sealed trait MUSIC extends VolumeType
-    /* 0 */ @js.native
-    object MUSIC extends TopLevel[MUSIC with Double]
+    /* 0 */ val MUSIC: typingsSlinky.clovelcedPluginAudiomanagement.mod.VolumeType.MUSIC with Double = js.native
     
     @js.native
     sealed trait NOTIFICATION extends VolumeType
-    /* 1 */ @js.native
-    object NOTIFICATION extends TopLevel[NOTIFICATION with Double]
+    /* 1 */ val NOTIFICATION: typingsSlinky.clovelcedPluginAudiomanagement.mod.VolumeType.NOTIFICATION with Double = js.native
     
     @js.native
     sealed trait RING extends VolumeType
-    /* 0 */ @js.native
-    object RING extends TopLevel[RING with Double]
+    /* 0 */ val RING: typingsSlinky.clovelcedPluginAudiomanagement.mod.VolumeType.RING with Double = js.native
     
     @js.native
     sealed trait SYSTEM extends VolumeType
-    /* 2 */ @js.native
-    object SYSTEM extends TopLevel[SYSTEM with Double]
+    /* 2 */ val SYSTEM: typingsSlinky.clovelcedPluginAudiomanagement.mod.VolumeType.SYSTEM with Double = js.native
   }
+  
+  @JSImport("clovelced-plugin-audiomanagement", "getAudioMode")
+  @js.native
+  def getAudioMode(
+    onSuccess: js.Function1[/* results */ typingsSlinky.clovelcedPluginAudiomanagement.anon.AudioMode, Unit],
+    onError: js.Function1[/* error */ js.Any, Unit]
+  ): Unit = js.native
+  
+  @JSImport("clovelced-plugin-audiomanagement", "getMaxVolume")
+  @js.native
+  def getMaxVolume(
+    `type`: VolumeType,
+    onSuccess: js.Function1[/* results */ MaxVolume, Unit],
+    onError: js.Function1[/* error */ js.Any, Unit]
+  ): Unit = js.native
+  
+  @JSImport("clovelced-plugin-audiomanagement", "getVolume")
+  @js.native
+  def getVolume(
+    `type`: VolumeType,
+    onSuccess: js.Function1[/* results */ Volume, Unit],
+    onError: js.Function1[/* error */ js.Any, Unit]
+  ): Unit = js.native
+  
+  @JSImport("clovelced-plugin-audiomanagement", "setAudioMode")
+  @js.native
+  def setAudioMode(mode: AudioMode, onSuccess: js.Function0[Unit], onError: js.Function1[/* error */ js.Any, Unit]): Unit = js.native
+  
+  @JSImport("clovelced-plugin-audiomanagement", "setVolume")
+  @js.native
+  def setVolume(
+    `type`: VolumeType,
+    volume: Double,
+    onSuccess: js.Function0[Unit],
+    onError: js.Function1[/* error */ js.Any, Unit]
+  ): Unit = js.native
 }

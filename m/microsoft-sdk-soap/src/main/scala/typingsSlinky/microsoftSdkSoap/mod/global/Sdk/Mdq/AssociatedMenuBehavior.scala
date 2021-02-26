@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UseCollectionName
   - typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UseLabel
 */
-trait AssociatedMenuBehavior extends js.Object
+trait AssociatedMenuBehavior extends StObject
 object AssociatedMenuBehavior {
   
   @scala.inline

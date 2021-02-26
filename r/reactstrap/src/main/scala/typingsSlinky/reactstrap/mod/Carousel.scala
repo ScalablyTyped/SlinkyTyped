@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.carouselMod.CarouselProps
+import typingsSlinky.reactstrap.carouselMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "Carousel")
+@JSImport("reactstrap/lib", "Carousel")
 @js.native
-class Carousel ()
-  extends Component[CarouselProps, js.Object, js.Any]
+class Carousel () extends default

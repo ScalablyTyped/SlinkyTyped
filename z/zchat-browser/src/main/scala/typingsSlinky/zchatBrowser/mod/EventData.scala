@@ -1,5 +1,6 @@
 package typingsSlinky.zchatBrowser.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,4 +17,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.zchatBrowser.zchatBrowserStrings.connected
   - typingsSlinky.zchatBrowser.zchatBrowserStrings.closed
 */
-trait EventData extends js.Object
+trait EventData extends StObject

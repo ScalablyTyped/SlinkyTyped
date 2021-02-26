@@ -1,27 +1,32 @@
 package typingsSlinky.apolloEnv
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("apollo-env/lib/fetch/global", JSImport.Namespace)
-@js.native
-object globalMod extends js.Object {
+object globalMod {
   
-  def fetch(): js.Promise[Response] = js.native
-  def fetch(input: js.UndefOr[RequestInfo], init: RequestInit): js.Promise[Response] = js.native
-  def fetch(input: RequestInfo): js.Promise[Response] = js.native
-  
+  @JSImport("apollo-env/lib/fetch/global", "fetch")
   @js.native
-  trait GlobalFetch extends js.Object {
-    
-    def fetch(input: RequestInfo): js.Promise[Response] = js.native
-    def fetch(input: RequestInfo, init: RequestInit): js.Promise[Response] = js.native
-  }
+  def fetch(): js.Promise[Response] = js.native
+  @JSImport("apollo-env/lib/fetch/global", "fetch")
+  @js.native
+  def fetch(input: js.UndefOr[RequestInfo], init: RequestInit): js.Promise[Response] = js.native
+  @JSImport("apollo-env/lib/fetch/global", "fetch")
+  @js.native
+  def fetch(input: RequestInfo): js.Promise[Response] = js.native
   
   type Body = typingsSlinky.apolloEnv.fetchFetchMod.Body
   
   type BodyInit = typingsSlinky.nodeFetch.mod.BodyInit
+  
+  @js.native
+  trait GlobalFetch extends StObject {
+    
+    def fetch(input: RequestInfo): js.Promise[Response] = js.native
+    def fetch(input: RequestInfo, init: RequestInit): js.Promise[Response] = js.native
+  }
   
   type Headers = typingsSlinky.apolloEnv.fetchFetchMod.Headers
   

@@ -9,6 +9,7 @@ import typingsSlinky.antdMobileRn.checkboxStyleIndexNativeMod.ICheckboxStyle
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object AgreeItemDotnative {
   
   @JSImport("antd-mobile-rn/lib/checkbox/AgreeItem.native", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,7 +53,7 @@ object AgreeItemDotnative {
     def styles(value: ICheckboxStyle): this.type = set("styles", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AgreeItemNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: AgreeItemDotnative.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AgreeItemNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

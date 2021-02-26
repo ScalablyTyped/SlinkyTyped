@@ -1,13 +1,12 @@
 package typingsSlinky.twilsock
 
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("twilsock/lib/interfaces/channel", JSImport.Namespace)
-@js.native
-object channelMod extends js.Object {
+object channelMod {
   
   @js.native
   trait Channel extends EventEmitter {

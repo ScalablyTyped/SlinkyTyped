@@ -10,9 +10,9 @@ The official Semantic-UI-React integration.
 | ------------------ | :-------------: |
 | Full name          | semantic-ui-react |
 | Keywords           | - |
-| # releases         | 32 |
-| # dependents       | 405 |
-| # downloads        | 8296103 |
+| # releases         | 21 |
+| # dependents       | 521 |
+| # downloads        | 8787166 |
 | # stars            | 14 |
 
 ## Links

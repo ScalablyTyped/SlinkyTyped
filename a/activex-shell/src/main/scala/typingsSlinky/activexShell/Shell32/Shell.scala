@@ -9,13 +9,14 @@ import typingsSlinky.activexShell.activexShellStrings.PhysicalMemoryInstalled
 import typingsSlinky.activexShell.activexShellStrings.ProcessorArchitecture
 import typingsSlinky.activexShell.activexShellStrings.ProcessorLevel
 import typingsSlinky.activexShell.activexShellStrings.ProcessorSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Shell Object Type Information */
 @js.native
-trait Shell extends js.Object {
+trait Shell extends StObject {
   
   /** Add an object to the Recent Docuements */
   def AddToRecent(): Unit = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.w3cImageCapture
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.always
   - typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.controllable
 */
-trait RedEyeReduction extends js.Object
+trait RedEyeReduction extends StObject
 object RedEyeReduction {
   
   @scala.inline

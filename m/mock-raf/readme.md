@@ -10,9 +10,9 @@ A simple mock for requestAnimationFrame testing with fake timers.
 | ------------------ | :-------------: |
 | Full name          | mock-raf |
 | Keywords           | - |
-| # releases         | 2 |
-| # dependents       | 3 |
-| # downloads        | 139487 |
+| # releases         | 0 |
+| # dependents       | 2 |
+| # downloads        | 161893 |
 | # stars            | 0 |
 
 ## Links

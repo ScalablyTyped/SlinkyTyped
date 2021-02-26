@@ -3,6 +3,7 @@ package typingsSlinky.googleAppsScript.GoogleAppsScript.JDBC
 import typingsSlinky.googleAppsScript.GoogleAppsScript.BigNumber
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Byte
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * java.sql.PreparedStatement.
   */
 @js.native
-trait JdbcPreparedStatement extends js.Object {
+trait JdbcPreparedStatement extends StObject {
   
   def addBatch(): Unit = js.native
   def addBatch(sql: String): Unit = js.native

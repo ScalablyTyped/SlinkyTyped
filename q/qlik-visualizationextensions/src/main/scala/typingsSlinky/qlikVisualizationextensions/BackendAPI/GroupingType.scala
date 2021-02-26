@@ -1,5 +1,6 @@
 package typingsSlinky.qlikVisualizationextensions.BackendAPI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.H
   - typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.C
 */
-trait GroupingType extends js.Object
+trait GroupingType extends StObject
 object GroupingType {
   
   @scala.inline

@@ -15,19 +15,15 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.std.DocumentAndElementEventHandlersEventMap
-import typingsSlinky.std.ElementEventMap
-import typingsSlinky.std.GlobalEventHandlersEventMap
+import typingsSlinky.std.HTMLElementEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ojChartSeriesEventMap
-  extends ElementEventMap
-     with GlobalEventHandlersEventMap
-     with DocumentAndElementEventHandlersEventMap {
+trait ojChartSeriesEventMap extends HTMLElementEventMap {
   
   var areaColorChanged: CustomEvent = js.native
   
@@ -227,114 +223,102 @@ object ojChartSeriesEventMap {
   }
   
   @scala.inline
-  implicit class ojChartSeriesEventMapOps[Self <: ojChartSeriesEventMap] (val x: Self) extends AnyVal {
+  implicit class ojChartSeriesEventMapMutableBuilder[Self <: ojChartSeriesEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAreaColorChanged(value: CustomEvent): Self = StObject.set(x, "areaColorChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAreaSvgClassNameChanged(value: CustomEvent): Self = StObject.set(x, "areaSvgClassNameChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setAreaSvgStyleChanged(value: CustomEvent): Self = StObject.set(x, "areaSvgStyleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAreaColorChanged(value: CustomEvent): Self = this.set("areaColorChanged", value.asInstanceOf[js.Any])
+    def setAssignedToY2Changed(value: CustomEvent): Self = StObject.set(x, "assignedToY2Changed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAreaSvgClassNameChanged(value: CustomEvent): Self = this.set("areaSvgClassNameChanged", value.asInstanceOf[js.Any])
+    def setBorderColorChanged(value: CustomEvent): Self = StObject.set(x, "borderColorChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAreaSvgStyleChanged(value: CustomEvent): Self = this.set("areaSvgStyleChanged", value.asInstanceOf[js.Any])
+    def setBorderWidthChanged(value: CustomEvent): Self = StObject.set(x, "borderWidthChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAssignedToY2Changed(value: CustomEvent): Self = this.set("assignedToY2Changed", value.asInstanceOf[js.Any])
+    def setBoxPlotChanged(value: CustomEvent): Self = StObject.set(x, "boxPlotChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBorderColorChanged(value: CustomEvent): Self = this.set("borderColorChanged", value.asInstanceOf[js.Any])
+    def setCategoriesChanged(value: CustomEvent): Self = StObject.set(x, "categoriesChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBorderWidthChanged(value: CustomEvent): Self = this.set("borderWidthChanged", value.asInstanceOf[js.Any])
+    def setColorChanged(value: CustomEvent): Self = StObject.set(x, "colorChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBoxPlotChanged(value: CustomEvent): Self = this.set("boxPlotChanged", value.asInstanceOf[js.Any])
+    def setDisplayInLegendChanged(value: CustomEvent): Self = StObject.set(x, "displayInLegendChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCategoriesChanged(value: CustomEvent): Self = this.set("categoriesChanged", value.asInstanceOf[js.Any])
+    def setDrillingChanged(value: CustomEvent): Self = StObject.set(x, "drillingChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColorChanged(value: CustomEvent): Self = this.set("colorChanged", value.asInstanceOf[js.Any])
+    def setLineStyleChanged(value: CustomEvent): Self = StObject.set(x, "lineStyleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDisplayInLegendChanged(value: CustomEvent): Self = this.set("displayInLegendChanged", value.asInstanceOf[js.Any])
+    def setLineTypeChanged(value: CustomEvent): Self = StObject.set(x, "lineTypeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDrillingChanged(value: CustomEvent): Self = this.set("drillingChanged", value.asInstanceOf[js.Any])
+    def setLineWidthChanged(value: CustomEvent): Self = StObject.set(x, "lineWidthChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLineStyleChanged(value: CustomEvent): Self = this.set("lineStyleChanged", value.asInstanceOf[js.Any])
+    def setMarkerColorChanged(value: CustomEvent): Self = StObject.set(x, "markerColorChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLineTypeChanged(value: CustomEvent): Self = this.set("lineTypeChanged", value.asInstanceOf[js.Any])
+    def setMarkerDisplayedChanged(value: CustomEvent): Self = StObject.set(x, "markerDisplayedChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLineWidthChanged(value: CustomEvent): Self = this.set("lineWidthChanged", value.asInstanceOf[js.Any])
+    def setMarkerShapeChanged(value: CustomEvent): Self = StObject.set(x, "markerShapeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMarkerColorChanged(value: CustomEvent): Self = this.set("markerColorChanged", value.asInstanceOf[js.Any])
+    def setMarkerSizeChanged(value: CustomEvent): Self = StObject.set(x, "markerSizeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMarkerDisplayedChanged(value: CustomEvent): Self = this.set("markerDisplayedChanged", value.asInstanceOf[js.Any])
+    def setMarkerSvgClassNameChanged(value: CustomEvent): Self = StObject.set(x, "markerSvgClassNameChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMarkerShapeChanged(value: CustomEvent): Self = this.set("markerShapeChanged", value.asInstanceOf[js.Any])
+    def setMarkerSvgStyleChanged(value: CustomEvent): Self = StObject.set(x, "markerSvgStyleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMarkerSizeChanged(value: CustomEvent): Self = this.set("markerSizeChanged", value.asInstanceOf[js.Any])
+    def setNameChanged(value: CustomEvent): Self = StObject.set(x, "nameChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMarkerSvgClassNameChanged(value: CustomEvent): Self = this.set("markerSvgClassNameChanged", value.asInstanceOf[js.Any])
+    def setPatternChanged(value: CustomEvent): Self = StObject.set(x, "patternChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMarkerSvgStyleChanged(value: CustomEvent): Self = this.set("markerSvgStyleChanged", value.asInstanceOf[js.Any])
+    def setPieSliceExplodeChanged(value: CustomEvent): Self = StObject.set(x, "pieSliceExplodeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNameChanged(value: CustomEvent): Self = this.set("nameChanged", value.asInstanceOf[js.Any])
+    def setShortDescChanged(value: CustomEvent): Self = StObject.set(x, "shortDescChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPatternChanged(value: CustomEvent): Self = this.set("patternChanged", value.asInstanceOf[js.Any])
+    def setSourceChanged(value: CustomEvent): Self = StObject.set(x, "sourceChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPieSliceExplodeChanged(value: CustomEvent): Self = this.set("pieSliceExplodeChanged", value.asInstanceOf[js.Any])
+    def setSourceHoverChanged(value: CustomEvent): Self = StObject.set(x, "sourceHoverChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setShortDescChanged(value: CustomEvent): Self = this.set("shortDescChanged", value.asInstanceOf[js.Any])
+    def setSourceHoverSelectedChanged(value: CustomEvent): Self = StObject.set(x, "sourceHoverSelectedChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSourceChanged(value: CustomEvent): Self = this.set("sourceChanged", value.asInstanceOf[js.Any])
+    def setSourceSelectedChanged(value: CustomEvent): Self = StObject.set(x, "sourceSelectedChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSourceHoverChanged(value: CustomEvent): Self = this.set("sourceHoverChanged", value.asInstanceOf[js.Any])
+    def setStackCategoryChanged(value: CustomEvent): Self = StObject.set(x, "stackCategoryChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSourceHoverSelectedChanged(value: CustomEvent): Self = this.set("sourceHoverSelectedChanged", value.asInstanceOf[js.Any])
+    def setSvgClassNameChanged(value: CustomEvent): Self = StObject.set(x, "svgClassNameChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSourceSelectedChanged(value: CustomEvent): Self = this.set("sourceSelectedChanged", value.asInstanceOf[js.Any])
+    def setSvgStyleChanged(value: CustomEvent): Self = StObject.set(x, "svgStyleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStackCategoryChanged(value: CustomEvent): Self = this.set("stackCategoryChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSvgClassNameChanged(value: CustomEvent): Self = this.set("svgClassNameChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSvgStyleChanged(value: CustomEvent): Self = this.set("svgStyleChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTypeChanged(value: CustomEvent): Self = this.set("typeChanged", value.asInstanceOf[js.Any])
+    def setTypeChanged(value: CustomEvent): Self = StObject.set(x, "typeChanged", value.asInstanceOf[js.Any])
   }
 }

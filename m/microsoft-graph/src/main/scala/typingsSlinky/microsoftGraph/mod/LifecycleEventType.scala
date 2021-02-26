@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.subscriptionRemoved
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.reauthorizationRequired
 */
-trait LifecycleEventType extends js.Object
+trait LifecycleEventType extends StObject
 object LifecycleEventType {
   
   @scala.inline

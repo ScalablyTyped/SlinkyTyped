@@ -9,12 +9,13 @@ import typingsSlinky.relayRuntime.relayNetworkTypesMod.PayloadData
 import typingsSlinky.relayRuntime.relayObservableMod.RelayObservable
 import typingsSlinky.relayRuntime.relayOperationTrackerMod.RelayOperationTracker
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Disposable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Environment extends js.Object {
+trait Environment extends StObject {
   
   /**
     * Apply an optimistic mutation response and/or updater. The mutation can be

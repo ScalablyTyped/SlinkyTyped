@@ -12,6 +12,7 @@ import typingsSlinky.activexMshtml.activexMshtmlNumbers.`4`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`511`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`64`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`128`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`256`
 */
-trait mediaType extends js.Object
+trait mediaType extends StObject
 object mediaType {
   
   @scala.inline

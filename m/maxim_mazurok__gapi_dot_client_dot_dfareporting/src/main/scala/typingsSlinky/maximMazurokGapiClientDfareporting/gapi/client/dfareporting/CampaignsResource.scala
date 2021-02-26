@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Archived
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.CallbackFields
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.FieldsId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CampaignsResource extends js.Object {
+trait CampaignsResource extends StObject {
   
   /** Gets one campaign by ID. */
   def get(): Request[Campaign] = js.native

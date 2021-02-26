@@ -12,7 +12,7 @@ A low memory UndoManager for TypeScript (and JavaScript)
 | Keywords           | TypeScript, Undo, UndoManager |
 | # releases         | 3 |
 | # dependents       | 0 |
-| # downloads        | 2046 |
+| # downloads        | 1334 |
 | # stars            | 0 |
 
 ## Links

@@ -3,16 +3,18 @@ package typingsSlinky.wordpressCustomizeBrowser
 import typingsSlinky.jquery.JQuery.Callbacks
 import typingsSlinky.jquery.JQuery.TypeOrArray
 import typingsSlinky.wordpressCustomizeBrowser.classMod.Class
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@wordpress/customize-browser/Value", JSImport.Namespace)
-@js.native
-object valueMod extends js.Object {
+object valueMod {
   
+  @JSImport("@wordpress/customize-browser/Value", "Value")
   @js.native
-  class Value[T] () extends Class {
+  class Value[T] protected () extends Class {
+    def this(applicator: js.Object, argsArray: js.Object) = this()
+    def this(applicator: js.Object, argsArray: js.Object, options: js.Object) = this()
     
     def apply(): T = js.native
     def apply(args: T): this.type = js.native

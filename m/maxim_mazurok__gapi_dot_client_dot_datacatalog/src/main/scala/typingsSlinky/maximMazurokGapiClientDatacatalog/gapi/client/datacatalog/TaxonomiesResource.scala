@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.ParentPrettyPrint
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.SerializedTaxonomies
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TaxonomiesResource extends js.Object {
+trait TaxonomiesResource extends StObject {
   
   /** Creates a taxonomy in the specified project. */
   def create(request: OauthtokenParent): Request[GoogleCloudDatacatalogV1beta1Taxonomy] = js.native

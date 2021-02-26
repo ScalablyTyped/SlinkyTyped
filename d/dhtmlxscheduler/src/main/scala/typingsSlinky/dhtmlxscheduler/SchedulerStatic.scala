@@ -2,12 +2,13 @@ package typingsSlinky.dhtmlxscheduler
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SchedulerStatic extends js.Object {
+trait SchedulerStatic extends StObject {
   
   /**
     * adds a new event
@@ -56,8 +57,6 @@ trait SchedulerStatic extends js.Object {
     */
   def backbone(events: js.Any): Unit = js.native
   
-  def blockTime(date: Double, time_points: js.Array[_]): Unit = js.native
-  def blockTime(date: Double, time_points: js.Array[_], items: js.Any): Unit = js.native
   /**
     * blocks the specified date and applies the default 'dimmed' style to it.
     * @param date a date to block ( if a number is provided, the parameter will be treated as a week <br> day: '0' index refers to Sunday,'6' - to Saturday )
@@ -66,6 +65,8 @@ trait SchedulerStatic extends js.Object {
     */
   def blockTime(date: js.Date, time_points: js.Array[_]): Unit = js.native
   def blockTime(date: js.Date, time_points: js.Array[_], items: js.Any): Unit = js.native
+  def blockTime(date: Double, time_points: js.Array[_]): Unit = js.native
+  def blockTime(date: Double, time_points: js.Array[_], items: js.Any): Unit = js.native
   
   /**
     * calls an inner event

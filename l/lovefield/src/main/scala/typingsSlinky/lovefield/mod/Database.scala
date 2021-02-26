@@ -6,12 +6,13 @@ import typingsSlinky.lovefield.mod.query.Select
 import typingsSlinky.lovefield.mod.query.Update
 import typingsSlinky.lovefield.mod.schema.Column
 import typingsSlinky.lovefield.mod.schema.Table
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Database extends js.Object {
+trait Database extends StObject {
   
   def close(): Unit = js.native
   

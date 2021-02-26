@@ -5,6 +5,7 @@ import typingsSlinky.webgme.GmeCommon.Dictionary
 import typingsSlinky.webgme.GmeCommon.NodeId
 import typingsSlinky.webgme.GmeCommon.Pointer
 import typingsSlinky.webgme.GmeCommon.ResultCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * https://github.com/webgme/webgme/blob/master/src/client/js/client.js
   */
 @js.native
-trait Client extends js.Object {
+trait Client extends StObject {
   
   /**
     * assign a node to a set

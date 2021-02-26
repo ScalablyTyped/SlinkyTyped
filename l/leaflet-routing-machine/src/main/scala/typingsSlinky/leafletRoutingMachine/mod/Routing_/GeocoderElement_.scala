@@ -1,13 +1,14 @@
 package typingsSlinky.leafletRoutingMachine.mod.Routing_
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("leaflet", "Routing.GeocoderElement")
 @js.native
-class GeocoderElement_ protected () extends js.Object {
+class GeocoderElement_ protected () extends StObject {
   def this(wp: Waypoint_, i: Double, numberWaypoints: Double, options: GeocoderElementOptions) = this()
   
   def focus(): Unit = js.native

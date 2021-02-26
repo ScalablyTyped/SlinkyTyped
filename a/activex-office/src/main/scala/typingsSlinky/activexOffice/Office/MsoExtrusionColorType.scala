@@ -3,6 +3,7 @@ package typingsSlinky.activexOffice.Office
 import typingsSlinky.activexOffice.activexOfficeNumbers.`-2`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`1`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`2`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`-2`
 */
-trait MsoExtrusionColorType extends js.Object
+trait MsoExtrusionColorType extends StObject
 object MsoExtrusionColorType {
   
   @scala.inline

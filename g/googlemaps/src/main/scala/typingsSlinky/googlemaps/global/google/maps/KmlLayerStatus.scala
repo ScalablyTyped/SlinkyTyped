@@ -1,12 +1,13 @@
 package typingsSlinky.googlemaps.global.google.maps
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("google.maps.KmlLayerStatus")
 @js.native
-object KmlLayerStatus extends js.Object {
+object KmlLayerStatus extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.googlemaps.google.maps.KmlLayerStatus with String] = js.native

@@ -16,6 +16,7 @@ import typingsSlinky.jquery.JQueryPromise
 import typingsSlinky.jquery.JQuerySupport
 import typingsSlinky.jquery.JQueryXHR
 import typingsSlinky.std.XMLDocument
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Static members of chai-jquery (those on $ and jQuery themselves)
   */
 @js.native
-trait ChaiJQueryStatic extends js.Object {
+trait ChaiJQueryStatic extends StObject {
   
   /**
     * Specify a function to execute when the DOM is fully loaded.
@@ -81,8 +82,8 @@ trait ChaiJQueryStatic extends js.Object {
     * @param ownerDocument A document in which the new elements will be created.
     */
   def apply(selector: String): ChaiJQuery = js.native
-  def apply(selector: String, context: JQuery[HTMLElement]): ChaiJQuery = js.native
   def apply(selector: String, context: Element): ChaiJQuery = js.native
+  def apply(selector: String, context: JQuery[HTMLElement]): ChaiJQuery = js.native
   
   /**
     * A multi-purpose callbacks list object that provides a powerful way to manage callback lists.
@@ -452,7 +453,7 @@ trait ChaiJQueryStatic extends js.Object {
     */
   def isPlainObject(obj: js.Any): Boolean = js.native
   
-    //TODO: Decide how we want to type this
+  //TODO: Decide how we want to type this
   var isReady: Boolean = js.native
   
   /**

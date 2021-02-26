@@ -1,12 +1,13 @@
 package typingsSlinky.localforage
 
 import org.scalajs.dom.raw.Blob
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocalForageSerializer extends js.Object {
+trait LocalForageSerializer extends StObject {
   
   def bufferToString(buffer: js.typedarray.ArrayBuffer): String = js.native
   

@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientCompute.anon.FieldsKeyOauthtokenPrettyPrintProject
 import typingsSlinky.maximMazurokGapiClientCompute.anon.InterconnectKey
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InterconnectsResource extends js.Object {
+trait InterconnectsResource extends StObject {
   
   /** Deletes the specified interconnect. */
   def delete(): Request[Operation] = js.native

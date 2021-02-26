@@ -10,9 +10,9 @@ NODE_ENV accessor
 | ------------------ | :-------------: |
 | Full name          | asenv |
 | Keywords           | NODE_ENV |
-| # releases         | 5 |
+| # releases         | 2 |
 | # dependents       | 18 |
-| # downloads        | 71412 |
+| # downloads        | 48254 |
 | # stars            | 0 |
 
 ## Links

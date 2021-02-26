@@ -3,15 +3,22 @@ package typingsSlinky.glReact.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.glReact.mod.BusProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Bus {
   
+  @scala.inline
+  def apply(index: Double): Builder = {
+    val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BusProps]))
+  }
+  
   @JSImport("gl-react", "Bus")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -26,10 +33,4 @@ object Bus {
   }
   
   def withProps(p: BusProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(index: Double): Builder = {
-    val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[BusProps]))
-  }
 }

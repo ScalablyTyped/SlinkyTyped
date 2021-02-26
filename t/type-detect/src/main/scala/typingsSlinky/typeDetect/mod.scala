@@ -1,12 +1,13 @@
 package typingsSlinky.typeDetect
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("type-detect", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("type-detect", JSImport.Namespace)
+  @js.native
   def apply(obj: js.Any): String = js.native
 }

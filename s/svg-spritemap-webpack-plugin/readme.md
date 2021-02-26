@@ -10,9 +10,9 @@ Generates symbol-based SVG spritemap from all .svg files in a directory
 | ------------------ | :-------------: |
 | Full name          | svg-spritemap-webpack-plugin |
 | Keywords           | svg, sprite, sprites, spritemap, symbols, icons, sass, scss, less, css, variables, webpack, plugin |
-| # releases         | 28 |
-| # dependents       | 11 |
-| # downloads        | 523943 |
+| # releases         | 30 |
+| # dependents       | 14 |
+| # downloads        | 700338 |
 | # stars            | 1 |
 
 ## Links

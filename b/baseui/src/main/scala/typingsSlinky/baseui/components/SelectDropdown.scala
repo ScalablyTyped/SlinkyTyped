@@ -17,6 +17,7 @@ import typingsSlinky.baseui.selectMod.DropdownProps
 import typingsSlinky.baseui.selectMod.Option
 import typingsSlinky.baseui.selectMod.Value
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ object SelectDropdown {
   
   @JSImport("baseui/select", "SelectDropdown")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,31 +43,31 @@ object SelectDropdown {
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def isLoading(value: Boolean): this.type = set("isLoading", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def keyboardControlNodeRefObject(value: ReactRef[_]): this.type = set("keyboardControlNode", value.asInstanceOf[js.Any])
+    def keyboardControlNode(value: Ref[_]): this.type = set("keyboardControlNode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def keyboardControlNodeFunction1(value: /* instance */ _ | Null => Unit): this.type = set("keyboardControlNode", js.Any.fromFunction1(value))
     
     @scala.inline
-    def keyboardControlNode(value: Ref[_]): this.type = set("keyboardControlNode", value.asInstanceOf[js.Any])
+    def keyboardControlNodeNull: this.type = set("keyboardControlNode", null)
     
     @scala.inline
-    def keyboardControlNodeNull: this.type = set("keyboardControlNode", null)
+    def keyboardControlNodeRefObject(value: ReactRef[_]): this.type = set("keyboardControlNode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelKey(value: String): this.type = set("labelKey", value.asInstanceOf[js.Any])
@@ -78,10 +79,10 @@ object SelectDropdown {
     def multi(value: Boolean): this.type = set("multi", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noResultsMsgReactElement(value: ReactElement): this.type = set("noResultsMsg", value.asInstanceOf[js.Any])
+    def noResultsMsg(value: ReactElement): this.type = set("noResultsMsg", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noResultsMsg(value: ReactElement): this.type = set("noResultsMsg", value.asInstanceOf[js.Any])
+    def noResultsMsgReactElement(value: ReactElement): this.type = set("noResultsMsg", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onActiveDescendantChange(value: /* id */ js.UndefOr[String] => Unit): this.type = set("onActiveDescendantChange", js.Any.fromFunction1(value))
@@ -90,10 +91,10 @@ object SelectDropdown {
     def onItemSelect(value: /* args */ Item => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
     
     @scala.inline
-    def optionsVarargs(value: Option*): this.type = set("options", js.Array(value :_*))
+    def options(value: Value): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: Value): this.type = set("options", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: Option*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def overrides(value: DropdownOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
@@ -111,19 +112,19 @@ object SelectDropdown {
     def `type`(value: select | search): this.type = set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: Option*): this.type = set("value", js.Array(value :_*))
-    
-    @scala.inline
     def value(value: Value): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def valueKey(value: String): this.type = set("valueKey", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def valueVarargs(value: Option*): this.type = set("value", js.Array(value :_*))
+    
+    @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SelectDropdown.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

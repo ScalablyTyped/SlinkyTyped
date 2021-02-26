@@ -1,5 +1,6 @@
 package typingsSlinky.jqueryPnotify
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.success
   - typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.error
 */
-trait NoticeTypeOptions extends js.Object
+trait NoticeTypeOptions extends StObject
 object NoticeTypeOptions {
   
   @scala.inline

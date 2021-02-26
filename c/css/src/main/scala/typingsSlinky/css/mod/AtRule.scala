@@ -1,5 +1,6 @@
 package typingsSlinky.css.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,72 +18,72 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.css.mod.Page
   - typingsSlinky.css.mod.Supports
 */
-trait AtRule extends js.Object
+trait AtRule extends StObject
 object AtRule {
   
   @scala.inline
-  def CustomMedia(): AtRule = {
+  def Charset(): typingsSlinky.css.mod.Charset = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.Charset]
   }
   
   @scala.inline
-  def Media(): AtRule = {
+  def CustomMedia(): typingsSlinky.css.mod.CustomMedia = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.CustomMedia]
   }
   
   @scala.inline
-  def FontFace(): AtRule = {
+  def Document(): typingsSlinky.css.mod.Document = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.Document]
   }
   
   @scala.inline
-  def KeyFrames(): AtRule = {
+  def FontFace(): typingsSlinky.css.mod.FontFace = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.FontFace]
   }
   
   @scala.inline
-  def Import(): AtRule = {
+  def Host(): typingsSlinky.css.mod.Host = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.Host]
   }
   
   @scala.inline
-  def Namespace(): AtRule = {
+  def Import(): typingsSlinky.css.mod.Import = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.Import]
   }
   
   @scala.inline
-  def Host(): AtRule = {
+  def KeyFrames(): typingsSlinky.css.mod.KeyFrames = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.KeyFrames]
   }
   
   @scala.inline
-  def Page(): AtRule = {
+  def Media(): typingsSlinky.css.mod.Media = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.Media]
   }
   
   @scala.inline
-  def Charset(): AtRule = {
+  def Namespace(): typingsSlinky.css.mod.Namespace = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.Namespace]
   }
   
   @scala.inline
-  def Supports(): AtRule = {
+  def Page(): typingsSlinky.css.mod.Page = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.Page]
   }
   
   @scala.inline
-  def Document(): AtRule = {
+  def Supports(): typingsSlinky.css.mod.Supports = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
+    __obj.asInstanceOf[typingsSlinky.css.mod.Supports]
   }
 }

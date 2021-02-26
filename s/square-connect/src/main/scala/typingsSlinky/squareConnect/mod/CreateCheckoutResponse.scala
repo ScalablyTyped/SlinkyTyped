@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "CreateCheckoutResponse")
 @js.native
-class CreateCheckoutResponse () extends js.Object {
+class CreateCheckoutResponse () extends StObject {
   
   /**
     * The newly created checkout.

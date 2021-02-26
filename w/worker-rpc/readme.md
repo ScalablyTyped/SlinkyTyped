@@ -12,7 +12,7 @@ A simple RPC layer for communicating with web workers and over other transports
 | Keywords           | worker, rpc |
 | # releases         | 3 |
 | # dependents       | 6 |
-| # downloads        | 44885997 |
+| # downloads        | 175742649 |
 | # stars            | 0 |
 
 ## Links

@@ -3,12 +3,13 @@ package typingsSlinky.algoliaTransporter.mod
 import typingsSlinky.algoliaCacheCommon.mod.Cache
 import typingsSlinky.algoliaLoggerCommon.mod.Logger
 import typingsSlinky.algoliaRequesterCommon.mod.Requester
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Transporter extends js.Object {
+trait Transporter extends StObject {
   
   /**
     * The headers used on each request.

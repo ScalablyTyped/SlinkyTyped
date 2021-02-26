@@ -1,5 +1,6 @@
 package typingsSlinky.reactVirtualized.esGridMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactVirtualized.reactVirtualizedStrings.horizontal
   - typingsSlinky.reactVirtualized.reactVirtualizedStrings.vertical
 */
-trait ScrollDirection extends js.Object
+trait ScrollDirection extends StObject
 object ScrollDirection {
   
   @scala.inline

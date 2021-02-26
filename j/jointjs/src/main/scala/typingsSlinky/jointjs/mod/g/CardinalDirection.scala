@@ -1,5 +1,6 @@
 package typingsSlinky.jointjs.mod.g
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jointjs.jointjsStrings.NW
   - typingsSlinky.jointjs.jointjsStrings.N
 */
-trait CardinalDirection extends js.Object
+trait CardinalDirection extends StObject
 object CardinalDirection {
   
   @scala.inline

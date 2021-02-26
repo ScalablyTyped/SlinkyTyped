@@ -5,12 +5,13 @@ import typingsSlinky.gestalt.gestaltStrings.down
 import typingsSlinky.gestalt.gestaltStrings.left
 import typingsSlinky.gestalt.gestaltStrings.right
 import typingsSlinky.gestalt.gestaltStrings.up
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TooltipProps extends js.Object {
+trait TooltipProps extends StObject {
   
   var children: ReactElement = js.native
   
@@ -33,54 +34,42 @@ object TooltipProps {
   }
   
   @scala.inline
-  implicit class TooltipPropsOps[Self <: TooltipProps] (val x: Self) extends AnyVal {
+  implicit class TooltipPropsMutableBuilder[Self <: TooltipProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChildren(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setIdealDirection(value: up | right | down | left): Self = StObject.set(x, "idealDirection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])
+    def setIdealDirectionUndefined: Self = StObject.set(x, "idealDirection", js.undefined)
     
     @scala.inline
-    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setInline(value: Boolean): Self = StObject.set(x, "inline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
+    def setInlineUndefined: Self = StObject.set(x, "inline", js.undefined)
     
     @scala.inline
-    def setIdealDirection(value: up | right | down | left): Self = this.set("idealDirection", value.asInstanceOf[js.Any])
+    def setLink(value: ReactElement): Self = StObject.set(x, "link", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteIdealDirection: Self = this.set("idealDirection", js.undefined)
+    def setLinkReactElement(value: ReactElement): Self = StObject.set(x, "link", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInline(value: Boolean): Self = this.set("inline", value.asInstanceOf[js.Any])
+    def setLinkUndefined: Self = StObject.set(x, "link", js.undefined)
     
     @scala.inline
-    def deleteInline: Self = this.set("inline", js.undefined)
+    def setText(value: String): Self = StObject.set(x, "text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLinkReactElement(value: ReactElement): Self = this.set("link", value.asInstanceOf[js.Any])
+    def setZIndex(value: Indexable): Self = StObject.set(x, "zIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLink(value: ReactElement): Self = this.set("link", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLink: Self = this.set("link", js.undefined)
-    
-    @scala.inline
-    def setZIndex(value: Indexable): Self = this.set("zIndex", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteZIndex: Self = this.set("zIndex", js.undefined)
+    def setZIndexUndefined: Self = StObject.set(x, "zIndex", js.undefined)
   }
 }

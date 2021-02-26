@@ -75,15 +75,22 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactMdForm.floatingLabelMod.FloatingLabelProps
 import typingsSlinky.reactMdForm.reactMdFormStrings.label
 import typingsSlinky.reactMdForm.reactMdFormStrings.span
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FloatingLabel {
   
+  @scala.inline
+  def apply(htmlFor: String, valued: Boolean): Builder = {
+    val __props = js.Dynamic.literal(htmlFor = htmlFor.asInstanceOf[js.Any], valued = valued.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[FloatingLabelProps with RefAttributes[HTMLLabelElement]]))
+  }
+  
   @JSImport("@react-md/form/types/label/FloatingLabel", "FloatingLabel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -279,10 +286,10 @@ object FloatingLabel {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dense(value: Boolean): this.type = set("dense", value.asInstanceOf[js.Any])
@@ -631,10 +638,4 @@ object FloatingLabel {
   }
   
   def withProps(p: FloatingLabelProps with RefAttributes[HTMLLabelElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(htmlFor: String, valued: Boolean): Builder = {
-    val __props = js.Dynamic.literal(htmlFor = htmlFor.asInstanceOf[js.Any], valued = valued.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[FloatingLabelProps with RefAttributes[HTMLLabelElement]]))
-  }
 }

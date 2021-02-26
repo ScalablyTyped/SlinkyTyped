@@ -17,6 +17,7 @@ import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -179,69 +180,57 @@ object ojLegendEventMap {
   }
   
   @scala.inline
-  implicit class ojLegendEventMapOps[Self <: ojLegendEventMap[_, _], K, D] (val x: Self with (ojLegendEventMap[K, D])) extends AnyVal {
+  implicit class ojLegendEventMapMutableBuilder[Self <: ojLegendEventMap[_, _], K, D] (val x: Self with (ojLegendEventMap[K, D])) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAsChanged(value: CustomEvent): Self = StObject.set(x, "asChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDataChanged(value: CustomEvent): Self = StObject.set(x, "dataChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDrillingChanged(value: CustomEvent): Self = StObject.set(x, "drillingChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAsChanged(value: CustomEvent): Self = this.set("asChanged", value.asInstanceOf[js.Any])
+    def setExpandedChanged(value: CustomEvent): Self = StObject.set(x, "expandedChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDataChanged(value: CustomEvent): Self = this.set("dataChanged", value.asInstanceOf[js.Any])
+    def setHalignChanged(value: CustomEvent): Self = StObject.set(x, "halignChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDrillingChanged(value: CustomEvent): Self = this.set("drillingChanged", value.asInstanceOf[js.Any])
+    def setHiddenCategoriesChanged(value: CustomEvent): Self = StObject.set(x, "hiddenCategoriesChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExpandedChanged(value: CustomEvent): Self = this.set("expandedChanged", value.asInstanceOf[js.Any])
+    def setHideAndShowBehaviorChanged(value: CustomEvent): Self = StObject.set(x, "hideAndShowBehaviorChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHalignChanged(value: CustomEvent): Self = this.set("halignChanged", value.asInstanceOf[js.Any])
+    def setHighlightedCategoriesChanged(value: CustomEvent): Self = StObject.set(x, "highlightedCategoriesChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHiddenCategoriesChanged(value: CustomEvent): Self = this.set("hiddenCategoriesChanged", value.asInstanceOf[js.Any])
+    def setHoverBehaviorChanged(value: CustomEvent): Self = StObject.set(x, "hoverBehaviorChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHideAndShowBehaviorChanged(value: CustomEvent): Self = this.set("hideAndShowBehaviorChanged", value.asInstanceOf[js.Any])
+    def setHoverBehaviorDelayChanged(value: CustomEvent): Self = StObject.set(x, "hoverBehaviorDelayChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHighlightedCategoriesChanged(value: CustomEvent): Self = this.set("highlightedCategoriesChanged", value.asInstanceOf[js.Any])
+    def setOjDrill(value: CustomEvent): Self = StObject.set(x, "ojDrill", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHoverBehaviorChanged(value: CustomEvent): Self = this.set("hoverBehaviorChanged", value.asInstanceOf[js.Any])
+    def setOrientationChanged(value: CustomEvent): Self = StObject.set(x, "orientationChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHoverBehaviorDelayChanged(value: CustomEvent): Self = this.set("hoverBehaviorDelayChanged", value.asInstanceOf[js.Any])
+    def setScrollingChanged(value: CustomEvent): Self = StObject.set(x, "scrollingChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjDrill(value: CustomEvent): Self = this.set("ojDrill", value.asInstanceOf[js.Any])
+    def setSymbolHeightChanged(value: CustomEvent): Self = StObject.set(x, "symbolHeightChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOrientationChanged(value: CustomEvent): Self = this.set("orientationChanged", value.asInstanceOf[js.Any])
+    def setSymbolWidthChanged(value: CustomEvent): Self = StObject.set(x, "symbolWidthChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScrollingChanged(value: CustomEvent): Self = this.set("scrollingChanged", value.asInstanceOf[js.Any])
+    def setTextStyleChanged(value: CustomEvent): Self = StObject.set(x, "textStyleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSymbolHeightChanged(value: CustomEvent): Self = this.set("symbolHeightChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSymbolWidthChanged(value: CustomEvent): Self = this.set("symbolWidthChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTextStyleChanged(value: CustomEvent): Self = this.set("textStyleChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValignChanged(value: CustomEvent): Self = this.set("valignChanged", value.asInstanceOf[js.Any])
+    def setValignChanged(value: CustomEvent): Self = StObject.set(x, "valignChanged", value.asInstanceOf[js.Any])
   }
 }

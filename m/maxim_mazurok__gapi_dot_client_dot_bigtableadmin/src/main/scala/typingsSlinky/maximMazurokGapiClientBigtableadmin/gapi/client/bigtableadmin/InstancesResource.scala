@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InstancesResource extends js.Object {
+trait InstancesResource extends StObject {
   
   var appProfiles: AppProfilesResource = js.native
   

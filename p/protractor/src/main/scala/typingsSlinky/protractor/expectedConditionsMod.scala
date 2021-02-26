@@ -2,16 +2,16 @@ package typingsSlinky.protractor
 
 import typingsSlinky.protractor.browserMod.ProtractorBrowser
 import typingsSlinky.protractor.elementMod.ElementFinder
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("protractor/built/expectedConditions", JSImport.Namespace)
-@js.native
-object expectedConditionsMod extends js.Object {
+object expectedConditionsMod {
   
+  @JSImport("protractor/built/expectedConditions", "ProtractorExpectedConditions")
   @js.native
-  class ProtractorExpectedConditions protected () extends js.Object {
+  class ProtractorExpectedConditions protected () extends StObject {
     def this(browser: ProtractorBrowser) = this()
     
     /**

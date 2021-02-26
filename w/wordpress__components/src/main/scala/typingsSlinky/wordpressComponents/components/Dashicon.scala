@@ -95,15 +95,22 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Dashicon {
   
+  @scala.inline
+  def apply(icon: typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon): Builder = {
+    val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@wordpress/components", "Dashicon")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1277,10 +1284,4 @@ object Dashicon {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(icon: typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon): Builder = {
-    val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

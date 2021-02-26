@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/av/queue-play-next", JSImport.Namespace)
-@js.native
-object queuePlayNextMod extends js.Object {
+object queuePlayNextMod {
   
+  @JSImport("material-ui/svg-icons/av/queue-play-next", JSImport.Default)
+  @js.native
+  class default () extends AvQueuePlayNext
+  
+  @JSImport("material-ui/svg-icons/av/queue-play-next", "AvQueuePlayNext")
   @js.native
   class AvQueuePlayNext ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

@@ -9,16 +9,21 @@ import typingsSlinky.plottable.interfacesMod.Bounds
 import typingsSlinky.plottable.interfacesMod.Point
 import typingsSlinky.plottable.interfacesMod.SimpleSelection
 import typingsSlinky.plottable.interfacesMod.SpaceRequest
+import typingsSlinky.plottable.plottableStrings.bottom
+import typingsSlinky.plottable.plottableStrings.center
+import typingsSlinky.plottable.plottableStrings.left
+import typingsSlinky.plottable.plottableStrings.right
+import typingsSlinky.plottable.plottableStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("plottable/build/src/components/component", JSImport.Namespace)
-@js.native
-object componentMod extends js.Object {
+object componentMod {
   
+  @JSImport("plottable/build/src/components/component", "Component")
   @js.native
-  class Component () extends js.Object {
+  class Component () extends StObject {
     
     /**
       * Place more objects just behind this Component's Content by appending them to the _backgroundContainer.
@@ -338,8 +343,8 @@ object componentMod extends js.Object {
       * @returns {Component} The calling Component.
       */
     def renderTo(element: String): this.type = js.native
-    def renderTo(element: Selection_[HTMLElement, _, _, _]): this.type = js.native
     def renderTo(element: HTMLElement): this.type = js.native
+    def renderTo(element: Selection_[HTMLElement, _, _, _]): this.type = js.native
     
     /**
       * Given available space in pixels, returns the minimum width and height this Component will need.
@@ -413,12 +418,23 @@ object componentMod extends js.Object {
     def yAlignment(yAlignment: YAlignment): this.type = js.native
   }
   /* static members */
-  @js.native
-  object Component extends js.Object {
+  object Component {
     
-    var _xAlignToProportion: js.Any = js.native
+    @JSImport("plottable/build/src/components/component", "Component")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var _yAlignToProportion: js.Any = js.native
+    @JSImport("plottable/build/src/components/component", "Component._xAlignToProportion")
+    @js.native
+    def _xAlignToProportion: js.Any = js.native
+    @scala.inline
+    def _xAlignToProportion_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_xAlignToProportion")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/components/component", "Component._yAlignToProportion")
+    @js.native
+    def _yAlignToProportion: js.Any = js.native
+    @scala.inline
+    def _yAlignToProportion_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_yAlignToProportion")(x.asInstanceOf[js.Any])
   }
   
   /* keyof plottable.anon.Center */ /* Rewritten from type alias, can be one of: 
@@ -426,15 +442,30 @@ object componentMod extends js.Object {
     - typingsSlinky.plottable.plottableStrings.right
     - typingsSlinky.plottable.plottableStrings.center
   */
-  trait XAlignment extends js.Object
-  @js.native
-  object XAlignment extends js.Object {
+  trait XAlignment extends StObject
+  object XAlignment {
     
-    var center: typingsSlinky.plottable.plottableStrings.center = js.native
+    @JSImport("plottable/build/src/components/component", "XAlignment")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var left: typingsSlinky.plottable.plottableStrings.left = js.native
+    @JSImport("plottable/build/src/components/component", "XAlignment.center")
+    @js.native
+    def center: typingsSlinky.plottable.plottableStrings.center = js.native
+    @scala.inline
+    def center_=(x: center): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("center")(x.asInstanceOf[js.Any])
     
-    var right: typingsSlinky.plottable.plottableStrings.right = js.native
+    @JSImport("plottable/build/src/components/component", "XAlignment.left")
+    @js.native
+    def left: typingsSlinky.plottable.plottableStrings.left = js.native
+    @scala.inline
+    def left_=(x: left): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("left")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/components/component", "XAlignment.right")
+    @js.native
+    def right: typingsSlinky.plottable.plottableStrings.right = js.native
+    @scala.inline
+    def right_=(x: right): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("right")(x.asInstanceOf[js.Any])
   }
   
   /* keyof plottable.anon.BottomCenter */ /* Rewritten from type alias, can be one of: 
@@ -442,15 +473,30 @@ object componentMod extends js.Object {
     - typingsSlinky.plottable.plottableStrings.top
     - typingsSlinky.plottable.plottableStrings.bottom
   */
-  trait YAlignment extends js.Object
-  @js.native
-  object YAlignment extends js.Object {
+  trait YAlignment extends StObject
+  object YAlignment {
     
-    var bottom: typingsSlinky.plottable.plottableStrings.bottom = js.native
+    @JSImport("plottable/build/src/components/component", "YAlignment")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var center: typingsSlinky.plottable.plottableStrings.center = js.native
+    @JSImport("plottable/build/src/components/component", "YAlignment.bottom")
+    @js.native
+    def bottom: typingsSlinky.plottable.plottableStrings.bottom = js.native
+    @scala.inline
+    def bottom_=(x: bottom): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("bottom")(x.asInstanceOf[js.Any])
     
-    var top: typingsSlinky.plottable.plottableStrings.top = js.native
+    @JSImport("plottable/build/src/components/component", "YAlignment.center")
+    @js.native
+    def center: typingsSlinky.plottable.plottableStrings.center = js.native
+    @scala.inline
+    def center_=(x: center): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("center")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/components/component", "YAlignment.top")
+    @js.native
+    def top: typingsSlinky.plottable.plottableStrings.top = js.native
+    @scala.inline
+    def top_=(x: top): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("top")(x.asInstanceOf[js.Any])
   }
   
   type ComponentCallback = js.Function1[/* component */ Component, Unit]

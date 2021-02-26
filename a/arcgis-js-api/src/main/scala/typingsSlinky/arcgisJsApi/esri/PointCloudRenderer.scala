@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`point-cloud-class-breaks`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`point-cloud-rgb`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`point-cloud-stretch`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`point-cloud-unique-value`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

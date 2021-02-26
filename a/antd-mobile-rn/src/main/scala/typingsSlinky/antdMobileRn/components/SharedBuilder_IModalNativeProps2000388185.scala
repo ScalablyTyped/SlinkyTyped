@@ -8,6 +8,7 @@ import typingsSlinky.antdMobileRn.modalStyleIndexNativeMod.IModalStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,10 +37,10 @@ class SharedBuilder_IModalNativeProps2000388185[R <: js.Object] (val args: js.Ar
   def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def footerVarargs(value: Action[TextStyle]*): this.type = set("footer", js.Array(value :_*))
+  def footer(value: js.Array[Action[TextStyle]]): this.type = set("footer", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def footer(value: js.Array[Action[TextStyle]]): this.type = set("footer", value.asInstanceOf[js.Any])
+  def footerVarargs(value: Action[TextStyle]*): this.type = set("footer", js.Array(value :_*))
   
   @scala.inline
   def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
@@ -69,10 +70,10 @@ class SharedBuilder_IModalNativeProps2000388185[R <: js.Object] (val args: js.Ar
   def styles(value: IModalStyle): this.type = set("styles", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   
   @scala.inline
   def transparent(value: Boolean): this.type = set("transparent", value.asInstanceOf[js.Any])

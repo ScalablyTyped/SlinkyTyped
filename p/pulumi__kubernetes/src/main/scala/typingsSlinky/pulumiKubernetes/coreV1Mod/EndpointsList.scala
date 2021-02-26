@@ -4,6 +4,7 @@ import typingsSlinky.pulumiKubernetes.endpointsListMod.EndpointsListArgs
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,9 +26,7 @@ class EndpointsList protected ()
   def this(name: String, args: EndpointsListArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/kubernetes/core/v1", "EndpointsList")
-@js.native
-object EndpointsList extends js.Object {
+object EndpointsList {
   
   /**
     * Get an existing EndpointsList resource's state with the given name, ID, and optional extra
@@ -37,12 +36,18 @@ object EndpointsList extends js.Object {
     * @param id The _unique_ provider ID of the resource to lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/kubernetes/core/v1", "EndpointsList.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.endpointsListMod.EndpointsList = js.native
+  @JSImport("@pulumi/kubernetes/core/v1", "EndpointsList.get")
+  @js.native
   def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.endpointsListMod.EndpointsList = js.native
   
   /**
     * Returns true if the given object is an instance of EndpointsList.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/kubernetes/core/v1", "EndpointsList.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/core/v1/endpointsList.EndpointsList */ Boolean = js.native
 }

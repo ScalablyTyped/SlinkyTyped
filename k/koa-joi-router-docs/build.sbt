@@ -1,30 +1,30 @@
 organization := "org.scalablytyped.slinky"
 name := "koa-joi-router-docs"
-version := "1.0-dt-20191104Z-38a2c3"
+version := "1.0-dt-20191104Z-404457"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "accepts" % "1.3-dt-20200515Z-a883a7",
-  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-e4419c",
-  "org.scalablytyped.slinky" %%% "co-body" % "5.1-dt-20200515Z-445a25",
-  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200515Z-41abee",
-  "org.scalablytyped.slinky" %%% "content-disposition" % "0.5-dt-20200515Z-8dac25",
-  "org.scalablytyped.slinky" %%% "cookies" % "0.7-dt-20191002Z-0a7a1c",
-  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200706Z-a5f9b2",
-  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200722Z-5cbccc",
-  "org.scalablytyped.slinky" %%% "joi" % "14.3-dt-20200515Z-7e47dd",
-  "org.scalablytyped.slinky" %%% "keygrip" % "1.0-dt-20200515Z-f3092a",
-  "org.scalablytyped.slinky" %%% "koa" % "2.11.0-dt-20200515Z-64d711",
-  "org.scalablytyped.slinky" %%% "koa-joi-router" % "5.2-dt-20200515Z-39e86d",
-  "org.scalablytyped.slinky" %%% "koa-router" % "7.4-dt-20200515Z-544feb",
-  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200722Z-600803",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
-  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-524837",
-  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-18f701",
-  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200519Z-04f03f",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "accepts" % "1.3-dt-20200515Z-9afb4d",
+  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-a3cce0",
+  "org.scalablytyped.slinky" %%% "co-body" % "5.1-dt-20200923Z-7f427c",
+  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20201002Z-671a3f",
+  "org.scalablytyped.slinky" %%% "content-disposition" % "0.5-dt-20200515Z-8eadf3",
+  "org.scalablytyped.slinky" %%% "cookies" % "0.7-dt-20201028Z-1bc50c",
+  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20201111Z-1b328b",
+  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200921Z-935502",
+  "org.scalablytyped.slinky" %%% "joi" % "17.3.0-876e70",
+  "org.scalablytyped.slinky" %%% "keygrip" % "1.0-dt-20200515Z-8b3ea1",
+  "org.scalablytyped.slinky" %%% "koa" % "2.11.0-dt-20201020Z-e80676",
+  "org.scalablytyped.slinky" %%% "koa-joi-router" % "5.2-dt-20201010Z-fb0892",
+  "org.scalablytyped.slinky" %%% "koa-router" % "7.4-dt-20201002Z-a1e5d8",
+  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200722Z-25c5b2",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20201002Z-9bc0d9",
+  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20201002Z-d58f66",
+  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20201117Z-7353a1",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -5,14 +5,14 @@ import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.PaginatedRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.Sudo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gitlab/dist/types/core/templates/ResourceAwardEmojis", JSImport.Namespace)
-@js.native
-object resourceAwardEmojisMod extends js.Object {
+object resourceAwardEmojisMod {
   
+  @JSImport("gitlab/dist/types/core/templates/ResourceAwardEmojis", "ResourceAwardEmojis")
   @js.native
   class ResourceAwardEmojis protected () extends BaseService {
     def this(resourceType: String, options: BaseServiceOptions) = this()

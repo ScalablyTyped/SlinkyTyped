@@ -10,9 +10,9 @@ Utilities for Hexo.
 | ------------------ | :-------------: |
 | Full name          | hexo-util |
 | Keywords           | hexo, util, utilities |
-| # releases         | 17 |
-| # dependents       | 138 |
-| # downloads        | 764794 |
+| # releases         | 24 |
+| # dependents       | 173 |
+| # downloads        | 1353285 |
 | # stars            | 0 |
 
 ## Links

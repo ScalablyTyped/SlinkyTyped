@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientCalendar.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientCalendar.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientCalendar.anon.Resource
 import typingsSlinky.maximMazurokGapiClientCalendar.anon.UserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CalendarListResource extends js.Object {
+trait CalendarListResource extends StObject {
   
   /** Removes a calendar from the user's calendar list. */
   def delete(): Request[Unit] = js.native

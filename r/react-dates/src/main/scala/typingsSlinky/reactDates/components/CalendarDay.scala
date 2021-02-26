@@ -5,12 +5,14 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.td.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.moment.mod.Moment
+import typingsSlinky.reactDates.mod.CalendarDayCls
 import typingsSlinky.reactDates.mod.CalendarDayPhrases
 import typingsSlinky.reactDates.mod.CalendarDayShape
 import typingsSlinky.reactDates.mod.ModifiersShape
 import typingsSlinky.reactDates.reactDatesNumbers.`-1`
 import typingsSlinky.reactDates.reactDatesNumbers.`0`
 import typingsSlinky.std.HTMLTableDataCellElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,12 +21,12 @@ object CalendarDay {
   
   @JSImport("react-dates", "CalendarDay")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
+       with StBuildingComponent[tag.type, CalendarDayCls] {
     
     @scala.inline
     def ariaLabelFormat(value: String): this.type = set("ariaLabelFormat", value.asInstanceOf[js.Any])
@@ -69,7 +71,7 @@ object CalendarDay {
     def tabIndex(value: `0` | `-1`): this.type = set("tabIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CalendarDayShape): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: CalendarDay.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CalendarDayShape): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

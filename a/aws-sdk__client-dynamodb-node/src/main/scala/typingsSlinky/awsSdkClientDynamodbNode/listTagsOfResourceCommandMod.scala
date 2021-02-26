@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientDynamodbNode.typesListTagsOfResourceInputMod.Li
 import typingsSlinky.awsSdkClientDynamodbNode.typesListTagsOfResourceOutputMod.ListTagsOfResourceOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-node/commands/ListTagsOfResourceCommand", JSImport.Namespace)
-@js.native
-object listTagsOfResourceCommandMod extends js.Object {
+object listTagsOfResourceCommandMod {
   
+  @JSImport("@aws-sdk/client-dynamodb-node/commands/ListTagsOfResourceCommand", "ListTagsOfResourceCommand")
   @js.native
   class ListTagsOfResourceCommand protected () extends Command[
           InputTypesUnion, 

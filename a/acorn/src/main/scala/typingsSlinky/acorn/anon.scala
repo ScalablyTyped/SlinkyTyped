@@ -1,21 +1,17 @@
 package typingsSlinky.acorn
 
-import org.scalablytyped.runtime.Instantiable2
-import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.acorn.mod.Node
 import typingsSlinky.acorn.mod.Options
-import typingsSlinky.acorn.mod.Parser
 import typingsSlinky.acorn.mod.Token
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait Call extends js.Object {
+  trait Call extends StObject {
     
     def apply(): js.Iterator[Token] = js.native
     
@@ -23,10 +19,9 @@ object anon extends js.Object {
   }
   
   @js.native
-  trait TypeofParser
-    extends Instantiable2[/* options */ Options, /* input */ String, Parser]
-       with Instantiable3[/* options */ Options, /* input */ String, /* startPos */ Double, Parser] {
+  trait TypeofParser extends StObject {
     
+    /* static member */
     def extend(
       plugins: (js.Function1[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof Parser */ /* BaseParser */ js.Any, 
@@ -34,12 +29,15 @@ object anon extends js.Object {
         ])*
     ): /* import warning: importer.ImportType#apply Failed type conversion: typeof Parser */ js.Any = js.native
     
+    /* static member */
     def parse(input: String): Node = js.native
     def parse(input: String, options: Options): Node = js.native
     
+    /* static member */
     def parseExpressionAt(input: String, pos: Double): Node = js.native
     def parseExpressionAt(input: String, pos: Double, options: Options): Node = js.native
     
+    /* static member */
     def tokenizer(input: String): Call = js.native
     def tokenizer(input: String, options: Options): Call = js.native
   }

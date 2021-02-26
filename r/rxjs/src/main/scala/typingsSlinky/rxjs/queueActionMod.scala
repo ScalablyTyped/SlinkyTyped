@@ -3,14 +3,14 @@ package typingsSlinky.rxjs
 import typingsSlinky.rxjs.asyncActionMod.AsyncAction
 import typingsSlinky.rxjs.queueSchedulerMod.QueueScheduler
 import typingsSlinky.rxjs.typesMod.SchedulerAction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rxjs/internal/scheduler/QueueAction", JSImport.Namespace)
-@js.native
-object queueActionMod extends js.Object {
+object queueActionMod {
   
+  @JSImport("rxjs/internal/scheduler/QueueAction", "QueueAction")
   @js.native
   class QueueAction[T] protected () extends AsyncAction[T] {
     def this(

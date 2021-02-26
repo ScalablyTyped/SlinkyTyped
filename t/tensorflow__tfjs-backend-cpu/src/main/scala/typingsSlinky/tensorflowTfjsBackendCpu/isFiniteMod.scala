@@ -2,15 +2,18 @@ package typingsSlinky.tensorflowTfjsBackendCpu
 
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelConfig
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelFunc
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/IsFinite", JSImport.Namespace)
-@js.native
-object isFiniteMod extends js.Object {
+object isFiniteMod {
   
+  @JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/IsFinite", "isFinite")
+  @js.native
   val isFinite: KernelFunc = js.native
   
+  @JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/IsFinite", "isFiniteConfig")
+  @js.native
   val isFiniteConfig: KernelConfig = js.native
 }

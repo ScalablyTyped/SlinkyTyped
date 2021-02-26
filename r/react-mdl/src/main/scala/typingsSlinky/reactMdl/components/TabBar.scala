@@ -17,20 +17,30 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactMdl.anon.Html
 import typingsSlinky.reactMdl.mod.TabBarProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TabBar {
   
+  @scala.inline
+  def apply(cssPrefix: String): Builder = {
+    val __props = js.Dynamic.literal(cssPrefix = cssPrefix.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabBarProps]))
+  }
+  
   @JSImport("react-mdl", "TabBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactMdl.mod.TabBar] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -141,16 +151,13 @@ object TabBar {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: Double | String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: Double | String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -643,10 +650,4 @@ object TabBar {
   }
   
   def withProps(p: TabBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(cssPrefix: String): Builder = {
-    val __props = js.Dynamic.literal(cssPrefix = cssPrefix.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TabBarProps]))
-  }
 }

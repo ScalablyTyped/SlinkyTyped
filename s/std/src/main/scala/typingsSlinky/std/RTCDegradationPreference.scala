@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.`maintain-framerate`
   - typingsSlinky.std.stdStrings.`maintain-resolution`
 */
-trait RTCDegradationPreference extends js.Object
+trait RTCDegradationPreference extends StObject
 object RTCDegradationPreference {
   
   @scala.inline

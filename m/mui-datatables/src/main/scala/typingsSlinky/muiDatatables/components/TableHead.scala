@@ -6,15 +6,22 @@ import typingsSlinky.muiDatatables.mod.MUIDataTableColumnDef
 import typingsSlinky.muiDatatables.mod.MUIDataTableHead
 import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
 import typingsSlinky.muiDatatables.mod.MUIDataTableStateRows
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TableHead {
   
+  @scala.inline
+  def apply(columnOrder: js.Array[Double]): Builder = {
+    val __props = js.Dynamic.literal(columnOrder = columnOrder.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableHead]))
+  }
+  
   @JSImport("mui-datatables", "TableHead")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,19 +38,19 @@ object TableHead {
     def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columnsVarargs(value: MUIDataTableColumnDef*): this.type = set("columns", js.Array(value :_*))
+    def columns(value: js.Array[MUIDataTableColumnDef]): this.type = set("columns", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columns(value: js.Array[MUIDataTableColumnDef]): this.type = set("columns", value.asInstanceOf[js.Any])
+    def columnsVarargs(value: MUIDataTableColumnDef*): this.type = set("columns", js.Array(value :_*))
     
     @scala.inline
     def count(value: Double): this.type = set("count", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def draggableHeadCellRefs(value: js.Object): this.type = set("draggableHeadCellRefs", value.asInstanceOf[js.Any])
@@ -89,10 +96,4 @@ object TableHead {
   }
   
   def withProps(p: MUIDataTableHead): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(columnOrder: js.Array[Double]): Builder = {
-    val __props = js.Dynamic.literal(columnOrder = columnOrder.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableHead]))
-  }
 }

@@ -1,12 +1,13 @@
 package typingsSlinky.navermaps.global.naver.maps
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("naver.maps.Position")
 @js.native
-object Position extends js.Object {
+object Position extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.navermaps.naver.maps.Position with Double] = js.native

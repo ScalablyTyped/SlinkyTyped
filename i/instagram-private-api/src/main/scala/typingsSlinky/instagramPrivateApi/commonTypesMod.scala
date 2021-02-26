@@ -12,17 +12,50 @@ import typingsSlinky.request.anon.Connect
 import typingsSlinky.request.anon.Dns
 import typingsSlinky.request.mod.Request
 import typingsSlinky.request.mod.ResponseAsJSON
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/types/common.types", JSImport.Namespace)
-@js.native
-object commonTypesMod extends js.Object {
+object commonTypesMod {
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_timeline
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.newsfeed
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.media_view_profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.video_view_profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.photo_view_profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.followers
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.following
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_followers
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_following
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.comment_likers
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.comment_owner
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_post
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_hashtag
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_location
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_newsfeed_multi_media_liked
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_media_view_profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_photo_view_profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_video_view_profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_media_view_profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_photo_view_profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_video_view_profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_camera_music_overlay_post_capture
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_camera_music_overlay_pre_capture
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_viewer_profile
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_viewer_default
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.find_friends_contacts
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.explore_people
+    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.igtv_feed_timeline
+    - java.lang.String
+  */
+  type IgAppModule = _IgAppModule | String
   
   /* Inlined std.Pick<request.request.Response, std.Exclude<keyof request.request.Response, 'body'>> & {  body :Body} */
   @js.native
-  trait IgResponse[Body] extends js.Object {
+  trait IgResponse[Body] extends StObject {
     
     def _destroy(error: js.Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     @JSName("_destroy")
@@ -54,8 +87,6 @@ object commonTypesMod extends js.Object {
     @JSName("constructor")
     var constructor_Original: js.Function1[/* socket */ Socket, js.Any] = js.native
     
-    var defaultMaxListeners: js.UndefOr[js.Any] = js.native
-    
     def destroy(): Unit = js.native
     @JSName("destroy")
     var destroy_Original: js.Function0[Unit] = js.native
@@ -69,13 +100,9 @@ object commonTypesMod extends js.Object {
     @JSName("emit")
     def emit_close(event: close): Boolean = js.native
     
-    var errorMonitor: js.UndefOr[js.Any] = js.native
-    
     def eventNames(): js.Array[String | js.Symbol] = js.native
     @JSName("eventNames")
     var eventNames_Original: js.Function0[js.Array[String | js.Symbol]] = js.native
-    
-    var from: js.UndefOr[js.Any] = js.native
     
     def getMaxListeners(): Double = js.native
     @JSName("getMaxListeners")
@@ -229,39 +256,5 @@ object commonTypesMod extends js.Object {
     var wrap_Original: js.Function1[/* oldStream */ ReadableStream, this.type] = js.native
   }
   
-  trait _IgAppModule extends js.Object
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_timeline
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.newsfeed
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.media_view_profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.video_view_profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.photo_view_profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.followers
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.following
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_followers
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_following
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.comment_likers
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.comment_owner
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_post
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_hashtag
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_location
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_newsfeed_multi_media_liked
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_media_view_profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_photo_view_profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_video_view_profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_media_view_profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_photo_view_profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_video_view_profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_camera_music_overlay_post_capture
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_camera_music_overlay_pre_capture
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_viewer_profile
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_viewer_default
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.find_friends_contacts
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.explore_people
-    - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.igtv_feed_timeline
-    - java.lang.String
-  */
-  type IgAppModule = _IgAppModule | String
+  trait _IgAppModule extends StObject
 }

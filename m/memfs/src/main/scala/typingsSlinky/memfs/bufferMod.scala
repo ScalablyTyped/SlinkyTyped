@@ -3,37 +3,14 @@ package typingsSlinky.memfs
 import typingsSlinky.memfs.anon.ToPrimitive
 import typingsSlinky.memfs.anon.ValueOf
 import typingsSlinky.std.SharedArrayBuffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("memfs/lib/internal/buffer", JSImport.Namespace)
-@js.native
-object bufferMod extends js.Object {
+object bufferMod {
   
-  def bufferAllocUnsafe(size: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  
-  def bufferFrom(arrayBuffer: js.typedarray.ArrayBuffer): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(arrayBuffer: SharedArrayBuffer): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(data: js.Array[_]): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(data: js.typedarray.Uint8Array): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(obj: ToPrimitive): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(obj: ToPrimitive, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(obj: ToPrimitive, byteOffset: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(obj: ToPrimitive, byteOffset: Double, length: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(obj: ValueOf): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(obj: ValueOf, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(obj: ValueOf, byteOffset: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(obj: ValueOf, byteOffset: Double, length: Double): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(str: String): typingsSlinky.buffer.mod.Buffer = js.native
-  def bufferFrom(str: String, encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
-  
+  @JSImport("memfs/lib/internal/buffer", "Buffer")
   @js.native
   class Buffer protected ()
     extends typingsSlinky.buffer.mod.Buffer {
@@ -79,8 +56,7 @@ object bufferMod extends js.Object {
     def this(str: String, encoding: String) = this()
   }
   /* static members */
-  @js.native
-  object Buffer extends js.Object {
+  object Buffer {
     
     /**
       * Allocates a new buffer of {size} octets.
@@ -90,13 +66,29 @@ object bufferMod extends js.Object {
       *    If parameter is omitted, buffer will be filled with zeros.
       * @param encoding encoding used for call to buf.fill while initializing
       */
+    @JSImport("memfs/lib/internal/buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: js.UndefOr[scala.Nothing], encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: String): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: String, encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: Double): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: Double, encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: typingsSlinky.buffer.mod.Buffer): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: typingsSlinky.buffer.mod.Buffer, encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
     
     /**
@@ -105,6 +97,8 @@ object bufferMod extends js.Object {
       *
       * @param size count of octets to allocate
       */
+    @JSImport("memfs/lib/internal/buffer", "Buffer.allocUnsafe")
+    @js.native
     def allocUnsafe(size: Double): typingsSlinky.buffer.mod.Buffer = js.native
     
     /**
@@ -113,6 +107,8 @@ object bufferMod extends js.Object {
       *
       * @param size count of octets to allocate
       */
+    @JSImport("memfs/lib/internal/buffer", "Buffer.allocUnsafeSlow")
+    @js.native
     def allocUnsafeSlow(size: Double): typingsSlinky.buffer.mod.Buffer = js.native
     
     /**
@@ -122,13 +118,19 @@ object bufferMod extends js.Object {
       * @param string string to test.
       * @param encoding encoding used to evaluate (defaults to 'utf8')
       */
+    @JSImport("memfs/lib/internal/buffer", "Buffer.byteLength")
+    @js.native
     def byteLength(string: String): Double = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.byteLength")
+    @js.native
     def byteLength(string: String, encoding: String): Double = js.native
     
     /**
       * The same as buf1.compare(buf2).
       */
-    def compare(buf1: typingsSlinky.buffer.mod.Buffer, buf2: typingsSlinky.buffer.mod.Buffer): Double = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.compare")
+    @js.native
+    def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = js.native
     
     /**
       * Returns a buffer which is the result of concatenating all the buffers in the list together.
@@ -141,8 +143,12 @@ object bufferMod extends js.Object {
       * @param totalLength Total length of the buffers when concatenated.
       *   If totalLength is not provided, it is read from the buffers in the list. However, this adds an additional loop to the function, so it is faster to provide the length explicitly.
       */
-    def concat(list: js.Array[typingsSlinky.buffer.mod.Buffer]): typingsSlinky.buffer.mod.Buffer = js.native
-    def concat(list: js.Array[typingsSlinky.buffer.mod.Buffer], totalLength: Double): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.concat")
+    @js.native
+    def concat(list: js.Array[js.typedarray.Uint8Array]): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.concat")
+    @js.native
+    def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): typingsSlinky.buffer.mod.Buffer = js.native
     
     /**
       * When passed a reference to the .buffer property of a TypedArray instance,
@@ -154,23 +160,37 @@ object bufferMod extends js.Object {
       * @param byteOffset
       * @param length
       */
+    @JSImport("memfs/lib/internal/buffer", "Buffer.from")
+    @js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.from")
+    @js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.from")
+    @js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.from")
+    @js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.buffer.mod.Buffer = js.native
     /**
       * Allocates a new Buffer using an {array} of octets.
       *
       * @param array
       */
+    @JSImport("memfs/lib/internal/buffer", "Buffer.from")
+    @js.native
     def from(array: js.Array[_]): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.from")
+    @js.native
+    def from(buffer: js.typedarray.Uint8Array): typingsSlinky.buffer.mod.Buffer = js.native
     /**
       * Copies the passed {buffer} data onto a new Buffer instance.
       *
       * @param buffer
       */
+    @JSImport("memfs/lib/internal/buffer", "Buffer.from")
+    @js.native
     def from(buffer: typingsSlinky.buffer.mod.Buffer): typingsSlinky.buffer.mod.Buffer = js.native
-    def from(buffer: js.typedarray.Uint8Array): typingsSlinky.buffer.mod.Buffer = js.native
     /**
       * Creates a new Buffer containing the given JavaScript string {str}.
       * If provided, the {encoding} parameter identifies the character encoding.
@@ -178,7 +198,11 @@ object bufferMod extends js.Object {
       *
       * @param str
       */
+    @JSImport("memfs/lib/internal/buffer", "Buffer.from")
+    @js.native
     def from(str: String): typingsSlinky.buffer.mod.Buffer = js.native
+    @JSImport("memfs/lib/internal/buffer", "Buffer.from")
+    @js.native
     def from(str: String, encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
     
     /**
@@ -186,6 +210,8 @@ object bufferMod extends js.Object {
       *
       * @param obj object to test.
       */
+    @JSImport("memfs/lib/internal/buffer", "Buffer.isBuffer")
+    @js.native
     def isBuffer(obj: js.Any): /* is buffer.buffer.Buffer */ Boolean = js.native
     
     /**
@@ -194,6 +220,73 @@ object bufferMod extends js.Object {
       *
       * @param encoding string to test.
       */
+    @JSImport("memfs/lib/internal/buffer", "Buffer.isEncoding")
+    @js.native
     def isEncoding(encoding: String): Boolean = js.native
   }
+  
+  @JSImport("memfs/lib/internal/buffer", "bufferAllocUnsafe")
+  @js.native
+  def bufferAllocUnsafe(size: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(arrayBuffer: js.typedarray.ArrayBuffer): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(arrayBuffer: SharedArrayBuffer): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(data: js.Array[_]): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(data: js.typedarray.Uint8Array): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(obj: ToPrimitive): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(obj: ToPrimitive, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(obj: ToPrimitive, byteOffset: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(obj: ToPrimitive, byteOffset: Double, length: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(obj: ValueOf): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(obj: ValueOf, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(obj: ValueOf, byteOffset: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(obj: ValueOf, byteOffset: Double, length: Double): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(str: String): typingsSlinky.buffer.mod.Buffer = js.native
+  @JSImport("memfs/lib/internal/buffer", "bufferFrom")
+  @js.native
+  def bufferFrom(str: String, encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
 }

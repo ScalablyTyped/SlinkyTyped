@@ -3,12 +3,13 @@ package typingsSlinky.activexExcel.Excel
 import typingsSlinky.activexExcel.activexExcelNumbers.`0`
 import typingsSlinky.activexExcel.activexExcelNumbers.`1`
 import typingsSlinky.activexOffice.Office.MsoSegmentType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FreeformBuilder extends js.Object {
+trait FreeformBuilder extends StObject {
   
   @JSName("AddNodes")
   def AddNodes_0(SegmentType: MsoSegmentType, EditingType: `0`, X1: Double, Y1: Double): Unit = js.native

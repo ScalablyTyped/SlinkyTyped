@@ -2,6 +2,7 @@ package typingsSlinky.devtoolsProtocol.mod.Protocol.Page
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.jpeg
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.png
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.jpeg
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.png
 */
-trait StartScreencastRequestFormat extends js.Object
+trait StartScreencastRequestFormat extends StObject
 object StartScreencastRequestFormat {
   
   @scala.inline

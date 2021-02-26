@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientHomegraph.anon.Callback
 import typingsSlinky.maximMazurokGapiClientHomegraph.anon.Fields
 import typingsSlinky.maximMazurokGapiClientHomegraph.anon.Key
 import typingsSlinky.maximMazurokGapiClientHomegraph.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DevicesResource extends js.Object {
+trait DevicesResource extends StObject {
   
   /**
     * Gets the current states in Home Graph for the given set of the third-party user's devices. The third-party user's identity is passed in via the `agent_user_id` (see QueryRequest).

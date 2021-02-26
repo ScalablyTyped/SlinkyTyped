@@ -5,6 +5,7 @@ import typingsSlinky.msRest.mod.RequestOptions
 import typingsSlinky.msRest.mod.ServiceCallback
 import typingsSlinky.msRest.mod.ServiceClient
 import typingsSlinky.msRest.mod.ServiceClientCredentials
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

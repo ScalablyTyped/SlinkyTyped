@@ -10,15 +10,15 @@ watch mode for browserify builds
 | ------------------ | :-------------: |
 | Full name          | watchify |
 | Keywords           | browserify, browserify-tool, watch, bundle, build, browser |
-| # releases         | 4 |
-| # dependents       | 608 |
-| # downloads        | 9576357 |
+| # releases         | 1 |
+| # dependents       | 641 |
+| # downloads        | 17546119 |
 | # stars            | 128 |
 
 ## Links
-- [Homepage](https://github.com/substack/watchify)
-- [Bugs](https://github.com/substack/watchify/issues)
-- [Repository](https://github.com/substack/watchify)
+- [Homepage](https://github.com/browserify/watchify)
+- [Bugs](https://github.com/browserify/watchify/issues)
+- [Repository](https://github.com/browserify/watchify)
 - [Npm](https://www.npmjs.com/package/watchify)
     
 

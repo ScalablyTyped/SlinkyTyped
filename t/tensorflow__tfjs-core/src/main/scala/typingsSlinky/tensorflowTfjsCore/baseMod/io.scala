@@ -16,19 +16,26 @@ import typingsSlinky.tensorflowTfjsCore.typesMod.TrainingConfig
 import typingsSlinky.tensorflowTfjsCore.typesMod.WeightGroup
 import typingsSlinky.tensorflowTfjsCore.typesMod.WeightsManifestConfig
 import typingsSlinky.tensorflowTfjsCore.typesMod.WeightsManifestEntry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-core/dist/base", "io")
-@js.native
-object io extends js.Object {
+object io {
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.browserFiles")
+  @js.native
   def browserFiles(files: js.Array[File]): IOHandler = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.browserHTTPRequest")
+  @js.native
   def browserHTTPRequest(path: String): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.browserHTTPRequest")
+  @js.native
   def browserHTTPRequest(path: String, loadOptions: LoadOptions): IOHandler = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.concatenateArrayBuffers")
+  @js.native
   def concatenateArrayBuffers(buffers: js.Array[js.typedarray.ArrayBuffer]): js.typedarray.ArrayBuffer = js.native
   
   /**
@@ -78,81 +85,125 @@ object io extends js.Object {
     *   ignoreCI: true
     * }
     */
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.copyModel")
+  @js.native
   def copyModel(sourceURL: String, destURL: String): js.Promise[ModelArtifactsInfo] = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.decodeWeights")
+  @js.native
   def decodeWeights(buffer: js.typedarray.ArrayBuffer, specs: js.Array[WeightsManifestEntry]): NamedTensorMap = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.encodeWeights")
+  @js.native
   def encodeWeights(tensors: js.Array[NamedTensor]): js.Promise[Data] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.encodeWeights")
+  @js.native
   def encodeWeights(tensors: js.Array[NamedTensor], group: WeightGroup): js.Promise[Data] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.encodeWeights")
+  @js.native
   def encodeWeights(tensors: NamedTensorMap): js.Promise[Data] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.encodeWeights")
+  @js.native
   def encodeWeights(tensors: NamedTensorMap, group: WeightGroup): js.Promise[Data] = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(modelArtifacts: js.Object): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.UndefOr[scala.Nothing],
     weightData: js.UndefOr[scala.Nothing],
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.UndefOr[scala.Nothing],
     weightData: js.typedarray.ArrayBuffer
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.UndefOr[scala.Nothing],
     weightData: js.typedarray.ArrayBuffer,
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(modelArtifacts: js.Object, weightSpecs: js.Array[WeightsManifestEntry]): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.Array[WeightsManifestEntry],
     weightData: js.UndefOr[scala.Nothing],
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.Array[WeightsManifestEntry],
     weightData: js.typedarray.ArrayBuffer
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.Array[WeightsManifestEntry],
     weightData: js.typedarray.ArrayBuffer,
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(modelArtifacts: ModelArtifacts): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.UndefOr[scala.Nothing],
     weightData: js.UndefOr[scala.Nothing],
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.UndefOr[scala.Nothing],
     weightData: js.typedarray.ArrayBuffer
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.UndefOr[scala.Nothing],
     weightData: js.typedarray.ArrayBuffer,
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(modelArtifacts: ModelArtifacts, weightSpecs: js.Array[WeightsManifestEntry]): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.Array[WeightsManifestEntry],
     weightData: js.UndefOr[scala.Nothing],
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.Array[WeightsManifestEntry],
     weightData: js.typedarray.ArrayBuffer
   ): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.fromMemory")
+  @js.native
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.Array[WeightsManifestEntry],
@@ -160,19 +211,39 @@ object io extends js.Object {
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.getLoadHandlers")
+  @js.native
   def getLoadHandlers(url: String): js.Array[IOHandler] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.getLoadHandlers")
+  @js.native
   def getLoadHandlers(url: String, loadOptions: LoadOptions): js.Array[IOHandler] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.getLoadHandlers")
+  @js.native
   def getLoadHandlers(url: js.Array[String]): js.Array[IOHandler] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.getLoadHandlers")
+  @js.native
   def getLoadHandlers(url: js.Array[String], loadOptions: LoadOptions): js.Array[IOHandler] = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.getModelArtifactsInfoForJSON")
+  @js.native
   def getModelArtifactsInfoForJSON(modelArtifacts: ModelArtifacts): ModelArtifactsInfo = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.getSaveHandlers")
+  @js.native
   def getSaveHandlers(url: String): js.Array[IOHandler] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.getSaveHandlers")
+  @js.native
   def getSaveHandlers(url: js.Array[String]): js.Array[IOHandler] = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.http")
+  @js.native
   def http(path: String): IOHandler = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.http")
+  @js.native
   def http(path: String, loadOptions: LoadOptions): IOHandler = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.isHTTPScheme")
+  @js.native
   def isHTTPScheme(url: String): Boolean = js.native
   
   /**
@@ -210,34 +281,52 @@ object io extends js.Object {
     *   ignoreCI: true
     * }
     */
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.listModels")
+  @js.native
   def listModels(): js.Promise[StringDictionary[ModelArtifactsInfo]] = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.loadWeights")
+  @js.native
   def loadWeights(manifest: WeightsManifestConfig): js.Promise[NamedTensorMap] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.loadWeights")
+  @js.native
   def loadWeights(
     manifest: WeightsManifestConfig,
     filePathPrefix: js.UndefOr[scala.Nothing],
     weightNames: js.UndefOr[scala.Nothing],
     requestInit: RequestInit
   ): js.Promise[NamedTensorMap] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.loadWeights")
+  @js.native
   def loadWeights(
     manifest: WeightsManifestConfig,
     filePathPrefix: js.UndefOr[scala.Nothing],
     weightNames: js.Array[String]
   ): js.Promise[NamedTensorMap] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.loadWeights")
+  @js.native
   def loadWeights(
     manifest: WeightsManifestConfig,
     filePathPrefix: js.UndefOr[scala.Nothing],
     weightNames: js.Array[String],
     requestInit: RequestInit
   ): js.Promise[NamedTensorMap] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.loadWeights")
+  @js.native
   def loadWeights(manifest: WeightsManifestConfig, filePathPrefix: String): js.Promise[NamedTensorMap] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.loadWeights")
+  @js.native
   def loadWeights(
     manifest: WeightsManifestConfig,
     filePathPrefix: String,
     weightNames: js.UndefOr[scala.Nothing],
     requestInit: RequestInit
   ): js.Promise[NamedTensorMap] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.loadWeights")
+  @js.native
   def loadWeights(manifest: WeightsManifestConfig, filePathPrefix: String, weightNames: js.Array[String]): js.Promise[NamedTensorMap] = js.native
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.loadWeights")
+  @js.native
   def loadWeights(
     manifest: WeightsManifestConfig,
     filePathPrefix: String,
@@ -291,10 +380,16 @@ object io extends js.Object {
     *   ignoreCI: true
     * }
     */
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.moveModel")
+  @js.native
   def moveModel(sourceURL: String, destURL: String): js.Promise[ModelArtifactsInfo] = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.registerLoadRouter")
+  @js.native
   def registerLoadRouter(loudRouter: IORouter): Unit = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.registerSaveRouter")
+  @js.native
   def registerSaveRouter(loudRouter: IORouter): Unit = js.native
   
   /**
@@ -330,8 +425,12 @@ object io extends js.Object {
     *   ignoreCI: true
     * }
     */
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.removeModel")
+  @js.native
   def removeModel(url: String): js.Promise[ModelArtifactsInfo] = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.weightsLoaderFactory")
+  @js.native
   def weightsLoaderFactory(
     fetchWeightsFunction: js.Function1[/* fetchUrls */ js.Array[String], js.Promise[js.Array[js.typedarray.ArrayBuffer]]]
   ): js.Function3[
@@ -341,5 +440,7 @@ object io extends js.Object {
     js.Promise[NamedTensorMap]
   ] = js.native
   
+  @JSImport("@tensorflow/tfjs-core/dist/base", "io.withSaveHandler")
+  @js.native
   def withSaveHandler(saveHandler: js.Function1[/* artifacts */ ModelArtifacts, js.Promise[SaveResult]]): IOHandler = js.native
 }

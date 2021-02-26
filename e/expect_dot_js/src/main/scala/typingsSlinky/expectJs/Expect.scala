@@ -1,12 +1,11 @@
 package typingsSlinky.expectJs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Expect")
-@js.native
-object Expect extends js.Object {
+object Expect {
   
   @js.native
   trait An extends Assertion {
@@ -22,7 +21,7 @@ object Expect extends js.Object {
   }
   
   @js.native
-  trait Assertion extends js.Object {
+  trait Assertion extends StObject {
     
     /**
       * Assert typeof.

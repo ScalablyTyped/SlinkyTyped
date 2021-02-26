@@ -16,12 +16,13 @@ import typingsSlinky.chromeApps.chrome.runtime.UpdateAvailableDetails
 import typingsSlinky.chromeApps.chrome.runtime.UpdateCheckDetails
 import typingsSlinky.filesystem.DirectoryEntry
 import typingsSlinky.std.Exclude
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofruntimeConnect extends js.Object {
+trait TypeofruntimeConnect extends StObject {
   
   val OnInstalledReason: CHROMEUPDATE = js.native
   

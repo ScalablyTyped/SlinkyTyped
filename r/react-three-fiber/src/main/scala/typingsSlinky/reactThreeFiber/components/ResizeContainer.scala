@@ -86,15 +86,22 @@ import typingsSlinky.std.Partial
 import typingsSlinky.three.mod.Camera
 import typingsSlinky.three.mod.OrthographicCamera
 import typingsSlinky.three.mod.PerspectiveCamera
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ResizeContainer {
   
+  @scala.inline
+  def apply(renderer: () => js.UndefOr[Renderer | Null]): Builder = {
+    val __props = js.Dynamic.literal(renderer = js.Any.fromFunction0(renderer))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ResizeContainerProps]))
+  }
+  
   @JSImport("react-three-fiber", "ResizeContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -306,10 +313,10 @@ object ResizeContainer {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -615,10 +622,10 @@ object ResizeContainer {
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def preRenderReactElement(value: ReactElement): this.type = set("preRender", value.asInstanceOf[js.Any])
+    def preRender(value: ReactElement): this.type = set("preRender", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def preRender(value: ReactElement): this.type = set("preRender", value.asInstanceOf[js.Any])
+    def preRenderReactElement(value: ReactElement): this.type = set("preRender", value.asInstanceOf[js.Any])
     
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
@@ -694,10 +701,4 @@ object ResizeContainer {
   }
   
   def withProps(p: ResizeContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(renderer: () => js.UndefOr[Renderer | Null]): Builder = {
-    val __props = js.Dynamic.literal(renderer = js.Any.fromFunction0(renderer))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ResizeContainerProps]))
-  }
 }

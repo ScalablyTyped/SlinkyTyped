@@ -86,17 +86,16 @@ import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestParams
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@elastic/elasticsearch/api/kibana", JSImport.Namespace)
-@js.native
-object kibanaMod extends js.Object {
+object kibanaMod {
   
   // Extend API
   @js.native
-  trait ClientExtendsCallbackOptions extends js.Object {
+  trait ClientExtendsCallbackOptions extends StObject {
     
     var ConfigurationError: typingsSlinky.elasticElasticsearch.mod.errors.ConfigurationError = js.native
     
@@ -108,7 +107,7 @@ object kibanaMod extends js.Object {
   
   // /Extend API
   @js.native
-  trait KibanaClient extends js.Object {
+  trait KibanaClient extends StObject {
     
     /* GENERATED */
     var asyncSearch: Delete = js.native

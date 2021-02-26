@@ -10,9 +10,9 @@ nameof in TypeScript
 | ------------------ | :-------------: |
 | Full name          | ts-nameof |
 | Keywords           | nameof, typescript, transformer, custom-transformer |
-| # releases         | 21 |
-| # dependents       | 5 |
-| # downloads        | 96401 |
+| # releases         | 14 |
+| # dependents       | 12 |
+| # downloads        | 214879 |
 | # stars            | 1 |
 
 ## Links

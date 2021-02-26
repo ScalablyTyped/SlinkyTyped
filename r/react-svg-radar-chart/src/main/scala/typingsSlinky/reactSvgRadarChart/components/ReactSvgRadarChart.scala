@@ -6,15 +6,22 @@ import typingsSlinky.reactSvgRadarChart.mod.ChartData
 import typingsSlinky.reactSvgRadarChart.mod.ChartOptionsProps
 import typingsSlinky.reactSvgRadarChart.mod.ChartProps
 import typingsSlinky.reactSvgRadarChart.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactSvgRadarChart {
   
+  @scala.inline
+  def apply(data: js.Array[ChartData], size: Double): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ChartProps]))
+  }
+  
   @JSImport("react-svg-radar-chart", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -26,10 +33,4 @@ object ReactSvgRadarChart {
   }
   
   def withProps(p: ChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[ChartData], size: Double): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ChartProps]))
-  }
 }

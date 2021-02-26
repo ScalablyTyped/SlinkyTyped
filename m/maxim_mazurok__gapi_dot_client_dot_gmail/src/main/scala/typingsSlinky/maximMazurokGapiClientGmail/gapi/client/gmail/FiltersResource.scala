@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientGmail.anon.AccesstokenAlt
 import typingsSlinky.maximMazurokGapiClientGmail.anon.Alt
 import typingsSlinky.maximMazurokGapiClientGmail.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FiltersResource extends js.Object {
+trait FiltersResource extends StObject {
   
   /** Creates a filter. Note: you can only create a maximum of 1,000 filters. */
   def create(request: AccesstokenAlt): Request[Filter] = js.native

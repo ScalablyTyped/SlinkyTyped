@@ -10,15 +10,26 @@ import typingsSlinky.reactDatagrid.mod.ReactDataGrid.PaginationToolbarProps
 import typingsSlinky.reactDatagrid.mod.ReactDataGrid.RowProps
 import typingsSlinky.reactDatagrid.mod.ReactDataGrid.SortInfo
 import typingsSlinky.reactDatagrid.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactDatagrid {
   
+  @scala.inline
+  def apply(
+    columns: js.Array[Column],
+    dataSource: js.Array[_] | String | (js.Function1[/* query */ PageSize, js.Promise[js.Array[_]]]),
+    idProperty: String
+  ): Builder = {
+    val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], dataSource = dataSource.asInstanceOf[js.Any], idProperty = idProperty.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DataGridProps]))
+  }
+  
   @JSImport("react-datagrid", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +49,10 @@ object ReactDatagrid {
     def emptyText(value: String): this.type = set("emptyText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def groupByVarargs(value: js.Any*): this.type = set("groupBy", js.Array(value :_*))
+    def groupBy(value: js.Array[_]): this.type = set("groupBy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def groupBy(value: js.Array[_]): this.type = set("groupBy", value.asInstanceOf[js.Any])
+    def groupByVarargs(value: js.Any*): this.type = set("groupBy", js.Array(value :_*))
     
     @scala.inline
     def liveFilter(value: Boolean): this.type = set("liveFilter", value.asInstanceOf[js.Any])
@@ -94,10 +105,10 @@ object ReactDatagrid {
     def rowHeight(value: Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowStyleFunction2(value: (/* data */ js.Any, /* props */ RowProps) => CSSProperties): this.type = set("rowStyle", js.Any.fromFunction2(value))
+    def rowStyle(value: CSSProperties | (js.Function2[/* data */ js.Any, /* props */ RowProps, CSSProperties])): this.type = set("rowStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowStyle(value: CSSProperties | (js.Function2[/* data */ js.Any, /* props */ RowProps, CSSProperties])): this.type = set("rowStyle", value.asInstanceOf[js.Any])
+    def rowStyleFunction2(value: (/* data */ js.Any, /* props */ RowProps) => CSSProperties): this.type = set("rowStyle", js.Any.fromFunction2(value))
     
     @scala.inline
     def selected(value: js.Object): this.type = set("selected", value.asInstanceOf[js.Any])
@@ -106,10 +117,10 @@ object ReactDatagrid {
     def showCellBorders(value: Boolean | String): this.type = set("showCellBorders", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sortInfoVarargs(value: SortInfo*): this.type = set("sortInfo", js.Array(value :_*))
+    def sortInfo(value: js.Array[SortInfo]): this.type = set("sortInfo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sortInfo(value: js.Array[SortInfo]): this.type = set("sortInfo", value.asInstanceOf[js.Any])
+    def sortInfoVarargs(value: SortInfo*): this.type = set("sortInfo", js.Array(value :_*))
     
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
@@ -119,14 +130,4 @@ object ReactDatagrid {
   }
   
   def withProps(p: DataGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    columns: js.Array[Column],
-    dataSource: js.Array[_] | String | (js.Function1[/* query */ PageSize, js.Promise[js.Array[_]]]),
-    idProperty: String
-  ): Builder = {
-    val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], dataSource = dataSource.asInstanceOf[js.Any], idProperty = idProperty.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DataGridProps]))
-  }
 }

@@ -10,9 +10,9 @@ A simple utility for determining the KeyboardEvent.key property from a keyboard 
 | ------------------ | :-------------: |
 | Full name          | keyboard-key |
 | Keywords           | - |
-| # releases         | 4 |
-| # dependents       | 29 |
-| # downloads        | 6657331 |
+| # releases         | 2 |
+| # dependents       | 36 |
+| # downloads        | 8183731 |
 | # stars            | 1 |
 
 ## Links

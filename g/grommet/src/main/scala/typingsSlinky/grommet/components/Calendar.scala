@@ -84,15 +84,16 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Calendar {
   
-  @JSImport("grommet/es6", "Calendar")
+  @JSImport("grommet", "Calendar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -270,10 +271,10 @@ object Calendar {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def boundsVarargs(value: String*): this.type = set("bounds", js.Array(value :_*))
+    def bounds(value: js.Array[String]): this.type = set("bounds", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def bounds(value: js.Array[String]): this.type = set("bounds", value.asInstanceOf[js.Any])
+    def boundsVarargs(value: String*): this.type = set("bounds", js.Array(value :_*))
     
     @scala.inline
     def children(value: /* repeated */ js.Any => _): this.type = set("children", js.Any.fromFunction1(value))
@@ -300,10 +301,10 @@ object Calendar {
     def date(value: String): this.type = set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def datesVarargs(value: (String | js.Array[String])*): this.type = set("dates", js.Array(value :_*))
+    def dates(value: js.Array[String | js.Array[String]]): this.type = set("dates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dates(value: js.Array[String | js.Array[String]]): this.type = set("dates", value.asInstanceOf[js.Any])
+    def datesVarargs(value: (String | js.Array[String])*): this.type = set("dates", js.Array(value :_*))
     
     @scala.inline
     def daysOfWeek(value: Boolean): this.type = set("daysOfWeek", value.asInstanceOf[js.Any])
@@ -312,19 +313,19 @@ object Calendar {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabledVarargs(value: (String | js.Array[String])*): this.type = set("disabled", js.Array(value :_*))
+    def disabled(value: js.Array[String | js.Array[String]]): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabled(value: js.Array[String | js.Array[String]]): this.type = set("disabled", value.asInstanceOf[js.Any])
+    def disabledVarargs(value: (String | js.Array[String])*): this.type = set("disabled", js.Array(value :_*))
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
@@ -690,7 +691,7 @@ object Calendar {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CalendarProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Calendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CalendarProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

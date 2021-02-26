@@ -9,14 +9,14 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.skeletonMod.Skeleton
 import typingsSlinky.babylonjs.transformNodeMod.TransformNode
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/assetContainer", JSImport.Namespace)
-@js.native
-object assetContainerMod extends js.Object {
+object assetContainerMod {
   
+  @JSImport("babylonjs/assetContainer", "AssetContainer")
   @js.native
   class AssetContainer protected () extends AbstractScene {
     /**
@@ -101,8 +101,9 @@ object assetContainerMod extends js.Object {
     var scene: Scene = js.native
   }
   
+  @JSImport("babylonjs/assetContainer", "InstantiatedEntries")
   @js.native
-  class InstantiatedEntries () extends js.Object {
+  class InstantiatedEntries () extends StObject {
     
     /**
       * List of new animation groups
@@ -120,6 +121,7 @@ object assetContainerMod extends js.Object {
     var skeletons: js.Array[Skeleton] = js.native
   }
   
+  @JSImport("babylonjs/assetContainer", "KeepAssets")
   @js.native
   class KeepAssets () extends AbstractScene
 }

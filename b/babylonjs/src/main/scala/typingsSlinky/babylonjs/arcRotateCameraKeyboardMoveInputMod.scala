@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.arcRotateCameraMod.ArcRotateCamera
 import typingsSlinky.babylonjs.cameraInputsManagerMod.ICameraInput
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/Inputs/arcRotateCameraKeyboardMoveInput", JSImport.Namespace)
-@js.native
-object arcRotateCameraKeyboardMoveInputMod extends js.Object {
+object arcRotateCameraKeyboardMoveInputMod {
   
+  @JSImport("babylonjs/Cameras/Inputs/arcRotateCameraKeyboardMoveInput", "ArcRotateCameraKeyboardMoveInput")
   @js.native
   class ArcRotateCameraKeyboardMoveInput () extends ICameraInput[ArcRotateCamera] {
     

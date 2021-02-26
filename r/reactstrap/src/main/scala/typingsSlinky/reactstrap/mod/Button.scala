@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.buttonMod.ButtonProps
+import typingsSlinky.reactstrap.buttonMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "Button")
+@JSImport("reactstrap/lib", "Button")
 @js.native
-class Button ()
-  extends Component[ButtonProps, js.Object, js.Any]
+class Button () extends default

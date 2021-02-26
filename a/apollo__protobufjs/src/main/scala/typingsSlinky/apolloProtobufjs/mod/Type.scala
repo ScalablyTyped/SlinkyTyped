@@ -2,6 +2,7 @@ package typingsSlinky.apolloProtobufjs.mod
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,6 +32,8 @@ class Type protected () extends NamespaceBase {
     */
   var ctor: Constructor[js.Object] = js.native
   
+  def decode(reader: js.typedarray.Uint8Array): Message[js.Object] = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Message[js.Object] = js.native
   /**
     * Decodes a message of this type.
     * @param reader Reader or buffer to decode from
@@ -41,9 +44,8 @@ class Type protected () extends NamespaceBase {
     */
   def decode(reader: Reader): Message[js.Object] = js.native
   def decode(reader: Reader, length: Double): Message[js.Object] = js.native
-  def decode(reader: js.typedarray.Uint8Array): Message[js.Object] = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): Message[js.Object] = js.native
   
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Message[js.Object] = js.native
   /**
     * Decodes a message of this type preceeded by its byte length as a varint.
     * @param reader Reader or buffer to decode from
@@ -52,7 +54,6 @@ class Type protected () extends NamespaceBase {
     * @throws {util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): Message[js.Object] = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): Message[js.Object] = js.native
   
   def encode(message: StringDictionary[js.UndefOr[js.Any]]): Writer = js.native
   def encode(message: StringDictionary[js.UndefOr[js.Any]], writer: Writer): Writer = js.native
@@ -141,16 +142,18 @@ class Type protected () extends NamespaceBase {
   def verify(message: StringDictionary[js.UndefOr[js.Any]]): Null | String = js.native
 }
 /* static members */
-@JSImport("@apollo/protobufjs", "Type")
-@js.native
-object Type extends js.Object {
+object Type {
   
   /**
     * Type decorator (TypeScript).
     * @param [typeName] Type name, defaults to the constructor's name
     * @returns Decorator function
     */
+  @JSImport("@apollo/protobufjs", "Type.d")
+  @js.native
   def d[T /* <: Message[T] */](): TypeDecorator[T] = js.native
+  @JSImport("@apollo/protobufjs", "Type.d")
+  @js.native
   def d[T /* <: Message[T] */](typeName: String): TypeDecorator[T] = js.native
   
   /**
@@ -159,6 +162,8 @@ object Type extends js.Object {
     * @param json Message type descriptor
     * @returns Created message type
     */
+  @JSImport("@apollo/protobufjs", "Type.fromJSON")
+  @js.native
   def fromJSON(name: String, json: IType): Type = js.native
   
   /**
@@ -166,5 +171,7 @@ object Type extends js.Object {
     * @param mtype Message type
     * @returns Codegen instance
     */
+  @JSImport("@apollo/protobufjs", "Type.generateConstructor")
+  @js.native
   def generateConstructor(mtype: Type): Codegen = js.native
 }

@@ -28,6 +28,7 @@ import typingsSlinky.validator.mod.validator.MobilePhoneLocale
 import typingsSlinky.validator.mod.validator.NormalizeEmailOptions
 import typingsSlinky.validator.mod.validator.PostalCodeLocale
 import typingsSlinky.validator.mod.validator.UUIDVersion
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,7 +37,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 //  Validator
 // ~~~~~~~~~~~
 @js.native
-trait ValidatorJSType extends js.Object {
+trait ValidatorJSType extends StObject {
   
   /******************
     *** Sanitizers ***

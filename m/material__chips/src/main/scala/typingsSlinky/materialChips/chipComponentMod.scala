@@ -6,17 +6,19 @@ import typingsSlinky.materialChips.chipFoundationMod.MDCChipFoundation
 import typingsSlinky.materialChips.trailingactionComponentMod.MDCChipTrailingActionFactory
 import typingsSlinky.materialRipple.componentMod.MDCRipple
 import typingsSlinky.materialRipple.componentMod.MDCRippleFactory
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/chips/chip/component", JSImport.Namespace)
-@js.native
-object chipComponentMod extends js.Object {
+object chipComponentMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-  - typingsSlinky.materialRipple.typesMod.MDCRippleCapableSurface because var conflicts: root. Inlined disabled, unbounded */ @js.native
-  class MDCChip () extends MDCComponent[MDCChipFoundation] {
+  - typingsSlinky.materialRipple.typesMod.MDCRippleCapableSurface because var conflicts: root. Inlined disabled, unbounded */ @JSImport("@material/chips/chip/component", "MDCChip")
+  @js.native
+  class MDCChip protected () extends MDCComponent[MDCChipFoundation] {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(root: Element, foundation: MDCChipFoundation, args: js.Any*) = this()
     
     /**
       * Begins the exit animation which leads to removal of the chip.
@@ -70,9 +72,10 @@ object chipComponentMod extends js.Object {
     var unbounded: js.UndefOr[Boolean] = js.native
   }
   /* static members */
-  @js.native
-  object MDCChip extends js.Object {
+  object MDCChip {
     
+    @JSImport("@material/chips/chip/component", "MDCChip.attachTo")
+    @js.native
     def attachTo(root: Element): MDCChip = js.native
   }
   

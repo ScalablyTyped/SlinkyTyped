@@ -12,6 +12,7 @@ import typingsSlinky.activexMshtml.activexMshtmlNumbers.`6`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`7`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`8`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`2`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
 */
-trait svgPreserveAspectRatioAlignType extends js.Object
+trait svgPreserveAspectRatioAlignType extends StObject
 object svgPreserveAspectRatioAlignType {
   
   @scala.inline

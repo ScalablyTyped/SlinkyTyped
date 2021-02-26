@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.configserviceMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _ResourceCountGroupKey extends js.Object
+trait _ResourceCountGroupKey extends StObject

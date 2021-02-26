@@ -14,20 +14,65 @@ import typingsSlinky.semanticUiReact.stepDescriptionMod.StepDescriptionProps
 import typingsSlinky.semanticUiReact.stepGroupMod.StepGroupProps
 import typingsSlinky.semanticUiReact.stepStepMod.StepProps
 import typingsSlinky.semanticUiReact.stepTitleMod.StepTitleProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Step {
   
+  object Content {
+    
+    @JSImport("semantic-ui-react", "Step.Content")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Content.type): SharedBuilder_StepContentProps774867170 = new SharedBuilder_StepContentProps774867170(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: StepContentProps): SharedBuilder_StepContentProps774867170 = new SharedBuilder_StepContentProps774867170(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Description {
+    
+    @JSImport("semantic-ui-react", "Step.Description")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Description.type): SharedBuilder_StepDescriptionProps_1229748384 = new SharedBuilder_StepDescriptionProps_1229748384(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: StepDescriptionProps): SharedBuilder_StepDescriptionProps_1229748384 = new SharedBuilder_StepDescriptionProps_1229748384(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Group {
+    
+    @JSImport("semantic-ui-react", "Step.Group")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Group.type): SharedBuilder_StepGroupProps1201670136 = new SharedBuilder_StepGroupProps1201670136(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: StepGroupProps): SharedBuilder_StepGroupProps1201670136 = new SharedBuilder_StepGroupProps1201670136(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Title {
+    
+    @JSImport("semantic-ui-react", "Step.Title")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Title.type): SharedBuilder_StepTitleProps1252644081 = new SharedBuilder_StepTitleProps1252644081(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: StepTitleProps): SharedBuilder_StepTitleProps1252644081 = new SharedBuilder_StepTitleProps1252644081(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Step")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Step] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
@@ -42,13 +87,13 @@ object Step {
     def completed(value: Boolean): this.type = set("completed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def description(value: SemanticShorthandItem[StepDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def descriptionFunction3(
@@ -56,7 +101,7 @@ object Step {
     ): this.type = set("description", js.Any.fromFunction3(value))
     
     @scala.inline
-    def description(value: SemanticShorthandItem[StepDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
+    def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -65,7 +110,7 @@ object Step {
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconFunction3(
@@ -73,7 +118,7 @@ object Step {
     ): this.type = set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
-    def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def link(value: Boolean): this.type = set("link", value.asInstanceOf[js.Any])
@@ -85,7 +130,7 @@ object Step {
     def ordered(value: Boolean): this.type = set("ordered", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: SemanticShorthandItem[StepTitleProps]): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def titleFunction3(
@@ -93,54 +138,10 @@ object Step {
     ): this.type = set("title", js.Any.fromFunction3(value))
     
     @scala.inline
-    def title(value: SemanticShorthandItem[StepTitleProps]): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  
-  def withProps(p: StepProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: Step.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Content {
-    
-    @JSImport("semantic-ui-react", "Step.Content")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: StepContentProps): SharedBuilder_StepContentProps774867170 = new SharedBuilder_StepContentProps774867170(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Content.type): SharedBuilder_StepContentProps774867170 = new SharedBuilder_StepContentProps774867170(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Description {
-    
-    @JSImport("semantic-ui-react", "Step.Description")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: StepDescriptionProps): SharedBuilder_StepDescriptionProps_1229748384 = new SharedBuilder_StepDescriptionProps_1229748384(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Description.type): SharedBuilder_StepDescriptionProps_1229748384 = new SharedBuilder_StepDescriptionProps_1229748384(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Group {
-    
-    @JSImport("semantic-ui-react", "Step.Group")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: StepGroupProps): SharedBuilder_StepGroupProps1201670136 = new SharedBuilder_StepGroupProps1201670136(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Group.type): SharedBuilder_StepGroupProps1201670136 = new SharedBuilder_StepGroupProps1201670136(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Title {
-    
-    @JSImport("semantic-ui-react", "Step.Title")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: StepTitleProps): SharedBuilder_StepTitleProps1252644081 = new SharedBuilder_StepTitleProps1252644081(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Title.type): SharedBuilder_StepTitleProps1252644081 = new SharedBuilder_StepTitleProps1252644081(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: StepProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

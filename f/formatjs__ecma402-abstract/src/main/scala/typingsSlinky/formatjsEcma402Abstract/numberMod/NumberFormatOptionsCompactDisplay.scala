@@ -1,5 +1,6 @@
 package typingsSlinky.formatjsEcma402Abstract.numberMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.formatjsEcma402Abstract.formatjsEcma402AbstractStrings.short
   - typingsSlinky.formatjsEcma402Abstract.formatjsEcma402AbstractStrings.long
 */
-trait NumberFormatOptionsCompactDisplay extends js.Object
+trait NumberFormatOptionsCompactDisplay extends StObject
 object NumberFormatOptionsCompactDisplay {
   
   @scala.inline

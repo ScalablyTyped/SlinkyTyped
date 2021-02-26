@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientFirebaserules.anon.Alt
 import typingsSlinky.maximMazurokGapiClientFirebaserules.anon.Callback
 import typingsSlinky.maximMazurokGapiClientFirebaserules.anon.Fields
 import typingsSlinky.maximMazurokGapiClientFirebaserules.anon.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReleasesResource extends js.Object {
+trait ReleasesResource extends StObject {
   
   /**
     * Create a `Release`. Release names should reflect the developer's deployment practices. For example, the release name may include the environment name, application name, application

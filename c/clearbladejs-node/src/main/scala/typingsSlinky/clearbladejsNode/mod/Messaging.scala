@@ -1,11 +1,12 @@
 package typingsSlinky.clearbladejsNode.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Messaging extends js.Object {
+trait Messaging extends StObject {
   
   var URI: String = js.native
   

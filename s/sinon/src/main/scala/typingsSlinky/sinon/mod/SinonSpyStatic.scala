@@ -5,12 +5,13 @@ import typingsSlinky.sinon.sinonStrings.get
 import typingsSlinky.sinon.sinonStrings.set
 import typingsSlinky.std.Parameters
 import typingsSlinky.std.ReturnType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SinonSpyStatic extends js.Object {
+trait SinonSpyStatic extends StObject {
   
   /**
     * Creates an anonymous function that records arguments, this value, exceptions and return values for all calls.

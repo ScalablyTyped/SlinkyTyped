@@ -3,6 +3,7 @@ package typingsSlinky.activexMshtml.MSHTML
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`1`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`2`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`1`
 */
-trait htmlSelectType extends js.Object
+trait htmlSelectType extends StObject
 object htmlSelectType {
   
   @scala.inline

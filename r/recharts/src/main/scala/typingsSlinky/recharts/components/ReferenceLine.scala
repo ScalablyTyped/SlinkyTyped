@@ -30,6 +30,7 @@ import typingsSlinky.recharts.rechartsStrings.normal
 import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,7 +39,7 @@ object ReferenceLine {
   
   @JSImport("recharts", "ReferenceLine")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -165,13 +166,13 @@ object ReferenceLine {
     def kerning(value: Double | String): this.type = set("kerning", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: String | Double | ContentRenderer[_] | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelFunction1(value: _ => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
     
     @scala.inline
-    def label(value: String | Double | ContentRenderer[_] | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def letterSpacing(value: String): this.type = set("letterSpacing", value.asInstanceOf[js.Any])
@@ -210,13 +211,13 @@ object ReferenceLine {
     def segment(value: js.Tuple2[SegmentItem, SegmentItem]): this.type = set("segment", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
+    def shape(value: ContentRenderer[EventAttributesPartialPreAlignmentBaseline] | ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shapeFunction1(value: EventAttributesPartialPreAlignmentBaseline => ReactElement): this.type = set("shape", js.Any.fromFunction1(value))
     
     @scala.inline
-    def shape(value: ContentRenderer[EventAttributesPartialPreAlignmentBaseline] | ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
+    def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
@@ -303,7 +304,7 @@ object ReferenceLine {
     def yAxisId(value: String | Double): this.type = set("yAxisId", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReferenceLineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReferenceLine.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReferenceLineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

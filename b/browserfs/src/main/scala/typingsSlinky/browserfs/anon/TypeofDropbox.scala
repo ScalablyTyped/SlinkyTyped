@@ -8,6 +8,7 @@ import typingsSlinky.browserfs.dropboxMod.default
 import typingsSlinky.browserfs.fileSystemMod.BFSCallback
 import typingsSlinky.browserfs.fileSystemMod.FileSystemOptions
 import typingsSlinky.dropboxjs.Dropbox.Client
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

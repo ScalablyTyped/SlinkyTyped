@@ -10,10 +10,10 @@ A Karma plugin. Launcher for Firefox.
 | ------------------ | :-------------: |
 | Full name          | karma-firefox-launcher |
 | Keywords           | karma, testing, karma-plugin, karma-launcher, firefox |
-| # releases         | 3 |
-| # dependents       | 241 |
-| # downloads        | 9661538 |
-| # stars            | 7 |
+| # releases         | 5 |
+| # dependents       | 248 |
+| # downloads        | 12046038 |
+| # stars            | 8 |
 
 ## Links
 - [Homepage](https://github.com/karma-runner/karma-firefox-launcher#readme)

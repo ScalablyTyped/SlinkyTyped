@@ -2,6 +2,7 @@ package typingsSlinky.winrt.Windows.Graphics.Imaging
 
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

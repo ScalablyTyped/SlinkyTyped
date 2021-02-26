@@ -2,13 +2,12 @@ package typingsSlinky.angularCompiler
 
 import typingsSlinky.angularCompiler.staticSymbolResolverMod.StaticSymbolResolverHost
 import typingsSlinky.angularCompiler.summaryResolverMod.AotSummaryResolverHost
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/compiler/src/aot/compiler_host", JSImport.Namespace)
-@js.native
-object compilerHostMod extends js.Object {
+object compilerHostMod {
   
   @js.native
   trait AotCompilerHost

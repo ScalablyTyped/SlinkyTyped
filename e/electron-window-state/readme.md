@@ -10,9 +10,9 @@ Simple module that helps to save and restore size and position of Electron windo
 | ------------------ | :-------------: |
 | Full name          | electron-window-state |
 | Keywords           | electron |
-| # releases         | 5 |
-| # dependents       | 55 |
-| # downloads        | 435426 |
+| # releases         | 0 |
+| # dependents       | 62 |
+| # downloads        | 718942 |
 | # stars            | 7 |
 
 ## Links

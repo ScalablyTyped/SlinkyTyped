@@ -2,12 +2,13 @@ package typingsSlinky.devextreme.mod.DevExpress.data
 
 import typingsSlinky.devextreme.mod.global.JQueryPromise
 import typingsSlinky.devextreme.mod.global.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DataSource extends js.Object {
+trait DataSource extends StObject {
   
   /**
     * [descr:DataSource.cancel(operationId)]

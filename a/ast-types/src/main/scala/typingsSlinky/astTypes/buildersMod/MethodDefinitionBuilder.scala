@@ -8,12 +8,13 @@ import typingsSlinky.astTypes.astTypesStrings.set
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.FunctionKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.MethodDefinition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MethodDefinitionBuilder extends js.Object {
+trait MethodDefinitionBuilder extends StObject {
   
   def apply(kind: constructor, key: ExpressionKind, value: FunctionKind): MethodDefinition = js.native
   def apply(kind: constructor, key: ExpressionKind, value: FunctionKind, staticParam: Boolean): MethodDefinition = js.native

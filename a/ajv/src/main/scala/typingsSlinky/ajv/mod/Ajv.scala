@@ -1,11 +1,12 @@
 package typingsSlinky.ajv.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Ajv extends js.Object {
+trait Ajv extends StObject {
   
   var _opts: Options = js.native
   
@@ -138,8 +139,8 @@ trait Ajv extends js.Object {
   def removeSchema(): Ajv = js.native
   def removeSchema(schemaKeyRef: String): Ajv = js.native
   def removeSchema(schemaKeyRef: js.Object): Ajv = js.native
-  def removeSchema(schemaKeyRef: Boolean): Ajv = js.native
   def removeSchema(schemaKeyRef: js.RegExp): Ajv = js.native
+  def removeSchema(schemaKeyRef: Boolean): Ajv = js.native
   
   def validate(schemaKeyRef: String, data: js.Any): Boolean | js.Thenable[_] = js.native
   /**

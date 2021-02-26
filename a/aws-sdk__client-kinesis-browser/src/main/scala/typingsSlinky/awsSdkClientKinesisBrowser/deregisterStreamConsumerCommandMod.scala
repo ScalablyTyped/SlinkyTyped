@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKinesisBrowser.typesDeregisterStreamConsumerInp
 import typingsSlinky.awsSdkClientKinesisBrowser.typesDeregisterStreamConsumerOutputMod.DeregisterStreamConsumerOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kinesis-browser/commands/DeregisterStreamConsumerCommand", JSImport.Namespace)
-@js.native
-object deregisterStreamConsumerCommandMod extends js.Object {
+object deregisterStreamConsumerCommandMod {
   
+  @JSImport("@aws-sdk/client-kinesis-browser/commands/DeregisterStreamConsumerCommand", "DeregisterStreamConsumerCommand")
   @js.native
   class DeregisterStreamConsumerCommand protected () extends Command[
           InputTypesUnion, 

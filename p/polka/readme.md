@@ -10,9 +10,9 @@ A micro web server so fast, it'll make you dance! :dancers:
 | ------------------ | :-------------: |
 | Full name          | polka |
 | Keywords           | - |
-| # releases         | 15 |
-| # dependents       | 67 |
-| # downloads        | 808734 |
+| # releases         | 13 |
+| # dependents       | 103 |
+| # downloads        | 1866829 |
 | # stars            | 1 |
 
 ## Links

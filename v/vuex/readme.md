@@ -10,9 +10,9 @@ state management for Vue.js
 | ------------------ | :-------------: |
 | Full name          | vuex |
 | Keywords           | - |
-| # releases         | 4 |
-| # dependents       | 3385 |
-| # downloads        | 32964381 |
+| # releases         | 18 |
+| # dependents       | 6053 |
+| # downloads        | 62345094 |
 | # stars            | 40 |
 
 ## Links

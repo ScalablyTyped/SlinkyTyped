@@ -7,16 +7,15 @@ import typingsSlinky.tablesorter.uidaterangeoptionsMod.UIDateRangeOptions
 import typingsSlinky.tablesorter.uirangeoptionsMod.UIRangeOptions
 import typingsSlinky.tablesorter.uislideroptionsMod.UISliderOptions
 import typingsSlinky.tablesorter.uispinneroptionsMod.UISpinnerOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tablesorter/Filtering/Formatter/UIFormatter", JSImport.Namespace)
-@js.native
-object uiformatterMod extends js.Object {
+object uiformatterMod {
   
   @js.native
-  trait UIFormatter extends js.Object {
+  trait UIFormatter extends StObject {
     
     /**
       * Creates a jQueryUI date-comparsion control.

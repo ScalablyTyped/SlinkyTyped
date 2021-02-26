@@ -2,12 +2,13 @@ package typingsSlinky.chromeLauncher.anon
 
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ErrnoException
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofwrite extends js.Object {
+trait Typeofwrite extends StObject {
   
   def apply(
     fd: Double,

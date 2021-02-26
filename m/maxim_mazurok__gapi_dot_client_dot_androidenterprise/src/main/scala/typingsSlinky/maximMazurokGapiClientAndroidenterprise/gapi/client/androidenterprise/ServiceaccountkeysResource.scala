@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.EnterpriseIdFields
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.KeyId
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServiceaccountkeysResource extends js.Object {
+trait ServiceaccountkeysResource extends StObject {
   
   /**
     * Removes and invalidates the specified credentials for the service account associated with this enterprise. The calling service account must have been retrieved by calling

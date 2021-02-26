@@ -4,21 +4,21 @@
 Typings are for version 4.1.3
 
 ## Library description:
-Another simple argument parser
+Unopinionated, no-frills CLI argument parser
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | arg |
 | Keywords           | - |
-| # releases         | 8 |
-| # dependents       | 415 |
-| # downloads        | 56951991 |
+| # releases         | 4 |
+| # dependents       | 1022 |
+| # downloads        | 210621723 |
 | # stars            | 1 |
 
 ## Links
-- [Homepage](https://github.com/zeit/arg#readme)
-- [Bugs](https://github.com/zeit/arg/issues)
-- [Repository](https://github.com/zeit/arg)
+- [Homepage](https://github.com/vercel/arg#readme)
+- [Bugs](https://github.com/vercel/arg/issues)
+- [Repository](https://github.com/vercel/arg)
 - [Npm](https://www.npmjs.com/package/arg)
     
 

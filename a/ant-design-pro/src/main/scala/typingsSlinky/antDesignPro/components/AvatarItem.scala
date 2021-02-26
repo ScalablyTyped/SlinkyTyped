@@ -7,15 +7,22 @@ import typingsSlinky.antDesignPro.avatarItemMod.AvatarItemProps
 import typingsSlinky.antDesignPro.avatarItemMod.SizeType
 import typingsSlinky.antDesignPro.avatarItemMod.default
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AvatarItem {
   
+  @scala.inline
+  def apply(src: String): Builder = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AvatarItemProps]))
+  }
+  
   @JSImport("ant-design-pro/lib/AvatarList/AvatarItem", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +43,4 @@ object AvatarItem {
   }
   
   def withProps(p: AvatarItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(src: String): Builder = {
-    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AvatarItemProps]))
-  }
 }

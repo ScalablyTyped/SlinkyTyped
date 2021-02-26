@@ -8,6 +8,7 @@ import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.autocompleteAutoCompleteMod.AutoCompleteProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object AutoComplete {
   
   @JSImport("primereact/autocomplete", "AutoComplete")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -144,10 +145,10 @@ object AutoComplete {
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suggestionsVarargs(value: js.Any*): this.type = set("suggestions", js.Array(value :_*))
+    def suggestions(value: js.Array[_]): this.type = set("suggestions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suggestions(value: js.Array[_]): this.type = set("suggestions", value.asInstanceOf[js.Any])
+    def suggestionsVarargs(value: js.Any*): this.type = set("suggestions", js.Array(value :_*))
     
     @scala.inline
     def tabindex(value: Double): this.type = set("tabindex", value.asInstanceOf[js.Any])
@@ -165,7 +166,7 @@ object AutoComplete {
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AutoCompleteProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: AutoComplete.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AutoCompleteProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

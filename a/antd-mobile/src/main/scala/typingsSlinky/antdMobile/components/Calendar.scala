@@ -14,6 +14,7 @@ import typingsSlinky.rmcCalendar.rmcCalendarStrings.one
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.range
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.vertical
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.xl
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ object Calendar {
   
   @JSImport("antd-mobile", "Calendar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +37,10 @@ object Calendar {
     def defaultTimeValue(value: js.Date): this.type = set("defaultTimeValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: js.Date*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: SelectDateType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: SelectDateType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: js.Date*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def enterDirection(value: horizontal | vertical): this.type = set("enterDirection", value.asInstanceOf[js.Any])
@@ -118,7 +119,7 @@ object Calendar {
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Calendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

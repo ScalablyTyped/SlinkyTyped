@@ -6,6 +6,7 @@ import typingsSlinky.csstype.mod.ColorProperty
 import typingsSlinky.mjmlReact.mod.HrefProps
 import typingsSlinky.mjmlReact.mod.MjmlNavbarLinkProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object MjmlNavbarLink {
   
   @JSImport("mjml-react", "MjmlNavbarLink")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -70,7 +71,7 @@ object MjmlNavbarLink {
     def textTransform(value: String): this.type = set("textTransform", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MjmlNavbarLinkProps with HrefProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MjmlNavbarLink.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MjmlNavbarLinkProps with HrefProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

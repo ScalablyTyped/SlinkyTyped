@@ -9,15 +9,31 @@ import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarFormatDateCal
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarIconStrings
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarStrings
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CalendarMonth {
   
+  @scala.inline
+  def apply(
+    dateTimeFormatter: ICalendarFormatDateCallbacks,
+    highlightCurrentMonth: Boolean,
+    highlightSelectedMonth: Boolean,
+    navigatedDate: js.Date,
+    navigationIcons: ICalendarIconStrings,
+    onNavigateDate: (js.Date, Boolean) => Unit,
+    selectedDate: js.Date,
+    strings: ICalendarStrings
+  ): Builder = {
+    val __props = js.Dynamic.literal(dateTimeFormatter = dateTimeFormatter.asInstanceOf[js.Any], highlightCurrentMonth = highlightCurrentMonth.asInstanceOf[js.Any], highlightSelectedMonth = highlightSelectedMonth.asInstanceOf[js.Any], navigatedDate = navigatedDate.asInstanceOf[js.Any], navigationIcons = navigationIcons.asInstanceOf[js.Any], onNavigateDate = js.Any.fromFunction2(onNavigateDate), selectedDate = selectedDate.asInstanceOf[js.Any], strings = strings.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ICalendarMonthProps]))
+  }
+  
   @JSImport("office-ui-fabric-react/lib/components/Calendar/CalendarMonth", "CalendarMonth")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,13 +41,13 @@ object CalendarMonth {
        with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.calendarMonthMod.CalendarMonth] {
     
     @scala.inline
+    def componentRef(value: IRefObject[ICalendarMonth]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ ICalendarMonth | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[ICalendarMonth]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[ICalendarMonth]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
@@ -50,19 +66,4 @@ object CalendarMonth {
   }
   
   def withProps(p: ICalendarMonthProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    dateTimeFormatter: ICalendarFormatDateCallbacks,
-    highlightCurrentMonth: Boolean,
-    highlightSelectedMonth: Boolean,
-    navigatedDate: js.Date,
-    navigationIcons: ICalendarIconStrings,
-    onNavigateDate: (js.Date, Boolean) => Unit,
-    selectedDate: js.Date,
-    strings: ICalendarStrings
-  ): Builder = {
-    val __props = js.Dynamic.literal(dateTimeFormatter = dateTimeFormatter.asInstanceOf[js.Any], highlightCurrentMonth = highlightCurrentMonth.asInstanceOf[js.Any], highlightSelectedMonth = highlightSelectedMonth.asInstanceOf[js.Any], navigatedDate = navigatedDate.asInstanceOf[js.Any], navigationIcons = navigationIcons.asInstanceOf[js.Any], onNavigateDate = js.Any.fromFunction2(onNavigateDate), selectedDate = selectedDate.asInstanceOf[js.Any], strings = strings.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ICalendarMonthProps]))
-  }
 }

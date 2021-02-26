@@ -2,17 +2,20 @@ package typingsSlinky.amcharts
 
 import typingsSlinky.amcharts.anon.DD
 import typingsSlinky.amcharts.anon.EndValue
-import typingsSlinky.amcharts.axisBaseMod.AxisBase
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("amcharts/ValueAxis", JSImport.Namespace)
-@js.native
-object valueAxisMod extends js.Object {
+object valueAxisMod {
+  
+  @JSImport("amcharts/ValueAxis", JSImport.Default)
+  @js.native
+  class default () extends ValueAxis
   
   @js.native
-  trait ValueAxis extends AxisBase {
+  trait ValueAxis
+    extends typingsSlinky.amcharts.axisBaseMod.default {
     
     /**
       * Adds event listener.
@@ -270,7 +273,4 @@ object valueAxisMod extends js.Object {
       */
     def zoomToValues(startValue: Double, endValue: Double): Unit = js.native
   }
-  
-  @js.native
-  class default () extends ValueAxis
 }

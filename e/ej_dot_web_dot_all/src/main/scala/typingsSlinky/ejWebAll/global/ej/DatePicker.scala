@@ -2,6 +2,7 @@ package typingsSlinky.ejWebAll.global.ej
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,22 +11,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class DatePicker protected ()
   extends typingsSlinky.ejWebAll.ej.DatePicker {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.DatePicker.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.DatePicker.Model) = this()
+  def this(element: JQuery) = this()
+  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Model) = this()
+  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Model) = this()
 }
-/* static members */
-@JSGlobal("ej.DatePicker")
-@js.native
-object DatePicker extends js.Object {
+object DatePicker {
   
-  var Locale: js.Any = js.native
-  
-  var fn: typingsSlinky.ejWebAll.ej.DatePicker = js.native
-  
+  @JSGlobal("ej.DatePicker")
   @js.native
-  object Header extends js.Object {
+  val ^ : js.Any = js.native
+  
+  @JSGlobal("ej.DatePicker.Header")
+  @js.native
+  object Header extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.DatePicker.Header with Double] = js.native
@@ -37,8 +36,9 @@ object DatePicker extends js.Object {
     /* 1 */ val Short: typingsSlinky.ejWebAll.ej.DatePicker.Header.Short with Double = js.native
   }
   
+  @JSGlobal("ej.DatePicker.HighlightSection")
   @js.native
-  object HighlightSection extends js.Object {
+  object HighlightSection extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.DatePicker.HighlightSection with Double] = js.native
@@ -50,8 +50,9 @@ object DatePicker extends js.Object {
     /* 1 */ val WorkDays: typingsSlinky.ejWebAll.ej.DatePicker.HighlightSection.WorkDays with Double = js.native
   }
   
+  @JSGlobal("ej.DatePicker.Level")
   @js.native
-  object Level extends js.Object {
+  object Level extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.DatePicker.Level with Double] = js.native
@@ -62,4 +63,18 @@ object DatePicker extends js.Object {
     
     /* 0 */ val Year: typingsSlinky.ejWebAll.ej.DatePicker.Level.Year with Double = js.native
   }
+  
+  /* static member */
+  @JSGlobal("ej.DatePicker.Locale")
+  @js.native
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSGlobal("ej.DatePicker.fn")
+  @js.native
+  def fn: typingsSlinky.ejWebAll.ej.DatePicker = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.DatePicker): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

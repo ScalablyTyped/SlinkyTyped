@@ -9,6 +9,7 @@ import typingsSlinky.storybookComponents.anon.PickanycolortranslatehiddAbout
 import typingsSlinky.storybookComponents.inputMod.TextareaProps
 import typingsSlinky.storybookComponents.storybookComponentsStrings.theme
 import typingsSlinky.storybookTheming.typesMod.Theme
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,13 +21,13 @@ typingsSlinky.storybookComponents.anon.PickanycolortranslatehiddAbout with (typi
 ]) with typingsSlinky.emotionStyledBase.anon.`0`[typingsSlinky.storybookTheming.typesMod.Theme]] because: IArray(Couldn't find props for typingsSlinky.storybookComponents.inputMod.TextareaProps because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.)) */
 object Textarea {
   
-  @JSImport("@storybook/components/dist/form/input/input", "Textarea")
-  @js.native
-  object component extends js.Object
-  
   def apply(
     p: PropsWithChildren[PickanycolortranslatehiddAbout with (Omit[TextareaProps, theme]) with `0`[Theme]]
   ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
+  @JSImport("@storybook/components/dist/form/input/input", "Textarea")
+  @js.native
+  val component: js.Object = js.native
   
   implicit def make(companion: Textarea.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }

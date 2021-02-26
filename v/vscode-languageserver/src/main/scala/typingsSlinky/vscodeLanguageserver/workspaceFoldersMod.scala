@@ -6,18 +6,19 @@ import typingsSlinky.vscodeLanguageserver.mod.Feature
 import typingsSlinky.vscodeLanguageserver.mod._RemoteWorkspace
 import typingsSlinky.vscodeLanguageserverProtocol.protocolWorkspaceFoldersMod.WorkspaceFolder
 import typingsSlinky.vscodeLanguageserverProtocol.protocolWorkspaceFoldersMod.WorkspaceFoldersChangeEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageserver/lib/workspaceFolders", JSImport.Namespace)
-@js.native
-object workspaceFoldersMod extends js.Object {
+object workspaceFoldersMod {
   
+  @JSImport("vscode-languageserver/lib/workspaceFolders", "WorkspaceFoldersFeature")
+  @js.native
   val WorkspaceFoldersFeature: Feature[_RemoteWorkspace, WorkspaceFolders] = js.native
   
   @js.native
-  trait WorkspaceFolders extends js.Object {
+  trait WorkspaceFolders extends StObject {
     
     def getWorkspaceFolders(): js.Promise[js.Array[WorkspaceFolder] | Null] = js.native
     

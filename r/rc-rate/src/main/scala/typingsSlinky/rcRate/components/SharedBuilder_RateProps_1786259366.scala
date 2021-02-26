@@ -7,6 +7,7 @@ import slinky.web.html.ul.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcRate.starMod.StarProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,10 +27,10 @@ class SharedBuilder_RateProps_1786259366[R <: js.Object] (val args: js.Array[js.
   def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def characterReactElement(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
+  def character(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def character(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
+  def characterReactElement(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
   
   @scala.inline
   def characterRender(value: (/* origin */ ReactElement, /* props */ StarProps) => ReactElement): this.type = set("characterRender", js.Any.fromFunction2(value))

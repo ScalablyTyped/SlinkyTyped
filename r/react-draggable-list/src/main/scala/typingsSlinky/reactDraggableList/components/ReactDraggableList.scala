@@ -9,15 +9,26 @@ import typingsSlinky.reactDraggableList.mod.Props
 import typingsSlinky.reactDraggableList.mod.TemplateProps
 import typingsSlinky.reactDraggableList.mod.default
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactDraggableList {
   
+  @scala.inline
+  def apply[I, C, T /* <: ReactComponentClass[Partial[TemplateProps[I, C]]] */](
+    itemKey: String | (js.Function1[I, String]),
+    list: js.Array[I],
+    template: Instantiable2[/* props */ js.Any, /* context */ js.UndefOr[js.Any], T]
+  ): Builder[I, C, T] = {
+    val __props = js.Dynamic.literal(itemKey = itemKey.asInstanceOf[js.Any], list = list.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
+    new Builder[I, C, T](js.Array(this.component, __props.asInstanceOf[Props[I, C, T]]))
+  }
+  
   @JSImport("react-draggable-list", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[I, C, T /* <: ReactComponentClass[Partial[TemplateProps[I, C]]] */] (val args: js.Array[js.Any])
@@ -53,14 +64,4 @@ object ReactDraggableList {
   }
   
   def withProps[I, C, T /* <: ReactComponentClass[Partial[TemplateProps[I, C]]] */](p: Props[I, C, T]): Builder[I, C, T] = new Builder[I, C, T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[I, C, T /* <: ReactComponentClass[Partial[TemplateProps[I, C]]] */](
-    itemKey: String | (js.Function1[I, String]),
-    list: js.Array[I],
-    template: Instantiable2[/* props */ js.Any, /* context */ js.UndefOr[js.Any], T]
-  ): Builder[I, C, T] = {
-    val __props = js.Dynamic.literal(itemKey = itemKey.asInstanceOf[js.Any], list = list.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
-    new Builder[I, C, T](js.Array(this.component, __props.asInstanceOf[Props[I, C, T]]))
-  }
 }

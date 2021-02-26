@@ -3,19 +3,19 @@ package typingsSlinky.phaser.Phaser.Types
 import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.phaser.Phaser.Display.Color
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Phaser.Types.Renderer")
-@js.native
-object Renderer extends js.Object {
+object Renderer {
   
-  @js.native
-  object Snapshot extends js.Object {
+  object Snapshot {
+    
+    type SnapshotCallback = js.Function1[/* snapshot */ Color | HTMLImageElement, Unit]
     
     @js.native
-    trait SnapshotState extends js.Object {
+    trait SnapshotState extends StObject {
       
       /**
         * The height of the frame buffer, if a frame buffer grab.
@@ -27,11 +27,11 @@ object Renderer extends js.Object {
         */
       var bufferWidth: js.UndefOr[integer] = js.native
       
+      def callback(snapshot: HTMLImageElement): Unit = js.native
       /**
         * The function to call after the snapshot is taken.
         */
       def callback(snapshot: Color): Unit = js.native
-      def callback(snapshot: HTMLImageElement): Unit = js.native
       /**
         * The function to call after the snapshot is taken.
         */
@@ -78,7 +78,5 @@ object Renderer extends js.Object {
         */
       var y: js.UndefOr[integer] = js.native
     }
-    
-    type SnapshotCallback = js.Function1[/* snapshot */ Color | HTMLImageElement, Unit]
   }
 }

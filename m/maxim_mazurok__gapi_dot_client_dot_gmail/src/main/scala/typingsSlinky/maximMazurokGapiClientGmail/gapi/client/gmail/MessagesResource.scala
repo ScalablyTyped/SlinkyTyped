@@ -13,12 +13,13 @@ import typingsSlinky.maximMazurokGapiClientGmail.anon.Resource
 import typingsSlinky.maximMazurokGapiClientGmail.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientGmail.anon.Uploadprotocol
 import typingsSlinky.maximMazurokGapiClientGmail.anon.UserId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MessagesResource extends js.Object {
+trait MessagesResource extends StObject {
   
   var attachments: AttachmentsResource = js.native
   

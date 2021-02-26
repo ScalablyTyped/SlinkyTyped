@@ -6,15 +6,25 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.anon.Label
 import typingsSlinky.antdMobile.listViewMod.ListViewProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ListView {
   
+  @scala.inline
+  def apply(
+    dataSource: js.Any,
+    renderRow: (js.Any, Double | String, Double | String, js.UndefOr[Boolean]) => ReactElement
+  ): Builder = {
+    val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], renderRow = js.Any.fromFunction4(renderRow))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ListViewProps]))
+  }
+  
   @JSImport("antd-mobile", "ListView")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -70,10 +80,10 @@ object ListView {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pullToRefreshReactElement(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
+    def pullToRefresh(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pullToRefresh(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
+    def pullToRefreshReactElement(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
     
     @scala.inline
     def quickSearchBarStyle(value: CSSProperties): this.type = set("quickSearchBarStyle", value.asInstanceOf[js.Any])
@@ -124,13 +134,4 @@ object ListView {
   }
   
   def withProps(p: ListViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    dataSource: js.Any,
-    renderRow: (js.Any, Double | String, Double | String, js.UndefOr[Boolean]) => ReactElement
-  ): Builder = {
-    val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], renderRow = js.Any.fromFunction4(renderRow))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ListViewProps]))
-  }
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.googleAppsScript.GoogleAppsScript.Charts
 
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *       var chart = chartBuilder.build();
   */
 @js.native
-trait LineChartBuilder extends js.Object {
+trait LineChartBuilder extends StObject {
   
   def build(): Chart = js.native
   

@@ -10,9 +10,9 @@ a human-readable cron
 | ------------------ | :-------------: |
 | Full name          | ontime |
 | Keywords           | cron, crontab, cronjob, schedule, scheduler, job scheduler, task scheduler, timer, interval |
-| # releases         | 3 |
+| # releases         | 0 |
 | # dependents       | 3 |
-| # downloads        | 14159 |
+| # downloads        | 14831 |
 | # stars            | 1 |
 
 ## Links

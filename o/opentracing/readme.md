@@ -10,9 +10,9 @@ Typings are for version 0.14.5
 | ------------------ | :-------------: |
 | Full name          | opentracing |
 | Keywords           | - |
-| # releases         | 4 |
-| # dependents       | 128 |
-| # downloads        | 18489926 |
+| # releases         | 3 |
+| # dependents       | 193 |
+| # downloads        | 45725445 |
 | # stars            | 3 |
 
 ## Links

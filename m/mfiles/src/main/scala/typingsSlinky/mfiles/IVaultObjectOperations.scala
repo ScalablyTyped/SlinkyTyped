@@ -6,12 +6,13 @@ import typingsSlinky.mfiles.MFiles.MFLatestSpecificBehavior
 import typingsSlinky.mfiles.MFiles.MFObjectWindowMode
 import typingsSlinky.mfiles.MFiles.MFRelationshipsMode
 import typingsSlinky.mfiles.MFiles.MFilesURLType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultObjectOperations extends js.Object {
+trait IVaultObjectOperations extends StObject {
   
   def AddFavorite(ObjID: IObjID): IObjectVersionAndProperties = js.native
   

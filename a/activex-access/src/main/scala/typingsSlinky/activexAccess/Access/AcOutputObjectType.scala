@@ -9,6 +9,7 @@ import typingsSlinky.activexAccess.activexAccessNumbers.`5`
 import typingsSlinky.activexAccess.activexAccessNumbers.`6`
 import typingsSlinky.activexAccess.activexAccessNumbers.`7`
 import typingsSlinky.activexAccess.activexAccessNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAccess.activexAccessNumbers.`9`
   - typingsSlinky.activexAccess.activexAccessNumbers.`0`
 */
-trait AcOutputObjectType extends js.Object
+trait AcOutputObjectType extends StObject
 object AcOutputObjectType {
   
   @scala.inline

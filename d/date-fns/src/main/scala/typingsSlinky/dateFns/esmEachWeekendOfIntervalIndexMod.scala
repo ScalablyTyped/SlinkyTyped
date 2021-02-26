@@ -1,16 +1,16 @@
 package typingsSlinky.dateFns
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("date-fns/esm/eachWeekendOfInterval/index", JSImport.Namespace)
-@js.native
-object esmEachWeekendOfIntervalIndexMod extends js.Object {
+object esmEachWeekendOfIntervalIndexMod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
+    @JSImport("date-fns/esm/eachWeekendOfInterval/index", JSImport.Default)
+    @js.native
     def apply(interval: Interval): js.Array[js.Date] = js.native
   }
 }

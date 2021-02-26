@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMdStates.statesConfigMod.StatesConfigProps
 import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
 import typingsSlinky.reactTransitionGroup.csstransitionMod.CSSTransitionClassNames
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object StatesConfig {
   
   @JSImport("@react-md/states", "StatesConfig")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,7 +34,7 @@ object StatesConfig {
     def rippleTimeout(value: TransitionTimeout): this.type = set("rippleTimeout", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StatesConfigProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatesConfig.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatesConfigProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

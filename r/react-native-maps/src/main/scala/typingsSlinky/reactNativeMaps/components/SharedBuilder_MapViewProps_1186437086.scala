@@ -44,6 +44,7 @@ import typingsSlinky.reactNativeMaps.mod.MapTypes
 import typingsSlinky.reactNativeMaps.mod.Point
 import typingsSlinky.reactNativeMaps.mod.Region
 import typingsSlinky.reactNativeMaps.reactNativeMapsStrings.google
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -54,10 +55,10 @@ class SharedBuilder_MapViewProps_1186437086[R <: js.Object] (val args: js.Array[
      with StBuildingComponent[tag.type, R] {
   
   @scala.inline
-  def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+  def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+  def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
   
   @scala.inline
   def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -84,10 +85,10 @@ class SharedBuilder_MapViewProps_1186437086[R <: js.Object] (val args: js.Array[
   def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+  def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+  def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
   
   @scala.inline
   def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -111,13 +112,13 @@ class SharedBuilder_MapViewProps_1186437086[R <: js.Object] (val args: js.Array[
   def compassOffset(value: Point): this.type = set("compassOffset", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def customMapStyleVarargs(value: MapStyleElement*): this.type = set("customMapStyle", js.Array(value :_*))
-  
-  @scala.inline
   def customMapStyle(value: js.Array[MapStyleElement]): this.type = set("customMapStyle", value.asInstanceOf[js.Any])
   
   @scala.inline
   def customMapStyleString(value: String): this.type = set("customMapStyleString", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def customMapStyleVarargs(value: MapStyleElement*): this.type = set("customMapStyle", js.Array(value :_*))
   
   @scala.inline
   def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])

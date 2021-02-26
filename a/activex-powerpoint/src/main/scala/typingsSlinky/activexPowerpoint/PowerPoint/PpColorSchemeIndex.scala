@@ -10,6 +10,7 @@ import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`5`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`6`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`7`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`3`
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`4`
 */
-trait PpColorSchemeIndex extends js.Object
+trait PpColorSchemeIndex extends StObject
 object PpColorSchemeIndex {
   
   @scala.inline

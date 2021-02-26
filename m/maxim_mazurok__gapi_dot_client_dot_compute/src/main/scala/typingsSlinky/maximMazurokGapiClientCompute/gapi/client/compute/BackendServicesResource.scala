@@ -11,12 +11,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.PrettyPrintProject
 import typingsSlinky.maximMazurokGapiClientCompute.anon.ProjectQuotaUser
 import typingsSlinky.maximMazurokGapiClientCompute.anon.QuotaUserRequestId
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RequestIdResource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BackendServicesResource extends js.Object {
+trait BackendServicesResource extends StObject {
   
   def addSignedUrlKey(request: AltBackendService, body: SignedUrlKey): Request[Operation] = js.native
   /** Adds a key for validating requests with signed URLs for this backend service. */

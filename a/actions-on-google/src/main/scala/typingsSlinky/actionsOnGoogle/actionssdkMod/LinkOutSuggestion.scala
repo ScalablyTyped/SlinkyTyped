@@ -2,6 +2,7 @@ package typingsSlinky.actionsOnGoogle.actionssdkMod
 
 import typingsSlinky.actionsOnGoogle.incomingMod._IncomingMessage
 import typingsSlinky.actionsOnGoogle.linkoutMod.LinkOutSuggestionOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

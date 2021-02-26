@@ -1,6 +1,7 @@
 package typingsSlinky.phaser.global.MatterJS
 
 import typingsSlinky.phaser.MatterJS.IRunnerOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,16 +22,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Runner ()
   extends typingsSlinky.phaser.MatterJS.Runner
-/* static members */
-@JSGlobal("MatterJS.Runner")
-@js.native
-object Runner extends js.Object {
+object Runner {
   
   /**
     * Creates a new Runner. The options parameter is an object that specifies any properties you wish to override the defaults.
     * @method create
     * @param {} options
     */
+  /* static member */
+  @JSGlobal("MatterJS.Runner.create")
+  @js.native
   def create(options: IRunnerOptions): typingsSlinky.phaser.MatterJS.Runner = js.native
   
   /**
@@ -38,12 +39,18 @@ object Runner extends js.Object {
     * @method run
     * @param {engine} engine
     */
+  /* static member */
+  @JSGlobal("MatterJS.Runner.run")
+  @js.native
   def run(engine: typingsSlinky.phaser.MatterJS.Engine): typingsSlinky.phaser.MatterJS.Runner = js.native
   /**
     * Continuously ticks a `Matter.Engine` by calling `Runner.tick` on the `requestAnimationFrame` event.
     * @method run
     * @param {engine} engine
     */
+  /* static member */
+  @JSGlobal("MatterJS.Runner.run")
+  @js.native
   def run(runner: typingsSlinky.phaser.MatterJS.Runner, engine: typingsSlinky.phaser.MatterJS.Engine): typingsSlinky.phaser.MatterJS.Runner = js.native
   
   /**
@@ -52,6 +59,9 @@ object Runner extends js.Object {
     * @param {runner} runner
     * @param {engine} engine
     */
+  /* static member */
+  @JSGlobal("MatterJS.Runner.start")
+  @js.native
   def start(runner: typingsSlinky.phaser.MatterJS.Runner, engine: typingsSlinky.phaser.MatterJS.Engine): Unit = js.native
   
   /**
@@ -60,6 +70,9 @@ object Runner extends js.Object {
     * @method stop
     * @param {runner} runner
     */
+  /* static member */
+  @JSGlobal("MatterJS.Runner.stop")
+  @js.native
   def stop(runner: typingsSlinky.phaser.MatterJS.Runner): Unit = js.native
   
   /**
@@ -72,6 +85,9 @@ object Runner extends js.Object {
     * @param {engine} engine
     * @param {number} time
     */
+  /* static member */
+  @JSGlobal("MatterJS.Runner.tick")
+  @js.native
   def tick(
     runner: typingsSlinky.phaser.MatterJS.Runner,
     engine: typingsSlinky.phaser.MatterJS.Engine,

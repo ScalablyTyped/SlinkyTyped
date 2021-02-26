@@ -2,12 +2,13 @@ package typingsSlinky.atom.mod
 
 import typingsSlinky.atom.anon.ExclusiveInvalidate
 import typingsSlinky.atom.anon.`27`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MarkerLayer extends js.Object {
+trait MarkerLayer extends StObject {
   
   /** Remove all markers from this layer. */
   def clear(): Unit = js.native

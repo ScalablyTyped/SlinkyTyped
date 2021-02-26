@@ -1,6 +1,7 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Input
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.none_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.back
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.forward
 */
-trait MouseButton extends js.Object
+trait MouseButton extends StObject
 object MouseButton {
   
   @scala.inline

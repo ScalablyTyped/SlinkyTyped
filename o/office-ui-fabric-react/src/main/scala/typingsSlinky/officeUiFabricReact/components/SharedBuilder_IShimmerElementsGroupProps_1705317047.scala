@@ -80,6 +80,7 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -88,6 +89,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class SharedBuilder_IShimmerElementsGroupProps_1705317047 (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
+  
+  @scala.inline
+  def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
   
   @scala.inline
   def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -323,13 +327,13 @@ class SharedBuilder_IShimmerElementsGroupProps_1705317047 (val args: js.Array[js
   def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def componentRef(value: IRefObject[IShimmerElementsGroup]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def componentRefFunction1(value: /* ref */ IShimmerElementsGroup | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
   
   @scala.inline
   def componentRefRefObject(value: ReactRef[IShimmerElementsGroup]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def componentRef(value: IRefObject[IShimmerElementsGroup]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
@@ -362,16 +366,13 @@ class SharedBuilder_IShimmerElementsGroupProps_1705317047 (val args: js.Array[js
   def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -860,10 +861,10 @@ class SharedBuilder_IShimmerElementsGroupProps_1705317047 (val args: js.Array[js
   def shape(value: String): this.type = set("shape", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def shimmerElementsVarargs(value: IShimmerElement*): this.type = set("shimmerElements", js.Array(value :_*))
+  def shimmerElements(value: js.Array[IShimmerElement]): this.type = set("shimmerElements", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def shimmerElements(value: js.Array[IShimmerElement]): this.type = set("shimmerElements", value.asInstanceOf[js.Any])
+  def shimmerElementsVarargs(value: IShimmerElement*): this.type = set("shimmerElements", js.Array(value :_*))
   
   @scala.inline
   def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
@@ -902,10 +903,10 @@ class SharedBuilder_IShimmerElementsGroupProps_1705317047 (val args: js.Array[js
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def stylesFunction1(value: IShimmerElementsGroupStyleProps => DeepPartial[IShimmerElementsGroupStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def styles(value: IStyleFunctionOrObject[IShimmerElementsGroupStyleProps, IShimmerElementsGroupStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def styles(value: IStyleFunctionOrObject[IShimmerElementsGroupStyleProps, IShimmerElementsGroupStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+  def stylesFunction1(value: IShimmerElementsGroupStyleProps => DeepPartial[IShimmerElementsGroupStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   
   @scala.inline
   def summary(value: String): this.type = set("summary", value.asInstanceOf[js.Any])
@@ -944,10 +945,10 @@ class SharedBuilder_IShimmerElementsGroupProps_1705317047 (val args: js.Array[js
   def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
   
   @scala.inline
   def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])

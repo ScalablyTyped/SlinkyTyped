@@ -5,16 +5,22 @@ import typingsSlinky.baconjs.replyMod.Reply
 import typingsSlinky.baconjs.typesMod.EventSink
 import typingsSlinky.baconjs.typesMod.Subscribe
 import typingsSlinky.baconjs.typesMod.Unsub
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("baconjs/types/internal/dispatcher", JSImport.Namespace)
-@js.native
-object dispatcherMod extends js.Object {
+object dispatcherMod {
+  
+  @JSImport("baconjs/types/internal/dispatcher", JSImport.Default)
+  @js.native
+  class default[V, O] protected () extends Dispatcher[V, O] {
+    def this(observable: O, _subscribe: Subscribe[V]) = this()
+    def this(observable: O, _subscribe: Subscribe[V], _handleEvent: EventSink[V]) = this()
+  }
   
   @js.native
-  trait Dispatcher[V, O] extends js.Object {
+  trait Dispatcher[V, O] extends StObject {
     
     var _handleEvent: js.UndefOr[EventSink[V]] = js.native
     
@@ -56,16 +62,10 @@ object dispatcherMod extends js.Object {
   }
   
   @js.native
-  trait Subscription[V] extends js.Object {
+  trait Subscription[V] extends StObject {
     
     def sink(event: Event[V]): Reply = js.native
     @JSName("sink")
     var sink_Original: EventSink[V] = js.native
-  }
-  
-  @js.native
-  class default[V, O] protected () extends Dispatcher[V, O] {
-    def this(observable: O, _subscribe: Subscribe[V]) = this()
-    def this(observable: O, _subscribe: Subscribe[V], _handleEvent: EventSink[V]) = this()
   }
 }

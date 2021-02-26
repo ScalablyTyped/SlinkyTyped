@@ -1,5 +1,6 @@
 package typingsSlinky.jweixin.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jweixin.jweixinStrings.album
   - typingsSlinky.jweixin.jweixinStrings.camera
 */
-trait ImageSourceType extends js.Object
+trait ImageSourceType extends StObject
 object ImageSourceType {
   
   @scala.inline

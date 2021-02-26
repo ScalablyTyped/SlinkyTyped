@@ -7,15 +7,22 @@ import typingsSlinky.gestalt.anon.ActiveIndex
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.mod.SegmentedControlProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SegmentedControl {
   
+  @scala.inline
+  def apply(items: js.Array[ReactElement], onChange: ActiveIndex => Unit, selectedItemIndex: Double): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), selectedItemIndex = selectedItemIndex.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SegmentedControlProps]))
+  }
+  
   @JSImport("gestalt", "SegmentedControl")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +37,4 @@ object SegmentedControl {
   }
   
   def withProps(p: SegmentedControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(items: js.Array[ReactElement], onChange: ActiveIndex => Unit, selectedItemIndex: Double): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), selectedItemIndex = selectedItemIndex.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SegmentedControlProps]))
-  }
 }

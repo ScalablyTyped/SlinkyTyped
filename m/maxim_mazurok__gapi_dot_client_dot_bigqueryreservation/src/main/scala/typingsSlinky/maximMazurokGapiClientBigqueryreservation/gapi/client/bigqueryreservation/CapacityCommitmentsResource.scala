@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.Name
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CapacityCommitmentsResource extends js.Object {
+trait CapacityCommitmentsResource extends StObject {
   
   /** Creates a new capacity commitment resource. */
   def create(request: Callback): Request[CapacityCommitment] = js.native

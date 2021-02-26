@@ -3,14 +3,15 @@ package typingsSlinky.cssSelect
 import typingsSlinky.cssSelect.typesMod.CompiledQuery
 import typingsSlinky.cssSelect.typesMod.InternalOptions
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("css-select/lib/pseudo-selectors/filters", JSImport.Namespace)
-@js.native
-object filtersMod extends js.Object {
+object filtersMod {
   
+  @JSImport("css-select/lib/pseudo-selectors/filters", "filters")
+  @js.native
   val filters: Record[String, Filter] = js.native
   
   type Filter = js.Function4[

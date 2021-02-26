@@ -1,13 +1,14 @@
 package typingsSlinky.angularCore.mod
 
 import org.scalajs.dom.raw.Node
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/core", "TestabilityRegistry")
 @js.native
-class TestabilityRegistry () extends js.Object {
+class TestabilityRegistry () extends StObject {
   
   /**
     * Find testability of a node in the Tree

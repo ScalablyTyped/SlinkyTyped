@@ -12,7 +12,7 @@ Pure JS implementation of CRC32 https://en.wikipedia.org/wiki/Cyclic_redundancy_
 | Keywords           | - |
 | # releases         | 5 |
 | # dependents       | 1 |
-| # downloads        | 994055 |
+| # downloads        | 6970469 |
 | # stars            | 0 |
 
 ## Links

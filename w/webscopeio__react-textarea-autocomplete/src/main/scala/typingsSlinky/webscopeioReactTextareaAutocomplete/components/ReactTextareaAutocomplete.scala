@@ -77,15 +77,22 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.webscopeioReactTextareaAutocomplete.mod.TextareaProps
 import typingsSlinky.webscopeioReactTextareaAutocomplete.mod.TriggerType
 import typingsSlinky.webscopeioReactTextareaAutocomplete.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactTextareaAutocomplete {
   
+  @scala.inline
+  def apply[TItem /* <: String | js.Object */](loadingComponent: ReactComponentClass[js.Object], trigger: TriggerType[TItem]): Builder[TItem] = {
+    val __props = js.Dynamic.literal(loadingComponent = loadingComponent.asInstanceOf[js.Any], trigger = trigger.asInstanceOf[js.Any])
+    new Builder[TItem](js.Array(this.component, __props.asInstanceOf[TextareaProps[TItem]]))
+  }
+  
   @JSImport("@webscopeio/react-textarea-autocomplete", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[TItem /* <: String | js.Object */] (val args: js.Array[js.Any])
@@ -293,10 +300,10 @@ object ReactTextareaAutocomplete {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -659,10 +666,10 @@ object ReactTextareaAutocomplete {
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scrollToItemFunction2(value: (/* container */ HTMLDivElement, /* item */ HTMLDivElement) => Unit): this.type = set("scrollToItem", js.Any.fromFunction2(value))
+    def scrollToItem(value: Boolean | (js.Function2[/* container */ HTMLDivElement, /* item */ HTMLDivElement, Unit])): this.type = set("scrollToItem", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scrollToItem(value: Boolean | (js.Function2[/* container */ HTMLDivElement, /* item */ HTMLDivElement, Unit])): this.type = set("scrollToItem", value.asInstanceOf[js.Any])
+    def scrollToItemFunction2(value: (/* container */ HTMLDivElement, /* item */ HTMLDivElement) => Unit): this.type = set("scrollToItem", js.Any.fromFunction2(value))
     
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
@@ -698,10 +705,10 @@ object ReactTextareaAutocomplete {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -711,10 +718,4 @@ object ReactTextareaAutocomplete {
   }
   
   def withProps[TItem /* <: String | js.Object */](p: TextareaProps[TItem]): Builder[TItem] = new Builder[TItem](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[TItem /* <: String | js.Object */](loadingComponent: ReactComponentClass[js.Object], trigger: TriggerType[TItem]): Builder[TItem] = {
-    val __props = js.Dynamic.literal(loadingComponent = loadingComponent.asInstanceOf[js.Any], trigger = trigger.asInstanceOf[js.Any])
-    new Builder[TItem](js.Array(this.component, __props.asInstanceOf[TextareaProps[TItem]]))
-  }
 }

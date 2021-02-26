@@ -2,6 +2,7 @@ package typingsSlinky.typescriptServices.mod
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import typingsSlinky.typescriptServices.TypeScript.ITypeSyntax
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,11 +20,11 @@ class ConstructorTypeSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSImport("typescript-services", "ConstructorTypeSyntax")
-@js.native
-object ConstructorTypeSyntax extends js.Object {
+object ConstructorTypeSyntax {
   
+  /* static member */
+  @JSImport("typescript-services", "ConstructorTypeSyntax.create")
+  @js.native
   def create(
     newKeyword: ISyntaxToken,
     parameterList: typingsSlinky.typescriptServices.TypeScript.ParameterListSyntax,
@@ -31,5 +32,8 @@ object ConstructorTypeSyntax extends js.Object {
     `type`: ITypeSyntax
   ): typingsSlinky.typescriptServices.TypeScript.ConstructorTypeSyntax = js.native
   
+  /* static member */
+  @JSImport("typescript-services", "ConstructorTypeSyntax.create1")
+  @js.native
   def create1(`type`: ITypeSyntax): typingsSlinky.typescriptServices.TypeScript.ConstructorTypeSyntax = js.native
 }

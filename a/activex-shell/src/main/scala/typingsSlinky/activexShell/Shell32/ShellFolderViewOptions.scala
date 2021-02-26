@@ -7,6 +7,7 @@ import typingsSlinky.activexShell.activexShellNumbers.`0x00000020`
 import typingsSlinky.activexShell.activexShellNumbers.`0x00000040`
 import typingsSlinky.activexShell.activexShellNumbers.`0x00000080`
 import typingsSlinky.activexShell.activexShellNumbers.`0x00000200`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexShell.activexShellNumbers.`0x00000080`
   - typingsSlinky.activexShell.activexShellNumbers.`0x00000200`
 */
-trait ShellFolderViewOptions extends js.Object
+trait ShellFolderViewOptions extends StObject
 object ShellFolderViewOptions {
   
   /** The **Active Desktop – View as Web Page** option is enabled. */

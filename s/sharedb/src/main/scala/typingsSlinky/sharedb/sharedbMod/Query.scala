@@ -1,6 +1,8 @@
 package typingsSlinky.sharedb.sharedbMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitterOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("sharedb/lib/sharedb", "Query")
 @js.native
 class Query () extends EventEmitter {
+  def this(options: EventEmitterOptions) = this()
   
   def addListener(event: QueryEvent, callback: js.Function1[/* repeated */ js.Any, _]): this.type = js.native
   

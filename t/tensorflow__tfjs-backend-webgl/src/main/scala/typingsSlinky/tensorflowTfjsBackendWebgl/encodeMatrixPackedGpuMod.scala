@@ -1,14 +1,14 @@
 package typingsSlinky.tensorflowTfjsBackendWebgl
 
 import typingsSlinky.tensorflowTfjsBackendWebgl.gpgpuMathMod.GPGPUProgram
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-backend-webgl/dist/encode_matrix_packed_gpu", JSImport.Namespace)
-@js.native
-object encodeMatrixPackedGpuMod extends js.Object {
+object encodeMatrixPackedGpuMod {
   
+  @JSImport("@tensorflow/tfjs-backend-webgl/dist/encode_matrix_packed_gpu", "EncodeMatrixPackedProgram")
   @js.native
   class EncodeMatrixPackedProgram protected () extends GPGPUProgram {
     def this(outputShape: js.Tuple3[Double, Double, Double], texShape: js.Tuple2[Double, Double]) = this()

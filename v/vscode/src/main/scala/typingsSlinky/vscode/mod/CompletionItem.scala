@@ -1,13 +1,14 @@
 package typingsSlinky.vscode.mod
 
 import typingsSlinky.vscode.anon.Inserting
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode", "CompletionItem")
 @js.native
-class CompletionItem protected () extends js.Object {
+class CompletionItem protected () extends StObject {
   /**
     * Creates a new completion item.
     *

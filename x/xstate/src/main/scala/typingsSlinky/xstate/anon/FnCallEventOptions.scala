@@ -4,12 +4,13 @@ import typingsSlinky.xstate.typesMod.EventObject
 import typingsSlinky.xstate.typesMod.SendAction
 import typingsSlinky.xstate.typesMod.SendActionOptions
 import typingsSlinky.xstate.typesMod.SendExpr
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FnCallEventOptions extends js.Object {
+trait FnCallEventOptions extends StObject {
   
   def apply[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TSentEvent]): SendAction[TContext, TEvent, TSentEvent] = js.native
   def apply[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](

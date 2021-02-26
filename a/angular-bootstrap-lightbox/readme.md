@@ -12,7 +12,7 @@ An AngularJS lightbox built using UI Bootstrap Modal.
 | Keywords           | angular, lightbox, image, gallery |
 | # releases         | 0 |
 | # dependents       | 0 |
-| # downloads        | 61839 |
+| # downloads        | 86001 |
 | # stars            | 2 |
 
 ## Links

@@ -1,11 +1,11 @@
 package typingsSlinky.sawtoothSdk.protobufMod
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.ClientEventsGetResponse.Status
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,18 +34,57 @@ class ClientEventsGetResponse () extends IClientEventsGetResponse {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse")
-@js.native
-object ClientEventsGetResponse extends js.Object {
+object ClientEventsGetResponse {
+  
+  @js.native
+  sealed trait Status extends StObject
+  /** Status enum. */
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.Status")
+  @js.native
+  object Status extends StObject {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[Status with Double] = js.native
+    
+    @js.native
+    sealed trait INTERNAL_ERROR extends Status
+    /* 2 */ val INTERNAL_ERROR: typingsSlinky.sawtoothSdk.protobufMod.ClientEventsGetResponse.Status.INTERNAL_ERROR with Double = js.native
+    
+    @js.native
+    sealed trait INVALID_FILTER extends Status
+    /* 3 */ val INVALID_FILTER: typingsSlinky.sawtoothSdk.protobufMod.ClientEventsGetResponse.Status.INVALID_FILTER with Double = js.native
+    
+    @js.native
+    sealed trait OK extends Status
+    /* 1 */ val OK: typingsSlinky.sawtoothSdk.protobufMod.ClientEventsGetResponse.Status.OK with Double = js.native
+    
+    @js.native
+    sealed trait STATUS_UNSET extends Status
+    /* 0 */ val STATUS_UNSET: typingsSlinky.sawtoothSdk.protobufMod.ClientEventsGetResponse.Status.STATUS_UNSET with Double = js.native
+    
+    @js.native
+    sealed trait UNKNOWN_BLOCK extends Status
+    /* 4 */ val UNKNOWN_BLOCK: typingsSlinky.sawtoothSdk.protobufMod.ClientEventsGetResponse.Status.UNKNOWN_BLOCK with Double = js.native
+  }
   
   /**
     * Creates a new ClientEventsGetResponse instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ClientEventsGetResponse instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.create")
+  @js.native
   def create(): ClientEventsGetResponse = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.create")
+  @js.native
   def create(properties: IClientEventsGetResponse): ClientEventsGetResponse = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): ClientEventsGetResponse = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ClientEventsGetResponse = js.native
   /**
     * Decodes a ClientEventsGetResponse message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -54,11 +93,16 @@ object ClientEventsGetResponse extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.decode")
+  @js.native
   def decode(reader: Reader): ClientEventsGetResponse = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.decode")
+  @js.native
   def decode(reader: Reader, length: Double): ClientEventsGetResponse = js.native
-  def decode(reader: js.typedarray.Uint8Array): ClientEventsGetResponse = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): ClientEventsGetResponse = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ClientEventsGetResponse = js.native
   /**
     * Decodes a ClientEventsGetResponse message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -66,8 +110,9 @@ object ClientEventsGetResponse extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): ClientEventsGetResponse = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): ClientEventsGetResponse = js.native
   
   /**
     * Encodes the specified ClientEventsGetResponse message. Does not implicitly {@link ClientEventsGetResponse.verify|verify} messages.
@@ -75,7 +120,11 @@ object ClientEventsGetResponse extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.encode")
+  @js.native
   def encode(message: IClientEventsGetResponse): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.encode")
+  @js.native
   def encode(message: IClientEventsGetResponse, writer: Writer): Writer = js.native
   
   /**
@@ -84,7 +133,11 @@ object ClientEventsGetResponse extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientEventsGetResponse): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientEventsGetResponse, writer: Writer): Writer = js.native
   
   /**
@@ -92,6 +145,8 @@ object ClientEventsGetResponse extends js.Object {
     * @param object Plain object
     * @returns ClientEventsGetResponse
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): ClientEventsGetResponse = js.native
   
   /**
@@ -100,7 +155,11 @@ object ClientEventsGetResponse extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.toObject")
+  @js.native
   def toObject(message: ClientEventsGetResponse): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.toObject")
+  @js.native
   def toObject(message: ClientEventsGetResponse, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -108,40 +167,7 @@ object ClientEventsGetResponse extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientEventsGetResponse.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
-  
-  @js.native
-  sealed trait Status extends js.Object
-  /** Status enum. */
-  @js.native
-  object Status extends js.Object {
-    
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[Status with Double] = js.native
-    
-    @js.native
-    sealed trait INTERNAL_ERROR extends Status
-    /* 2 */ @js.native
-    object INTERNAL_ERROR extends TopLevel[INTERNAL_ERROR with Double]
-    
-    @js.native
-    sealed trait INVALID_FILTER extends Status
-    /* 3 */ @js.native
-    object INVALID_FILTER extends TopLevel[INVALID_FILTER with Double]
-    
-    @js.native
-    sealed trait OK extends Status
-    /* 1 */ @js.native
-    object OK extends TopLevel[OK with Double]
-    
-    @js.native
-    sealed trait STATUS_UNSET extends Status
-    /* 0 */ @js.native
-    object STATUS_UNSET extends TopLevel[STATUS_UNSET with Double]
-    
-    @js.native
-    sealed trait UNKNOWN_BLOCK extends Status
-    /* 4 */ @js.native
-    object UNKNOWN_BLOCK extends TopLevel[UNKNOWN_BLOCK with Double]
-  }
 }

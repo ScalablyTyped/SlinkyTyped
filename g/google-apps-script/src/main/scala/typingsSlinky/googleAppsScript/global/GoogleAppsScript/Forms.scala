@@ -1,12 +1,11 @@
 package typingsSlinky.googleAppsScript.global.GoogleAppsScript
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("GoogleAppsScript.Forms")
-@js.native
-object Forms extends js.Object {
+object Forms {
   
   /**
     * An enum representing the supported types of image alignment. Alignment types can be accessed from
@@ -19,8 +18,9 @@ object Forms extends js.Object {
     *         .setImage(img)
     *         .setAlignment(FormApp.Alignment.CENTER);
     */
+  @JSGlobal("GoogleAppsScript.Forms.Alignment")
   @js.native
-  object Alignment extends js.Object {
+  object Alignment extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.Alignment with Double] = js.native
@@ -44,8 +44,9 @@ object Forms extends js.Object {
     *     // Update the form's response destination.
     *     form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());
     */
+  @JSGlobal("GoogleAppsScript.Forms.DestinationType")
   @js.native
-  object DestinationType extends js.Object {
+  object DestinationType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -70,8 +71,9 @@ object Forms extends js.Object {
     *     item.setFeedbackForCorrect(
     *         FormApp.createFeedback().setDisplayText("Dogs rule, cats drool.").build());
     */
+  @JSGlobal("GoogleAppsScript.Forms.FeedbackType")
   @js.native
-  object FeedbackType extends js.Object {
+  object FeedbackType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.FeedbackType with Double] = js.native
@@ -96,8 +98,9 @@ object Forms extends js.Object {
     *       item.setHelpText('Description of new section.');
     *     }
     */
+  @JSGlobal("GoogleAppsScript.Forms.ItemType")
   @js.native
-  object ItemType extends js.Object {
+  object ItemType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType with Double] = js.native
@@ -162,8 +165,9 @@ object Forms extends js.Object {
     *     var otherChoice = item.createChoice('Strawberry', FormApp.PageNavigationType.CONTINUE);
     *     item.setChoices([rightChoice, wrongChoice, iffyChoice, otherChoice]);
     */
+  @JSGlobal("GoogleAppsScript.Forms.PageNavigationType")
   @js.native
-  object PageNavigationType extends js.Object {
+  object PageNavigationType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[

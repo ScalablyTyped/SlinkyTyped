@@ -9,9 +9,9 @@ A string replace plugin for gulp
 | ------------------ | :-------------: |
 | Full name          | gulp-replace |
 | Keywords           | gulpplugin, replace |
-| # releases         | 2 |
-| # dependents       | 664 |
-| # downloads        | 9651428 |
+| # releases         | 0 |
+| # dependents       | 726 |
+| # downloads        | 11260628 |
 | # stars            | 135 |
 
 ## Links

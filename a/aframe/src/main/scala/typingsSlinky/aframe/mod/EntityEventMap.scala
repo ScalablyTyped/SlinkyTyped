@@ -8,12 +8,13 @@ import typingsSlinky.aframe.anon.Id
 import typingsSlinky.aframe.anon.Name
 import typingsSlinky.aframe.anon.State
 import typingsSlinky.std.EventListener
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EntityEventMap extends js.Object {
+trait EntityEventMap extends StObject {
   
   var `child-attached`: DetailEvent[El] = js.native
   

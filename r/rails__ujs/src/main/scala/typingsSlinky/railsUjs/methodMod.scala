@@ -1,13 +1,14 @@
 package typingsSlinky.railsUjs
 
 import org.scalajs.dom.raw.Event
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@rails/ujs/features/method", JSImport.Namespace)
-@js.native
-object methodMod extends js.Object {
+object methodMod {
   
+  @JSImport("@rails/ujs/features/method", "handleMethod")
+  @js.native
   def handleMethod(e: Event): Unit = js.native
 }

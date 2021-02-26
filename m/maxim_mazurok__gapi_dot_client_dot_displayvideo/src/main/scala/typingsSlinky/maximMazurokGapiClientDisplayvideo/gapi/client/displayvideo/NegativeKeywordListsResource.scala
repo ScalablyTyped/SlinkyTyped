@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.AltCallbackFields
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.CallbackFieldsKey
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.KeyNegativeKeywordListId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.OauthtokenPageSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NegativeKeywordListsResource extends js.Object {
+trait NegativeKeywordListsResource extends StObject {
   
   /** Creates a new negative keyword list. Returns the newly created negative keyword list if successful. */
   def create(request: AdvertiserIdAltCallback): Request[NegativeKeywordList] = js.native

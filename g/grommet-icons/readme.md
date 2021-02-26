@@ -10,9 +10,9 @@ iconography for grommet apps.
 | ------------------ | :-------------: |
 | Full name          | grommet-icons |
 | Keywords           | - |
-| # releases         | 17 |
-| # dependents       | 20 |
-| # downloads        | 498260 |
+| # releases         | 9 |
+| # dependents       | 34 |
+| # downloads        | 864851 |
 | # stars            | 0 |
 
 ## Links

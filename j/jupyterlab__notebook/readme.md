@@ -10,13 +10,15 @@ JupyterLab - Notebook
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/notebook |
 | Keywords           | - |
-| # releases         | 70 |
-| # dependents       | 160 |
-| # downloads        | 879682 |
+| # releases         | 131 |
+| # dependents       | 271 |
+| # downloads        | 1697478 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/jupyterlab/jupyterlab)
 - [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
+- [Repository](https://github.com/jupyterlab/jupyterlab)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Fnotebook)
     
 

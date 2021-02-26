@@ -14,15 +14,22 @@ import typingsSlinky.ionicReact.ionToastMod.ToastButton
 import typingsSlinky.ionicReact.ionicReactStrings.bottom
 import typingsSlinky.ionicReact.ionicReactStrings.middle
 import typingsSlinky.ionicReact.ionicReactStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IonToast {
   
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ToastOptionsReactControll]))
+  }
+  
   @JSImport("@ionic/react", "IonToast")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,19 +40,19 @@ object IonToast {
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttonsVarargs(value: (ToastButton | String)*): this.type = set("buttons", js.Array(value :_*))
+    def buttons(value: js.Array[ToastButton | String]): this.type = set("buttons", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttons(value: js.Array[ToastButton | String]): this.type = set("buttons", value.asInstanceOf[js.Any])
+    def buttonsVarargs(value: (ToastButton | String)*): this.type = set("buttons", js.Array(value :_*))
     
     @scala.inline
     def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cssClassVarargs(value: String*): this.type = set("cssClass", js.Array(value :_*))
+    def cssClass(value: String | js.Array[String]): this.type = set("cssClass", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cssClass(value: String | js.Array[String]): this.type = set("cssClass", value.asInstanceOf[js.Any])
+    def cssClassVarargs(value: String*): this.type = set("cssClass", js.Array(value :_*))
     
     @scala.inline
     def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
@@ -94,10 +101,4 @@ object IonToast {
   }
   
   def withProps(p: ToastOptionsReactControll): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(isOpen: Boolean): Builder = {
-    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ToastOptionsReactControll]))
-  }
 }

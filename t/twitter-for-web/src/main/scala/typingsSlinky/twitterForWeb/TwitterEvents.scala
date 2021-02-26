@@ -7,6 +7,7 @@ import typingsSlinky.twitterForWeb.twitterForWebStrings.loaded
 import typingsSlinky.twitterForWeb.twitterForWebStrings.rendered
 import typingsSlinky.twitterForWeb.twitterForWebStrings.retweet
 import typingsSlinky.twitterForWeb.twitterForWebStrings.tweet
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * The interface for Twitter events.
   */
 @js.native
-trait TwitterEvents extends js.Object {
+trait TwitterEvents extends StObject {
   
   /**
     * Bind an event.

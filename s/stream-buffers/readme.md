@@ -10,9 +10,9 @@ Buffer-backed Streams for reading and writing.
 | ------------------ | :-------------: |
 | Full name          | stream-buffers |
 | Keywords           | memory streams, streams, buffer streams |
-| # releases         | 2 |
-| # dependents       | 255 |
-| # downloads        | 26409806 |
+| # releases         | 0 |
+| # dependents       | 319 |
+| # downloads        | 49332380 |
 | # stars            | 15 |
 
 ## Links

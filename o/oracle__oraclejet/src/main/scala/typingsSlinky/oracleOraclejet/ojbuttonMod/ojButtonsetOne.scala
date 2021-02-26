@@ -19,6 +19,7 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.oneTabstop
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.outlined
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.value
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valueChanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

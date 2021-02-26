@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.containerMod.ContainerProps
+import typingsSlinky.reactstrap.containerMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "Container")
+@JSImport("reactstrap/lib", "Container")
 @js.native
-class Container ()
-  extends Component[ContainerProps, js.Object, js.Any]
+class Container () extends default

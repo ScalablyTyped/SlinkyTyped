@@ -4,12 +4,13 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.stellarBase.stellarBaseStrings.base64
 import typingsSlinky.stellarBase.stellarBaseStrings.hex
 import typingsSlinky.stellarBase.stellarBaseStrings.raw
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClaimOfferAtom extends js.Object {
+trait ClaimOfferAtom extends StObject {
   
   def amountBought(): Int64 = js.native
   def amountBought(value: Int64): Int64 = js.native

@@ -3,14 +3,15 @@ package typingsSlinky.tensorflowTfjsCore
 import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-core/dist/ops/batchnorm4d", JSImport.Namespace)
-@js.native
-object batchnorm4dMod extends js.Object {
+object batchnorm4dMod {
   
+  @JSImport("@tensorflow/tfjs-core/dist/ops/batchnorm4d", "batchNorm4d")
+  @js.native
   val batchNorm4d: js.Function6[
     /* x */ Tensor4D | TensorLike, 
     /* mean */ Tensor4D | Tensor1D | TensorLike, 

@@ -3,10 +3,8 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.form
 import typingsSlinky.activexLibreoffice.LibreOffice.SeqEquiv
 import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.PropertyValue
-import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyAccess
+import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyBag
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyChangeListener
-import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyContainer
-import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySet
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfo
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XVetoableChangeListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XChild
@@ -18,6 +16,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,13 +28,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait FormComponent
-  extends XChild
+  extends XPropertyBag
+     with XChild
      with XComponent
      with XNamed
-     with XPropertySet
      with XPersistObject
-     with XPropertyContainer
-     with XPropertyAccess
 object FormComponent {
   
   @scala.inline

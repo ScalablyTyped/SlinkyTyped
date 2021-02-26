@@ -10,23 +10,14 @@ import typingsSlinky.nodeFetch.mod.RequestInfo
 import typingsSlinky.nodeFetch.mod.RequestInit
 import typingsSlinky.nodeFetch.mod.ResponseInit
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("apollo-env", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  def createHash(kind: String): Hash = js.native
-  
-  val isNodeLike: Boolean = js.native
-  
-  def isNotNullOrUndefined[T](): /* is T */ Boolean = js.native
-  def isNotNullOrUndefined[T](value: T): /* is T */ Boolean = js.native
-  
-  def mapValues[T, U](`object`: Record[String, T], callback: js.Function1[/* value */ T, U]): Record[String, U] = js.native
-  
+  @JSImport("apollo-env", "Body")
   @js.native
   class Body ()
     extends typingsSlinky.apolloEnv.fetchMod.Body {
@@ -35,12 +26,14 @@ object mod extends js.Object {
     def this(body: js.Any, opts: Size) = this()
   }
   
+  @JSImport("apollo-env", "Headers")
   @js.native
   class Headers ()
     extends typingsSlinky.apolloEnv.fetchMod.Headers {
     def this(init: HeadersInit) = this()
   }
   
+  @JSImport("apollo-env", "Request")
   @js.native
   class Request protected ()
     extends typingsSlinky.apolloEnv.fetchMod.Request {
@@ -48,6 +41,7 @@ object mod extends js.Object {
     def this(input: RequestInfo, init: RequestInit) = this()
   }
   
+  @JSImport("apollo-env", "Response")
   @js.native
   class Response ()
     extends typingsSlinky.apolloEnv.fetchMod.Response {
@@ -55,14 +49,18 @@ object mod extends js.Object {
     def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
   }
   /* static members */
-  @js.native
-  object Response extends js.Object {
+  object Response {
     
+    @JSImport("apollo-env", "Response.error")
+    @js.native
     def error(): typingsSlinky.nodeFetch.mod.Response = js.native
     
+    @JSImport("apollo-env", "Response.redirect")
+    @js.native
     def redirect(url: String, status: Double): typingsSlinky.nodeFetch.mod.Response = js.native
   }
   
+  @JSImport("apollo-env", "URL")
   @js.native
   class URL protected ()
     extends typingsSlinky.apolloEnv.fetchMod.URL {
@@ -71,22 +69,47 @@ object mod extends js.Object {
     def this(input: String, base: URL_) = this()
   }
   
+  @JSImport("apollo-env", "URLSearchParams")
   @js.native
   class URLSearchParams ()
     extends typingsSlinky.apolloEnv.fetchMod.URLSearchParams {
     def this(init: String) = this()
     def this(init: js.Array[js.Tuple2[String, String]]) = this()
+    def this(init: js.Iterable[js.Tuple2[String, String]]) = this()
     def this(init: Dict[String | js.Array[String]]) = this()
     def this(init: typingsSlinky.node.urlMod.URLSearchParams) = this()
-    def this(init: js.Iterable[js.Tuple2[String, String]]) = this()
   }
   
+  @JSImport("apollo-env", "createHash")
   @js.native
-  object fetch extends js.Object {
+  def createHash(kind: String): Hash = js.native
+  
+  object fetch {
     
+    @JSImport("apollo-env", "fetch")
+    @js.native
     def apply(url: RequestInfo): js.Promise[typingsSlinky.nodeFetch.mod.Response] = js.native
+    @JSImport("apollo-env", "fetch")
+    @js.native
     def apply(url: RequestInfo, init: RequestInit): js.Promise[typingsSlinky.nodeFetch.mod.Response] = js.native
     
+    @JSImport("apollo-env", "fetch.isRedirect")
+    @js.native
     def isRedirect(code: Double): Boolean = js.native
   }
+  
+  @JSImport("apollo-env", "isNodeLike")
+  @js.native
+  val isNodeLike: Boolean = js.native
+  
+  @JSImport("apollo-env", "isNotNullOrUndefined")
+  @js.native
+  def isNotNullOrUndefined[T](): /* is T */ Boolean = js.native
+  @JSImport("apollo-env", "isNotNullOrUndefined")
+  @js.native
+  def isNotNullOrUndefined[T](value: T): /* is T */ Boolean = js.native
+  
+  @JSImport("apollo-env", "mapValues")
+  @js.native
+  def mapValues[T, U](`object`: Record[String, T], callback: js.Function1[/* value */ T, U]): Record[String, U] = js.native
 }

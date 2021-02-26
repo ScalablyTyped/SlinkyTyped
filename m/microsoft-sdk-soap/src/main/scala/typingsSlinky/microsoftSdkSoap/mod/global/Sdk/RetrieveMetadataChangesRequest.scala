@@ -3,6 +3,7 @@ package typingsSlinky.microsoftSdkSoap.mod.global.Sdk
 import typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.DeletedMetadataFilters
 import typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.EntityQueryExpression
 import typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.IEntityMetadata
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

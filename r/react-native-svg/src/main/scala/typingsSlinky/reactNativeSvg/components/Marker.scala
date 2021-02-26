@@ -7,6 +7,7 @@ import typingsSlinky.reactNativeSvg.mod.MarkerProps
 import typingsSlinky.reactNativeSvg.mod.MarkerUnits
 import typingsSlinky.reactNativeSvg.mod.NumberProp
 import typingsSlinky.reactNativeSvg.mod.Orient
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object Marker {
   
   @JSImport("react-native-svg", "Marker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -50,7 +51,7 @@ object Marker {
     def viewBox(value: String): this.type = set("viewBox", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MarkerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Marker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MarkerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

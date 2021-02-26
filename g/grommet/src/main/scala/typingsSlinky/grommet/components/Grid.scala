@@ -105,15 +105,16 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Grid {
   
-  @JSImport("grommet/es6", "Grid")
+  @JSImport("grommet", "Grid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -139,10 +140,10 @@ object Grid {
     def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def areasVarargs(value: (js.Array[String] | End)*): this.type = set("areas", js.Array(value :_*))
+    def areas(value: js.Array[js.Array[String] | End]): this.type = set("areas", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def areas(value: js.Array[js.Array[String] | End]): this.type = set("areas", value.asInstanceOf[js.Any])
+    def areasVarargs(value: (js.Array[String] | End)*): this.type = set("areas", js.Array(value :_*))
     
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
@@ -291,13 +292,13 @@ object Grid {
     def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def asComponentClass(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
+    def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def autoCapitalize(value: String): this.type = set("autoCapitalize", value.asInstanceOf[js.Any])
@@ -315,16 +316,16 @@ object Grid {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columnsVarargs(
-      value: (xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String])*
-    ): this.type = set("columns", js.Array(value :_*))
-    
-    @scala.inline
     def columns(
       value: (js.Array[
           xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
         ]) | xsmall | small | medium | large | xlarge | Count | String
     ): this.type = set("columns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def columnsVarargs(
+      value: (xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String])*
+    ): this.type = set("columns", js.Array(value :_*))
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -342,10 +343,10 @@ object Grid {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -669,16 +670,16 @@ object Grid {
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsVarargs(
-      value: (xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String])*
-    ): this.type = set("rows", js.Array(value :_*))
-    
-    @scala.inline
     def rows(
       value: (js.Array[
           xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
         ]) | xsmall | small | medium | large | xlarge | String
     ): this.type = set("rows", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def rowsVarargs(
+      value: (xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String])*
+    ): this.type = set("rows", js.Array(value :_*))
     
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
@@ -702,13 +703,13 @@ object Grid {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tagFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: PolymorphicType): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tagComponentClass(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tag(value: PolymorphicType): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tagFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -726,7 +727,7 @@ object Grid {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GridProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Grid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GridProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

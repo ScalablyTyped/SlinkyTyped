@@ -3,6 +3,7 @@ package typingsSlinky.winjs.WinJS.UI
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.winjs.WinJS.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Displays a modal dialog which can display arbitrary HTML content.
   **/
 @js.native
-trait ContentDialog extends js.Object {
+trait ContentDialog extends StObject {
   
   /**
     * Registers an event handler for the specified event.

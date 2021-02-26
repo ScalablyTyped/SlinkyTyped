@@ -10,9 +10,9 @@ XML parser middleware for express.js.
 | ------------------ | :-------------: |
 | Full name          | body-parser-xml |
 | Keywords           | express, xml, middleware, body-parser |
-| # releases         | 0 |
-| # dependents       | 19 |
-| # downloads        | 272583 |
+| # releases         | 3 |
+| # dependents       | 22 |
+| # downloads        | 725377 |
 | # stars            | 1 |
 
 ## Links

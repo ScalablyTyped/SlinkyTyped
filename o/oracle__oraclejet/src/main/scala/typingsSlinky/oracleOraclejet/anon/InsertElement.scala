@@ -1,11 +1,12 @@
 package typingsSlinky.oracleOraclejet.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InsertElement extends js.Object {
+trait InsertElement extends StObject {
   
   var insert: org.scalajs.dom.raw.Element = js.native
 }
@@ -18,21 +19,9 @@ object InsertElement {
   }
   
   @scala.inline
-  implicit class InsertElementOps[Self <: InsertElement] (val x: Self) extends AnyVal {
+  implicit class InsertElementMutableBuilder[Self <: InsertElement] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setInsert(value: org.scalajs.dom.raw.Element): Self = this.set("insert", value.asInstanceOf[js.Any])
+    def setInsert(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "insert", value.asInstanceOf[js.Any])
   }
 }

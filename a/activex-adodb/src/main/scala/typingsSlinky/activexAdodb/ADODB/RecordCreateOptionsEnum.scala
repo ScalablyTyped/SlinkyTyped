@@ -6,6 +6,7 @@ import typingsSlinky.activexAdodb.activexAdodbNumbers.`0`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`33554432`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`67108864`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`8192`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAdodb.activexAdodbNumbers.`-1`
   - typingsSlinky.activexAdodb.activexAdodbNumbers.`33554432`
 */
-trait RecordCreateOptionsEnum extends js.Object
+trait RecordCreateOptionsEnum extends StObject
 object RecordCreateOptionsEnum {
   
   @scala.inline

@@ -84,6 +84,7 @@ import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,7 +93,7 @@ object TableSortLabel {
   
   @JSImport("@material-ui/core", "TableSortLabel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -100,13 +101,13 @@ object TableSortLabel {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def IconComponentFunctionComponent(value: ReactComponentClass[SvgIconProps]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    def IconComponent(value: ReactComponentClass[SvgIconProps]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def IconComponentComponentClass(value: ReactComponentClass[SvgIconProps]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def IconComponent(value: ReactComponentClass[SvgIconProps]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    def IconComponentFunctionComponent(value: ReactComponentClass[SvgIconProps]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def TouchRippleProps(value: Partial[typingsSlinky.materialUiCore.touchRippleMod.TouchRippleProps]): this.type = set("TouchRippleProps", value.asInstanceOf[js.Any])
@@ -282,16 +283,16 @@ object TableSortLabel {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttonRefRefObject(value: ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
+    def buttonRef(value: Ref[_] | ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def buttonRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("buttonRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def buttonRef(value: Ref[_] | ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
+    def buttonRefNull: this.type = set("buttonRef", null)
     
     @scala.inline
-    def buttonRefNull: this.type = set("buttonRef", null)
+    def buttonRefRefObject(value: ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def centerRipple(value: Boolean): this.type = set("centerRipple", value.asInstanceOf[js.Any])
@@ -306,13 +307,13 @@ object TableSortLabel {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentFunctionComponent(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def component(value: ReactType[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def componentFunctionComponent(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -330,10 +331,10 @@ object TableSortLabel {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -399,16 +400,16 @@ object TableSortLabel {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -750,16 +751,16 @@ object TableSortLabel {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TableSortLabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TableSortLabel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TableSortLabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

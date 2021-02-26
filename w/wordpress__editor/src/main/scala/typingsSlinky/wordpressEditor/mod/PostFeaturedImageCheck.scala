@@ -1,12 +1,21 @@
 package typingsSlinky.wordpressEditor.mod
 
-import org.scalablytyped.runtime.TopLevel
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.Shortcut
+import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.wordpressEditor.postFeaturedImageCheckMod.PostFeaturedImageCheck.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@wordpress/editor", "PostFeaturedImageCheck")
-@js.native
-object PostFeaturedImageCheck extends TopLevel[ReactComponentClass[Props]]
+object PostFeaturedImageCheck extends Shortcut {
+  
+  @JSImport("@wordpress/editor", "PostFeaturedImageCheck")
+  @js.native
+  val ^ : ComponentType[Props] = js.native
+  
+  type _To = ComponentType[Props]
+  
+  /* This means you don't have to write `^`, but can instead just say `PostFeaturedImageCheck.foo` */
+  override def _to: ComponentType[Props] = ^
+}

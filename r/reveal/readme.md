@@ -11,8 +11,8 @@ The HTML presentation framework
 | Full name          | reveal |
 | Keywords           | - |
 | # releases         | 0 |
-| # dependents       | 2 |
-| # downloads        | 8267 |
+| # dependents       | 1 |
+| # downloads        | 18551 |
 | # stars            | 1 |
 
 ## Links

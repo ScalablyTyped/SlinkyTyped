@@ -3,18 +3,21 @@ package typingsSlinky.stripe.mod.resources
 import typingsSlinky.stripe.mod.HeaderOptions
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.issuing.disputes.IIssuingDispute
 import typingsSlinky.stripe.mod.issuing.disputes.IIssuingDisputeCreateOptions
 import typingsSlinky.stripe.mod.issuing.disputes.IIssuingDisputeListOptions
 import typingsSlinky.stripe.mod.issuing.disputes.IIssuingDisputeUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.IssuingDisputes")
 @js.native
-class IssuingDisputes () extends StripeResource {
+class IssuingDisputes protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(data: IIssuingDisputeCreateOptions): js.Promise[IIssuingDispute] = js.native
   /**

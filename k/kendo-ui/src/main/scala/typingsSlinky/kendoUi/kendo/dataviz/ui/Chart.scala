@@ -8,6 +8,7 @@ import typingsSlinky.kendoUi.kendo.dataviz.ChartSeries
 import typingsSlinky.kendoUi.kendo.drawing.PDFOptions
 import typingsSlinky.kendoUi.kendo.drawing.Surface
 import typingsSlinky.kendoUi.kendo.ui.Widget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -58,9 +59,9 @@ trait Chart extends Widget {
   def setOptions(options: js.Any): Unit = js.native
   
   def showTooltip(filter: String): Unit = js.native
+  def showTooltip(filter: js.Date): Unit = js.native
   def showTooltip(filter: js.Function): Unit = js.native
   def showTooltip(filter: Double): Unit = js.native
-  def showTooltip(filter: js.Date): Unit = js.native
   
   var surface: Surface = js.native
   

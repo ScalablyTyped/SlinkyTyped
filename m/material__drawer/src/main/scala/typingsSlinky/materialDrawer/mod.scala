@@ -3,48 +3,47 @@ package typingsSlinky.materialDrawer
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.materialDom.focusTrapMod.FocusTrap
-import typingsSlinky.materialDrawer.adapterMod.MDCDrawerAdapter
-import typingsSlinky.materialDrawer.anon.ANIMATE
-import typingsSlinky.materialDrawer.anon.APPCONTENTSELECTOR
 import typingsSlinky.materialDrawer.anon.PartialMDCDrawerAdapter
 import typingsSlinky.materialDrawer.utilMod.MDCDrawerFocusTrapFactory
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/drawer", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@material/drawer", "MDCDismissibleDrawerFoundation")
   @js.native
   class MDCDismissibleDrawerFoundation ()
     extends typingsSlinky.materialDrawer.foundationMod.MDCDismissibleDrawerFoundation {
     def this(adapter: PartialMDCDrawerAdapter) = this()
   }
-  /* static members */
-  @js.native
-  object MDCDismissibleDrawerFoundation extends js.Object {
-    
-    def cssClasses: ANIMATE = js.native
-    
-    def defaultAdapter: MDCDrawerAdapter = js.native
-    
-    def strings: APPCONTENTSELECTOR = js.native
-  }
   
+  @JSImport("@material/drawer", "MDCDrawer")
   @js.native
-  class MDCDrawer ()
-    extends typingsSlinky.materialDrawer.componentMod.MDCDrawer
+  class MDCDrawer protected ()
+    extends typingsSlinky.materialDrawer.componentMod.MDCDrawer {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(
+      root: Element,
+      foundation: typingsSlinky.materialDrawer.foundationMod.MDCDismissibleDrawerFoundation,
+      args: js.Any*
+    ) = this()
+  }
   /* static members */
-  @js.native
-  object MDCDrawer extends js.Object {
+  object MDCDrawer {
     
+    @JSImport("@material/drawer", "MDCDrawer.attachTo")
+    @js.native
     def attachTo(root: Element): typingsSlinky.materialDrawer.componentMod.MDCDrawer = js.native
   }
   
+  @JSImport("@material/drawer", "MDCModalDrawerFoundation")
   @js.native
   class MDCModalDrawerFoundation ()
-    extends typingsSlinky.materialDrawer.modalFoundationMod.MDCModalDrawerFoundation
+    extends typingsSlinky.materialDrawer.modalFoundationMod.MDCModalDrawerFoundation {
+    def this(adapter: PartialMDCDrawerAdapter) = this()
+  }
   
   /**
     * @license
@@ -68,39 +67,91 @@ object mod extends js.Object {
     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     * THE SOFTWARE.
     */
-  @js.native
-  object cssClasses extends js.Object {
+  object cssClasses {
     
-    var ANIMATE: String = js.native
+    @JSImport("@material/drawer", "cssClasses")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var CLOSING: String = js.native
+    @JSImport("@material/drawer", "cssClasses.ANIMATE")
+    @js.native
+    def ANIMATE: String = js.native
+    @scala.inline
+    def ANIMATE_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ANIMATE")(x.asInstanceOf[js.Any])
     
-    var DISMISSIBLE: String = js.native
+    @JSImport("@material/drawer", "cssClasses.CLOSING")
+    @js.native
+    def CLOSING: String = js.native
+    @scala.inline
+    def CLOSING_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("CLOSING")(x.asInstanceOf[js.Any])
     
-    var MODAL: String = js.native
+    @JSImport("@material/drawer", "cssClasses.DISMISSIBLE")
+    @js.native
+    def DISMISSIBLE: String = js.native
+    @scala.inline
+    def DISMISSIBLE_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DISMISSIBLE")(x.asInstanceOf[js.Any])
     
-    var OPEN: String = js.native
+    @JSImport("@material/drawer", "cssClasses.MODAL")
+    @js.native
+    def MODAL: String = js.native
+    @scala.inline
+    def MODAL_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MODAL")(x.asInstanceOf[js.Any])
     
-    var OPENING: String = js.native
+    @JSImport("@material/drawer", "cssClasses.OPEN")
+    @js.native
+    def OPEN: String = js.native
     
-    var ROOT: String = js.native
+    @JSImport("@material/drawer", "cssClasses.OPENING")
+    @js.native
+    def OPENING: String = js.native
+    @scala.inline
+    def OPENING_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("OPENING")(x.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def OPEN_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("OPEN")(x.asInstanceOf[js.Any])
+    
+    @JSImport("@material/drawer", "cssClasses.ROOT")
+    @js.native
+    def ROOT: String = js.native
+    @scala.inline
+    def ROOT_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ROOT")(x.asInstanceOf[js.Any])
   }
   
-  @js.native
-  object strings extends js.Object {
+  object strings {
     
-    var APP_CONTENT_SELECTOR: String = js.native
+    @JSImport("@material/drawer", "strings")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var CLOSE_EVENT: String = js.native
+    @JSImport("@material/drawer", "strings.APP_CONTENT_SELECTOR")
+    @js.native
+    def APP_CONTENT_SELECTOR: String = js.native
+    @scala.inline
+    def APP_CONTENT_SELECTOR_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("APP_CONTENT_SELECTOR")(x.asInstanceOf[js.Any])
     
-    var OPEN_EVENT: String = js.native
+    @JSImport("@material/drawer", "strings.CLOSE_EVENT")
+    @js.native
+    def CLOSE_EVENT: String = js.native
+    @scala.inline
+    def CLOSE_EVENT_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("CLOSE_EVENT")(x.asInstanceOf[js.Any])
     
-    var SCRIM_SELECTOR: String = js.native
+    @JSImport("@material/drawer", "strings.OPEN_EVENT")
+    @js.native
+    def OPEN_EVENT: String = js.native
+    @scala.inline
+    def OPEN_EVENT_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("OPEN_EVENT")(x.asInstanceOf[js.Any])
+    
+    @JSImport("@material/drawer", "strings.SCRIM_SELECTOR")
+    @js.native
+    def SCRIM_SELECTOR: String = js.native
+    @scala.inline
+    def SCRIM_SELECTOR_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SCRIM_SELECTOR")(x.asInstanceOf[js.Any])
   }
   
-  @js.native
-  object util extends js.Object {
+  object util {
     
+    @JSImport("@material/drawer", "util.createFocusTrapInstance")
+    @js.native
     def createFocusTrapInstance(surfaceEl: HTMLElement, focusTrapFactory: MDCDrawerFocusTrapFactory): FocusTrap = js.native
   }
 }

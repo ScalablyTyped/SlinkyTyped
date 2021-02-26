@@ -8,6 +8,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.empty
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.error
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.informative
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.warning
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

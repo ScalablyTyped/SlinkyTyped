@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,19 +41,27 @@ class RuntimeConfig () extends IRuntimeConfig {
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-/* static members */
-@JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig")
-@js.native
-object RuntimeConfig extends js.Object {
+object RuntimeConfig {
   
   /**
     * Creates a new RuntimeConfig instance using the specified properties.
     * @param [properties] Properties to set
     * @returns RuntimeConfig instance
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.create")
+  @js.native
   def create(): RuntimeConfig = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.create")
+  @js.native
   def create(properties: IRuntimeConfig): RuntimeConfig = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): RuntimeConfig = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): RuntimeConfig = js.native
   /**
     * Decodes a RuntimeConfig message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -61,11 +70,17 @@ object RuntimeConfig extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.decode")
+  @js.native
   def decode(reader: Reader): RuntimeConfig = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.decode")
+  @js.native
   def decode(reader: Reader, length: Double): RuntimeConfig = js.native
-  def decode(reader: js.typedarray.Uint8Array): RuntimeConfig = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): RuntimeConfig = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): RuntimeConfig = js.native
   /**
     * Decodes a RuntimeConfig message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -73,8 +88,10 @@ object RuntimeConfig extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): RuntimeConfig = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): RuntimeConfig = js.native
   
   /**
     * Encodes the specified RuntimeConfig message. Does not implicitly {@link io.cucumber.messages.RuntimeConfig.verify|verify} messages.
@@ -82,7 +99,12 @@ object RuntimeConfig extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.encode")
+  @js.native
   def encode(message: IRuntimeConfig): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.encode")
+  @js.native
   def encode(message: IRuntimeConfig, writer: Writer): Writer = js.native
   
   /**
@@ -91,7 +113,12 @@ object RuntimeConfig extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IRuntimeConfig): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IRuntimeConfig, writer: Writer): Writer = js.native
   
   /**
@@ -99,6 +126,9 @@ object RuntimeConfig extends js.Object {
     * @param object Plain object
     * @returns RuntimeConfig
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): RuntimeConfig = js.native
   
   /**
@@ -107,7 +137,12 @@ object RuntimeConfig extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.toObject")
+  @js.native
   def toObject(message: RuntimeConfig): StringDictionary[js.Any] = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.toObject")
+  @js.native
   def toObject(message: RuntimeConfig, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -115,5 +150,8 @@ object RuntimeConfig extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.RuntimeConfig.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

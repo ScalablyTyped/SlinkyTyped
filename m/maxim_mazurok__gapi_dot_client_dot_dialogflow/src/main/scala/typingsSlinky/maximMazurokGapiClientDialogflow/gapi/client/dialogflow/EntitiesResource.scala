@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientDialogflow.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EntitiesResource extends js.Object {
+trait EntitiesResource extends StObject {
   
   /** Creates multiple new entities in the specified entity type. Operation */
   def batchCreate(request: Accesstoken): Request[GoogleLongrunningOperation] = js.native

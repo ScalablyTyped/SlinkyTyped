@@ -1,17 +1,24 @@
 package typingsSlinky.leaflet.mod
 
 import typingsSlinky.leaflet.mod.TileLayer_.WMS
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("leaflet", "tileLayer")
-@js.native
-object tileLayer extends js.Object {
+object tileLayer {
   
+  @JSImport("leaflet", "tileLayer")
+  @js.native
   def apply(urlTemplate: String): TileLayer_ = js.native
+  @JSImport("leaflet", "tileLayer")
+  @js.native
   def apply(urlTemplate: String, options: TileLayerOptions): TileLayer_ = js.native
   
+  @JSImport("leaflet", "tileLayer.wms")
+  @js.native
   def wms(baseUrl: String): WMS = js.native
+  @JSImport("leaflet", "tileLayer.wms")
+  @js.native
   def wms(baseUrl: String, options: WMSOptions): WMS = js.native
 }

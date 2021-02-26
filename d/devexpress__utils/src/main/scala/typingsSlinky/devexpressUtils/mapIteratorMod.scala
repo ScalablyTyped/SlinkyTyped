@@ -2,16 +2,16 @@ package typingsSlinky.devexpressUtils
 
 import typingsSlinky.devexpressUtils.constMod.ConstInterval
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@devexpress/utils/lib/intervals/sparse/map-iterator", JSImport.Namespace)
-@js.native
-object mapIteratorMod extends js.Object {
+object mapIteratorMod {
   
+  @JSImport("@devexpress/utils/lib/intervals/sparse/map-iterator", "SparseIntervalsMapIterator")
   @js.native
-  class SparseIntervalsMapIterator[T /* <: ConstInterval */, ObjT] protected () extends js.Object {
+  class SparseIntervalsMapIterator[T /* <: ConstInterval */, ObjT] protected () extends StObject {
     def this(intervals: js.Array[T], valMap: Record[Double, ObjT]) = this()
     
     var interval: T = js.native

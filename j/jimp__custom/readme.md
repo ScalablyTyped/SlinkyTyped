@@ -10,9 +10,9 @@ Interface to customize jimp configuration
 | ------------------ | :-------------: |
 | Full name          | @jimp/custom |
 | Keywords           | - |
-| # releases         | 69 |
-| # dependents       | 5 |
-| # downloads        | 14472962 |
+| # releases         | 102 |
+| # dependents       | 16 |
+| # downloads        | 43342618 |
 | # stars            | 0 |
 
 ## Links

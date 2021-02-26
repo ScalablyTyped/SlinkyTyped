@@ -3,6 +3,7 @@ package typingsSlinky.webidl2.mod
 import typingsSlinky.webidl2.webidl2Strings.attribute
 import typingsSlinky.webidl2.webidl2Strings.const
 import typingsSlinky.webidl2.webidl2Strings.operation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webidl2.mod.ConstantMemberType
   - typingsSlinky.webidl2.mod.OperationMemberType
 */
-trait IDLInterfaceMixinMemberType extends js.Object
+trait IDLInterfaceMixinMemberType extends StObject
 object IDLInterfaceMixinMemberType {
   
   @scala.inline
@@ -24,10 +25,10 @@ object IDLInterfaceMixinMemberType {
     parent: InterfaceMixinType | InterfaceType | NamespaceType,
     readonly: Boolean,
     `type`: attribute
-  ): IDLInterfaceMixinMemberType = {
+  ): typingsSlinky.webidl2.mod.AttributeMemberType = {
     val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], idlType = idlType.asInstanceOf[js.Any], inherit = inherit.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IDLInterfaceMixinMemberType]
+    __obj.asInstanceOf[typingsSlinky.webidl2.mod.AttributeMemberType]
   }
   
   @scala.inline
@@ -39,10 +40,10 @@ object IDLInterfaceMixinMemberType {
     parent: CallbackInterfaceType | InterfaceMixinType | InterfaceType,
     `type`: const,
     value: ValueDescription
-  ): IDLInterfaceMixinMemberType = {
+  ): typingsSlinky.webidl2.mod.ConstantMemberType = {
     val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], idlType = idlType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nullable = nullable.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IDLInterfaceMixinMemberType]
+    __obj.asInstanceOf[typingsSlinky.webidl2.mod.ConstantMemberType]
   }
   
   @scala.inline
@@ -51,9 +52,9 @@ object IDLInterfaceMixinMemberType {
     extAttrs: js.Array[ExtendedAttribute],
     parent: CallbackInterfaceType | InterfaceMixinType | InterfaceType | NamespaceType,
     `type`: operation
-  ): IDLInterfaceMixinMemberType = {
+  ): typingsSlinky.webidl2.mod.OperationMemberType = {
     val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], extAttrs = extAttrs.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IDLInterfaceMixinMemberType]
+    __obj.asInstanceOf[typingsSlinky.webidl2.mod.OperationMemberType]
   }
 }

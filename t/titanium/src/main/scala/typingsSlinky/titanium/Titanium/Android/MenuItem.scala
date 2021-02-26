@@ -5,6 +5,7 @@ import typingsSlinky.titanium.Titanium.UI.View
 import typingsSlinky.titanium.titaniumStrings.click
 import typingsSlinky.titanium.titaniumStrings.collapse
 import typingsSlinky.titanium.titaniumStrings.expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

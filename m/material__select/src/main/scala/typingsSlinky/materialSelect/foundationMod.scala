@@ -3,19 +3,28 @@ package typingsSlinky.materialSelect
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialSelect.adapterMod.MDCSelectAdapter
-import typingsSlinky.materialSelect.anon.ACTIVATED
-import typingsSlinky.materialSelect.anon.ARIACONTROLS
-import typingsSlinky.materialSelect.anon.LABELSCALE
 import typingsSlinky.materialSelect.anon.PartialMDCSelectAdapter
 import typingsSlinky.materialSelect.anon.PartialMDCSelectFoundatio
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/select/foundation", JSImport.Namespace)
-@js.native
-object foundationMod extends js.Object {
+object foundationMod {
   
+  @JSImport("@material/select/foundation", JSImport.Default)
+  @js.native
+  /**
+    * @param adapter
+    * @param foundationMap Map from subcomponent names to their subfoundations.
+    */
+  class default () extends MDCSelectFoundation {
+    def this(adapter: PartialMDCSelectAdapter) = this()
+    def this(adapter: js.UndefOr[scala.Nothing], foundationMap: PartialMDCSelectFoundatio) = this()
+    def this(adapter: PartialMDCSelectAdapter, foundationMap: PartialMDCSelectFoundatio) = this()
+  }
+  
+  @JSImport("@material/select/foundation", "MDCSelectFoundation")
   @js.native
   /**
     * @param adapter
@@ -116,46 +125,5 @@ object foundationMod extends js.Object {
     
     def setValue(value: String): Unit = js.native
     def setValue(value: String, skipNotify: Boolean): Unit = js.native
-  }
-  /* static members */
-  @js.native
-  object MDCSelectFoundation extends js.Object {
-    
-    def cssClasses: ACTIVATED = js.native
-    
-    /**
-      * See {@link MDCSelectAdapter} for typing information on parameters and return types.
-      */
-    def defaultAdapter: MDCSelectAdapter = js.native
-    
-    def numbers: LABELSCALE = js.native
-    
-    def strings: ARIACONTROLS = js.native
-  }
-  
-  @js.native
-  /**
-    * @param adapter
-    * @param foundationMap Map from subcomponent names to their subfoundations.
-    */
-  class default () extends MDCSelectFoundation {
-    def this(adapter: PartialMDCSelectAdapter) = this()
-    def this(adapter: js.UndefOr[scala.Nothing], foundationMap: PartialMDCSelectFoundatio) = this()
-    def this(adapter: PartialMDCSelectAdapter, foundationMap: PartialMDCSelectFoundatio) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    def cssClasses: ACTIVATED = js.native
-    
-    /**
-      * See {@link MDCSelectAdapter} for typing information on parameters and return types.
-      */
-    def defaultAdapter: MDCSelectAdapter = js.native
-    
-    def numbers: LABELSCALE = js.native
-    
-    def strings: ARIACONTROLS = js.native
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.reactVis.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactVis.reactVisStrings.time
   - typingsSlinky.reactVis.reactVisStrings.`time-utc`
 */
-trait Scale extends js.Object
+trait Scale extends StObject
 object Scale {
   
   @scala.inline

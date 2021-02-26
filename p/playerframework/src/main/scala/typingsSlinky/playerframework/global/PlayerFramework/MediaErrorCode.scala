@@ -1,12 +1,13 @@
 package typingsSlinky.playerframework.global.PlayerFramework
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("PlayerFramework.MediaErrorCode")
 @js.native
-object MediaErrorCode extends js.Object {
+object MediaErrorCode extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.playerframework.PlayerFramework.MediaErrorCode with Double] = js.native

@@ -4,20 +4,23 @@ import typingsSlinky.ajv.mod.Ajv
 import typingsSlinky.ajv.mod.KeywordDefinition
 import typingsSlinky.ajv.mod.ValidateFunction
 import typingsSlinky.ajvPack.anon.FnCall
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ajv-pack", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("ajv-pack", JSImport.Namespace)
+  @js.native
   def apply(ajv: Ajv, validate: ValidateFunction): String = js.native
   
+  @JSImport("ajv-pack", "instance")
+  @js.native
   def instance(ajv: Ajv): AjvPack = js.native
   
   @js.native
-  trait AjvPack extends js.Object {
+  trait AjvPack extends StObject {
     
     /**
       * add custom keyword to the instance

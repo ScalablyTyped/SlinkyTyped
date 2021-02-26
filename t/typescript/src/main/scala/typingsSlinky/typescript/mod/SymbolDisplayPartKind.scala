@@ -1,126 +1,104 @@
 package typingsSlinky.typescript.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait SymbolDisplayPartKind extends js.Object
+sealed trait SymbolDisplayPartKind extends StObject
 @JSImport("typescript", "SymbolDisplayPartKind")
 @js.native
-object SymbolDisplayPartKind extends js.Object {
+object SymbolDisplayPartKind extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[SymbolDisplayPartKind with Double] = js.native
   
   @js.native
   sealed trait aliasName extends SymbolDisplayPartKind
-  /* 0 */ @js.native
-  object aliasName extends TopLevel[aliasName with Double]
+  /* 0 */ val aliasName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.aliasName with Double = js.native
   
   @js.native
   sealed trait className extends SymbolDisplayPartKind
-  /* 1 */ @js.native
-  object className extends TopLevel[className with Double]
+  /* 1 */ val className: typingsSlinky.typescript.mod.SymbolDisplayPartKind.className with Double = js.native
   
   @js.native
   sealed trait enumMemberName extends SymbolDisplayPartKind
-  /* 19 */ @js.native
-  object enumMemberName extends TopLevel[enumMemberName with Double]
+  /* 19 */ val enumMemberName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.enumMemberName with Double = js.native
   
   @js.native
   sealed trait enumName extends SymbolDisplayPartKind
-  /* 2 */ @js.native
-  object enumName extends TopLevel[enumName with Double]
+  /* 2 */ val enumName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.enumName with Double = js.native
   
   @js.native
   sealed trait fieldName extends SymbolDisplayPartKind
-  /* 3 */ @js.native
-  object fieldName extends TopLevel[fieldName with Double]
+  /* 3 */ val fieldName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.fieldName with Double = js.native
   
   @js.native
   sealed trait functionName extends SymbolDisplayPartKind
-  /* 20 */ @js.native
-  object functionName extends TopLevel[functionName with Double]
+  /* 20 */ val functionName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.functionName with Double = js.native
   
   @js.native
   sealed trait interfaceName extends SymbolDisplayPartKind
-  /* 4 */ @js.native
-  object interfaceName extends TopLevel[interfaceName with Double]
+  /* 4 */ val interfaceName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.interfaceName with Double = js.native
   
   @js.native
   sealed trait keyword extends SymbolDisplayPartKind
-  /* 5 */ @js.native
-  object keyword extends TopLevel[keyword with Double]
+  /* 5 */ val keyword: typingsSlinky.typescript.mod.SymbolDisplayPartKind.keyword with Double = js.native
   
   @js.native
   sealed trait lineBreak extends SymbolDisplayPartKind
-  /* 6 */ @js.native
-  object lineBreak extends TopLevel[lineBreak with Double]
+  /* 6 */ val lineBreak: typingsSlinky.typescript.mod.SymbolDisplayPartKind.lineBreak with Double = js.native
   
   @js.native
   sealed trait localName extends SymbolDisplayPartKind
-  /* 9 */ @js.native
-  object localName extends TopLevel[localName with Double]
+  /* 9 */ val localName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.localName with Double = js.native
   
   @js.native
   sealed trait methodName extends SymbolDisplayPartKind
-  /* 10 */ @js.native
-  object methodName extends TopLevel[methodName with Double]
+  /* 10 */ val methodName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.methodName with Double = js.native
   
   @js.native
   sealed trait moduleName extends SymbolDisplayPartKind
-  /* 11 */ @js.native
-  object moduleName extends TopLevel[moduleName with Double]
+  /* 11 */ val moduleName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.moduleName with Double = js.native
   
   @js.native
   sealed trait numericLiteral extends SymbolDisplayPartKind
-  /* 7 */ @js.native
-  object numericLiteral extends TopLevel[numericLiteral with Double]
+  /* 7 */ val numericLiteral: typingsSlinky.typescript.mod.SymbolDisplayPartKind.numericLiteral with Double = js.native
   
   @js.native
   sealed trait operator extends SymbolDisplayPartKind
-  /* 12 */ @js.native
-  object operator extends TopLevel[operator with Double]
+  /* 12 */ val operator: typingsSlinky.typescript.mod.SymbolDisplayPartKind.operator with Double = js.native
   
   @js.native
   sealed trait parameterName extends SymbolDisplayPartKind
-  /* 13 */ @js.native
-  object parameterName extends TopLevel[parameterName with Double]
+  /* 13 */ val parameterName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.parameterName with Double = js.native
   
   @js.native
   sealed trait propertyName extends SymbolDisplayPartKind
-  /* 14 */ @js.native
-  object propertyName extends TopLevel[propertyName with Double]
+  /* 14 */ val propertyName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.propertyName with Double = js.native
   
   @js.native
   sealed trait punctuation extends SymbolDisplayPartKind
-  /* 15 */ @js.native
-  object punctuation extends TopLevel[punctuation with Double]
+  /* 15 */ val punctuation: typingsSlinky.typescript.mod.SymbolDisplayPartKind.punctuation with Double = js.native
   
   @js.native
   sealed trait regularExpressionLiteral extends SymbolDisplayPartKind
-  /* 21 */ @js.native
-  object regularExpressionLiteral extends TopLevel[regularExpressionLiteral with Double]
+  /* 21 */ val regularExpressionLiteral: typingsSlinky.typescript.mod.SymbolDisplayPartKind.regularExpressionLiteral with Double = js.native
   
   @js.native
   sealed trait space extends SymbolDisplayPartKind
-  /* 16 */ @js.native
-  object space extends TopLevel[space with Double]
+  /* 16 */ val space: typingsSlinky.typescript.mod.SymbolDisplayPartKind.space with Double = js.native
   
   @js.native
   sealed trait stringLiteral extends SymbolDisplayPartKind
-  /* 8 */ @js.native
-  object stringLiteral extends TopLevel[stringLiteral with Double]
+  /* 8 */ val stringLiteral: typingsSlinky.typescript.mod.SymbolDisplayPartKind.stringLiteral with Double = js.native
   
   @js.native
   sealed trait text extends SymbolDisplayPartKind
-  /* 17 */ @js.native
-  object text extends TopLevel[text with Double]
+  /* 17 */ val text: typingsSlinky.typescript.mod.SymbolDisplayPartKind.text with Double = js.native
   
   @js.native
   sealed trait typeParameterName extends SymbolDisplayPartKind
-  /* 18 */ @js.native
-  object typeParameterName extends TopLevel[typeParameterName with Double]
+  /* 18 */ val typeParameterName: typingsSlinky.typescript.mod.SymbolDisplayPartKind.typeParameterName with Double = js.native
 }

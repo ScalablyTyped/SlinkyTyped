@@ -3,6 +3,7 @@ package typingsSlinky.angularRouter.mod
 import typingsSlinky.angularCommon.mod.ViewportScroller
 import typingsSlinky.angularCore.mod.OnDestroy
 import typingsSlinky.angularRouter.anon.AnchorScrolling
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

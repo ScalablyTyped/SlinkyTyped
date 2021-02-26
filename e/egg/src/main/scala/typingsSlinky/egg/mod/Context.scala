@@ -3,7 +3,6 @@ package typingsSlinky.egg.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.accepts.mod.Accepts
 import typingsSlinky.egg.anon.FnCall
-import typingsSlinky.eggCookies.mod.^
 import typingsSlinky.koa.mod.BaseContext
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
@@ -11,6 +10,7 @@ import typingsSlinky.node.urlMod.URL_
 import typingsSlinky.urllib.mod.Callback
 import typingsSlinky.urllib.mod.HttpClientResponse
 import typingsSlinky.urllib.mod.RequestOptions2
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +35,7 @@ trait Context
   var app: Application = js.native
   
   // The new 'cookies' instead of Koa's.
-  var cookies: ^ = js.native
+  var cookies: typingsSlinky.eggCookies.mod.^ = js.native
   
   /**
     * http request helper base on httpclient, it will auto save httpclient log.

@@ -7,6 +7,7 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLFormElement
 import org.scalajs.dom.raw.HTMLInputElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * The FineUploader Core only constructor
   */
-class FineUploaderBasic () extends js.Object {
+class FineUploaderBasic () extends StObject {
   def this(fineuploaderOptions: CoreOptions) = this()
   
   /**
@@ -50,6 +51,10 @@ class FineUploaderBasic () extends js.Object {
     params: js.Any,
     endpoint: String
   ): Unit = js.native
+  def addFiles(files: FileList): Unit = js.native
+  def addFiles(files: FileList, params: js.UndefOr[scala.Nothing], endpoint: String): Unit = js.native
+  def addFiles(files: FileList, params: js.Any): Unit = js.native
+  def addFiles(files: FileList, params: js.Any, endpoint: String): Unit = js.native
   def addFiles(files: BlobWrapper): Unit = js.native
   def addFiles(files: BlobWrapper, params: js.UndefOr[scala.Nothing], endpoint: String): Unit = js.native
   def addFiles(files: BlobWrapper, params: js.Any): Unit = js.native
@@ -58,10 +63,6 @@ class FineUploaderBasic () extends js.Object {
   def addFiles(files: CanvasWrapper, params: js.UndefOr[scala.Nothing], endpoint: String): Unit = js.native
   def addFiles(files: CanvasWrapper, params: js.Any): Unit = js.native
   def addFiles(files: CanvasWrapper, params: js.Any, endpoint: String): Unit = js.native
-  def addFiles(files: FileList): Unit = js.native
-  def addFiles(files: FileList, params: js.UndefOr[scala.Nothing], endpoint: String): Unit = js.native
-  def addFiles(files: FileList, params: js.Any): Unit = js.native
-  def addFiles(files: FileList, params: js.Any, endpoint: String): Unit = js.native
   
   /**
     * Submit one or more canned/initial files to the uploader
@@ -531,8 +532,8 @@ class FineUploaderBasic () extends js.Object {
     * @param number | HTMLElement identifier : An integer or HTMLElement corresponding to a file
     */
   def setDeleteFileEndpoint(path: String): Unit = js.native
-  def setDeleteFileEndpoint(path: String, identifier: Double): Unit = js.native
   def setDeleteFileEndpoint(path: String, identifier: HTMLElement): Unit = js.native
+  def setDeleteFileEndpoint(path: String, identifier: Double): Unit = js.native
   
   /**
     * Set the parameters for a delete request. Pass in a file id to make the parameters specific to that file
@@ -550,8 +551,8 @@ class FineUploaderBasic () extends js.Object {
     * @param number | HTMLElement identifier : An integer or HTMLElement corresponding to a file
     */
   def setEndpoint(path: String): Unit = js.native
-  def setEndpoint(path: String, identifier: Double): Unit = js.native
   def setEndpoint(path: String, identifier: HTMLElement): Unit = js.native
+  def setEndpoint(path: String, identifier: Double): Unit = js.native
   
   def setForm(formElementOrId: String): Unit = js.native
   /**

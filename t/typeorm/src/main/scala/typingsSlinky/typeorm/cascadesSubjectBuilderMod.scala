@@ -6,16 +6,16 @@ import typingsSlinky.typeorm.typeormStrings.`soft-remove`
 import typingsSlinky.typeorm.typeormStrings.recover
 import typingsSlinky.typeorm.typeormStrings.remove
 import typingsSlinky.typeorm.typeormStrings.save
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/persistence/subject-builder/CascadesSubjectBuilder", JSImport.Namespace)
-@js.native
-object cascadesSubjectBuilderMod extends js.Object {
+object cascadesSubjectBuilderMod {
   
+  @JSImport("typeorm/browser/persistence/subject-builder/CascadesSubjectBuilder", "CascadesSubjectBuilder")
   @js.native
-  class CascadesSubjectBuilder protected () extends js.Object {
+  class CascadesSubjectBuilder protected () extends StObject {
     def this(allSubjects: js.Array[Subject]) = this()
     
     var allSubjects: js.Array[Subject] = js.native

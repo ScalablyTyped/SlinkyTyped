@@ -16,13 +16,14 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.symlink.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("memfs/lib/volume", "Volume")
 @js.native
-class Volume () extends js.Object {
+class Volume () extends StObject {
   def this(props: js.Object) = this()
   
   var FSWatcher: Instantiable0[typingsSlinky.memfs.volumeMod.FSWatcher] = js.native
@@ -282,7 +283,7 @@ class Volume () extends js.Object {
   
   def read(
     fd: Double,
-    buffer: Buffer,
+    buffer: js.typedarray.Uint8Array,
     offset: Double,
     length: Double,
     position: Double,
@@ -295,7 +296,7 @@ class Volume () extends js.Object {
   ): Unit = js.native
   def read(
     fd: Double,
-    buffer: js.typedarray.Uint8Array,
+    buffer: Buffer,
     offset: Double,
     length: Double,
     position: Double,
@@ -319,8 +320,8 @@ class Volume () extends js.Object {
   def readFileSync(file: TFileId, options: String): TDataOut = js.native
   def readFileSync(file: TFileId, options: IReadFileOptions): TDataOut = js.native
   
-  def readSync(fd: Double, buffer: Buffer, offset: Double, length: Double, position: Double): Double = js.native
   def readSync(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): Double = js.native
+  def readSync(fd: Double, buffer: Buffer, offset: Double, length: Double, position: Double): Double = js.native
   
   def readdir(path: PathLike, callback: TCallback[js.Array[TDataOut | typingsSlinky.memfs.direntMod.default]]): js.Any = js.native
   def readdir(
@@ -468,23 +469,6 @@ class Volume () extends js.Object {
   
   var wrapAsync: js.Any = js.native
   
-  def write(fd: Double, buffer: Buffer, callback: js.Function1[/* repeated */ js.Any, Unit]): js.Any = js.native
-  def write(fd: Double, buffer: Buffer, offset: Double, callback: js.Function1[/* repeated */ js.Any, Unit]): js.Any = js.native
-  def write(
-    fd: Double,
-    buffer: Buffer,
-    offset: Double,
-    length: Double,
-    callback: js.Function1[/* repeated */ js.Any, Unit]
-  ): js.Any = js.native
-  def write(
-    fd: Double,
-    buffer: Buffer,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function1[/* repeated */ js.Any, Unit]
-  ): js.Any = js.native
   def write(fd: Double, buffer: js.typedarray.Uint8Array, callback: js.Function1[/* repeated */ js.Any, Unit]): js.Any = js.native
   def write(
     fd: Double,
@@ -502,6 +486,23 @@ class Volume () extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
+    offset: Double,
+    length: Double,
+    position: Double,
+    callback: js.Function1[/* repeated */ js.Any, Unit]
+  ): js.Any = js.native
+  def write(fd: Double, buffer: Buffer, callback: js.Function1[/* repeated */ js.Any, Unit]): js.Any = js.native
+  def write(fd: Double, buffer: Buffer, offset: Double, callback: js.Function1[/* repeated */ js.Any, Unit]): js.Any = js.native
+  def write(
+    fd: Double,
+    buffer: Buffer,
+    offset: Double,
+    length: Double,
+    callback: js.Function1[/* repeated */ js.Any, Unit]
+  ): js.Any = js.native
+  def write(
+    fd: Double,
+    buffer: Buffer,
     offset: Double,
     length: Double,
     position: Double,
@@ -528,20 +529,6 @@ class Volume () extends js.Object {
   def writeFileSync(id: TFileId, data: TData): Unit = js.native
   def writeFileSync(id: TFileId, data: TData, options: IWriteFileOptions): Unit = js.native
   
-  def writeSync(fd: Double, buffer: Buffer): Double = js.native
-  def writeSync(
-    fd: Double,
-    buffer: Buffer,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
-    position: Double
-  ): Double = js.native
-  def writeSync(fd: Double, buffer: Buffer, offset: js.UndefOr[scala.Nothing], length: Double): Double = js.native
-  def writeSync(fd: Double, buffer: Buffer, offset: js.UndefOr[scala.Nothing], length: Double, position: Double): Double = js.native
-  def writeSync(fd: Double, buffer: Buffer, offset: Double): Double = js.native
-  def writeSync(fd: Double, buffer: Buffer, offset: Double, length: js.UndefOr[scala.Nothing], position: Double): Double = js.native
-  def writeSync(fd: Double, buffer: Buffer, offset: Double, length: Double): Double = js.native
-  def writeSync(fd: Double, buffer: Buffer, offset: Double, length: Double, position: Double): Double = js.native
   def writeSync(fd: Double, buffer: js.typedarray.Uint8Array): Double = js.native
   def writeSync(
     fd: Double,
@@ -568,15 +555,31 @@ class Volume () extends js.Object {
   ): Double = js.native
   def writeSync(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): Double = js.native
   def writeSync(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): Double = js.native
+  def writeSync(fd: Double, buffer: Buffer): Double = js.native
+  def writeSync(
+    fd: Double,
+    buffer: Buffer,
+    offset: js.UndefOr[scala.Nothing],
+    length: js.UndefOr[scala.Nothing],
+    position: Double
+  ): Double = js.native
+  def writeSync(fd: Double, buffer: Buffer, offset: js.UndefOr[scala.Nothing], length: Double): Double = js.native
+  def writeSync(fd: Double, buffer: Buffer, offset: js.UndefOr[scala.Nothing], length: Double, position: Double): Double = js.native
+  def writeSync(fd: Double, buffer: Buffer, offset: Double): Double = js.native
+  def writeSync(fd: Double, buffer: Buffer, offset: Double, length: js.UndefOr[scala.Nothing], position: Double): Double = js.native
+  def writeSync(fd: Double, buffer: Buffer, offset: Double, length: Double): Double = js.native
+  def writeSync(fd: Double, buffer: Buffer, offset: Double, length: Double, position: Double): Double = js.native
   def writeSync(fd: Double, str: String): Double = js.native
   def writeSync(fd: Double, str: String, position: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Double = js.native
   def writeSync(fd: Double, str: String, position: Double): Double = js.native
   def writeSync(fd: Double, str: String, position: Double, encoding: BufferEncoding): Double = js.native
 }
 /* static members */
-@JSImport("memfs/lib/volume", "Volume")
-@js.native
-object Volume extends js.Object {
+object Volume {
+  
+  @JSImport("memfs/lib/volume", "Volume")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Global file descriptor counter. UNIX file descriptors start from 0 and go sequentially
@@ -585,11 +588,23 @@ object Volume extends js.Object {
     * @type {number}
     * @todo This should not be static, right?
     */
-  var fd: Double = js.native
+  @JSImport("memfs/lib/volume", "Volume.fd")
+  @js.native
+  def fd: Double = js.native
+  @scala.inline
+  def fd_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fd")(x.asInstanceOf[js.Any])
   
+  @JSImport("memfs/lib/volume", "Volume.fromJSON")
+  @js.native
   def fromJSON(json: DirectoryJSON): Volume = js.native
+  @JSImport("memfs/lib/volume", "Volume.fromJSON")
+  @js.native
   def fromJSON(json: DirectoryJSON, cwd: String): Volume = js.native
   
+  @JSImport("memfs/lib/volume", "Volume.fromNestedJSON")
+  @js.native
   def fromNestedJSON(json: NestedDirectoryJSON): Volume = js.native
+  @JSImport("memfs/lib/volume", "Volume.fromNestedJSON")
+  @js.native
   def fromNestedJSON(json: NestedDirectoryJSON, cwd: String): Volume = js.native
 }

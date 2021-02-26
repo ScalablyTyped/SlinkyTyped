@@ -3,12 +3,13 @@ package typingsSlinky.bootstrapGrowlIfightcrime
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.bootstrapGrowlIfightcrime.BootstrapGrowlIfightcrime.Options
 import typingsSlinky.jquery.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQueryStatic extends js.Object {
+trait JQueryStatic extends StObject {
   
   /**
     * Show standard Bootstrap alerts into hovering "Growl-like" notifications

@@ -8,6 +8,7 @@ import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.StyleHTMLAttributes
 import typingsSlinky.reactShare.reactShareStrings.screenCenter
 import typingsSlinky.reactShare.reactShareStrings.windowCenter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

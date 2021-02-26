@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,10 +37,10 @@ class PassCubePostProcess protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/PostProcesses/index", "PassCubePostProcess")
-@js.native
-object PassCubePostProcess extends js.Object {
+object PassCubePostProcess {
   
   /** @hidden */
+  @JSImport("babylonjs/PostProcesses/index", "PassCubePostProcess._Parse")
+  @js.native
   def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.passPostProcessMod.PassCubePostProcess = js.native
 }

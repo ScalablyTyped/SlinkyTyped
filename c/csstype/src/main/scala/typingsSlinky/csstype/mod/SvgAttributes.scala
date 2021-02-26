@@ -1,5 +1,6 @@
 package typingsSlinky.csstype.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -252,7 +253,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.`[z]`
   - typingsSlinky.csstype.csstypeStrings.`[zoomAndPan]`
 */
-trait SvgAttributes extends js.Object
+trait SvgAttributes extends StObject
 object SvgAttributes {
   
   @scala.inline

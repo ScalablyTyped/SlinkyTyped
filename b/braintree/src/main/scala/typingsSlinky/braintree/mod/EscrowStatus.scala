@@ -1,5 +1,6 @@
 package typingsSlinky.braintree.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.braintree.braintreeStrings.released
   - typingsSlinky.braintree.braintreeStrings.refunded
 */
-trait EscrowStatus extends js.Object
+trait EscrowStatus extends StObject
 object EscrowStatus {
   
   @scala.inline

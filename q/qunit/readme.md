@@ -4,15 +4,15 @@
 Typings are for version v2.9.2
 
 ## Library description:
-An easy-to-use JavaScript Unit Testing framework.
+The powerful, easy-to-use testing framework.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | qunit |
-| Keywords           | testing, unit, jquery |
-| # releases         | 13 |
-| # dependents       | 42 |
-| # downloads        | 4948594 |
+| Keywords           | testing, unit, assert, assertion, tap, tape, karma, jquery |
+| # releases         | 12 |
+| # dependents       | 48 |
+| # downloads        | 7219196 |
 | # stars            | 11 |
 
 ## Links

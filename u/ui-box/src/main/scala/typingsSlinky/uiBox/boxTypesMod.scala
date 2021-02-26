@@ -7,13 +7,12 @@ import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
 import typingsSlinky.uiBox.anon.AllowUnsafeHref
 import typingsSlinky.uiBox.typesEnhancersMod.EnhancerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ui-box/dist/src/types/box-types", JSImport.Namespace)
-@js.native
-object boxTypesMod extends js.Object {
+object boxTypesMod {
   
   type BoxComponent[P, D /* <: ReactElement */] = js.Function1[/* props */ PolymorphicBoxProps[D, P], ReactElement]
   

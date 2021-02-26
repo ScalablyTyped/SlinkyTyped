@@ -85,6 +85,7 @@ import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.keyCodesMod.KeyCodes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -93,7 +94,7 @@ object HoverCard {
   
   @JSImport("office-ui-fabric-react", "HoverCard")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -274,13 +275,13 @@ object HoverCard {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IHoverCard]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IHoverCard | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IHoverCard]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IHoverCard]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -298,10 +299,10 @@ object HoverCard {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -310,10 +311,10 @@ object HoverCard {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventListenerTargetHTMLElement(value: HTMLElement): this.type = set("eventListenerTarget", value.asInstanceOf[js.Any])
+    def eventListenerTarget(value: HTMLElement | String): this.type = set("eventListenerTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventListenerTarget(value: HTMLElement | String): this.type = set("eventListenerTarget", value.asInstanceOf[js.Any])
+    def eventListenerTargetHTMLElement(value: HTMLElement): this.type = set("eventListenerTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
     def eventListenerTargetNull: this.type = set("eventListenerTarget", null)
@@ -658,10 +659,10 @@ object HoverCard {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IHoverCardStyleProps => DeepPartial[IHoverCardStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IHoverCardStyleProps, IHoverCardStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IHoverCardStyleProps, IHoverCardStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IHoverCardStyleProps => DeepPartial[IHoverCardStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -673,10 +674,10 @@ object HoverCard {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+    def target(value: HTMLElement | String): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def target(value: HTMLElement | String): this.type = set("target", value.asInstanceOf[js.Any])
+    def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetNull: this.type = set("target", null)
@@ -706,7 +707,7 @@ object HoverCard {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IHoverCardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: HoverCard.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IHoverCardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

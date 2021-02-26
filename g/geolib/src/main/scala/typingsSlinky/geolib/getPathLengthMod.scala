@@ -1,15 +1,18 @@
 package typingsSlinky.geolib
 
 import typingsSlinky.geolib.typesMod.GeolibInputCoordinates
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("geolib/es/getPathLength", JSImport.Namespace)
-@js.native
-object getPathLengthMod extends js.Object {
+object getPathLengthMod {
   
+  @JSImport("geolib/es/getPathLength", JSImport.Default)
+  @js.native
   def default(points: js.Array[GeolibInputCoordinates]): Double = js.native
+  @JSImport("geolib/es/getPathLength", JSImport.Default)
+  @js.native
   def default(points: js.Array[GeolibInputCoordinates], distanceFn: DistanceFn): Double = js.native
   
   type DistanceFn = js.Function2[/* point */ GeolibInputCoordinates, /* dest */ GeolibInputCoordinates, Double]

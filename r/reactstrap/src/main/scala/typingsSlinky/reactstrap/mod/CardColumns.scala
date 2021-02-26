@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.cardColumnsMod.CardColumnsProps
+import typingsSlinky.reactstrap.cardColumnsMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "CardColumns")
+@JSImport("reactstrap/lib", "CardColumns")
 @js.native
-class CardColumns ()
-  extends Component[CardColumnsProps, js.Object, js.Any]
+class CardColumns () extends default

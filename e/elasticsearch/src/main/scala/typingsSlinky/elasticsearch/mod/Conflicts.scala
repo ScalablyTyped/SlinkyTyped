@@ -1,5 +1,6 @@
 package typingsSlinky.elasticsearch.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.elasticsearch.elasticsearchStrings.abort
   - typingsSlinky.elasticsearch.elasticsearchStrings.proceed
 */
-trait Conflicts extends js.Object
+trait Conflicts extends StObject
 object Conflicts {
   
   @scala.inline

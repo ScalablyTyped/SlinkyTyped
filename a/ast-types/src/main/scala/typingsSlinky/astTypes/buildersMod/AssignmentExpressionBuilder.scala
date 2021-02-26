@@ -18,12 +18,13 @@ import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.MemberExpressionKind
 import typingsSlinky.astTypes.kindsMod.PatternKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.AssignmentExpression
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AssignmentExpressionBuilder extends js.Object {
+trait AssignmentExpressionBuilder extends StObject {
   
   def apply(operator: AmpersandEqualssign, left: MemberExpressionKind, right: ExpressionKind): AssignmentExpression = js.native
   def apply(operator: AmpersandEqualssign, left: PatternKind, right: ExpressionKind): AssignmentExpression = js.native

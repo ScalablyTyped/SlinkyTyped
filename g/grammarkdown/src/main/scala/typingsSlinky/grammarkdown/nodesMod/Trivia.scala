@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.nodesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.grammarkdown.nodesMod.CommentTrivia
   - typingsSlinky.grammarkdown.nodesMod.HtmlTrivia
 */
-trait Trivia extends js.Object
+trait Trivia extends StObject

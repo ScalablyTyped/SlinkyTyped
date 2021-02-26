@@ -17,14 +17,14 @@ import typingsSlinky.pulumiAws.virtualServiceMod.VirtualServiceState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws/appmesh", JSImport.Namespace)
-@js.native
-object appmeshMod extends js.Object {
+object appmeshMod {
   
+  @JSImport("@pulumi/aws/appmesh", "GatewayRoute")
   @js.native
   class GatewayRoute protected ()
     extends typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRoute {
@@ -39,8 +39,7 @@ object appmeshMod extends js.Object {
     def this(name: String, args: GatewayRouteArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object GatewayRoute extends js.Object {
+  object GatewayRoute {
     
     /**
       * Get an existing GatewayRoute resource's state with the given name, ID, and optional extra
@@ -51,18 +50,29 @@ object appmeshMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/appmesh", "GatewayRoute.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRoute = js.native
+    @JSImport("@pulumi/aws/appmesh", "GatewayRoute.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRoute = js.native
+    @JSImport("@pulumi/aws/appmesh", "GatewayRoute.get")
+    @js.native
     def get(name: String, id: Input[ID], state: GatewayRouteState): typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRoute = js.native
+    @JSImport("@pulumi/aws/appmesh", "GatewayRoute.get")
+    @js.native
     def get(name: String, id: Input[ID], state: GatewayRouteState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRoute = js.native
     
     /**
       * Returns true if the given object is an instance of GatewayRoute.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/appmesh", "GatewayRoute.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/appmesh/gatewayRoute.GatewayRoute */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/appmesh", "Mesh")
   @js.native
   class Mesh protected ()
     extends typingsSlinky.pulumiAws.meshMod.Mesh {
@@ -79,8 +89,7 @@ object appmeshMod extends js.Object {
     def this(name: String, args: MeshArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object Mesh extends js.Object {
+  object Mesh {
     
     /**
       * Get an existing Mesh resource's state with the given name, ID, and optional extra
@@ -91,18 +100,29 @@ object appmeshMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/appmesh", "Mesh.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.meshMod.Mesh = js.native
+    @JSImport("@pulumi/aws/appmesh", "Mesh.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.meshMod.Mesh = js.native
+    @JSImport("@pulumi/aws/appmesh", "Mesh.get")
+    @js.native
     def get(name: String, id: Input[ID], state: MeshState): typingsSlinky.pulumiAws.meshMod.Mesh = js.native
+    @JSImport("@pulumi/aws/appmesh", "Mesh.get")
+    @js.native
     def get(name: String, id: Input[ID], state: MeshState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.meshMod.Mesh = js.native
     
     /**
       * Returns true if the given object is an instance of Mesh.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/appmesh", "Mesh.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/appmesh/mesh.Mesh */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/appmesh", "Route")
   @js.native
   class Route protected ()
     extends typingsSlinky.pulumiAws.appmeshRouteMod.Route {
@@ -117,8 +137,7 @@ object appmeshMod extends js.Object {
     def this(name: String, args: RouteArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object Route extends js.Object {
+  object Route {
     
     /**
       * Get an existing Route resource's state with the given name, ID, and optional extra
@@ -129,18 +148,29 @@ object appmeshMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/appmesh", "Route.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.appmeshRouteMod.Route = js.native
+    @JSImport("@pulumi/aws/appmesh", "Route.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.appmeshRouteMod.Route = js.native
+    @JSImport("@pulumi/aws/appmesh", "Route.get")
+    @js.native
     def get(name: String, id: Input[ID], state: RouteState): typingsSlinky.pulumiAws.appmeshRouteMod.Route = js.native
+    @JSImport("@pulumi/aws/appmesh", "Route.get")
+    @js.native
     def get(name: String, id: Input[ID], state: RouteState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.appmeshRouteMod.Route = js.native
     
     /**
       * Returns true if the given object is an instance of Route.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/appmesh", "Route.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/appmesh/route.Route */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/appmesh", "VirtualGateway")
   @js.native
   class VirtualGateway protected ()
     extends typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGateway {
@@ -155,8 +185,7 @@ object appmeshMod extends js.Object {
     def this(name: String, args: VirtualGatewayArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object VirtualGateway extends js.Object {
+  object VirtualGateway {
     
     /**
       * Get an existing VirtualGateway resource's state with the given name, ID, and optional extra
@@ -167,18 +196,29 @@ object appmeshMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/appmesh", "VirtualGateway.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGateway = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualGateway.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGateway = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualGateway.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VirtualGatewayState): typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGateway = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualGateway.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VirtualGatewayState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGateway = js.native
     
     /**
       * Returns true if the given object is an instance of VirtualGateway.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/appmesh", "VirtualGateway.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/appmesh/virtualGateway.VirtualGateway */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/appmesh", "VirtualNode")
   @js.native
   class VirtualNode protected ()
     extends typingsSlinky.pulumiAws.virtualNodeMod.VirtualNode {
@@ -193,8 +233,7 @@ object appmeshMod extends js.Object {
     def this(name: String, args: VirtualNodeArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object VirtualNode extends js.Object {
+  object VirtualNode {
     
     /**
       * Get an existing VirtualNode resource's state with the given name, ID, and optional extra
@@ -205,18 +244,29 @@ object appmeshMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/appmesh", "VirtualNode.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.virtualNodeMod.VirtualNode = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualNode.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.virtualNodeMod.VirtualNode = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualNode.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VirtualNodeState): typingsSlinky.pulumiAws.virtualNodeMod.VirtualNode = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualNode.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VirtualNodeState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.virtualNodeMod.VirtualNode = js.native
     
     /**
       * Returns true if the given object is an instance of VirtualNode.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/appmesh", "VirtualNode.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/appmesh/virtualNode.VirtualNode */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/appmesh", "VirtualRouter")
   @js.native
   class VirtualRouter protected ()
     extends typingsSlinky.pulumiAws.virtualRouterMod.VirtualRouter {
@@ -231,8 +281,7 @@ object appmeshMod extends js.Object {
     def this(name: String, args: VirtualRouterArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object VirtualRouter extends js.Object {
+  object VirtualRouter {
     
     /**
       * Get an existing VirtualRouter resource's state with the given name, ID, and optional extra
@@ -243,18 +292,29 @@ object appmeshMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/appmesh", "VirtualRouter.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.virtualRouterMod.VirtualRouter = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualRouter.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.virtualRouterMod.VirtualRouter = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualRouter.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VirtualRouterState): typingsSlinky.pulumiAws.virtualRouterMod.VirtualRouter = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualRouter.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VirtualRouterState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.virtualRouterMod.VirtualRouter = js.native
     
     /**
       * Returns true if the given object is an instance of VirtualRouter.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/appmesh", "VirtualRouter.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/appmesh/virtualRouter.VirtualRouter */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/appmesh", "VirtualService")
   @js.native
   class VirtualService protected ()
     extends typingsSlinky.pulumiAws.virtualServiceMod.VirtualService {
@@ -269,8 +329,7 @@ object appmeshMod extends js.Object {
     def this(name: String, args: VirtualServiceArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object VirtualService extends js.Object {
+  object VirtualService {
     
     /**
       * Get an existing VirtualService resource's state with the given name, ID, and optional extra
@@ -281,15 +340,25 @@ object appmeshMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/appmesh", "VirtualService.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.virtualServiceMod.VirtualService = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualService.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.virtualServiceMod.VirtualService = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualService.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VirtualServiceState): typingsSlinky.pulumiAws.virtualServiceMod.VirtualService = js.native
+    @JSImport("@pulumi/aws/appmesh", "VirtualService.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VirtualServiceState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.virtualServiceMod.VirtualService = js.native
     
     /**
       * Returns true if the given object is an instance of VirtualService.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/appmesh", "VirtualService.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/appmesh/virtualService.VirtualService */ Boolean = js.native
   }
 }

@@ -10,10 +10,10 @@ Prettier is an opinionated code formatter
 | ------------------ | :-------------: |
 | Full name          | prettier |
 | Keywords           | - |
-| # releases         | 37 |
-| # dependents       | 3177 |
-| # downloads        | 236857812 |
-| # stars            | 61 |
+| # releases         | 24 |
+| # dependents       | 5364 |
+| # downloads        | 468134905 |
+| # stars            | 63 |
 
 ## Links
 - [Homepage](https://prettier.io)

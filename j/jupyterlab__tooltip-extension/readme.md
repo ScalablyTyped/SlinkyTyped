@@ -10,9 +10,9 @@ JupyterLab - Tooltip Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/tooltip-extension |
 | Keywords           | - |
-| # releases         | 63 |
+| # releases         | 130 |
 | # dependents       | 1 |
-| # downloads        | 760767 |
+| # downloads        | 1465008 |
 | # stars            | 0 |
 
 ## Links

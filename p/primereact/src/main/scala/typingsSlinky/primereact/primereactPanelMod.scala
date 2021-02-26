@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.panelMod.PanelProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/panel", JSImport.Namespace)
-@js.native
-object primereactPanelMod extends js.Object {
+object primereactPanelMod {
   
+  @JSImport("primereact/panel", "Panel")
   @js.native
-  class Panel ()
-    extends Component[PanelProps, js.Any, js.Any]
+  class Panel protected ()
+    extends typingsSlinky.primereact.panelMod.Panel {
+    def this(props: PanelProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: PanelProps, context: js.Any) = this()
+  }
 }

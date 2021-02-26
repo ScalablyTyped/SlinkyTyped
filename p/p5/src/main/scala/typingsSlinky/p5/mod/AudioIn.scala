@@ -3,12 +3,13 @@ package typingsSlinky.p5.mod
 import org.scalajs.dom.experimental.mediastream.MediaStream
 import org.scalajs.dom.raw.GainNode
 import org.scalajs.dom.raw.MediaStreamAudioSourceNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AudioIn extends js.Object {
+trait AudioIn extends StObject {
   
   /**
     *   Set amplitude (volume) of a mic input between 0

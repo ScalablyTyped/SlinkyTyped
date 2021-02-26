@@ -16,6 +16,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Hidden
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.None
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.VeryHidden
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Visible
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -5,6 +5,7 @@ import typingsSlinky.stripe.mod.HeaderOptions
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.setupIntents.ISetupIntent
 import typingsSlinky.stripe.mod.setupIntents.ISetupIntentConfirmOptions
@@ -12,13 +13,15 @@ import typingsSlinky.stripe.mod.setupIntents.ISetupIntentCreationOptions
 import typingsSlinky.stripe.mod.setupIntents.ISetupIntentListOptions
 import typingsSlinky.stripe.mod.setupIntents.ISetupIntentRetrieveOptions
 import typingsSlinky.stripe.mod.setupIntents.ISetupIntentUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.SetupIntents")
 @js.native
-class SetupIntents () extends StripeResource {
+class SetupIntents protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def cancel(intent: String): js.Promise[ISetupIntent] = js.native
   def cancel(intent: String, data: `1`): js.Promise[ISetupIntent] = js.native

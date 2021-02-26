@@ -10,9 +10,9 @@ JavaScript's functional programming helper library.
 | ------------------ | :-------------: |
 | Full name          | underscore |
 | Keywords           | util, functional, server, client, browser |
-| # releases         | 2 |
-| # dependents       | 17026 |
-| # downloads        | 330470497 |
+| # releases         | 7 |
+| # dependents       | 17609 |
+| # downloads        | 373770361 |
 | # stars            | 574 |
 
 ## Links

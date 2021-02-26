@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientCivicinfo.gapi.client.civicinfo
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientCivicinfo.anon.Callback
 import typingsSlinky.maximMazurokGapiClientCivicinfo.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RepresentativesResource extends js.Object {
+trait RepresentativesResource extends StObject {
   
   /** Looks up political geography and representative information for a single address. */
   def representativeInfoByAddress(): Request[RepresentativeInfoResponse] = js.native

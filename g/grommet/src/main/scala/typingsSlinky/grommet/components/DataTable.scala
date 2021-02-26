@@ -95,15 +95,22 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DataTable {
   
-  @JSImport("grommet/es6", "DataTable")
+  @scala.inline
+  def apply[TRowType](): Builder[TRowType] = {
+    val __props = js.Dynamic.literal()
+    new Builder[TRowType](js.Array(this.component, __props.asInstanceOf[DataTableProps[TRowType] with (DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement])]))
+  }
+  
+  @JSImport("grommet", "DataTable")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[TRowType] (val args: js.Array[js.Any])
@@ -288,10 +295,10 @@ object DataTable {
     ): this.type = set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderVarargs(value: Error*): this.type = set("border", js.Array(value :_*))
+    def border(value: BorderType | (Sections[BorderType, BorderType, BorderType, BorderType])): this.type = set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def border(value: BorderType | (Sections[BorderType, BorderType, BorderType, BorderType])): this.type = set("border", value.asInstanceOf[js.Any])
+    def borderVarargs(value: Error*): this.type = set("border", js.Array(value :_*))
     
     @scala.inline
     def cellPadding(value: Double | String): this.type = set("cellPadding", value.asInstanceOf[js.Any])
@@ -306,10 +313,10 @@ object DataTable {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columnsVarargs(value: ColumnConfig[TRowType]*): this.type = set("columns", js.Array(value :_*))
+    def columns(value: js.Array[ColumnConfig[TRowType]]): this.type = set("columns", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columns(value: js.Array[ColumnConfig[TRowType]]): this.type = set("columns", value.asInstanceOf[js.Any])
+    def columnsVarargs(value: ColumnConfig[TRowType]*): this.type = set("columns", js.Array(value :_*))
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -321,10 +328,10 @@ object DataTable {
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: TRowType*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[TRowType]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[TRowType]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: TRowType*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
@@ -333,10 +340,10 @@ object DataTable {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -680,10 +687,10 @@ object DataTable {
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectVarargs(value: (String | Double)*): this.type = set("select", js.Array(value :_*))
+    def select(value: js.Array[String | Double]): this.type = set("select", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def select(value: js.Array[String | Double]): this.type = set("select", value.asInstanceOf[js.Any])
+    def selectVarargs(value: (String | Double)*): this.type = set("select", js.Array(value :_*))
     
     @scala.inline
     def size(value: small | medium | large | xlarge | String): this.type = set("size", value.asInstanceOf[js.Any])
@@ -737,15 +744,9 @@ object DataTable {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
+  implicit def make[TRowType](companion: DataTable.type): Builder[TRowType] = new Builder[TRowType](js.Array(this.component, js.Dictionary.empty))()
+  
   def withProps[TRowType](
     p: DataTableProps[TRowType] with (DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement])
   ): Builder[TRowType] = new Builder[TRowType](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[TRowType](): Builder[TRowType] = {
-    val __props = js.Dynamic.literal()
-    new Builder[TRowType](js.Array(this.component, __props.asInstanceOf[DataTableProps[TRowType] with (DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement])]))
-  }
-  
-  implicit def make[TRowType](companion: DataTable.type): Builder[TRowType] = new Builder[TRowType](js.Array(this.component, js.Dictionary.empty))()
 }

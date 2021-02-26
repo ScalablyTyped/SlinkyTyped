@@ -1,12 +1,13 @@
 package typingsSlinky.layuiSrc.layui
 
 import typingsSlinky.layuiSrc.anon.Data
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Table extends js.Object {
+trait Table extends StObject {
   
   def checkStatus(id: String): Data = js.native
   

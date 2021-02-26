@@ -2,14 +2,14 @@ package typingsSlinky.ts3NodejsLibrary
 
 import typingsSlinky.std.Error
 import typingsSlinky.ts3NodejsLibrary.anon.EventName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ts3-nodejs-library/lib/exception/EventError", JSImport.Namespace)
-@js.native
-object eventErrorMod extends js.Object {
+object eventErrorMod {
   
+  @JSImport("ts3-nodejs-library/lib/exception/EventError", "EventError")
   @js.native
   class EventError protected () extends Error {
     /**

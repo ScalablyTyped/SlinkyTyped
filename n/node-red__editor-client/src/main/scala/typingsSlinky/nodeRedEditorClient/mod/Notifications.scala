@@ -4,12 +4,13 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.nodeRedEditorClient.anon.Buttons
 import typingsSlinky.nodeRedEditorClient.mod.global.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Notifications extends js.Object {
+trait Notifications extends StObject {
   
   def init(): Unit = js.native
   

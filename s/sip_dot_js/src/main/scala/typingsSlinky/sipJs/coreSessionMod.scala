@@ -1,15 +1,15 @@
 package typingsSlinky.sipJs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/core/session", JSImport.Namespace)
-@js.native
-object coreSessionMod extends js.Object {
+object coreSessionMod {
   
+  @JSImport("sip.js/lib/core/session", "SessionState")
   @js.native
-  object SessionState extends js.Object {
+  object SessionState extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.sipJs.sessionSessionMod.SessionState with String] = js.native
@@ -25,8 +25,9 @@ object coreSessionMod extends js.Object {
     /* "Terminated" */ val Terminated: typingsSlinky.sipJs.sessionSessionMod.SessionState.Terminated with String = js.native
   }
   
+  @JSImport("sip.js/lib/core/session", "SignalingState")
   @js.native
-  object SignalingState extends js.Object {
+  object SignalingState extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.sipJs.sessionSessionMod.SignalingState with String] = js.native

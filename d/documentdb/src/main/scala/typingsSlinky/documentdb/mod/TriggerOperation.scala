@@ -5,6 +5,7 @@ import typingsSlinky.documentdb.documentdbStrings.create_
 import typingsSlinky.documentdb.documentdbStrings.delete_
 import typingsSlinky.documentdb.documentdbStrings.replace_
 import typingsSlinky.documentdb.documentdbStrings.update_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.documentdb.documentdbStrings.delete_
   - typingsSlinky.documentdb.documentdbStrings.replace_
 */
-trait TriggerOperation extends js.Object
+trait TriggerOperation extends StObject
 object TriggerOperation {
   
   @scala.inline

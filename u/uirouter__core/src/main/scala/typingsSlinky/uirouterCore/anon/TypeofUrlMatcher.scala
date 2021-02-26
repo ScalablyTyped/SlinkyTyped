@@ -7,6 +7,7 @@ import typingsSlinky.uirouterCore.paramTypesMod.ParamTypes
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlMatcherCompileConfig
 import typingsSlinky.uirouterCore.urlMatcherFactoryMod.ParamFactory
 import typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

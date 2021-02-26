@@ -10,9 +10,9 @@ An ini encoder/decoder for node
 | ------------------ | :-------------: |
 | Full name          | ini |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 1403 |
-| # downloads        | 449330342 |
+| # releases         | 5 |
+| # dependents       | 1771 |
+| # downloads        | 682491332 |
 | # stars            | 44 |
 
 ## Links

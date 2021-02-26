@@ -1,5 +1,6 @@
 package typingsSlinky.antd.components
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
@@ -62,7 +63,6 @@ import typingsSlinky.rcSelect.generatorMod.CustomTagProps
 import typingsSlinky.rcSelect.generatorMod.FilterFunc
 import typingsSlinky.rcSelect.generatorMod.SingleType
 import typingsSlinky.rcTree.interfaceMod.IconType
-import typingsSlinky.rcTree.treeNodeMod.TreeNodeProps
 import typingsSlinky.rcTreeSelect.interfaceMod.ChangeEventExtra
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.DefaultValueType
@@ -71,16 +71,39 @@ import typingsSlinky.rcTreeSelect.interfaceMod.LabelValueType
 import typingsSlinky.rcTreeSelect.interfaceMod.LegacyDataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.SimpleModeConfig
 import typingsSlinky.rcTreeSelect.strategyUtilMod.CheckedStrategy
+import typingsSlinky.rcTreeSelect.treeNodeMod.TreeNodeProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TreeSelect {
   
+  @scala.inline
+  def apply[T /* <: DefaultValueType */](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[TreeSelectProps[T] with `1`]))
+  }
+  
+  object TreeNode {
+    
+    @scala.inline
+    def apply(value: Key): SharedBuilder_TreeNodeProps1401300722 = {
+      val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+      new SharedBuilder_TreeNodeProps1401300722(js.Array(this.component, __props.asInstanceOf[TreeNodeProps]))
+    }
+    
+    @JSImport("antd", "TreeSelect.TreeNode")
+    @js.native
+    val component: js.Object = js.native
+    
+    def withProps(p: TreeNodeProps): SharedBuilder_TreeNodeProps1401300722 = new SharedBuilder_TreeNodeProps1401300722(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd", "TreeSelect")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T /* <: DefaultValueType */] (val args: js.Array[js.Any])
@@ -255,10 +278,10 @@ object TreeSelect {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultActiveFirstOption(value: Boolean): this.type = set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
@@ -291,10 +314,10 @@ object TreeSelect {
     def dropdownStyle(value: CSSProperties): this.type = set("dropdownStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filterTreeNodeFunction2(value: (/* inputValue */ String, /* option */ js.UndefOr[LegacyDataNode]) => Boolean): this.type = set("filterTreeNode", js.Any.fromFunction2(value))
+    def filterTreeNode(value: Boolean | FilterFunc[LegacyDataNode]): this.type = set("filterTreeNode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filterTreeNode(value: Boolean | FilterFunc[LegacyDataNode]): this.type = set("filterTreeNode", value.asInstanceOf[js.Any])
+    def filterTreeNodeFunction2(value: (/* inputValue */ String, /* option */ js.UndefOr[LegacyDataNode]) => Boolean): this.type = set("filterTreeNode", js.Any.fromFunction2(value))
     
     @scala.inline
     def getPopupContainer(value: /* props */ js.Any => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
@@ -336,10 +359,10 @@ object TreeSelect {
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[HTMLElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
@@ -351,7 +374,7 @@ object TreeSelect {
     def onClear(value: () => Unit): this.type = set("onClear", js.Any.fromFunction0(value))
     
     @scala.inline
-    def onClick(value: SyntheticMouseEvent[org.scalajs.dom.raw.Element] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: SyntheticMouseEvent[Element] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def onDeselect(
@@ -406,25 +429,19 @@ object TreeSelect {
     def optionFilterProp(value: String): this.type = set("optionFilterProp", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def optionsVarargs(value: DataNode*): this.type = set("options", js.Array(value :_*))
-    
-    @scala.inline
     def options(value: js.Array[DataNode]): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: DataNode*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def refRefObject(value: ReactRef[RefTreeSelectProps]): this.type = set("ref", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def refFunction1(value: /* instance */ RefTreeSelectProps | Null => Unit): this.type = set("ref", js.Any.fromFunction1(value))
     
     @scala.inline
     def ref(
@@ -432,28 +449,34 @@ object TreeSelect {
     ): this.type = set("ref", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def refFunction1(value: /* instance */ RefTreeSelectProps | Null => Unit): this.type = set("ref", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def refNull: this.type = set("ref", null)
     
     @scala.inline
-    def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    def refRefObject(value: ReactRef[RefTreeSelectProps]): this.type = set("ref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def removeIcon(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def searchPlaceholderReactElement(value: ReactElement): this.type = set("searchPlaceholder", value.asInstanceOf[js.Any])
+    def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def searchPlaceholder(value: ReactElement): this.type = set("searchPlaceholder", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def searchPlaceholderReactElement(value: ReactElement): this.type = set("searchPlaceholder", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def searchValue(value: String): this.type = set("searchValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def showActionVarargs(value: (focus | click)*): this.type = set("showAction", js.Array(value :_*))
+    def showAction(value: js.Array[focus | click]): this.type = set("showAction", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def showAction(value: js.Array[focus | click]): this.type = set("showAction", value.asInstanceOf[js.Any])
+    def showActionVarargs(value: (focus | click)*): this.type = set("showAction", js.Array(value :_*))
     
     @scala.inline
     def showArrow(value: Boolean): this.type = set("showArrow", value.asInstanceOf[js.Any])
@@ -471,19 +494,19 @@ object TreeSelect {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def switcherIconReactElement(value: ReactElement): this.type = set("switcherIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def switcherIconFunction1(value: /* props */ TreeNodeProps => ReactElement): this.type = set("switcherIcon", js.Any.fromFunction1(value))
+    def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def switcherIcon(value: IconType): this.type = set("switcherIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def switcherIconFunction1(value: /* props */ typingsSlinky.rcTree.treeNodeMod.TreeNodeProps => ReactElement): this.type = set("switcherIcon", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def switcherIconReactElement(value: ReactElement): this.type = set("switcherIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
@@ -498,13 +521,10 @@ object TreeSelect {
     def treeCheckStrictly(value: Boolean): this.type = set("treeCheckStrictly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def treeCheckableReactElement(value: ReactElement): this.type = set("treeCheckable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def treeCheckable(value: Boolean | ReactElement): this.type = set("treeCheckable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def treeDataVarargs(value: DataNode*): this.type = set("treeData", js.Array(value :_*))
+    def treeCheckableReactElement(value: ReactElement): this.type = set("treeCheckable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def treeData(value: js.Array[DataNode]): this.type = set("treeData", value.asInstanceOf[js.Any])
@@ -513,37 +533,40 @@ object TreeSelect {
     def treeDataSimpleMode(value: Boolean | SimpleModeConfig): this.type = set("treeDataSimpleMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def treeDefaultExpandAll(value: Boolean): this.type = set("treeDefaultExpandAll", value.asInstanceOf[js.Any])
+    def treeDataVarargs(value: DataNode*): this.type = set("treeData", js.Array(value :_*))
     
     @scala.inline
-    def treeDefaultExpandedKeysVarargs(value: Key*): this.type = set("treeDefaultExpandedKeys", js.Array(value :_*))
+    def treeDefaultExpandAll(value: Boolean): this.type = set("treeDefaultExpandAll", value.asInstanceOf[js.Any])
     
     @scala.inline
     def treeDefaultExpandedKeys(value: js.Array[Key]): this.type = set("treeDefaultExpandedKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def treeExpandedKeysVarargs(value: Key*): this.type = set("treeExpandedKeys", js.Array(value :_*))
+    def treeDefaultExpandedKeysVarargs(value: Key*): this.type = set("treeDefaultExpandedKeys", js.Array(value :_*))
     
     @scala.inline
     def treeExpandedKeys(value: js.Array[Key]): this.type = set("treeExpandedKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def treeIconReactElement(value: ReactElement): this.type = set("treeIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def treeIconFunction1(value: /* props */ TreeNodeProps => ReactElement): this.type = set("treeIcon", js.Any.fromFunction1(value))
+    def treeExpandedKeysVarargs(value: Key*): this.type = set("treeExpandedKeys", js.Array(value :_*))
     
     @scala.inline
     def treeIcon(value: IconType): this.type = set("treeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def treeIconFunction1(value: /* props */ typingsSlinky.rcTree.treeNodeMod.TreeNodeProps => ReactElement): this.type = set("treeIcon", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def treeIconReactElement(value: ReactElement): this.type = set("treeIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def treeLine(value: Boolean): this.type = set("treeLine", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def treeLoadedKeysVarargs(value: Key*): this.type = set("treeLoadedKeys", js.Array(value :_*))
+    def treeLoadedKeys(value: js.Array[Key]): this.type = set("treeLoadedKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def treeLoadedKeys(value: js.Array[Key]): this.type = set("treeLoadedKeys", value.asInstanceOf[js.Any])
+    def treeLoadedKeysVarargs(value: Key*): this.type = set("treeLoadedKeys", js.Array(value :_*))
     
     @scala.inline
     def treeNodeFilterProp(value: String): this.type = set("treeNodeFilterProp", value.asInstanceOf[js.Any])
@@ -558,28 +581,7 @@ object TreeSelect {
     def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T /* <: DefaultValueType */](p: TreeSelectProps[T] with `1`): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T /* <: DefaultValueType */](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[TreeSelectProps[T] with `1`]))
-  }
-  
   implicit def make[T /* <: DefaultValueType */](companion: TreeSelect.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
   
-  object TreeNode {
-    
-    @JSImport("antd", "TreeSelect.TreeNode")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: typingsSlinky.rcTreeSelect.treeNodeMod.TreeNodeProps): SharedBuilder_TreeNodeProps1401300722 = new SharedBuilder_TreeNodeProps1401300722(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(value: Key): SharedBuilder_TreeNodeProps1401300722 = {
-      val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-      new SharedBuilder_TreeNodeProps1401300722(js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcTreeSelect.treeNodeMod.TreeNodeProps]))
-    }
-  }
+  def withProps[T /* <: DefaultValueType */](p: TreeSelectProps[T] with `1`): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -10,10 +10,10 @@ Cascading grid layout library
 | ------------------ | :-------------: |
 | Full name          | masonry-layout |
 | Keywords           | DOM, browser, grid, layout, outlayer |
-| # releases         | 2 |
-| # dependents       | 114 |
-| # downloads        | 3542428 |
-| # stars            | 17 |
+| # releases         | 1 |
+| # dependents       | 127 |
+| # downloads        | 4833326 |
+| # stars            | 16 |
 
 ## Links
 - [Homepage](https://masonry.desandro.com)

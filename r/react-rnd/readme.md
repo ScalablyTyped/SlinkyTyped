@@ -10,9 +10,9 @@ Typings are for version 10.2.3
 | ------------------ | :-------------: |
 | Full name          | react-rnd |
 | Keywords           | react, resize, resizable, draggable, component |
-| # releases         | 25 |
-| # dependents       | 52 |
-| # downloads        | 1153517 |
+| # releases         | 22 |
+| # dependents       | 97 |
+| # downloads        | 2406425 |
 | # stars            | 2 |
 
 ## Links

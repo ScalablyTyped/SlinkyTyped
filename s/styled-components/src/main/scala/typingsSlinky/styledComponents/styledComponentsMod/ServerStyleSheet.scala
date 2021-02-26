@@ -2,13 +2,14 @@ package typingsSlinky.styledComponents.styledComponentsMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.styledComponents.styledComponentsMod.global.NodeJS.ReadableStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("styled-components", "ServerStyleSheet")
 @js.native
-class ServerStyleSheet () extends js.Object {
+class ServerStyleSheet () extends StObject {
   
   def collectStyles(tree: ReactElement): ReactElement = js.native
   

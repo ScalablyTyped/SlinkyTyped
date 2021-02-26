@@ -1,10 +1,19 @@
 package typingsSlinky.parameter
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
+  /* static member */
+  @scala.inline
+  def CONVERT_MAP: typingsSlinky.std.Record[java.lang.String, js.UndefOr[typingsSlinky.parameter.mod.ParameterConvertType]] = typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].selectDynamic("CONVERT_MAP").asInstanceOf[typingsSlinky.std.Record[java.lang.String, js.UndefOr[typingsSlinky.parameter.mod.ParameterConvertType]]]
+  @scala.inline
+  def CONVERT_MAP_=(
+    x: typingsSlinky.std.Record[java.lang.String, js.UndefOr[typingsSlinky.parameter.mod.ParameterConvertType]]
+  ): scala.Unit = typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].updateDynamic("CONVERT_MAP")(x.asInstanceOf[js.Any])
   
   type ParameterCheckFunction[T /* <: java.lang.String */] = js.Function2[
     /* rule */ typingsSlinky.parameter.mod.ParameterRuleCustom with typingsSlinky.parameter.anon.Type[T], 
@@ -87,4 +96,67 @@ package object mod {
     /* repeated */ js.Any, 
     java.lang.String
   ]
+  
+  @scala.inline
+  def TYPE_MAP: typingsSlinky.std.Record[
+    java.lang.String, 
+    js.UndefOr[typingsSlinky.parameter.mod.ParameterCheckFunction[java.lang.String]]
+  ] = typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].selectDynamic("TYPE_MAP").asInstanceOf[typingsSlinky.std.Record[
+    java.lang.String, 
+    js.UndefOr[typingsSlinky.parameter.mod.ParameterCheckFunction[java.lang.String]]
+  ]]
+  
+  @scala.inline
+  def addRule[T /* <: java.lang.String */](`type`: T, check: js.RegExp): scala.Unit = (typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].applyDynamic("addRule")(`type`.asInstanceOf[js.Any], check.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addRule[T /* <: java.lang.String */](`type`: T, check: js.RegExp, convertType: typingsSlinky.parameter.mod.ParameterConvertType): scala.Unit = (typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].applyDynamic("addRule")(`type`.asInstanceOf[js.Any], check.asInstanceOf[js.Any], convertType.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addRule[T /* <: java.lang.String */](
+    `type`: T,
+    check: js.RegExp,
+    `override`: js.UndefOr[scala.Nothing],
+    convertType: typingsSlinky.parameter.mod.ParameterConvertType
+  ): scala.Unit = (typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].applyDynamic("addRule")(`type`.asInstanceOf[js.Any], check.asInstanceOf[js.Any], `override`.asInstanceOf[js.Any], convertType.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addRule[T /* <: java.lang.String */](`type`: T, check: js.RegExp, `override`: scala.Boolean): scala.Unit = (typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].applyDynamic("addRule")(`type`.asInstanceOf[js.Any], check.asInstanceOf[js.Any], `override`.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addRule[T /* <: java.lang.String */](
+    `type`: T,
+    check: js.RegExp,
+    `override`: scala.Boolean,
+    convertType: typingsSlinky.parameter.mod.ParameterConvertType
+  ): scala.Unit = (typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].applyDynamic("addRule")(`type`.asInstanceOf[js.Any], check.asInstanceOf[js.Any], `override`.asInstanceOf[js.Any], convertType.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  /* static member */
+  @scala.inline
+  def addRule[T /* <: java.lang.String */](`type`: T, check: typingsSlinky.parameter.mod.ParameterCheckFunction[T]): scala.Unit = (typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].applyDynamic("addRule")(`type`.asInstanceOf[js.Any], check.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  /**
+    * Add custom rules
+    * @param type
+    * @param check
+    * @param override Override exist rules. Default: `true`
+    * @param convertType Make parameter convert the input param to the specific type
+    */
+  /* static member */
+  @scala.inline
+  def addRule[T /* <: java.lang.String */](
+    `type`: T,
+    check: typingsSlinky.parameter.mod.ParameterCheckFunction[T],
+    convertType: typingsSlinky.parameter.mod.ParameterConvertType
+  ): scala.Unit = (typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].applyDynamic("addRule")(`type`.asInstanceOf[js.Any], check.asInstanceOf[js.Any], convertType.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addRule[T /* <: java.lang.String */](
+    `type`: T,
+    check: typingsSlinky.parameter.mod.ParameterCheckFunction[T],
+    `override`: js.UndefOr[scala.Nothing],
+    convertType: typingsSlinky.parameter.mod.ParameterConvertType
+  ): scala.Unit = (typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].applyDynamic("addRule")(`type`.asInstanceOf[js.Any], check.asInstanceOf[js.Any], `override`.asInstanceOf[js.Any], convertType.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addRule[T /* <: java.lang.String */](`type`: T, check: typingsSlinky.parameter.mod.ParameterCheckFunction[T], `override`: scala.Boolean): scala.Unit = (typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].applyDynamic("addRule")(`type`.asInstanceOf[js.Any], check.asInstanceOf[js.Any], `override`.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addRule[T /* <: java.lang.String */](
+    `type`: T,
+    check: typingsSlinky.parameter.mod.ParameterCheckFunction[T],
+    `override`: scala.Boolean,
+    convertType: typingsSlinky.parameter.mod.ParameterConvertType
+  ): scala.Unit = (typingsSlinky.parameter.mod.^.asInstanceOf[js.Dynamic].applyDynamic("addRule")(`type`.asInstanceOf[js.Any], check.asInstanceOf[js.Any], `override`.asInstanceOf[js.Any], convertType.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
 }

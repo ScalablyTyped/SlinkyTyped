@@ -1,12 +1,13 @@
 package typingsSlinky.bingmaps.global.Microsoft.Maps
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.Maps.NavigationBarOrientation")
 @js.native
-object NavigationBarOrientation extends js.Object {
+object NavigationBarOrientation extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.bingmaps.Microsoft.Maps.NavigationBarOrientation with Double] = js.native

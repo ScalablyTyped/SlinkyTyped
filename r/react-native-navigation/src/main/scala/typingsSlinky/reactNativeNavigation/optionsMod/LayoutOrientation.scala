@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.portrait
   - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.landscape
 */
-trait LayoutOrientation extends js.Object
+trait LayoutOrientation extends StObject
 object LayoutOrientation {
   
   @scala.inline

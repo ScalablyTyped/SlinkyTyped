@@ -5,14 +5,14 @@ import typingsSlinky.babylonjs.anon.OffsetX
 import typingsSlinky.babylonjs.cameraInputsManagerMod.ICameraInput
 import typingsSlinky.babylonjs.freeCameraMod.FreeCamera
 import typingsSlinky.babylonjs.observableMod.Observable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/Inputs/freeCameraMouseInput", JSImport.Namespace)
-@js.native
-object freeCameraMouseInputMod extends js.Object {
+object freeCameraMouseInputMod {
   
+  @JSImport("babylonjs/Cameras/Inputs/freeCameraMouseInput", "FreeCameraMouseInput")
   @js.native
   /**
     * Manage the mouse inputs to control the movement of a free camera.

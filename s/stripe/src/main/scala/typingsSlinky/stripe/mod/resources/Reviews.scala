@@ -5,15 +5,18 @@ import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListOptionsCreated
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.reviews.IReview
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.Reviews")
 @js.native
-class Reviews () extends StripeResource {
+class Reviews protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def approve(id: String): js.Promise[IReview] = js.native
   /**

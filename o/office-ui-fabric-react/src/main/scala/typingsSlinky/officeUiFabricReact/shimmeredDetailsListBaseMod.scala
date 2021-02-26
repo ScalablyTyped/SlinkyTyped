@@ -2,14 +2,14 @@ package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.shimmeredDetailsListTypesMod.IShimmeredDetailsListProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/DetailsList/ShimmeredDetailsList.base", JSImport.Namespace)
-@js.native
-object shimmeredDetailsListBaseMod extends js.Object {
+object shimmeredDetailsListBaseMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/DetailsList/ShimmeredDetailsList.base", "ShimmeredDetailsListBase")
   @js.native
   class ShimmeredDetailsListBase protected ()
     extends Component[IShimmeredDetailsListProps, js.Object, js.Any] {

@@ -1,11 +1,12 @@
 package typingsSlinky.echarts.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Font extends js.Object {
+trait Font extends StObject {
   
   /**
     * Color filled in this element.
@@ -175,96 +176,84 @@ object Font {
   }
   
   @scala.inline
-  implicit class FontOps[Self <: Font] (val x: Self) extends AnyVal {
+  implicit class FontMutableBuilder[Self <: Font] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setFill(value: String): Self = StObject.set(x, "fill", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setFillUndefined: Self = StObject.set(x, "fill", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setFont(value: String): Self = StObject.set(x, "font", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFill(value: String): Self = this.set("fill", value.asInstanceOf[js.Any])
+    def setFontUndefined: Self = StObject.set(x, "font", js.undefined)
     
     @scala.inline
-    def deleteFill: Self = this.set("fill", js.undefined)
+    def setLineWidth(value: Double): Self = StObject.set(x, "lineWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFont(value: String): Self = this.set("font", value.asInstanceOf[js.Any])
+    def setLineWidthUndefined: Self = StObject.set(x, "lineWidth", js.undefined)
     
     @scala.inline
-    def deleteFont: Self = this.set("font", js.undefined)
+    def setShadowBlur(value: Double): Self = StObject.set(x, "shadowBlur", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLineWidth(value: Double): Self = this.set("lineWidth", value.asInstanceOf[js.Any])
+    def setShadowBlurUndefined: Self = StObject.set(x, "shadowBlur", js.undefined)
     
     @scala.inline
-    def deleteLineWidth: Self = this.set("lineWidth", js.undefined)
+    def setShadowColor(value: Double): Self = StObject.set(x, "shadowColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setShadowBlur(value: Double): Self = this.set("shadowBlur", value.asInstanceOf[js.Any])
+    def setShadowColorUndefined: Self = StObject.set(x, "shadowColor", js.undefined)
     
     @scala.inline
-    def deleteShadowBlur: Self = this.set("shadowBlur", js.undefined)
+    def setShadowOffsetX(value: Double): Self = StObject.set(x, "shadowOffsetX", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setShadowColor(value: Double): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
+    def setShadowOffsetXUndefined: Self = StObject.set(x, "shadowOffsetX", js.undefined)
     
     @scala.inline
-    def deleteShadowColor: Self = this.set("shadowColor", js.undefined)
+    def setShadowOffsetY(value: Double): Self = StObject.set(x, "shadowOffsetY", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setShadowOffsetX(value: Double): Self = this.set("shadowOffsetX", value.asInstanceOf[js.Any])
+    def setShadowOffsetYUndefined: Self = StObject.set(x, "shadowOffsetY", js.undefined)
     
     @scala.inline
-    def deleteShadowOffsetX: Self = this.set("shadowOffsetX", js.undefined)
+    def setStroke(value: String): Self = StObject.set(x, "stroke", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setShadowOffsetY(value: Double): Self = this.set("shadowOffsetY", value.asInstanceOf[js.Any])
+    def setStrokeUndefined: Self = StObject.set(x, "stroke", js.undefined)
     
     @scala.inline
-    def deleteShadowOffsetY: Self = this.set("shadowOffsetY", js.undefined)
+    def setText(value: String): Self = StObject.set(x, "text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStroke(value: String): Self = this.set("stroke", value.asInstanceOf[js.Any])
+    def setTextAlign(value: String): Self = StObject.set(x, "textAlign", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteStroke: Self = this.set("stroke", js.undefined)
+    def setTextAlignUndefined: Self = StObject.set(x, "textAlign", js.undefined)
     
     @scala.inline
-    def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])
+    def setTextUndefined: Self = StObject.set(x, "text", js.undefined)
     
     @scala.inline
-    def deleteText: Self = this.set("text", js.undefined)
+    def setTextVerticalAlign(value: String): Self = StObject.set(x, "textVerticalAlign", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTextAlign(value: String): Self = this.set("textAlign", value.asInstanceOf[js.Any])
+    def setTextVerticalAlignUndefined: Self = StObject.set(x, "textVerticalAlign", js.undefined)
     
     @scala.inline
-    def deleteTextAlign: Self = this.set("textAlign", js.undefined)
+    def setX(value: Double): Self = StObject.set(x, "x", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTextVerticalAlign(value: String): Self = this.set("textVerticalAlign", value.asInstanceOf[js.Any])
+    def setXUndefined: Self = StObject.set(x, "x", js.undefined)
     
     @scala.inline
-    def deleteTextVerticalAlign: Self = this.set("textVerticalAlign", js.undefined)
+    def setY(value: Double): Self = StObject.set(x, "y", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setX(value: Double): Self = this.set("x", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteX: Self = this.set("x", js.undefined)
-    
-    @scala.inline
-    def setY(value: Double): Self = this.set("y", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteY: Self = this.set("y", js.undefined)
+    def setYUndefined: Self = StObject.set(x, "y", js.undefined)
   }
 }

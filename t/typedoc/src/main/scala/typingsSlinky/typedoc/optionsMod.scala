@@ -45,254 +45,14 @@ import typingsSlinky.typedoc.typedocStrings.theme
 import typingsSlinky.typedoc.typedocStrings.toc
 import typingsSlinky.typedoc.typedocStrings.tsconfig
 import typingsSlinky.typedoc.typedocStrings.version
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/utils/options", JSImport.Namespace)
-@js.native
-object optionsMod extends js.Object {
+object optionsMod {
   
-  def BindOption(name: NeverIfInternal[String]): js.Function2[
-    /* target */ Application | typingsSlinky.typedoc.anon.Options, 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_categorizeByGroup(name: categorizeByGroup): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_categoryOrder(name: categoryOrder): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_defaultCategory(name: defaultCategory): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_disableOutputCheck(name: disableOutputCheck): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_disableSources(name: disableSources): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_entryPoint(name: entryPoint): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_exclude(name: exclude): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_excludeExternals(name: excludeExternals): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_excludeNotDocumented(name: excludeNotDocumented): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_excludeNotExported(name: excludeNotExported): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_excludePrivate(name: excludePrivate): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_excludeProtected(name: excludeProtected): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_excludeTags(name: excludeTags): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_externalPattern(name: externalPattern): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_gaID(name: gaID): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_gaSite(name: gaSite): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_gitRemote(name: gitRemote): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_gitRevision(name: gitRevision): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_help(name: help): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_hideGenerator(name: hideGenerator): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_ignoreCompilerErrors(name: ignoreCompilerErrors): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_includeDeclarations(name: includeDeclarations): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_includeVersion(name: includeVersion): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_includes(name: includes): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_inputFiles(name: inputFiles): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_json(name: json): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_listInvalidSymbolLinks(name: listInvalidSymbolLinks): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_logger(name: logger): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_media(name: media): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_mode(name: mode): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_name(name: name): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_options(name: options): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_out(name: out): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_plugin(name: plugin): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_readme(name: readme): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_theme(name: theme): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_toc(name: toc): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_tsconfig(name: tsconfig): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  @JSName("BindOption")
-  def BindOption_version(name: version): js.Function2[
-    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
-    /* key */ PropertyKey, 
-    Unit
-  ] = js.native
-  
+  @JSImport("typedoc/dist/lib/utils/options", "ArgumentsReader")
   @js.native
   class ArgumentsReader protected ()
     extends typingsSlinky.typedoc.readersMod.ArgumentsReader {
@@ -300,14 +60,297 @@ object optionsMod extends js.Object {
     def this(priority: Double, args: js.Array[String]) = this()
   }
   
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption(name: NeverIfInternal[String]): js.Function2[
+    /* target */ Application | typingsSlinky.typedoc.anon.Options, 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_categorizeByGroup(name: categorizeByGroup): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_categoryOrder(name: categoryOrder): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_defaultCategory(name: defaultCategory): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_disableOutputCheck(name: disableOutputCheck): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_disableSources(name: disableSources): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_entryPoint(name: entryPoint): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_exclude(name: exclude): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_excludeExternals(name: excludeExternals): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_excludeNotDocumented(name: excludeNotDocumented): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_excludeNotExported(name: excludeNotExported): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_excludePrivate(name: excludePrivate): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_excludeProtected(name: excludeProtected): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_excludeTags(name: excludeTags): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_externalPattern(name: externalPattern): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_gaID(name: gaID): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_gaSite(name: gaSite): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_gitRemote(name: gitRemote): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_gitRevision(name: gitRevision): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_help(name: help): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_hideGenerator(name: hideGenerator): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_ignoreCompilerErrors(name: ignoreCompilerErrors): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_includeDeclarations(name: includeDeclarations): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_includeVersion(name: includeVersion): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_includes(name: includes): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_inputFiles(name: inputFiles): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_json(name: json): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_listInvalidSymbolLinks(name: listInvalidSymbolLinks): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_logger(name: logger): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_media(name: media): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_mode(name: mode): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_name(name: name): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_options(name: options): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_out(name: out): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_plugin(name: plugin): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_readme(name: readme): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_theme(name: theme): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_toc(name: toc): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_tsconfig(name: tsconfig): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  @JSImport("typedoc/dist/lib/utils/options", "BindOption")
+  @js.native
+  def BindOption_version(name: version): js.Function2[
+    /* target */ (Application | typingsSlinky.typedoc.anon.Options) with BindOption with TopLevel[js.Any], 
+    /* key */ PropertyKey, 
+    Unit
+  ] = js.native
+  
+  @JSImport("typedoc/dist/lib/utils/options", "Options")
   @js.native
   class Options protected ()
     extends typingsSlinky.typedoc.optionsOptionsMod.Options {
     def this(logger: Logger) = this()
   }
   
+  @JSImport("typedoc/dist/lib/utils/options", "ParameterHint")
   @js.native
-  object ParameterHint extends js.Object {
+  object ParameterHint extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint with Double] = js.native
@@ -317,8 +360,9 @@ object optionsMod extends js.Object {
     /* 0 */ val File: typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint.File with Double = js.native
   }
   
+  @JSImport("typedoc/dist/lib/utils/options", "ParameterScope")
   @js.native
-  object ParameterScope extends js.Object {
+  object ParameterScope extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope with Double] = js.native
@@ -328,8 +372,9 @@ object optionsMod extends js.Object {
     /* 1 */ val TypeScript: typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope.TypeScript with Double = js.native
   }
   
+  @JSImport("typedoc/dist/lib/utils/options", "ParameterType")
   @js.native
-  object ParameterType extends js.Object {
+  object ParameterType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.ParameterType with Double] = js.native
@@ -347,8 +392,9 @@ object optionsMod extends js.Object {
     /* 0 */ val String: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.String with Double = js.native
   }
   
+  @JSImport("typedoc/dist/lib/utils/options", "SourceFileMode")
   @js.native
-  object SourceFileMode extends js.Object {
+  object SourceFileMode extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode with Double] = js.native
@@ -358,11 +404,13 @@ object optionsMod extends js.Object {
     /* 1 */ val Modules: typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode.Modules with Double = js.native
   }
   
+  @JSImport("typedoc/dist/lib/utils/options", "TSConfigReader")
   @js.native
   class TSConfigReader ()
-    extends typingsSlinky.typedoc.tsconfigMod.TSConfigReader
+    extends typingsSlinky.typedoc.readersMod.TSConfigReader
   
+  @JSImport("typedoc/dist/lib/utils/options", "TypeDocReader")
   @js.native
   class TypeDocReader ()
-    extends typingsSlinky.typedoc.typedocMod.TypeDocReader
+    extends typingsSlinky.typedoc.readersMod.TypeDocReader
 }

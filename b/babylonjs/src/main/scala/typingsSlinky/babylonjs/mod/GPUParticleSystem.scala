@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import typingsSlinky.babylonjs.anon.Partialcapacitynumberrand
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -71,14 +72,7 @@ class GPUParticleSystem protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs", "GPUParticleSystem")
-@js.native
-object GPUParticleSystem extends js.Object {
-  
-  /**
-    * Gets a boolean indicating if the GPU particles can be rendered on current browser
-    */
-  def IsSupported: Boolean = js.native
+object GPUParticleSystem {
   
   /**
     * Parses a JSON object to create a GPU particle system.
@@ -88,22 +82,30 @@ object GPUParticleSystem extends js.Object {
     * @param doNotStart Ignore the preventAutoStart attribute and does not start
     * @returns the parsed GPU particle system
     */
+  @JSImport("babylonjs", "GPUParticleSystem.Parse")
+  @js.native
   def Parse(
     parsedParticleSystem: js.Any,
     sceneOrEngine: typingsSlinky.babylonjs.sceneMod.Scene,
     rootUrl: String
   ): typingsSlinky.babylonjs.gpuParticleSystemMod.GPUParticleSystem = js.native
+  @JSImport("babylonjs", "GPUParticleSystem.Parse")
+  @js.native
   def Parse(
     parsedParticleSystem: js.Any,
     sceneOrEngine: typingsSlinky.babylonjs.sceneMod.Scene,
     rootUrl: String,
     doNotStart: Boolean
   ): typingsSlinky.babylonjs.gpuParticleSystemMod.GPUParticleSystem = js.native
+  @JSImport("babylonjs", "GPUParticleSystem.Parse")
+  @js.native
   def Parse(
     parsedParticleSystem: js.Any,
     sceneOrEngine: typingsSlinky.babylonjs.thinEngineMod.ThinEngine,
     rootUrl: String
   ): typingsSlinky.babylonjs.gpuParticleSystemMod.GPUParticleSystem = js.native
+  @JSImport("babylonjs", "GPUParticleSystem.Parse")
+  @js.native
   def Parse(
     parsedParticleSystem: js.Any,
     sceneOrEngine: typingsSlinky.babylonjs.thinEngineMod.ThinEngine,

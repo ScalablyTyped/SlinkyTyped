@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientGames.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientGames.anon.Language
 import typingsSlinky.maximMazurokGapiClientGames.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EventsResource extends js.Object {
+trait EventsResource extends StObject {
   
   /** Returns a list showing the current progress on events in this application for the currently authenticated user. */
   def listByPlayer(): Request[PlayerEventListResponse] = js.native

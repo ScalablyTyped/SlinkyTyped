@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesGetBucketAnalyticsConfigurationInpu
 import typingsSlinky.awsSdkClientS3Node.typesGetBucketAnalyticsConfigurationOutputMod.GetBucketAnalyticsConfigurationOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/GetBucketAnalyticsConfigurationCommand", JSImport.Namespace)
-@js.native
-object getBucketAnalyticsConfigurationCommandMod extends js.Object {
+object getBucketAnalyticsConfigurationCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/GetBucketAnalyticsConfigurationCommand", "GetBucketAnalyticsConfigurationCommand")
   @js.native
   class GetBucketAnalyticsConfigurationCommand protected () extends Command[
           InputTypesUnion, 

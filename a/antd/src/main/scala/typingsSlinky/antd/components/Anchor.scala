@@ -8,6 +8,7 @@ import typingsSlinky.antd.anchorAnchorMod.AnchorContainer
 import typingsSlinky.antd.anchorAnchorMod.AnchorProps
 import typingsSlinky.antd.anon.Href
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object Anchor {
   
   @JSImport("antd", "Anchor")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,7 +61,7 @@ object Anchor {
     def targetOffset(value: Double): this.type = set("targetOffset", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnchorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Anchor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AnchorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

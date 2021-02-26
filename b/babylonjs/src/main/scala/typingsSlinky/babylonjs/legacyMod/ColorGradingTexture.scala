@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.legacyMod
 
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,9 +31,11 @@ class ColorGradingTexture protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "ColorGradingTexture")
-@js.native
-object ColorGradingTexture extends js.Object {
+object ColorGradingTexture {
+  
+  @JSImport("babylonjs/Legacy/legacy", "ColorGradingTexture")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Parses a color grading texture serialized by Babylon.
@@ -41,10 +44,16 @@ object ColorGradingTexture extends js.Object {
     * @param rootUrl The root url of the data assets to load
     * @return A color gradind texture
     */
+  @JSImport("babylonjs/Legacy/legacy", "ColorGradingTexture.Parse")
+  @js.native
   def Parse(parsedTexture: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene): Nullable[typingsSlinky.babylonjs.colorGradingTextureMod.ColorGradingTexture] = js.native
   
   /**
     * Empty line regex stored for GC.
     */
-  var _noneEmptyLineRegex: js.Any = js.native
+  @JSImport("babylonjs/Legacy/legacy", "ColorGradingTexture._noneEmptyLineRegex")
+  @js.native
+  def _noneEmptyLineRegex: js.Any = js.native
+  @scala.inline
+  def _noneEmptyLineRegex_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_noneEmptyLineRegex")(x.asInstanceOf[js.Any])
 }

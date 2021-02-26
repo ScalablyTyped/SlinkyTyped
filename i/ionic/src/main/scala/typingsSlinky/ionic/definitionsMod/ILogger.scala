@@ -1,6 +1,7 @@
 package typingsSlinky.ionic.definitionsMod
 
 import typingsSlinky.ionicCliFramework.mod.Logger_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

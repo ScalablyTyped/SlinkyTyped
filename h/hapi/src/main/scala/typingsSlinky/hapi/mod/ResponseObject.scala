@@ -16,6 +16,7 @@ import typingsSlinky.hapi.mod.Json.StringifyReplacer
 import typingsSlinky.hapi.mod.Lifecycle.ReturnValue
 import typingsSlinky.hapi.mod.Util.Dictionary
 import typingsSlinky.podium.mod.Podium
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -13,12 +13,13 @@ import typingsSlinky.maximMazurokGapiClientStorage.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientStorage.anon.Projection
 import typingsSlinky.maximMazurokGapiClientStorage.anon.ProvisionalUserProject
 import typingsSlinky.maximMazurokGapiClientStorage.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BucketsResource extends js.Object {
+trait BucketsResource extends StObject {
   
   /** Permanently deletes an empty bucket. */
   def delete(): Request[Unit] = js.native

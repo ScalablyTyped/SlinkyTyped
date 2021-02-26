@@ -1,11 +1,12 @@
 package typingsSlinky.echarts.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `4` extends js.Object {
+trait `4` extends StObject {
   
   /**
     * @see https://echarts.apache.org/en/option.html#series-tree.data.emphasis.itemStyle
@@ -26,30 +27,18 @@ object `4` {
   }
   
   @scala.inline
-  implicit class `4Ops`[Self <: `4`] (val x: Self) extends AnyVal {
+  implicit class `4MutableBuilder`[Self <: `4`] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setItemStyle(value: BorderType): Self = StObject.set(x, "itemStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setItemStyleUndefined: Self = StObject.set(x, "itemStyle", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setLabel(value: Distance): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setItemStyle(value: BorderType): Self = this.set("itemStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteItemStyle: Self = this.set("itemStyle", js.undefined)
-    
-    @scala.inline
-    def setLabel(value: Distance): Self = this.set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLabel: Self = this.set("label", js.undefined)
+    def setLabelUndefined: Self = StObject.set(x, "label", js.undefined)
   }
 }

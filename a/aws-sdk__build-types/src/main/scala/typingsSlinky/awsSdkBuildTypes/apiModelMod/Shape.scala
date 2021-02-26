@@ -15,6 +15,7 @@ import typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.short
 import typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.string
 import typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.structure
 import typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.timestamp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,104 +36,104 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.awsSdkBuildTypes.apiModelMod.Structure
   - typingsSlinky.awsSdkBuildTypes.apiModelMod.Timestamp
 */
-trait Shape extends js.Object
+trait Shape extends StObject
 object Shape {
   
   @scala.inline
-  def Boolean(`type`: boolean): Shape = {
+  def Blob(`type`: blob): typingsSlinky.awsSdkBuildTypes.apiModelMod.Blob = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Blob]
   }
   
   @scala.inline
-  def String(`type`: string): Shape = {
+  def Boolean(`type`: boolean): typingsSlinky.awsSdkBuildTypes.apiModelMod.Boolean = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Boolean]
   }
   
   @scala.inline
-  def Short(`type`: short): Shape = {
+  def Byte(`type`: byte): typingsSlinky.awsSdkBuildTypes.apiModelMod.Byte = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Byte]
   }
   
   @scala.inline
-  def Character(`type`: character): Shape = {
+  def Character(`type`: character): typingsSlinky.awsSdkBuildTypes.apiModelMod.Character = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Character]
   }
   
   @scala.inline
-  def Integer(`type`: integer): Shape = {
+  def Double(`type`: double): typingsSlinky.awsSdkBuildTypes.apiModelMod.Double = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Double]
   }
   
   @scala.inline
-  def List(member: Member, `type`: list): Shape = {
+  def Float(`type`: float): typingsSlinky.awsSdkBuildTypes.apiModelMod.Float = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Float]
+  }
+  
+  @scala.inline
+  def Integer(`type`: integer): typingsSlinky.awsSdkBuildTypes.apiModelMod.Integer = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Integer]
+  }
+  
+  @scala.inline
+  def List(member: Member, `type`: list): typingsSlinky.awsSdkBuildTypes.apiModelMod.List = {
     val __obj = js.Dynamic.literal(member = member.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.List]
   }
   
   @scala.inline
-  def Blob(`type`: blob): Shape = {
+  def Long(`type`: long): typingsSlinky.awsSdkBuildTypes.apiModelMod.Long = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Long]
   }
   
   @scala.inline
-  def Byte(`type`: byte): Shape = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
-  }
-  
-  @scala.inline
-  def Double(`type`: double): Shape = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
-  }
-  
-  @scala.inline
-  def Long(`type`: long): Shape = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
-  }
-  
-  @scala.inline
-  def Float(`type`: float): Shape = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
-  }
-  
-  @scala.inline
-  def Map(key: Member, `type`: map, value: Member): Shape = {
+  def Map(key: Member, `type`: map, value: Member): typingsSlinky.awsSdkBuildTypes.apiModelMod.Map = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Map]
   }
   
   @scala.inline
-  def Timestamp(`type`: timestamp): Shape = {
+  def Short(`type`: short): typingsSlinky.awsSdkBuildTypes.apiModelMod.Short = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Short]
   }
   
   @scala.inline
-  def Structure(members: StringDictionary[StructureMember], `type`: structure): Shape = {
+  def String(`type`: string): typingsSlinky.awsSdkBuildTypes.apiModelMod.String = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.String]
+  }
+  
+  @scala.inline
+  def Structure(members: StringDictionary[StructureMember], `type`: structure): typingsSlinky.awsSdkBuildTypes.apiModelMod.Structure = {
     val __obj = js.Dynamic.literal(members = members.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Shape]
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Structure]
+  }
+  
+  @scala.inline
+  def Timestamp(`type`: timestamp): typingsSlinky.awsSdkBuildTypes.apiModelMod.Timestamp = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.awsSdkBuildTypes.apiModelMod.Timestamp]
   }
 }

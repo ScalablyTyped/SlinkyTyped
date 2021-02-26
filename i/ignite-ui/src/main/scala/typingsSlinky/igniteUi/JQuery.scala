@@ -2321,12 +2321,13 @@ import typingsSlinky.igniteUi.igniteUiStrings.zoomToGeographic
 import typingsSlinky.igniteUi.igniteUiStrings.zoomWindowMinWidth
 import typingsSlinky.igniteUi.igniteUiStrings.zoomWindowMoveDistance
 import typingsSlinky.igniteUi.igniteUiStrings.zoomable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   @JSName("data")
   def data_igBaseChart(propertyName: igBaseChart): IgBaseChartMethods = js.native
@@ -10687,8 +10688,8 @@ trait JQuery extends js.Object {
     * @optionValue New value to be set.
     */
   def igDateEditor(optionLiteral: option, optionName: nullValue, optionValue: String): Unit = js.native
-  def igDateEditor(optionLiteral: option, optionName: nullValue, optionValue: Double): Unit = js.native
   def igDateEditor(optionLiteral: option, optionName: nullValue, optionValue: js.Date): Unit = js.native
+  def igDateEditor(optionLiteral: option, optionName: nullValue, optionValue: Double): Unit = js.native
   /**
     * This option is inherited from a parent widget and it's not applicable for igDateEditor
     */
@@ -11594,8 +11595,8 @@ trait JQuery extends js.Object {
     * @optionValue New value to be set.
     */
   def igDatePicker(optionLiteral: option, optionName: nullValue, optionValue: String): Unit = js.native
-  def igDatePicker(optionLiteral: option, optionName: nullValue, optionValue: Double): Unit = js.native
   def igDatePicker(optionLiteral: option, optionName: nullValue, optionValue: js.Date): Unit = js.native
+  def igDatePicker(optionLiteral: option, optionName: nullValue, optionValue: Double): Unit = js.native
   /**
     * This option is inherited from a parent widget and it's not applicable for igDateEditor
     */
@@ -41344,8 +41345,8 @@ trait JQuery extends js.Object {
     * @optionValue New value to be set.
     */
   def igTimePicker(optionLiteral: option, optionName: nullValue, optionValue: String): Unit = js.native
-  def igTimePicker(optionLiteral: option, optionName: nullValue, optionValue: Double): Unit = js.native
   def igTimePicker(optionLiteral: option, optionName: nullValue, optionValue: js.Date): Unit = js.native
+  def igTimePicker(optionLiteral: option, optionName: nullValue, optionValue: Double): Unit = js.native
   /**
     * This option is inherited from a parent widget and it's not applicable for igDateEditor
     */

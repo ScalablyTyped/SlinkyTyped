@@ -2,16 +2,21 @@ package typingsSlinky.mobxCookie
 
 import typingsSlinky.jsCookie.mod.CookieAttributes
 import typingsSlinky.node.NodeJS.Timeout
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("mobx-cookie/dist-types/mobx-cookie", JSImport.Namespace)
-@js.native
-object mobxCookieMod extends js.Object {
+object mobxCookieMod {
+  
+  @JSImport("mobx-cookie/dist-types/mobx-cookie", JSImport.Default)
+  @js.native
+  class default protected () extends MobxCookie {
+    def this(name: String) = this()
+  }
   
   @js.native
-  trait MobxCookie extends js.Object {
+  trait MobxCookie extends StObject {
     
     /**
       * Clear Timeout
@@ -19,28 +24,28 @@ object mobxCookieMod extends js.Object {
       */
     def _clearTimeout(): Unit = js.native
     
+    def _expiresToDateTime(expires: js.Date): String | js.Date = js.native
     /**
       * Expires To Date Time
       * Internal function to convert a js-cookie expires value to string date-time.
       */
     def _expiresToDateTime(expires: Double): String | js.Date = js.native
-    def _expiresToDateTime(expires: js.Date): String | js.Date = js.native
     
+    def _expiresToMs(expires: js.Date): Double = js.native
     /**
       * Expires To Milliseconds
       * Internal function to convert a js-cookie expires value to milliseconds.
       */
     def _expiresToMs(expires: Double): Double = js.native
-    def _expiresToMs(expires: js.Date): Double = js.native
     
     var _name: String = js.native
     
+    def _startTimeout(expires: js.Date): Unit = js.native
     /**
       * Start Timeout
       * Internal function for creating the cookie expiry timer
       */
     def _startTimeout(expires: Double): Unit = js.native
-    def _startTimeout(expires: js.Date): Unit = js.native
     
     /**
       * Sync Timeout
@@ -72,10 +77,5 @@ object mobxCookieMod extends js.Object {
     def set(value: String, options: CookieAttributes): Unit = js.native
     
     var value: js.UndefOr[String] = js.native
-  }
-  
-  @js.native
-  class default protected () extends MobxCookie {
-    def this(name: String) = this()
   }
 }

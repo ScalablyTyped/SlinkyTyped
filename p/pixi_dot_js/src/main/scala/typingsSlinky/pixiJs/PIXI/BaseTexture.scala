@@ -2,6 +2,7 @@ package typingsSlinky.pixiJs.PIXI
 
 import typingsSlinky.pixiJs.PIXI.resources.Resource
 import typingsSlinky.pixiJs.PIXI.utils.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

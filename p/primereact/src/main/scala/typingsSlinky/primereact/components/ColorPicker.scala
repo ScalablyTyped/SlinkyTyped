@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.Id
 import typingsSlinky.primereact.colorpickerColorPickerMod.ColorPickerProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object ColorPicker {
   
   @JSImport("primereact/colorpicker", "ColorPicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -63,7 +64,7 @@ object ColorPicker {
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ColorPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ColorPicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ColorPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

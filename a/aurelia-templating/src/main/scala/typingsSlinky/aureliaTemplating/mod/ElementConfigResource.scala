@@ -1,13 +1,14 @@
 package typingsSlinky.aureliaTemplating.mod
 
 import typingsSlinky.aureliaDependencyInjection.mod.Container
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aurelia-templating", "ElementConfigResource")
 @js.native
-class ElementConfigResource () extends js.Object {
+class ElementConfigResource () extends StObject {
   
   /**
     * Provides an opportunity for the resource to initialize iteself.

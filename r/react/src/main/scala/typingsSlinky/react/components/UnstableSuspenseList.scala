@@ -8,6 +8,7 @@ import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListTailMo
 import typingsSlinky.react.reactStrings.backwards
 import typingsSlinky.react.reactStrings.forwards
 import typingsSlinky.std.Exclude
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,9 +17,15 @@ object UnstableSuspenseList {
   
   object DirectionalSuspenseListProps {
     
-    @JSImport("react", "unstable_SuspenseList")
+    @scala.inline
+    def apply(children: ReactElement | js.Iterable[ReactElement], revealOrder: forwards | backwards): Builder = {
+      val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], revealOrder = revealOrder.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.react.experimentalMod.reactAugmentingMod.DirectionalSuspenseListProps]))
+    }
+    
+    @JSImport("react", "unstableSuspenseList")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -30,19 +37,19 @@ object UnstableSuspenseList {
     }
     
     def withProps(p: typingsSlinky.react.experimentalMod.reactAugmentingMod.DirectionalSuspenseListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(children: ReactElement | js.Iterable[ReactElement], revealOrder: forwards | backwards): Builder = {
-      val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], revealOrder = revealOrder.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.react.experimentalMod.reactAugmentingMod.DirectionalSuspenseListProps]))
-    }
   }
   
   object NonDirectionalSuspenseListProps {
     
-    @JSImport("react", "unstable_SuspenseList")
+    @scala.inline
+    def apply(children: ReactElement | js.Iterable[ReactElement]): Builder = {
+      val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.react.experimentalMod.reactAugmentingMod.NonDirectionalSuspenseListProps]))
+    }
+    
+    @JSImport("react", "unstableSuspenseList")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -54,11 +61,5 @@ object UnstableSuspenseList {
     }
     
     def withProps(p: typingsSlinky.react.experimentalMod.reactAugmentingMod.NonDirectionalSuspenseListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(children: ReactElement | js.Iterable[ReactElement]): Builder = {
-      val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.react.experimentalMod.reactAugmentingMod.NonDirectionalSuspenseListProps]))
-    }
   }
 }

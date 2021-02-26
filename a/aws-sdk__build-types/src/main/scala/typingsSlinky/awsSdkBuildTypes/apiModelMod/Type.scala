@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkBuildTypes.apiModelMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.map
   - typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.structure
 */
-trait Type extends js.Object
+trait Type extends StObject
 object Type {
   
   @scala.inline

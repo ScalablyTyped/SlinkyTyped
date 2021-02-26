@@ -71,6 +71,7 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactHotkeys.mod.ListOfKeys
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -263,10 +264,10 @@ class SharedBuilder_HotKeysOverrideProps229638314[R <: js.Object] (val args: js.
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -275,10 +276,10 @@ class SharedBuilder_HotKeysOverrideProps229638314[R <: js.Object] (val args: js.
   def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def exceptVarargs(value: String*): this.type = set("except", js.Array(value :_*))
+  def except(value: ListOfKeys): this.type = set("except", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def except(value: ListOfKeys): this.type = set("except", value.asInstanceOf[js.Any])
+  def exceptVarargs(value: String*): this.type = set("except", js.Array(value :_*))
   
   @scala.inline
   def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -551,10 +552,10 @@ class SharedBuilder_HotKeysOverrideProps229638314[R <: js.Object] (val args: js.
   def onWheel(value: SyntheticWheelEvent[typingsSlinky.reactHotkeys.mod.HotKeys] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
   
   @scala.inline
-  def onlyVarargs(value: String*): this.type = set("only", js.Array(value :_*))
+  def only(value: ListOfKeys): this.type = set("only", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def only(value: ListOfKeys): this.type = set("only", value.asInstanceOf[js.Any])
+  def onlyVarargs(value: String*): this.type = set("only", js.Array(value :_*))
   
   @scala.inline
   def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])

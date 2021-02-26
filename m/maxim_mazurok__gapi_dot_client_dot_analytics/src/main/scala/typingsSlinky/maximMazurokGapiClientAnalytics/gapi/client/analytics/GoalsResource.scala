@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAnalytics.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.GoalId
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.KeyMaxresults
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.OauthtokenPrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GoalsResource extends js.Object {
+trait GoalsResource extends StObject {
   
   /** Gets a goal to which the user has access. */
   def get(): Request[Goal] = js.native

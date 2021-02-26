@@ -6,6 +6,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.Identifier
 import typingsSlinky.babelTypes.babelTypesStrings.MemberExpression
 import typingsSlinky.babelTypes.babelTypesStrings.ObjectPattern
 import typingsSlinky.babelTypes.babelTypesStrings.RestElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.babelTypes.ts36Mod.ObjectPattern_
   - typingsSlinky.babelTypes.ts36Mod.TSParameterProperty
 */
-trait LVal extends js.Object
+trait LVal extends StObject
 object LVal {
   
   @scala.inline
@@ -29,17 +30,31 @@ object LVal {
     loc: SourceLocation,
     start: Double,
     `type`: ArrayPattern
-  ): LVal = {
+  ): typingsSlinky.babelTypes.ts36Mod.ArrayPattern_ = {
     val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.ArrayPattern_]
   }
   
   @scala.inline
-  def RestElement_(argument: LVal, end: Double, loc: SourceLocation, start: Double, `type`: RestElement): LVal = {
-    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+  def AssignmentPattern_(
+    end: Double,
+    left: Identifier_,
+    loc: SourceLocation,
+    right: Expression,
+    start: Double,
+    `type`: AssignmentPattern
+  ): typingsSlinky.babelTypes.ts36Mod.AssignmentPattern_ = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.AssignmentPattern_]
+  }
+  
+  @scala.inline
+  def Identifier_(end: Double, loc: SourceLocation, name: String, start: Double, `type`: Identifier): typingsSlinky.babelTypes.ts36Mod.Identifier_ = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.Identifier_]
   }
   
   @scala.inline
@@ -51,45 +66,11 @@ object LVal {
     property: Expression,
     start: Double,
     `type`: MemberExpression
-  ): LVal = {
+  ): typingsSlinky.babelTypes.ts36Mod.MemberExpression_ = {
     val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], property = property.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
-  }
-  
-  @scala.inline
-  def Identifier_(end: Double, loc: SourceLocation, name: String, start: Double, `type`: Identifier): LVal = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
-  }
-  
-  @scala.inline
-  def TSParameterProperty(
-    end: Double,
-    loc: SourceLocation,
-    parameter: Identifier_ | AssignmentPattern_,
-    start: Double,
-    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSParameterProperty
-  ): LVal = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], parameter = parameter.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
-  }
-  
-  @scala.inline
-  def AssignmentPattern_(
-    end: Double,
-    left: Identifier_,
-    loc: SourceLocation,
-    right: Expression,
-    start: Double,
-    `type`: AssignmentPattern
-  ): LVal = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.MemberExpression_]
   }
   
   @scala.inline
@@ -99,9 +80,29 @@ object LVal {
     properties: js.Array[AssignmentProperty | RestProperty_],
     start: Double,
     `type`: ObjectPattern
-  ): LVal = {
+  ): typingsSlinky.babelTypes.ts36Mod.ObjectPattern_ = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.ObjectPattern_]
+  }
+  
+  @scala.inline
+  def RestElement_(argument: LVal, end: Double, loc: SourceLocation, start: Double, `type`: RestElement): typingsSlinky.babelTypes.ts36Mod.RestElement_ = {
+    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.RestElement_]
+  }
+  
+  @scala.inline
+  def TSParameterProperty(
+    end: Double,
+    loc: SourceLocation,
+    parameter: Identifier_ | AssignmentPattern_,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSParameterProperty
+  ): typingsSlinky.babelTypes.ts36Mod.TSParameterProperty = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], parameter = parameter.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.ts36Mod.TSParameterProperty]
   }
 }

@@ -3,6 +3,7 @@ package typingsSlinky.winjs.WinJS.UI
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.winjs.WinJS.Binding.List
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Displays ICommands in overlayed application pane that opens and closes at the top or bottom of the main view.
   **/
 @js.native
-trait AppBar extends js.Object {
+trait AppBar extends StObject {
   
   //#endregion Events
   //#region Methods

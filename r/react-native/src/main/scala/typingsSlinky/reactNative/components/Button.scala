@@ -7,15 +7,22 @@ import typingsSlinky.reactNative.mod.ButtonProps
 import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Button {
   
+  @scala.inline
+  def apply(onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit, title: String): Builder = {
+    val __props = js.Dynamic.literal(onPress = js.Any.fromFunction1(onPress), title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ButtonProps]))
+  }
+  
   @JSImport("react-native", "Button")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +43,4 @@ object Button {
   }
   
   def withProps(p: ButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit, title: String): Builder = {
-    val __props = js.Dynamic.literal(onPress = js.Any.fromFunction1(onPress), title = title.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ButtonProps]))
-  }
 }

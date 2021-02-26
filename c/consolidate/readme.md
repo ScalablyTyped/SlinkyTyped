@@ -11,8 +11,8 @@ Template engine consolidation library
 | Full name          | consolidate |
 | Keywords           | engine, template, view |
 | # releases         | 2 |
-| # dependents       | 1019 |
-| # downloads        | 57090123 |
+| # dependents       | 1215 |
+| # downloads        | 99069890 |
 | # stars            | 98 |
 
 ## Links

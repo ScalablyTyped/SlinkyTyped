@@ -2,6 +2,7 @@ package typingsSlinky.std
 
 import typingsSlinky.std.stdStrings.addtrack
 import typingsSlinky.std.stdStrings.removetrack
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -112,7 +113,7 @@ trait MediaStream extends EventTarget {
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
       _
     ],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_addtrack(
@@ -122,7 +123,7 @@ trait MediaStream extends EventTarget {
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
       _
     ],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_removetrack(
@@ -141,7 +142,7 @@ trait MediaStream extends EventTarget {
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
       _
     ],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_removetrack(
@@ -151,7 +152,7 @@ trait MediaStream extends EventTarget {
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
       _
     ],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   def removeTrack(track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): Unit = js.native

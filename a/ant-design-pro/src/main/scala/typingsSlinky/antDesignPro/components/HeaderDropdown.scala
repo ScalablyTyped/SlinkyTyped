@@ -17,6 +17,7 @@ import typingsSlinky.antd.antdStrings.contextMenu
 import typingsSlinky.antd.antdStrings.hover
 import typingsSlinky.antd.dropdownDropdownMod.Align
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ object HeaderDropdown {
   
   @JSImport("ant-design-pro", "HeaderDropdown")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -63,16 +64,16 @@ object HeaderDropdown {
     def openClassName(value: String): this.type = set("openClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
+    def overlay(value: ReactElement | OverlayFunc): this.type = set("overlay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def overlayFunction0(value: () => ReactElement): this.type = set("overlay", js.Any.fromFunction0(value))
     
     @scala.inline
-    def overlay(value: ReactElement | OverlayFunc): this.type = set("overlay", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
+    def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
     
     @scala.inline
     def overlayStyle(value: CSSProperties): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
@@ -87,16 +88,16 @@ object HeaderDropdown {
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def triggerVarargs(value: (click | hover | contextMenu)*): this.type = set("trigger", js.Array(value :_*))
+    def trigger(value: js.Array[click | hover | contextMenu]): this.type = set("trigger", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def trigger(value: js.Array[click | hover | contextMenu]): this.type = set("trigger", value.asInstanceOf[js.Any])
+    def triggerVarargs(value: (click | hover | contextMenu)*): this.type = set("trigger", js.Array(value :_*))
     
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HeaderDropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: HeaderDropdown.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HeaderDropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

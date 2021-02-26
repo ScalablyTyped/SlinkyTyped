@@ -15,19 +15,15 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.std.DocumentAndElementEventHandlersEventMap
-import typingsSlinky.std.ElementEventMap
-import typingsSlinky.std.GlobalEventHandlersEventMap
+import typingsSlinky.std.HTMLElementEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ojLegendSectionEventMap
-  extends ElementEventMap
-     with GlobalEventHandlersEventMap
-     with DocumentAndElementEventHandlersEventMap {
+trait ojLegendSectionEventMap extends HTMLElementEventMap {
   
   var collapsibleChanged: CustomEvent = js.native
   
@@ -143,30 +139,18 @@ object ojLegendSectionEventMap {
   }
   
   @scala.inline
-  implicit class ojLegendSectionEventMapOps[Self <: ojLegendSectionEventMap] (val x: Self) extends AnyVal {
+  implicit class ojLegendSectionEventMapMutableBuilder[Self <: ojLegendSectionEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCollapsibleChanged(value: CustomEvent): Self = StObject.set(x, "collapsibleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setTextChanged(value: CustomEvent): Self = StObject.set(x, "textChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setTextHalignChanged(value: CustomEvent): Self = StObject.set(x, "textHalignChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCollapsibleChanged(value: CustomEvent): Self = this.set("collapsibleChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTextChanged(value: CustomEvent): Self = this.set("textChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTextHalignChanged(value: CustomEvent): Self = this.set("textHalignChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTextStyleChanged(value: CustomEvent): Self = this.set("textStyleChanged", value.asInstanceOf[js.Any])
+    def setTextStyleChanged(value: CustomEvent): Self = StObject.set(x, "textStyleChanged", value.asInstanceOf[js.Any])
   }
 }

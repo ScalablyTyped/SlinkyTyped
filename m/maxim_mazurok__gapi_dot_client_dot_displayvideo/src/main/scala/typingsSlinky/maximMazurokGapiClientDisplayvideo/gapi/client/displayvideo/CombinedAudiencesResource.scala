@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDisplayvideo.gapi.client.displayvide
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.CombinedAudienceId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.PartnerIdPrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CombinedAudiencesResource extends js.Object {
+trait CombinedAudiencesResource extends StObject {
   
   /** Gets a combined audience. */
   def get(): Request[CombinedAudience] = js.native

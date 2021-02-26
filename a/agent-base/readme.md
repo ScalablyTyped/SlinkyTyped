@@ -11,8 +11,8 @@ Turn a function into an `http.Agent` instance
 | Full name          | agent-base |
 | Keywords           | http, agent, base, barebones, https |
 | # releases         | 7 |
-| # dependents       | 31 |
-| # downloads        | 318961324 |
+| # dependents       | 47 |
+| # downloads        | 638630598 |
 | # stars            | 1 |
 
 ## Links

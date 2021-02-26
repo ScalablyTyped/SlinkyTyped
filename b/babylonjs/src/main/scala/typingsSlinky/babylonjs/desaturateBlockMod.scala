@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/desaturateBlock", JSImport.Namespace)
-@js.native
-object desaturateBlockMod extends js.Object {
+object desaturateBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/desaturateBlock", "DesaturateBlock")
   @js.native
   class DesaturateBlock protected () extends NodeMaterialBlock {
     /**

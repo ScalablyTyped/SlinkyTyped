@@ -1,12 +1,11 @@
 package typingsSlinky.awsSdkClientKmsNode
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-node/types/UntagResourceExceptionsUnion", JSImport.Namespace)
-@js.native
-object untagResourceExceptionsUnionMod extends js.Object {
+object untagResourceExceptionsUnionMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientKmsNode.typesKmsinternalexceptionMod.KMSInternalException
@@ -15,5 +14,37 @@ object untagResourceExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientKmsNode.typesKmsinvalidstateexceptionMod.KMSInvalidStateException
     - typingsSlinky.awsSdkClientKmsNode.typesTagExceptionMod.TagException
   */
-  trait UntagResourceExceptionsUnion extends js.Object
+  trait UntagResourceExceptionsUnion extends StObject
+  object UntagResourceExceptionsUnion {
+    
+    @scala.inline
+    def InvalidArnException(name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.InvalidArnException): typingsSlinky.awsSdkClientKmsNode.typesInvalidArnExceptionMod.InvalidArnException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientKmsNode.typesInvalidArnExceptionMod.InvalidArnException]
+    }
+    
+    @scala.inline
+    def KMSInternalException(name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.KMSInternalException): typingsSlinky.awsSdkClientKmsNode.typesKmsinternalexceptionMod.KMSInternalException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientKmsNode.typesKmsinternalexceptionMod.KMSInternalException]
+    }
+    
+    @scala.inline
+    def KMSInvalidStateException(name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.KMSInvalidStateException): typingsSlinky.awsSdkClientKmsNode.typesKmsinvalidstateexceptionMod.KMSInvalidStateException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientKmsNode.typesKmsinvalidstateexceptionMod.KMSInvalidStateException]
+    }
+    
+    @scala.inline
+    def NotFoundException(name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.NotFoundException): typingsSlinky.awsSdkClientKmsNode.typesNotFoundExceptionMod.NotFoundException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientKmsNode.typesNotFoundExceptionMod.NotFoundException]
+    }
+    
+    @scala.inline
+    def TagException(name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.TagException): typingsSlinky.awsSdkClientKmsNode.typesTagExceptionMod.TagException = {
+      val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+      __obj.asInstanceOf[typingsSlinky.awsSdkClientKmsNode.typesTagExceptionMod.TagException]
+    }
+  }
 }

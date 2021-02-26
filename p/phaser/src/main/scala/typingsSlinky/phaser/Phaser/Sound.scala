@@ -7,13 +7,12 @@ import typingsSlinky.phaser.Phaser.Events.EventEmitter
 import typingsSlinky.phaser.Phaser.Types.Sound.DecodeAudioConfig
 import typingsSlinky.phaser.Phaser.Types.Sound.SoundConfig
 import typingsSlinky.phaser.Phaser.Types.Sound.SoundMarker
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Phaser.Sound")
-@js.native
-object Sound extends js.Object {
+object Sound {
   
   /**
     * Class containing all the shared state and behavior of a sound object, independent of the implementation.
@@ -476,7 +475,7 @@ object Sound extends js.Object {
     * breaking on devices that don't support any audio playback technologies.
     */
   @js.native
-  trait NoAudioSound extends js.Object {
+  trait NoAudioSound extends StObject {
     
     /**
       * 
@@ -525,6 +524,16 @@ object Sound extends js.Object {
       */
     def updateMarker(marker: SoundMarker): Boolean = js.native
   }
+  
+  /**
+    * No-audio implementation of the Sound Manager. It is used if audio has been
+    * disabled in the game config or the device doesn't support any audio.
+    * 
+    * It represents a graceful degradation of Sound Manager logic that provides
+    * minimal functionality and prevents Phaser projects that use audio from
+    * breaking on devices that don't support any audio playback technologies.
+    */
+  type NoAudioSoundManager = BaseSoundManager
   
   /**
     * Web Audio API implementation of the sound.
@@ -668,14 +677,4 @@ object Sound extends js.Object {
       */
     def setVolume(value: Double): WebAudioSoundManager = js.native
   }
-  
-  /**
-    * No-audio implementation of the Sound Manager. It is used if audio has been
-    * disabled in the game config or the device doesn't support any audio.
-    * 
-    * It represents a graceful degradation of Sound Manager logic that provides
-    * minimal functionality and prevents Phaser projects that use audio from
-    * breaking on devices that don't support any audio playback technologies.
-    */
-  type NoAudioSoundManager = BaseSoundManager
 }

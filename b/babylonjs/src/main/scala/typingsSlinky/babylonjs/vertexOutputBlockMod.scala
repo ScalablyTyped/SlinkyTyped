@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Vertex/vertexOutputBlock", JSImport.Namespace)
-@js.native
-object vertexOutputBlockMod extends js.Object {
+object vertexOutputBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Vertex/vertexOutputBlock", "VertexOutputBlock")
   @js.native
   class VertexOutputBlock protected () extends NodeMaterialBlock {
     /**

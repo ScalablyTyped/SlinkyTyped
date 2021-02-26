@@ -10,13 +10,13 @@ Options addon for storybook
 | ------------------ | :-------------: |
 | Full name          | @storybook/addon-options |
 | Keywords           | addon, storybook |
-| # releases         | 415 |
-| # dependents       | 70 |
-| # downloads        | 9406566 |
+| # releases         | 345 |
+| # dependents       | 80 |
+| # downloads        | 7443648 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/storybookjs/storybook/tree/master/addons/options)
+- [Homepage](https://github.com/storybookjs/storybook#readme)
 - [Bugs](https://github.com/storybookjs/storybook/issues)
 - [Repository](https://github.com/storybookjs/storybook)
 - [Npm](https://www.npmjs.com/package/%40storybook%2Faddon-options)

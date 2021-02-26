@@ -5,14 +5,14 @@ import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.lineSegmentsMod.LineSegments
 import typingsSlinky.three.materialMod.Material
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/helpers/PolarGridHelper", JSImport.Namespace)
-@js.native
-object polarGridHelperMod extends js.Object {
+object polarGridHelperMod {
   
+  @JSImport("three/src/helpers/PolarGridHelper", "PolarGridHelper")
   @js.native
   class PolarGridHelper protected ()
     extends LineSegments[Geometry | BufferGeometry, Material | js.Array[Material]] {

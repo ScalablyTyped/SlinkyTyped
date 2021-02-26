@@ -1,10 +1,11 @@
 package typingsSlinky.ember.mod.default
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ember", "DefaultResolver")
+@JSImport("ember", "default.DefaultResolver")
 @js.native
 class DefaultResolver ()
-  extends typingsSlinky.emberApplication.defaultResolverMod.DefaultResolver
+  extends typingsSlinky.ember.mod.Ember.DefaultResolver

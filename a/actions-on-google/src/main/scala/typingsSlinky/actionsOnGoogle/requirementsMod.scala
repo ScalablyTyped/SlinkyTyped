@@ -1,17 +1,17 @@
 package typingsSlinky.actionsOnGoogle
 
 import typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionsDotintentDotTRANSACTION_REQUIREMENTS_CHECK
-import typingsSlinky.actionsOnGoogle.helperHelperMod.Helper
+import typingsSlinky.actionsOnGoogle.helperHelperMod.SoloHelper
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsTransactionsV3TransactionRequirementsCheckSpec
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2TransactionRequirementsCheckSpec
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("actions-on-google/dist/service/actionssdk/conversation/helper/transaction/requirements", JSImport.Namespace)
-@js.native
-object requirementsMod extends js.Object {
+object requirementsMod {
   
+  @JSImport("actions-on-google/dist/service/actionssdk/conversation/helper/transaction/requirements", "TransactionRequirements")
   @js.native
   /**
     * @param options The raw {@link GoogleActionsV2TransactionRequirementsCheckSpec}
@@ -19,7 +19,7 @@ object requirementsMod extends js.Object {
     *     if using ordersv3
     * @public
     */
-  class TransactionRequirements () extends Helper[
+  class TransactionRequirements () extends SoloHelper[
           actionsDotintentDotTRANSACTION_REQUIREMENTS_CHECK, 
           GoogleActionsV2TransactionRequirementsCheckSpec | GoogleActionsTransactionsV3TransactionRequirementsCheckSpec
         ] {
@@ -31,5 +31,19 @@ object requirementsMod extends js.Object {
     - typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2TransactionRequirementsCheckResult
     - typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsTransactionsV3TransactionRequirementsCheckResult
   */
-  trait TransactionRequirementsArgument extends js.Object
+  trait TransactionRequirementsArgument extends StObject
+  object TransactionRequirementsArgument {
+    
+    @scala.inline
+    def GoogleActionsTransactionsV3TransactionRequirementsCheckResult(): typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsTransactionsV3TransactionRequirementsCheckResult = {
+      val __obj = js.Dynamic.literal()
+      __obj.asInstanceOf[typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsTransactionsV3TransactionRequirementsCheckResult]
+    }
+    
+    @scala.inline
+    def GoogleActionsV2TransactionRequirementsCheckResult(): typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2TransactionRequirementsCheckResult = {
+      val __obj = js.Dynamic.literal()
+      __obj.asInstanceOf[typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2TransactionRequirementsCheckResult]
+    }
+  }
 }

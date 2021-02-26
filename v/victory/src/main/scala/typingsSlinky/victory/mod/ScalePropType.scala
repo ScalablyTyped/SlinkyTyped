@@ -1,5 +1,6 @@
 package typingsSlinky.victory.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.victory.victoryStrings.log
   - typingsSlinky.victory.victoryStrings.sqrt
 */
-trait ScalePropType extends js.Object
+trait ScalePropType extends StObject
 object ScalePropType {
   
   @scala.inline

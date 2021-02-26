@@ -10,9 +10,9 @@ State-based routing for AngularJS 1.x
 | ------------------ | :-------------: |
 | Full name          | @uirouter/angularjs |
 | Keywords           | - |
-| # releases         | 29 |
+| # releases         | 10 |
 | # dependents       | 77 |
-| # downloads        | 3481184 |
+| # downloads        | 4194137 |
 | # stars            | 1 |
 
 ## Links

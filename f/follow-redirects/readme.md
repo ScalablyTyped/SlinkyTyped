@@ -10,9 +10,9 @@ HTTP and HTTPS modules that follow redirects.
 | ------------------ | :-------------: |
 | Full name          | follow-redirects |
 | Keywords           | http, https, url, redirect, client, location, utility |
-| # releases         | 21 |
-| # dependents       | 389 |
-| # downloads        | 425258404 |
+| # releases         | 11 |
+| # dependents       | 507 |
+| # downloads        | 860485926 |
 | # stars            | 9 |
 
 ## Links

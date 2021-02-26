@@ -12,6 +12,7 @@ import typingsSlinky.officeJs.officeJsStrings.Context
 import typingsSlinky.officeJs.officeJsStrings.LeftToRight
 import typingsSlinky.officeJs.officeJsStrings.None
 import typingsSlinky.officeJs.officeJsStrings.RightToLeft
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

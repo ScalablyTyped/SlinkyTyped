@@ -11,6 +11,7 @@ import typingsSlinky.baseui.accordionMod.SharedProps
 import typingsSlinky.baseui.accordionMod.StatefulPanelProps
 import typingsSlinky.baseui.anon.ExpandedBoolean
 import typingsSlinky.baseui.baseuiStrings.expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object StatefulPanel {
   
   @JSImport("baseui/accordion", "StatefulPanel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,13 +55,13 @@ object StatefulPanel {
     def stateReducer(value: (expand, PanelState, PanelState) => PanelState): this.type = set("stateReducer", js.Any.fromFunction3(value))
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StatefulPanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatefulPanel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatefulPanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

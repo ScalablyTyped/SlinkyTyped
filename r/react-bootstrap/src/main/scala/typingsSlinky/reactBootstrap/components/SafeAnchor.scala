@@ -73,6 +73,7 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactBootstrap.safeAnchorMod.SafeAnchorProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -81,12 +82,15 @@ object SafeAnchor {
   
   @JSImport("react-bootstrap", "SafeAnchor")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.SafeAnchor] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -319,13 +323,13 @@ object SafeAnchor {
     def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentClassFunctionComponent(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
+    def componentClass(value: ReactType[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentClassComponentClass(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentClass(value: ReactType[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
+    def componentClassFunctionComponent(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
     
     @scala.inline
     def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
@@ -358,16 +362,13 @@ object SafeAnchor {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -931,10 +932,10 @@ object SafeAnchor {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -949,7 +950,7 @@ object SafeAnchor {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SafeAnchorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SafeAnchor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SafeAnchorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

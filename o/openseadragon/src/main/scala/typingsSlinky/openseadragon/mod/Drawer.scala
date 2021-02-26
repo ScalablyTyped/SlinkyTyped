@@ -6,13 +6,14 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.openseadragon.anon.Bounds
 import typingsSlinky.openseadragon.anon.DebugGridColor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openseadragon", "Drawer")
 @js.native
-class Drawer protected () extends js.Object {
+class Drawer protected () extends StObject {
   // element : Element; // Deprecated
   def this(options: DebugGridColor) = this()
   
@@ -35,30 +36,30 @@ class Drawer protected () extends js.Object {
   
   def drawTile(
     tile: Tile,
-     // TODO: determine handler parameter types
-  drawingHandler: js.Function3[/* context */ CanvasRenderingContext2D, /* tile */ js.Any, /* rendered */ js.Any, Unit],
-    useSketch: Boolean
+    drawingHandler: js.Function3[/* context */ CanvasRenderingContext2D, /* tile */ js.Any, /* rendered */ js.Any, Unit],
+    // TODO: determine handler parameter types
+  useSketch: Boolean
   ): Unit = js.native
   def drawTile(
     tile: Tile,
-     // TODO: determine handler parameter types
-  drawingHandler: js.Function3[/* context */ CanvasRenderingContext2D, /* tile */ js.Any, /* rendered */ js.Any, Unit],
-    useSketch: Boolean,
+    drawingHandler: js.Function3[/* context */ CanvasRenderingContext2D, /* tile */ js.Any, /* rendered */ js.Any, Unit],
+    // TODO: determine handler parameter types
+  useSketch: Boolean,
     scale: js.UndefOr[scala.Nothing],
     translate: Point
   ): Unit = js.native
   def drawTile(
     tile: Tile,
-     // TODO: determine handler parameter types
-  drawingHandler: js.Function3[/* context */ CanvasRenderingContext2D, /* tile */ js.Any, /* rendered */ js.Any, Unit],
-    useSketch: Boolean,
+    drawingHandler: js.Function3[/* context */ CanvasRenderingContext2D, /* tile */ js.Any, /* rendered */ js.Any, Unit],
+    // TODO: determine handler parameter types
+  useSketch: Boolean,
     scale: Double
   ): Unit = js.native
   def drawTile(
     tile: Tile,
-     // TODO: determine handler parameter types
-  drawingHandler: js.Function3[/* context */ CanvasRenderingContext2D, /* tile */ js.Any, /* rendered */ js.Any, Unit],
-    useSketch: Boolean,
+    drawingHandler: js.Function3[/* context */ CanvasRenderingContext2D, /* tile */ js.Any, /* rendered */ js.Any, Unit],
+    // TODO: determine handler parameter types
+  useSketch: Boolean,
     scale: Double,
     translate: Point
   ): Unit = js.native

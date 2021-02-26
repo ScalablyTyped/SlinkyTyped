@@ -2,12 +2,13 @@ package typingsSlinky.activexVbide.VBIDE
 
 import typingsSlinky.activexOffice.Office.CommandBar
 import typingsSlinky.activexOffice.Office.CommandBars
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VBE extends js.Object {
+trait VBE extends StObject {
   
   var ActiveCodePane: CodePane = js.native
   

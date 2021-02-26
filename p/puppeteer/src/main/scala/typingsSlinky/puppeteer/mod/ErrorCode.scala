@@ -1,5 +1,6 @@
 package typingsSlinky.puppeteer.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.puppeteer.puppeteerStrings.timedout
   - typingsSlinky.puppeteer.puppeteerStrings.failed
 */
-trait ErrorCode extends js.Object
+trait ErrorCode extends StObject
 object ErrorCode {
   
   @scala.inline

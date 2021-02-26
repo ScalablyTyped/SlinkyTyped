@@ -1,6 +1,7 @@
 package typingsSlinky.fibjs.global
 
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -80,10 +81,7 @@ class ClassBuffer ()
   def this(str: String) = this()
   def this(str: String, codec: String) = this()
 }
-/* static members */
-@JSGlobal("Class_Buffer")
-@js.native
-object ClassBuffer extends js.Object {
+object ClassBuffer {
   
   /**
     * 
@@ -96,11 +94,24 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
+  @JSGlobal("Class_Buffer.alloc")
+  @js.native
   def alloc(size: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.alloc")
+  @js.native
   def alloc(size: Double, fill: js.UndefOr[scala.Nothing], codec: String): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.alloc")
+  @js.native
   def alloc(size: Double, fill: String): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.alloc")
+  @js.native
   def alloc(size: Double, fill: String, codec: String): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.alloc")
+  @js.native
   def alloc(size: Double, fill: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.alloc")
+  @js.native
   def alloc(size: Double, fill: Double, codec: String): typingsSlinky.fibjs.ClassBuffer = js.native
   /**
     * 
@@ -113,7 +124,12 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
+  @JSGlobal("Class_Buffer.alloc")
+  @js.native
   def alloc(size: Double, fill: typingsSlinky.fibjs.ClassBuffer): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.alloc")
+  @js.native
   def alloc(size: Double, fill: typingsSlinky.fibjs.ClassBuffer, codec: String): typingsSlinky.fibjs.ClassBuffer = js.native
   
   /**
@@ -125,6 +141,9 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
+  @JSGlobal("Class_Buffer.allocUnsafe")
+  @js.native
   def allocUnsafe(size: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   
   /**
@@ -136,6 +155,9 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
+  @JSGlobal("Class_Buffer.allocUnsafeSlow")
+  @js.native
   def allocUnsafeSlow(size: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   
   /**
@@ -148,7 +170,12 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
+  @JSGlobal("Class_Buffer.byteLength")
+  @js.native
   def byteLength(str: String): Double = js.native
+  @JSGlobal("Class_Buffer.byteLength")
+  @js.native
   def byteLength(str: String, codec: String): Double = js.native
   /**
     * 
@@ -160,18 +187,9 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
-  def byteLength(str: typingsSlinky.fibjs.ClassBuffer): Double = js.native
-  def byteLength(str: typingsSlinky.fibjs.ClassBuffer, codec: String): Double = js.native
-  /**
-    * 
-    * @brief 返回字符串的实际字节长度
-    * @param str 待取字节的字符串，如果str为 ArrayBuffer/TypedArray/DataView/Buffer 对象，则返回它们的实际长度
-    * @param codec 指定编码格式，允许值为："hex", "base64", "utf8", 或者系统支持的字符集
-    * @return 返回实际字节长度
-    * 
-    * 
-    * 
-    */
+  /* static member */
+  @JSGlobal("Class_Buffer.byteLength")
+  @js.native
   def byteLength(str: js.typedarray.ArrayBuffer): Double = js.native
   /**
     * 
@@ -183,9 +201,33 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
+  @JSGlobal("Class_Buffer.byteLength")
+  @js.native
   def byteLength(str: js.typedarray.ArrayBufferView): Double = js.native
+  @JSGlobal("Class_Buffer.byteLength")
+  @js.native
   def byteLength(str: js.typedarray.ArrayBufferView, codec: String): Double = js.native
+  @JSGlobal("Class_Buffer.byteLength")
+  @js.native
   def byteLength(str: js.typedarray.ArrayBuffer, codec: String): Double = js.native
+  /**
+    * 
+    * @brief 返回字符串的实际字节长度
+    * @param str 待取字节的字符串，如果str为 ArrayBuffer/TypedArray/DataView/Buffer 对象，则返回它们的实际长度
+    * @param codec 指定编码格式，允许值为："hex", "base64", "utf8", 或者系统支持的字符集
+    * @return 返回实际字节长度
+    * 
+    * 
+    * 
+    */
+  /* static member */
+  @JSGlobal("Class_Buffer.byteLength")
+  @js.native
+  def byteLength(str: typingsSlinky.fibjs.ClassBuffer): Double = js.native
+  @JSGlobal("Class_Buffer.byteLength")
+  @js.native
+  def byteLength(str: typingsSlinky.fibjs.ClassBuffer, codec: String): Double = js.native
   
   /**
     * 
@@ -197,7 +239,12 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
+  @JSGlobal("Class_Buffer.concat")
+  @js.native
   def concat(buflist: js.Array[_]): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.concat")
+  @js.native
   def concat(buflist: js.Array[_], cutLength: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   
   /**
@@ -211,9 +258,18 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
+  @JSGlobal("Class_Buffer.from")
+  @js.native
   def from(buffer: typingsSlinky.fibjs.ClassBuffer): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.from")
+  @js.native
   def from(buffer: typingsSlinky.fibjs.ClassBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.from")
+  @js.native
   def from(buffer: typingsSlinky.fibjs.ClassBuffer, byteOffset: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.from")
+  @js.native
   def from(buffer: typingsSlinky.fibjs.ClassBuffer, byteOffset: Double, length: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   /**
     * 
@@ -226,6 +282,7 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
   /**
     * 
     * @brief 通过字符串创建 Buffer 对象
@@ -236,10 +293,20 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  @JSGlobal("Class_Buffer.from")
+  @js.native
   def from(str: String): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.from")
+  @js.native
   def from(str: String, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.from")
+  @js.native
   def from(str: String, byteOffset: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.from")
+  @js.native
   def from(str: String, byteOffset: Double, length: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  @JSGlobal("Class_Buffer.from")
+  @js.native
   def from(str: String, codec: String): typingsSlinky.fibjs.ClassBuffer = js.native
   
   /**
@@ -251,6 +318,9 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
+  @JSGlobal("Class_Buffer.isBuffer")
+  @js.native
   def isBuffer(v: js.Any): Boolean = js.native
   
   /**
@@ -262,5 +332,8 @@ object ClassBuffer extends js.Object {
     * 
     * 
     */
+  /* static member */
+  @JSGlobal("Class_Buffer.isEncoding")
+  @js.native
   def isEncoding(codec: String): Boolean = js.native
 }

@@ -1,14 +1,17 @@
 package typingsSlinky.lockr
 
 import typingsSlinky.lockr.lockr.LockrStatic
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
-  @JSName("Lockr")
-  var Lockr_ : LockrStatic = js.native
+  @JSGlobal("Lockr")
+  @js.native
+  def Lockr_ : LockrStatic = js.native
+  
+  @scala.inline
+  def Lockr__=(x: LockrStatic): Unit = js.Dynamic.global.updateDynamic("Lockr")(x.asInstanceOf[js.Any])
 }

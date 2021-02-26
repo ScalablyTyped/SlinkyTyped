@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.ParentChild
   - typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Pointer
 */
-trait SecurityType extends js.Object
+trait SecurityType extends StObject
 object SecurityType {
   
   @scala.inline

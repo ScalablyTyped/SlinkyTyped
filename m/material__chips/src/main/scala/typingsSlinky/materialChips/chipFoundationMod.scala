@@ -5,19 +5,23 @@ import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.TransitionEvent
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
-import typingsSlinky.materialChips.anon.ADDEDANNOUNCEMENTATTRIBUTE
-import typingsSlinky.materialChips.anon.CHECKMARK
 import typingsSlinky.materialChips.anon.PartialMDCChipAdapter
 import typingsSlinky.materialChips.chipAdapterMod.MDCChipAdapter
 import typingsSlinky.materialChips.trailingactionTypesMod.MDCChipTrailingActionNavigationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/chips/chip/foundation", JSImport.Namespace)
-@js.native
-object chipFoundationMod extends js.Object {
+object chipFoundationMod {
   
+  @JSImport("@material/chips/chip/foundation", JSImport.Default)
+  @js.native
+  class default () extends MDCChipFoundation {
+    def this(adapter: PartialMDCChipAdapter) = this()
+  }
+  
+  @JSImport("@material/chips/chip/foundation", "MDCChipFoundation")
   @js.native
   class MDCChipFoundation () extends MDCFoundation[MDCChipAdapter] {
     def this(adapter: PartialMDCChipAdapter) = this()
@@ -87,30 +91,5 @@ object chipFoundationMod extends js.Object {
     def setShouldFocusPrimaryActionOnClick(shouldFocus: Boolean): Unit = js.native
     
     def setShouldRemoveOnTrailingIconClick(shouldRemove: Boolean): Unit = js.native
-  }
-  /* static members */
-  @js.native
-  object MDCChipFoundation extends js.Object {
-    
-    def cssClasses: CHECKMARK = js.native
-    
-    def defaultAdapter: MDCChipAdapter = js.native
-    
-    def strings: ADDEDANNOUNCEMENTATTRIBUTE = js.native
-  }
-  
-  @js.native
-  class default () extends MDCChipFoundation {
-    def this(adapter: PartialMDCChipAdapter) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    def cssClasses: CHECKMARK = js.native
-    
-    def defaultAdapter: MDCChipAdapter = js.native
-    
-    def strings: ADDEDANNOUNCEMENTATTRIBUTE = js.native
   }
 }

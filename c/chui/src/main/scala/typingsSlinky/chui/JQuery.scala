@@ -6,6 +6,7 @@ import typingsSlinky.chui.anon.DefaultValue
 import typingsSlinky.chui.anon.Deletable
 import typingsSlinky.chui.anon.Name
 import typingsSlinky.chui.anon.Selected
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Interface for jQuery
   */
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Display a busy indicator. Posible options: {size: "100px", color: "#ff0000", position: "align-flush", duration: "2s"}.

@@ -2,6 +2,7 @@ package typingsSlinky.youtube.YT
 
 import typingsSlinky.youtube.youtubeNumbers.`0`
 import typingsSlinky.youtube.youtubeNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.youtube.youtubeNumbers.`0`
   - typingsSlinky.youtube.youtubeNumbers.`1`
 */
-trait Loop extends js.Object
+trait Loop extends StObject
 object Loop {
   
   /**

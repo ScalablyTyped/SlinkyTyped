@@ -1,13 +1,13 @@
 package typingsSlinky.openui5.global.sap.ui.core
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("sap.ui.core.delegate")
-@js.native
-object delegate extends js.Object {
+object delegate {
   
+  @JSGlobal("sap.ui.core.delegate.ItemNavigation")
   @js.native
   class ItemNavigation protected ()
     extends typingsSlinky.openui5.sap.ui.core.delegate.ItemNavigation {
@@ -29,6 +29,7 @@ object delegate extends js.Object {
     ) = this()
   }
   
+  @JSGlobal("sap.ui.core.delegate.ScrollEnablement")
   @js.native
   class ScrollEnablement ()
     extends typingsSlinky.openui5.sap.ui.core.delegate.ScrollEnablement

@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTypeahead
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object mod {
   
   type AllTypeaheadOwnAndInjectedProps[T /* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */] = typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadProps[T] with typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadContainerProps[T]
+  
+  @scala.inline
+  def ClearButton: slinky.core.ReactComponentClass[typingsSlinky.reactBootstrapTypeahead.mod.ClearButtonProps] = typingsSlinky.reactBootstrapTypeahead.mod.^.asInstanceOf[js.Dynamic].selectDynamic("ClearButton").asInstanceOf[slinky.core.ReactComponentClass[typingsSlinky.reactBootstrapTypeahead.mod.ClearButtonProps]]
+  
+  @scala.inline
+  def Loader: slinky.core.ReactComponentClass[typingsSlinky.reactBootstrapTypeahead.mod.LoaderProps] = typingsSlinky.reactBootstrapTypeahead.mod.^.asInstanceOf[js.Dynamic].selectDynamic("Loader").asInstanceOf[slinky.core.ReactComponentClass[typingsSlinky.reactBootstrapTypeahead.mod.LoaderProps]]
   
   type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   

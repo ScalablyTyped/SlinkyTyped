@@ -2,6 +2,7 @@ package typingsSlinky.devtoolsProtocol.mod.Protocol.Page
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.selectMultiple
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.selectSingle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.selectSingle
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.selectMultiple
 */
-trait FileChooserOpenedEventMode extends js.Object
+trait FileChooserOpenedEventMode extends StObject
 object FileChooserOpenedEventMode {
   
   @scala.inline

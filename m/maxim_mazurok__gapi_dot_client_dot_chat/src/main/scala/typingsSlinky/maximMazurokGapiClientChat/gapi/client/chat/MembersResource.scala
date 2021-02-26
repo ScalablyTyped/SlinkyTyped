@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientChat.gapi.client.chat
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientChat.anon.Alt
 import typingsSlinky.maximMazurokGapiClientChat.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MembersResource extends js.Object {
+trait MembersResource extends StObject {
   
   /** Returns a membership. */
   def get(): Request[Membership] = js.native

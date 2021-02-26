@@ -1,12 +1,13 @@
 package typingsSlinky.sharepoint.global.SP.JsGrid
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("SP.JsGrid.SortMode")
 @js.native
-object SortMode extends js.Object {
+object SortMode extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.sharepoint.SP.JsGrid.SortMode with Double] = js.native

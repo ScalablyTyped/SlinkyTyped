@@ -5,6 +5,7 @@ import typingsSlinky.kiiCloudSdk.anon.`12`
 import typingsSlinky.kiiCloudSdk.anon.`13`
 import typingsSlinky.kiiCloudSdk.anon.`14`
 import typingsSlinky.kiiCloudSdk.anon.`15`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Represents a KiiObject object
   */
 @js.native
-trait KiiObject extends js.Object {
+trait KiiObject extends StObject {
   
   /**
     * Delete the object from the server

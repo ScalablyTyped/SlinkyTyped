@@ -9,13 +9,14 @@ import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.currentitemchanged
 import typingsSlinky.winrtUwp.winrtUwpStrings.itemfailed
 import typingsSlinky.winrtUwp.winrtUwpStrings.itemopened
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a list of MediaPlaybackItem objects that can be played back. Provides methods for switching the currently playing item and enabling looping and shuffling. */
 @js.native
-trait MediaPlaybackList extends js.Object {
+trait MediaPlaybackList extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

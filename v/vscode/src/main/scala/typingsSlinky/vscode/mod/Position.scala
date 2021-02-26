@@ -2,13 +2,14 @@ package typingsSlinky.vscode.mod
 
 import typingsSlinky.vscode.anon.Character
 import typingsSlinky.vscode.anon.CharacterDelta
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode", "Position")
 @js.native
-class Position protected () extends js.Object {
+class Position protected () extends StObject {
   /**
     * @param line A zero-based line value.
     * @param character A zero-based character value.

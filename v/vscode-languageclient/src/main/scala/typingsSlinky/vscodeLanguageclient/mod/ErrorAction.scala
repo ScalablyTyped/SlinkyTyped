@@ -1,12 +1,13 @@
 package typingsSlinky.vscodeLanguageclient.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageclient", "ErrorAction")
 @js.native
-object ErrorAction extends js.Object {
+object ErrorAction extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.vscodeLanguageclient.clientMod.ErrorAction with Double] = js.native

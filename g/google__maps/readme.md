@@ -10,9 +10,9 @@ Node.js client library for Google Maps API Web Services
 | ------------------ | :-------------: |
 | Full name          | @google/maps |
 | Keywords           | google, maps, googlemaps, geo, geocode, timezone, api, client, roads, directions, navigation |
-| # releases         | 11 |
-| # dependents       | 79 |
-| # downloads        | 3416628 |
+| # releases         | 7 |
+| # dependents       | 77 |
+| # downloads        | 4372478 |
 | # stars            | 13 |
 
 ## Links

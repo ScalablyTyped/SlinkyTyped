@@ -10,9 +10,9 @@ Map color names to HEX color values.
 | ------------------ | :-------------: |
 | Full name          | colornames |
 | Keywords           | color, colour, names, css, hex, rgb, convert |
-| # releases         | 1 |
-| # dependents       | 32 |
-| # downloads        | 52787110 |
+| # releases         | 0 |
+| # dependents       | 44 |
+| # downloads        | 84070843 |
 | # stars            | 1 |
 
 ## Links

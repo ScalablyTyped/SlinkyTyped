@@ -27,12 +27,13 @@ import typingsSlinky.chromeApps.chrome.fileSystemProvider.UnmountRequestedEventO
 import typingsSlinky.chromeApps.chrome.fileSystemProvider.WatcherRequestedEventOptions
 import typingsSlinky.chromeApps.chrome.fileSystemProvider.WriteFileRequestedEventOptions
 import typingsSlinky.std.Exclude
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeoffileSystemProvider extends js.Object {
+trait TypeoffileSystemProvider extends StObject {
   
   /** Type of a change detected on the observed directory. */
   val ChangeType: DELETED = js.native

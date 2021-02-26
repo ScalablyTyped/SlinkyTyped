@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.blueprintjsTable.columnHeaderCellMod.IColumnHeaderCellProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ColumnHeaderCell {
   
   @JSImport("@blueprintjs/table", "ColumnHeaderCell")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +41,10 @@ object ColumnHeaderCell {
     def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuIconReactElement(value: ReactElement): this.type = set("menuIcon", value.asInstanceOf[js.Any])
+    def menuIcon(value: IconName | ReactElement): this.type = set("menuIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuIcon(value: IconName | ReactElement): this.type = set("menuIcon", value.asInstanceOf[js.Any])
+    def menuIconReactElement(value: ReactElement): this.type = set("menuIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def menuRenderer(value: /* index */ js.UndefOr[Double] => ReactElement): this.type = set("menuRenderer", js.Any.fromFunction1(value))
@@ -64,7 +65,7 @@ object ColumnHeaderCell {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IColumnHeaderCellProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ColumnHeaderCell.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IColumnHeaderCellProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

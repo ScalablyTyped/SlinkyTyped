@@ -2,12 +2,13 @@ package typingsSlinky.colorConvert.anon
 
 import typingsSlinky.colorConvert.conversionsMod.CMYK_
 import typingsSlinky.colorConvert.conversionsMod.HEX_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `65` extends js.Object {
+trait `65` extends StObject {
   
   def raw(from: CMYK_): HEX_ = js.native
   @JSName("raw")

@@ -10,9 +10,9 @@ Turn your geo data into GeoJSON
 | ------------------ | :-------------: |
 | Full name          | geojson |
 | Keywords           | geojson |
-| # releases         | 1 |
-| # dependents       | 50 |
-| # downloads        | 513484 |
+| # releases         | 0 |
+| # dependents       | 84 |
+| # downloads        | 1335573 |
 | # stars            | 16 |
 
 ## Links

@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import typingsSlinky.std.EventTarget
 import typingsSlinky.std.OrientationType
 import typingsSlinky.w3cScreenOrientation.w3cScreenOrientationStrings.change
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

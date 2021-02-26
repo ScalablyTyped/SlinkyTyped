@@ -10,9 +10,9 @@ React notification made easy
 | ------------------ | :-------------: |
 | Full name          | react-toastify |
 | Keywords           | react, notification, toast, react-component, react-toastify, push, alert |
-| # releases         | 57 |
-| # dependents       | 169 |
-| # downloads        | 9153386 |
+| # releases         | 42 |
+| # dependents       | 351 |
+| # downloads        | 19971643 |
 | # stars            | 12 |
 
 ## Links

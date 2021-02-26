@@ -1,12 +1,13 @@
 package typingsSlinky.babylonjs.BABYLON
 
 import typingsSlinky.babylonjs.anon.Input
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NodeMaterialBlock extends js.Object {
+trait NodeMaterialBlock extends StObject {
   
   /* protected */ def _buildBlock(state: NodeMaterialBuildState): Unit = js.native
   

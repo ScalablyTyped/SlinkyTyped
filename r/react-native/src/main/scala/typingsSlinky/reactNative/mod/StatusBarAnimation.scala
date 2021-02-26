@@ -1,5 +1,6 @@
 package typingsSlinky.reactNative.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNative.reactNativeStrings.fade
   - typingsSlinky.reactNative.reactNativeStrings.slide
 */
-trait StatusBarAnimation extends js.Object
+trait StatusBarAnimation extends StObject
 object StatusBarAnimation {
   
   @scala.inline

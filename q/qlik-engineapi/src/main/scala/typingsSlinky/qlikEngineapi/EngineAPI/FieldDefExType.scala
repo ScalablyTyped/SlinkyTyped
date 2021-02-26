@@ -1,5 +1,6 @@
 package typingsSlinky.qlikEngineapi.EngineAPI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.`1`
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.`2`
 */
-trait FieldDefExType extends js.Object
+trait FieldDefExType extends StObject
 object FieldDefExType {
   
   @scala.inline

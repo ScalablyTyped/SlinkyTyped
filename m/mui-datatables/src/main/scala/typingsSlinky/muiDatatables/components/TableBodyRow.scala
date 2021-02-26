@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableBodyRow
 import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TableBodyRow {
   
+  @scala.inline
+  def apply(options: MUIDataTableOptions): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableBodyRow]))
+  }
+  
   @JSImport("mui-datatables", "TableBodyRow")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,10 +40,4 @@ object TableBodyRow {
   }
   
   def withProps(p: MUIDataTableBodyRow): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(options: MUIDataTableOptions): Builder = {
-    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableBodyRow]))
-  }
 }

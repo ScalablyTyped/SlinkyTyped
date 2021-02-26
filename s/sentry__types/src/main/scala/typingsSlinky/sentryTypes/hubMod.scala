@@ -21,16 +21,15 @@ import typingsSlinky.sentryTypes.transactionMod.CustomSamplingContext
 import typingsSlinky.sentryTypes.transactionMod.Transaction
 import typingsSlinky.sentryTypes.transactionMod.TransactionContext
 import typingsSlinky.sentryTypes.userMod.User
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@sentry/types/dist/hub", JSImport.Namespace)
-@js.native
-object hubMod extends js.Object {
+object hubMod {
   
   @js.native
-  trait Hub extends js.Object {
+  trait Hub extends StObject {
     
     /**
       * Records a new breadcrumb which will be attached to future events.

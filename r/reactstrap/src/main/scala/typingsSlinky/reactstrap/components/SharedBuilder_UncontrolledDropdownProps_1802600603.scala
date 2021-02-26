@@ -77,6 +77,7 @@ import typingsSlinky.reactstrap.dropdownMod.Direction
 import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.reactstrapStrings.append
 import typingsSlinky.reactstrap.reactstrapStrings.prepend
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -284,10 +285,10 @@ class SharedBuilder_UncontrolledDropdownProps_1802600603[R <: js.Object] (val ar
   def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -637,13 +638,13 @@ class SharedBuilder_UncontrolledDropdownProps_1802600603[R <: js.Object] (val ar
   def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def tagFunctionComponent(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+  def tag(value: ReactElement): this.type = set("tag", value.asInstanceOf[js.Any])
   
   @scala.inline
   def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def tag(value: ReactElement): this.type = set("tag", value.asInstanceOf[js.Any])
+  def tagFunctionComponent(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
   
   @scala.inline
   def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])

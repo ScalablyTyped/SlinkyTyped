@@ -10,9 +10,9 @@ Properties utility functions for ethers.
 | ------------------ | :-------------: |
 | Full name          | @ethersproject/properties |
 | Keywords           | Ethereum, ethers |
-| # releases         | 25 |
-| # dependents       | 23 |
-| # downloads        | 197674 |
+| # releases         | 36 |
+| # dependents       | 53 |
+| # downloads        | 2917376 |
 | # stars            | 0 |
 
 ## Links

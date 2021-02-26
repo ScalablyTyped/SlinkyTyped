@@ -1,24 +1,23 @@
 package typingsSlinky.babylonjs
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.babylonjs.anon.`0`
 import typingsSlinky.babylonjs.cloudPointMod.CloudPoint
 import typingsSlinky.babylonjs.mathMod.Color4
 import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.sceneMod.IDisposable
 import typingsSlinky.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Particles/pointsCloudSystem", JSImport.Namespace)
-@js.native
-object pointsCloudSystemMod extends js.Object {
+object pointsCloudSystemMod {
   
   @js.native
-  sealed trait PointColor extends js.Object
+  sealed trait PointColor extends StObject
+  @JSImport("babylonjs/Particles/pointsCloudSystem", "PointColor")
   @js.native
-  object PointColor extends js.Object {
+  object PointColor extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[PointColor with Double] = js.native
@@ -26,28 +25,25 @@ object pointsCloudSystemMod extends js.Object {
     /** color value */
     @js.native
     sealed trait Color extends PointColor
-    /* 2 */ @js.native
-    object Color extends TopLevel[Color with Double]
+    /* 2 */ val Color: typingsSlinky.babylonjs.pointsCloudSystemMod.PointColor.Color with Double = js.native
     
     /** random value */
     @js.native
     sealed trait Random extends PointColor
-    /* 0 */ @js.native
-    object Random extends TopLevel[Random with Double]
+    /* 0 */ val Random: typingsSlinky.babylonjs.pointsCloudSystemMod.PointColor.Random with Double = js.native
     
     /** stated value */
     @js.native
     sealed trait Stated extends PointColor
-    /* 3 */ @js.native
-    object Stated extends TopLevel[Stated with Double]
+    /* 3 */ val Stated: typingsSlinky.babylonjs.pointsCloudSystemMod.PointColor.Stated with Double = js.native
     
     /** uv value */
     @js.native
     sealed trait UV extends PointColor
-    /* 1 */ @js.native
-    object UV extends TopLevel[UV with Double]
+    /* 1 */ val UV: typingsSlinky.babylonjs.pointsCloudSystemMod.PointColor.UV with Double = js.native
   }
   
+  @JSImport("babylonjs/Particles/pointsCloudSystem", "PointsCloudSystem")
   @js.native
   class PointsCloudSystem protected () extends IDisposable {
     /**

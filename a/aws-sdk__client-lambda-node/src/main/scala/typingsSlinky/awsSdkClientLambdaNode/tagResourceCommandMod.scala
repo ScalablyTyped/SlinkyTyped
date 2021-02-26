@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientLambdaNode.typesTagResourceInputMod.TagResource
 import typingsSlinky.awsSdkClientLambdaNode.typesTagResourceOutputMod.TagResourceOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-lambda-node/commands/TagResourceCommand", JSImport.Namespace)
-@js.native
-object tagResourceCommandMod extends js.Object {
+object tagResourceCommandMod {
   
+  @JSImport("@aws-sdk/client-lambda-node/commands/TagResourceCommand", "TagResourceCommand")
   @js.native
   class TagResourceCommand protected () extends Command[
           InputTypesUnion, 

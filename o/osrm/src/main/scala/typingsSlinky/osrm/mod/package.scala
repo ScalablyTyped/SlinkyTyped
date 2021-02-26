@@ -1,5 +1,6 @@
 package typingsSlinky.osrm
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,4 +22,7 @@ package object mod {
   type Radius = scala.Double
   
   type Tile = js.Tuple3[scala.Double, scala.Double, scala.Double]
+  
+  @scala.inline
+  def version: scala.Double = typingsSlinky.osrm.mod.^.asInstanceOf[js.Dynamic].selectDynamic("version").asInstanceOf[scala.Double]
 }

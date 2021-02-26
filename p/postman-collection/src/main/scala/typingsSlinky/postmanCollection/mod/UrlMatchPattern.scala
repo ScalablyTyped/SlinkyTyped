@@ -2,13 +2,14 @@ package typingsSlinky.postmanCollection.mod
 
 import typingsSlinky.postmanCollection.anon.Host
 import typingsSlinky.postmanCollection.anon.Pattern
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("postman-collection", "UrlMatchPattern")
 @js.native
-class UrlMatchPattern protected () extends js.Object {
+class UrlMatchPattern protected () extends StObject {
   def this(options: String) = this()
   def this(options: Pattern) = this()
   
@@ -39,11 +40,21 @@ class UrlMatchPattern protected () extends js.Object {
   def update(options: Pattern): Unit = js.native
 }
 /* static members */
-@JSImport("postman-collection", "UrlMatchPattern")
-@js.native
-object UrlMatchPattern extends js.Object {
+object UrlMatchPattern {
   
-  var MATCH_ALL_URLS: String = js.native
+  @JSImport("postman-collection", "UrlMatchPattern")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var PROTOCOL_DELIMITER: String = js.native
+  @JSImport("postman-collection", "UrlMatchPattern.MATCH_ALL_URLS")
+  @js.native
+  def MATCH_ALL_URLS: String = js.native
+  @scala.inline
+  def MATCH_ALL_URLS_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MATCH_ALL_URLS")(x.asInstanceOf[js.Any])
+  
+  @JSImport("postman-collection", "UrlMatchPattern.PROTOCOL_DELIMITER")
+  @js.native
+  def PROTOCOL_DELIMITER: String = js.native
+  @scala.inline
+  def PROTOCOL_DELIMITER_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("PROTOCOL_DELIMITER")(x.asInstanceOf[js.Any])
 }

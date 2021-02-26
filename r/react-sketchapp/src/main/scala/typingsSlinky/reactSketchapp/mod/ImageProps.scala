@@ -1,12 +1,13 @@
 package typingsSlinky.reactSketchapp.mod
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ImageProps extends js.Object {
+trait ImageProps extends StObject {
   
   var children: js.UndefOr[js.Array[ReactElement] | ReactElement] = js.native
   
@@ -25,45 +26,33 @@ object ImageProps {
   }
   
   @scala.inline
-  implicit class ImagePropsOps[Self <: ImageProps] (val x: Self) extends AnyVal {
+  implicit class ImagePropsMutableBuilder[Self <: ImageProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChildren(value: js.Array[ReactElement] | ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChildrenReactElement(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
     
     @scala.inline
-    def setResizeMode(value: ResizeMode): Self = this.set("resizeMode", value.asInstanceOf[js.Any])
+    def setChildrenVarargs(value: ReactElement*): Self = StObject.set(x, "children", js.Array(value :_*))
     
     @scala.inline
-    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setResizeMode(value: ResizeMode): Self = StObject.set(x, "resizeMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenVarargs(value: ReactElement*): Self = this.set("children", js.Array(value :_*))
+    def setSource(value: ImageSource): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildren(value: js.Array[ReactElement] | ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setSourceUndefined: Self = StObject.set(x, "source", js.undefined)
     
     @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
+    def setStyle(value: Style | StyleReference): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSource(value: ImageSource): Self = this.set("source", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSource: Self = this.set("source", js.undefined)
-    
-    @scala.inline
-    def setStyle(value: Style | StyleReference): Self = this.set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStyle: Self = this.set("style", js.undefined)
+    def setStyleUndefined: Self = StObject.set(x, "style", js.undefined)
   }
 }

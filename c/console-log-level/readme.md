@@ -11,8 +11,8 @@ The most simple logger imaginable
 | Full name          | console-log-level |
 | Keywords           | log, logging, logger, console, console.log, stdout, stderr |
 | # releases         | 2 |
-| # dependents       | 38 |
-| # downloads        | 6037479 |
+| # dependents       | 54 |
+| # downloads        | 11629690 |
 | # stars            | 0 |
 
 ## Links

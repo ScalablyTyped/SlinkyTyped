@@ -1,6 +1,7 @@
 package typingsSlinky.cookieclicker.Game
 
 import typingsSlinky.cookieclicker.cookieclickerStrings.prestige
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

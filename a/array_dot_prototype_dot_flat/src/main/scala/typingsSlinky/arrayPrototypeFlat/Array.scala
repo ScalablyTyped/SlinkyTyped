@@ -8,12 +8,13 @@ import typingsSlinky.arrayPrototypeFlat.arrayPrototypeFlatNumbers.`4`
 import typingsSlinky.arrayPrototypeFlat.arrayPrototypeFlatNumbers.`5`
 import typingsSlinky.arrayPrototypeFlat.arrayPrototypeFlatNumbers.`6`
 import typingsSlinky.arrayPrototypeFlat.arrayPrototypeFlatNumbers.`7`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Array[T] extends js.Object {
+trait Array[T] extends StObject {
   
   /**
     * Returns a new array with all sub-array elements concatenated into it recursively up to the

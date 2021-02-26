@@ -7,6 +7,7 @@ import typingsSlinky.reactAriaModal.anon.PickAriaModalPropstitleTe
 import typingsSlinky.reactAriaModal.mod.AriaModalProps
 import typingsSlinky.reactAriaModal.mod.RequiredAriaTypes
 import typingsSlinky.reactAriaModal.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,11 +17,11 @@ typingsSlinky.reactAriaModal.anon.PickAriaModalPropstitleId,
 typingsSlinky.reactAriaModal.anon.PickAriaModalPropstitleTe]) because: IArray(Couldn't find props for typingsSlinky.reactAriaModal.reactAriaModalStrings.RequiredAriaTypes with typingsSlinky.reactAriaModal.anon.PickAriaModalPropstitleId with js.Any because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.), Couldn't find props for typingsSlinky.reactAriaModal.reactAriaModalStrings.RequiredAriaTypes with js.Any with typingsSlinky.reactAriaModal.anon.PickAriaModalPropstitleTe because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.)) */
 object ReactAriaModal {
   
+  def apply(p: AriaModalProps with (RequiredAriaTypes[PickAriaModalPropstitleId, PickAriaModalPropstitleTe])): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @JSImport("react-aria-modal", JSImport.Default)
   @js.native
-  object component extends js.Object
-  
-  def apply(p: AriaModalProps with (RequiredAriaTypes[PickAriaModalPropstitleId, PickAriaModalPropstitleTe])): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  val component: js.Object = js.native
   
   implicit def make(companion: ReactAriaModal.type): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, js.Dictionary.empty))()
 }

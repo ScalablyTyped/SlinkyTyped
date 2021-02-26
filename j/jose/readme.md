@@ -4,15 +4,15 @@
 Typings are for version 2.0.3
 
 ## Library description:
-JSON Web Almost Everything - JWA, JWS, JWE, JWK, JWT, JWKS for Node.js with minimal dependencies
+Universal 'JSON Web Almost Everything' - JWA, JWS, JWE, JWT, JWK with no dependencies
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | jose |
-| Keywords           | access token, access_token, compact, decode, decrypt, ec, ecdsa, eddsa, electron, encrypt, flattened, general, id token, id_token, jose, json web token, jsonwebtoken, jwa, jwe, jwk, jwks, jws, jwt, logout token, logout_token, oct, okp, rsa, secp256k1, sign, validate, verify |
-| # releases         | 21 |
-| # dependents       | 17 |
-| # downloads        | 208266 |
+| Keywords           | browser, compact, decode, decrypt, detached, ec, ecdsa, eddsa, electron, embedded, encrypt, flattened, general, isomorphic, jose, json web token, jsonwebtoken, jwa, jwe, jwk, jwks, jws, jwt, oct, okp, payload, rsa, secp256k1, sign, signature, universal, validate, verify, webcrypto |
+| # releases         | 65 |
+| # dependents       | 124 |
+| # downloads        | 7784992 |
 | # stars            | 2 |
 
 ## Links

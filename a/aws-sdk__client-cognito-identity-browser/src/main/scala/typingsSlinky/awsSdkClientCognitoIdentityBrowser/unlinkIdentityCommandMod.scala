@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesUnlinkIdentityInput
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesUnlinkIdentityOutputMod.UnlinkIdentityOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity-browser/commands/UnlinkIdentityCommand", JSImport.Namespace)
-@js.native
-object unlinkIdentityCommandMod extends js.Object {
+object unlinkIdentityCommandMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity-browser/commands/UnlinkIdentityCommand", "UnlinkIdentityCommand")
   @js.native
   class UnlinkIdentityCommand protected () extends Command[
           InputTypesUnion, 

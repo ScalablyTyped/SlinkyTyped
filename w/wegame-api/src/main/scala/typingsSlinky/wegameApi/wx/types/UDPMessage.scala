@@ -1,12 +1,13 @@
 package typingsSlinky.wegameApi.wx.types
 
 import typingsSlinky.wegameApi.anon.Address
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UDPMessage extends js.Object {
+trait UDPMessage extends StObject {
   
   /**
     * 收到的消息
@@ -27,24 +28,12 @@ object UDPMessage {
   }
   
   @scala.inline
-  implicit class UDPMessageOps[Self <: UDPMessage] (val x: Self) extends AnyVal {
+  implicit class UDPMessageMutableBuilder[Self <: UDPMessage] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setMessage(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setMessage(value: js.typedarray.ArrayBuffer): Self = this.set("message", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRemoteInfo(value: Address): Self = this.set("remoteInfo", value.asInstanceOf[js.Any])
+    def setRemoteInfo(value: Address): Self = StObject.set(x, "remoteInfo", value.asInstanceOf[js.Any])
   }
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet
 
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Date
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Builder for FilterCriteria.
   */
 @js.native
-trait FilterCriteriaBuilder extends js.Object {
+trait FilterCriteriaBuilder extends StObject {
   
   def build(): FilterCriteria = js.native
   

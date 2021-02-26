@@ -2,20 +2,25 @@ package typingsSlinky.classValidator
 
 import typingsSlinky.classValidator.validationOptionsMod.ValidationOptions
 import typingsSlinky.std.PropertyDecorator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("class-validator/types/decorator/number/Min", JSImport.Namespace)
-@js.native
-object minMod extends js.Object {
+object minMod {
   
+  @JSImport("class-validator/types/decorator/number/Min", "MIN")
+  @js.native
   val MIN: /* "min" */ String = js.native
   
-  @JSName("Min")
+  @JSImport("class-validator/types/decorator/number/Min", "Min")
+  @js.native
   def Min_(minValue: Double): PropertyDecorator = js.native
-  @JSName("Min")
+  @JSImport("class-validator/types/decorator/number/Min", "Min")
+  @js.native
   def Min_(minValue: Double, validationOptions: ValidationOptions): PropertyDecorator = js.native
   
+  @JSImport("class-validator/types/decorator/number/Min", "min")
+  @js.native
   def min(num: js.Any, min: Double): Boolean = js.native
 }

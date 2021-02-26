@@ -6,12 +6,13 @@ import typingsSlinky.chrome.chrome.management.ManagementEnabledEvent
 import typingsSlinky.chrome.chrome.management.ManagementInstalledEvent
 import typingsSlinky.chrome.chrome.management.ManagementUninstalledEvent
 import typingsSlinky.chrome.chrome.management.UninstallOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofmanagement extends js.Object {
+trait Typeofmanagement extends StObject {
   
   def createAppShortcut(id: String): Unit = js.native
   def createAppShortcut(id: String, callback: js.Function0[Unit]): Unit = js.native

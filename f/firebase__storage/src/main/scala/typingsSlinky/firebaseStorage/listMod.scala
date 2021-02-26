@@ -3,14 +3,14 @@ package typingsSlinky.firebaseStorage
 import typingsSlinky.firebaseStorage.referenceMod.ReferenceCompat
 import typingsSlinky.firebaseStorage.serviceMod.StorageServiceCompat
 import typingsSlinky.firebaseStorageTypes.mod.ListResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/storage/dist/compat/list", JSImport.Namespace)
-@js.native
-object listMod extends js.Object {
+object listMod {
   
+  @JSImport("@firebase/storage/dist/compat/list", "ListResultCompat")
   @js.native
   class ListResultCompat protected () extends ListResult {
     def this(_delegate: typingsSlinky.firebaseStorage.srcListMod.ListResult, _service: StorageServiceCompat) = this()

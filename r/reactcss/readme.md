@@ -10,9 +10,9 @@ Bringing Classes to Inline Styles
 | ------------------ | :-------------: |
 | Full name          | reactcss |
 | Keywords           | react, reactcss |
-| # releases         | 1 |
-| # dependents       | 92 |
-| # downloads        | 32524079 |
+| # releases         | 0 |
+| # dependents       | 127 |
+| # downloads        | 76621468 |
 | # stars            | 3 |
 
 ## Links

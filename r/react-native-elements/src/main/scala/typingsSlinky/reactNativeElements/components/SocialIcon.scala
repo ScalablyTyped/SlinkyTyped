@@ -8,15 +8,23 @@ import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.mod.SocialIconProps
 import typingsSlinky.reactNativeElements.mod.SocialMediaType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SocialIcon {
   
+  @scala.inline
+  def apply(`type`: SocialMediaType): Builder = {
+    val __props = js.Dynamic.literal()
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SocialIconProps]))
+  }
+  
   @JSImport("react-native-elements", "SocialIcon")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -85,11 +93,4 @@ object SocialIcon {
   }
   
   def withProps(p: SocialIconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(`type`: SocialMediaType): Builder = {
-    val __props = js.Dynamic.literal()
-    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SocialIconProps]))
-  }
 }

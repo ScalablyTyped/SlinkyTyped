@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientCompute.anon.HealthCheckKey
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RequestIdResourceUserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HealthChecksResource extends js.Object {
+trait HealthChecksResource extends StObject {
   
   /** Retrieves the list of all HealthCheck resources, regional and global, available to the specified project. */
   def aggregatedList(): Request[HealthChecksAggregatedList] = js.native

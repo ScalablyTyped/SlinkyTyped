@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/image/looks-two", JSImport.Namespace)
-@js.native
-object looksTwoMod extends js.Object {
+object looksTwoMod {
   
+  @JSImport("material-ui/svg-icons/image/looks-two", JSImport.Default)
+  @js.native
+  class default () extends ImageLooksTwo
+  
+  @JSImport("material-ui/svg-icons/image/looks-two", "ImageLooksTwo")
   @js.native
   class ImageLooksTwo ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

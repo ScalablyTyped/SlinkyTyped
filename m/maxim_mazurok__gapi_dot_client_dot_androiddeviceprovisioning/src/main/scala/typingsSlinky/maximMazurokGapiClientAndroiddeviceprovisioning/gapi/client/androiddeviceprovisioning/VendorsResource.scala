@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientAndroiddeviceprovisioning.gapi.clien
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAndroiddeviceprovisioning.anon.KeyOauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VendorsResource extends js.Object {
+trait VendorsResource extends StObject {
   
   var customers: CustomersResource = js.native
   

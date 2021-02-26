@@ -1,12 +1,13 @@
 package typingsSlinky.lodash.fpMod
 
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashIsMatch extends js.Object {
+trait LodashIsMatch extends StObject {
   
   def apply(source: js.Object): LodashIsMatch1x1 = js.native
   def apply(source: js.Object, `object`: js.Object): Boolean = js.native

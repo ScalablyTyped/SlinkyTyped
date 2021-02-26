@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientGlacierNode.typesAbortMultipartUploadInputMod.A
 import typingsSlinky.awsSdkClientGlacierNode.typesAbortMultipartUploadOutputMod.AbortMultipartUploadOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/commands/AbortMultipartUploadCommand", JSImport.Namespace)
-@js.native
-object abortMultipartUploadCommandMod extends js.Object {
+object abortMultipartUploadCommandMod {
   
+  @JSImport("@aws-sdk/client-glacier-node/commands/AbortMultipartUploadCommand", "AbortMultipartUploadCommand")
   @js.native
   class AbortMultipartUploadCommand protected () extends Command[
           InputTypesUnion, 

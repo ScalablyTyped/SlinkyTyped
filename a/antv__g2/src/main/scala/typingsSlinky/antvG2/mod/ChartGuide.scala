@@ -6,13 +6,14 @@ import typingsSlinky.antvG2.anon.End
 import typingsSlinky.antvG2.anon.Height
 import typingsSlinky.antvG2.anon.Start
 import typingsSlinky.antvG2.anon.Top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@antv/g2", "ChartGuide")
 @js.native
-class ChartGuide () extends js.Object {
+class ChartGuide () extends StObject {
   
   def arc(option: Top): Unit = js.native
   

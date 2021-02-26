@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientFirebase.anon.Key
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.Name
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AndroidAppsResource extends js.Object {
+trait AndroidAppsResource extends StObject {
   
   def create(request: Fields, body: AndroidApp): Request[Operation] = js.native
   /**

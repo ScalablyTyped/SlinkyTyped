@@ -1,13 +1,14 @@
 package typingsSlinky.randomJs
 
 import typingsSlinky.randomJs.typesMod.Engine
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("random-js/dist/distribution/realZeroToOneInclusive", JSImport.Namespace)
-@js.native
-object realZeroToOneInclusiveMod extends js.Object {
+object realZeroToOneInclusiveMod {
   
+  @JSImport("random-js/dist/distribution/realZeroToOneInclusive", "realZeroToOneInclusive")
+  @js.native
   def realZeroToOneInclusive(engine: Engine): Double = js.native
 }

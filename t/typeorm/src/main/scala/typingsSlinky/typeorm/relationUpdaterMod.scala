@@ -2,16 +2,16 @@ package typingsSlinky.typeorm
 
 import typingsSlinky.typeorm.queryBuilderMod.QueryBuilder
 import typingsSlinky.typeorm.queryExpressionMapMod.QueryExpressionMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/query-builder/RelationUpdater", JSImport.Namespace)
-@js.native
-object relationUpdaterMod extends js.Object {
+object relationUpdaterMod {
   
+  @JSImport("typeorm/browser/query-builder/RelationUpdater", "RelationUpdater")
   @js.native
-  class RelationUpdater protected () extends js.Object {
+  class RelationUpdater protected () extends StObject {
     def this(queryBuilder: QueryBuilder[_], expressionMap: QueryExpressionMap) = this()
     
     var expressionMap: QueryExpressionMap = js.native

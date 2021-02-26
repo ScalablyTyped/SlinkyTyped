@@ -1,12 +1,13 @@
 package typingsSlinky.winrt.global.Windows.Foundation
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Windows.Foundation.PropertyType")
 @js.native
-object PropertyType extends js.Object {
+object PropertyType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Foundation.PropertyType with Double] = js.native

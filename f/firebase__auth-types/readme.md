@@ -10,9 +10,9 @@ Typings are for version 0.10.1
 | ------------------ | :-------------: |
 | Full name          | @firebase/auth-types |
 | Keywords           | - |
-| # releases         | 916 |
-| # dependents       | 8 |
-| # downloads        | 16863630 |
+| # releases         | 1292 |
+| # dependents       | 12 |
+| # downloads        | 34671532 |
 | # stars            | 0 |
 
 ## Links

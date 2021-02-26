@@ -9,6 +9,7 @@ import typingsSlinky.atlaskitCalendar.mod.Props
 import typingsSlinky.atlaskitCalendar.mod.SelectEvent
 import typingsSlinky.atlaskitCalendar.mod.default
 import typingsSlinky.react.mod.HTMLAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object Calendar {
   
   @JSImport("@atlaskit/calendar", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,34 +32,34 @@ object Calendar {
     def defaultDay(value: Double): this.type = set("defaultDay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultDisabledVarargs(value: String*): this.type = set("defaultDisabled", js.Array(value :_*))
+    def defaultDisabled(value: js.Array[String]): this.type = set("defaultDisabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultDisabled(value: js.Array[String]): this.type = set("defaultDisabled", value.asInstanceOf[js.Any])
+    def defaultDisabledVarargs(value: String*): this.type = set("defaultDisabled", js.Array(value :_*))
     
     @scala.inline
     def defaultMonth(value: Double): this.type = set("defaultMonth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultPreviouslySelectedVarargs(value: String*): this.type = set("defaultPreviouslySelected", js.Array(value :_*))
-    
-    @scala.inline
     def defaultPreviouslySelected(value: js.Array[String]): this.type = set("defaultPreviouslySelected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultSelectedVarargs(value: String*): this.type = set("defaultSelected", js.Array(value :_*))
+    def defaultPreviouslySelectedVarargs(value: String*): this.type = set("defaultPreviouslySelected", js.Array(value :_*))
     
     @scala.inline
     def defaultSelected(value: js.Array[String]): this.type = set("defaultSelected", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def defaultSelectedVarargs(value: String*): this.type = set("defaultSelected", js.Array(value :_*))
+    
+    @scala.inline
     def defaultYear(value: Double): this.type = set("defaultYear", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabledVarargs(value: String*): this.type = set("disabled", js.Array(value :_*))
+    def disabled(value: js.Array[String]): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabled(value: js.Array[String]): this.type = set("disabled", value.asInstanceOf[js.Any])
+    def disabledVarargs(value: String*): this.type = set("disabled", js.Array(value :_*))
     
     @scala.inline
     def innerProps(value: HTMLAttributes[HTMLDivElement]): this.type = set("innerProps", value.asInstanceOf[js.Any])
@@ -79,16 +80,16 @@ object Calendar {
     def onSelect(value: /* e */ SelectEvent => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     
     @scala.inline
-    def previouslySelectedVarargs(value: String*): this.type = set("previouslySelected", js.Array(value :_*))
-    
-    @scala.inline
     def previouslySelected(value: js.Array[String]): this.type = set("previouslySelected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedVarargs(value: String*): this.type = set("selected", js.Array(value :_*))
+    def previouslySelectedVarargs(value: String*): this.type = set("previouslySelected", js.Array(value :_*))
     
     @scala.inline
     def selected(value: js.Array[String]): this.type = set("selected", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def selectedVarargs(value: String*): this.type = set("selected", js.Array(value :_*))
     
     @scala.inline
     def today(value: String): this.type = set("today", value.asInstanceOf[js.Any])
@@ -97,7 +98,7 @@ object Calendar {
     def year(value: Double): this.type = set("year", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Calendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

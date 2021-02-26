@@ -6,13 +6,18 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.olMod.Transform
 import typingsSlinky.ol.pluggableMapMod.FrameState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/renderer/canvas/Layer", JSImport.Namespace)
-@js.native
-object canvasLayerMod extends js.Object {
+object canvasLayerMod {
+  
+  @JSImport("ol/renderer/canvas/Layer", JSImport.Default)
+  @js.native
+  abstract class default[LayerType /* <: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default] */] protected () extends CanvasLayerRenderer[LayerType] {
+    def this(layer: LayerType) = this()
+  }
   
   @js.native
   trait CanvasLayerRenderer[LayerType /* <: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default] */]
@@ -65,10 +70,5 @@ object canvasLayerMod extends js.Object {
       * Get a rendering container from an existing target, if compatible.
       */
     def useContainer(target: HTMLElement, transform: String, opacity: Double): Unit = js.native
-  }
-  
-  @js.native
-  abstract class default[LayerType /* <: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default] */] protected () extends CanvasLayerRenderer[LayerType] {
-    def this(layer: LayerType) = this()
   }
 }

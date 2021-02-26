@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ErrorInfo
 import typingsSlinky.reactLifecycleComponent.mod.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object LifecycleComponent {
   
+  @scala.inline
+  def apply(component: ReactComponentClass[js.Any]): Builder = {
+    val __props = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props[js.Any, js.Any]]))
+  }
+  
   @JSImport("react-lifecycle-component", "LifecycleComponent")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -58,10 +65,4 @@ object LifecycleComponent {
   }
   
   def withProps(p: Props[js.Any, js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(component: ReactComponentClass[js.Any]): Builder = {
-    val __props = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props[js.Any, js.Any]]))
-  }
 }

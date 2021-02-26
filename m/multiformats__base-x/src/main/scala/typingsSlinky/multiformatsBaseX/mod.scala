@@ -1,17 +1,18 @@
 package typingsSlinky.multiformatsBaseX
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@multiformats/base-x", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@multiformats/base-x", JSImport.Namespace)
+  @js.native
   def apply(ALPHABET: String): BaseConverter = js.native
   
   @js.native
-  trait BaseConverter extends js.Object {
+  trait BaseConverter extends StObject {
     
     def decode(string: String): js.typedarray.Uint8Array = js.native
     

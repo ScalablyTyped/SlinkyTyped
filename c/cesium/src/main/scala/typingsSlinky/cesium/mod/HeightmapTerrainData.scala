@@ -3,13 +3,14 @@ package typingsSlinky.cesium.mod
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.cesium.anon.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "HeightmapTerrainData")
 @js.native
-class HeightmapTerrainData protected () extends js.Object {
+class HeightmapTerrainData protected () extends StObject {
   def this(options: Buffer) = this()
   
   def createMesh(tilingScheme: TilingScheme, x: Double, y: Double, level: Double): js.Promise[TerrainMesh] = js.native

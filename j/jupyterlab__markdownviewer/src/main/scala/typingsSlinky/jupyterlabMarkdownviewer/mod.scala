@@ -1,39 +1,47 @@
 package typingsSlinky.jupyterlabMarkdownviewer
 
+import typingsSlinky.jupyterlabDocregistry.defaultMod.DocumentWidget.IOptions
+import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IModel
 import typingsSlinky.jupyterlabMarkdownviewer.widgetMod.MarkdownViewer.IConfig
-import typingsSlinky.jupyterlabMarkdownviewer.widgetMod.MarkdownViewer.IOptions
 import typingsSlinky.luminoCoreutils.mod.Token
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/markdownviewer", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@jupyterlab/markdownviewer", "IMarkdownViewerTracker")
+  @js.native
   val IMarkdownViewerTracker: Token[typingsSlinky.jupyterlabMarkdownviewer.tokensMod.IMarkdownViewerTracker] = js.native
   
+  @JSImport("@jupyterlab/markdownviewer", "MarkdownDocument")
   @js.native
-  class MarkdownDocument ()
-    extends typingsSlinky.jupyterlabMarkdownviewer.widgetMod.MarkdownDocument
+  class MarkdownDocument protected ()
+    extends typingsSlinky.jupyterlabMarkdownviewer.widgetMod.MarkdownDocument {
+    def this(options: IOptions[typingsSlinky.jupyterlabMarkdownviewer.widgetMod.MarkdownViewer, IModel]) = this()
+  }
   
+  @JSImport("@jupyterlab/markdownviewer", "MarkdownViewer")
   @js.native
   class MarkdownViewer protected ()
     extends typingsSlinky.jupyterlabMarkdownviewer.widgetMod.MarkdownViewer {
     /**
       * Construct a new markdown viewer widget.
       */
-    def this(options: IOptions) = this()
+    def this(options: typingsSlinky.jupyterlabMarkdownviewer.widgetMod.MarkdownViewer.IOptions) = this()
   }
-  @js.native
-  object MarkdownViewer extends js.Object {
+  object MarkdownViewer {
     
     /**
       * The default configuration options for an editor.
       */
+    @JSImport("@jupyterlab/markdownviewer", "MarkdownViewer.defaultConfig")
+    @js.native
     val defaultConfig: IConfig = js.native
   }
   
+  @JSImport("@jupyterlab/markdownviewer", "MarkdownViewerFactory")
   @js.native
   class MarkdownViewerFactory protected ()
     extends typingsSlinky.jupyterlabMarkdownviewer.widgetMod.MarkdownViewerFactory {

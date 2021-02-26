@@ -4,16 +4,16 @@ import typingsSlinky.frctlFractal.anon.ClifractalFractal
 import typingsSlinky.frctlFractal.anon.Current
 import typingsSlinky.frctlFractal.anon.Description
 import typingsSlinky.frctlFractal.mod.CliTheme
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@frctl/fractal", "fractal.cli")
-@js.native
-object cli extends js.Object {
+object cli {
   
+  @JSImport("@frctl/fractal", "fractal.cli.Cli")
   @js.native
-  class Cli () extends js.Object {
+  class Cli () extends StObject {
     
     def command(
       commandString: String,
@@ -48,8 +48,9 @@ object cli extends js.Object {
     var notify_FCli: Notifier = js.native
   }
   
+  @JSImport("@frctl/fractal", "fractal.cli.Console")
   @js.native
-  class Console () extends js.Object {
+  class Console () extends StObject {
     
     def box(): this.type = js.native
     def box(header: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], footer: String): this.type = js.native
@@ -100,8 +101,9 @@ object cli extends js.Object {
     def write(str: String, `type`: String): Unit = js.native
   }
   
+  @JSImport("@frctl/fractal", "fractal.cli.Notifier")
   @js.native
-  class Notifier () extends js.Object {
+  class Notifier () extends StObject {
     
     def updateAvailable(details: Current): Unit = js.native
     

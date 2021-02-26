@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "GetPaymentResponse")
 @js.native
-class GetPaymentResponse () extends js.Object {
+class GetPaymentResponse () extends StObject {
   
   /**
     * Information about errors encountered during the request.

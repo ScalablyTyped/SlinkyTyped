@@ -1,5 +1,6 @@
 package typingsSlinky.xterm.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xterm.xtermStrings.error
   - typingsSlinky.xterm.xtermStrings.off
 */
-trait LogLevel extends js.Object
+trait LogLevel extends StObject
 object LogLevel {
   
   @scala.inline

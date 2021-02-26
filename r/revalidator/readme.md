@@ -12,7 +12,7 @@ A cross-browser / node.js validator powered by JSON Schema
 | Keywords           | - |
 | # releases         | 0 |
 | # dependents       | 71 |
-| # downloads        | 28211806 |
+| # downloads        | 31284260 |
 | # stars            | 8 |
 
 ## Links

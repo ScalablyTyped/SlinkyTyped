@@ -9,15 +9,22 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactLazylog.anon.Text
 import typingsSlinky.reactLazylog.lineMod.LineProps
 import typingsSlinky.reactLazylog.lineMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Line {
   
+  @scala.inline
+  def apply(data: js.Array[Text], number: Double, rowHeight: Double): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LineProps]))
+  }
+  
   @JSImport("react-lazylog/build/Line", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -44,10 +51,4 @@ object Line {
   }
   
   def withProps(p: LineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[Text], number: Double, rowHeight: Double): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[LineProps]))
-  }
 }

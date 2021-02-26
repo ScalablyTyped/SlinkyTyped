@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateSegmentInputMod.Upda
 import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateSegmentOutputMod.UpdateSegmentOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/UpdateSegmentCommand", JSImport.Namespace)
-@js.native
-object updateSegmentCommandMod extends js.Object {
+object updateSegmentCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/UpdateSegmentCommand", "UpdateSegmentCommand")
   @js.native
   class UpdateSegmentCommand protected () extends Command[
           InputTypesUnion, 

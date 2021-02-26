@@ -1,6 +1,7 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Security
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.secure_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.info
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`insecure-broken`
 */
-trait SecurityState extends js.Object
+trait SecurityState extends StObject
 object SecurityState {
   
   @scala.inline

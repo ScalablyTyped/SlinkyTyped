@@ -8,15 +8,22 @@ import typingsSlinky.reactTagAutocomplete.mod.ReactTagsProps
 import typingsSlinky.reactTagAutocomplete.mod.Tag
 import typingsSlinky.reactTagAutocomplete.mod.TagComponentProps
 import typingsSlinky.reactTagAutocomplete.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactTagAutocomplete {
   
+  @scala.inline
+  def apply(handleAddition: Tag => Unit, handleDelete: Double => Unit): Builder = {
+    val __props = js.Dynamic.literal(handleAddition = js.Any.fromFunction1(handleAddition), handleDelete = js.Any.fromFunction1(handleDelete))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactTagsProps]))
+  }
+  
   @JSImport("react-tag-autocomplete", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,16 +52,16 @@ object ReactTagAutocomplete {
     def clearInputOnDelete(value: Boolean): this.type = set("clearInputOnDelete", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def delimiterCharsVarargs(value: String*): this.type = set("delimiterChars", js.Array(value :_*))
-    
-    @scala.inline
     def delimiterChars(value: js.Array[String]): this.type = set("delimiterChars", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def delimitersVarargs(value: Double*): this.type = set("delimiters", js.Array(value :_*))
+    def delimiterCharsVarargs(value: String*): this.type = set("delimiterChars", js.Array(value :_*))
     
     @scala.inline
     def delimiters(value: js.Array[Double]): this.type = set("delimiters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def delimitersVarargs(value: Double*): this.type = set("delimiters", js.Array(value :_*))
     
     @scala.inline
     def handleBlur(value: () => Unit): this.type = set("handleBlur", js.Any.fromFunction0(value))
@@ -81,29 +88,23 @@ object ReactTagAutocomplete {
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suggestionsVarargs(value: Tag*): this.type = set("suggestions", js.Array(value :_*))
-    
-    @scala.inline
     def suggestions(value: js.Array[Tag]): this.type = set("suggestions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def suggestionsFilter(value: (/* suggestion */ Tag, /* query */ String) => Boolean): this.type = set("suggestionsFilter", js.Any.fromFunction2(value))
     
     @scala.inline
+    def suggestionsVarargs(value: Tag*): this.type = set("suggestions", js.Array(value :_*))
+    
+    @scala.inline
     def tagComponent(value: ReactComponentClass[TagComponentProps]): this.type = set("tagComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tagsVarargs(value: Tag*): this.type = set("tags", js.Array(value :_*))
+    def tags(value: js.Array[Tag]): this.type = set("tags", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tags(value: js.Array[Tag]): this.type = set("tags", value.asInstanceOf[js.Any])
+    def tagsVarargs(value: Tag*): this.type = set("tags", js.Array(value :_*))
   }
   
   def withProps(p: ReactTagsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(handleAddition: Tag => Unit, handleDelete: Double => Unit): Builder = {
-    val __props = js.Dynamic.literal(handleAddition = js.Any.fromFunction1(handleAddition), handleDelete = js.Any.fromFunction1(handleDelete))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactTagsProps]))
-  }
 }

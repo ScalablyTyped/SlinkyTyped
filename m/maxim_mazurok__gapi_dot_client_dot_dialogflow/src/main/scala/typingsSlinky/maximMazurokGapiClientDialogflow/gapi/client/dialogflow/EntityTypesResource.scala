@@ -15,12 +15,13 @@ import typingsSlinky.maximMazurokGapiClientDialogflow.anon.Resource
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EntityTypesResource extends js.Object {
+trait EntityTypesResource extends StObject {
   
   def batchDelete(request: Alt, body: GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest): Request[GoogleLongrunningOperation] = js.native
   /** Deletes entity types in the specified agent. Operation */

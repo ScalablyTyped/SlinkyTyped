@@ -1,17 +1,17 @@
 package typingsSlinky.xmldsigjs
 
-import typingsSlinky.xmlCore.mod.XmlCollection
-import typingsSlinky.xmlCore.mod.XmlObject
+import typingsSlinky.xmldsigjs.xmlObjectMod.XmlSignatureCollection
+import typingsSlinky.xmldsigjs.xmlObjectMod.XmlSignatureObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xmldsigjs/build/types/xml/reference", JSImport.Namespace)
-@js.native
-object referenceMod extends js.Object {
+object referenceMod {
   
+  @JSImport("xmldsigjs/build/types/xml/reference", "Reference")
   @js.native
-  class Reference () extends XmlObject {
+  class Reference () extends XmlSignatureObject {
     def this(uri: String) = this()
     
     /**
@@ -42,6 +42,9 @@ object referenceMod extends js.Object {
     var Uri: js.UndefOr[String] = js.native
   }
   
+  @JSImport("xmldsigjs/build/types/xml/reference", "References")
   @js.native
-  class References () extends XmlCollection[Reference]
+  class References () extends XmlSignatureCollection[Reference] {
+    def this(properties: js.Object) = this()
+  }
 }

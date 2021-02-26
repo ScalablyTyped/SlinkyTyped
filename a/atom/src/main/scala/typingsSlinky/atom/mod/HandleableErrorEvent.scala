@@ -1,11 +1,12 @@
 package typingsSlinky.atom.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HandleableErrorEvent extends js.Object {
+trait HandleableErrorEvent extends StObject {
   
   /** The error object. */
   var error: js.Error = js.native
@@ -25,24 +26,12 @@ object HandleableErrorEvent {
   }
   
   @scala.inline
-  implicit class HandleableErrorEventOps[Self <: HandleableErrorEvent] (val x: Self) extends AnyVal {
+  implicit class HandleableErrorEventMutableBuilder[Self <: HandleableErrorEvent] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setError(value: js.Error): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setError(value: js.Error): Self = this.set("error", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHandle(value: () => Unit): Self = this.set("handle", js.Any.fromFunction0(value))
+    def setHandle(value: () => Unit): Self = StObject.set(x, "handle", js.Any.fromFunction0(value))
   }
 }

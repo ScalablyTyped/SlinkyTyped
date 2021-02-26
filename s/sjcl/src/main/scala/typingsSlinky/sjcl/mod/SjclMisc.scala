@@ -1,12 +1,13 @@
 package typingsSlinky.sjcl.mod
 
 import typingsSlinky.sjcl.anon.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SjclMisc extends js.Object {
+trait SjclMisc extends StObject {
   
   def cachedPbkdf2(password: String): Key = js.native
   def cachedPbkdf2(password: String, obj: PBKDF2Params): Key = js.native

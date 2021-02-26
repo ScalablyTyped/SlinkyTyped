@@ -10,15 +10,22 @@ import typingsSlinky.antDesignReactNative.modalViewMod.IModalPropTypes
 import typingsSlinky.antDesignReactNative.modalViewMod.default
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ModalView {
   
+  @scala.inline
+  def apply(animationType: none | fade | `slide-up` | `slide-down`, visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(animationType = animationType.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IModalPropTypes]))
+  }
+  
   @JSImport("@ant-design/react-native/lib/modal/ModalView", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,10 +67,4 @@ object ModalView {
   }
   
   def withProps(p: IModalPropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(animationType: none | fade | `slide-up` | `slide-down`, visible: Boolean): Builder = {
-    val __props = js.Dynamic.literal(animationType = animationType.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IModalPropTypes]))
-  }
 }

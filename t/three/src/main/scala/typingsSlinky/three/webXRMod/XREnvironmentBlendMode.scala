@@ -1,5 +1,6 @@
 package typingsSlinky.three.webXRMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.three.threeStrings.additive
   - typingsSlinky.three.threeStrings.`alpha-blend`
 */
-trait XREnvironmentBlendMode extends js.Object
+trait XREnvironmentBlendMode extends StObject
 object XREnvironmentBlendMode {
   
   @scala.inline

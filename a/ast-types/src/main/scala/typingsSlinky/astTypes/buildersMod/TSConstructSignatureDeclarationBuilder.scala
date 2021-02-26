@@ -7,12 +7,13 @@ import typingsSlinky.astTypes.kindsMod.ObjectPatternKind
 import typingsSlinky.astTypes.kindsMod.RestElementKind
 import typingsSlinky.astTypes.kindsMod.TSTypeAnnotationKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSConstructSignatureDeclaration
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TSConstructSignatureDeclarationBuilder extends js.Object {
+trait TSConstructSignatureDeclarationBuilder extends StObject {
   
   def apply(parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind]): TSConstructSignatureDeclaration = js.native
   def apply(

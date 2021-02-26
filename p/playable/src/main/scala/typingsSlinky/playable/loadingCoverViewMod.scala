@@ -2,17 +2,20 @@ package typingsSlinky.playable
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.loadingCoverTypesMod.ILoadingCoverViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/loading-cover/loading-cover.view", JSImport.Namespace)
-@js.native
-object loadingCoverViewMod extends js.Object {
+object loadingCoverViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/loading-cover/loading-cover.view", JSImport.Default)
+  @js.native
+  class default () extends LoadingCoverView
   
   @js.native
   trait LoadingCoverView
-    extends typingsSlinky.playable.stylableMod.default[ILoadingCoverViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[ILoadingCoverViewStyles] {
     
     @JSName("_$image")
     var _$image: js.Any = js.native
@@ -33,7 +36,4 @@ object loadingCoverViewMod extends js.Object {
     
     def show(): Unit = js.native
   }
-  
-  @js.native
-  class default () extends LoadingCoverView
 }

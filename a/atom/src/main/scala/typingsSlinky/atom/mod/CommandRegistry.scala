@@ -6,12 +6,13 @@ import org.scalajs.dom.raw.Node
 import typingsSlinky.atom.anon.DisplayName
 import typingsSlinky.atom.anon.Target
 import typingsSlinky.atom.atomStrings.`atom-text-editor`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CommandRegistry extends js.Object {
+trait CommandRegistry extends StObject {
   
   /** Register a single command. */
   def add[T /* <: Node */](target: T, commandName: String, listener: CommandRegistryListener[T]): Disposable = js.native

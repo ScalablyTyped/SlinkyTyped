@@ -7,12 +7,13 @@ import typingsSlinky.select2.select2Strings.close
 import typingsSlinky.select2.select2Strings.data
 import typingsSlinky.select2.select2Strings.destroy
 import typingsSlinky.select2.select2Strings.open
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Select2Plugin[TElement] extends js.Object {
+trait Select2Plugin[TElement] extends StObject {
   
   def apply(): JQuery[TElement] = js.native
   /**

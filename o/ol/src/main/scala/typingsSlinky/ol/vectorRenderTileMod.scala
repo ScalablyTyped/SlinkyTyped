@@ -6,16 +6,26 @@ import typingsSlinky.ol.olFeatureMod.FeatureLike
 import typingsSlinky.ol.renderMod.OrderFunction
 import typingsSlinky.ol.tileStateMod.TileState
 import typingsSlinky.ol.tilecoordMod.TileCoord
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/VectorRenderTile", JSImport.Namespace)
-@js.native
-object vectorRenderTileMod extends js.Object {
+object vectorRenderTileMod {
+  
+  @JSImport("ol/VectorRenderTile", JSImport.Default)
+  @js.native
+  class default protected () extends VectorRenderTile {
+    def this(
+      tileCoord: TileCoord,
+      state: TileState,
+      urlTileCoord: TileCoord,
+      getSourceTiles: js.Function1[/* p0 */ VectorRenderTile, js.Array[typingsSlinky.ol.olVectorTileMod.default]]
+    ) = this()
+  }
   
   @js.native
-  trait ReplayState extends js.Object {
+  trait ReplayState extends StObject {
     
     var dirty: Boolean = js.native
     
@@ -50,15 +60,5 @@ object vectorRenderTileMod extends js.Object {
     def getReplayState(layer: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default]): ReplayState = js.native
     
     def hasContext(layer: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default]): Boolean = js.native
-  }
-  
-  @js.native
-  class default protected () extends VectorRenderTile {
-    def this(
-      tileCoord: TileCoord,
-      state: TileState,
-      urlTileCoord: TileCoord,
-      getSourceTiles: js.Function1[/* p0 */ VectorRenderTile, js.Array[typingsSlinky.ol.olVectorTileMod.default]]
-    ) = this()
   }
 }

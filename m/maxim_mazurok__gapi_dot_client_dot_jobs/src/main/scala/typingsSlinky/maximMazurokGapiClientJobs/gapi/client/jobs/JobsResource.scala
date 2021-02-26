@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientJobs.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientJobs.anon.Parent
 import typingsSlinky.maximMazurokGapiClientJobs.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientJobs.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JobsResource extends js.Object {
+trait JobsResource extends StObject {
   
   def batchDelete(request: Alt, body: BatchDeleteJobsRequest): Request[js.Object] = js.native
   /** Deletes a list of Jobs by filter. */

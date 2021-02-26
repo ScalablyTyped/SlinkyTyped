@@ -2,12 +2,13 @@ package typingsSlinky.activexWord.Word
 
 import typingsSlinky.activexOffice.Office.MsoEditingType
 import typingsSlinky.activexOffice.Office.MsoSegmentType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ShapeNodes extends js.Object {
+trait ShapeNodes extends StObject {
   
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   

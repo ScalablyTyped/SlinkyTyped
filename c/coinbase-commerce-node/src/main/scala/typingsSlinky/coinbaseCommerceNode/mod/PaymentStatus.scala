@@ -1,5 +1,6 @@
 package typingsSlinky.coinbaseCommerceNode.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.EXPIRED
   - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CANCELED
 */
-trait PaymentStatus extends js.Object
+trait PaymentStatus extends StObject
 object PaymentStatus {
   
   @scala.inline

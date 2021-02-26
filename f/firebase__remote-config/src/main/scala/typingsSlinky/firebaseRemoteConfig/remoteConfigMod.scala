@@ -5,14 +5,14 @@ import typingsSlinky.firebaseLogger.mod.Logger
 import typingsSlinky.firebaseRemoteConfig.remoteConfigFetchClientMod.RemoteConfigFetchClient
 import typingsSlinky.firebaseRemoteConfig.storageCacheMod.StorageCache
 import typingsSlinky.firebaseRemoteConfig.storageMod.Storage
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/remote-config/dist/src/remote_config", JSImport.Namespace)
-@js.native
-object remoteConfigMod extends js.Object {
+object remoteConfigMod {
   
+  @JSImport("@firebase/remote-config/dist/src/remote_config", "RemoteConfig")
   @js.native
   class RemoteConfig protected ()
     extends typingsSlinky.firebaseRemoteConfigTypes.mod.RemoteConfig {

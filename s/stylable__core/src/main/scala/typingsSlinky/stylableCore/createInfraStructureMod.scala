@@ -4,16 +4,18 @@ import typingsSlinky.stylableCore.anon.OmitTimedCacheOptionscrea
 import typingsSlinky.stylableCore.cachedProcessFileMod.FileProcessor
 import typingsSlinky.stylableCore.cachedProcessFileMod.MinimalFS
 import typingsSlinky.stylableCore.diagnosticsMod.Diagnostics
+import typingsSlinky.stylableCore.parserMod.CssParser
 import typingsSlinky.stylableCore.stylableProcessorMod.StylableMeta
 import typingsSlinky.stylableCore.typesMod.ModuleResolver
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@stylable/core/cjs/create-infra-structure", JSImport.Namespace)
-@js.native
-object createInfraStructureMod extends js.Object {
+object createInfraStructureMod {
   
+  @JSImport("@stylable/core/cjs/create-infra-structure", "createInfrastructure")
+  @js.native
   def createInfrastructure(
     projectRoot: String,
     fileSystem: MinimalFS,
@@ -22,11 +24,12 @@ object createInfraStructureMod extends js.Object {
     resolveNamespace: js.UndefOr[js.Function2[/* namespace */ String, /* source */ String, String]],
     timedCacheOptions: js.UndefOr[OmitTimedCacheOptionscrea],
     resolveModule: js.UndefOr[ModuleResolver],
+    cssParser: js.UndefOr[CssParser],
     createDiagnostics: js.UndefOr[js.Function1[/* from */ String, Diagnostics]]
   ): StylableInfrastructure = js.native
   
   @js.native
-  trait StylableInfrastructure extends js.Object {
+  trait StylableInfrastructure extends StObject {
     
     var fileProcessor: FileProcessor[StylableMeta] = js.native
     

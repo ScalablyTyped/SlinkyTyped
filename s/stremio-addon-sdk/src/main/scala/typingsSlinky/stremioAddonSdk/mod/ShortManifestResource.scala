@@ -1,5 +1,6 @@
 package typingsSlinky.stremioAddonSdk.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.stremioAddonSdk.stremioAddonSdkStrings.subtitles
   - typingsSlinky.stremioAddonSdk.stremioAddonSdkStrings.addon_catalog
 */
-trait ShortManifestResource extends js.Object
+trait ShortManifestResource extends StObject
 object ShortManifestResource {
   
   @scala.inline

@@ -1,16 +1,15 @@
 package typingsSlinky.pQueue
 
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("p-queue/dist/queue", JSImport.Namespace)
-@js.native
-object queueMod extends js.Object {
+object queueMod {
   
   @js.native
-  trait Queue[Element, Options] extends js.Object {
+  trait Queue[Element, Options] extends StObject {
     
     def dequeue(): js.UndefOr[Element] = js.native
     

@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.1
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/http-serialization |
 | Keywords           | - |
-| # releases         | 10 |
+| # releases         | 12 |
 | # dependents       | 0 |
-| # downloads        | 454 |
+| # downloads        | 701 |
 | # stars            | 0 |
 
 ## Links

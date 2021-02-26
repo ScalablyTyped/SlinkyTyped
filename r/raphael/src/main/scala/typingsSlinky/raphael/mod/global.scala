@@ -1,18 +1,18 @@
 package typingsSlinky.raphael.mod
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
 import typingsSlinky.raphael.raphaelStrings.SVG
 import typingsSlinky.raphael.raphaelStrings.VML
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSGlobal("Raphael")
   @js.native
   /**
     * @param onReadyCallback Function that is going to be called on DOM ready event. You can also subscribe to this
@@ -90,6 +90,7 @@ object global extends js.Object {
     *
     * See https://dmitrybaranovskiy.github.io/raphael/
     */
+  @JSGlobal("Raphael")
   @js.native
-  object Raphael extends TopLevel[RaphaelStatic[SVG | VML]]
+  val Raphael: RaphaelStatic[SVG | VML] = js.native
 }

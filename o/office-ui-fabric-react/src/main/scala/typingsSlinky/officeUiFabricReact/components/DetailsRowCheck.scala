@@ -79,15 +79,22 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DetailsRowCheck {
   
+  @scala.inline
+  def apply(canSelect: Boolean): Builder = {
+    val __props = js.Dynamic.literal(canSelect = canSelect.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsRowCheckProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "DetailsRowCheck")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -286,10 +293,10 @@ object DetailsRowCheck {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -615,10 +622,10 @@ object DetailsRowCheck {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IDetailsRowCheckStyleProps => DeepPartial[IDetailsRowCheckStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IDetailsRowCheckStyleProps, IDetailsRowCheckStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IDetailsRowCheckStyleProps, IDetailsRowCheckStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IDetailsRowCheckStyleProps => DeepPartial[IDetailsRowCheckStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -652,10 +659,4 @@ object DetailsRowCheck {
   }
   
   def withProps(p: IDetailsRowCheckProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(canSelect: Boolean): Builder = {
-    val __props = js.Dynamic.literal(canSelect = canSelect.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsRowCheckProps]))
-  }
 }

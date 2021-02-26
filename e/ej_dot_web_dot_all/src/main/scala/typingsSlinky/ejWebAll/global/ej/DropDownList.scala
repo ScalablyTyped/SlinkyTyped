@@ -2,6 +2,7 @@ package typingsSlinky.ejWebAll.global.ej
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,17 +11,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class DropDownList protected ()
   extends typingsSlinky.ejWebAll.ej.DropDownList {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.DropDownList.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.DropDownList.Model) = this()
+  def this(element: JQuery) = this()
+  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Model) = this()
+  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Model) = this()
 }
-/* static members */
-@JSGlobal("ej.DropDownList")
-@js.native
-object DropDownList extends js.Object {
+object DropDownList {
   
-  var Locale: js.Any = js.native
+  @JSGlobal("ej.DropDownList")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var fn: typingsSlinky.ejWebAll.ej.DropDownList = js.native
+  /* static member */
+  @JSGlobal("ej.DropDownList.Locale")
+  @js.native
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSGlobal("ej.DropDownList.fn")
+  @js.native
+  def fn: typingsSlinky.ejWebAll.ej.DropDownList = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.DropDownList): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

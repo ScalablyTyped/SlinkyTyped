@@ -10,9 +10,9 @@ Common Ethereum constants used for ethers.
 | ------------------ | :-------------: |
 | Full name          | @ethersproject/constants |
 | Keywords           | Ethereum, ethers |
-| # releases         | 18 |
-| # dependents       | 8 |
-| # downloads        | 194382 |
+| # releases         | 28 |
+| # dependents       | 40 |
+| # downloads        | 2919399 |
 | # stars            | 0 |
 
 ## Links

@@ -1,6 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.mod
 
 import typingsSlinky.awsSdkClientS3Browser.typesGetBucketLocationInputMod.GetBucketLocationInput
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

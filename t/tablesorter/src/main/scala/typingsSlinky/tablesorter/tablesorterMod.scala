@@ -41,16 +41,15 @@ import typingsSlinky.tablesorter.tablesorterStrings.string
 import typingsSlinky.tablesorter.themeCollectionMod.ThemeCollection
 import typingsSlinky.tablesorter.triggerCallbackHandlerMod.TriggerCallbackHandler
 import typingsSlinky.tablesorter.widgetMod.Widget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tablesorter/Tablesorter", JSImport.Namespace)
-@js.native
-object tablesorterMod extends js.Object {
+object tablesorterMod {
   
   @js.native
-  trait Tablesorter[TElement] extends js.Object {
+  trait Tablesorter[TElement] extends StObject {
     
     def addHeaderResizeEvent(table: TElement, disable: Boolean): Unit = js.native
     def addHeaderResizeEvent(table: TElement, disable: Boolean, options: HeaderResizeOptions): Unit = js.native

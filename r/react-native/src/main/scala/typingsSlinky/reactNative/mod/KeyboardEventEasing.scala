@@ -1,5 +1,6 @@
 package typingsSlinky.reactNative.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNative.reactNativeStrings.linear
   - typingsSlinky.reactNative.reactNativeStrings.keyboard
 */
-trait KeyboardEventEasing extends js.Object
+trait KeyboardEventEasing extends StObject
 object KeyboardEventEasing {
   
   @scala.inline

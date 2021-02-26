@@ -6,14 +6,14 @@ import typingsSlinky.three.animationObjectGroupMod.AnimationObjectGroup
 import typingsSlinky.three.constantsMod.AnimationBlendMode
 import typingsSlinky.three.eventDispatcherMod.EventDispatcher
 import typingsSlinky.three.object3DMod.Object3D
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/animation/AnimationMixer", JSImport.Namespace)
-@js.native
-object animationMixerMod extends js.Object {
+object animationMixerMod {
   
+  @JSImport("three/src/animation/AnimationMixer", "AnimationMixer")
   @js.native
   class AnimationMixer protected () extends EventDispatcher {
     def this(root: AnimationObjectGroup) = this()

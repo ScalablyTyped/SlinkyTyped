@@ -1,12 +1,13 @@
 package typingsSlinky.winrt.Windows.Media
 
 import typingsSlinky.winrt.Windows.Foundation.Collections.IPropertySet
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IMediaExtensionManager extends js.Object {
+trait IMediaExtensionManager extends StObject {
   
   def registerAudioDecoder(activatableClassId: String, inputSubtype: String, outputSubtype: String): Unit = js.native
   def registerAudioDecoder(

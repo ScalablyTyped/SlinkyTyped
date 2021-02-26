@@ -6,6 +6,7 @@ import typingsSlinky.lodash.lodashStrings.desc
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.NonNullable
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

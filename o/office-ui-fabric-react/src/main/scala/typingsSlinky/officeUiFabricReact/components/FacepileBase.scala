@@ -17,15 +17,22 @@ import typingsSlinky.officeUiFabricReact.personaTypesMod.PersonaSize
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FacepileBase {
   
+  @scala.inline
+  def apply(personas: js.Array[IFacepilePersona]): Builder = {
+    val __props = js.Dynamic.literal(personas = personas.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IFacepileProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "FacepileBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -48,13 +55,13 @@ object FacepileBase {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IFacepile]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IFacepile | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IFacepile]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IFacepile]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def getPersonaProps(value: /* persona */ IFacepilePersona => IPersonaSharedProps): this.type = set("getPersonaProps", js.Any.fromFunction1(value))
@@ -79,10 +86,10 @@ object FacepileBase {
     def overflowButtonType(value: OverflowButtonType): this.type = set("overflowButtonType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overflowPersonasVarargs(value: IFacepilePersona*): this.type = set("overflowPersonas", js.Array(value :_*))
+    def overflowPersonas(value: js.Array[IFacepilePersona]): this.type = set("overflowPersonas", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overflowPersonas(value: js.Array[IFacepilePersona]): this.type = set("overflowPersonas", value.asInstanceOf[js.Any])
+    def overflowPersonasVarargs(value: IFacepilePersona*): this.type = set("overflowPersonas", js.Array(value :_*))
     
     @scala.inline
     def personaSize(value: PersonaSize): this.type = set("personaSize", value.asInstanceOf[js.Any])
@@ -91,20 +98,14 @@ object FacepileBase {
     def showAddButton(value: Boolean): this.type = set("showAddButton", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IFacepileStyleProps => DeepPartial[IFacepileStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IFacepileStyleProps, IFacepileStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IFacepileStyleProps, IFacepileStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IFacepileStyleProps => DeepPartial[IFacepileStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IFacepileProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(personas: js.Array[IFacepilePersona]): Builder = {
-    val __props = js.Dynamic.literal(personas = personas.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IFacepileProps]))
-  }
 }

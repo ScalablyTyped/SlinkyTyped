@@ -1,6 +1,7 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.model
 
 import typingsSlinky.std.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@ckeditor/ckeditor5-engine", "model.DocumentFragment")
 @js.native
 class DocumentFragment protected () extends _NodeSet {
-  protected def this(children: Node) = this()
   protected def this(children: js.Iterable[Node]) = this()
+  protected def this(children: Node) = this()
   
-  /* protected */ def _appendChild(items: Item): Unit = js.native
   /* protected */ def _appendChild(items: js.Iterable[Item]): Unit = js.native
+  /* protected */ def _appendChild(items: Item): Unit = js.native
   
-  /* protected */ def _insertChild(index: Double, items: Item): Unit = js.native
   /* protected */ def _insertChild(index: Double, items: js.Iterable[Item]): Unit = js.native
+  /* protected */ def _insertChild(index: Double, items: Item): Unit = js.native
   
   /* protected */ def _removeChildren(index: Double): js.Array[Node] = js.native
   /* protected */ def _removeChildren(index: Double, howMany: Double): js.Array[Node] = js.native
@@ -35,7 +36,8 @@ class DocumentFragment protected () extends _NodeSet {
   
   def getPath(): js.Array[Double] = js.native
   
-   /*TS3.0: []*/ def is(`type`: String): Boolean = js.native
+  /*TS3.0: []*/
+  def is(`type`: String): Boolean = js.native
   
   val isEmpty: Boolean = js.native
   
@@ -54,10 +56,10 @@ class DocumentFragment protected () extends _NodeSet {
   
   def toJSON(): js.Object = js.native
 }
-/* static members */
-@JSImport("@ckeditor/ckeditor5-engine", "model.DocumentFragment")
-@js.native
-object DocumentFragment extends js.Object {
+object DocumentFragment {
   
+  /* static member */
+  @JSImport("@ckeditor/ckeditor5-engine", "model.DocumentFragment.fromJSON")
+  @js.native
   def fromJSON(json: js.Object): DocumentFragment = js.native
 }

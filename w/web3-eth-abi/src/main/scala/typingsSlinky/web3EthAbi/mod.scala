@@ -3,16 +3,16 @@ package typingsSlinky.web3EthAbi
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.web3Utils.mod.AbiInput
 import typingsSlinky.web3Utils.mod.AbiItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("web3-eth-abi", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("web3-eth-abi", "AbiCoder")
   @js.native
-  class AbiCoder () extends js.Object {
+  class AbiCoder () extends StObject {
     
     def decodeLog(inputs: js.Array[AbiInput], hex: String, topics: js.Array[String]): StringDictionary[String] = js.native
     

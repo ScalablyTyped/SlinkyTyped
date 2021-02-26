@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientBigquery.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientBigquery.anon.ModelId
 import typingsSlinky.maximMazurokGapiClientBigquery.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ModelsResource extends js.Object {
+trait ModelsResource extends StObject {
   
   /** Deletes the model specified by modelId from the dataset. */
   def delete(): Request[Unit] = js.native

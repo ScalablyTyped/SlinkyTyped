@@ -1,13 +1,14 @@
 package typingsSlinky.vscode.anon
 
 import typingsSlinky.vscode.Thenable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined vscode.vscode.Memento & {setKeysForSync (keys : std.Array<string>): void} */
 @js.native
-trait MementosetKeysForSynckeys extends js.Object {
+trait MementosetKeysForSynckeys extends StObject {
   
   /**
     * Return a value.

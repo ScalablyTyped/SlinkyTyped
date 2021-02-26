@@ -8,6 +8,7 @@ import typingsSlinky.typeorm.typeormStrings.migration
 import typingsSlinky.typeorm.typeormStrings.query
 import typingsSlinky.typeorm.typeormStrings.schema
 import typingsSlinky.typeorm.typeormStrings.warn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

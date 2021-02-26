@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.columnColumnMod.ColumnProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/column", JSImport.Namespace)
-@js.native
-object columnMod extends js.Object {
+object columnMod {
   
+  @JSImport("primereact/column", "Column")
   @js.native
-  class Column ()
-    extends Component[ColumnProps, js.Any, js.Any]
+  class Column protected ()
+    extends typingsSlinky.primereact.columnColumnMod.Column {
+    def this(props: ColumnProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: ColumnProps, context: js.Any) = this()
+  }
 }

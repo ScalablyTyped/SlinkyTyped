@@ -15,6 +15,7 @@ import typingsSlinky.fabric.fabricStrings._empty
 import typingsSlinky.fabric.fabricStrings.italic
 import typingsSlinky.fabric.fabricStrings.normal
 import typingsSlinky.fabric.fabricStrings.oblique
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -579,11 +580,17 @@ class Text protected () extends Object {
   var underline: js.UndefOr[Boolean] = js.native
 }
 /* static members */
-@JSImport("fabric/fabric-impl", "Text")
-@js.native
-object Text extends js.Object {
+object Text {
   
-  var DEFAULT_SVG_FONT_SIZE: Double = js.native
+  @JSImport("fabric/fabric-impl", "Text")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  @JSImport("fabric/fabric-impl", "Text.DEFAULT_SVG_FONT_SIZE")
+  @js.native
+  def DEFAULT_SVG_FONT_SIZE: Double = js.native
+  @scala.inline
+  def DEFAULT_SVG_FONT_SIZE_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DEFAULT_SVG_FONT_SIZE")(x.asInstanceOf[js.Any])
   
   /**
     * Returns fabric.Text instance from an SVG element (<b>not yet implemented</b>)
@@ -593,9 +600,17 @@ object Text extends js.Object {
     * @param {Function} callback callback function invoked after parsing
     * @param {Object} [options] Options object
     */
+  @JSImport("fabric/fabric-impl", "Text.fromElement")
+  @js.native
   def fromElement(element: SVGElement): Text = js.native
+  @JSImport("fabric/fabric-impl", "Text.fromElement")
+  @js.native
   def fromElement(element: SVGElement, callback: js.UndefOr[scala.Nothing], options: TextOptions): Text = js.native
+  @JSImport("fabric/fabric-impl", "Text.fromElement")
+  @js.native
   def fromElement(element: SVGElement, callback: js.Function): Text = js.native
+  @JSImport("fabric/fabric-impl", "Text.fromElement")
+  @js.native
   def fromElement(element: SVGElement, callback: js.Function, options: TextOptions): Text = js.native
   
   /**
@@ -605,6 +620,10 @@ object Text extends js.Object {
     * @param {Object} object Object to create an instance from
     * @param {Function} [callback] Callback to invoke when an fabric.Text instance is created
     */
+  @JSImport("fabric/fabric-impl", "Text.fromObject")
+  @js.native
   def fromObject(`object`: js.Any): Text = js.native
+  @JSImport("fabric/fabric-impl", "Text.fromObject")
+  @js.native
   def fromObject(`object`: js.Any, callback: js.Function): Text = js.native
 }

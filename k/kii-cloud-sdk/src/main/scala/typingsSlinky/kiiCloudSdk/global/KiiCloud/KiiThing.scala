@@ -4,6 +4,7 @@ import typingsSlinky.kiiCloudSdk.KiiCloud.KiiThingFields
 import typingsSlinky.kiiCloudSdk.anon.`1`
 import typingsSlinky.kiiCloudSdk.anon.`2`
 import typingsSlinky.kiiCloudSdk.anon.`3`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,10 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class KiiThing ()
   extends typingsSlinky.kiiCloudSdk.KiiCloud.KiiThing
-/* static members */
-@JSGlobal("KiiCloud.KiiThing")
-@js.native
-object KiiThing extends js.Object {
+object KiiThing {
   
   /**
     * Load thing with thing id given by Kii Cloud.
@@ -64,7 +62,12 @@ object KiiThing extends js.Object {
     *         }
     *     );
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiThing.loadWithThingID")
+  @js.native
   def loadWithThingID(thingID: String): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiThing] = js.native
+  @JSGlobal("KiiCloud.KiiThing.loadWithThingID")
+  @js.native
   def loadWithThingID(thingID: String, callbacks: `1`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiThing] = js.native
   
   /**
@@ -109,7 +112,12 @@ object KiiThing extends js.Object {
     *         }
     *     );
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiThing.loadWithVendorThingID")
+  @js.native
   def loadWithVendorThingID(vendorThingID: String): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiThing] = js.native
+  @JSGlobal("KiiCloud.KiiThing.loadWithVendorThingID")
+  @js.native
   def loadWithVendorThingID(vendorThingID: String, callbacks: `1`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiThing] = js.native
   
   /**
@@ -188,10 +196,19 @@ object KiiThing extends js.Object {
     *         }
     *     );
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiThing.register")
+  @js.native
   def register(fields: KiiThingFields): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiThing] = js.native
+  @JSGlobal("KiiCloud.KiiThing.register")
+  @js.native
   def register(fields: KiiThingFields, callbacks: `1`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiThing] = js.native
   
+  @JSGlobal("KiiCloud.KiiThing.registerOwnerWithThingID")
+  @js.native
   def registerOwnerWithThingID(thingID: String, owner: typingsSlinky.kiiCloudSdk.KiiCloud.KiiGroup): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiGroup] = js.native
+  @JSGlobal("KiiCloud.KiiThing.registerOwnerWithThingID")
+  @js.native
   def registerOwnerWithThingID(thingID: String, owner: typingsSlinky.kiiCloudSdk.KiiCloud.KiiGroup, callbacks: `3`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiGroup] = js.native
   /**
     * Register user/group as owner of specified thing.
@@ -243,10 +260,19 @@ object KiiThing extends js.Object {
     *         }
     *     );
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiThing.registerOwnerWithThingID")
+  @js.native
   def registerOwnerWithThingID(thingID: String, owner: typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
+  @JSGlobal("KiiCloud.KiiThing.registerOwnerWithThingID")
+  @js.native
   def registerOwnerWithThingID(thingID: String, owner: typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser, callbacks: `2`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   
+  @JSGlobal("KiiCloud.KiiThing.registerOwnerWithVendorThingID")
+  @js.native
   def registerOwnerWithVendorThingID(vendorThingID: String, owner: typingsSlinky.kiiCloudSdk.KiiCloud.KiiGroup): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiGroup] = js.native
+  @JSGlobal("KiiCloud.KiiThing.registerOwnerWithVendorThingID")
+  @js.native
   def registerOwnerWithVendorThingID(vendorThingID: String, owner: typingsSlinky.kiiCloudSdk.KiiCloud.KiiGroup, callbacks: `3`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiGroup] = js.native
   /**
     * Register user/group as owner of specified thing.
@@ -297,6 +323,11 @@ object KiiThing extends js.Object {
     *         }
     *     );
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiThing.registerOwnerWithVendorThingID")
+  @js.native
   def registerOwnerWithVendorThingID(vendorThingID: String, owner: typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
+  @JSGlobal("KiiCloud.KiiThing.registerOwnerWithVendorThingID")
+  @js.native
   def registerOwnerWithVendorThingID(vendorThingID: String, owner: typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser, callbacks: `2`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
 }

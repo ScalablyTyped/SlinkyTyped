@@ -3,6 +3,7 @@ package typingsSlinky.uirouterAngularjs.mod
 import typingsSlinky.uirouterCore.transitionHookMod.GetErrorHandler
 import typingsSlinky.uirouterCore.transitionHookMod.GetResultHandler
 import typingsSlinky.uirouterCore.transitionInterfaceMod.PathType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -5,14 +5,14 @@ import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialC
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
 import typingsSlinky.babylonjs.nodeMaterialBuildStateMod.NodeMaterialBuildState
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Dual/reflectionTextureBaseBlock", JSImport.Namespace)
-@js.native
-object reflectionTextureBaseBlockMod extends js.Object {
+object reflectionTextureBaseBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Dual/reflectionTextureBaseBlock", "ReflectionTextureBaseBlock")
   @js.native
   abstract class ReflectionTextureBaseBlock protected () extends NodeMaterialBlock {
     /**

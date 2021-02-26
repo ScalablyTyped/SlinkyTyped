@@ -1,20 +1,19 @@
 package typingsSlinky.fastTextEncoding
 
 import typingsSlinky.fastTextEncoding.fastTextEncoding.TextDecoderOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
-  @js.native
-  object fastTextEncoding extends js.Object {
+  object fastTextEncoding {
     
     /**
       * TextDecoder instance.
       */
+    @JSGlobal("fastTextEncoding.TextDecoderClass")
     @js.native
     class TextDecoderClass ()
       extends typingsSlinky.fastTextEncoding.fastTextEncoding.TextDecoderClass {
@@ -26,6 +25,7 @@ object global extends js.Object {
     /**
       * TextEncoder instance.
       */
+    @JSGlobal("fastTextEncoding.TextEncoderClass")
     @js.native
     class TextEncoderClass ()
       extends typingsSlinky.fastTextEncoding.fastTextEncoding.TextEncoderClass {

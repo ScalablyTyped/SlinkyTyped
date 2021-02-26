@@ -2,12 +2,13 @@ package typingsSlinky.handsontable.mod.Handsontable.plugins
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Cursor extends js.Object {
+trait Cursor extends StObject {
   
   var cellHeight: Double = js.native
   

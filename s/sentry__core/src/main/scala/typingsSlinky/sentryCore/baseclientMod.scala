@@ -11,14 +11,14 @@ import typingsSlinky.sentryTypes.eventMod.EventHint
 import typingsSlinky.sentryTypes.optionsMod.Options
 import typingsSlinky.sentryTypes.severityMod.Severity
 import typingsSlinky.sentryUtils.mod.Dsn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@sentry/core/dist/baseclient", JSImport.Namespace)
-@js.native
-object baseclientMod extends js.Object {
+object baseclientMod {
   
+  @JSImport("@sentry/core/dist/baseclient", "BaseClient")
   @js.native
   abstract class BaseClient[B /* <: Backend */, O /* <: Options */] protected () extends Client[O] {
     /**

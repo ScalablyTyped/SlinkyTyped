@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsNode.typesDecryptInputMod.DecryptInput
 import typingsSlinky.awsSdkClientKmsNode.typesDecryptOutputMod.DecryptOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-node/commands/DecryptCommand", JSImport.Namespace)
-@js.native
-object decryptCommandMod extends js.Object {
+object decryptCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-node/commands/DecryptCommand", "DecryptCommand")
   @js.native
   class DecryptCommand protected () extends Command[InputTypesUnion, DecryptInput, OutputTypesUnion, DecryptOutput, KMSResolvedConfiguration] {
     def this(input: DecryptInput) = this()

@@ -11,8 +11,8 @@ window.localStorage engine for redux-storage
 | Full name          | redux-storage-engine-localstorage |
 | Keywords           | redux, redux-storage, redux-storage-engine, localStorage |
 | # releases         | 0 |
-| # dependents       | 4 |
-| # downloads        | 271839 |
+| # dependents       | 5 |
+| # downloads        | 226042 |
 | # stars            | 1 |
 
 ## Links

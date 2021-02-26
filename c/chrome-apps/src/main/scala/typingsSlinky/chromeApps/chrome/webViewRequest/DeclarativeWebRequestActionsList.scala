@@ -1,5 +1,6 @@
 package typingsSlinky.chromeApps.chrome.webViewRequest
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.declarativeWebRequestDotSendMessageToExtension
   - typingsSlinky.chromeApps.chromeAppsStrings.declarativeWebRequestDotIgnoreRules
 */
-trait DeclarativeWebRequestActionsList extends js.Object
+trait DeclarativeWebRequestActionsList extends StObject
 object DeclarativeWebRequestActionsList {
   
   @scala.inline

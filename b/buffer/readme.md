@@ -1,7 +1,7 @@
 
 # Scala.js typings for buffer
 
-Typings are for version 6.0.2
+Typings are for version 6.0.3
 
 ## Library description:
 Node.js Buffer API, for the browser
@@ -10,9 +10,9 @@ Node.js Buffer API, for the browser
 | ------------------ | :-------------: |
 | Full name          | buffer |
 | Keywords           | arraybuffer, browser, browserify, buffer, compatible, dataview, uint8array |
-| # releases         | 11 |
-| # dependents       | 1473 |
-| # downloads        | 755410629 |
+| # releases         | 18 |
+| # dependents       | 1741 |
+| # downloads        | 1019435858 |
 | # stars            | 29 |
 
 ## Links

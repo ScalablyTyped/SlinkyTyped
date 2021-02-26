@@ -1,24 +1,24 @@
 organization := "org.scalablytyped.slinky"
 name := "roads-server"
-version := "1.0.3-7bc655"
+version := "1.0.3-2020a4"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "babel-core" % "6.25-dt-20200226Z-73b25f",
-  "org.scalablytyped.slinky" %%% "babel-generator" % "6.25-dt-20200515Z-3b2d20",
-  "org.scalablytyped.slinky" %%% "babel-template" % "6.25-dt-20200226Z-8ce283",
-  "org.scalablytyped.slinky" %%% "babel-traverse" % "6.25-dt-20200515Z-13ee7e",
-  "org.scalablytyped.slinky" %%% "babel-types" % "7.0-dt-20200902Z-becac9",
-  "org.scalablytyped.slinky" %%% "babelify" % "v7.3.0-dt-20200923Z-b5964e",
-  "org.scalablytyped.slinky" %%% "babylon" % "6.16-dt-20200226Z-c0c10b",
-  "org.scalablytyped.slinky" %%% "browserify" % "12.0-dt-20200923Z-a9915f",
-  "org.scalablytyped.slinky" %%% "cookie" % "0.4-dt-20200513Z-f853a4",
-  "org.scalablytyped.slinky" %%% "insert-module-globals" % "7.0-dt-20200515Z-3bc584",
-  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
-  "org.scalablytyped.slinky" %%% "roads" % "6.3.1-ade0be",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "babel-core" % "6.25-dt-20200226Z-abeb0f",
+  "org.scalablytyped.slinky" %%% "babel-generator" % "6.25-dt-20200515Z-8957d9",
+  "org.scalablytyped.slinky" %%% "babel-template" % "6.25-dt-20200226Z-ad479f",
+  "org.scalablytyped.slinky" %%% "babel-traverse" % "6.25-dt-20200515Z-dca7d7",
+  "org.scalablytyped.slinky" %%% "babel-types" % "7.0-dt-20200902Z-1391d5",
+  "org.scalablytyped.slinky" %%% "babelify" % "v7.3.0-dt-20200923Z-2ae990",
+  "org.scalablytyped.slinky" %%% "babylon" % "6.16-dt-20200226Z-687f36",
+  "org.scalablytyped.slinky" %%% "browserify" % "12.0-dt-20200923Z-270245",
+  "org.scalablytyped.slinky" %%% "cookie" % "0.4-dt-20200513Z-549764",
+  "org.scalablytyped.slinky" %%% "insert-module-globals" % "7.0-dt-20200515Z-2c975e",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "roads" % "6.3.1-8a1fb1",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

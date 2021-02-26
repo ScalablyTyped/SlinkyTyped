@@ -9,15 +9,22 @@ import typingsSlinky.protonNative.protonNativeStrings.bevel
 import typingsSlinky.protonNative.protonNativeStrings.flat
 import typingsSlinky.protonNative.protonNativeStrings.miter
 import typingsSlinky.protonNative.protonNativeStrings.round
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AreaCircle {
   
+  @scala.inline
+  def apply(r: Double | String, x: Double | String, y: Double | String): Builder = {
+    val __props = js.Dynamic.literal(r = r.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AreaCircleProps]))
+  }
+  
   @JSImport("proton-native", "AreaCircle")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -74,10 +81,4 @@ object AreaCircle {
   }
   
   def withProps(p: AreaCircleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(r: Double | String, x: Double | String, y: Double | String): Builder = {
-    val __props = js.Dynamic.literal(r = r.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AreaCircleProps]))
-  }
 }

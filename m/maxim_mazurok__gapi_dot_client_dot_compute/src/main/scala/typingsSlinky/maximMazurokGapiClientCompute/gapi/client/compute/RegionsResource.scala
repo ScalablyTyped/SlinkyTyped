@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientCompute.gapi.client.compute
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientCompute.anon.PrettyPrintProjectQuotaUserRegionUserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RegionsResource extends js.Object {
+trait RegionsResource extends StObject {
   
   /** Returns the specified Region resource. Gets a list of available regions by making a list() request. */
   def get(): Request[Region] = js.native

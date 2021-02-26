@@ -1,13 +1,14 @@
 package typingsSlinky.glReact.mod
 
 import org.scalajs.dom.raw.WebGLRenderingContext
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gl-react", "Visitor")
 @js.native
-class Visitor () extends js.Object {
+class Visitor () extends StObject {
   
   def onNodeDraw(node: Node, preparedUniforms: js.Array[_]): Unit = js.native
   

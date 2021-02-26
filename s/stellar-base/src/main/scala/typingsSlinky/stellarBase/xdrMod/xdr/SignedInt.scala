@@ -6,12 +6,14 @@ import typingsSlinky.stellarBase.stellarBaseNumbers.`2147483647`
 import typingsSlinky.stellarBase.stellarBaseStrings.base64
 import typingsSlinky.stellarBase.stellarBaseStrings.hex
 import typingsSlinky.stellarBase.stellarBaseStrings.raw
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// tslint:disable-line:strict-export-declare-modifiers
 @js.native
-trait SignedInt extends js.Object {
+trait SignedInt extends StObject {
   
   val MAX_VALUE: `2147483647` = js.native
   

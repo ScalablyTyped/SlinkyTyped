@@ -2,21 +2,23 @@ package typingsSlinky.ionic
 
 import typingsSlinky.ionic.cordovaBaseMod.CordovaCommand
 import typingsSlinky.ionic.definitionsMod.CommandInstanceInfo
+import typingsSlinky.ionic.definitionsMod.INamespace
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineInputs
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ionic/commands/cordova/resources", JSImport.Namespace)
-@js.native
-object resourcesMod extends js.Object {
+object resourcesMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.ionicCliFramework.definitionsMod.ICommand because Already inherited
   - typingsSlinky.ionic.definitionsMod.ICommand because Already inherited
-  - typingsSlinky.ionic.definitionsMod.CommandPreRun because var conflicts: env, namespace, project. Inlined preRun */ @js.native
-  class ResourcesCommand () extends CordovaCommand {
+  - typingsSlinky.ionic.definitionsMod.CommandPreRun because var conflicts: env, namespace, project. Inlined preRun */ @JSImport("ionic/commands/cordova/resources", "ResourcesCommand")
+  @js.native
+  class ResourcesCommand protected () extends CordovaCommand {
+    def this(namespace: INamespace) = this()
     
     def getBuildPlatforms(): js.Promise[js.Array[String]] = js.native
     

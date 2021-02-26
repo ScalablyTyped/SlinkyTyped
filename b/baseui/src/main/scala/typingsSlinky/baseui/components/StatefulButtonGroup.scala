@@ -23,6 +23,7 @@ import typingsSlinky.baseui.buttonGroupMod.InitialState
 import typingsSlinky.baseui.buttonGroupMod.STATE_CHANGE_TYPE
 import typingsSlinky.baseui.buttonGroupMod.State
 import typingsSlinky.baseui.buttonGroupMod.StatefulButtonGroupProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,7 +32,7 @@ object StatefulButtonGroup {
   
   @JSImport("baseui/button-group", "StatefulButtonGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,10 +61,10 @@ object StatefulButtonGroup {
     def overrides(value: ButtonGroupOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedVarargs(value: Double*): this.type = set("selected", js.Array(value :_*))
+    def selected(value: Double | js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selected(value: Double | js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
+    def selectedVarargs(value: Double*): this.type = set("selected", js.Array(value :_*))
     
     @scala.inline
     def shape(value: pill | default_ | square | round | circle): this.type = set("shape", value.asInstanceOf[js.Any])
@@ -77,7 +78,7 @@ object StatefulButtonGroup {
     ): this.type = set("stateReducer", js.Any.fromFunction3(value))
   }
   
-  def withProps(p: StatefulButtonGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatefulButtonGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatefulButtonGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

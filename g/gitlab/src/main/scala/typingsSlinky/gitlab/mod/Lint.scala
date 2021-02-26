@@ -1,5 +1,7 @@
 package typingsSlinky.gitlab.mod
 
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("gitlab", "Lint")
 @js.native
 class Lint ()
-  extends typingsSlinky.gitlab.lintMod.Lint
+  extends typingsSlinky.gitlab.servicesMod.Lint {
+  def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
+}

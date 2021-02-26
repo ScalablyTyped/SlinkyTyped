@@ -1,12 +1,13 @@
 package typingsSlinky.openidClient.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openid-client", "Strategy")
 @js.native
-class Strategy[TUser, TClient /* <: Client */] protected () extends js.Object {
+class Strategy[TUser, TClient /* <: Client */] protected () extends StObject {
   def this(
     options: StrategyOptions[TClient],
     verify: StrategyVerifyCallbackReq[TUser] | StrategyVerifyCallbackUserInfo[TUser]

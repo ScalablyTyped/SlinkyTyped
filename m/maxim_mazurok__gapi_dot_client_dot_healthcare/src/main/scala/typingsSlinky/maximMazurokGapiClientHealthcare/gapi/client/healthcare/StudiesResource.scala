@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientHealthcare.gapi.client.healthcare
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.Alt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait StudiesResource extends js.Object {
+trait StudiesResource extends StObject {
   
   /**
     * DeleteStudy deletes all instances within the given study. Delete requests are equivalent to the GET requests specified in the Retrieve transaction. The method returns an Operation

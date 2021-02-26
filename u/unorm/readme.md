@@ -11,8 +11,8 @@ JavaScript Unicode 8.0 Normalization - NFC, NFD, NFKC, NFKD. Read <http://unicod
 | Full name          | unorm |
 | Keywords           | - |
 | # releases         | 3 |
-| # dependents       | 196 |
-| # downloads        | 10862597 |
+| # dependents       | 229 |
+| # downloads        | 14623065 |
 | # stars            | 3 |
 
 ## Links

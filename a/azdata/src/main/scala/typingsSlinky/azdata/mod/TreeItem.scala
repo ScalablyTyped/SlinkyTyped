@@ -1,13 +1,28 @@
 package typingsSlinky.azdata.mod
 
+import typingsSlinky.vscode.mod.TreeItemCollapsibleState
+import typingsSlinky.vscode.mod.Uri
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("azdata", "TreeItem")
 @js.native
-class TreeItem ()
+class TreeItem protected ()
   extends typingsSlinky.vscode.mod.TreeItem {
+  /**
+    * @param label A human-readable string describing this item
+    * @param collapsibleState [TreeItemCollapsibleState](#TreeItemCollapsibleState) of the tree item. Default is [TreeItemCollapsibleState.None](#TreeItemCollapsibleState.None)
+    */
+  def this(label: String) = this()
+  /**
+    * @param resourceUri The [uri](#Uri) of the resource representing this item.
+    * @param collapsibleState [TreeItemCollapsibleState](#TreeItemCollapsibleState) of the tree item. Default is [TreeItemCollapsibleState.None](#TreeItemCollapsibleState.None)
+    */
+  def this(resourceUri: Uri) = this()
+  def this(label: String, collapsibleState: TreeItemCollapsibleState) = this()
+  def this(resourceUri: Uri, collapsibleState: TreeItemCollapsibleState) = this()
   
   var childProvider: js.UndefOr[String] = js.native
   

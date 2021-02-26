@@ -1,5 +1,6 @@
 package typingsSlinky.angularForms.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularForms.angularFormsStrings.blur
   - typingsSlinky.angularForms.angularFormsStrings.submit
 */
-trait FormHooks extends js.Object
+trait FormHooks extends StObject
 object FormHooks {
   
   @scala.inline

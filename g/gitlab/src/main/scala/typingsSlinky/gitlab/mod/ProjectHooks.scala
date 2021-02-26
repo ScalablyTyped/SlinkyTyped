@@ -1,5 +1,7 @@
 package typingsSlinky.gitlab.mod
 
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("gitlab", "ProjectHooks")
 @js.native
 class ProjectHooks ()
-  extends typingsSlinky.gitlab.projectHooksMod.ProjectHooks
+  extends typingsSlinky.gitlab.servicesMod.ProjectHooks {
+  def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
+}

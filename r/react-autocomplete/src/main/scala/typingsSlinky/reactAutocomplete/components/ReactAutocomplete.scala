@@ -10,15 +10,27 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.HTMLProps
 import typingsSlinky.reactAutocomplete.mod.Props
 import typingsSlinky.reactAutocomplete.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactAutocomplete {
   
+  @scala.inline
+  def apply(
+    getItemValue: js.Any => String,
+    items: js.Array[_],
+    renderItem: (js.Any, Boolean, js.UndefOr[CSSProperties]) => ReactElement,
+    value: js.Any
+  ): Builder = {
+    val __props = js.Dynamic.literal(getItemValue = js.Any.fromFunction1(getItemValue), items = items.asInstanceOf[js.Any], renderItem = js.Any.fromFunction3(renderItem), value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("react-autocomplete", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -77,15 +89,4 @@ object ReactAutocomplete {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    getItemValue: js.Any => String,
-    items: js.Array[_],
-    renderItem: (js.Any, Boolean, js.UndefOr[CSSProperties]) => ReactElement,
-    value: js.Any
-  ): Builder = {
-    val __props = js.Dynamic.literal(getItemValue = js.Any.fromFunction1(getItemValue), items = items.asInstanceOf[js.Any], renderItem = js.Any.fromFunction3(renderItem), value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

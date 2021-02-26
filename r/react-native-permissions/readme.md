@@ -9,10 +9,10 @@ An unified permissions API for React Native on iOS and Android
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | react-native-permissions |
-| Keywords           | react-native, react native, permission, authorization |
-| # releases         | 16 |
-| # dependents       | 31 |
-| # downloads        | 2831945 |
+| Keywords           | react-native, react native, react-native-windows, permission, authorization |
+| # releases         | 29 |
+| # dependents       | 56 |
+| # downloads        | 5587488 |
 | # stars            | 2 |
 
 ## Links

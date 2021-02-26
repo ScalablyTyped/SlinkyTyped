@@ -7,6 +7,7 @@ import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.decelera
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.linear
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.overshoot
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.spring
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,55 +21,55 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeNavigation.anon.Tension
   - typingsSlinky.reactNativeNavigation.anon.AllowsOverdamping
 */
-trait Interpolation extends js.Object
+trait Interpolation extends StObject
 object Interpolation {
   
   @scala.inline
-  def AllowsOverdamping(`type`: spring): Interpolation = {
+  def `1`(`type`: decelerateAccelerate): typingsSlinky.reactNativeNavigation.anon.`1` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Interpolation]
+    __obj.asInstanceOf[typingsSlinky.reactNativeNavigation.anon.`1`]
   }
   
   @scala.inline
-  def `1`(`type`: decelerateAccelerate): Interpolation = {
+  def `2`(`type`: accelerateDecelerate): typingsSlinky.reactNativeNavigation.anon.`2` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Interpolation]
+    __obj.asInstanceOf[typingsSlinky.reactNativeNavigation.anon.`2`]
   }
   
   @scala.inline
-  def Type(`type`: decelerate): Interpolation = {
+  def `3`(`type`: linear): typingsSlinky.reactNativeNavigation.anon.`3` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Interpolation]
+    __obj.asInstanceOf[typingsSlinky.reactNativeNavigation.anon.`3`]
   }
   
   @scala.inline
-  def Factor(`type`: accelerate): Interpolation = {
+  def AllowsOverdamping(`type`: spring): typingsSlinky.reactNativeNavigation.anon.AllowsOverdamping = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Interpolation]
+    __obj.asInstanceOf[typingsSlinky.reactNativeNavigation.anon.AllowsOverdamping]
   }
   
   @scala.inline
-  def `3`(`type`: linear): Interpolation = {
+  def Factor(`type`: accelerate): typingsSlinky.reactNativeNavigation.anon.Factor = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Interpolation]
+    __obj.asInstanceOf[typingsSlinky.reactNativeNavigation.anon.Factor]
   }
   
   @scala.inline
-  def Tension(`type`: overshoot): Interpolation = {
+  def Tension(`type`: overshoot): typingsSlinky.reactNativeNavigation.anon.Tension = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Interpolation]
+    __obj.asInstanceOf[typingsSlinky.reactNativeNavigation.anon.Tension]
   }
   
   @scala.inline
-  def `2`(`type`: accelerateDecelerate): Interpolation = {
+  def Type(`type`: decelerate): typingsSlinky.reactNativeNavigation.anon.Type = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Interpolation]
+    __obj.asInstanceOf[typingsSlinky.reactNativeNavigation.anon.Type]
   }
 }

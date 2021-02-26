@@ -1,12 +1,13 @@
 package typingsSlinky.dynogels.mod
 
 import typingsSlinky.node.streamMod.Readable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Scan extends js.Object {
+trait Scan extends StObject {
   
   def addFilterCondition(condition: js.Any): Scan = js.native
   

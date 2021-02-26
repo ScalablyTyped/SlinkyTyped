@@ -4,6 +4,7 @@ import typingsSlinky.angularCore.angularCoreNumbers.`1`
 import typingsSlinky.angularCore.angularCoreNumbers.`2`
 import typingsSlinky.angularCore.angularCoreNumbers.`4`
 import typingsSlinky.angularCore.angularCoreNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCore.angularCoreNumbers.`4`
   - typingsSlinky.angularCore.angularCoreNumbers.`8`
 */
-trait SelectorFlags extends js.Object
+trait SelectorFlags extends StObject
 object SelectorFlags {
   
   /** Mode for matching attributes */

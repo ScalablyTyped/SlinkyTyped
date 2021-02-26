@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Fields
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Name
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DatasetsResource extends js.Object {
+trait DatasetsResource extends StObject {
   
   var annotatedDatasets: AnnotatedDatasetsResource = js.native
   

@@ -1,12 +1,13 @@
 package typingsSlinky.jqueryTinycarousel
 
 import typingsSlinky.jqueryTinycarousel.JQueryTinyCarousel.JQueryTinyCarouselOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Creates a new tinycarousel with the specified, or default, options.

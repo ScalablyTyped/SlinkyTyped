@@ -12,7 +12,7 @@ Find lexicographical points between strings
 | Keywords           | string, mean, lexicographical, distance, number, radix, base |
 | # releases         | 7 |
 | # dependents       | 1 |
-| # downloads        | 25866 |
+| # downloads        | 46345 |
 | # stars            | 0 |
 
 ## Links

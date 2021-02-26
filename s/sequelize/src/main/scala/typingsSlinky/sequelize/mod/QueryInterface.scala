@@ -5,6 +5,7 @@ import typingsSlinky.sequelize.anon.Logging
 import typingsSlinky.sequelize.anon.Schema
 import typingsSlinky.sequelize.anon.SchemaTableName
 import typingsSlinky.sequelize.anon.TableName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * referenced anyway, so it can be used.
   */
 @js.native
-trait QueryInterface extends js.Object {
+trait QueryInterface extends StObject {
   
   /**
     * Returns the dialect-specific sql generator.
@@ -394,8 +395,8 @@ trait QueryInterface extends js.Object {
     */
   def escape(): String = js.native
   def escape(value: String): String = js.native
-  def escape(value: Double): String = js.native
   def escape(value: js.Date): String = js.native
+  def escape(value: Double): String = js.native
   
   /**
     * Returns all foreign key constraints of each table in list

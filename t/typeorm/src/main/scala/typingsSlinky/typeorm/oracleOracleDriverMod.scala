@@ -9,14 +9,14 @@ import typingsSlinky.typeorm.oracleOracleConnectionCredentialsOptionsMod.OracleC
 import typingsSlinky.typeorm.oracleOracleConnectionOptionsMod.OracleConnectionOptions
 import typingsSlinky.typeorm.tableTableColumnMod.TableColumn
 import typingsSlinky.typeorm.typesColumnTypesMod.ColumnType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/driver/oracle/OracleDriver", JSImport.Namespace)
-@js.native
-object oracleOracleDriverMod extends js.Object {
+object oracleOracleDriverMod {
   
+  @JSImport("typeorm/driver/oracle/OracleDriver", "OracleDriver")
   @js.native
   class OracleDriver protected () extends Driver {
     def this(connection: Connection) = this()

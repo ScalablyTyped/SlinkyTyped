@@ -80,15 +80,22 @@ import typingsSlinky.reactFoundation.enumsMod.VerticalAlignments
 import typingsSlinky.reactFoundation.iconMod.IconProps
 import typingsSlinky.reactFoundation.reactFoundationStrings.large
 import typingsSlinky.reactFoundation.reactFoundationStrings.medium
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Icon {
   
+  @scala.inline
+  def apply(name: String): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IconProps]))
+  }
+  
   @JSImport("react-foundation", "Icon")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -287,10 +294,10 @@ object Icon {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -702,10 +709,4 @@ object Icon {
   }
   
   def withProps(p: IconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(name: String): Builder = {
-    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IconProps]))
-  }
 }

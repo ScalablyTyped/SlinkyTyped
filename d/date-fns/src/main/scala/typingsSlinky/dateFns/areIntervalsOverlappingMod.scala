@@ -1,21 +1,23 @@
 package typingsSlinky.dateFns
 
 import typingsSlinky.dateFns.anon.Inclusive
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("date-fns/areIntervalsOverlapping", JSImport.Namespace)
-@js.native
-object areIntervalsOverlappingMod extends js.Object {
+object areIntervalsOverlappingMod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
+    @JSImport("date-fns/areIntervalsOverlapping", JSImport.Default)
+    @js.native
     def apply(
       intervalLeft: typingsSlinky.dateFns.mod.Interval,
       intervalRight: typingsSlinky.dateFns.mod.Interval
     ): Boolean = js.native
+    @JSImport("date-fns/areIntervalsOverlapping", JSImport.Default)
+    @js.native
     def apply(
       intervalLeft: typingsSlinky.dateFns.mod.Interval,
       intervalRight: typingsSlinky.dateFns.mod.Interval,

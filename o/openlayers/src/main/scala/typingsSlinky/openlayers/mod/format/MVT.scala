@@ -6,6 +6,7 @@ import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.olx.format.MVTOptions
 import typingsSlinky.openlayers.mod.olx.format.ReadOptions
 import typingsSlinky.openlayers.mod.proj.Projection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,8 +32,6 @@ class MVT () extends Feature {
   
   def readFeatures(source: String): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: String, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: GlobalObject): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: GlobalObject, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: js.typedarray.ArrayBuffer): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: js.typedarray.ArrayBuffer, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   /**
@@ -43,15 +42,17 @@ class MVT () extends Feature {
   def readFeatures(source: Document, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: GlobalObject): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: GlobalObject, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   
   def readProjection(source: String): Projection = js.native
-  def readProjection(source: GlobalObject): Projection = js.native
   /**
     * @inheritDoc
     * @api
     */
   def readProjection(source: Document): Projection = js.native
   def readProjection(source: Node): Projection = js.native
+  def readProjection(source: GlobalObject): Projection = js.native
   
   /**
     * Sets the layers that features will be read from.

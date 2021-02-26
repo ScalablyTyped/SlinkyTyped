@@ -5,6 +5,7 @@ import typingsSlinky.arangodb.anon.End
 import typingsSlinky.std.FlatArray
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.anon.CopyWithin
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

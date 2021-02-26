@@ -9,15 +9,22 @@ import typingsSlinky.react.mod.StyleHTMLAttributes
 import typingsSlinky.reactShare.anon.CommonShareButtonPropsmed
 import typingsSlinky.reactShare.reactShareStrings.screenCenter
 import typingsSlinky.reactShare.reactShareStrings.windowCenter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PinterestShareButton {
   
+  @scala.inline
+  def apply(media: String, url: String): Builder = {
+    val __props = js.Dynamic.literal(media = media.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropsmed]))
+  }
+  
   @JSImport("react-share", "PinterestShareButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -71,10 +78,4 @@ object PinterestShareButton {
   }
   
   def withProps(p: CommonShareButtonPropsmed): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(media: String, url: String): Builder = {
-    val __props = js.Dynamic.literal(media = media.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropsmed]))
-  }
 }

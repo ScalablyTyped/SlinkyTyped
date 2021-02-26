@@ -1,8 +1,10 @@
 package typingsSlinky.typeorm.mongodbTypingsMod
 
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.streamMod.ReadableOptions
 import typingsSlinky.typeorm.anon.Transform
 import typingsSlinky.typeorm.platformPlatformToolsMod.Readable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("typeorm/driver/mongodb/typings", "Cursor")
 @js.native
 class Cursor[T] () extends Readable {
+  def this(opts: ReadableOptions) = this()
   
   /**
     * @param flag The flag to set, must be one of following ['tailable', 'oplogReplay', 'noCursorTimeout', 'awaitData', 'partial'].

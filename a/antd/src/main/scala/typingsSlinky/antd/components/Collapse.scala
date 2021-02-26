@@ -8,15 +8,27 @@ import typingsSlinky.antd.collapseCollapseMod.ExpandIconPosition
 import typingsSlinky.antd.collapseCollapseMod.PanelProps
 import typingsSlinky.antd.collapsePanelMod.CollapsePanelProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Collapse {
   
+  object Panel {
+    
+    @JSImport("antd", "Collapse.Panel")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Panel.type): SharedBuilder_CollapsePanelProps_1625560543 = new SharedBuilder_CollapsePanelProps_1625560543(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: CollapsePanelProps): SharedBuilder_CollapsePanelProps_1625560543 = new SharedBuilder_CollapsePanelProps_1625560543(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd", "Collapse")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,10 +39,10 @@ object Collapse {
     def accordion(value: Boolean): this.type = set("accordion", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def activeKeyVarargs(value: (String | Double)*): this.type = set("activeKey", js.Array(value :_*))
+    def activeKey(value: (js.Array[String | Double]) | String | Double): this.type = set("activeKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def activeKey(value: (js.Array[String | Double]) | String | Double): this.type = set("activeKey", value.asInstanceOf[js.Any])
+    def activeKeyVarargs(value: (String | Double)*): this.type = set("activeKey", js.Array(value :_*))
     
     @scala.inline
     def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
@@ -39,10 +51,10 @@ object Collapse {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultActiveKeyVarargs(value: (String | Double)*): this.type = set("defaultActiveKey", js.Array(value :_*))
+    def defaultActiveKey(value: (js.Array[String | Double]) | String | Double): this.type = set("defaultActiveKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultActiveKey(value: (js.Array[String | Double]) | String | Double): this.type = set("defaultActiveKey", value.asInstanceOf[js.Any])
+    def defaultActiveKeyVarargs(value: (String | Double)*): this.type = set("defaultActiveKey", js.Array(value :_*))
     
     @scala.inline
     def destroyInactivePanel(value: Boolean): this.type = set("destroyInactivePanel", value.asInstanceOf[js.Any])
@@ -66,18 +78,7 @@ object Collapse {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Collapse.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Panel {
-    
-    @JSImport("antd", "Collapse.Panel")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: CollapsePanelProps): SharedBuilder_CollapsePanelProps_1625560543 = new SharedBuilder_CollapsePanelProps_1625560543(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Panel.type): SharedBuilder_CollapsePanelProps_1625560543 = new SharedBuilder_CollapsePanelProps_1625560543(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: CollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

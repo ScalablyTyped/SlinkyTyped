@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.typesGetRepositoryInputMod.GetRe
 import typingsSlinky.awsSdkClientCodecommitNode.typesGetRepositoryOutputMod.GetRepositoryOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-codecommit-node/commands/GetRepositoryCommand", JSImport.Namespace)
-@js.native
-object getRepositoryCommandMod extends js.Object {
+object getRepositoryCommandMod {
   
+  @JSImport("@aws-sdk/client-codecommit-node/commands/GetRepositoryCommand", "GetRepositoryCommand")
   @js.native
   class GetRepositoryCommand protected () extends Command[
           InputTypesUnion, 

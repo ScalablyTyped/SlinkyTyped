@@ -4,13 +4,14 @@ import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.BYTES
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.BYTES_ARRAY
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.STRING
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.STRING_ARRAY
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tizen-common-web/tizen", "Bundle")
 @js.native
-class Bundle () extends js.Object {
+class Bundle () extends StObject {
   
   /**
     * Calls the callback function for each item stored in the bundle.

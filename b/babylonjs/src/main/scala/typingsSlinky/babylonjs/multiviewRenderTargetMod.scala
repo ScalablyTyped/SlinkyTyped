@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.anon.Ratio
 import typingsSlinky.babylonjs.anon.Width
 import typingsSlinky.babylonjs.renderTargetTextureMod.RenderTargetTexture
 import typingsSlinky.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Textures/MultiviewRenderTarget", JSImport.Namespace)
-@js.native
-object multiviewRenderTargetMod extends js.Object {
+object multiviewRenderTargetMod {
   
+  @JSImport("babylonjs/Materials/Textures/MultiviewRenderTarget", "MultiviewRenderTarget")
   @js.native
   class MultiviewRenderTarget protected () extends RenderTargetTexture {
     /**

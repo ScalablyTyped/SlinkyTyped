@@ -4,12 +4,13 @@ import typingsSlinky.activexOffice.Office.IMsoDiagram
 import typingsSlinky.activexOffice.Office.MsoDiagramNodeType
 import typingsSlinky.activexOffice.Office.MsoOrgChartLayoutType
 import typingsSlinky.activexOffice.Office.MsoRelativeNodePosition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DiagramNode extends js.Object {
+trait DiagramNode extends StObject {
   
   /**
     * @param pos [pos=2]

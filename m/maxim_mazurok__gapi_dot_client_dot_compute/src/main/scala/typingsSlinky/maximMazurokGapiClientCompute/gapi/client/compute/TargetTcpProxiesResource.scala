@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.QuotaUserTargetTcpProxy
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RequestIdResourceTargetTcpProxy
 import typingsSlinky.maximMazurokGapiClientCompute.anon.ResourceTargetTcpProxy
 import typingsSlinky.maximMazurokGapiClientCompute.anon.TargetTcpProxyUserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TargetTcpProxiesResource extends js.Object {
+trait TargetTcpProxiesResource extends StObject {
   
   /** Deletes the specified TargetTcpProxy resource. */
   def delete(): Request[Operation] = js.native

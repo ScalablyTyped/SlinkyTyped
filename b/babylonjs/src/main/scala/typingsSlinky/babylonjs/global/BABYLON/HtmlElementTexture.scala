@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.IHtmlElementTextureOptions
 import typingsSlinky.babylonjs.HTMLCanvasElement
 import typingsSlinky.babylonjs.HTMLVideoElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,9 +23,9 @@ class HtmlElementTexture protected ()
   def this(name: String, element: HTMLVideoElement, options: IHtmlElementTextureOptions) = this()
 }
 /* static members */
-@JSGlobal("BABYLON.HtmlElementTexture")
-@js.native
-object HtmlElementTexture extends js.Object {
+object HtmlElementTexture {
   
+  @JSGlobal("BABYLON.HtmlElementTexture.DefaultOptions")
+  @js.native
   val DefaultOptions: js.Any = js.native
 }

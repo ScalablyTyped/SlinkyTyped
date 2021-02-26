@@ -10,9 +10,9 @@ favicon serving middleware with caching
 | ------------------ | :-------------: |
 | Full name          | serve-favicon |
 | Keywords           | express, favicon, middleware |
-| # releases         | 2 |
-| # dependents       | 1839 |
-| # downloads        | 65256147 |
+| # releases         | 0 |
+| # dependents       | 1912 |
+| # downloads        | 105138165 |
 | # stars            | 124 |
 
 ## Links

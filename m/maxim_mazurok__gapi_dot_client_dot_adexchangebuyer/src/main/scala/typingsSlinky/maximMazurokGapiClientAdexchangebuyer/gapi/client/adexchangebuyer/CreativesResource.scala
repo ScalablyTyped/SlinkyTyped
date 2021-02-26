@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.DealsStatusFilte
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.Fields
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CreativesResource extends js.Object {
+trait CreativesResource extends StObject {
   
   /** Add a deal id association for the creative. */
   def addDeal(): Request[Unit] = js.native

@@ -21,6 +21,7 @@ import typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.
 import typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.START_DATE
 import typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.circle
 import typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.square
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ object ReactNativeCalendarPicker {
   
   @JSImport("react-native-calendar-picker", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,13 +44,13 @@ object ReactNativeCalendarPicker {
     def allowRangeSelection(value: Boolean): this.type = set("allowRangeSelection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customDatesStylesVarargs(value: CustomDateStyle*): this.type = set("customDatesStyles", js.Array(value :_*))
+    def customDatesStyles(value: js.Array[CustomDateStyle] | CustomDatesStylesFunc): this.type = set("customDatesStyles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customDatesStylesFunction1(value: /* date */ Moment => ContainerStyle): this.type = set("customDatesStyles", js.Any.fromFunction1(value))
     
     @scala.inline
-    def customDatesStyles(value: js.Array[CustomDateStyle] | CustomDatesStylesFunc): this.type = set("customDatesStyles", value.asInstanceOf[js.Any])
+    def customDatesStylesVarargs(value: CustomDateStyle*): this.type = set("customDatesStyles", js.Array(value :_*))
     
     @scala.inline
     def customDayHeaderStyles(value: /* date */ CustomDayHeaderStylesFuncDateArg => Style): this.type = set("customDayHeaderStyles", js.Any.fromFunction1(value))
@@ -64,19 +65,19 @@ object ReactNativeCalendarPicker {
     def dayShape(value: circle | square): this.type = set("dayShape", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabledDatesVarargs(value: js.Date*): this.type = set("disabledDates", js.Array(value :_*))
+    def disabledDates(value: js.Array[js.Date] | DisabledDatesFunc): this.type = set("disabledDates", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabledDatesFunction1(value: /* date */ Moment => Boolean): this.type = set("disabledDates", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def disabledDates(value: js.Array[js.Date] | DisabledDatesFunc): this.type = set("disabledDates", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabledDatesTextStyle(value: StyleProp[TextStyle]): this.type = set("disabledDatesTextStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabledDatesTextStyleNull: this.type = set("disabledDatesTextStyle", null)
+    
+    @scala.inline
+    def disabledDatesVarargs(value: js.Date*): this.type = set("disabledDates", js.Array(value :_*))
     
     @scala.inline
     def enableDateChange(value: Boolean): this.type = set("enableDateChange", value.asInstanceOf[js.Any])
@@ -97,19 +98,19 @@ object ReactNativeCalendarPicker {
     def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maxRangeDurationVarargs(value: MaxDurationArrayItem*): this.type = set("maxRangeDuration", js.Array(value :_*))
+    def maxRangeDuration(value: Double | js.Array[MaxDurationArrayItem]): this.type = set("maxRangeDuration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maxRangeDuration(value: Double | js.Array[MaxDurationArrayItem]): this.type = set("maxRangeDuration", value.asInstanceOf[js.Any])
+    def maxRangeDurationVarargs(value: MaxDurationArrayItem*): this.type = set("maxRangeDuration", js.Array(value :_*))
     
     @scala.inline
     def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def minRangeDurationVarargs(value: MinDurationArrayItem*): this.type = set("minRangeDuration", js.Array(value :_*))
+    def minRangeDuration(value: Double | js.Array[MinDurationArrayItem]): this.type = set("minRangeDuration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def minRangeDuration(value: Double | js.Array[MinDurationArrayItem]): this.type = set("minRangeDuration", value.asInstanceOf[js.Any])
+    def minRangeDurationVarargs(value: MinDurationArrayItem*): this.type = set("minRangeDuration", js.Array(value :_*))
     
     @scala.inline
     def monthYearHeaderWrapperStyle(value: StyleProp[ViewStyle]): this.type = set("monthYearHeaderWrapperStyle", value.asInstanceOf[js.Any])
@@ -118,16 +119,16 @@ object ReactNativeCalendarPicker {
     def monthYearHeaderWrapperStyleNull: this.type = set("monthYearHeaderWrapperStyle", null)
     
     @scala.inline
-    def monthsVarargs(value: String*): this.type = set("months", js.Array(value :_*))
-    
-    @scala.inline
     def months(value: js.Array[String]): this.type = set("months", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextComponentReactElement(value: ReactElement): this.type = set("nextComponent", value.asInstanceOf[js.Any])
+    def monthsVarargs(value: String*): this.type = set("months", js.Array(value :_*))
     
     @scala.inline
     def nextComponent(value: ReactElement): this.type = set("nextComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def nextComponentReactElement(value: ReactElement): this.type = set("nextComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def nextTitle(value: String): this.type = set("nextTitle", value.asInstanceOf[js.Any])
@@ -145,10 +146,10 @@ object ReactNativeCalendarPicker {
     def onMonthChange(value: (/* date */ Moment, /* type */ START_DATE | END_DATE) => Unit): this.type = set("onMonthChange", js.Any.fromFunction2(value))
     
     @scala.inline
-    def previousComponentReactElement(value: ReactElement): this.type = set("previousComponent", value.asInstanceOf[js.Any])
+    def previousComponent(value: ReactElement): this.type = set("previousComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def previousComponent(value: ReactElement): this.type = set("previousComponent", value.asInstanceOf[js.Any])
+    def previousComponentReactElement(value: ReactElement): this.type = set("previousComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def previousTitle(value: String): this.type = set("previousTitle", value.asInstanceOf[js.Any])
@@ -226,16 +227,16 @@ object ReactNativeCalendarPicker {
     def todayTextStyleNull: this.type = set("todayTextStyle", null)
     
     @scala.inline
-    def weekdaysVarargs(value: String*): this.type = set("weekdays", js.Array(value :_*))
+    def weekdays(value: js.Array[String]): this.type = set("weekdays", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def weekdays(value: js.Array[String]): this.type = set("weekdays", value.asInstanceOf[js.Any])
+    def weekdaysVarargs(value: String*): this.type = set("weekdays", js.Array(value :_*))
     
     @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CalendarPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeCalendarPicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CalendarPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientAppengine.anon.Resource
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.Uploadprotocol
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IngressRulesResource extends js.Object {
+trait IngressRulesResource extends StObject {
   
   def batchUpdate(request: Alt, body: BatchUpdateIngressRulesRequest): Request[BatchUpdateIngressRulesResponse] = js.native
   /**

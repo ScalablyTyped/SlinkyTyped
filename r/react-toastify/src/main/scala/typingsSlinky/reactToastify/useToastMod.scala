@@ -2,13 +2,14 @@ package typingsSlinky.reactToastify
 
 import typingsSlinky.reactToastify.anon.EventHandlers
 import typingsSlinky.reactToastify.typesMod.ToastProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-toastify/dist/hooks/useToast", JSImport.Namespace)
-@js.native
-object useToastMod extends js.Object {
+object useToastMod {
   
+  @JSImport("react-toastify/dist/hooks/useToast", "useToast")
+  @js.native
   def useToast(props: ToastProps): EventHandlers = js.native
 }

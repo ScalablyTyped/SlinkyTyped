@@ -5,6 +5,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.dual
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.line
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.metric
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ruler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientIap.anon.Callback
 import typingsSlinky.maximMazurokGapiClientIap.anon.Name
 import typingsSlinky.maximMazurokGapiClientIap.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientIap.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait V1Resource extends js.Object {
+trait V1Resource extends StObject {
   
   /**
     * Gets the access control policy for an Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at:

@@ -1,7 +1,7 @@
 
 # Scala.js typings for maxim_mazurok__gapi_dot_client_dot_vectortile
 
-Typings are for version 1.0.20201119
+Typings are for version 1.0.20201121
 
 ## Library description:
 TypeScript typings for Semantic Tile API v1
@@ -10,9 +10,9 @@ TypeScript typings for Semantic Tile API v1
 | ------------------ | :-------------: |
 | Full name          | @maxim_mazurok/gapi.client.vectortile |
 | Keywords           | - |
-| # releases         | 4 |
+| # releases         | 44 |
 | # dependents       | 1 |
-| # downloads        | 140 |
+| # downloads        | 3147 |
 | # stars            | 0 |
 
 ## Links

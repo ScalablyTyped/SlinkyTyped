@@ -1,6 +1,7 @@
 package typingsSlinky.std
 
 import typingsSlinky.std.stdStrings.required_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.preferred
   - typingsSlinky.std.stdStrings.required_
 */
-trait ResidentKeyRequirement extends js.Object
+trait ResidentKeyRequirement extends StObject
 object ResidentKeyRequirement {
   
   @scala.inline

@@ -1,17 +1,16 @@
 package typingsSlinky.emberFeatureFlags
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.emberObject.mod.default
+import typingsSlinky.ember.mod.default.Service
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ember-feature-flags", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   @js.native
-  trait Features extends default {
+  trait Features extends Service {
     
     def disable(feature: String): Unit = js.native
     

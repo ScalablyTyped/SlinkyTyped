@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
 import typingsSlinky.rcMenu.rcMenuStrings.ltr
 import typingsSlinky.rcMenu.rcMenuStrings.rtl
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,8 +41,8 @@ class SharedBuilder_MenuItemGroupProps_851978124[R <: js.Object] (val args: js.A
   def subMenuKey(value: String): this.type = set("subMenuKey", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
 }

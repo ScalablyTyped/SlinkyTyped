@@ -81,6 +81,7 @@ import typingsSlinky.reactMdLink.reactMdLinkStrings._blank
 import typingsSlinky.reactMdLink.reactMdLinkStrings._parent
 import typingsSlinky.reactMdLink.reactMdLinkStrings._self
 import typingsSlinky.reactMdLink.reactMdLinkStrings._top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -91,7 +92,7 @@ object Link {
     
     @JSImport("@react-md/link", "Link")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -269,13 +270,13 @@ object Link {
       def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def componentFunctionComponent(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+      def component(value: ReactElement): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
       def componentComponentClass(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def component(value: ReactElement): this.type = set("component", value.asInstanceOf[js.Any])
+      def componentFunctionComponent(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -293,10 +294,10 @@ object Link {
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -665,20 +666,28 @@ object Link {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
+    implicit def make(companion: LinkPropsRefAttributes.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
     def withProps(
       p: LinkProps with (RefAttributes[
           /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any
         ])
     ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: LinkPropsRefAttributes.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   }
   
   object LinkWithComponentPropsRefAttributes {
     
+    @scala.inline
+    def apply(component: ReactElement): Builder = {
+      val __props = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[LinkWithComponentProps with (RefAttributes[
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any
+      ])]))
+    }
+    
     @JSImport("@react-md/link", "Link")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -871,10 +880,10 @@ object Link {
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -1248,13 +1257,5 @@ object Link {
           /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any
         ])
     ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(component: ReactElement): Builder = {
-      val __props = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[LinkWithComponentProps with (RefAttributes[
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any
-      ])]))
-    }
   }
 }

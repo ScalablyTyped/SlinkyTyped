@@ -2,12 +2,13 @@ package typingsSlinky.rollup.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Parameters
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypedEventEmitter[T /* <: StringDictionary[js.Function1[/* args */ js.Any, _]] */] extends js.Object {
+trait TypedEventEmitter[T /* <: StringDictionary[js.Function1[/* args */ js.Any, _]] */] extends StObject {
   
   def addListener[K /* <: /* keyof T */ String */](
     event: K,

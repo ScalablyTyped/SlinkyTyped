@@ -11,8 +11,8 @@ Parsers and serializers for common RDF formats
 | Full name          | @rdfjs/formats-common |
 | Keywords           | rdf, rdfjs, format, parser, serializer |
 | # releases         | 3 |
-| # dependents       | 6 |
-| # downloads        | 3864 |
+| # dependents       | 9 |
+| # downloads        | 29848 |
 | # stars            | 0 |
 
 ## Links

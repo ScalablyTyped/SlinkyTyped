@@ -4,13 +4,18 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.gmlbaseMod.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/format/GML3", JSImport.Namespace)
-@js.native
-object gml3Mod extends js.Object {
+object gml3Mod {
+  
+  @JSImport("ol/format/GML3", JSImport.Default)
+  @js.native
+  class default () extends GML3 {
+    def this(opt_options: Options) = this()
+  }
   
   @js.native
   trait GML3
@@ -78,10 +83,5 @@ object gml3Mod extends js.Object {
     def writeSurfaceOrPolygon(node: Element, geometry: typingsSlinky.ol.polygonMod.default, objectStack: js.Array[_]): Unit = js.native
     
     def writeSurfaceOrPolygonMember(node: Node, polygon: typingsSlinky.ol.polygonMod.default, objectStack: js.Array[_]): Unit = js.native
-  }
-  
-  @js.native
-  class default () extends GML3 {
-    def this(opt_options: Options) = this()
   }
 }

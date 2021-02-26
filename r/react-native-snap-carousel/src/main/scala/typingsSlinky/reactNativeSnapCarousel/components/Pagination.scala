@@ -8,15 +8,22 @@ import typingsSlinky.reactNative.mod.FlatListProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeSnapCarousel.mod.PaginationProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Pagination {
   
+  @scala.inline
+  def apply(activeDotIndex: Double, dotsLength: Double): Builder = {
+    val __props = js.Dynamic.literal(activeDotIndex = activeDotIndex.asInstanceOf[js.Any], dotsLength = dotsLength.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PaginationProperties]))
+  }
+  
   @JSImport("react-native-snap-carousel", "Pagination")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -57,10 +64,10 @@ object Pagination {
     def dotContainerStyleNull: this.type = set("dotContainerStyle", null)
     
     @scala.inline
-    def dotElementReactElement(value: ReactElement): this.type = set("dotElement", value.asInstanceOf[js.Any])
+    def dotElement(value: ReactElement): this.type = set("dotElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dotElement(value: ReactElement): this.type = set("dotElement", value.asInstanceOf[js.Any])
+    def dotElementReactElement(value: ReactElement): this.type = set("dotElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dotStyle(value: StyleProp[ViewStyle]): this.type = set("dotStyle", value.asInstanceOf[js.Any])
@@ -72,10 +79,10 @@ object Pagination {
     def inactiveDotColor(value: String): this.type = set("inactiveDotColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inactiveDotElementReactElement(value: ReactElement): this.type = set("inactiveDotElement", value.asInstanceOf[js.Any])
+    def inactiveDotElement(value: ReactElement): this.type = set("inactiveDotElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inactiveDotElement(value: ReactElement): this.type = set("inactiveDotElement", value.asInstanceOf[js.Any])
+    def inactiveDotElementReactElement(value: ReactElement): this.type = set("inactiveDotElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inactiveDotOpacity(value: Double): this.type = set("inactiveDotOpacity", value.asInstanceOf[js.Any])
@@ -100,10 +107,4 @@ object Pagination {
   }
   
   def withProps(p: PaginationProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(activeDotIndex: Double, dotsLength: Double): Builder = {
-    val __props = js.Dynamic.literal(activeDotIndex = activeDotIndex.asInstanceOf[js.Any], dotsLength = dotsLength.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PaginationProperties]))
-  }
 }

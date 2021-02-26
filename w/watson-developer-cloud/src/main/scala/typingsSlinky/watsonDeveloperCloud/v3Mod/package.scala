@@ -1,5 +1,6 @@
 package typingsSlinky.watsonDeveloperCloud
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,4 +14,10 @@ package object v3Mod {
     /* response */ js.UndefOr[typingsSlinky.axios.mod.AxiosResponse[T]], 
     scala.Unit
   ]
+  
+  /* static member */
+  @scala.inline
+  def URL: java.lang.String = typingsSlinky.watsonDeveloperCloud.v3Mod.^.asInstanceOf[js.Dynamic].selectDynamic("URL").asInstanceOf[java.lang.String]
+  @scala.inline
+  def URL_=(x: java.lang.String): scala.Unit = typingsSlinky.watsonDeveloperCloud.v3Mod.^.asInstanceOf[js.Dynamic].updateDynamic("URL")(x.asInstanceOf[js.Any])
 }

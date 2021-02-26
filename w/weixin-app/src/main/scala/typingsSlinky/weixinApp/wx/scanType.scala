@@ -1,5 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.weixinApp.weixinAppStrings.qrCode
   - typingsSlinky.weixinApp.weixinAppStrings.barCode
 */
-trait scanType extends js.Object
+trait scanType extends StObject
 object scanType {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.pixiSpine.global.PIXI.spine.core
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,22 +30,54 @@ class Color ()
   def this(r: Double, g: Double, b: js.UndefOr[scala.Nothing], a: Double) = this()
   def this(r: Double, g: Double, b: Double, a: Double) = this()
 }
-/* static members */
-@JSGlobal("PIXI.spine.core.Color")
-@js.native
-object Color extends js.Object {
+object Color {
   
-  var BLUE: typingsSlinky.pixiSpine.PIXI.spine.core.Color = js.native
+  @JSGlobal("PIXI.spine.core.Color")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var GREEN: typingsSlinky.pixiSpine.PIXI.spine.core.Color = js.native
+  /* static member */
+  @JSGlobal("PIXI.spine.core.Color.BLUE")
+  @js.native
+  def BLUE: typingsSlinky.pixiSpine.PIXI.spine.core.Color = js.native
+  @scala.inline
+  def BLUE_=(x: typingsSlinky.pixiSpine.PIXI.spine.core.Color): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("BLUE")(x.asInstanceOf[js.Any])
   
-  var MAGENTA: typingsSlinky.pixiSpine.PIXI.spine.core.Color = js.native
+  /* static member */
+  @JSGlobal("PIXI.spine.core.Color.GREEN")
+  @js.native
+  def GREEN: typingsSlinky.pixiSpine.PIXI.spine.core.Color = js.native
+  @scala.inline
+  def GREEN_=(x: typingsSlinky.pixiSpine.PIXI.spine.core.Color): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("GREEN")(x.asInstanceOf[js.Any])
   
-  var RED: typingsSlinky.pixiSpine.PIXI.spine.core.Color = js.native
+  /* static member */
+  @JSGlobal("PIXI.spine.core.Color.MAGENTA")
+  @js.native
+  def MAGENTA: typingsSlinky.pixiSpine.PIXI.spine.core.Color = js.native
+  @scala.inline
+  def MAGENTA_=(x: typingsSlinky.pixiSpine.PIXI.spine.core.Color): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAGENTA")(x.asInstanceOf[js.Any])
   
-  var WHITE: typingsSlinky.pixiSpine.PIXI.spine.core.Color = js.native
+  /* static member */
+  @JSGlobal("PIXI.spine.core.Color.RED")
+  @js.native
+  def RED: typingsSlinky.pixiSpine.PIXI.spine.core.Color = js.native
+  @scala.inline
+  def RED_=(x: typingsSlinky.pixiSpine.PIXI.spine.core.Color): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("RED")(x.asInstanceOf[js.Any])
   
+  /* static member */
+  @JSGlobal("PIXI.spine.core.Color.WHITE")
+  @js.native
+  def WHITE: typingsSlinky.pixiSpine.PIXI.spine.core.Color = js.native
+  @scala.inline
+  def WHITE_=(x: typingsSlinky.pixiSpine.PIXI.spine.core.Color): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("WHITE")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSGlobal("PIXI.spine.core.Color.rgb888ToColor")
+  @js.native
   def rgb888ToColor(color: typingsSlinky.pixiSpine.PIXI.spine.core.Color, value: Double): Unit = js.native
   
+  /* static member */
+  @JSGlobal("PIXI.spine.core.Color.rgba8888ToColor")
+  @js.native
   def rgba8888ToColor(color: typingsSlinky.pixiSpine.PIXI.spine.core.Color, value: Double): Unit = js.native
 }

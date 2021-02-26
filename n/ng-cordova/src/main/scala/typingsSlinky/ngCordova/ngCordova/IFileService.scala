@@ -5,12 +5,13 @@ import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.cordovaPluginFile.DirectoryEntry
 import typingsSlinky.cordovaPluginFile.FileEntry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IFileService extends js.Object {
+trait IFileService extends StObject {
   
   def checkDir(path: String, directory: String): IFilePromise[DirectoryEntry] = js.native
   

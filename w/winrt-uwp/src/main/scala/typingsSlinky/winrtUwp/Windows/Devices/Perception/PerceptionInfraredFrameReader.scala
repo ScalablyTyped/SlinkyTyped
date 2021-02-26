@@ -4,13 +4,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtUwp.Windows.Foundation.TypedEventHandler
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.framearrived
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Reads infrared frames from a infrared frame source. */
 @js.native
-trait PerceptionInfraredFrameReader extends js.Object {
+trait PerceptionInfraredFrameReader extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

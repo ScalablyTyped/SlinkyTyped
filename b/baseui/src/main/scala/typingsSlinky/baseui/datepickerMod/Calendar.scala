@@ -6,14 +6,21 @@ import typingsSlinky.baseui.anon.Date
 import typingsSlinky.baseui.anon.DateDate
 import typingsSlinky.baseui.anon.EventEvent
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("baseui/datepicker", "Calendar")
 @js.native
-class Calendar ()
+class Calendar protected ()
   extends Component[CalendarProps, CalendarState, js.Any] {
+  def this(props: CalendarProps) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: CalendarProps, context: js.Any) = this()
   
   def blurCalendar(): Unit = js.native
   

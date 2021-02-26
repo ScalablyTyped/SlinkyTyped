@@ -98,15 +98,22 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactSimpleMaps.mod.AnnotationProps
 import typingsSlinky.reactSimpleMaps.mod.Point
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Annotation {
   
+  @scala.inline
+  def apply(connectorProps: SVGProps[SVGPathElement]): Builder = {
+    val __props = js.Dynamic.literal(connectorProps = connectorProps.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AnnotationProps]))
+  }
+  
   @JSImport("react-simple-maps", "Annotation")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1283,10 +1290,4 @@ object Annotation {
   }
   
   def withProps(p: AnnotationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(connectorProps: SVGProps[SVGPathElement]): Builder = {
-    val __props = js.Dynamic.literal(connectorProps = connectorProps.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AnnotationProps]))
-  }
 }

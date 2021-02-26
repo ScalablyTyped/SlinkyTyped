@@ -5,14 +5,14 @@ import typingsSlinky.mobservable.dnodeMod.DataNode
 import typingsSlinky.mobservable.interfacesMod.IContextInfoStruct
 import typingsSlinky.mobservable.interfacesMod.Lambda
 import typingsSlinky.mobservable.simpleeventemitterMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("mobservable/lib/observablevalue", JSImport.Namespace)
-@js.native
-object observablevalueMod extends js.Object {
+object observablevalueMod {
   
+  @JSImport("mobservable/lib/observablevalue", "ObservableValue")
   @js.native
   class ObservableValue[T] protected () extends DataNode {
     def this(value: T, mode: ValueMode, context: IContextInfoStruct) = this()

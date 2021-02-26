@@ -1,16 +1,16 @@
 package typingsSlinky.yandexMaps.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("yandex-maps", "collection")
-@js.native
-object collection extends js.Object {
+object collection {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.yandexMaps.mod.IEventEmitter because Already inherited
-  - typingsSlinky.yandexMaps.mod.ICustomizable because var conflicts: events. Inlined options */ @js.native
+  - typingsSlinky.yandexMaps.mod.ICustomizable because var conflicts: events. Inlined options */ @JSImport("yandex-maps", "collection.Item")
+  @js.native
   class Item ()
     extends IChild[IControlParent]
        with IParentOnMap {

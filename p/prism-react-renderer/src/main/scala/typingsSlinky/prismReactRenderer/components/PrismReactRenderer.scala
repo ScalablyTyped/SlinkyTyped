@@ -9,15 +9,22 @@ import typingsSlinky.prismReactRenderer.mod.PrismLib
 import typingsSlinky.prismReactRenderer.mod.PrismTheme
 import typingsSlinky.prismReactRenderer.mod.RenderProps
 import typingsSlinky.prismReactRenderer.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PrismReactRenderer {
   
+  @scala.inline
+  def apply(Prism: PrismLib, children: RenderProps => ReactElement, code: String, language: Language): Builder = {
+    val __props = js.Dynamic.literal(Prism = Prism.asInstanceOf[js.Any], children = js.Any.fromFunction1(children), code = code.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[HighlightProps]))
+  }
+  
   @JSImport("prism-react-renderer", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,10 +36,4 @@ object PrismReactRenderer {
   }
   
   def withProps(p: HighlightProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(Prism: PrismLib, children: RenderProps => ReactElement, code: String, language: Language): Builder = {
-    val __props = js.Dynamic.literal(Prism = Prism.asInstanceOf[js.Any], children = js.Any.fromFunction1(children), code = code.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[HighlightProps]))
-  }
 }

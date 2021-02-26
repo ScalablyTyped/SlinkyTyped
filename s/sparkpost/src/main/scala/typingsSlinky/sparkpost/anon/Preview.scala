@@ -8,12 +8,13 @@ import typingsSlinky.sparkpost.mod.Template
 import typingsSlinky.sparkpost.mod.TemplateContent
 import typingsSlinky.sparkpost.mod.TemplateMeta
 import typingsSlinky.sparkpost.mod.UpdateTemplate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Preview extends js.Object {
+trait Preview extends StObject {
   
   /**
     * Create a new template

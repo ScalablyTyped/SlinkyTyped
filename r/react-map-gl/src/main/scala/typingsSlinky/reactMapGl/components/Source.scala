@@ -11,15 +11,23 @@ import typingsSlinky.reactMapGl.reactMapGlStrings.mapbox
 import typingsSlinky.reactMapGl.reactMapGlStrings.terrarium
 import typingsSlinky.reactMapGl.reactMapGlStrings.tms
 import typingsSlinky.reactMapGl.reactMapGlStrings.xyz
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Source {
   
+  @scala.inline
+  def apply(`type`: String): Builder = {
+    val __props = js.Dynamic.literal()
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SourceProps]))
+  }
+  
   @JSImport("react-map-gl", "Source")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +38,10 @@ object Source {
     def attribution(value: String): this.type = set("attribution", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def boundsVarargs(value: Double*): this.type = set("bounds", js.Array(value :_*))
+    def bounds(value: js.Array[Double]): this.type = set("bounds", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def bounds(value: js.Array[Double]): this.type = set("bounds", value.asInstanceOf[js.Any])
+    def boundsVarargs(value: Double*): this.type = set("bounds", js.Array(value :_*))
     
     @scala.inline
     def buffer(value: Double): this.type = set("buffer", value.asInstanceOf[js.Any])
@@ -51,10 +59,10 @@ object Source {
     def clusterRadius(value: Double): this.type = set("clusterRadius", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def coordinatesVarargs(value: js.Array[Double]*): this.type = set("coordinates", js.Array(value :_*))
+    def coordinates(value: js.Array[js.Array[Double]]): this.type = set("coordinates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def coordinates(value: js.Array[js.Array[Double]]): this.type = set("coordinates", value.asInstanceOf[js.Any])
+    def coordinatesVarargs(value: js.Array[Double]*): this.type = set("coordinates", js.Array(value :_*))
     
     @scala.inline
     def data(
@@ -86,10 +94,10 @@ object Source {
     def tileSize(value: Double): this.type = set("tileSize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tilesVarargs(value: String*): this.type = set("tiles", js.Array(value :_*))
+    def tiles(value: js.Array[String]): this.type = set("tiles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tiles(value: js.Array[String]): this.type = set("tiles", value.asInstanceOf[js.Any])
+    def tilesVarargs(value: String*): this.type = set("tiles", js.Array(value :_*))
     
     @scala.inline
     def tolerance(value: Double): this.type = set("tolerance", value.asInstanceOf[js.Any])
@@ -98,18 +106,11 @@ object Source {
     def url(value: String): this.type = set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def urlsVarargs(value: String*): this.type = set("urls", js.Array(value :_*))
+    def urls(value: js.Array[String]): this.type = set("urls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def urls(value: js.Array[String]): this.type = set("urls", value.asInstanceOf[js.Any])
+    def urlsVarargs(value: String*): this.type = set("urls", js.Array(value :_*))
   }
   
   def withProps(p: SourceProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(`type`: String): Builder = {
-    val __props = js.Dynamic.literal()
-    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SourceProps]))
-  }
 }

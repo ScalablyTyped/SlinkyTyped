@@ -2,14 +2,14 @@ package typingsSlinky.firebaseDatabase
 
 import typingsSlinky.firebaseDatabase.nodeFilterMod.NodeFilter
 import typingsSlinky.firebaseDatabase.queryParamsMod.QueryParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/database/dist/src/core/view/filter/LimitedFilter", JSImport.Namespace)
-@js.native
-object limitedFilterMod extends js.Object {
+object limitedFilterMod {
   
+  @JSImport("@firebase/database/dist/src/core/view/filter/LimitedFilter", "LimitedFilter")
   @js.native
   class LimitedFilter protected () extends NodeFilter {
     /**

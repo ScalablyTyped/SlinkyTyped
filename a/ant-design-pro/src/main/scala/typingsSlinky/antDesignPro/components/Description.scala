@@ -77,6 +77,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -85,7 +86,7 @@ object Description {
   
   @JSImport("ant-design-pro/lib/DescriptionList/Description", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -278,10 +279,10 @@ object Description {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -632,10 +633,10 @@ object Description {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def termReactElement(value: ReactElement): this.type = set("term", value.asInstanceOf[js.Any])
+    def term(value: ReactElement): this.type = set("term", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def term(value: ReactElement): this.type = set("term", value.asInstanceOf[js.Any])
+    def termReactElement(value: ReactElement): this.type = set("term", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -662,7 +663,7 @@ object Description {
     def xxl(value: ColSpanType | ColSize): this.type = set("xxl", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DescriptionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Description.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DescriptionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

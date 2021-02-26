@@ -1,13 +1,14 @@
 package typingsSlinky.antvScale
 
 import typingsSlinky.antvScale.typesMod.ScaleConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/scale/lib/tick-method/log", JSImport.Namespace)
-@js.native
-object tickMethodLogMod extends js.Object {
+object tickMethodLogMod {
   
+  @JSImport("@antv/scale/lib/tick-method/log", JSImport.Default)
+  @js.native
   def default(cfg: ScaleConfig): js.Array[_] = js.native
 }

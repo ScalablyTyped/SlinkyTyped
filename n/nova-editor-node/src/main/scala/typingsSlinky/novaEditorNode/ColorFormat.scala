@@ -1,5 +1,6 @@
 package typingsSlinky.novaEditorNode
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.novaEditorNode.novaEditorNodeStrings.p3
   - typingsSlinky.novaEditorNode.novaEditorNodeStrings.hex
 */
-trait ColorFormat extends js.Object
+trait ColorFormat extends StObject
 object ColorFormat {
   
   @scala.inline

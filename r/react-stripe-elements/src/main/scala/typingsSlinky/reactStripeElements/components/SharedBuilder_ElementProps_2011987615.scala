@@ -10,6 +10,7 @@ import typingsSlinky.stripeV3.anon.Complete
 import typingsSlinky.stripeV3.stripe.paymentRequest.StripePaymentRequest
 import typingsSlinky.stripeV3.stripeV3Strings.default
 import typingsSlinky.stripeV3.stripeV3Strings.solid
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -71,10 +72,10 @@ class SharedBuilder_ElementProps_2011987615[R <: js.Object] (val args: js.Array[
   def style(value: Complete): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def supportedCountriesVarargs(value: String*): this.type = set("supportedCountries", js.Array(value :_*))
+  def supportedCountries(value: js.Array[String]): this.type = set("supportedCountries", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def supportedCountries(value: js.Array[String]): this.type = set("supportedCountries", value.asInstanceOf[js.Any])
+  def supportedCountriesVarargs(value: String*): this.type = set("supportedCountries", js.Array(value :_*))
   
   @scala.inline
   def value(value: String | StringDictionary[String]): this.type = set("value", value.asInstanceOf[js.Any])

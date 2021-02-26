@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.QuotaUserResourceUploadTypeUploadprotocol
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.ResourceUploadTypeUploadprotocolXgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SubaccountsResource extends js.Object {
+trait SubaccountsResource extends StObject {
   
   /** Gets one subaccount by ID. */
   def get(): Request[Subaccount] = js.native

@@ -3,18 +3,22 @@
 
 Typings are for version 1.0.0-rc.3
 
-
+## Library description:
+[![NPM version](https://img.shields.io/npm/v/@aws-sdk/util-buffer-from/latest.svg)](https://www.npmjs.com/package/@aws-sdk/util-buffer-from) [![NPM downloads](https://img.shields.io/npm/dm/@aws-sdk/util-buffer-from.svg)](https://www.npmjs.com/package/@aws
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/util-buffer-from |
 | Keywords           | - |
-| # releases         | 5 |
+| # releases         | 25 |
 | # dependents       | 3 |
-| # downloads        | 948334 |
+| # downloads        | 10047026 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/aws/aws-sdk-js-v3/tree/main/packages/util-buffer-from)
+- [Bugs](https://github.com/aws/aws-sdk-js-v3/issues)
+- [Repository](https://github.com/aws/aws-sdk-js-v3)
 - [Npm](https://www.npmjs.com/package/%40aws-sdk%2Futil-buffer-from)
     
 

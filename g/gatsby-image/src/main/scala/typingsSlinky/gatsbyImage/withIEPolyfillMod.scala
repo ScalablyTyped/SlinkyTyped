@@ -4,14 +4,14 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.gatsbyImage.anon.ObjectFit
 import typingsSlinky.gatsbyImage.mod.GatsbyImageProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gatsby-image/withIEPolyfill", JSImport.Namespace)
-@js.native
-object withIEPolyfillMod extends js.Object {
+object withIEPolyfillMod {
   
+  @JSImport("gatsby-image/withIEPolyfill", JSImport.Default)
   @js.native
   class default ()
     extends Component[GatsbyImageWithIEPolyfillProps, js.Object, js.Any]

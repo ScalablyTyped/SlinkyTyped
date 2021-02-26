@@ -8,6 +8,7 @@ import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.backboneMarionette.anon.Dictindex
 import typingsSlinky.backboneMarionette.backboneMarionetteBooleans.`false`
 import typingsSlinky.jquery.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,12 +1,13 @@
 package typingsSlinky.ethersprojectAddress
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ethersproject/address/lib/_version", JSImport.Namespace)
-@js.native
-object versionMod extends js.Object {
+object versionMod {
   
-  val version: /* "address/5.0.6" */ String = js.native
+  @JSImport("@ethersproject/address/lib/_version", "version")
+  @js.native
+  val version: /* "address/5.0.7" */ String = js.native
 }

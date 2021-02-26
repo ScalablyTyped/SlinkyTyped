@@ -7,6 +7,7 @@ import typingsSlinky.onesignalCordovaPlugin.onesignalCordovaPluginNumbers.`3`
 import typingsSlinky.onesignalCordovaPlugin.onesignalCordovaPluginNumbers.`4`
 import typingsSlinky.onesignalCordovaPlugin.onesignalCordovaPluginNumbers.`5`
 import typingsSlinky.onesignalCordovaPlugin.onesignalCordovaPluginNumbers.`6`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.onesignalCordovaPlugin.onesignalCordovaPluginNumbers.`5`
   - typingsSlinky.onesignalCordovaPlugin.onesignalCordovaPluginNumbers.`6`
 */
-trait OSLogLevel extends js.Object
+trait OSLogLevel extends StObject
 object OSLogLevel {
   
   @scala.inline

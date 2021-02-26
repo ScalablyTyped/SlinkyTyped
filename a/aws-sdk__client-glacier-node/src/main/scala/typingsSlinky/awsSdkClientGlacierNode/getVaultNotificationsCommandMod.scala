@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientGlacierNode.typesGetVaultNotificationsInputMod.
 import typingsSlinky.awsSdkClientGlacierNode.typesGetVaultNotificationsOutputMod.GetVaultNotificationsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/commands/GetVaultNotificationsCommand", JSImport.Namespace)
-@js.native
-object getVaultNotificationsCommandMod extends js.Object {
+object getVaultNotificationsCommandMod {
   
+  @JSImport("@aws-sdk/client-glacier-node/commands/GetVaultNotificationsCommand", "GetVaultNotificationsCommand")
   @js.native
   class GetVaultNotificationsCommand protected () extends Command[
           InputTypesUnion, 

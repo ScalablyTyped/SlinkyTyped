@@ -9,16 +9,16 @@ Clean up user-submitted HTML, preserving whitelisted elements and whitelisted at
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | sanitize-html |
-| Keywords           | html, parser, sanitizer, html, sanitizer, apostrophe |
-| # releases         | 13 |
-| # dependents       | 433 |
-| # downloads        | 26400864 |
+| Keywords           | html, parser, sanitizer, sanitize |
+| # releases         | 27 |
+| # dependents       | 563 |
+| # downloads        | 45488829 |
 | # stars            | 72 |
 
 ## Links
-- [Homepage](https://github.com/punkave/sanitize-html#readme)
-- [Bugs](https://github.com/punkave/sanitize-html/issues)
-- [Repository](https://github.com/punkave/sanitize-html)
+- [Homepage](https://github.com/apostrophecms/sanitize-html#readme)
+- [Bugs](https://github.com/apostrophecms/sanitize-html/issues)
+- [Repository](https://github.com/apostrophecms/sanitize-html)
 - [Npm](https://www.npmjs.com/package/sanitize-html)
     
 

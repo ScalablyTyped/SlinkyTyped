@@ -2,12 +2,13 @@ package typingsSlinky.chromeApps
 
 import typingsSlinky.chromeApps.chromeAppsStrings.appview
 import typingsSlinky.chromeApps.chromeAppsStrings.webview
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Document extends js.Object {
+trait Document extends StObject {
   
   /**
     * ❗ document.close is not available in packaged apps. ❗

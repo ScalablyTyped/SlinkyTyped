@@ -4,6 +4,7 @@ import typingsSlinky.activexWord.activexWordNumbers.`-1`
 import typingsSlinky.activexWord.activexWordNumbers.`-4`
 import typingsSlinky.activexWord.activexWordNumbers.`-5`
 import typingsSlinky.activexWord.activexWordNumbers.`-6`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWord.activexWordNumbers.`-1`
   - typingsSlinky.activexWord.activexWordNumbers.`-4`
 */
-trait WdEditorType extends js.Object
+trait WdEditorType extends StObject
 object WdEditorType {
   
   @scala.inline

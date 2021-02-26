@@ -33,6 +33,7 @@ import typingsSlinky.tuyaPanelKit.themeMod.StopsProps
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.`box-none`
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.`box-only`
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.none_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,7 +42,7 @@ object Progress {
   
   @JSImport("tuya-panel-kit", "Progress")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,10 +50,10 @@ object Progress {
        with StBuildingComponent[tag.type, typingsSlinky.tuyaPanelKit.mod.Progress] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -79,10 +80,10 @@ object Progress {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -115,10 +116,10 @@ object Progress {
     def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def foreColorVarargs(value: StopsProps*): this.type = set("foreColor", js.Array(value :_*))
+    def foreColor(value: String | js.Array[StopsProps] | StringDictionary[String]): this.type = set("foreColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def foreColor(value: String | js.Array[StopsProps] | StringDictionary[String]): this.type = set("foreColor", value.asInstanceOf[js.Any])
+    def foreColorVarargs(value: StopsProps*): this.type = set("foreColor", js.Array(value :_*))
     
     @scala.inline
     def foreStrokeOpacity(value: Double): this.type = set("foreStrokeOpacity", value.asInstanceOf[js.Any])
@@ -235,10 +236,10 @@ object Progress {
     def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderCenterViewReactElement(value: ReactElement): this.type = set("renderCenterView", value.asInstanceOf[js.Any])
+    def renderCenterView(value: ReactElement): this.type = set("renderCenterView", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderCenterView(value: ReactElement): this.type = set("renderCenterView", value.asInstanceOf[js.Any])
+    def renderCenterViewReactElement(value: ReactElement): this.type = set("renderCenterView", value.asInstanceOf[js.Any])
     
     @scala.inline
     def renderToHardwareTextureAndroid(value: Boolean): this.type = set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])
@@ -310,7 +311,7 @@ object Progress {
     def y2(value: String): this.type = set("y2", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ProgressBasicProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Progress.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ProgressBasicProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

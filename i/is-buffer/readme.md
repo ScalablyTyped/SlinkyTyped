@@ -10,9 +10,9 @@ Determine if an object is a Buffer
 | ------------------ | :-------------: |
 | Full name          | is-buffer |
 | Keywords           | arraybuffer, browser, browser buffer, browserify, buffer, buffers, core buffer, dataview, float32array, float64array, int16array, int32array, type, typed array, uint32array |
-| # releases         | 6 |
-| # dependents       | 286 |
-| # downloads        | 657719135 |
+| # releases         | 3 |
+| # dependents       | 388 |
+| # downloads        | 1095481137 |
 | # stars            | 4 |
 
 ## Links

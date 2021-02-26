@@ -3,20 +3,16 @@ package typingsSlinky.hyperlorisTyson
 import typingsSlinky.hyperlorisTyson.jsonPropertyMod.JsonPropertyOptions
 import typingsSlinky.hyperlorisTyson.typeTokenMod.ClassType
 import typingsSlinky.hyperlorisTyson.typeTokenMod.TypeToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@hyperloris/tyson", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  def JsonProperty(): js.Any = js.native
-  def JsonProperty(options: String): js.Any = js.native
-  def JsonProperty(options: JsonPropertyOptions): js.Any = js.native
-  
+  @JSImport("@hyperloris/tyson", "Access")
   @js.native
-  object Access extends js.Object {
+  object Access extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.hyperlorisTyson.jsonPropertyMod.Access with String] = js.native
@@ -26,10 +22,22 @@ object mod extends js.Object {
     /* "TOJSON_ONLY" */ val TOJSON_ONLY: typingsSlinky.hyperlorisTyson.jsonPropertyMod.Access.TOJSON_ONLY with String = js.native
   }
   
+  @JSImport("@hyperloris/tyson", "JsonProperty")
+  @js.native
+  def JsonProperty(): js.Any = js.native
+  @JSImport("@hyperloris/tyson", "JsonProperty")
+  @js.native
+  def JsonProperty(options: String): js.Any = js.native
+  @JSImport("@hyperloris/tyson", "JsonProperty")
+  @js.native
+  def JsonProperty(options: JsonPropertyOptions): js.Any = js.native
+  
+  @JSImport("@hyperloris/tyson", "TypeAdapter")
   @js.native
   abstract class TypeAdapter[T] ()
     extends typingsSlinky.hyperlorisTyson.typeAdapterMod.TypeAdapter[T]
   
+  @JSImport("@hyperloris/tyson", "Tyson")
   @js.native
   /**
     * Creates an instance of Tyson.
@@ -37,7 +45,7 @@ object mod extends js.Object {
     * @param {TysonBuilder} [builder]
     * @memberof Tyson
     */
-  class Tyson () extends js.Object {
+  class Tyson () extends StObject {
     def this(builder: typingsSlinky.hyperlorisTyson.tysonBuilderMod.TysonBuilder) = this()
     
     var _factories: js.Any = js.native
@@ -88,6 +96,7 @@ object mod extends js.Object {
     def toJson(src: js.Object, `type`: ClassType[_]): js.Any = js.native
   }
   
+  @JSImport("@hyperloris/tyson", "TysonBuilder")
   @js.native
   class TysonBuilder ()
     extends typingsSlinky.hyperlorisTyson.tysonBuilderMod.TysonBuilder

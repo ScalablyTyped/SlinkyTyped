@@ -9,14 +9,14 @@ import typingsSlinky.uirouterCore.urlInterfaceMod.UrlRule
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlRuleHandlerFn
 import typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher
 import typingsSlinky.uirouterCore.urlRuleMod.UrlRuleFactory
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/url/urlRules", JSImport.Namespace)
-@js.native
-object urlRulesMod extends js.Object {
+object urlRulesMod {
   
+  @JSImport("@uirouter/core/lib/url/urlRules", "UrlRules")
   @js.native
   class UrlRules protected () extends Disposable {
     /** @internal */

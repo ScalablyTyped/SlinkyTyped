@@ -11,8 +11,8 @@ Typings are for version 1.0
 | Full name          | caller |
 | Keywords           | caller, file, require |
 | # releases         | 0 |
-| # dependents       | 145 |
-| # downloads        | 9298128 |
+| # dependents       | 154 |
+| # downloads        | 12040835 |
 | # stars            | 3 |
 
 ## Links

@@ -1,5 +1,6 @@
 package typingsSlinky.gdal.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gdal.gdalStrings.AVERAGE_MAGPHASE
   - typingsSlinky.gdal.gdalStrings.NONE
 */
-trait Resampling extends js.Object
+trait Resampling extends StObject
 object Resampling {
   
   @scala.inline

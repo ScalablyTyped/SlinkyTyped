@@ -1,15 +1,18 @@
 package typingsSlinky.opentracing
 
 import typingsSlinky.opentracing.tracerMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("opentracing/lib/global_tracer", JSImport.Namespace)
-@js.native
-object globalTracerMod extends js.Object {
+object globalTracerMod {
   
+  @JSImport("opentracing/lib/global_tracer", "globalTracer")
+  @js.native
   def globalTracer(): default = js.native
   
+  @JSImport("opentracing/lib/global_tracer", "initGlobalTracer")
+  @js.native
   def initGlobalTracer(tracer: default): Unit = js.native
 }

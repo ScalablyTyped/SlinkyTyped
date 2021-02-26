@@ -1,5 +1,6 @@
 package typingsSlinky.ipp.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -512,8 +513,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ipp.ippStrings.`na-number-9-envelope`
   - typingsSlinky.ipp.ippStrings.`na-number-10-envelope`
 */
-trait Media extends js.Object
+trait Media extends StObject
 object Media {
+  
+  @scala.inline
+  def default: typingsSlinky.ipp.ippStrings.default = "default".asInstanceOf[typingsSlinky.ipp.ippStrings.default]
   
   @scala.inline
   def a: typingsSlinky.ipp.ippStrings.a = "a".asInstanceOf[typingsSlinky.ipp.ippStrings.a]
@@ -730,9 +734,6 @@ object Media {
   
   @scala.inline
   def `d-white`: typingsSlinky.ipp.ippStrings.`d-white` = "d-white".asInstanceOf[typingsSlinky.ipp.ippStrings.`d-white`]
-  
-  @scala.inline
-  def default: typingsSlinky.ipp.ippStrings.default = "default".asInstanceOf[typingsSlinky.ipp.ippStrings.default]
   
   @scala.inline
   def `dxsynchro-translucent`: typingsSlinky.ipp.ippStrings.`dxsynchro-translucent` = "dxsynchro-translucent".asInstanceOf[typingsSlinky.ipp.ippStrings.`dxsynchro-translucent`]

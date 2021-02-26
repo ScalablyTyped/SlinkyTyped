@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientBigquerydatatransfer.gapi.client.big
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientBigquerydatatransfer.anon.Alt
 import typingsSlinky.maximMazurokGapiClientBigquerydatatransfer.anon.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RunsResource extends js.Object {
+trait RunsResource extends StObject {
   
   /** Deletes the specified transfer run. */
   def delete(): Request[js.Object] = js.native

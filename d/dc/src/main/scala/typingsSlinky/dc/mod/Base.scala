@@ -4,12 +4,13 @@ import org.scalajs.dom.raw.Node
 import typingsSlinky.d3Selection.mod.BaseType
 import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.d3Transition.mod.Transition_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Base extends js.Object {
+trait Base extends StObject {
   
   def afterTransition(
     transition: Transition_[
@@ -747,6 +748,8 @@ trait Base extends js.Object {
   
   def pieChart(parent: String): PieChart = js.native
   def pieChart(parent: String, chartGroup: String): PieChart = js.native
+  def pieChart(parent: Node): PieChart = js.native
+  def pieChart(parent: Node, chartGroup: String): PieChart = js.native
   def pieChart(
     parent: Selection_[
       _, 
@@ -764,8 +767,6 @@ trait Base extends js.Object {
     ],
     chartGroup: String
   ): PieChart = js.native
-  def pieChart(parent: Node): PieChart = js.native
-  def pieChart(parent: Node, chartGroup: String): PieChart = js.native
   
   def pluck(n: String): Accessor[_, _] = js.native
   def pluck(n: String, f: Accessor[_, _]): Accessor[_, _] = js.native
@@ -800,6 +801,8 @@ trait Base extends js.Object {
   
   def sunburstChart(parent: String): SunburstChart = js.native
   def sunburstChart(parent: String, chartGroup: String): SunburstChart = js.native
+  def sunburstChart(parent: Node): SunburstChart = js.native
+  def sunburstChart(parent: Node, chartGroup: String): SunburstChart = js.native
   def sunburstChart(
     parent: Selection_[
       _, 
@@ -817,8 +820,6 @@ trait Base extends js.Object {
     ],
     chartGroup: String
   ): SunburstChart = js.native
-  def sunburstChart(parent: Node): SunburstChart = js.native
-  def sunburstChart(parent: Node, chartGroup: String): SunburstChart = js.native
   
   def textFilterWidget(parent: String): TextFilterWidget = js.native
   def textFilterWidget(parent: String, chartGroup: String): TextFilterWidget = js.native

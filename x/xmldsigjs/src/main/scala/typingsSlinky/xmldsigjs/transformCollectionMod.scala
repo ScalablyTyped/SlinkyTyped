@@ -1,15 +1,17 @@
 package typingsSlinky.xmldsigjs
 
-import typingsSlinky.xmlCore.mod.XmlCollection
 import typingsSlinky.xmldsigjs.transformMod.Transform
+import typingsSlinky.xmldsigjs.xmlObjectMod.XmlSignatureCollection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xmldsigjs/build/types/xml/transform_collection", JSImport.Namespace)
-@js.native
-object transformCollectionMod extends js.Object {
+object transformCollectionMod {
   
+  @JSImport("xmldsigjs/build/types/xml/transform_collection", "Transforms")
   @js.native
-  class Transforms () extends XmlCollection[Transform]
+  class Transforms () extends XmlSignatureCollection[Transform] {
+    def this(properties: js.Object) = this()
+  }
 }

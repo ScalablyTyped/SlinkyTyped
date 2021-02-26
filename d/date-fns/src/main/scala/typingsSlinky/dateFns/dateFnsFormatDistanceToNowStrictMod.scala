@@ -1,20 +1,26 @@
 package typingsSlinky.dateFns
 
 import typingsSlinky.dateFns.anon.RoundingMethod
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("date-fns/formatDistanceToNowStrict", JSImport.Namespace)
-@js.native
-object dateFnsFormatDistanceToNowStrictMod extends js.Object {
+object dateFnsFormatDistanceToNowStrictMod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
-    def apply(date: Double): String = js.native
-    def apply(date: Double, options: RoundingMethod): String = js.native
+    @JSImport("date-fns/formatDistanceToNowStrict", JSImport.Default)
+    @js.native
     def apply(date: js.Date): String = js.native
+    @JSImport("date-fns/formatDistanceToNowStrict", JSImport.Default)
+    @js.native
     def apply(date: js.Date, options: RoundingMethod): String = js.native
+    @JSImport("date-fns/formatDistanceToNowStrict", JSImport.Default)
+    @js.native
+    def apply(date: Double): String = js.native
+    @JSImport("date-fns/formatDistanceToNowStrict", JSImport.Default)
+    @js.native
+    def apply(date: Double, options: RoundingMethod): String = js.native
   }
 }

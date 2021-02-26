@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.legacyMod
 
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -200,9 +201,11 @@ class SpriteManager protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "SpriteManager")
-@js.native
-object SpriteManager extends js.Object {
+object SpriteManager {
+  
+  @JSImport("babylonjs/Legacy/legacy", "SpriteManager")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Creates a sprite manager from a snippet saved by the sprite editor
@@ -211,7 +214,11 @@ object SpriteManager extends js.Object {
     * @param rootUrl defines the root URL to use to load textures and relative dependencies
     * @returns a promise that will resolve to the new sprite manager
     */
+  @JSImport("babylonjs/Legacy/legacy", "SpriteManager.CreateFromSnippetAsync")
+  @js.native
   def CreateFromSnippetAsync(snippetId: String, scene: typingsSlinky.babylonjs.sceneMod.Scene): js.Promise[typingsSlinky.babylonjs.spriteManagerMod.SpriteManager] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SpriteManager.CreateFromSnippetAsync")
+  @js.native
   def CreateFromSnippetAsync(snippetId: String, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): js.Promise[typingsSlinky.babylonjs.spriteManagerMod.SpriteManager] = js.native
   
   /**
@@ -221,6 +228,8 @@ object SpriteManager extends js.Object {
     * @param rootUrl The root url to use to load external dependencies like texture
     * @returns the new sprite manager
     */
+  @JSImport("babylonjs/Legacy/legacy", "SpriteManager.Parse")
+  @js.native
   def Parse(parsedManager: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.spriteManagerMod.SpriteManager = js.native
   
   /**
@@ -231,7 +240,11 @@ object SpriteManager extends js.Object {
     * @param rootUrl defines the root URL to use to load textures and relative dependencies
     * @returns a promise that will resolve to the new sprite manager
     */
+  @JSImport("babylonjs/Legacy/legacy", "SpriteManager.ParseFromFileAsync")
+  @js.native
   def ParseFromFileAsync(name: Nullable[String], url: String, scene: typingsSlinky.babylonjs.sceneMod.Scene): js.Promise[typingsSlinky.babylonjs.spriteManagerMod.SpriteManager] = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SpriteManager.ParseFromFileAsync")
+  @js.native
   def ParseFromFileAsync(
     name: Nullable[String],
     url: String,
@@ -240,5 +253,9 @@ object SpriteManager extends js.Object {
   ): js.Promise[typingsSlinky.babylonjs.spriteManagerMod.SpriteManager] = js.native
   
   /** Define the Url to load snippets */
-  var SnippetUrl: String = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SpriteManager.SnippetUrl")
+  @js.native
+  def SnippetUrl: String = js.native
+  @scala.inline
+  def SnippetUrl_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SnippetUrl")(x.asInstanceOf[js.Any])
 }

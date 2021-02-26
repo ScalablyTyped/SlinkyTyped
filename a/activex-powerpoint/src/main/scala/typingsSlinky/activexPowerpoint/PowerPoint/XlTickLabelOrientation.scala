@@ -5,6 +5,7 @@ import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`-4128`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`-4166`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`-4170`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`-4171`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`-4171`
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`-4166`
 */
-trait XlTickLabelOrientation extends js.Object
+trait XlTickLabelOrientation extends StObject
 object XlTickLabelOrientation {
   
   @scala.inline

@@ -1,9 +1,11 @@
 package typingsSlinky.loopback.mod
 
+import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.expressServeStaticCore.mod.Handler
 import typingsSlinky.loopback.anon.DataSource
 import typingsSlinky.loopback.anon.Enabled
 import typingsSlinky.loopback.anon.TypeofModel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -219,7 +221,7 @@ trait LoopBackApplication
     * ``
     *  @returns {Array} Array of model classes
     */
-  def models(): js.Array[TypeofModel] = js.native
+  def models(): js.Array[TypeofModel with (Instantiable1[/* data */ js.Any, Model])] = js.native
   
   /**
     * Get all remote objects.

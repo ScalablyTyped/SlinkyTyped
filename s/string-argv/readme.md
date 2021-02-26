@@ -10,9 +10,9 @@ string-argv parses a string into an argument array to mimic process.argv. This i
 | ------------------ | :-------------: |
 | Full name          | string-argv |
 | Keywords           | argv |
-| # releases         | 8 |
-| # dependents       | 88 |
-| # downloads        | 65510381 |
+| # releases         | 6 |
+| # dependents       | 119 |
+| # downloads        | 144773758 |
 | # stars            | 3 |
 
 ## Links

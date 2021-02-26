@@ -5,16 +5,18 @@ import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialChips.chipComponentMod.MDCChip
 import typingsSlinky.materialChips.chipComponentMod.MDCChipFactory
 import typingsSlinky.materialChips.foundationMod.MDCChipSetFoundation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/chips/chip-set/component", JSImport.Namespace)
-@js.native
-object componentMod extends js.Object {
+object componentMod {
   
+  @JSImport("@material/chips/chip-set/component", "MDCChipSet")
   @js.native
-  class MDCChipSet () extends MDCComponent[MDCChipSetFoundation] {
+  class MDCChipSet protected () extends MDCComponent[MDCChipSetFoundation] {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(root: Element, foundation: MDCChipSetFoundation, args: js.Any*) = this()
     
     /**
       * Adds a new chip object to the chip set from the given chip element.
@@ -35,9 +37,10 @@ object componentMod extends js.Object {
     def selectedChipIds: js.Array[String] = js.native
   }
   /* static members */
-  @js.native
-  object MDCChipSet extends js.Object {
+  object MDCChipSet {
     
+    @JSImport("@material/chips/chip-set/component", "MDCChipSet.attachTo")
+    @js.native
     def attachTo(root: Element): MDCChipSet = js.native
   }
 }

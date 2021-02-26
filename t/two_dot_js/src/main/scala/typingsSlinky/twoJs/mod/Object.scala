@@ -1,5 +1,6 @@
 package typingsSlinky.twoJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.twoJs.mod.Group
   - typingsSlinky.twoJs.mod.Text
 */
-trait Object extends js.Object
+trait Object extends StObject

@@ -1,5 +1,6 @@
 package typingsSlinky.reactNative.mod.Animated
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNative.reactNativeStrings.identity
   - typingsSlinky.reactNative.reactNativeStrings.clamp
 */
-trait ExtrapolateType extends js.Object
+trait ExtrapolateType extends StObject
 object ExtrapolateType {
   
   @scala.inline

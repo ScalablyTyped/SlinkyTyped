@@ -1,5 +1,6 @@
 package typingsSlinky.recharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.recharts.rechartsStrings.`ease-in-out`
   - typingsSlinky.recharts.rechartsStrings.linear
 */
-trait AnimationEasingType extends js.Object
+trait AnimationEasingType extends StObject
 object AnimationEasingType {
   
   @scala.inline

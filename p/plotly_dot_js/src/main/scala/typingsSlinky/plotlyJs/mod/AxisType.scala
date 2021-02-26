@@ -1,6 +1,7 @@
 package typingsSlinky.plotlyJs.mod
 
 import typingsSlinky.plotlyJs.plotlyJsStrings.`-_`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.plotlyJs.plotlyJsStrings.category
   - typingsSlinky.plotlyJs.plotlyJsStrings.multicategory
 */
-trait AxisType extends js.Object
+trait AxisType extends StObject
 object AxisType {
   
   @scala.inline

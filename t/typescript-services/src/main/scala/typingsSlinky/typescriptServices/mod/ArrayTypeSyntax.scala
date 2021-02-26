@@ -2,6 +2,7 @@ package typingsSlinky.typescriptServices.mod
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import typingsSlinky.typescriptServices.TypeScript.ITypeSyntax
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,10 +18,10 @@ class ArrayTypeSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSImport("typescript-services", "ArrayTypeSyntax")
-@js.native
-object ArrayTypeSyntax extends js.Object {
+object ArrayTypeSyntax {
   
+  /* static member */
+  @JSImport("typescript-services", "ArrayTypeSyntax.create1")
+  @js.native
   def create1(`type`: ITypeSyntax): typingsSlinky.typescriptServices.TypeScript.ArrayTypeSyntax = js.native
 }

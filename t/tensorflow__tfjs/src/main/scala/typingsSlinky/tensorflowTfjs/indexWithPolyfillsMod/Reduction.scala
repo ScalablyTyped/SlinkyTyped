@@ -1,12 +1,13 @@
 package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs/dist/index_with_polyfills", "Reduction")
 @js.native
-object Reduction extends js.Object {
+object Reduction extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.tensorflowTfjsCore.lossOpsUtilsMod.Reduction with Double] = js.native

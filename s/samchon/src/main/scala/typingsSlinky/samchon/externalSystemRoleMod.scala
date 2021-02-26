@@ -4,14 +4,14 @@ import typingsSlinky.samchon.entityMod.Entity
 import typingsSlinky.samchon.externalSystemArrayMod.ExternalSystemArray
 import typingsSlinky.samchon.externalSystemMod.ExternalSystem
 import typingsSlinky.samchon.iprotocolMod.IProtocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/external/ExternalSystemRole", JSImport.Namespace)
-@js.native
-object externalSystemRoleMod extends js.Object {
+object externalSystemRoleMod {
   
+  @JSImport("samchon/templates/external/ExternalSystemRole", "ExternalSystemRole")
   @js.native
   abstract class ExternalSystemRole protected ()
     extends Entity

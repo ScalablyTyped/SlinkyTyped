@@ -7,12 +7,13 @@ import typingsSlinky.astTypes.kindsMod.FlowTypeKind
 import typingsSlinky.astTypes.kindsMod.TypeAnnotationKind
 import typingsSlinky.astTypes.kindsMod.VarianceKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeParameter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeParameterBuilder extends js.Object {
+trait TypeParameterBuilder extends StObject {
   
   def apply(name: String): TypeParameter = js.native
   def apply(

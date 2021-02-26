@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,18 +33,26 @@ class ClientPagingControls () extends IClientPagingControls {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "ClientPagingControls")
-@js.native
-object ClientPagingControls extends js.Object {
+object ClientPagingControls {
   
   /**
     * Creates a new ClientPagingControls instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ClientPagingControls instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.create")
+  @js.native
   def create(): ClientPagingControls = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.create")
+  @js.native
   def create(properties: IClientPagingControls): ClientPagingControls = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): ClientPagingControls = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ClientPagingControls = js.native
   /**
     * Decodes a ClientPagingControls message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -52,11 +61,16 @@ object ClientPagingControls extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.decode")
+  @js.native
   def decode(reader: Reader): ClientPagingControls = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.decode")
+  @js.native
   def decode(reader: Reader, length: Double): ClientPagingControls = js.native
-  def decode(reader: js.typedarray.Uint8Array): ClientPagingControls = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): ClientPagingControls = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ClientPagingControls = js.native
   /**
     * Decodes a ClientPagingControls message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -64,8 +78,9 @@ object ClientPagingControls extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): ClientPagingControls = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): ClientPagingControls = js.native
   
   /**
     * Encodes the specified ClientPagingControls message. Does not implicitly {@link ClientPagingControls.verify|verify} messages.
@@ -73,7 +88,11 @@ object ClientPagingControls extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.encode")
+  @js.native
   def encode(message: IClientPagingControls): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.encode")
+  @js.native
   def encode(message: IClientPagingControls, writer: Writer): Writer = js.native
   
   /**
@@ -82,7 +101,11 @@ object ClientPagingControls extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientPagingControls): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientPagingControls, writer: Writer): Writer = js.native
   
   /**
@@ -90,6 +113,8 @@ object ClientPagingControls extends js.Object {
     * @param object Plain object
     * @returns ClientPagingControls
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): ClientPagingControls = js.native
   
   /**
@@ -98,7 +123,11 @@ object ClientPagingControls extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.toObject")
+  @js.native
   def toObject(message: ClientPagingControls): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.toObject")
+  @js.native
   def toObject(message: ClientPagingControls, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -106,5 +135,7 @@ object ClientPagingControls extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

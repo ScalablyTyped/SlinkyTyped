@@ -9,9 +9,9 @@ Rename files
 | ------------------ | :-------------: |
 | Full name          | gulp-rename |
 | Keywords           | gulpplugin |
-| # releases         | 5 |
-| # dependents       | 2587 |
-| # downloads        | 38082275 |
+| # releases         | 2 |
+| # dependents       | 2734 |
+| # downloads        | 36471291 |
 | # stars            | 323 |
 
 ## Links

@@ -77,20 +77,30 @@ import typingsSlinky.reactI18next.reactI18nextStrings.tree
 import typingsSlinky.reactI18next.reactI18nextStrings.url
 import typingsSlinky.reactI18next.reactI18nextStrings.vertical
 import typingsSlinky.reactI18next.reactI18nextStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Trans {
   
+  @scala.inline
+  def apply[E /* <: Element */](): Builder[E] = {
+    val __props = js.Dynamic.literal()
+    new Builder[E](js.Array(this.component, __props.asInstanceOf[TransProps[E]]))
+  }
+  
   @JSImport("react-i18next", "Trans")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[E /* <: Element */] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, E with js.Object] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -323,10 +333,10 @@ object Trans {
     def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentsVarargs(value: ReactElement*): this.type = set("components", js.Array(value :_*))
+    def components(value: js.Array[ReactElement] | StringDictionary[ReactElement]): this.type = set("components", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def components(value: js.Array[ReactElement] | StringDictionary[ReactElement]): this.type = set("components", value.asInstanceOf[js.Any])
+    def componentsVarargs(value: ReactElement*): this.type = set("components", js.Array(value :_*))
     
     @scala.inline
     def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
@@ -362,16 +372,13 @@ object Trans {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defaults(value: String): this.type = set("defaults", value.asInstanceOf[js.Any])
@@ -545,10 +552,10 @@ object Trans {
     def nonce(value: String): this.type = set("nonce", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nsVarargs(value: String*): this.type = set("ns", js.Array(value :_*))
+    def ns(value: Namespace): this.type = set("ns", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ns(value: Namespace): this.type = set("ns", value.asInstanceOf[js.Any])
+    def nsVarargs(value: String*): this.type = set("ns", js.Array(value :_*))
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, E] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -794,13 +801,13 @@ object Trans {
     def optimum(value: Double): this.type = set("optimum", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def parentFunctionComponent(value: ReactComponentClass[_]): this.type = set("parent", value.asInstanceOf[js.Any])
+    def parent(value: String | ReactComponentClass[_]): this.type = set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def parentComponentClass(value: ReactComponentClass[_]): this.type = set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def parent(value: String | ReactComponentClass[_]): this.type = set("parent", value.asInstanceOf[js.Any])
+    def parentFunctionComponent(value: ReactComponentClass[_]): this.type = set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def parentNull: this.type = set("parent", null)
@@ -956,10 +963,10 @@ object Trans {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def values(value: js.Object): this.type = set("values", value.asInstanceOf[js.Any])
@@ -977,13 +984,7 @@ object Trans {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps[E /* <: Element */](p: TransProps[E]): Builder[E] = new Builder[E](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[E /* <: Element */](): Builder[E] = {
-    val __props = js.Dynamic.literal()
-    new Builder[E](js.Array(this.component, __props.asInstanceOf[TransProps[E]]))
-  }
-  
   implicit def make[E /* <: Element */](companion: Trans.type): Builder[E] = new Builder[E](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps[E /* <: Element */](p: TransProps[E]): Builder[E] = new Builder[E](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

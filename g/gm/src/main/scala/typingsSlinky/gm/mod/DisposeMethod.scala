@@ -1,5 +1,6 @@
 package typingsSlinky.gm.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gm.gmStrings.Background
   - typingsSlinky.gm.gmStrings.Previous
 */
-trait DisposeMethod extends js.Object
+trait DisposeMethod extends StObject
 object DisposeMethod {
   
   @scala.inline

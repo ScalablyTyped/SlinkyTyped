@@ -1,16 +1,17 @@
 package typingsSlinky.sharepoint
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MQuery extends js.Object {
+trait MQuery extends StObject {
   
   def apply(objectOrElement: js.Array[HTMLElement]): MQueryResultSetElements = js.native
-  def apply(objectOrElement: MQueryResultSetElements): MQueryResultSetElements = js.native
   def apply(objectOrElement: HTMLElement): MQueryResultSetElements = js.native
+  def apply(objectOrElement: MQueryResultSetElements): MQueryResultSetElements = js.native
   def apply(selector: String): MQueryResultSetElements = js.native
   def apply(selector: String, context: js.Any): MQueryResultSetElements = js.native
   def apply[T](): MQueryResultSet[T] = js.native

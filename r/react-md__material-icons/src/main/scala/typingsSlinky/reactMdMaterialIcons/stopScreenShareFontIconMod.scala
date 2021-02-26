@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.fontIconMod.FontIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/StopScreenShareFontIcon", JSImport.Namespace)
-@js.native
-object stopScreenShareFontIconMod extends js.Object {
+object stopScreenShareFontIconMod {
   
+  @JSImport("@react-md/material-icons/types/StopScreenShareFontIcon", "StopScreenShareFontIcon")
+  @js.native
   val StopScreenShareFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

@@ -1,12 +1,13 @@
 package typingsSlinky.officeUiFabricReact.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react", "ConstrainMode")
 @js.native
-object ConstrainMode extends js.Object {
+object ConstrainMode extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.detailsListTypesMod.ConstrainMode with Double] = js.native

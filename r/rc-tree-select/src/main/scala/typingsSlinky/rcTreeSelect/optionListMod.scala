@@ -1,5 +1,6 @@
 package typingsSlinky.rcTreeSelect
 
+import org.scalablytyped.runtime.Shortcut
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcSelect.optionListMod.RefOptionListProps
@@ -11,18 +12,19 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.std.Set
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-tree-select/es/OptionList", JSImport.Namespace)
-@js.native
-object optionListMod extends js.Object {
+object optionListMod extends Shortcut {
   
+  @JSImport("rc-tree-select/es/OptionList", JSImport.Default)
+  @js.native
   val default: ForwardRefExoticComponent[OptionListProps[js.Array[DataNode]] with RefAttributes[RefOptionListProps]] = js.native
   
   @js.native
-  trait OptionListProps[OptionsType /* <: js.Array[js.Object] */] extends js.Object {
+  trait OptionListProps[OptionsType /* <: js.Array[js.Object] */] extends StObject {
     
     var childrenAsData: Boolean = js.native
     
@@ -66,4 +68,9 @@ object optionListMod extends js.Object {
     
     var virtual: js.UndefOr[Boolean] = js.native
   }
+  
+  type _To = ForwardRefExoticComponent[OptionListProps[js.Array[DataNode]] with RefAttributes[RefOptionListProps]]
+  
+  /* This means you don't have to write `default`, but can instead just say `optionListMod.foo` */
+  override def _to: ForwardRefExoticComponent[OptionListProps[js.Array[DataNode]] with RefAttributes[RefOptionListProps]] = default
 }

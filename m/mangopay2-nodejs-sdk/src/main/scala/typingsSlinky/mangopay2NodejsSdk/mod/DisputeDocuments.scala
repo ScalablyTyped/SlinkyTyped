@@ -1,13 +1,14 @@
 package typingsSlinky.mangopay2NodejsSdk.mod
 
 import typingsSlinky.mangopay2NodejsSdk.mod.disputeDocument.DisputeDocumentData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mangopay2-nodejs-sdk", "DisputeDocuments")
 @js.native
-class DisputeDocuments () extends js.Object {
+class DisputeDocuments () extends StObject {
   
   /**
     * Creates temporary URLs where each page of a KYC document can be viewed.

@@ -7,14 +7,14 @@ import typingsSlinky.libp2pNoise.basicMod.bytes32
 import typingsSlinky.libp2pNoise.handshakeMod.MessageBuffer
 import typingsSlinky.libp2pNoise.handshakeMod.NoiseSession
 import typingsSlinky.libp2pNoise.libp2pMod.KeyPair
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("libp2p-noise/dist/src/handshakes/xx", JSImport.Namespace)
-@js.native
-object xxMod extends js.Object {
+object xxMod {
   
+  @JSImport("libp2p-noise/dist/src/handshakes/xx", "XX")
   @js.native
   class XX () extends AbstractHandshake {
     

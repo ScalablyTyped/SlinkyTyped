@@ -5,6 +5,7 @@ import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`1`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`2`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`3`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`3`
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`1`
 */
-trait XlPivotFieldOrientation extends js.Object
+trait XlPivotFieldOrientation extends StObject
 object XlPivotFieldOrientation {
   
   @scala.inline

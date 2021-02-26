@@ -32,18 +32,19 @@ import typingsSlinky.node.fsMod.StatOptions
 import typingsSlinky.node.fsMod.Stats
 import typingsSlinky.node.fsMod.WriteFileOptions
 import typingsSlinky.node.fsMod.symlink.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("broccoli-output-wrapper", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("broccoli-output-wrapper", JSImport.Namespace)
+  @js.native
   def apply(node: js.Any): FSOutput = js.native
   
   @js.native
-  trait FSOutput extends js.Object {
+  trait FSOutput extends StObject {
     
     def appendFileSync(file: Double, data: String): Unit = js.native
     def appendFileSync(file: Double, data: String, options: WriteFileOptions): Unit = js.native
@@ -129,14 +130,14 @@ object mod extends js.Object {
     var unlinkSync_Original: js.Function1[/* path */ PathLike, Unit] = js.native
     
     def utimesSync(path: PathLike, atime: String, mtime: String): Unit = js.native
-    def utimesSync(path: PathLike, atime: String, mtime: Double): Unit = js.native
     def utimesSync(path: PathLike, atime: String, mtime: js.Date): Unit = js.native
-    def utimesSync(path: PathLike, atime: Double, mtime: String): Unit = js.native
-    def utimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
-    def utimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
+    def utimesSync(path: PathLike, atime: String, mtime: Double): Unit = js.native
     def utimesSync(path: PathLike, atime: js.Date, mtime: String): Unit = js.native
-    def utimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
     def utimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
+    def utimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
+    def utimesSync(path: PathLike, atime: Double, mtime: String): Unit = js.native
+    def utimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
+    def utimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
     @JSName("utimesSync")
     var utimesSync_Original: FnCallPathAtimeMtime = js.native
     

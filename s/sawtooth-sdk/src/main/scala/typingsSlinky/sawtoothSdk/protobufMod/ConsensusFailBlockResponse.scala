@@ -1,11 +1,11 @@
 package typingsSlinky.sawtoothSdk.protobufMod
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.ConsensusFailBlockResponse.Status
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,18 +30,61 @@ class ConsensusFailBlockResponse () extends IConsensusFailBlockResponse {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse")
-@js.native
-object ConsensusFailBlockResponse extends js.Object {
+object ConsensusFailBlockResponse {
+  
+  @js.native
+  sealed trait Status extends StObject
+  /** Status enum. */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.Status")
+  @js.native
+  object Status extends StObject {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[Status with Double] = js.native
+    
+    @js.native
+    sealed trait BAD_REQUEST extends Status
+    /* 2 */ val BAD_REQUEST: typingsSlinky.sawtoothSdk.protobufMod.ConsensusFailBlockResponse.Status.BAD_REQUEST with Double = js.native
+    
+    @js.native
+    sealed trait NOT_READY extends Status
+    /* 4 */ val NOT_READY: typingsSlinky.sawtoothSdk.protobufMod.ConsensusFailBlockResponse.Status.NOT_READY with Double = js.native
+    
+    @js.native
+    sealed trait OK extends Status
+    /* 1 */ val OK: typingsSlinky.sawtoothSdk.protobufMod.ConsensusFailBlockResponse.Status.OK with Double = js.native
+    
+    @js.native
+    sealed trait SERVICE_ERROR extends Status
+    /* 3 */ val SERVICE_ERROR: typingsSlinky.sawtoothSdk.protobufMod.ConsensusFailBlockResponse.Status.SERVICE_ERROR with Double = js.native
+    
+    @js.native
+    sealed trait STATUS_UNSET extends Status
+    /* 0 */ val STATUS_UNSET: typingsSlinky.sawtoothSdk.protobufMod.ConsensusFailBlockResponse.Status.STATUS_UNSET with Double = js.native
+    
+    @js.native
+    sealed trait UNKNOWN_BLOCK extends Status
+    /* 5 */ val UNKNOWN_BLOCK: typingsSlinky.sawtoothSdk.protobufMod.ConsensusFailBlockResponse.Status.UNKNOWN_BLOCK with Double = js.native
+  }
   
   /**
     * Creates a new ConsensusFailBlockResponse instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ConsensusFailBlockResponse instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.create")
+  @js.native
   def create(): ConsensusFailBlockResponse = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.create")
+  @js.native
   def create(properties: IConsensusFailBlockResponse): ConsensusFailBlockResponse = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): ConsensusFailBlockResponse = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusFailBlockResponse = js.native
   /**
     * Decodes a ConsensusFailBlockResponse message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -50,11 +93,16 @@ object ConsensusFailBlockResponse extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.decode")
+  @js.native
   def decode(reader: Reader): ConsensusFailBlockResponse = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.decode")
+  @js.native
   def decode(reader: Reader, length: Double): ConsensusFailBlockResponse = js.native
-  def decode(reader: js.typedarray.Uint8Array): ConsensusFailBlockResponse = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusFailBlockResponse = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusFailBlockResponse = js.native
   /**
     * Decodes a ConsensusFailBlockResponse message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -62,8 +110,9 @@ object ConsensusFailBlockResponse extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): ConsensusFailBlockResponse = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusFailBlockResponse = js.native
   
   /**
     * Encodes the specified ConsensusFailBlockResponse message. Does not implicitly {@link ConsensusFailBlockResponse.verify|verify} messages.
@@ -71,7 +120,11 @@ object ConsensusFailBlockResponse extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.encode")
+  @js.native
   def encode(message: IConsensusFailBlockResponse): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.encode")
+  @js.native
   def encode(message: IConsensusFailBlockResponse, writer: Writer): Writer = js.native
   
   /**
@@ -80,7 +133,11 @@ object ConsensusFailBlockResponse extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusFailBlockResponse): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusFailBlockResponse, writer: Writer): Writer = js.native
   
   /**
@@ -88,6 +145,8 @@ object ConsensusFailBlockResponse extends js.Object {
     * @param object Plain object
     * @returns ConsensusFailBlockResponse
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusFailBlockResponse = js.native
   
   /**
@@ -96,7 +155,11 @@ object ConsensusFailBlockResponse extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.toObject")
+  @js.native
   def toObject(message: ConsensusFailBlockResponse): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.toObject")
+  @js.native
   def toObject(message: ConsensusFailBlockResponse, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -104,45 +167,7 @@ object ConsensusFailBlockResponse extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockResponse.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
-  
-  @js.native
-  sealed trait Status extends js.Object
-  /** Status enum. */
-  @js.native
-  object Status extends js.Object {
-    
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[Status with Double] = js.native
-    
-    @js.native
-    sealed trait BAD_REQUEST extends Status
-    /* 2 */ @js.native
-    object BAD_REQUEST extends TopLevel[BAD_REQUEST with Double]
-    
-    @js.native
-    sealed trait NOT_READY extends Status
-    /* 4 */ @js.native
-    object NOT_READY extends TopLevel[NOT_READY with Double]
-    
-    @js.native
-    sealed trait OK extends Status
-    /* 1 */ @js.native
-    object OK extends TopLevel[OK with Double]
-    
-    @js.native
-    sealed trait SERVICE_ERROR extends Status
-    /* 3 */ @js.native
-    object SERVICE_ERROR extends TopLevel[SERVICE_ERROR with Double]
-    
-    @js.native
-    sealed trait STATUS_UNSET extends Status
-    /* 0 */ @js.native
-    object STATUS_UNSET extends TopLevel[STATUS_UNSET with Double]
-    
-    @js.native
-    sealed trait UNKNOWN_BLOCK extends Status
-    /* 5 */ @js.native
-    object UNKNOWN_BLOCK extends TopLevel[UNKNOWN_BLOCK with Double]
-  }
 }

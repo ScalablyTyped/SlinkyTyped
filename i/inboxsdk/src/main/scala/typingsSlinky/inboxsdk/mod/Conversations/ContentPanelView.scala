@@ -3,12 +3,13 @@ package typingsSlinky.inboxsdk.mod.Conversations
 import typingsSlinky.inboxsdk.inboxsdkStrings.activate
 import typingsSlinky.inboxsdk.inboxsdkStrings.deactivate
 import typingsSlinky.inboxsdk.inboxsdkStrings.destroy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ContentPanelView extends js.Object {
+trait ContentPanelView extends StObject {
   
   /**
     * Undocumented method, no guarantee it will always work.

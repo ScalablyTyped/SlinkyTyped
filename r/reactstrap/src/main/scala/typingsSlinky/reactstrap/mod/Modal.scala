@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.modalMod.ModalProps
+import typingsSlinky.reactstrap.modalMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "Modal")
+@JSImport("reactstrap/lib", "Modal")
 @js.native
-class Modal ()
-  extends Component[ModalProps, js.Object, js.Any]
+class Modal () extends default

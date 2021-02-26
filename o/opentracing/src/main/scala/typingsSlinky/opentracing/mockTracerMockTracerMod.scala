@@ -1,14 +1,18 @@
 package typingsSlinky.opentracing
 
-import typingsSlinky.opentracing.tracerMod.Tracer
+import typingsSlinky.opentracing.mod.Tracer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("opentracing/lib/mock_tracer/mock_tracer", JSImport.Namespace)
-@js.native
-object mockTracerMockTracerMod extends js.Object {
+object mockTracerMockTracerMod {
   
+  @JSImport("opentracing/lib/mock_tracer/mock_tracer", JSImport.Default)
+  @js.native
+  class default () extends MockTracer
+  
+  @JSImport("opentracing/lib/mock_tracer/mock_tracer", "MockTracer")
   @js.native
   class MockTracer () extends Tracer {
     
@@ -31,7 +35,4 @@ object mockTracerMockTracerMod extends js.Object {
       */
     def report(): typingsSlinky.opentracing.mockReportMod.default = js.native
   }
-  
-  @js.native
-  class default () extends MockTracer
 }

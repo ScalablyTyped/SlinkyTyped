@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.sharepoint.anon.Left
 import typingsSlinky.sharepoint.anon.LeftTop
 import typingsSlinky.sharepoint.anon.Top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,8 +16,8 @@ trait MQueryResultSetElements extends MQueryResultSet[HTMLElement] {
   def addClass(classNames: String): MQueryResultSetElements = js.native
   
   def append(node: String): MQueryResultSetElements = js.native
-  def append(node: MQueryResultSetElements): MQueryResultSetElements = js.native
   def append(node: HTMLElement): MQueryResultSetElements = js.native
+  def append(node: MQueryResultSetElements): MQueryResultSetElements = js.native
   
   def attr(attributeName: String): String = js.native
   // tslint:disable-next-line: unified-signatures

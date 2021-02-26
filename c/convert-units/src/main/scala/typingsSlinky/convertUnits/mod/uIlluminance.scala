@@ -1,14 +1,16 @@
 package typingsSlinky.convertUnits.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// Digital
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.convertUnits.convertUnitsStrings.lx
   - typingsSlinky.convertUnits.convertUnitsStrings.`ft-cd`
 */
-trait uIlluminance extends js.Object
+trait uIlluminance extends StObject
 object uIlluminance {
   
   @scala.inline

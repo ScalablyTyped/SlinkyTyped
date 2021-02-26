@@ -2,16 +2,16 @@ package typingsSlinky.reactNativeNavigation
 
 import typingsSlinky.reactNativeNavigation.processorSubscriptionMod.ProcessorSubscription
 import typingsSlinky.reactNativeNavigation.processorsMod.LayoutProcessor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-navigation/lib/dist/processors/LayoutProcessorsStore", JSImport.Namespace)
-@js.native
-object layoutProcessorsStoreMod extends js.Object {
+object layoutProcessorsStoreMod {
   
+  @JSImport("react-native-navigation/lib/dist/processors/LayoutProcessorsStore", "LayoutProcessorsStore")
   @js.native
-  class LayoutProcessorsStore () extends js.Object {
+  class LayoutProcessorsStore () extends StObject {
     
     def addProcessor(processor: LayoutProcessor): ProcessorSubscription = js.native
     

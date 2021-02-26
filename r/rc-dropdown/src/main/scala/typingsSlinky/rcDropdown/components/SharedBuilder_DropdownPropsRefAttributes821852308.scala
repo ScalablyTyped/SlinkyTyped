@@ -10,6 +10,7 @@ import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.rcTrigger.interfaceMod.AnimationType
 import typingsSlinky.rcTrigger.interfaceMod.BuildInPlacements
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,10 +36,10 @@ class SharedBuilder_DropdownPropsRefAttributes821852308[R <: js.Object] (val arg
   def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
   
   @scala.inline
-  def hideActionVarargs(value: ActionType*): this.type = set("hideAction", js.Array(value :_*))
+  def hideAction(value: js.Array[ActionType]): this.type = set("hideAction", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def hideAction(value: js.Array[ActionType]): this.type = set("hideAction", value.asInstanceOf[js.Any])
+  def hideActionVarargs(value: ActionType*): this.type = set("hideAction", js.Array(value :_*))
   
   @scala.inline
   def minOverlayWidthMatchTrigger(value: Boolean): this.type = set("minOverlayWidthMatchTrigger", value.asInstanceOf[js.Any])
@@ -59,16 +60,16 @@ class SharedBuilder_DropdownPropsRefAttributes821852308[R <: js.Object] (val arg
   def openClassName(value: String): this.type = set("openClassName", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
+  def overlay(value: js.Function0[ReactElement] | ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
   
   @scala.inline
   def overlayFunction0(value: () => ReactElement): this.type = set("overlay", js.Any.fromFunction0(value))
   
   @scala.inline
-  def overlay(value: js.Function0[ReactElement] | ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
+  def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
   
   @scala.inline
   def overlayStyle(value: CSSProperties): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
@@ -83,19 +84,19 @@ class SharedBuilder_DropdownPropsRefAttributes821852308[R <: js.Object] (val arg
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def showActionVarargs(value: ActionType*): this.type = set("showAction", js.Array(value :_*))
+  def showAction(value: js.Array[ActionType]): this.type = set("showAction", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def showAction(value: js.Array[ActionType]): this.type = set("showAction", value.asInstanceOf[js.Any])
+  def showActionVarargs(value: ActionType*): this.type = set("showAction", js.Array(value :_*))
   
   @scala.inline
   def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def triggerVarargs(value: ActionType*): this.type = set("trigger", js.Array(value :_*))
+  def trigger(value: ActionType | js.Array[ActionType]): this.type = set("trigger", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def trigger(value: ActionType | js.Array[ActionType]): this.type = set("trigger", value.asInstanceOf[js.Any])
+  def triggerVarargs(value: ActionType*): this.type = set("trigger", js.Array(value :_*))
   
   @scala.inline
   def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])

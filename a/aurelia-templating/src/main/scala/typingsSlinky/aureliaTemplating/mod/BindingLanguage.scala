@@ -1,13 +1,14 @@
 package typingsSlinky.aureliaTemplating.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aurelia-templating", "BindingLanguage")
 @js.native
-class BindingLanguage () extends js.Object {
+class BindingLanguage () extends StObject {
   
   /**
     * Creates an attribute behavior instruction.

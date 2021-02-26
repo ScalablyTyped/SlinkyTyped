@@ -10,10 +10,10 @@ A react component toolset for managing animations
 | ------------------ | :-------------: |
 | Full name          | react-transition-group |
 | Keywords           | react, transition, addons, transition-group, animation, css, transitions |
-| # releases         | 23 |
-| # dependents       | 1727 |
-| # downloads        | 163692111 |
-| # stars            | 22 |
+| # releases         | 17 |
+| # dependents       | 2653 |
+| # downloads        | 289694632 |
+| # stars            | 23 |
 
 ## Links
 - [Homepage](https://github.com/reactjs/react-transition-group#readme)

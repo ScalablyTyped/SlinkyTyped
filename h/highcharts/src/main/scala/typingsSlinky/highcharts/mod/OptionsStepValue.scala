@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.left
   - typingsSlinky.highcharts.highchartsStrings.right
 */
-trait OptionsStepValue extends js.Object
+trait OptionsStepValue extends StObject
 object OptionsStepValue {
   
   @scala.inline

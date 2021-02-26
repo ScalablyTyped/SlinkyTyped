@@ -2,6 +2,7 @@ package typingsSlinky.jstree
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -1160,7 +1161,6 @@ trait JSTree extends JQuery {
   def hover_node(obj: js.Any): Unit = js.native
   
   def init(el: String, options: js.Any): Unit = js.native
-  def init(el: JQuery, options: js.Any): Unit = js.native
   /**
     * used to decorate an instance with a plugin. Used internally.
     * @private
@@ -1170,6 +1170,7 @@ trait JSTree extends JQuery {
     * @trigger init.jstree, loading.jstree, loaded.jstree, ready.jstree, changed.jstree
     */
   def init(el: HTMLElement, options: js.Any): Unit = js.native
+  def init(el: JQuery, options: js.Any): Unit = js.native
   
   /**
     * checks if a node is checked (if tie_selection is on in the settings this function will return the same as is_selected)

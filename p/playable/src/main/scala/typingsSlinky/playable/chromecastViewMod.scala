@@ -3,17 +3,22 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.controlsChromecastTypesMod.IChromecastStyles
 import typingsSlinky.playable.controlsChromecastTypesMod.IChromecastViewConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/controls/chromecast/chromecast.view", JSImport.Namespace)
-@js.native
-object chromecastViewMod extends js.Object {
+object chromecastViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/controls/chromecast/chromecast.view", JSImport.Default)
+  @js.native
+  class default protected () extends ChromecastView {
+    def this(config: IChromecastViewConfig) = this()
+  }
   
   @js.native
   trait ChromecastView
-    extends typingsSlinky.playable.stylableMod.default[IChromecastStyles] {
+    extends typingsSlinky.playable.viewMod.default[IChromecastStyles] {
     
     @JSName("_$downloadButton")
     var _$downloadButton: js.Any = js.native
@@ -44,10 +49,5 @@ object chromecastViewMod extends js.Object {
     def setCastingState(isCasting: Boolean): Unit = js.native
     
     def show(): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends ChromecastView {
-    def this(config: IChromecastViewConfig) = this()
   }
 }

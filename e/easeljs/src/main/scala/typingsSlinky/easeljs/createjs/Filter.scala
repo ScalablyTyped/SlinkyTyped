@@ -1,12 +1,13 @@
 package typingsSlinky.easeljs.createjs
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Filter extends js.Object {
+trait Filter extends StObject {
   
   // methods
   def applyFilter(ctx: CanvasRenderingContext2D, x: Double, y: Double, width: Double, height: Double): Boolean = js.native

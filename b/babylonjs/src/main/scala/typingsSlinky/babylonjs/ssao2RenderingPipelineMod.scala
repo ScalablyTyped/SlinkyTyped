@@ -3,14 +3,14 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.postProcessRenderPipelineMod.PostProcessRenderPipeline
 import typingsSlinky.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/PostProcesses/RenderPipeline/Pipelines/ssao2RenderingPipeline", JSImport.Namespace)
-@js.native
-object ssao2RenderingPipelineMod extends js.Object {
+object ssao2RenderingPipelineMod {
   
+  @JSImport("babylonjs/PostProcesses/RenderPipeline/Pipelines/ssao2RenderingPipeline", "SSAO2RenderingPipeline")
   @js.native
   class SSAO2RenderingPipeline protected () extends PostProcessRenderPipeline {
     /**
@@ -182,13 +182,7 @@ object ssao2RenderingPipelineMod extends js.Object {
     var totalStrength: Double = js.native
   }
   /* static members */
-  @js.native
-  object SSAO2RenderingPipeline extends js.Object {
-    
-    /**
-      *  Support test.
-      */
-    def IsSupported: Boolean = js.native
+  object SSAO2RenderingPipeline {
     
     /**
       * Parse the serialized pipeline
@@ -197,6 +191,8 @@ object ssao2RenderingPipelineMod extends js.Object {
       * @param rootUrl The URL of the serialized pipeline.
       * @returns An instantiated pipeline from the serialized object.
       */
+    @JSImport("babylonjs/PostProcesses/RenderPipeline/Pipelines/ssao2RenderingPipeline", "SSAO2RenderingPipeline.Parse")
+    @js.native
     def Parse(source: js.Any, scene: Scene, rootUrl: String): SSAO2RenderingPipeline = js.native
   }
 }

@@ -85,15 +85,22 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactImageFallback.mod.ReactImageFallbackProps
 import typingsSlinky.reactImageFallback.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactImageFallback {
   
+  @scala.inline
+  def apply(fallbackImage: String | ReactElement | (js.Array[ReactElement | String]), src: String): Builder = {
+    val __props = js.Dynamic.literal(fallbackImage = fallbackImage.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactImageFallbackProps with (DetailedHTMLProps[ImgHTMLAttributes[HTMLImageElement], HTMLImageElement])]))
+  }
+  
   @JSImport("react-image-fallback", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -292,10 +299,10 @@ object ReactImageFallback {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -313,10 +320,10 @@ object ReactImageFallback {
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def initialImageReactElement(value: ReactElement): this.type = set("initialImage", value.asInstanceOf[js.Any])
+    def initialImage(value: String | ReactElement): this.type = set("initialImage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def initialImage(value: String | ReactElement): this.type = set("initialImage", value.asInstanceOf[js.Any])
+    def initialImageReactElement(value: ReactElement): this.type = set("initialImage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def initialTimeout(value: Double): this.type = set("initialTimeout", value.asInstanceOf[js.Any])
@@ -664,10 +671,4 @@ object ReactImageFallback {
   def withProps(
     p: ReactImageFallbackProps with (DetailedHTMLProps[ImgHTMLAttributes[HTMLImageElement], HTMLImageElement])
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(fallbackImage: String | ReactElement | (js.Array[ReactElement | String]), src: String): Builder = {
-    val __props = js.Dynamic.literal(fallbackImage = fallbackImage.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactImageFallbackProps with (DetailedHTMLProps[ImgHTMLAttributes[HTMLImageElement], HTMLImageElement])]))
-  }
 }

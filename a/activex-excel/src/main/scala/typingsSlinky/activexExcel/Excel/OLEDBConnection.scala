@@ -2,12 +2,13 @@ package typingsSlinky.activexExcel.Excel
 
 import typingsSlinky.activexAdodb.ADODB.Connection
 import typingsSlinky.std.VarDate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OLEDBConnection extends js.Object {
+trait OLEDBConnection extends StObject {
   
   val ADOConnection: Connection = js.native
   

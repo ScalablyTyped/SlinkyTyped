@@ -10,9 +10,9 @@ Gracefully terminates HTTP(S) server.
 | ------------------ | :-------------: |
 | Full name          | http-terminator |
 | Keywords           | kubernetes, prometheus |
-| # releases         | 12 |
-| # dependents       | 7 |
-| # downloads        | 55490 |
+| # releases         | 11 |
+| # dependents       | 29 |
+| # downloads        | 803095 |
 | # stars            | 0 |
 
 ## Links

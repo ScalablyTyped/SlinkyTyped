@@ -15,12 +15,13 @@ import typingsSlinky.screeps.screepsStrings.source
 import typingsSlinky.screeps.screepsStrings.structure
 import typingsSlinky.screeps.screepsStrings.terrain
 import typingsSlinky.screeps.screepsStrings.tombstone
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LookForAtAreaResult[T, K /* <: tombstone | exit | resource | creep | structure | source | deposit | constructionSite | mineral | nuke | flag | energy | ruin | terrain | powerCreep */] extends js.Object {
+trait LookForAtAreaResult[T, K /* <: tombstone | exit | resource | creep | structure | source | deposit | constructionSite | mineral | nuke | flag | energy | ruin | terrain | powerCreep */] extends StObject {
   
   var `type`: K = js.native
 }

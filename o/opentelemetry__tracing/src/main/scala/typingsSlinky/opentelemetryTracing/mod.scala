@@ -8,20 +8,21 @@ import typingsSlinky.opentelemetryCore.typesMod.InstrumentationLibrary
 import typingsSlinky.opentelemetryTracing.spanExporterMod.SpanExporter
 import typingsSlinky.opentelemetryTracing.typesMod.BufferConfig
 import typingsSlinky.opentelemetryTracing.typesMod.TracerConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@opentelemetry/tracing", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@opentelemetry/tracing", "BasicTracerProvider")
   @js.native
   class BasicTracerProvider ()
     extends typingsSlinky.opentelemetryTracing.basicTracerProviderMod.BasicTracerProvider {
     def this(config: TracerConfig) = this()
   }
   
+  @JSImport("@opentelemetry/tracing", "BatchSpanProcessor")
   @js.native
   class BatchSpanProcessor protected ()
     extends typingsSlinky.opentelemetryTracing.batchSpanProcessorMod.BatchSpanProcessor {
@@ -29,20 +30,24 @@ object mod extends js.Object {
     def this(_exporter: SpanExporter, config: BufferConfig) = this()
   }
   
+  @JSImport("@opentelemetry/tracing", "ConsoleSpanExporter")
   @js.native
   class ConsoleSpanExporter ()
     extends typingsSlinky.opentelemetryTracing.consoleSpanExporterMod.ConsoleSpanExporter
   
+  @JSImport("@opentelemetry/tracing", "InMemorySpanExporter")
   @js.native
   class InMemorySpanExporter ()
     extends typingsSlinky.opentelemetryTracing.inMemorySpanExporterMod.InMemorySpanExporter
   
+  @JSImport("@opentelemetry/tracing", "SimpleSpanProcessor")
   @js.native
   class SimpleSpanProcessor protected ()
     extends typingsSlinky.opentelemetryTracing.simpleSpanProcessorMod.SimpleSpanProcessor {
     def this(_exporter: SpanExporter) = this()
   }
   
+  @JSImport("@opentelemetry/tracing", "Span")
   @js.native
   class Span protected ()
     extends typingsSlinky.opentelemetryTracing.spanMod.Span {
@@ -114,6 +119,7 @@ object mod extends js.Object {
     ) = this()
   }
   
+  @JSImport("@opentelemetry/tracing", "Tracer")
   @js.native
   class Tracer protected ()
     extends typingsSlinky.opentelemetryTracing.tracerMod.Tracer {

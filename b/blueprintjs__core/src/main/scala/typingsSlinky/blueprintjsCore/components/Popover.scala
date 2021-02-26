@@ -14,6 +14,7 @@ import typingsSlinky.popperJs.mod.Boundary
 import typingsSlinky.popperJs.mod.Modifiers
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.HTMLProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ object Popover {
   
   @JSImport("@blueprintjs/core", "Popover")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -48,10 +49,10 @@ object Popover {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: String | ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: String | ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultIsOpen(value: Boolean): this.type = set("defaultIsOpen", value.asInstanceOf[js.Any])
@@ -131,9 +132,6 @@ object Popover {
     def position(value: PopoverPosition): this.type = set("position", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def targetReactElement(value: ReactElement): this.type = set("target", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def target(value: String | ReactElement): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -141,6 +139,9 @@ object Popover {
     
     @scala.inline
     def targetProps(value: HTMLAttributes[HTMLElement]): this.type = set("targetProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def targetReactElement(value: ReactElement): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetTagName(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any): this.type = set("targetTagName", value.asInstanceOf[js.Any])
@@ -155,7 +156,7 @@ object Popover {
     def wrapperTagName(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any): this.type = set("wrapperTagName", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IPopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Popover.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IPopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

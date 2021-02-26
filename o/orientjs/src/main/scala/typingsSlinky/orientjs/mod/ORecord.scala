@@ -4,6 +4,7 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.orientjs.orientjsStrings.b
 import typingsSlinky.orientjs.orientjsStrings.d
 import typingsSlinky.std.Object
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

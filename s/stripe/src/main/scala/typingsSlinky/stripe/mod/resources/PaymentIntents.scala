@@ -5,6 +5,7 @@ import typingsSlinky.stripe.mod.HeaderOptions
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.paymentIntents.IPaymentIntent
 import typingsSlinky.stripe.mod.paymentIntents.IPaymentIntentCaptureOptions
@@ -13,13 +14,15 @@ import typingsSlinky.stripe.mod.paymentIntents.IPaymentIntentCreationOptions
 import typingsSlinky.stripe.mod.paymentIntents.IPaymentIntentListOptions
 import typingsSlinky.stripe.mod.paymentIntents.IPaymentIntentRetrieveOptions
 import typingsSlinky.stripe.mod.paymentIntents.IPaymentIntentUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.PaymentIntents")
 @js.native
-class PaymentIntents () extends StripeResource {
+class PaymentIntents protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def cancel(paymentIntentId: String): js.Promise[IPaymentIntent] = js.native
   def cancel(paymentIntentId: String, data: Cancellationreason): js.Promise[IPaymentIntent] = js.native

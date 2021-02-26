@@ -10,15 +10,22 @@ import typingsSlinky.reactAce.typesMod.IAnnotation
 import typingsSlinky.reactAce.typesMod.ICommand
 import typingsSlinky.reactAce.typesMod.IEditorProps
 import typingsSlinky.reactAce.typesMod.IMarker
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Split {
   
+  @scala.inline
+  def apply(splits: Double): Builder = {
+    val __props = js.Dynamic.literal(splits = splits.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ISplitEditorProps]))
+  }
+  
   @JSImport("react-ace", "split")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -26,19 +33,19 @@ object Split {
        with StBuildingComponent[tag.type, split] {
     
     @scala.inline
-    def annotationsVarargs(value: js.Array[IAnnotation]*): this.type = set("annotations", js.Array(value :_*))
+    def annotations(value: js.Array[js.Array[IAnnotation]]): this.type = set("annotations", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def annotations(value: js.Array[js.Array[IAnnotation]]): this.type = set("annotations", value.asInstanceOf[js.Any])
+    def annotationsVarargs(value: js.Array[IAnnotation]*): this.type = set("annotations", js.Array(value :_*))
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def commandsVarargs(value: ICommand*): this.type = set("commands", js.Array(value :_*))
+    def commands(value: js.Array[ICommand]): this.type = set("commands", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def commands(value: js.Array[ICommand]): this.type = set("commands", value.asInstanceOf[js.Any])
+    def commandsVarargs(value: ICommand*): this.type = set("commands", js.Array(value :_*))
     
     @scala.inline
     def cursorStart(value: Double): this.type = set("cursorStart", value.asInstanceOf[js.Any])
@@ -47,25 +54,25 @@ object Split {
     def debounceChangePeriod(value: Double): this.type = set("debounceChangePeriod", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def editorProps(value: IEditorProps): this.type = set("editorProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def enableBasicAutocompletionVarargs(value: String*): this.type = set("enableBasicAutocompletion", js.Array(value :_*))
-    
-    @scala.inline
     def enableBasicAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableBasicAutocompletion", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def enableLiveAutocompletionVarargs(value: String*): this.type = set("enableLiveAutocompletion", js.Array(value :_*))
+    def enableBasicAutocompletionVarargs(value: String*): this.type = set("enableBasicAutocompletion", js.Array(value :_*))
     
     @scala.inline
     def enableLiveAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableLiveAutocompletion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enableLiveAutocompletionVarargs(value: String*): this.type = set("enableLiveAutocompletion", js.Array(value :_*))
     
     @scala.inline
     def focus(value: Boolean): this.type = set("focus", value.asInstanceOf[js.Any])
@@ -83,10 +90,10 @@ object Split {
     def keyboardHandler(value: String): this.type = set("keyboardHandler", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def markersVarargs(value: js.Array[IMarker]*): this.type = set("markers", js.Array(value :_*))
+    def markers(value: js.Array[js.Array[IMarker]]): this.type = set("markers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def markers(value: js.Array[js.Array[IMarker]]): this.type = set("markers", value.asInstanceOf[js.Any])
+    def markersVarargs(value: js.Array[IMarker]*): this.type = set("markers", js.Array(value :_*))
     
     @scala.inline
     def maxLines(value: Double): this.type = set("maxLines", value.asInstanceOf[js.Any])
@@ -143,10 +150,10 @@ object Split {
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scrollMarginVarargs(value: Double*): this.type = set("scrollMargin", js.Array(value :_*))
+    def scrollMargin(value: js.Array[Double]): this.type = set("scrollMargin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scrollMargin(value: js.Array[Double]): this.type = set("scrollMargin", value.asInstanceOf[js.Any])
+    def scrollMarginVarargs(value: Double*): this.type = set("scrollMargin", js.Array(value :_*))
     
     @scala.inline
     def setOptions(value: IAceOptions): this.type = set("setOptions", value.asInstanceOf[js.Any])
@@ -167,10 +174,10 @@ object Split {
     def theme(value: String): this.type = set("theme", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Array[String]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Array[String]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def width(value: String): this.type = set("width", value.asInstanceOf[js.Any])
@@ -180,10 +187,4 @@ object Split {
   }
   
   def withProps(p: ISplitEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(splits: Double): Builder = {
-    val __props = js.Dynamic.literal(splits = splits.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ISplitEditorProps]))
-  }
 }

@@ -10,9 +10,9 @@ AngularJS module for cookies
 | ------------------ | :-------------: |
 | Full name          | angular-cookies |
 | Keywords           | angular, framework, browser, cookies, client-side |
-| # releases         | 14 |
-| # dependents       | 113 |
-| # downloads        | 5107320 |
+| # releases         | 8 |
+| # dependents       | 123 |
+| # downloads        | 5933401 |
 | # stars            | 9 |
 
 ## Links

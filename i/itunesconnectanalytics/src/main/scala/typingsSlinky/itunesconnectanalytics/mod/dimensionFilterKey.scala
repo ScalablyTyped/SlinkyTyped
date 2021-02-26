@@ -1,70 +1,56 @@
 package typingsSlinky.itunesconnectanalytics.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait dimensionFilterKey extends js.Object
+sealed trait dimensionFilterKey extends StObject
 @JSImport("itunesconnectanalytics", "dimensionFilterKey")
 @js.native
-object dimensionFilterKey extends js.Object {
+object dimensionFilterKey extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[dimensionFilterKey with String] = js.native
   
   @js.native
   sealed trait appPurchaseWeek extends dimensionFilterKey
-  /* "apppurchaseWeek" */ @js.native
-  object appPurchaseWeek extends TopLevel[appPurchaseWeek with String]
+  /* "apppurchaseWeek" */ val appPurchaseWeek: typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.appPurchaseWeek with String = js.native
   
   @js.native
   sealed trait appVersion extends dimensionFilterKey
-  /* "appVersion" */ @js.native
-  object appVersion extends TopLevel[appVersion with String]
+  /* "appVersion" */ val appVersion: typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.appVersion with String = js.native
   
   @js.native
   sealed trait apppurchaseDay extends dimensionFilterKey
-  /* "apppurchaseDay" */ @js.native
-  object apppurchaseDay extends TopLevel[apppurchaseDay with String]
+  /* "apppurchaseDay" */ val apppurchaseDay: typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.apppurchaseDay with String = js.native
   
   @js.native
   sealed trait apppurchaseMonth extends dimensionFilterKey
-  /* "apppurchaseMonth" */ @js.native
-  object apppurchaseMonth extends TopLevel[apppurchaseMonth with String]
+  /* "apppurchaseMonth" */ val apppurchaseMonth: typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.apppurchaseMonth with String = js.native
   
   @js.native
   sealed trait campaigns extends dimensionFilterKey
-  /* "campaignId" */ @js.native
-  object campaigns extends TopLevel[campaigns with String]
+  /* "campaignId" */ val campaigns: typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.campaigns with String = js.native
   
   @js.native
   sealed trait device extends dimensionFilterKey
-  /* "platform" */ @js.native
-  object device extends TopLevel[device with String]
+  /* "platform" */ val device: typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.device with String = js.native
   
   @js.native
   sealed trait platformVersion extends dimensionFilterKey
-  /* "platformVersion" */ @js.native
-  object platformVersion extends TopLevel[platformVersion with String]
+  /* "platformVersion" */ val platformVersion: typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.platformVersion with String = js.native
   
   @js.native
   sealed trait region extends dimensionFilterKey
-  /* "region" */ @js.native
-  object region
-    extends TopLevel[typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.region with String]
+  /* "region" */ val region: typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.region with String = js.native
   
   @js.native
   sealed trait territory extends dimensionFilterKey
-  /* "storefront" */ @js.native
-  object territory
-    extends TopLevel[
-          typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.territory with String
-        ]
+  /* "storefront" */ val territory: typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.territory with String = js.native
   
   @js.native
   sealed trait websites extends dimensionFilterKey
-  /* "domainReferrer" */ @js.native
-  object websites extends TopLevel[websites with String]
+  /* "domainReferrer" */ val websites: typingsSlinky.itunesconnectanalytics.mod.dimensionFilterKey.websites with String = js.native
 }

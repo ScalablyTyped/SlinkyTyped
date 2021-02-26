@@ -3,13 +3,14 @@ package typingsSlinky.forgeApis.mod
 import typingsSlinky.forgeApis.anon.FilterId
 import typingsSlinky.forgeApis.anon.FilterRefType
 import typingsSlinky.forgeApis.anon.FilterType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("forge-apis", "ItemsApi")
 @js.native
-class ItemsApi () extends js.Object {
+class ItemsApi () extends StObject {
   
   /**
     * Returns a resource item by ID for any item within a given project. Resource items represent word documents, fusion design files, drawings, spreadsheets, etc.

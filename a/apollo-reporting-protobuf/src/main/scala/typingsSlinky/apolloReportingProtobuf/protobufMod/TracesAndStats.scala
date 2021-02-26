@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,18 +33,26 @@ class TracesAndStats () extends ITracesAndStats {
   var trace_TracesAndStats: js.Array[ITrace] = js.native
 }
 /* static members */
-@JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats")
-@js.native
-object TracesAndStats extends js.Object {
+object TracesAndStats {
   
   /**
     * Creates a new TracesAndStats instance using the specified properties.
     * @param [properties] Properties to set
     * @returns TracesAndStats instance
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.create")
+  @js.native
   def create(): TracesAndStats = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.create")
+  @js.native
   def create(properties: ITracesAndStats): TracesAndStats = js.native
   
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): TracesAndStats = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): TracesAndStats = js.native
   /**
     * Decodes a TracesAndStats message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -52,11 +61,16 @@ object TracesAndStats extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.decode")
+  @js.native
   def decode(reader: Reader): TracesAndStats = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.decode")
+  @js.native
   def decode(reader: Reader, length: Double): TracesAndStats = js.native
-  def decode(reader: js.typedarray.Uint8Array): TracesAndStats = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): TracesAndStats = js.native
   
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): TracesAndStats = js.native
   /**
     * Decodes a TracesAndStats message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -64,8 +78,9 @@ object TracesAndStats extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): TracesAndStats = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): TracesAndStats = js.native
   
   /**
     * Encodes the specified TracesAndStats message. Does not implicitly {@link TracesAndStats.verify|verify} messages.
@@ -73,7 +88,11 @@ object TracesAndStats extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.encode")
+  @js.native
   def encode(message: ITracesAndStats): Writer = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.encode")
+  @js.native
   def encode(message: ITracesAndStats, writer: Writer): Writer = js.native
   
   /**
@@ -82,7 +101,11 @@ object TracesAndStats extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITracesAndStats): Writer = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITracesAndStats, writer: Writer): Writer = js.native
   
   /**
@@ -90,6 +113,8 @@ object TracesAndStats extends js.Object {
     * @param object Plain object
     * @returns TracesAndStats
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): TracesAndStats = js.native
   
   /**
@@ -98,7 +123,11 @@ object TracesAndStats extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.toObject")
+  @js.native
   def toObject(message: TracesAndStats): StringDictionary[js.Any] = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.toObject")
+  @js.native
   def toObject(message: TracesAndStats, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -106,5 +135,7 @@ object TracesAndStats extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "TracesAndStats.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

@@ -10,9 +10,9 @@ ProseMirror Markdown integration
 | ------------------ | :-------------: |
 | Full name          | prosemirror-markdown |
 | Keywords           | - |
-| # releases         | 15 |
-| # dependents       | 20 |
-| # downloads        | 1472182 |
+| # releases         | 12 |
+| # dependents       | 48 |
+| # downloads        | 2893201 |
 | # stars            | 0 |
 
 ## Links

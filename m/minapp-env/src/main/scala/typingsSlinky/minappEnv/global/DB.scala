@@ -3,41 +3,47 @@ package typingsSlinky.minappEnv.global
 import typingsSlinky.minappEnv.DB.IServerDateOptions
 import typingsSlinky.minappEnv.DB.UPDATE_COMMANDS_LITERAL
 import typingsSlinky.minappEnv.IAPIParam
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // === Database ===
-@JSGlobal("DB")
-@js.native
-object DB extends js.Object {
+object DB {
   
+  @JSGlobal("DB.APIBaseContract")
   @js.native
   class APIBaseContract[PROMISE_RETURN, CALLBACK_RETURN, PARAM /* <: IAPIParam[_] */, CONTEXT] ()
     extends typingsSlinky.minappEnv.DB.APIBaseContract[PROMISE_RETURN, CALLBACK_RETURN, PARAM, CONTEXT]
   
+  @JSGlobal("DB.Batch")
   @js.native
   class Batch ()
     extends typingsSlinky.minappEnv.DB.Batch
   
+  @JSGlobal("DB.CollectionReference")
   @js.native
   class CollectionReference protected ()
     extends typingsSlinky.minappEnv.DB.CollectionReference {
     protected def this(name: java.lang.String, database: typingsSlinky.minappEnv.DB.Database) = this()
   }
   
+  @JSGlobal("DB.Database")
   @js.native
   class Database protected ()
     extends typingsSlinky.minappEnv.DB.Database
   
+  @JSGlobal("DB.DatabaseLogicCommand")
   @js.native
   class DatabaseLogicCommand ()
     extends typingsSlinky.minappEnv.DB.DatabaseLogicCommand
   
+  @JSGlobal("DB.DatabaseQueryCommand")
   @js.native
   class DatabaseQueryCommand ()
     extends typingsSlinky.minappEnv.DB.DatabaseQueryCommand
   
+  @JSGlobal("DB.DatabaseUpdateCommand")
   @js.native
   class DatabaseUpdateCommand protected ()
     extends typingsSlinky.minappEnv.DB.DatabaseUpdateCommand {
@@ -54,6 +60,7 @@ object DB extends js.Object {
     ) = this()
   }
   
+  @JSGlobal("DB.DocumentReference")
   @js.native
   class DocumentReference protected ()
     extends typingsSlinky.minappEnv.DB.DocumentReference {
@@ -61,14 +68,16 @@ object DB extends js.Object {
     protected def this(docId: Double, database: typingsSlinky.minappEnv.DB.Database) = this()
   }
   
+  @JSGlobal("DB.GeoPoint")
   @js.native
   abstract class GeoPoint protected ()
     extends typingsSlinky.minappEnv.DB.GeoPoint {
     def this(longitude: Double, latitude: Double) = this()
   }
   
+  @JSGlobal("DB.LOGIC_COMMANDS_LITERAL")
   @js.native
-  object LOGIC_COMMANDS_LITERAL extends js.Object {
+  object LOGIC_COMMANDS_LITERAL extends StObject {
     
     @JSBracketAccess
     def apply(value: java.lang.String): js.UndefOr[typingsSlinky.minappEnv.DB.LOGIC_COMMANDS_LITERAL with java.lang.String] = js.native
@@ -82,8 +91,9 @@ object DB extends js.Object {
     /* "or" */ val OR: typingsSlinky.minappEnv.DB.LOGIC_COMMANDS_LITERAL.OR with java.lang.String = js.native
   }
   
+  @JSGlobal("DB.QUERY_COMMANDS_LITERAL")
   @js.native
-  object QUERY_COMMANDS_LITERAL extends js.Object {
+  object QUERY_COMMANDS_LITERAL extends StObject {
     
     @JSBracketAccess
     def apply(value: java.lang.String): js.UndefOr[typingsSlinky.minappEnv.DB.QUERY_COMMANDS_LITERAL with java.lang.String] = js.native
@@ -105,18 +115,21 @@ object DB extends js.Object {
     /* "nin" */ val NIN: typingsSlinky.minappEnv.DB.QUERY_COMMANDS_LITERAL.NIN with java.lang.String = js.native
   }
   
+  @JSGlobal("DB.Query")
   @js.native
   class Query ()
     extends typingsSlinky.minappEnv.DB.Query
   
+  @JSGlobal("DB.ServerDate")
   @js.native
   abstract class ServerDate ()
     extends typingsSlinky.minappEnv.DB.ServerDate {
     def this(options: IServerDateOptions) = this()
   }
   
+  @JSGlobal("DB.UPDATE_COMMANDS_LITERAL")
   @js.native
-  object UPDATE_COMMANDS_LITERAL extends js.Object {
+  object UPDATE_COMMANDS_LITERAL extends StObject {
     
     @JSBracketAccess
     def apply(value: java.lang.String): js.UndefOr[typingsSlinky.minappEnv.DB.UPDATE_COMMANDS_LITERAL with java.lang.String] = js.native

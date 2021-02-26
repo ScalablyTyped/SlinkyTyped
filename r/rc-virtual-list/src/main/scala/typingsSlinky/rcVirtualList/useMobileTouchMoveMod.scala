@@ -2,14 +2,15 @@ package typingsSlinky.rcVirtualList
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactRef
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-virtual-list/es/hooks/useMobileTouchMove", JSImport.Namespace)
-@js.native
-object useMobileTouchMoveMod extends js.Object {
+object useMobileTouchMoveMod {
   
+  @JSImport("rc-virtual-list/es/hooks/useMobileTouchMove", JSImport.Default)
+  @js.native
   def default(
     inVirtual: Boolean,
     listRef: ReactRef[HTMLDivElement],

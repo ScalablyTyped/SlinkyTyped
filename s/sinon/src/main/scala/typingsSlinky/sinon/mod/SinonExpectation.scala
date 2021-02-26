@@ -2,13 +2,14 @@ package typingsSlinky.sinon.mod
 
 import typingsSlinky.sinon.anon.MatchArgumentsArrayany
 import typingsSlinky.sinon.anon.PartialMatchArgumentsArra
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent sinon.sinon.SinonStub<std.Array<any>, any> */
 @js.native
-trait SinonExpectation extends js.Object {
+trait SinonExpectation extends StObject {
   
   // Methods
   def apply(

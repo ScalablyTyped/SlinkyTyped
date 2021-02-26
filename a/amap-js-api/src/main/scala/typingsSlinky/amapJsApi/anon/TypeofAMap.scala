@@ -7,12 +7,13 @@ import org.scalablytyped.runtime.Instantiable3
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.amapJsApi.AMap.BezierCurve.Options
 import typingsSlinky.amapJsApi.AMap.LocationValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofAMap extends js.Object {
+trait TypeofAMap extends StObject {
   
   var ArrayBounds: Instantiable1[/* bounds */ js.Array[LocationValue], typingsSlinky.amapJsApi.AMap.ArrayBounds] = js.native
   

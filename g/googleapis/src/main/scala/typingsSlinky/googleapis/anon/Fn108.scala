@@ -5,12 +5,13 @@ import typingsSlinky.googleapis.googleapisStrings.v1alpha
 import typingsSlinky.googleapis.googleapisStrings.v2
 import typingsSlinky.googleapis.remotebuildexecutionV1Mod.remotebuildexecutionV1.Options
 import typingsSlinky.googleapis.remotebuildexecutionV1Mod.remotebuildexecutionV1.Remotebuildexecution
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Fn108 extends js.Object {
+trait Fn108 extends StObject {
   
   def apply(options: Options): Remotebuildexecution = js.native
   def apply(

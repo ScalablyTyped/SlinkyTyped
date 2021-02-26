@@ -7,12 +7,13 @@ import typingsSlinky.vexflow.anon.Glyphspacingpx
 import typingsSlinky.vexflow.anon.Justification
 import typingsSlinky.vexflow.anon.Name
 import typingsSlinky.vexflow.anon.Visible
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Stave extends js.Object {
+trait Stave extends StObject {
   
   def addClef(clef: String): Stave = js.native
   def addClef(
@@ -47,7 +48,7 @@ trait Stave extends js.Object {
   def addTimeSignature(timeSpec: String): Unit = js.native
   def addTimeSignature(timeSpec: String, customPadding: Double): Unit = js.native
   
-   //inconsistent type: void -> Stave
+  //inconsistent type: void -> Stave
   def addTrebleGlyph(): Stave = js.native
   
   def draw(): Unit = js.native

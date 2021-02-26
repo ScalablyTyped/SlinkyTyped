@@ -3,6 +3,7 @@ package typingsSlinky.chromeApps.chrome.runtime
 import typingsSlinky.chromeApps.chromeAppsStrings.audio_
 import typingsSlinky.chromeApps.chromeAppsStrings.background_
 import typingsSlinky.chromeApps.chromeAppsStrings.usb_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -76,7 +77,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.serial
   - typingsSlinky.chromeApps.chromeAppsStrings.identity
 */
-trait OptionalPermission extends js.Object
+trait OptionalPermission extends StObject
 object OptionalPermission {
   
   @scala.inline

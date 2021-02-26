@@ -1,13 +1,13 @@
 package typingsSlinky.babylonjs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Fragment/index", JSImport.Namespace)
-@js.native
-object fragmentIndexMod extends js.Object {
+object fragmentIndexMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/index", "DerivativeBlock")
   @js.native
   class DerivativeBlock protected ()
     extends typingsSlinky.babylonjs.derivativeBlockMod.DerivativeBlock {
@@ -18,6 +18,7 @@ object fragmentIndexMod extends js.Object {
     def this(name: String) = this()
   }
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/index", "DiscardBlock")
   @js.native
   class DiscardBlock protected ()
     extends typingsSlinky.babylonjs.discardBlockMod.DiscardBlock {
@@ -28,6 +29,7 @@ object fragmentIndexMod extends js.Object {
     def this(name: String) = this()
   }
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/index", "FragCoordBlock")
   @js.native
   class FragCoordBlock protected ()
     extends typingsSlinky.babylonjs.fragCoordBlockMod.FragCoordBlock {
@@ -38,6 +40,7 @@ object fragmentIndexMod extends js.Object {
     def this(name: String) = this()
   }
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/index", "FragmentOutputBlock")
   @js.native
   class FragmentOutputBlock protected ()
     extends typingsSlinky.babylonjs.fragmentOutputBlockMod.FragmentOutputBlock {
@@ -48,6 +51,7 @@ object fragmentIndexMod extends js.Object {
     def this(name: String) = this()
   }
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/index", "FrontFacingBlock")
   @js.native
   class FrontFacingBlock protected ()
     extends typingsSlinky.babylonjs.frontFacingBlockMod.FrontFacingBlock {
@@ -58,6 +62,7 @@ object fragmentIndexMod extends js.Object {
     def this(name: String) = this()
   }
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/index", "ImageProcessingBlock")
   @js.native
   class ImageProcessingBlock protected ()
     extends typingsSlinky.babylonjs.imageProcessingBlockMod.ImageProcessingBlock {
@@ -68,6 +73,7 @@ object fragmentIndexMod extends js.Object {
     def this(name: String) = this()
   }
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/index", "PerturbNormalBlock")
   @js.native
   class PerturbNormalBlock protected ()
     extends typingsSlinky.babylonjs.perturbNormalBlockMod.PerturbNormalBlock {
@@ -78,6 +84,7 @@ object fragmentIndexMod extends js.Object {
     def this(name: String) = this()
   }
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/index", "ScreenSizeBlock")
   @js.native
   class ScreenSizeBlock protected ()
     extends typingsSlinky.babylonjs.screenSizeBlockMod.ScreenSizeBlock {

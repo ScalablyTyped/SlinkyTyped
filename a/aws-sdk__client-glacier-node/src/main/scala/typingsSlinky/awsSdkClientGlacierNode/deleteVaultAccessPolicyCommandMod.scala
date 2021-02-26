@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientGlacierNode.typesDeleteVaultAccessPolicyInputMo
 import typingsSlinky.awsSdkClientGlacierNode.typesDeleteVaultAccessPolicyOutputMod.DeleteVaultAccessPolicyOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/commands/DeleteVaultAccessPolicyCommand", JSImport.Namespace)
-@js.native
-object deleteVaultAccessPolicyCommandMod extends js.Object {
+object deleteVaultAccessPolicyCommandMod {
   
+  @JSImport("@aws-sdk/client-glacier-node/commands/DeleteVaultAccessPolicyCommand", "DeleteVaultAccessPolicyCommand")
   @js.native
   class DeleteVaultAccessPolicyCommand protected () extends Command[
           InputTypesUnion, 

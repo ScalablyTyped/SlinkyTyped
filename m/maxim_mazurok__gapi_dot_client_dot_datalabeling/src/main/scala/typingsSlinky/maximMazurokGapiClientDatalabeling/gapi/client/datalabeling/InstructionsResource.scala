@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Fields
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.FieldsKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InstructionsResource extends js.Object {
+trait InstructionsResource extends StObject {
   
   def create(request: Alt, body: GoogleCloudDatalabelingV1beta1CreateInstructionRequest): Request[GoogleLongrunningOperation] = js.native
   /** Creates an instruction for how data should be labeled. */

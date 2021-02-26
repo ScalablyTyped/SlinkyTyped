@@ -1,11 +1,19 @@
 package typingsSlinky.reactElemental.mod
 
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-elemental", "LoadingBar")
 @js.native
-class LoadingBar ()
-  extends Component[LoadingBarProps, LoadingBarState, js.Any]
+class LoadingBar protected ()
+  extends Component[LoadingBarProps, LoadingBarState, js.Any] {
+  def this(props: LoadingBarProps) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: LoadingBarProps, context: js.Any) = this()
+}

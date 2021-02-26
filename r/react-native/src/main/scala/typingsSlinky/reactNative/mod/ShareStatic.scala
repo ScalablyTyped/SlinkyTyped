@@ -1,11 +1,12 @@
 package typingsSlinky.reactNative.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ShareStatic extends js.Object {
+trait ShareStatic extends StObject {
   
   var dismissedAction: typingsSlinky.reactNative.reactNativeStrings.dismissedAction = js.native
   

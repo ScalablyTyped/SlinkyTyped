@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesCreateAppInputMod.CreateAp
 import typingsSlinky.awsSdkClientPinpointBrowser.typesCreateAppOutputMod.CreateAppOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/CreateAppCommand", JSImport.Namespace)
-@js.native
-object createAppCommandMod extends js.Object {
+object createAppCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/CreateAppCommand", "CreateAppCommand")
   @js.native
   class CreateAppCommand protected () extends Command[
           InputTypesUnion, 

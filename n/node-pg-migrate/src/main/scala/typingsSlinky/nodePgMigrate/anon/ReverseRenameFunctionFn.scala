@@ -2,12 +2,13 @@ package typingsSlinky.nodePgMigrate.anon
 
 import typingsSlinky.nodePgMigrate.functionsTypesMod.FunctionParam
 import typingsSlinky.nodePgMigrate.functionsTypesMod.RenameFunctionFn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReverseRenameFunctionFn extends js.Object {
+trait ReverseRenameFunctionFn extends StObject {
   
   def reverse(
     oldFunctionName: typingsSlinky.nodePgMigrate.generalTypesMod.Name,

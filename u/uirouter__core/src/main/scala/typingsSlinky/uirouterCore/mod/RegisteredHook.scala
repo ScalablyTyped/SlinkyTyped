@@ -3,6 +3,7 @@ package typingsSlinky.uirouterCore.mod
 import typingsSlinky.uirouterCore.transitionInterfaceMod.HookFn
 import typingsSlinky.uirouterCore.transitionInterfaceMod.HookMatchCriteria
 import typingsSlinky.uirouterCore.transitionInterfaceMod.HookRegOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

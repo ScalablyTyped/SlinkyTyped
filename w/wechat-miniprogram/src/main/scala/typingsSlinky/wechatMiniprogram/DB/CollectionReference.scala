@@ -2,6 +2,7 @@ package typingsSlinky.wechatMiniprogram.DB
 
 import typingsSlinky.wechatMiniprogram.OQ
 import typingsSlinky.wechatMiniprogram.anon.RQIAddDocumentOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

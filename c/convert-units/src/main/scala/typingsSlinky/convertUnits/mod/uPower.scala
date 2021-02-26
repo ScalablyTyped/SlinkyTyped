@@ -1,10 +1,12 @@
 package typingsSlinky.convertUnits.mod
 
 import typingsSlinky.convertUnits.convertUnitsStrings.mW_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// Current
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.convertUnits.convertUnitsStrings.W
   - typingsSlinky.convertUnits.convertUnitsStrings.mW_
@@ -12,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.convertUnits.convertUnitsStrings.MW
   - typingsSlinky.convertUnits.convertUnitsStrings.GW
 */
-trait uPower extends js.Object
+trait uPower extends StObject
 object uPower {
   
   @scala.inline

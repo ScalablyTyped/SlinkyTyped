@@ -1,8 +1,9 @@
 package typingsSlinky.awsSdk.iotMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UpdateAuditSuppressionResponse extends js.Object
+trait UpdateAuditSuppressionResponse extends StObject

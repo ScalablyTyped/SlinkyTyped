@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.ReadMask
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EntryGroupsResource extends js.Object {
+trait EntryGroupsResource extends StObject {
   
   /**
     * A maximum of 10,000 entry groups may be created per organization across all locations. Users should enable the Data Catalog API in the project identified by the `parent` parameter

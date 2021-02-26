@@ -3,29 +3,46 @@ package typingsSlinky.fortawesomeFreeSolidSvgIcons
 import typingsSlinky.fortawesomeFontawesomeCommonTypes.mod.IconDefinition
 import typingsSlinky.fortawesomeFontawesomeCommonTypes.mod.IconName
 import typingsSlinky.fortawesomeFontawesomeCommonTypes.mod.IconPrefix
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@fortawesome/free-solid-svg-icons/faFilm", JSImport.Namespace)
-@js.native
-object faFilmMod extends js.Object {
+object faFilmMod {
   
+  @JSImport("@fortawesome/free-solid-svg-icons/faFilm", "definition")
+  @js.native
   val definition: IconDefinition = js.native
   
+  @JSImport("@fortawesome/free-solid-svg-icons/faFilm", "faFilm")
+  @js.native
   val faFilm: IconDefinition = js.native
   
+  @JSImport("@fortawesome/free-solid-svg-icons/faFilm", "height")
+  @js.native
   val height: Double = js.native
   
+  @JSImport("@fortawesome/free-solid-svg-icons/faFilm", "iconName")
+  @js.native
   val iconName: IconName = js.native
   
+  @JSImport("@fortawesome/free-solid-svg-icons/faFilm", "ligatures")
+  @js.native
   val ligatures: js.Array[String] = js.native
   
+  @JSImport("@fortawesome/free-solid-svg-icons/faFilm", "prefix")
+  @js.native
   val prefix: IconPrefix = js.native
   
+  @JSImport("@fortawesome/free-solid-svg-icons/faFilm", "svgPathData")
+  @js.native
   val svgPathData: String = js.native
   
+  @JSImport("@fortawesome/free-solid-svg-icons/faFilm", "unicode")
+  @js.native
   val unicode: String = js.native
   
+  @JSImport("@fortawesome/free-solid-svg-icons/faFilm", "width")
+  @js.native
   val width: Double = js.native
 }

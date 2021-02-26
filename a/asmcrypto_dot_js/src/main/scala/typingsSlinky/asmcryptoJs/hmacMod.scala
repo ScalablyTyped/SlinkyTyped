@@ -4,19 +4,16 @@ import typingsSlinky.asmcryptoJs.hashMod.Hash
 import typingsSlinky.asmcryptoJs.sha1AsmMod.sha1result
 import typingsSlinky.asmcryptoJs.sha256AsmMod.sha256result
 import typingsSlinky.asmcryptoJs.sha512AsmMod.sha512result
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("asmcrypto.js/dist_es8/hmac/hmac", JSImport.Namespace)
-@js.native
-object hmacMod extends js.Object {
+object hmacMod {
   
-  @JSName("_hmac_key")
-  def hmacKey(hash: Hash[sha1result | sha256result | sha512result], password: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
-  
+  @JSImport("asmcrypto.js/dist_es8/hmac/hmac", "Hmac")
   @js.native
-  abstract class Hmac[T /* <: Hash[sha1result | sha256result | sha512result] */] protected () extends js.Object {
+  abstract class Hmac[T /* <: Hash[sha1result | sha256result | sha512result] */] protected () extends StObject {
     protected def this(hash: T, password: js.typedarray.Uint8Array) = this()
     protected def this(hash: T, password: js.typedarray.Uint8Array, verify: js.typedarray.Uint8Array) = this()
     
@@ -38,4 +35,8 @@ object hmacMod extends js.Object {
     
     var verify: js.typedarray.Uint8Array | Null = js.native
   }
+  
+  @JSImport("asmcrypto.js/dist_es8/hmac/hmac", "_hmac_key")
+  @js.native
+  def hmacKey(hash: Hash[sha1result | sha256result | sha512result], password: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
 }

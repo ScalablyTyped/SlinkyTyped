@@ -5,12 +5,13 @@ import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import org.scalajs.dom.raw.ImageData
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.PixelData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FromPixelsInputs extends js.Object {
+trait FromPixelsInputs extends StObject {
   
   var pixels: PixelData | ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement = js.native
 }
@@ -23,33 +24,21 @@ object FromPixelsInputs {
   }
   
   @scala.inline
-  implicit class FromPixelsInputsOps[Self <: FromPixelsInputs] (val x: Self) extends AnyVal {
+  implicit class FromPixelsInputsMutableBuilder[Self <: FromPixelsInputs] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setPixels(value: PixelData | ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement): Self = StObject.set(x, "pixels", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setPixelsHTMLCanvasElement(value: HTMLCanvasElement): Self = StObject.set(x, "pixels", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setPixelsHTMLImageElement(value: HTMLImageElement): Self = StObject.set(x, "pixels", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPixelsImageData(value: ImageData): Self = this.set("pixels", value.asInstanceOf[js.Any])
+    def setPixelsHTMLVideoElement(value: HTMLVideoElement): Self = StObject.set(x, "pixels", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPixelsHTMLImageElement(value: HTMLImageElement): Self = this.set("pixels", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPixels(value: PixelData | ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement): Self = this.set("pixels", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPixelsHTMLVideoElement(value: HTMLVideoElement): Self = this.set("pixels", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPixelsHTMLCanvasElement(value: HTMLCanvasElement): Self = this.set("pixels", value.asInstanceOf[js.Any])
+    def setPixelsImageData(value: ImageData): Self = StObject.set(x, "pixels", value.asInstanceOf[js.Any])
   }
 }

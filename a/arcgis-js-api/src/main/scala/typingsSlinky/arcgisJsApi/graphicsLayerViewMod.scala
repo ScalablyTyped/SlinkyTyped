@@ -1,12 +1,11 @@
 package typingsSlinky.arcgisJsApi
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("esri/views/layers/GraphicsLayerView", JSImport.Namespace)
-@js.native
-object graphicsLayerViewMod extends js.Object {
+object graphicsLayerViewMod {
   
   type GraphicsLayerView = typingsSlinky.arcgisJsApi.esri.GraphicsLayerView
 }

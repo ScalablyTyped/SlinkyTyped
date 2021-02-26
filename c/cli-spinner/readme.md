@@ -10,9 +10,9 @@ A simple spinner
 | ------------------ | :-------------: |
 | Full name          | cli-spinner |
 | Keywords           | cli |
-| # releases         | 3 |
-| # dependents       | 677 |
-| # downloads        | 4987560 |
+| # releases         | 2 |
+| # dependents       | 811 |
+| # downloads        | 16447850 |
 | # stars            | 27 |
 
 ## Links

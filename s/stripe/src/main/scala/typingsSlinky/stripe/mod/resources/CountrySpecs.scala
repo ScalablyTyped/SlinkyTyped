@@ -6,15 +6,18 @@ import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListOptions
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.countrySpecs.ICountrySpec
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.CountrySpecs")
 @js.native
-class CountrySpecs () extends StripeResource {
+class CountrySpecs protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def list(): IListPromise[ICountrySpec] = js.native
   def list(data: IListOptions): IListPromise[ICountrySpec] = js.native

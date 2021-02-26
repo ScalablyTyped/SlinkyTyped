@@ -3,13 +3,16 @@ package typingsSlinky.lasso
 import typingsSlinky.lasso.dependenciesMod.DependencyRegistry
 import typingsSlinky.lasso.writerMod.Writer
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("lasso/lib/LassoContext", JSImport.Namespace)
-@js.native
-object lassoContextMod extends js.Object {
+object lassoContextMod {
+  
+  @JSImport("lasso/lib/LassoContext", JSImport.Default)
+  @js.native
+  class default () extends LassoContext
   
   @js.native
   trait LassoContext extends EventEmitter {
@@ -38,7 +41,4 @@ object lassoContextMod extends js.Object {
     @JSName("writer")
     var writer_Original: typingsSlinky.lasso.writersMod.Writer = js.native
   }
-  
-  @js.native
-  class default () extends LassoContext
 }

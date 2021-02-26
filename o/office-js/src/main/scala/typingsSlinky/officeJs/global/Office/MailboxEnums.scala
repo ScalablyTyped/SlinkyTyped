@@ -1,12 +1,11 @@
 package typingsSlinky.officeJs.global.Office
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Office.MailboxEnums")
-@js.native
-object MailboxEnums extends js.Object {
+object MailboxEnums {
   
   /**
     * Specifies the formatting that applies to an attachment's content.
@@ -17,8 +16,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.AttachmentContentFormat")
   @js.native
-  object AttachmentContentFormat extends js.Object {
+  object AttachmentContentFormat extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.AttachmentContentFormat with String] = js.native
@@ -41,8 +41,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.AttachmentStatus")
   @js.native
-  object AttachmentStatus extends js.Object {
+  object AttachmentStatus extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.AttachmentStatus with String] = js.native
@@ -59,8 +60,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.AttachmentType")
   @js.native
-  object AttachmentType extends js.Object {
+  object AttachmentType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.AttachmentType with String] = js.native
@@ -84,8 +86,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.CategoryColor")
   @js.native
-  object CategoryColor extends js.Object {
+  object CategoryColor extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.CategoryColor with Double] = js.native
@@ -152,8 +155,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.Days")
   @js.native
-  object Days extends js.Object {
+  object Days extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.Days with String] = js.native
@@ -188,8 +192,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.DelegatePermissions")
   @js.native
-  object DelegatePermissions extends js.Object {
+  object DelegatePermissions extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.DelegatePermissions with Double] = js.native
@@ -214,8 +219,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.EntityType")
   @js.native
-  object EntityType extends js.Object {
+  object EntityType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.EntityType with String] = js.native
@@ -244,8 +250,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.ItemNotificationMessageType")
   @js.native
-  object ItemNotificationMessageType extends js.Object {
+  object ItemNotificationMessageType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[
@@ -266,8 +273,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.ItemType")
   @js.native
-  object ItemType extends js.Object {
+  object ItemType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.ItemType with String] = js.native
@@ -286,8 +294,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.LocationType")
   @js.native
-  object LocationType extends js.Object {
+  object LocationType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.LocationType with String] = js.native
@@ -306,8 +315,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.Month")
   @js.native
-  object Month extends js.Object {
+  object Month extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.Month with String] = js.native
@@ -340,8 +350,9 @@ object MailboxEnums extends js.Object {
   /**
     * Represents the current view of Outlook on the web.
     */
+  @JSGlobal("Office.MailboxEnums.OWAView")
   @js.native
-  object OWAView extends js.Object {
+  object OWAView extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.OWAView with String] = js.native
@@ -362,8 +373,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.RecipientType")
   @js.native
-  object RecipientType extends js.Object {
+  object RecipientType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.RecipientType with String] = js.native
@@ -386,8 +398,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.RecurrenceTimeZone")
   @js.native
-  object RecurrenceTimeZone extends js.Object {
+  object RecurrenceTimeZone extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.RecurrenceTimeZone with String] = js.native
@@ -674,8 +687,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.RecurrenceType")
   @js.native
-  object RecurrenceType extends js.Object {
+  object RecurrenceType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.RecurrenceType with String] = js.native
@@ -698,8 +712,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.ResponseType")
   @js.native
-  object ResponseType extends js.Object {
+  object ResponseType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.ResponseType with String] = js.native
@@ -724,8 +739,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.RestVersion")
   @js.native
-  object RestVersion extends js.Object {
+  object RestVersion extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.RestVersion with String] = js.native
@@ -746,8 +762,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose
     */
+  @JSGlobal("Office.MailboxEnums.SourceProperty")
   @js.native
-  object SourceProperty extends js.Object {
+  object SourceProperty extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.SourceProperty with String] = js.native
@@ -766,8 +783,9 @@ object MailboxEnums extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
+  @JSGlobal("Office.MailboxEnums.WeekNumber")
   @js.native
-  object WeekNumber extends js.Object {
+  object WeekNumber extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Office.MailboxEnums.WeekNumber with String] = js.native

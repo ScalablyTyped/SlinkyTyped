@@ -1,6 +1,7 @@
 package typingsSlinky.microsoftGraph.mod
 
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.none_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.enhanced
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.full
 */
-trait DiagnosticDataSubmissionMode extends js.Object
+trait DiagnosticDataSubmissionMode extends StObject
 object DiagnosticDataSubmissionMode {
   
   @scala.inline

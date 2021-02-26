@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsNode.typesUpdateKeyDescriptionInputMod.Updat
 import typingsSlinky.awsSdkClientKmsNode.typesUpdateKeyDescriptionOutputMod.UpdateKeyDescriptionOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-node/commands/UpdateKeyDescriptionCommand", JSImport.Namespace)
-@js.native
-object updateKeyDescriptionCommandMod extends js.Object {
+object updateKeyDescriptionCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-node/commands/UpdateKeyDescriptionCommand", "UpdateKeyDescriptionCommand")
   @js.native
   class UpdateKeyDescriptionCommand protected () extends Command[
           InputTypesUnion, 

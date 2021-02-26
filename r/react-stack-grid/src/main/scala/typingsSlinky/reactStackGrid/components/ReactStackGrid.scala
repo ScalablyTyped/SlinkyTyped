@@ -6,15 +6,22 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactStackGrid.mod.StackGridProps
 import typingsSlinky.reactStackGrid.mod.Units
 import typingsSlinky.reactStackGrid.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactStackGrid {
   
+  @scala.inline
+  def apply(columnWidth: Double | String): Builder = {
+    val __props = js.Dynamic.literal(columnWidth = columnWidth.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StackGridProps]))
+  }
+  
   @JSImport("react-stack-grid", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -92,10 +99,4 @@ object ReactStackGrid {
   }
   
   def withProps(p: StackGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(columnWidth: Double | String): Builder = {
-    val __props = js.Dynamic.literal(columnWidth = columnWidth.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StackGridProps]))
-  }
 }

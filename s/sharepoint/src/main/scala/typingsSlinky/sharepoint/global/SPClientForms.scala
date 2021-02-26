@@ -1,65 +1,79 @@
 package typingsSlinky.sharepoint.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("SPClientForms")
-@js.native
-object SPClientForms extends js.Object {
+object SPClientForms {
   
+  @JSGlobal("SPClientForms.ClientForm")
   @js.native
   class ClientForm protected ()
     extends typingsSlinky.sharepoint.SPClientForms.ClientForm {
     def this(qualifier: String) = this()
   }
   
+  @JSGlobal("SPClientForms.ClientFormManager")
   @js.native
   class ClientFormManager ()
     extends typingsSlinky.sharepoint.SPClientForms.ClientFormManager
-  /* static members */
-  @js.native
-  object ClientFormManager extends js.Object {
+  object ClientFormManager {
     
+    /* static member */
+    @JSGlobal("SPClientForms.ClientFormManager.GetClientForm")
+    @js.native
     def GetClientForm(qualifier: String): typingsSlinky.sharepoint.SPClientForms.ClientForm = js.native
     
+    /* static member */
+    @JSGlobal("SPClientForms.ClientFormManager.RegisterClientForm")
+    @js.native
     def RegisterClientForm(qualifier: String): Unit = js.native
     
+    /* static member */
+    @JSGlobal("SPClientForms.ClientFormManager.SubmitClientForm")
+    @js.native
     def SubmitClientForm(qualifier: String): Boolean = js.native
   }
   
-  @js.native
-  object ClientValidation extends js.Object {
+  object ClientValidation {
     
+    @JSGlobal("SPClientForms.ClientValidation.MaxLengthUrlValidator")
     @js.native
     class MaxLengthUrlValidator ()
       extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.MaxLengthUrlValidator
     
+    @JSGlobal("SPClientForms.ClientValidation.RequiredFileValidator")
     @js.native
     class RequiredFileValidator ()
       extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.RequiredFileValidator
     
+    @JSGlobal("SPClientForms.ClientValidation.RequiredRichTextValidator")
     @js.native
     class RequiredRichTextValidator ()
       extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.RequiredRichTextValidator
     
+    @JSGlobal("SPClientForms.ClientValidation.RequiredValidator")
     @js.native
     class RequiredValidator ()
       extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.RequiredValidator
     
+    @JSGlobal("SPClientForms.ClientValidation.ValidationResult")
     @js.native
     class ValidationResult protected ()
       extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.ValidationResult {
       def this(hasErrors: Boolean, errorMsg: String) = this()
     }
     
+    @JSGlobal("SPClientForms.ClientValidation.ValidatorSet")
     @js.native
     class ValidatorSet ()
       extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.ValidatorSet
   }
   
+  @JSGlobal("SPClientForms.FormManagerEvents")
   @js.native
-  object FormManagerEvents extends js.Object {
+  object FormManagerEvents extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.sharepoint.SPClientForms.FormManagerEvents with Double] = js.native

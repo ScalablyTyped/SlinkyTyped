@@ -10,12 +10,15 @@ Types for the AWS SDK
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/types |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 654 |
-| # downloads        | 986891 |
+| # releases         | 35 |
+| # dependents       | 338 |
+| # downloads        | 15448650 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/aws/aws-sdk-js-v3/tree/main/packages/types)
+- [Bugs](https://github.com/aws/aws-sdk-js-v3/issues)
+- [Repository](https://github.com/aws/aws-sdk-js-v3)
 - [Npm](https://www.npmjs.com/package/%40aws-sdk%2Ftypes)
     
 

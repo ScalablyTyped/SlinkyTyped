@@ -1,12 +1,13 @@
 package typingsSlinky.phaser.Phaser.Types.GameObjects.Particles
 
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EdgeZoneSource extends js.Object {
+trait EdgeZoneSource extends StObject {
   
   /**
     * A function placing points on the sources edge or edges.

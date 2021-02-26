@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.tagSelectOptionMod.TagSelectOptionProps
 import typingsSlinky.antDesignPro.tagSelectOptionMod.default
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object TagSelectOption {
   
   @JSImport("ant-design-pro/lib/TagSelect/TagSelectOption", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,7 +34,7 @@ object TagSelectOption {
     def value(value: String | Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TagSelectOptionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TagSelectOption.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TagSelectOptionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

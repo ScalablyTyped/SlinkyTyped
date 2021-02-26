@@ -2,6 +2,7 @@ package typingsSlinky.grammarkdown.grammarkdownMod
 
 import typingsSlinky.grammarkdown.grammarkdownMod.SyntaxKind.OfKeyword
 import typingsSlinky.grammarkdown.grammarkdownMod.SyntaxKind.OneKeyword
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/grammarkdown", "OneOfSymbol")
 @js.native
 class OneOfSymbol protected ()
-  extends Node2[typingsSlinky.grammarkdown.grammarkdownMod.SyntaxKind.OneOfSymbol] {
+  extends LexicalSymbolBase[typingsSlinky.grammarkdown.grammarkdownMod.SyntaxKind.OneOfSymbol] {
   def this(oneKeyword: Token[OneKeyword]) = this()
   def this(oneKeyword: Token[OneKeyword], ofKeyword: Token[OfKeyword]) = this()
   def this(

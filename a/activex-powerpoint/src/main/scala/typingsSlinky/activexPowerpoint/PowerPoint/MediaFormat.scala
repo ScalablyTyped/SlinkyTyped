@@ -1,11 +1,12 @@
 package typingsSlinky.activexPowerpoint.PowerPoint
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MediaFormat extends js.Object {
+trait MediaFormat extends StObject {
   
   val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
   

@@ -3,6 +3,7 @@ package typingsSlinky.typeorm.browserMod
 import typingsSlinky.typeorm.findOperatorMod.SqlGeneratorType
 import typingsSlinky.typeorm.findOperatorTypeMod.FindOperatorType
 import typingsSlinky.typeorm.objectLiteralMod.ObjectLiteral
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

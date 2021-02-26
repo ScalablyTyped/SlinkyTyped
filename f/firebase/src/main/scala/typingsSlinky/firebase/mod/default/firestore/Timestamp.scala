@@ -1,12 +1,13 @@
 package typingsSlinky.firebase.mod.default.firestore
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("firebase", "firestore.Timestamp")
+@JSImport("firebase", "default.firestore.Timestamp")
 @js.native
-class Timestamp protected () extends js.Object {
+class Timestamp protected () extends StObject {
   /**
     * Creates a new timestamp.
     *
@@ -51,9 +52,7 @@ class Timestamp protected () extends js.Object {
   def toMillis(): Double = js.native
 }
 /* static members */
-@JSImport("firebase", "firestore.Timestamp")
-@js.native
-object Timestamp extends js.Object {
+object Timestamp {
   
   /**
     * Creates a new timestamp from the given date.
@@ -62,6 +61,8 @@ object Timestamp extends js.Object {
     * @return A new `Timestamp` representing the same point in time as the given
     *     date.
     */
+  @JSImport("firebase", "default.firestore.Timestamp.fromDate")
+  @js.native
   def fromDate(date: js.Date): typingsSlinky.firebase.mod.firebase.firestore.Timestamp = js.native
   
   /**
@@ -72,6 +73,8 @@ object Timestamp extends js.Object {
     * @return A new `Timestamp` representing the same point in time as the given
     *     number of milliseconds.
     */
+  @JSImport("firebase", "default.firestore.Timestamp.fromMillis")
+  @js.native
   def fromMillis(milliseconds: Double): typingsSlinky.firebase.mod.firebase.firestore.Timestamp = js.native
   
   /**
@@ -79,5 +82,7 @@ object Timestamp extends js.Object {
     *
     * @return a new timestamp representing the current date.
     */
+  @JSImport("firebase", "default.firestore.Timestamp.now")
+  @js.native
   def now(): typingsSlinky.firebase.mod.firebase.firestore.Timestamp = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.ariaQuery.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ariaQuery.ariaQueryStrings.`aria-pressed`
   - typingsSlinky.ariaQuery.ariaQueryStrings.`aria-selected`
 */
-trait ARIAState extends js.Object
+trait ARIAState extends StObject
 object ARIAState {
   
   @scala.inline

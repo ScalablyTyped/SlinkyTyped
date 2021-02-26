@@ -7,14 +7,15 @@ import typingsSlinky.tuyaPanelKit.routersTypesMod.NavigationState
 import typingsSlinky.tuyaPanelKit.routersTypesMod.ParamListBase
 import typingsSlinky.tuyaPanelKit.routersTypesMod.RouterFactory
 import typingsSlinky.tuyaPanelKit.typesMod.DefaultNavigatorOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tuya-panel-kit/@react-navigation/core/useNavigationBuilder", JSImport.Namespace)
-@js.native
-object useNavigationBuilderMod extends js.Object {
+object useNavigationBuilderMod {
   
+  @JSImport("tuya-panel-kit/@react-navigation/core/useNavigationBuilder", JSImport.Default)
+  @js.native
   def default[State /* <: NavigationState[ParamListBase] */, RouterOptions /* <: DefaultRouterOptions[String] */, ActionHelpers /* <: Record[String, js.Function0[Unit]] */, ScreenOptions /* <: js.Object */, EventMap /* <: Record[String, _] */](
     createRouter: RouterFactory[State, _, RouterOptions],
     options: (DefaultNavigatorOptions[ScreenOptions, ParamListBase]) with RouterOptions

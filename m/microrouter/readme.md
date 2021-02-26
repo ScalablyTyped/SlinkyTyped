@@ -10,9 +10,9 @@ Typings are for version 3.1
 | ------------------ | :-------------: |
 | Full name          | microrouter |
 | Keywords           | - |
-| # releases         | 5 |
-| # dependents       | 42 |
-| # downloads        | 200539 |
+| # releases         | 0 |
+| # dependents       | 44 |
+| # downloads        | 254724 |
 | # stars            | 3 |
 
 ## Links

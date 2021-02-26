@@ -4,6 +4,7 @@ import typingsSlinky.openui5.sap.ui.core.CalendarType
 import typingsSlinky.openui5.sap.ui.core.Element
 import typingsSlinky.openui5.sap.ui.unified.CalendarLegend
 import typingsSlinky.openui5.sap.ui.unified.DateTypeRange
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

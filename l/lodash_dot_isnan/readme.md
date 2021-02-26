@@ -11,8 +11,8 @@ The lodash method `_.isNaN` exported as a module.
 | Full name          | lodash.isnan |
 | Keywords           | lodash-modularized, isnan |
 | # releases         | 0 |
-| # dependents       | 27 |
-| # downloads        | 304955 |
+| # dependents       | 31 |
+| # downloads        | 416581 |
 | # stars            | 0 |
 
 ## Links

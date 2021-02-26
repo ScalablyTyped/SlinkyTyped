@@ -14,15 +14,28 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DefaultTabBar {
   
+  @scala.inline
+  def apply(
+    activeTab: Double,
+    animated: Boolean,
+    goToTab: Double => Unit,
+    instanceId: Double,
+    tabs: js.Array[TabData]
+  ): Builder = {
+    val __props = js.Dynamic.literal(activeTab = activeTab.asInstanceOf[js.Any], animated = animated.asInstanceOf[js.Any], goToTab = js.Any.fromFunction1(goToTab), instanceId = instanceId.asInstanceOf[js.Any], tabs = tabs.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
+  }
+  
   @JSImport("@ant-design/react-native/lib/tabs/DefaultTabBar", "DefaultTabBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -85,16 +98,4 @@ object DefaultTabBar {
   }
   
   def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    activeTab: Double,
-    animated: Boolean,
-    goToTab: Double => Unit,
-    instanceId: Double,
-    tabs: js.Array[TabData]
-  ): Builder = {
-    val __props = js.Dynamic.literal(activeTab = activeTab.asInstanceOf[js.Any], animated = animated.asInstanceOf[js.Any], goToTab = js.Any.fromFunction1(goToTab), instanceId = instanceId.asInstanceOf[js.Any], tabs = tabs.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
-  }
 }

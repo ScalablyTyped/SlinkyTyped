@@ -1,5 +1,6 @@
 package typingsSlinky.reactNative.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNative.reactNativeStrings.search
   - typingsSlinky.reactNative.reactNativeStrings.send
 */
-trait ReturnKeyType extends js.Object
+trait ReturnKeyType extends StObject
 object ReturnKeyType {
   
   @scala.inline

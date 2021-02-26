@@ -2,6 +2,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxList
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,12 +21,15 @@ class ParameterSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSGlobal("TypeScript.ParameterSyntax")
-@js.native
-object ParameterSyntax extends js.Object {
+object ParameterSyntax {
   
+  /* static member */
+  @JSGlobal("TypeScript.ParameterSyntax.create")
+  @js.native
   def create(identifier: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.ParameterSyntax = js.native
   
+  /* static member */
+  @JSGlobal("TypeScript.ParameterSyntax.create1")
+  @js.native
   def create1(identifier: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.ParameterSyntax = js.native
 }

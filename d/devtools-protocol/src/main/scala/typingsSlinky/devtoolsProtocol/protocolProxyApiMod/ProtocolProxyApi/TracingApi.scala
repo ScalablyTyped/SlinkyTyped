@@ -11,12 +11,13 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Tracing.RequestMemoryDumpRequ
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Tracing.RequestMemoryDumpResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Tracing.StartRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Tracing.TracingCompleteEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TracingApi extends js.Object {
+trait TracingApi extends StObject {
   
   /**
     * Stop trace events collection.

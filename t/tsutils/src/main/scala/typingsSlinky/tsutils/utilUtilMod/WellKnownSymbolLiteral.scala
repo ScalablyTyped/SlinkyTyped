@@ -2,6 +2,7 @@ package typingsSlinky.tsutils.utilUtilMod
 
 import typingsSlinky.tsutils.anon.IdentifiertextSymbolescap
 import typingsSlinky.typescript.mod.PropertyAccessExpression
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

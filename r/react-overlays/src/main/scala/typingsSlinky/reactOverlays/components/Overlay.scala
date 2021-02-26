@@ -8,26 +8,32 @@ import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.RefAttributes
-import typingsSlinky.reactOverlays.anon.ArrowProps
-import typingsSlinky.reactOverlays.anon.Placement
+import typingsSlinky.reactOverlays.anon.ForceUpdate
+import typingsSlinky.reactOverlays.anon.OmitUsePopperOptionsplace
+import typingsSlinky.reactOverlays.anon.Popper
 import typingsSlinky.reactOverlays.anon.inbooleanundefinedappearb
-import typingsSlinky.reactOverlays.overlayMod.OverlayProps
-import typingsSlinky.reactOverlays.reactOverlaysStrings.placement
-import typingsSlinky.reactOverlays.usePopperMod.Offset
-import typingsSlinky.reactOverlays.usePopperMod.OffsetValue
-import typingsSlinky.reactOverlays.usePopperMod.UsePopperOptions
-import typingsSlinky.reactOverlays.useRootCloseMod.MouseEvents
-import typingsSlinky.reactOverlays.useWaitForDOMRefMod.DOMContainer
-import typingsSlinky.std.Omit
+import typingsSlinky.reactOverlays.esmOverlayMod.OverlayProps
+import typingsSlinky.reactOverlays.esmUsePopperMod.Offset
+import typingsSlinky.reactOverlays.esmUsePopperMod.OffsetValue
+import typingsSlinky.reactOverlays.esmUsePopperMod.Placement
+import typingsSlinky.reactOverlays.esmUseRootCloseMod.MouseEvents
+import typingsSlinky.reactOverlays.esmUseWaitForDOMRefMod.DOMContainer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Overlay {
   
+  @scala.inline
+  def apply(children: ForceUpdate => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[OverlayProps with RefAttributes[HTMLElement]]))
+  }
+  
   @JSImport("react-overlays/esm", "Overlay")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,16 +41,13 @@ object Overlay {
        with StBuildingComponent[tag.type, HTMLElement] {
     
     @scala.inline
-    def containerRefObject(value: ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def containerHTMLElement(value: HTMLElement): this.type = set("container", value.asInstanceOf[js.Any])
+    def container(value: DOMContainer[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerFunction0(value: () => HTMLElement | ReactRef[HTMLElement] | Null): this.type = set("container", js.Any.fromFunction0(value))
     
     @scala.inline
-    def container(value: DOMContainer[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    def containerHTMLElement(value: HTMLElement): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerNull: this.type = set("container", null)
@@ -53,13 +56,16 @@ object Overlay {
     def containerPadding(value: Double): this.type = set("containerPadding", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def containerRefObject(value: ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def flip(value: Boolean): this.type = set("flip", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def offsetFunction1(value: /* details */ Placement => OffsetValue): this.type = set("offset", js.Any.fromFunction1(value))
+    def offset(value: Offset): this.type = set("offset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def offset(value: Offset): this.type = set("offset", value.asInstanceOf[js.Any])
+    def offsetFunction1(value: /* details */ Popper => OffsetValue): this.type = set("offset", js.Any.fromFunction1(value))
     
     @scala.inline
     def onEnter(value: /* node */ HTMLElement => _): this.type = set("onEnter", js.Any.fromFunction1(value))
@@ -83,10 +89,10 @@ object Overlay {
     def onHide(value: /* e */ Event => Unit): this.type = set("onHide", js.Any.fromFunction1(value))
     
     @scala.inline
-    def placement(value: typingsSlinky.reactOverlays.usePopperMod.Placement): this.type = set("placement", value.asInstanceOf[js.Any])
+    def placement(value: Placement): this.type = set("placement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def popperConfig(value: Omit[UsePopperOptions, placement]): this.type = set("popperConfig", value.asInstanceOf[js.Any])
+    def popperConfig(value: OmitUsePopperOptionsplace): this.type = set("popperConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rootClose(value: Boolean): this.type = set("rootClose", value.asInstanceOf[js.Any])
@@ -101,35 +107,29 @@ object Overlay {
     def show(value: Boolean): this.type = set("show", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def targetRefObject(value: ReactRef[HTMLElement]): this.type = set("target", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+    def target(value: DOMContainer[HTMLElement]): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetFunction0(value: () => HTMLElement | ReactRef[HTMLElement] | Null): this.type = set("target", js.Any.fromFunction0(value))
     
     @scala.inline
-    def target(value: DOMContainer[HTMLElement]): this.type = set("target", value.asInstanceOf[js.Any])
+    def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetNull: this.type = set("target", null)
     
     @scala.inline
-    def transitionFunctionComponent(value: ReactComponentClass[inbooleanundefinedappearb]): this.type = set("transition", value.asInstanceOf[js.Any])
+    def targetRefObject(value: ReactRef[HTMLElement]): this.type = set("target", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def transition(value: ReactComponentClass[inbooleanundefinedappearb]): this.type = set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def transitionComponentClass(value: ReactComponentClass[inbooleanundefinedappearb]): this.type = set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def transition(value: ReactComponentClass[inbooleanundefinedappearb]): this.type = set("transition", value.asInstanceOf[js.Any])
+    def transitionFunctionComponent(value: ReactComponentClass[inbooleanundefinedappearb]): this.type = set("transition", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: OverlayProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: ArrowProps => ReactElement): Builder = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
-    new Builder(js.Array(this.component, __props.asInstanceOf[OverlayProps with RefAttributes[HTMLElement]]))
-  }
 }

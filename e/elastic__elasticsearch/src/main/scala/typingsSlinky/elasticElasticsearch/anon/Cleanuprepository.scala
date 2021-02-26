@@ -18,12 +18,13 @@ import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestCallback
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Cleanuprepository extends js.Object {
+trait Cleanuprepository extends StObject {
   
   def cleanupRepository[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def cleanupRepository[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native

@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientRecommendationengine.anon.Alt
 import typingsSlinky.maximMazurokGapiClientRecommendationengine.anon.Callback
 import typingsSlinky.maximMazurokGapiClientRecommendationengine.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientRecommendationengine.anon.Parent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PredictionApiKeyRegistrationsResource extends js.Object {
+trait PredictionApiKeyRegistrationsResource extends StObject {
   
   def create(
     request: Alt,

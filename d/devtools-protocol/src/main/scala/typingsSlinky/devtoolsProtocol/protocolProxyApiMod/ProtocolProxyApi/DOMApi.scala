@@ -90,12 +90,13 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetNodeValueRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetOuterHTMLRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.ShadowRootPoppedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.ShadowRootPushedEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DOMApi extends js.Object {
+trait DOMApi extends StObject {
   
   /**
     * Collects class names for the node with given id and all of it's child nodes.

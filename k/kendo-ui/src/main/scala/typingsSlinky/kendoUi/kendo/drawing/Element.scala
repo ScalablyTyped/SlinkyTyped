@@ -3,6 +3,7 @@ package typingsSlinky.kendoUi.kendo.drawing
 import typingsSlinky.kendoUi.kendo.Class
 import typingsSlinky.kendoUi.kendo.geometry.Point
 import typingsSlinky.kendoUi.kendo.geometry.Transformation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -14,15 +14,22 @@ import typingsSlinky.officeUiFabricReact.swatchColorPickerTypesMod.ISwatchColorP
 import typingsSlinky.officeUiFabricReact.swatchColorPickerTypesMod.ISwatchColorPickerStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SwatchColorPicker {
   
+  @scala.inline
+  def apply(colorCells: js.Array[IColorCellProps], columnCount: Double): Builder = {
+    val __props = js.Dynamic.literal(colorCells = colorCells.asInstanceOf[js.Any], columnCount = columnCount.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ISwatchColorPickerProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "SwatchColorPicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -63,10 +70,10 @@ object SwatchColorPicker {
     def focusOnHover(value: Boolean): this.type = set("focusOnHover", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def getColorGridCellStylesFunction1(value: IColorPickerGridCellStyleProps => DeepPartial[IColorPickerGridCellStyles]): this.type = set("getColorGridCellStyles", js.Any.fromFunction1(value))
+    def getColorGridCellStyles(value: IStyleFunctionOrObject[IColorPickerGridCellStyleProps, IColorPickerGridCellStyles]): this.type = set("getColorGridCellStyles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def getColorGridCellStyles(value: IStyleFunctionOrObject[IColorPickerGridCellStyleProps, IColorPickerGridCellStyles]): this.type = set("getColorGridCellStyles", value.asInstanceOf[js.Any])
+    def getColorGridCellStylesFunction1(value: IColorPickerGridCellStyleProps => DeepPartial[IColorPickerGridCellStyles]): this.type = set("getColorGridCellStyles", js.Any.fromFunction1(value))
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -104,20 +111,14 @@ object SwatchColorPicker {
     def shouldFocusCircularNavigate(value: Boolean): this.type = set("shouldFocusCircularNavigate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: ISwatchColorPickerStyleProps => DeepPartial[ISwatchColorPickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[ISwatchColorPickerStyleProps, ISwatchColorPickerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[ISwatchColorPickerStyleProps, ISwatchColorPickerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: ISwatchColorPickerStyleProps => DeepPartial[ISwatchColorPickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ISwatchColorPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(colorCells: js.Array[IColorCellProps], columnCount: Double): Builder = {
-    val __props = js.Dynamic.literal(colorCells = colorCells.asInstanceOf[js.Any], columnCount = columnCount.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ISwatchColorPickerProps]))
-  }
 }

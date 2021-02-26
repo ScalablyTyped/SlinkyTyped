@@ -5,14 +5,14 @@ import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.three.cubeTextureMod.CubeTexture
 import typingsSlinky.three.loaderMod.Loader
 import typingsSlinky.three.loadingManagerMod.LoadingManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/loaders/CubeTextureLoader", JSImport.Namespace)
-@js.native
-object cubeTextureLoaderMod extends js.Object {
+object cubeTextureLoaderMod {
   
+  @JSImport("three/src/loaders/CubeTextureLoader", "CubeTextureLoader")
   @js.native
   class CubeTextureLoader () extends Loader {
     def this(manager: LoadingManager) = this()

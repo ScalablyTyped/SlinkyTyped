@@ -6,12 +6,13 @@ import typingsSlinky.i18n.i18n.LocaleCatalog
 import typingsSlinky.i18n.i18n.PluralOptions
 import typingsSlinky.i18n.i18n.Replacements
 import typingsSlinky.i18n.i18n.TranslateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait i18nAPI extends js.Object {
+trait i18nAPI extends StObject {
   
   //#region __()
   /**

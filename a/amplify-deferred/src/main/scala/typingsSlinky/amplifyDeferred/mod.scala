@@ -2,17 +2,16 @@ package typingsSlinky.amplifyDeferred
 
 import typingsSlinky.amplify.mod.RequestSettings
 import typingsSlinky.jquery.JQueryPromise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
-@JSImport("amplify", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   @js.native
-  trait Request extends js.Object {
+  trait Request extends StObject {
     
     /***
       * Request a resource.

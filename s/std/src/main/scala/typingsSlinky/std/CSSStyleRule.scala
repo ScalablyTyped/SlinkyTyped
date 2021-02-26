@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,31 +31,19 @@ object CSSStyleRule {
     selectorText: java.lang.String,
     style: org.scalajs.dom.raw.CSSStyleDeclaration,
     `type`: Double
-  ): CSSStyleRule = {
+  ): org.scalajs.dom.raw.CSSStyleRule = {
     val __obj = js.Dynamic.literal(CHARSET_RULE = CHARSET_RULE.asInstanceOf[js.Any], FONT_FACE_RULE = FONT_FACE_RULE.asInstanceOf[js.Any], IMPORT_RULE = IMPORT_RULE.asInstanceOf[js.Any], KEYFRAMES_RULE = KEYFRAMES_RULE.asInstanceOf[js.Any], KEYFRAME_RULE = KEYFRAME_RULE.asInstanceOf[js.Any], MEDIA_RULE = MEDIA_RULE.asInstanceOf[js.Any], NAMESPACE_RULE = NAMESPACE_RULE.asInstanceOf[js.Any], PAGE_RULE = PAGE_RULE.asInstanceOf[js.Any], STYLE_RULE = STYLE_RULE.asInstanceOf[js.Any], SUPPORTS_RULE = SUPPORTS_RULE.asInstanceOf[js.Any], cssText = cssText.asInstanceOf[js.Any], selectorText = selectorText.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CSSStyleRule]
+    __obj.asInstanceOf[org.scalajs.dom.raw.CSSStyleRule]
   }
   
   @scala.inline
-  implicit class CSSStyleRuleOps[Self <: org.scalajs.dom.raw.CSSStyleRule] (val x: Self) extends AnyVal {
+  implicit class CSSStyleRuleMutableBuilder[Self <: org.scalajs.dom.raw.CSSStyleRule] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setSelectorText(value: java.lang.String): Self = StObject.set(x, "selectorText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setSelectorText(value: java.lang.String): Self = this.set("selectorText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStyle(value: org.scalajs.dom.raw.CSSStyleDeclaration): Self = this.set("style", value.asInstanceOf[js.Any])
+    def setStyle(value: org.scalajs.dom.raw.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
   }
 }

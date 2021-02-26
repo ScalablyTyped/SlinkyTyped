@@ -11,8 +11,8 @@ A lightweight implementation of OOP Class in JavaScript
 | Full name          | core-object |
 | Keywords           | - |
 | # releases         | 0 |
-| # dependents       | 114 |
-| # downloads        | 17264710 |
+| # dependents       | 119 |
+| # downloads        | 14886354 |
 | # stars            | 0 |
 
 ## Links

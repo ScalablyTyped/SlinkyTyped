@@ -9,6 +9,7 @@ import typingsSlinky.reactDraggable.anon.PartialDraggableCoreProps
 import typingsSlinky.reactDraggable.mod.DraggableData
 import typingsSlinky.reactDraggable.mod.DraggableEvent
 import typingsSlinky.reactDraggable.reactDraggableBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object DraggableCore {
   
   @JSImport("react-draggable", "DraggableCore")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -64,7 +65,7 @@ object DraggableCore {
     def scale(value: Double): this.type = set("scale", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PartialDraggableCoreProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DraggableCore.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PartialDraggableCoreProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -11,6 +11,7 @@ import typingsSlinky.browserfs.zipFSMod.ZipFSOptions
 import typingsSlinky.browserfs.zipFSMod.ZipTOC
 import typingsSlinky.browserfs.zipFSMod.default
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

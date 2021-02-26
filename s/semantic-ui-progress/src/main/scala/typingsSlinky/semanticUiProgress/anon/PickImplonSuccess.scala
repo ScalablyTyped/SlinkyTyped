@@ -1,13 +1,14 @@
 package typingsSlinky.semanticUiProgress.anon
 
 import typingsSlinky.semanticUiProgress.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Pick<semantic-ui-progress.SemanticUI.ProgressSettings._Impl, 'onSuccess'> */
 @js.native
-trait PickImplonSuccess extends js.Object {
+trait PickImplonSuccess extends StObject {
   
   def onSuccess(total: Double): Unit = js.native
   @JSName("onSuccess")

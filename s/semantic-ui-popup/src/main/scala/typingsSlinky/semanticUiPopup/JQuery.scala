@@ -78,12 +78,13 @@ import typingsSlinky.semanticUiPopup.semanticUiPopupStrings.toggle
 import typingsSlinky.semanticUiPopup.semanticUiPopupStrings.transition
 import typingsSlinky.semanticUiPopup.semanticUiPopupStrings.variation
 import typingsSlinky.semanticUiPopup.semanticUiPopupStrings.verbose
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def popup(): JQuery = js.native
   def popup(behavior: setting, name: `inline`, value: js.UndefOr[scala.Nothing]): Boolean = js.native

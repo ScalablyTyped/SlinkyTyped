@@ -4,21 +4,21 @@
 Typings are for version 2.2.4
 
 ## Library description:
-React wrapper around Popper.js
+Official library to use Popper on React projects
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | react-popper |
 | Keywords           | react, react-popper, popperjs, component, drop, tooltip, popover |
-| # releases         | 38 |
-| # dependents       | 363 |
-| # downloads        | 76864187 |
+| # releases         | 13 |
+| # dependents       | 652 |
+| # downloads        | 159871769 |
 | # stars            | 1 |
 
 ## Links
-- [Homepage](https://github.com/souporserious/react-popper)
-- [Bugs](https://github.com/souporserious/react-popper/issues)
-- [Repository](https://github.com/souporserious/react-popper)
+- [Homepage](https://popper.js.org/react-popper)
+- [Bugs](https://github.com/popperjs/react-popper/issues)
+- [Repository](https://github.com/popperjs/react-popper)
 - [Npm](https://www.npmjs.com/package/react-popper)
     
 

@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientGames.gapi.client.games
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientGames.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientGames.anon.PlayerId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PlayersResource extends js.Object {
+trait PlayersResource extends StObject {
   
   /** Retrieves the Player resource with the given ID. To retrieve the player for the currently authenticated user, set `playerId` to `me`. */
   def get(): Request[Player] = js.native

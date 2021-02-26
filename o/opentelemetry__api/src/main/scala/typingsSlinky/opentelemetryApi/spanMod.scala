@@ -5,16 +5,15 @@ import typingsSlinky.opentelemetryApi.exceptionMod.Exception
 import typingsSlinky.opentelemetryApi.spanContextMod.SpanContext
 import typingsSlinky.opentelemetryApi.statusMod.Status
 import typingsSlinky.opentelemetryApi.timeMod.TimeInput
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@opentelemetry/api/build/src/trace/span", JSImport.Namespace)
-@js.native
-object spanMod extends js.Object {
+object spanMod {
   
   @js.native
-  trait Span extends js.Object {
+  trait Span extends StObject {
     
     /**
       * Adds an event to the Span.

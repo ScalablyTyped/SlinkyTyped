@@ -2,6 +2,7 @@ package typingsSlinky.react.mod
 
 import org.scalajs.dom.raw.EventTarget
 import slinky.web.SyntheticCompositionEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,28 +33,16 @@ object CompositionEvent {
     target: EventTarget,
     timeStamp: Double,
     `type`: String
-  ): CompositionEvent[T] = {
+  ): SyntheticCompositionEvent[T] = {
     val __obj = js.Dynamic.literal(bubbles = bubbles.asInstanceOf[js.Any], cancelable = cancelable.asInstanceOf[js.Any], currentTarget = currentTarget.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], defaultPrevented = defaultPrevented.asInstanceOf[js.Any], eventPhase = eventPhase.asInstanceOf[js.Any], isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), isPropagationStopped = js.Any.fromFunction0(isPropagationStopped), isTrusted = isTrusted.asInstanceOf[js.Any], nativeEvent = nativeEvent.asInstanceOf[js.Any], persist = js.Any.fromFunction0(persist), preventDefault = js.Any.fromFunction0(preventDefault), stopPropagation = js.Any.fromFunction0(stopPropagation), target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CompositionEvent[T]]
+    __obj.asInstanceOf[SyntheticCompositionEvent[T]]
   }
   
   @scala.inline
-  implicit class CompositionEventOps[Self <: SyntheticCompositionEvent[_], T] (val x: Self with SyntheticCompositionEvent[T]) extends AnyVal {
+  implicit class CompositionEventMutableBuilder[Self <: SyntheticCompositionEvent[_], T] (val x: Self with SyntheticCompositionEvent[T]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setData(value: String): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: String): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
   }
 }

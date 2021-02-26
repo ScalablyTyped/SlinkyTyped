@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookComponents.controlsTypesMod.TextValue
 import typingsSlinky.storybookComponents.textMod.TextProps
 import typingsSlinky.storybookComponents.typesMod.ArgType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TextControl {
   
+  @scala.inline
+  def apply(name: String, onChange: js.UndefOr[TextValue] => js.UndefOr[TextValue | Unit]): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[TextProps]))
+  }
+  
   @JSImport("@storybook/components", "TextControl")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,10 +44,4 @@ object TextControl {
   }
   
   def withProps(p: TextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(name: String, onChange: js.UndefOr[TextValue] => js.UndefOr[TextValue | Unit]): Builder = {
-    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[TextProps]))
-  }
 }

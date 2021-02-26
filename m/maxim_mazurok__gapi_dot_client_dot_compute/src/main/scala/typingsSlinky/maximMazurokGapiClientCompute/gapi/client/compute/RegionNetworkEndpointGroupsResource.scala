@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.FieldsKeyNetworkEndpoint
 import typingsSlinky.maximMazurokGapiClientCompute.anon.Filter
 import typingsSlinky.maximMazurokGapiClientCompute.anon.KeyNetworkEndpointGroupOauthtokenPrettyPrint
 import typingsSlinky.maximMazurokGapiClientCompute.anon.PrettyPrintProjectQuotaUserRegionRequestIdResource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RegionNetworkEndpointGroupsResource extends js.Object {
+trait RegionNetworkEndpointGroupsResource extends StObject {
   
   /** Deletes the specified network endpoint group. Note that the NEG cannot be deleted if it is configured as a backend of a backend service. */
   def delete(): Request[Operation] = js.native

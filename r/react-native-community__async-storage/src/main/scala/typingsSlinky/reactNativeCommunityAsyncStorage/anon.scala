@@ -1,15 +1,14 @@
 package typingsSlinky.reactNativeCommunityAsyncStorage
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait GetItem extends js.Object {
+  trait GetItem extends StObject {
     
     def getItem(): js.Promise[String | Null] = js.native
     def getItem(callback: js.Function2[/* error */ js.UndefOr[js.Error], /* result */ js.UndefOr[String], Unit]): js.Promise[String | Null] = js.native

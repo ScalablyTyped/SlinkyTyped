@@ -5,14 +5,14 @@ import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.lineMod.Line
 import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/objects/LineLoop", JSImport.Namespace)
-@js.native
-object lineLoopMod extends js.Object {
+object lineLoopMod {
   
+  @JSImport("three/src/objects/LineLoop", "LineLoop")
   @js.native
   class LineLoop[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: Material | js.Array[Material] */] () extends Line[TGeometry, TMaterial] {
     def this(geometry: TGeometry) = this()

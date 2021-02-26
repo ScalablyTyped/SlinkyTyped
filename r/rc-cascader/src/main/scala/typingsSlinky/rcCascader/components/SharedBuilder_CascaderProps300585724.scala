@@ -10,6 +10,7 @@ import typingsSlinky.rcCascader.cascaderMod.CascaderOption
 import typingsSlinky.rcCascader.cascaderMod.CascaderValueType
 import typingsSlinky.rcTrigger.interfaceMod.BuildInPlacements
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,10 +27,10 @@ class SharedBuilder_CascaderProps300585724[R <: js.Object] (val args: js.Array[j
   def changeOnSelect(value: Boolean): this.type = set("changeOnSelect", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: (String | Double)*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: CascaderValueType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: CascaderValueType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: (String | Double)*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -41,10 +42,10 @@ class SharedBuilder_CascaderProps300585724[R <: js.Object] (val args: js.Array[j
   def dropdownRender(value: /* menu */ ReactElement => ReactElement): this.type = set("dropdownRender", js.Any.fromFunction1(value))
   
   @scala.inline
-  def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+  def expandIcon(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def expandIcon(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+  def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def expandTrigger(value: String): this.type = set("expandTrigger", value.asInstanceOf[js.Any])
@@ -62,10 +63,10 @@ class SharedBuilder_CascaderProps300585724[R <: js.Object] (val args: js.Array[j
   def loadData(value: /* selectOptions */ js.Array[CascaderOption] => Unit): this.type = set("loadData", js.Any.fromFunction1(value))
   
   @scala.inline
-  def loadingIconReactElement(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
+  def loadingIcon(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def loadingIcon(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
+  def loadingIconReactElement(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def onChange(value: (/* value */ CascaderValueType, /* selectOptions */ js.Array[CascaderOption]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
@@ -77,10 +78,10 @@ class SharedBuilder_CascaderProps300585724[R <: js.Object] (val args: js.Array[j
   def onPopupVisibleChange(value: /* popupVisible */ Boolean => Unit): this.type = set("onPopupVisibleChange", js.Any.fromFunction1(value))
   
   @scala.inline
-  def optionsVarargs(value: CascaderOption*): this.type = set("options", js.Array(value :_*))
+  def options(value: js.Array[CascaderOption]): this.type = set("options", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def options(value: js.Array[CascaderOption]): this.type = set("options", value.asInstanceOf[js.Any])
+  def optionsVarargs(value: CascaderOption*): this.type = set("options", js.Array(value :_*))
   
   @scala.inline
   def popupClassName(value: String): this.type = set("popupClassName", value.asInstanceOf[js.Any])
@@ -98,8 +99,8 @@ class SharedBuilder_CascaderProps300585724[R <: js.Object] (val args: js.Array[j
   def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: (String | Double)*): this.type = set("value", js.Array(value :_*))
+  def value(value: CascaderValueType): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: CascaderValueType): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: (String | Double)*): this.type = set("value", js.Array(value :_*))
 }

@@ -25,6 +25,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,10 +36,10 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
      with StBuildingComponent[tag.type, scala.Nothing] {
   
   @scala.inline
-  def additionLabelReactElement(value: ReactElement): this.type = set("additionLabel", value.asInstanceOf[js.Any])
+  def additionLabel(value: Double | String | ReactElement): this.type = set("additionLabel", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def additionLabel(value: Double | String | ReactElement): this.type = set("additionLabel", value.asInstanceOf[js.Any])
+  def additionLabelReactElement(value: ReactElement): this.type = set("additionLabel", value.asInstanceOf[js.Any])
   
   @scala.inline
   def additionPosition(value: top | bottom): this.type = set("additionPosition", value.asInstanceOf[js.Any])
@@ -74,10 +75,10 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
   def control(value: js.Any): this.type = set("control", value.asInstanceOf[js.Any])
@@ -98,10 +99,10 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def defaultUpward(value: Boolean): this.type = set("defaultUpward", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: (Double | String | Boolean)*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | Boolean | (js.Array[Double | String | Boolean])): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | Boolean | (js.Array[Double | String | Boolean])): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: (Double | String | Boolean)*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def direction(value: left | right): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -119,10 +120,10 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def fluid(value: Boolean): this.type = set("fluid", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+  def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+  def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
   
   @scala.inline
   def icon(value: js.Any): this.type = set("icon", value.asInstanceOf[js.Any])
@@ -137,7 +138,7 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def item(value: Boolean): this.type = set("item", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+  def label(value: SemanticShorthandItem[HtmlLabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
   
   @scala.inline
   def labelFunction3(
@@ -145,7 +146,7 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   ): this.type = set("label", js.Any.fromFunction3(value))
   
   @scala.inline
-  def label(value: SemanticShorthandItem[HtmlLabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
+  def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
   
   @scala.inline
   def labeled(value: Boolean): this.type = set("labeled", value.asInstanceOf[js.Any])
@@ -163,10 +164,10 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def noResultsMessageReactElement(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
+  def noResultsMessage(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def noResultsMessage(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
+  def noResultsMessageReactElement(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
   
   @scala.inline
   def onAddItem(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onAddItem", js.Any.fromFunction2(value))
@@ -224,11 +225,6 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def scrolling(value: Boolean): this.type = set("scrolling", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def searchFunction2(
-    value: (/* options */ js.Array[DropdownItemProps], /* value */ String) => js.Array[DropdownItemProps]
-  ): this.type = set("search", js.Any.fromFunction2(value))
-  
-  @scala.inline
   def search(
     value: Boolean | (js.Function2[
       /* options */ js.Array[DropdownItemProps], 
@@ -236,6 +232,11 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
       js.Array[DropdownItemProps]
     ])
   ): this.type = set("search", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def searchFunction2(
+    value: (/* options */ js.Array[DropdownItemProps], /* value */ String) => js.Array[DropdownItemProps]
+  ): this.type = set("search", js.Any.fromFunction2(value))
   
   @scala.inline
   def searchInput(value: js.Any): this.type = set("searchInput", value.asInstanceOf[js.Any])
@@ -265,10 +266,10 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
+  def trigger(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def trigger(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
+  def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
@@ -277,10 +278,10 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def upward(value: Boolean): this.type = set("upward", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: (Boolean | Double | String)*): this.type = set("value", js.Array(value :_*))
+  def value(value: Boolean | Double | String | (js.Array[Boolean | Double | String])): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: Boolean | Double | String | (js.Array[Boolean | Double | String])): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: (Boolean | Double | String)*): this.type = set("value", js.Array(value :_*))
   
   @scala.inline
   def width(value: SemanticWIDTHS): this.type = set("width", value.asInstanceOf[js.Any])

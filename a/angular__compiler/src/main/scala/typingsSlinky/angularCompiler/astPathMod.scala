@@ -1,16 +1,16 @@
 package typingsSlinky.angularCompiler
 
 import typingsSlinky.angularCompiler.anon.Instantiable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/compiler/src/ast_path", JSImport.Namespace)
-@js.native
-object astPathMod extends js.Object {
+object astPathMod {
   
+  @JSImport("@angular/compiler/src/ast_path", "AstPath")
   @js.native
-  class AstPath[T] protected () extends js.Object {
+  class AstPath[T] protected () extends StObject {
     def this(path: js.Array[T]) = this()
     def this(path: js.Array[T], position: Double) = this()
     

@@ -1,14 +1,15 @@
 package typingsSlinky.vscodeLanguageclient.mod
 
 import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageclient", "DocumentLinkResolveRequest")
-@js.native
-object DocumentLinkResolveRequest extends js.Object {
+object DocumentLinkResolveRequest {
   
+  @JSImport("vscode-languageclient", "DocumentLinkResolveRequest.type")
+  @js.native
   val `type`: ProtocolRequestType[
     typingsSlinky.vscodeLanguageserverTypes.mod.DocumentLink, 
     typingsSlinky.vscodeLanguageserverTypes.mod.DocumentLink, 

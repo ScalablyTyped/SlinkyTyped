@@ -10,9 +10,9 @@ Storybook for React: Develop React Component in isolation with Hot Reloading.
 | ------------------ | :-------------: |
 | Full name          | @storybook/react |
 | Keywords           | storybook |
-| # releases         | 411 |
-| # dependents       | 264 |
-| # downloads        | 36132600 |
+| # releases         | 548 |
+| # dependents       | 414 |
+| # downloads        | 78620631 |
 | # stars            | 10 |
 
 ## Links

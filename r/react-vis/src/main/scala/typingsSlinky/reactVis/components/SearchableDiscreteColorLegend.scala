@@ -9,15 +9,22 @@ import typingsSlinky.reactVis.anon.Color
 import typingsSlinky.reactVis.mod.SearchableDiscreteColorLegendProps
 import typingsSlinky.reactVis.reactVisStrings.horizontal
 import typingsSlinky.reactVis.reactVisStrings.vertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SearchableDiscreteColorLegend {
   
+  @scala.inline
+  def apply(items: js.Array[Color | String | ReactChild]): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SearchableDiscreteColorLegendProps]))
+  }
+  
   @JSImport("react-vis", "SearchableDiscreteColorLegend")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -63,10 +70,4 @@ object SearchableDiscreteColorLegend {
   }
   
   def withProps(p: SearchableDiscreteColorLegendProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(items: js.Array[Color | String | ReactChild]): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SearchableDiscreteColorLegendProps]))
-  }
 }

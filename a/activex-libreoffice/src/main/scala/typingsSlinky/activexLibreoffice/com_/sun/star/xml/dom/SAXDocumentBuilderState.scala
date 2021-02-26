@@ -5,6 +5,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`3`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`4`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 */
-trait SAXDocumentBuilderState extends js.Object
+trait SAXDocumentBuilderState extends StObject
 object SAXDocumentBuilderState {
   
   @scala.inline

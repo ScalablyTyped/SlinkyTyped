@@ -3,12 +3,13 @@ package typingsSlinky.lodash.fpMod
 import typingsSlinky.lodash.mod.PropertyPath
 import typingsSlinky.lodash.mod.SetWithCustomizer
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashUpdateWith1x4 extends js.Object {
+trait LodashUpdateWith1x4 extends StObject {
   
   def apply(customizer: __, path: PropertyPath): LodashUpdateWith1x6 = js.native
   def apply[T /* <: js.Object */](customizer: SetWithCustomizer[T]): LodashUpdateWith1x5[T] = js.native

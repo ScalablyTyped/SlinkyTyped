@@ -1,6 +1,7 @@
 package typingsSlinky.winrt.Windows.ApplicationModel.Activation
 
 import typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Provider.ContactPickerUI
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

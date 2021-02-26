@@ -10,9 +10,9 @@ JSS plugin for classes composition
 | ------------------ | :-------------: |
 | Full name          | jss-plugin-compose |
 | Keywords           | cssinnjs, css-in-js, css in js, jss, plugin, compose, composition |
-| # releases         | 33 |
-| # dependents       | 6 |
-| # downloads        | 593302 |
+| # releases         | 30 |
+| # dependents       | 4 |
+| # downloads        | 6078029 |
 | # stars            | 0 |
 
 ## Links

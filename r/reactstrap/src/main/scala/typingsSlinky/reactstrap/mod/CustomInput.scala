@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.customInputMod.CustomInputProps
+import typingsSlinky.reactstrap.customInputMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "CustomInput")
+@JSImport("reactstrap/lib", "CustomInput")
 @js.native
-class CustomInput ()
-  extends Component[CustomInputProps, js.Object, js.Any]
+class CustomInput () extends default

@@ -2,14 +2,14 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.clientDriverMod.ClientDriver
 import typingsSlinky.samchon.iserverMod.IServer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/protocol/server/Server", JSImport.Namespace)
-@js.native
-object serverMod extends js.Object {
+object serverMod {
   
+  @JSImport("samchon/protocol/server/Server", "Server")
   @js.native
   abstract class Server () extends IServer {
     

@@ -8,6 +8,7 @@ import typingsSlinky.chromeApps.chrome.bluetoothLowEnergy.IProperties
 import typingsSlinky.chromeApps.chrome.bluetoothLowEnergy.IResponse
 import typingsSlinky.chromeApps.chrome.bluetoothLowEnergy.Service
 import typingsSlinky.chromeApps.chrome.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,15 +23,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * with Bluetooth Smart (Low Energy) devices using the
   * Generic Attribute Profile (GATT).
   */
-@JSGlobal("chrome.bluetoothLowEnergy")
-@js.native
-object bluetoothLowEnergy extends js.Object {
+object bluetoothLowEnergy {
   
   /**
     * Establishes a connection between the application and the device with the given address. A device may be already connected and its GATT services available without calling connect, however, an app that wants to access GATT services of a device should call this function to make sure that a connection to the device is maintained. If the device is not connected, all GATT services of the device will be discovered after a successful call to connect.
     * @param deviceAddress The Bluetooth address of the remote device to which a GATT connection should be opened.
     * @param callback Called when the connect request has completed.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.connect")
+  @js.native
   def connect(deviceAddress: String, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Establishes a connection between the application and the device with the given address. A device may be already connected and its GATT services available without calling connect, however, an app that wants to access GATT services of a device should call this function to make sure that a connection to the device is maintained. If the device is not connected, all GATT services of the device will be discovered after a successful call to connect.
@@ -38,6 +39,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param properties Connection properties (optional).
     * @param callback Called when the connect request has completed.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.connect")
+  @js.native
   def connect(deviceAddress: String, properties: IProperties, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -47,6 +50,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param serviceId ID of the service to create this characteristic for.
     * @param callback Called with the created characteristic's unique ID.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.createCharacteristic")
+  @js.native
   def createCharacteristic(
     characteristic: Characteristic,
     serviceId: String,
@@ -60,6 +65,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param characteristicId ID of the characteristic to create this descriptor for.
     * @param callback Called with the created desciptor's unique ID.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.createDescriptor")
+  @js.native
   def createDescriptor(
     descriptor: Descriptor,
     characteristicId: String,
@@ -72,6 +79,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param service The service to create.
     * @param callback Called with the created services's unique ID.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.createService")
+  @js.native
   def createService(service: Service, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -79,7 +88,11 @@ object bluetoothLowEnergy extends js.Object {
     * @param deviceAddress The Bluetooth address of the remote device.
     * @param [callback] Called when the disconnect request has completed.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.disconnect")
+  @js.native
   def disconnect(deviceAddress: String): Unit = js.native
+  @JSGlobal("chrome.bluetoothLowEnergy.disconnect")
+  @js.native
   def disconnect(deviceAddress: String, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -87,6 +100,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param characteristicId The instance ID of the requested GATT characteristic.
     * @param callback Called with the requested Characteristic object.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.getCharacteristic")
+  @js.native
   def getCharacteristic(characteristicId: String, callback: js.Function1[/* result */ Characteristic, Unit]): Unit = js.native
   
   /**
@@ -94,6 +109,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param serviceId The instance ID of the GATT service whose characteristics should be returned.
     * @param callback Called with the list of characteristics that belong to the given service.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.getCharacteristics")
+  @js.native
   def getCharacteristics(serviceId: String, callback: js.Function1[/* result */ js.Array[Characteristic], Unit]): Unit = js.native
   
   /**
@@ -101,6 +118,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param descriptorId The instance ID of the requested GATT characteristic descriptor.
     * @param callback Called with the requested Descriptor object.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.getDescriptor")
+  @js.native
   def getDescriptor(descriptorId: String, callback: js.Function1[/* result */ Descriptor, Unit]): Unit = js.native
   
   /**
@@ -108,6 +127,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param characteristicId The instance ID of the GATT characteristic whose descriptors should be returned.
     * @param callback Called with the list of descriptors that belong to the given characteristic.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.getDescriptors")
+  @js.native
   def getDescriptors(characteristicId: String, callback: js.Function1[/* result */ js.Array[Descriptor], Unit]): Unit = js.native
   
   /**
@@ -115,6 +136,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param serviceId The instance ID of the GATT service whose included services should be returned.
     * @param callback Called with the list of GATT services included from the given service.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.getIncludedServices")
+  @js.native
   def getIncludedServices(serviceId: String, callback: js.Function1[/* result */ js.Array[Service], Unit]): Unit = js.native
   
   /**
@@ -122,6 +145,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param serviceId The instance ID of the requested GATT service.
     * @param callback Called with the requested Service object.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.getService")
+  @js.native
   def getService(serviceId: String, callback: js.Function1[/* result */ Service, Unit]): Unit = js.native
   
   /**
@@ -130,6 +155,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param deviceAddress The Bluetooth address of the remote device whose GATT services should be returned.
     * @param callback Called with the list of requested Service objects.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.getServices")
+  @js.native
   def getServices(deviceAddress: String, callback: js.Function1[/* result */ js.Array[Service], Unit]): Unit = js.native
   
   /**
@@ -143,6 +170,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param notification Notification object
     * @param callback Callback called once the notification or indication has been sent successfully.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.notifyCharacteristicValueChanged")
+  @js.native
   def notifyCharacteristicValueChanged(characteristicId: String, notification: INotification, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -154,6 +183,8 @@ object bluetoothLowEnergy extends js.Object {
     * The peripheral permission may not be available to all apps.
     * @since Chrome 52.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.onCharacteristicReadRequest")
+  @js.native
   val onCharacteristicReadRequest: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* characteristic */ Characteristic, Unit]] = js.native
   
   /**
@@ -163,6 +194,8 @@ object bluetoothLowEnergy extends js.Object {
     * This event will only be sent if the app has enabled notifications
     *   by calling startCharacteristicNotifications.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.onCharacteristicValueChanged")
+  @js.native
   val onCharacteristicValueChanged: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* characteristic */ Characteristic, Unit]] = js.native
   
   /**
@@ -174,6 +207,8 @@ object bluetoothLowEnergy extends js.Object {
     * The peripheral permission may not be available to all apps.
     * @since Chrome 52.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.onCharacteristicWriteRequest")
+  @js.native
   val onCharacteristicWriteRequest: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* characteristic */ Characteristic, Unit]] = js.native
   
   /**
@@ -185,6 +220,8 @@ object bluetoothLowEnergy extends js.Object {
     * The peripheral permission may not be available to all apps.
     * @since Chrome 52.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.onDescriptorReadRequest")
+  @js.native
   val onDescriptorReadRequest: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* descriptor */ Descriptor, Unit]] = js.native
   
   /**
@@ -193,6 +230,8 @@ object bluetoothLowEnergy extends js.Object {
     * This event exists mostly for convenience and will always be sent after
     *   a successful call to readDescriptorValue.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.onDescriptorValueChanged")
+  @js.native
   val onDescriptorValueChanged: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* descriptor */ Descriptor, Unit]] = js.native
   
   /**
@@ -203,9 +242,13 @@ object bluetoothLowEnergy extends js.Object {
     *   and the bluetooth:peripheral permissions set to true.
     * The peripheral permission may not be available to all apps.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.onDescriptorWriteRequest")
+  @js.native
   val onDescriptorWriteRequest: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* descriptor */ Descriptor, Unit]] = js.native
   
   /** Fired whan a new GATT service has been discovered on a remote device. */
+  @JSGlobal("chrome.bluetoothLowEnergy.onServiceAdded")
+  @js.native
   val onServiceAdded: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* service */ Service, Unit]] = js.native
   
   /**
@@ -214,9 +257,13 @@ object bluetoothLowEnergy extends js.Object {
     *   that get added or removed from the service, as well as
     *   'ServiceChanged' notifications from the remote device.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.onServiceChanged")
+  @js.native
   val onServiceChanged: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* service */ Service, Unit]] = js.native
   
   /** Fired when a GATT service that was previously discovered on a remote device has been removed. */
+  @JSGlobal("chrome.bluetoothLowEnergy.onServiceRemoved")
+  @js.native
   val onServiceRemoved: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* service */ Service, Unit]] = js.native
   
   /**
@@ -224,6 +271,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param characteristicId The instance ID of the GATT characteristic whose value should be read from the remote device.
     * @param callback Called with the Characteristic object whose value was requested. The value field of the returned Characteristic object contains the result of the read request.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.readCharacteristicValue")
+  @js.native
   def readCharacteristicValue(characteristicId: String, callback: js.Function1[/* result */ Characteristic, Unit]): Unit = js.native
   
   /**
@@ -231,6 +280,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param descriptorId The instance ID of the GATT characteristic descriptor whose value should be read from the remote device.
     * @param callback Called with the Descriptor object whose value was requested. The value field of the returned Descriptor object contains the result of the read request.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.readDescriptorValue")
+  @js.native
   def readDescriptorValue(descriptorId: String, callback: js.Function1[/* result */ Descriptor, Unit]): Unit = js.native
   
   /**
@@ -251,6 +302,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param advertisement The advertisement to advertise.
     * @param callback Called once the registeration is done and we've started advertising. Returns the id of the created advertisement.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.registerAdvertisement")
+  @js.native
   def registerAdvertisement(advertisement: Advertisement, callback: js.Function1[/* advertisementId */ integer, Unit]): Unit = js.native
   
   /**
@@ -263,6 +316,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param serviceId Unique ID of a created service.
     * @param callback Callback with the result of the register operation.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.registerService")
+  @js.native
   def registerService(serviceId: String, callback: js.Function1[/* result */ js.Any, Unit]): Unit = js.native
   
   /**
@@ -275,7 +330,11 @@ object bluetoothLowEnergy extends js.Object {
     * @param serviceId Unique ID of a current registered service.
     * @param [callback] Callback called once the service is removed.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.removeService")
+  @js.native
   def removeService(serviceId: String): Unit = js.native
+  @JSGlobal("chrome.bluetoothLowEnergy.removeService")
+  @js.native
   def removeService(serviceId: String, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -283,6 +342,8 @@ object bluetoothLowEnergy extends js.Object {
     * @since Chrome 61.
     * @param callback Called once the advertisements are reset.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.resetAdvertising")
+  @js.native
   def resetAdvertising(callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -290,6 +351,8 @@ object bluetoothLowEnergy extends js.Object {
     * @since Chrome 52.
     * @param response The response to the request.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.sendRequestResponse")
+  @js.native
   def sendRequestResponse(response: IResponse): Unit = js.native
   
   /**
@@ -303,6 +366,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param maxInterval Maximum interval between advertisments (in milliseconds). This cannot be more than 10240ms (as per the spec).
     * @param callback Called once the interval has been set.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.setAdvertisingInterval")
+  @js.native
   def setAdvertisingInterval(minInterval: integer, maxInterval: integer, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -311,6 +376,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param characteristicId The instance ID of the GATT characteristic that notifications should be enabled on.
     * @param callback Called when the request has completed.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.startCharacteristicNotifications")
+  @js.native
   def startCharacteristicNotifications(characteristicId: String, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Enable value notifications/indications from the specified characteristic. Once enabled, an application can listen to notifications using the onCharacteristicValueChanged event.
@@ -319,6 +386,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param properties Notification session properties (optional).
     * @param callback Called when the request has completed.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.startCharacteristicNotifications")
+  @js.native
   def startCharacteristicNotifications(characteristicId: String, properties: IProperties, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -326,7 +395,11 @@ object bluetoothLowEnergy extends js.Object {
     * @param characteristicId The instance ID of the GATT characteristic on which this app's notification session should be stopped.
     * @param [callback] Called when the request has completed (optional).
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.stopCharacteristicNotifications")
+  @js.native
   def stopCharacteristicNotifications(characteristicId: String): Unit = js.native
+  @JSGlobal("chrome.bluetoothLowEnergy.stopCharacteristicNotifications")
+  @js.native
   def stopCharacteristicNotifications(characteristicId: String, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -337,6 +410,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param advertisementId Id of the advertisement to unregister.
     * @param callback Called once the advertisement is unregistered and is no longer being advertised.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.unregisterAdvertisement")
+  @js.native
   def unregisterAdvertisement(advertisementId: integer, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -349,6 +424,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param serviceId Unique ID of a current registered service.
     * @param callback Callback with the result of the register operation.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.unregisterService")
+  @js.native
   def unregisterService(serviceId: String, callback: js.Function1[/* result */ js.Any, Unit]): Unit = js.native
   
   /**
@@ -357,6 +434,8 @@ object bluetoothLowEnergy extends js.Object {
     * @param value The value that should be sent to the remote characteristic as part of the write request.
     * @param callback Called when the write request has completed.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.writeCharacteristicValue")
+  @js.native
   def writeCharacteristicValue(characteristicId: String, value: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -365,5 +444,7 @@ object bluetoothLowEnergy extends js.Object {
     * @param value The value that should be sent to the remote descriptor as part of the write request.
     * @param callback Called when the write request has completed.
     */
+  @JSGlobal("chrome.bluetoothLowEnergy.writeDescriptorValue")
+  @js.native
   def writeDescriptorValue(descriptorId: String, value: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
 }

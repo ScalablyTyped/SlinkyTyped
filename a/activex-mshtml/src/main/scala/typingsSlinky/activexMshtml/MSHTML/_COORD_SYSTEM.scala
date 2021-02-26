@@ -7,6 +7,7 @@ import typingsSlinky.activexMshtml.activexMshtmlNumbers.`2`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`3`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`4`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`1`
 */
-trait _COORD_SYSTEM extends js.Object
+trait _COORD_SYSTEM extends StObject
 object _COORD_SYSTEM {
   
   @scala.inline

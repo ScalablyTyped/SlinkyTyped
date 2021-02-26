@@ -10,9 +10,9 @@ Opaquely authenticates solid clients
 | ------------------ | :-------------: |
 | Full name          | solid-auth-client |
 | Keywords           | - |
-| # releases         | 24 |
-| # dependents       | 16 |
-| # downloads        | 38274 |
+| # releases         | 9 |
+| # dependents       | 23 |
+| # downloads        | 35335 |
 | # stars            | 0 |
 
 ## Links

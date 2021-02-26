@@ -2,12 +2,13 @@ package typingsSlinky.reactNativeFetchBlob.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.reactNativeFetchBlob.anon.Free
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FS extends js.Object {
+trait FS extends StObject {
   
   var RNFetchBlobSession: typingsSlinky.reactNativeFetchBlob.mod.RNFetchBlobSession = js.native
   

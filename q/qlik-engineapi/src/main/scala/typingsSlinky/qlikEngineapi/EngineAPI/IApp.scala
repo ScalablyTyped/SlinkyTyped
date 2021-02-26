@@ -10,6 +10,7 @@ import typingsSlinky.qlikEngineapi.anon.QName
 import typingsSlinky.qlikEngineapi.anon.Qk
 import typingsSlinky.qlikEngineapi.enigmaJS.IGeneratedAPI
 import typingsSlinky.qlikEngineapi.qlikEngineapiStrings.SlashqListObjectDef
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

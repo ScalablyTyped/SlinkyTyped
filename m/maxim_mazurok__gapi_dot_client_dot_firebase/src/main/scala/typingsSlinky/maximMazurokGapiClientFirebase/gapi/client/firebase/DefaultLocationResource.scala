@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientFirebase.gapi.client.firebase
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.Fields
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.Parent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DefaultLocationResource extends js.Object {
+trait DefaultLocationResource extends StObject {
   
   def finalize(request: Fields, body: FinalizeDefaultLocationRequest): Request[Operation] = js.native
   /**

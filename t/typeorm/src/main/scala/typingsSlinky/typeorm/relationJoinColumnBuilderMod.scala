@@ -5,16 +5,16 @@ import typingsSlinky.typeorm.columnMetadataMod.ColumnMetadata
 import typingsSlinky.typeorm.connectionMod.Connection
 import typingsSlinky.typeorm.joinColumnMetadataArgsMod.JoinColumnMetadataArgs
 import typingsSlinky.typeorm.relationMetadataMod.RelationMetadata
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/metadata-builder/RelationJoinColumnBuilder", JSImport.Namespace)
-@js.native
-object relationJoinColumnBuilderMod extends js.Object {
+object relationJoinColumnBuilderMod {
   
+  @JSImport("typeorm/browser/metadata-builder/RelationJoinColumnBuilder", "RelationJoinColumnBuilder")
   @js.native
-  class RelationJoinColumnBuilder protected () extends js.Object {
+  class RelationJoinColumnBuilder protected () extends StObject {
     def this(connection: Connection) = this()
     
     /**

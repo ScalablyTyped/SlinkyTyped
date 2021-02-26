@@ -74,15 +74,22 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactMdTabs.tabsListMod.TabsListProps
 import typingsSlinky.reactMdTabs.typesMod.TabsAlignment
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TabsList {
   
+  @scala.inline
+  def apply(activeIndex: Double, onActiveIndexChange: Double => Unit): Builder = {
+    val __props = js.Dynamic.literal(activeIndex = activeIndex.asInstanceOf[js.Any], onActiveIndexChange = js.Any.fromFunction1(onActiveIndexChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabsListProps with RefAttributes[HTMLDivElement]]))
+  }
+  
   @JSImport("@react-md/tabs", "TabsList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -278,10 +285,10 @@ object TabsList {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -629,10 +636,4 @@ object TabsList {
   }
   
   def withProps(p: TabsListProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(activeIndex: Double, onActiveIndexChange: Double => Unit): Builder = {
-    val __props = js.Dynamic.literal(activeIndex = activeIndex.asInstanceOf[js.Any], onActiveIndexChange = js.Any.fromFunction1(onActiveIndexChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[TabsListProps with RefAttributes[HTMLDivElement]]))
-  }
 }

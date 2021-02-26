@@ -9,12 +9,13 @@ import typingsSlinky.activexOffice.Office.MsoTextOrientation
 import typingsSlinky.activexOffice.Office.MsoTriState
 import typingsSlinky.activexOffice.Office.SmartArtLayout
 import typingsSlinky.activexOffice.Office.XlChartType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Shapes extends js.Object {
+trait Shapes extends StObject {
   
   def AddCallout(Type: MsoCalloutType, Left: Double, Top: Double, Width: Double, Height: Double): Shape = js.native
   def AddCallout(Type: MsoCalloutType, Left: Double, Top: Double, Width: Double, Height: Double, Anchor: js.Any): Shape = js.native

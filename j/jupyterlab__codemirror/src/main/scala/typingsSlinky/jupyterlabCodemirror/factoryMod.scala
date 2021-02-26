@@ -2,14 +2,14 @@ package typingsSlinky.jupyterlabCodemirror
 
 import typingsSlinky.jupyterlabCodeeditor.factoryMod.IEditorFactoryService
 import typingsSlinky.jupyterlabCodemirror.anon.PartialIConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/codemirror/lib/factory", JSImport.Namespace)
-@js.native
-object factoryMod extends js.Object {
+object factoryMod {
   
+  @JSImport("@jupyterlab/codemirror/lib/factory", "CodeMirrorEditorFactory")
   @js.native
   /**
     * Construct an IEditorFactoryService for CodeMirrorEditors.

@@ -10,9 +10,9 @@ Lumino Generic Collections
 | ------------------ | :-------------: |
 | Full name          | @lumino/collections |
 | Keywords           | - |
-| # releases         | 8 |
-| # dependents       | 2 |
-| # downloads        | 319766 |
+| # releases         | 11 |
+| # dependents       | 5 |
+| # downloads        | 1374104 |
 | # stars            | 0 |
 
 ## Links

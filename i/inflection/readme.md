@@ -10,9 +10,9 @@ A port of inflection-js to node.js module
 | ------------------ | :-------------: |
 | Full name          | inflection |
 | Keywords           | inflection, inflections, inflection-js, pluralize, singularize, camelize, underscore, humanize, capitalize, dasherize, titleize, demodulize, tableize, classify, foreign_key, ordinalize |
-| # releases         | 1 |
-| # dependents       | 761 |
-| # downloads        | 63371329 |
+| # releases         | 0 |
+| # dependents       | 842 |
+| # downloads        | 84174873 |
 | # stars            | 16 |
 
 ## Links

@@ -2,6 +2,7 @@ package typingsSlinky.winjs.WinJS.UI
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Displays a tooltip that can contain images and formatting.
   **/
 @js.native
-trait Tooltip extends js.Object {
+trait Tooltip extends StObject {
   
   //#endregion Events
   //#region Methods

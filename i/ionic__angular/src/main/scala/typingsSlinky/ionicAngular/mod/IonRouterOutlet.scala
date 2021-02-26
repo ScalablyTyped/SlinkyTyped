@@ -8,6 +8,7 @@ import typingsSlinky.angularCore.mod.ViewContainerRef
 import typingsSlinky.angularRouter.mod.ActivatedRoute
 import typingsSlinky.angularRouter.mod.ChildrenOutletContexts
 import typingsSlinky.angularRouter.mod.Router
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

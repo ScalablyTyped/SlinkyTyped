@@ -10,9 +10,9 @@ An implementation of WHATWG AbortController interface.
 | ------------------ | :-------------: |
 | Full name          | abort-controller |
 | Keywords           | w3c, whatwg, event, events, abort, cancel, abortcontroller, abortsignal, controller, signal, shim |
-| # releases         | 10 |
-| # dependents       | 110 |
-| # downloads        | 61390549 |
+| # releases         | 3 |
+| # dependents       | 397 |
+| # downloads        | 165757147 |
 | # stars            | 0 |
 
 ## Links

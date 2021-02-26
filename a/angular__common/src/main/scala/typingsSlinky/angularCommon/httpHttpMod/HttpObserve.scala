@@ -1,5 +1,6 @@
 package typingsSlinky.angularCommon.httpHttpMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCommon.angularCommonStrings.events
   - typingsSlinky.angularCommon.angularCommonStrings.response
 */
-trait HttpObserve extends js.Object
+trait HttpObserve extends StObject
 object HttpObserve {
   
   @scala.inline

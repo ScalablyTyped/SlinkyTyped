@@ -2,13 +2,14 @@ package typingsSlinky.datejs
 
 import typingsSlinky.datejs.sugarpak.IDateLiteral
 import typingsSlinky.datejs.sugarpak.IOrientation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** DateJS Public Static Methods */
 @js.native
-trait DateConstructor extends js.Object {
+trait DateConstructor extends StObject {
   
   /** Contains the day-of-week value for Friday */
   var FRIDAY: Double = js.native

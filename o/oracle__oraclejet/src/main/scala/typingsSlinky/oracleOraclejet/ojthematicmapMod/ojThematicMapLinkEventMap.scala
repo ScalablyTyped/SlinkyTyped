@@ -15,19 +15,15 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.std.DocumentAndElementEventHandlersEventMap
-import typingsSlinky.std.ElementEventMap
-import typingsSlinky.std.GlobalEventHandlersEventMap
+import typingsSlinky.std.HTMLElementEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ojThematicMapLinkEventMap
-  extends ElementEventMap
-     with GlobalEventHandlersEventMap
-     with DocumentAndElementEventHandlersEventMap {
+trait ojThematicMapLinkEventMap extends HTMLElementEventMap {
   
   var categoriesChanged: CustomEvent = js.native
   
@@ -158,45 +154,33 @@ object ojThematicMapLinkEventMap {
   }
   
   @scala.inline
-  implicit class ojThematicMapLinkEventMapOps[Self <: ojThematicMapLinkEventMap] (val x: Self) extends AnyVal {
+  implicit class ojThematicMapLinkEventMapMutableBuilder[Self <: ojThematicMapLinkEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCategoriesChanged(value: CustomEvent): Self = StObject.set(x, "categoriesChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setColorChanged(value: CustomEvent): Self = StObject.set(x, "colorChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setEndLocationChanged(value: CustomEvent): Self = StObject.set(x, "endLocationChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCategoriesChanged(value: CustomEvent): Self = this.set("categoriesChanged", value.asInstanceOf[js.Any])
+    def setSelectableChanged(value: CustomEvent): Self = StObject.set(x, "selectableChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColorChanged(value: CustomEvent): Self = this.set("colorChanged", value.asInstanceOf[js.Any])
+    def setShortDescChanged(value: CustomEvent): Self = StObject.set(x, "shortDescChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEndLocationChanged(value: CustomEvent): Self = this.set("endLocationChanged", value.asInstanceOf[js.Any])
+    def setStartLocationChanged(value: CustomEvent): Self = StObject.set(x, "startLocationChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSelectableChanged(value: CustomEvent): Self = this.set("selectableChanged", value.asInstanceOf[js.Any])
+    def setSvgClassNameChanged(value: CustomEvent): Self = StObject.set(x, "svgClassNameChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setShortDescChanged(value: CustomEvent): Self = this.set("shortDescChanged", value.asInstanceOf[js.Any])
+    def setSvgStyleChanged(value: CustomEvent): Self = StObject.set(x, "svgStyleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStartLocationChanged(value: CustomEvent): Self = this.set("startLocationChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSvgClassNameChanged(value: CustomEvent): Self = this.set("svgClassNameChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSvgStyleChanged(value: CustomEvent): Self = this.set("svgStyleChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setWidthChanged(value: CustomEvent): Self = this.set("widthChanged", value.asInstanceOf[js.Any])
+    def setWidthChanged(value: CustomEvent): Self = StObject.set(x, "widthChanged", value.asInstanceOf[js.Any])
   }
 }

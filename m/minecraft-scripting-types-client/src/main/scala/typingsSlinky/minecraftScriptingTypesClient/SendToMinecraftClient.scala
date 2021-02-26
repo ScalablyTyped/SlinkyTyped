@@ -7,6 +7,7 @@ import typingsSlinky.minecraftScriptingTypesClient.minecraftScriptingTypesClient
 import typingsSlinky.minecraftScriptingTypesClient.minecraftScriptingTypesClientStrings.minecraftColonspawn_particle_attached_entity
 import typingsSlinky.minecraftScriptingTypesClient.minecraftScriptingTypesClientStrings.minecraftColonspawn_particle_in_world
 import typingsSlinky.minecraftScriptingTypesClient.minecraftScriptingTypesClientStrings.minecraftColonunload_ui
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.minecraftScriptingTypesClient.minecraftScriptingTypesClientStrings.minecraftColonspawn_particle_in_world
   - typingsSlinky.minecraftScriptingTypesClient.minecraftScriptingTypesClientStrings.minecraftColonunload_ui
 */
-trait SendToMinecraftClient extends js.Object
+trait SendToMinecraftClient extends StObject
 object SendToMinecraftClient {
   
   /**

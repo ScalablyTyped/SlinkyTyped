@@ -4,14 +4,14 @@ import typingsSlinky.firebaseDatabase.indexMod.Index
 import typingsSlinky.firebaseDatabase.nodeMod.NamedNode
 import typingsSlinky.firebaseDatabase.nodeMod.Node
 import typingsSlinky.firebaseDatabase.pathMod.Path
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/database/dist/src/core/snap/indexes/PathIndex", JSImport.Namespace)
-@js.native
-object pathIndexMod extends js.Object {
+object pathIndexMod {
   
+  @JSImport("@firebase/database/dist/src/core/snap/indexes/PathIndex", "PathIndex")
   @js.native
   class PathIndex protected () extends Index {
     def this(indexPath_ : Path) = this()

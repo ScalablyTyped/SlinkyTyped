@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.tokensMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.RightHandSide
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.RightHandSideList
 */
-trait ProductionBodyKind extends js.Object
+trait ProductionBodyKind extends StObject

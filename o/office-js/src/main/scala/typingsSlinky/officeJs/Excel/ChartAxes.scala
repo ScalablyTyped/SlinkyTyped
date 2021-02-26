@@ -12,6 +12,7 @@ import typingsSlinky.officeJs.officeJsStrings.Primary
 import typingsSlinky.officeJs.officeJsStrings.Secondary
 import typingsSlinky.officeJs.officeJsStrings.Series
 import typingsSlinky.officeJs.officeJsStrings.Value
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

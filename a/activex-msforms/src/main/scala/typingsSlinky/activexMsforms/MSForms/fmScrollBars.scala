@@ -4,6 +4,7 @@ import typingsSlinky.activexMsforms.activexMsformsNumbers.`0`
 import typingsSlinky.activexMsforms.activexMsformsNumbers.`1`
 import typingsSlinky.activexMsforms.activexMsformsNumbers.`2`
 import typingsSlinky.activexMsforms.activexMsformsNumbers.`3`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMsforms.activexMsformsNumbers.`0`
   - typingsSlinky.activexMsforms.activexMsformsNumbers.`2`
 */
-trait fmScrollBars extends js.Object
+trait fmScrollBars extends StObject
 object fmScrollBars {
   
   @scala.inline

@@ -5,14 +5,14 @@ import typingsSlinky.three.extrudeGeometryMod.ExtrudeGeometry
 import typingsSlinky.three.pathMod.Path
 import typingsSlinky.three.shapeGeometryMod.ShapeGeometry
 import typingsSlinky.three.vector2Mod.Vector2
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/extras/core/Shape", JSImport.Namespace)
-@js.native
-object shapeMod extends js.Object {
+object shapeMod {
   
+  @JSImport("three/src/extras/core/Shape", "Shape")
   @js.native
   class Shape () extends Path {
     def this(points: js.Array[Vector2]) = this()

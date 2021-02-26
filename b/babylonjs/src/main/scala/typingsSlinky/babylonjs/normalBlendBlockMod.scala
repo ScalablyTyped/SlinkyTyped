@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/normalBlendBlock", JSImport.Namespace)
-@js.native
-object normalBlendBlockMod extends js.Object {
+object normalBlendBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/normalBlendBlock", "NormalBlendBlock")
   @js.native
   class NormalBlendBlock protected () extends NodeMaterialBlock {
     /**

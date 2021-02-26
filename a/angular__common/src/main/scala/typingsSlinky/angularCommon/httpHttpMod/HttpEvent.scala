@@ -1,5 +1,6 @@
 package typingsSlinky.angularCommon.httpHttpMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,4 +12,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCommon.httpHttpMod.HttpProgressEvent
   - typingsSlinky.angularCommon.httpHttpMod.HttpUserEvent[T]
 */
-trait HttpEvent[T] extends js.Object
+trait HttpEvent[T] extends StObject

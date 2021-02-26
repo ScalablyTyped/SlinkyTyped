@@ -1,8 +1,8 @@
 package typingsSlinky.emberData.mod.DS
 
-import typingsSlinky.emberObject.promiseProxyMixinMod.PromiseProxyMixin
-import typingsSlinky.emberObject.proxyMod.ObjectProxy
 import typingsSlinky.emberObject.proxyMod.default
+import typingsSlinky.rsvp.mod.RSVP.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,8 +14,42 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * it easy to create data bindings with the `PromiseObject` that will
   * be updated when the promise resolves.
   */
-@JSImport("ember-data", "DS.PromiseObject")
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.rsvp.mod.default.Promise because Inheritance from two classes. Inlined 
+- typingsSlinky.emberObject.promiseProxyMixinMod.PromiseProxyMixin because Inheritance from two classes. Inlined promise, isRejected, isPending, reason, isSettled, isFulfilled */ @JSImport("ember-data", "DS.PromiseObject")
 @js.native
 class PromiseObject[T] ()
-  extends PromiseProxyMixin[T with default[js.Object]]
-     with ObjectProxy[T]
+  extends default[T]
+     with Promise[T with default[js.Object]] {
+  
+  /**
+    * Will become `true` if the proxied promise is fulfilled.
+    */
+  var isFulfilled: Boolean = js.native
+  
+  /**
+    * Once the proxied promise has settled this will become `false`.
+    */
+  var isPending: Boolean = js.native
+  
+  /**
+    * Will become `true` if the proxied promise is rejected.
+    */
+  var isRejected: Boolean = js.native
+  
+  /**
+    * Once the proxied promise has settled this will become `true`.
+    */
+  var isSettled: Boolean = js.native
+  
+  /**
+    * The promise whose fulfillment value is being proxied by this object.
+    */
+  var promise: typingsSlinky.rsvp.mod.default.Promise[T with default[js.Object]] = js.native
+  
+  /**
+    * If the proxied promise is rejected this will contain the reason
+    * provided.
+    */
+  var reason: js.Any = js.native
+}

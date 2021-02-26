@@ -10,6 +10,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-left`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-right`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`trigger-action`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.auto
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

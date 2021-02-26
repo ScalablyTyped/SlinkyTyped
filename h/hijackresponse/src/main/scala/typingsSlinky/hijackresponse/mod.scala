@@ -30,14 +30,15 @@ import typingsSlinky.node.streamMod.ReadableOptions
 import typingsSlinky.node.streamMod.WritableOptions
 import typingsSlinky.qs.mod.ParsedQs
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("hijackresponse", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("hijackresponse", JSImport.Namespace)
+  @js.native
   def apply[ResBody](
     res: Response_[ResBody],
     callback: js.Function2[/* err */ Null, /* res */ HijackedResponse[ResBody], Unit]
@@ -46,10 +47,10 @@ object mod extends js.Object {
   /* Inlined parent express.express.Response<ResBody> */
   /* Inlined parent std.Omit<node.stream.Readable, keyof express.express.Response<any>> */
   @js.native
-  trait HijackedResponse[ResBody] extends js.Object {
+  trait HijackedResponse[ResBody] extends StObject {
     
-    def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     def _destroy(error: js.Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+    def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     
     def _final(callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     
@@ -301,8 +302,6 @@ object mod extends js.Object {
       * instead.
       */
     def format(obj: js.Any): this.type = js.native
-    
-    var from: js.UndefOr[js.Any] = js.native
     
     /** Get value for header `field`. */
     def get(field: String): String = js.native

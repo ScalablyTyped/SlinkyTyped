@@ -10,9 +10,9 @@ The Remote Config package of the Firebase JS SDK
 | ------------------ | :-------------: |
 | Full name          | @firebase/remote-config |
 | Keywords           | - |
-| # releases         | 156 |
-| # dependents       | 3 |
-| # downloads        | 2086375 |
+| # releases         | 1000 |
+| # dependents       | 7 |
+| # downloads        | 26544983 |
 | # stars            | 0 |
 
 ## Links

@@ -1,5 +1,6 @@
 package typingsSlinky.sketchapp
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.sketchapp.sketchappNumbers.`14`
   - typingsSlinky.sketchapp.sketchappNumbers.`15`
 */
-trait SketchMSGraphicsContextSettingsBlendMode extends js.Object
+trait SketchMSGraphicsContextSettingsBlendMode extends StObject
 object SketchMSGraphicsContextSettingsBlendMode {
   
   @scala.inline

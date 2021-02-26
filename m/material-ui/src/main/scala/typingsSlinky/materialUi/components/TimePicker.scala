@@ -10,6 +10,7 @@ import typingsSlinky.materialUi.MaterialUI.TimePickerProps
 import typingsSlinky.materialUi.materialUiStrings.`24hr`
 import typingsSlinky.materialUi.materialUiStrings.ampm
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object TimePicker {
   
   @JSImport("material-ui", "TimePicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,10 +30,10 @@ object TimePicker {
     def autoOk(value: Boolean): this.type = set("autoOk", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelLabelReactElement(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    def cancelLabel(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelLabel(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    def cancelLabelReactElement(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -56,10 +57,10 @@ object TimePicker {
     def errorStyle(value: CSSProperties): this.type = set("errorStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
+    def errorText(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorText(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
+    def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def floatingLabelFixed(value: Boolean): this.type = set("floatingLabelFixed", value.asInstanceOf[js.Any])
@@ -71,10 +72,10 @@ object TimePicker {
     def floatingLabelStyle(value: CSSProperties): this.type = set("floatingLabelStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    def floatingLabelText(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def floatingLabelText(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def format(value: ampm | `24hr`): this.type = set("format", value.asInstanceOf[js.Any])
@@ -86,10 +87,10 @@ object TimePicker {
     def hintStyle(value: CSSProperties): this.type = set("hintStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
+    def hintText(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def hintText(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
+    def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -107,10 +108,10 @@ object TimePicker {
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okLabelReactElement(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    def okLabel(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okLabel(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    def okLabelReactElement(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
@@ -170,7 +171,7 @@ object TimePicker {
     def value(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TimePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -10,9 +10,9 @@ EventEmitter3 focuses on performance while maintaining a Node.js AND browser com
 | ------------------ | :-------------: |
 | Full name          | eventemitter3 |
 | Keywords           | EventEmitter, EventEmitter2, EventEmitter3, Events, addEventListener, addListener, emit, emits, emitter, event, once, pub/sub, publish, reactor, subscribe |
-| # releases         | 6 |
-| # dependents       | 1610 |
-| # downloads        | 375938379 |
+| # releases         | 11 |
+| # dependents       | 2159 |
+| # downloads        | 704692470 |
 | # stars            | 40 |
 
 ## Links

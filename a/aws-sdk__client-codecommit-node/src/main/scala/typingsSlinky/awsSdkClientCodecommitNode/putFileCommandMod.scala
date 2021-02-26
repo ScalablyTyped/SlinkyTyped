@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.typesPutFileInputMod.PutFileInpu
 import typingsSlinky.awsSdkClientCodecommitNode.typesPutFileOutputMod.PutFileOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-codecommit-node/commands/PutFileCommand", JSImport.Namespace)
-@js.native
-object putFileCommandMod extends js.Object {
+object putFileCommandMod {
   
+  @JSImport("@aws-sdk/client-codecommit-node/commands/PutFileCommand", "PutFileCommand")
   @js.native
   class PutFileCommand protected () extends Command[
           InputTypesUnion, 

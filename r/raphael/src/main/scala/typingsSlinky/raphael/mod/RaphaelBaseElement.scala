@@ -40,12 +40,13 @@ import typingsSlinky.raphael.raphaelStrings.transform
 import typingsSlinky.raphael.raphaelStrings.width
 import typingsSlinky.raphael.raphaelStrings.x
 import typingsSlinky.raphael.raphaelStrings.y
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RaphaelBaseElement[TTechnology /* <: RaphaelTechnology */] extends js.Object {
+trait RaphaelBaseElement[TTechnology /* <: RaphaelTechnology */] extends StObject {
   
   /**
     * Creates and starts animation for given element.

@@ -12,6 +12,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.presentation.PresentationD
 import typingsSlinky.activexLibreoffice.com_.sun.star.sheet.SpreadsheetDocument
 import typingsSlinky.activexLibreoffice.com_.sun.star.text.TextDocument
 import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

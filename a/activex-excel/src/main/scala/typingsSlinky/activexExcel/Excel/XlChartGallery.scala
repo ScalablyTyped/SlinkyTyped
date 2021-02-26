@@ -3,6 +3,7 @@ package typingsSlinky.activexExcel.Excel
 import typingsSlinky.activexExcel.activexExcelNumbers.`21`
 import typingsSlinky.activexExcel.activexExcelNumbers.`22`
 import typingsSlinky.activexExcel.activexExcelNumbers.`23`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`21`
   - typingsSlinky.activexExcel.activexExcelNumbers.`22`
 */
-trait XlChartGallery extends js.Object
+trait XlChartGallery extends StObject
 object XlChartGallery {
   
   @scala.inline

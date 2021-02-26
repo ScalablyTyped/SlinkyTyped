@@ -2,14 +2,14 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.clientMod.Client
 import typingsSlinky.samchon.iprotocolMod.IProtocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/service/Service", JSImport.Namespace)
-@js.native
-object serviceServiceMod extends js.Object {
+object serviceServiceMod {
   
+  @JSImport("samchon/templates/service/Service", "Service")
   @js.native
   abstract class Service protected () extends IProtocol {
     /**

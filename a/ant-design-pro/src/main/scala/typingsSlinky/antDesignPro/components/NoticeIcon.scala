@@ -8,6 +8,7 @@ import typingsSlinky.antDesignPro.anon.Dictkey
 import typingsSlinky.antDesignPro.noticeIconMod.NoticeIconProps
 import typingsSlinky.antDesignPro.noticeIconTabMod.NoticeIconData
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object NoticeIcon {
   
   @JSImport("ant-design-pro", "NoticeIcon")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -24,10 +25,10 @@ object NoticeIcon {
        with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.mod.NoticeIcon] {
     
     @scala.inline
-    def bellReactElement(value: ReactElement): this.type = set("bell", value.asInstanceOf[js.Any])
+    def bell(value: ReactElement): this.type = set("bell", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def bell(value: ReactElement): this.type = set("bell", value.asInstanceOf[js.Any])
+    def bellReactElement(value: ReactElement): this.type = set("bell", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -66,7 +67,7 @@ object NoticeIcon {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: NoticeIconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: NoticeIcon.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: NoticeIconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

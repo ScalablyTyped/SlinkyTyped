@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientGmail.anon.Alt
 import typingsSlinky.maximMazurokGapiClientGmail.anon.Callback
 import typingsSlinky.maximMazurokGapiClientGmail.anon.Key
 import typingsSlinky.maximMazurokGapiClientGmail.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LabelsResource extends js.Object {
+trait LabelsResource extends StObject {
   
   def create(request: Alt, body: Label): Request[Label] = js.native
   /** Creates a new label. */

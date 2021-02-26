@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.columnMod.IColumnProps
 import typingsSlinky.blueprintjsTable.esmRegionsMod.ColumnLoadingOption
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object Column {
   
   @JSImport("@blueprintjs/table", "Column")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,10 +34,10 @@ object Column {
     def id(value: String | Double): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingOptionsVarargs(value: ColumnLoadingOption*): this.type = set("loadingOptions", js.Array(value :_*))
+    def loadingOptions(value: js.Array[ColumnLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingOptions(value: js.Array[ColumnLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
+    def loadingOptionsVarargs(value: ColumnLoadingOption*): this.type = set("loadingOptions", js.Array(value :_*))
     
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
@@ -45,7 +46,7 @@ object Column {
     def nameRenderer(value: (/* name */ String, /* index */ js.UndefOr[Double]) => ReactElement): this.type = set("nameRenderer", js.Any.fromFunction2(value))
   }
   
-  def withProps(p: IColumnProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Column.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IColumnProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

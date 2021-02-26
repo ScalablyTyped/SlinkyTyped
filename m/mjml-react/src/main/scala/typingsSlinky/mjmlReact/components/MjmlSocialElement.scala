@@ -33,6 +33,7 @@ import typingsSlinky.mjmlReact.mod.HrefProps
 import typingsSlinky.mjmlReact.mod.MjmlSocialElementProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
 import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,7 +42,7 @@ object MjmlSocialElement {
   
   @JSImport("mjml-react", "MjmlSocialElement")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -117,7 +118,7 @@ object MjmlSocialElement {
     def textDecoration(value: String): this.type = set("textDecoration", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MjmlSocialElementProps with RequiredChildrenProps with HrefProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MjmlSocialElement.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MjmlSocialElementProps with RequiredChildrenProps with HrefProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

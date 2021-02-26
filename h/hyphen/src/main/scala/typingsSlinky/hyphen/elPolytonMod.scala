@@ -3,21 +3,30 @@ package typingsSlinky.hyphen
 import typingsSlinky.hyphen.mod.HyphenationFunctionAsync
 import typingsSlinky.hyphen.mod.HyphenationFunctionSync
 import typingsSlinky.hyphen.mod.PatternsDefinition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("hyphen/el-polyton", JSImport.Namespace)
-@js.native
-object elPolytonMod extends js.Object {
+object elPolytonMod {
   
+  @JSImport("hyphen/el-polyton", "hyphenate")
+  @js.native
   val hyphenate: HyphenationFunctionAsync = js.native
   
+  @JSImport("hyphen/el-polyton", "hyphenateHTML")
+  @js.native
   val hyphenateHTML: HyphenationFunctionAsync = js.native
   
+  @JSImport("hyphen/el-polyton", "hyphenateHTMLSync")
+  @js.native
   val hyphenateHTMLSync: HyphenationFunctionSync = js.native
   
+  @JSImport("hyphen/el-polyton", "hyphenateSync")
+  @js.native
   val hyphenateSync: HyphenationFunctionSync = js.native
   
+  @JSImport("hyphen/el-polyton", "patterns")
+  @js.native
   val patterns: PatternsDefinition = js.native
 }

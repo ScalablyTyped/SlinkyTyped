@@ -9,12 +9,13 @@ import typingsSlinky.winrt.Windows.Media.MediaProperties.ImageEncodingProperties
 import typingsSlinky.winrt.Windows.Media.MediaProperties.MediaEncodingProfile
 import typingsSlinky.winrt.Windows.Storage.IStorageFile
 import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IMediaCapture extends js.Object {
+trait IMediaCapture extends StObject {
   
   def addEffectAsync(mediaStreamType: MediaStreamType, effectActivationID: String, effectSettings: IPropertySet): IAsyncAction = js.native
   

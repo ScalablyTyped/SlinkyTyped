@@ -16,6 +16,7 @@ import typingsSlinky.ssh2.ssh2Strings.rekey
 import typingsSlinky.ssh2.ssh2Strings.request
 import typingsSlinky.ssh2.ssh2Strings.session
 import typingsSlinky.ssh2.ssh2Strings.tcpip
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

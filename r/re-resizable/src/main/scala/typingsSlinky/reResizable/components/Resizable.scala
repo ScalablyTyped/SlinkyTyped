@@ -20,6 +20,7 @@ import typingsSlinky.reResizable.reResizableStrings.parent
 import typingsSlinky.reResizable.reResizableStrings.window
 import typingsSlinky.reResizable.resizerMod.Direction
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ object Resizable {
   
   @JSImport("re-resizable", "Resizable")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,19 +37,19 @@ object Resizable {
        with StBuildingComponent[tag.type, typingsSlinky.reResizable.mod.Resizable] {
     
     @scala.inline
-    def asFunctionComponent(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: String | ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def asComponentClass(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def as(value: String | ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def boundsHTMLElement(value: HTMLElement): this.type = set("bounds", value.asInstanceOf[js.Any])
+    def asFunctionComponent(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def bounds(value: parent | window | HTMLElement): this.type = set("bounds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def boundsHTMLElement(value: HTMLElement): this.type = set("bounds", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -132,7 +133,7 @@ object Resizable {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ResizableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Resizable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ResizableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

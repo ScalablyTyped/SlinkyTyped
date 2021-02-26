@@ -1,17 +1,17 @@
 package typingsSlinky.winrtUwp.global.Windows.Networking
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** The functionality described in this topic is not available to all Windows and Windows Phone apps. For your code to call these APIs, Microsoft must approve your use of them and provision your developer account. Otherwise the calls will fail at runtime. */
-@JSGlobal("Windows.Networking.Vpn")
-@js.native
-object Vpn extends js.Object {
+object Vpn {
   
   /** Specifies the type of AppId understood by the VPN platform. */
+  @JSGlobal("Windows.Networking.Vpn.VpnAppIdType")
   @js.native
-  object VpnAppIdType extends js.Object {
+  object VpnAppIdType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Networking.Vpn.VpnAppIdType with Double] = js.native
@@ -24,8 +24,9 @@ object Vpn extends js.Object {
   }
   
   /** Specifies the type of authentication methods allowed by the operating system native VPN protocols. */
+  @JSGlobal("Windows.Networking.Vpn.VpnAuthenticationMethod")
   @js.native
-  object VpnAuthenticationMethod extends js.Object {
+  object VpnAuthenticationMethod extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -42,8 +43,9 @@ object Vpn extends js.Object {
   }
   
   /** Specifies the type of activity events. */
+  @JSGlobal("Windows.Networking.Vpn.VpnChannelActivityEventType")
   @js.native
-  object VpnChannelActivityEventType extends js.Object {
+  object VpnChannelActivityEventType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -56,8 +58,9 @@ object Vpn extends js.Object {
   }
   
   /** Specifies the values defining whether a requested credential is a retry case, or should be used for single sign on. */
+  @JSGlobal("Windows.Networking.Vpn.VpnChannelRequestCredentialsOptions")
   @js.native
-  object VpnChannelRequestCredentialsOptions extends js.Object {
+  object VpnChannelRequestCredentialsOptions extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -72,8 +75,9 @@ object Vpn extends js.Object {
   }
   
   /** Specifies the types of credentials that can be requested by the VPN platform. */
+  @JSGlobal("Windows.Networking.Vpn.VpnCredentialType")
   @js.native
-  object VpnCredentialType extends js.Object {
+  object VpnCredentialType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Networking.Vpn.VpnCredentialType with Double] = js.native
@@ -94,8 +98,9 @@ object Vpn extends js.Object {
   }
   
   /** VpnDataPathType is not supported and may be altered or unavailable in the future. */
+  @JSGlobal("Windows.Networking.Vpn.VpnDataPathType")
   @js.native
-  object VpnDataPathType extends js.Object {
+  object VpnDataPathType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Networking.Vpn.VpnDataPathType with Double] = js.native
@@ -106,8 +111,9 @@ object Vpn extends js.Object {
   }
   
   /** Describes whether a name is a domain name suffix or a fully qualified domain name. */
+  @JSGlobal("Windows.Networking.Vpn.VpnDomainNameType")
   @js.native
-  object VpnDomainNameType extends js.Object {
+  object VpnDomainNameType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Networking.Vpn.VpnDomainNameType with Double] = js.native
@@ -120,8 +126,9 @@ object Vpn extends js.Object {
   }
   
   /** Specifies the IP protocols (numeric values). */
+  @JSGlobal("Windows.Networking.Vpn.VpnIPProtocol")
   @js.native
-  object VpnIPProtocol extends js.Object {
+  object VpnIPProtocol extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Networking.Vpn.VpnIPProtocol with Double] = js.native
@@ -142,8 +149,9 @@ object Vpn extends js.Object {
   }
   
   /** Describes the known VPN management errors. */
+  @JSGlobal("Windows.Networking.Vpn.VpnManagementErrorStatus")
   @js.native
-  object VpnManagementErrorStatus extends js.Object {
+  object VpnManagementErrorStatus extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -164,8 +172,9 @@ object Vpn extends js.Object {
   }
   
   /** Specifies the native protocol types. */
+  @JSGlobal("Windows.Networking.Vpn.VpnNativeProtocolType")
   @js.native
-  object VpnNativeProtocolType extends js.Object {
+  object VpnNativeProtocolType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Networking.Vpn.VpnNativeProtocolType with Double] = js.native
@@ -178,8 +187,9 @@ object Vpn extends js.Object {
   }
   
   /** Describes the possible states of the VPN packet buffer. */
+  @JSGlobal("Windows.Networking.Vpn.VpnPacketBufferStatus")
   @js.native
-  object VpnPacketBufferStatus extends js.Object {
+  object VpnPacketBufferStatus extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Networking.Vpn.VpnPacketBufferStatus with Double] = js.native
@@ -190,8 +200,9 @@ object Vpn extends js.Object {
   }
   
   /** Specifies the routing policy type. */
+  @JSGlobal("Windows.Networking.Vpn.VpnRoutingPolicyType")
   @js.native
-  object VpnRoutingPolicyType extends js.Object {
+  object VpnRoutingPolicyType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Networking.Vpn.VpnRoutingPolicyType with Double] = js.native

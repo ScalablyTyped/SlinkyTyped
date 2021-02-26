@@ -1,5 +1,6 @@
 package typingsSlinky.reactSketchapp.propsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactSketchapp.reactSketchappStrings.`800`
   - typingsSlinky.reactSketchapp.reactSketchappStrings.`900`
 */
-trait FontWeight extends js.Object
+trait FontWeight extends StObject
 object FontWeight {
   
   @scala.inline

@@ -3,12 +3,13 @@ package typingsSlinky.azdata.mod
 import typingsSlinky.azdata.mod.connection.Connection
 import typingsSlinky.vscode.Thenable
 import typingsSlinky.vscode.mod.Disposable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ModelView extends js.Object {
+trait ModelView extends StObject {
   
   /**
     * The connection info for the dashboard the webview exists on

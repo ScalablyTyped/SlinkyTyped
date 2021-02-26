@@ -4,8 +4,10 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeSvg.mod.ColumnMajorTransformMatrix
 import typingsSlinky.reactNativeSvg.mod.NumberProp
+import typingsSlinky.reactNativeSvg.mod.RadialGradientCls
 import typingsSlinky.reactNativeSvg.mod.RadialGradientProps
 import typingsSlinky.reactNativeSvg.mod.Units
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,12 +16,12 @@ object RadialGradient {
   
   @JSImport("react-native-svg", "RadialGradient")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
+       with StBuildingComponent[tag.type, RadialGradientCls] {
     
     @scala.inline
     def cx(value: NumberProp): this.type = set("cx", value.asInstanceOf[js.Any])
@@ -52,7 +54,7 @@ object RadialGradient {
     def ry(value: NumberProp): this.type = set("ry", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RadialGradientProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RadialGradient.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RadialGradientProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

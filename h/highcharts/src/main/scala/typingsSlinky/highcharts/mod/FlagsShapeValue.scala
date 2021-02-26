@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.flag
   - typingsSlinky.highcharts.highchartsStrings.squarepin
 */
-trait FlagsShapeValue extends js.Object
+trait FlagsShapeValue extends StObject
 object FlagsShapeValue {
   
   @scala.inline

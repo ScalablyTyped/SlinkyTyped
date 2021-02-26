@@ -2,12 +2,13 @@ package typingsSlinky.antdMobileRn.anon
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.reactNative.mod.RegisteredStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Disabled extends js.Object {
+trait Disabled extends StObject {
   
   var disabled: Boolean = js.native
   

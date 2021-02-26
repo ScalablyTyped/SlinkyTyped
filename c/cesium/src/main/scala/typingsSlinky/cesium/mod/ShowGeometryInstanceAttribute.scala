@@ -1,12 +1,13 @@
 package typingsSlinky.cesium.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "ShowGeometryInstanceAttribute")
 @js.native
-class ShowGeometryInstanceAttribute () extends js.Object {
+class ShowGeometryInstanceAttribute () extends StObject {
   def this(show: Boolean) = this()
   
   var componentDatatype: ComponentDatatype = js.native
@@ -17,11 +18,13 @@ class ShowGeometryInstanceAttribute () extends js.Object {
   
   var value: js.typedarray.Uint8Array = js.native
 }
-/* static members */
-@JSImport("cesium", "ShowGeometryInstanceAttribute")
-@js.native
-object ShowGeometryInstanceAttribute extends js.Object {
+object ShowGeometryInstanceAttribute {
   
+  /* static member */
+  @JSImport("cesium", "ShowGeometryInstanceAttribute.toValue")
+  @js.native
   def toValue(show: Boolean): js.typedarray.Uint8Array = js.native
+  @JSImport("cesium", "ShowGeometryInstanceAttribute.toValue")
+  @js.native
   def toValue(show: Boolean, result: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
 }

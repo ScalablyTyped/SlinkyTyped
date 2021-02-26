@@ -6,6 +6,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.center
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.origin
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.relative
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

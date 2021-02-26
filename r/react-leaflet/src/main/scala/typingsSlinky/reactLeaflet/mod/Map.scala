@@ -4,13 +4,20 @@ import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.leaflet.mod.LatLngBoundsExpression
 import typingsSlinky.leaflet.mod.LatLngExpression
 import typingsSlinky.leaflet.mod.Map_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-leaflet", "Map")
 @js.native
-class Map[P /* <: MapProps */, E /* <: Map_ */] () extends MapEvented[P, E] {
+class Map[P /* <: MapProps */, E /* <: Map_ */] protected () extends MapEvented[P, E] {
+  def this(props: P) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: P, context: js.Any) = this()
   
   def bindContainer(): Unit = js.native
   def bindContainer(container: HTMLDivElement): Unit = js.native

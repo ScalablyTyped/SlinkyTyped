@@ -9,6 +9,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.metric
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.multitenant
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.public
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.singletenant
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

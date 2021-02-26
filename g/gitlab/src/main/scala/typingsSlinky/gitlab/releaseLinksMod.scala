@@ -2,20 +2,22 @@ package typingsSlinky.gitlab
 
 import typingsSlinky.gitlab.anon.Name
 import typingsSlinky.gitlab.anon.Url
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.PaginatedRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.Sudo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gitlab/dist/types/core/services/ReleaseLinks", JSImport.Namespace)
-@js.native
-object releaseLinksMod extends js.Object {
+object releaseLinksMod {
   
+  @JSImport("gitlab/dist/types/core/services/ReleaseLinks", "ReleaseLinks")
   @js.native
   class ReleaseLinks () extends BaseService {
+    def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
     
     def all(projectId: String, tagName: String): js.Promise[GetResponse] = js.native
     def all(projectId: String, tagName: String, options: PaginatedRequestOptions): js.Promise[GetResponse] = js.native

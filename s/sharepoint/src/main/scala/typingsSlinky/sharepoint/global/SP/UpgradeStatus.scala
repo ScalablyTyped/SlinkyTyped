@@ -1,12 +1,13 @@
 package typingsSlinky.sharepoint.global.SP
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("SP.UpgradeStatus")
 @js.native
-object UpgradeStatus extends js.Object {
+object UpgradeStatus extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.sharepoint.SP.UpgradeStatus with Double] = js.native

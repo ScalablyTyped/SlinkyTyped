@@ -1,10 +1,11 @@
 package typingsSlinky.firebase.mod.default.firestore
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("firebase", "firestore.CollectionReference")
+@JSImport("firebase", "default.firestore.CollectionReference")
 @js.native
 class CollectionReference[T] protected ()
   extends typingsSlinky.firebase.mod.firebase.firestore.Query[T] {

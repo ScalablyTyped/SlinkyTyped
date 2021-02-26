@@ -9,6 +9,7 @@ import typingsSlinky.gatsbyImage.gatsbyImageStrings.eager
 import typingsSlinky.gatsbyImage.mod.FixedObject
 import typingsSlinky.gatsbyImage.mod.FluidObject
 import typingsSlinky.gatsbyImage.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,9 +18,15 @@ object GatsbyImage {
   
   object GatsbyImageFixedProps {
     
+    @scala.inline
+    def apply(fixed: FixedObject | js.Array[FixedObject]): Builder = {
+      val __props = js.Dynamic.literal(fixed = fixed.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.gatsbyImage.mod.GatsbyImageFixedProps]))
+    }
+    
     @JSImport("gatsby-image", JSImport.Default)
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -91,19 +98,19 @@ object GatsbyImage {
     }
     
     def withProps(p: typingsSlinky.gatsbyImage.mod.GatsbyImageFixedProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(fixed: FixedObject | js.Array[FixedObject]): Builder = {
-      val __props = js.Dynamic.literal(fixed = fixed.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.gatsbyImage.mod.GatsbyImageFixedProps]))
-    }
   }
   
   object GatsbyImageFluidProps {
     
+    @scala.inline
+    def apply(fluid: FluidObject | js.Array[FluidObject]): Builder = {
+      val __props = js.Dynamic.literal(fluid = fluid.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.gatsbyImage.mod.GatsbyImageFluidProps]))
+    }
+    
     @JSImport("gatsby-image", JSImport.Default)
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -175,11 +182,5 @@ object GatsbyImage {
     }
     
     def withProps(p: typingsSlinky.gatsbyImage.mod.GatsbyImageFluidProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(fluid: FluidObject | js.Array[FluidObject]): Builder = {
-      val __props = js.Dynamic.literal(fluid = fluid.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.gatsbyImage.mod.GatsbyImageFluidProps]))
-    }
   }
 }

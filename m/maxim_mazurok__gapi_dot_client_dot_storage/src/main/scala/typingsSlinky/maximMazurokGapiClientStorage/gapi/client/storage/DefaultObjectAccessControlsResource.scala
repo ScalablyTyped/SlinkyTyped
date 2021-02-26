@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientStorage.anon.AltBucket
 import typingsSlinky.maximMazurokGapiClientStorage.anon.Fields
 import typingsSlinky.maximMazurokGapiClientStorage.anon.IfMetagenerationMatch
 import typingsSlinky.maximMazurokGapiClientStorage.anon.UserProject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DefaultObjectAccessControlsResource extends js.Object {
+trait DefaultObjectAccessControlsResource extends StObject {
   
   /** Permanently deletes the default object ACL entry for the specified entity on the specified bucket. */
   def delete(): Request[Unit] = js.native

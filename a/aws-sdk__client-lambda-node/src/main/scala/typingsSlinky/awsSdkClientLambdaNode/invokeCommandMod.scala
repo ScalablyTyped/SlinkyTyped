@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientLambdaNode.typesInvokeInputMod.InvokeInput
 import typingsSlinky.awsSdkClientLambdaNode.typesInvokeOutputMod.InvokeOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-lambda-node/commands/InvokeCommand", JSImport.Namespace)
-@js.native
-object invokeCommandMod extends js.Object {
+object invokeCommandMod {
   
+  @JSImport("@aws-sdk/client-lambda-node/commands/InvokeCommand", "InvokeCommand")
   @js.native
   class InvokeCommand protected () extends Command[
           InputTypesUnion, 

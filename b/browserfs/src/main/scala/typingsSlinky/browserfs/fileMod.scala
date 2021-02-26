@@ -5,16 +5,16 @@ import typingsSlinky.browserfs.fileSystemMod.BFSOneArgCallback
 import typingsSlinky.browserfs.fileSystemMod.BFSThreeArgCallback
 import typingsSlinky.browserfs.nodeFsStatsMod.default
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("browserfs/dist/node/core/file", JSImport.Namespace)
-@js.native
-object fileMod extends js.Object {
+object fileMod {
   
+  @JSImport("browserfs/dist/node/core/file", "BaseFile")
   @js.native
-  class BaseFile () extends js.Object {
+  class BaseFile () extends StObject {
     
     def chmod(mode: Double, cb: BFSOneArgCallback): Unit = js.native
     
@@ -38,7 +38,7 @@ object fileMod extends js.Object {
   }
   
   @js.native
-  trait File extends js.Object {
+  trait File extends StObject {
     
     /**
       * **Optional**: Asynchronous `fchmod`.

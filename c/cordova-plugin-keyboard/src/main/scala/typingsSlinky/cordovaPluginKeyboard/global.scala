@@ -1,12 +1,15 @@
 package typingsSlinky.cordovaPluginKeyboard
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
-  var Keyboard: typingsSlinky.cordovaPluginKeyboard.Keyboard = js.native
+  @JSGlobal("Keyboard")
+  @js.native
+  def Keyboard: typingsSlinky.cordovaPluginKeyboard.Keyboard = js.native
+  @scala.inline
+  def Keyboard_=(x: Keyboard): Unit = js.Dynamic.global.updateDynamic("Keyboard")(x.asInstanceOf[js.Any])
 }

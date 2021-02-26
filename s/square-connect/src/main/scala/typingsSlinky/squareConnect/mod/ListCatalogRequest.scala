@@ -8,13 +8,14 @@ import typingsSlinky.squareConnect.squareConnectStrings.ITEM_VARIATION
 import typingsSlinky.squareConnect.squareConnectStrings.MODIFIER
 import typingsSlinky.squareConnect.squareConnectStrings.MODIFIER_LIST
 import typingsSlinky.squareConnect.squareConnectStrings.TAX
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "ListCatalogRequest")
 @js.native
-class ListCatalogRequest () extends js.Object {
+class ListCatalogRequest () extends StObject {
   
   /**
     * TThe pagination cursor returned in the previous response. Leave unset for an initial request.

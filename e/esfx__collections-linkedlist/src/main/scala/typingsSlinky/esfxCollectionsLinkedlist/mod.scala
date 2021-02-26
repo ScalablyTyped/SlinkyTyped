@@ -2,14 +2,14 @@ package typingsSlinky.esfxCollectionsLinkedlist
 
 import typingsSlinky.esfxEquatable.distMod.Equaler
 import typingsSlinky.esfxEquatable.distMod.EqualityComparison
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@esfx/collections-linkedlist", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@esfx/collections-linkedlist", "LinkedList")
   @js.native
   class LinkedList[T] ()
     extends typingsSlinky.esfxCollectionsLinkedlist.distMod.LinkedList[T] {
@@ -22,6 +22,7 @@ object mod extends js.Object {
     def this(iterable: js.Iterable[T], equaler: EqualityComparison[T]) = this()
   }
   
+  @JSImport("@esfx/collections-linkedlist", "LinkedListNode")
   @js.native
   class LinkedListNode[T] protected ()
     extends typingsSlinky.esfxCollectionsLinkedlist.distMod.LinkedListNode[T] {

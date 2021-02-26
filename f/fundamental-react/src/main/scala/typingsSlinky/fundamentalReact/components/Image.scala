@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.imageMod.ImageProps
 import typingsSlinky.fundamentalReact.imageMod.imageSize
 import typingsSlinky.fundamentalReact.imageMod.imageType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Image {
   
+  @scala.inline
+  def apply(photo: String, size: imageSize): Builder = {
+    val __props = js.Dynamic.literal(photo = photo.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ImageProps]))
+  }
+  
   @JSImport("fundamental-react", "Image")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,10 +38,4 @@ object Image {
   }
   
   def withProps(p: ImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(photo: String, size: imageSize): Builder = {
-    val __props = js.Dynamic.literal(photo = photo.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ImageProps]))
-  }
 }

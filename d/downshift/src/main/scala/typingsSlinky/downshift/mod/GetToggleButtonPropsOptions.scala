@@ -1,16 +1,14 @@
 package typingsSlinky.downshift.mod
 
 import org.scalajs.dom.raw.HTMLButtonElement
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.react.mod.HTMLProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GetToggleButtonPropsOptions
-  extends AllHTMLAttributes[HTMLButtonElement]
-     with ClassAttributes[HTMLButtonElement]
+trait GetToggleButtonPropsOptions extends HTMLProps[HTMLButtonElement]
 object GetToggleButtonPropsOptions {
   
   @scala.inline

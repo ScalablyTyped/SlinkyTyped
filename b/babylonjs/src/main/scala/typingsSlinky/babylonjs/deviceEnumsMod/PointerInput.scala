@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.deviceEnumsMod
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.babylonjs.deviceTypesMod._DeviceInput
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ sealed trait PointerInput
   extends _DeviceInput[js.Any]
 @JSImport("babylonjs/DeviceInput/InputDevices/deviceEnums", "PointerInput")
 @js.native
-object PointerInput extends js.Object {
+object PointerInput extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PointerInput with Double] = js.native
@@ -19,42 +19,35 @@ object PointerInput extends js.Object {
   /** Browser Back */
   @js.native
   sealed trait BrowserBack extends PointerInput
-  /* 5 */ @js.native
-  object BrowserBack extends TopLevel[BrowserBack with Double]
+  /* 5 */ val BrowserBack: typingsSlinky.babylonjs.deviceEnumsMod.PointerInput.BrowserBack with Double = js.native
   
   /** Browser Forward */
   @js.native
   sealed trait BrowserForward extends PointerInput
-  /* 6 */ @js.native
-  object BrowserForward extends TopLevel[BrowserForward with Double]
+  /* 6 */ val BrowserForward: typingsSlinky.babylonjs.deviceEnumsMod.PointerInput.BrowserForward with Double = js.native
   
   /** Horizontal Axis */
   @js.native
   sealed trait Horizontal extends PointerInput
-  /* 0 */ @js.native
-  object Horizontal extends TopLevel[Horizontal with Double]
+  /* 0 */ val Horizontal: typingsSlinky.babylonjs.deviceEnumsMod.PointerInput.Horizontal with Double = js.native
   
   /** Left Click or Touch */
   @js.native
   sealed trait LeftClick extends PointerInput
-  /* 2 */ @js.native
-  object LeftClick extends TopLevel[LeftClick with Double]
+  /* 2 */ val LeftClick: typingsSlinky.babylonjs.deviceEnumsMod.PointerInput.LeftClick with Double = js.native
   
   /** Middle Click */
   @js.native
   sealed trait MiddleClick extends PointerInput
-  /* 3 */ @js.native
-  object MiddleClick extends TopLevel[MiddleClick with Double]
+  /* 3 */ val MiddleClick: typingsSlinky.babylonjs.deviceEnumsMod.PointerInput.MiddleClick with Double = js.native
   
   /** Right Click */
   @js.native
   sealed trait RightClick extends PointerInput
-  /* 4 */ @js.native
-  object RightClick extends TopLevel[RightClick with Double]
+  /* 4 */ val RightClick: typingsSlinky.babylonjs.deviceEnumsMod.PointerInput.RightClick with Double = js.native
   
   /** Vertical Axis */
   @js.native
   sealed trait Vertical extends PointerInput
-  /* 1 */ @js.native
-  object Vertical extends TopLevel[Vertical with Double]
+  /* 1 */ val Vertical: typingsSlinky.babylonjs.deviceEnumsMod.PointerInput.Vertical with Double = js.native
 }

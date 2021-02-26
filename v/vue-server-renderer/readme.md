@@ -10,9 +10,9 @@ server renderer for Vue 2.0
 | ------------------ | :-------------: |
 | Full name          | vue-server-renderer |
 | Keywords           | vue, server, ssr |
-| # releases         | 27 |
-| # dependents       | 282 |
-| # downloads        | 10005209 |
+| # releases         | 9 |
+| # dependents       | 352 |
+| # downloads        | 18482044 |
 | # stars            | 25 |
 
 ## Links

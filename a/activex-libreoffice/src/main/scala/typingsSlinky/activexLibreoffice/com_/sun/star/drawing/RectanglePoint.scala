@@ -9,6 +9,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`5`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`6`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`7`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`5`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
 */
-trait RectanglePoint extends js.Object
+trait RectanglePoint extends StObject
 object RectanglePoint {
   
   /** specify to the point on the bottom of the left side from the rectangle. */

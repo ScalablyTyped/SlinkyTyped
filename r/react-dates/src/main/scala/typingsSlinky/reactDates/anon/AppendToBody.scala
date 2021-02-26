@@ -13,12 +13,13 @@ import typingsSlinky.reactDates.mod.OpenDirectionShape
 import typingsSlinky.reactDates.mod.OrientationShape
 import typingsSlinky.reactDates.mod.SingleDatePickerPhrases
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AppendToBody extends js.Object {
+trait AppendToBody extends StObject {
   
   var anchorDirection: js.UndefOr[AnchorDirectionShape] = js.native
   

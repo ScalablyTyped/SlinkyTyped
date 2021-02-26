@@ -1,5 +1,6 @@
 package typingsSlinky.openseadragon.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.openseadragon.openseadragonStrings.`open-failed`
   - typingsSlinky.openseadragon.openseadragonStrings.ready
 */
-trait TileSourceEventname extends js.Object
+trait TileSourceEventname extends StObject
 object TileSourceEventname {
   
   @scala.inline

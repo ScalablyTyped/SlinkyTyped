@@ -1,5 +1,6 @@
 package typingsSlinky.promClient.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,9 +20,7 @@ class AggregatorRegistry () extends Registry {
   def clusterMetrics(cb: js.Function2[/* err */ js.Error | Null, /* metrics */ js.UndefOr[String], _]): js.Promise[String] = js.native
 }
 /* static members */
-@JSImport("prom-client", "AggregatorRegistry")
-@js.native
-object AggregatorRegistry extends js.Object {
+object AggregatorRegistry {
   
   /**
   	 * Creates a new Registry instance from an array of metrics that were
@@ -32,6 +31,8 @@ object AggregatorRegistry extends js.Object {
   	 *   `registry.getMetricsAsJSON()`.
   	 * @return {Registry} aggregated registry.
   	 */
+  @JSImport("prom-client", "AggregatorRegistry.aggregate")
+  @js.native
   def aggregate(metricsArr: js.Array[js.Object]): Registry = js.native
   
   /**
@@ -41,6 +42,10 @@ object AggregatorRegistry extends js.Object {
   	 *   aggregated.
   	 * @return {void}
   	 */
+  @JSImport("prom-client", "AggregatorRegistry.setRegistries")
+  @js.native
   def setRegistries(regs: js.Array[Registry]): Unit = js.native
+  @JSImport("prom-client", "AggregatorRegistry.setRegistries")
+  @js.native
   def setRegistries(regs: Registry): Unit = js.native
 }

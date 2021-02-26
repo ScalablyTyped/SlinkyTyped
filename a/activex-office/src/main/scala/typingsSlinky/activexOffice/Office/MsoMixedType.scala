@@ -2,6 +2,7 @@ package typingsSlinky.activexOffice.Office
 
 import typingsSlinky.activexOffice.activexOfficeNumbers.`-2147483648`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`32768`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`32768`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`-2147483648`
 */
-trait MsoMixedType extends js.Object
+trait MsoMixedType extends StObject
 object MsoMixedType {
   
   @scala.inline

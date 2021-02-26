@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesGetObjectTaggingInputMod.GetObjectT
 import typingsSlinky.awsSdkClientS3Node.typesGetObjectTaggingOutputMod.GetObjectTaggingOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/GetObjectTaggingCommand", JSImport.Namespace)
-@js.native
-object getObjectTaggingCommandMod extends js.Object {
+object getObjectTaggingCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/GetObjectTaggingCommand", "GetObjectTaggingCommand")
   @js.native
   class GetObjectTaggingCommand protected () extends Command[
           InputTypesUnion, 

@@ -1,11 +1,12 @@
 package typingsSlinky.activexOutlook.Outlook
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FormDescription extends js.Object {
+trait FormDescription extends StObject {
   
   val Application: typingsSlinky.activexOutlook.Outlook.Application = js.native
   

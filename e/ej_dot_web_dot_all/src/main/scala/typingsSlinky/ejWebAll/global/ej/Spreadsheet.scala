@@ -2,6 +2,7 @@ package typingsSlinky.ejWebAll.global.ej
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,22 +11,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Spreadsheet protected ()
   extends typingsSlinky.ejWebAll.ej.Spreadsheet {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Spreadsheet.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Spreadsheet.Model) = this()
+  def this(element: JQuery) = this()
+  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Model) = this()
+  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Model) = this()
 }
-/* static members */
-@JSGlobal("ej.Spreadsheet")
-@js.native
-object Spreadsheet extends js.Object {
+object Spreadsheet {
   
-  var Locale: js.Any = js.native
-  
-  var fn: typingsSlinky.ejWebAll.ej.Spreadsheet = js.native
-  
+  @JSGlobal("ej.Spreadsheet")
   @js.native
-  object AutoFillOptions extends js.Object {
+  val ^ : js.Any = js.native
+  
+  @JSGlobal("ej.Spreadsheet.AutoFillOptions")
+  @js.native
+  object AutoFillOptions extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.AutoFillOptions with Double] = js.native
@@ -41,8 +40,9 @@ object Spreadsheet extends js.Object {
     /* 4 */ val FlashFill: typingsSlinky.ejWebAll.ej.Spreadsheet.AutoFillOptions.FlashFill with Double = js.native
   }
   
+  @JSGlobal("ej.Spreadsheet.BorderType")
   @js.native
-  object BorderType extends js.Object {
+  object BorderType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.BorderType with Double] = js.native
@@ -68,8 +68,9 @@ object Spreadsheet extends js.Object {
     /* 9 */ val TopandThickBottom: typingsSlinky.ejWebAll.ej.Spreadsheet.BorderType.TopandThickBottom with Double = js.native
   }
   
+  @JSGlobal("ej.Spreadsheet.CFormatHighlightColor")
   @js.native
-  object CFormatHighlightColor extends js.Object {
+  object CFormatHighlightColor extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.CFormatHighlightColor with Double] = js.native
@@ -85,8 +86,9 @@ object Spreadsheet extends js.Object {
     /* 1 */ val YellowFillwithDarkYellowText: typingsSlinky.ejWebAll.ej.Spreadsheet.CFormatHighlightColor.YellowFillwithDarkYellowText with Double = js.native
   }
   
+  @JSGlobal("ej.Spreadsheet.CFormatRule")
   @js.native
-  object CFormatRule extends js.Object {
+  object CFormatRule extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.CFormatRule with Double] = js.native
@@ -104,8 +106,9 @@ object Spreadsheet extends js.Object {
     /* 4 */ val TextContains: typingsSlinky.ejWebAll.ej.Spreadsheet.CFormatRule.TextContains with Double = js.native
   }
   
+  @JSGlobal("ej.Spreadsheet.ChartProperties")
   @js.native
-  object ChartProperties extends js.Object {
+  object ChartProperties extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.ChartProperties with Double] = js.native
@@ -155,8 +158,9 @@ object Spreadsheet extends js.Object {
     /* 21 */ val TitleNone: typingsSlinky.ejWebAll.ej.Spreadsheet.ChartProperties.TitleNone with Double = js.native
   }
   
+  @JSGlobal("ej.Spreadsheet.ContextMenuType")
   @js.native
-  object ContextMenuType extends js.Object {
+  object ContextMenuType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.ContextMenuType with Double] = js.native
@@ -170,8 +174,9 @@ object Spreadsheet extends js.Object {
     /* 1 */ val RowHeader: typingsSlinky.ejWebAll.ej.Spreadsheet.ContextMenuType.RowHeader with Double = js.native
   }
   
+  @JSGlobal("ej.Spreadsheet.CustomCellType")
   @js.native
-  object CustomCellType extends js.Object {
+  object CustomCellType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.CustomCellType with Double] = js.native
@@ -185,8 +190,9 @@ object Spreadsheet extends js.Object {
     /* 3 */ val DropDownList: typingsSlinky.ejWebAll.ej.Spreadsheet.CustomCellType.DropDownList with Double = js.native
   }
   
+  @JSGlobal("ej.Spreadsheet.ExportType")
   @js.native
-  object ExportType extends js.Object {
+  object ExportType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.ExportType with Double] = js.native
@@ -198,8 +204,16 @@ object Spreadsheet extends js.Object {
     /* 2 */ val Pdf: typingsSlinky.ejWebAll.ej.Spreadsheet.ExportType.Pdf with Double = js.native
   }
   
+  /* static member */
+  @JSGlobal("ej.Spreadsheet.Locale")
   @js.native
-  object SelectionType extends js.Object {
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("ej.Spreadsheet.SelectionType")
+  @js.native
+  object SelectionType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.SelectionType with Double] = js.native
@@ -211,8 +225,9 @@ object Spreadsheet extends js.Object {
     /* 1 */ val Row: typingsSlinky.ejWebAll.ej.Spreadsheet.SelectionType.Row with Double = js.native
   }
   
+  @JSGlobal("ej.Spreadsheet.SelectionUnit")
   @js.native
-  object SelectionUnit extends js.Object {
+  object SelectionUnit extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.SelectionUnit with Double] = js.native
@@ -224,8 +239,16 @@ object Spreadsheet extends js.Object {
     /* 0 */ val Single: typingsSlinky.ejWebAll.ej.Spreadsheet.SelectionUnit.Single with Double = js.native
   }
   
+  /* static member */
+  @JSGlobal("ej.Spreadsheet.fn")
   @js.native
-  object scrollMode extends js.Object {
+  def fn: typingsSlinky.ejWebAll.ej.Spreadsheet = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.Spreadsheet): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("ej.Spreadsheet.scrollMode")
+  @js.native
+  object scrollMode extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Spreadsheet.scrollMode with Double] = js.native

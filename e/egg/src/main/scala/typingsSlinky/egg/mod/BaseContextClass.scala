@@ -1,13 +1,15 @@
 package typingsSlinky.egg.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("egg", "BaseContextClass")
 @js.native
-class BaseContextClass ()
+class BaseContextClass protected ()
   extends typingsSlinky.eggCore.mod.BaseContextClass[Context, Application, EggAppConfig, IService] {
+  def this(ctx: Context) = this()
   
   // tslint:disable-line
   /**

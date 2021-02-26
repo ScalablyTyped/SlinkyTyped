@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.`text-too-long`
   - typingsSlinky.std.stdStrings.`voice-unavailable`
 */
-trait SpeechSynthesisErrorCode extends js.Object
+trait SpeechSynthesisErrorCode extends StObject
 object SpeechSynthesisErrorCode {
   
   @scala.inline

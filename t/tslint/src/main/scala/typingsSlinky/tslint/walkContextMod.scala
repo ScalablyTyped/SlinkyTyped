@@ -4,16 +4,16 @@ import typingsSlinky.tslint.ruleMod.Fix
 import typingsSlinky.tslint.ruleMod.RuleFailure
 import typingsSlinky.typescript.mod.Node
 import typingsSlinky.typescript.mod.SourceFile
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tslint/lib/language/walker/walkContext", JSImport.Namespace)
-@js.native
-object walkContextMod extends js.Object {
+object walkContextMod {
   
+  @JSImport("tslint/lib/language/walker/walkContext", "WalkContext")
   @js.native
-  class WalkContext[T] protected () extends js.Object {
+  class WalkContext[T] protected () extends StObject {
     def this(sourceFile: SourceFile, ruleName: String, options: T) = this()
     
     def addFailure(start: Double, end: Double, failure: String): Unit = js.native

@@ -3,14 +3,14 @@ package typingsSlinky.toughCookieFileStore
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.toughCookie.mod.Cookie
 import typingsSlinky.toughCookie.mod.Store
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tough-cookie-file-store", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("tough-cookie-file-store", "FileCookieStore")
   @js.native
   class FileCookieStore protected () extends Store {
     def this(filePath: String) = this()

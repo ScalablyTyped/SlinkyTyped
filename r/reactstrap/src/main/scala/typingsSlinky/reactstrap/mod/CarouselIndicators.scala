@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.carouselIndicatorsMod.CarouselIndicatorsProps
+import typingsSlinky.reactstrap.carouselIndicatorsMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "CarouselIndicators")
+@JSImport("reactstrap/lib", "CarouselIndicators")
 @js.native
-class CarouselIndicators ()
-  extends Component[CarouselIndicatorsProps, js.Object, js.Any]
+class CarouselIndicators () extends default

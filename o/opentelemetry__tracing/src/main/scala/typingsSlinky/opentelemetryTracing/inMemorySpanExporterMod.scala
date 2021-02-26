@@ -2,14 +2,14 @@ package typingsSlinky.opentelemetryTracing
 
 import typingsSlinky.opentelemetryTracing.readableSpanMod.ReadableSpan
 import typingsSlinky.opentelemetryTracing.spanExporterMod.SpanExporter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@opentelemetry/tracing/build/src/export/InMemorySpanExporter", JSImport.Namespace)
-@js.native
-object inMemorySpanExporterMod extends js.Object {
+object inMemorySpanExporterMod {
   
+  @JSImport("@opentelemetry/tracing/build/src/export/InMemorySpanExporter", "InMemorySpanExporter")
   @js.native
   class InMemorySpanExporter () extends SpanExporter {
     

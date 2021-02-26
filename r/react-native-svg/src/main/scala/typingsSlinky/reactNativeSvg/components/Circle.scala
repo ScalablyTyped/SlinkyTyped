@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
+import typingsSlinky.reactNativeSvg.mod.CircleCls
 import typingsSlinky.reactNativeSvg.mod.CircleProps
 import typingsSlinky.reactNativeSvg.mod.Color
 import typingsSlinky.reactNativeSvg.mod.ColumnMajorTransformMatrix
@@ -23,6 +24,7 @@ import typingsSlinky.reactNativeSvg.reactNativeSvgStrings.inherit
 import typingsSlinky.reactNativeSvg.reactNativeSvgStrings.nonScalingStroke
 import typingsSlinky.reactNativeSvg.reactNativeSvgStrings.none
 import typingsSlinky.reactNativeSvg.reactNativeSvgStrings.uri
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,12 +33,12 @@ object Circle {
   
   @JSImport("react-native-svg", "Circle")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
+       with StBuildingComponent[tag.type, CircleCls] {
     
     @scala.inline
     def clipPath(value: String): this.type = set("clipPath", value.asInstanceOf[js.Any])
@@ -63,9 +65,6 @@ object Circle {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fillVarargs(value: Double*): this.type = set("fill", js.Array(value :_*))
-    
-    @scala.inline
     def fill(value: Color): this.type = set("fill", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -73,6 +72,9 @@ object Circle {
     
     @scala.inline
     def fillRule(value: FillRule): this.type = set("fillRule", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def fillVarargs(value: Double*): this.type = set("fill", js.Array(value :_*))
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -144,10 +146,10 @@ object Circle {
     def opacity(value: NumberProp): this.type = set("opacity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def originVarargs(value: NumberProp*): this.type = set("origin", js.Array(value :_*))
+    def origin(value: NumberArray): this.type = set("origin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def origin(value: NumberArray): this.type = set("origin", value.asInstanceOf[js.Any])
+    def originVarargs(value: NumberProp*): this.type = set("origin", js.Array(value :_*))
     
     @scala.inline
     def originX(value: NumberProp): this.type = set("originX", value.asInstanceOf[js.Any])
@@ -165,10 +167,10 @@ object Circle {
     def rotation(value: NumberProp): this.type = set("rotation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scaleVarargs(value: NumberProp*): this.type = set("scale", js.Array(value :_*))
+    def scale(value: NumberArray): this.type = set("scale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scale(value: NumberArray): this.type = set("scale", value.asInstanceOf[js.Any])
+    def scaleVarargs(value: NumberProp*): this.type = set("scale", js.Array(value :_*))
     
     @scala.inline
     def scaleX(value: NumberProp): this.type = set("scaleX", value.asInstanceOf[js.Any])
@@ -177,10 +179,10 @@ object Circle {
     def scaleY(value: NumberProp): this.type = set("scaleY", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def skewVarargs(value: NumberProp*): this.type = set("skew", js.Array(value :_*))
+    def skew(value: NumberArray): this.type = set("skew", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def skew(value: NumberArray): this.type = set("skew", value.asInstanceOf[js.Any])
+    def skewVarargs(value: NumberProp*): this.type = set("skew", js.Array(value :_*))
     
     @scala.inline
     def skewX(value: NumberProp): this.type = set("skewX", value.asInstanceOf[js.Any])
@@ -189,16 +191,13 @@ object Circle {
     def skewY(value: NumberProp): this.type = set("skewY", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeVarargs(value: Double*): this.type = set("stroke", js.Array(value :_*))
-    
-    @scala.inline
     def stroke(value: Color): this.type = set("stroke", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
+    def strokeDasharray(value: js.Array[NumberProp] | NumberProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDasharray(value: js.Array[NumberProp] | NumberProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
+    def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
     
     @scala.inline
     def strokeDashoffset(value: NumberProp): this.type = set("strokeDashoffset", value.asInstanceOf[js.Any])
@@ -216,16 +215,19 @@ object Circle {
     def strokeOpacity(value: NumberProp): this.type = set("strokeOpacity", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def strokeVarargs(value: Double*): this.type = set("stroke", js.Array(value :_*))
+    
+    @scala.inline
     def strokeWidth(value: NumberProp): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def transform(value: ColumnMajorTransformMatrix | String | TransformObject): this.type = set("transform", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def translateVarargs(value: NumberProp*): this.type = set("translate", js.Array(value :_*))
+    def translate(value: NumberArray): this.type = set("translate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def translate(value: NumberArray): this.type = set("translate", value.asInstanceOf[js.Any])
+    def translateVarargs(value: NumberProp*): this.type = set("translate", js.Array(value :_*))
     
     @scala.inline
     def translateX(value: NumberProp): this.type = set("translateX", value.asInstanceOf[js.Any])
@@ -237,19 +239,19 @@ object Circle {
     def vectorEffect(value: none | `non-scaling-stroke` | nonScalingStroke | default | inherit | uri): this.type = set("vectorEffect", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def xVarargs(value: NumberProp*): this.type = set("x", js.Array(value :_*))
-    
-    @scala.inline
     def x(value: NumberArray): this.type = set("x", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def yVarargs(value: NumberProp*): this.type = set("y", js.Array(value :_*))
+    def xVarargs(value: NumberProp*): this.type = set("x", js.Array(value :_*))
     
     @scala.inline
     def y(value: NumberArray): this.type = set("y", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def yVarargs(value: NumberProp*): this.type = set("y", js.Array(value :_*))
   }
   
-  def withProps(p: CircleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Circle.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CircleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

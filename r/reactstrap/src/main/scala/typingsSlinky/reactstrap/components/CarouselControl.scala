@@ -75,15 +75,22 @@ import typingsSlinky.reactstrap.carouselControlMod.CarouselControlProps
 import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.reactstrapStrings.next
 import typingsSlinky.reactstrap.reactstrapStrings.prev
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CarouselControl {
   
-  @JSImport("reactstrap/es", "CarouselControl")
+  @scala.inline
+  def apply(direction: prev | next, onClickHandler: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], onClickHandler = js.Any.fromFunction0(onClickHandler))
+    new Builder(js.Array(this.component, __props.asInstanceOf[CarouselControlProps]))
+  }
+  
+  @JSImport("reactstrap/lib", "CarouselControl")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -276,10 +283,10 @@ object CarouselControl {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -619,10 +626,4 @@ object CarouselControl {
   }
   
   def withProps(p: CarouselControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(direction: prev | next, onClickHandler: () => Unit): Builder = {
-    val __props = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], onClickHandler = js.Any.fromFunction0(onClickHandler))
-    new Builder(js.Array(this.component, __props.asInstanceOf[CarouselControlProps]))
-  }
 }

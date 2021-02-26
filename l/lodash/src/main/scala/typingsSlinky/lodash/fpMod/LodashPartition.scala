@@ -5,12 +5,13 @@ import typingsSlinky.lodash.mod.ValueIteratee
 import typingsSlinky.lodash.mod.ValueIteratorTypeGuard
 import typingsSlinky.lodash.mod.__
 import typingsSlinky.std.Exclude
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashPartition extends js.Object {
+trait LodashPartition extends StObject {
   
   def apply[T](callback: ValueIteratee[T]): js.Tuple2[js.Array[T], js.Array[T]] = js.native
   def apply[T /* <: js.Object */](

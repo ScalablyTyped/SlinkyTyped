@@ -17,6 +17,7 @@ import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValueEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -168,48 +169,36 @@ object inputBaseEventMap {
   }
   
   @scala.inline
-  implicit class inputBaseEventMapOps[Self <: inputBaseEventMap[_, _, _, _], V, SP /* <: inputBaseSettableProperties[V, SV, V] */, SV, RV] (val x: Self with (inputBaseEventMap[V, SP, SV, RV])) extends AnyVal {
+  implicit class inputBaseEventMapMutableBuilder[Self <: inputBaseEventMap[_, _, _, _], V, SP /* <: inputBaseSettableProperties[V, SV, V] */, SV, RV] (val x: Self with (inputBaseEventMap[V, SP, SV, RV])) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAsyncValidatorsChanged(value: CustomEvent): Self = StObject.set(x, "asyncValidatorsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAutocompleteChanged(value: CustomEvent): Self = StObject.set(x, "autocompleteChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setAutofocusChanged(value: CustomEvent): Self = StObject.set(x, "autofocusChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAsyncValidatorsChanged(value: CustomEvent): Self = this.set("asyncValidatorsChanged", value.asInstanceOf[js.Any])
+    def setOjAnimateEnd(value: CustomEvent): Self = StObject.set(x, "ojAnimateEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAutocompleteChanged(value: CustomEvent): Self = this.set("autocompleteChanged", value.asInstanceOf[js.Any])
+    def setOjAnimateStart(value: CustomEvent): Self = StObject.set(x, "ojAnimateStart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAutofocusChanged(value: CustomEvent): Self = this.set("autofocusChanged", value.asInstanceOf[js.Any])
+    def setPlaceholderChanged(value: CustomEvent): Self = StObject.set(x, "placeholderChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjAnimateEnd(value: CustomEvent): Self = this.set("ojAnimateEnd", value.asInstanceOf[js.Any])
+    def setRawValueChanged(value: CustomEvent): Self = StObject.set(x, "rawValueChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjAnimateStart(value: CustomEvent): Self = this.set("ojAnimateStart", value.asInstanceOf[js.Any])
+    def setReadonlyChanged(value: CustomEvent): Self = StObject.set(x, "readonlyChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPlaceholderChanged(value: CustomEvent): Self = this.set("placeholderChanged", value.asInstanceOf[js.Any])
+    def setRequiredChanged(value: CustomEvent): Self = StObject.set(x, "requiredChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRawValueChanged(value: CustomEvent): Self = this.set("rawValueChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setReadonlyChanged(value: CustomEvent): Self = this.set("readonlyChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRequiredChanged(value: CustomEvent): Self = this.set("requiredChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValidatorsChanged(value: CustomEvent): Self = this.set("validatorsChanged", value.asInstanceOf[js.Any])
+    def setValidatorsChanged(value: CustomEvent): Self = StObject.set(x, "validatorsChanged", value.asInstanceOf[js.Any])
   }
 }

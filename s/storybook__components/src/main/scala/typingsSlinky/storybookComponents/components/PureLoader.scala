@@ -10,6 +10,7 @@ import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.storybookComponents.anon.PickDetailedHTMLPropsHTML
 import typingsSlinky.storybookComponents.loaderMod.LoaderProps
 import typingsSlinky.storybookTheming.typesMod.Theme
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,10 +26,6 @@ typingsSlinky.emotionStyledBase.mod.StyledComponent[
 ]]) because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
 object PureLoader {
   
-  @JSImport("@storybook/components/dist/Loader/Loader", "PureLoader")
-  @js.native
-  object component extends js.Object
-  
   def apply(
     p: LoaderProps with (ComponentProps[
       StyledComponent[
@@ -38,6 +35,10 @@ object PureLoader {
       ]
     ])
   ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
+  @JSImport("@storybook/components/dist/Loader/Loader", "PureLoader")
+  @js.native
+  val component: js.Object = js.native
   
   implicit def make(companion: PureLoader.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }

@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientAnalytics.anon.AltCustomDataSourceId
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.CustomDataSourceId
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.CustomDataSourceIdFields
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.UploadId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UploadsResource extends js.Object {
+trait UploadsResource extends StObject {
   
   def deleteUploadData(request: AltCustomDataSourceId, body: AnalyticsDataimportDeleteUploadDataRequest): Request[Unit] = js.native
   /** Delete data associated with a previous upload. */

@@ -1,6 +1,7 @@
 package typingsSlinky.twilio.mod
 
 import typingsSlinky.q.mod.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,9 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.twilio.mod.Resource because Already inherited
 - typingsSlinky.twilio.mod.PostableResource because Already inherited
-- typingsSlinky.twilio.mod.ListableResource because var conflicts: get_Original. Inlined list, list, list, list_Original
 - typingsSlinky.twilio.mod.AccountInstance because var conflicts: get_Original, post_Original. Inlined update, update, update, update_Original, put, put, put, put_Original, availablePhoneNumbers, availablePhoneNumbers_Original, outgoingCallerIds, incomingPhoneNumbers, messages, sms, applications, connectApps, authorizedConnectApps, calls, conferences, queues, recordings, tokens, transcriptions, notifications, usage, sip, addresses, keys */ @js.native
-trait AccountResource extends CreatableMappedResource[AccountInstance] {
+trait AccountResource extends ListMappedResource[AccountInstance] {
   
   var addresses: AddressResource = js.native
   
@@ -33,12 +33,6 @@ trait AccountResource extends CreatableMappedResource[AccountInstance] {
   var incomingPhoneNumbers: IncomingPhoneNumberResource = js.native
   
   var keys: KeyResource = js.native
-  
-  def list(args: js.Any): Promise[_] = js.native
-  def list(args: js.Any, callback: RequestCallback): Promise[_] = js.native
-  def list(callback: RequestCallback): Promise[_] = js.native
-  @JSName("list")
-  var list_Original: RestMethod = js.native
   
   var messages: MessageResource = js.native
   

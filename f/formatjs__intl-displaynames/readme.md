@@ -10,9 +10,9 @@ Polyfill for: https://tc39.es/proposal-intl-displaynames
 | ------------------ | :-------------: |
 | Full name          | @formatjs/intl-displaynames |
 | Keywords           | i18n, polyfill, intl-polyfill, localization, formatjs, Intl.DisplayNames, Intl |
-| # releases         | 4 |
-| # dependents       | 0 |
-| # downloads        | 139 |
+| # releases         | 70 |
+| # dependents       | 8 |
+| # downloads        | 15809746 |
 | # stars            | 0 |
 
 ## Links

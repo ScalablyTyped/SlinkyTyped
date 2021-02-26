@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientManagedidentities.anon.Alt
 import typingsSlinky.maximMazurokGapiClientManagedidentities.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientManagedidentities.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OperationsResource extends js.Object {
+trait OperationsResource extends StObject {
   
   def cancel(request: Alt, body: CancelOperationRequest): Request[js.Object] = js.native
   /**

@@ -2,12 +2,13 @@ package typingsSlinky.monacoEditor.mod.languages.typescript
 
 import typingsSlinky.monacoEditor.anon.Content
 import typingsSlinky.monacoEditor.mod.IDisposable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LanguageServiceDefaults extends js.Object {
+trait LanguageServiceDefaults extends StObject {
   
   /**
     * Add an additional source file to the language service. Use this

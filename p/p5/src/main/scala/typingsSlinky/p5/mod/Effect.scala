@@ -1,11 +1,12 @@
 package typingsSlinky.p5.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Effect extends js.Object {
+trait Effect extends StObject {
   
   /**
     *   Set the output volume of the filter.

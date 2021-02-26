@@ -3,6 +3,7 @@ package typingsSlinky.typescript.mod
 import typingsSlinky.typescript.mod.SyntaxKind.KeyOfKeyword
 import typingsSlinky.typescript.mod.SyntaxKind.TypeOperator
 import typingsSlinky.typescript.mod.SyntaxKind.UniqueKeyword
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -4,15 +4,15 @@
 Typings are for version 4.0.5
 
 ## Library description:
-express.js middleware for flatiron/winston
+express.js middleware for winstonjs/winston
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | express-winston |
-| Keywords           | winston, flatiron, logging, express, log, error, handler, middleware, colors |
-| # releases         | 14 |
-| # dependents       | 175 |
-| # downloads        | 5357364 |
+| Keywords           | winston, logging, express, log, error, handler, middleware, colors |
+| # releases         | 10 |
+| # dependents       | 218 |
+| # downloads        | 9470401 |
 | # stars            | 20 |
 
 ## Links

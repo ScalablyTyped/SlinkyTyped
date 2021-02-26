@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.Fields
 import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.IgnoreWarnings
 import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.Key
 import typingsSlinky.maximMazurokGapiClientBigtableadmin.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AppProfilesResource extends js.Object {
+trait AppProfilesResource extends StObject {
   
   /** Creates an app profile within an instance. */
   def create(request: AppProfileId): Request[AppProfile] = js.native

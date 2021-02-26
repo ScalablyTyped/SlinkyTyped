@@ -1,5 +1,6 @@
 package typingsSlinky.reactNative.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNative.reactNativeStrings.`light-content`
   - typingsSlinky.reactNative.reactNativeStrings.`dark-content`
 */
-trait StatusBarStyle extends js.Object
+trait StatusBarStyle extends StObject
 object StatusBarStyle {
   
   @scala.inline
-  def `dark-content`: typingsSlinky.reactNative.reactNativeStrings.`dark-content` = "dark-content".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.`dark-content`]
+  def default: typingsSlinky.reactNative.reactNativeStrings.default = "default".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.default]
   
   @scala.inline
-  def default: typingsSlinky.reactNative.reactNativeStrings.default = "default".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.default]
+  def `dark-content`: typingsSlinky.reactNative.reactNativeStrings.`dark-content` = "dark-content".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.`dark-content`]
   
   @scala.inline
   def `light-content`: typingsSlinky.reactNative.reactNativeStrings.`light-content` = "light-content".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.`light-content`]

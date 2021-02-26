@@ -6,6 +6,7 @@ import typingsSlinky.highland.Highland.OnFinished
 import typingsSlinky.highland.Highland.Stream
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   */
 @js.native
-trait HighlandStatic extends js.Object {
+trait HighlandStatic extends StObject {
   
   /**
     * The Stream constructor, accepts an array of values or a generator function
@@ -125,13 +126,13 @@ trait HighlandStatic extends js.Object {
       Unit
     ]
   ): Stream[R] = js.native
+  def apply[R](source: js.Iterable[R]): Stream[R] = js.native
+  def apply[R](source: js.Iterator[R]): Stream[R] = js.native
   // moar (promise for everything?)
   def apply[R](source: js.Thenable[R | Stream[R]]): Stream[R] = js.native
   def apply[R](source: Stream[R]): Stream[R] = js.native
   def apply[R](source: ReadableStream): Stream[R] = js.native
   def apply[R](source: ReadableStream, onFinished: OnFinished): Stream[R] = js.native
-  def apply[R](source: js.Iterable[R]): Stream[R] = js.native
-  def apply[R](source: js.Iterator[R]): Stream[R] = js.native
   
   def add(a: Double): js.Function1[/* b */ Double, Double] = js.native
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

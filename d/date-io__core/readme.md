@@ -10,9 +10,9 @@ Abstraction over common javascript date management libraries
 | ------------------ | :-------------: |
 | Full name          | @date-io/core |
 | Keywords           | date, time, date-io, picker, date-fns, moment, luxon |
-| # releases         | 25 |
-| # dependents       | 32 |
-| # downloads        | 10091459 |
+| # releases         | 29 |
+| # dependents       | 62 |
+| # downloads        | 24175399 |
 | # stars            | 0 |
 
 ## Links

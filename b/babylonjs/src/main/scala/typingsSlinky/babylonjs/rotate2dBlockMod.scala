@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/rotate2dBlock", JSImport.Namespace)
-@js.native
-object rotate2dBlockMod extends js.Object {
+object rotate2dBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/rotate2dBlock", "Rotate2dBlock")
   @js.native
   class Rotate2dBlock protected () extends NodeMaterialBlock {
     /**

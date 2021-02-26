@@ -15,6 +15,7 @@ import typingsSlinky.cathoQuantum.cathoQuantumStrings.on
 import typingsSlinky.cathoQuantum.rangeSliderMod.RangeSliderProps
 import typingsSlinky.cathoQuantum.rangeSliderMod.default
 import typingsSlinky.react.mod.ChangeEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ object RangeSlider {
   
   @JSImport("@catho/quantum/RangeSlider", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +41,10 @@ object RangeSlider {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def marksVarargs(value: LabelValue*): this.type = set("marks", js.Array(value :_*))
+    def marks(value: js.Array[LabelValue]): this.type = set("marks", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def marks(value: js.Array[LabelValue]): this.type = set("marks", value.asInstanceOf[js.Any])
+    def marksVarargs(value: LabelValue*): this.type = set("marks", js.Array(value :_*))
     
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
@@ -76,7 +77,7 @@ object RangeSlider {
     def valueLabelDisplay(value: auto | on | off): this.type = set("valueLabelDisplay", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RangeSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RangeSlider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RangeSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

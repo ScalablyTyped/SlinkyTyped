@@ -1,5 +1,6 @@
 package typingsSlinky.overlayscrollbars.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.l
   - typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.m
 */
-trait AutoHideBehavior extends js.Object
+trait AutoHideBehavior extends StObject
 object AutoHideBehavior {
   
   @scala.inline

@@ -6,16 +6,16 @@ import typingsSlinky.gulpTypescript.reporterMod.CompilationResult
 import typingsSlinky.gulpTypescript.reporterMod.TypeScriptError
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.typescript.mod.Diagnostic
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gulp-typescript/release/output", JSImport.Namespace)
-@js.native
-object outputMod extends js.Object {
+object outputMod {
   
+  @JSImport("gulp-typescript/release/output", "Output")
   @js.native
-  class Output protected () extends js.Object {
+  class Output protected () extends StObject {
     def this(_project: ProjectInfo, streamFull: Readable, streamJs: Readable, streamDts: Readable) = this()
     
     var applySourceMap: js.Any = js.native

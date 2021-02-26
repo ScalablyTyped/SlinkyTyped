@@ -3,6 +3,7 @@ package typingsSlinky.mangopay2NodejsSdk.mod.models
 import typingsSlinky.mangopay2NodejsSdk.anon.PartialReportData
 import typingsSlinky.mangopay2NodejsSdk.mod.report.Filters
 import typingsSlinky.mangopay2NodejsSdk.mod.report.ReportData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

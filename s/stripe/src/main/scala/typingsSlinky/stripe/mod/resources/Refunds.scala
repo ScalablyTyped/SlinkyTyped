@@ -6,17 +6,20 @@ import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.refunds.IRefund
 import typingsSlinky.stripe.mod.refunds.IRefundCreationOptionsWithCharge
 import typingsSlinky.stripe.mod.refunds.IRefundListOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.Refunds")
 @js.native
-class Refunds () extends StripeResource {
+class Refunds protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(data: IRefundCreationOptionsWithCharge): js.Promise[IRefund] = js.native
   /**

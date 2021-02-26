@@ -3,15 +3,18 @@ package typingsSlinky.ol
 import org.scalajs.dom.raw.Event
 import typingsSlinky.ol.eventMod.default
 import typingsSlinky.ol.targetMod.EventTargetLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/events", JSImport.Namespace)
-@js.native
-object eventsMod extends js.Object {
+object eventsMod {
   
+  @JSImport("ol/events", "listen")
+  @js.native
   def listen(target: EventTargetLike, `type`: String, listener: ListenerFunction): EventsKey = js.native
+  @JSImport("ol/events", "listen")
+  @js.native
   def listen(
     target: EventTargetLike,
     `type`: String,
@@ -19,7 +22,11 @@ object eventsMod extends js.Object {
     opt_this: js.UndefOr[scala.Nothing],
     opt_once: Boolean
   ): EventsKey = js.native
+  @JSImport("ol/events", "listen")
+  @js.native
   def listen(target: EventTargetLike, `type`: String, listener: ListenerFunction, opt_this: js.Any): EventsKey = js.native
+  @JSImport("ol/events", "listen")
+  @js.native
   def listen(
     target: EventTargetLike,
     `type`: String,
@@ -28,16 +35,22 @@ object eventsMod extends js.Object {
     opt_once: Boolean
   ): EventsKey = js.native
   
+  @JSImport("ol/events", "listenOnce")
+  @js.native
   def listenOnce(target: EventTargetLike, `type`: String, listener: ListenerFunction): EventsKey = js.native
+  @JSImport("ol/events", "listenOnce")
+  @js.native
   def listenOnce(target: EventTargetLike, `type`: String, listener: ListenerFunction, opt_this: js.Any): EventsKey = js.native
   
+  @JSImport("ol/events", "unlistenByKey")
+  @js.native
   def unlistenByKey(key: EventsKey): Unit = js.native
   
   @js.native
-  trait EventsKey extends js.Object {
+  trait EventsKey extends StObject {
     
-    def listener(p0: default): Boolean = js.native
     def listener(p0: Event): Boolean = js.native
+    def listener(p0: default): Boolean = js.native
     @JSName("listener")
     var listener_Original: ListenerFunction = js.native
     
@@ -46,16 +59,16 @@ object eventsMod extends js.Object {
     var `type`: String = js.native
   }
   
-  @js.native
-  trait ListenerObject extends js.Object {
-    
-    def handleEvent(p0: default): Boolean = js.native
-    def handleEvent(p0: Event): Boolean = js.native
-    @JSName("handleEvent")
-    var handleEvent_Original: ListenerFunction = js.native
-  }
-  
   type Listener = ListenerFunction | ListenerObject
   
   type ListenerFunction = js.Function1[/* p0 */ Event | default, Boolean]
+  
+  @js.native
+  trait ListenerObject extends StObject {
+    
+    def handleEvent(p0: Event): Boolean = js.native
+    def handleEvent(p0: default): Boolean = js.native
+    @JSName("handleEvent")
+    var handleEvent_Original: ListenerFunction = js.native
+  }
 }

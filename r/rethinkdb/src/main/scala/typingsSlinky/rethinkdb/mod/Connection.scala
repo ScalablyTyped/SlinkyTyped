@@ -1,11 +1,12 @@
 package typingsSlinky.rethinkdb.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Connection extends js.Object {
+trait Connection extends StObject {
   
   def addListener(event: String, cb: js.Function): Unit = js.native
   

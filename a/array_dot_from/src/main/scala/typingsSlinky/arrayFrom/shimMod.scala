@@ -1,13 +1,14 @@
 package typingsSlinky.arrayFrom
 
 import typingsSlinky.arrayFrom.anon.FnCall
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("array.from/shim", JSImport.Namespace)
-@js.native
-object shimMod extends js.Object {
+object shimMod {
   
+  @JSImport("array.from/shim", JSImport.Namespace)
+  @js.native
   def apply(): FnCall = js.native
 }

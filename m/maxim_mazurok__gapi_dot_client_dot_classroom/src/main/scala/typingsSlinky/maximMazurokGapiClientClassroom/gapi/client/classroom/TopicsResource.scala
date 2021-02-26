@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientClassroom.anon.Fields
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.FieldsId
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.KeyOauthtoken
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TopicsResource extends js.Object {
+trait TopicsResource extends StObject {
   
   def create(request: Alt, body: Topic): Request[Topic] = js.native
   /**

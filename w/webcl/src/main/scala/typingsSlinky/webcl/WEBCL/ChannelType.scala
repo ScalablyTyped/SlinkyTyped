@@ -15,6 +15,7 @@ import typingsSlinky.webcl.webclNumbers.`0x10DB`
 import typingsSlinky.webcl.webclNumbers.`0x10DC`
 import typingsSlinky.webcl.webclNumbers.`0x10DD`
 import typingsSlinky.webcl.webclNumbers.`0x10DE`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,7 +38,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webcl.webclNumbers.`0x10DD`
   - typingsSlinky.webcl.webclNumbers.`0x10DE`
 */
-trait ChannelType extends js.Object
+trait ChannelType extends StObject
 object ChannelType {
   
   @scala.inline

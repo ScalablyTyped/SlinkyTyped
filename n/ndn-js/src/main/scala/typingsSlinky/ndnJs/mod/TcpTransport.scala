@@ -1,5 +1,6 @@
 package typingsSlinky.ndnJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,11 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("ndn-js", "TcpTransport")
 @js.native
 class TcpTransport ()
-  extends typingsSlinky.ndnJs.transportMod.Transport
-@JSImport("ndn-js", "TcpTransport")
-@js.native
-object TcpTransport extends js.Object {
+  extends typingsSlinky.ndnJs.transportMod.TcpTransport
+object TcpTransport {
   
+  @JSImport("ndn-js", "TcpTransport.ConnectionInfo")
   @js.native
   class ConnectionInfo protected ()
     extends typingsSlinky.ndnJs.transportMod.TcpTransport.ConnectionInfo {

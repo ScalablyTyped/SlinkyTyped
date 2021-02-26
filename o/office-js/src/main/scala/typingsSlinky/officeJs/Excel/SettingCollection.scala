@@ -7,6 +7,7 @@ import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.EventHandlers
 import typingsSlinky.officeJs.OfficeExtension.LoadOption
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,9 +32,9 @@ trait SettingCollection extends ClientObject {
   def add(key: String, value: String): Setting = js.native
   def add(key: String, value: js.Any): Setting = js.native
   def add(key: String, value: js.Array[_]): Setting = js.native
+  def add(key: String, value: js.Date): Setting = js.native
   def add(key: String, value: Boolean): Setting = js.native
   def add(key: String, value: Double): Setting = js.native
-  def add(key: String, value: js.Date): Setting = js.native
   
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")

@@ -1,20 +1,22 @@
 package typingsSlinky.vscodeLanguageserver.mod
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.vscodeLanguageserver.callHierarchyProposedMod.CallHierarchy
 import typingsSlinky.vscodeLanguageserver.sematicTokensProposedMod.SemanticTokens
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageserver", "ProposedFeatures")
-@js.native
-object ProposedFeatures extends js.Object {
+object ProposedFeatures {
   
-  val SemanticTokensBuilder: Instantiable0[
-    typingsSlinky.vscodeLanguageserver.sematicTokensProposedMod.SemanticTokensBuilder
-  ] = js.native
+  /* was `typeof st.SemanticTokensBuilder` */
+  @JSImport("vscode-languageserver", "ProposedFeatures.SemanticTokensBuilder")
+  @js.native
+  class SemanticTokensBuilder ()
+    extends typingsSlinky.vscodeLanguageserver.sematicTokensProposedMod.SemanticTokensBuilder
   
+  @JSImport("vscode-languageserver", "ProposedFeatures.all")
+  @js.native
   val all: Features[
     _underscore, 
     _underscore, 
@@ -24,6 +26,4 @@ object ProposedFeatures extends js.Object {
     _underscore, 
     CallHierarchy with SemanticTokens
   ] = js.native
-  
-  type SemanticTokensBuilder = typingsSlinky.vscodeLanguageserver.sematicTokensProposedMod.SemanticTokensBuilder
 }

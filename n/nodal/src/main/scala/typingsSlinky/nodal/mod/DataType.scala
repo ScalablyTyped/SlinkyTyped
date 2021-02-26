@@ -1,5 +1,6 @@
 package typingsSlinky.nodal.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nodal.nodalStrings.boolean
   - typingsSlinky.nodal.nodalStrings.json
 */
-trait DataType extends js.Object
+trait DataType extends StObject
 object DataType {
   
   @scala.inline

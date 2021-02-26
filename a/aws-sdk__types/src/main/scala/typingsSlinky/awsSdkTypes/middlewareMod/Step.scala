@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkTypes.middlewareMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.awsSdkTypes.awsSdkTypesStrings.finalizeRequest
   - typingsSlinky.awsSdkTypes.awsSdkTypesStrings.deserialize
 */
-trait Step extends js.Object
+trait Step extends StObject
 object Step {
   
   @scala.inline

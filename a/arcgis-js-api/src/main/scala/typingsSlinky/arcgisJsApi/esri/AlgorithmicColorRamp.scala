@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`cie-lab`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`lab-lch`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.algorithmic
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.hsv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

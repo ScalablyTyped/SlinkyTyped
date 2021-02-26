@@ -184,6 +184,7 @@ import typingsSlinky.activexOffice.activexOfficeNumbers.`97`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`98`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`99`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -374,7 +375,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`101`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`103`
 */
-trait MsoAutoShapeType extends js.Object
+trait MsoAutoShapeType extends StObject
 object MsoAutoShapeType {
   
   @scala.inline

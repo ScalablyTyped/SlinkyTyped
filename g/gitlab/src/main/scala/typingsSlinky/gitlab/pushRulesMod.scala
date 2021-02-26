@@ -1,19 +1,21 @@
 package typingsSlinky.gitlab
 
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.Sudo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gitlab/dist/types/core/services/PushRules", JSImport.Namespace)
-@js.native
-object pushRulesMod extends js.Object {
+object pushRulesMod {
   
+  @JSImport("gitlab/dist/types/core/services/PushRules", "PushRules")
   @js.native
   class PushRules () extends BaseService {
+    def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
     
     def create(projectId: String): js.Promise[js.Object] = js.native
     def create(projectId: String, options: BaseRequestOptions): js.Promise[js.Object] = js.native

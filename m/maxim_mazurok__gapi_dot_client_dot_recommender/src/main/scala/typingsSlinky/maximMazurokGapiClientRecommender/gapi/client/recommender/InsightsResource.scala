@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientRecommender.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientRecommender.anon.Alt
 import typingsSlinky.maximMazurokGapiClientRecommender.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InsightsResource extends js.Object {
+trait InsightsResource extends StObject {
   
   /** Gets the requested insight. Requires the recommender.*.get IAM permission for the specified insight type. */
   def get(): Request[GoogleCloudRecommenderV1Insight] = js.native

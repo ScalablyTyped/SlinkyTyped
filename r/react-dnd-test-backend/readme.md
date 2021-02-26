@@ -10,9 +10,9 @@ A mock backend for testing React DnD apps
 | ------------------ | :-------------: |
 | Full name          | react-dnd-test-backend |
 | Keywords           | - |
-| # releases         | 35 |
-| # dependents       | 8 |
-| # downloads        | 1613164 |
+| # releases         | 25 |
+| # dependents       | 10 |
+| # downloads        | 2642666 |
 | # stars            | 1 |
 
 ## Links

@@ -5,6 +5,7 @@ import typingsSlinky.activexOutlook.activexOutlookNumbers.`1`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`2`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`3`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOutlook.activexOutlookNumbers.`3`
   - typingsSlinky.activexOutlook.activexOutlookNumbers.`0`
 */
-trait OlExchangeStoreType extends js.Object
+trait OlExchangeStoreType extends StObject
 object OlExchangeStoreType {
   
   @scala.inline

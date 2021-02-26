@@ -2,14 +2,14 @@ package typingsSlinky.stormReactDiagrams
 
 import typingsSlinky.stormReactDiagrams.abstractLabelFactoryMod.AbstractLabelFactory
 import typingsSlinky.stormReactDiagrams.defaultLabelModelMod.DefaultLabelModel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("storm-react-diagrams/dist/src/defaults/factories/DefaultLabelFactory", JSImport.Namespace)
-@js.native
-object defaultLabelFactoryMod extends js.Object {
+object defaultLabelFactoryMod {
   
+  @JSImport("storm-react-diagrams/dist/src/defaults/factories/DefaultLabelFactory", "DefaultLabelFactory")
   @js.native
   class DefaultLabelFactory () extends AbstractLabelFactory[DefaultLabelModel]
 }

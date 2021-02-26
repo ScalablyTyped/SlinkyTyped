@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.progressMod.ProgressProps
+import typingsSlinky.reactstrap.progressMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "Progress")
+@JSImport("reactstrap/lib", "Progress")
 @js.native
-class Progress ()
-  extends Component[ProgressProps, js.Object, js.Any]
+class Progress () extends default

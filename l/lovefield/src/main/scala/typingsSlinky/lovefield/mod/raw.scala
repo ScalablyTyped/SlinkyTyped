@@ -1,22 +1,21 @@
 package typingsSlinky.lovefield.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // module query
-@JSImport("lovefield", "raw")
-@js.native
-object raw extends js.Object {
+object raw {
   
   @js.native
-  trait BackStore extends js.Object {
+  trait BackStore extends StObject {
     
     def addTableColumn(tableName: String, columnName: String, defaultValue: String): js.Promise[Unit] = js.native
+    def addTableColumn(tableName: String, columnName: String, defaultValue: js.Date): js.Promise[Unit] = js.native
+    def addTableColumn(tableName: String, columnName: String, defaultValue: js.typedarray.ArrayBuffer): js.Promise[Unit] = js.native
     def addTableColumn(tableName: String, columnName: String, defaultValue: Boolean): js.Promise[Unit] = js.native
     def addTableColumn(tableName: String, columnName: String, defaultValue: Double): js.Promise[Unit] = js.native
-    def addTableColumn(tableName: String, columnName: String, defaultValue: js.typedarray.ArrayBuffer): js.Promise[Unit] = js.native
-    def addTableColumn(tableName: String, columnName: String, defaultValue: js.Date): js.Promise[Unit] = js.native
     
     def createRow(payload: js.Object): Row = js.native
     

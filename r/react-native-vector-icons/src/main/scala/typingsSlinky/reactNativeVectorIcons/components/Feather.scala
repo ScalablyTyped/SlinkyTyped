@@ -5,17 +5,12 @@ import typingsSlinky.reactNativeVectorIcons.iconMod.IconButtonProps
 import typingsSlinky.reactNativeVectorIcons.iconMod.IconProps
 import typingsSlinky.reactNativeVectorIcons.iconMod.TabBarItemIOSProps
 import typingsSlinky.reactNativeVectorIcons.iconMod.ToolbarAndroidProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Feather {
-  
-  @JSImport("react-native-vector-icons/Feather", JSImport.Default)
-  @js.native
-  object component extends js.Object
-  
-  def withProps(p: IconProps): SharedBuilder_IconProps1765893822[default] = new SharedBuilder_IconProps1765893822[default](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(name: String): SharedBuilder_IconProps1765893822[default] = {
@@ -25,56 +20,50 @@ object Feather {
   
   object Button {
     
-    @JSImport("react-native-vector-icons/Feather", "default.Button")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: IconButtonProps): SharedBuilder_IconButtonProps_1587742882[typingsSlinky.reactNativeVectorIcons.featherMod.default.Button] = new SharedBuilder_IconButtonProps_1587742882[typingsSlinky.reactNativeVectorIcons.featherMod.default.Button](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     @scala.inline
     def apply(name: String): SharedBuilder_IconButtonProps_1587742882[typingsSlinky.reactNativeVectorIcons.featherMod.default.Button] = {
       val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
       new SharedBuilder_IconButtonProps_1587742882[typingsSlinky.reactNativeVectorIcons.featherMod.default.Button](js.Array(this.component, __props.asInstanceOf[IconButtonProps]))
     }
+    
+    @JSImport("react-native-vector-icons/Feather", "default.Button")
+    @js.native
+    val component: js.Object = js.native
+    
+    def withProps(p: IconButtonProps): SharedBuilder_IconButtonProps_1587742882[typingsSlinky.reactNativeVectorIcons.featherMod.default.Button] = new SharedBuilder_IconButtonProps_1587742882[typingsSlinky.reactNativeVectorIcons.featherMod.default.Button](js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object TabBarItem {
-    
-    @JSImport("react-native-vector-icons/Feather", "default.TabBarItem")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: TabBarItemIOSProps): SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItem] = new SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItem](js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
     def apply(iconName: String): SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItem] = {
       val __props = js.Dynamic.literal(iconName = iconName.asInstanceOf[js.Any])
       new SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItem](js.Array(this.component, __props.asInstanceOf[TabBarItemIOSProps]))
     }
+    
+    @JSImport("react-native-vector-icons/Feather", "default.TabBarItem")
+    @js.native
+    val component: js.Object = js.native
+    
+    def withProps(p: TabBarItemIOSProps): SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItem] = new SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItem](js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object TabBarItemIOS {
-    
-    @JSImport("react-native-vector-icons/Feather", "default.TabBarItemIOS")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: TabBarItemIOSProps): SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItemIOS] = new SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItemIOS](js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
     def apply(iconName: String): SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItemIOS] = {
       val __props = js.Dynamic.literal(iconName = iconName.asInstanceOf[js.Any])
       new SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItemIOS](js.Array(this.component, __props.asInstanceOf[TabBarItemIOSProps]))
     }
+    
+    @JSImport("react-native-vector-icons/Feather", "default.TabBarItemIOS")
+    @js.native
+    val component: js.Object = js.native
+    
+    def withProps(p: TabBarItemIOSProps): SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItemIOS] = new SharedBuilder_TabBarItemIOSProps_163491253[typingsSlinky.reactNativeVectorIcons.featherMod.default.TabBarItemIOS](js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object ToolbarAndroid {
-    
-    @JSImport("react-native-vector-icons/Feather", "default.ToolbarAndroid")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: ToolbarAndroidProps): SharedBuilder_ToolbarAndroidProps2005905226[typingsSlinky.reactNativeVectorIcons.featherMod.default.ToolbarAndroid] = new SharedBuilder_ToolbarAndroidProps2005905226[typingsSlinky.reactNativeVectorIcons.featherMod.default.ToolbarAndroid](js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
     def apply(
@@ -87,5 +76,17 @@ object Feather {
       val __props = js.Dynamic.literal(iconColor = iconColor.asInstanceOf[js.Any], iconSize = iconSize.asInstanceOf[js.Any], logoName = logoName.asInstanceOf[js.Any], navIconName = navIconName.asInstanceOf[js.Any], overflowIconName = overflowIconName.asInstanceOf[js.Any])
       new SharedBuilder_ToolbarAndroidProps2005905226[typingsSlinky.reactNativeVectorIcons.featherMod.default.ToolbarAndroid](js.Array(this.component, __props.asInstanceOf[ToolbarAndroidProps]))
     }
+    
+    @JSImport("react-native-vector-icons/Feather", "default.ToolbarAndroid")
+    @js.native
+    val component: js.Object = js.native
+    
+    def withProps(p: ToolbarAndroidProps): SharedBuilder_ToolbarAndroidProps2005905226[typingsSlinky.reactNativeVectorIcons.featherMod.default.ToolbarAndroid] = new SharedBuilder_ToolbarAndroidProps2005905226[typingsSlinky.reactNativeVectorIcons.featherMod.default.ToolbarAndroid](js.Array(this.component, p.asInstanceOf[js.Any]))
   }
+  
+  @JSImport("react-native-vector-icons/Feather", JSImport.Default)
+  @js.native
+  val component: js.Object = js.native
+  
+  def withProps(p: IconProps): SharedBuilder_IconProps1765893822[default] = new SharedBuilder_IconProps1765893822[default](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

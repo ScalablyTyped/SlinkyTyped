@@ -3,6 +3,7 @@ package typingsSlinky.ejWebAll.global.ej.datavisualization
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
 import typingsSlinky.ejWebAll.ej.Model
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,22 +12,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class CircularGauge protected ()
   extends typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: Model) = this()
+  def this(element: JQuery) = this()
   def this(element: Element, options: Model) = this()
+  def this(element: JQuery, options: Model) = this()
 }
-/* static members */
-@JSGlobal("ej.datavisualization.CircularGauge")
-@js.native
-object CircularGauge extends js.Object {
+object CircularGauge {
   
-  var Locale: js.Any = js.native
-  
-  var fn: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge = js.native
-  
+  @JSGlobal("ej.datavisualization.CircularGauge")
   @js.native
-  object CustomLabelPositionType extends js.Object {
+  val ^ : js.Any = js.native
+  
+  @JSGlobal("ej.datavisualization.CircularGauge.CustomLabelPositionType")
+  @js.native
+  object CustomLabelPositionType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -38,8 +37,9 @@ object CircularGauge extends js.Object {
     /* 1 */ val Outer: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.CustomLabelPositionType.Outer with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.Direction")
   @js.native
-  object Direction extends js.Object {
+  object Direction extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.Direction with Double] = js.native
@@ -49,8 +49,9 @@ object CircularGauge extends js.Object {
     /* 1 */ val CounterClockwise: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.Direction.CounterClockwise with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.ExportingMode")
   @js.native
-  object ExportingMode extends js.Object {
+  object ExportingMode extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -62,8 +63,9 @@ object CircularGauge extends js.Object {
     /* 0 */ val ServerSide: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.ExportingMode.ServerSide with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.ExportingType")
   @js.native
-  object ExportingType extends js.Object {
+  object ExportingType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -75,8 +77,9 @@ object CircularGauge extends js.Object {
     /* 0 */ val PNG: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.ExportingType.PNG with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.FrameType")
   @js.native
-  object FrameType extends js.Object {
+  object FrameType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.FrameType with Double] = js.native
@@ -86,8 +89,9 @@ object CircularGauge extends js.Object {
     /* 1 */ val HalfCircle: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.FrameType.HalfCircle with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.IndicatorTypes")
   @js.native
-  object IndicatorTypes extends js.Object {
+  object IndicatorTypes extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -133,8 +137,9 @@ object CircularGauge extends js.Object {
     /* 9 */ val Wedge: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.IndicatorTypes.Wedge with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.LabelType")
   @js.native
-  object LabelType extends js.Object {
+  object LabelType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.LabelType with Double] = js.native
@@ -144,8 +149,9 @@ object CircularGauge extends js.Object {
     /* 1 */ val Minor: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.LabelType.Minor with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.LegendAlignment")
   @js.native
-  object LegendAlignment extends js.Object {
+  object LegendAlignment extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -159,8 +165,9 @@ object CircularGauge extends js.Object {
     /* 1 */ val Near: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.LegendAlignment.Near with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.LegendPosition")
   @js.native
-  object LegendPosition extends js.Object {
+  object LegendPosition extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -176,8 +183,9 @@ object CircularGauge extends js.Object {
     /* 2 */ val Top: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.LegendPosition.Top with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.LegendShape")
   @js.native
-  object LegendShape extends js.Object {
+  object LegendShape extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -203,8 +211,16 @@ object CircularGauge extends js.Object {
     /* 2 */ val Triangle: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.LegendShape.Triangle with Double = js.native
   }
   
+  /* static member */
+  @JSGlobal("ej.datavisualization.CircularGauge.Locale")
   @js.native
-  object MarkerType extends js.Object {
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("ej.datavisualization.CircularGauge.MarkerType")
+  @js.native
+  object MarkerType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.MarkerType with Double] = js.native
@@ -234,8 +250,9 @@ object CircularGauge extends js.Object {
     /* 8 */ val Wedge: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.MarkerType.Wedge with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.NeedleType")
   @js.native
-  object NeedleType extends js.Object {
+  object NeedleType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.NeedleType with Double] = js.native
@@ -251,8 +268,9 @@ object CircularGauge extends js.Object {
     /* 0 */ val Triangle: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.NeedleType.Triangle with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.OuterCustomLabelPosition")
   @js.native
-  object OuterCustomLabelPosition extends js.Object {
+  object OuterCustomLabelPosition extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -268,8 +286,9 @@ object CircularGauge extends js.Object {
     /* 0 */ val Top: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.OuterCustomLabelPosition.Top with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.Placement")
   @js.native
-  object Placement extends js.Object {
+  object Placement extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.Placement with Double] = js.native
@@ -279,8 +298,9 @@ object CircularGauge extends js.Object {
     /* 0 */ val Near: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.Placement.Near with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.PointerType")
   @js.native
-  object PointerType extends js.Object {
+  object PointerType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -292,8 +312,9 @@ object CircularGauge extends js.Object {
     /* 0 */ val Needle: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.PointerType.Needle with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.RangeZOrderPlacement")
   @js.native
-  object RangeZOrderPlacement extends js.Object {
+  object RangeZOrderPlacement extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -305,8 +326,9 @@ object CircularGauge extends js.Object {
     /* 0 */ val Rear: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.RangeZOrderPlacement.Rear with Double = js.native
   }
   
+  @JSGlobal("ej.datavisualization.CircularGauge.UnitTextPlacement")
   @js.native
-  object UnitTextPlacement extends js.Object {
+  object UnitTextPlacement extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -318,8 +340,16 @@ object CircularGauge extends js.Object {
     /* 1 */ val Front: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge.UnitTextPlacement.Front with Double = js.native
   }
   
+  /* static member */
+  @JSGlobal("ej.datavisualization.CircularGauge.fn")
   @js.native
-  object gaugePosition extends js.Object {
+  def fn: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.datavisualization.CircularGauge): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("ej.datavisualization.CircularGauge.gaugePosition")
+  @js.native
+  object gaugePosition extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[

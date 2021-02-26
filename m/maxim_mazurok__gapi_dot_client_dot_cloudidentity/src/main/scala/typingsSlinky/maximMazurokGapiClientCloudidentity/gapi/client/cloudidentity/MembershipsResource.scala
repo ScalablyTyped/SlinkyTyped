@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.MemberKeyid
 import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.Parent
 import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MembershipsResource extends js.Object {
+trait MembershipsResource extends StObject {
   
   /** Creates a `Membership`. */
   def create(request: Parent): Request[Operation] = js.native

@@ -10,15 +10,22 @@ import typingsSlinky.cathoQuantum.cathoQuantumStrings.right
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.top
 import typingsSlinky.cathoQuantum.tooltipMod.TooltipProps
 import typingsSlinky.cathoQuantum.tooltipMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tooltip {
   
+  @scala.inline
+  def apply(text: String): Builder = {
+    val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
+  }
+  
   @JSImport("@catho/quantum/Tooltip", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -26,13 +33,13 @@ object Tooltip {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
-    
-    @scala.inline
-    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def multiline(value: Boolean): this.type = set("multiline", value.asInstanceOf[js.Any])
@@ -48,10 +55,4 @@ object Tooltip {
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(text: String): Builder = {
-    val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
-  }
 }

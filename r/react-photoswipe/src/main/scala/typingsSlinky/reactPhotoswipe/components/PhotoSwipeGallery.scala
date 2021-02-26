@@ -10,15 +10,22 @@ import typingsSlinky.reactPhotoswipe.anon.Prevent
 import typingsSlinky.reactPhotoswipe.anon.X
 import typingsSlinky.reactPhotoswipe.mod.PhotoSwipeGalleryItem
 import typingsSlinky.reactPhotoswipe.mod.PhotoSwipeGalleryProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PhotoSwipeGallery {
   
+  @scala.inline
+  def apply(items: js.Array[PhotoSwipeGalleryItem], thumbnailContent: PhotoSwipeGalleryItem => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], thumbnailContent = js.Any.fromFunction1(thumbnailContent))
+    new Builder(js.Array(this.component, __props.asInstanceOf[PhotoSwipeGalleryProps]))
+  }
+  
   @JSImport("react-photoswipe", "PhotoSwipeGallery")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -101,10 +108,4 @@ object PhotoSwipeGallery {
   }
   
   def withProps(p: PhotoSwipeGalleryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(items: js.Array[PhotoSwipeGalleryItem], thumbnailContent: PhotoSwipeGalleryItem => ReactElement): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], thumbnailContent = js.Any.fromFunction1(thumbnailContent))
-    new Builder(js.Array(this.component, __props.asInstanceOf[PhotoSwipeGalleryProps]))
-  }
 }

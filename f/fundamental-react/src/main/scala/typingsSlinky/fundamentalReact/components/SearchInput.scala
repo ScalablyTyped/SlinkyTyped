@@ -7,6 +7,7 @@ import typingsSlinky.fundamentalReact.anon.Callback
 import typingsSlinky.fundamentalReact.anon.Text
 import typingsSlinky.fundamentalReact.searchInputMod.SearchInputProps
 import typingsSlinky.react.mod.ChangeEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object SearchInput {
   
   @JSImport("fundamental-react", "SearchInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -65,16 +66,16 @@ object SearchInput {
     def searchBtnProps(value: js.Any): this.type = set("searchBtnProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def searchListVarargs(value: Callback*): this.type = set("searchList", js.Array(value :_*))
+    def searchList(value: js.Array[Callback]): this.type = set("searchList", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def searchList(value: js.Array[Callback]): this.type = set("searchList", value.asInstanceOf[js.Any])
+    def searchListVarargs(value: Callback*): this.type = set("searchList", js.Array(value :_*))
     
     @scala.inline
     def validationState(value: Text): this.type = set("validationState", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SearchInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SearchInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SearchInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

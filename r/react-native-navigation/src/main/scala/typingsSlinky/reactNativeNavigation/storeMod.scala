@@ -3,16 +3,16 @@ package typingsSlinky.reactNativeNavigation
 import slinky.core.ReactComponentClass
 import typingsSlinky.reactNative.mod.ComponentProvider
 import typingsSlinky.reactNativeNavigation.componentWrapperMod.IWrappedComponent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-navigation/lib/dist/components/Store", JSImport.Namespace)
-@js.native
-object storeMod extends js.Object {
+object storeMod {
   
+  @JSImport("react-native-navigation/lib/dist/components/Store", "Store")
   @js.native
-  class Store () extends js.Object {
+  class Store () extends StObject {
     
     def clearComponent(componentId: String): Unit = js.native
     

@@ -2,6 +2,7 @@ package typingsSlinky.kiiCloudSdk.global.KiiCloud
 
 import typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialConnectOptions
 import typingsSlinky.kiiCloudSdk.anon.`36`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,10 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class KiiSocialConnect ()
   extends typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialConnect
-/* static members */
-@JSGlobal("KiiCloud.KiiSocialConnect")
-@js.native
-object KiiSocialConnect extends js.Object {
+object KiiSocialConnect {
   
   /**
     * Retrieve the current user's access token expiration date from a social network
@@ -29,6 +27,9 @@ object KiiSocialConnect extends js.Object {
     *
     * @return The current access token expiration date, null if unavailable
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiSocialConnect.getAccessTokenExpirationForNetwork")
+  @js.native
   def getAccessTokenExpirationForNetwork(networkName: typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName): String = js.native
   
   /**
@@ -41,6 +42,9 @@ object KiiSocialConnect extends js.Object {
     *
     * @return The current access token, null if unavailable
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiSocialConnect.getAccessTokenForNetwork")
+  @js.native
   def getAccessTokenForNetwork(networkName: typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName): String = js.native
   
   /**
@@ -76,6 +80,9 @@ object KiiSocialConnect extends js.Object {
     *
     * @return tokenObject The current access token object, null if unavailable.
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiSocialConnect.getAccessTokenObjectForNetwork")
+  @js.native
   def getAccessTokenObjectForNetwork(networkName: typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName): js.Any = js.native
   
   /**
@@ -243,6 +250,9 @@ object KiiSocialConnect extends js.Object {
     *          }
     *      );
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiSocialConnect.linkCurrentUserWithNetwork")
+  @js.native
   def linkCurrentUserWithNetwork(
     networkName: typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName,
     options: KiiSocialConnectOptions
@@ -252,6 +262,8 @@ object KiiSocialConnect extends js.Object {
       typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName
     ]
   ] = js.native
+  @JSGlobal("KiiCloud.KiiSocialConnect.linkCurrentUserWithNetwork")
+  @js.native
   def linkCurrentUserWithNetwork(
     networkName: typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName,
     options: KiiSocialConnectOptions,
@@ -430,6 +442,9 @@ object KiiSocialConnect extends js.Object {
     *          }
     *      );
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiSocialConnect.logIn")
+  @js.native
   def logIn(
     networkName: typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName,
     options: KiiSocialConnectOptions
@@ -439,6 +454,8 @@ object KiiSocialConnect extends js.Object {
       typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName
     ]
   ] = js.native
+  @JSGlobal("KiiCloud.KiiSocialConnect.logIn")
+  @js.native
   def logIn(
     networkName: typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName,
     options: KiiSocialConnectOptions,
@@ -577,6 +594,9 @@ object KiiSocialConnect extends js.Object {
     *
     * @throws For details refer to the table above
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiSocialConnect.setupNetwork")
+  @js.native
   def setupNetwork(
     networkName: typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName,
     apiKey: String,
@@ -633,12 +653,17 @@ object KiiSocialConnect extends js.Object {
     *          }
     *      );
     */
+  /* static member */
+  @JSGlobal("KiiCloud.KiiSocialConnect.unLinkCurrentUserFromNetwork")
+  @js.native
   def unLinkCurrentUserFromNetwork(networkName: typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName): js.Promise[
     js.Tuple2[
       typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser, 
       typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName
     ]
   ] = js.native
+  @JSGlobal("KiiCloud.KiiSocialConnect.unLinkCurrentUserFromNetwork")
+  @js.native
   def unLinkCurrentUserFromNetwork(networkName: typingsSlinky.kiiCloudSdk.KiiCloud.KiiSocialNetworkName, callbacks: `36`): js.Promise[
     js.Tuple2[
       typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser, 

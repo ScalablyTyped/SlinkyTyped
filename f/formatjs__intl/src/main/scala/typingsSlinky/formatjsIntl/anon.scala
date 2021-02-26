@@ -9,14 +9,14 @@ import typingsSlinky.formatjsEcma402Abstract.typesListMod.ListPatternFieldsData
 import typingsSlinky.formatjsEcma402Abstract.typesListMod.ListPatternLocaleData
 import typingsSlinky.formatjsEcma402Abstract.typesRelativeTimeMod.LocaleFieldsData
 import typingsSlinky.formatjsEcma402Abstract.typesRelativeTimeMod.RelativeTimeLocaleData
-import typingsSlinky.formatjsIntl.errorMod.InvalidConfigError
-import typingsSlinky.formatjsIntl.errorMod.MessageFormatError
-import typingsSlinky.formatjsIntl.errorMod.MissingDataError
-import typingsSlinky.formatjsIntl.errorMod.MissingTranslationError
-import typingsSlinky.formatjsIntl.errorMod.UnsupportedFormatterError
-import typingsSlinky.formatjsIntl.typesMod.CustomFormats
-import typingsSlinky.formatjsIntl.typesMod.FormatListOptions
-import typingsSlinky.formatjsIntl.typesMod.OnErrorFn
+import typingsSlinky.formatjsIntl.srcErrorMod.InvalidConfigError
+import typingsSlinky.formatjsIntl.srcErrorMod.MessageFormatError
+import typingsSlinky.formatjsIntl.srcErrorMod.MissingDataError
+import typingsSlinky.formatjsIntl.srcErrorMod.MissingTranslationError
+import typingsSlinky.formatjsIntl.srcErrorMod.UnsupportedFormatterError
+import typingsSlinky.formatjsIntl.srcTypesMod.CustomFormats
+import typingsSlinky.formatjsIntl.srcTypesMod.FormatListOptions
+import typingsSlinky.formatjsIntl.srcTypesMod.OnErrorFn
 import typingsSlinky.formatjsIntlDisplaynames.anon.PickDisplayNamesOptionslo
 import typingsSlinky.formatjsIntlDisplaynames.mod.DisplayNames
 import typingsSlinky.formatjsIntlDisplaynames.mod.DisplayNamesOptions
@@ -34,39 +34,15 @@ import typingsSlinky.std.Intl.NumberFormatOptions
 import typingsSlinky.std.Intl.PluralRules
 import typingsSlinky.std.Intl.PluralRulesOptions
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait Call
-    extends Instantiable0[DateTimeFormat]
-       with Instantiable1[(/* locales */ js.Array[String]) | (/* locales */ String), DateTimeFormat]
-       with Instantiable2[
-          js.UndefOr[(/* locales */ js.Array[String]) | (/* locales */ String)], 
-          /* options */ DateTimeFormatOptions, 
-          DateTimeFormat
-        ] {
-    
-    def apply(): DateTimeFormat = js.native
-    def apply(locales: js.UndefOr[scala.Nothing], options: DateTimeFormatOptions): DateTimeFormat = js.native
-    def apply(locales: String): DateTimeFormat = js.native
-    def apply(locales: String, options: DateTimeFormatOptions): DateTimeFormat = js.native
-    def apply(locales: js.Array[String]): DateTimeFormat = js.native
-    def apply(locales: js.Array[String], options: DateTimeFormatOptions): DateTimeFormat = js.native
-    
-    def supportedLocalesOf(locales: String): js.Array[String] = js.native
-    def supportedLocalesOf(locales: String, options: DateTimeFormatOptions): js.Array[String] = js.native
-    def supportedLocalesOf(locales: js.Array[String]): js.Array[String] = js.native
-    def supportedLocalesOf(locales: js.Array[String], options: DateTimeFormatOptions): js.Array[String] = js.native
-  }
-  
-  @js.native
-  trait DefaultFormats extends js.Object {
+  trait DefaultFormats extends StObject {
     
     var defaultFormats: CustomFormats = js.native
     
@@ -91,14 +67,39 @@ object anon extends js.Object {
   }
   
   @js.native
-  trait FnCall extends js.Object {
+  trait DefaultLocale extends StObject {
+    
+    var defaultFormats: typingsSlinky.formatjsIntl.typesMod.CustomFormats = js.native
+    
+    var defaultLocale: String = js.native
+    
+    var formats: typingsSlinky.formatjsIntl.typesMod.CustomFormats = js.native
+    
+    var locale: String = js.native
+    
+    var messages: Record[String, js.Array[MessageFormatElement] | String] = js.native
+    
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.InvalidConfigError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MessageFormatError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MissingDataError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MissingTranslationError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.UnsupportedFormatterError): Unit = js.native
+    def onError(err: FormatError): Unit = js.native
+    @JSName("onError")
+    var onError_Original: typingsSlinky.formatjsIntl.typesMod.OnErrorFn = js.native
+    
+    var timeZone: js.UndefOr[String] = js.native
+  }
+  
+  @js.native
+  trait FnCall extends StObject {
     
     def apply(values: js.Array[String]): String = js.native
     def apply(values: js.Array[String], opts: FormatListOptions): String = js.native
   }
   
   @js.native
-  trait FnCallCode extends js.Object {
+  trait FnCallCode extends StObject {
     
     def apply(code: String): js.UndefOr[String] = js.native
     def apply(code: js.Object): js.UndefOr[String] = js.native
@@ -106,31 +107,38 @@ object anon extends js.Object {
   }
   
   @js.native
-  trait FnCallDate extends js.Object {
+  trait FnCallDate extends StObject {
     
     def apply(): String = js.native
-    def apply(date: Double): String = js.native
     def apply(date: js.Date): String = js.native
+    def apply(date: Double): String = js.native
   }
   
   @js.native
-  trait FnCallStartDateEndDate extends js.Object {
+  trait FnCallStartDateEndDate extends StObject {
     
-    def apply(startDate: Double, endDate: Double): String = js.native
-    def apply(startDate: Double, endDate: js.Date): String = js.native
-    def apply(startDate: js.Date, endDate: Double): String = js.native
     def apply(startDate: js.Date, endDate: js.Date): String = js.native
+    def apply(startDate: js.Date, endDate: Double): String = js.native
+    def apply(startDate: Double, endDate: js.Date): String = js.native
+    def apply(startDate: Double, endDate: Double): String = js.native
   }
   
   @js.native
-  trait FnCallValue extends js.Object {
+  trait FnCallValue extends StObject {
     
     def apply(value: js.BigInt): String = js.native
     def apply(value: Double): String = js.native
   }
   
   @js.native
-  trait Formats extends js.Object {
+  trait FnCallValuesOpts extends StObject {
+    
+    def apply(values: js.Array[String]): String = js.native
+    def apply(values: js.Array[String], opts: typingsSlinky.formatjsIntl.typesMod.FormatListOptions): String = js.native
+  }
+  
+  @js.native
+  trait Formats extends StObject {
     
     var formats: CustomFormats = js.native
     
@@ -149,30 +157,24 @@ object anon extends js.Object {
   }
   
   @js.native
-  trait Instantiable
-    extends Instantiable0[PluralRules]
-       with Instantiable1[(/* locales */ js.Array[String]) | (/* locales */ String), PluralRules]
-       with Instantiable2[
-          js.UndefOr[(/* locales */ js.Array[String]) | (/* locales */ String)], 
-          /* options */ PluralRulesOptions, 
-          PluralRules
-        ] {
+  trait FormatsLocale extends StObject {
     
-    def apply(): PluralRules = js.native
-    def apply(locales: js.UndefOr[scala.Nothing], options: PluralRulesOptions): PluralRules = js.native
-    def apply(locales: String): PluralRules = js.native
-    def apply(locales: String, options: PluralRulesOptions): PluralRules = js.native
-    def apply(locales: js.Array[String]): PluralRules = js.native
-    def apply(locales: js.Array[String], options: PluralRulesOptions): PluralRules = js.native
+    var formats: typingsSlinky.formatjsIntl.typesMod.CustomFormats = js.native
     
-    def supportedLocalesOf(locales: String): js.Array[String] = js.native
-    def supportedLocalesOf(locales: String, options: PluralRulesOptions): js.Array[String] = js.native
-    def supportedLocalesOf(locales: js.Array[String]): js.Array[String] = js.native
-    def supportedLocalesOf(locales: js.Array[String], options: PluralRulesOptions): js.Array[String] = js.native
+    var locale: String = js.native
+    
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.InvalidConfigError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MessageFormatError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MissingDataError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MissingTranslationError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.UnsupportedFormatterError): Unit = js.native
+    def onError(err: FormatError): Unit = js.native
+    @JSName("onError")
+    var onError_Original: typingsSlinky.formatjsIntl.typesMod.OnErrorFn = js.native
   }
   
   @js.native
-  trait Locale extends js.Object {
+  trait Locale extends StObject {
     
     var locale: String = js.native
     
@@ -187,7 +189,39 @@ object anon extends js.Object {
   }
   
   @js.native
-  trait OnError extends js.Object {
+  trait LocaleOnError extends StObject {
+    
+    var locale: String = js.native
+    
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.InvalidConfigError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MessageFormatError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MissingDataError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MissingTranslationError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.UnsupportedFormatterError): Unit = js.native
+    def onError(err: FormatError): Unit = js.native
+    @JSName("onError")
+    var onError_Original: typingsSlinky.formatjsIntl.typesMod.OnErrorFn = js.native
+  }
+  
+  @js.native
+  trait LocaleOnErrorTimeZone extends StObject {
+    
+    var locale: String = js.native
+    
+    def onError(err: InvalidConfigError): Unit = js.native
+    def onError(err: MessageFormatError): Unit = js.native
+    def onError(err: MissingDataError): Unit = js.native
+    def onError(err: MissingTranslationError): Unit = js.native
+    def onError(err: UnsupportedFormatterError): Unit = js.native
+    def onError(err: FormatError): Unit = js.native
+    @JSName("onError")
+    var onError_Original: OnErrorFn = js.native
+    
+    var timeZone: js.UndefOr[String] = js.native
+  }
+  
+  @js.native
+  trait OnError extends StObject {
     
     var formats: CustomFormats = js.native
     
@@ -204,43 +238,55 @@ object anon extends js.Object {
   }
   
   @js.native
-  trait SupportedLocalesOf
-    extends Instantiable0[NumberFormat]
-       with Instantiable1[(/* locales */ js.Array[String]) | (/* locales */ String), NumberFormat]
-       with Instantiable2[
-          js.UndefOr[(/* locales */ js.Array[String]) | (/* locales */ String)], 
-          /* options */ NumberFormatOptions, 
-          NumberFormat
-        ] {
-    
-    def apply(): NumberFormat = js.native
-    def apply(locales: js.UndefOr[scala.Nothing], options: NumberFormatOptions): NumberFormat = js.native
-    def apply(locales: String): NumberFormat = js.native
-    def apply(locales: String, options: NumberFormatOptions): NumberFormat = js.native
-    def apply(locales: js.Array[String]): NumberFormat = js.native
-    def apply(locales: js.Array[String], options: NumberFormatOptions): NumberFormat = js.native
-    
-    def supportedLocalesOf(locales: String): js.Array[String] = js.native
-    def supportedLocalesOf(locales: String, options: NumberFormatOptions): js.Array[String] = js.native
-    def supportedLocalesOf(locales: js.Array[String]): js.Array[String] = js.native
-    def supportedLocalesOf(locales: js.Array[String], options: NumberFormatOptions): js.Array[String] = js.native
-  }
-  
-  @js.native
-  trait TimeZone extends js.Object {
+  trait OnErrorTimeZone extends StObject {
     
     var locale: String = js.native
     
-    def onError(err: InvalidConfigError): Unit = js.native
-    def onError(err: MessageFormatError): Unit = js.native
-    def onError(err: MissingDataError): Unit = js.native
-    def onError(err: MissingTranslationError): Unit = js.native
-    def onError(err: UnsupportedFormatterError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.InvalidConfigError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MessageFormatError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MissingDataError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MissingTranslationError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.UnsupportedFormatterError): Unit = js.native
     def onError(err: FormatError): Unit = js.native
     @JSName("onError")
-    var onError_Original: OnErrorFn = js.native
+    var onError_Original: typingsSlinky.formatjsIntl.typesMod.OnErrorFn = js.native
     
     var timeZone: js.UndefOr[String] = js.native
+  }
+  
+  @js.native
+  trait TimeZone extends StObject {
+    
+    var formats: typingsSlinky.formatjsIntl.typesMod.CustomFormats = js.native
+    
+    var locale: String = js.native
+    
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.InvalidConfigError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MessageFormatError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MissingDataError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.MissingTranslationError): Unit = js.native
+    def onError(err: typingsSlinky.formatjsIntl.errorMod.UnsupportedFormatterError): Unit = js.native
+    def onError(err: FormatError): Unit = js.native
+    @JSName("onError")
+    var onError_Original: typingsSlinky.formatjsIntl.typesMod.OnErrorFn = js.native
+    
+    var timeZone: js.UndefOr[String] = js.native
+  }
+  
+  @js.native
+  trait TypeofDateTimeFormat extends StObject {
+    
+    def apply(): DateTimeFormat = js.native
+    def apply(locales: js.UndefOr[scala.Nothing], options: DateTimeFormatOptions): DateTimeFormat = js.native
+    def apply(locales: String): DateTimeFormat = js.native
+    def apply(locales: String, options: DateTimeFormatOptions): DateTimeFormat = js.native
+    def apply(locales: js.Array[String]): DateTimeFormat = js.native
+    def apply(locales: js.Array[String], options: DateTimeFormatOptions): DateTimeFormat = js.native
+    
+    def supportedLocalesOf(locales: String): js.Array[String] = js.native
+    def supportedLocalesOf(locales: String, options: DateTimeFormatOptions): js.Array[String] = js.native
+    def supportedLocalesOf(locales: js.Array[String]): js.Array[String] = js.native
+    def supportedLocalesOf(locales: js.Array[String], options: DateTimeFormatOptions): js.Array[String] = js.native
   }
   
   @js.native
@@ -325,5 +371,37 @@ object anon extends js.Object {
     def supportedLocalesOf(locales: String, options: PickIntlRelativeTimeForma): js.Array[String] = js.native
     def supportedLocalesOf(locales: js.Array[String]): js.Array[String] = js.native
     def supportedLocalesOf(locales: js.Array[String], options: PickIntlRelativeTimeForma): js.Array[String] = js.native
+  }
+  
+  @js.native
+  trait TypeofNumberFormat extends StObject {
+    
+    def apply(): NumberFormat = js.native
+    def apply(locales: js.UndefOr[scala.Nothing], options: NumberFormatOptions): NumberFormat = js.native
+    def apply(locales: String): NumberFormat = js.native
+    def apply(locales: String, options: NumberFormatOptions): NumberFormat = js.native
+    def apply(locales: js.Array[String]): NumberFormat = js.native
+    def apply(locales: js.Array[String], options: NumberFormatOptions): NumberFormat = js.native
+    
+    def supportedLocalesOf(locales: String): js.Array[String] = js.native
+    def supportedLocalesOf(locales: String, options: NumberFormatOptions): js.Array[String] = js.native
+    def supportedLocalesOf(locales: js.Array[String]): js.Array[String] = js.native
+    def supportedLocalesOf(locales: js.Array[String], options: NumberFormatOptions): js.Array[String] = js.native
+  }
+  
+  @js.native
+  trait TypeofPluralRules extends StObject {
+    
+    def apply(): PluralRules = js.native
+    def apply(locales: js.UndefOr[scala.Nothing], options: PluralRulesOptions): PluralRules = js.native
+    def apply(locales: String): PluralRules = js.native
+    def apply(locales: String, options: PluralRulesOptions): PluralRules = js.native
+    def apply(locales: js.Array[String]): PluralRules = js.native
+    def apply(locales: js.Array[String], options: PluralRulesOptions): PluralRules = js.native
+    
+    def supportedLocalesOf(locales: String): js.Array[String] = js.native
+    def supportedLocalesOf(locales: String, options: PluralRulesOptions): js.Array[String] = js.native
+    def supportedLocalesOf(locales: js.Array[String]): js.Array[String] = js.native
+    def supportedLocalesOf(locales: js.Array[String], options: PluralRulesOptions): js.Array[String] = js.native
   }
 }

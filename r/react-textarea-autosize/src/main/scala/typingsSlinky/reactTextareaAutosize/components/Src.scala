@@ -2,6 +2,7 @@ package typingsSlinky.reactTextareaAutosize.components
 
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import typingsSlinky.reactTextareaAutosize.anon.PickTextareaPropscolortra
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,9 +11,9 @@ object Src {
   
   @JSImport("react-textarea-autosize/dist/declarations/src", JSImport.Default)
   @js.native
-  object component extends js.Object
-  
-  def withProps(p: PickTextareaPropscolortra): SharedBuilder_PickTextareaPropscolortra_1829433617[HTMLTextAreaElement] = new SharedBuilder_PickTextareaPropscolortra_1829433617[HTMLTextAreaElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  val component: js.Object = js.native
   
   implicit def make(companion: Src.type): SharedBuilder_PickTextareaPropscolortra_1829433617[HTMLTextAreaElement] = new SharedBuilder_PickTextareaPropscolortra_1829433617[HTMLTextAreaElement](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PickTextareaPropscolortra): SharedBuilder_PickTextareaPropscolortra_1829433617[HTMLTextAreaElement] = new SharedBuilder_PickTextareaPropscolortra_1829433617[HTMLTextAreaElement](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

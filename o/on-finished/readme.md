@@ -10,9 +10,9 @@ Execute a callback when a request closes, finishes, or errors
 | ------------------ | :-------------: |
 | Full name          | on-finished |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 592 |
-| # downloads        | 432387137 |
+| # releases         | 0 |
+| # dependents       | 749 |
+| # downloads        | 666324535 |
 | # stars            | 23 |
 
 ## Links

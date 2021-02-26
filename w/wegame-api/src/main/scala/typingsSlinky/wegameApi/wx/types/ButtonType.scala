@@ -1,5 +1,6 @@
 package typingsSlinky.wegameApi.wx.types
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.wegameApi.wegameApiStrings.text
   - typingsSlinky.wegameApi.wegameApiStrings.image
 */
-trait ButtonType extends js.Object
+trait ButtonType extends StObject
 object ButtonType {
   
   @scala.inline

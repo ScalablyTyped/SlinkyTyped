@@ -4,16 +4,16 @@ import typingsSlinky.tsMockito.matcherMod.Matcher
 import typingsSlinky.tsMockito.methodActionMod.MethodAction
 import typingsSlinky.tsMockito.methodStubMod.MethodStub
 import typingsSlinky.tsMockito.objectInspectorMod.ObjectInspector
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ts-mockito/lib/Mock", JSImport.Namespace)
-@js.native
-object mockMod extends js.Object {
+object mockMod {
   
+  @JSImport("ts-mockito/lib/Mock", "Mocker")
   @js.native
-  class Mocker protected () extends js.Object {
+  class Mocker protected () extends StObject {
     def this(clazz: js.Any) = this()
     def this(clazz: js.Any, instance: js.Any) = this()
     

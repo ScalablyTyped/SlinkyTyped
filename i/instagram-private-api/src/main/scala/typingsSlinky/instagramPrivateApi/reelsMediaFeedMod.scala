@@ -1,19 +1,21 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.commonTypesMod.IgAppModule
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.reelsMediaFeedResponseMod.ReelsMediaFeedResponseItem
 import typingsSlinky.instagramPrivateApi.reelsMediaFeedResponseMod.ReelsMediaFeedResponseRootObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/reels-media.feed", JSImport.Namespace)
-@js.native
-object reelsMediaFeedMod extends js.Object {
+object reelsMediaFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/reels-media.feed", "ReelsMediaFeed")
   @js.native
-  class ReelsMediaFeed () extends Feed[ReelsMediaFeedResponseRootObject, ReelsMediaFeedResponseItem] {
+  class ReelsMediaFeed protected () extends Feed[ReelsMediaFeedResponseRootObject, ReelsMediaFeedResponseItem] {
+    def this(client: IgApiClient) = this()
     
     def request(): js.Promise[ReelsMediaFeedResponseRootObject] = js.native
     

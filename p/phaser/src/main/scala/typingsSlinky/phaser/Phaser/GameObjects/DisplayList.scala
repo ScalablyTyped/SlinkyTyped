@@ -4,6 +4,7 @@ import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Scenes.Systems
 import typingsSlinky.phaser.Phaser.Structs.List
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

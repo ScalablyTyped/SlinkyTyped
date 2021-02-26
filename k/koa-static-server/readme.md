@@ -11,8 +11,8 @@ Static file serving middleware for koa with directory, rewrite and index support
 | Full name          | koa-static-server |
 | Keywords           | koa, middleware, file, static, sendfile, directory, server, folder |
 | # releases         | 4 |
-| # dependents       | 24 |
-| # downloads        | 134366 |
+| # dependents       | 32 |
+| # downloads        | 169782 |
 | # stars            | 1 |
 
 ## Links

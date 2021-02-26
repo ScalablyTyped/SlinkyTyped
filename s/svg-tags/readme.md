@@ -11,8 +11,8 @@ List of standard SVG tags.
 | Full name          | svg-tags |
 | Keywords           | svg, tags, w3c |
 | # releases         | 0 |
-| # dependents       | 24 |
-| # downloads        | 77195213 |
+| # dependents       | 31 |
+| # downloads        | 115457843 |
 | # stars            | 1 |
 
 ## Links

@@ -1,5 +1,6 @@
 package typingsSlinky.openui5.global.sap.m
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("sap.m.DeviationIndicator")
 @js.native
-object DeviationIndicator extends js.Object {
+object DeviationIndicator extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.openui5.sap.m.DeviationIndicator with Double] = js.native

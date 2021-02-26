@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MediaSourceEventMap extends js.Object {
+trait MediaSourceEventMap extends StObject {
   
   var sourceclose: org.scalajs.dom.raw.Event = js.native
   
@@ -26,27 +27,15 @@ object MediaSourceEventMap {
   }
   
   @scala.inline
-  implicit class MediaSourceEventMapOps[Self <: MediaSourceEventMap] (val x: Self) extends AnyVal {
+  implicit class MediaSourceEventMapMutableBuilder[Self <: MediaSourceEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setSourceclose(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "sourceclose", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setSourceended(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "sourceended", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setSourceclose(value: org.scalajs.dom.raw.Event): Self = this.set("sourceclose", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSourceended(value: org.scalajs.dom.raw.Event): Self = this.set("sourceended", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSourceopen(value: org.scalajs.dom.raw.Event): Self = this.set("sourceopen", value.asInstanceOf[js.Any])
+    def setSourceopen(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "sourceopen", value.asInstanceOf[js.Any])
   }
 }

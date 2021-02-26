@@ -10,9 +10,9 @@ Typings are for version 0.5.0
 | ------------------ | :-------------: |
 | Full name          | @firebase/messaging-types |
 | Keywords           | - |
-| # releases         | 896 |
+| # releases         | 1277 |
 | # dependents       | 3 |
-| # downloads        | 16746440 |
+| # downloads        | 33662764 |
 | # stars            | 0 |
 
 ## Links

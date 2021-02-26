@@ -10,9 +10,9 @@ Docker Remote API module.
 | ------------------ | :-------------: |
 | Full name          | dockerode |
 | Keywords           | docker, docker.io |
-| # releases         | 9 |
-| # dependents       | 438 |
-| # downloads        | 2105892 |
+| # releases         | 7 |
+| # dependents       | 525 |
+| # downloads        | 5006208 |
 | # stars            | 44 |
 
 ## Links

@@ -3,13 +3,14 @@ package typingsSlinky.winrtUwp.Windows.Foundation.Diagnostics
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Storage.IStorageFolder
 import typingsSlinky.winrtUwp.Windows.Storage.StorageFile
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents the destination of logged messages from LoggingChannel instances. */
 @js.native
-trait LoggingSession extends js.Object {
+trait LoggingSession extends StObject {
   
   /**
     * Adds a logging channel to the current logging session.

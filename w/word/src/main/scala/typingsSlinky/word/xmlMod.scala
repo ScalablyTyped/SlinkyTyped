@@ -2,16 +2,18 @@ package typingsSlinky.word
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.word.typesMod.WJSDoc
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("word/dist/typings/codecs/XML", JSImport.Namespace)
-@js.native
-object xmlMod extends js.Object {
+object xmlMod {
   
-  @JSName("parse_str")
+  @JSImport("word/dist/typings/codecs/XML", "parse_str")
+  @js.native
   def parseStr(data: String): WJSDoc = js.native
   
+  @JSImport("word/dist/typings/codecs/XML", "read")
+  @js.native
   def read(data: Buffer): WJSDoc = js.native
 }

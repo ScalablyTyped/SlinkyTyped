@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientAppengine.anon.OverrideStrategy
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.UpdateMask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DomainMappingsResource extends js.Object {
+trait DomainMappingsResource extends StObject {
   
   /**
     * Maps a domain to an application. A user must be authorized to administer a domain in order to map it to an application. For a list of available authorized domains, see

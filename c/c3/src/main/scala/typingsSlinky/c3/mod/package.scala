@@ -1,5 +1,6 @@
 package typingsSlinky.c3
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,4 +34,10 @@ package object mod {
   type UpdateAndRedrawOptions = org.scalablytyped.runtime.StringDictionary[scala.Boolean]
   
   type XAxisName = typingsSlinky.c3.c3Strings.x
+  
+  @scala.inline
+  def generate(config: typingsSlinky.c3.mod.ChartConfiguration): typingsSlinky.c3.mod.ChartAPI = typingsSlinky.c3.mod.^.asInstanceOf[js.Dynamic].applyDynamic("generate")(config.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.c3.mod.ChartAPI]
+  
+  @scala.inline
+  def version: java.lang.String = typingsSlinky.c3.mod.^.asInstanceOf[js.Dynamic].selectDynamic("version").asInstanceOf[java.lang.String]
 }

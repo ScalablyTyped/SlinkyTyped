@@ -5,12 +5,13 @@ import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Storage.IStorageItem
 import typingsSlinky.winrt.Windows.Storage.StorageFile
 import typingsSlinky.winrt.Windows.Storage.StorageFolder
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IStorageFolderQueryOperations extends js.Object {
+trait IStorageFolderQueryOperations extends StObject {
   
   def areQueryOptionsSupported(queryOptions: QueryOptions): Boolean = js.native
   

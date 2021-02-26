@@ -1,5 +1,6 @@
 package typingsSlinky.cannon.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,10 +12,10 @@ class Box protected ()
   def this(halfExtents: typingsSlinky.cannon.CANNON.Vec3) = this()
 }
 /* static members */
-@JSImport("cannon", "Box")
-@js.native
-object Box extends js.Object {
+object Box {
   
+  @JSImport("cannon", "Box.calculateInertia")
+  @js.native
   def calculateInertia(
     halfExtents: typingsSlinky.cannon.CANNON.Vec3,
     mass: Double,

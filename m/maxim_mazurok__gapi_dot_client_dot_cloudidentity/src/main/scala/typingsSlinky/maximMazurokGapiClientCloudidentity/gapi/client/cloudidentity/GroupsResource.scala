@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.Key
 import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.Query
 import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.UpdateMask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GroupsResource extends js.Object {
+trait GroupsResource extends StObject {
   
   def create(request: AltCallback, body: Group): Request[Operation] = js.native
   /** Creates a Group. */

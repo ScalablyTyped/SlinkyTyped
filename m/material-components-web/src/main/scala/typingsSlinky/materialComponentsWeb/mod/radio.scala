@@ -1,50 +1,57 @@
 package typingsSlinky.materialComponentsWeb.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materialRadio.adapterMod.MDCRadioAdapter
-import typingsSlinky.materialRadio.anon.DISABLED
-import typingsSlinky.materialRadio.anon.NATIVECONTROLSELECTOR
 import typingsSlinky.materialRadio.anon.PartialMDCRadioAdapter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-components-web", "radio")
-@js.native
-object radio extends js.Object {
+object radio {
   
+  @JSImport("material-components-web", "radio.MDCRadio")
   @js.native
-  class MDCRadio ()
-    extends typingsSlinky.materialRadio.mod.MDCRadio
+  class MDCRadio protected ()
+    extends typingsSlinky.materialRadio.mod.MDCRadio {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(
+      root: Element,
+      foundation: typingsSlinky.materialRadio.foundationMod.MDCRadioFoundation,
+      args: js.Any*
+    ) = this()
+  }
   /* static members */
-  @js.native
-  object MDCRadio extends js.Object {
+  object MDCRadio {
     
+    @JSImport("material-components-web", "radio.MDCRadio.attachTo")
+    @js.native
     def attachTo(root: Element): typingsSlinky.materialRadio.componentMod.MDCRadio = js.native
   }
   
+  @JSImport("material-components-web", "radio.MDCRadioFoundation")
   @js.native
   class MDCRadioFoundation ()
     extends typingsSlinky.materialRadio.mod.MDCRadioFoundation {
     def this(adapter: PartialMDCRadioAdapter) = this()
   }
-  /* static members */
-  @js.native
-  object MDCRadioFoundation extends js.Object {
-    
-    def cssClasses: DISABLED = js.native
-    
-    def defaultAdapter: MDCRadioAdapter = js.native
-    
-    def strings: NATIVECONTROLSELECTOR = js.native
-  }
   
-  @js.native
-  object cssClasses extends js.Object {
+  object cssClasses {
     
-    var DISABLED: String = js.native
+    @JSImport("material-components-web", "radio.cssClasses")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var ROOT: String = js.native
+    @JSImport("material-components-web", "radio.cssClasses.DISABLED")
+    @js.native
+    def DISABLED: String = js.native
+    @scala.inline
+    def DISABLED_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DISABLED")(x.asInstanceOf[js.Any])
+    
+    @JSImport("material-components-web", "radio.cssClasses.ROOT")
+    @js.native
+    def ROOT: String = js.native
+    @scala.inline
+    def ROOT_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ROOT")(x.asInstanceOf[js.Any])
   }
   
   /**
@@ -69,9 +76,16 @@ object radio extends js.Object {
     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     * THE SOFTWARE.
     */
-  @js.native
-  object strings extends js.Object {
+  object strings {
     
-    var NATIVE_CONTROL_SELECTOR: String = js.native
+    @JSImport("material-components-web", "radio.strings")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("material-components-web", "radio.strings.NATIVE_CONTROL_SELECTOR")
+    @js.native
+    def NATIVE_CONTROL_SELECTOR: String = js.native
+    @scala.inline
+    def NATIVE_CONTROL_SELECTOR_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("NATIVE_CONTROL_SELECTOR")(x.asInstanceOf[js.Any])
   }
 }

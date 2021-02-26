@@ -5,6 +5,7 @@ import typingsSlinky.xrm.xrmNumbers.`1`
 import typingsSlinky.xrm.xrmNumbers.`2`
 import typingsSlinky.xrm.xrmNumbers.`3`
 import typingsSlinky.xrm.xrmNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmNumbers.`3`
   - typingsSlinky.xrm.xrmNumbers.`4`
 */
-trait GridControlContext extends js.Object
+trait GridControlContext extends StObject
 object GridControlContext {
   
   @scala.inline

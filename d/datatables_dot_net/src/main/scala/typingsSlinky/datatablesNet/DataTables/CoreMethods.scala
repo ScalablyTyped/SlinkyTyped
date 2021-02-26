@@ -3,6 +3,7 @@ package typingsSlinky.datatablesNet.DataTables
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.Node
 import typingsSlinky.datatablesNet.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,13 +25,13 @@ trait CoreMethods extends UtilityMethods {
   @JSName("$")
   def $(selector: js.Array[Node], modifier: ObjectSelectorModifier): JQuery = js.native
   @JSName("$")
-  def $(selector: JQuery): JQuery = js.native
-  @JSName("$")
-  def $(selector: JQuery, modifier: ObjectSelectorModifier): JQuery = js.native
-  @JSName("$")
   def $(selector: Node): JQuery = js.native
   @JSName("$")
   def $(selector: Node, modifier: ObjectSelectorModifier): JQuery = js.native
+  @JSName("$")
+  def $(selector: JQuery): JQuery = js.native
+  @JSName("$")
+  def $(selector: JQuery, modifier: ObjectSelectorModifier): JQuery = js.native
   
   /**
     * Ajax Methods

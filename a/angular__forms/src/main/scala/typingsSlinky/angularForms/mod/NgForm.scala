@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.Event
 import typingsSlinky.angularCore.mod.AfterViewInit
 import typingsSlinky.angularCore.mod.EventEmitter
 import typingsSlinky.angularForms.anon.UpdateOn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

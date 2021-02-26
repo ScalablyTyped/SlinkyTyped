@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.inputGroupMod.InputGroupProps
+import typingsSlinky.reactstrap.inputGroupMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "InputGroup")
+@JSImport("reactstrap/lib", "InputGroup")
 @js.native
-class InputGroup ()
-  extends Component[InputGroupProps, js.Object, js.Any]
+class InputGroup () extends default

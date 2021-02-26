@@ -5,6 +5,7 @@ import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IConsensusCancelBlockResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,88 +21,12 @@ class ConsensusCancelBlockResponse ()
   def this(properties: IConsensusCancelBlockResponse) = this()
 }
 /* static members */
-@JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse")
-@js.native
-object ConsensusCancelBlockResponse extends js.Object {
-  
-  /**
-    * Creates a new ConsensusCancelBlockResponse instance using the specified properties.
-    * @param [properties] Properties to set
-    * @returns ConsensusCancelBlockResponse instance
-    */
-  def create(): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
-  def create(properties: IConsensusCancelBlockResponse): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
-  
-  /**
-    * Decodes a ConsensusCancelBlockResponse message from the specified reader or buffer.
-    * @param reader Reader or buffer to decode from
-    * @param [length] Message length if known beforehand
-    * @returns ConsensusCancelBlockResponse
-    * @throws {Error} If the payload is not a reader or valid buffer
-    * @throws {$protobuf.util.ProtocolError} If required fields are missing
-    */
-  def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
-  def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
-  
-  /**
-    * Decodes a ConsensusCancelBlockResponse message from the specified reader or buffer, length delimited.
-    * @param reader Reader or buffer to decode from
-    * @returns ConsensusCancelBlockResponse
-    * @throws {Error} If the payload is not a reader or valid buffer
-    * @throws {$protobuf.util.ProtocolError} If required fields are missing
-    */
-  def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
-  
-  /**
-    * Encodes the specified ConsensusCancelBlockResponse message. Does not implicitly {@link ConsensusCancelBlockResponse.verify|verify} messages.
-    * @param message ConsensusCancelBlockResponse message or plain object to encode
-    * @param [writer] Writer to encode to
-    * @returns Writer
-    */
-  def encode(message: IConsensusCancelBlockResponse): Writer = js.native
-  def encode(message: IConsensusCancelBlockResponse, writer: Writer): Writer = js.native
-  
-  /**
-    * Encodes the specified ConsensusCancelBlockResponse message, length delimited. Does not implicitly {@link ConsensusCancelBlockResponse.verify|verify} messages.
-    * @param message ConsensusCancelBlockResponse message or plain object to encode
-    * @param [writer] Writer to encode to
-    * @returns Writer
-    */
-  def encodeDelimited(message: IConsensusCancelBlockResponse): Writer = js.native
-  def encodeDelimited(message: IConsensusCancelBlockResponse, writer: Writer): Writer = js.native
-  
-  /**
-    * Creates a ConsensusCancelBlockResponse message from a plain object. Also converts values to their respective internal types.
-    * @param object Plain object
-    * @returns ConsensusCancelBlockResponse
-    */
-  def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
-  
-  /**
-    * Creates a plain object from a ConsensusCancelBlockResponse message. Also converts values to other types if specified.
-    * @param message ConsensusCancelBlockResponse
-    * @param [options] Conversion options
-    * @returns Plain object
-    */
-  def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse): StringDictionary[js.Any] = js.native
-  def toObject(
-    message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse,
-    options: IConversionOptions
-  ): StringDictionary[js.Any] = js.native
-  
-  /**
-    * Verifies a ConsensusCancelBlockResponse message.
-    * @param message Plain object to verify
-    * @returns `null` if valid, otherwise the reason why it is not
-    */
-  def verify(message: StringDictionary[js.Any]): String | Null = js.native
+object ConsensusCancelBlockResponse {
   
   /** Status enum. */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.Status")
   @js.native
-  object Status extends js.Object {
+  object Status extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -120,4 +45,111 @@ object ConsensusCancelBlockResponse extends js.Object {
     
     /* 0 */ val STATUS_UNSET: typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse.Status.STATUS_UNSET with Double = js.native
   }
+  
+  /**
+    * Creates a new ConsensusCancelBlockResponse instance using the specified properties.
+    * @param [properties] Properties to set
+    * @returns ConsensusCancelBlockResponse instance
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.create")
+  @js.native
+  def create(): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.create")
+  @js.native
+  def create(properties: IConsensusCancelBlockResponse): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
+  
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
+  /**
+    * Decodes a ConsensusCancelBlockResponse message from the specified reader or buffer.
+    * @param reader Reader or buffer to decode from
+    * @param [length] Message length if known beforehand
+    * @returns ConsensusCancelBlockResponse
+    * @throws {Error} If the payload is not a reader or valid buffer
+    * @throws {$protobuf.util.ProtocolError} If required fields are missing
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.decode")
+  @js.native
+  def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.decode")
+  @js.native
+  def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
+  
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
+  /**
+    * Decodes a ConsensusCancelBlockResponse message from the specified reader or buffer, length delimited.
+    * @param reader Reader or buffer to decode from
+    * @returns ConsensusCancelBlockResponse
+    * @throws {Error} If the payload is not a reader or valid buffer
+    * @throws {$protobuf.util.ProtocolError} If required fields are missing
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
+  
+  /**
+    * Encodes the specified ConsensusCancelBlockResponse message. Does not implicitly {@link ConsensusCancelBlockResponse.verify|verify} messages.
+    * @param message ConsensusCancelBlockResponse message or plain object to encode
+    * @param [writer] Writer to encode to
+    * @returns Writer
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.encode")
+  @js.native
+  def encode(message: IConsensusCancelBlockResponse): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.encode")
+  @js.native
+  def encode(message: IConsensusCancelBlockResponse, writer: Writer): Writer = js.native
+  
+  /**
+    * Encodes the specified ConsensusCancelBlockResponse message, length delimited. Does not implicitly {@link ConsensusCancelBlockResponse.verify|verify} messages.
+    * @param message ConsensusCancelBlockResponse message or plain object to encode
+    * @param [writer] Writer to encode to
+    * @returns Writer
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.encodeDelimited")
+  @js.native
+  def encodeDelimited(message: IConsensusCancelBlockResponse): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.encodeDelimited")
+  @js.native
+  def encodeDelimited(message: IConsensusCancelBlockResponse, writer: Writer): Writer = js.native
+  
+  /**
+    * Creates a ConsensusCancelBlockResponse message from a plain object. Also converts values to their respective internal types.
+    * @param object Plain object
+    * @returns ConsensusCancelBlockResponse
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.fromObject")
+  @js.native
+  def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse = js.native
+  
+  /**
+    * Creates a plain object from a ConsensusCancelBlockResponse message. Also converts values to other types if specified.
+    * @param message ConsensusCancelBlockResponse
+    * @param [options] Conversion options
+    * @returns Plain object
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.toObject")
+  @js.native
+  def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.toObject")
+  @js.native
+  def toObject(
+    message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusCancelBlockResponse,
+    options: IConversionOptions
+  ): StringDictionary[js.Any] = js.native
+  
+  /**
+    * Verifies a ConsensusCancelBlockResponse message.
+    * @param message Plain object to verify
+    * @returns `null` if valid, otherwise the reason why it is not
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusCancelBlockResponse.verify")
+  @js.native
+  def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

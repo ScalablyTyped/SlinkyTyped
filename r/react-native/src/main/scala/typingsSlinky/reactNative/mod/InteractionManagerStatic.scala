@@ -2,12 +2,13 @@ package typingsSlinky.reactNative.mod
 
 import typingsSlinky.reactNative.anon.Cancel
 import typingsSlinky.reactNative.anon.InteractionComplete
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InteractionManagerStatic extends js.Object {
+trait InteractionManagerStatic extends StObject {
   
   var Events: InteractionComplete = js.native
   

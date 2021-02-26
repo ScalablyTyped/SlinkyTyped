@@ -14,15 +14,38 @@ import typingsSlinky.semanticUiReact.segmentSegmentMod.SegmentSizeProp
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.very
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Segment {
   
+  object Group {
+    
+    @JSImport("semantic-ui-react", "Segment.Group")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Group.type): SharedBuilder_SegmentGroupProps1911915083 = new SharedBuilder_SegmentGroupProps1911915083(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: SegmentGroupProps): SharedBuilder_SegmentGroupProps1911915083 = new SharedBuilder_SegmentGroupProps1911915083(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Inline {
+    
+    @JSImport("semantic-ui-react", "Segment.Inline")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Inline.type): SharedBuilder_SegmentInlineProps1003700032 = new SharedBuilder_SegmentInlineProps1003700032(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: SegmentInlineProps): SharedBuilder_SegmentInlineProps1003700032 = new SharedBuilder_SegmentInlineProps1003700032(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Segment")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +77,10 @@ object Segment {
     def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -102,29 +125,7 @@ object Segment {
     def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SegmentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Segment.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Inline {
-    
-    @JSImport("semantic-ui-react", "Segment.Inline")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: SegmentInlineProps): SharedBuilder_SegmentInlineProps1003700032 = new SharedBuilder_SegmentInlineProps1003700032(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Inline.type): SharedBuilder_SegmentInlineProps1003700032 = new SharedBuilder_SegmentInlineProps1003700032(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Group {
-    
-    @JSImport("semantic-ui-react", "Segment.Group")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: SegmentGroupProps): SharedBuilder_SegmentGroupProps1911915083 = new SharedBuilder_SegmentGroupProps1911915083(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Group.type): SharedBuilder_SegmentGroupProps1911915083 = new SharedBuilder_SegmentGroupProps1911915083(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: SegmentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

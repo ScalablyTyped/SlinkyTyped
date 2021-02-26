@@ -10,6 +10,7 @@ import typingsSlinky.reactDateRange.mod.DateInputType
 import typingsSlinky.reactDateRange.mod.LanguageType
 import typingsSlinky.reactDateRange.mod.OnChangeProps
 import typingsSlinky.reactDateRange.mod.Range
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,10 +39,10 @@ class SharedBuilder_DateRangeProps_475329904[R <: js.Object] (val args: js.Array
   def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def disabledDatesVarargs(value: js.Date*): this.type = set("disabledDates", js.Array(value :_*))
+  def disabledDates(value: js.Array[js.Date]): this.type = set("disabledDates", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def disabledDates(value: js.Array[js.Date]): this.type = set("disabledDates", value.asInstanceOf[js.Any])
+  def disabledDatesVarargs(value: js.Date*): this.type = set("disabledDates", js.Array(value :_*))
   
   @scala.inline
   def editableDateInputs(value: Boolean): this.type = set("editableDateInputs", value.asInstanceOf[js.Any])
@@ -68,22 +69,22 @@ class SharedBuilder_DateRangeProps_475329904[R <: js.Object] (val args: js.Array
   def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def maxDate(value: DateInputType): this.type = set("maxDate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
   
   @scala.inline
   def maxDateFunction1(value: /* now */ js.Date => AnyDate): this.type = set("maxDate", js.Any.fromFunction1(value))
   
   @scala.inline
-  def maxDate(value: DateInputType): this.type = set("maxDate", value.asInstanceOf[js.Any])
+  def minDate(value: DateInputType): this.type = set("minDate", value.asInstanceOf[js.Any])
   
   @scala.inline
   def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
   
   @scala.inline
   def minDateFunction1(value: /* now */ js.Date => AnyDate): this.type = set("minDate", js.Any.fromFunction1(value))
-  
-  @scala.inline
-  def minDate(value: DateInputType): this.type = set("minDate", value.asInstanceOf[js.Any])
   
   @scala.inline
   def monthDisplayFormat(value: String): this.type = set("monthDisplayFormat", value.asInstanceOf[js.Any])
@@ -101,10 +102,10 @@ class SharedBuilder_DateRangeProps_475329904[R <: js.Object] (val args: js.Array
   def onInit(value: /* range */ Range => Unit): this.type = set("onInit", js.Any.fromFunction1(value))
   
   @scala.inline
-  def rangeColorsVarargs(value: String*): this.type = set("rangeColors", js.Array(value :_*))
+  def rangeColors(value: js.Array[String]): this.type = set("rangeColors", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def rangeColors(value: js.Array[String]): this.type = set("rangeColors", value.asInstanceOf[js.Any])
+  def rangeColorsVarargs(value: String*): this.type = set("rangeColors", js.Array(value :_*))
   
   @scala.inline
   def rangedCalendars(value: Boolean): this.type = set("rangedCalendars", value.asInstanceOf[js.Any])
@@ -128,10 +129,10 @@ class SharedBuilder_DateRangeProps_475329904[R <: js.Object] (val args: js.Array
   def shownDate(value: js.Date): this.type = set("shownDate", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def specialDaysVarargs(value: DateContainerType*): this.type = set("specialDays", js.Array(value :_*))
+  def specialDays(value: js.Array[DateContainerType]): this.type = set("specialDays", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def specialDays(value: js.Array[DateContainerType]): this.type = set("specialDays", value.asInstanceOf[js.Any])
+  def specialDaysVarargs(value: DateContainerType*): this.type = set("specialDays", js.Array(value :_*))
   
   @scala.inline
   def startDate(value: js.Date): this.type = set("startDate", value.asInstanceOf[js.Any])

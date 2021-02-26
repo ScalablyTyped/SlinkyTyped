@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientArtifactregistry.anon.Fields
 import typingsSlinky.maximMazurokGapiClientArtifactregistry.anon.Key
 import typingsSlinky.maximMazurokGapiClientArtifactregistry.anon.Name
 import typingsSlinky.maximMazurokGapiClientArtifactregistry.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TagsResource extends js.Object {
+trait TagsResource extends StObject {
   
   /** Creates a tag. */
   def create(request: Fields): Request[Tag] = js.native

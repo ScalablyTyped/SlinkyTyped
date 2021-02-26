@@ -11,8 +11,8 @@ Newline character converter
 | Full name          | eol |
 | Keywords           | eol, lf, cr, crlf, newline, newlines, convert, converter, conversion, character, formatting, format, string, javascript, typescript, ender, file |
 | # releases         | 0 |
-| # dependents       | 70 |
-| # downloads        | 12171078 |
+| # dependents       | 102 |
+| # downloads        | 25575829 |
 | # stars            | 2 |
 
 ## Links

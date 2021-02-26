@@ -6,18 +6,16 @@ import typingsSlinky.jupyterlabDocregistry.defaultMod.DocumentWidget.IOptionsOpt
 import typingsSlinky.jupyterlabDocregistry.mod.ABCWidgetFactory
 import typingsSlinky.jupyterlabDocregistry.mod.DocumentWidget
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IModel
+import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IWidgetFactoryOptions
 import typingsSlinky.luminoCoreutils.mod.Token
 import typingsSlinky.luminoSignaling.mod.ISignal
 import typingsSlinky.luminoWidgets.mod.Widget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/htmlviewer", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
-  
-  val IHTMLViewerTracker: Token[typingsSlinky.jupyterlabHtmlviewer.mod.IHTMLViewerTracker] = js.native
+object mod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.luminoDisposable.mod.IDisposable because Already inherited
@@ -25,7 +23,8 @@ object mod extends js.Object {
   - typingsSlinky.luminoDisposable.mod.IObservableDisposable because Already inherited
   - typingsSlinky.luminoWidgets.widgetMod.Widget because Already inherited
   - typingsSlinky.luminoWidgets.mod.Widget because Already inherited
-  - typingsSlinky.jupyterlabDocregistry.registryMod.IDocumentWidget because var conflicts: _disposed, _flags, _layout, _parent, content, id, layout, parent, revealed, toolbar. Inlined  */ @js.native
+  - typingsSlinky.jupyterlabDocregistry.registryMod.IDocumentWidget because var conflicts: _disposed, _flags, _layout, _parent, content, id, layout, parent, revealed, toolbar. Inlined  */ @JSImport("@jupyterlab/htmlviewer", "HTMLViewer")
+  @js.native
   class HTMLViewer protected () extends DocumentWidget[IFrame, IModel] {
     /**
       * Create a new widget for rendering HTML.
@@ -72,8 +71,17 @@ object mod extends js.Object {
     def trusted_=(value: Boolean): Unit = js.native
   }
   
+  @JSImport("@jupyterlab/htmlviewer", "HTMLViewerFactory")
   @js.native
-  class HTMLViewerFactory () extends ABCWidgetFactory[HTMLViewer, IModel]
+  class HTMLViewerFactory protected () extends ABCWidgetFactory[HTMLViewer, IModel] {
+    /**
+      * Construct a new `ABCWidgetFactory`.
+      */
+    def this(options: IWidgetFactoryOptions[HTMLViewer]) = this()
+  }
   
+  @JSImport("@jupyterlab/htmlviewer", "IHTMLViewerTracker")
+  @js.native
+  val IHTMLViewerTracker: Token[typingsSlinky.jupyterlabHtmlviewer.mod.IHTMLViewerTracker] = js.native
   type IHTMLViewerTracker = IWidgetTracker[HTMLViewer]
 }

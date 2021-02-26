@@ -16,12 +16,13 @@ import typingsSlinky.std.stdStrings.rejectionhandled
 import typingsSlinky.std.stdStrings.storage
 import typingsSlinky.std.stdStrings.unhandledrejection
 import typingsSlinky.std.stdStrings.unload
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WindowEventHandlers extends js.Object {
+trait WindowEventHandlers extends StObject {
   
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
@@ -336,12 +337,12 @@ trait WindowEventHandlers extends js.Object {
   var onunload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   
   def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
-  def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_afterprint(
     `type`: afterprint,
@@ -351,13 +352,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_afterprint(
     `type`: afterprint,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_afterprint(
     `type`: afterprint,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_beforeprint(
@@ -368,13 +369,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_beforeprint(
     `type`: beforeprint,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_beforeprint(
     `type`: beforeprint,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_beforeunload(
@@ -385,13 +386,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_beforeunload(
     `type`: beforeunload,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_beforeunload(
     `type`: beforeunload,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_hashchange(
@@ -402,13 +403,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_hashchange(
     `type`: hashchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.HashChangeEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_hashchange(
     `type`: hashchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.HashChangeEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_languagechange(
@@ -419,13 +420,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_languagechange(
     `type`: languagechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_languagechange(
     `type`: languagechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
@@ -436,13 +437,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_messageerror(
@@ -453,13 +454,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_messageerror(
     `type`: messageerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_messageerror(
     `type`: messageerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_offline(
@@ -470,13 +471,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_offline(
     `type`: offline,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_offline(
     `type`: offline,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_online(
@@ -487,13 +488,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_online(
     `type`: online,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_online(
     `type`: online,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pagehide(
@@ -504,13 +505,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_pagehide(
     `type`: pagehide,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PageTransitionEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pagehide(
     `type`: pagehide,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PageTransitionEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pageshow(
@@ -521,13 +522,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_pageshow(
     `type`: pageshow,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PageTransitionEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pageshow(
     `type`: pageshow,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PageTransitionEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_popstate(
@@ -538,13 +539,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_popstate(
     `type`: popstate,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.PopStateEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_popstate(
     `type`: popstate,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.PopStateEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_rejectionhandled(
@@ -555,13 +556,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_rejectionhandled(
     `type`: rejectionhandled,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PromiseRejectionEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_rejectionhandled(
     `type`: rejectionhandled,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PromiseRejectionEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_storage(
@@ -572,13 +573,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_storage(
     `type`: storage,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.StorageEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_storage(
     `type`: storage,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.StorageEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_unhandledrejection(
@@ -589,13 +590,13 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_unhandledrejection(
     `type`: unhandledrejection,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PromiseRejectionEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_unhandledrejection(
     `type`: unhandledrejection,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PromiseRejectionEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_unload(
@@ -606,12 +607,12 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_unload(
     `type`: unload,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_unload(
     `type`: unload,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
 }

@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientDfareporting.gapi.client.dfareportin
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Accesstoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AccountActiveAdSummariesResource extends js.Object {
+trait AccountActiveAdSummariesResource extends StObject {
   
   /** Gets the account's active ad summary by account ID. */
   def get(): Request[AccountActiveAdSummary] = js.native

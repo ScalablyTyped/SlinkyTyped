@@ -11,8 +11,8 @@ Produce URLs to test HTTP servers with ephemeral ports
 | Full name          | test-listen |
 | Keywords           | - |
 | # releases         | 0 |
-| # dependents       | 7 |
-| # downloads        | 195916 |
+| # dependents       | 9 |
+| # downloads        | 685413 |
 | # stars            | 0 |
 
 ## Links

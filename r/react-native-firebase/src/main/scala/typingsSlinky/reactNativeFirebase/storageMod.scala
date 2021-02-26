@@ -1,12 +1,11 @@
 package typingsSlinky.reactNativeFirebase
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-firebase/storage", JSImport.Namespace)
-@js.native
-object storageMod extends js.Object {
+object storageMod {
   
   type DownloadTaskSnapshot = typingsSlinky.reactNativeFirebase.mod.RNFirebase.storage.DownloadTaskSnapshot
   

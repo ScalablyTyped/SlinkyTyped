@@ -14,6 +14,7 @@ import typingsSlinky.reactDaterangePicker.mod.StateDefinitions
 import typingsSlinky.reactDaterangePicker.mod.default
 import typingsSlinky.reactDaterangePicker.reactDaterangePickerStrings.range
 import typingsSlinky.reactDaterangePicker.reactDaterangePickerStrings.single
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ object ReactDaterangePicker {
     
     @JSImport("react-daterange-picker", JSImport.Default)
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -41,10 +42,10 @@ object ReactDaterangePicker {
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def dateStatesVarargs(value: DateState*): this.type = set("dateStates", js.Array(value :_*))
+      def dateStates(value: js.Array[DateState]): this.type = set("dateStates", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def dateStates(value: js.Array[DateState]): this.type = set("dateStates", value.asInstanceOf[js.Any])
+      def dateStatesVarargs(value: DateState*): this.type = set("dateStates", js.Array(value :_*))
       
       @scala.inline
       def defaultState(value: String): this.type = set("defaultState", value.asInstanceOf[js.Any])
@@ -98,13 +99,13 @@ object ReactDaterangePicker {
       def onSelectStart(value: /* value */ MomentRangeNoneinpundefin => Unit): this.type = set("onSelectStart", js.Any.fromFunction1(value))
       
       @scala.inline
-      def paginationArrowComponentFunctionComponent(value: ReactComponentClass[PaginationArrowProps[js.Object]]): this.type = set("paginationArrowComponent", value.asInstanceOf[js.Any])
+      def paginationArrowComponent(value: ReactComponentClass[PaginationArrowProps[js.Object]]): this.type = set("paginationArrowComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def paginationArrowComponentComponentClass(value: ReactComponentClass[PaginationArrowProps[js.Object]]): this.type = set("paginationArrowComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def paginationArrowComponent(value: ReactComponentClass[PaginationArrowProps[js.Object]]): this.type = set("paginationArrowComponent", value.asInstanceOf[js.Any])
+      def paginationArrowComponentFunctionComponent(value: ReactComponentClass[PaginationArrowProps[js.Object]]): this.type = set("paginationArrowComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def selectedLabel(value: String): this.type = set("selectedLabel", value.asInstanceOf[js.Any])
@@ -125,16 +126,16 @@ object ReactDaterangePicker {
       def value(value: MomentRangeNoneinpundefin | DateRange | Moment): this.type = set("value", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactDaterangePicker.mod.RangeProps[DateRangePicker]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: RangeProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: typingsSlinky.reactDaterangePicker.mod.RangeProps[DateRangePicker]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object SingleProps {
     
     @JSImport("react-daterange-picker", JSImport.Default)
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -151,10 +152,10 @@ object ReactDaterangePicker {
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def dateStatesVarargs(value: DateState*): this.type = set("dateStates", js.Array(value :_*))
+      def dateStates(value: js.Array[DateState]): this.type = set("dateStates", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def dateStates(value: js.Array[DateState]): this.type = set("dateStates", value.asInstanceOf[js.Any])
+      def dateStatesVarargs(value: DateState*): this.type = set("dateStates", js.Array(value :_*))
       
       @scala.inline
       def defaultState(value: String): this.type = set("defaultState", value.asInstanceOf[js.Any])
@@ -208,13 +209,13 @@ object ReactDaterangePicker {
       def onSelectStart(value: /* value */ MomentRangeNoneinpundefin => Unit): this.type = set("onSelectStart", js.Any.fromFunction1(value))
       
       @scala.inline
-      def paginationArrowComponentFunctionComponent(value: ReactComponentClass[PaginationArrowProps[js.Object]]): this.type = set("paginationArrowComponent", value.asInstanceOf[js.Any])
+      def paginationArrowComponent(value: ReactComponentClass[PaginationArrowProps[js.Object]]): this.type = set("paginationArrowComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def paginationArrowComponentComponentClass(value: ReactComponentClass[PaginationArrowProps[js.Object]]): this.type = set("paginationArrowComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def paginationArrowComponent(value: ReactComponentClass[PaginationArrowProps[js.Object]]): this.type = set("paginationArrowComponent", value.asInstanceOf[js.Any])
+      def paginationArrowComponentFunctionComponent(value: ReactComponentClass[PaginationArrowProps[js.Object]]): this.type = set("paginationArrowComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def selectedLabel(value: String): this.type = set("selectedLabel", value.asInstanceOf[js.Any])
@@ -235,8 +236,8 @@ object ReactDaterangePicker {
       def value(value: MomentRangeNoneinpundefin | DateRange | Moment): this.type = set("value", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactDaterangePicker.mod.SingleProps[DateRangePicker]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: SingleProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: typingsSlinky.reactDaterangePicker.mod.SingleProps[DateRangePicker]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
 }

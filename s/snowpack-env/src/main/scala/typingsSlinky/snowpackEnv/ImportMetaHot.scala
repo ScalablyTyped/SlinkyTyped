@@ -2,12 +2,13 @@ package typingsSlinky.snowpackEnv
 
 import typingsSlinky.snowpackEnv.anon.Deps
 import typingsSlinky.snowpackEnv.anon.Module
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ImportMetaHot extends js.Object {
+trait ImportMetaHot extends StObject {
   
   /** Accept the HMR update. */
   def accept(): Unit = js.native

@@ -10,9 +10,9 @@ Promise-based request library for browser using xhr.
 | ------------------ | :-------------: |
 | Full name          | @algolia/requester-browser-xhr |
 | Keywords           | - |
-| # releases         | 28 |
-| # dependents       | 4 |
-| # downloads        | 1736162 |
+| # releases         | 38 |
+| # dependents       | 5 |
+| # downloads        | 6737957 |
 | # stars            | 0 |
 
 ## Links

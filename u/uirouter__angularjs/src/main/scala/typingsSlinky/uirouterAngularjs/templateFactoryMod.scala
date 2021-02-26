@@ -7,14 +7,14 @@ import typingsSlinky.uirouterAngularjs.interfaceMod.TemplateFactoryProvider
 import typingsSlinky.uirouterCore.commonCommonMod.IInjectable
 import typingsSlinky.uirouterCore.mod.ResolveContext
 import typingsSlinky.uirouterCore.paramsInterfaceMod.RawParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/angularjs/lib/templateFactory", JSImport.Namespace)
-@js.native
-object templateFactoryMod extends js.Object {
+object templateFactoryMod {
   
+  @JSImport("@uirouter/angularjs/lib/templateFactory", "TemplateFactory")
   @js.native
   class TemplateFactory () extends TemplateFactoryProvider {
     

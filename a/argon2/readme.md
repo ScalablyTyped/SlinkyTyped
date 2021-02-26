@@ -10,9 +10,9 @@ An Argon2 library for Node
 | ------------------ | :-------------: |
 | Full name          | argon2 |
 | Keywords           | argon2, crypto, encryption, hashing, password |
-| # releases         | 22 |
-| # dependents       | 57 |
-| # downloads        | 562431 |
+| # releases         | 14 |
+| # dependents       | 81 |
+| # downloads        | 1683493 |
 | # stars            | 9 |
 
 ## Links

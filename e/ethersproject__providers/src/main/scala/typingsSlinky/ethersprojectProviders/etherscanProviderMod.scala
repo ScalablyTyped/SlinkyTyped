@@ -4,14 +4,14 @@ import typingsSlinky.ethersprojectAbstractProvider.mod.BlockTag
 import typingsSlinky.ethersprojectAbstractProvider.mod.TransactionResponse
 import typingsSlinky.ethersprojectNetworks.typesMod.Networkish
 import typingsSlinky.ethersprojectProviders.baseProviderMod.BaseProvider
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ethersproject/providers/lib/etherscan-provider", JSImport.Namespace)
-@js.native
-object etherscanProviderMod extends js.Object {
+object etherscanProviderMod {
   
+  @JSImport("@ethersproject/providers/lib/etherscan-provider", "EtherscanProvider")
   @js.native
   class EtherscanProvider () extends BaseProvider {
     def this(network: Networkish) = this()

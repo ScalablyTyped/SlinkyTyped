@@ -3,6 +3,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.presentation
 import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XIndexContainer
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XNamed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

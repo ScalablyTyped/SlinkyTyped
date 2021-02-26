@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,19 +33,27 @@ class Location () extends ILocation {
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-/* static members */
-@JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location")
-@js.native
-object Location extends js.Object {
+object Location {
   
   /**
     * Creates a new Location instance using the specified properties.
     * @param [properties] Properties to set
     * @returns Location instance
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.create")
+  @js.native
   def create(): Location = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.create")
+  @js.native
   def create(properties: ILocation): Location = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): Location = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Location = js.native
   /**
     * Decodes a Location message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -53,11 +62,17 @@ object Location extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.decode")
+  @js.native
   def decode(reader: Reader): Location = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.decode")
+  @js.native
   def decode(reader: Reader, length: Double): Location = js.native
-  def decode(reader: js.typedarray.Uint8Array): Location = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): Location = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Location = js.native
   /**
     * Decodes a Location message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -65,8 +80,10 @@ object Location extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): Location = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): Location = js.native
   
   /**
     * Encodes the specified Location message. Does not implicitly {@link io.cucumber.messages.Location.verify|verify} messages.
@@ -74,7 +91,12 @@ object Location extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.encode")
+  @js.native
   def encode(message: ILocation): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.encode")
+  @js.native
   def encode(message: ILocation, writer: Writer): Writer = js.native
   
   /**
@@ -83,7 +105,12 @@ object Location extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ILocation): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ILocation, writer: Writer): Writer = js.native
   
   /**
@@ -91,6 +118,9 @@ object Location extends js.Object {
     * @param object Plain object
     * @returns Location
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): Location = js.native
   
   /**
@@ -99,7 +129,12 @@ object Location extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.toObject")
+  @js.native
   def toObject(message: Location): StringDictionary[js.Any] = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.toObject")
+  @js.native
   def toObject(message: Location, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -107,5 +142,8 @@ object Location extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Location.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

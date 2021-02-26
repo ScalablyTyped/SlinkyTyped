@@ -20,6 +20,7 @@ import typingsSlinky.activexOutlook.activexOutlookNumbers.`4`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`5`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`6`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -46,7 +47,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOutlook.activexOutlookNumbers.`28`
   - typingsSlinky.activexOutlook.activexOutlookNumbers.`18`
 */
-trait OlDefaultFolders extends js.Object
+trait OlDefaultFolders extends StObject
 object OlDefaultFolders {
   
   @scala.inline

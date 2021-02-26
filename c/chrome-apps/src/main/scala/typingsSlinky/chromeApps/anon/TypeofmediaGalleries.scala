@@ -10,12 +10,13 @@ import typingsSlinky.chromeApps.chrome.mediaGalleries.Metadata
 import typingsSlinky.chromeApps.chrome.mediaGalleries.MetadataOptions
 import typingsSlinky.chromeApps.chrome.mediaGalleries.ScanProgressEventArgs
 import typingsSlinky.filesystem.FileSystem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofmediaGalleries extends js.Object {
+trait TypeofmediaGalleries extends StObject {
   
   /**
     * Adds a gallery watch for the gallery with the specified gallery ID.

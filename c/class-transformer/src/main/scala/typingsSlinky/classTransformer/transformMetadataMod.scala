@@ -2,16 +2,16 @@ package typingsSlinky.classTransformer
 
 import typingsSlinky.classTransformer.exposeExcludeOptionsMod.TransformOptions
 import typingsSlinky.classTransformer.transformationTypeEnumMod.TransformationType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("class-transformer/metadata/TransformMetadata", JSImport.Namespace)
-@js.native
-object transformMetadataMod extends js.Object {
+object transformMetadataMod {
   
+  @JSImport("class-transformer/metadata/TransformMetadata", "TransformMetadata")
   @js.native
-  class TransformMetadata protected () extends js.Object {
+  class TransformMetadata protected () extends StObject {
     def this(
       target: js.Function,
       propertyName: String,

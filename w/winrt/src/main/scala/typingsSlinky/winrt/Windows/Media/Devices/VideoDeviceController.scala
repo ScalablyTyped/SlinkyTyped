@@ -6,6 +6,7 @@ import typingsSlinky.winrt.Windows.Media.Capture.MediaStreamType
 import typingsSlinky.winrt.Windows.Media.Capture.PowerlineFrequency
 import typingsSlinky.winrt.Windows.Media.MediaProperties.IMediaEncodingProperties
 import typingsSlinky.winrt.anon.Value
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

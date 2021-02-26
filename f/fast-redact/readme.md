@@ -10,9 +10,9 @@ very fast object redaction
 | ------------------ | :-------------: |
 | Full name          | fast-redact |
 | Keywords           | redact, censor, performance, performant, gdpr, fast, speed, serialize, stringify |
-| # releases         | 28 |
-| # dependents       | 8 |
-| # downloads        | 14102902 |
+| # releases         | 7 |
+| # dependents       | 9 |
+| # downloads        | 32003128 |
 | # stars            | 0 |
 
 ## Links

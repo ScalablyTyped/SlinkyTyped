@@ -4,6 +4,7 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.char
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.keyDown
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.keyUp
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.rawKeyDown
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.rawKeyDown
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.char
 */
-trait DispatchKeyEventRequestType extends js.Object
+trait DispatchKeyEventRequestType extends StObject
 object DispatchKeyEventRequestType {
   
   @scala.inline

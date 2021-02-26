@@ -10,6 +10,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XContent
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XContentEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XContentIdentifier
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

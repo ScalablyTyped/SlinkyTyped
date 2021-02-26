@@ -29,6 +29,7 @@ import typingsSlinky.lokijs.lokijsStrings.`parse-stringify`
 import typingsSlinky.lokijs.lokijsStrings.`shallow-assign`
 import typingsSlinky.lokijs.lokijsStrings.`shallow-recurse-objects`
 import typingsSlinky.lokijs.lokijsStrings.shallow
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

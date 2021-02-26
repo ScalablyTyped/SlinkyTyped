@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/action/alarm-add", JSImport.Namespace)
-@js.native
-object alarmAddMod extends js.Object {
+object alarmAddMod {
   
+  @JSImport("material-ui/svg-icons/action/alarm-add", JSImport.Default)
+  @js.native
+  class default () extends ActionAlarmAdd
+  
+  @JSImport("material-ui/svg-icons/action/alarm-add", "ActionAlarmAdd")
   @js.native
   class ActionAlarmAdd ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

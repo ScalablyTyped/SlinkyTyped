@@ -9,13 +9,14 @@ import typingsSlinky.jqueryAjaxfile.anon.Instance
 import typingsSlinky.jqueryAjaxfile.anon.InstantiableInstance
 import typingsSlinky.jqueryAjaxfile.anon.InstantiableKnockoutTemplateEngine
 import typingsSlinky.jqueryAjaxfile.anon.ReadValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /////////////////////////////////
 @js.native
-trait KnockoutStatic extends js.Object {
+trait KnockoutStatic extends StObject {
   
   def applyBindingAccessorsToNode(
     node: Node,

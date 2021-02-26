@@ -9,9 +9,9 @@ RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS
 | ------------------ | :-------------: |
 | Full name          | rss |
 | Keywords           | rss, xml, atom, podcasts, ghost, feed, feed builder, rss feed |
-| # releases         | 1 |
-| # dependents       | 177 |
-| # downloads        | 2475056 |
+| # releases         | 0 |
+| # dependents       | 198 |
+| # downloads        | 3444302 |
 | # stars            | 30 |
 
 ## Links

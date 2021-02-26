@@ -3,14 +3,14 @@ package typingsSlinky.signalsJs
 import typingsSlinky.signalsJs.ioncesignalMod.IOnceSignal
 import typingsSlinky.signalsJs.islotMod.ISlot
 import typingsSlinky.signalsJs.slotListMod.SlotList
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("signals.js/lib/org/osflash/signals/OnceSignal", JSImport.Namespace)
-@js.native
-object onceSignalMod extends js.Object {
+object onceSignalMod {
   
+  @JSImport("signals.js/lib/org/osflash/signals/OnceSignal", "OnceSignal")
   @js.native
   class OnceSignal protected () extends IOnceSignal {
     /**

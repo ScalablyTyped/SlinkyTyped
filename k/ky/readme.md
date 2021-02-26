@@ -10,9 +10,9 @@ Tiny and elegant HTTP client based on the browser Fetch API
 | ------------------ | :-------------: |
 | Full name          | ky |
 | Keywords           | fetch, request, requests, http, https, fetching, get, url, curl, wget, net, network, ajax, api, rest, xhr, browser, got, axios, node-fetch |
-| # releases         | 23 |
-| # dependents       | 53 |
-| # downloads        | 1645031 |
+| # releases         | 25 |
+| # dependents       | 132 |
+| # downloads        | 9838456 |
 | # stars            | 3 |
 
 ## Links

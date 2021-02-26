@@ -1,11 +1,12 @@
 package typingsSlinky.winrt.Windows.Storage.Streams
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IDataReader extends js.Object {
+trait IDataReader extends StObject {
   
   var byteOrder: ByteOrder = js.native
   

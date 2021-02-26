@@ -11,8 +11,8 @@ Lumino DOM Utilities
 | Full name          | @lumino/domutils |
 | Keywords           | - |
 | # releases         | 11 |
-| # dependents       | 20 |
-| # downloads        | 451904 |
+| # dependents       | 29 |
+| # downloads        | 1333921 |
 | # stars            | 0 |
 
 ## Links

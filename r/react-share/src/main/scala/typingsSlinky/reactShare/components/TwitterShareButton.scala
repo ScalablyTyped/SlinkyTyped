@@ -9,15 +9,22 @@ import typingsSlinky.react.mod.StyleHTMLAttributes
 import typingsSlinky.reactShare.anon.CommonShareButtonPropstit
 import typingsSlinky.reactShare.reactShareStrings.screenCenter
 import typingsSlinky.reactShare.reactShareStrings.windowCenter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TwitterShareButton {
   
+  @scala.inline
+  def apply(url: String): Builder = {
+    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropstit]))
+  }
+  
   @JSImport("react-share", "TwitterShareButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +47,10 @@ object TwitterShareButton {
     def disabledStyle(value: StyleHTMLAttributes[HTMLDivElement]): this.type = set("disabledStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def hashtagsVarargs(value: String*): this.type = set("hashtags", js.Array(value :_*))
+    def hashtags(value: js.Array[String]): this.type = set("hashtags", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def hashtags(value: js.Array[String]): this.type = set("hashtags", value.asInstanceOf[js.Any])
+    def hashtagsVarargs(value: String*): this.type = set("hashtags", js.Array(value :_*))
     
     @scala.inline
     def onClick(value: /* link */ String => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
@@ -80,10 +87,4 @@ object TwitterShareButton {
   }
   
   def withProps(p: CommonShareButtonPropstit): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(url: String): Builder = {
-    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropstit]))
-  }
 }

@@ -10,9 +10,9 @@ An OpenAPI framework for any web framework
 | ------------------ | :-------------: |
 | Full name          | openapi-framework |
 | Keywords           | openapi, swagger, framework |
-| # releases         | 52 |
-| # dependents       | 2 |
-| # downloads        | 377348 |
+| # releases         | 18 |
+| # dependents       | 4 |
+| # downloads        | 736349 |
 | # stars            | 0 |
 
 ## Links

@@ -90,6 +90,7 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -294,13 +295,13 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   def comboBoxOptionStyles(value: PartialIComboBoxOptionSty): this.type = set("comboBoxOptionStyles", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def componentRef(value: IRefObject[IComboBox]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def componentRefFunction1(value: /* ref */ IComboBox | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
   
   @scala.inline
   def componentRefRefObject(value: ReactRef[IComboBox]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def componentRef(value: IRefObject[IComboBox]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -318,19 +319,19 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultSelectedKeyVarargs(value: (Double | String)*): this.type = set("defaultSelectedKey", js.Array(value :_*))
-  
-  @scala.inline
   def defaultSelectedKey(value: String | Double | (js.Array[Double | String])): this.type = set("defaultSelectedKey", value.asInstanceOf[js.Any])
   
   @scala.inline
   def defaultSelectedKeyNull: this.type = set("defaultSelectedKey", null)
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultSelectedKeyVarargs(value: (Double | String)*): this.type = set("defaultSelectedKey", js.Array(value :_*))
   
   @scala.inline
   def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -762,13 +763,13 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def selectedKeyVarargs(value: (Double | String)*): this.type = set("selectedKey", js.Array(value :_*))
-  
-  @scala.inline
   def selectedKey(value: String | Double | (js.Array[Double | String])): this.type = set("selectedKey", value.asInstanceOf[js.Any])
   
   @scala.inline
   def selectedKeyNull: this.type = set("selectedKey", null)
+  
+  @scala.inline
+  def selectedKeyVarargs(value: (Double | String)*): this.type = set("selectedKey", js.Array(value :_*))
   
   @scala.inline
   def shouldRestoreFocus(value: Boolean): this.type = set("shouldRestoreFocus", value.asInstanceOf[js.Any])

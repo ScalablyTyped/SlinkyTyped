@@ -1,14 +1,14 @@
 package typingsSlinky.vsoNodeApi
 
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vso-node-api/handlers/personalaccesstoken", JSImport.Namespace)
-@js.native
-object personalaccesstokenMod extends js.Object {
+object personalaccesstokenMod {
   
+  @JSImport("vso-node-api/handlers/personalaccesstoken", "PersonalAccessTokenCredentialHandler")
   @js.native
   class PersonalAccessTokenCredentialHandler protected () extends IRequestHandler {
     def this(token: String) = this()

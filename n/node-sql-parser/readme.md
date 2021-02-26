@@ -9,10 +9,10 @@ simple node sql parser
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | node-sql-parser |
-| Keywords           | sql, parser, ast, nodejs |
-| # releases         | 51 |
-| # dependents       | 3 |
-| # downloads        | 26581 |
+| Keywords           | sql, sql-parser, parser, node, nodejs, node-parser, node-sql-parser, ast, sql-ast |
+| # releases         | 87 |
+| # dependents       | 22 |
+| # downloads        | 156125 |
 | # stars            | 0 |
 
 ## Links

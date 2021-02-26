@@ -16,15 +16,26 @@ import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.keyCodesMod.KeyCodes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Suggestions {
   
+  @scala.inline
+  def apply[T](
+    onRenderSuggestion: (T, ISuggestionItemProps[T]) => ReactElement,
+    onSuggestionClick: (js.UndefOr[SyntheticMouseEvent[HTMLElement]], js.UndefOr[js.Any], js.UndefOr[Double]) => Unit,
+    suggestions: js.Array[ISuggestionModel[T]]
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(onRenderSuggestion = js.Any.fromFunction2(onRenderSuggestion), onSuggestionClick = js.Any.fromFunction3(onSuggestionClick), suggestions = suggestions.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ISuggestionsProps[T]]))
+  }
+  
   @JSImport("office-ui-fabric-react", "Suggestions")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -35,13 +46,13 @@ object Suggestions {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[ISuggestions[T]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ ISuggestions[T] | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[ISuggestions[T]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[ISuggestions[T]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def createGenericItem(value: () => Unit): this.type = set("createGenericItem", js.Any.fromFunction0(value))
@@ -117,10 +128,10 @@ object Suggestions {
     def showRemoveButtons(value: Boolean): this.type = set("showRemoveButtons", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: _ => DeepPartial[_]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[_, _]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[_, _]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: _ => DeepPartial[_]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def suggestionsAvailableAlertText(value: String): this.type = set("suggestionsAvailableAlertText", value.asInstanceOf[js.Any])
@@ -145,14 +156,4 @@ object Suggestions {
   }
   
   def withProps[T](p: ISuggestionsProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](
-    onRenderSuggestion: (T, ISuggestionItemProps[T]) => ReactElement,
-    onSuggestionClick: (js.UndefOr[SyntheticMouseEvent[HTMLElement]], js.UndefOr[js.Any], js.UndefOr[Double]) => Unit,
-    suggestions: js.Array[ISuggestionModel[T]]
-  ): Builder[T] = {
-    val __props = js.Dynamic.literal(onRenderSuggestion = js.Any.fromFunction2(onRenderSuggestion), onSuggestionClick = js.Any.fromFunction3(onSuggestionClick), suggestions = suggestions.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ISuggestionsProps[T]]))
-  }
 }

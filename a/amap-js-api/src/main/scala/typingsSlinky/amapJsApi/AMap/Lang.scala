@@ -1,5 +1,6 @@
 package typingsSlinky.amapJsApi.AMap
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.amapJsApi.amapJsApiStrings.en
   - typingsSlinky.amapJsApi.amapJsApiStrings.zh_en
 */
-trait Lang extends js.Object
+trait Lang extends StObject
 object Lang {
   
   @scala.inline

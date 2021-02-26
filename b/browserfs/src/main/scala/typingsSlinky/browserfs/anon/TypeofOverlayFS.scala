@@ -8,6 +8,7 @@ import typingsSlinky.browserfs.fileSystemMod.FileSystemOptions
 import typingsSlinky.browserfs.overlayFSMod.OverlayFS
 import typingsSlinky.browserfs.overlayFSMod.OverlayFSOptions
 import typingsSlinky.browserfs.overlayFSMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

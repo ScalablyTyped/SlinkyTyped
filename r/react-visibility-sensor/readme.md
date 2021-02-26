@@ -10,9 +10,9 @@ Sensor component for React that notifies you when it goes in or out of the windo
 | ------------------ | :-------------: |
 | Full name          | react-visibility-sensor |
 | Keywords           | react, react-component, visibility |
-| # releases         | 17 |
-| # dependents       | 82 |
-| # downloads        | 4434220 |
+| # releases         | 4 |
+| # dependents       | 128 |
+| # downloads        | 9425673 |
 | # stars            | 4 |
 
 ## Links

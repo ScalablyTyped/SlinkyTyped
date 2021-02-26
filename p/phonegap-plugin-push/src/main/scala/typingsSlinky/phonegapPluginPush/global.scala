@@ -1,21 +1,24 @@
 package typingsSlinky.phonegapPluginPush
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.phonegapPluginPush.PhonegapPluginPush.InitOptions
 import typingsSlinky.phonegapPluginPush.PhonegapPluginPush.PushNotificationStatic
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
+  /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+  @JSGlobal("PushNotification")
   @js.native
   class PushNotification protected ()
     extends typingsSlinky.phonegapPluginPush.PhonegapPluginPush.PushNotification {
     def this(options: InitOptions) = this()
   }
+  @JSGlobal("PushNotification")
   @js.native
-  object PushNotification extends TopLevel[PushNotificationStatic]
+  def PushNotification: PushNotificationStatic = js.native
+  @scala.inline
+  def PushNotification_=(x: PushNotificationStatic): Unit = js.Dynamic.global.updateDynamic("PushNotification")(x.asInstanceOf[js.Any])
 }

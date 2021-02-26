@@ -23,15 +23,24 @@ import typingsSlinky.officeUiFabricReact.tagPickerTypesMod.ITag
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TagPickerBase {
   
+  @scala.inline
+  def apply(
+    onResolveSuggestions: (String, js.UndefOr[js.Array[ITag]]) => js.Array[ITag] | js.Thenable[js.Array[ITag]]
+  ): Builder = {
+    val __props = js.Dynamic.literal(onResolveSuggestions = js.Any.fromFunction2(onResolveSuggestions))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IBasePickerProps[ITag]]))
+  }
+  
   @JSImport("office-ui-fabric-react", "TagPickerBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,13 +51,13 @@ object TagPickerBase {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IBasePicker[ITag]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IBasePicker[ITag] | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IBasePicker[ITag]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IBasePicker[ITag]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def createGenericItem(
@@ -56,10 +65,10 @@ object TagPickerBase {
     ): this.type = set("createGenericItem", js.Any.fromFunction2(value))
     
     @scala.inline
-    def defaultSelectedItemsVarargs(value: ITag*): this.type = set("defaultSelectedItems", js.Array(value :_*))
+    def defaultSelectedItems(value: js.Array[ITag]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultSelectedItems(value: js.Array[ITag]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
+    def defaultSelectedItemsVarargs(value: ITag*): this.type = set("defaultSelectedItems", js.Array(value :_*))
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -138,34 +147,26 @@ object TagPickerBase {
     def resolveDelay(value: Double): this.type = set("resolveDelay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def searchingTextFunction1(value: /* props */ Input => String): this.type = set("searchingText", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def searchingText(value: (js.Function1[/* props */ Input, String]) | String): this.type = set("searchingText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedItemsVarargs(value: ITag*): this.type = set("selectedItems", js.Array(value :_*))
+    def searchingTextFunction1(value: /* props */ Input => String): this.type = set("searchingText", js.Any.fromFunction1(value))
     
     @scala.inline
     def selectedItems(value: js.Array[ITag]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IBasePickerStyleProps => DeepPartial[IBasePickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def selectedItemsVarargs(value: ITag*): this.type = set("selectedItems", js.Array(value :_*))
     
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IBasePickerStyleProps, IBasePickerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def stylesFunction1(value: IBasePickerStyleProps => DeepPartial[IBasePickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IBasePickerProps[ITag]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    onResolveSuggestions: (String, js.UndefOr[js.Array[ITag]]) => js.Array[ITag] | js.Thenable[js.Array[ITag]]
-  ): Builder = {
-    val __props = js.Dynamic.literal(onResolveSuggestions = js.Any.fromFunction2(onResolveSuggestions))
-    new Builder(js.Array(this.component, __props.asInstanceOf[IBasePickerProps[ITag]]))
-  }
 }

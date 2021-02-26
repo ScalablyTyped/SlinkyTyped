@@ -3,12 +3,13 @@ package typingsSlinky.atom.mod
 import typingsSlinky.atom.anon.CopyActiveItem
 import typingsSlinky.atom.anon.Index
 import typingsSlinky.atom.anon.Pending
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Pane extends js.Object {
+trait Pane extends StObject {
   
   /** Makes this pane the active pane, causing it to gain focus. */
   def activate(): Unit = js.native

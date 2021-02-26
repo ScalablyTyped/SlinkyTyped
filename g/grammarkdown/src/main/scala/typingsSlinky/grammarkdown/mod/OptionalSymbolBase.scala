@@ -2,6 +2,7 @@ package typingsSlinky.grammarkdown.mod
 
 import typingsSlinky.grammarkdown.tokensMod.OptionalSymbolKind
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.QuestionToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientXrayNode.typesGetSamplingTargetsOutputMod.GetSa
 import typingsSlinky.awsSdkClientXrayNode.xrayconfigurationMod.XRayResolvedConfiguration
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-xray-node/commands/GetSamplingTargetsCommand", JSImport.Namespace)
-@js.native
-object getSamplingTargetsCommandMod extends js.Object {
+object getSamplingTargetsCommandMod {
   
+  @JSImport("@aws-sdk/client-xray-node/commands/GetSamplingTargetsCommand", "GetSamplingTargetsCommand")
   @js.native
   class GetSamplingTargetsCommand protected () extends Command[
           InputTypesUnion, 

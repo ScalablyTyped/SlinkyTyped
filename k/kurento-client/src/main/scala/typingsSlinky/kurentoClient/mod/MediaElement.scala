@@ -10,6 +10,7 @@ import typingsSlinky.kurentoClient.kurentoClientStrings.ElementDisconnected
 import typingsSlinky.kurentoClient.kurentoClientStrings.MediaFlowInStateChange
 import typingsSlinky.kurentoClient.kurentoClientStrings.MediaFlowOutStateChange
 import typingsSlinky.kurentoClient.kurentoClientStrings.MediaTranscodingStateChange
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -7,12 +7,13 @@ import typingsSlinky.monacoEditor.mod.ISelection
 import typingsSlinky.monacoEditor.mod.Position
 import typingsSlinky.monacoEditor.mod.Range
 import typingsSlinky.monacoEditor.mod.Selection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IEditor extends js.Object {
+trait IEditor extends StObject {
   
   /**
     * Dispose the editor.

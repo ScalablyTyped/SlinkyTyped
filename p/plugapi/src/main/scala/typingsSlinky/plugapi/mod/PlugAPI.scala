@@ -45,12 +45,13 @@ import typingsSlinky.plugapi.plugapiStrings.userJoin
 import typingsSlinky.plugapi.plugapiStrings.userLeave
 import typingsSlinky.plugapi.plugapiStrings.userUpdate
 import typingsSlinky.plugapi.plugapiStrings.vote
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PlugAPI extends js.Object {
+trait PlugAPI extends StObject {
   
   def changeDJCycle(enabled: Boolean): Boolean = js.native
   def changeDJCycle(enabled: Boolean, callback: js.Function0[Unit]): Boolean = js.native

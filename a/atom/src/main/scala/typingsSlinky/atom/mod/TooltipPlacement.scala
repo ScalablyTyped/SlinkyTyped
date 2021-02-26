@@ -4,6 +4,7 @@ import typingsSlinky.atom.atomStrings.bottom_
 import typingsSlinky.atom.atomStrings.left_
 import typingsSlinky.atom.atomStrings.right_
 import typingsSlinky.atom.atomStrings.top_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.atom.atomStrings.`auto left`
   - typingsSlinky.atom.atomStrings.`auto right`
 */
-trait TooltipPlacement extends js.Object
+trait TooltipPlacement extends StObject
 object TooltipPlacement {
   
   @scala.inline

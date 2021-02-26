@@ -4,14 +4,15 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcVirtualList.interfaceMod.RenderFunc
 import typingsSlinky.rcVirtualList.interfaceMod.SharedConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-virtual-list/es/hooks/useChildren", JSImport.Namespace)
-@js.native
-object useChildrenMod extends js.Object {
+object useChildrenMod {
   
+  @JSImport("rc-virtual-list/es/hooks/useChildren", JSImport.Default)
+  @js.native
   def default[T](
     list: js.Array[T],
     startIndex: Double,

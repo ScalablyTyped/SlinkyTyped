@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsBrowser.typesEnableKeyRotationInputMod.Enabl
 import typingsSlinky.awsSdkClientKmsBrowser.typesEnableKeyRotationOutputMod.EnableKeyRotationOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-browser/commands/EnableKeyRotationCommand", JSImport.Namespace)
-@js.native
-object enableKeyRotationCommandMod extends js.Object {
+object enableKeyRotationCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-browser/commands/EnableKeyRotationCommand", "EnableKeyRotationCommand")
   @js.native
   class EnableKeyRotationCommand protected () extends Command[
           InputTypesUnion, 

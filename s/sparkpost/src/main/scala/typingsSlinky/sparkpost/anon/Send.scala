@@ -5,12 +5,13 @@ import typingsSlinky.sparkpost.mod.ResultsCallback
 import typingsSlinky.sparkpost.mod.ResultsPromise
 import typingsSlinky.sparkpost.mod.Transmission
 import typingsSlinky.sparkpost.mod.TransmissionSummary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Send extends js.Object {
+trait Send extends StObject {
   
   /**
     * Retrieve the details about a transmission by its ID

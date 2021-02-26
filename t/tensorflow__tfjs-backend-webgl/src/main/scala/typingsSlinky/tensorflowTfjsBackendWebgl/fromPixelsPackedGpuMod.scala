@@ -1,14 +1,14 @@
 package typingsSlinky.tensorflowTfjsBackendWebgl
 
 import typingsSlinky.tensorflowTfjsBackendWebgl.gpgpuMathMod.GPGPUProgram
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-backend-webgl/dist/kernels/FromPixels_utils/from_pixels_packed_gpu", JSImport.Namespace)
-@js.native
-object fromPixelsPackedGpuMod extends js.Object {
+object fromPixelsPackedGpuMod {
   
+  @JSImport("@tensorflow/tfjs-backend-webgl/dist/kernels/FromPixels_utils/from_pixels_packed_gpu", "FromPixelsPackedProgram")
   @js.native
   class FromPixelsPackedProgram protected () extends GPGPUProgram {
     def this(outputShape: js.Array[Double]) = this()

@@ -11,8 +11,8 @@ Base16 themes as JS objects
 | Full name          | base16 |
 | Keywords           | base16, color schemes |
 | # releases         | 0 |
-| # dependents       | 10 |
-| # downloads        | 9038452 |
+| # dependents       | 13 |
+| # downloads        | 16741030 |
 | # stars            | 0 |
 
 ## Links

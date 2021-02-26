@@ -10,9 +10,9 @@ Concise and fast javascript templating compatible with nodejs and other javascri
 | ------------------ | :-------------: |
 | Full name          | dot |
 | Keywords           | template, fast, simple, templating |
-| # releases         | 2 |
-| # dependents       | 360 |
-| # downloads        | 7821539 |
+| # releases         | 3 |
+| # dependents       | 399 |
+| # downloads        | 13547271 |
 | # stars            | 17 |
 
 ## Links

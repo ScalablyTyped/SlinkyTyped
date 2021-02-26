@@ -1,11 +1,12 @@
 package typingsSlinky.c3.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AxisConfiguration extends js.Object {
+trait AxisConfiguration extends StObject {
   
   /**
     * Show the axis inside of the chart.
@@ -43,54 +44,42 @@ object AxisConfiguration {
   }
   
   @scala.inline
-  implicit class AxisConfigurationOps[Self <: AxisConfiguration] (val x: Self) extends AnyVal {
+  implicit class AxisConfigurationMutableBuilder[Self <: AxisConfiguration] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setInner(value: Boolean): Self = StObject.set(x, "inner", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setInnerUndefined: Self = StObject.set(x, "inner", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setMax(value: String | Double | js.Date): Self = StObject.set(x, "max", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInner(value: Boolean): Self = this.set("inner", value.asInstanceOf[js.Any])
+    def setMaxDate(value: js.Date): Self = StObject.set(x, "max", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteInner: Self = this.set("inner", js.undefined)
+    def setMaxUndefined: Self = StObject.set(x, "max", js.undefined)
     
     @scala.inline
-    def setMaxDate(value: js.Date): Self = this.set("max", value.asInstanceOf[js.Any])
+    def setMin(value: String | Double | js.Date): Self = StObject.set(x, "min", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMax(value: String | Double | js.Date): Self = this.set("max", value.asInstanceOf[js.Any])
+    def setMinDate(value: js.Date): Self = StObject.set(x, "min", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteMax: Self = this.set("max", js.undefined)
+    def setMinUndefined: Self = StObject.set(x, "min", js.undefined)
     
     @scala.inline
-    def setMinDate(value: js.Date): Self = this.set("min", value.asInstanceOf[js.Any])
+    def setPadding(value: Padding): Self = StObject.set(x, "padding", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMin(value: String | Double | js.Date): Self = this.set("min", value.asInstanceOf[js.Any])
+    def setPaddingUndefined: Self = StObject.set(x, "padding", js.undefined)
     
     @scala.inline
-    def deleteMin: Self = this.set("min", js.undefined)
+    def setShow(value: Boolean): Self = StObject.set(x, "show", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPadding(value: Padding): Self = this.set("padding", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePadding: Self = this.set("padding", js.undefined)
-    
-    @scala.inline
-    def setShow(value: Boolean): Self = this.set("show", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteShow: Self = this.set("show", js.undefined)
+    def setShowUndefined: Self = StObject.set(x, "show", js.undefined)
   }
 }

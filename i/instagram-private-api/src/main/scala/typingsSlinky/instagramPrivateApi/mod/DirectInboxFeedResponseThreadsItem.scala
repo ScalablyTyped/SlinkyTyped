@@ -1,5 +1,6 @@
 package typingsSlinky.instagramPrivateApi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("instagram-private-api", "DirectInboxFeedResponseThreadsItem")
 @js.native
 class DirectInboxFeedResponseThreadsItem ()
-  extends typingsSlinky.instagramPrivateApi.directInboxFeedResponseMod.DirectInboxFeedResponseThreadsItem
+  extends typingsSlinky.instagramPrivateApi.responsesMod.DirectInboxFeedResponseThreadsItem

@@ -1,6 +1,7 @@
 package typingsSlinky.xrm.XrmEnum
 
 import typingsSlinky.xrm.xrmStrings.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.Office12Blue
   - typingsSlinky.xrm.xrmStrings.Office14Silver
 */
-trait Theme extends js.Object
+trait Theme extends StObject
 object Theme {
   
   @scala.inline

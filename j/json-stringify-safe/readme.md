@@ -10,9 +10,9 @@ Like JSON.stringify, but doesn't blow up on circular refs.
 | ------------------ | :-------------: |
 | Full name          | json-stringify-safe |
 | Keywords           | json, stringify, circular, safe |
-| # releases         | 1 |
-| # dependents       | 852 |
-| # downloads        | 530907369 |
+| # releases         | 0 |
+| # dependents       | 1027 |
+| # downloads        | 819425656 |
 | # stars            | 35 |
 
 ## Links

@@ -2,6 +2,7 @@ package typingsSlinky.kendoUi.global.kendo.mobile.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.mobile.ui.PaneOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,12 +14,21 @@ class Pane protected ()
   def this(element: Element) = this()
   def this(element: Element, options: PaneOptions) = this()
 }
-/* static members */
-@JSGlobal("kendo.mobile.ui.Pane")
-@js.native
-object Pane extends js.Object {
+object Pane {
   
+  @JSGlobal("kendo.mobile.ui.Pane")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSGlobal("kendo.mobile.ui.Pane.extend")
+  @js.native
   def extend(proto: js.Object): typingsSlinky.kendoUi.kendo.mobile.ui.Pane = js.native
   
-  var fn: typingsSlinky.kendoUi.kendo.mobile.ui.Pane = js.native
+  /* static member */
+  @JSGlobal("kendo.mobile.ui.Pane.fn")
+  @js.native
+  def fn: typingsSlinky.kendoUi.kendo.mobile.ui.Pane = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.kendoUi.kendo.mobile.ui.Pane): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.typescript.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.typescript.mod.StringLiteralLike
   - typingsSlinky.typescript.mod.NumericLiteral
 */
-trait PropertyNameLiteral extends js.Object
+trait PropertyNameLiteral extends StObject

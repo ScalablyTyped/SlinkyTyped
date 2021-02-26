@@ -1,5 +1,6 @@
 package typingsSlinky.preact.jsxCsstypeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -59,7 +60,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.preact.preactStrings.revert
   - typingsSlinky.preact.preactStrings.unset
 */
-trait WebkitAppearanceProperty extends js.Object
+trait WebkitAppearanceProperty extends StObject
 object WebkitAppearanceProperty {
   
   @scala.inline

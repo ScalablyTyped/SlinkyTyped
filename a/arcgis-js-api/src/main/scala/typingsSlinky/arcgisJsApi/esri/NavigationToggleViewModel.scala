@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.pan
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.rotate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

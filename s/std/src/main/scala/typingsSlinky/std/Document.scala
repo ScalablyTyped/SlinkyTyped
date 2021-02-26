@@ -187,6 +187,7 @@ import typingsSlinky.std.stdStrings.view
 import typingsSlinky.std.stdStrings.visibilitychange
 import typingsSlinky.std.stdStrings.wbr
 import typingsSlinky.std.stdStrings.xmp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -1214,17 +1215,17 @@ trait Document
     filter: org.scalajs.dom.raw.NodeFilter
   ): org.scalajs.dom.raw.TreeWalker = js.native
   def createTreeWalker(root: org.scalajs.dom.raw.Node, whatToShow: Double): org.scalajs.dom.raw.TreeWalker = js.native
-  def createTreeWalker(
-    root: org.scalajs.dom.raw.Node,
-    whatToShow: Double,
-    filter: Null,
-    entityReferenceExpansion: scala.Boolean
-  ): org.scalajs.dom.raw.TreeWalker = js.native
   def createTreeWalker(root: org.scalajs.dom.raw.Node, whatToShow: Double, filter: org.scalajs.dom.raw.NodeFilter): org.scalajs.dom.raw.TreeWalker = js.native
   def createTreeWalker(
     root: org.scalajs.dom.raw.Node,
     whatToShow: Double,
     filter: org.scalajs.dom.raw.NodeFilter,
+    entityReferenceExpansion: scala.Boolean
+  ): org.scalajs.dom.raw.TreeWalker = js.native
+  def createTreeWalker(
+    root: org.scalajs.dom.raw.Node,
+    whatToShow: Double,
+    filter: Null,
     entityReferenceExpansion: scala.Boolean
   ): org.scalajs.dom.raw.TreeWalker = js.native
   
@@ -1872,13 +1873,13 @@ trait Document
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
-  override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
-  /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
@@ -1888,13 +1889,13 @@ trait Document
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
@@ -1905,13 +1906,13 @@ trait Document
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockchange(
@@ -1922,13 +1923,13 @@ trait Document
   def removeEventListener_pointerlockchange(
     `type`: pointerlockchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockchange(
     `type`: pointerlockchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockerror(
@@ -1939,13 +1940,13 @@ trait Document
   def removeEventListener_pointerlockerror(
     `type`: pointerlockerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockerror(
     `type`: pointerlockerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readystatechange(
@@ -1956,13 +1957,13 @@ trait Document
   def removeEventListener_readystatechange(
     `type`: readystatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readystatechange(
     `type`: readystatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_visibilitychange(
@@ -1973,13 +1974,13 @@ trait Document
   def removeEventListener_visibilitychange(
     `type`: visibilitychange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_visibilitychange(
     `type`: visibilitychange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   /**

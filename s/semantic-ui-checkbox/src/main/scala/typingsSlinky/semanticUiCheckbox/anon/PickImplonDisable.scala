@@ -1,13 +1,14 @@
 package typingsSlinky.semanticUiCheckbox.anon
 
 import org.scalajs.dom.raw.HTMLInputElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Pick<semantic-ui-checkbox.SemanticUI.CheckboxSettings._Impl, 'onDisable'> */
 @js.native
-trait PickImplonDisable extends js.Object {
+trait PickImplonDisable extends StObject {
   
   def onDisable(): Unit = js.native
   @JSName("onDisable")

@@ -1,5 +1,6 @@
 package typingsSlinky.gm.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gm.gmStrings.LSB
   - typingsSlinky.gm.gmStrings.Native
 */
-trait EndianType extends js.Object
+trait EndianType extends StObject
 object EndianType {
   
   @scala.inline

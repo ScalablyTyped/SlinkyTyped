@@ -1,19 +1,34 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod.codeactions
 
+import typingsSlinky.mendixmodelsdk.versionChecksMod.ILifeCycle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "codeactions.StringTemplateParameterGrammar")
 @js.native
-class StringTemplateParameterGrammar ()
-  extends typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.StringTemplateParameterGrammar
-/* static members */
-@JSImport("mendixmodelsdk/dist/gen/all-model-classes", "codeactions.StringTemplateParameterGrammar")
-@js.native
-object StringTemplateParameterGrammar extends js.Object {
+class StringTemplateParameterGrammar protected ()
+  extends typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.StringTemplateParameterGrammar {
+  def this(_name: String, lifeCycleInfo: ILifeCycle) = this()
+}
+object StringTemplateParameterGrammar {
   
-  var Sql: typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.StringTemplateParameterGrammar = js.native
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "codeactions.StringTemplateParameterGrammar")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var Text: typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.StringTemplateParameterGrammar = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "codeactions.StringTemplateParameterGrammar.Sql")
+  @js.native
+  def Sql: typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.StringTemplateParameterGrammar = js.native
+  @scala.inline
+  def Sql_=(x: typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.StringTemplateParameterGrammar): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Sql")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "codeactions.StringTemplateParameterGrammar.Text")
+  @js.native
+  def Text: typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.StringTemplateParameterGrammar = js.native
+  @scala.inline
+  def Text_=(x: typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.StringTemplateParameterGrammar): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Text")(x.asInstanceOf[js.Any])
 }

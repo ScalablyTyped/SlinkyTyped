@@ -1,5 +1,6 @@
 package typingsSlinky.facebookJsSdk.facebook
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotstatusChange
   - typingsSlinky.facebookJsSdk.facebookJsSdkStrings.xfbmlDotrender
 */
-trait FacebookEventType extends js.Object
+trait FacebookEventType extends StObject
 object FacebookEventType {
   
   @scala.inline

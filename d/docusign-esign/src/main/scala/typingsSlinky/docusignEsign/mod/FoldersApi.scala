@@ -2,13 +2,14 @@ package typingsSlinky.docusignEsign.mod
 
 import typingsSlinky.docusignEsign.anon.Include
 import typingsSlinky.docusignEsign.anon.IncludeItems
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("docusign-esign", "FoldersApi")
 @js.native
-class FoldersApi protected () extends js.Object {
+class FoldersApi protected () extends StObject {
   def this(apiClient: ApiClient) = this()
   
   def list(accountId: String): js.Promise[Folders] = js.native

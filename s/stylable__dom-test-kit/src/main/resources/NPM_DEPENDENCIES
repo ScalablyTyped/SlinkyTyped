@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "@stylable/dom-test-kit" : "3.11.5"
+      "@stylable/dom-test-kit" : "3.11.7"
     }
   ],
   "test-dependencies" : [
     {
-      "@stylable/dom-test-kit" : "3.11.5"
+      "@stylable/dom-test-kit" : "3.11.7"
     }
   ],
   "compile-devDependencies" : [

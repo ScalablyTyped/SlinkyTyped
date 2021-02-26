@@ -6,15 +6,22 @@ import typingsSlinky.antDesignReactNative.toastContainerMod.ToastProps
 import typingsSlinky.antDesignReactNative.toastContainerMod.default
 import typingsSlinky.antDesignReactNative.toastStyleMod.ToastStyle
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ToastContainer {
   
+  @scala.inline
+  def apply(content: String): Builder = {
+    val __props = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ToastProps]))
+  }
+  
   @JSImport("@ant-design/react-native/lib/toast/ToastContainer", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,10 +48,4 @@ object ToastContainer {
   }
   
   def withProps(p: ToastProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(content: String): Builder = {
-    val __props = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ToastProps]))
-  }
 }

@@ -1,13 +1,14 @@
 package typingsSlinky.forgeApis.mod
 
 import typingsSlinky.forgeApis.anon.FilterExtensionTypeFilterId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("forge-apis", "HubsApi")
 @js.native
-class HubsApi () extends js.Object {
+class HubsApi () extends StObject {
   
   /**
     * Returns data on a specific `hub_id`.

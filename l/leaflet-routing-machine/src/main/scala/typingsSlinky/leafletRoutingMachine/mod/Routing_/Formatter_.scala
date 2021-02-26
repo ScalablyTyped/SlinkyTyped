@@ -12,13 +12,14 @@ import typingsSlinky.leafletRoutingMachine.leafletRoutingMachineStrings.arrive
 import typingsSlinky.leafletRoutingMachine.leafletRoutingMachineStrings.continue
 import typingsSlinky.leafletRoutingMachine.leafletRoutingMachineStrings.depart
 import typingsSlinky.leafletRoutingMachine.leafletRoutingMachineStrings.via
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("leaflet", "Routing.Formatter")
 @js.native
-class Formatter_ () extends js.Object {
+class Formatter_ () extends StObject {
   def this(options: FormatterOptions) = this()
   
   def capitalize(s: String): String = js.native

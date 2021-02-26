@@ -5,17 +5,19 @@ import typingsSlinky.jquery.JQuery.Deferred
 import typingsSlinky.jquery.JQuery.Promise
 import typingsSlinky.std.Record
 import typingsSlinky.wordpressCustomizeBrowser.classMod.Class
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@wordpress/customize-browser/Values", JSImport.Namespace)
-@js.native
-object valuesMod extends js.Object {
+object valuesMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-  - typingsSlinky.wordpressCustomizeBrowser.eventsMod.Events because Inheritance from two classes. Inlined topics, trigger, bind, unbind */ @js.native
-  class Values[T] () extends Class {
+  - typingsSlinky.wordpressCustomizeBrowser.eventsMod.Events because Inheritance from two classes. Inlined topics, trigger, bind, unbind */ @JSImport("@wordpress/customize-browser/Values", "Values")
+  @js.native
+  class Values[T] protected () extends Class {
+    def this(applicator: js.Object, argsArray: js.Object) = this()
+    def this(applicator: js.Object, argsArray: js.Object, options: js.Object) = this()
     
     def apply(arg: String): T = js.native
     def apply(args: (String | (js.Function1[/* repeated */ T, Unit]))*): Promise[_, _, _] = js.native

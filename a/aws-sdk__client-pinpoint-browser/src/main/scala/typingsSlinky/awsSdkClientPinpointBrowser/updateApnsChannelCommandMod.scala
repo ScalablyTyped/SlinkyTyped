@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateApnsChannelInputMod.
 import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateApnsChannelOutputMod.UpdateApnsChannelOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/UpdateApnsChannelCommand", JSImport.Namespace)
-@js.native
-object updateApnsChannelCommandMod extends js.Object {
+object updateApnsChannelCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/UpdateApnsChannelCommand", "UpdateApnsChannelCommand")
   @js.native
   class UpdateApnsChannelCommand protected () extends Command[
           InputTypesUnion, 

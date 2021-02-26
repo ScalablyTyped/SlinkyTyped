@@ -2,6 +2,7 @@ package typingsSlinky.fridaGum.Java
 
 import typingsSlinky.fridaGum.fridaGumNumbers.`1`
 import typingsSlinky.fridaGum.fridaGumNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fridaGum.fridaGumNumbers.`1`
   - typingsSlinky.fridaGum.fridaGumNumbers.`2`
 */
-trait FieldType extends js.Object
+trait FieldType extends StObject
 object FieldType {
   
   @scala.inline

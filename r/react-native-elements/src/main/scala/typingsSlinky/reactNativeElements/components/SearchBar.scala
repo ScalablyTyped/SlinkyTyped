@@ -107,6 +107,7 @@ import typingsSlinky.reactNativeElements.mod.SearchBarProps
 import typingsSlinky.reactNativeElements.mod.TextProps
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.android
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.ios
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -115,7 +116,7 @@ object SearchBar {
   
   @JSImport("react-native-elements", "SearchBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -123,19 +124,19 @@ object SearchBar {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.SearchBar] {
     
     @scala.inline
-    def InputComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
+    def InputComponent(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def InputComponentComponentClass(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def InputComponent(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def InputComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -162,10 +163,10 @@ object SearchBar {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -203,10 +204,10 @@ object SearchBar {
     def cancelButtonTitle(value: String): this.type = set("cancelButtonTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelIconReactElement(value: ReactElement): this.type = set("cancelIcon", value.asInstanceOf[js.Any])
+    def cancelIcon(value: IconNode): this.type = set("cancelIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelIcon(value: IconNode): this.type = set("cancelIcon", value.asInstanceOf[js.Any])
+    def cancelIconReactElement(value: ReactElement): this.type = set("cancelIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def caretHidden(value: Boolean): this.type = set("caretHidden", value.asInstanceOf[js.Any])
@@ -215,10 +216,10 @@ object SearchBar {
     def clearButtonMode(value: never | `while-editing` | `unless-editing` | always): this.type = set("clearButtonMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    def clearIcon(value: IconNode): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def clearIcon(value: IconNode): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def clearTextOnFocus(value: Boolean): this.type = set("clearTextOnFocus", value.asInstanceOf[js.Any])
@@ -236,10 +237,10 @@ object SearchBar {
     def contextMenuHidden(value: Boolean): this.type = set("contextMenuHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataDetectorTypesVarargs(value: DataDetectorTypes*): this.type = set("dataDetectorTypes", js.Array(value :_*))
+    def dataDetectorTypes(value: DataDetectorTypes | js.Array[DataDetectorTypes]): this.type = set("dataDetectorTypes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataDetectorTypes(value: DataDetectorTypes | js.Array[DataDetectorTypes]): this.type = set("dataDetectorTypes", value.asInstanceOf[js.Any])
+    def dataDetectorTypesVarargs(value: DataDetectorTypes*): this.type = set("dataDetectorTypes", js.Array(value :_*))
     
     @scala.inline
     def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
@@ -320,22 +321,19 @@ object SearchBar {
     def keyboardType(value: KeyboardTypeOptions): this.type = set("keyboardType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def label(value: String | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelProps(value: TextProps): this.type = set("labelProps", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def labelStyle(value: StyleProp[TextStyle]): this.type = set("labelStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelStyleNull: this.type = set("labelStyle", null)
-    
-    @scala.inline
-    def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftIcon(value: IconNode): this.type = set("leftIcon", value.asInstanceOf[js.Any])
@@ -345,6 +343,9 @@ object SearchBar {
     
     @scala.inline
     def leftIconContainerStyleNull: this.type = set("leftIconContainerStyle", null)
+    
+    @scala.inline
+    def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lightTheme(value: Boolean): this.type = set("lightTheme", value.asInstanceOf[js.Any])
@@ -518,9 +519,6 @@ object SearchBar {
     def returnKeyType(value: ReturnKeyTypeOptions): this.type = set("returnKeyType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def rightIcon(value: IconNode): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -530,16 +528,19 @@ object SearchBar {
     def rightIconContainerStyleNull: this.type = set("rightIconContainerStyle", null)
     
     @scala.inline
+    def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def round(value: Boolean): this.type = set("round", value.asInstanceOf[js.Any])
     
     @scala.inline
     def scrollEnabled(value: Boolean): this.type = set("scrollEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def searchIconReactElement(value: ReactElement): this.type = set("searchIcon", value.asInstanceOf[js.Any])
+    def searchIcon(value: IconNode): this.type = set("searchIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def searchIcon(value: IconNode): this.type = set("searchIcon", value.asInstanceOf[js.Any])
+    def searchIconReactElement(value: ReactElement): this.type = set("searchIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def secureTextEntry(value: Boolean): this.type = set("secureTextEntry", value.asInstanceOf[js.Any])
@@ -613,7 +614,7 @@ object SearchBar {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SearchBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SearchBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SearchBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

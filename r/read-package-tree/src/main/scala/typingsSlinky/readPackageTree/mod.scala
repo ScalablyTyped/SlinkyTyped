@@ -2,21 +2,25 @@ package typingsSlinky.readPackageTree
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.readPackageTree.readPackageTreeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("read-package-tree", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("read-package-tree", JSImport.Namespace)
+  @js.native
   def apply(root: String, cb: js.Function2[/* er */ js.Error | Null, /* data */ Node, Unit]): Unit = js.native
+  @JSImport("read-package-tree", JSImport.Namespace)
+  @js.native
   def apply(
     root: String,
     filterWith: js.Function2[/* node */ Node, /* kidName */ String, js.UndefOr[Unit | Boolean]],
     cb: js.Function2[/* er */ js.Error | Null, /* data */ Node, Unit]
   ): Unit = js.native
   
+  @JSImport("read-package-tree", "Link")
   @js.native
   class Link protected () extends Node {
     def this(
@@ -24,7 +28,7 @@ object mod extends js.Object {
       logical: String,
       physical: String,
       realpath: String,
-      er: Null,
+      er: js.Error,
       cache: StringDictionary[Node]
     ) = this()
     def this(
@@ -32,7 +36,7 @@ object mod extends js.Object {
       logical: String,
       physical: String,
       realpath: String,
-      er: js.Error,
+      er: Null,
       cache: StringDictionary[Node]
     ) = this()
     
@@ -42,15 +46,16 @@ object mod extends js.Object {
     var target: Node = js.native
   }
   
+  @JSImport("read-package-tree", "Node")
   @js.native
-  class Node protected () extends js.Object {
-    def this(pkg: js.Any, logical: String, physical: String, er: Null, cache: StringDictionary[Node]) = this()
+  class Node protected () extends StObject {
     def this(pkg: js.Any, logical: String, physical: String, er: js.Error, cache: StringDictionary[Node]) = this()
+    def this(pkg: js.Any, logical: String, physical: String, er: Null, cache: StringDictionary[Node]) = this()
     def this(
       pkg: js.Any,
       logical: String,
       physical: String,
-      er: Null,
+      er: js.Error,
       cache: StringDictionary[Node],
       fromLink: Boolean
     ) = this()
@@ -58,7 +63,7 @@ object mod extends js.Object {
       pkg: js.Any,
       logical: String,
       physical: String,
-      er: js.Error,
+      er: Null,
       cache: StringDictionary[Node],
       fromLink: Boolean
     ) = this()

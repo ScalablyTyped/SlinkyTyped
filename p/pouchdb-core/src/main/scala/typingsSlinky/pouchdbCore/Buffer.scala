@@ -3,6 +3,7 @@ package typingsSlinky.pouchdbCore
 import typingsSlinky.pouchdbCore.PouchDB.Core._AttachmentData
 import typingsSlinky.pouchdbCore.anon.Data
 import typingsSlinky.std.Uint8Array
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

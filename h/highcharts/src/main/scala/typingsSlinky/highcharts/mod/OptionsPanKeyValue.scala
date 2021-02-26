@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.meta
   - typingsSlinky.highcharts.highchartsStrings.shift
 */
-trait OptionsPanKeyValue extends js.Object
+trait OptionsPanKeyValue extends StObject
 object OptionsPanKeyValue {
   
   @scala.inline

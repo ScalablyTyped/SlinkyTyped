@@ -3,15 +3,16 @@
 
 Typings are for version 26.6.2
 
-
+## Library description:
+Display differences clearly so people can review changes confidently.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | jest-diff |
 | Keywords           | - |
-| # releases         | 51 |
-| # dependents       | 113 |
-| # downloads        | 255751565 |
+| # releases         | 41 |
+| # dependents       | 179 |
+| # downloads        | 620392567 |
 | # stars            | 0 |
 
 ## Links

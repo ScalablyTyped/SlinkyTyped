@@ -90,13 +90,12 @@ import typingsSlinky.react.reactStrings.terminal
 import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object stop {
-  
-  val component: String = "stop"
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1268,7 +1267,9 @@ object stop {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SVGProps[SVGStopElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  val component: String = "stop"
   
   implicit def make(companion: stop.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SVGProps[SVGStopElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

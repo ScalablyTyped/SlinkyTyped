@@ -10,9 +10,9 @@ Library for drawing smooth signatures.
 | ------------------ | :-------------: |
 | Full name          | signature_pad |
 | Keywords           | - |
-| # releases         | 4 |
-| # dependents       | 78 |
-| # downloads        | 3099341 |
+| # releases         | 0 |
+| # dependents       | 117 |
+| # downloads        | 5201205 |
 | # stars            | 5 |
 
 ## Links

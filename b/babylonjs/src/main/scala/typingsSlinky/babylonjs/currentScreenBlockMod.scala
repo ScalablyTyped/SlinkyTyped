@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Dual/currentScreenBlock", JSImport.Namespace)
-@js.native
-object currentScreenBlockMod extends js.Object {
+object currentScreenBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Dual/currentScreenBlock", "CurrentScreenBlock")
   @js.native
   class CurrentScreenBlock protected () extends NodeMaterialBlock {
     /**

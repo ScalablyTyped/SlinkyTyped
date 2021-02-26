@@ -10,9 +10,9 @@ Opens stuff, like webpages and files and executables, cross-platform
 | ------------------ | :-------------: |
 | Full name          | opener |
 | Keywords           | - |
-| # releases         | 3 |
-| # dependents       | 481 |
-| # downloads        | 111478116 |
+| # releases         | 2 |
+| # dependents       | 544 |
+| # downloads        | 236449899 |
 | # stars            | 30 |
 
 ## Links

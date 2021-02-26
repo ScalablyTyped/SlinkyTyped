@@ -1,22 +1,28 @@
 package typingsSlinky.reactIntl.components
 
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
+import slinky.core.facade.ReactElement
+import typingsSlinky.formatjsIntl.srcTypesMod.FormatDateOptions
 import typingsSlinky.reactIntl.anon.Children
+import typingsSlinky.std.Intl.DateTimeFormatPart
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for (/ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FormatDateOptions * / js.Any) with typingsSlinky.reactIntl.anon.Children because: IArray(Could't extract props from / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FormatDateOptions * / js.Any because couldn't resolve ClassTree.) */
 object FormattedTimeParts {
+  
+  @scala.inline
+  def apply(
+    children: js.Array[DateTimeFormatPart] => ReactElement | Null,
+    value: (/* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.anon.FnCall>[0] */ js.Any) | String
+  ): SharedBuilder_FormatDateOptionsChildren1965677642 = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), value = value.asInstanceOf[js.Any])
+    new SharedBuilder_FormatDateOptionsChildren1965677642(js.Array(this.component, __props.asInstanceOf[FormatDateOptions with Children]))
+  }
   
   @JSImport("react-intl", "FormattedTimeParts")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
-  def apply(
-    p: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FormatDateOptions */ js.Any) with Children
-  ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: FormattedTimeParts.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: FormatDateOptions with Children): SharedBuilder_FormatDateOptionsChildren1965677642 = new SharedBuilder_FormatDateOptionsChildren1965677642(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

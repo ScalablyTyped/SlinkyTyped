@@ -12,7 +12,7 @@ Power Assert output formatter
 | Keywords           | power-assert, test, testing, assert, assertion |
 | # releases         | 0 |
 | # dependents       | 7 |
-| # downloads        | 9222755 |
+| # downloads        | 7567255 |
 | # stars            | 0 |
 
 ## Links

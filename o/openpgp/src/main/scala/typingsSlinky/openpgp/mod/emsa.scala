@@ -1,12 +1,11 @@
 package typingsSlinky.openpgp.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("openpgp", "emsa")
-@js.native
-object emsa extends js.Object {
+object emsa {
   
   /**
     * Create a EMSA-PKCS1-v1_5 padded message
@@ -16,5 +15,7 @@ object emsa extends js.Object {
     * @param emLen intended length in octets of the encoded message
     * @returns encoded message
     */
+  @JSImport("openpgp", "emsa.encode")
+  @js.native
   def encode(algo: Integer, hashed: js.typedarray.Uint8Array, emLen: Integer): String = js.native
 }

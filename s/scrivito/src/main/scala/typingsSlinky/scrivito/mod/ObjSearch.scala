@@ -9,12 +9,13 @@ import typingsSlinky.scrivito.scrivitoStrings.isGreaterThan
 import typingsSlinky.scrivito.scrivitoStrings.isLessThan
 import typingsSlinky.scrivito.scrivitoStrings.startsWith
 import typingsSlinky.std.Extract
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ObjSearch extends js.Object {
+trait ObjSearch extends StObject {
   
   def and(
     attribute: ObjSearchAttribute,

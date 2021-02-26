@@ -9,6 +9,7 @@ import typingsSlinky.nodeRedEditorClient.nodeRedEditorClientStrings.types
 import typingsSlinky.nodeRedEditorClient.nodeRedEditorClientStrings.validate
 import typingsSlinky.nodeRedEditorClient.nodeRedEditorClientStrings.value
 import typingsSlinky.nodeRedEditorClient.nodeRedEditorClientStrings.width
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WidgetTypedInput extends JQuery[HTMLElement] {
   
-   // tslint:disable-line:unified-signatures
+  // tslint:disable-line:unified-signatures
   /**
     * Gets the selected type of the typedInput.
     */

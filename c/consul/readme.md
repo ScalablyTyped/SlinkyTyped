@@ -10,9 +10,9 @@ Consul client
 | ------------------ | :-------------: |
 | Full name          | consul |
 | Keywords           | consul |
-| # releases         | 8 |
-| # dependents       | 189 |
-| # downloads        | 1858566 |
+| # releases         | 5 |
+| # dependents       | 211 |
+| # downloads        | 2437492 |
 | # stars            | 20 |
 
 ## Links

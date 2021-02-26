@@ -9,6 +9,7 @@ import typingsSlinky.node.nodeStrings.OCSPResponse
 import typingsSlinky.node.nodeStrings.keylog
 import typingsSlinky.node.nodeStrings.secureConnect
 import typingsSlinky.node.nodeStrings.session
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

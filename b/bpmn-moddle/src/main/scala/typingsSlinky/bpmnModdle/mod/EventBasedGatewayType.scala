@@ -1,5 +1,6 @@
 package typingsSlinky.bpmnModdle.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.bpmnModdle.bpmnModdleStrings.Parallel
   - typingsSlinky.bpmnModdle.bpmnModdleStrings.Exclusive
 */
-trait EventBasedGatewayType extends js.Object
+trait EventBasedGatewayType extends StObject
 object EventBasedGatewayType {
   
   @scala.inline

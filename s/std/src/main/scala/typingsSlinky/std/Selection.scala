@@ -1,12 +1,13 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A Selection object represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or modification, call Window.getSelection(). */
 @js.native
-trait Selection extends js.Object {
+trait Selection extends StObject {
   
   def addRange(range: org.scalajs.dom.raw.Range): Unit = js.native
   
@@ -15,9 +16,9 @@ trait Selection extends js.Object {
   val anchorOffset: Double = js.native
   
   def collapse(): Unit = js.native
-  def collapse(node: Null, offset: Double): Unit = js.native
   def collapse(node: org.scalajs.dom.raw.Node): Unit = js.native
   def collapse(node: org.scalajs.dom.raw.Node, offset: Double): Unit = js.native
+  def collapse(node: Null, offset: Double): Unit = js.native
   
   def collapseToEnd(): Unit = js.native
   
@@ -57,9 +58,9 @@ trait Selection extends js.Object {
   ): Unit = js.native
   
   def setPosition(): Unit = js.native
-  def setPosition(node: Null, offset: Double): Unit = js.native
   def setPosition(node: org.scalajs.dom.raw.Node): Unit = js.native
   def setPosition(node: org.scalajs.dom.raw.Node, offset: Double): Unit = js.native
+  def setPosition(node: Null, offset: Double): Unit = js.native
   
   val `type`: java.lang.String = js.native
 }

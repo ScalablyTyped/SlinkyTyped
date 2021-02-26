@@ -17,6 +17,7 @@ import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.oracleOraclejet.mod.baseComponentEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -202,93 +203,81 @@ object ojTableEventMap {
   }
   
   @scala.inline
-  implicit class ojTableEventMapOps[Self <: ojTableEventMap[_, _], K, D] (val x: Self with (ojTableEventMap[K, D])) extends AnyVal {
+  implicit class ojTableEventMapMutableBuilder[Self <: ojTableEventMap[_, _], K, D] (val x: Self with (ojTableEventMap[K, D])) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAccessibilityChanged(value: CustomEvent): Self = StObject.set(x, "accessibilityChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAsChanged(value: CustomEvent): Self = StObject.set(x, "asChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setColumnsChanged(value: CustomEvent): Self = StObject.set(x, "columnsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAccessibilityChanged(value: CustomEvent): Self = this.set("accessibilityChanged", value.asInstanceOf[js.Any])
+    def setColumnsDefaultChanged(value: CustomEvent): Self = StObject.set(x, "columnsDefaultChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAsChanged(value: CustomEvent): Self = this.set("asChanged", value.asInstanceOf[js.Any])
+    def setCurrentRowChanged(value: CustomEvent): Self = StObject.set(x, "currentRowChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColumnsChanged(value: CustomEvent): Self = this.set("columnsChanged", value.asInstanceOf[js.Any])
+    def setDataChanged(value: CustomEvent): Self = StObject.set(x, "dataChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColumnsDefaultChanged(value: CustomEvent): Self = this.set("columnsDefaultChanged", value.asInstanceOf[js.Any])
+    def setDisplayChanged(value: CustomEvent): Self = StObject.set(x, "displayChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCurrentRowChanged(value: CustomEvent): Self = this.set("currentRowChanged", value.asInstanceOf[js.Any])
+    def setDndChanged(value: CustomEvent): Self = StObject.set(x, "dndChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDataChanged(value: CustomEvent): Self = this.set("dataChanged", value.asInstanceOf[js.Any])
+    def setEditModeChanged(value: CustomEvent): Self = StObject.set(x, "editModeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDisplayChanged(value: CustomEvent): Self = this.set("displayChanged", value.asInstanceOf[js.Any])
+    def setFirstSelectedRowChanged(value: CustomEvent): Self = StObject.set(x, "firstSelectedRowChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDndChanged(value: CustomEvent): Self = this.set("dndChanged", value.asInstanceOf[js.Any])
+    def setHorizontalGridVisibleChanged(value: CustomEvent): Self = StObject.set(x, "horizontalGridVisibleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEditModeChanged(value: CustomEvent): Self = this.set("editModeChanged", value.asInstanceOf[js.Any])
+    def setOjAnimateEnd(value: CustomEvent): Self = StObject.set(x, "ojAnimateEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFirstSelectedRowChanged(value: CustomEvent): Self = this.set("firstSelectedRowChanged", value.asInstanceOf[js.Any])
+    def setOjAnimateStart(value: CustomEvent): Self = StObject.set(x, "ojAnimateStart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHorizontalGridVisibleChanged(value: CustomEvent): Self = this.set("horizontalGridVisibleChanged", value.asInstanceOf[js.Any])
+    def setOjBeforeCurrentRow(value: CustomEvent): Self = StObject.set(x, "ojBeforeCurrentRow", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjAnimateEnd(value: CustomEvent): Self = this.set("ojAnimateEnd", value.asInstanceOf[js.Any])
+    def setOjBeforeRowEdit(value: CustomEvent): Self = StObject.set(x, "ojBeforeRowEdit", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjAnimateStart(value: CustomEvent): Self = this.set("ojAnimateStart", value.asInstanceOf[js.Any])
+    def setOjBeforeRowEditEnd(value: CustomEvent): Self = StObject.set(x, "ojBeforeRowEditEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjBeforeCurrentRow(value: CustomEvent): Self = this.set("ojBeforeCurrentRow", value.asInstanceOf[js.Any])
+    def setOjSort(value: CustomEvent): Self = StObject.set(x, "ojSort", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjBeforeRowEdit(value: CustomEvent): Self = this.set("ojBeforeRowEdit", value.asInstanceOf[js.Any])
+    def setRowRendererChanged(value: CustomEvent): Self = StObject.set(x, "rowRendererChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjBeforeRowEditEnd(value: CustomEvent): Self = this.set("ojBeforeRowEditEnd", value.asInstanceOf[js.Any])
+    def setScrollPolicyChanged(value: CustomEvent): Self = StObject.set(x, "scrollPolicyChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjSort(value: CustomEvent): Self = this.set("ojSort", value.asInstanceOf[js.Any])
+    def setScrollPolicyOptionsChanged(value: CustomEvent): Self = StObject.set(x, "scrollPolicyOptionsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRowRendererChanged(value: CustomEvent): Self = this.set("rowRendererChanged", value.asInstanceOf[js.Any])
+    def setScrollPositionChanged(value: CustomEvent): Self = StObject.set(x, "scrollPositionChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScrollPolicyChanged(value: CustomEvent): Self = this.set("scrollPolicyChanged", value.asInstanceOf[js.Any])
+    def setSelectionChanged(value: CustomEvent): Self = StObject.set(x, "selectionChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScrollPolicyOptionsChanged(value: CustomEvent): Self = this.set("scrollPolicyOptionsChanged", value.asInstanceOf[js.Any])
+    def setSelectionModeChanged(value: CustomEvent): Self = StObject.set(x, "selectionModeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScrollPositionChanged(value: CustomEvent): Self = this.set("scrollPositionChanged", value.asInstanceOf[js.Any])
+    def setSelectionRequiredChanged(value: CustomEvent): Self = StObject.set(x, "selectionRequiredChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSelectionChanged(value: CustomEvent): Self = this.set("selectionChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSelectionModeChanged(value: CustomEvent): Self = this.set("selectionModeChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSelectionRequiredChanged(value: CustomEvent): Self = this.set("selectionRequiredChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVerticalGridVisibleChanged(value: CustomEvent): Self = this.set("verticalGridVisibleChanged", value.asInstanceOf[js.Any])
+    def setVerticalGridVisibleChanged(value: CustomEvent): Self = StObject.set(x, "verticalGridVisibleChanged", value.asInstanceOf[js.Any])
   }
 }

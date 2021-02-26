@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.grammarkdownMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,4 +11,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.grammarkdown.grammarkdownStrings.`50`
   - typingsSlinky.grammarkdown.grammarkdownStrings.`51`
 */
-trait ProseFragmentKind extends js.Object
+trait ProseFragmentKind extends StObject

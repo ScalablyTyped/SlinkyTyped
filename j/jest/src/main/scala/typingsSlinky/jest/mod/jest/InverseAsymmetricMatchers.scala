@@ -1,11 +1,12 @@
 package typingsSlinky.jest.mod.jest
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InverseAsymmetricMatchers extends js.Object {
+trait InverseAsymmetricMatchers extends StObject {
   
   /**
     * `expect.not.arrayContaining(array)` matches a received array which

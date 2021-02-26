@@ -13,6 +13,7 @@ import typingsSlinky.semanticUiReact.listDescriptionMod.ListDescriptionProps
 import typingsSlinky.semanticUiReact.listHeaderMod.ListHeaderProps
 import typingsSlinky.semanticUiReact.listIconMod.ListIconProps
 import typingsSlinky.semanticUiReact.listItemMod.ListItemProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,7 +33,7 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  def content(value: SemanticShorthandItem[ListContentProps]): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
   def contentFunction3(
@@ -40,10 +41,10 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   ): this.type = set("content", js.Any.fromFunction3(value))
   
   @scala.inline
-  def content(value: SemanticShorthandItem[ListContentProps]): this.type = set("content", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
+  def description(value: SemanticShorthandItem[ListDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
   
   @scala.inline
   def descriptionFunction3(
@@ -51,13 +52,13 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   ): this.type = set("description", js.Any.fromFunction3(value))
   
   @scala.inline
-  def description(value: SemanticShorthandItem[ListDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
+  def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
   
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+  def header(value: SemanticShorthandItem[ListHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
   
   @scala.inline
   def headerFunction3(
@@ -65,10 +66,10 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   ): this.type = set("header", js.Any.fromFunction3(value))
   
   @scala.inline
-  def header(value: SemanticShorthandItem[ListHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
+  def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+  def icon(value: SemanticShorthandItem[ListIconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def iconFunction3(
@@ -76,10 +77,10 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   ): this.type = set("icon", js.Any.fromFunction3(value))
   
   @scala.inline
-  def icon(value: SemanticShorthandItem[ListIconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def imageReactElement(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
+  def image(value: SemanticShorthandItem[ImageProps]): this.type = set("image", value.asInstanceOf[js.Any])
   
   @scala.inline
   def imageFunction3(
@@ -87,7 +88,7 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   ): this.type = set("image", js.Any.fromFunction3(value))
   
   @scala.inline
-  def image(value: SemanticShorthandItem[ImageProps]): this.type = set("image", value.asInstanceOf[js.Any])
+  def imageReactElement(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
   
   @scala.inline
   def onClick(value: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ ListItemProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))

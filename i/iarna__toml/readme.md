@@ -10,9 +10,9 @@ Better TOML parsing and stringifying all in that familiar JSON interface.
 | ------------------ | :-------------: |
 | Full name          | @iarna/toml |
 | Keywords           | toml, toml-parser, toml-stringifier, parser, stringifer, emitter, ini, tomlify, encoder, decoder |
-| # releases         | 20 |
-| # dependents       | 101 |
-| # downloads        | 6561026 |
+| # releases         | 7 |
+| # dependents       | 171 |
+| # downloads        | 15278686 |
 | # stars            | 1 |
 
 ## Links

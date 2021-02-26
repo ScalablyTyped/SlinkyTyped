@@ -11,36 +11,56 @@ import typingsSlinky.officeUiFabricReact.documentCardPreviewTypesMod.IDocumentCa
 import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCardStatusProps
 import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCardTitleProps
 import typingsSlinky.officeUiFabricReact.documentCardTypesMod.IDocumentCardProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/DocumentCard", JSImport.Namespace)
-@js.native
-object libDocumentCardMod extends js.Object {
+object libDocumentCardMod {
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCard")
+  @js.native
   val DocumentCard: ReactComponentClass[IDocumentCardProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCardActions")
+  @js.native
   val DocumentCardActions: ReactComponentClass[IDocumentCardActionsProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCardActivity")
+  @js.native
   val DocumentCardActivity: ReactComponentClass[IDocumentCardActivityProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCardDetails")
+  @js.native
   val DocumentCardDetails: ReactComponentClass[IDocumentCardDetailsProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCardImage")
+  @js.native
   val DocumentCardImage: ReactComponentClass[IDocumentCardImageProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCardLocation")
+  @js.native
   val DocumentCardLocation: ReactComponentClass[IDocumentCardLocationProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCardLogo")
+  @js.native
   val DocumentCardLogo: ReactComponentClass[IDocumentCardLogoProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCardPreview")
+  @js.native
   val DocumentCardPreview: ReactComponentClass[IDocumentCardPreviewProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCardStatus")
+  @js.native
   val DocumentCardStatus: ReactComponentClass[IDocumentCardStatusProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCardTitle")
+  @js.native
   val DocumentCardTitle: ReactComponentClass[IDocumentCardTitleProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/DocumentCard", "DocumentCardType")
   @js.native
-  object DocumentCardType extends js.Object {
+  object DocumentCardType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[

@@ -8,6 +8,7 @@ import typingsSlinky.reactFlexr.reactFlexrStrings.center
 import typingsSlinky.reactFlexr.reactFlexrStrings.left
 import typingsSlinky.reactFlexr.reactFlexrStrings.right
 import typingsSlinky.reactFlexr.reactFlexrStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object Grid {
   
   @JSImport("react-flexr", "Grid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,7 +37,7 @@ object Grid {
     def hAlign(value: left | center | right): this.type = set("hAlign", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Grid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -17,19 +17,26 @@ import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.ReadableOptions
 import typingsSlinky.std.Set
 import typingsSlinky.strtok3.typesMod.ITokenizer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("file-type", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   /**
   	Supported file extensions.
   	*/
+  @JSImport("file-type", "extensions")
+  @js.native
   val extensions: Set[typingsSlinky.fileType.coreMod.FileExtension] = js.native
   
+  @JSImport("file-type", "fromBuffer")
+  @js.native
+  def fromBuffer(buffer: js.typedarray.ArrayBuffer): js.Promise[js.UndefOr[typingsSlinky.fileType.coreMod.FileTypeResult]] = js.native
+  @JSImport("file-type", "fromBuffer")
+  @js.native
+  def fromBuffer(buffer: js.typedarray.Uint8Array): js.Promise[js.UndefOr[typingsSlinky.fileType.coreMod.FileTypeResult]] = js.native
   /**
   	Detect the file type of a `Buffer`, `Uint8Array`, or `ArrayBuffer`.
   	The file type is detected by checking the [magic number](https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files) of the buffer.
@@ -37,10 +44,12 @@ object mod extends js.Object {
   	@param buffer - A buffer representing file data. It works best if the buffer contains the entire file, it may work with a smaller portion as well.
   	@returns The detected file type and MIME type, or `undefined` when there is no match.
   	*/
+  @JSImport("file-type", "fromBuffer")
+  @js.native
   def fromBuffer(buffer: Buffer): js.Promise[js.UndefOr[typingsSlinky.fileType.coreMod.FileTypeResult]] = js.native
-  def fromBuffer(buffer: js.typedarray.ArrayBuffer): js.Promise[js.UndefOr[typingsSlinky.fileType.coreMod.FileTypeResult]] = js.native
-  def fromBuffer(buffer: js.typedarray.Uint8Array): js.Promise[js.UndefOr[typingsSlinky.fileType.coreMod.FileTypeResult]] = js.native
   
+  @JSImport("file-type", "fromFile")
+  @js.native
   def fromFile(path: String): js.Promise[js.UndefOr[typingsSlinky.fileType.coreMod.FileTypeResult]] = js.native
   
   /**
@@ -49,6 +58,8 @@ object mod extends js.Object {
   	@param stream - A readable stream representing file data.
   	@returns The detected file type and MIME type, or `undefined` when there is no match.
   	*/
+  @JSImport("file-type", "fromStream")
+  @js.native
   def fromStream(stream: Readable): js.Promise[js.UndefOr[typingsSlinky.fileType.coreMod.FileTypeResult]] = js.native
   
   /**
@@ -70,11 +81,15 @@ object mod extends js.Object {
   	@param tokenizer - File source implementing the tokenizer interface.
   	@returns The detected file type and MIME type, or `undefined` when there is no match.
   	*/
+  @JSImport("file-type", "fromTokenizer")
+  @js.native
   def fromTokenizer(tokenizer: ITokenizer): js.Promise[js.UndefOr[typingsSlinky.fileType.coreMod.FileTypeResult]] = js.native
   
   /**
   	Supported MIME types.
   	*/
+  @JSImport("file-type", "mimeTypes")
+  @js.native
   val mimeTypes: js.Array[typingsSlinky.fileType.coreMod.MimeType] = js.native
   
   /**
@@ -97,14 +112,22 @@ object mod extends js.Object {
   	})();
   	```
   	*/
+  @JSImport("file-type", "stream")
+  @js.native
   def stream(readableStream: Readable): js.Promise[typingsSlinky.fileType.coreMod.ReadableStreamWithFileType] = js.native
+  
+  type FileExtension = typingsSlinky.fileType.coreMod.FileExtension
+  
+  type FileTypeResult = typingsSlinky.fileType.coreMod.FileTypeResult
+  
+  type MimeType = typingsSlinky.fileType.coreMod.MimeType
   
   /* Inlined file-type.file-type/core.ReadableStreamWithFileType */
   @js.native
-  trait ReadableStreamWithFileType extends js.Object {
+  trait ReadableStreamWithFileType extends StObject {
     
-    def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     def _destroy(error: js.Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+    def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     
     def _read(size: Double): Unit = js.native
     
@@ -314,10 +337,4 @@ object mod extends js.Object {
     
     def wrap(oldStream: ReadableStream): this.type = js.native
   }
-  
-  type FileExtension = typingsSlinky.fileType.coreMod.FileExtension
-  
-  type FileTypeResult = typingsSlinky.fileType.coreMod.FileTypeResult
-  
-  type MimeType = typingsSlinky.fileType.coreMod.MimeType
 }

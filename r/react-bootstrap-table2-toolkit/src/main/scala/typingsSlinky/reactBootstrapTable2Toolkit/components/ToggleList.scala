@@ -4,15 +4,26 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTable2Toolkit.mod.ToggleListProps
 import typingsSlinky.reactBootstrapTableNext.mod.ColumnDescription
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ToggleList {
   
+  @scala.inline
+  def apply(
+    columns: js.Array[ColumnDescription[_, _]],
+    onColumnToggle: String => Unit,
+    toggles: js.Array[Boolean]
+  ): Builder = {
+    val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], onColumnToggle = js.Any.fromFunction1(onColumnToggle), toggles = toggles.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ToggleListProps]))
+  }
+  
   @JSImport("react-bootstrap-table2-toolkit", "ColumnToggle.ToggleList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,14 +41,4 @@ object ToggleList {
   }
   
   def withProps(p: ToggleListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    columns: js.Array[ColumnDescription[_, _]],
-    onColumnToggle: String => Unit,
-    toggles: js.Array[Boolean]
-  ): Builder = {
-    val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], onColumnToggle = js.Any.fromFunction1(onColumnToggle), toggles = toggles.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ToggleListProps]))
-  }
 }

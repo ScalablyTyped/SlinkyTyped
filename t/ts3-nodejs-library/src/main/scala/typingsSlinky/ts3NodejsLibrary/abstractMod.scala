@@ -3,16 +3,16 @@ package typingsSlinky.ts3NodejsLibrary
 import typingsSlinky.std.Record
 import typingsSlinky.ts3NodejsLibrary.teamSpeakMod.TeamSpeak
 import typingsSlinky.ts3NodejsLibrary.teamSpeakQueryMod.TeamSpeakQuery.ResponseEntry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ts3-nodejs-library/lib/node/Abstract", JSImport.Namespace)
-@js.native
-object abstractMod extends js.Object {
+object abstractMod {
   
+  @JSImport("ts3-nodejs-library/lib/node/Abstract", "Abstract")
   @js.native
-  abstract class Abstract[T /* <: ResponseEntry */] protected () extends js.Object {
+  abstract class Abstract[T /* <: ResponseEntry */] protected () extends StObject {
     def this(parent: TeamSpeak, props: T, namespace: String) = this()
     
     /** retrieves the namespace of this class */

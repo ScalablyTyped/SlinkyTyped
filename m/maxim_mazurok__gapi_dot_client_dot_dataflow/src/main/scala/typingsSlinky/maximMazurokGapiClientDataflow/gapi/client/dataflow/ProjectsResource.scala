@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.AccesstokenAltCallback
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.CallbackFieldsKey
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.SnapshotIdUploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProjectsResource extends js.Object {
+trait ProjectsResource extends StObject {
   
   var catalogTemplates: CatalogTemplatesResource = js.native
   

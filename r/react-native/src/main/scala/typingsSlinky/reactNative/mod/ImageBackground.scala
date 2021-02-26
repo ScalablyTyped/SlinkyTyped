@@ -5,6 +5,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.reactNativeStrings.disk
 import typingsSlinky.reactNative.reactNativeStrings.diskSlashmemory
 import typingsSlinky.reactNative.reactNativeStrings.memory
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -11,8 +11,8 @@ Create a vinyl file from an actual file
 | Full name          | vinyl-file |
 | Keywords           | vinyl, fs, file, read, virtual, format, gulp, gulpfriendly |
 | # releases         | 0 |
-| # dependents       | 171 |
-| # downloads        | 28256855 |
+| # dependents       | 176 |
+| # downloads        | 31027433 |
 | # stars            | 3 |
 
 ## Links

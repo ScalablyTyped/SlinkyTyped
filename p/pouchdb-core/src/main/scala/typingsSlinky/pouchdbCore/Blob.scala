@@ -1,6 +1,7 @@
 package typingsSlinky.pouchdbCore
 
 import typingsSlinky.pouchdbCore.PouchDB.Core._AttachmentData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

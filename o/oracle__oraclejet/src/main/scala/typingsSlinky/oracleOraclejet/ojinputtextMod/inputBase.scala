@@ -26,6 +26,7 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.requiredChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.validators
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.validatorsChanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -179,9 +180,7 @@ trait inputBase[V, SP /* <: inputBaseSettableProperties[V, SV, V] */, SV, RV] ex
   
   var validators: (js.Array[Validator[V] | RegisteredValidator]) | Null = js.native
 }
-@JSImport("@oracle/oraclejet/ojinputtext", "inputBase")
-@js.native
-object inputBase extends js.Object {
+object inputBase {
   
   type ojAnimateEnd = CustomEvent
   

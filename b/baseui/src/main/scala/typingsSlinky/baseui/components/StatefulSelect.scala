@@ -27,6 +27,7 @@ import typingsSlinky.baseui.selectMod.State
 import typingsSlinky.baseui.selectMod.StatefulSelectProps
 import typingsSlinky.baseui.selectMod.Value
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,7 @@ object StatefulSelect {
   
   @JSImport("baseui/select", "StatefulSelect")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -70,16 +71,16 @@ object StatefulSelect {
     def closeOnSelect(value: Boolean): this.type = set("closeOnSelect", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def controlRefRefObject(value: ReactRef[HTMLInputElement | HTMLDivElement]): this.type = set("controlRef", value.asInstanceOf[js.Any])
+    def controlRef(value: Ref[HTMLInputElement | HTMLDivElement]): this.type = set("controlRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def controlRefFunction1(value: /* instance */ HTMLInputElement | HTMLDivElement | Null => Unit): this.type = set("controlRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def controlRef(value: Ref[HTMLInputElement | HTMLDivElement]): this.type = set("controlRef", value.asInstanceOf[js.Any])
+    def controlRefNull: this.type = set("controlRef", null)
     
     @scala.inline
-    def controlRefNull: this.type = set("controlRef", null)
+    def controlRefRefObject(value: ReactRef[HTMLInputElement | HTMLDivElement]): this.type = set("controlRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def creatable(value: Boolean): this.type = set("creatable", value.asInstanceOf[js.Any])
@@ -132,10 +133,10 @@ object StatefulSelect {
     def multi(value: Boolean): this.type = set("multi", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noResultsMsgReactElement(value: ReactElement): this.type = set("noResultsMsg", value.asInstanceOf[js.Any])
+    def noResultsMsg(value: ReactElement): this.type = set("noResultsMsg", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noResultsMsg(value: ReactElement): this.type = set("noResultsMsg", value.asInstanceOf[js.Any])
+    def noResultsMsgReactElement(value: ReactElement): this.type = set("noResultsMsg", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onBlur(value: /* e */ Event => _): this.type = set("onBlur", js.Any.fromFunction1(value))
@@ -168,19 +169,19 @@ object StatefulSelect {
     def openOnClick(value: Boolean): this.type = set("openOnClick", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def optionsVarargs(value: typingsSlinky.baseui.selectMod.Option*): this.type = set("options", js.Array(value :_*))
+    def options(value: OptionsT): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: OptionsT): this.type = set("options", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: typingsSlinky.baseui.selectMod.Option*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def overrides(value: SelectOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
     def positive(value: Boolean): this.type = set("positive", value.asInstanceOf[js.Any])
@@ -204,16 +205,16 @@ object StatefulSelect {
     def `type`(value: select | search): this.type = set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: typingsSlinky.baseui.selectMod.Option*): this.type = set("value", js.Array(value :_*))
-    
-    @scala.inline
     def value(value: Value): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def valueKey(value: String): this.type = set("valueKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def valueVarargs(value: typingsSlinky.baseui.selectMod.Option*): this.type = set("value", js.Array(value :_*))
   }
   
-  def withProps(p: StatefulSelectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatefulSelect.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatefulSelectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

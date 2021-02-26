@@ -1,16 +1,14 @@
 package typingsSlinky.easyXHeaders
 
 import typingsSlinky.easyXHeaders.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("domain", JSImport.Namespace)
-@js.native
-object domainMod extends js.Object {
+object domainMod {
   
-  def create(): Domain = js.native
-  
+  @JSImport("domain", "Domain")
   @js.native
   class Domain () extends EventEmitter {
     
@@ -26,4 +24,8 @@ object domainMod extends js.Object {
     
     def run(fn: js.Function): Unit = js.native
   }
+  
+  @JSImport("domain", "create")
+  @js.native
+  def create(): Domain = js.native
 }

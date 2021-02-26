@@ -1,12 +1,13 @@
 package typingsSlinky.datatablesNet.DataTables
 
 import org.scalajs.dom.raw.Node
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SettingsLegacy extends js.Object {
+trait SettingsLegacy extends StObject {
   
   var _iDisplayEnd: Double = js.native
   
@@ -138,7 +139,7 @@ trait SettingsLegacy extends js.Object {
   
   var oApi: js.Any = js.native
   
-   // | { fnInfoCallback: FunctionInfoCallback; };
+  // | { fnInfoCallback: FunctionInfoCallback; };
   var oBrowser: BrowserLegacy = js.native
   
   var oClasses: js.Any = js.native

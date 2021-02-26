@@ -7,6 +7,7 @@ import typingsSlinky.baseui.anon.SnackbarElementOverridesT
 import typingsSlinky.baseui.snackbarMod.DurationT
 import typingsSlinky.baseui.snackbarMod.PlacementT
 import typingsSlinky.baseui.snackbarMod.SnackbarProviderPropsT
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object SnackbarProvider {
   
   @JSImport("baseui/snackbar", "SnackbarProvider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,7 +36,7 @@ object SnackbarProvider {
     def placement(value: PlacementT): this.type = set("placement", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SnackbarProviderPropsT): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SnackbarProvider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SnackbarProviderPropsT): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

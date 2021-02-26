@@ -10,10 +10,10 @@ Build cross platform desktop apps with JavaScript, HTML, and CSS
 | ------------------ | :-------------: |
 | Full name          | electron |
 | Keywords           | electron |
-| # releases         | 226 |
-| # dependents       | 645 |
-| # downloads        | 11431320 |
-| # stars            | 142 |
+| # releases         | 286 |
+| # dependents       | 803 |
+| # downloads        | 17388673 |
+| # stars            | 144 |
 
 ## Links
 - [Homepage](https://github.com/electron/electron#readme)

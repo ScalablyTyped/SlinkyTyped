@@ -1,5 +1,6 @@
 package typingsSlinky.bpmnModdle.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.bpmnModdle.bpmnModdleStrings.All
   - typingsSlinky.bpmnModdle.bpmnModdleStrings.Complex
 */
-trait MultiInstanceBehaviour extends js.Object
+trait MultiInstanceBehaviour extends StObject
 object MultiInstanceBehaviour {
   
   @scala.inline

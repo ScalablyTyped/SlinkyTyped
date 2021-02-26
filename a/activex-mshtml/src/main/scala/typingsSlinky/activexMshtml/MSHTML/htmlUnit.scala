@@ -5,6 +5,7 @@ import typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`2`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`3`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`6`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`6`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`2`
 */
-trait htmlUnit extends js.Object
+trait htmlUnit extends StObject
 object htmlUnit {
   
   @scala.inline

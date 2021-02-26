@@ -4,6 +4,7 @@ import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.ssh2.ssh2Booleans.`false`
 import typingsSlinky.ssh2.ssh2Strings.close
 import typingsSlinky.ssh2.ssh2Strings.exit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

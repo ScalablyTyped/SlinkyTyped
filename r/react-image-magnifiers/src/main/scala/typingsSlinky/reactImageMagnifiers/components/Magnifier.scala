@@ -11,15 +11,22 @@ import typingsSlinky.reactImageMagnifiers.anon.ClickMoveLimit
 import typingsSlinky.reactImageMagnifiers.mod.MagnifierProps
 import typingsSlinky.reactImageMagnifiers.mod.MouseActivation
 import typingsSlinky.reactImageMagnifiers.mod.TouchActivation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Magnifier {
   
+  @scala.inline
+  def apply(imageSrc: String): Builder = {
+    val __props = js.Dynamic.literal(imageSrc = imageSrc.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MagnifierProps]))
+  }
+  
   @JSImport("react-image-magnifiers", "Magnifier")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -73,10 +80,4 @@ object Magnifier {
   }
   
   def withProps(p: MagnifierProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(imageSrc: String): Builder = {
-    val __props = js.Dynamic.literal(imageSrc = imageSrc.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MagnifierProps]))
-  }
 }

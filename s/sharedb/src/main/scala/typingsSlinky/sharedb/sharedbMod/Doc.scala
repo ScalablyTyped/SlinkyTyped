@@ -1,6 +1,7 @@
 package typingsSlinky.sharedb.sharedbMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.sharedb.clientMod.Connection
 import typingsSlinky.sharedb.sharedbStrings.`before op`
 import typingsSlinky.sharedb.sharedbStrings.`no write pending`
@@ -10,6 +11,7 @@ import typingsSlinky.sharedb.sharedbStrings.del
 import typingsSlinky.sharedb.sharedbStrings.error
 import typingsSlinky.sharedb.sharedbStrings.load
 import typingsSlinky.sharedb.sharedbStrings.op
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,6 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("sharedb/lib/sharedb", "Doc")
 @js.native
 class Doc () extends EventEmitter {
+  def this(options: EventEmitterOptions) = this()
   
   @JSName("addListener")
   def addListener_beforeop(event: `before op`, callback: js.Function2[/* ops */ js.Array[Op], /* source */ Boolean, Unit]): this.type = js.native

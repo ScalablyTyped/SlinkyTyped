@@ -2,12 +2,13 @@ package typingsSlinky.activexExcel.Excel
 
 import typingsSlinky.activexOffice.Office.MsoDiagramType
 import typingsSlinky.activexOffice.Office.MsoTriState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Diagram extends js.Object {
+trait Diagram extends StObject {
   
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   

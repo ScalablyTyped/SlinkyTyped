@@ -24,6 +24,7 @@ import typingsSlinky.qlik.qlikStrings.string
 import typingsSlinky.qlik.qlikStrings.switch
 import typingsSlinky.qlik.qlikStrings.text
 import typingsSlinky.qlik.qlikStrings.textarea
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,138 +50,138 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.qlik.mod.CustomPropertyExpression
   - typingsSlinky.qlik.mod.CustomPropertyItems
 */
-trait CustomProperty extends js.Object
+trait CustomProperty extends StObject
 object CustomProperty {
   
   @scala.inline
-  def CustomPropertyInteger(`type`: integer): CustomProperty = {
+  def CustomPropertyArray(`type`: array): typingsSlinky.qlik.mod.CustomPropertyArray = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyArray]
   }
   
   @scala.inline
-  def CustomPropertyItems(items: StringDictionary[CustomProperty], `type`: items): CustomProperty = {
-    val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+  def CustomPropertyButton(action: VisualizationOptions => Unit, component: button): typingsSlinky.qlik.mod.CustomPropertyButton = {
+    val __obj = js.Dynamic.literal(action = js.Any.fromFunction1(action), component = component.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyButton]
   }
   
   @scala.inline
-  def CustomPropertyButtonGroup(component: buttongroup, `type`: string): CustomProperty = {
+  def CustomPropertyButtonGroup(component: buttongroup, `type`: string): typingsSlinky.qlik.mod.CustomPropertyButtonGroup = {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyButtonGroup]
   }
   
   @scala.inline
-  def CustomPropertyRangeSlider(component: slider, `type`: array): CustomProperty = {
-    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
-  }
-  
-  @scala.inline
-  def CustomPropertyRadio(component: radiobuttons, `type`: string): CustomProperty = {
-    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
-  }
-  
-  @scala.inline
-  def CustomPropertyNumber(`type`: number): CustomProperty = {
+  def CustomPropertyCheckbox(`type`: boolean): typingsSlinky.qlik.mod.CustomPropertyCheckbox = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyCheckbox]
   }
   
   @scala.inline
-  def CustomPropertySwitch(component: switch, `type`: boolean): CustomProperty = {
+  def CustomPropertyColorPicker(component: `color-picker`, `type`: integer): typingsSlinky.qlik.mod.CustomPropertyColorPicker = {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyColorPicker]
+  }
+  
+  @scala.inline
+  def CustomPropertyDropdown(component: dropdown, ref: String, `type`: string): typingsSlinky.qlik.mod.CustomPropertyDropdown = {
+    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any], ref = ref.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyDropdown]
   }
   
   @scala.inline
   def CustomPropertyExpression(
     component: expression,
     expressionType: dimension | measure | StringExpr | typingsSlinky.qlik.qlikStrings.ValueExpr | ValueExpression | StringExpression
-  ): CustomProperty = {
+  ): typingsSlinky.qlik.mod.CustomPropertyExpression = {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any], expressionType = expressionType.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyExpression]
   }
   
   @scala.inline
-  def CustomPropertyString(`type`: string): CustomProperty = {
+  def CustomPropertyInteger(`type`: integer): typingsSlinky.qlik.mod.CustomPropertyInteger = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyInteger]
   }
   
   @scala.inline
-  def CustomPropertyArray(`type`: array): CustomProperty = {
+  def CustomPropertyItems(items: StringDictionary[CustomProperty], `type`: items): typingsSlinky.qlik.mod.CustomPropertyItems = {
+    val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyItems]
+  }
+  
+  @scala.inline
+  def CustomPropertyLink(component: link): typingsSlinky.qlik.mod.CustomPropertyLink = {
+    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyLink]
+  }
+  
+  @scala.inline
+  def CustomPropertyNumber(`type`: number): typingsSlinky.qlik.mod.CustomPropertyNumber = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyNumber]
   }
   
   @scala.inline
-  def CustomPropertyText(component: text): CustomProperty = {
-    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
-  }
-  
-  @scala.inline
-  def CustomPropertyButton(action: VisualizationOptions => Unit, component: button): CustomProperty = {
-    val __obj = js.Dynamic.literal(action = js.Any.fromFunction1(action), component = component.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
-  }
-  
-  @scala.inline
-  def CustomPropertyLink(component: link): CustomProperty = {
-    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
-  }
-  
-  @scala.inline
-  def CustomPropertyDropdown(component: dropdown, ref: String, `type`: string): CustomProperty = {
-    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any], ref = ref.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
-  }
-  
-  @scala.inline
-  def CustomPropertyTextArea(component: textarea, `type`: string): CustomProperty = {
+  def CustomPropertyRadio(component: radiobuttons, `type`: string): typingsSlinky.qlik.mod.CustomPropertyRadio = {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyRadio]
   }
   
   @scala.inline
-  def CustomPropertyColorPicker(component: `color-picker`, `type`: integer): CustomProperty = {
+  def CustomPropertyRangeSlider(component: slider, `type`: array): typingsSlinky.qlik.mod.CustomPropertyRangeSlider = {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyRangeSlider]
   }
   
   @scala.inline
-  def CustomPropertySlider(component: slider, `type`: number): CustomProperty = {
+  def CustomPropertySlider(component: slider, `type`: number): typingsSlinky.qlik.mod.CustomPropertySlider = {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertySlider]
   }
   
   @scala.inline
-  def CustomPropertyCheckbox(`type`: boolean): CustomProperty = {
+  def CustomPropertyString(`type`: string): typingsSlinky.qlik.mod.CustomPropertyString = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyString]
   }
   
   @scala.inline
-  def CustomProperyMedia(component: media, `type`: string): CustomProperty = {
+  def CustomPropertySwitch(component: switch, `type`: boolean): typingsSlinky.qlik.mod.CustomPropertySwitch = {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CustomProperty]
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertySwitch]
+  }
+  
+  @scala.inline
+  def CustomPropertyText(component: text): typingsSlinky.qlik.mod.CustomPropertyText = {
+    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyText]
+  }
+  
+  @scala.inline
+  def CustomPropertyTextArea(component: textarea, `type`: string): typingsSlinky.qlik.mod.CustomPropertyTextArea = {
+    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomPropertyTextArea]
+  }
+  
+  @scala.inline
+  def CustomProperyMedia(component: media, `type`: string): typingsSlinky.qlik.mod.CustomProperyMedia = {
+    val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.qlik.mod.CustomProperyMedia]
   }
 }

@@ -2,12 +2,13 @@ package typingsSlinky.sugar
 
 import typingsSlinky.sugar.sugarjs.Date.DateCreateOptions
 import typingsSlinky.sugar.sugarjs.Locale
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Date extends js.Object {
+trait Date extends StObject {
   
   def addDays(n: Double): Date = js.native
   def addDays(n: Double, reset: Boolean): Date = js.native

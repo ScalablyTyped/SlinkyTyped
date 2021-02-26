@@ -2,6 +2,7 @@ package typingsSlinky.typescript.mod
 
 import typingsSlinky.typescript.mod.SyntaxKind.ExtendsKeyword
 import typingsSlinky.typescript.mod.SyntaxKind.ImplementsKeyword
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

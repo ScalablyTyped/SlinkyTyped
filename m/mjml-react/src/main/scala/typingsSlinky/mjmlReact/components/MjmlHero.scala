@@ -10,6 +10,7 @@ import typingsSlinky.mjmlReact.mjmlReactStrings.`fluid-height`
 import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.MjmlHeroProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object MjmlHero {
   
   @JSImport("mjml-react", "MjmlHero")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -71,7 +72,7 @@ object MjmlHero {
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MjmlHeroProps with ClassNameProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MjmlHero.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MjmlHeroProps with ClassNameProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

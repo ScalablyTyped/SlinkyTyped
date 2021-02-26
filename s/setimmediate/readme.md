@@ -10,9 +10,9 @@ A shim for the setImmediate efficient script yielding API
 | ------------------ | :-------------: |
 | Full name          | setimmediate |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 341 |
-| # downloads        | 296427725 |
+| # releases         | 0 |
+| # dependents       | 455 |
+| # downloads        | 500648664 |
 | # stars            | 7 |
 
 ## Links

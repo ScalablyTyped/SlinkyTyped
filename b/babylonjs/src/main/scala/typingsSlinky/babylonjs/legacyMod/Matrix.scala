@@ -4,6 +4,7 @@ import typingsSlinky.babylonjs.anon.DownDegrees
 import typingsSlinky.babylonjs.mathLikeMod.IPlaneLike
 import typingsSlinky.babylonjs.typesMod.DeepImmutable
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,9 +17,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Matrix ()
   extends typingsSlinky.babylonjs.indexMod.Matrix
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "Matrix")
-@js.native
-object Matrix extends js.Object {
+object Matrix {
+  
+  @JSImport("babylonjs/Legacy/legacy", "Matrix")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Creates a new matrix composed by merging scale (vector3), rotation (quaternion) and translation (vector3)
@@ -27,6 +30,8 @@ object Matrix extends js.Object {
     * @param translation defines the translation vector3
     * @returns a new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.Compose")
+  @js.native
   def Compose(
     scale: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     rotation: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
@@ -40,6 +45,8 @@ object Matrix extends js.Object {
     * @param translation defines the translation vector3
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.ComposeToRef")
+  @js.native
   def ComposeToRef(
     scale: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     rotation: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
@@ -57,6 +64,8 @@ object Matrix extends js.Object {
     * @param gradient defines the gradient between the two matrices
     * @returns the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.DecomposeLerp")
+  @js.native
   def DecomposeLerp(
     startValue: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     endValue: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
@@ -73,6 +82,8 @@ object Matrix extends js.Object {
     * @param gradient defines the gradient between the two matrices
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.DecomposeLerpToRef")
+  @js.native
   def DecomposeLerpToRef(
     startValue: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     endValue: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
@@ -86,7 +97,11 @@ object Matrix extends js.Object {
     * @param offset defines an offset in the source array
     * @returns a new Matrix set from the starting index of the given array
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.FromArray")
+  @js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]]): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.FromArray")
+  @js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -95,6 +110,8 @@ object Matrix extends js.Object {
     * @param offset defines an offset in the source array
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.FromArrayToRef")
+  @js.native
   def FromArrayToRef(
     array: DeepImmutable[ArrayLike[Double]],
     offset: Double,
@@ -108,6 +125,8 @@ object Matrix extends js.Object {
     * @param scale defines the scaling factor
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.FromFloat32ArrayToRefScaled")
+  @js.native
   def FromFloat32ArrayToRefScaled(
     array: DeepImmutable[js.typedarray.Float32Array | js.Array[Double]],
     offset: Double,
@@ -120,6 +139,8 @@ object Matrix extends js.Object {
     * @param quat defines the quaternion to use
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.FromQuaternionToRef")
+  @js.native
   def FromQuaternionToRef(
     quat: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Quaternion],
     result: typingsSlinky.babylonjs.mathVectorMod.Matrix
@@ -145,6 +166,8 @@ object Matrix extends js.Object {
     * @param initialM44 defines 4th value of 4th row
     * @returns the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.FromValues")
+  @js.native
   def FromValues(
     initialM11: Double,
     initialM12: Double,
@@ -184,6 +207,8 @@ object Matrix extends js.Object {
     * @param initialM44 defines 4th value of 4th row
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.FromValuesToRef")
+  @js.native
   def FromValuesToRef(
     initialM11: Double,
     initialM12: Double,
@@ -211,6 +236,8 @@ object Matrix extends js.Object {
     * @param zaxis defines the value of the 3rd axis
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.FromXYZAxesToRef")
+  @js.native
   def FromXYZAxesToRef(
     xaxis: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     yaxis: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
@@ -223,6 +250,8 @@ object Matrix extends js.Object {
     * @param matrix defines the matrix to use
     * @returns a new Float32Array array with 4 elements : the 2x2 matrix extracted from the given matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.GetAsMatrix2x2")
+  @js.native
   def GetAsMatrix2x2(matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]): js.typedarray.Float32Array | js.Array[Double] = js.native
   
   /**
@@ -230,6 +259,8 @@ object Matrix extends js.Object {
     * @param matrix defines the matrix to use
     * @returns a new Float32Array array with 9 elements : the 3x3 matrix extracted from the given matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.GetAsMatrix3x3")
+  @js.native
   def GetAsMatrix3x3(matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]): js.typedarray.Float32Array | js.Array[Double] = js.native
   
   /**
@@ -242,6 +273,8 @@ object Matrix extends js.Object {
     * @param zmax defines the far clip plane
     * @returns the transformation matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.GetFinalMatrix")
+  @js.native
   def GetFinalMatrix(
     viewport: DeepImmutable[typingsSlinky.babylonjs.mathViewportMod.Viewport],
     world: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
@@ -255,17 +288,16 @@ object Matrix extends js.Object {
     * Creates a new identity matrix
     * @returns a new identity matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.Identity")
+  @js.native
   def Identity(): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
-  
-  /**
-    * Gets an identity matrix that must not be updated
-    */
-  def IdentityReadOnly: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix] = js.native
   
   /**
     * Creates a new identity matrix and stores the result in a given matrix
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.IdentityToRef")
+  @js.native
   def IdentityToRef(result: typingsSlinky.babylonjs.mathVectorMod.Matrix): Unit = js.native
   
   /**
@@ -273,6 +305,8 @@ object Matrix extends js.Object {
     * @param source defines the source matrix
     * @returns the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.Invert")
+  @js.native
   def Invert(source: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -282,6 +316,8 @@ object Matrix extends js.Object {
     * @param gradient defines the gradient factor
     * @returns the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.Lerp")
+  @js.native
   def Lerp(
     startValue: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     endValue: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
@@ -295,6 +331,8 @@ object Matrix extends js.Object {
     * @param gradient defines the gradient factor
     * @param result defines the Matrix object where to store data
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.LerpToRef")
+  @js.native
   def LerpToRef(
     startValue: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     endValue: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
@@ -310,6 +348,8 @@ object Matrix extends js.Object {
     * @param up defines the up vector for the entity
     * @returns the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.LookAtLH")
+  @js.native
   def LookAtLH(
     eye: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     target: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
@@ -324,6 +364,8 @@ object Matrix extends js.Object {
     * @param up defines the up vector for the entity
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.LookAtLHToRef")
+  @js.native
   def LookAtLHToRef(
     eye: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     target: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
@@ -339,6 +381,8 @@ object Matrix extends js.Object {
     * @param up defines the up vector for the entity
     * @returns the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.LookAtRH")
+  @js.native
   def LookAtRH(
     eye: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     target: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
@@ -353,6 +397,8 @@ object Matrix extends js.Object {
     * @param up defines the up vector for the entity
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.LookAtRHToRef")
+  @js.native
   def LookAtRHToRef(
     eye: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     target: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
@@ -368,6 +414,8 @@ object Matrix extends js.Object {
     * @param zfar defines the far clip plane
     * @returns a new matrix as a left-handed orthographic projection matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.OrthoLH")
+  @js.native
   def OrthoLH(width: Double, height: Double, znear: Double, zfar: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -378,6 +426,8 @@ object Matrix extends js.Object {
     * @param zfar defines the far clip plane
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.OrthoLHToRef")
+  @js.native
   def OrthoLHToRef(
     width: Double,
     height: Double,
@@ -396,6 +446,8 @@ object Matrix extends js.Object {
     * @param zfar defines the far clip plane
     * @returns a new matrix as a left-handed orthographic projection matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.OrthoOffCenterLH")
+  @js.native
   def OrthoOffCenterLH(left: Double, right: Double, bottom: Double, top: Double, znear: Double, zfar: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -408,6 +460,8 @@ object Matrix extends js.Object {
     * @param zfar defines the far clip plane
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.OrthoOffCenterLHToRef")
+  @js.native
   def OrthoOffCenterLHToRef(
     left: Double,
     right: Double,
@@ -428,6 +482,8 @@ object Matrix extends js.Object {
     * @param zfar defines the far clip plane
     * @returns a new matrix as a right-handed orthographic projection matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.OrthoOffCenterRH")
+  @js.native
   def OrthoOffCenterRH(left: Double, right: Double, bottom: Double, top: Double, znear: Double, zfar: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -440,6 +496,8 @@ object Matrix extends js.Object {
     * @param zfar defines the far clip plane
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.OrthoOffCenterRHToRef")
+  @js.native
   def OrthoOffCenterRHToRef(
     left: Double,
     right: Double,
@@ -458,6 +516,8 @@ object Matrix extends js.Object {
     * @param zfar defines the far clip plane
     * @returns a new matrix as a left-handed perspective projection matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovLH")
+  @js.native
   def PerspectiveFovLH(fov: Double, aspect: Double, znear: Double, zfar: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -469,6 +529,8 @@ object Matrix extends js.Object {
     * @param result defines the target matrix
     * @param isVerticalFovFixed defines it the fov is vertically fixed (default) or horizontally
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovLHToRef")
+  @js.native
   def PerspectiveFovLHToRef(
     fov: Double,
     aspect: Double,
@@ -476,6 +538,8 @@ object Matrix extends js.Object {
     zfar: Double,
     result: typingsSlinky.babylonjs.mathVectorMod.Matrix
   ): Unit = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovLHToRef")
+  @js.native
   def PerspectiveFovLHToRef(
     fov: Double,
     aspect: Double,
@@ -493,6 +557,8 @@ object Matrix extends js.Object {
     * @param zfar defines the far clip plane
     * @returns a new matrix as a right-handed perspective projection matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovRH")
+  @js.native
   def PerspectiveFovRH(fov: Double, aspect: Double, znear: Double, zfar: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -504,6 +570,8 @@ object Matrix extends js.Object {
     * @param result defines the target matrix
     * @param isVerticalFovFixed defines it the fov is vertically fixed (default) or horizontally
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovRHToRef")
+  @js.native
   def PerspectiveFovRHToRef(
     fov: Double,
     aspect: Double,
@@ -511,6 +579,8 @@ object Matrix extends js.Object {
     zfar: Double,
     result: typingsSlinky.babylonjs.mathVectorMod.Matrix
   ): Unit = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovRHToRef")
+  @js.native
   def PerspectiveFovRHToRef(
     fov: Double,
     aspect: Double,
@@ -529,6 +599,8 @@ object Matrix extends js.Object {
     * @param result defines the target matrix
     * @param isVerticalFovFixed defines it the fov is vertically fixed (default) or horizontally
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovReverseLHToRef")
+  @js.native
   def PerspectiveFovReverseLHToRef(
     fov: Double,
     aspect: Double,
@@ -536,6 +608,8 @@ object Matrix extends js.Object {
     zfar: Double,
     result: typingsSlinky.babylonjs.mathVectorMod.Matrix
   ): Unit = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovReverseLHToRef")
+  @js.native
   def PerspectiveFovReverseLHToRef(
     fov: Double,
     aspect: Double,
@@ -554,6 +628,8 @@ object Matrix extends js.Object {
     * @param result defines the target matrix
     * @param isVerticalFovFixed defines it the fov is vertically fixed (default) or horizontally
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovReverseRHToRef")
+  @js.native
   def PerspectiveFovReverseRHToRef(
     fov: Double,
     aspect: Double,
@@ -561,6 +637,8 @@ object Matrix extends js.Object {
     zfar: Double,
     result: typingsSlinky.babylonjs.mathVectorMod.Matrix
   ): Unit = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovReverseRHToRef")
+  @js.native
   def PerspectiveFovReverseRHToRef(
     fov: Double,
     aspect: Double,
@@ -578,12 +656,16 @@ object Matrix extends js.Object {
     * @param result defines the target matrix
     * @param rightHanded defines if the matrix must be in right-handed mode (false by default)
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovWebVRToRef")
+  @js.native
   def PerspectiveFovWebVRToRef(
     fov: DownDegrees,
     znear: Double,
     zfar: Double,
     result: typingsSlinky.babylonjs.mathVectorMod.Matrix
   ): Unit = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveFovWebVRToRef")
+  @js.native
   def PerspectiveFovWebVRToRef(
     fov: DownDegrees,
     znear: Double,
@@ -600,6 +682,8 @@ object Matrix extends js.Object {
     * @param zfar defines the far clip plane
     * @returns a new matrix as a left-handed perspective projection matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.PerspectiveLH")
+  @js.native
   def PerspectiveLH(width: Double, height: Double, znear: Double, zfar: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -607,6 +691,8 @@ object Matrix extends js.Object {
     * @param plane defines the reflection plane
     * @returns a new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.Reflection")
+  @js.native
   def Reflection(plane: DeepImmutable[IPlaneLike]): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -614,6 +700,8 @@ object Matrix extends js.Object {
     * @param plane defines the reflection plane
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.ReflectionToRef")
+  @js.native
   def ReflectionToRef(plane: DeepImmutable[IPlaneLike], result: typingsSlinky.babylonjs.mathVectorMod.Matrix): Unit = js.native
   
   /**
@@ -623,6 +711,8 @@ object Matrix extends js.Object {
     * @param to defines the vector to align to
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationAlignToRef")
+  @js.native
   def RotationAlignToRef(
     from: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     to: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
@@ -635,6 +725,8 @@ object Matrix extends js.Object {
     * @param angle defines the angle (in radians) to use
     * @return the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationAxis")
+  @js.native
   def RotationAxis(axis: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3], angle: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -643,6 +735,8 @@ object Matrix extends js.Object {
     * @param angle defines the angle (in radians) to use
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationAxisToRef")
+  @js.native
   def RotationAxisToRef(
     axis: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     angle: Double,
@@ -654,6 +748,8 @@ object Matrix extends js.Object {
     * @param angle defines the angle (in radians) to use
     * @return the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationX")
+  @js.native
   def RotationX(angle: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -661,6 +757,8 @@ object Matrix extends js.Object {
     * @param angle defines the angle (in radians) to use
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationXToRef")
+  @js.native
   def RotationXToRef(angle: Double, result: typingsSlinky.babylonjs.mathVectorMod.Matrix): Unit = js.native
   
   /**
@@ -668,6 +766,8 @@ object Matrix extends js.Object {
     * @param angle defines the angle (in radians) to use
     * @return the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationY")
+  @js.native
   def RotationY(angle: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -675,6 +775,8 @@ object Matrix extends js.Object {
     * @param angle defines the angle (in radians) to use
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationYToRef")
+  @js.native
   def RotationYToRef(angle: Double, result: typingsSlinky.babylonjs.mathVectorMod.Matrix): Unit = js.native
   
   /**
@@ -684,6 +786,8 @@ object Matrix extends js.Object {
     * @param roll defines the roll angle in radians (Z axis)
     * @returns the new rotation matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationYawPitchRoll")
+  @js.native
   def RotationYawPitchRoll(yaw: Double, pitch: Double, roll: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -693,6 +797,8 @@ object Matrix extends js.Object {
     * @param roll defines the roll angle in radians (Z axis)
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationYawPitchRollToRef")
+  @js.native
   def RotationYawPitchRollToRef(yaw: Double, pitch: Double, roll: Double, result: typingsSlinky.babylonjs.mathVectorMod.Matrix): Unit = js.native
   
   /**
@@ -700,6 +806,8 @@ object Matrix extends js.Object {
     * @param angle defines the angle (in radians) to use
     * @return the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationZ")
+  @js.native
   def RotationZ(angle: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -707,6 +815,8 @@ object Matrix extends js.Object {
     * @param angle defines the angle (in radians) to use
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.RotationZToRef")
+  @js.native
   def RotationZToRef(angle: Double, result: typingsSlinky.babylonjs.mathVectorMod.Matrix): Unit = js.native
   
   /**
@@ -716,6 +826,8 @@ object Matrix extends js.Object {
     * @param z defines the scale factor on Z axis
     * @returns the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.Scaling")
+  @js.native
   def Scaling(x: Double, y: Double, z: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -725,6 +837,8 @@ object Matrix extends js.Object {
     * @param z defines the scale factor on Z axis
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.ScalingToRef")
+  @js.native
   def ScalingToRef(x: Double, y: Double, z: Double, result: typingsSlinky.babylonjs.mathVectorMod.Matrix): Unit = js.native
   
   /**
@@ -734,6 +848,8 @@ object Matrix extends js.Object {
     * @param z defines the translationon Z axis
     * @returns the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.Translation")
+  @js.native
   def Translation(x: Double, y: Double, z: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -743,6 +859,8 @@ object Matrix extends js.Object {
     * @param z defines the translationon Z axis
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.TranslationToRef")
+  @js.native
   def TranslationToRef(x: Double, y: Double, z: Double, result: typingsSlinky.babylonjs.mathVectorMod.Matrix): Unit = js.native
   
   /**
@@ -750,6 +868,8 @@ object Matrix extends js.Object {
     * @param matrix defines the matrix to transpose
     * @returns the new matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.Transpose")
+  @js.native
   def Transpose(matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
   /**
@@ -757,23 +877,30 @@ object Matrix extends js.Object {
     * @param matrix defines the matrix to transpose
     * @param result defines the target matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.TransposeToRef")
+  @js.native
   def TransposeToRef(
     matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.mathVectorMod.Matrix
   ): Unit = js.native
   
   /**
-    * Gets the precision of matrix computations
-    */
-  def Use64Bits: Boolean = js.native
-  
-  /**
     * Creates a new zero matrix
     * @returns a new zero matrix
     */
+  @JSImport("babylonjs/Legacy/legacy", "Matrix.Zero")
+  @js.native
   def Zero(): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
   
-  var _identityReadOnly: js.Any = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Matrix._identityReadOnly")
+  @js.native
+  def _identityReadOnly: js.Any = js.native
+  @scala.inline
+  def _identityReadOnly_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_identityReadOnly")(x.asInstanceOf[js.Any])
   
-  var _updateFlagSeed: js.Any = js.native
+  @JSImport("babylonjs/Legacy/legacy", "Matrix._updateFlagSeed")
+  @js.native
+  def _updateFlagSeed: js.Any = js.native
+  @scala.inline
+  def _updateFlagSeed_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_updateFlagSeed")(x.asInstanceOf[js.Any])
 }

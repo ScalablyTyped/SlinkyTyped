@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientServicedirectory.anon.Callback
 import typingsSlinky.maximMazurokGapiClientServicedirectory.anon.Fields
 import typingsSlinky.maximMazurokGapiClientServicedirectory.anon.Key
 import typingsSlinky.maximMazurokGapiClientServicedirectory.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EndpointsResource extends js.Object {
+trait EndpointsResource extends StObject {
   
   /** Creates a endpoint, and returns the new Endpoint. */
   def create(request: Accesstoken): Request[Endpoint] = js.native

@@ -2,6 +2,7 @@ package typingsSlinky.typescriptServices.mod
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxList
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,15 +18,18 @@ class MemberVariableDeclarationSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSImport("typescript-services", "MemberVariableDeclarationSyntax")
-@js.native
-object MemberVariableDeclarationSyntax extends js.Object {
+object MemberVariableDeclarationSyntax {
   
+  /* static member */
+  @JSImport("typescript-services", "MemberVariableDeclarationSyntax.create")
+  @js.native
   def create(
     variableDeclarator: typingsSlinky.typescriptServices.TypeScript.VariableDeclaratorSyntax,
     semicolonToken: ISyntaxToken
   ): typingsSlinky.typescriptServices.TypeScript.MemberVariableDeclarationSyntax = js.native
   
+  /* static member */
+  @JSImport("typescript-services", "MemberVariableDeclarationSyntax.create1")
+  @js.native
   def create1(variableDeclarator: typingsSlinky.typescriptServices.TypeScript.VariableDeclaratorSyntax): typingsSlinky.typescriptServices.TypeScript.MemberVariableDeclarationSyntax = js.native
 }

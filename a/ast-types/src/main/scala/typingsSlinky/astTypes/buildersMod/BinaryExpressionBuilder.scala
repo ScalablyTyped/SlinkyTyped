@@ -25,12 +25,13 @@ import typingsSlinky.astTypes.astTypesStrings.in
 import typingsSlinky.astTypes.astTypesStrings.instanceof
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.BinaryExpression
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BinaryExpressionBuilder extends js.Object {
+trait BinaryExpressionBuilder extends StObject {
   
   def apply(operator: Ampersand, left: ExpressionKind, right: ExpressionKind): BinaryExpression = js.native
   def apply(operator: AsteriskAsterisk, left: ExpressionKind, right: ExpressionKind): BinaryExpression = js.native

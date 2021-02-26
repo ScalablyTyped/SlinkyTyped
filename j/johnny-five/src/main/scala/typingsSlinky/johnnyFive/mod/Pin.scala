@@ -5,13 +5,14 @@ import typingsSlinky.johnnyFive.johnnyFiveStrings.data
 import typingsSlinky.johnnyFive.johnnyFiveStrings.digital
 import typingsSlinky.johnnyFive.johnnyFiveStrings.high
 import typingsSlinky.johnnyFive.johnnyFiveStrings.low
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("johnny-five", "Pin")
 @js.native
-class Pin protected () extends js.Object {
+class Pin protected () extends StObject {
   def this(option: String) = this()
   def this(option: Double) = this()
   def this(option: PinOption) = this()
@@ -45,11 +46,13 @@ class Pin protected () extends js.Object {
   def write(value: Double): Unit = js.native
 }
 /* static members */
-@JSImport("johnny-five", "Pin")
-@js.native
-object Pin extends js.Object {
+object Pin {
   
+  @JSImport("johnny-five", "Pin.read")
+  @js.native
   def read(pin: Double, cb: js.Function2[/* error */ js.Error, /* data */ Double, Unit]): Unit = js.native
   
+  @JSImport("johnny-five", "Pin.write")
+  @js.native
   def write(pin: Double, value: Double): Unit = js.native
 }

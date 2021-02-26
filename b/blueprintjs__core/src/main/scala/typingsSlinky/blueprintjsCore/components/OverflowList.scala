@@ -7,15 +7,26 @@ import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
 import typingsSlinky.blueprintjsCore.overflowListMod.IOverflowListProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactChild
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OverflowList {
   
+  @scala.inline
+  def apply[T](
+    items: js.Array[T],
+    overflowRenderer: js.Array[T] => ReactElement,
+    visibleItemRenderer: (T, Double) => ReactChild
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], overflowRenderer = js.Any.fromFunction1(overflowRenderer), visibleItemRenderer = js.Any.fromFunction2(visibleItemRenderer))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[IOverflowListProps[T]]))
+  }
+  
   @JSImport("@blueprintjs/core", "OverflowList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -45,14 +56,4 @@ object OverflowList {
   }
   
   def withProps[T](p: IOverflowListProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](
-    items: js.Array[T],
-    overflowRenderer: js.Array[T] => ReactElement,
-    visibleItemRenderer: (T, Double) => ReactChild
-  ): Builder[T] = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], overflowRenderer = js.Any.fromFunction1(overflowRenderer), visibleItemRenderer = js.Any.fromFunction2(visibleItemRenderer))
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[IOverflowListProps[T]]))
-  }
 }

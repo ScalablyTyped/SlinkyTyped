@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Node
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.auto
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.drawer
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.floating
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

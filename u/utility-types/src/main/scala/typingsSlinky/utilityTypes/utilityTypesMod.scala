@@ -8,13 +8,12 @@ import typingsSlinky.std.Pick
 import typingsSlinky.utilityTypes.mappedTypesMod.DeepReadonly
 import typingsSlinky.utilityTypes.mappedTypesMod.SetComplement
 import typingsSlinky.utilityTypes.utilityTypesStrings.$ElementType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("utility-types/dist/utility-types", JSImport.Namespace)
-@js.native
-object utilityTypesMod extends js.Object {
+object utilityTypesMod {
   
   type Call[Fn /* <: js.Function1[/* repeated */ js.Any, _] */] = js.Any
   

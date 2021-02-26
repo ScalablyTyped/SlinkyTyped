@@ -12,15 +12,22 @@ import typingsSlinky.antd.cascaderMod.FieldNamesType
 import typingsSlinky.antd.cascaderMod.ShowSearchType
 import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Cascader {
   
+  @scala.inline
+  def apply(options: js.Array[CascaderOptionType]): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CascaderProps]))
+  }
+  
   @JSImport("antd", "Cascader")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,10 +50,10 @@ object Cascader {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: (String | Double)*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: CascaderValueType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: CascaderValueType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: (String | Double)*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -60,10 +67,10 @@ object Cascader {
     def dropdownRender(value: /* menus */ ReactElement => ReactElement): this.type = set("dropdownRender", js.Any.fromFunction1(value))
     
     @scala.inline
-    def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    def expandIcon(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def expandIcon(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def expandTrigger(value: CascaderExpandTrigger): this.type = set("expandTrigger", value.asInstanceOf[js.Any])
@@ -87,10 +94,10 @@ object Cascader {
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onChange(
@@ -125,23 +132,17 @@ object Cascader {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: (String | Double)*): this.type = set("value", js.Array(value :_*))
+    def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def value(value: CascaderValueType): this.type = set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def valueVarargs(value: (String | Double)*): this.type = set("value", js.Array(value :_*))
   }
   
   def withProps(p: CascaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(options: js.Array[CascaderOptionType]): Builder = {
-    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CascaderProps]))
-  }
 }

@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientDrive.anon.CommentIdFields
 import typingsSlinky.maximMazurokGapiClientDrive.anon.FileIdIncludeDeleted
 import typingsSlinky.maximMazurokGapiClientDrive.anon.FileIdKey
 import typingsSlinky.maximMazurokGapiClientDrive.anon.ReplyId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RepliesResource extends js.Object {
+trait RepliesResource extends StObject {
   
   /** Creates a new reply to a comment. */
   def create(request: AltCommentId): Request[Reply] = js.native

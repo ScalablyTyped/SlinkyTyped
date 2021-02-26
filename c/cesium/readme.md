@@ -11,14 +11,14 @@ CesiumJS is a JavaScript library for creating 3D globes and 2D maps in a web bro
 | Full name          | cesium |
 | Keywords           | 3D, webgl, geospatial, map, globe |
 | # releases         | 30 |
-| # dependents       | 42 |
-| # downloads        | 421369 |
+| # dependents       | 92 |
+| # downloads        | 810452 |
 | # stars            | 10 |
 
 ## Links
 - [Homepage](http://cesium.com/cesiumjs/)
-- [Bugs](https://github.com/AnalyticalGraphicsInc/cesium/issues)
-- [Repository](https://github.com/AnalyticalGraphicsInc/cesium)
+- [Bugs](https://github.com/CesiumGS/cesium/issues)
+- [Repository](https://github.com/CesiumGS/cesium)
 - [Npm](https://www.npmjs.com/package/cesium)
     
 

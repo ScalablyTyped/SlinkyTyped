@@ -1,11 +1,12 @@
 package typingsSlinky.sinon.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SinonFakeTimersConfig extends js.Object {
+trait SinonFakeTimersConfig extends StObject {
   
   var now: Double | js.Date = js.native
   
@@ -22,33 +23,21 @@ object SinonFakeTimersConfig {
   }
   
   @scala.inline
-  implicit class SinonFakeTimersConfigOps[Self <: SinonFakeTimersConfig] (val x: Self) extends AnyVal {
+  implicit class SinonFakeTimersConfigMutableBuilder[Self <: SinonFakeTimersConfig] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setNow(value: Double | js.Date): Self = StObject.set(x, "now", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setNowDate(value: js.Date): Self = StObject.set(x, "now", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setShouldAdvanceTime(value: Boolean): Self = StObject.set(x, "shouldAdvanceTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNowDate(value: js.Date): Self = this.set("now", value.asInstanceOf[js.Any])
+    def setToFake(value: js.Array[String]): Self = StObject.set(x, "toFake", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNow(value: Double | js.Date): Self = this.set("now", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setShouldAdvanceTime(value: Boolean): Self = this.set("shouldAdvanceTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setToFakeVarargs(value: String*): Self = this.set("toFake", js.Array(value :_*))
-    
-    @scala.inline
-    def setToFake(value: js.Array[String]): Self = this.set("toFake", value.asInstanceOf[js.Any])
+    def setToFakeVarargs(value: String*): Self = StObject.set(x, "toFake", js.Array(value :_*))
   }
 }

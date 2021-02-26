@@ -2,12 +2,13 @@ package typingsSlinky.tizenAccessory
 
 import typingsSlinky.tizenAccessory.tizenAccessoryStrings.ATTACHED
 import typingsSlinky.tizenAccessory.tizenAccessoryStrings.DETACHED
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SAManager extends js.Object {
+trait SAManager extends StObject {
   
   def requestSAAgent(success: js.Function1[/* agents */ js.Array[SAAgent], Unit]): Unit = js.native
   def requestSAAgent(

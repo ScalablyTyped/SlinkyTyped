@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.Name
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AndroidAppDataStreamsResource extends js.Object {
+trait AndroidAppDataStreamsResource extends StObject {
   
   def create(request: Alt, body: GoogleAnalyticsAdminV1alphaAndroidAppDataStream): Request[GoogleAnalyticsAdminV1alphaAndroidAppDataStream] = js.native
   /** Creates an android app stream with the specified location and attributes. */

@@ -3,16 +3,16 @@ package typingsSlinky.tsMockito
 import typingsSlinky.tsMockito.matcherMod.Matcher
 import typingsSlinky.tsMockito.methodStubCollectionMod.MethodStubCollection
 import typingsSlinky.tsMockito.mockMod.Mocker
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ts-mockito/lib/MethodToStub", JSImport.Namespace)
-@js.native
-object methodToStubMod extends js.Object {
+object methodToStubMod {
   
+  @JSImport("ts-mockito/lib/MethodToStub", "MethodToStub")
   @js.native
-  class MethodToStub protected () extends js.Object {
+  class MethodToStub protected () extends StObject {
     def this(
       methodStubCollection: MethodStubCollection,
       matchers: js.Array[Matcher],

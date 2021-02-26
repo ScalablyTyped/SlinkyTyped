@@ -10,9 +10,9 @@ Promise-based cache library using memory.
 | ------------------ | :-------------: |
 | Full name          | @algolia/cache-in-memory |
 | Keywords           | - |
-| # releases         | 28 |
-| # dependents       | 3 |
-| # downloads        | 1700162 |
+| # releases         | 38 |
+| # dependents       | 5 |
+| # downloads        | 6732025 |
 | # stars            | 0 |
 
 ## Links

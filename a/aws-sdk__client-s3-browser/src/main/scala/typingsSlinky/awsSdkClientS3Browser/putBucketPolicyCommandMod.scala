@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesPutBucketPolicyInputMod.PutBucke
 import typingsSlinky.awsSdkClientS3Browser.typesPutBucketPolicyOutputMod.PutBucketPolicyOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/PutBucketPolicyCommand", JSImport.Namespace)
-@js.native
-object putBucketPolicyCommandMod extends js.Object {
+object putBucketPolicyCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/PutBucketPolicyCommand", "PutBucketPolicyCommand")
   @js.native
   class PutBucketPolicyCommand protected () extends Command[
           InputTypesUnion, 

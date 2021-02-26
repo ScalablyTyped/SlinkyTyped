@@ -1,13 +1,14 @@
 package typingsSlinky.exceljs.mod
 
 import typingsSlinky.exceljs.anon.PartialAddWorksheetOption
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("exceljs", "Workbook")
 @js.native
-class Workbook () extends js.Object {
+class Workbook () extends StObject {
   
   /**
   	 * Add Image to Workbook and return the id

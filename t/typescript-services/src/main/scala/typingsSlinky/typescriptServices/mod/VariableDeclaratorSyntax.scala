@@ -1,6 +1,7 @@
 package typingsSlinky.typescriptServices.mod
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,12 +17,15 @@ class VariableDeclaratorSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSImport("typescript-services", "VariableDeclaratorSyntax")
-@js.native
-object VariableDeclaratorSyntax extends js.Object {
+object VariableDeclaratorSyntax {
   
+  /* static member */
+  @JSImport("typescript-services", "VariableDeclaratorSyntax.create")
+  @js.native
   def create(propertyName: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.VariableDeclaratorSyntax = js.native
   
+  /* static member */
+  @JSImport("typescript-services", "VariableDeclaratorSyntax.create1")
+  @js.native
   def create1(propertyName: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.VariableDeclaratorSyntax = js.native
 }

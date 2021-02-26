@@ -6,14 +6,15 @@ import typingsSlinky.firebaseApp.firebaseAppMod.FirebaseAppImpl
 import typingsSlinky.firebaseAppTypes.mod.FirebaseAppConfig
 import typingsSlinky.firebaseAppTypes.mod.FirebaseOptions
 import typingsSlinky.firebaseAppTypes.privateMod.FirebaseNamespace
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/app/dist/packages/app/src/firebaseNamespaceCore", JSImport.Namespace)
-@js.native
-object firebaseNamespaceCoreMod extends js.Object {
+object firebaseNamespaceCoreMod {
   
+  @JSImport("@firebase/app/dist/packages/app/src/firebaseNamespaceCore", "createFirebaseNamespaceCore")
+  @js.native
   def createFirebaseNamespaceCore(
     firebaseAppImpl: Instantiable3[
       /* options */ FirebaseOptions, 

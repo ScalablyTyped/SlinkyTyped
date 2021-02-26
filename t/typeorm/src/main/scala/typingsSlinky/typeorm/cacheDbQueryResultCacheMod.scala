@@ -3,14 +3,14 @@ package typingsSlinky.typeorm
 import typingsSlinky.typeorm.cacheQueryResultCacheMod.QueryResultCache
 import typingsSlinky.typeorm.connectionConnectionMod.Connection
 import typingsSlinky.typeorm.queryRunnerQueryRunnerMod.QueryRunner
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/cache/DbQueryResultCache", JSImport.Namespace)
-@js.native
-object cacheDbQueryResultCacheMod extends js.Object {
+object cacheDbQueryResultCacheMod {
   
+  @JSImport("typeorm/cache/DbQueryResultCache", "DbQueryResultCache")
   @js.native
   class DbQueryResultCache protected () extends QueryResultCache {
     def this(connection: Connection) = this()

@@ -30,6 +30,7 @@ import typingsSlinky.aceBuilds.aceBuildsStrings.wrapMethod
 import typingsSlinky.aceBuilds.anon.Action
 import typingsSlinky.aceBuilds.anon.Data
 import typingsSlinky.aceBuilds.anon.Max
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

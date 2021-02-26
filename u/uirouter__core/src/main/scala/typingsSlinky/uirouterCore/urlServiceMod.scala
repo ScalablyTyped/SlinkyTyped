@@ -7,14 +7,14 @@ import typingsSlinky.uirouterCore.urlInterfaceMod.MatchResult
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlParts
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlSyncApi
 import typingsSlinky.uirouterCore.urlRulesMod.UrlRules
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/url/urlService", JSImport.Namespace)
-@js.native
-object urlServiceMod extends js.Object {
+object urlServiceMod {
   
+  @JSImport("@uirouter/core/lib/url/urlService", "UrlService")
   @js.native
   class UrlService protected ()
     extends LocationServices

@@ -15,19 +15,15 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.std.DocumentAndElementEventHandlersEventMap
-import typingsSlinky.std.ElementEventMap
-import typingsSlinky.std.GlobalEventHandlersEventMap
+import typingsSlinky.std.HTMLElementEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ojGanttDependencyEventMap
-  extends ElementEventMap
-     with GlobalEventHandlersEventMap
-     with DocumentAndElementEventHandlersEventMap {
+trait ojGanttDependencyEventMap extends HTMLElementEventMap {
   
   var predecessorTaskIdChanged: CustomEvent = js.native
   
@@ -149,36 +145,24 @@ object ojGanttDependencyEventMap {
   }
   
   @scala.inline
-  implicit class ojGanttDependencyEventMapOps[Self <: ojGanttDependencyEventMap] (val x: Self) extends AnyVal {
+  implicit class ojGanttDependencyEventMapMutableBuilder[Self <: ojGanttDependencyEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setPredecessorTaskIdChanged(value: CustomEvent): Self = StObject.set(x, "predecessorTaskIdChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setShortDescChanged(value: CustomEvent): Self = StObject.set(x, "shortDescChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setSuccessorTaskIdChanged(value: CustomEvent): Self = StObject.set(x, "successorTaskIdChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPredecessorTaskIdChanged(value: CustomEvent): Self = this.set("predecessorTaskIdChanged", value.asInstanceOf[js.Any])
+    def setSvgClassNameChanged(value: CustomEvent): Self = StObject.set(x, "svgClassNameChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setShortDescChanged(value: CustomEvent): Self = this.set("shortDescChanged", value.asInstanceOf[js.Any])
+    def setSvgStyleChanged(value: CustomEvent): Self = StObject.set(x, "svgStyleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSuccessorTaskIdChanged(value: CustomEvent): Self = this.set("successorTaskIdChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSvgClassNameChanged(value: CustomEvent): Self = this.set("svgClassNameChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSvgStyleChanged(value: CustomEvent): Self = this.set("svgStyleChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTypeChanged(value: CustomEvent): Self = this.set("typeChanged", value.asInstanceOf[js.Any])
+    def setTypeChanged(value: CustomEvent): Self = StObject.set(x, "typeChanged", value.asInstanceOf[js.Any])
   }
 }

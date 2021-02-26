@@ -3,13 +3,14 @@ package typingsSlinky.googleCloudCommon.utilMod
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.googleCloudCommon.anon.TypeofApiError
 import typingsSlinky.teenyRequest.mod.Response
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@google-cloud/common/build/src/util", "Util")
 @js.native
-class Util_ () extends js.Object {
+class Util_ () extends StObject {
   
   var ApiError: TypeofApiError = js.native
   
@@ -44,21 +45,6 @@ class Util_ () extends js.Object {
     * @param {function} callback - The callback function.
     */
   def handleResp(): Unit = js.native
-  def handleResp(
-    err: Null,
-    resp: js.UndefOr[scala.Nothing],
-    body: js.UndefOr[scala.Nothing],
-    callback: BodyResponseCallback
-  ): Unit = js.native
-  def handleResp(err: Null, resp: js.UndefOr[scala.Nothing], body: ResponseBody): Unit = js.native
-  def handleResp(err: Null, resp: js.UndefOr[scala.Nothing], body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
-  def handleResp(err: Null, resp: Null, body: js.UndefOr[scala.Nothing], callback: BodyResponseCallback): Unit = js.native
-  def handleResp(err: Null, resp: Null, body: ResponseBody): Unit = js.native
-  def handleResp(err: Null, resp: Null, body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
-  def handleResp(err: Null, resp: Response[_]): Unit = js.native
-  def handleResp(err: Null, resp: Response[_], body: js.UndefOr[scala.Nothing], callback: BodyResponseCallback): Unit = js.native
-  def handleResp(err: Null, resp: Response[_], body: ResponseBody): Unit = js.native
-  def handleResp(err: Null, resp: Response[_], body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
   def handleResp(err: js.Error): Unit = js.native
   def handleResp(
     err: js.Error,
@@ -75,6 +61,21 @@ class Util_ () extends js.Object {
   def handleResp(err: js.Error, resp: Response[_], body: js.UndefOr[scala.Nothing], callback: BodyResponseCallback): Unit = js.native
   def handleResp(err: js.Error, resp: Response[_], body: ResponseBody): Unit = js.native
   def handleResp(err: js.Error, resp: Response[_], body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
+  def handleResp(
+    err: Null,
+    resp: js.UndefOr[scala.Nothing],
+    body: js.UndefOr[scala.Nothing],
+    callback: BodyResponseCallback
+  ): Unit = js.native
+  def handleResp(err: Null, resp: js.UndefOr[scala.Nothing], body: ResponseBody): Unit = js.native
+  def handleResp(err: Null, resp: js.UndefOr[scala.Nothing], body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
+  def handleResp(err: Null, resp: Null, body: js.UndefOr[scala.Nothing], callback: BodyResponseCallback): Unit = js.native
+  def handleResp(err: Null, resp: Null, body: ResponseBody): Unit = js.native
+  def handleResp(err: Null, resp: Null, body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
+  def handleResp(err: Null, resp: Response[_]): Unit = js.native
+  def handleResp(err: Null, resp: Response[_], body: js.UndefOr[scala.Nothing], callback: BodyResponseCallback): Unit = js.native
+  def handleResp(err: Null, resp: Response[_], body: ResponseBody): Unit = js.native
+  def handleResp(err: Null, resp: Response[_], body: ResponseBody, callback: BodyResponseCallback): Unit = js.native
   
   def isCustomType(unknown: js.Any, module: String): Boolean = js.native
   

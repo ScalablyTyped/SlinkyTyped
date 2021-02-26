@@ -1,5 +1,6 @@
 package typingsSlinky.bootstrapDatepicker
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.`top right`
   - typingsSlinky.bootstrapDatepicker.bootstrapDatepickerStrings.`bottom right`
 */
-trait DatepickerOrientations extends js.Object
+trait DatepickerOrientations extends StObject
 object DatepickerOrientations {
   
   @scala.inline

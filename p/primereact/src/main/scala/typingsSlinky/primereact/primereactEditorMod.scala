@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.editorMod.EditorProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/editor", JSImport.Namespace)
-@js.native
-object primereactEditorMod extends js.Object {
+object primereactEditorMod {
   
+  @JSImport("primereact/editor", "Editor")
   @js.native
-  class Editor ()
-    extends Component[EditorProps, js.Any, js.Any]
+  class Editor protected ()
+    extends typingsSlinky.primereact.editorMod.Editor {
+    def this(props: EditorProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: EditorProps, context: js.Any) = this()
+  }
 }

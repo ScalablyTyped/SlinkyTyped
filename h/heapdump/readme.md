@@ -10,9 +10,9 @@ Make a dump of the V8 heap for later inspection.
 | ------------------ | :-------------: |
 | Full name          | heapdump |
 | Keywords           | - |
-| # releases         | 7 |
-| # dependents       | 85 |
-| # downloads        | 4074676 |
+| # releases         | 4 |
+| # dependents       | 95 |
+| # downloads        | 4399716 |
 | # stars            | 41 |
 
 ## Links

@@ -8,6 +8,7 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`4`
 import typingsSlinky.activexExcel.activexExcelNumbers.`5`
 import typingsSlinky.activexExcel.activexExcelNumbers.`6`
 import typingsSlinky.activexExcel.activexExcelNumbers.`7`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`1`
   - typingsSlinky.activexExcel.activexExcelNumbers.`0`
 */
-trait XlSourceType extends js.Object
+trait XlSourceType extends StObject
 object XlSourceType {
   
   @scala.inline

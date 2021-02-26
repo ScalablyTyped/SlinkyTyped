@@ -8,12 +8,13 @@ import typingsSlinky.activexOffice.Office.MsoPresetGradientType
 import typingsSlinky.activexOffice.Office.MsoPresetTexture
 import typingsSlinky.activexOffice.Office.MsoTextureType
 import typingsSlinky.activexOffice.Office.MsoTriState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ChartFillFormat extends js.Object {
+trait ChartFillFormat extends StObject {
   
   val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
   

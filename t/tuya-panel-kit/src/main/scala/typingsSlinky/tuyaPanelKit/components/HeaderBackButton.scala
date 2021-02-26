@@ -12,6 +12,7 @@ import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.tuyaPanelKit.anon.TintColorString
 import typingsSlinky.tuyaPanelKit.stackTypesMod.StackHeaderLeftButtonProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object HeaderBackButton {
   
   @JSImport("tuya-panel-kit/@react-navigation/stack", "HeaderBackButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -82,7 +83,7 @@ object HeaderBackButton {
     def truncatedLabel(value: String): this.type = set("truncatedLabel", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StackHeaderLeftButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: HeaderBackButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StackHeaderLeftButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

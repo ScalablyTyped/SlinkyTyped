@@ -80,15 +80,49 @@ import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.time
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.url
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.vertical
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TypeaheadInputMulti {
   
+  @scala.inline
+  def apply[T /* <: TypeaheadModel */](
+    `aria-activedescendant`: String,
+    `aria-autocomplete`: list | both,
+    `aria-expanded`: Boolean,
+    `aria-haspopup`: listbox,
+    `aria-owns`: String,
+    autoComplete: String,
+    disabled: Boolean,
+    inputClassName: String,
+    labelKey: TypeaheadLabelKey[T],
+    onBlur: /* e */ Event => Unit,
+    onChange: /* selected */ js.Array[T] => Unit,
+    onClick: /* e */ Event => Unit,
+    onFocus: /* e */ Event => Unit,
+    onKeyDown: /* e */ Event => Unit,
+    onRemove: Event => Unit,
+    renderToken: (T, TypeaheadMenuProps[T], Double) => ReactElement,
+    role: _empty,
+    selected: js.Array[T],
+    `type`: text,
+    value: String
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(autoComplete = autoComplete.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], inputClassName = inputClassName.asInstanceOf[js.Any], labelKey = labelKey.asInstanceOf[js.Any], onBlur = js.Any.fromFunction1(onBlur), onChange = js.Any.fromFunction1(onChange), onClick = js.Any.fromFunction1(onClick), onFocus = js.Any.fromFunction1(onFocus), onKeyDown = js.Any.fromFunction1(onKeyDown), onRemove = js.Any.fromFunction1(onRemove), renderToken = js.Any.fromFunction3(renderToken), role = role.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __props.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
+    __props.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+    __props.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])
+    __props.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+    __props.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[TypeaheadMulitInputWithHocProps[T]]))
+  }
+  
   @JSImport("react-bootstrap-typeahead", "TypeaheadInputMulti")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T /* <: TypeaheadModel */] (val args: js.Array[js.Any])
@@ -281,10 +315,10 @@ object TypeaheadInputMulti {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -335,16 +369,16 @@ object TypeaheadInputMulti {
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRef(value: LegacyRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def inputRef(value: LegacyRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRefNull: this.type = set("inputRef", null)
     
     @scala.inline
-    def inputRefNull: this.type = set("inputRef", null)
+    def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -696,37 +730,4 @@ object TypeaheadInputMulti {
   }
   
   def withProps[T /* <: TypeaheadModel */](p: TypeaheadMulitInputWithHocProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T /* <: TypeaheadModel */](
-    `aria-activedescendant`: String,
-    `aria-autocomplete`: list | both,
-    `aria-expanded`: Boolean,
-    `aria-haspopup`: listbox,
-    `aria-owns`: String,
-    autoComplete: String,
-    disabled: Boolean,
-    inputClassName: String,
-    labelKey: TypeaheadLabelKey[T],
-    onBlur: /* e */ Event => Unit,
-    onChange: /* selected */ js.Array[T] => Unit,
-    onClick: /* e */ Event => Unit,
-    onFocus: /* e */ Event => Unit,
-    onKeyDown: /* e */ Event => Unit,
-    onRemove: Event => Unit,
-    renderToken: (T, TypeaheadMenuProps[T], Double) => ReactElement,
-    role: _empty,
-    selected: js.Array[T],
-    `type`: text,
-    value: String
-  ): Builder[T] = {
-    val __props = js.Dynamic.literal(autoComplete = autoComplete.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], inputClassName = inputClassName.asInstanceOf[js.Any], labelKey = labelKey.asInstanceOf[js.Any], onBlur = js.Any.fromFunction1(onBlur), onChange = js.Any.fromFunction1(onChange), onClick = js.Any.fromFunction1(onClick), onFocus = js.Any.fromFunction1(onFocus), onKeyDown = js.Any.fromFunction1(onKeyDown), onRemove = js.Any.fromFunction1(onRemove), renderToken = js.Any.fromFunction3(renderToken), role = role.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __props.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
-    __props.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
-    __props.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])
-    __props.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
-    __props.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
-    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[TypeaheadMulitInputWithHocProps[T]]))
-  }
 }

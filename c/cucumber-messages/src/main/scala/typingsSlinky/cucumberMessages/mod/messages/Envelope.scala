@@ -5,6 +5,7 @@ import typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.I
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,19 +24,27 @@ class Envelope ()
   extends typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope {
   def this(properties: IEnvelope) = this()
 }
-/* static members */
-@JSImport("cucumber-messages", "messages.Envelope")
-@js.native
-object Envelope extends js.Object {
+object Envelope {
   
   /**
     * Creates a new Envelope instance using the specified properties.
     * @param [properties] Properties to set
     * @returns Envelope instance
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.Envelope.create")
+  @js.native
   def create(): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
+  @JSImport("cucumber-messages", "messages.Envelope.create")
+  @js.native
   def create(properties: IEnvelope): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
   
+  @JSImport("cucumber-messages", "messages.Envelope.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
+  @JSImport("cucumber-messages", "messages.Envelope.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
   /**
     * Decodes an Envelope message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -44,11 +53,17 @@ object Envelope extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.Envelope.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
+  @JSImport("cucumber-messages", "messages.Envelope.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
   
+  @JSImport("cucumber-messages", "messages.Envelope.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
   /**
     * Decodes an Envelope message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -56,8 +71,10 @@ object Envelope extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.Envelope.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
   
   /**
     * Encodes the specified Envelope message. Does not implicitly {@link io.cucumber.messages.Envelope.verify|verify} messages.
@@ -65,7 +82,12 @@ object Envelope extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.Envelope.encode")
+  @js.native
   def encode(message: IEnvelope): Writer = js.native
+  @JSImport("cucumber-messages", "messages.Envelope.encode")
+  @js.native
   def encode(message: IEnvelope, writer: Writer): Writer = js.native
   
   /**
@@ -74,7 +96,12 @@ object Envelope extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.Envelope.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IEnvelope): Writer = js.native
+  @JSImport("cucumber-messages", "messages.Envelope.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IEnvelope, writer: Writer): Writer = js.native
   
   /**
@@ -82,6 +109,9 @@ object Envelope extends js.Object {
     * @param object Plain object
     * @returns Envelope
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.Envelope.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope = js.native
   
   /**
@@ -90,7 +120,12 @@ object Envelope extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.Envelope.toObject")
+  @js.native
   def toObject(message: typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope): StringDictionary[js.Any] = js.native
+  @JSImport("cucumber-messages", "messages.Envelope.toObject")
+  @js.native
   def toObject(
     message: typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.Envelope,
     options: IConversionOptions
@@ -101,5 +136,8 @@ object Envelope extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.Envelope.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

@@ -5,6 +5,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`expand-up`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.auto
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.capture
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.live
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

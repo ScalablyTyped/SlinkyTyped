@@ -10,9 +10,9 @@ JSS integration with React
 | ------------------ | :-------------: |
 | Full name          | react-jss |
 | Keywords           | react, style, css, stylesheet, jss, hoc, decorator |
-| # releases         | 44 |
-| # dependents       | 388 |
-| # downloads        | 8658430 |
+| # releases         | 31 |
+| # dependents       | 484 |
+| # downloads        | 8214414 |
 | # stars            | 3 |
 
 ## Links

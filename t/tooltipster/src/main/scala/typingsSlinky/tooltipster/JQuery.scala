@@ -23,12 +23,13 @@ import typingsSlinky.tooltipster.tooltipsterStrings.option
 import typingsSlinky.tooltipster.tooltipsterStrings.reposition
 import typingsSlinky.tooltipster.tooltipsterStrings.status
 import typingsSlinky.tooltipster.tooltipsterStrings.triggerHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /** Activates Tooltipster */
   def tooltipster(): JQuery = js.native

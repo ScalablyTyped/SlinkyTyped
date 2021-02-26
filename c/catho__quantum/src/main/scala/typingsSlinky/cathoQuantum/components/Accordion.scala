@@ -6,15 +6,22 @@ import typingsSlinky.cathoQuantum.accordionMod.AccordionProps
 import typingsSlinky.cathoQuantum.accordionMod.default
 import typingsSlinky.cathoQuantum.anon.BaseFontSize
 import typingsSlinky.cathoQuantum.anon.Content
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Accordion {
   
+  @scala.inline
+  def apply(items: js.Array[Content]): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AccordionProps]))
+  }
+  
   @JSImport("@catho/quantum/Accordion", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,10 +36,4 @@ object Accordion {
   }
   
   def withProps(p: AccordionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(items: js.Array[Content]): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AccordionProps]))
-  }
 }

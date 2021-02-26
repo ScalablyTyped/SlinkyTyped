@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/av/loop", JSImport.Namespace)
-@js.native
-object loopMod extends js.Object {
+object loopMod {
   
+  @JSImport("material-ui/svg-icons/av/loop", JSImport.Default)
+  @js.native
+  class default () extends AvLoop
+  
+  @JSImport("material-ui/svg-icons/av/loop", "AvLoop")
   @js.native
   class AvLoop ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

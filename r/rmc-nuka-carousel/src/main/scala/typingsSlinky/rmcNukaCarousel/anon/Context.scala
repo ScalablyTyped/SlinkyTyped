@@ -5,12 +5,13 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.rmcNukaCarousel.decoratorsMod.IDecoratorProps
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Context extends js.Object {
+trait Context extends StObject {
   
   var context: js.Any = js.native
   

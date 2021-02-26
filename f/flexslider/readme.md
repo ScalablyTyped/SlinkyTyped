@@ -10,9 +10,9 @@ An awesome, fully responsive jQuery slider toolkit.
 | ------------------ | :-------------: |
 | Full name          | flexslider |
 | Keywords           | flexslider, jquery, slider, woocommerce, automattic |
-| # releases         | 4 |
-| # dependents       | 2 |
-| # downloads        | 235726 |
+| # releases         | 2 |
+| # dependents       | 4 |
+| # downloads        | 270898 |
 | # stars            | 2 |
 
 ## Links

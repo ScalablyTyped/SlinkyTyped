@@ -3,12 +3,13 @@ package typingsSlinky.ariClient.mod
 import typingsSlinky.ariClient.anon.Body
 import typingsSlinky.ariClient.anon.From
 import typingsSlinky.ariClient.anon.Tech
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Endpoints extends js.Object {
+trait Endpoints extends StObject {
   
   /**
     * Details for an endpoint.

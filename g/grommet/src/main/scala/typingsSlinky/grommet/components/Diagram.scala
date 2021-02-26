@@ -96,15 +96,22 @@ import typingsSlinky.react.reactStrings.time
 import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Diagram {
   
-  @JSImport("grommet/es6", "Diagram")
+  @scala.inline
+  def apply(connections: js.Array[typingsSlinky.grommet.anon.Anchor]): Builder = {
+    val __props = js.Dynamic.literal(connections = connections.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DiagramProps with SVGProps[SVGSVGElement]]))
+  }
+  
+  @JSImport("grommet", "Diagram")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1275,10 +1282,4 @@ object Diagram {
   }
   
   def withProps(p: DiagramProps with SVGProps[SVGSVGElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(connections: js.Array[typingsSlinky.grommet.anon.Anchor]): Builder = {
-    val __props = js.Dynamic.literal(connections = connections.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DiagramProps with SVGProps[SVGSVGElement]]))
-  }
 }

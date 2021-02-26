@@ -1,5 +1,6 @@
 package typingsSlinky.swaggerSchemaOfficial.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.pipes
   - typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.multi
 */
-trait ParameterCollectionFormat extends js.Object
+trait ParameterCollectionFormat extends StObject
 object ParameterCollectionFormat {
   
   @scala.inline

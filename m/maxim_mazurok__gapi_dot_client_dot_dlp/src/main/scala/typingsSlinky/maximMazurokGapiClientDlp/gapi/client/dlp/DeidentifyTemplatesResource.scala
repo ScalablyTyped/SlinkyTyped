@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDlp.anon.Fields
 import typingsSlinky.maximMazurokGapiClientDlp.anon.Key
 import typingsSlinky.maximMazurokGapiClientDlp.anon.LocationId
 import typingsSlinky.maximMazurokGapiClientDlp.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DeidentifyTemplatesResource extends js.Object {
+trait DeidentifyTemplatesResource extends StObject {
   
   /**
     * Creates a DeidentifyTemplate for re-using frequently used configuration for de-identifying content, images, and storage. See

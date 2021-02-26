@@ -8,6 +8,7 @@ import typingsSlinky.protonNative.protonNativeStrings.Check
 import typingsSlinky.protonNative.protonNativeStrings.Item
 import typingsSlinky.protonNative.protonNativeStrings.Preferences
 import typingsSlinky.protonNative.protonNativeStrings.Quit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object MenuItem {
   
   @JSImport("proton-native", "MenuItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,7 +39,7 @@ object MenuItem {
     ): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MenuItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

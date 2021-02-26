@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MediaStreamConstraints extends js.Object {
+trait MediaStreamConstraints extends StObject {
   
   var audio: js.UndefOr[scala.Boolean | org.scalajs.dom.experimental.mediastream.MediaTrackConstraints] = js.native
   
@@ -16,48 +17,36 @@ trait MediaStreamConstraints extends js.Object {
 object MediaStreamConstraints {
   
   @scala.inline
-  def apply(): MediaStreamConstraints = {
+  def apply(): org.scalajs.dom.experimental.mediastream.MediaStreamConstraints = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[MediaStreamConstraints]
+    __obj.asInstanceOf[org.scalajs.dom.experimental.mediastream.MediaStreamConstraints]
   }
   
   @scala.inline
-  implicit class MediaStreamConstraintsOps[Self <: org.scalajs.dom.experimental.mediastream.MediaStreamConstraints] (val x: Self) extends AnyVal {
+  implicit class MediaStreamConstraintsMutableBuilder[Self <: org.scalajs.dom.experimental.mediastream.MediaStreamConstraints] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAudio(value: scala.Boolean | org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = StObject.set(x, "audio", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAudioMediaTrackConstraints(value: org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = StObject.set(x, "audio", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setAudioUndefined: Self = StObject.set(x, "audio", js.undefined)
     
     @scala.inline
-    def setAudioMediaTrackConstraints(value: org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = this.set("audio", value.asInstanceOf[js.Any])
+    def setPeerIdentity(value: java.lang.String): Self = StObject.set(x, "peerIdentity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAudio(value: scala.Boolean | org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = this.set("audio", value.asInstanceOf[js.Any])
+    def setPeerIdentityUndefined: Self = StObject.set(x, "peerIdentity", js.undefined)
     
     @scala.inline
-    def deleteAudio: Self = this.set("audio", js.undefined)
+    def setVideo(value: scala.Boolean | org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = StObject.set(x, "video", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPeerIdentity(value: java.lang.String): Self = this.set("peerIdentity", value.asInstanceOf[js.Any])
+    def setVideoMediaTrackConstraints(value: org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = StObject.set(x, "video", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deletePeerIdentity: Self = this.set("peerIdentity", js.undefined)
-    
-    @scala.inline
-    def setVideoMediaTrackConstraints(value: org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = this.set("video", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVideo(value: scala.Boolean | org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = this.set("video", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteVideo: Self = this.set("video", js.undefined)
+    def setVideoUndefined: Self = StObject.set(x, "video", js.undefined)
   }
 }

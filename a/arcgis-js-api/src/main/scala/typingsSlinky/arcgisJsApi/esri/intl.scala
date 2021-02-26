@@ -27,6 +27,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`short-time`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.year
 import typingsSlinky.std.Intl.DateTimeFormatOptions
 import typingsSlinky.std.Intl.NumberFormatOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,7 +38,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-intl.html)
   */
 @js.native
-trait intl extends js.Object {
+trait intl extends StObject {
   
   /**
     * Converts a [web map date format string](https://developers.arcgis.com/web-map-specification/objects/format/) to an [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Parameters) options object.
@@ -104,8 +105,6 @@ trait intl extends js.Object {
   def convertNumberFormatToIntlOptions(): NumberFormatOptions = js.native
   def convertNumberFormatToIntlOptions(format: NumberFormat): NumberFormatOptions = js.native
   
-  def formatDate(value: Double): String = js.native
-  def formatDate(value: Double, formatOptions: DateTimeFormatOptions): String = js.native
   /**
     * Formats a `Date` or `Number` value to a string in the current locale.
     *
@@ -113,6 +112,8 @@ trait intl extends js.Object {
     */
   def formatDate(value: js.Date): String = js.native
   def formatDate(value: js.Date, formatOptions: DateTimeFormatOptions): String = js.native
+  def formatDate(value: Double): String = js.native
+  def formatDate(value: Double, formatOptions: DateTimeFormatOptions): String = js.native
   
   /**
     * Formats a `Number` value to a string in the current locale.

@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.EventHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

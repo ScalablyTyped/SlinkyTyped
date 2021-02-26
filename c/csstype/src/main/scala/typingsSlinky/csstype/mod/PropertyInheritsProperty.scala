@@ -1,5 +1,6 @@
 package typingsSlinky.csstype.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.`false`
   - typingsSlinky.csstype.csstypeStrings.`true`
 */
-trait PropertyInheritsProperty extends js.Object
+trait PropertyInheritsProperty extends StObject
 object PropertyInheritsProperty {
   
   @scala.inline

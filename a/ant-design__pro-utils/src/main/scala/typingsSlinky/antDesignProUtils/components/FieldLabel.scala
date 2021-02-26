@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProUtils.fieldLabelMod.FieldLabelProps
 import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object FieldLabel {
   
   @JSImport("@ant-design/pro-utils", "FieldLabel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,19 +44,19 @@ object FieldLabel {
     def formatter(value: /* value */ js.Any => String): this.type = set("formatter", js.Any.fromFunction1(value))
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onClear(value: () => Unit): this.type = set("onClear", js.Any.fromFunction0(value))
     
     @scala.inline
-    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
     def size(value: SizeType): this.type = set("size", value.asInstanceOf[js.Any])
@@ -67,7 +68,7 @@ object FieldLabel {
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FieldLabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FieldLabel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FieldLabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

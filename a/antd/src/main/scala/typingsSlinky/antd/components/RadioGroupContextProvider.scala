@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.radioInterfaceMod.RadioGroupContextProps
 import typingsSlinky.react.mod.ProviderProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object RadioGroupContextProvider {
   
   @JSImport("antd/lib/radio/context", "RadioGroupContextProvider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -26,7 +27,7 @@ object RadioGroupContextProvider {
     def valueNull: this.type = set("value", null)
   }
   
-  def withProps(p: ProviderProps[RadioGroupContextProps | Null]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RadioGroupContextProvider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ProviderProps[RadioGroupContextProps | Null]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

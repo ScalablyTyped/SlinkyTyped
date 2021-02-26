@@ -1,13 +1,14 @@
 package typingsSlinky.reactstrap
 
 import typingsSlinky.reactstrap.mod.CSSModule
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es/utils", JSImport.Namespace)
-@js.native
-object utilsMod extends js.Object {
+object utilsMod {
   
+  @JSImport("reactstrap/lib/utils", "setGlobalCssModule")
+  @js.native
   def setGlobalCssModule(cssModule: CSSModule): Unit = js.native
 }

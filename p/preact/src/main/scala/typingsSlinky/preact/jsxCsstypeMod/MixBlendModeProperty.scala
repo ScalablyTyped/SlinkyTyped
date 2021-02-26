@@ -1,5 +1,6 @@
 package typingsSlinky.preact.jsxCsstypeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +28,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.preact.preactStrings.screen
   - typingsSlinky.preact.preactStrings.`soft-light`
 */
-trait MixBlendModeProperty extends js.Object
+trait MixBlendModeProperty extends StObject
 object MixBlendModeProperty {
   
   @scala.inline

@@ -9,15 +9,22 @@ import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
 import typingsSlinky.wordpressComponents.wordpressComponentsBooleans.`false`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.container
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.firstElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Dropdown {
   
+  @scala.inline
+  def apply(renderContent: RenderProps => ReactElement, renderToggle: RenderProps => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(renderContent = js.Any.fromFunction1(renderContent), renderToggle = js.Any.fromFunction1(renderToggle))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@wordpress/components", "Dropdown")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,20 +44,14 @@ object Dropdown {
     def focusOnMount(value: firstElement | container | `false`): this.type = set("focusOnMount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headerTitleReactElement(value: ReactElement): this.type = set("headerTitle", value.asInstanceOf[js.Any])
+    def headerTitle(value: ReactElement): this.type = set("headerTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headerTitle(value: ReactElement): this.type = set("headerTitle", value.asInstanceOf[js.Any])
+    def headerTitleReactElement(value: ReactElement): this.type = set("headerTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def position(value: Position): this.type = set("position", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(renderContent: RenderProps => ReactElement, renderToggle: RenderProps => ReactElement): Builder = {
-    val __props = js.Dynamic.literal(renderContent = js.Any.fromFunction1(renderContent), renderToggle = js.Any.fromFunction1(renderToggle))
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

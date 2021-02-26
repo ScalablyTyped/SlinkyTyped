@@ -2,6 +2,7 @@ package typingsSlinky.react.mod
 
 import typingsSlinky.react.reactStrings.backwards
 import typingsSlinky.react.reactStrings.forwards
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,27 +37,15 @@ object DirectionalSuspenseListProps {
   }
   
   @scala.inline
-  implicit class DirectionalSuspenseListPropsOps[Self <: DirectionalSuspenseListProps] (val x: Self) extends AnyVal {
+  implicit class DirectionalSuspenseListPropsMutableBuilder[Self <: DirectionalSuspenseListProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setRevealOrder(value: forwards | backwards): Self = StObject.set(x, "revealOrder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setTail(value: typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListTailMode): Self = StObject.set(x, "tail", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setRevealOrder(value: forwards | backwards): Self = this.set("revealOrder", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTail(value: typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListTailMode): Self = this.set("tail", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTail: Self = this.set("tail", js.undefined)
+    def setTailUndefined: Self = StObject.set(x, "tail", js.undefined)
   }
 }

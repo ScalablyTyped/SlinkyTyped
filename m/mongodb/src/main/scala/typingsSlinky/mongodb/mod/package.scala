@@ -1,5 +1,6 @@
 package typingsSlinky.mongodb
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -98,6 +99,7 @@ package object mod {
   {readonly [ key in keyof TSchema ]:? TSchema[key]}
     */ typingsSlinky.mongodb.mongodbStrings.ReadonlyPartial with org.scalablytyped.runtime.TopLevel[TSchema]
   
+  /** [ <position1>, <position2>, ... ] */
   // we can search using alternative types in mongodb e.g.
   // string types can be searched using a regex in mongo
   // array types can be searched using their element type
@@ -118,6 +120,22 @@ package object mod {
   type WithId[TSchema] = (typingsSlinky.mongodb.mod.EnhancedOmit[TSchema, typingsSlinky.mongodb.mongodbStrings._id]) with typingsSlinky.mongodb.anon.IdExtractIdType[TSchema]
   
   type WithTransactionCallback[T] = js.Function1[/* session */ typingsSlinky.mongodb.mod.ClientSession, js.Promise[T]]
+  
+  @scala.inline
+  def connect(uri: java.lang.String): js.Promise[typingsSlinky.mongodb.mod.MongoClient] = typingsSlinky.mongodb.mod.^.asInstanceOf[js.Dynamic].applyDynamic("connect")(uri.asInstanceOf[js.Any]).asInstanceOf[js.Promise[typingsSlinky.mongodb.mod.MongoClient]]
+  @scala.inline
+  def connect(
+    uri: java.lang.String,
+    callback: typingsSlinky.mongodb.mod.MongoCallback[typingsSlinky.mongodb.mod.MongoClient]
+  ): scala.Unit = (typingsSlinky.mongodb.mod.^.asInstanceOf[js.Dynamic].applyDynamic("connect")(uri.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def connect(uri: java.lang.String, options: typingsSlinky.mongodb.mod.MongoClientOptions): js.Promise[typingsSlinky.mongodb.mod.MongoClient] = (typingsSlinky.mongodb.mod.^.asInstanceOf[js.Dynamic].applyDynamic("connect")(uri.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[typingsSlinky.mongodb.mod.MongoClient]]
+  @scala.inline
+  def connect(
+    uri: java.lang.String,
+    options: typingsSlinky.mongodb.mod.MongoClientOptions,
+    callback: typingsSlinky.mongodb.mod.MongoCallback[typingsSlinky.mongodb.mod.MongoClient]
+  ): scala.Unit = (typingsSlinky.mongodb.mod.^.asInstanceOf[js.Dynamic].applyDynamic("connect")(uri.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   type log = js.Function2[
     /* message */ js.UndefOr[java.lang.String], 

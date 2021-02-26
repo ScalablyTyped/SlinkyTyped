@@ -9,16 +9,16 @@ import typingsSlinky.typeorm.tableTableColumnMod.TableColumn
 import typingsSlinky.typeorm.tableTableMod.Table
 import typingsSlinky.typeorm.typesReplicationModeMod.ReplicationMode
 import typingsSlinky.typeorm.viewViewMod.View
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/query-runner/BaseQueryRunner", JSImport.Namespace)
-@js.native
-object queryRunnerBaseQueryRunnerMod extends js.Object {
+object queryRunnerBaseQueryRunnerMod {
   
+  @JSImport("typeorm/query-runner/BaseQueryRunner", "BaseQueryRunner")
   @js.native
-  abstract class BaseQueryRunner () extends js.Object {
+  abstract class BaseQueryRunner () extends StObject {
     
     /**
       * Broadcaster used on this query runner to broadcast entity events.

@@ -10,12 +10,15 @@ A cross engine globalThis.
 | ------------------ | :-------------: |
 | Full name          | @ungap/global-this |
 | Keywords           | global, this |
-| # releases         | 8 |
-| # dependents       | 6 |
-| # downloads        | 7169 |
+| # releases         | 11 |
+| # dependents       | 13 |
+| # downloads        | 1709299 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/ungap/global-this#readme)
+- [Bugs](https://github.com/ungap/global-this/issues)
+- [Repository](https://github.com/ungap/global-this)
 - [Npm](https://www.npmjs.com/package/%40ungap%2Fglobal-this)
     
 

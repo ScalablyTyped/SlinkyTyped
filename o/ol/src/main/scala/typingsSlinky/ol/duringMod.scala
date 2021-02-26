@@ -1,13 +1,13 @@
 package typingsSlinky.ol
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/format/filter/During", JSImport.Namespace)
-@js.native
-object duringMod extends js.Object {
+object duringMod {
   
+  @JSImport("ol/format/filter/During", JSImport.Default)
   @js.native
   class default protected ()
     extends typingsSlinky.ol.comparisonMod.default {

@@ -10,9 +10,9 @@ tabs ui component for react
 | ------------------ | :-------------: |
 | Full name          | rc-tabs |
 | Keywords           | react, react-component, react-tabs |
-| # releases         | 61 |
-| # dependents       | 258 |
-| # downloads        | 15846597 |
+| # releases         | 47 |
+| # dependents       | 274 |
+| # downloads        | 20571587 |
 | # stars            | 8 |
 
 ## Links

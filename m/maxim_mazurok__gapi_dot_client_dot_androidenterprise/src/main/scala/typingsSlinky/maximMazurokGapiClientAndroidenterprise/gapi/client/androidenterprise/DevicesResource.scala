@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.Alt
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.Callback
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.DeviceId
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.EnterpriseId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DevicesResource extends js.Object {
+trait DevicesResource extends StObject {
   
   /**
     * Uploads a report containing any changes in app states on the device since the last report was generated. You can call this method up to 3 times every 24 hours for a given device. If

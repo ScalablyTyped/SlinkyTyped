@@ -1,12 +1,13 @@
 package typingsSlinky.sharepoint.global.SP.JsGrid
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("SP.JsGrid.GanttBarDateType")
 @js.native
-object GanttBarDateType extends js.Object {
+object GanttBarDateType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.sharepoint.SP.JsGrid.GanttBarDateType with Double] = js.native

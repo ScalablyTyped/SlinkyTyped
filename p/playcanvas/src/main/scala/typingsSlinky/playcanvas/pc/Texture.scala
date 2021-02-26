@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.playcanvas.anon.Face
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,7 +93,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * * {@link pc.FUNC_NOTEQUAL}
   */
 @js.native
-trait Texture extends js.Object {
+trait Texture extends StObject {
   
   /**
     * The addressing mode to be applied to the texture horizontally. Can be:

@@ -1,10 +1,11 @@
 package typingsSlinky.ember.mod.default
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ember", "NoneLocation")
+@JSImport("ember", "default.NoneLocation")
 @js.native
 class NoneLocation ()
-  extends typingsSlinky.emberObject.mod.default
+  extends typingsSlinky.ember.mod.Ember.NoneLocation

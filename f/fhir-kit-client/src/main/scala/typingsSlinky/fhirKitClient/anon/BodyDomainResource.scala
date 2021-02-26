@@ -1,12 +1,13 @@
 package typingsSlinky.fhirKitClient.anon
 
 import typingsSlinky.fhir.fhir.DomainResource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BodyDomainResource extends js.Object {
+trait BodyDomainResource extends StObject {
   
   var body: DomainResource = js.native
   
@@ -28,36 +29,24 @@ object BodyDomainResource {
   }
   
   @scala.inline
-  implicit class BodyDomainResourceOps[Self <: BodyDomainResource] (val x: Self) extends AnyVal {
+  implicit class BodyDomainResourceMutableBuilder[Self <: BodyDomainResource] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBody(value: DomainResource): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setHeaders(value: typingsSlinky.request.mod.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setHeadersUndefined: Self = StObject.set(x, "headers", js.undefined)
     
     @scala.inline
-    def setBody(value: DomainResource): Self = this.set("body", value.asInstanceOf[js.Any])
+    def setOptions(value: typingsSlinky.request.mod.Options): Self = StObject.set(x, "options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResourceType(value: typingsSlinky.fhirKitClient.fhirKitClientStrings.DomainResource): Self = this.set("resourceType", value.asInstanceOf[js.Any])
+    def setOptionsUndefined: Self = StObject.set(x, "options", js.undefined)
     
     @scala.inline
-    def setHeaders(value: typingsSlinky.request.mod.Headers): Self = this.set("headers", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHeaders: Self = this.set("headers", js.undefined)
-    
-    @scala.inline
-    def setOptions(value: typingsSlinky.request.mod.Options): Self = this.set("options", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOptions: Self = this.set("options", js.undefined)
+    def setResourceType(value: typingsSlinky.fhirKitClient.fhirKitClientStrings.DomainResource): Self = StObject.set(x, "resourceType", value.asInstanceOf[js.Any])
   }
 }

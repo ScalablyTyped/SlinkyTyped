@@ -1,11 +1,12 @@
 package typingsSlinky.awsSdk.acmpcaMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ImportCertificateAuthorityCertificateRequest extends js.Object {
+trait ImportCertificateAuthorityCertificateRequest extends StObject {
   
   /**
     * The PEM-encoded certificate for a private CA. This may be a self-signed certificate in the case of a root CA, or it may be signed by another CA that you control.
@@ -31,36 +32,24 @@ object ImportCertificateAuthorityCertificateRequest {
   }
   
   @scala.inline
-  implicit class ImportCertificateAuthorityCertificateRequestOps[Self <: ImportCertificateAuthorityCertificateRequest] (val x: Self) extends AnyVal {
+  implicit class ImportCertificateAuthorityCertificateRequestMutableBuilder[Self <: ImportCertificateAuthorityCertificateRequest] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCertificate(value: CertificateBodyBlob): Self = StObject.set(x, "Certificate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setCertificateAuthorityArn(value: Arn): Self = StObject.set(x, "CertificateAuthorityArn", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setCertificateChain(value: CertificateChainBlob): Self = StObject.set(x, "CertificateChain", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCertificateUint8Array(value: js.typedarray.Uint8Array): Self = this.set("Certificate", value.asInstanceOf[js.Any])
+    def setCertificateChainUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "CertificateChain", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCertificate(value: CertificateBodyBlob): Self = this.set("Certificate", value.asInstanceOf[js.Any])
+    def setCertificateChainUndefined: Self = StObject.set(x, "CertificateChain", js.undefined)
     
     @scala.inline
-    def setCertificateAuthorityArn(value: Arn): Self = this.set("CertificateAuthorityArn", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setCertificateChainUint8Array(value: js.typedarray.Uint8Array): Self = this.set("CertificateChain", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setCertificateChain(value: CertificateChainBlob): Self = this.set("CertificateChain", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCertificateChain: Self = this.set("CertificateChain", js.undefined)
+    def setCertificateUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "Certificate", value.asInstanceOf[js.Any])
   }
 }

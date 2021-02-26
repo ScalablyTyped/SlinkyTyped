@@ -2,6 +2,7 @@ package typingsSlinky.kendoUi.global.kendo.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.ui.TabStripOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,12 +14,21 @@ class TabStrip protected ()
   def this(element: Element) = this()
   def this(element: Element, options: TabStripOptions) = this()
 }
-/* static members */
-@JSGlobal("kendo.ui.TabStrip")
-@js.native
-object TabStrip extends js.Object {
+object TabStrip {
   
+  @JSGlobal("kendo.ui.TabStrip")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSGlobal("kendo.ui.TabStrip.extend")
+  @js.native
   def extend(proto: js.Object): typingsSlinky.kendoUi.kendo.ui.TabStrip = js.native
   
-  var fn: typingsSlinky.kendoUi.kendo.ui.TabStrip = js.native
+  /* static member */
+  @JSGlobal("kendo.ui.TabStrip.fn")
+  @js.native
+  def fn: typingsSlinky.kendoUi.kendo.ui.TabStrip = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.kendoUi.kendo.ui.TabStrip): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

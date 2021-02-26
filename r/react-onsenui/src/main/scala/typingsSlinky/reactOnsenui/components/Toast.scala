@@ -3,7 +3,8 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameOnDeviceBackButton
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import typingsSlinky.reactOnsenui.anon.OnDeviceBackButton
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.ascend
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.default
@@ -11,15 +12,22 @@ import typingsSlinky.reactOnsenui.reactOnsenuiStrings.fade
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.fall
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.lift
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.none
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Toast {
   
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassName with OnDeviceBackButton]))
+  }
+  
   @JSImport("react-onsenui", "Toast")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,11 +68,5 @@ object Toast {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HTMLAttributesidclassNameOnDeviceBackButton): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(isOpen: Boolean): Builder = {
-    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassNameOnDeviceBackButton]))
-  }
+  def withProps(p: HTMLAttributesidclassName with OnDeviceBackButton): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

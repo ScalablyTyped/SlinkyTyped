@@ -15,6 +15,7 @@ import typingsSlinky.googleMapReact.mod.Point
 import typingsSlinky.googleMapReact.mod.Props
 import typingsSlinky.googleMapReact.mod.^
 import typingsSlinky.react.mod.HTMLProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ object GoogleMapReact {
   
   @JSImport("google-map-react", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -64,16 +65,16 @@ object GoogleMapReact {
     def hoverDistance(value: Double): this.type = set("hoverDistance", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def layerTypesVarargs(value: String*): this.type = set("layerTypes", js.Array(value :_*))
-    
-    @scala.inline
     def layerTypes(value: js.Array[String]): this.type = set("layerTypes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def marginVarargs(value: js.Any*): this.type = set("margin", js.Array(value :_*))
+    def layerTypesVarargs(value: String*): this.type = set("layerTypes", js.Array(value :_*))
     
     @scala.inline
     def margin(value: js.Array[_]): this.type = set("margin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def marginVarargs(value: js.Any*): this.type = set("margin", js.Array(value :_*))
     
     @scala.inline
     def onChange(value: /* value */ ChangeEventValue => _): this.type = set("onChange", js.Any.fromFunction1(value))
@@ -121,10 +122,10 @@ object GoogleMapReact {
     def onZoomAnimationStart(value: /* args */ js.Any => Unit): this.type = set("onZoomAnimationStart", js.Any.fromFunction1(value))
     
     @scala.inline
-    def optionsFunction1(value: /* maps */ Maps => MapOptions): this.type = set("options", js.Any.fromFunction1(value))
+    def options(value: MapOptions | (js.Function1[/* maps */ Maps, MapOptions])): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: MapOptions | (js.Function1[/* maps */ Maps, MapOptions])): this.type = set("options", value.asInstanceOf[js.Any])
+    def optionsFunction1(value: /* maps */ Maps => MapOptions): this.type = set("options", js.Any.fromFunction1(value))
     
     @scala.inline
     def resetBoundsOnResize(value: Boolean): this.type = set("resetBoundsOnResize", value.asInstanceOf[js.Any])
@@ -142,7 +143,7 @@ object GoogleMapReact {
     def zoom(value: Double): this.type = set("zoom", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: GoogleMapReact.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -13,15 +13,22 @@ import typingsSlinky.std.Number
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DocumentCardActionsBase {
   
+  @scala.inline
+  def apply(actions: js.Array[IButtonProps]): Builder = {
+    val __props = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDocumentCardActionsProps]))
+  }
+  
   @JSImport("office-ui-fabric-react/lib/components/DocumentCard/DocumentCardActions.base", "DocumentCardActionsBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,19 +42,19 @@ object DocumentCardActionsBase {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IDocumentCardActions]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IDocumentCardActions | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IDocumentCardActions]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentRef(value: IRefObject[IDocumentCardActions]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    def styles(value: IStyleFunctionOrObject[IDocumentCardActionsStyleProps, IDocumentCardActionsStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def stylesFunction1(value: IDocumentCardActionsStyleProps => DeepPartial[IDocumentCardActionsStyles]): this.type = set("styles", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def styles(value: IStyleFunctionOrObject[IDocumentCardActionsStyleProps, IDocumentCardActionsStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -57,10 +64,4 @@ object DocumentCardActionsBase {
   }
   
   def withProps(p: IDocumentCardActionsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(actions: js.Array[IButtonProps]): Builder = {
-    val __props = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IDocumentCardActionsProps]))
-  }
 }

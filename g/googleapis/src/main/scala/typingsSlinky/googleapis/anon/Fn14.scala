@@ -5,12 +5,13 @@ import typingsSlinky.googleapis.appengineV1Mod.appengineV1.Options
 import typingsSlinky.googleapis.googleapisStrings.v1
 import typingsSlinky.googleapis.googleapisStrings.v1alpha
 import typingsSlinky.googleapis.googleapisStrings.v1beta
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Fn14 extends js.Object {
+trait Fn14 extends StObject {
   
   def apply(options: Options): Appengine = js.native
   def apply(options: typingsSlinky.googleapis.appengineV1betaMod.appengineV1beta.Options): typingsSlinky.googleapis.appengineV1betaMod.appengineV1beta.Appengine = js.native

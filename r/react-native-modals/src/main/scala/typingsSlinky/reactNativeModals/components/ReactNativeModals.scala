@@ -13,15 +13,22 @@ import typingsSlinky.reactNativeModals.mod.ScaleAnimation
 import typingsSlinky.reactNativeModals.mod.SlideAnimation
 import typingsSlinky.reactNativeModals.mod.SwipeDirection
 import typingsSlinky.reactNativeModals.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeModals {
   
+  @scala.inline
+  def apply(visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
+  }
+  
   @JSImport("react-native-modals", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +39,10 @@ object ReactNativeModals {
     def animationDuration(value: Double): this.type = set("animationDuration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def hasOverlay(value: Boolean): this.type = set("hasOverlay", value.asInstanceOf[js.Any])
@@ -53,10 +60,10 @@ object ReactNativeModals {
     def modalStyleNull: this.type = set("modalStyle", null)
     
     @scala.inline
-    def modalTitleReactElement(value: ReactElement): this.type = set("modalTitle", value.asInstanceOf[js.Any])
+    def modalTitle(value: ReactElement): this.type = set("modalTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def modalTitle(value: ReactElement): this.type = set("modalTitle", value.asInstanceOf[js.Any])
+    def modalTitleReactElement(value: ReactElement): this.type = set("modalTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onDismiss(value: () => Unit): this.type = set("onDismiss", js.Any.fromFunction0(value))
@@ -104,10 +111,10 @@ object ReactNativeModals {
     def styleNull: this.type = set("style", null)
     
     @scala.inline
-    def swipeDirectionVarargs(value: SwipeDirection*): this.type = set("swipeDirection", js.Array(value :_*))
+    def swipeDirection(value: SwipeDirection | js.Array[SwipeDirection]): this.type = set("swipeDirection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def swipeDirection(value: SwipeDirection | js.Array[SwipeDirection]): this.type = set("swipeDirection", value.asInstanceOf[js.Any])
+    def swipeDirectionVarargs(value: SwipeDirection*): this.type = set("swipeDirection", js.Array(value :_*))
     
     @scala.inline
     def swipeThreshold(value: Double): this.type = set("swipeThreshold", value.asInstanceOf[js.Any])
@@ -120,10 +127,4 @@ object ReactNativeModals {
   }
   
   def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(visible: Boolean): Builder = {
-    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
-  }
 }

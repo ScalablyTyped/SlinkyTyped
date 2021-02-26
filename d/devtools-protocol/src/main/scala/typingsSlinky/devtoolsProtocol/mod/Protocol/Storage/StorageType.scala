@@ -1,6 +1,7 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Storage
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.other_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.all
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.other_
 */
-trait StorageType extends js.Object
+trait StorageType extends StObject
 object StorageType {
   
   @scala.inline

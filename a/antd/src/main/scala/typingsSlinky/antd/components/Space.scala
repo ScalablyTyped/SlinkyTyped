@@ -12,6 +12,7 @@ import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.spaceMod.SpaceProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object Space {
   
   @JSImport("antd", "Space")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,16 +44,16 @@ object Space {
     def size(value: SizeType | Double): this.type = set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def splitReactElement(value: ReactElement): this.type = set("split", value.asInstanceOf[js.Any])
+    def split(value: ReactElement): this.type = set("split", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def split(value: ReactElement): this.type = set("split", value.asInstanceOf[js.Any])
+    def splitReactElement(value: ReactElement): this.type = set("split", value.asInstanceOf[js.Any])
     
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SpaceProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Space.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SpaceProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

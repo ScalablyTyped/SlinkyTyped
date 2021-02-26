@@ -1,5 +1,6 @@
 package typingsSlinky.navermaps.naver.maps
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.navermaps.naver.maps.Point
   - typingsSlinky.navermaps.naver.maps.LatLng
 */
-trait Coord extends js.Object
+trait Coord extends StObject

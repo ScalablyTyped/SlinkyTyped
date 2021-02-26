@@ -7,15 +7,22 @@ import typingsSlinky.antdMobile.anon.PartialHTMLPropsHTMLDivEl
 import typingsSlinky.antdMobile.modalModalMod.ModalProps
 import typingsSlinky.antdMobile.modalPropsTypeMod.Action
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Modal {
   
+  @scala.inline
+  def apply(visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
+  }
+  
   @JSImport("antd-mobile", "Modal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,10 +48,10 @@ object Modal {
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerVarargs(value: Action[CSSProperties]*): this.type = set("footer", js.Array(value :_*))
+    def footer(value: js.Array[Action[CSSProperties]]): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footer(value: js.Array[Action[CSSProperties]]): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footerVarargs(value: Action[CSSProperties]*): this.type = set("footer", js.Array(value :_*))
     
     @scala.inline
     def maskClosable(value: Boolean): this.type = set("maskClosable", value.asInstanceOf[js.Any])
@@ -74,10 +81,10 @@ object Modal {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
@@ -93,10 +100,4 @@ object Modal {
   }
   
   def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(visible: Boolean): Builder = {
-    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
-  }
 }

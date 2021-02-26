@@ -29,15 +29,22 @@ import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.reactSelect.typesMod.ValueType
 import typingsSlinky.std.EventListener
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Creatable {
   
+  @scala.inline
+  def apply[OptionType /* <: OptionTypeBase */](): Builder[OptionType] = {
+    val __props = js.Dynamic.literal()
+    new Builder[OptionType](js.Array(this.component, __props.asInstanceOf[Props[OptionType]]))
+  }
+  
   @JSImport("react-select/creatable", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[OptionType /* <: OptionTypeBase */] (val args: js.Array[js.Any])
@@ -75,10 +82,10 @@ object Creatable {
     def classNamePrefixNull: this.type = set("classNamePrefix", null)
     
     @scala.inline
-    def closeMenuOnScrollFunction1(value: /* evt */ Event => Unit): this.type = set("closeMenuOnScroll", js.Any.fromFunction1(value))
+    def closeMenuOnScroll(value: Boolean | EventListener): this.type = set("closeMenuOnScroll", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeMenuOnScroll(value: Boolean | EventListener): this.type = set("closeMenuOnScroll", value.asInstanceOf[js.Any])
+    def closeMenuOnScrollFunction1(value: /* evt */ Event => Unit): this.type = set("closeMenuOnScroll", js.Any.fromFunction1(value))
     
     @scala.inline
     def closeMenuOnSelect(value: Boolean): this.type = set("closeMenuOnSelect", value.asInstanceOf[js.Any])
@@ -99,13 +106,13 @@ object Creatable {
     def defaultMenuIsOpen(value: Boolean): this.type = set("defaultMenuIsOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: OptionType*): this.type = set("defaultValue", js.Array(value :_*))
-    
-    @scala.inline
     def defaultValue(value: ValueType[OptionType]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultValueNull: this.type = set("defaultValue", null)
+    
+    @scala.inline
+    def defaultValueVarargs(value: OptionType*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def delimiter(value: String): this.type = set("delimiter", value.asInstanceOf[js.Any])
@@ -256,19 +263,19 @@ object Creatable {
     def openMenuOnFocus(value: Boolean): this.type = set("openMenuOnFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def optionsVarargs(value: (GroupType[OptionType] | OptionType)*): this.type = set("options", js.Array(value :_*))
+    def options(value: GroupedOptionsType[OptionType] | OptionsType[OptionType]): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: GroupedOptionsType[OptionType] | OptionsType[OptionType]): this.type = set("options", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: (GroupType[OptionType] | OptionType)*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def pageSize(value: Double): this.type = set("pageSize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
     def screenReaderStatus(value: /* obj */ Count => String): this.type = set("screenReaderStatus", js.Any.fromFunction1(value))
@@ -286,28 +293,22 @@ object Creatable {
     def tabSelectsValue(value: Boolean): this.type = set("tabSelectsValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def themeFunction1(value: /* theme */ Theme => Theme): this.type = set("theme", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def theme(value: ThemeConfig): this.type = set("theme", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: OptionType*): this.type = set("value", js.Array(value :_*))
+    def themeFunction1(value: /* theme */ Theme => Theme): this.type = set("theme", js.Any.fromFunction1(value))
     
     @scala.inline
     def value(value: ValueType[OptionType]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def valueNull: this.type = set("value", null)
-  }
-  
-  def withProps[OptionType /* <: OptionTypeBase */](p: Props[OptionType]): Builder[OptionType] = new Builder[OptionType](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[OptionType /* <: OptionTypeBase */](): Builder[OptionType] = {
-    val __props = js.Dynamic.literal()
-    new Builder[OptionType](js.Array(this.component, __props.asInstanceOf[Props[OptionType]]))
+    
+    @scala.inline
+    def valueVarargs(value: OptionType*): this.type = set("value", js.Array(value :_*))
   }
   
   implicit def make[OptionType /* <: OptionTypeBase */](companion: Creatable.type): Builder[OptionType] = new Builder[OptionType](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps[OptionType /* <: OptionTypeBase */](p: Props[OptionType]): Builder[OptionType] = new Builder[OptionType](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -2,14 +2,21 @@ package typingsSlinky.reactNativeElements.mod
 
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNativeElements.anon.PartialTextInputProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-elements", "Input")
 @js.native
-class Input ()
+class Input protected ()
   extends Component[InputProps, js.Object, js.Any] {
+  def this(props: InputProps) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: InputProps, context: js.Any) = this()
   
   /**
     * Calls blur on the Input

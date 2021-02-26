@@ -10,15 +10,15 @@ Trap focus within a DOM node.
 | ------------------ | :-------------: |
 | Full name          | focus-trap |
 | Keywords           | focus, accessibility, trap, capture, keyboard, modal |
-| # releases         | 13 |
-| # dependents       | 105 |
-| # downloads        | 9595051 |
+| # releases         | 17 |
+| # dependents       | 133 |
+| # downloads        | 15363515 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/davidtheclark/focus-trap#readme)
-- [Bugs](https://github.com/davidtheclark/focus-trap/issues)
-- [Repository](https://github.com/davidtheclark/focus-trap)
+- [Homepage](https://github.com/focus-trap/focus-trap#readme)
+- [Bugs](https://github.com/focus-trap/focus-trap/issues)
+- [Repository](https://github.com/focus-trap/focus-trap)
 - [Npm](https://www.npmjs.com/package/focus-trap)
     
 

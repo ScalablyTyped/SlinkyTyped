@@ -5,13 +5,14 @@ import typingsSlinky.fundamentalReact.fundamentalReactStrings.ListDotItem
 import typingsSlinky.fundamentalReact.listMod.ListItemProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined react.react.FunctionComponent<fundamental-react.fundamental-react/lib/List/List.ListItemProps> & {  displayName :'List.Item'} */
 @js.native
-trait FunctionComponentListItem extends js.Object {
+trait FunctionComponentListItem extends StObject {
   
   def apply(props: PropsWithChildren[ListItemProps]): ReactElement | Null = js.native
   def apply(props: PropsWithChildren[ListItemProps], context: js.Any): ReactElement | Null = js.native

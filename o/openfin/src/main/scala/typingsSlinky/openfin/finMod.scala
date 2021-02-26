@@ -6,13 +6,18 @@ import typingsSlinky.openfin.identityMod.Identity
 import typingsSlinky.openfin.utilEntityTypeMod.EntityTypeHelpers
 import typingsSlinky.openfin.v2MainMod.Frame
 import typingsSlinky.openfin.viewViewMod.View
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("openfin/_v2/api/fin", JSImport.Namespace)
-@js.native
-object finMod extends js.Object {
+object finMod {
+  
+  @JSImport("openfin/_v2/api/fin", JSImport.Default)
+  @js.native
+  class default protected () extends Fin {
+    def this(wire: typingsSlinky.openfin.transportMod.default) = this()
+  }
   
   @js.native
   trait Fin extends EventEmitter {
@@ -44,10 +49,5 @@ object finMod extends js.Object {
     val me: (View | Window | Frame | js.Object) with Identity with EntityTypeHelpers = js.native
     
     var wire: js.Any = js.native
-  }
-  
-  @js.native
-  class default protected () extends Fin {
-    def this(wire: typingsSlinky.openfin.transportMod.default) = this()
   }
 }

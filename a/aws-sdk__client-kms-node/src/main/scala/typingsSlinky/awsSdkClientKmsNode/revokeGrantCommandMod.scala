@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsNode.typesRevokeGrantInputMod.RevokeGrantInp
 import typingsSlinky.awsSdkClientKmsNode.typesRevokeGrantOutputMod.RevokeGrantOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-node/commands/RevokeGrantCommand", JSImport.Namespace)
-@js.native
-object revokeGrantCommandMod extends js.Object {
+object revokeGrantCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-node/commands/RevokeGrantCommand", "RevokeGrantCommand")
   @js.native
   class RevokeGrantCommand protected () extends Command[
           InputTypesUnion, 

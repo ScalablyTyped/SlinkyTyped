@@ -1,5 +1,6 @@
 package typingsSlinky.std.Intl
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.many
   - typingsSlinky.std.stdStrings.other
 */
-trait LDMLPluralRule extends js.Object
+trait LDMLPluralRule extends StObject
 object LDMLPluralRule {
   
   @scala.inline

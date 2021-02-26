@@ -10,9 +10,9 @@ Build consistent, themeable React UIs based on design system constraints
 | ------------------ | :-------------: |
 | Full name          | theme-ui |
 | Keywords           | theme-ui, emotion, mdx, css, styles, css-in-js |
-| # releases         | 77 |
-| # dependents       | 326 |
-| # downloads        | 419735 |
+| # releases         | 111 |
+| # dependents       | 596 |
+| # downloads        | 8715301 |
 | # stars            | 0 |
 
 ## Links

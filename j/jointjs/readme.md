@@ -10,9 +10,9 @@ JavaScript diagramming library
 | ------------------ | :-------------: |
 | Full name          | jointjs |
 | Keywords           | diagram, flowchart, graph, visualization |
-| # releases         | 15 |
-| # dependents       | 25 |
-| # downloads        | 291609 |
+| # releases         | 9 |
+| # dependents       | 34 |
+| # downloads        | 440275 |
 | # stars            | 4 |
 
 ## Links

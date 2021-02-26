@@ -1,12 +1,13 @@
 package typingsSlinky.mfiles
 
 import typingsSlinky.mfiles.MFiles.MFBuiltInPropertyDef
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultPropertyDefOperations extends js.Object {
+trait IVaultPropertyDefOperations extends StObject {
   
   def AddPropertyDefAdmin(PropertyDefAdmin: IPropertyDefAdmin, ResetLastUsedValue: ITypedValue): IPropertyDefAdmin = js.native
   

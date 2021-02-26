@@ -1,14 +1,17 @@
 package typingsSlinky.easyJsend
 
 import typingsSlinky.easyJsend.anon.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("easy-jsend", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("easy-jsend", "init")
+  @js.native
   def init(): Unit = js.native
+  @JSImport("easy-jsend", "init")
+  @js.native
   def init(conf: Partial): Unit = js.native
 }

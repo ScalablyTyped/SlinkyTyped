@@ -5,12 +5,13 @@ import typingsSlinky.astTypes.kindsMod.FlowTypeKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.TypeParameterDeclarationKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.OpaqueType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OpaqueTypeBuilder extends js.Object {
+trait OpaqueTypeBuilder extends StObject {
   
   def apply(id: IdentifierKind, typeParameters: Null, impltype: FlowTypeKind): OpaqueType = js.native
   def apply(id: IdentifierKind, typeParameters: Null, impltype: FlowTypeKind, supertype: FlowTypeKind): OpaqueType = js.native

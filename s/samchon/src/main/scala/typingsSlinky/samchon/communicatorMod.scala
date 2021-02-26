@@ -1,16 +1,26 @@
 package typingsSlinky.samchon
 
 import typingsSlinky.samchon.communicatorBaseMod.CommunicatorBase
+import typingsSlinky.samchon.iprotocolMod.IProtocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/protocol/communicator/communicator/Communicator", JSImport.Namespace)
-@js.native
-object communicatorMod extends js.Object {
+object communicatorMod {
   
+  @JSImport("samchon/protocol/communicator/communicator/Communicator", "Communicator")
   @js.native
+  /**
+    * Default Constructor.
+    */
   abstract class Communicator () extends CommunicatorBase {
+    /**
+      * Construct from *listener*.
+      *
+      * @param listener An {@link IProtocol} object to listen {@link Invoke} messages.
+      */
+    def this(listener: IProtocol) = this()
     
     /**
       * @hidden

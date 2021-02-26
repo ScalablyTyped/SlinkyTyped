@@ -2,13 +2,14 @@ package typingsSlinky.aureliaTemplating.mod
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.aureliaDependencyInjection.mod.Container
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aurelia-templating", "TemplatingEngine")
 @js.native
-class TemplatingEngine protected () extends js.Object {
+class TemplatingEngine protected () extends StObject {
   /**
     * Creates an instance of TemplatingEngine.
     * @param container The root DI container.
@@ -37,7 +38,6 @@ class TemplatingEngine protected () extends js.Object {
     */
   def configureAnimator(animator: Animator): Unit = js.native
   
-  def enhance(instruction: EnhanceInstruction): View_ = js.native
   /**
     * Enhances existing DOM with behaviors and bindings.
     * @param instruction The element to enhance or a set of instructions for the enhancement process.
@@ -45,4 +45,5 @@ class TemplatingEngine protected () extends js.Object {
     * are responsible for enforcing the View lifecycle.
     */
   def enhance(instruction: Element): View_ = js.native
+  def enhance(instruction: EnhanceInstruction): View_ = js.native
 }

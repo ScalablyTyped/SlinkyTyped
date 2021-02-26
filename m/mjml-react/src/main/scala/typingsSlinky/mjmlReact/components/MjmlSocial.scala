@@ -8,6 +8,7 @@ import typingsSlinky.mjmlReact.mjmlReactStrings.horizontal
 import typingsSlinky.mjmlReact.mjmlReactStrings.vertical
 import typingsSlinky.mjmlReact.mod.MjmlSocialProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object MjmlSocial {
   
   @JSImport("mjml-react", "MjmlSocial")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -75,7 +76,7 @@ object MjmlSocial {
     def textDecoration(value: String): this.type = set("textDecoration", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MjmlSocialProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MjmlSocial.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MjmlSocialProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

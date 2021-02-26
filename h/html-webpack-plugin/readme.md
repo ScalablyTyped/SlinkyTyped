@@ -10,9 +10,9 @@ Simplifies creation of HTML files to serve your webpack bundles
 | ------------------ | :-------------: |
 | Full name          | html-webpack-plugin |
 | Keywords           | webpack, plugin, html, html-webpack-plugin |
-| # releases         | 25 |
-| # dependents       | 6068 |
-| # downloads        | 195620408 |
+| # releases         | 49 |
+| # dependents       | 7861 |
+| # downloads        | 323520720 |
 | # stars            | 195 |
 
 ## Links

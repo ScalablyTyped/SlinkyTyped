@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeMaterialUi.anon.ContainerIcon
 import typingsSlinky.reactNativeMaterialUi.mod.IconToggleProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IconToggle {
   
+  @scala.inline
+  def apply(name: String): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IconToggleProps]))
+  }
+  
   @JSImport("react-native-material-ui", "IconToggle")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,10 +59,4 @@ object IconToggle {
   }
   
   def withProps(p: IconToggleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(name: String): Builder = {
-    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IconToggleProps]))
-  }
 }

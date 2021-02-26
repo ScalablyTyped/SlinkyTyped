@@ -75,6 +75,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -83,7 +84,7 @@ object RefreshLink {
   
   @JSImport("navigation-react", "RefreshLink")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -270,10 +271,10 @@ object RefreshLink {
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def currentDataKeysVarargs(value: String*): this.type = set("currentDataKeys", js.Array(value :_*))
+    def currentDataKeys(value: String | js.Array[String]): this.type = set("currentDataKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def currentDataKeys(value: String | js.Array[String]): this.type = set("currentDataKeys", value.asInstanceOf[js.Any])
+    def currentDataKeysVarargs(value: String*): this.type = set("currentDataKeys", js.Array(value :_*))
     
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
@@ -285,10 +286,10 @@ object RefreshLink {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -666,7 +667,7 @@ object RefreshLink {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RefreshLinkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RefreshLink.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RefreshLinkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

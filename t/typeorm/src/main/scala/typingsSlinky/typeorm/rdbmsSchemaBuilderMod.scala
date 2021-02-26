@@ -6,14 +6,14 @@ import typingsSlinky.typeorm.entityMetadataMod.EntityMetadata
 import typingsSlinky.typeorm.queryRunnerMod.QueryRunner
 import typingsSlinky.typeorm.schemaBuilderMod.SchemaBuilder
 import typingsSlinky.typeorm.tableColumnOptionsMod.TableColumnOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/schema-builder/RdbmsSchemaBuilder", JSImport.Namespace)
-@js.native
-object rdbmsSchemaBuilderMod extends js.Object {
+object rdbmsSchemaBuilderMod {
   
+  @JSImport("typeorm/browser/schema-builder/RdbmsSchemaBuilder", "RdbmsSchemaBuilder")
   @js.native
   class RdbmsSchemaBuilder protected () extends SchemaBuilder {
     def this(connection: Connection) = this()

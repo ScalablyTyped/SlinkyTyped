@@ -3,23 +3,26 @@ package typingsSlinky.materialTextfield
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialTextfield.iconFoundationMod.MDCTextFieldIconFoundation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/textfield/icon/component", JSImport.Namespace)
-@js.native
-object iconComponentMod extends js.Object {
+object iconComponentMod {
   
+  @JSImport("@material/textfield/icon/component", "MDCTextFieldIcon")
   @js.native
-  class MDCTextFieldIcon () extends MDCComponent[MDCTextFieldIconFoundation] {
+  class MDCTextFieldIcon protected () extends MDCComponent[MDCTextFieldIconFoundation] {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(root: Element, foundation: MDCTextFieldIconFoundation, args: js.Any*) = this()
     
     def foundationForTextField: MDCTextFieldIconFoundation = js.native
   }
   /* static members */
-  @js.native
-  object MDCTextFieldIcon extends js.Object {
+  object MDCTextFieldIcon {
     
+    @JSImport("@material/textfield/icon/component", "MDCTextFieldIcon.attachTo")
+    @js.native
     def attachTo(root: Element): MDCTextFieldIcon = js.native
   }
   

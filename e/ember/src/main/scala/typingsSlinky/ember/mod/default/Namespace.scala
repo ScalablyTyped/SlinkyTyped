@@ -1,5 +1,6 @@
 package typingsSlinky.ember.mod.default
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * such as an application or framework. Create a namespace anytime you want
   * to define one of these new containers.
   */
-@JSImport("ember", "Namespace")
+@JSImport("ember", "default.Namespace")
 @js.native
 class Namespace ()
-  extends typingsSlinky.emberObject.mod.default
+  extends typingsSlinky.ember.mod.Ember.Namespace

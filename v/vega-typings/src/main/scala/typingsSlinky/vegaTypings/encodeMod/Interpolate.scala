@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.encodeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.vegaTypingsStrings.`step-before`
   - typingsSlinky.vegaTypings.vegaTypingsStrings.`step-after`
 */
-trait Interpolate extends js.Object
+trait Interpolate extends StObject
 object Interpolate {
   
   @scala.inline

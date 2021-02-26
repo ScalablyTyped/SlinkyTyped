@@ -1,5 +1,6 @@
 package typingsSlinky.rollup.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.rollup.rollupStrings.renderDynamicImport
   - typingsSlinky.rollup.rollupStrings.resolveAssetUrl
 */
-trait SyncPluginHooks extends js.Object
+trait SyncPluginHooks extends StObject
 object SyncPluginHooks {
   
   @scala.inline

@@ -1,12 +1,13 @@
 package typingsSlinky.gestalt.mod
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TableHeaderProps extends js.Object {
+trait TableHeaderProps extends StObject {
   
   var children: js.UndefOr[ReactElement] = js.native
   
@@ -21,33 +22,21 @@ object TableHeaderProps {
   }
   
   @scala.inline
-  implicit class TableHeaderPropsOps[Self <: TableHeaderProps] (val x: Self) extends AnyVal {
+  implicit class TableHeaderPropsMutableBuilder[Self <: TableHeaderProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChildren(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChildrenReactElement(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
     
     @scala.inline
-    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setSticky(value: Boolean): Self = StObject.set(x, "sticky", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
-    
-    @scala.inline
-    def setSticky(value: Boolean): Self = this.set("sticky", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSticky: Self = this.set("sticky", js.undefined)
+    def setStickyUndefined: Self = StObject.set(x, "sticky", js.undefined)
   }
 }

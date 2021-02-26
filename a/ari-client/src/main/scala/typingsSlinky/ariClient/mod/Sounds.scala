@@ -2,12 +2,13 @@ package typingsSlinky.ariClient.mod
 
 import typingsSlinky.ariClient.anon.FormatLang
 import typingsSlinky.ariClient.anon.SoundId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Sounds extends js.Object {
+trait Sounds extends StObject {
   
   /**
     * Get a sounds details.

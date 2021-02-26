@@ -2,12 +2,13 @@ package typingsSlinky.fridaGum.Java
 
 import typingsSlinky.fridaGum.NativeFunctionOptions
 import typingsSlinky.fridaGum.NativePointer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Method[Holder /* <: Members[Holder] */] extends js.Object {
+trait Method[Holder /* <: Members[Holder] */] extends StObject {
   
   def apply(params: js.Any*): js.Any = js.native
   

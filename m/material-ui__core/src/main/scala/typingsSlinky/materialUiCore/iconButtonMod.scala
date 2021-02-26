@@ -1,14 +1,21 @@
 package typingsSlinky.materialUiCore
 
+import org.scalablytyped.runtime.Shortcut
 import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.iconButtonIconButtonMod.IconButtonProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material-ui/core/IconButton", JSImport.Namespace)
-@js.native
-object iconButtonMod extends js.Object {
+object iconButtonMod extends Shortcut {
   
+  @JSImport("@material-ui/core/IconButton", JSImport.Default)
+  @js.native
   val default: ReactComponentClass[IconButtonProps] = js.native
+  
+  type _To = ReactComponentClass[IconButtonProps]
+  
+  /* This means you don't have to write `default`, but can instead just say `iconButtonMod.foo` */
+  override def _to: ReactComponentClass[IconButtonProps] = default
 }

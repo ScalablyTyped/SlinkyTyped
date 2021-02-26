@@ -7,14 +7,14 @@ import typingsSlinky.sentryTypes.transportMod.Transport
 import typingsSlinky.sentryTypes.transportMod.TransportOptions
 import typingsSlinky.sentryUtils.mod.PromiseBuffer
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@sentry/browser/dist/transports/base", JSImport.Namespace)
-@js.native
-object baseMod extends js.Object {
+object baseMod {
   
+  @JSImport("@sentry/browser/dist/transports/base", "BaseTransport")
   @js.native
   abstract class BaseTransport protected () extends Transport {
     def this(options: TransportOptions) = this()

@@ -3,14 +3,15 @@ package typingsSlinky.canvaskitWasm.mod
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.std.CanvasImageSource
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CanvasKit extends js.Object {
+trait CanvasKit extends StObject {
   
-   // if GPU code was compiled in
+  // if GPU code was compiled in
   // Paragraph Enums
   val Affinity: AffinityEnumValues = js.native
   

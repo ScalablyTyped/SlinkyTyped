@@ -5,6 +5,7 @@ import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import typingsSlinky.apolloReportingProtobuf.protobufMod.IContextualizedTypeStats
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,18 +21,26 @@ class ContextualizedTypeStats ()
   def this(properties: IContextualizedTypeStats) = this()
 }
 /* static members */
-@JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats")
-@js.native
-object ContextualizedTypeStats extends js.Object {
+object ContextualizedTypeStats {
   
   /**
     * Creates a new ContextualizedTypeStats instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ContextualizedTypeStats instance
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.create")
+  @js.native
   def create(): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.create")
+  @js.native
   def create(properties: IContextualizedTypeStats): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
   
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
   /**
     * Decodes a ContextualizedTypeStats message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -40,11 +49,16 @@ object ContextualizedTypeStats extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
   
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
   /**
     * Decodes a ContextualizedTypeStats message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,8 +66,9 @@ object ContextualizedTypeStats extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
   
   /**
     * Encodes the specified ContextualizedTypeStats message. Does not implicitly {@link ContextualizedTypeStats.verify|verify} messages.
@@ -61,7 +76,11 @@ object ContextualizedTypeStats extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.encode")
+  @js.native
   def encode(message: IContextualizedTypeStats): Writer = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.encode")
+  @js.native
   def encode(message: IContextualizedTypeStats, writer: Writer): Writer = js.native
   
   /**
@@ -70,7 +89,11 @@ object ContextualizedTypeStats extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IContextualizedTypeStats): Writer = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IContextualizedTypeStats, writer: Writer): Writer = js.native
   
   /**
@@ -78,6 +101,8 @@ object ContextualizedTypeStats extends js.Object {
     * @param object Plain object
     * @returns ContextualizedTypeStats
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
   
   /**
@@ -86,7 +111,11 @@ object ContextualizedTypeStats extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.toObject")
+  @js.native
   def toObject(message: typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats): StringDictionary[js.Any] = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.toObject")
+  @js.native
   def toObject(
     message: typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedTypeStats,
     options: IConversionOptions
@@ -97,5 +126,7 @@ object ContextualizedTypeStats extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedTypeStats.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

@@ -6,12 +6,13 @@ import typingsSlinky.googleapis.googleapisStrings.v1
 import typingsSlinky.googleapis.googleapisStrings.v1beta1
 import typingsSlinky.googleapis.googleapisStrings.v2
 import typingsSlinky.googleapis.googleapisStrings.v2beta1
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Fn39 extends js.Object {
+trait Fn39 extends StObject {
   
   def apply(options: Options): Cloudresourcemanager = js.native
   def apply(

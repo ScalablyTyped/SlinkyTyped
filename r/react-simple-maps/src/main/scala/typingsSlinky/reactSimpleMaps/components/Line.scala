@@ -96,6 +96,7 @@ import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.time
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.tree
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.vertical
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -104,7 +105,7 @@ object Line {
   
   @JSImport("react-simple-maps", "Line")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -362,10 +363,10 @@ object Line {
     def contentStyleType(value: Double | String): this.type = set("contentStyleType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def coordinatesVarargs(value: Point*): this.type = set("coordinates", js.Array(value :_*))
+    def coordinates(value: js.Array[Point]): this.type = set("coordinates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def coordinates(value: js.Array[Point]): this.type = set("coordinates", value.asInstanceOf[js.Any])
+    def coordinatesVarargs(value: Point*): this.type = set("coordinates", js.Array(value :_*))
     
     @scala.inline
     def crossOrigin(value: anonymous | `use-credentials` | _empty): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
@@ -1280,7 +1281,7 @@ object Line {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: LineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Line.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: LineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

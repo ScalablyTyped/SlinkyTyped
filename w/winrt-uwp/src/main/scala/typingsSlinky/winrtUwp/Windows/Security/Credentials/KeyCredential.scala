@@ -3,13 +3,14 @@ package typingsSlinky.winrtUwp.Windows.Security.Credentials
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a key credential, an RSA, 2048-bit, asymmetric key that represents a user's identity for an application. */
 @js.native
-trait KeyCredential extends js.Object {
+trait KeyCredential extends StObject {
   
   /**
     * Gets an attestation for a key credential. Call this method after provisioning a key credential for the current user and application.

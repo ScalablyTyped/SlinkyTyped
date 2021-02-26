@@ -1,13 +1,14 @@
 package typingsSlinky.storybookClientApi
 
 import typingsSlinky.storybookClientApi.typesMod.ArgTypesEnhancer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@storybook/client-api/dist/inferControls", JSImport.Namespace)
-@js.native
-object inferControlsMod extends js.Object {
+object inferControlsMod {
   
+  @JSImport("@storybook/client-api/dist/inferControls", "inferControls")
+  @js.native
   val inferControls: ArgTypesEnhancer = js.native
 }

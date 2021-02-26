@@ -6,16 +6,16 @@ import typingsSlinky.typeorm.entityManagerEntityManagerMod.EntityManager
 import typingsSlinky.typeorm.queryBuilderSelectQueryBuilderMod.SelectQueryBuilder
 import typingsSlinky.typeorm.repositoryRepositoryMod.Repository
 import typingsSlinky.typeorm.repositoryTreeRepositoryMod.TreeRepository
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/repository/AbstractRepository", JSImport.Namespace)
-@js.native
-object repositoryAbstractRepositoryMod extends js.Object {
+object repositoryAbstractRepositoryMod {
   
+  @JSImport("typeorm/repository/AbstractRepository", "AbstractRepository")
   @js.native
-  class AbstractRepository[Entity /* <: ObjectLiteral */] () extends js.Object {
+  class AbstractRepository[Entity /* <: ObjectLiteral */] () extends StObject {
     
     /**
       * Creates a new query builder for the repository's entity that can be used to build a sql query.

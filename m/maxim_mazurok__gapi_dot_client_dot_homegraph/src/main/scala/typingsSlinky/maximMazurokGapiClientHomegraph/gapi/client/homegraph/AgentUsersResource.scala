@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientHomegraph.gapi.client.homegraph
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientHomegraph.anon.Accesstoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AgentUsersResource extends js.Object {
+trait AgentUsersResource extends StObject {
   
   /**
     * Unlinks the given third-party user from your smart home Action. All data related to this user will be deleted. For more details on how users link their accounts, see [fulfillment

@@ -9,6 +9,7 @@ import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.DSA
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.ECDSA
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.jws.JWS.JsonWebKey
 import typingsSlinky.jsrsasign.jsrsasign.RSAKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

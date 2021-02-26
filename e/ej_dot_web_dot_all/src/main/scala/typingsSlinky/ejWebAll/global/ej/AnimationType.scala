@@ -1,12 +1,13 @@
 package typingsSlinky.ejWebAll.global.ej
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ej.AnimationType")
 @js.native
-object AnimationType extends js.Object {
+object AnimationType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.AnimationType with Double] = js.native

@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/navigation/arrow-drop-down-circle", JSImport.Namespace)
-@js.native
-object arrowDropDownCircleMod extends js.Object {
+object arrowDropDownCircleMod {
   
+  @JSImport("material-ui/svg-icons/navigation/arrow-drop-down-circle", JSImport.Default)
+  @js.native
+  class default () extends NavigationArrowDropDownCircle
+  
+  @JSImport("material-ui/svg-icons/navigation/arrow-drop-down-circle", "NavigationArrowDropDownCircle")
   @js.native
   class NavigationArrowDropDownCircle ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

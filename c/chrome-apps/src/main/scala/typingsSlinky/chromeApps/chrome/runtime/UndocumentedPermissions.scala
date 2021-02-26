@@ -1,6 +1,7 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
 import typingsSlinky.chromeApps.chromeAppsStrings.fullscreen_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.fullscreen_
   - typingsSlinky.chromeApps.chromeAppsStrings.overrideEscFullscreen
 */
-trait UndocumentedPermissions extends js.Object
+trait UndocumentedPermissions extends StObject
 object UndocumentedPermissions {
   
   @scala.inline

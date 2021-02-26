@@ -20,15 +20,24 @@ import typingsSlinky.reactDatepicker.mod.ReactDatePickerProps
 import typingsSlinky.reactDatepicker.mod.default
 import typingsSlinky.reactDatepicker.reactDatepickerStrings.scroll
 import typingsSlinky.reactDatepicker.reactDatepickerStrings.select
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactDatepicker {
   
+  @scala.inline
+  def apply(
+    onChange: (js.UndefOr[js.Date | Null | (js.Tuple2[js.Date, js.Date])], js.UndefOr[SyntheticEvent[Event, _]]) => Unit
+  ): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactDatePickerProps]))
+  }
+  
   @JSImport("react-datepicker", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -69,34 +78,34 @@ object ReactDatepicker {
     def clearButtonTitle(value: String): this.type = set("clearButtonTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeOnScrollFunction1(value: /* e */ Event => Boolean): this.type = set("closeOnScroll", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def closeOnScroll(value: Boolean | (js.Function1[/* e */ Event, Boolean])): this.type = set("closeOnScroll", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customInputReactElement(value: ReactElement): this.type = set("customInput", value.asInstanceOf[js.Any])
+    def closeOnScrollFunction1(value: /* e */ Event => Boolean): this.type = set("closeOnScroll", js.Any.fromFunction1(value))
     
     @scala.inline
     def customInput(value: ReactElement): this.type = set("customInput", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customInputRef(value: String): this.type = set("customInputRef", value.asInstanceOf[js.Any])
+    def customInputReactElement(value: ReactElement): this.type = set("customInput", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customTimeInputReactElement(value: ReactElement): this.type = set("customTimeInput", value.asInstanceOf[js.Any])
+    def customInputRef(value: String): this.type = set("customInputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customTimeInput(value: ReactElement): this.type = set("customTimeInput", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dateFormatVarargs(value: String*): this.type = set("dateFormat", js.Array(value :_*))
+    def customTimeInputReactElement(value: ReactElement): this.type = set("customTimeInput", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dateFormat(value: String | js.Array[String]): this.type = set("dateFormat", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dateFormatCalendar(value: String): this.type = set("dateFormatCalendar", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dateFormatVarargs(value: String*): this.type = set("dateFormat", js.Array(value :_*))
     
     @scala.inline
     def dayClassName(value: /* date */ js.Date => String | Null): this.type = set("dayClassName", js.Any.fromFunction1(value))
@@ -123,19 +132,19 @@ object ReactDatepicker {
     def endDateNull: this.type = set("endDate", null)
     
     @scala.inline
-    def excludeDatesVarargs(value: js.Date*): this.type = set("excludeDates", js.Array(value :_*))
+    def excludeDates(value: js.Array[js.Date]): this.type = set("excludeDates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def excludeDates(value: js.Array[js.Date]): this.type = set("excludeDates", value.asInstanceOf[js.Any])
+    def excludeDatesVarargs(value: js.Date*): this.type = set("excludeDates", js.Array(value :_*))
     
     @scala.inline
     def excludeScrollbar(value: Boolean): this.type = set("excludeScrollbar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def excludeTimesVarargs(value: js.Date*): this.type = set("excludeTimes", js.Array(value :_*))
+    def excludeTimes(value: js.Array[js.Date]): this.type = set("excludeTimes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def excludeTimes(value: js.Array[js.Date]): this.type = set("excludeTimes", value.asInstanceOf[js.Any])
+    def excludeTimesVarargs(value: js.Date*): this.type = set("excludeTimes", js.Array(value :_*))
     
     @scala.inline
     def filterDate(value: /* date */ js.Date => Boolean): this.type = set("filterDate", js.Any.fromFunction1(value))
@@ -156,31 +165,31 @@ object ReactDatepicker {
     def formatWeekNumber(value: /* date */ js.Date => String | Double): this.type = set("formatWeekNumber", js.Any.fromFunction1(value))
     
     @scala.inline
-    def highlightDatesVarargs(value: (HighlightDates | js.Date)*): this.type = set("highlightDates", js.Array(value :_*))
+    def highlightDates(value: js.Array[HighlightDates | js.Date]): this.type = set("highlightDates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def highlightDates(value: js.Array[HighlightDates | js.Date]): this.type = set("highlightDates", value.asInstanceOf[js.Any])
+    def highlightDatesVarargs(value: (HighlightDates | js.Date)*): this.type = set("highlightDates", js.Array(value :_*))
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def includeDatesVarargs(value: js.Date*): this.type = set("includeDates", js.Array(value :_*))
-    
-    @scala.inline
     def includeDates(value: js.Array[js.Date]): this.type = set("includeDates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def includeTimesVarargs(value: js.Date*): this.type = set("includeTimes", js.Array(value :_*))
+    def includeDatesVarargs(value: js.Date*): this.type = set("includeDates", js.Array(value :_*))
     
     @scala.inline
     def includeTimes(value: js.Array[js.Date]): this.type = set("includeTimes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def injectTimesVarargs(value: js.Date*): this.type = set("injectTimes", js.Array(value :_*))
+    def includeTimesVarargs(value: js.Date*): this.type = set("includeTimes", js.Array(value :_*))
     
     @scala.inline
     def injectTimes(value: js.Array[js.Date]): this.type = set("injectTimes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def injectTimesVarargs(value: js.Date*): this.type = set("injectTimes", js.Array(value :_*))
     
     @scala.inline
     def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
@@ -425,10 +434,10 @@ object ReactDatepicker {
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def todayButtonReactElement(value: ReactElement): this.type = set("todayButton", value.asInstanceOf[js.Any])
+    def todayButton(value: ReactElement): this.type = set("todayButton", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def todayButton(value: ReactElement): this.type = set("todayButton", value.asInstanceOf[js.Any])
+    def todayButtonReactElement(value: ReactElement): this.type = set("todayButton", value.asInstanceOf[js.Any])
     
     @scala.inline
     def useShortMonthInDropdown(value: Boolean): this.type = set("useShortMonthInDropdown", value.asInstanceOf[js.Any])
@@ -459,12 +468,4 @@ object ReactDatepicker {
   }
   
   def withProps(p: ReactDatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    onChange: (js.UndefOr[js.Date | Null | (js.Tuple2[js.Date, js.Date])], js.UndefOr[SyntheticEvent[Event, _]]) => Unit
-  ): Builder = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactDatePickerProps]))
-  }
 }

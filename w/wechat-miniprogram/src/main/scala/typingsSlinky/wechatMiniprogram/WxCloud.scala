@@ -21,6 +21,7 @@ import typingsSlinky.wechatMiniprogram.anon.RQDeleteFileParam
 import typingsSlinky.wechatMiniprogram.anon.RQDownloadFileParam
 import typingsSlinky.wechatMiniprogram.anon.RQGetTempFileURLParam
 import typingsSlinky.wechatMiniprogram.anon.RQUploadFileParam
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * extend wx with cloud
   */
 @js.native
-trait WxCloud extends js.Object {
+trait WxCloud extends StObject {
   
   def CDN(options: String): typingsSlinky.wechatMiniprogram.ICloud.CDN = js.native
   def CDN(options: js.typedarray.ArrayBuffer): typingsSlinky.wechatMiniprogram.ICloud.CDN = js.native

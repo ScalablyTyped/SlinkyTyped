@@ -4,21 +4,21 @@
 Typings are for version 7.16.18
 
 ## Library description:
-Styling helpers for Office UI Fabric.
+Styling helpers for Fluent UI React.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @uifabric/styling |
 | Keywords           | - |
-| # releases         | 173 |
-| # dependents       | 28 |
-| # downloads        | 2103683 |
+| # releases         | 181 |
+| # dependents       | 45 |
+| # downloads        | 4526039 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/OfficeDev/office-ui-fabric-react#readme)
-- [Bugs](https://github.com/OfficeDev/office-ui-fabric-react/issues)
-- [Repository](https://github.com/OfficeDev/office-ui-fabric-react)
+- [Homepage](https://github.com/microsoft/fluentui#readme)
+- [Bugs](https://github.com/microsoft/fluentui/issues)
+- [Repository](https://github.com/microsoft/fluentui)
 - [Npm](https://www.npmjs.com/package/%40uifabric%2Fstyling)
     
 

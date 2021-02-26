@@ -3,6 +3,7 @@ package typingsSlinky.meteor
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.meteor.anon.Bare
 import typingsSlinky.meteor.anon.Unordered
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

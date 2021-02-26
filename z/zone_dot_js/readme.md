@@ -10,9 +10,9 @@ Zones for JavaScript
 | ------------------ | :-------------: |
 | Full name          | zone.js |
 | Keywords           | - |
-| # releases         | 17 |
-| # dependents       | 7038 |
-| # downloads        | 52534713 |
+| # releases         | 10 |
+| # dependents       | 7834 |
+| # downloads        | 69596179 |
 | # stars            | 25 |
 
 ## Links

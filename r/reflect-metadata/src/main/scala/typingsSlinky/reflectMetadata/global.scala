@@ -4,16 +4,14 @@ import typingsSlinky.reflectMetadata.anon.FnCall
 import typingsSlinky.std.ClassDecorator
 import typingsSlinky.std.MethodDecorator
 import typingsSlinky.std.PropertyDecorator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
-  @js.native
-  object Reflect extends js.Object {
+  object Reflect {
     
     /**
       * Applies a set of decorators to a target object.
@@ -29,6 +27,8 @@ object global extends js.Object {
       *     Example = Reflect.decorate(decoratorsArray, Example);
       *
       */
+    @JSGlobal("Reflect.decorate")
+    @js.native
     def decorate(decorators: js.Array[ClassDecorator], target: js.Function): js.Function = js.native
     /**
       * Applies a set of decorators to a property of a target object.
@@ -65,14 +65,22 @@ object global extends js.Object {
       *             Object.getOwnPropertyDescriptor(Example.prototype, "method")));
       *
       */
+    @JSGlobal("Reflect.decorate")
+    @js.native
     def decorate(decorators: js.Array[PropertyDecorator | MethodDecorator], target: js.Object, targetKey: String): js.PropertyDescriptor = js.native
+    @JSGlobal("Reflect.decorate")
+    @js.native
     def decorate(
       decorators: js.Array[PropertyDecorator | MethodDecorator],
       target: js.Object,
       targetKey: String,
       descriptor: js.PropertyDescriptor
     ): js.PropertyDescriptor = js.native
+    @JSGlobal("Reflect.decorate")
+    @js.native
     def decorate(decorators: js.Array[PropertyDecorator | MethodDecorator], target: js.Object, targetKey: js.Symbol): js.PropertyDescriptor = js.native
+    @JSGlobal("Reflect.decorate")
+    @js.native
     def decorate(
       decorators: js.Array[PropertyDecorator | MethodDecorator],
       target: js.Object,
@@ -99,6 +107,8 @@ object global extends js.Object {
       *     }
       *
       */
+    @JSGlobal("Reflect.defineMetadata")
+    @js.native
     def defineMetadata(metadataKey: js.Any, metadataValue: js.Any, target: js.Object): Unit = js.native
     /**
       * Define a unique metadata entry on the target.
@@ -135,7 +145,11 @@ object global extends js.Object {
       *     }
       *
       */
+    @JSGlobal("Reflect.defineMetadata")
+    @js.native
     def defineMetadata(metadataKey: js.Any, metadataValue: js.Any, target: js.Object, targetKey: String): Unit = js.native
+    @JSGlobal("Reflect.defineMetadata")
+    @js.native
     def defineMetadata(metadataKey: js.Any, metadataValue: js.Any, target: js.Object, targetKey: js.Symbol): Unit = js.native
     
     /**
@@ -152,6 +166,8 @@ object global extends js.Object {
       *     result = Reflect.deleteMetadata("custom:annotation", Example);
       *
       */
+    @JSGlobal("Reflect.deleteMetadata")
+    @js.native
     def deleteMetadata(metadataKey: js.Any, target: js.Object): Boolean = js.native
     /**
       * Deletes the metadata entry from the target object with the provided key.
@@ -183,7 +199,11 @@ object global extends js.Object {
       *     result = Reflect.deleteMetadata("custom:annotation", Example.prototype, "method");
       *
       */
+    @JSGlobal("Reflect.deleteMetadata")
+    @js.native
     def deleteMetadata(metadataKey: js.Any, target: js.Object, targetKey: String): Boolean = js.native
+    @JSGlobal("Reflect.deleteMetadata")
+    @js.native
     def deleteMetadata(metadataKey: js.Any, target: js.Object, targetKey: js.Symbol): Boolean = js.native
     
     /**
@@ -200,6 +220,8 @@ object global extends js.Object {
       *     result = Reflect.getMetadata("custom:annotation", Example);
       *
       */
+    @JSGlobal("Reflect.getMetadata")
+    @js.native
     def getMetadata(metadataKey: js.Any, target: js.Object): js.Any = js.native
     /**
       * Gets the metadata value for the provided metadata key on the target object or its prototype chain.
@@ -231,7 +253,11 @@ object global extends js.Object {
       *     result = Reflect.getMetadata("custom:annotation", Example.prototype, "method");
       *
       */
+    @JSGlobal("Reflect.getMetadata")
+    @js.native
     def getMetadata(metadataKey: js.Any, target: js.Object, targetKey: String): js.Any = js.native
+    @JSGlobal("Reflect.getMetadata")
+    @js.native
     def getMetadata(metadataKey: js.Any, target: js.Object, targetKey: js.Symbol): js.Any = js.native
     
     /**
@@ -247,6 +273,8 @@ object global extends js.Object {
       *     result = Reflect.getMetadataKeys(Example);
       *
       */
+    @JSGlobal("Reflect.getMetadataKeys")
+    @js.native
     def getMetadataKeys(target: js.Object): js.Array[_] = js.native
     /**
       * Gets the metadata keys defined on the target object or its prototype chain.
@@ -277,7 +305,11 @@ object global extends js.Object {
       *     result = Reflect.getMetadataKeys(Example.prototype, "method");
       *
       */
+    @JSGlobal("Reflect.getMetadataKeys")
+    @js.native
     def getMetadataKeys(target: js.Object, targetKey: String): js.Array[_] = js.native
+    @JSGlobal("Reflect.getMetadataKeys")
+    @js.native
     def getMetadataKeys(target: js.Object, targetKey: js.Symbol): js.Array[_] = js.native
     
     /**
@@ -294,6 +326,8 @@ object global extends js.Object {
       *     result = Reflect.getOwnMetadata("custom:annotation", Example);
       *
       */
+    @JSGlobal("Reflect.getOwnMetadata")
+    @js.native
     def getOwnMetadata(metadataKey: js.Any, target: js.Object): js.Any = js.native
     /**
       * Gets the metadata value for the provided metadata key on the target object.
@@ -325,7 +359,11 @@ object global extends js.Object {
       *     result = Reflect.getOwnMetadata("custom:annotation", Example.prototype, "method");
       *
       */
+    @JSGlobal("Reflect.getOwnMetadata")
+    @js.native
     def getOwnMetadata(metadataKey: js.Any, target: js.Object, targetKey: String): js.Any = js.native
+    @JSGlobal("Reflect.getOwnMetadata")
+    @js.native
     def getOwnMetadata(metadataKey: js.Any, target: js.Object, targetKey: js.Symbol): js.Any = js.native
     
     /**
@@ -341,6 +379,8 @@ object global extends js.Object {
       *     result = Reflect.getOwnMetadataKeys(Example);
       *
       */
+    @JSGlobal("Reflect.getOwnMetadataKeys")
+    @js.native
     def getOwnMetadataKeys(target: js.Object): js.Array[_] = js.native
     /**
       * Gets the unique metadata keys defined on the target object.
@@ -371,7 +411,11 @@ object global extends js.Object {
       *     result = Reflect.getOwnMetadataKeys(Example.prototype, "method");
       *
       */
+    @JSGlobal("Reflect.getOwnMetadataKeys")
+    @js.native
     def getOwnMetadataKeys(target: js.Object, targetKey: String): js.Array[_] = js.native
+    @JSGlobal("Reflect.getOwnMetadataKeys")
+    @js.native
     def getOwnMetadataKeys(target: js.Object, targetKey: js.Symbol): js.Array[_] = js.native
     
     /**
@@ -388,6 +432,8 @@ object global extends js.Object {
       *     result = Reflect.hasMetadata("custom:annotation", Example);
       *
       */
+    @JSGlobal("Reflect.hasMetadata")
+    @js.native
     def hasMetadata(metadataKey: js.Any, target: js.Object): Boolean = js.native
     /**
       * Gets a value indicating whether the target object or its prototype chain has the provided metadata key defined.
@@ -419,7 +465,11 @@ object global extends js.Object {
       *     result = Reflect.hasMetadata("custom:annotation", Example.prototype, "method");
       *
       */
+    @JSGlobal("Reflect.hasMetadata")
+    @js.native
     def hasMetadata(metadataKey: js.Any, target: js.Object, targetKey: String): Boolean = js.native
+    @JSGlobal("Reflect.hasMetadata")
+    @js.native
     def hasMetadata(metadataKey: js.Any, target: js.Object, targetKey: js.Symbol): Boolean = js.native
     
     /**
@@ -436,6 +486,8 @@ object global extends js.Object {
       *     result = Reflect.hasOwnMetadata("custom:annotation", Example);
       *
       */
+    @JSGlobal("Reflect.hasOwnMetadata")
+    @js.native
     def hasOwnMetadata(metadataKey: js.Any, target: js.Object): Boolean = js.native
     /**
       * Gets a value indicating whether the target object has the provided metadata key defined.
@@ -467,7 +519,11 @@ object global extends js.Object {
       *     result = Reflect.hasOwnMetadata("custom:annotation", Example.prototype, "method");
       *
       */
+    @JSGlobal("Reflect.hasOwnMetadata")
+    @js.native
     def hasOwnMetadata(metadataKey: js.Any, target: js.Object, targetKey: String): Boolean = js.native
+    @JSGlobal("Reflect.hasOwnMetadata")
+    @js.native
     def hasOwnMetadata(metadataKey: js.Any, target: js.Object, targetKey: js.Symbol): Boolean = js.native
     
     /**
@@ -510,6 +566,8 @@ object global extends js.Object {
       *     }
       *
       */
+    @JSGlobal("Reflect.metadata")
+    @js.native
     def metadata(metadataKey: js.Any, metadataValue: js.Any): FnCall = js.native
   }
 }

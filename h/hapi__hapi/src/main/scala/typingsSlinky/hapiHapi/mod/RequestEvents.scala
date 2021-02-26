@@ -4,6 +4,7 @@ import typingsSlinky.hapiHapi.hapiHapiStrings.disconnect
 import typingsSlinky.hapiHapi.hapiHapiStrings.finish
 import typingsSlinky.hapiHapi.hapiHapiStrings.peek
 import typingsSlinky.hapiPodium.mod.Podium
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

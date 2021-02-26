@@ -3,6 +3,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.presentation
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 */
-trait AnimationSpeed extends js.Object
+trait AnimationSpeed extends StObject
 object AnimationSpeed {
   
   /** set the speed from the animation/fade to fast. */

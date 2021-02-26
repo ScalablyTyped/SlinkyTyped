@@ -10,9 +10,9 @@ Enables developers to use a unified Postman Collection format Object across proj
 | ------------------ | :-------------: |
 | Full name          | postman-collection |
 | Keywords           | postman |
-| # releases         | 47 |
-| # dependents       | 34 |
-| # downloads        | 5645090 |
+| # releases         | 38 |
+| # dependents       | 58 |
+| # downloads        | 12058727 |
 | # stars            | 2 |
 
 ## Links

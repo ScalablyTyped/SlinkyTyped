@@ -5,13 +5,14 @@ import typingsSlinky.antvG2.antvG2Strings.left
 import typingsSlinky.antvG2.antvG2Strings.right
 import typingsSlinky.antvG2.antvG2Strings.top
 import typingsSlinky.antvG2.mod.Styles.tickLine
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@antv/g2", "ChartAxisConfig")
 @js.native
-class ChartAxisConfig () extends js.Object {
+class ChartAxisConfig () extends StObject {
   
   var grid: js.UndefOr[AxisGrid | Null] = js.native
   

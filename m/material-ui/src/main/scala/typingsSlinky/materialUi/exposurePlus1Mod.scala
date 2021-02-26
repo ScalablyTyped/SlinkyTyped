@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/image/exposure-plus-1", JSImport.Namespace)
-@js.native
-object exposurePlus1Mod extends js.Object {
+object exposurePlus1Mod {
   
+  @JSImport("material-ui/svg-icons/image/exposure-plus-1", JSImport.Default)
+  @js.native
+  class default () extends ImageExposurePlus1
+  
+  @JSImport("material-ui/svg-icons/image/exposure-plus-1", "ImageExposurePlus1")
   @js.native
   class ImageExposurePlus1 ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

@@ -10,9 +10,9 @@ Display PDFs in your React app as easily as if they were images.
 | ------------------ | :-------------: |
 | Full name          | react-pdf |
 | Keywords           | pdf, pdf-viewer, react |
-| # releases         | 32 |
-| # dependents       | 52 |
-| # downloads        | 2724453 |
+| # releases         | 14 |
+| # dependents       | 111 |
+| # downloads        | 10512297 |
 | # stars            | 14 |
 
 ## Links

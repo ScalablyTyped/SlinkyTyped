@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.transformMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.vegaTypingsStrings.poly
   - typingsSlinky.vegaTypings.vegaTypingsStrings.pow
 */
-trait RegressionMethod extends js.Object
+trait RegressionMethod extends StObject
 object RegressionMethod {
   
   @scala.inline

@@ -13,6 +13,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.percent
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ratio
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.seconds
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.years
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

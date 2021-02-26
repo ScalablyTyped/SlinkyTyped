@@ -6,6 +6,7 @@ import typingsSlinky.bip174.interfacesMod.TransactionFromBuffer
 import typingsSlinky.bip174.mod.Psbt
 import typingsSlinky.node.Buffer
 import typingsSlinky.std.InstanceType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

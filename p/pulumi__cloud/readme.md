@@ -10,9 +10,9 @@ A highly productive, cloud neutral programming model.
 | ------------------ | :-------------: |
 | Full name          | @pulumi/cloud |
 | Keywords           | pulumi, cloud |
-| # releases         | 290 |
+| # releases         | 63 |
 | # dependents       | 2 |
-| # downloads        | 31552 |
+| # downloads        | 36667 |
 | # stars            | 0 |
 
 ## Links

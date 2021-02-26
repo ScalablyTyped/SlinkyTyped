@@ -2,44 +2,37 @@ package typingsSlinky.materialTextfield
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialTextfield.anon.PartialMDCTextFieldCharac
-import typingsSlinky.materialTextfield.anon.ROOT
-import typingsSlinky.materialTextfield.anon.ROOTSELECTOR
-import typingsSlinky.materialTextfield.characterCounterAdapterMod.MDCTextFieldCharacterCounterAdapter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/textfield/character-counter/index", JSImport.Namespace)
-@js.native
-object indexMod extends js.Object {
+object indexMod {
   
+  @JSImport("@material/textfield/character-counter/index", "MDCTextFieldCharacterCounter")
   @js.native
-  class MDCTextFieldCharacterCounter ()
-    extends typingsSlinky.materialTextfield.componentMod.MDCTextFieldCharacterCounter
+  class MDCTextFieldCharacterCounter protected ()
+    extends typingsSlinky.materialTextfield.componentMod.MDCTextFieldCharacterCounter {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(
+      root: Element,
+      foundation: typingsSlinky.materialTextfield.foundationMod.MDCTextFieldCharacterCounterFoundation,
+      args: js.Any*
+    ) = this()
+  }
   /* static members */
-  @js.native
-  object MDCTextFieldCharacterCounter extends js.Object {
+  object MDCTextFieldCharacterCounter {
     
+    @JSImport("@material/textfield/character-counter/index", "MDCTextFieldCharacterCounter.attachTo")
+    @js.native
     def attachTo(root: Element): typingsSlinky.materialTextfield.componentMod.MDCTextFieldCharacterCounter = js.native
   }
   
+  @JSImport("@material/textfield/character-counter/index", "MDCTextFieldCharacterCounterFoundation")
   @js.native
   class MDCTextFieldCharacterCounterFoundation ()
     extends typingsSlinky.materialTextfield.foundationMod.MDCTextFieldCharacterCounterFoundation {
     def this(adapter: PartialMDCTextFieldCharac) = this()
-  }
-  /* static members */
-  @js.native
-  object MDCTextFieldCharacterCounterFoundation extends js.Object {
-    
-    def cssClasses: ROOT = js.native
-    
-    /**
-      * See {@link MDCTextFieldCharacterCounterAdapter} for typing information on parameters and return types.
-      */
-    def defaultAdapter: MDCTextFieldCharacterCounterAdapter = js.native
-    
-    def strings: ROOTSELECTOR = js.native
   }
   
   /**
@@ -64,15 +57,29 @@ object indexMod extends js.Object {
     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     * THE SOFTWARE.
     */
-  @js.native
-  object characterCountCssClasses extends js.Object {
+  object characterCountCssClasses {
     
-    var ROOT: String = js.native
+    @JSImport("@material/textfield/character-counter/index", "characterCountCssClasses")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("@material/textfield/character-counter/index", "characterCountCssClasses.ROOT")
+    @js.native
+    def ROOT: String = js.native
+    @scala.inline
+    def ROOT_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ROOT")(x.asInstanceOf[js.Any])
   }
   
-  @js.native
-  object characterCountStrings extends js.Object {
+  object characterCountStrings {
     
-    var ROOT_SELECTOR: String = js.native
+    @JSImport("@material/textfield/character-counter/index", "characterCountStrings")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("@material/textfield/character-counter/index", "characterCountStrings.ROOT_SELECTOR")
+    @js.native
+    def ROOT_SELECTOR: String = js.native
+    @scala.inline
+    def ROOT_SELECTOR_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ROOT_SELECTOR")(x.asInstanceOf[js.Any])
   }
 }

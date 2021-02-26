@@ -5,6 +5,7 @@ import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.urlMod.Url
 import typingsSlinky.websocket.websocketStrings.requestAccepted
 import typingsSlinky.websocket.websocketStrings.requestRejected
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

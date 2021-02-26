@@ -12,6 +12,7 @@ import typingsSlinky.officeJs.officeJsStrings.NoFill
 import typingsSlinky.officeJs.officeJsStrings.Pattern
 import typingsSlinky.officeJs.officeJsStrings.PictureAndTexture
 import typingsSlinky.officeJs.officeJsStrings.Solid
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

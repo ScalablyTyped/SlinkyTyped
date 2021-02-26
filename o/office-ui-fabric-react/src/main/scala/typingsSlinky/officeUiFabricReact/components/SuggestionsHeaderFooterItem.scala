@@ -6,15 +6,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.suggestionsDottypesMod.ISuggestionsHeaderFooterItemProps
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SuggestionsHeaderFooterItem {
   
+  @scala.inline
+  def apply(id: String, isSelected: Boolean, renderItem: () => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], isSelected = isSelected.asInstanceOf[js.Any], renderItem = js.Any.fromFunction0(renderItem))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ISuggestionsHeaderFooterItemProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "SuggestionsHeaderFooterItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,23 +32,17 @@ object SuggestionsHeaderFooterItem {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ js.Object | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def onExecute(value: () => Unit): this.type = set("onExecute", js.Any.fromFunction0(value))
   }
   
   def withProps(p: ISuggestionsHeaderFooterItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String, isSelected: Boolean, renderItem: () => ReactElement): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], isSelected = isSelected.asInstanceOf[js.Any], renderItem = js.Any.fromFunction0(renderItem))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ISuggestionsHeaderFooterItemProps]))
-  }
 }

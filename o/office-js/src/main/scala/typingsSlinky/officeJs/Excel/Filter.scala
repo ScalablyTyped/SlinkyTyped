@@ -41,6 +41,7 @@ import typingsSlinky.officeJs.officeJsStrings.Tomorrow
 import typingsSlinky.officeJs.officeJsStrings.Unknown_
 import typingsSlinky.officeJs.officeJsStrings.YearToDate
 import typingsSlinky.officeJs.officeJsStrings.Yesterday
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

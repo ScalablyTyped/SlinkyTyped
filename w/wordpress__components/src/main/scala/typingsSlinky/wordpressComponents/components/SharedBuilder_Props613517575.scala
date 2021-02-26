@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Element
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,16 +21,16 @@ class SharedBuilder_Props613517575 (val args: js.Array[js.Any])
   def onFocus(value: SyntheticFocusEvent[Element] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
   
   @scala.inline
-  def scriptsVarargs(value: String*): this.type = set("scripts", js.Array(value :_*))
-  
-  @scala.inline
   def scripts(value: js.Array[String]): this.type = set("scripts", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def stylesVarargs(value: String*): this.type = set("styles", js.Array(value :_*))
+  def scriptsVarargs(value: String*): this.type = set("scripts", js.Array(value :_*))
   
   @scala.inline
   def styles(value: js.Array[String]): this.type = set("styles", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def stylesVarargs(value: String*): this.type = set("styles", js.Array(value :_*))
   
   @scala.inline
   def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])

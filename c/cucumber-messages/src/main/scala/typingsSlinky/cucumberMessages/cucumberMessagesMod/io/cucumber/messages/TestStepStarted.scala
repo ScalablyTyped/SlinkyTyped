@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,19 +33,27 @@ class TestStepStarted () extends ITestStepStarted {
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-/* static members */
-@JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted")
-@js.native
-object TestStepStarted extends js.Object {
+object TestStepStarted {
   
   /**
     * Creates a new TestStepStarted instance using the specified properties.
     * @param [properties] Properties to set
     * @returns TestStepStarted instance
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.create")
+  @js.native
   def create(): TestStepStarted = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.create")
+  @js.native
   def create(properties: ITestStepStarted): TestStepStarted = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): TestStepStarted = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): TestStepStarted = js.native
   /**
     * Decodes a TestStepStarted message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -53,11 +62,17 @@ object TestStepStarted extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.decode")
+  @js.native
   def decode(reader: Reader): TestStepStarted = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.decode")
+  @js.native
   def decode(reader: Reader, length: Double): TestStepStarted = js.native
-  def decode(reader: js.typedarray.Uint8Array): TestStepStarted = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): TestStepStarted = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): TestStepStarted = js.native
   /**
     * Decodes a TestStepStarted message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -65,8 +80,10 @@ object TestStepStarted extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): TestStepStarted = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): TestStepStarted = js.native
   
   /**
     * Encodes the specified TestStepStarted message. Does not implicitly {@link io.cucumber.messages.TestStepStarted.verify|verify} messages.
@@ -74,7 +91,12 @@ object TestStepStarted extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.encode")
+  @js.native
   def encode(message: ITestStepStarted): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.encode")
+  @js.native
   def encode(message: ITestStepStarted, writer: Writer): Writer = js.native
   
   /**
@@ -83,7 +105,12 @@ object TestStepStarted extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITestStepStarted): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITestStepStarted, writer: Writer): Writer = js.native
   
   /**
@@ -91,6 +118,9 @@ object TestStepStarted extends js.Object {
     * @param object Plain object
     * @returns TestStepStarted
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): TestStepStarted = js.native
   
   /**
@@ -99,7 +129,12 @@ object TestStepStarted extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.toObject")
+  @js.native
   def toObject(message: TestStepStarted): StringDictionary[js.Any] = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.toObject")
+  @js.native
   def toObject(message: TestStepStarted, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -107,5 +142,8 @@ object TestStepStarted extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.TestStepStarted.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

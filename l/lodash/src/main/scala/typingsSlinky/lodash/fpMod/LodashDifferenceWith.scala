@@ -3,12 +3,13 @@ package typingsSlinky.lodash.fpMod
 import typingsSlinky.lodash.mod.Comparator2
 import typingsSlinky.lodash.mod.List
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashDifferenceWith extends js.Object {
+trait LodashDifferenceWith extends StObject {
   
   def apply[T1](comparator: __): LodashDifferenceWith1x2[T1] = js.native
   def apply[T1](comparator: __, array: List[T1]): LodashDifferenceWith1x2[T1] = js.native

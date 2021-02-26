@@ -12,14 +12,14 @@ import typingsSlinky.node.anon.End
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.streamMod.Transform
 import typingsSlinky.node.streamMod.TransformOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("are-we-there-yet", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("are-we-there-yet", "Tracker")
   @js.native
   class Tracker ()
     extends TrackerBase
@@ -37,6 +37,7 @@ object mod extends js.Object {
     def finish(): Unit = js.native
   }
   
+  @JSImport("are-we-there-yet", "TrackerBase")
   @js.native
   class TrackerBase () extends EventEmitter {
     def this(name: String) = this()
@@ -60,6 +61,7 @@ object mod extends js.Object {
     def removeListener_change(event: change, listener: TrackerEventListener): this.type = js.native
   }
   
+  @JSImport("are-we-there-yet", "TrackerGroup")
   @js.native
   class TrackerGroup ()
     extends TrackerBase
@@ -99,13 +101,7 @@ object mod extends js.Object {
     def newStream(name: String, todo: Double, weight: Double): TrackerStream = js.native
   }
   
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.areWeThereYet.mod.Tracker
-    - typingsSlinky.areWeThereYet.mod.TrackerGroup
-    - typingsSlinky.areWeThereYet.mod.TrackerStream
-  */
-  trait TrackerObject extends js.Object
-  
+  @JSImport("are-we-there-yet", "TrackerStream")
   @js.native
   class TrackerStream ()
     extends Transform
@@ -209,4 +205,11 @@ object mod extends js.Object {
   type GenericEventListener = js.Function1[/* repeated */ js.Any, Unit]
   
   type TrackerEventListener = js.Function3[/* name */ String, /* completed */ Double, /* tracker */ TrackerObject, Unit]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.areWeThereYet.mod.Tracker
+    - typingsSlinky.areWeThereYet.mod.TrackerGroup
+    - typingsSlinky.areWeThereYet.mod.TrackerStream
+  */
+  trait TrackerObject extends StObject
 }

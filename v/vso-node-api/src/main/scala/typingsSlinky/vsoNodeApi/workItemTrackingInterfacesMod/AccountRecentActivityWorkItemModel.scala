@@ -1,11 +1,12 @@
 package typingsSlinky.vsoNodeApi.workItemTrackingInterfacesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AccountRecentActivityWorkItemModel extends js.Object {
+trait AccountRecentActivityWorkItemModel extends StObject {
   
   /**
     * Date of the last Activity by the user
@@ -77,48 +78,36 @@ object AccountRecentActivityWorkItemModel {
   }
   
   @scala.inline
-  implicit class AccountRecentActivityWorkItemModelOps[Self <: AccountRecentActivityWorkItemModel] (val x: Self) extends AnyVal {
+  implicit class AccountRecentActivityWorkItemModelMutableBuilder[Self <: AccountRecentActivityWorkItemModel] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setActivityDate(value: js.Date): Self = StObject.set(x, "activityDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setActivityType(value: WorkItemRecentActivityType): Self = StObject.set(x, "activityType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setAssignedTo(value: String): Self = StObject.set(x, "assignedTo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setActivityDate(value: js.Date): Self = this.set("activityDate", value.asInstanceOf[js.Any])
+    def setChangedDate(value: js.Date): Self = StObject.set(x, "changedDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setActivityType(value: WorkItemRecentActivityType): Self = this.set("activityType", value.asInstanceOf[js.Any])
+    def setId(value: Double): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAssignedTo(value: String): Self = this.set("assignedTo", value.asInstanceOf[js.Any])
+    def setIdentityId(value: String): Self = StObject.set(x, "identityId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChangedDate(value: js.Date): Self = this.set("changedDate", value.asInstanceOf[js.Any])
+    def setState(value: String): Self = StObject.set(x, "state", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setId(value: Double): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setTeamProject(value: String): Self = StObject.set(x, "teamProject", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIdentityId(value: String): Self = this.set("identityId", value.asInstanceOf[js.Any])
+    def setTitle(value: String): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setState(value: String): Self = this.set("state", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTeamProject(value: String): Self = this.set("teamProject", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setWorkItemType(value: String): Self = this.set("workItemType", value.asInstanceOf[js.Any])
+    def setWorkItemType(value: String): Self = StObject.set(x, "workItemType", value.asInstanceOf[js.Any])
   }
 }

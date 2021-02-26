@@ -20,6 +20,7 @@ import typingsSlinky.protobufjs.protobufjsStrings.sint64
 import typingsSlinky.protobufjs.protobufjsStrings.string
 import typingsSlinky.protobufjs.protobufjsStrings.uint32
 import typingsSlinky.protobufjs.protobufjsStrings.uint64
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -57,9 +58,7 @@ class MapField protected ()
   ) = this()
 }
 /* static members */
-@JSImport("protobufjs/minimal", "MapField")
-@js.native
-object MapField extends js.Object {
+object MapField {
   
   /**
     * Map field decorator (TypeScript).
@@ -68,6 +67,8 @@ object MapField extends js.Object {
     * @param fieldValueType Field value type
     * @returns Decorator function
     */
+  @JSImport("protobufjs/minimal", "MapField.d")
+  @js.native
   def d[T /* <: StringDictionary[
     Double | Long | String | Boolean | js.typedarray.Uint8Array | js.Array[Double] | typingsSlinky.protobufjs.mod.Message[js.Object]
   ] */](
@@ -83,5 +84,7 @@ object MapField extends js.Object {
     * @returns Created map field
     * @throws {TypeError} If arguments are invalid
     */
+  @JSImport("protobufjs/minimal", "MapField.fromJSON")
+  @js.native
   def fromJSON(name: String, json: IMapField): typingsSlinky.protobufjs.mod.MapField = js.native
 }

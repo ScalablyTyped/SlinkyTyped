@@ -1,6 +1,7 @@
 package typingsSlinky.microsoftGraph.mod
 
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.unknown_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.rejected
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.unresponsive
 */
-trait DeviceManagementPartnerTenantState extends js.Object
+trait DeviceManagementPartnerTenantState extends StObject
 object DeviceManagementPartnerTenantState {
   
   @scala.inline

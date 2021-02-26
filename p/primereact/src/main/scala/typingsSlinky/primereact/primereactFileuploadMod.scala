@@ -1,14 +1,22 @@
 package typingsSlinky.primereact
 
+import typingsSlinky.primereact.fileUploadMod.FileUploadProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/fileupload", JSImport.Namespace)
-@js.native
-object primereactFileuploadMod extends js.Object {
+object primereactFileuploadMod {
   
+  @JSImport("primereact/fileupload", "FileUpload")
   @js.native
-  class FileUpload ()
-    extends typingsSlinky.primereact.fileUploadMod.FileUpload
+  class FileUpload protected ()
+    extends typingsSlinky.primereact.fileUploadMod.FileUpload {
+    def this(props: FileUploadProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: FileUploadProps, context: js.Any) = this()
+  }
 }

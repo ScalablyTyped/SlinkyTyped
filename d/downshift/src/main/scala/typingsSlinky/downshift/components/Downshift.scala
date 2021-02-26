@@ -12,15 +12,22 @@ import typingsSlinky.downshift.mod.Environment
 import typingsSlinky.downshift.mod.StateChangeOptions
 import typingsSlinky.downshift.mod.default
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Downshift {
   
+  @scala.inline
+  def apply[Item](): Builder[Item] = {
+    val __props = js.Dynamic.literal()
+    new Builder[Item](js.Array(this.component, __props.asInstanceOf[DownshiftProps[Item]]))
+  }
+  
   @JSImport("downshift", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[Item] (val args: js.Array[js.Any])
@@ -129,10 +136,10 @@ object Downshift {
     def selectedItem(value: Item): this.type = set("selectedItem", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedItemNull: this.type = set("selectedItem", null)
+    def selectedItemChanged(value: (Item, Item) => Boolean): this.type = set("selectedItemChanged", js.Any.fromFunction2(value))
     
     @scala.inline
-    def selectedItemChanged(value: (Item, Item) => Boolean): this.type = set("selectedItemChanged", js.Any.fromFunction2(value))
+    def selectedItemNull: this.type = set("selectedItem", null)
     
     @scala.inline
     def stateReducer(
@@ -143,13 +150,7 @@ object Downshift {
     def suppressRefError(value: Boolean): this.type = set("suppressRefError", value.asInstanceOf[js.Any])
   }
   
-  def withProps[Item](p: DownshiftProps[Item]): Builder[Item] = new Builder[Item](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[Item](): Builder[Item] = {
-    val __props = js.Dynamic.literal()
-    new Builder[Item](js.Array(this.component, __props.asInstanceOf[DownshiftProps[Item]]))
-  }
-  
   implicit def make[Item](companion: Downshift.type): Builder[Item] = new Builder[Item](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps[Item](p: DownshiftProps[Item]): Builder[Item] = new Builder[Item](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -10,9 +10,9 @@ Any client-side logging that is done through storybook should be done through th
 | ------------------ | :-------------: |
 | Full name          | @storybook/client-logger |
 | Keywords           | storybook |
-| # releases         | 430 |
-| # dependents       | 37 |
-| # downloads        | 52311801 |
+| # releases         | 565 |
+| # dependents       | 53 |
+| # downloads        | 133097601 |
 | # stars            | 0 |
 
 ## Links

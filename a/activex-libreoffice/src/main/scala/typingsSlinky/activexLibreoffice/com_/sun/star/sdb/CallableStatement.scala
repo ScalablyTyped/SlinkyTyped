@@ -12,16 +12,15 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XArray
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XBlob
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XClob
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XConnection
-import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XOutParameters
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XRef
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XResultSet
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XResultSetMetaData
-import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XRow
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.XColumnsSupplier
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.Date
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.DateTime
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.Time
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,11 +29,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * represents a procedure call. The service differs only in the access of the columns and parameters to the service {@link
   * com.sun.star.sdbc.CallableStatement} .
   */
-@js.native
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XMultipleResults because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XWarningsSupplier because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XPreparedBatchExecution because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XParameters because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XResultSetMetaDataSupplier because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XPreparedStatement because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.util.XCancellable because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySet because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XCloseable because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.PreparedStatement because Already inherited
+- typingsSlinky.activexLibreoffice.com_.sun.star.sdb.PreparedStatement because var conflicts: CursorName, FetchDirection, FetchSize, MaxFieldSize, MaxRows, QueryTimeOut, ResultSetConcurrency, ResultSetType. Inlined  */ @js.native
 trait CallableStatement
-  extends typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.PreparedStatement
-     with XRow
-     with XOutParameters
+  extends typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.CallableStatement
      with XColumnsSupplier
 object CallableStatement {
   

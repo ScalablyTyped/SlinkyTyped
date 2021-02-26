@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.mediaMod.MediaProps
+import typingsSlinky.reactstrap.mediaMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "Media")
+@JSImport("reactstrap/lib", "Media")
 @js.native
-class Media ()
-  extends Component[MediaProps, js.Object, js.Any]
+class Media () extends default

@@ -3,6 +3,7 @@ package typingsSlinky.puppeteer.mod
 import typingsSlinky.puppeteer.puppeteerStrings.targetchanged
 import typingsSlinky.puppeteer.puppeteerStrings.targetcreated
 import typingsSlinky.puppeteer.puppeteerStrings.targetdestroyed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

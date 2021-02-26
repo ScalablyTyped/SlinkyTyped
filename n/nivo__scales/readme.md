@@ -11,11 +11,14 @@ Typings are for version 0.65.0
 | Full name          | @nivo/scales |
 | Keywords           | - |
 | # releases         | 20 |
-| # dependents       | 7 |
-| # downloads        | 687994 |
+| # dependents       | 12 |
+| # downloads        | 3160734 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/plouc/nivo#readme)
+- [Bugs](https://github.com/plouc/nivo/issues)
+- [Repository](https://github.com/plouc/nivo)
 - [Npm](https://www.npmjs.com/package/%40nivo%2Fscales)
     
 

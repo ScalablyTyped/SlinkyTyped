@@ -3,16 +3,18 @@ package typingsSlinky.sentryBrowser
 import typingsSlinky.sentryBrowser.baseMod.BaseTransport
 import typingsSlinky.sentryTypes.responseMod.Response
 import typingsSlinky.sentryTypes.sessionMod.Session
+import typingsSlinky.sentryTypes.transportMod.TransportOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@sentry/browser/dist/transports/fetch", JSImport.Namespace)
-@js.native
-object fetchMod extends js.Object {
+object fetchMod {
   
+  @JSImport("@sentry/browser/dist/transports/fetch", "FetchTransport")
   @js.native
-  class FetchTransport () extends BaseTransport {
+  class FetchTransport protected () extends BaseTransport {
+    def this(options: TransportOptions) = this()
     
     /**
       * @param sentryRequest Prepared SentryRequest to be delivered

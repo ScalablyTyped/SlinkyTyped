@@ -3,6 +3,7 @@ package typingsSlinky.std
 import typingsSlinky.std.stdStrings.MSCandidateWindowHide
 import typingsSlinky.std.stdStrings.MSCandidateWindowShow
 import typingsSlinky.std.stdStrings.MSCandidateWindowUpdate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -89,13 +90,13 @@ trait MSInputMethodContext extends EventTarget {
   def removeEventListener_MSCandidateWindowHide(
     `type`: MSCandidateWindowHide,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_MSCandidateWindowHide(
     `type`: MSCandidateWindowHide,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_MSCandidateWindowShow(
@@ -106,13 +107,13 @@ trait MSInputMethodContext extends EventTarget {
   def removeEventListener_MSCandidateWindowShow(
     `type`: MSCandidateWindowShow,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_MSCandidateWindowShow(
     `type`: MSCandidateWindowShow,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_MSCandidateWindowUpdate(
@@ -123,13 +124,13 @@ trait MSInputMethodContext extends EventTarget {
   def removeEventListener_MSCandidateWindowUpdate(
     `type`: MSCandidateWindowUpdate,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_MSCandidateWindowUpdate(
     `type`: MSCandidateWindowUpdate,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   val target: org.scalajs.dom.raw.HTMLElement = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.plotlyJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.plotlyJs.plotlyJsStrings.thai
   - typingsSlinky.plotlyJs.plotlyJsStrings.ummalqura
 */
-trait Calendar extends js.Object
+trait Calendar extends StObject
 object Calendar {
   
   @scala.inline

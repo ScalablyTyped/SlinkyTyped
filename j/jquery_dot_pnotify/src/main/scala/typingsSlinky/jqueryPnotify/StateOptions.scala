@@ -1,5 +1,6 @@
 package typingsSlinky.jqueryPnotify
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.closing
   - typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.closed
 */
-trait StateOptions extends js.Object
+trait StateOptions extends StObject
 object StateOptions {
   
   @scala.inline

@@ -12,6 +12,7 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.regexp
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.set
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.weakmap
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.weakset
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.generator
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.error
 */
-trait ObjectPreviewSubtype extends js.Object
+trait ObjectPreviewSubtype extends StObject
 object ObjectPreviewSubtype {
   
   @scala.inline

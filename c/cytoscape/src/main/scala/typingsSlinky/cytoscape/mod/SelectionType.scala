@@ -1,5 +1,6 @@
 package typingsSlinky.cytoscape.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.cytoscape.cytoscapeStrings.additive
   - typingsSlinky.cytoscape.cytoscapeStrings.single
 */
-trait SelectionType extends js.Object
+trait SelectionType extends StObject
 object SelectionType {
   
   @scala.inline

@@ -4,19 +4,22 @@ import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateMod.State
 import typingsSlinky.xstate.typesMod.EventObject
 import typingsSlinky.xstate.typesMod.StateValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xstate/lib/match", JSImport.Namespace)
-@js.native
-object matchMod extends js.Object {
+object matchMod {
   
+  @JSImport("xstate/lib/match", "matchState")
+  @js.native
   def matchState[T, TContext, TEvent /* <: EventObject */](
     state: State[TContext, TEvent, _, ContextTContext[TContext]],
     patterns: js.Array[StatePatternTuple[T, TContext, TEvent]],
     defaultValue: ValueFromStateGetter[T, TContext, TEvent]
   ): T = js.native
+  @JSImport("xstate/lib/match", "matchState")
+  @js.native
   def matchState[T, TContext, TEvent /* <: EventObject */](
     state: StateValue,
     patterns: js.Array[StatePatternTuple[T, TContext, TEvent]],

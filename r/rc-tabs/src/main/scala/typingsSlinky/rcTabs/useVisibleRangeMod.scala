@@ -4,14 +4,15 @@ import typingsSlinky.rcTabs.anon.Height
 import typingsSlinky.rcTabs.anon.Width
 import typingsSlinky.rcTabs.anon.tabsArrayTabTabNavListPro
 import typingsSlinky.rcTabs.interfaceMod.TabOffsetMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-tabs/es/hooks/useVisibleRange", JSImport.Namespace)
-@js.native
-object useVisibleRangeMod extends js.Object {
+object useVisibleRangeMod {
   
+  @JSImport("rc-tabs/es/hooks/useVisibleRange", JSImport.Default)
+  @js.native
   def default(
     tabOffsets: TabOffsetMap,
     containerSize: Height,

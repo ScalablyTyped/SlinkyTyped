@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisRestApi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriGeometryPolygon
   - typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriGeometryEnvelope
 */
-trait esriGeometryType extends js.Object
+trait esriGeometryType extends StObject
 object esriGeometryType {
   
   @scala.inline

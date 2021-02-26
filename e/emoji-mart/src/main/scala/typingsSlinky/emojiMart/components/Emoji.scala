@@ -11,15 +11,22 @@ import typingsSlinky.emojiMart.nimbleEmojiIndexMod.EmojiSkin
 import typingsSlinky.emojiMart.sharedPropsMod.EmojiProps
 import typingsSlinky.emojiMart.sharedPropsMod.EmojiSet
 import typingsSlinky.emojiMart.sharedPropsMod.EmojiSheetSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Emoji {
   
+  @scala.inline
+  def apply(emoji: String | EmojiData, size: Double): Builder = {
+    val __props = js.Dynamic.literal(emoji = emoji.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[EmojiProps]))
+  }
+  
   @JSImport("emoji-mart/dist-es/components/emoji/emoji", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -70,10 +77,4 @@ object Emoji {
   }
   
   def withProps(p: EmojiProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(emoji: String | EmojiData, size: Double): Builder = {
-    val __props = js.Dynamic.literal(emoji = emoji.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[EmojiProps]))
-  }
 }

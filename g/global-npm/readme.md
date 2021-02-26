@@ -10,9 +10,9 @@ Require global npm as a local node module.
 | ------------------ | :-------------: |
 | Full name          | global-npm |
 | Keywords           | - |
-| # releases         | 2 |
-| # dependents       | 26 |
-| # downloads        | 413658 |
+| # releases         | 3 |
+| # dependents       | 33 |
+| # downloads        | 583358 |
 | # stars            | 1 |
 
 ## Links

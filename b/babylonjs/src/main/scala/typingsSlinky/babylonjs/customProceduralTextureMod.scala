@@ -3,14 +3,14 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.proceduralTextureMod.ProceduralTexture
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.textureMod.Texture
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Textures/Procedurals/customProceduralTexture", JSImport.Namespace)
-@js.native
-object customProceduralTextureMod extends js.Object {
+object customProceduralTextureMod {
   
+  @JSImport("babylonjs/Materials/Textures/Procedurals/customProceduralTexture", "CustomProceduralTexture")
   @js.native
   class CustomProceduralTexture protected () extends ProceduralTexture {
     /**

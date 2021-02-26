@@ -10,9 +10,9 @@ Vert.x 3 Event Bus Client as NPM
 | ------------------ | :-------------: |
 | Full name          | vertx3-eventbus-client |
 | Keywords           | websockets, websocket, sockjs, vert.x |
-| # releases         | 13 |
-| # dependents       | 9 |
-| # downloads        | 63206 |
+| # releases         | 15 |
+| # dependents       | 12 |
+| # downloads        | 69167 |
 | # stars            | 0 |
 
 ## Links

@@ -3,14 +3,14 @@ package typingsSlinky.reactNative.mod.Animated
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.reactNative.anon.X
 import typingsSlinky.reactNative.anon.Y
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native", "Animated.ValueXY")
 @js.native
-class ValueXY ()
-  extends typingsSlinky.reactNative.mod.Animated.Animated {
+class ValueXY () extends AnimatedWithChildren {
   def this(valueIn: Y) = this()
   
   def addListener(callback: ValueXYListenerCallback): String = js.native

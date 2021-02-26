@@ -1,10 +1,11 @@
 package typingsSlinky.stellarBase.xdrMod.default
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("stellar-base/types/xdr", "Opaque")
+@JSImport("stellar-base/types/xdr", "default.Opaque")
 @js.native
 class Opaque protected ()
   extends typingsSlinky.stellarBase.xdrMod.xdr.Opaque {

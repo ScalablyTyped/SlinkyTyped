@@ -5,24 +5,31 @@ import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.d3Axis.anon.ValueOf
 import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.d3Selection.mod.TransitionLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("d3-axis", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("d3-axis", "axisBottom")
+  @js.native
   def axisBottom[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
   
+  @JSImport("d3-axis", "axisLeft")
+  @js.native
   def axisLeft[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
   
+  @JSImport("d3-axis", "axisRight")
+  @js.native
   def axisRight[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
   
+  @JSImport("d3-axis", "axisTop")
+  @js.native
   def axisTop[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
   
   @js.native
-  trait Axis[Domain] extends js.Object {
+  trait Axis[Domain] extends StObject {
     
     /**
       * Render the axis to the given context.
@@ -246,8 +253,12 @@ object mod extends js.Object {
     def ticks(interval: AxisTimeInterval, specifier: String): this.type = js.native
   }
   
+  type AxisContainerElement = SVGSVGElement | SVGGElement
+  
+  type AxisDomain = Double | String | js.Date | ValueOf
+  
   @js.native
-  trait AxisScale[Domain] extends js.Object {
+  trait AxisScale[Domain] extends StObject {
     
     def apply(x: Domain): js.UndefOr[Double] = js.native
     
@@ -261,13 +272,9 @@ object mod extends js.Object {
   }
   
   @js.native
-  trait AxisTimeInterval extends js.Object {
+  trait AxisTimeInterval extends StObject {
     
     def range(start: js.Date, stop: js.Date): js.Array[js.Date] = js.native
     def range(start: js.Date, stop: js.Date, step: Double): js.Array[js.Date] = js.native
   }
-  
-  type AxisContainerElement = SVGSVGElement | SVGGElement
-  
-  type AxisDomain = Double | String | js.Date | ValueOf
 }

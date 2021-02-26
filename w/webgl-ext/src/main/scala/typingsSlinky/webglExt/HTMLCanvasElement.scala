@@ -4,12 +4,13 @@ import org.scalajs.dom.raw.WebGLContextAttributes
 import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.webglExt.webglExtStrings.`experimental-webgl`
 import typingsSlinky.webglExt.webglExtStrings.webgl
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HTMLCanvasElement extends js.Object {
+trait HTMLCanvasElement extends StObject {
   
   @JSName("getContext")
   def getContext_experimentalwebgl(contextId: `experimental-webgl`): (WebGLRenderingContext with WebGL1Extensions) | Null = js.native

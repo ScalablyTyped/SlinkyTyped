@@ -5,14 +5,14 @@ import org.scalajs.dom.raw.ErrorEvent
 import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.three.loaderMod.Loader
 import typingsSlinky.three.loadingManagerMod.LoadingManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/loaders/AudioLoader", JSImport.Namespace)
-@js.native
-object audioLoaderMod extends js.Object {
+object audioLoaderMod {
   
+  @JSImport("three/src/loaders/AudioLoader", "AudioLoader")
   @js.native
   class AudioLoader () extends Loader {
     def this(manager: LoadingManager) = this()

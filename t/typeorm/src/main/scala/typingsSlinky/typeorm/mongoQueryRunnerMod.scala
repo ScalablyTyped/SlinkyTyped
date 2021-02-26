@@ -42,14 +42,14 @@ import typingsSlinky.typeorm.typingsMod.ParallelCollectionScanOptions
 import typingsSlinky.typeorm.typingsMod.ReplaceOneOptions
 import typingsSlinky.typeorm.typingsMod.UnorderedBulkOperation
 import typingsSlinky.typeorm.typingsMod.UpdateWriteOpResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/driver/mongodb/MongoQueryRunner", JSImport.Namespace)
-@js.native
-object mongoQueryRunnerMod extends js.Object {
+object mongoQueryRunnerMod {
   
+  @JSImport("typeorm/browser/driver/mongodb/MongoQueryRunner", "MongoQueryRunner")
   @js.native
   class MongoQueryRunner protected () extends QueryRunner {
     def this(connection: Connection, databaseConnection: MongoClient) = this()

@@ -1,5 +1,6 @@
 package typingsSlinky.nodegit.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,10 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Commit ()
   extends typingsSlinky.nodegit.commitMod.Commit
 /* static members */
-@JSImport("nodegit", "Commit")
-@js.native
-object Commit extends js.Object {
+object Commit {
   
+  @JSImport("nodegit", "Commit.create")
+  @js.native
   def create(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     updateRef: String,
@@ -25,6 +26,8 @@ object Commit extends js.Object {
     parents: js.Array[_]
   ): typingsSlinky.nodegit.oidMod.Oid = js.native
   
+  @JSImport("nodegit", "Commit.createV")
+  @js.native
   def createV(
     id: typingsSlinky.nodegit.oidMod.Oid,
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
@@ -37,6 +40,8 @@ object Commit extends js.Object {
     parentCount: Double
   ): Double = js.native
   
+  @JSImport("nodegit", "Commit.createWithSignature")
+  @js.native
   def createWithSignature(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     commitContent: String,
@@ -49,10 +54,18 @@ object Commit extends js.Object {
     *
     *
     */
+  @JSImport("nodegit", "Commit.lookup")
+  @js.native
   def lookup(repo: typingsSlinky.nodegit.repositoryMod.Repository, id: String): js.Promise[typingsSlinky.nodegit.commitMod.Commit] = js.native
+  @JSImport("nodegit", "Commit.lookup")
+  @js.native
   def lookup(repo: typingsSlinky.nodegit.repositoryMod.Repository, id: typingsSlinky.nodegit.commitMod.Commit): js.Promise[typingsSlinky.nodegit.commitMod.Commit] = js.native
+  @JSImport("nodegit", "Commit.lookup")
+  @js.native
   def lookup(repo: typingsSlinky.nodegit.repositoryMod.Repository, id: typingsSlinky.nodegit.oidMod.Oid): js.Promise[typingsSlinky.nodegit.commitMod.Commit] = js.native
   
+  @JSImport("nodegit", "Commit.lookupPrefix")
+  @js.native
   def lookupPrefix(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     id: typingsSlinky.nodegit.oidMod.Oid,

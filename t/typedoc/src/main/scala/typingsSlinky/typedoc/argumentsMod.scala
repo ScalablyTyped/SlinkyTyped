@@ -3,14 +3,14 @@ package typingsSlinky.typedoc
 import typingsSlinky.typedoc.loggersMod.Logger
 import typingsSlinky.typedoc.optionsMod.Options
 import typingsSlinky.typedoc.optionsOptionsMod.OptionsReader
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/utils/options/readers/arguments", JSImport.Namespace)
-@js.native
-object argumentsMod extends js.Object {
+object argumentsMod {
   
+  @JSImport("typedoc/dist/lib/utils/options/readers/arguments", "ArgumentsReader")
   @js.native
   class ArgumentsReader protected () extends OptionsReader {
     def this(priority: Double) = this()

@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientFirebase.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebAppsResource extends js.Object {
+trait WebAppsResource extends StObject {
   
   def create(request: Fields, body: WebApp): Request[Operation] = js.native
   /**

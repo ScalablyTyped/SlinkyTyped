@@ -1,5 +1,6 @@
 package typingsSlinky.preact.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.preact.mod.FunctionComponent[P]
   - typingsSlinky.preact.mod.Component[P, S]
 */
-trait AnyComponent[P, S] extends js.Object
+trait AnyComponent[P, S] extends StObject

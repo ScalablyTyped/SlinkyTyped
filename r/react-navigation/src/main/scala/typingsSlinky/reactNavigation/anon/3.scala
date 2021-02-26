@@ -4,12 +4,13 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactNavigation.mod.NavigationInjectedProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `3`[T, P] extends js.Object {
+trait `3`[T, P] extends StObject {
   
   var onRef: js.UndefOr[Ref[ReactComponentClass[T with NavigationInjectedProps[P]]]] = js.native
 }
@@ -22,33 +23,21 @@ object `3` {
   }
   
   @scala.inline
-  implicit class `3Ops`[Self <: `3`[_, _], T, P] (val x: Self with (`3`[T, P])) extends AnyVal {
+  implicit class `3MutableBuilder`[Self <: `3`[_, _], T, P] (val x: Self with (`3`[T, P])) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setOnRef(value: Ref[ReactComponentClass[T with NavigationInjectedProps[P]]]): Self = StObject.set(x, "onRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setOnRefFunction1(value: /* instance */ (ReactComponentClass[T with NavigationInjectedProps[P]]) | Null => Unit): Self = StObject.set(x, "onRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setOnRefNull: Self = StObject.set(x, "onRef", null)
     
     @scala.inline
-    def setOnRefRefObject(value: ReactRef[ReactComponentClass[T with NavigationInjectedProps[P]]]): Self = this.set("onRef", value.asInstanceOf[js.Any])
+    def setOnRefRefObject(value: ReactRef[ReactComponentClass[T with NavigationInjectedProps[P]]]): Self = StObject.set(x, "onRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnRefFunction1(value: /* instance */ (ReactComponentClass[T with NavigationInjectedProps[P]]) | Null => Unit): Self = this.set("onRef", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnRef(value: Ref[ReactComponentClass[T with NavigationInjectedProps[P]]]): Self = this.set("onRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOnRef: Self = this.set("onRef", js.undefined)
-    
-    @scala.inline
-    def setOnRefNull: Self = this.set("onRef", null)
+    def setOnRefUndefined: Self = StObject.set(x, "onRef", js.undefined)
   }
 }

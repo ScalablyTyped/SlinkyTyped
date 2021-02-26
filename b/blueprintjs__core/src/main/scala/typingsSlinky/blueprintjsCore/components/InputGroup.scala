@@ -85,6 +85,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -93,7 +94,7 @@ object InputGroup {
   
   @JSImport("@blueprintjs/core", "InputGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -358,10 +359,10 @@ object InputGroup {
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRefFunction1(value: /* ref */ HTMLInputElement | Null => js.Any): this.type = set("inputRef", js.Any.fromFunction1(value))
+    def inputRef(value: IRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRef(value: IRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRefFunction1(value: /* ref */ HTMLInputElement | Null => js.Any): this.type = set("inputRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
@@ -394,13 +395,13 @@ object InputGroup {
     def leftElement(value: ReactElement): this.type = set("leftElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def leftIcon(value: IconName | MaybeElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftIconNull: this.type = set("leftIcon", null)
+    
+    @scala.inline
+    def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
@@ -754,7 +755,7 @@ object InputGroup {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IInputGroupProps with HTMLInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: InputGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IInputGroupProps with HTMLInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.node.cryptoMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.node.nodeStrings.der
   - typingsSlinky.node.nodeStrings.`ieee-p1363`
 */
-trait DSAEncoding extends js.Object
+trait DSAEncoding extends StObject
 object DSAEncoding {
   
   @scala.inline

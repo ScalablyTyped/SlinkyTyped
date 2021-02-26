@@ -3,16 +3,16 @@ package typingsSlinky.reactNativeNavigation
 import typingsSlinky.reactNativeNavigation.layoutMod.Layout
 import typingsSlinky.reactNativeNavigation.layoutTreeCrawlerMod.LayoutNode
 import typingsSlinky.reactNativeNavigation.uniqueIdProviderMod.UniqueIdProvider
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-navigation/lib/dist/commands/LayoutTreeParser", JSImport.Namespace)
-@js.native
-object layoutTreeParserMod extends js.Object {
+object layoutTreeParserMod {
   
+  @JSImport("react-native-navigation/lib/dist/commands/LayoutTreeParser", "LayoutTreeParser")
   @js.native
-  class LayoutTreeParser protected () extends js.Object {
+  class LayoutTreeParser protected () extends StObject {
     def this(uniqueIdProvider: UniqueIdProvider) = this()
     
     var bottomTabs: js.Any = js.native

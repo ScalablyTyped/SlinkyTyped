@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.restId
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.restImmutableEntryId
 */
-trait ExchangeIdFormat extends js.Object
+trait ExchangeIdFormat extends StObject
 object ExchangeIdFormat {
   
   @scala.inline

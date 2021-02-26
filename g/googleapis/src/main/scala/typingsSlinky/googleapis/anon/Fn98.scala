@@ -5,12 +5,13 @@ import typingsSlinky.googleapis.googleapisStrings.v1alpha
 import typingsSlinky.googleapis.googleapisStrings.v1beta
 import typingsSlinky.googleapis.osloginV1Mod.osloginV1.Options
 import typingsSlinky.googleapis.osloginV1Mod.osloginV1.Oslogin
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Fn98 extends js.Object {
+trait Fn98 extends StObject {
   
   def apply(options: Options): Oslogin = js.native
   def apply(options: typingsSlinky.googleapis.osloginV1alphaMod.osloginV1alpha.Options): typingsSlinky.googleapis.osloginV1alphaMod.osloginV1alpha.Oslogin = js.native

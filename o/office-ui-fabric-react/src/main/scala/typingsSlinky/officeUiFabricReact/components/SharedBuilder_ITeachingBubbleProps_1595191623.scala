@@ -19,6 +19,7 @@ import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricReactHooks.useTargetMod.Target
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,31 +42,31 @@ class SharedBuilder_ITeachingBubbleProps_1595191623[R <: js.Object] (val args: j
   def closeButtonAriaLabel(value: String): this.type = set("closeButtonAriaLabel", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def componentRef(value: IRefObject[ITeachingBubble]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def componentRefFunction1(value: /* ref */ ITeachingBubble | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
   
   @scala.inline
   def componentRefRefObject(value: ReactRef[ITeachingBubble]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def componentRef(value: IRefObject[ITeachingBubble]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def elementToFocusOnDismiss(value: HTMLElement): this.type = set("elementToFocusOnDismiss", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def firstFocusableSelectorFunction0(value: () => String): this.type = set("firstFocusableSelector", js.Any.fromFunction0(value))
   
   @scala.inline
   def firstFocusableSelector(value: String | js.Function0[String]): this.type = set("firstFocusableSelector", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def firstFocusableSelectorFunction0(value: () => String): this.type = set("firstFocusableSelector", js.Any.fromFunction0(value))
+  
+  @scala.inline
   def focusTrapZoneProps(value: IFocusTrapZoneProps): this.type = set("focusTrapZoneProps", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def footerContentReactElement(value: ReactElement): this.type = set("footerContent", value.asInstanceOf[js.Any])
+  def footerContent(value: String | ReactElement): this.type = set("footerContent", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def footerContent(value: String | ReactElement): this.type = set("footerContent", value.asInstanceOf[js.Any])
+  def footerContentReactElement(value: ReactElement): this.type = set("footerContent", value.asInstanceOf[js.Any])
   
   @scala.inline
   def forceFocusInsideTrap(value: Boolean): this.type = set("forceFocusInsideTrap", value.asInstanceOf[js.Any])
@@ -107,13 +108,13 @@ class SharedBuilder_ITeachingBubbleProps_1595191623[R <: js.Object] (val args: j
   def secondaryButtonProps(value: IButtonProps): this.type = set("secondaryButtonProps", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def stylesFunction1(value: ITeachingBubbleStyleProps => DeepPartial[ITeachingBubbleStyles]): this.type = set("styles", js.Any.fromFunction1(value))
-  
-  @scala.inline
   def styles(value: IStyleFunctionOrObject[ITeachingBubbleStyleProps, ITeachingBubbleStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def targetRefObject(value: ReactRef[Element]): this.type = set("target", value.asInstanceOf[js.Any])
+  def stylesFunction1(value: ITeachingBubbleStyleProps => DeepPartial[ITeachingBubbleStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  
+  @scala.inline
+  def target(value: Target): this.type = set("target", value.asInstanceOf[js.Any])
   
   @scala.inline
   def targetElement(value: Element): this.type = set("target", value.asInstanceOf[js.Any])
@@ -122,10 +123,10 @@ class SharedBuilder_ITeachingBubbleProps_1595191623[R <: js.Object] (val args: j
   def targetMouseEvent(value: MouseEvent): this.type = set("target", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def target(value: Target): this.type = set("target", value.asInstanceOf[js.Any])
+  def targetNull: this.type = set("target", null)
   
   @scala.inline
-  def targetNull: this.type = set("target", null)
+  def targetRefObject(value: ReactRef[Element]): this.type = set("target", value.asInstanceOf[js.Any])
   
   @scala.inline
   def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])

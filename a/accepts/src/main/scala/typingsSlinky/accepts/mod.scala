@@ -2,18 +2,19 @@ package typingsSlinky.accepts
 
 import typingsSlinky.accepts.acceptsBooleans.`false`
 import typingsSlinky.node.httpMod.IncomingMessage
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("accepts", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("accepts", JSImport.Namespace)
+  @js.native
   def apply(req: IncomingMessage): Accepts = js.native
   
   @js.native
-  trait Accepts extends js.Object {
+  trait Accepts extends StObject {
     
     /**
       * Return the first accepted charset. If nothing in `charsets` is accepted, then `false` is returned.

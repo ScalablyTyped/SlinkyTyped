@@ -15,19 +15,15 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.std.DocumentAndElementEventHandlersEventMap
-import typingsSlinky.std.ElementEventMap
-import typingsSlinky.std.GlobalEventHandlersEventMap
+import typingsSlinky.std.HTMLElementEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ojGanttTaskEventMap
-  extends ElementEventMap
-     with GlobalEventHandlersEventMap
-     with DocumentAndElementEventHandlersEventMap {
+trait ojGanttTaskEventMap extends HTMLElementEventMap {
   
   var baselineChanged: CustomEvent = js.native
   
@@ -173,60 +169,48 @@ object ojGanttTaskEventMap {
   }
   
   @scala.inline
-  implicit class ojGanttTaskEventMapOps[Self <: ojGanttTaskEventMap] (val x: Self) extends AnyVal {
+  implicit class ojGanttTaskEventMapMutableBuilder[Self <: ojGanttTaskEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBaselineChanged(value: CustomEvent): Self = StObject.set(x, "baselineChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setBorderRadiusChanged(value: CustomEvent): Self = StObject.set(x, "borderRadiusChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setEndChanged(value: CustomEvent): Self = StObject.set(x, "endChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBaselineChanged(value: CustomEvent): Self = this.set("baselineChanged", value.asInstanceOf[js.Any])
+    def setHeightChanged(value: CustomEvent): Self = StObject.set(x, "heightChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBorderRadiusChanged(value: CustomEvent): Self = this.set("borderRadiusChanged", value.asInstanceOf[js.Any])
+    def setLabelChanged(value: CustomEvent): Self = StObject.set(x, "labelChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEndChanged(value: CustomEvent): Self = this.set("endChanged", value.asInstanceOf[js.Any])
+    def setLabelPositionChanged(value: CustomEvent): Self = StObject.set(x, "labelPositionChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeightChanged(value: CustomEvent): Self = this.set("heightChanged", value.asInstanceOf[js.Any])
+    def setLabelStyleChanged(value: CustomEvent): Self = StObject.set(x, "labelStyleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLabelChanged(value: CustomEvent): Self = this.set("labelChanged", value.asInstanceOf[js.Any])
+    def setProgressChanged(value: CustomEvent): Self = StObject.set(x, "progressChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLabelPositionChanged(value: CustomEvent): Self = this.set("labelPositionChanged", value.asInstanceOf[js.Any])
+    def setRowIdChanged(value: CustomEvent): Self = StObject.set(x, "rowIdChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLabelStyleChanged(value: CustomEvent): Self = this.set("labelStyleChanged", value.asInstanceOf[js.Any])
+    def setShortDescChanged(value: CustomEvent): Self = StObject.set(x, "shortDescChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setProgressChanged(value: CustomEvent): Self = this.set("progressChanged", value.asInstanceOf[js.Any])
+    def setStartChanged(value: CustomEvent): Self = StObject.set(x, "startChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRowIdChanged(value: CustomEvent): Self = this.set("rowIdChanged", value.asInstanceOf[js.Any])
+    def setSvgClassNameChanged(value: CustomEvent): Self = StObject.set(x, "svgClassNameChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setShortDescChanged(value: CustomEvent): Self = this.set("shortDescChanged", value.asInstanceOf[js.Any])
+    def setSvgStyleChanged(value: CustomEvent): Self = StObject.set(x, "svgStyleChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStartChanged(value: CustomEvent): Self = this.set("startChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSvgClassNameChanged(value: CustomEvent): Self = this.set("svgClassNameChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSvgStyleChanged(value: CustomEvent): Self = this.set("svgStyleChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTypeChanged(value: CustomEvent): Self = this.set("typeChanged", value.asInstanceOf[js.Any])
+    def setTypeChanged(value: CustomEvent): Self = StObject.set(x, "typeChanged", value.asInstanceOf[js.Any])
   }
 }

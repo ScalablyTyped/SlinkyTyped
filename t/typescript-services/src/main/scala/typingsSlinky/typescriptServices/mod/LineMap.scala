@@ -1,5 +1,6 @@
 package typingsSlinky.typescriptServices.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,10 +11,16 @@ class LineMap protected ()
   extends typingsSlinky.typescriptServices.TypeScript.LineMap {
   def this(_computeLineStarts: js.Function0[js.Array[Double]], length: Double) = this()
 }
-/* static members */
-@JSImport("typescript-services", "LineMap")
-@js.native
-object LineMap extends js.Object {
+object LineMap {
   
-  var empty: typingsSlinky.typescriptServices.TypeScript.LineMap = js.native
+  @JSImport("typescript-services", "LineMap")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSImport("typescript-services", "LineMap.empty")
+  @js.native
+  def empty: typingsSlinky.typescriptServices.TypeScript.LineMap = js.native
+  @scala.inline
+  def empty_=(x: typingsSlinky.typescriptServices.TypeScript.LineMap): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("empty")(x.asInstanceOf[js.Any])
 }

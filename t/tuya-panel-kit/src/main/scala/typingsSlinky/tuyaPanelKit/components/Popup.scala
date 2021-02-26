@@ -57,6 +57,7 @@ import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.singleCancel
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.singleConfirm
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.top
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -65,7 +66,7 @@ object Popup {
   
   @JSImport("tuya-panel-kit", "Popup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -73,10 +74,10 @@ object Popup {
        with StBuildingComponent[tag.type, typingsSlinky.tuyaPanelKit.mod.Popup] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none_ | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -103,10 +104,10 @@ object Popup {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -160,10 +161,10 @@ object Popup {
     def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def footerType(value: both | singleConfirm | singleCancel): this.type = set("footerType", value.asInstanceOf[js.Any])
@@ -346,14 +347,14 @@ object Popup {
     def subTitle(value: String): this.type = set("subTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def supportedOrientationsVarargs(value: (portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`)*): this.type = set("supportedOrientations", js.Array(value :_*))
-    
-    @scala.inline
     def supportedOrientations(
       value: js.Array[
           portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`
         ]
     ): this.type = set("supportedOrientations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def supportedOrientationsVarargs(value: (portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`)*): this.type = set("supportedOrientations", js.Array(value :_*))
     
     @scala.inline
     def switchValue(value: Boolean): this.type = set("switchValue", value.asInstanceOf[js.Any])
@@ -365,19 +366,19 @@ object Popup {
     def theme(value: BackIconColor): this.type = set("theme", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def titleVarargs(value: String*): this.type = set("title", js.Array(value :_*))
-    
-    @scala.inline
     def title(value: String | js.Array[String] | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def titleTextStyle(value: StyleProp[TextStyle]): this.type = set("titleTextStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def titleTextStyleNull: this.type = set("titleTextStyle", null)
+    
+    @scala.inline
+    def titleVarargs(value: String*): this.type = set("title", js.Array(value :_*))
     
     @scala.inline
     def titleWrapperStyle(value: StyleProp[ViewStyle]): this.type = set("titleWrapperStyle", value.asInstanceOf[js.Any])
@@ -416,7 +417,7 @@ object Popup {
     def wrapperStyleNull: this.type = set("wrapperStyle", null)
   }
   
-  def withProps(p: PopupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Popup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PopupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -8,6 +8,7 @@ import typingsSlinky.nvd3.nvd3Strings.percent
 import typingsSlinky.nvd3.nvd3Strings.right
 import typingsSlinky.nvd3.nvd3Strings.top
 import typingsSlinky.nvd3.nvd3Strings.value
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

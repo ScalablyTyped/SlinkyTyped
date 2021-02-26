@@ -3,24 +3,6 @@
 
 Typings are for version 3.1
 
-## Library description:
-Component library for the Nulogy Design System - http://nulogy.design
-
-|                    |                 |
-| ------------------ | :-------------: |
-| Full name          | @nulogy/components |
-| Keywords           | nulogy, design system, NDS, react, components, component library |
-| # releases         | 181 |
-| # dependents       | 0 |
-| # downloads        | 35093 |
-| # stars            | 0 |
-
-## Links
-- [Homepage](http://nulogy.design)
-- [Bugs](https://github.com/nulogy/design-system/issues)
-- [Repository](https://github.com/nulogy/design-system)
-- [Npm](https://www.npmjs.com/package/%40nulogy%2Fcomponents)
-    
 
 
 ## Note

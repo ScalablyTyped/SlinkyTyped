@@ -1,5 +1,6 @@
 package typingsSlinky.servicenowLondon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.servicenowLondon.servicenowLondonStrings.update
   - typingsSlinky.servicenowLondon.servicenowLondonStrings.delete
 */
-trait GlideRecordOperation extends js.Object
+trait GlideRecordOperation extends StObject
 object GlideRecordOperation {
   
   @scala.inline

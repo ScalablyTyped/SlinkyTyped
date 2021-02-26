@@ -1,6 +1,7 @@
 package typingsSlinky.mockAwsS3.mod
 
 import typingsSlinky.awsSdk.cognitoIdentityCredentialsMod.CognitoIdentityCredentials.CognitoIdentityOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,6 +23,4 @@ class CognitoIdentityCredentials ()
   ) = this()
 }
 // Needed to expose interfaces on the class
-@JSImport("mock-aws-s3", "CognitoIdentityCredentials")
-@js.native
-object CognitoIdentityCredentials extends js.Object
+object CognitoIdentityCredentials

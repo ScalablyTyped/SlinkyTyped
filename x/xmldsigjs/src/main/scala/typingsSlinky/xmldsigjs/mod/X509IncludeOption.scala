@@ -1,12 +1,13 @@
 package typingsSlinky.xmldsigjs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xmldsigjs", "X509IncludeOption")
 @js.native
-object X509IncludeOption extends js.Object {
+object X509IncludeOption extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.xmldsigjs.x509DataMod.X509IncludeOption with Double] = js.native

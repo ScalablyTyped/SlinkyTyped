@@ -10,15 +10,15 @@ A React component that traps focus.
 | ------------------ | :-------------: |
 | Full name          | focus-trap-react |
 | Keywords           | react, reactjs, react-component, aria, accessibility, modal, dialog, focus, keyboard |
-| # releases         | 9 |
-| # dependents       | 78 |
-| # downloads        | 5130372 |
+| # releases         | 11 |
+| # dependents       | 122 |
+| # downloads        | 9608301 |
 | # stars            | 2 |
 
 ## Links
-- [Homepage](https://github.com/davidtheclark/focus-trap-react#readme)
-- [Bugs](https://github.com/davidtheclark/focus-trap-react/issues)
-- [Repository](https://github.com/davidtheclark/focus-trap-react)
+- [Homepage](https://github.com/focus-trap/focus-trap-react#readme)
+- [Bugs](https://github.com/focus-trap/focus-trap-react/issues)
+- [Repository](https://github.com/focus-trap/focus-trap-react)
 - [Npm](https://www.npmjs.com/package/focus-trap-react)
     
 

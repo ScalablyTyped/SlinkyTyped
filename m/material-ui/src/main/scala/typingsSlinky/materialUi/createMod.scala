@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/content/create", JSImport.Namespace)
-@js.native
-object createMod extends js.Object {
+object createMod {
   
+  @JSImport("material-ui/svg-icons/content/create", JSImport.Default)
+  @js.native
+  class default () extends ContentCreate
+  
+  @JSImport("material-ui/svg-icons/content/create", "ContentCreate")
   @js.native
   class ContentCreate ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

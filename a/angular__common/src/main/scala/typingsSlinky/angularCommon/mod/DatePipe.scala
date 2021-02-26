@@ -1,6 +1,7 @@
 package typingsSlinky.angularCommon.mod
 
 import typingsSlinky.angularCore.mod.PipeTransform
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -48,31 +49,6 @@ class DatePipe protected () extends PipeTransform {
   def transform(value: String, format: String, timezone: js.UndefOr[scala.Nothing], locale: String): String | Null = js.native
   def transform(value: String, format: String, timezone: String): String | Null = js.native
   def transform(value: String, format: String, timezone: String, locale: String): String | Null = js.native
-  def transform(value: Double): String | Null = js.native
-  def transform(
-    value: Double,
-    format: js.UndefOr[scala.Nothing],
-    timezone: js.UndefOr[scala.Nothing],
-    locale: String
-  ): String | Null = js.native
-  def transform(value: Double, format: js.UndefOr[scala.Nothing], timezone: String): String | Null = js.native
-  def transform(value: Double, format: js.UndefOr[scala.Nothing], timezone: String, locale: String): String | Null = js.native
-  def transform(value: Double, format: String): String | Null = js.native
-  def transform(value: Double, format: String, timezone: js.UndefOr[scala.Nothing], locale: String): String | Null = js.native
-  def transform(value: Double, format: String, timezone: String): String | Null = js.native
-  def transform(value: Double, format: String, timezone: String, locale: String): String | Null = js.native
-  def transform(
-    value: Null,
-    format: js.UndefOr[scala.Nothing],
-    timezone: js.UndefOr[scala.Nothing],
-    locale: String
-  ): Null = js.native
-  def transform(value: Null, format: js.UndefOr[scala.Nothing], timezone: String): Null = js.native
-  def transform(value: Null, format: js.UndefOr[scala.Nothing], timezone: String, locale: String): Null = js.native
-  def transform(value: Null, format: String): Null = js.native
-  def transform(value: Null, format: String, timezone: js.UndefOr[scala.Nothing], locale: String): Null = js.native
-  def transform(value: Null, format: String, timezone: String): Null = js.native
-  def transform(value: Null, format: String, timezone: String, locale: String): Null = js.native
   /**
     * @param value The date expression: a `Date` object,  a number
     * (milliseconds since UTC epoch), or an ISO string (https://www.w3.org/TR/NOTE-datetime).
@@ -99,6 +75,31 @@ class DatePipe protected () extends PipeTransform {
   def transform(value: js.Date, format: String, timezone: js.UndefOr[scala.Nothing], locale: String): String | Null = js.native
   def transform(value: js.Date, format: String, timezone: String): String | Null = js.native
   def transform(value: js.Date, format: String, timezone: String, locale: String): String | Null = js.native
+  def transform(value: Double): String | Null = js.native
+  def transform(
+    value: Double,
+    format: js.UndefOr[scala.Nothing],
+    timezone: js.UndefOr[scala.Nothing],
+    locale: String
+  ): String | Null = js.native
+  def transform(value: Double, format: js.UndefOr[scala.Nothing], timezone: String): String | Null = js.native
+  def transform(value: Double, format: js.UndefOr[scala.Nothing], timezone: String, locale: String): String | Null = js.native
+  def transform(value: Double, format: String): String | Null = js.native
+  def transform(value: Double, format: String, timezone: js.UndefOr[scala.Nothing], locale: String): String | Null = js.native
+  def transform(value: Double, format: String, timezone: String): String | Null = js.native
+  def transform(value: Double, format: String, timezone: String, locale: String): String | Null = js.native
+  def transform(
+    value: Null,
+    format: js.UndefOr[scala.Nothing],
+    timezone: js.UndefOr[scala.Nothing],
+    locale: String
+  ): Null = js.native
+  def transform(value: Null, format: js.UndefOr[scala.Nothing], timezone: String): Null = js.native
+  def transform(value: Null, format: js.UndefOr[scala.Nothing], timezone: String, locale: String): Null = js.native
+  def transform(value: Null, format: String): Null = js.native
+  def transform(value: Null, format: String, timezone: js.UndefOr[scala.Nothing], locale: String): Null = js.native
+  def transform(value: Null, format: String, timezone: String): Null = js.native
+  def transform(value: Null, format: String, timezone: String, locale: String): Null = js.native
   @JSName("transform")
   def transform_Union(): String | Null = js.native
   @JSName("transform")

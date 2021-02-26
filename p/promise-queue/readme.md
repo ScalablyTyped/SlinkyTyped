@@ -10,9 +10,9 @@ Promise-based queue
 | ------------------ | :-------------: |
 | Full name          | promise-queue |
 | Keywords           | - |
-| # releases         | 3 |
-| # dependents       | 135 |
-| # downloads        | 11658471 |
+| # releases         | 0 |
+| # dependents       | 168 |
+| # downloads        | 24143298 |
 | # stars            | 9 |
 
 ## Links

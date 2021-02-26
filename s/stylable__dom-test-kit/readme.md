@@ -1,7 +1,7 @@
 
 # Scala.js typings for stylable__dom-test-kit
 
-Typings are for version 3.11.5
+Typings are for version 3.11.7
 
 ## Library description:
 Stylable DOM testing utilities
@@ -10,9 +10,9 @@ Stylable DOM testing utilities
 | ------------------ | :-------------: |
 | Full name          | @stylable/dom-test-kit |
 | Keywords           | - |
-| # releases         | 89 |
+| # releases         | 99 |
 | # dependents       | 1 |
-| # downloads        | 150629 |
+| # downloads        | 221818 |
 | # stars            | 0 |
 
 ## Links

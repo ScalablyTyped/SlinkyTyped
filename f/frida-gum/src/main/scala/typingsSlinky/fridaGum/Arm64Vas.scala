@@ -1,5 +1,6 @@
 package typingsSlinky.fridaGum
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fridaGum.fridaGumStrings.`2d`
   - typingsSlinky.fridaGum.fridaGumStrings.`1q`
 */
-trait Arm64Vas extends js.Object
+trait Arm64Vas extends StObject
 object Arm64Vas {
   
   @scala.inline

@@ -1,12 +1,13 @@
 package typingsSlinky.tern.ternMod
 
 import typingsSlinky.tern.ternBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ASyncConstructorOptions extends js.Object {
+trait ASyncConstructorOptions extends StObject {
   
   /** Indicates whether `getFile` is asynchronous. Default is `false`. */
   var async: `true` = js.native
@@ -34,29 +35,17 @@ object ASyncConstructorOptions {
   }
   
   @scala.inline
-  implicit class ASyncConstructorOptionsOps[Self <: ASyncConstructorOptions] (val x: Self) extends AnyVal {
+  implicit class ASyncConstructorOptionsMutableBuilder[Self <: ASyncConstructorOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setAsync(value: `true`): Self = this.set("async", value.asInstanceOf[js.Any])
+    def setAsync(value: `true`): Self = StObject.set(x, "async", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setGetFile(
       value: (/* filename */ String, /* callback */ js.Function2[/* error */ js.UndefOr[js.Error], /* content */ js.UndefOr[String], Unit]) => Unit
-    ): Self = this.set("getFile", js.Any.fromFunction2(value))
+    ): Self = StObject.set(x, "getFile", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteGetFile: Self = this.set("getFile", js.undefined)
+    def setGetFileUndefined: Self = StObject.set(x, "getFile", js.undefined)
   }
 }

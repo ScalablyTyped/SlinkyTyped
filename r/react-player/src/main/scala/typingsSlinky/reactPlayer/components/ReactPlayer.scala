@@ -8,6 +8,7 @@ import typingsSlinky.reactPlayer.mod.Config
 import typingsSlinky.reactPlayer.mod.ReactPlayerProps
 import typingsSlinky.reactPlayer.mod.SourceProps
 import typingsSlinky.reactPlayer.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object ReactPlayer {
   
   @JSImport("react-player", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -104,13 +105,13 @@ object ReactPlayer {
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def urlVarargs(value: (SourceProps | String)*): this.type = set("url", js.Array(value :_*))
+    def url(value: String | (js.Array[SourceProps | String]) | MediaStream): this.type = set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def urlMediaStream(value: MediaStream): this.type = set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def url(value: String | (js.Array[SourceProps | String]) | MediaStream): this.type = set("url", value.asInstanceOf[js.Any])
+    def urlVarargs(value: (SourceProps | String)*): this.type = set("url", js.Array(value :_*))
     
     @scala.inline
     def volume(value: Double): this.type = set("volume", value.asInstanceOf[js.Any])
@@ -122,7 +123,7 @@ object ReactPlayer {
     def wrapper(value: js.Any): this.type = set("wrapper", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactPlayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactPlayer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactPlayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

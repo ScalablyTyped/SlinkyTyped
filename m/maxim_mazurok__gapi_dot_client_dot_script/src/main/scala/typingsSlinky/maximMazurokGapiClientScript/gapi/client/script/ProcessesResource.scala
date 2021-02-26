@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientScript.gapi.client.script
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientScript.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientScript.anon.Alt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProcessesResource extends js.Object {
+trait ProcessesResource extends StObject {
   
   /** List information about processes made by or on behalf of a user, such as process type and current status. */
   def list(): Request[ListUserProcessesResponse] = js.native

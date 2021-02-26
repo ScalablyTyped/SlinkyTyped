@@ -1,12 +1,13 @@
 package typingsSlinky.vscode.mod
 
 import typingsSlinky.vscode.Thenable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DebugSession extends js.Object {
+trait DebugSession extends StObject {
   
   /**
     * The "resolved" [debug configuration](#DebugConfiguration) of this session.

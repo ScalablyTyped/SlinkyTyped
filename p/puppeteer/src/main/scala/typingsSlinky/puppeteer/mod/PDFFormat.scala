@@ -1,5 +1,6 @@
 package typingsSlinky.puppeteer.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.puppeteer.puppeteerStrings.A5
   - typingsSlinky.puppeteer.puppeteerStrings.A6
 */
-trait PDFFormat extends js.Object
+trait PDFFormat extends StObject
 object PDFFormat {
   
   @scala.inline

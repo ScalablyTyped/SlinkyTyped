@@ -10,9 +10,9 @@ Storybook Websocket Channel is a channel for Storybook that can be used when the
 | ------------------ | :-------------: |
 | Full name          | @storybook/channel-websocket |
 | Keywords           | storybook |
-| # releases         | 429 |
-| # dependents       | 6 |
-| # downloads        | 2457711 |
+| # releases         | 564 |
+| # dependents       | 7 |
+| # downloads        | 3619373 |
 | # stars            | 0 |
 
 ## Links

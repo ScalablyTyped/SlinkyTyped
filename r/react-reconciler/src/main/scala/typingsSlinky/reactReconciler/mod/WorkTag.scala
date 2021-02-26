@@ -1,5 +1,6 @@
 package typingsSlinky.reactReconciler.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactReconciler.reactReconcilerNumbers.`17`
   - typingsSlinky.reactReconciler.reactReconcilerNumbers.`18`
 */
-trait WorkTag extends js.Object
+trait WorkTag extends StObject
 object WorkTag {
   
   @scala.inline

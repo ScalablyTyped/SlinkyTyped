@@ -1,6 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojbuttonMod
 
 import org.scalajs.dom.raw.CustomEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,9 +14,7 @@ trait ojMenuButton extends ojButton[ojMenuButtonSettableProperties] {
   
   def setProperties(properties: ojMenuButtonSettablePropertiesLenient): Unit = js.native
 }
-@JSImport("@oracle/oraclejet/ojbutton", "ojMenuButton")
-@js.native
-object ojMenuButton extends js.Object {
+object ojMenuButton {
   
   type ojAction = CustomEvent
 }

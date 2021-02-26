@@ -11,8 +11,8 @@ A WebAudio Context singleton
 | Full name          | audio-context |
 | Keywords           | webaudio, audio, audiojs, context, singleton |
 | # releases         | 0 |
-| # dependents       | 31 |
-| # downloads        | 195303 |
+| # dependents       | 30 |
+| # downloads        | 130346 |
 | # stars            | 3 |
 
 ## Links

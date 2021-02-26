@@ -3,14 +3,15 @@ package typingsSlinky.memFs
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.streamMod.Transform
 import typingsSlinky.vinyl.mod.File
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("mem-fs", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("mem-fs", "create")
+  @js.native
   def create(): Store = js.native
   
   @js.native

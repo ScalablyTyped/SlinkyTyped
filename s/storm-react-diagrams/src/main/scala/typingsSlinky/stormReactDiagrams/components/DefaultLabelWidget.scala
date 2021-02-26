@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.stormReactDiagrams.defaultLabelModelMod.DefaultLabelModel
 import typingsSlinky.stormReactDiagrams.defaultLabelWidgetMod.DefaultLabelWidgetProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DefaultLabelWidget {
   
+  @scala.inline
+  def apply(model: DefaultLabelModel): Builder = {
+    val __props = js.Dynamic.literal(model = model.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DefaultLabelWidgetProps]))
+  }
+  
   @JSImport("storm-react-diagrams", "DefaultLabelWidget")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +37,4 @@ object DefaultLabelWidget {
   }
   
   def withProps(p: DefaultLabelWidgetProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(model: DefaultLabelModel): Builder = {
-    val __props = js.Dynamic.literal(model = model.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DefaultLabelWidgetProps]))
-  }
 }

@@ -10,13 +10,15 @@ Convert DataTransfer object to a list of File objects
 | ------------------ | :-------------: |
 | Full name          | file-selector |
 | Keywords           | drag-and-drop, html5, file-api, DataTransfer, File |
-| # releases         | 15 |
-| # dependents       | 11 |
-| # downloads        | 7593028 |
+| # releases         | 19 |
+| # dependents       | 26 |
+| # downloads        | 28261191 |
 | # stars            | 0 |
 
 ## Links
 - [Homepage](https://github.com/react-dropzone/file-selector)
+- [Bugs](https://github.com/react-dropzone/file-selector/issues)
+- [Repository](https://github.com/react-dropzone/file-selector)
 - [Npm](https://www.npmjs.com/package/file-selector)
     
 

@@ -2,16 +2,15 @@ package typingsSlinky.httpBasic
 
 import typingsSlinky.httpBasic.anon.PickCachedResponseheaders
 import typingsSlinky.httpBasic.cachedResponseMod.CachedResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("http-basic/lib/ICache", JSImport.Namespace)
-@js.native
-object icacheMod extends js.Object {
+object icacheMod {
   
   @js.native
-  trait ICache extends js.Object {
+  trait ICache extends StObject {
     
     def getResponse(
       url: String,

@@ -2,13 +2,14 @@ package typingsSlinky.cesium.mod
 
 import typingsSlinky.cesium.anon.Email
 import typingsSlinky.cesium.anon.Href
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "KmlFeatureData")
 @js.native
-class KmlFeatureData () extends js.Object {
+class KmlFeatureData () extends StObject {
   
   var address: String = js.native
   

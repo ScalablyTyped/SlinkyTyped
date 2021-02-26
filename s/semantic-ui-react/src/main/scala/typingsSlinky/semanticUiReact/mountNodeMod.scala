@@ -1,16 +1,14 @@
 package typingsSlinky.semanticUiReact
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.semanticUiReact.mountNodeMountNodeMod.MountNodeProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("semantic-ui-react/dist/commonjs/addons/MountNode", JSImport.Namespace)
-@js.native
-object mountNodeMod extends js.Object {
+object mountNodeMod {
   
+  @JSImport("semantic-ui-react/dist/commonjs/addons/MountNode", JSImport.Default)
   @js.native
   class default ()
-    extends Component[MountNodeProps, js.Object, js.Any]
+    extends typingsSlinky.semanticUiReact.mountNodeMountNodeMod.default
 }

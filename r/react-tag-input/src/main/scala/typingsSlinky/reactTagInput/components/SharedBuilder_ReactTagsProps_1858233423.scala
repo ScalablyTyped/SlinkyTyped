@@ -11,6 +11,7 @@ import typingsSlinky.reactTagInput.reactTagInputNumbers.`1`
 import typingsSlinky.reactTagInput.reactTagInputStrings.`inline`
 import typingsSlinky.reactTagInput.reactTagInputStrings.bottom
 import typingsSlinky.reactTagInput.reactTagInputStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,10 +43,10 @@ class SharedBuilder_ReactTagsProps_1858233423[R <: js.Object] (val args: js.Arra
   def classNames(value: ActiveSuggestion): this.type = set("classNames", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def delimitersVarargs(value: Double*): this.type = set("delimiters", js.Array(value :_*))
+  def delimiters(value: js.Array[Double]): this.type = set("delimiters", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def delimiters(value: js.Array[Double]): this.type = set("delimiters", value.asInstanceOf[js.Any])
+  def delimitersVarargs(value: Double*): this.type = set("delimiters", js.Array(value :_*))
   
   @scala.inline
   def handleDrag(value: (/* tag */ Id, /* currPos */ Double, /* newPos */ Double) => Unit): this.type = set("handleDrag", js.Any.fromFunction3(value))
@@ -110,14 +111,14 @@ class SharedBuilder_ReactTagsProps_1858233423[R <: js.Object] (val args: js.Arra
   def shouldRenderSuggestions(value: /* query */ String => Boolean): this.type = set("shouldRenderSuggestions", js.Any.fromFunction1(value))
   
   @scala.inline
-  def suggestionsVarargs(value: Tag*): this.type = set("suggestions", js.Array(value :_*))
-  
-  @scala.inline
   def suggestions(value: js.Array[Tag]): this.type = set("suggestions", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def tagsVarargs(value: Tag*): this.type = set("tags", js.Array(value :_*))
+  def suggestionsVarargs(value: Tag*): this.type = set("suggestions", js.Array(value :_*))
   
   @scala.inline
   def tags(value: js.Array[Tag]): this.type = set("tags", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def tagsVarargs(value: Tag*): this.type = set("tags", js.Array(value :_*))
 }

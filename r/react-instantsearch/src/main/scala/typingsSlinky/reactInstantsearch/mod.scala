@@ -5,14 +5,15 @@ import typingsSlinky.reactInstantsearchCore.mod.ConnectorDescription
 import typingsSlinky.reactInstantsearchCore.mod.ConnectorProvided
 import typingsSlinky.reactInstantsearchCore.mod.Omit
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-instantsearch", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("react-instantsearch", "createConnector")
+  @js.native
   def createConnector[TProvided, TExposed](connectorDesc: ConnectorDescription[TProvided, TExposed]): (js.Function1[
     /* stateless */ ReactComponentClass[ConnectorProvided[TProvided]], 
     ReactComponentClass[TExposed]

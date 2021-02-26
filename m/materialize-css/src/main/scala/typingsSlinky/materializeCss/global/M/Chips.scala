@@ -2,6 +2,7 @@ package typingsSlinky.materializeCss.global.M
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.anon.PartialChipsOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,22 +11,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Chips ()
   extends typingsSlinky.materializeCss.M.Chips
-/* static members */
-@JSGlobal("M.Chips")
-@js.native
-object Chips extends js.Object {
+object Chips {
   
   /**
     * Get Instance
     */
+  /* static member */
+  @JSGlobal("M.Chips.getInstance")
+  @js.native
   def getInstance(elem: Element): typingsSlinky.materializeCss.M.Chips = js.native
   
   /**
     * Init Chipses
     */
+  /* static member */
+  @JSGlobal("M.Chips.init")
+  @js.native
   def init(
     els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any
   ): js.Array[typingsSlinky.materializeCss.M.Chips] = js.native
+  @JSGlobal("M.Chips.init")
+  @js.native
   def init(
     els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any,
     options: PartialChipsOptions
@@ -33,6 +39,11 @@ object Chips extends js.Object {
   /**
     * Init Chips
     */
+  /* static member */
+  @JSGlobal("M.Chips.init")
+  @js.native
   def init(els: Element): typingsSlinky.materializeCss.M.Chips = js.native
+  @JSGlobal("M.Chips.init")
+  @js.native
   def init(els: Element, options: PartialChipsOptions): typingsSlinky.materializeCss.M.Chips = js.native
 }

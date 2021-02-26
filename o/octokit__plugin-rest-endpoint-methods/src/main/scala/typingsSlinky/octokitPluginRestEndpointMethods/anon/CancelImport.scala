@@ -5,12 +5,13 @@ import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointM
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CancelImport extends js.Object {
+trait CancelImport extends StObject {
   
   /**
     * Stop an import for a repository.

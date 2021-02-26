@@ -10,15 +10,15 @@ Custom element definitions and core utilities for markup that specifies ECMAScri
 | ------------------ | :-------------: |
 | Full name          | ecmarkup |
 | Keywords           | ecmascript, javascript, specs, specifications, markup, markdown, html, code |
-| # releases         | 8 |
+| # releases         | 29 |
 | # dependents       | 3 |
-| # downloads        | 10040 |
+| # downloads        | 18037 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/bterlson/ecmarkup#readme)
-- [Bugs](https://github.com/bterlson/ecmarkup/issues)
-- [Repository](https://github.com/bterlson/ecmarkup)
+- [Homepage](https://github.com/tc39/ecmarkup#readme)
+- [Bugs](https://github.com/tc39/ecmarkup/issues)
+- [Repository](https://github.com/tc39/ecmarkup)
 - [Npm](https://www.npmjs.com/package/ecmarkup)
     
 

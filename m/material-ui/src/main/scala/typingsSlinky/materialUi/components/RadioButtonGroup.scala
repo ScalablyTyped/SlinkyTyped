@@ -8,15 +8,22 @@ import typingsSlinky.materialUi.MaterialUI.Switches.RadioButtonGroupProps
 import typingsSlinky.materialUi.materialUiStrings.left
 import typingsSlinky.materialUi.materialUiStrings.right
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RadioButtonGroup {
   
+  @scala.inline
+  def apply(name: String): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RadioButtonGroupProps]))
+  }
+  
   @JSImport("material-ui", "RadioButtonGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,10 +52,4 @@ object RadioButtonGroup {
   }
   
   def withProps(p: RadioButtonGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(name: String): Builder = {
-    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RadioButtonGroupProps]))
-  }
 }

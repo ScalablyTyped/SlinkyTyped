@@ -21,12 +21,13 @@ import typingsSlinky.chrome.chrome.input.ime.MenuItemActivatedEvent
 import typingsSlinky.chrome.chrome.input.ime.MenuItemParameters
 import typingsSlinky.chrome.chrome.input.ime.SendKeyEventParameters
 import typingsSlinky.chrome.chrome.input.ime.SurroundingTextChangedEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofime extends js.Object {
+trait Typeofime extends StObject {
   
   def clearComposition(parameters: ClearCompositionParameters): Unit = js.native
   def clearComposition(parameters: ClearCompositionParameters, callback: js.Function1[/* success */ Boolean, Unit]): Unit = js.native

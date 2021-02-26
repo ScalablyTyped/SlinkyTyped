@@ -1,12 +1,13 @@
 package typingsSlinky.dashjs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dashjs", "KeyMessage")
 @js.native
-class KeyMessage protected () extends js.Object {
+class KeyMessage protected () extends StObject {
   def this(sessionToken: SessionToken, message: js.typedarray.ArrayBuffer, defaultURL: String) = this()
   def this(
     sessionToken: SessionToken,

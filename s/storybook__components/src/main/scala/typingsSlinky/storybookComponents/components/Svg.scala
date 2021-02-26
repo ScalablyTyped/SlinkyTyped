@@ -24,7 +24,6 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.SVGProps
 import typingsSlinky.react.reactStrings._empty
 import typingsSlinky.react.reactStrings.`additions removals`
@@ -101,15 +100,16 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.storybookComponents.svgMod.SvgProps
 import typingsSlinky.storybookTheming.typesMod.Theme
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Svg {
   
-  @JSImport("@storybook/components/dist/icon/svg", "default")
+  @JSImport("@storybook/components/dist/icon/svg", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1285,7 +1285,7 @@ object Svg {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PropsWithChildren[SVGProps[SVGSVGElement] with (Omit[SvgProps, theme]) with `0`[Theme]]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Svg.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SVGProps[SVGSVGElement] with (Omit[SvgProps, theme]) with `0`[Theme]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

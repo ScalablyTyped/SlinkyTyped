@@ -11,12 +11,13 @@ import typingsSlinky.maximMazurokGapiClientYoutube.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.QuotaUserUploadType
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.Rating
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.UploadprotocolXgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VideosResource extends js.Object {
+trait VideosResource extends StObject {
   
   /** Deletes a resource. */
   def delete(): Request[Unit] = js.native

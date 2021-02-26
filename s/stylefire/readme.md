@@ -10,9 +10,9 @@ Performant, simplified stylers for CSS, SVG, path and DOM scroll.
 | ------------------ | :-------------: |
 | Full name          | stylefire |
 | Keywords           | css, svg, svg, path, scroll, animation |
-| # releases         | 67 |
-| # dependents       | 11 |
-| # downloads        | 4449082 |
+| # releases         | 32 |
+| # dependents       | 14 |
+| # downloads        | 9168467 |
 | # stars            | 0 |
 
 ## Links

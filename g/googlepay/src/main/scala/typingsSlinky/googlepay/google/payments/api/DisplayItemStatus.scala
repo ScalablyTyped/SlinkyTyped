@@ -1,5 +1,6 @@
 package typingsSlinky.googlepay.google.payments.api
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googlepay.googlepayStrings.FINAL
   - typingsSlinky.googlepay.googlepayStrings.PENDING
 */
-trait DisplayItemStatus extends js.Object
+trait DisplayItemStatus extends StObject
 object DisplayItemStatus {
   
   @scala.inline

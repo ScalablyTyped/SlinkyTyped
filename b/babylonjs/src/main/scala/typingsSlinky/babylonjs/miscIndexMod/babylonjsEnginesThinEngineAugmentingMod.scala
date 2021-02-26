@@ -3,17 +3,16 @@ package typingsSlinky.babylonjs.miscIndexMod
 import typingsSlinky.babylonjs.internalTextureMod.InternalTexture
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
-@JSImport("babylonjs/Misc/index", "babylonjs/Engines/thinEngine")
-@js.native
-object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
+object babylonjsEnginesThinEngineAugmentingMod {
   
   @js.native
-  trait ThinEngine extends js.Object {
+  trait ThinEngine extends StObject {
     
     /**
       * Create a cube texture from prefiltered data (ie. the mipmaps contain ready to use data for PBR reflection)

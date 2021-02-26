@@ -10,9 +10,9 @@ connect middleware for adding the livereload script to the response
 | ------------------ | :-------------: |
 | Full name          | connect-livereload |
 | Keywords           | connect, livereload, live-reload |
-| # releases         | 2 |
-| # dependents       | 182 |
-| # downloads        | 8583132 |
+| # releases         | 0 |
+| # dependents       | 191 |
+| # downloads        | 9759031 |
 | # stars            | 17 |
 
 ## Links

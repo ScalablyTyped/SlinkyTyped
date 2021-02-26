@@ -1,6 +1,7 @@
 package typingsSlinky.awsSdkClientCodecommitNode
 
 import typingsSlinky.awsSdkClientCodecommitNode.codeCommitClientMod.CodeCommitClient
+import typingsSlinky.awsSdkClientCodecommitNode.codeCommitConfigurationMod.CodeCommitConfiguration
 import typingsSlinky.awsSdkClientCodecommitNode.typesBatchGetRepositoriesInputMod.BatchGetRepositoriesInput
 import typingsSlinky.awsSdkClientCodecommitNode.typesBatchGetRepositoriesOutputMod.BatchGetRepositoriesOutput
 import typingsSlinky.awsSdkClientCodecommitNode.typesCreateBranchInputMod.CreateBranchInput
@@ -79,16 +80,17 @@ import typingsSlinky.awsSdkClientCodecommitNode.typesUpdateRepositoryDescription
 import typingsSlinky.awsSdkClientCodecommitNode.typesUpdateRepositoryDescriptionOutputMod.UpdateRepositoryDescriptionOutput
 import typingsSlinky.awsSdkClientCodecommitNode.typesUpdateRepositoryNameInputMod.UpdateRepositoryNameInput
 import typingsSlinky.awsSdkClientCodecommitNode.typesUpdateRepositoryNameOutputMod.UpdateRepositoryNameOutput
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-codecommit-node/CodeCommit", JSImport.Namespace)
-@js.native
-object codeCommitMod extends js.Object {
+object codeCommitMod {
   
+  @JSImport("@aws-sdk/client-codecommit-node/CodeCommit", "CodeCommit")
   @js.native
-  class CodeCommit () extends CodeCommitClient {
+  class CodeCommit protected () extends CodeCommitClient {
+    def this(configuration: CodeCommitConfiguration) = this()
     
     /**
       * <p>Returns information about one or more repositories.</p> <note> <p>The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make sure that you HTML-encode the description field in any application that uses this API to display the repository description on a web page.</p> </note>

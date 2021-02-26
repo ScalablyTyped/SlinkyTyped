@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-pointCloudRenderers.html)
   */
-@JSGlobal("__esri.pointCloudRenderers")
-@js.native
-object pointCloudRenderers extends js.Object {
+object pointCloudRenderers {
+  
+  type PointCloudClassBreaksRenderer = typingsSlinky.arcgisJsApi.esri.PointCloudClassBreaksRenderer
+  
+  type PointCloudRGBRenderer = typingsSlinky.arcgisJsApi.esri.PointCloudRGBRenderer
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.arcgisJsApi.esri.PointCloudClassBreaksRenderer
@@ -19,11 +22,7 @@ object pointCloudRenderers extends js.Object {
     - typingsSlinky.arcgisJsApi.esri.PointCloudStretchRenderer
     - typingsSlinky.arcgisJsApi.esri.PointCloudUniqueValueRenderer
   */
-  trait PointCloudRenderer extends js.Object
-  
-  type PointCloudClassBreaksRenderer = typingsSlinky.arcgisJsApi.esri.PointCloudClassBreaksRenderer
-  
-  type PointCloudRGBRenderer = typingsSlinky.arcgisJsApi.esri.PointCloudRGBRenderer
+  trait PointCloudRenderer extends StObject
   
   type PointCloudStretchRenderer = typingsSlinky.arcgisJsApi.esri.PointCloudStretchRenderer
   

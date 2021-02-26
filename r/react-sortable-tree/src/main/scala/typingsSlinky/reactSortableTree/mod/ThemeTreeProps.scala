@@ -4,12 +4,13 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactSortableTree.anon.PartialListProps
 import typingsSlinky.reactVirtualized.mod.Index
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ThemeTreeProps extends js.Object {
+trait ThemeTreeProps extends StObject {
   
   var innerStyle: js.UndefOr[CSSProperties] = js.native
   
@@ -36,81 +37,69 @@ object ThemeTreeProps {
   }
   
   @scala.inline
-  implicit class ThemeTreePropsOps[Self <: ThemeTreeProps] (val x: Self) extends AnyVal {
+  implicit class ThemeTreePropsMutableBuilder[Self <: ThemeTreeProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setInnerStyle(value: CSSProperties): Self = StObject.set(x, "innerStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setInnerStyleUndefined: Self = StObject.set(x, "innerStyle", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setNodeContentRenderer(value: NodeRenderer): Self = StObject.set(x, "nodeContentRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInnerStyle(value: CSSProperties): Self = this.set("innerStyle", value.asInstanceOf[js.Any])
+    def setNodeContentRendererComponentClass(value: ReactComponentClass[NodeRendererProps]): Self = StObject.set(x, "nodeContentRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteInnerStyle: Self = this.set("innerStyle", js.undefined)
+    def setNodeContentRendererFunctionComponent(value: ReactComponentClass[NodeRendererProps]): Self = StObject.set(x, "nodeContentRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNodeContentRendererFunctionComponent(value: ReactComponentClass[NodeRendererProps]): Self = this.set("nodeContentRenderer", value.asInstanceOf[js.Any])
+    def setNodeContentRendererUndefined: Self = StObject.set(x, "nodeContentRenderer", js.undefined)
     
     @scala.inline
-    def setNodeContentRendererComponentClass(value: ReactComponentClass[NodeRendererProps]): Self = this.set("nodeContentRenderer", value.asInstanceOf[js.Any])
+    def setPlaceholderRenderer(value: PlaceholderRenderer): Self = StObject.set(x, "placeholderRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNodeContentRenderer(value: NodeRenderer): Self = this.set("nodeContentRenderer", value.asInstanceOf[js.Any])
+    def setPlaceholderRendererComponentClass(value: ReactComponentClass[PlaceholderRendererProps]): Self = StObject.set(x, "placeholderRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteNodeContentRenderer: Self = this.set("nodeContentRenderer", js.undefined)
+    def setPlaceholderRendererFunctionComponent(value: ReactComponentClass[PlaceholderRendererProps]): Self = StObject.set(x, "placeholderRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPlaceholderRendererFunctionComponent(value: ReactComponentClass[PlaceholderRendererProps]): Self = this.set("placeholderRenderer", value.asInstanceOf[js.Any])
+    def setPlaceholderRendererUndefined: Self = StObject.set(x, "placeholderRenderer", js.undefined)
     
     @scala.inline
-    def setPlaceholderRendererComponentClass(value: ReactComponentClass[PlaceholderRendererProps]): Self = this.set("placeholderRenderer", value.asInstanceOf[js.Any])
+    def setReactVirtualizedListProps(value: PartialListProps): Self = StObject.set(x, "reactVirtualizedListProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPlaceholderRenderer(value: PlaceholderRenderer): Self = this.set("placeholderRenderer", value.asInstanceOf[js.Any])
+    def setReactVirtualizedListPropsUndefined: Self = StObject.set(x, "reactVirtualizedListProps", js.undefined)
     
     @scala.inline
-    def deletePlaceholderRenderer: Self = this.set("placeholderRenderer", js.undefined)
+    def setRowHeight(value: (js.Function1[/* info */ NodeData with Index, Double]) | Double): Self = StObject.set(x, "rowHeight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setReactVirtualizedListProps(value: PartialListProps): Self = this.set("reactVirtualizedListProps", value.asInstanceOf[js.Any])
+    def setRowHeightFunction1(value: /* info */ NodeData with Index => Double): Self = StObject.set(x, "rowHeight", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteReactVirtualizedListProps: Self = this.set("reactVirtualizedListProps", js.undefined)
+    def setRowHeightUndefined: Self = StObject.set(x, "rowHeight", js.undefined)
     
     @scala.inline
-    def setRowHeightFunction1(value: /* info */ NodeData with Index => Double): Self = this.set("rowHeight", js.Any.fromFunction1(value))
+    def setScaffoldBlockPxWidth(value: Double): Self = StObject.set(x, "scaffoldBlockPxWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRowHeight(value: (js.Function1[/* info */ NodeData with Index, Double]) | Double): Self = this.set("rowHeight", value.asInstanceOf[js.Any])
+    def setScaffoldBlockPxWidthUndefined: Self = StObject.set(x, "scaffoldBlockPxWidth", js.undefined)
     
     @scala.inline
-    def deleteRowHeight: Self = this.set("rowHeight", js.undefined)
+    def setSlideRegionSize(value: Double): Self = StObject.set(x, "slideRegionSize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScaffoldBlockPxWidth(value: Double): Self = this.set("scaffoldBlockPxWidth", value.asInstanceOf[js.Any])
+    def setSlideRegionSizeUndefined: Self = StObject.set(x, "slideRegionSize", js.undefined)
     
     @scala.inline
-    def deleteScaffoldBlockPxWidth: Self = this.set("scaffoldBlockPxWidth", js.undefined)
+    def setStyle(value: CSSProperties): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSlideRegionSize(value: Double): Self = this.set("slideRegionSize", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSlideRegionSize: Self = this.set("slideRegionSize", js.undefined)
-    
-    @scala.inline
-    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStyle: Self = this.set("style", js.undefined)
+    def setStyleUndefined: Self = StObject.set(x, "style", js.undefined)
   }
 }

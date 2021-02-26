@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientManagedidentities.gapi.client.manage
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientManagedidentities.anon.Alt
 import typingsSlinky.maximMazurokGapiClientManagedidentities.anon.PageSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationsResource extends js.Object {
+trait LocationsResource extends StObject {
   
   /** Gets information about a location. */
   def get(): Request[Location] = js.native

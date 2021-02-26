@@ -3,14 +3,14 @@ package typingsSlinky.ionicCore
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/spinner/spinner", JSImport.Namespace)
-@js.native
-object spinnerMod extends js.Object {
+object spinnerMod {
   
+  @JSImport("@ionic/core/dist/types/components/spinner/spinner", "Spinner")
   @js.native
   class Spinner () extends ComponentInterface {
     

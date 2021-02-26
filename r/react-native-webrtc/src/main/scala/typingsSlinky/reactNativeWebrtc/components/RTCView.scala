@@ -6,15 +6,22 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeWebrtc.mod.RTCViewProps
 import typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.contain
 import typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.cover
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RTCView {
   
+  @scala.inline
+  def apply(streamURL: String): Builder = {
+    val __props = js.Dynamic.literal(streamURL = streamURL.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RTCViewProps]))
+  }
+  
   @JSImport("react-native-webrtc", "RTCView")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,10 +42,4 @@ object RTCView {
   }
   
   def withProps(p: RTCViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(streamURL: String): Builder = {
-    val __props = js.Dynamic.literal(streamURL = streamURL.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RTCViewProps]))
-  }
 }

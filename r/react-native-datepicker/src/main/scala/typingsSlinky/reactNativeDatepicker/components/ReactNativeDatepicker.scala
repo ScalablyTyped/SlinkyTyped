@@ -15,6 +15,7 @@ import typingsSlinky.reactNativeDatepicker.reactNativeDatepickerStrings.date
 import typingsSlinky.reactNativeDatepicker.reactNativeDatepickerStrings.datetime
 import typingsSlinky.reactNativeDatepicker.reactNativeDatepickerStrings.spinner
 import typingsSlinky.reactNativeDatepicker.reactNativeDatepickerStrings.time
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ object ReactNativeDatepicker {
   
   @JSImport("react-native-datepicker", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -57,10 +58,10 @@ object ReactNativeDatepicker {
     def customStyles(value: DatePickerCustomStylesProps): this.type = set("customStyles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dateDate(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
+    def date(value: String | js.Date | Moment): this.type = set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def date(value: String | js.Date | Moment): this.type = set("date", value.asInstanceOf[js.Any])
+    def dateDate(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -93,16 +94,16 @@ object ReactNativeDatepicker {
     def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def maxDate(value: String | js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def minDate(value: String | js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def minuteInterval(value: Double): this.type = set("minuteInterval", value.asInstanceOf[js.Any])
@@ -144,7 +145,7 @@ object ReactNativeDatepicker {
     def timeZoneOffsetInMinutes(value: Double): this.type = set("timeZoneOffsetInMinutes", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeDatepicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -3,16 +3,16 @@ package typingsSlinky.mendixmodelsdk
 import typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructure
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("mendixmodelsdk/dist/sdk/internal/QualifiedNameCache", JSImport.Namespace)
-@js.native
-object qualifiedNameCacheMod extends js.Object {
+object qualifiedNameCacheMod {
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/QualifiedNameCache", "QualifiedNameCache")
   @js.native
-  class QualifiedNameCache protected () extends js.Object {
+  class QualifiedNameCache protected () extends StObject {
     def this(_model: AbstractModel) = this()
     
     /**

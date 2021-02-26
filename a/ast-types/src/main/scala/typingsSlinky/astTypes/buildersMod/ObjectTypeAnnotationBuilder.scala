@@ -6,12 +6,13 @@ import typingsSlinky.astTypes.kindsMod.ObjectTypeIndexerKind
 import typingsSlinky.astTypes.kindsMod.ObjectTypePropertyKind
 import typingsSlinky.astTypes.kindsMod.ObjectTypeSpreadPropertyKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeAnnotation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ObjectTypeAnnotationBuilder extends js.Object {
+trait ObjectTypeAnnotationBuilder extends StObject {
   
   def apply(properties: js.Array[ObjectTypePropertyKind | ObjectTypeSpreadPropertyKind]): ObjectTypeAnnotation = js.native
   def apply(

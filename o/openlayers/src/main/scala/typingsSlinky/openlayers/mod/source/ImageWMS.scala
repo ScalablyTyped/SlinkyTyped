@@ -5,6 +5,7 @@ import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.ImageLoadFunctionType
 import typingsSlinky.openlayers.mod.ProjectionLike
 import typingsSlinky.openlayers.mod.olx.source.ImageWMSOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

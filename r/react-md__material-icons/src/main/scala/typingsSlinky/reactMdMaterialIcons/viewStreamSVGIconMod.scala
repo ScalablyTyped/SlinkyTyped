@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.svgiconMod.SVGIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/ViewStreamSVGIcon", JSImport.Namespace)
-@js.native
-object viewStreamSVGIconMod extends js.Object {
+object viewStreamSVGIconMod {
   
+  @JSImport("@react-md/material-icons/types/ViewStreamSVGIcon", "ViewStreamSVGIcon")
+  @js.native
   val ViewStreamSVGIcon: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
 }

@@ -2,6 +2,7 @@ package typingsSlinky.knuddelsUserappsApi.mod.global
 
 import typingsSlinky.knuddelsUserappsApi.anon.DisplayReasonText
 import typingsSlinky.knuddelsUserappsApi.anon.OnError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

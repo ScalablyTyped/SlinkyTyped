@@ -11,15 +11,22 @@ import typingsSlinky.baseui.baseuiStrings.mini
 import typingsSlinky.baseui.paginationMod.Labels
 import typingsSlinky.baseui.paginationMod.PaginationOverrides
 import typingsSlinky.baseui.paginationMod.PaginationProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Pagination {
   
+  @scala.inline
+  def apply(currentPage: Double, numPages: Double): Builder = {
+    val __props = js.Dynamic.literal(currentPage = currentPage.asInstanceOf[js.Any], numPages = numPages.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PaginationProps]))
+  }
+  
   @JSImport("baseui/pagination", "Pagination")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -46,10 +53,4 @@ object Pagination {
   }
   
   def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(currentPage: Double, numPages: Double): Builder = {
-    val __props = js.Dynamic.literal(currentPage = currentPage.asInstanceOf[js.Any], numPages = numPages.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PaginationProps]))
-  }
 }

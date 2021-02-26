@@ -1,5 +1,6 @@
 package typingsSlinky.googleMaps.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleMaps.googleMapsStrings.less_walking
   - typingsSlinky.googleMaps.googleMapsStrings.fewer_transfers
 */
-trait TransitRoutingPreference extends js.Object
+trait TransitRoutingPreference extends StObject
 object TransitRoutingPreference {
   
   @scala.inline

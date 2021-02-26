@@ -3,14 +3,14 @@ package typingsSlinky.ionicCore
 import org.scalajs.dom.raw.Event
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonReorderElement
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/reorder/reorder", JSImport.Namespace)
-@js.native
-object reorderMod extends js.Object {
+object reorderMod {
   
+  @JSImport("@ionic/core/dist/types/components/reorder/reorder", "Reorder")
   @js.native
   class Reorder () extends ComponentInterface {
     

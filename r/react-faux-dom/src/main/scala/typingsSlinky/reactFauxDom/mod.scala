@@ -11,20 +11,43 @@ import typingsSlinky.reactFauxDom.reactFauxDomStrings.stopAnimatingFauxDOM
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-faux-dom", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("react-faux-dom", "Element")
+  @js.native
+  class Element protected () extends HTMLElement {
+    def this(nodeName: String) = this()
+    def this(nodeName: String, parentNode: Element) = this()
+    
+    def toReact(): ReactElement = js.native
+  }
+  
+  @JSImport("react-faux-dom", "compareDocumentPosition")
+  @js.native
   def compareDocumentPosition(): Double = js.native
   
+  @JSImport("react-faux-dom", "createElement")
+  @js.native
   def createElement(nodeName: String): Element = js.native
   
+  @JSImport("react-faux-dom", "createElementNS")
+  @js.native
   def createElementNS(namespace: String, nodeName: String): Element = js.native
   
+  object defaultView {
+    
+    @JSImport("react-faux-dom", "defaultView.getComputedStyle")
+    @js.native
+    def getComputedStyle(node: Element): GetPropertyValue = js.native
+  }
+  
+  @JSImport("react-faux-dom", "withFauxDOM")
+  @js.native
   def withFauxDOM[P](WrappedComponent: ReactComponentClass[P]): ReactComponentClass[
     Pick[
       P, 
@@ -36,15 +59,7 @@ object mod extends js.Object {
   ] = js.native
   
   @js.native
-  class Element protected () extends HTMLElement {
-    def this(nodeName: String) = this()
-    def this(nodeName: String, parentNode: Element) = this()
-    
-    def toReact(): ReactElement = js.native
-  }
-  
-  @js.native
-  trait ReactFauxDomProps extends js.Object {
+  trait ReactFauxDomProps extends StObject {
     
     def animateFauxDOM(duration: Double): Unit = js.native
     
@@ -56,11 +71,5 @@ object mod extends js.Object {
     def isAnimatingFauxDOM(): Boolean = js.native
     
     def stopAnimatingFauxDOM(): Unit = js.native
-  }
-  
-  @js.native
-  object defaultView extends js.Object {
-    
-    def getComputedStyle(node: Element): GetPropertyValue = js.native
   }
 }

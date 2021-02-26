@@ -20,6 +20,7 @@ import typingsSlinky.puppeteer.puppeteerStrings.requestfinished
 import typingsSlinky.puppeteer.puppeteerStrings.response
 import typingsSlinky.puppeteer.puppeteerStrings.workercreated
 import typingsSlinky.puppeteer.puppeteerStrings.workerdestroyed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

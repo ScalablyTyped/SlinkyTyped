@@ -1,12 +1,13 @@
 package typingsSlinky.bingmaps.global.Microsoft.Maps
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.Maps.GeoXmlFormat")
 @js.native
-object GeoXmlFormat extends js.Object {
+object GeoXmlFormat extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.bingmaps.Microsoft.Maps.GeoXmlFormat with Double] = js.native

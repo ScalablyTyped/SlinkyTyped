@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactAddToCalendar.mod.AddToCalendarEvent
 import typingsSlinky.reactAddToCalendar.mod.AddToCalendarProps
 import typingsSlinky.reactAddToCalendar.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactAddToCalendar {
   
+  @scala.inline
+  def apply(event: AddToCalendarEvent): Builder = {
+    val __props = js.Dynamic.literal(event = event.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AddToCalendarProps]))
+  }
+  
   @JSImport("react-add-to-calendar", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,10 +52,10 @@ object ReactAddToCalendar {
     def dropdownClass(value: String): this.type = set("dropdownClass", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def listItemsVarargs(value: js.Any*): this.type = set("listItems", js.Array(value :_*))
+    def listItems(value: js.Array[_]): this.type = set("listItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def listItems(value: js.Array[_]): this.type = set("listItems", value.asInstanceOf[js.Any])
+    def listItemsVarargs(value: js.Any*): this.type = set("listItems", js.Array(value :_*))
     
     @scala.inline
     def optionsOpen(value: Boolean): this.type = set("optionsOpen", value.asInstanceOf[js.Any])
@@ -61,10 +68,4 @@ object ReactAddToCalendar {
   }
   
   def withProps(p: AddToCalendarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(event: AddToCalendarEvent): Builder = {
-    val __props = js.Dynamic.literal(event = event.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AddToCalendarProps]))
-  }
 }

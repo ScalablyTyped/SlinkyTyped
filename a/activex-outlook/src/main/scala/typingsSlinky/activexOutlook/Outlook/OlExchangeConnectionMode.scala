@@ -9,6 +9,7 @@ import typingsSlinky.activexOutlook.activexOutlookNumbers.`500`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`600`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`700`
 import typingsSlinky.activexOutlook.activexOutlookNumbers.`800`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOutlook.activexOutlookNumbers.`100`
   - typingsSlinky.activexOutlook.activexOutlookNumbers.`800`
 */
-trait OlExchangeConnectionMode extends js.Object
+trait OlExchangeConnectionMode extends StObject
 object OlExchangeConnectionMode {
   
   @scala.inline

@@ -1,11 +1,12 @@
 package typingsSlinky.googleMaps.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TimeZoneRequest extends js.Object {
+trait TimeZoneRequest extends StObject {
   
   /**
     * The language in which to return results.
@@ -36,36 +37,24 @@ object TimeZoneRequest {
   }
   
   @scala.inline
-  implicit class TimeZoneRequestOps[Self <: TimeZoneRequest] (val x: Self) extends AnyVal {
+  implicit class TimeZoneRequestMutableBuilder[Self <: TimeZoneRequest] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setLanguage(value: Language): Self = StObject.set(x, "language", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setLanguageUndefined: Self = StObject.set(x, "language", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setLocation(value: LatLng): Self = StObject.set(x, "location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLocation(value: LatLng): Self = this.set("location", value.asInstanceOf[js.Any])
+    def setTimestamp(value: js.Date | Double): Self = StObject.set(x, "timestamp", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLanguage(value: Language): Self = this.set("language", value.asInstanceOf[js.Any])
+    def setTimestampDate(value: js.Date): Self = StObject.set(x, "timestamp", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLanguage: Self = this.set("language", js.undefined)
-    
-    @scala.inline
-    def setTimestampDate(value: js.Date): Self = this.set("timestamp", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTimestamp(value: js.Date | Double): Self = this.set("timestamp", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTimestamp: Self = this.set("timestamp", js.undefined)
+    def setTimestampUndefined: Self = StObject.set(x, "timestamp", js.undefined)
   }
 }

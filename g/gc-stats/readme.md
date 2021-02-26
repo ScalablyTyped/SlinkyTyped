@@ -10,9 +10,9 @@ Exposes node v8 garbage collection stats
 | ------------------ | :-------------: |
 | Full name          | gc-stats |
 | Keywords           | - |
-| # releases         | 6 |
-| # dependents       | 34 |
-| # downloads        | 2416880 |
+| # releases         | 3 |
+| # dependents       | 37 |
+| # downloads        | 3049765 |
 | # stars            | 6 |
 
 ## Links

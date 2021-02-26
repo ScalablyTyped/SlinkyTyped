@@ -33,6 +33,7 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.value
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valueOptions
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valueOptionsChanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -254,9 +255,7 @@ trait ojSelectMany[K, D]
   @JSName("value")
   var value_ojSelectMany: js.Array[_] | Null = js.native
 }
-@JSImport("@oracle/oraclejet/ojselectcombobox", "ojSelectMany")
-@js.native
-object ojSelectMany extends js.Object {
+object ojSelectMany {
   
   type ojAnimateEnd = CustomEvent
   

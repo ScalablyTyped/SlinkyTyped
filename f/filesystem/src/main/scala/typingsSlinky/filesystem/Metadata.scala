@@ -1,11 +1,12 @@
 package typingsSlinky.filesystem
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Metadata extends js.Object {
+trait Metadata extends StObject {
   
   /**
     * This is the time at which the file or directory was last modified.
@@ -28,24 +29,12 @@ object Metadata {
   }
   
   @scala.inline
-  implicit class MetadataOps[Self <: Metadata] (val x: Self) extends AnyVal {
+  implicit class MetadataMutableBuilder[Self <: Metadata] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setModificationTime(value: js.Date): Self = StObject.set(x, "modificationTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setModificationTime(value: js.Date): Self = this.set("modificationTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setSize(value: Double): Self = StObject.set(x, "size", value.asInstanceOf[js.Any])
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.jose.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jose.joseStrings.`private`
   - typingsSlinky.jose.joseStrings.public
 */
-trait keyObjectTypes extends js.Object
+trait keyObjectTypes extends StObject
 object keyObjectTypes {
   
   @scala.inline

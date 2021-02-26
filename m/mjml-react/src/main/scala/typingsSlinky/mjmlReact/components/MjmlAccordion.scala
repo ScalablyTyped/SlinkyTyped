@@ -7,6 +7,7 @@ import typingsSlinky.mjmlReact.mjmlReactStrings.left
 import typingsSlinky.mjmlReact.mjmlReactStrings.right
 import typingsSlinky.mjmlReact.mod.MjmlAccordionElementProps
 import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object MjmlAccordion {
   
   @JSImport("mjml-react", "MjmlAccordion")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -53,7 +54,7 @@ object MjmlAccordion {
     def iconWrappedUrl(value: String): this.type = set("iconWrappedUrl", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RequiredChildrenProps with MjmlAccordionElementProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MjmlAccordion.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RequiredChildrenProps with MjmlAccordionElementProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

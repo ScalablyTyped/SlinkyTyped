@@ -1,13 +1,14 @@
 package typingsSlinky.awsCryptoSha256Browser
 
 import typingsSlinky.awsSdkTypes.cryptoMod.SourceData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-crypto/sha256-browser/build/isEmptyData", JSImport.Namespace)
-@js.native
-object isEmptyDataMod extends js.Object {
+object isEmptyDataMod {
   
+  @JSImport("@aws-crypto/sha256-browser/build/isEmptyData", "isEmptyData")
+  @js.native
   def isEmptyData(data: SourceData): Boolean = js.native
 }

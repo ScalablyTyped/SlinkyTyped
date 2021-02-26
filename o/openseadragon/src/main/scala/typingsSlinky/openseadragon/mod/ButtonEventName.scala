@@ -1,5 +1,6 @@
 package typingsSlinky.openseadragon.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.openseadragon.openseadragonStrings.press
   - typingsSlinky.openseadragon.openseadragonStrings.release
 */
-trait ButtonEventName extends js.Object
+trait ButtonEventName extends StObject
 object ButtonEventName {
   
   @scala.inline

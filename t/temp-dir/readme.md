@@ -11,8 +11,8 @@ Get the real path of the system temp directory
 | Full name          | temp-dir |
 | Keywords           | temp, tmpdir, os, system, real, path, realpath, resolved, temporary, directory, folder |
 | # releases         | 2 |
-| # dependents       | 68 |
-| # downloads        | 61678199 |
+| # dependents       | 120 |
+| # downloads        | 150375245 |
 | # stars            | 0 |
 
 ## Links

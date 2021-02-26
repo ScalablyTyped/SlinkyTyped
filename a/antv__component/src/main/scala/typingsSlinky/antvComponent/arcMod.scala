@@ -1,23 +1,23 @@
 package typingsSlinky.antvComponent
 
-import typingsSlinky.antvComponent.groupComponentMod.GroupComponent
 import typingsSlinky.antvComponent.typesMod.ArcAnnotationCfg
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/annotation/arc", JSImport.Namespace)
-@js.native
-object arcMod extends js.Object {
+object arcMod {
+  
+  @JSImport("@antv/component/lib/annotation/arc", JSImport.Default)
+  @js.native
+  class default () extends ArcAnnotation
   
   @js.native
-  trait ArcAnnotation extends GroupComponent[ArcAnnotationCfg] {
+  trait ArcAnnotation
+    extends typingsSlinky.antvComponent.groupComponentMod.default[ArcAnnotationCfg] {
     
     var getArcPath: js.Any = js.native
     
     var renderArc: js.Any = js.native
   }
-  
-  @js.native
-  class default () extends ArcAnnotation
 }

@@ -21,16 +21,21 @@ import typingsSlinky.openfin.v2MainMod.View
 import typingsSlinky.openfin.v2MainMod.Window
 import typingsSlinky.openfin.windowMod.ViewDetached
 import typingsSlinky.resizeObserverBrowser.ResizeObserver
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("openfin/_v2/api/platform/openfin-layout", JSImport.Namespace)
-@js.native
-object openfinLayoutMod extends js.Object {
+object openfinLayoutMod {
+  
+  @JSImport("openfin/_v2/api/platform/openfin-layout", JSImport.Default)
+  @js.native
+  class default protected () extends LayoutManager {
+    def this(fin: Fin) = this()
+  }
   
   @js.native
-  trait LayoutManager extends js.Object {
+  trait LayoutManager extends StObject {
     
     def addView(viewConfig: ViewState): js.Promise[View] = js.native
     
@@ -135,10 +140,5 @@ object openfinLayoutMod extends js.Object {
     def updateButtonDisplay(): Unit = js.native
     
     var viewsResizeObserver: ResizeObserver = js.native
-  }
-  
-  @js.native
-  class default protected () extends LayoutManager {
-    def this(fin: Fin) = this()
   }
 }

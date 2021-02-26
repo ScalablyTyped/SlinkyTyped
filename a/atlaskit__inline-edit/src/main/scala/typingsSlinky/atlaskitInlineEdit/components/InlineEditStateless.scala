@@ -4,15 +4,28 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.atlaskitInlineEdit.mod.StatelessProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object InlineEditStateless {
   
+  @scala.inline
+  def apply(
+    isEditing: Boolean,
+    onCancel: () => Unit,
+    onConfirm: () => Unit,
+    onEditRequested: () => Unit,
+    readView: ReactElement
+  ): Builder = {
+    val __props = js.Dynamic.literal(isEditing = isEditing.asInstanceOf[js.Any], onCancel = js.Any.fromFunction0(onCancel), onConfirm = js.Any.fromFunction0(onConfirm), onEditRequested = js.Any.fromFunction0(onEditRequested), readView = readView.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StatelessProps]))
+  }
+  
   @JSImport("@atlaskit/inline-edit", "InlineEditStateless")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -57,16 +70,4 @@ object InlineEditStateless {
   }
   
   def withProps(p: StatelessProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    isEditing: Boolean,
-    onCancel: () => Unit,
-    onConfirm: () => Unit,
-    onEditRequested: () => Unit,
-    readView: ReactElement
-  ): Builder = {
-    val __props = js.Dynamic.literal(isEditing = isEditing.asInstanceOf[js.Any], onCancel = js.Any.fromFunction0(onCancel), onConfirm = js.Any.fromFunction0(onConfirm), onEditRequested = js.Any.fromFunction0(onEditRequested), readView = readView.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StatelessProps]))
-  }
 }

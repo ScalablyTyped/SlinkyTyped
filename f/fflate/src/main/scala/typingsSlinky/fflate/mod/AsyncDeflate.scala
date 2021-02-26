@@ -1,5 +1,6 @@
 package typingsSlinky.fflate.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Creates an asynchronous DEFLATE stream
   * @param cb The callback to call whenever data is deflated
   */
-class AsyncDeflate () extends js.Object {
+class AsyncDeflate () extends StObject {
   def this(cb: AsyncFlateStreamHandler) = this()
   /**
     * Creates an asynchronous DEFLATE stream

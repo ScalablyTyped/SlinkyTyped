@@ -1,8 +1,9 @@
 package typingsSlinky.extjs.Ext.data
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NodeInterface extends js.Object
+trait NodeInterface extends StObject

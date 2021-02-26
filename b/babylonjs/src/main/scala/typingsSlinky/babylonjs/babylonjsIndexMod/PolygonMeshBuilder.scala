@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.babylonjsIndexMod
 import typingsSlinky.babylonjs.mathPathMod.Path2
 import typingsSlinky.babylonjs.mathVectorMod.Vector2
 import typingsSlinky.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

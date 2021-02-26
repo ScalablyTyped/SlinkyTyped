@@ -14,12 +14,13 @@ import typingsSlinky.maximMazurokGapiClientDrive.anon.KeepRevisionForever
 import typingsSlinky.maximMazurokGapiClientDrive.anon.OcrLanguage
 import typingsSlinky.maximMazurokGapiClientDrive.anon.SupportsAllDrives
 import typingsSlinky.maximMazurokGapiClientDrive.anon.SupportsTeamDrives
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FilesResource extends js.Object {
+trait FilesResource extends StObject {
   
   /** Creates a copy of a file and applies any requested updates with patch semantics. Folders cannot be copied. */
   def copy(request: EnforceSingleParent): Request[File] = js.native

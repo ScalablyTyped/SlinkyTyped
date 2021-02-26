@@ -6,12 +6,13 @@ import typingsSlinky.typeorm.anon.DropTarget
 import typingsSlinky.typeorm.anon.Full
 import typingsSlinky.typeorm.anon.ReplaceOneOptionsmultiboo
 import typingsSlinky.typeorm.anon.Scale
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Collection[T] extends js.Object {
+trait Collection[T] extends StObject {
   
   /**
     * Execute an aggregation framework pipeline against the collection, needs MongoDB >= 2.2

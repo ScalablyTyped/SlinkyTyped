@@ -5,22 +5,20 @@ import typingsSlinky.socks.constantsMod.SocksClientChainOptions
 import typingsSlinky.socks.constantsMod.SocksClientEstablishedEvent
 import typingsSlinky.socks.constantsMod.SocksClientOptions
 import typingsSlinky.socks.constantsMod.SocksUDPFrameDetails
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("socks", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("socks", "SocksClient")
   @js.native
   class SocksClient protected ()
     extends typingsSlinky.socks.socksclientMod.SocksClient {
     def this(options: SocksClientOptions) = this()
   }
-  /* static members */
-  @js.native
-  object SocksClient extends js.Object {
+  object SocksClient {
     
     /**
       * Creates a new SOCKS connection.
@@ -30,7 +28,12 @@ object mod extends js.Object {
       * @param callback { Function } An optional callback function.
       * @returns { Promise }
       */
+    /* static member */
+    @JSImport("socks", "SocksClient.createConnection")
+    @js.native
     def createConnection(options: SocksClientOptions): js.Promise[SocksClientEstablishedEvent] = js.native
+    @JSImport("socks", "SocksClient.createConnection")
+    @js.native
     def createConnection(options: SocksClientOptions, callback: js.Function): js.Promise[SocksClientEstablishedEvent] = js.native
     
     /**
@@ -42,25 +45,37 @@ object mod extends js.Object {
       * @param callback { Function } An optional callback function.
       * @returns { Promise }
       */
+    /* static member */
+    @JSImport("socks", "SocksClient.createConnectionChain")
+    @js.native
     def createConnectionChain(options: SocksClientChainOptions): js.Promise[SocksClientEstablishedEvent] = js.native
+    @JSImport("socks", "SocksClient.createConnectionChain")
+    @js.native
     def createConnectionChain(options: SocksClientChainOptions, callback: js.Function): js.Promise[SocksClientEstablishedEvent] = js.native
     
     /**
       * Creates a SOCKS UDP Frame.
       * @param options
       */
+    /* static member */
+    @JSImport("socks", "SocksClient.createUDPFrame")
+    @js.native
     def createUDPFrame(options: SocksUDPFrameDetails): Buffer = js.native
     
     /**
       * Parses a SOCKS UDP frame.
       * @param data
       */
+    /* static member */
+    @JSImport("socks", "SocksClient.parseUDPFrame")
+    @js.native
     def parseUDPFrame(data: Buffer): SocksUDPFrameDetails = js.native
   }
   
   /**
     * Error wrapper for SocksClient
     */
+  @JSImport("socks", "SocksClientError")
   @js.native
   class SocksClientError protected ()
     extends typingsSlinky.socks.socksclientMod.SocksClientError {

@@ -2,14 +2,14 @@ package typingsSlinky.agGrid
 
 import typingsSlinky.agGrid.beanStubMod.BeanStub
 import typingsSlinky.agGrid.gridPanelMod.GridPanel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/rendering/heightScaler", JSImport.Namespace)
-@js.native
-object heightScalerMod extends js.Object {
+object heightScalerMod {
   
+  @JSImport("ag-grid/dist/lib/rendering/heightScaler", "HeightScaler")
   @js.native
   class HeightScaler () extends BeanStub {
     

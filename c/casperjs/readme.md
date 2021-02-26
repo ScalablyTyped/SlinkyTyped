@@ -11,8 +11,8 @@ A navigation scripting & testing utility for PhantomJS and SlimerJS
 | Full name          | casperjs |
 | Keywords           | phantomjs, slimerjs, test, testing, scraping |
 | # releases         | 1 |
-| # dependents       | 90 |
-| # downloads        | 1091456 |
+| # dependents       | 91 |
+| # downloads        | 516402 |
 | # stars            | 39 |
 
 ## Links

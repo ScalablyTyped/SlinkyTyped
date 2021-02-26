@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientClassroom.anon.OauthtokenPrettyPrint
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.PrettyPrintQuotaUser
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.QuotaUserResource
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.QuotaUserUpdateMask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CoursesResource extends js.Object {
+trait CoursesResource extends StObject {
   
   var aliases: AliasesResource = js.native
   

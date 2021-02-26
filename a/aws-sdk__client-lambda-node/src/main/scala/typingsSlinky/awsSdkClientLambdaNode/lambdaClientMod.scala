@@ -5,16 +5,16 @@ import typingsSlinky.awsSdkClientLambdaNode.lambdaConfigurationMod.LambdaConfigu
 import typingsSlinky.awsSdkClientLambdaNode.lambdaConfigurationMod.LambdaResolvedConfiguration
 import typingsSlinky.awsSdkClientLambdaNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.commandMod.Command
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-lambda-node/LambdaClient", JSImport.Namespace)
-@js.native
-object lambdaClientMod extends js.Object {
+object lambdaClientMod {
   
+  @JSImport("@aws-sdk/client-lambda-node/LambdaClient", "LambdaClient")
   @js.native
-  class LambdaClient protected () extends js.Object {
+  class LambdaClient protected () extends StObject {
     def this(configuration: LambdaConfiguration) = this()
     
     val config: LambdaResolvedConfiguration = js.native

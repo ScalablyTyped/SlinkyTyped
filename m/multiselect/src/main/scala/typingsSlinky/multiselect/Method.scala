@@ -1,5 +1,6 @@
 package typingsSlinky.multiselect
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.multiselect.multiselectStrings.deselect_all
   - typingsSlinky.multiselect.multiselectStrings.refresh
 */
-trait Method extends js.Object
+trait Method extends StObject
 object Method {
   
   @scala.inline

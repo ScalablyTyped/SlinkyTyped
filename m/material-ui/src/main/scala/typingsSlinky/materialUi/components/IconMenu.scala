@@ -12,15 +12,22 @@ import typingsSlinky.materialUi.MaterialUI.Menus.MenuItemProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IconMenu {
   
+  @scala.inline
+  def apply(iconButtonElement: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(iconButtonElement = iconButtonElement.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IconMenuProps]))
+  }
+  
   @JSImport("material-ui", "IconMenu")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -113,17 +120,11 @@ object IconMenu {
     def useLayerForClickAway(value: Boolean): this.type = set("useLayerForClickAway", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Any | js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Any | js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
   }
   
   def withProps(p: IconMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(iconButtonElement: ReactElement): Builder = {
-    val __props = js.Dynamic.literal(iconButtonElement = iconButtonElement.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IconMenuProps]))
-  }
 }

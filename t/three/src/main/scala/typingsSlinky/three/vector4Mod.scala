@@ -7,14 +7,14 @@ import typingsSlinky.three.matrix4Mod.Matrix4
 import typingsSlinky.three.quaternionMod.Quaternion
 import typingsSlinky.three.threeBooleans.`true`
 import typingsSlinky.three.vector2Mod.Vector
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/math/Vector4", JSImport.Namespace)
-@js.native
-object vector4Mod extends js.Object {
+object vector4Mod {
   
+  @JSImport("three/src/math/Vector4", "Vector4")
   @js.native
   class Vector4 () extends Vector {
     def this(x: Double) = this()

@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressBlockEditor.anon.PartialEditorSettingsEdit
 import typingsSlinky.wordpressBlocks.mod.BlockInstance
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,8 +28,8 @@ class SharedBuilder_Props_1973207744 (val args: js.Array[js.Any])
   def useSubRegistry(value: Boolean): this.type = set("useSubRegistry", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: BlockInstance[StringDictionary[js.Any]]*): this.type = set("value", js.Array(value :_*))
+  def value(value: js.Array[BlockInstance[StringDictionary[_]]]): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: js.Array[BlockInstance[StringDictionary[_]]]): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: BlockInstance[StringDictionary[js.Any]]*): this.type = set("value", js.Array(value :_*))
 }

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientGlacierNode.typesRemoveTagsFromVaultInputMod.Re
 import typingsSlinky.awsSdkClientGlacierNode.typesRemoveTagsFromVaultOutputMod.RemoveTagsFromVaultOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/commands/RemoveTagsFromVaultCommand", JSImport.Namespace)
-@js.native
-object removeTagsFromVaultCommandMod extends js.Object {
+object removeTagsFromVaultCommandMod {
   
+  @JSImport("@aws-sdk/client-glacier-node/commands/RemoveTagsFromVaultCommand", "RemoveTagsFromVaultCommand")
   @js.native
   class RemoveTagsFromVaultCommand protected () extends Command[
           InputTypesUnion, 

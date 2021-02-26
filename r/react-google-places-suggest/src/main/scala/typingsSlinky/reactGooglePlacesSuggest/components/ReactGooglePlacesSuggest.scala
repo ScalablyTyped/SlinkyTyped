@@ -9,15 +9,22 @@ import typingsSlinky.reactGooglePlacesSuggest.mod.ReactGooglePlacesSuggest.Geoco
 import typingsSlinky.reactGooglePlacesSuggest.mod.ReactGooglePlacesSuggest.Prediction
 import typingsSlinky.reactGooglePlacesSuggest.mod.ReactGooglePlacesSuggest.Props
 import typingsSlinky.reactGooglePlacesSuggest.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactGooglePlacesSuggest {
   
+  @scala.inline
+  def apply(autocompletionRequest: AutocompletionRequest, googleMaps: Typeofmaps): Builder = {
+    val __props = js.Dynamic.literal(autocompletionRequest = autocompletionRequest.asInstanceOf[js.Any], googleMaps = googleMaps.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("react-google-places-suggest", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,10 +48,4 @@ object ReactGooglePlacesSuggest {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(autocompletionRequest: AutocompletionRequest, googleMaps: Typeofmaps): Builder = {
-    val __props = js.Dynamic.literal(autocompletionRequest = autocompletionRequest.asInstanceOf[js.Any], googleMaps = googleMaps.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

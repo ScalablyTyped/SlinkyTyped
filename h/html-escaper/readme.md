@@ -10,9 +10,9 @@ fast and safe way to escape and unescape &<>'" chars
 | ------------------ | :-------------: |
 | Full name          | html-escaper |
 | Keywords           | html, escape, encode, unescape, decode, entities |
-| # releases         | 5 |
-| # dependents       | 18 |
-| # downloads        | 67191740 |
+| # releases         | 4 |
+| # dependents       | 68 |
+| # downloads        | 367766050 |
 | # stars            | 1 |
 
 ## Links

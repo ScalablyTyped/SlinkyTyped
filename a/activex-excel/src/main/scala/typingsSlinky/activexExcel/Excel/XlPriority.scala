@@ -3,6 +3,7 @@ package typingsSlinky.activexExcel.Excel
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4127`
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4134`
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4143`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4134`
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4143`
 */
-trait XlPriority extends js.Object
+trait XlPriority extends StObject
 object XlPriority {
   
   @scala.inline

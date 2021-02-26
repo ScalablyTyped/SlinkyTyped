@@ -9,6 +9,7 @@ import typingsSlinky.cssTree.cssTreeStrings.Multiplier
 import typingsSlinky.cssTree.cssTreeStrings.Property
 import typingsSlinky.cssTree.cssTreeStrings.Token
 import typingsSlinky.cssTree.cssTreeStrings.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,8 +26,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.cssTree.mod.DSNodeToken
   - typingsSlinky.cssTree.mod.DSNodeType
 */
-trait DSNode extends js.Object
+trait DSNode extends StObject
 object DSNode {
+  
+  @scala.inline
+  def DSNodeAtWord(name: String, `type`: AtKeyword): typingsSlinky.cssTree.mod.DSNodeAtWord = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeAtWord]
+  }
+  
+  @scala.inline
+  def DSNodeComma(`type`: Comma): typingsSlinky.cssTree.mod.DSNodeComma = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeComma]
+  }
+  
+  @scala.inline
+  def DSNodeFunction(name: String, `type`: Function): typingsSlinky.cssTree.mod.DSNodeFunction = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeFunction]
+  }
   
   @scala.inline
   def DSNodeGroup(
@@ -35,72 +57,51 @@ object DSNode {
     explicit: Boolean,
     terms: js.Array[DSNode],
     `type`: Group
-  ): DSNode = {
+  ): typingsSlinky.cssTree.mod.DSNodeGroup = {
     val __obj = js.Dynamic.literal(combinator = combinator.asInstanceOf[js.Any], disallowEmpty = disallowEmpty.asInstanceOf[js.Any], explicit = explicit.asInstanceOf[js.Any], terms = terms.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNode]
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeGroup]
   }
   
   @scala.inline
-  def DSNodeComma(`type`: Comma): DSNode = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNode]
-  }
-  
-  @scala.inline
-  def DSNodeProperty(name: String, `type`: Property): DSNode = {
+  def DSNodeKeyword(name: String, `type`: Keyword): typingsSlinky.cssTree.mod.DSNodeKeyword = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNode]
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeKeyword]
   }
   
   @scala.inline
-  def DSNodeKeyword(name: String, `type`: Keyword): DSNode = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNode]
-  }
-  
-  @scala.inline
-  def DSNodeAtWord(name: String, `type`: AtKeyword): DSNode = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNode]
-  }
-  
-  @scala.inline
-  def DSNodeString(`type`: typingsSlinky.cssTree.cssTreeStrings.String, value: String): DSNode = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNode]
-  }
-  
-  @scala.inline
-  def DSNodeType(name: String, `type`: Type): DSNode = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNode]
-  }
-  
-  @scala.inline
-  def DSNodeToken(`type`: Token, value: String): DSNode = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNode]
-  }
-  
-  @scala.inline
-  def DSNodeMultiplier(comma: Boolean, max: Double, min: Double, term: DSNodeMultiplied, `type`: Multiplier): DSNode = {
+  def DSNodeMultiplier(comma: Boolean, max: Double, min: Double, term: DSNodeMultiplied, `type`: Multiplier): typingsSlinky.cssTree.mod.DSNodeMultiplier = {
     val __obj = js.Dynamic.literal(comma = comma.asInstanceOf[js.Any], max = max.asInstanceOf[js.Any], min = min.asInstanceOf[js.Any], term = term.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNode]
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeMultiplier]
   }
   
   @scala.inline
-  def DSNodeFunction(name: String, `type`: Function): DSNode = {
+  def DSNodeProperty(name: String, `type`: Property): typingsSlinky.cssTree.mod.DSNodeProperty = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNode]
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeProperty]
+  }
+  
+  @scala.inline
+  def DSNodeString(`type`: typingsSlinky.cssTree.cssTreeStrings.String, value: String): typingsSlinky.cssTree.mod.DSNodeString = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeString]
+  }
+  
+  @scala.inline
+  def DSNodeToken(`type`: Token, value: String): typingsSlinky.cssTree.mod.DSNodeToken = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeToken]
+  }
+  
+  @scala.inline
+  def DSNodeType(name: String, `type`: Type): typingsSlinky.cssTree.mod.DSNodeType = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeType]
   }
 }

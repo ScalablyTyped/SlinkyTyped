@@ -4,6 +4,7 @@ import typingsSlinky.babylonjs.HTMLCanvasElement
 import typingsSlinky.babylonjs.WebGLUniformLocation
 import typingsSlinky.babylonjs.anon.Width
 import typingsSlinky.std.WebGLVertexArrayObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

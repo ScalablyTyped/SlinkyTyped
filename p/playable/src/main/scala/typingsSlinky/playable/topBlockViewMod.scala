@@ -3,17 +3,22 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.topBlockTypesMod.ITopBlockViewConfig
 import typingsSlinky.playable.topBlockTypesMod.ITopBlockViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/top-block/top-block.view", JSImport.Namespace)
-@js.native
-object topBlockViewMod extends js.Object {
+object topBlockViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/top-block/top-block.view", JSImport.Default)
+  @js.native
+  class default protected () extends TopBlockView {
+    def this(config: ITopBlockViewConfig) = this()
+  }
   
   @js.native
   trait TopBlockView
-    extends typingsSlinky.playable.stylableMod.default[ITopBlockViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[ITopBlockViewStyles] {
     
     @JSName("_$liveIndicatorContainer")
     var _$liveIndicatorContainer: js.Any = js.native
@@ -53,10 +58,5 @@ object topBlockViewMod extends js.Object {
     def showLiveIndicator(): Unit = js.native
     
     def showTitle(): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends TopBlockView {
-    def this(config: ITopBlockViewConfig) = this()
   }
 }

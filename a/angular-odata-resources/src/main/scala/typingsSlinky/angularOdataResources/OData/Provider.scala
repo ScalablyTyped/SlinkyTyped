@@ -1,11 +1,12 @@
 package typingsSlinky.angularOdataResources.OData
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Provider[T] extends js.Object {
+trait Provider[T] extends StObject {
   
   var callback: js.Any = js.native
   

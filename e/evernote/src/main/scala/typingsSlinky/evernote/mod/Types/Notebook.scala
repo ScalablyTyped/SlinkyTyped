@@ -1,12 +1,13 @@
 package typingsSlinky.evernote.mod.Types
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("evernote", "Types.Notebook")
 @js.native
-class Notebook () extends js.Object {
+class Notebook () extends StObject {
   def this(args: typingsSlinky.evernote.anon.BusinessNotebook) = this()
   
   var businessNotebook: js.UndefOr[BusinessNotebook] = js.native

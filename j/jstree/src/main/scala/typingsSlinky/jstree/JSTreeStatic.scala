@@ -1,12 +1,13 @@
 package typingsSlinky.jstree
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JSTreeStatic extends js.Object {
+trait JSTreeStatic extends StObject {
   
   /**
     * the jstree class constructor, used only internally
@@ -18,8 +19,6 @@ trait JSTreeStatic extends js.Object {
   
   def create(el: String): JSTree = js.native
   def create(el: String, options: JSTreeStaticDefaults): JSTree = js.native
-  def create(el: JQuery): JSTree = js.native
-  def create(el: JQuery, options: JSTreeStaticDefaults): JSTree = js.native
   /**
     * creates a jstree instance
     * @name $.jstree.create(el [, options])
@@ -29,6 +28,8 @@ trait JSTreeStatic extends js.Object {
     */
   def create(el: HTMLElement): JSTree = js.native
   def create(el: HTMLElement, options: JSTreeStaticDefaults): JSTree = js.native
+  def create(el: JQuery): JSTree = js.native
+  def create(el: JQuery, options: JSTreeStaticDefaults): JSTree = js.native
   
   /**
     * holds all the default options used when creating new instances
@@ -53,7 +54,6 @@ trait JSTreeStatic extends js.Object {
   var plugins: js.Array[_] = js.native
   
   def reference(needle: String): JSTree = js.native
-  def reference(needle: JQuery): JSTree = js.native
   /**
     * get a reference to an existing instance
     *
@@ -75,6 +75,7 @@ trait JSTreeStatic extends js.Object {
     * @return {jsTree|null} the instance or `null` if not found
     */
   def reference(needle: HTMLElement): JSTree = js.native
+  def reference(needle: JQuery): JSTree = js.native
   
   var root: String = js.native
   

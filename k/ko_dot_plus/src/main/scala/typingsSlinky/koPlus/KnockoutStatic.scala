@@ -6,6 +6,7 @@ import typingsSlinky.koPlus.KoPlus.Editable
 import typingsSlinky.koPlus.KoPlus.EditableArray
 import typingsSlinky.koPlus.KoPlus.EditableArrayStatic
 import typingsSlinky.koPlus.KoPlus.EditableStatic
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,7 +34,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 // Add methods to the 'ko' Knockout object
 //
 @js.native
-trait KnockoutStatic extends js.Object {
+trait KnockoutStatic extends StObject {
   
   // create a command - two overloads
   def command(param: js.Function): Command = js.native

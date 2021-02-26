@@ -33,15 +33,22 @@ import typingsSlinky.reactNativeMaps.mod.LatLng
 import typingsSlinky.reactNativeMaps.mod.LineCapType
 import typingsSlinky.reactNativeMaps.mod.LineJoinType
 import typingsSlinky.reactNativeMaps.mod.MapCircleProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Circle {
   
+  @scala.inline
+  def apply(center: LatLng, radius: Double): Builder = {
+    val __props = js.Dynamic.literal(center = center.asInstanceOf[js.Any], radius = radius.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MapCircleProps]))
+  }
+  
   @JSImport("react-native-maps", "Circle")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,10 +56,10 @@ object Circle {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaps.mod.Circle] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -79,10 +86,10 @@ object Circle {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -118,10 +125,10 @@ object Circle {
     def lineCap(value: LineCapType): this.type = set("lineCap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lineDashPatternVarargs(value: Double*): this.type = set("lineDashPattern", js.Array(value :_*))
+    def lineDashPattern(value: js.Array[Double]): this.type = set("lineDashPattern", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lineDashPattern(value: js.Array[Double]): this.type = set("lineDashPattern", value.asInstanceOf[js.Any])
+    def lineDashPatternVarargs(value: Double*): this.type = set("lineDashPattern", js.Array(value :_*))
     
     @scala.inline
     def lineDashPhase(value: Double): this.type = set("lineDashPhase", value.asInstanceOf[js.Any])
@@ -254,10 +261,4 @@ object Circle {
   }
   
   def withProps(p: MapCircleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(center: LatLng, radius: Double): Builder = {
-    val __props = js.Dynamic.literal(center = center.asInstanceOf[js.Any], radius = radius.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MapCircleProps]))
-  }
 }

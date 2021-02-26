@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.BABYLON
 import typingsSlinky.babylonjs.anon.Delta
 import typingsSlinky.babylonjs.anon.FaceId
 import typingsSlinky.babylonjs.anon.PositionFunction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

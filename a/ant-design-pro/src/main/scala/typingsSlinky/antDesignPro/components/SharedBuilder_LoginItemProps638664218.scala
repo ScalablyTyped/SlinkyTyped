@@ -5,6 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,10 +16,10 @@ class SharedBuilder_LoginItemProps638664218 (val args: js.Array[js.Any])
      with StBuildingComponent[tag.type, scala.Nothing] {
   
   @scala.inline
-  def buttonTextReactElement(value: ReactElement): this.type = set("buttonText", value.asInstanceOf[js.Any])
+  def buttonText(value: ReactElement): this.type = set("buttonText", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def buttonText(value: ReactElement): this.type = set("buttonText", value.asInstanceOf[js.Any])
+  def buttonTextReactElement(value: ReactElement): this.type = set("buttonText", value.asInstanceOf[js.Any])
   
   @scala.inline
   def countDown(value: Double): this.type = set("countDown", value.asInstanceOf[js.Any])
@@ -51,10 +52,10 @@ class SharedBuilder_LoginItemProps638664218 (val args: js.Array[js.Any])
   def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def rulesVarargs(value: js.Any*): this.type = set("rules", js.Array(value :_*))
+  def rules(value: js.Array[_]): this.type = set("rules", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def rules(value: js.Array[_]): this.type = set("rules", value.asInstanceOf[js.Any])
+  def rulesVarargs(value: js.Any*): this.type = set("rules", js.Array(value :_*))
   
   @scala.inline
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])

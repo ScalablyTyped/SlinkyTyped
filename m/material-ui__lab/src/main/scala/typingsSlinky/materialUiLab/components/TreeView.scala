@@ -78,6 +78,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -88,7 +89,7 @@ object TreeView {
     
     @JSImport("@material-ui/lab", "TreeView")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -281,46 +282,46 @@ object TreeView {
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultCollapseIconReactElement(value: ReactElement): this.type = set("defaultCollapseIcon", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def defaultCollapseIcon(value: ReactElement): this.type = set("defaultCollapseIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultEndIconReactElement(value: ReactElement): this.type = set("defaultEndIcon", value.asInstanceOf[js.Any])
+      def defaultCollapseIconReactElement(value: ReactElement): this.type = set("defaultCollapseIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def defaultEndIcon(value: ReactElement): this.type = set("defaultEndIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultExpandIconReactElement(value: ReactElement): this.type = set("defaultExpandIcon", value.asInstanceOf[js.Any])
+      def defaultEndIconReactElement(value: ReactElement): this.type = set("defaultEndIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def defaultExpandIcon(value: ReactElement): this.type = set("defaultExpandIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultExpandedVarargs(value: String*): this.type = set("defaultExpanded", js.Array(value :_*))
+      def defaultExpandIconReactElement(value: ReactElement): this.type = set("defaultExpandIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def defaultExpanded(value: js.Array[String]): this.type = set("defaultExpanded", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultParentIconReactElement(value: ReactElement): this.type = set("defaultParentIcon", value.asInstanceOf[js.Any])
+      def defaultExpandedVarargs(value: String*): this.type = set("defaultExpanded", js.Array(value :_*))
       
       @scala.inline
       def defaultParentIcon(value: ReactElement): this.type = set("defaultParentIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultSelectedVarargs(value: String*): this.type = set("defaultSelected", js.Array(value :_*))
+      def defaultParentIconReactElement(value: ReactElement): this.type = set("defaultParentIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def defaultSelected(value: js.Array[String]): this.type = set("defaultSelected", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultSelectedVarargs(value: String*): this.type = set("defaultSelected", js.Array(value :_*))
       
       @scala.inline
       def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -332,10 +333,10 @@ object TreeView {
       def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def expandedVarargs(value: String*): this.type = set("expanded", js.Array(value :_*))
+      def expanded(value: js.Array[String]): this.type = set("expanded", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def expanded(value: js.Array[String]): this.type = set("expanded", value.asInstanceOf[js.Any])
+      def expandedVarargs(value: String*): this.type = set("expanded", js.Array(value :_*))
       
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -347,16 +348,16 @@ object TreeView {
       def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+      def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
       
       @scala.inline
-      def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+      def innerRefNull: this.type = set("innerRef", null)
       
       @scala.inline
-      def innerRefNull: this.type = set("innerRef", null)
+      def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -653,10 +654,10 @@ object TreeView {
       def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def selectedVarargs(value: String*): this.type = set("selected", js.Array(value :_*))
+      def selected(value: js.Array[String]): this.type = set("selected", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def selected(value: js.Array[String]): this.type = set("selected", value.asInstanceOf[js.Any])
+      def selectedVarargs(value: String*): this.type = set("selected", js.Array(value :_*))
       
       @scala.inline
       def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
@@ -692,16 +693,16 @@ object TreeView {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.materialUiLab.treeViewTreeViewMod.MultiSelectTreeViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: MultiSelectTreeViewProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: typingsSlinky.materialUiLab.treeViewTreeViewMod.MultiSelectTreeViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object SingleSelectTreeViewProps {
     
     @JSImport("@material-ui/lab", "TreeView")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -894,43 +895,43 @@ object TreeView {
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultCollapseIconReactElement(value: ReactElement): this.type = set("defaultCollapseIcon", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def defaultCollapseIcon(value: ReactElement): this.type = set("defaultCollapseIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultEndIconReactElement(value: ReactElement): this.type = set("defaultEndIcon", value.asInstanceOf[js.Any])
+      def defaultCollapseIconReactElement(value: ReactElement): this.type = set("defaultCollapseIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def defaultEndIcon(value: ReactElement): this.type = set("defaultEndIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultExpandIconReactElement(value: ReactElement): this.type = set("defaultExpandIcon", value.asInstanceOf[js.Any])
+      def defaultEndIconReactElement(value: ReactElement): this.type = set("defaultEndIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def defaultExpandIcon(value: ReactElement): this.type = set("defaultExpandIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultExpandedVarargs(value: String*): this.type = set("defaultExpanded", js.Array(value :_*))
+      def defaultExpandIconReactElement(value: ReactElement): this.type = set("defaultExpandIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def defaultExpanded(value: js.Array[String]): this.type = set("defaultExpanded", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultParentIconReactElement(value: ReactElement): this.type = set("defaultParentIcon", value.asInstanceOf[js.Any])
+      def defaultExpandedVarargs(value: String*): this.type = set("defaultExpanded", js.Array(value :_*))
       
       @scala.inline
       def defaultParentIcon(value: ReactElement): this.type = set("defaultParentIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
+      def defaultParentIconReactElement(value: ReactElement): this.type = set("defaultParentIcon", value.asInstanceOf[js.Any])
+      
+      @scala.inline
       def defaultSelected(value: String): this.type = set("defaultSelected", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -942,10 +943,10 @@ object TreeView {
       def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def expandedVarargs(value: String*): this.type = set("expanded", js.Array(value :_*))
+      def expanded(value: js.Array[String]): this.type = set("expanded", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def expanded(value: js.Array[String]): this.type = set("expanded", value.asInstanceOf[js.Any])
+      def expandedVarargs(value: String*): this.type = set("expanded", js.Array(value :_*))
       
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -957,16 +958,16 @@ object TreeView {
       def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+      def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
       
       @scala.inline
-      def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+      def innerRefNull: this.type = set("innerRef", null)
       
       @scala.inline
-      def innerRefNull: this.type = set("innerRef", null)
+      def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -1299,8 +1300,8 @@ object TreeView {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.materialUiLab.treeViewTreeViewMod.SingleSelectTreeViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: SingleSelectTreeViewProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: typingsSlinky.materialUiLab.treeViewTreeViewMod.SingleSelectTreeViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
 }

@@ -4,12 +4,13 @@ import typingsSlinky.braintreeWeb.braintreeWebNumbers.`1`
 import typingsSlinky.braintreeWeb.braintreeWebNumbers.`2`
 import typingsSlinky.braintreeWeb.braintreeWebStrings.`2-bootstrap3-modal`
 import typingsSlinky.braintreeWeb.braintreeWebStrings.`2-inline-iframe`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Version extends js.Object {
+trait Version extends StObject {
   
   var authorization: js.UndefOr[String] = js.native
   
@@ -28,38 +29,26 @@ object Version {
   }
   
   @scala.inline
-  implicit class VersionOps[Self <: Version] (val x: Self) extends AnyVal {
+  implicit class VersionMutableBuilder[Self <: Version] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAuthorization(value: String): Self = StObject.set(x, "authorization", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAuthorizationUndefined: Self = StObject.set(x, "authorization", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setClient(value: typingsSlinky.braintreeWeb.clientMod.Client): Self = StObject.set(x, "client", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAuthorization(value: String): Self = this.set("authorization", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAuthorization: Self = this.set("authorization", js.undefined)
-    
-    @scala.inline
-    def setClient(value: typingsSlinky.braintreeWeb.clientMod.Client): Self = this.set("client", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteClient: Self = this.set("client", js.undefined)
+    def setClientUndefined: Self = StObject.set(x, "client", js.undefined)
     
     @scala.inline
     def setVersion(
       value: `1` | typingsSlinky.braintreeWeb.braintreeWebStrings.`1` | `2` | typingsSlinky.braintreeWeb.braintreeWebStrings.`2` | `2-bootstrap3-modal` | `2-inline-iframe`
-    ): Self = this.set("version", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "version", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteVersion: Self = this.set("version", js.undefined)
+    def setVersionUndefined: Self = StObject.set(x, "version", js.undefined)
   }
 }

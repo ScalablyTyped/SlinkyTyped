@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.swipeActionMod.SwipeActionProps
 import typingsSlinky.antDesignReactNative.swipeActionMod.SwipeoutButtonProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object SwipeAction {
   
   @JSImport("@ant-design/react-native", "SwipeAction")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,10 +36,10 @@ object SwipeAction {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftVarargs(value: SwipeoutButtonProps*): this.type = set("left", js.Array(value :_*))
+    def left(value: js.Array[SwipeoutButtonProps]): this.type = set("left", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def left(value: js.Array[SwipeoutButtonProps]): this.type = set("left", value.asInstanceOf[js.Any])
+    def leftVarargs(value: SwipeoutButtonProps*): this.type = set("left", js.Array(value :_*))
     
     @scala.inline
     def onClose(value: (/* sectionId */ Double, /* rowId */ Double, /* direction */ String) => Unit): this.type = set("onClose", js.Any.fromFunction3(value))
@@ -53,10 +54,10 @@ object SwipeAction {
     def openRight(value: Boolean): this.type = set("openRight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightVarargs(value: SwipeoutButtonProps*): this.type = set("right", js.Array(value :_*))
+    def right(value: js.Array[SwipeoutButtonProps]): this.type = set("right", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def right(value: js.Array[SwipeoutButtonProps]): this.type = set("right", value.asInstanceOf[js.Any])
+    def rightVarargs(value: SwipeoutButtonProps*): this.type = set("right", js.Array(value :_*))
     
     @scala.inline
     def rowId(value: Double): this.type = set("rowId", value.asInstanceOf[js.Any])
@@ -74,7 +75,7 @@ object SwipeAction {
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SwipeActionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SwipeAction.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SwipeActionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

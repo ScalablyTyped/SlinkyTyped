@@ -124,6 +124,7 @@ import typingsSlinky.grammarkdown.grammarkdownNumbers.`97`
 import typingsSlinky.grammarkdown.grammarkdownNumbers.`98`
 import typingsSlinky.grammarkdown.grammarkdownNumbers.`99`
 import typingsSlinky.grammarkdown.grammarkdownNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -254,7 +255,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.grammarkdown.grammarkdownNumbers.`8713`
   - typingsSlinky.grammarkdown.grammarkdownNumbers.`65279`
 */
-trait CharacterCodes extends js.Object
+trait CharacterCodes extends StObject
 object CharacterCodes {
   
   @scala.inline

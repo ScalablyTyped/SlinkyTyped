@@ -9,13 +9,14 @@ import typingsSlinky.squareConnect.squareConnectStrings.KEYED
 import typingsSlinky.squareConnect.squareConnectStrings.ON_FILE
 import typingsSlinky.squareConnect.squareConnectStrings.SWIPED
 import typingsSlinky.squareConnect.squareConnectStrings.VOIDED
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "TenderCardDetails")
 @js.native
-class TenderCardDetails () extends js.Object {
+class TenderCardDetails () extends StObject {
   
   /**
     * The credit card's non-confidential details.

@@ -1,6 +1,7 @@
 package typingsSlinky.expressValidator.optionsMod
 
 import typingsSlinky.expressValidator.expressValidatorStrings.ar_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -61,7 +62,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.expressValidator.expressValidatorStrings.`tr-TR`
   - typingsSlinky.expressValidator.expressValidatorStrings.`uk-UA`
 */
-trait AlphanumericLocale extends js.Object
+trait AlphanumericLocale extends StObject
 object AlphanumericLocale {
   
   @scala.inline

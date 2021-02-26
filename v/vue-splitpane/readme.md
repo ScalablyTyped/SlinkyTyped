@@ -11,8 +11,8 @@ vue split-pane component
 | Full name          | vue-splitpane |
 | Keywords           | - |
 | # releases         | 4 |
-| # dependents       | 44 |
-| # downloads        | 320161 |
+| # dependents       | 116 |
+| # downloads        | 779004 |
 | # stars            | 0 |
 
 ## Links

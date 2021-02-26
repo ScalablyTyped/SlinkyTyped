@@ -10,13 +10,14 @@ import typingsSlinky.braintree.anon.CountryOfIssuance
 import typingsSlinky.braintree.anon.CustomFields
 import typingsSlinky.braintree.anon.ImageUrl
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("braintree", "Transaction")
 @js.native
-class Transaction () extends js.Object {
+class Transaction () extends StObject {
   
   var addOns: js.UndefOr[js.Array[AddOn]] = js.native
   
@@ -106,7 +107,7 @@ class Transaction () extends js.Object {
   
   var recurring: js.UndefOr[Boolean] = js.native
   
-   // Deprecated
+  // Deprecated
   var refundIds: js.UndefOr[js.Array[String]] = js.native
   
   var refundedTransactionId: js.UndefOr[String] = js.native

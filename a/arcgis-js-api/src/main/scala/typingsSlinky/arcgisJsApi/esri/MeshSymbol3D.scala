@@ -1,6 +1,7 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`mesh-3d`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

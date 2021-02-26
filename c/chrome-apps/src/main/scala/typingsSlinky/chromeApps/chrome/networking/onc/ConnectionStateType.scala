@@ -2,6 +2,7 @@ package typingsSlinky.chromeApps.chrome.networking.onc
 
 import typingsSlinky.chromeApps.chromeAppsStrings.Connected_
 import typingsSlinky.chromeApps.chromeAppsStrings.Connecting_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.Connecting_
   - typingsSlinky.chromeApps.chromeAppsStrings.NotConnected
 */
-trait ConnectionStateType extends js.Object
+trait ConnectionStateType extends StObject
 object ConnectionStateType {
   
   @scala.inline

@@ -2,6 +2,7 @@ package typingsSlinky.vscodeLanguageserverProtocol.protocolSematicTokensProposed
 
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.StaticRegistrationOptions
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

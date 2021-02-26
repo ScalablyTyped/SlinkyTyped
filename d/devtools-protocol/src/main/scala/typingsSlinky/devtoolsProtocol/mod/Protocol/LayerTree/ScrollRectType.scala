@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.LayerTree
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.TouchEventHandler
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.WheelEventHandler
 */
-trait ScrollRectType extends js.Object
+trait ScrollRectType extends StObject
 object ScrollRectType {
   
   @scala.inline

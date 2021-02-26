@@ -21,6 +21,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.radius
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.unknown
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.width
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.yards
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

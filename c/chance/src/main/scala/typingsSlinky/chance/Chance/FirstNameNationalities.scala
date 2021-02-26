@@ -1,5 +1,6 @@
 package typingsSlinky.chance.Chance
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chance.chanceStrings.en
   - typingsSlinky.chance.chanceStrings.it
 */
-trait FirstNameNationalities extends js.Object
+trait FirstNameNationalities extends StObject
 object FirstNameNationalities {
   
   @scala.inline

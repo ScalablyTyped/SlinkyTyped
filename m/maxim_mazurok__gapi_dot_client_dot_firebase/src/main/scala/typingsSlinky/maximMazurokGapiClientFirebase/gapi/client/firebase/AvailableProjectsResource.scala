@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientFirebase.gapi.client.firebase
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.Accesstoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AvailableProjectsResource extends js.Object {
+trait AvailableProjectsResource extends StObject {
   
   /**
     * Lists each [Google Cloud Platform (GCP) `Project`] (https://cloud.google.com/resource-manager/reference/rest/v1/projects) that can have Firebase resources added to it. A Project

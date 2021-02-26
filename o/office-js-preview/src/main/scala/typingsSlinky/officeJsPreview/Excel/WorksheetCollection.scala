@@ -12,6 +12,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Before
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Beginning
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.End
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.None
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

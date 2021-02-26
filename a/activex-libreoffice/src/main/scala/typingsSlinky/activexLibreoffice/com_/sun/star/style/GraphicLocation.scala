@@ -12,6 +12,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`6`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`7`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`8`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,7 +32,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`3`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`11`
 */
-trait GraphicLocation extends js.Object
+trait GraphicLocation extends StObject
 object GraphicLocation {
   
   /** The graphic is scaled to fill the whole surrounding area. */

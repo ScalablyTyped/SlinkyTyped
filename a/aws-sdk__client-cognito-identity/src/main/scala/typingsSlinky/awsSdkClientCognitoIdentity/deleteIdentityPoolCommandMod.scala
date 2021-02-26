@@ -4,19 +4,19 @@ import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.Cognit
 import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.ServiceInputTypes
 import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.ServiceOutputTypes
 import typingsSlinky.awsSdkClientCognitoIdentity.models0Mod.DeleteIdentityPoolInput
-import typingsSlinky.awsSdkSmithyClient.commandMod.Command
+import typingsSlinky.awsSdkSmithyClient.mod.Command
 import typingsSlinky.awsSdkTypes.httpMod.HttpHandlerOptions
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity/types/commands/DeleteIdentityPoolCommand", JSImport.Namespace)
-@js.native
-object deleteIdentityPoolCommandMod extends js.Object {
+object deleteIdentityPoolCommandMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity/types/commands/DeleteIdentityPoolCommand", "DeleteIdentityPoolCommand")
   @js.native
   class DeleteIdentityPoolCommand protected ()
     extends Command[

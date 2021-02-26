@@ -6,6 +6,7 @@ import typingsSlinky.webappsecCredentialManagement.webappsecCredentialManagement
 import typingsSlinky.webappsecCredentialManagement.webappsecCredentialManagementStrings.internal
 import typingsSlinky.webappsecCredentialManagement.webappsecCredentialManagementStrings.nfc
 import typingsSlinky.webappsecCredentialManagement.webappsecCredentialManagementStrings.usb
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @see {@link https://w3c.github.io/webauthn/#dictdef-publickeycredentialdescriptor}
   */
 @js.native
-trait PublicKeyCredentialDescriptor extends js.Object {
+trait PublicKeyCredentialDescriptor extends StObject {
   
   var id: BufferSource = js.native
   
@@ -32,39 +33,27 @@ object PublicKeyCredentialDescriptor {
   }
   
   @scala.inline
-  implicit class PublicKeyCredentialDescriptorOps[Self <: PublicKeyCredentialDescriptor] (val x: Self) extends AnyVal {
+  implicit class PublicKeyCredentialDescriptorMutableBuilder[Self <: PublicKeyCredentialDescriptor] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setId(value: BufferSource): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setIdArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setIdArrayBufferView(value: js.typedarray.ArrayBufferView): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIdArrayBufferView(value: js.typedarray.ArrayBufferView): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setTransports(value: js.Array[usb | nfc | ble | internal]): Self = StObject.set(x, "transports", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIdArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setTransportsUndefined: Self = StObject.set(x, "transports", js.undefined)
     
     @scala.inline
-    def setId(value: BufferSource): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setTransportsVarargs(value: (usb | nfc | ble | internal)*): Self = StObject.set(x, "transports", js.Array(value :_*))
     
     @scala.inline
-    def setType(value: `public-key`): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTransportsVarargs(value: (usb | nfc | ble | internal)*): Self = this.set("transports", js.Array(value :_*))
-    
-    @scala.inline
-    def setTransports(value: js.Array[usb | nfc | ble | internal]): Self = this.set("transports", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTransports: Self = this.set("transports", js.undefined)
+    def setType(value: `public-key`): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.sharedb.sharedbMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.sharedb.sharedbStrings.nf
   - typingsSlinky.sharedb.sharedbStrings.nt
 */
-trait RequestAction extends js.Object
+trait RequestAction extends StObject
 object RequestAction {
   
   @scala.inline

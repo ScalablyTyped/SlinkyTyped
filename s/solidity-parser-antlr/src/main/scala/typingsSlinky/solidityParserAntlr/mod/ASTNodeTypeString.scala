@@ -1,5 +1,6 @@
 package typingsSlinky.solidityParserAntlr.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -75,7 +76,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.MemberAccess
   - typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.IndexAccess
 */
-trait ASTNodeTypeString extends js.Object
+trait ASTNodeTypeString extends StObject
 object ASTNodeTypeString {
   
   @scala.inline

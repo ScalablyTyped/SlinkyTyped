@@ -2,7 +2,7 @@ package typingsSlinky.protractor
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable2
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.Shortcut
 import typingsSlinky.protractor.anon.Chrome
 import typingsSlinky.protractor.anon.TypeofCapabilities
 import typingsSlinky.protractor.anon.TypeofWebDriver
@@ -19,18 +19,19 @@ import typingsSlinky.protractor.expectedConditionsMod.ProtractorExpectedConditio
 import typingsSlinky.protractor.locatorsMod.Locator
 import typingsSlinky.protractor.locatorsMod.ProtractorBy
 import typingsSlinky.seleniumWebdriver.capabilitiesMod.Capabilities
+import typingsSlinky.seleniumWebdriver.httpMod.Executor
 import typingsSlinky.seleniumWebdriver.mod.WebDriver
 import typingsSlinky.seleniumWebdriver.mod.WebElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("protractor/built/ptor", JSImport.Namespace)
-@js.native
-object ptorMod extends js.Object {
+object ptorMod {
   
+  @JSImport("protractor/built/ptor", "Ptor")
   @js.native
-  class Ptor () extends js.Object {
+  class Ptor () extends StObject {
     
     @JSName("$")
     def $(search: String): ElementFinder = js.native
@@ -133,9 +134,14 @@ object ptorMod extends js.Object {
     def wrapDriver(webdriver: WebDriver, baseUrl: String, rootElement: String, untrackOutstandingTimeouts: Boolean): ProtractorBrowser = js.native
   }
   
-  @js.native
-  object protractor extends TopLevel[Ptor] {
+  object protractor extends Shortcut {
     
+    @JSImport("protractor/built/ptor", "protractor")
+    @js.native
+    val ^ : Ptor = js.native
+    
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("protractor/built/ptor", "protractor.Builder")
     @js.native
     // region Constructors
     /**
@@ -144,6 +150,19 @@ object ptorMod extends js.Object {
     class Builder ()
       extends typingsSlinky.seleniumWebdriver.mod.Builder
     
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("protractor/built/ptor", "protractor.Capabilities")
+    @js.native
+    // region Constructors
+    /**
+      * @param {(Capabilities|Map<string, ?>|Object)=} other Another set of
+      *     capabilities to initialize this instance from.
+      */
+    class Capabilities ()
+      extends typingsSlinky.seleniumWebdriver.mod.Capabilities
+    
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("protractor/built/ptor", "protractor.EventEmitter")
     @js.native
     // region Constructors
     /**
@@ -152,11 +171,15 @@ object ptorMod extends js.Object {
     class EventEmitter ()
       extends typingsSlinky.seleniumWebdriver.mod.EventEmitter
     
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("protractor/built/ptor", "protractor.FileDetector")
     @js.native
     /** @constructor */
     class FileDetector ()
       extends typingsSlinky.seleniumWebdriver.mod.FileDetector
     
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("protractor/built/ptor", "protractor.Session")
     @js.native
     class Session protected ()
       extends typingsSlinky.seleniumWebdriver.mod.Session {
@@ -167,9 +190,39 @@ object ptorMod extends js.Object {
         *     capabilities.
         * @constructor
         */
-      def this(id: String, capabilities: Capabilities) = this()
+      def this(id: String, capabilities: typingsSlinky.seleniumWebdriver.capabilitiesMod.Capabilities) = this()
     }
     
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("protractor/built/ptor", "protractor.WebDriver")
+    @js.native
+    class WebDriver protected ()
+      extends typingsSlinky.seleniumWebdriver.mod.WebDriver {
+      // region Constructors
+      /**
+        * @param {!(Session|Promise<!Session>)} session Either a
+        *     known session or a promise that will be resolved to a session.
+        * @param {!command.Executor} executor The executor to use when sending
+        *     commands to the browser.
+        */
+      def this(session: typingsSlinky.seleniumWebdriver.mod.Session, executor: Executor) = this()
+    }
+    
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("protractor/built/ptor", "protractor.WebElement")
+    @js.native
+    class WebElement protected ()
+      extends typingsSlinky.seleniumWebdriver.mod.WebElement {
+      /**
+        * @param {!WebDriver} driver the parent WebDriver instance for this element.
+        * @param {(!IThenable<string>|string)} id The server-assigned opaque ID for
+        *     the underlying DOM element.
+        */
+      def this(driver: typingsSlinky.seleniumWebdriver.mod.WebDriver, id: js.Promise[String]) = this()
+    }
+    
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("protractor/built/ptor", "protractor.WebElementPromise")
     @js.native
     class WebElementPromise protected ()
       extends typingsSlinky.seleniumWebdriver.mod.WebElementPromise {
@@ -179,7 +232,15 @@ object ptorMod extends js.Object {
         * @param {!Promise<!WebElement>} el A promise
         *     that will resolve to the promised element.
         */
-      def this(driver: WebDriver, el: js.Promise[WebElement]) = this()
+      def this(
+        driver: typingsSlinky.seleniumWebdriver.mod.WebDriver,
+        el: js.Promise[typingsSlinky.seleniumWebdriver.mod.WebElement]
+      ) = this()
     }
+    
+    type _To = Ptor
+    
+    /* This means you don't have to write `^`, but can instead just say `protractor.foo` */
+    override def _to: Ptor = ^
   }
 }

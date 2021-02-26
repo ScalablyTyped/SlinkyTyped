@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.sliderMod.SliderOverrides
 import typingsSlinky.baseui.sliderMod.State
 import typingsSlinky.baseui.sliderMod.StatefulSliderProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object StatefulSlider {
   
   @JSImport("baseui/slider", "StatefulSlider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,7 +46,7 @@ object StatefulSlider {
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StatefulSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatefulSlider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatefulSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,0 +1,158 @@
+package typingsSlinky.reactBootstrapDaterangepicker.components
+
+import org.scalajs.dom.raw.Element
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.daterangepicker.daterangepickerBooleans.`false`
+import typingsSlinky.daterangepicker.daterangepickerStrings.auto
+import typingsSlinky.daterangepicker.daterangepickerStrings.center
+import typingsSlinky.daterangepicker.daterangepickerStrings.down
+import typingsSlinky.daterangepicker.daterangepickerStrings.left
+import typingsSlinky.daterangepicker.daterangepickerStrings.right
+import typingsSlinky.daterangepicker.daterangepickerStrings.up
+import typingsSlinky.daterangepicker.mod.DateOrString
+import typingsSlinky.daterangepicker.mod.Locale
+import typingsSlinky.moment.mod.DurationInputArg1
+import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@scala.inline
+class SharedBuilder_Props_698415052[R <: js.Object] (val args: js.Array[js.Any])
+  extends AnyVal
+     with StBuildingComponent[tag.type, R] {
+  
+  @scala.inline
+  def alwaysShowCalendars(value: Boolean): this.type = set("alwaysShowCalendars", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def applyButtonClasses(value: String): this.type = set("applyButtonClasses", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def autoApply(value: Boolean): this.type = set("autoApply", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def autoUpdateInput(value: Boolean): this.type = set("autoUpdateInput", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def buttonClasses(value: js.Array[String]): this.type = set("buttonClasses", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def buttonClassesVarargs(value: String*): this.type = set("buttonClasses", js.Array(value :_*))
+  
+  @scala.inline
+  def cancelButtonClasses(value: String): this.type = set("cancelButtonClasses", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def containerClass(value: String): this.type = set("containerClass", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def containerStyles(value: CSSProperties): this.type = set("containerStyles", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def drops(value: down | up | auto): this.type = set("drops", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def endDate(value: DateOrString): this.type = set("endDate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def endDateDate(value: js.Date): this.type = set("endDate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def isCustomDate(value: /* date */ DateOrString => js.UndefOr[String | js.Array[String] | `false`]): this.type = set("isCustomDate", js.Any.fromFunction1(value))
+  
+  @scala.inline
+  def isInvalidDate(value: (/* startDate */ DateOrString, /* endDate */ js.UndefOr[DateOrString]) => Boolean): this.type = set("isInvalidDate", js.Any.fromFunction2(value))
+  
+  @scala.inline
+  def linkedCalendars(value: Boolean): this.type = set("linkedCalendars", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def locale(value: Locale): this.type = set("locale", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def maxDate(value: DateOrString): this.type = set("maxDate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def maxSpan(value: DurationInputArg1): this.type = set("maxSpan", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def maxYear(value: Double): this.type = set("maxYear", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def minDate(value: DateOrString): this.type = set("minDate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def minYear(value: Double): this.type = set("minYear", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def onApply(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onApply", js.Any.fromFunction2(value))
+  
+  @scala.inline
+  def onCancel(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onCancel", js.Any.fromFunction2(value))
+  
+  @scala.inline
+  def onEvent(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onEvent", js.Any.fromFunction2(value))
+  
+  @scala.inline
+  def onHide(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onHide", js.Any.fromFunction2(value))
+  
+  @scala.inline
+  def onHideCalendar(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onHideCalendar", js.Any.fromFunction2(value))
+  
+  @scala.inline
+  def onShow(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onShow", js.Any.fromFunction2(value))
+  
+  @scala.inline
+  def onShowCalendar(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onShowCalendar", js.Any.fromFunction2(value))
+  
+  @scala.inline
+  def opens(value: left | right | center): this.type = set("opens", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def parentEl(value: Element | String): this.type = set("parentEl", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def parentElElement(value: Element): this.type = set("parentEl", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def showCustomRangeLabel(value: Boolean): this.type = set("showCustomRangeLabel", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def showDropdowns(value: Boolean): this.type = set("showDropdowns", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def showISOWeekNumbers(value: Boolean): this.type = set("showISOWeekNumbers", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def showWeekNumbers(value: Boolean): this.type = set("showWeekNumbers", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def singleDatePicker(value: Boolean): this.type = set("singleDatePicker", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def startDate(value: DateOrString): this.type = set("startDate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def startDateDate(value: js.Date): this.type = set("startDate", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def timePicker(value: Boolean): this.type = set("timePicker", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def timePicker24Hour(value: Boolean): this.type = set("timePicker24Hour", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def timePickerIncrement(value: Double): this.type = set("timePickerIncrement", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def timePickerSeconds(value: Boolean): this.type = set("timePickerSeconds", value.asInstanceOf[js.Any])
+}

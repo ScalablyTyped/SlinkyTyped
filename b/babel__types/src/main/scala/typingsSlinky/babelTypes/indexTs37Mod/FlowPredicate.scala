@@ -2,6 +2,7 @@ package typingsSlinky.babelTypes.indexTs37Mod
 
 import typingsSlinky.babelTypes.babelTypesStrings.DeclaredPredicate
 import typingsSlinky.babelTypes.babelTypesStrings.InferredPredicate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,16 +15,16 @@ trait FlowPredicate extends _Node
 object FlowPredicate {
   
   @scala.inline
-  def DeclaredPredicate_(`type`: DeclaredPredicate, value: Flow): FlowPredicate = {
+  def DeclaredPredicate_(`type`: DeclaredPredicate, value: Flow): typingsSlinky.babelTypes.indexTs37Mod.DeclaredPredicate_ = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowPredicate]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.DeclaredPredicate_]
   }
   
   @scala.inline
-  def InferredPredicate_(`type`: InferredPredicate): FlowPredicate = {
+  def InferredPredicate_(`type`: InferredPredicate): typingsSlinky.babelTypes.indexTs37Mod.InferredPredicate_ = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowPredicate]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.InferredPredicate_]
   }
 }

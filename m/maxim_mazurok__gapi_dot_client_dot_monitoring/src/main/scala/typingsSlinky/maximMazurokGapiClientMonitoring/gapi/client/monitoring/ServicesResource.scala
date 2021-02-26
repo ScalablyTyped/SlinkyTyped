@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientMonitoring.anon.Key
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.OauthtokenPrettyPrint
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.ParentPrettyPrint
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.ServiceId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServicesResource extends js.Object {
+trait ServicesResource extends StObject {
   
   def create(request: ParentPrettyPrint, body: Service): Request[Service] = js.native
   /** Create a Service. */

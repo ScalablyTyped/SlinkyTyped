@@ -1,22 +1,22 @@
 organization := "org.scalablytyped.slinky"
 name := "ethersproject__hdnode"
-version := "5.0.6-f6ecbf"
+version := "5.0.6-35f7a1"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "ethersproject__abstract-provider" % "5.0.6-5ddcd4",
-  "org.scalablytyped.slinky" %%% "ethersproject__abstract-signer" % "5.0.8-0fb076",
-  "org.scalablytyped.slinky" %%% "ethersproject__bignumber" % "5.0.9-af9eb4",
-  "org.scalablytyped.slinky" %%% "ethersproject__bytes" % "5.0.6-9b31f4",
-  "org.scalablytyped.slinky" %%% "ethersproject__logger" % "5.0.7-1844ee",
-  "org.scalablytyped.slinky" %%% "ethersproject__networks" % "5.0.5-8721e2",
-  "org.scalablytyped.slinky" %%% "ethersproject__properties" % "5.0.5-710d78",
-  "org.scalablytyped.slinky" %%% "ethersproject__transactions" % "5.0.7-d9aa14",
-  "org.scalablytyped.slinky" %%% "ethersproject__web" % "5.0.10-8595a0",
-  "org.scalablytyped.slinky" %%% "ethersproject__wordlists" % "5.0.6-866cee",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "ethersproject__abstract-provider" % "5.0.6-dc65af",
+  "org.scalablytyped.slinky" %%% "ethersproject__abstract-signer" % "5.0.8-fe4d6b",
+  "org.scalablytyped.slinky" %%% "ethersproject__bignumber" % "5.0.10-56f20e",
+  "org.scalablytyped.slinky" %%% "ethersproject__bytes" % "5.0.6-bf07c3",
+  "org.scalablytyped.slinky" %%% "ethersproject__logger" % "5.0.7-31a58e",
+  "org.scalablytyped.slinky" %%% "ethersproject__networks" % "5.0.5-eee886",
+  "org.scalablytyped.slinky" %%% "ethersproject__properties" % "5.0.5-a901e8",
+  "org.scalablytyped.slinky" %%% "ethersproject__transactions" % "5.0.7-99e237",
+  "org.scalablytyped.slinky" %%% "ethersproject__web" % "5.0.10-8e2133",
+  "org.scalablytyped.slinky" %%% "ethersproject__wordlists" % "5.0.6-8e14fe",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

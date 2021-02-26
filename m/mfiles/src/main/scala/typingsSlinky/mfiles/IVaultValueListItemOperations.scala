@@ -4,12 +4,13 @@ import typingsSlinky.mfiles.MFiles.MFAutomaticPermissionsOperationOptions
 import typingsSlinky.mfiles.MFiles.MFBuiltInPropertyDef
 import typingsSlinky.mfiles.MFiles.MFBuiltInValueList
 import typingsSlinky.mfiles.MFiles.MFExternalDBRefreshType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultValueListItemOperations extends js.Object {
+trait IVaultValueListItemOperations extends StObject {
   
   def AddValueListItem(ValueList: Double, ValueListItem: IValueListItem, AdministrativeOperation: Boolean): IValueListItem = js.native
   def AddValueListItem(ValueList: MFBuiltInValueList, ValueListItem: IValueListItem, AdministrativeOperation: Boolean): IValueListItem = js.native

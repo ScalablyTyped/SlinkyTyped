@@ -11,6 +11,7 @@ import typingsSlinky.rcTable.interfaceMod.DataIndex
 import typingsSlinky.rcTable.interfaceMod.FixedType
 import typingsSlinky.rcTable.interfaceMod.RenderedCell
 import typingsSlinky.react.mod.HTMLAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,10 +31,10 @@ class SharedBuilder_ColumnGroupProps_758530088[RecordType] (val args: js.Array[j
   def colSpan(value: Double): this.type = set("colSpan", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def dataIndexVarargs(value: (String | Double)*): this.type = set("dataIndex", js.Array(value :_*))
+  def dataIndex(value: DataIndex): this.type = set("dataIndex", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def dataIndex(value: DataIndex): this.type = set("dataIndex", value.asInstanceOf[js.Any])
+  def dataIndexVarargs(value: (String | Double)*): this.type = set("dataIndex", js.Array(value :_*))
   
   @scala.inline
   def ellipsis(value: CellEllipsisType): this.type = set("ellipsis", value.asInstanceOf[js.Any])
@@ -64,10 +65,10 @@ class SharedBuilder_ColumnGroupProps_758530088[RecordType] (val args: js.Array[j
   def shouldCellUpdate(value: (RecordType, RecordType) => Boolean): this.type = set("shouldCellUpdate", js.Any.fromFunction2(value))
   
   @scala.inline
-  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   
   @scala.inline
   def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])

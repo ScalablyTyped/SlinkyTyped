@@ -2,20 +2,24 @@ package typingsSlinky.ethersprojectBasex
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ethersprojectBytes.mod.BytesLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ethersproject/basex", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@ethersproject/basex", "Base32")
+  @js.native
   val Base32: BaseX = js.native
   
+  @JSImport("@ethersproject/basex", "Base58")
+  @js.native
   val Base58: BaseX = js.native
   
+  @JSImport("@ethersproject/basex", "BaseX")
   @js.native
-  class BaseX protected () extends js.Object {
+  class BaseX protected () extends StObject {
     def this(alphabet: String) = this()
     
     var _alphabetMap: StringDictionary[Double] = js.native

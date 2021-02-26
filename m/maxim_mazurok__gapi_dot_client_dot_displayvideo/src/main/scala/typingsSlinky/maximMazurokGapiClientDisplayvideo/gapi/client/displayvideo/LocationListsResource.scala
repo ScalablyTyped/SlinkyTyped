@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.KeyLocationListId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.ResourceUploadType
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.UpdateMaskUploadType
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.UploadTypeUploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationListsResource extends js.Object {
+trait LocationListsResource extends StObject {
   
   var assignedLocations: AssignedLocationsResource = js.native
   

@@ -10,9 +10,9 @@ Prefix a noun with an indefinite article - a or an - based on whether it begins 
 | ------------------ | :-------------: |
 | Full name          | indefinite |
 | Keywords           | article, a, an, grammar, noun |
-| # releases         | 9 |
-| # dependents       | 3 |
-| # downloads        | 168504 |
+| # releases         | 7 |
+| # dependents       | 9 |
+| # downloads        | 518466 |
 | # stars            | 0 |
 
 ## Links

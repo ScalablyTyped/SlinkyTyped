@@ -3,12 +3,13 @@ package typingsSlinky.lodash.fpMod
 import typingsSlinky.lodash.mod.ValueIterateeCustom
 import typingsSlinky.lodash.mod.ValueIteratorTypeGuard
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashFindFrom3x4[T] extends js.Object {
+trait LodashFindFrom3x4[T] extends StObject {
   
   def apply(
     predicate: ValueIterateeCustom[

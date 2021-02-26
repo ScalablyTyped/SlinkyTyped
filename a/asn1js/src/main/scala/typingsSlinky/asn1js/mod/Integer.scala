@@ -1,5 +1,6 @@
 package typingsSlinky.asn1js.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,6 +23,7 @@ class Integer () extends BaseBlock[LocalIntegerValueBlock] {
     */
   def convertToDER(): Integer = js.native
   
+  def isEqual(otherValue: js.typedarray.ArrayBuffer): scala.Boolean = js.native
   /**
     * Compare two Integer object, or Integer and ArrayBuffer objects
     * 
@@ -31,5 +33,4 @@ class Integer () extends BaseBlock[LocalIntegerValueBlock] {
     * @memberOf Integer
     */
   def isEqual(otherValue: Integer): scala.Boolean = js.native
-  def isEqual(otherValue: js.typedarray.ArrayBuffer): scala.Boolean = js.native
 }

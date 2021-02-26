@@ -10,9 +10,9 @@ Converts a source-map from/to  different formats and allows adding/changing prop
 | ------------------ | :-------------: |
 | Full name          | convert-source-map |
 | Keywords           | convert, sourcemap, source, map, browser, debug |
-| # releases         | 3 |
-| # dependents       | 479 |
-| # downloads        | 499805978 |
+| # releases         | 2 |
+| # dependents       | 591 |
+| # downloads        | 942728217 |
 | # stars            | 4 |
 
 ## Links

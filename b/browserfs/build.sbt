@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "browserfs"
-version := "1.4.3-ec0919"
+version := "1.4.3-a87dd7"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "buffer" % "6.0.2-a51c4b",
-  "org.scalablytyped.slinky" %%% "dropboxjs" % "0.0-unknown-dt-20201002Z-c7d8d4",
-  "org.scalablytyped.slinky" %%% "filesystem" % "0.0-unknown-dt-20201002Z-6e02c8",
-  "org.scalablytyped.slinky" %%% "filewriter" % "0.0-unknown-dt-20201002Z-d399f2",
-  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "buffer" % "6.0.3-4b0ab7",
+  "org.scalablytyped.slinky" %%% "dropboxjs" % "0.0-unknown-dt-20201002Z-ccc17c",
+  "org.scalablytyped.slinky" %%% "filesystem" % "0.0-unknown-dt-20201002Z-77bfd9",
+  "org.scalablytyped.slinky" %%% "filewriter" % "0.0-unknown-dt-20201002Z-7bd4d8",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

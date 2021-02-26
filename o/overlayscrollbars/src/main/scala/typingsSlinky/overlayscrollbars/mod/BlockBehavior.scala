@@ -1,5 +1,6 @@
 package typingsSlinky.overlayscrollbars.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.center
   - typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.nearest
 */
-trait BlockBehavior extends js.Object
+trait BlockBehavior extends StObject
 object BlockBehavior {
   
   @scala.inline

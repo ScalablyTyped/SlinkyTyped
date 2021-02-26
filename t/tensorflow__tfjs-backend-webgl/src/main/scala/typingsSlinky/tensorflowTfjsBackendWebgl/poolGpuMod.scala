@@ -5,14 +5,14 @@ import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglString
 import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.max
 import typingsSlinky.tensorflowTfjsCore.convUtilMod.Conv2DInfo
 import typingsSlinky.tensorflowTfjsCore.convUtilMod.Conv3DInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-backend-webgl/dist/pool_gpu", JSImport.Namespace)
-@js.native
-object poolGpuMod extends js.Object {
+object poolGpuMod {
   
+  @JSImport("@tensorflow/tfjs-backend-webgl/dist/pool_gpu", "Pool2DProgram")
   @js.native
   class Pool2DProgram protected () extends GPGPUProgram {
     def this(convInfo: Conv2DInfo, poolType: avg, computePositions: Boolean) = this()
@@ -49,6 +49,7 @@ object poolGpuMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("@tensorflow/tfjs-backend-webgl/dist/pool_gpu", "Pool3DProgram")
   @js.native
   class Pool3DProgram protected () extends GPGPUProgram {
     def this(convInfo: Conv3DInfo, poolType: avg, computePositions: Boolean) = this()

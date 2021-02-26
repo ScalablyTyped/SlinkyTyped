@@ -1,13 +1,14 @@
 package typingsSlinky.logkitty
 
 import typingsSlinky.node.childProcessMod.ChildProcess
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("logkitty/build/ios/simulator", JSImport.Namespace)
-@js.native
-object simulatorMod extends js.Object {
+object simulatorMod {
   
+  @JSImport("logkitty/build/ios/simulator", "runSimulatorLoggingProcess")
+  @js.native
   def runSimulatorLoggingProcess(): ChildProcess = js.native
 }

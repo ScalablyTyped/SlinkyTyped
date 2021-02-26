@@ -12,7 +12,7 @@ Network utils for Node
 | Keywords           | - |
 | # releases         | 23 |
 | # dependents       | 1 |
-| # downloads        | 2264340 |
+| # downloads        | 3030237 |
 | # stars            | 0 |
 
 ## Links

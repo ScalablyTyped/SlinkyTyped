@@ -14,6 +14,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineStyle
 import typingsSlinky.activexLibreoffice.com_.sun.star.drawing.PolyPolygonBezierCoords
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.Color
 import typingsSlinky.activexLibreoffice.com_.sun.star.xml.UserDefinedAttributesSupplier
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

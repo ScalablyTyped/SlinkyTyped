@@ -4,15 +4,15 @@
 Typings are for version 7.0
 
 ## Library description:
-A simple vanilla JavaScript router with a fallback for older browsers
+A simple vanilla JavaScript router
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | navigo |
-| Keywords           | router, vanilla, hash, history |
-| # releases         | 4 |
-| # dependents       | 19 |
-| # downloads        | 472130 |
+| Keywords           | router, vanilla, history |
+| # releases         | 68 |
+| # dependents       | 22 |
+| # downloads        | 582942 |
 | # stars            | 2 |
 
 ## Links

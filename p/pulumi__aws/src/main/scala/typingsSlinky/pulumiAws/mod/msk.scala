@@ -12,20 +12,14 @@ import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws", "msk")
-@js.native
-object msk extends js.Object {
+object msk {
   
-  def getCluster(args: GetClusterArgs): js.Promise[GetClusterResult] = js.native
-  def getCluster(args: GetClusterArgs, opts: InvokeOptions): js.Promise[GetClusterResult] = js.native
-  
-  def getConfiguration(args: GetConfigurationArgs): js.Promise[GetConfigurationResult] = js.native
-  def getConfiguration(args: GetConfigurationArgs, opts: InvokeOptions): js.Promise[GetConfigurationResult] = js.native
-  
+  @JSImport("@pulumi/aws", "msk.Cluster")
   @js.native
   class Cluster protected ()
     extends typingsSlinky.pulumiAws.mskMod.Cluster {
@@ -40,8 +34,7 @@ object msk extends js.Object {
     def this(name: String, args: ClusterArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object Cluster extends js.Object {
+  object Cluster {
     
     /**
       * Get an existing Cluster resource's state with the given name, ID, and optional extra
@@ -52,18 +45,29 @@ object msk extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws", "msk.Cluster.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.mskClusterMod.Cluster = js.native
+    @JSImport("@pulumi/aws", "msk.Cluster.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.mskClusterMod.Cluster = js.native
+    @JSImport("@pulumi/aws", "msk.Cluster.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ClusterState): typingsSlinky.pulumiAws.mskClusterMod.Cluster = js.native
+    @JSImport("@pulumi/aws", "msk.Cluster.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ClusterState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.mskClusterMod.Cluster = js.native
     
     /**
       * Returns true if the given object is an instance of Cluster.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws", "msk.Cluster.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/msk/cluster.Cluster */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws", "msk.Configuration")
   @js.native
   class Configuration protected ()
     extends typingsSlinky.pulumiAws.mskMod.Configuration {
@@ -78,8 +82,7 @@ object msk extends js.Object {
     def this(name: String, args: ConfigurationArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object Configuration extends js.Object {
+  object Configuration {
     
     /**
       * Get an existing Configuration resource's state with the given name, ID, and optional extra
@@ -90,15 +93,39 @@ object msk extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws", "msk.Configuration.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.mskConfigurationMod.Configuration = js.native
+    @JSImport("@pulumi/aws", "msk.Configuration.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.mskConfigurationMod.Configuration = js.native
+    @JSImport("@pulumi/aws", "msk.Configuration.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ConfigurationState): typingsSlinky.pulumiAws.mskConfigurationMod.Configuration = js.native
+    @JSImport("@pulumi/aws", "msk.Configuration.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ConfigurationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.mskConfigurationMod.Configuration = js.native
     
     /**
       * Returns true if the given object is an instance of Configuration.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws", "msk.Configuration.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/msk/configuration.Configuration */ Boolean = js.native
   }
+  
+  @JSImport("@pulumi/aws", "msk.getCluster")
+  @js.native
+  def getCluster(args: GetClusterArgs): js.Promise[GetClusterResult] = js.native
+  @JSImport("@pulumi/aws", "msk.getCluster")
+  @js.native
+  def getCluster(args: GetClusterArgs, opts: InvokeOptions): js.Promise[GetClusterResult] = js.native
+  
+  @JSImport("@pulumi/aws", "msk.getConfiguration")
+  @js.native
+  def getConfiguration(args: GetConfigurationArgs): js.Promise[GetConfigurationResult] = js.native
+  @JSImport("@pulumi/aws", "msk.getConfiguration")
+  @js.native
+  def getConfiguration(args: GetConfigurationArgs, opts: InvokeOptions): js.Promise[GetConfigurationResult] = js.native
 }

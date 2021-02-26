@@ -2,15 +2,18 @@ package typingsSlinky.tensorflowTfjsBackendCpu
 
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelConfig
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelFunc
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/Relu6", JSImport.Namespace)
-@js.native
-object relu6Mod extends js.Object {
+object relu6Mod {
   
+  @JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/Relu6", "relu6")
+  @js.native
   val relu6: KernelFunc = js.native
   
+  @JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/Relu6", "relu6Config")
+  @js.native
   val relu6Config: KernelConfig = js.native
 }

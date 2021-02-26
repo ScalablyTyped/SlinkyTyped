@@ -10,9 +10,9 @@ Resolves ICSS imports
 | ------------------ | :-------------: |
 | Full name          | postcss-modules-resolve-imports |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 16 |
-| # downloads        | 2889077 |
+| # releases         | 0 |
+| # dependents       | 22 |
+| # downloads        | 3978939 |
 | # stars            | 0 |
 
 ## Links

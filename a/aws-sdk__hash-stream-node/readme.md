@@ -4,18 +4,21 @@
 Typings are for version 1.0.0-rc.7
 
 ## Library description:
-A utility for calculating the hash of Node.JS readable streams. This package is currently only compatible with file streams, as no other stream type can be replayed.
+[![NPM version](https://img.shields.io/npm/v/@aws-sdk/hash-stream-node/latest.svg)](https://www.npmjs.com/package/@aws-sdk/hash-stream-node) [![NPM downloads](https://img.shields.io/npm/dm/@aws-sdk/hash-stream-node.svg)](https://www.npmjs.com/package/@aws
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/hash-stream-node |
 | Keywords           | - |
-| # releases         | 12 |
-| # dependents       | 2 |
-| # downloads        | 4908 |
+| # releases         | 42 |
+| # dependents       | 1 |
+| # downloads        | 4614771 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/aws/aws-sdk-js-v3/tree/main/packages/hash-stream-node)
+- [Bugs](https://github.com/aws/aws-sdk-js-v3/issues)
+- [Repository](https://github.com/aws/aws-sdk-js-v3)
 - [Npm](https://www.npmjs.com/package/%40aws-sdk%2Fhash-stream-node)
     
 

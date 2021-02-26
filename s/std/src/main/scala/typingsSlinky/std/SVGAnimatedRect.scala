@@ -1,12 +1,13 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Used for attributes of basic SVGRect which can be animated. */
 @js.native
-trait SVGAnimatedRect extends js.Object {
+trait SVGAnimatedRect extends StObject {
   
   val animVal: DOMRectReadOnly = js.native
   
@@ -15,30 +16,18 @@ trait SVGAnimatedRect extends js.Object {
 object SVGAnimatedRect {
   
   @scala.inline
-  def apply(animVal: DOMRectReadOnly, baseVal: DOMRect): SVGAnimatedRect = {
+  def apply(animVal: DOMRectReadOnly, baseVal: DOMRect): org.scalajs.dom.raw.SVGAnimatedRect = {
     val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SVGAnimatedRect]
+    __obj.asInstanceOf[org.scalajs.dom.raw.SVGAnimatedRect]
   }
   
   @scala.inline
-  implicit class SVGAnimatedRectOps[Self <: org.scalajs.dom.raw.SVGAnimatedRect] (val x: Self) extends AnyVal {
+  implicit class SVGAnimatedRectMutableBuilder[Self <: org.scalajs.dom.raw.SVGAnimatedRect] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAnimVal(value: DOMRectReadOnly): Self = StObject.set(x, "animVal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setAnimVal(value: DOMRectReadOnly): Self = this.set("animVal", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBaseVal(value: DOMRect): Self = this.set("baseVal", value.asInstanceOf[js.Any])
+    def setBaseVal(value: DOMRect): Self = StObject.set(x, "baseVal", value.asInstanceOf[js.Any])
   }
 }

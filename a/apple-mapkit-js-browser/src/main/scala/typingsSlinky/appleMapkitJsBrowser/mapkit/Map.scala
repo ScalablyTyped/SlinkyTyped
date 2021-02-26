@@ -22,6 +22,7 @@ import typingsSlinky.appleMapkitJsBrowser.appleMapkitJsBrowserStrings.deselect
 import typingsSlinky.appleMapkitJsBrowser.appleMapkitJsBrowserStrings.dragging
 import typingsSlinky.appleMapkitJsBrowser.appleMapkitJsBrowserStrings.select
 import typingsSlinky.std.DOMPoint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * An embeddable interactive map that you add to a webpage.
   */
 @js.native
-trait Map extends js.Object {
+trait Map extends StObject {
   
   /**
     * Adds an annotation to the map.

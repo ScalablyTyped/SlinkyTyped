@@ -3,6 +3,7 @@ package typingsSlinky.activexMsxml2.MSXML2
 import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`0`
 import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`1`
 import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMsxml2.activexMsxml2Numbers.`1`
   - typingsSlinky.activexMsxml2.activexMsxml2Numbers.`2`
 */
-trait SXH_PROXY_SETTING extends js.Object
+trait SXH_PROXY_SETTING extends StObject
 object SXH_PROXY_SETTING {
   
   @scala.inline

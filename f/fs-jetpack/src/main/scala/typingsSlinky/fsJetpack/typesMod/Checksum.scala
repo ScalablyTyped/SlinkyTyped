@@ -1,5 +1,6 @@
 package typingsSlinky.fsJetpack.typesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fsJetpack.fsJetpackStrings.sha256
   - typingsSlinky.fsJetpack.fsJetpackStrings.sha512
 */
-trait Checksum extends js.Object
+trait Checksum extends StObject
 object Checksum {
   
   @scala.inline

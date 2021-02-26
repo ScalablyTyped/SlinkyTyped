@@ -1,35 +1,37 @@
 package typingsSlinky.materialSegmentedButton
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materialSegmentedButton.adapterMod.MDCSegmentedButtonAdapter
 import typingsSlinky.materialSegmentedButton.anon.PartialMDCSegmentedButton
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/segmented-button/segmented-button", JSImport.Namespace)
-@js.native
-object segmentedButtonMod extends js.Object {
+object segmentedButtonMod {
   
+  @JSImport("@material/segmented-button/segmented-button", "MDCSegmentedButton")
   @js.native
-  class MDCSegmentedButton ()
-    extends typingsSlinky.materialSegmentedButton.componentMod.MDCSegmentedButton
+  class MDCSegmentedButton protected ()
+    extends typingsSlinky.materialSegmentedButton.componentMod.MDCSegmentedButton {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(
+      root: Element,
+      foundation: typingsSlinky.materialSegmentedButton.foundationMod.MDCSegmentedButtonFoundation,
+      args: js.Any*
+    ) = this()
+  }
   /* static members */
-  @js.native
-  object MDCSegmentedButton extends js.Object {
+  object MDCSegmentedButton {
     
+    @JSImport("@material/segmented-button/segmented-button", "MDCSegmentedButton.attachTo")
+    @js.native
     def attachTo(root: Element): typingsSlinky.materialSegmentedButton.componentMod.MDCSegmentedButton = js.native
   }
   
+  @JSImport("@material/segmented-button/segmented-button", "MDCSegmentedButtonFoundation")
   @js.native
   class MDCSegmentedButtonFoundation ()
     extends typingsSlinky.materialSegmentedButton.foundationMod.MDCSegmentedButtonFoundation {
     def this(adapter: PartialMDCSegmentedButton) = this()
-  }
-  /* static members */
-  @js.native
-  object MDCSegmentedButtonFoundation extends js.Object {
-    
-    def defaultAdapter: MDCSegmentedButtonAdapter = js.native
   }
 }

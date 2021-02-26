@@ -4,18 +4,25 @@ import org.scalajs.dom.raw.SVGSVGElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.svg.svg.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignIcons.iconBaseMod.IconProps
+import typingsSlinky.antDesignIcons.componentsIconBaseMod.IconProps
 import typingsSlinky.antDesignIconsSvg.typesMod.IconDefinition
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IconBase {
   
-  @JSImport("@ant-design/icons/es/components/IconBase", JSImport.Default)
+  @scala.inline
+  def apply(icon: IconDefinition): Builder = {
+    val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IconProps]))
+  }
+  
+  @JSImport("@ant-design/icons/lib/components/IconBase", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,10 +49,4 @@ object IconBase {
   }
   
   def withProps(p: IconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(icon: IconDefinition): Builder = {
-    val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IconProps]))
-  }
 }

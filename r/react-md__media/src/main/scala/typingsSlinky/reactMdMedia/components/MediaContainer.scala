@@ -74,6 +74,7 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactMdMedia.mediaContainerMod.MediaContainerProps
 import typingsSlinky.reactMdMedia.mediaContainerMod.MediaContainerWithAspectRatioProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -84,7 +85,7 @@ object MediaContainer {
     
     @JSImport("@react-md/media", "MediaContainer")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -277,10 +278,10 @@ object MediaContainer {
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -625,16 +626,22 @@ object MediaContainer {
       def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: MediaContainerProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: MediaContainerPropsRefAttributes.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: MediaContainerProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object MediaContainerWithAspectRatioPropsRefAttributes {
     
+    @scala.inline
+    def apply(height: Double, width: Double): Builder = {
+      val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[MediaContainerWithAspectRatioProps with RefAttributes[HTMLDivElement]]))
+    }
+    
     @JSImport("@react-md/media", "MediaContainer")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -827,10 +834,10 @@ object MediaContainer {
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -1170,11 +1177,5 @@ object MediaContainer {
     }
     
     def withProps(p: MediaContainerWithAspectRatioProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(height: Double, width: Double): Builder = {
-      val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[MediaContainerWithAspectRatioProps with RefAttributes[HTMLDivElement]]))
-    }
   }
 }

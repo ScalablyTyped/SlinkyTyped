@@ -24,6 +24,7 @@ import typingsSlinky.recharts.rechartsStrings.normal
 import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,7 +33,7 @@ object Polygon {
   
   @JSImport("recharts", "Polygon")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -213,10 +214,10 @@ object Polygon {
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pointsVarargs(value: PolygonPoint*): this.type = set("points", js.Array(value :_*))
+    def points(value: js.Array[PolygonPoint]): this.type = set("points", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def points(value: js.Array[PolygonPoint]): this.type = set("points", value.asInstanceOf[js.Any])
+    def pointsVarargs(value: PolygonPoint*): this.type = set("points", js.Array(value :_*))
     
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
@@ -291,7 +292,7 @@ object Polygon {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PolygonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Polygon.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PolygonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

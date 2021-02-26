@@ -18,15 +18,29 @@ import typingsSlinky.rcTabs.tabNavListMod.TabNavListProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TabNavList {
   
+  @scala.inline
+  def apply(
+    activeKey: String,
+    id: String,
+    mobile: Boolean,
+    onTabClick: (Key, SyntheticKeyboardEvent[Element] | SyntheticMouseEvent[Element]) => Unit,
+    rtl: Boolean,
+    tabPosition: TabPosition
+  ): Builder = {
+    val __props = js.Dynamic.literal(activeKey = activeKey.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], mobile = mobile.asInstanceOf[js.Any], onTabClick = js.Any.fromFunction2(onTabClick), rtl = rtl.asInstanceOf[js.Any], tabPosition = tabPosition.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabNavListProps with RefAttributes[HTMLDivElement]]))
+  }
+  
   @JSImport("rc-tabs/es/TabNavList", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -46,19 +60,19 @@ object TabNavList {
     def editable(value: EditableConfig): this.type = set("editable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: TabBarExtraContent): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extra(value: TabBarExtraContent): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
     def locale(value: TabsLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def moreIconReactElement(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
+    def moreIcon(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def moreIcon(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
+    def moreIconReactElement(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def moreTransitionName(value: String): this.type = set("moreTransitionName", value.asInstanceOf[js.Any])
@@ -80,17 +94,4 @@ object TabNavList {
   }
   
   def withProps(p: TabNavListProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    activeKey: String,
-    id: String,
-    mobile: Boolean,
-    onTabClick: (Key, SyntheticKeyboardEvent[Element] | SyntheticMouseEvent[Element]) => Unit,
-    rtl: Boolean,
-    tabPosition: TabPosition
-  ): Builder = {
-    val __props = js.Dynamic.literal(activeKey = activeKey.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], mobile = mobile.asInstanceOf[js.Any], onTabClick = js.Any.fromFunction2(onTabClick), rtl = rtl.asInstanceOf[js.Any], tabPosition = tabPosition.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TabNavListProps with RefAttributes[HTMLDivElement]]))
-  }
 }

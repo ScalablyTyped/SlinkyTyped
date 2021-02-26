@@ -43,44 +43,45 @@ import typingsSlinky.typedoc.typedocStrings.theme
 import typingsSlinky.typedoc.typedocStrings.toc
 import typingsSlinky.typedoc.typedocStrings.tsconfig
 import typingsSlinky.typedoc.typedocStrings.version
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _KeyToDeclaration[K /* <: options | tsconfig | inputFiles | mode | includeDeclarations | entryPoint | exclude | externalPattern | excludeExternals | excludeNotExported | excludePrivate | excludeProtected | excludeNotDocumented | ignoreCompilerErrors | disableSources | includes | media | out | json | theme | name | includeVersion | excludeTags | readme | defaultCategory | categoryOrder | categorizeByGroup | gitRevision | gitRemote | gaID | gaSite | hideGenerator | toc | disableOutputCheck | help | version | plugin | logger | listInvalidSymbolLinks */] extends js.Object
+trait _KeyToDeclaration[K /* <: options | tsconfig | inputFiles | mode | includeDeclarations | entryPoint | exclude | externalPattern | excludeExternals | excludeNotExported | excludePrivate | excludeProtected | excludeNotDocumented | ignoreCompilerErrors | disableSources | includes | media | out | json | theme | name | includeVersion | excludeTags | readme | defaultCategory | categoryOrder | categorizeByGroup | gitRevision | gitRemote | gaID | gaSite | hideGenerator | toc | disableOutputCheck | help | version | plugin | logger | listInvalidSymbolLinks */] extends StObject
 object _KeyToDeclaration {
   
   @scala.inline
-  def StringDeclarationOption[K /* <: options | tsconfig | inputFiles | mode | includeDeclarations | entryPoint | exclude | externalPattern | excludeExternals | excludeNotExported | excludePrivate | excludeProtected | excludeNotDocumented | ignoreCompilerErrors | disableSources | includes | media | out | json | theme | name | includeVersion | excludeTags | readme | defaultCategory | categoryOrder | categorizeByGroup | gitRevision | gitRemote | gaID | gaSite | hideGenerator | toc | disableOutputCheck | help | version | plugin | logger | listInvalidSymbolLinks */](help: String, name: String): _KeyToDeclaration[K] = {
+  def ArrayDeclarationOption(help: String, name: String, `type`: Array): typingsSlinky.typedoc.optionsDeclarationMod.ArrayDeclarationOption = {
     val __obj = js.Dynamic.literal(help = help.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_KeyToDeclaration[K]]
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.ArrayDeclarationOption]
   }
   
   @scala.inline
-  def MixedDeclarationOption[K /* <: options | tsconfig | inputFiles | mode | includeDeclarations | entryPoint | exclude | externalPattern | excludeExternals | excludeNotExported | excludePrivate | excludeProtected | excludeNotDocumented | ignoreCompilerErrors | disableSources | includes | media | out | json | theme | name | includeVersion | excludeTags | readme | defaultCategory | categoryOrder | categorizeByGroup | gitRevision | gitRemote | gaID | gaSite | hideGenerator | toc | disableOutputCheck | help | version | plugin | logger | listInvalidSymbolLinks */](help: String, name: String, `type`: Mixed): _KeyToDeclaration[K] = {
+  def BooleanDeclarationOption(help: String, name: String, `type`: Boolean): typingsSlinky.typedoc.optionsDeclarationMod.BooleanDeclarationOption = {
     val __obj = js.Dynamic.literal(help = help.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_KeyToDeclaration[K]]
+    __obj.asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.BooleanDeclarationOption]
   }
   
   @scala.inline
-  def ArrayDeclarationOption[K /* <: options | tsconfig | inputFiles | mode | includeDeclarations | entryPoint | exclude | externalPattern | excludeExternals | excludeNotExported | excludePrivate | excludeProtected | excludeNotDocumented | ignoreCompilerErrors | disableSources | includes | media | out | json | theme | name | includeVersion | excludeTags | readme | defaultCategory | categoryOrder | categorizeByGroup | gitRevision | gitRemote | gaID | gaSite | hideGenerator | toc | disableOutputCheck | help | version | plugin | logger | listInvalidSymbolLinks */](help: String, name: String, `type`: Array): _KeyToDeclaration[K] = {
+  def MixedDeclarationOption(help: String, name: String, `type`: Mixed): typingsSlinky.typedoc.optionsDeclarationMod.MixedDeclarationOption = {
     val __obj = js.Dynamic.literal(help = help.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_KeyToDeclaration[K]]
+    __obj.asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.MixedDeclarationOption]
   }
   
   @scala.inline
-  def BooleanDeclarationOption[K /* <: options | tsconfig | inputFiles | mode | includeDeclarations | entryPoint | exclude | externalPattern | excludeExternals | excludeNotExported | excludePrivate | excludeProtected | excludeNotDocumented | ignoreCompilerErrors | disableSources | includes | media | out | json | theme | name | includeVersion | excludeTags | readme | defaultCategory | categoryOrder | categorizeByGroup | gitRevision | gitRemote | gaID | gaSite | hideGenerator | toc | disableOutputCheck | help | version | plugin | logger | listInvalidSymbolLinks */](help: String, name: String, `type`: Boolean): _KeyToDeclaration[K] = {
+  def NumberDeclarationOption(help: String, name: String, `type`: Number): typingsSlinky.typedoc.optionsDeclarationMod.NumberDeclarationOption = {
     val __obj = js.Dynamic.literal(help = help.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_KeyToDeclaration[K]]
+    __obj.asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.NumberDeclarationOption]
   }
   
   @scala.inline
-  def NumberDeclarationOption[K /* <: options | tsconfig | inputFiles | mode | includeDeclarations | entryPoint | exclude | externalPattern | excludeExternals | excludeNotExported | excludePrivate | excludeProtected | excludeNotDocumented | ignoreCompilerErrors | disableSources | includes | media | out | json | theme | name | includeVersion | excludeTags | readme | defaultCategory | categoryOrder | categorizeByGroup | gitRevision | gitRemote | gaID | gaSite | hideGenerator | toc | disableOutputCheck | help | version | plugin | logger | listInvalidSymbolLinks */](help: String, name: String, `type`: Number): _KeyToDeclaration[K] = {
+  def StringDeclarationOption(help: String, name: String): typingsSlinky.typedoc.optionsDeclarationMod.StringDeclarationOption = {
     val __obj = js.Dynamic.literal(help = help.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_KeyToDeclaration[K]]
+    __obj.asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.StringDeclarationOption]
   }
 }

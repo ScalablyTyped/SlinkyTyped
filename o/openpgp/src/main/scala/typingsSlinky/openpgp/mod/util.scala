@@ -1,13 +1,16 @@
 package typingsSlinky.openpgp.mod
 
 import typingsSlinky.openpgp.anon.Comment
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("openpgp", "util")
-@js.native
-object util extends js.Object {
+object util {
+  
+  @JSImport("openpgp", "util")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Convert an array of 8-bit integer to a Base-64 encoded string
@@ -15,9 +18,11 @@ object util extends js.Object {
     * @param url If true, output is URL-safe
     * @returns Base-64 encoded string
     */
-  @JSName("Uint8Array_to_b64")
+  @JSImport("openpgp", "util.Uint8Array_to_b64")
+  @js.native
   def Uint8ArrayToB64(bytes: js.typedarray.Uint8Array): String = js.native
-  @JSName("Uint8Array_to_b64")
+  @JSImport("openpgp", "util.Uint8Array_to_b64")
+  @js.native
   def Uint8ArrayToB64(bytes: js.typedarray.Uint8Array, url: Boolean): String = js.native
   
   /**
@@ -25,7 +30,8 @@ object util extends js.Object {
     * @param bytes Array of 8-bit integers to convert
     * @returns Hexadecimal representation of the array
     */
-  @JSName("Uint8Array_to_hex")
+  @JSImport("openpgp", "util.Uint8Array_to_hex")
+  @js.native
   def Uint8ArrayToHex(bytes: js.typedarray.Uint8Array): String = js.native
   
   /**
@@ -36,7 +42,8 @@ object util extends js.Object {
     * @param bin An array of 8-bit integers to convert
     * @returns MPI-formatted Uint8Array
     */
-  @JSName("Uint8Array_to_MPI")
+  @JSImport("openpgp", "util.Uint8Array_to_MPI")
+  @js.native
   def Uint8ArrayToMPI(bin: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
   
   /**
@@ -44,7 +51,8 @@ object util extends js.Object {
     * @param bytes An array of 8-bit integers to convert
     * @returns String representation of the array
     */
-  @JSName("Uint8Array_to_str")
+  @JSImport("openpgp", "util.Uint8Array_to_str")
+  @js.native
   def Uint8ArrayToStr(bytes: js.typedarray.Uint8Array): String = js.native
   
   /**
@@ -53,12 +61,15 @@ object util extends js.Object {
     * @param base64 Base-64 encoded string to convert
     * @returns An array of 8-bit integers
     */
-  @JSName("b64_to_Uint8Array")
+  @JSImport("openpgp", "util.b64_to_Uint8Array")
+  @js.native
   def b64ToUint8Array(base64: String): js.typedarray.Uint8Array = js.native
   
   /**
     * Normalize line endings to \r\n
     */
+  @JSImport("openpgp", "util.canonicalizeEOL")
+  @js.native
   def canonicalizeEOL(): Unit = js.native
   
   /**
@@ -67,28 +78,41 @@ object util extends js.Object {
     * @param Array of Uint8Arrays/Strings/Streams to concatenate
     * @returns Concatenated array
     */
-  var concat: js.Any = js.native
+  @JSImport("openpgp", "util.concat")
+  @js.native
+  def concat: js.Any = js.native
   
   /**
     * Concat Uint8Arrays
     * @param Array of Uint8Arrays to concatenate
     * @returns Concatenated array
     */
-  var concatUint8Array: js.Any = js.native
+  @JSImport("openpgp", "util.concatUint8Array")
+  @js.native
+  def concatUint8Array: js.Any = js.native
+  @scala.inline
+  def concatUint8Array_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("concatUint8Array")(x.asInstanceOf[js.Any])
   
-  @JSName("decode_utf8")
-  def decodeUtf8(utf8: ReadableStream[String]): String | ReadableStream[String] = js.native
+  @scala.inline
+  def concat_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("concat")(x.asInstanceOf[js.Any])
+  
   /**
     * Convert a Uint8Array of utf8 bytes to a native javascript string
     * @param utf8 A valid squence of utf8 bytes
     * @returns A native javascript string
     */
-  @JSName("decode_utf8")
+  @JSImport("openpgp", "util.decode_utf8")
+  @js.native
   def decodeUtf8(utf8: js.typedarray.Uint8Array): String | ReadableStream[String] = js.native
+  @JSImport("openpgp", "util.decode_utf8")
+  @js.native
+  def decodeUtf8(utf8: ReadableStream[String]): String | ReadableStream[String] = js.native
   
   /**
     * Detect Node.js runtime.
     */
+  @JSImport("openpgp", "util.detectNode")
+  @js.native
   def detectNode(): Unit = js.native
   
   /**
@@ -96,9 +120,11 @@ object util extends js.Object {
     * @param str The string to convert
     * @returns A valid squence of utf8 bytes
     */
-  @JSName("encode_utf8")
+  @JSImport("openpgp", "util.encode_utf8")
+  @js.native
   def encodeUtf8(str: String): js.typedarray.Uint8Array | ReadableStream[String] = js.native
-  @JSName("encode_utf8")
+  @JSImport("openpgp", "util.encode_utf8")
+  @js.native
   def encodeUtf8(str: ReadableStream[String]): js.typedarray.Uint8Array | ReadableStream[String] = js.native
   
   /**
@@ -107,6 +133,8 @@ object util extends js.Object {
     * @param data The binary data to encode
     * @returns Binary data encoded using Z-Base32
     */
+  @JSImport("openpgp", "util.encodeZBase32")
+  @js.native
   def encodeZBase32(data: js.typedarray.Uint8Array): String = js.native
   
   /**
@@ -115,11 +143,15 @@ object util extends js.Object {
     * @param second array
     * @returns equality
     */
+  @JSImport("openpgp", "util.equalsUint8Array")
+  @js.native
   def equalsUint8Array(first: js.typedarray.Uint8Array, second: js.typedarray.Uint8Array): Boolean = js.native
   
   /**
     * Format user id for internal use.
     */
+  @JSImport("openpgp", "util.formatUserId")
+  @js.native
   def formatUserId(id: Comment): String = js.native
   
   /**
@@ -127,6 +159,8 @@ object util extends js.Object {
     * Buffer is not available under browserify.
     * @returns The Buffer constructor or 'undefined'
     */
+  @JSImport("openpgp", "util.getNodeBuffer")
+  @js.native
   def getNodeBuffer(): js.Function = js.native
   
   /**
@@ -134,6 +168,8 @@ object util extends js.Object {
     * the api when available. But it can also be deactivated with config.use_native
     * @returns The crypto module or 'undefined'
     */
+  @JSImport("openpgp", "util.getNodeCrypto")
+  @js.native
   def getNodeCrypto(): js.Object = js.native
   
   /**
@@ -143,6 +179,8 @@ object util extends js.Object {
     * @param obj the options object to be passed to the web worker
     * @returns an array of binary data to be passed
     */
+  @JSImport("openpgp", "util.getTransferables")
+  @js.native
   def getTransferables(obj: js.Object): js.Array[_] = js.native
   
   /**
@@ -151,6 +189,8 @@ object util extends js.Object {
     * be deactivated with config.use_native
     * @returns The SubtleCrypto api or 'undefined'
     */
+  @JSImport("openpgp", "util.getWebCrypto")
+  @js.native
   def getWebCrypto(): js.Object = js.native
   
   /**
@@ -160,6 +200,8 @@ object util extends js.Object {
     * with config.use_native
     * @returns The SubtleCrypto api or 'undefined'
     */
+  @JSImport("openpgp", "util.getWebCryptoAll")
+  @js.native
   def getWebCryptoAll(): js.Object = js.native
   
   /**
@@ -167,7 +209,8 @@ object util extends js.Object {
     * @param str Hex string to convert
     * @returns
     */
-  @JSName("hex_to_str")
+  @JSImport("openpgp", "util.hex_to_str")
+  @js.native
   def hexToStr(str: String): String = js.native
   
   /**
@@ -175,12 +218,15 @@ object util extends js.Object {
     * @param hex A hex string to convert
     * @returns An array of 8-bit integers
     */
-  @JSName("hex_to_Uint8Array")
+  @JSImport("openpgp", "util.hex_to_Uint8Array")
+  @js.native
   def hexToUint8Array(hex: String): js.typedarray.Uint8Array = js.native
   
   /**
     * Convert line endings from canonicalized \r\n to native \n
     */
+  @JSImport("openpgp", "util.nativeEOL")
+  @js.native
   def nativeEOL(): Unit = js.native
   
   /**
@@ -188,11 +234,15 @@ object util extends js.Object {
     * @param The module to require
     * @returns The required module or 'undefined'
     */
+  @JSImport("openpgp", "util.nodeRequire")
+  @js.native
   def nodeRequire(The: String): js.Object = js.native
   
   /**
     * Parse user id.
     */
+  @JSImport("openpgp", "util.parseUserId")
+  @js.native
   def parseUserId(userId: String): Comment = js.native
   
   /**
@@ -200,7 +250,8 @@ object util extends js.Object {
     * messages are only printed if
     * @param str String of the debug message
     */
-  @JSName("print_debug")
+  @JSImport("openpgp", "util.print_debug")
+  @js.native
   def printDebug(str: String): Unit = js.native
   
   /**
@@ -208,7 +259,8 @@ object util extends js.Object {
     * messages are only printed if
     * @param str String of the debug message
     */
-  @JSName("print_debug_error")
+  @JSImport("openpgp", "util.print_debug_error")
+  @js.native
   def printDebugError(str: String): Unit = js.native
   
   /**
@@ -216,7 +268,8 @@ object util extends js.Object {
     * messages are only printed if
     * @param str String of the debug message
     */
-  @JSName("print_debug_hexarray_dump")
+  @JSImport("openpgp", "util.print_debug_hexarray_dump")
+  @js.native
   def printDebugHexarrayDump(str: String): Unit = js.native
   
   /**
@@ -224,25 +277,31 @@ object util extends js.Object {
     * messages are only printed if
     * @param str String of the debug message
     */
-  @JSName("print_debug_hexstr_dump")
+  @JSImport("openpgp", "util.print_debug_hexstr_dump")
+  @js.native
   def printDebugHexstrDump(str: String): Unit = js.native
   
-  @JSName("print_entire_stream")
+  @JSImport("openpgp", "util.print_entire_stream")
+  @js.native
   def printEntireStream(str: String, input: String, concat: js.Function): Unit = js.native
+  @JSImport("openpgp", "util.print_entire_stream")
+  @js.native
+  def printEntireStream(str: String, input: js.typedarray.Uint8Array, concat: js.Function): Unit = js.native
   /**
     * Read a stream to the end and print it to the console when it's closed.
     * @param str String of the debug message
     * @param input Stream to print
     * @param concat Function to concatenate chunks of the stream (defaults to util.concat).
     */
-  @JSName("print_entire_stream")
+  @JSImport("openpgp", "util.print_entire_stream")
+  @js.native
   def printEntireStream(str: String, input: ReadableStream[String], concat: js.Function): Unit = js.native
-  @JSName("print_entire_stream")
-  def printEntireStream(str: String, input: js.typedarray.Uint8Array, concat: js.Function): Unit = js.native
   
   /**
     * Remove trailing spaces and tabs from each line
     */
+  @JSImport("openpgp", "util.removeTrailingSpaces")
+  @js.native
   def removeTrailingSpaces(): Unit = js.native
   
   /**
@@ -250,6 +309,8 @@ object util extends js.Object {
     * @param obj
     * @returns
     */
+  @JSImport("openpgp", "util.restoreStreams")
+  @js.native
   def restoreStreams(obj: js.Object): js.Object = js.native
   
   /**
@@ -269,6 +330,8 @@ object util extends js.Object {
     *        than 8)
     * @returns Resulting array.
     */
+  @JSImport("openpgp", "util.shiftRight")
+  @js.native
   def shiftRight(array: js.typedarray.Uint8Array, bits: Integer): String = js.native
   
   /**
@@ -276,7 +339,8 @@ object util extends js.Object {
     * @param str String to convert
     * @returns String containing the hexadecimal values
     */
-  @JSName("str_to_hex")
+  @JSImport("openpgp", "util.str_to_hex")
+  @js.native
   def strToHex(str: String): String = js.native
   
   /**
@@ -284,7 +348,8 @@ object util extends js.Object {
     * @param str String to convert
     * @returns An array of 8-bit integers
     */
-  @JSName("str_to_Uint8Array")
+  @JSImport("openpgp", "util.str_to_Uint8Array")
+  @js.native
   def strToUint8Array(str: String): js.typedarray.Uint8Array = js.native
   
   /**
@@ -293,6 +358,7 @@ object util extends js.Object {
     * @param Uint8Array to create a sum of
     * @returns 2 bytes containing the sum of all charcodes % 65535
     */
-  @JSName("write_checksum")
+  @JSImport("openpgp", "util.write_checksum")
+  @js.native
   def writeChecksum(Uint8Array: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
 }

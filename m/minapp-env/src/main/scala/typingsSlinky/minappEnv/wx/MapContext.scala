@@ -1,11 +1,12 @@
 package typingsSlinky.minappEnv.wx
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MapContext extends js.Object {
+trait MapContext extends StObject {
   
   /** [MapContext.getCenterLocation(Object object)](MapContext.getCenterLocation.md)
     *

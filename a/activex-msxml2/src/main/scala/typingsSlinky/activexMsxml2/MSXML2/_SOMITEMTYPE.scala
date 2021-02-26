@@ -73,6 +73,7 @@ import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`8493`
 import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`8703`
 import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`8704`
 import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`9216`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -153,7 +154,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMsxml2.activexMsxml2Numbers.`8704`
   - typingsSlinky.activexMsxml2.activexMsxml2Numbers.`4355`
 */
-trait _SOMITEMTYPE extends js.Object
+trait _SOMITEMTYPE extends StObject
 object _SOMITEMTYPE {
   
   @scala.inline

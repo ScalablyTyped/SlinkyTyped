@@ -10,9 +10,9 @@ Hardware-accelerated JavaScript library for machine intelligence
 | ------------------ | :-------------: |
 | Full name          | @tensorflow/tfjs-core |
 | Keywords           | - |
-| # releases         | 102 |
-| # dependents       | 23 |
-| # downloads        | 939162 |
+| # releases         | 59 |
+| # dependents       | 52 |
+| # downloads        | 1740037 |
 | # stars            | 0 |
 
 ## Links

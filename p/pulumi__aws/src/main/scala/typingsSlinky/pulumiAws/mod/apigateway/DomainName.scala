@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.apigatewayDomainNameMod.DomainNameState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,9 +25,7 @@ class DomainName protected ()
   def this(name: String, args: DomainNameArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/aws", "apigateway.DomainName")
-@js.native
-object DomainName extends js.Object {
+object DomainName {
   
   /**
     * Get an existing DomainName resource's state with the given name, ID, and optional extra
@@ -37,14 +36,24 @@ object DomainName extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/aws", "apigateway.DomainName.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.apigatewayDomainNameMod.DomainName = js.native
+  @JSImport("@pulumi/aws", "apigateway.DomainName.get")
+  @js.native
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayDomainNameMod.DomainName = js.native
+  @JSImport("@pulumi/aws", "apigateway.DomainName.get")
+  @js.native
   def get(name: String, id: Input[ID], state: DomainNameState): typingsSlinky.pulumiAws.apigatewayDomainNameMod.DomainName = js.native
+  @JSImport("@pulumi/aws", "apigateway.DomainName.get")
+  @js.native
   def get(name: String, id: Input[ID], state: DomainNameState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayDomainNameMod.DomainName = js.native
   
   /**
     * Returns true if the given object is an instance of DomainName.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/aws", "apigateway.DomainName.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/apigateway/domainName.DomainName */ Boolean = js.native
 }

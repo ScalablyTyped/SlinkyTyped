@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientTranslate.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientTranslate.anon.Alt
 import typingsSlinky.maximMazurokGapiClientTranslate.anon.Callback
 import typingsSlinky.maximMazurokGapiClientTranslate.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GlossariesResource extends js.Object {
+trait GlossariesResource extends StObject {
   
   /** Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn't exist. */
   def create(request: Accesstoken): Request[Operation] = js.native

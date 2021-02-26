@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcTrigger.propsTypeMod.ITriggerProps
 import typingsSlinky.rmcTrigger.triggerMod.IProptypes
 import typingsSlinky.rmcTrigger.triggerMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Trigger {
   
+  @scala.inline
+  def apply(onClose: () => Unit, onTargetClick: () => Unit, visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(onClose = js.Any.fromFunction0(onClose), onTargetClick = js.Any.fromFunction0(onTargetClick), visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITriggerProps with IProptypes]))
+  }
+  
   @JSImport("rmc-trigger/lib/Trigger", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,9 +68,6 @@ object Trigger {
     def onPopupVisibleChange(value: js.Function): this.type = set("onPopupVisibleChange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def popupReactElement(value: ReactElement): this.type = set("popup", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def popup(value: ReactElement | js.Function): this.type = set("popup", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -77,6 +81,9 @@ object Trigger {
     
     @scala.inline
     def popupPlacement(value: String): this.type = set("popupPlacement", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def popupReactElement(value: ReactElement): this.type = set("popup", value.asInstanceOf[js.Any])
     
     @scala.inline
     def popupStyle(value: js.Any): this.type = set("popupStyle", value.asInstanceOf[js.Any])
@@ -95,10 +102,4 @@ object Trigger {
   }
   
   def withProps(p: ITriggerProps with IProptypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onClose: () => Unit, onTargetClick: () => Unit, visible: Boolean): Builder = {
-    val __props = js.Dynamic.literal(onClose = js.Any.fromFunction0(onClose), onTargetClick = js.Any.fromFunction0(onTargetClick), visible = visible.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ITriggerProps with IProptypes]))
-  }
 }

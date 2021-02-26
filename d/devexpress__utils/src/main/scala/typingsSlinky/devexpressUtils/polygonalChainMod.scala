@@ -6,16 +6,16 @@ import typingsSlinky.devexpressUtils.pointMod.Point
 import typingsSlinky.devexpressUtils.rectangleMod.Rectangle
 import typingsSlinky.devexpressUtils.segmentMod.Segment
 import typingsSlinky.devexpressUtils.vectorMod.Vector
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@devexpress/utils/lib/geometry/polygonal-chain", JSImport.Namespace)
-@js.native
-object polygonalChainMod extends js.Object {
+object polygonalChainMod {
   
+  @JSImport("@devexpress/utils/lib/geometry/polygonal-chain", "PolygonalChain")
   @js.native
-  class PolygonalChain[T /* <: Point */] protected () extends js.Object {
+  class PolygonalChain[T /* <: Point */] protected () extends StObject {
     def this(points: js.Array[T]) = this()
     
     val bounds: Rectangle = js.native

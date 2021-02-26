@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationVerticalProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PopoverAnimationVertical {
   
+  @scala.inline
+  def apply(open: Boolean): Builder = {
+    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PopoverAnimationVerticalProps]))
+  }
+  
   @JSImport("material-ui/Popover", "PopoverAnimationVertical")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,10 +41,4 @@ object PopoverAnimationVertical {
   }
   
   def withProps(p: PopoverAnimationVerticalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(open: Boolean): Builder = {
-    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PopoverAnimationVerticalProps]))
-  }
 }

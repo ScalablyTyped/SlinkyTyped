@@ -11,15 +11,22 @@ import typingsSlinky.baseui.tabsMod.State
 import typingsSlinky.baseui.tabsMod.StatefulTabsProps
 import typingsSlinky.baseui.tabsMod.TabsOverrides
 import typingsSlinky.react.mod.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StatefulTabs {
   
+  @scala.inline
+  def apply(activeKey: js.UndefOr[Key] with js.UndefOr[scala.Nothing]): Builder = {
+    val __props = js.Dynamic.literal(activeKey = activeKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StatefulTabsProps]))
+  }
+  
   @JSImport("baseui/tabs", "StatefulTabs")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,10 +56,4 @@ object StatefulTabs {
   }
   
   def withProps(p: StatefulTabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(activeKey: js.UndefOr[Key] with js.UndefOr[scala.Nothing]): Builder = {
-    val __props = js.Dynamic.literal(activeKey = activeKey.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StatefulTabsProps]))
-  }
 }

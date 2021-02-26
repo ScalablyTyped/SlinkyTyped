@@ -1,17 +1,17 @@
 package typingsSlinky.phaser.global.Phaser
 
 import typingsSlinky.phaser.Phaser.Types.Time.TimerEventConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Phaser.Time")
-@js.native
-object Time extends js.Object {
+object Time {
   
   /**
     * The Clock is a Scene plugin which creates and updates Timer Events for its Scene.
     */
+  @JSGlobal("Phaser.Time.Clock")
   @js.native
   class Clock protected ()
     extends typingsSlinky.phaser.Phaser.Time.Clock {
@@ -27,6 +27,7 @@ object Time extends js.Object {
     * 
     * Because it's managed by a Clock, a Timer Event is based on game time, will be affected by its Clock's time scale, and will pause if its Clock pauses.
     */
+  @JSGlobal("Phaser.Time.TimerEvent")
   @js.native
   class TimerEvent protected ()
     extends typingsSlinky.phaser.Phaser.Time.TimerEvent {

@@ -6,6 +6,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XControlModel
 import typingsSlinky.activexLibreoffice.com_.sun.star.table.CellRangeAddress
 import typingsSlinky.activexLibreoffice.com_.sun.star.table.XCellRange
 import typingsSlinky.activexLibreoffice.com_.sun.star.view.XControlAccess
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -107,15 +107,16 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.std.Omit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object WorldMap {
   
-  @JSImport("grommet/es6", "WorldMap")
+  @JSImport("grommet", "WorldMap")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -379,10 +380,10 @@ object WorldMap {
     def contentStyleType(value: Double | String): this.type = set("contentStyleType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def continentsVarargs(value: Name*): this.type = set("continents", js.Array(value :_*))
+    def continents(value: js.Array[Name]): this.type = set("continents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def continents(value: js.Array[Name]): this.type = set("continents", value.asInstanceOf[js.Any])
+    def continentsVarargs(value: Name*): this.type = set("continents", js.Array(value :_*))
     
     @scala.inline
     def crossOrigin(value: anonymous | `use-credentials` | _empty): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
@@ -970,10 +971,10 @@ object WorldMap {
     def patternUnits(value: String): this.type = set("patternUnits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placesVarargs(value: Location*): this.type = set("places", js.Array(value :_*))
+    def places(value: js.Array[Location]): this.type = set("places", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def places(value: js.Array[Location]): this.type = set("places", value.asInstanceOf[js.Any])
+    def placesVarargs(value: Location*): this.type = set("places", js.Array(value :_*))
     
     @scala.inline
     def pointerEvents(value: Double | String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
@@ -1315,7 +1316,7 @@ object WorldMap {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: WorldMapProps with (Omit[SVGProps[SVGSVGElement], color])): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: WorldMap.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: WorldMapProps with (Omit[SVGProps[SVGSVGElement], color])): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

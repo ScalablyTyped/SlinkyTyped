@@ -3,12 +3,13 @@ package typingsSlinky.chromeApps.anon
 import typingsSlinky.chromeApps.chrome.clipboard.AdditionalItems
 import typingsSlinky.chromeApps.chrome.clipboard.ImageType
 import typingsSlinky.chromeApps.chrome.events.Event
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofclipboard extends js.Object {
+trait Typeofclipboard extends StObject {
   
   /** @enum */
   val DataItemType: TEXTHTML = js.native

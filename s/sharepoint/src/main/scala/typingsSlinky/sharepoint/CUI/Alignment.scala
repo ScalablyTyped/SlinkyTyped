@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.CUI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.sharepoint.sharepointNumbers.`0`
   - typingsSlinky.sharepoint.sharepointNumbers.`2`
 */
-trait Alignment extends js.Object
+trait Alignment extends StObject
 object Alignment {
   
   @scala.inline

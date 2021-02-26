@@ -1,14 +1,17 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.ionic.commandMod.Command
+import typingsSlinky.ionic.definitionsMod.INamespace
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ionic/commands/signup", JSImport.Namespace)
-@js.native
-object signupMod extends js.Object {
+object signupMod {
   
+  @JSImport("ionic/commands/signup", "SignupCommand")
   @js.native
-  class SignupCommand () extends Command
+  class SignupCommand protected () extends Command {
+    def this(namespace: INamespace) = this()
+  }
 }

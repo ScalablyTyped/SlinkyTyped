@@ -3,12 +3,13 @@ package typingsSlinky.sugar
 import typingsSlinky.sugar.sugarjs.Array.mapFn
 import typingsSlinky.sugar.sugarjs.Array.searchFn
 import typingsSlinky.sugar.sugarjs.Array.sortMapFn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Array[T] extends js.Object {
+trait Array[T] extends StObject {
   
   def add(item: T): Array[T] = js.native
   def add(item: T, index: Double): Array[T] = js.native

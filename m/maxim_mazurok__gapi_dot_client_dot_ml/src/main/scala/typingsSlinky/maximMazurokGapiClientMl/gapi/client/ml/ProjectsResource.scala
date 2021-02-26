@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientMl.anon.Alt
 import typingsSlinky.maximMazurokGapiClientMl.anon.NameOauthtoken
 import typingsSlinky.maximMazurokGapiClientMl.anon.OauthtokenPrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProjectsResource extends js.Object {
+trait ProjectsResource extends StObject {
   
   def explain(request: Alt, body: GoogleCloudMlV1ExplainRequest): Request[GoogleApiHttpBody] = js.native
   /** Performs explanation on the data in the request. {% dynamic include "/ai-platform/includes/___explain-request" %} */

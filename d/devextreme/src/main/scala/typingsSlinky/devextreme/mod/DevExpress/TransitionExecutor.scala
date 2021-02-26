@@ -3,12 +3,13 @@ package typingsSlinky.devextreme.mod.DevExpress
 import typingsSlinky.devextreme.mod.global.JQuery
 import typingsSlinky.devextreme.mod.global.JQueryPromise
 import typingsSlinky.devextreme.mod.global.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TransitionExecutor extends js.Object {
+trait TransitionExecutor extends StObject {
   
   def enter(elements: JQuery, animation: String): Unit = js.native
   /**

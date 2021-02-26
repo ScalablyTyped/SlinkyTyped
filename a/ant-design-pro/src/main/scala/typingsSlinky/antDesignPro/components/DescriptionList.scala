@@ -10,6 +10,7 @@ import typingsSlinky.antDesignPro.antDesignProStrings.vertical
 import typingsSlinky.antDesignPro.descriptionListMod.DescriptionListProps
 import typingsSlinky.antDesignPro.descriptionMod.DescriptionProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object DescriptionList {
   
   @JSImport("ant-design-pro", "DescriptionList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +33,10 @@ object DescriptionList {
     def col(value: Double): this.type = set("col", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def descriptionVarargs(value: DescriptionProps*): this.type = set("description", js.Array(value :_*))
+    def description(value: js.Array[DescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def description(value: js.Array[DescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
+    def descriptionVarargs(value: DescriptionProps*): this.type = set("description", js.Array(value :_*))
     
     @scala.inline
     def gutter(value: Double): this.type = set("gutter", value.asInstanceOf[js.Any])
@@ -50,13 +51,13 @@ object DescriptionList {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DescriptionListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DescriptionList.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DescriptionListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

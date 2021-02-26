@@ -1,5 +1,6 @@
 package typingsSlinky.node.childProcessMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.node.nodeStrings.json
   - typingsSlinky.node.nodeStrings.advanced
 */
-trait SerializationType extends js.Object
+trait SerializationType extends StObject
 object SerializationType {
   
   @scala.inline

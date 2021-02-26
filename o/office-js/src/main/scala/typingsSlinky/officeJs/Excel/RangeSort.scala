@@ -6,6 +6,7 @@ import typingsSlinky.officeJs.officeJsStrings.Columns
 import typingsSlinky.officeJs.officeJsStrings.PinYin
 import typingsSlinky.officeJs.officeJsStrings.Rows
 import typingsSlinky.officeJs.officeJsStrings.StrokeCount
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

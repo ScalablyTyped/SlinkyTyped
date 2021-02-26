@@ -27,6 +27,7 @@ import typingsSlinky.ink.inkStrings.single
 import typingsSlinky.ink.inkStrings.singleDouble
 import typingsSlinky.ink.inkStrings.stretch
 import typingsSlinky.typeFest.literalUnionMod.LiteralUnion
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,7 @@ object Box {
   
   @JSImport("ink", "Box")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -135,7 +136,7 @@ object Box {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: readonlymarginnumberundef): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Box.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: readonlymarginnumberundef): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -3,12 +3,13 @@ package typingsSlinky.reactElemental.mod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactElemental.anon.Primary
 import typingsSlinky.reactElemental.anon.PrimaryDark
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ElementalProps extends js.Object {
+trait ElementalProps extends StObject {
   
   val children: ReactElement = js.native
   
@@ -25,36 +26,24 @@ object ElementalProps {
   }
   
   @scala.inline
-  implicit class ElementalPropsOps[Self <: ElementalProps] (val x: Self) extends AnyVal {
+  implicit class ElementalPropsMutableBuilder[Self <: ElementalProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChildren(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setColorOpts(value: PrimaryDark): Self = StObject.set(x, "colorOpts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setColorOptsUndefined: Self = StObject.set(x, "colorOpts", js.undefined)
     
     @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
+    def setFontOpts(value: Primary): Self = StObject.set(x, "fontOpts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColorOpts(value: PrimaryDark): Self = this.set("colorOpts", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteColorOpts: Self = this.set("colorOpts", js.undefined)
-    
-    @scala.inline
-    def setFontOpts(value: Primary): Self = this.set("fontOpts", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteFontOpts: Self = this.set("fontOpts", js.undefined)
+    def setFontOptsUndefined: Self = StObject.set(x, "fontOpts", js.undefined)
   }
 }

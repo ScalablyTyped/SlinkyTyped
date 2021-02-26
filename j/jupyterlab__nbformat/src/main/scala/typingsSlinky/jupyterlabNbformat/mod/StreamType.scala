@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabNbformat.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jupyterlabNbformat.jupyterlabNbformatStrings.stdout
   - typingsSlinky.jupyterlabNbformat.jupyterlabNbformatStrings.stderr
 */
-trait StreamType extends js.Object
+trait StreamType extends StObject
 object StreamType {
   
   @scala.inline

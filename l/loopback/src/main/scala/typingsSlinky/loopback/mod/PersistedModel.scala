@@ -9,6 +9,7 @@ import typingsSlinky.loopback.anon.Order
 import typingsSlinky.loopback.anon.Throws
 import typingsSlinky.loopback.anon.Validate
 import typingsSlinky.loopback.anon.Where
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("loopback", "PersistedModel")
 @js.native
-class PersistedModel () extends Model {
+class PersistedModel protected () extends Model {
+  def this(data: js.Any) = this()
   
   /**
     * Deletes the model from persistence.
@@ -173,10 +175,7 @@ class PersistedModel () extends Model {
     */
   def updateAttributes[T](data: js.Any, callback: CallbackWithResult[T]): Unit = js.native
 }
-/* static members */
-@JSImport("loopback", "PersistedModel")
-@js.native
-object PersistedModel extends js.Object {
+object PersistedModel {
   
   /**
     * Apply an update list
@@ -185,6 +184,9 @@ object PersistedModel extends js.Object {
     * @param {any} options An optional options object to pass to underlying data-access calls.
     * @param  {() => void} callback Callback function
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.bulkUpdate")
+  @js.native
   def bulkUpdate(updates: js.Array[_], options: js.Any): js.Promise[Unit] = js.native
   /**
     * Apply an update list
@@ -193,6 +195,9 @@ object PersistedModel extends js.Object {
     * @param {any} options An optional options object to pass to underlying data-access calls.
     * @param  {() => void} callback Callback function
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.bulkUpdate")
+  @js.native
   def bulkUpdate(updates: js.Array[_], options: js.Any, callback: CallbackWithoutResult): Unit = js.native
   
   /**
@@ -204,6 +209,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {Array} changes An Array of [Change](#change) objects
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.changes")
+  @js.native
   def changes(since: Double, filter: js.Any): js.Promise[js.Array[_]] = js.native
   /**
     * Get the changes to a model since the specified checkpoint. Provide a filter object
@@ -214,18 +222,28 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {Array} changes An Array of [Change](#change) objects
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.changes")
+  @js.native
   def changes(since: Double, filter: js.Any, callback: CallbackWithResult[_]): Unit = js.native
   
   /**
     * Create a checkpoint
     * @param  {() => void} callback
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.checkpoint")
+  @js.native
   def checkpoint(): Unit = js.native
+  @JSImport("loopback", "PersistedModel.checkpoint")
+  @js.native
   def checkpoint(callback: js.Function0[Unit]): Unit = js.native
   /**
     * Create a checkpoint
     */
-  @JSName("checkpoint")
+  /* static member */
+  @JSImport("loopback", "PersistedModel.checkpoint")
+  @js.native
   def checkpoint_Promise(): js.Promise[Unit] = js.native
   
   /**
@@ -240,7 +258,12 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {number} count number of instances updated
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.count")
+  @js.native
   def count(): js.Promise[Double] = js.native
+  @JSImport("loopback", "PersistedModel.count")
+  @js.native
   def count(where: js.Any): js.Promise[Double] = js.native
   /**
     * Return the number of records that match the optional "where" filter.
@@ -254,6 +277,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {number} count number of instances updated
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.count")
+  @js.native
   def count(where: js.Any, callback: CallbackWithResult[Double]): Unit = js.native
   
   /**
@@ -261,7 +287,12 @@ object PersistedModel extends js.Object {
     * @param {any}|[{any}] data Optional data argument.  Can be either a single model instance or an Array of instances
     * @returns {T | T[]} Model instances or null
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.create")
+  @js.native
   def create[T](): js.Promise[T | js.Array[T] | Null] = js.native
+  @JSImport("loopback", "PersistedModel.create")
+  @js.native
   def create[T](data: js.Any): js.Promise[T | js.Array[T] | Null] = js.native
   /**
     * Create new instance of Model, and save to database
@@ -270,8 +301,15 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} models Model instances or null
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.create")
+  @js.native
   def create[T](data: js.Any, callback: CallbackWithResult[T | js.Array[T] | Null]): Unit = js.native
+  @JSImport("loopback", "PersistedModel.create")
+  @js.native
   def create[T](data: js.Array[_]): js.Promise[T | js.Array[T] | Null] = js.native
+  @JSImport("loopback", "PersistedModel.create")
+  @js.native
   def create[T](data: js.Array[_], callback: CallbackWithResult[T | js.Array[T] | Null]): Unit = js.native
   
   /**
@@ -279,12 +317,18 @@ object PersistedModel extends js.Object {
     * @param {any} options Only changes to models matching this where filter will be included in the ChangeStream.
     * @returns {any} changes
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.createChangeStream")
+  @js.native
   def createChangeStream(options: Where): js.Promise[_] = js.native
   /**
     * Create a change stream. See here for more info http://loopback.io/doc/en/lb2/Realtime-server-sent-events.html
     * @param {any} options Only changes to models matching this where filter will be included in the ChangeStream.
     * @param {() => void} callback
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.createChangeStream")
+  @js.native
   def createChangeStream(options: Where, callback: CallbackWithResult[_]): Unit = js.native
   
   /**
@@ -292,6 +336,9 @@ object PersistedModel extends js.Object {
     * (result of `Change.diff()`)
     * @param  {Array}    deltas
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.createUpdates")
+  @js.native
   def createUpdates(deltas: js.Array[_]): js.Promise[Unit] = js.native
   /**
     * Create an update list (for `Model.bulkUpdate()`) from a delta list
@@ -299,12 +346,18 @@ object PersistedModel extends js.Object {
     * @param  {Array}    deltas
     * @param  {() => void} callback
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.createUpdates")
+  @js.native
   def createUpdates(deltas: js.Array[_], callback: CallbackWithoutResult): Unit = js.native
   
   /**
     * Get the current checkpoint ID
     * @returns {Promise<number>} resolves to currentCheckpointId
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.currentCheckpoint")
+  @js.native
   def currentCheckpoint(): js.Promise[Double] = js.native
   /**
     * Get the current checkpoint ID
@@ -312,6 +365,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {number} currentCheckpointId Current checkpoint ID
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.currentCheckpoint")
+  @js.native
   def currentCheckpoint(callback: CallbackWithResult[Double]): Unit = js.native
   
   /**
@@ -325,7 +381,12 @@ object PersistedModel extends js.Object {
     *
     * @returns {Promise<{ count: number }>} number of instances (rows, documents) destroyed
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.destroyAll")
+  @js.native
   def destroyAll(): js.Promise[Info] = js.native
+  @JSImport("loopback", "PersistedModel.destroyAll")
+  @js.native
   def destroyAll(where: js.Any): js.Promise[Info] = js.native
   /**
     * Destroy all model instances that match the optional `where` specification
@@ -341,12 +402,18 @@ object PersistedModel extends js.Object {
     * @param {any} info Additional information about the command outcome.
     * @param {number} info.count number of instances (rows, documents) destroyed
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.destroyAll")
+  @js.native
   def destroyAll(where: js.Any, callback: CallbackWithMultipleResults[_, Double]): Unit = js.native
   
   /**
     * Destroy model instance with the specified ID.
     * @param {*} id The ID value of model instance to delete.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.destroyById")
+  @js.native
   def destroyById(id: js.Any): js.Promise[Unit] = js.native
   /**
     * Destroy model instance with the specified ID.
@@ -354,6 +421,9 @@ object PersistedModel extends js.Object {
     * @callback {() => void} callback Callback function called with `(err)` arguments.  Required.
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object)
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.destroyById")
+  @js.native
   def destroyById(id: js.Any, callback: CallbackWithoutResult): Unit = js.native
   
   /**
@@ -362,6 +432,9 @@ object PersistedModel extends js.Object {
     * @param  {number}  since  Find deltas since this checkpoint.
     * @param  {Array}  remoteChanges  An Array of change objects.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.diff")
+  @js.native
   def diff(since: Double, remoteChanges: js.Array[_]): js.Promise[_] = js.native
   /**
     * Get a set of deltas and conflicts since the given checkpoint
@@ -372,17 +445,26 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} result any with `deltas` and `conflicts` properties; see [Change.diff()](#change-diff) for details
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.diff")
+  @js.native
   def diff(since: Double, remoteChanges: js.Array[_], callback: CallbackWithResult[_]): Unit = js.native
   
   /**
     * Enable the tracking of changes made to the model. Usually for replication.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.enableChangeTracking")
+  @js.native
   def enableChangeTracking(): Unit = js.native
   
   /**
     * Check whether a model instance exists in database
     * @param {id} id Identifier of object (primary key value)
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.exists")
+  @js.native
   def exists(id: js.Any): js.Promise[Boolean] = js.native
   /**
     * Check whether a model instance exists in database
@@ -391,6 +473,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {boolean} exists True if the instance with the specified ID exists; false otherwise
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.exists")
+  @js.native
   def exists(id: js.Any, callback: CallbackWithResult[Boolean]): Unit = js.native
   
   /**
@@ -414,7 +499,12 @@ object PersistedModel extends js.Object {
     * <br/>See
     * [Where filter](docs.strongloop.com/display/LB/Where+filter#Wherefilter-Whereclauseforqueries)
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.find")
+  @js.native
   def find[T](): js.Promise[js.Array[T] | Null] = js.native
+  @JSImport("loopback", "PersistedModel.find")
+  @js.native
   def find[T](filter: Fields): js.Promise[js.Array[T] | Null] = js.native
   /**
     * Find all model instances that match `filter` specification.
@@ -440,6 +530,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {Array} models Model instances matching the filter, or null if none found
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.find")
+  @js.native
   def find[T](filter: Fields, callback: CallbackWithResult[js.Array[T]]): Unit = js.native
   
   /**
@@ -451,6 +544,9 @@ object PersistedModel extends js.Object {
     * @property {string|any|Array} include  See PersistedModel.include documentation.
     * <br/>See [Include filter](docs.strongloop.com/display/LB/Include+filter).
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.findById")
+  @js.native
   def findById[T](id: js.Any): js.Promise[T | Null] = js.native
   /**
     * Find object by ID with an optional filter for include/fields
@@ -459,7 +555,12 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} instance Model instance matching the specified ID or null if no instance matches
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.findById")
+  @js.native
   def findById[T](id: js.Any, callback: CallbackWithResult[T]): Unit = js.native
+  @JSImport("loopback", "PersistedModel.findById")
+  @js.native
   def findById[T](id: js.Any, filter: Include): js.Promise[T | Null] = js.native
   /**
     * Find object by ID with an optional filter for include/fields
@@ -473,6 +574,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} instance Model instance matching the specified ID or null if no instance matches
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.findById")
+  @js.native
   def findById[T](id: js.Any, filter: Include, callback: CallbackWithResult[T]): Unit = js.native
   
   /**
@@ -495,6 +599,9 @@ object PersistedModel extends js.Object {
     * <br/>See
     * [Where filter](docs.strongloop.com/display/LB/Where+filter#Wherefilter-Whereclauseforqueries)
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.findOne")
+  @js.native
   def findOne[T](): js.Promise[T | Null] = js.native
   /**
     * Find one model instance that matches `filter` specification.
@@ -504,7 +611,12 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {Array} model First model instance that matches the filter or null if none found
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.findOne")
+  @js.native
   def findOne[T](callback: CallbackWithResult[T]): Unit = js.native
+  @JSImport("loopback", "PersistedModel.findOne")
+  @js.native
   def findOne[T](filter: Order): js.Promise[T | Null] = js.native
   /**
     * Find one model instance that matches `filter` specification.
@@ -529,6 +641,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {Array} model First model instance that matches the filter or null if none found
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.findOne")
+  @js.native
   def findOne[T](filter: Order, callback: CallbackWithResult[T]): Unit = js.native
   
   /**
@@ -557,6 +672,9 @@ object PersistedModel extends js.Object {
     * [Where filter](docs.strongloop.com/display/LB/Where+filter#Wherefilter-Whereclauseforqueries).
     * @param {any} data Data to insert if object matching the `where` filter is not found.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.findOrCreate")
+  @js.native
   def findOrCreate[T](data: js.Any): js.Promise[Created[T] | Null] = js.native
   /**
     * Finds one record matching the optional filter object. If not found, creates
@@ -571,7 +689,12 @@ object PersistedModel extends js.Object {
     * @param {any} instance Model instance matching the `where` filter, if found.
     * @param {boolean} created True if the instance matching the `where` filter was created
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.findOrCreate")
+  @js.native
   def findOrCreate[T](data: js.Any, callback: CallbackWithMultipleResults[T, Boolean]): Unit = js.native
+  @JSImport("loopback", "PersistedModel.findOrCreate")
+  @js.native
   def findOrCreate[T](data: js.Any, filter: Fields): js.Promise[Created[T] | Null] = js.native
   /**
     * Finds one record matching the optional filter object. If not found, creates
@@ -603,23 +726,35 @@ object PersistedModel extends js.Object {
     * @param {any} instance Model instance matching the `where` filter, if found.
     * @param {boolean} created True if the instance matching the `where` filter was created
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.findOrCreate")
+  @js.native
   def findOrCreate[T](data: js.Any, filter: Fields, callback: CallbackWithMultipleResults[T, Boolean]): Unit = js.native
   
   /**
     * Get the `Change` model.
     * Throws an error if the change model is not correctly setup.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.getChangeModel")
+  @js.native
   def getChangeModel(): Unit = js.native
   
   /**
     * Get the `id` property name of the constructor
     * @returns {string} The `id` property nam
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.getIdName")
+  @js.native
   def getIdName(): String = js.native
   
   /**
     * Get the source identifier for this model or dataSource
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.getSourceId")
+  @js.native
   def getSourceId(): js.Promise[String] = js.native
   /**
     * Get the source identifier for this model or dataSource
@@ -627,6 +762,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {string} sourceId Source identifier for the model or dataSource
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.getSourceId")
+  @js.native
   def getSourceId(callback: CallbackWithResult[String]): Unit = js.native
   
   /**
@@ -634,12 +772,18 @@ object PersistedModel extends js.Object {
     * change error handling
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object)
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.handleChangeError")
+  @js.native
   def handleChangeError(err: js.Error): Unit = js.native
   
   /**
     * Specify that a change to the model with the given ID has occurred
     * @param {*} id The ID of the model that has changed.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.rectifyChange")
+  @js.native
   def rectifyChange(id: js.Any): js.Promise[Unit] = js.native
   /**
     * Specify that a change to the model with the given ID has occurred
@@ -647,6 +791,9 @@ object PersistedModel extends js.Object {
     * @callback {() => void} callback
     * @param {Error} er
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.rectifyChange")
+  @js.native
   def rectifyChange(id: js.Any, callback: CallbackWithoutResult): Unit = js.native
   
   /**
@@ -658,6 +805,9 @@ object PersistedModel extends js.Object {
     * @options {any} [options] Options for replace
     * @property {boolean} validate Perform validation before saving.  Default is true.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.replaceById")
+  @js.native
   def replaceById[T](id: js.Any, data: js.Any): js.Promise[T] = js.native
   /**
     * Replace attributes for a model instance whose id is the first input
@@ -669,7 +819,12 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} instance Replaced instance
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.replaceById")
+  @js.native
   def replaceById[T](id: js.Any, data: js.Any, callback: CallbackWithResult[T]): Unit = js.native
+  @JSImport("loopback", "PersistedModel.replaceById")
+  @js.native
   def replaceById[T](id: js.Any, data: js.Any, options: Validate): js.Promise[T] = js.native
   /**
     * Replace attributes for a model instance whose id is the first input
@@ -683,6 +838,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} instance Replaced instance
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.replaceById")
+  @js.native
   def replaceById[T](id: js.Any, data: js.Any, options: Validate, callback: CallbackWithResult[T]): Unit = js.native
   
   /**
@@ -693,6 +851,9 @@ object PersistedModel extends js.Object {
     * @options {any} [options] Options for replaceOrCreate
     * @property {boolean} validate Perform validation before saving.  Default is true.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.replaceOrCreate")
+  @js.native
   def replaceOrCreate[T](data: js.Any): js.Promise[T] = js.native
   /**
     * Replace or insert a model instance; replace existing record if one is found,
@@ -703,7 +864,12 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} model Replaced model instance.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.replaceOrCreate")
+  @js.native
   def replaceOrCreate[T](data: js.Any, callback: CallbackWithResult[T]): Unit = js.native
+  @JSImport("loopback", "PersistedModel.replaceOrCreate")
+  @js.native
   def replaceOrCreate[T](data: js.Any, options: Validate): js.Promise[T] = js.native
   /**
     * Replace or insert a model instance; replace existing record if one is found,
@@ -716,6 +882,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} model Replaced model instance.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.replaceOrCreate")
+  @js.native
   def replaceOrCreate[T](data: js.Any, options: Validate, callback: CallbackWithResult[T]): Unit = js.native
   
   /**
@@ -730,7 +899,12 @@ object PersistedModel extends js.Object {
     * @param {any} checkpoints The new checkpoints to use as the "since"
     * argument for the next replication
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: js.UndefOr[scala.Nothing],
@@ -738,12 +912,16 @@ object PersistedModel extends js.Object {
     optionsFilter: js.UndefOr[scala.Nothing],
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: js.UndefOr[scala.Nothing],
     options: js.UndefOr[scala.Nothing],
     optionsFilter: js.Any
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: js.UndefOr[scala.Nothing],
@@ -751,7 +929,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.Any,
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: js.UndefOr[scala.Nothing], targetModel: js.UndefOr[scala.Nothing], options: js.Any): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: js.UndefOr[scala.Nothing],
@@ -759,12 +941,16 @@ object PersistedModel extends js.Object {
     optionsFilter: js.UndefOr[scala.Nothing],
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: js.UndefOr[scala.Nothing],
     options: js.Any,
     optionsFilter: js.Any
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: js.UndefOr[scala.Nothing],
@@ -772,7 +958,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.Any,
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: js.UndefOr[scala.Nothing], targetModel: Model): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: Model,
@@ -780,12 +970,16 @@ object PersistedModel extends js.Object {
     optionsFilter: js.UndefOr[scala.Nothing],
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: Model,
     options: js.UndefOr[scala.Nothing],
     optionsFilter: js.Any
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: Model,
@@ -793,7 +987,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.Any,
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: js.UndefOr[scala.Nothing], targetModel: Model, options: js.Any): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: Model,
@@ -801,7 +999,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.UndefOr[scala.Nothing],
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: js.UndefOr[scala.Nothing], targetModel: Model, options: js.Any, optionsFilter: js.Any): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: js.UndefOr[scala.Nothing],
     targetModel: Model,
@@ -809,7 +1011,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.Any,
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: Double): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: Double,
     targetModel: js.UndefOr[scala.Nothing],
@@ -817,12 +1023,16 @@ object PersistedModel extends js.Object {
     optionsFilter: js.UndefOr[scala.Nothing],
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: Double,
     targetModel: js.UndefOr[scala.Nothing],
     options: js.UndefOr[scala.Nothing],
     optionsFilter: js.Any
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: Double,
     targetModel: js.UndefOr[scala.Nothing],
@@ -830,7 +1040,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.Any,
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: Double, targetModel: js.UndefOr[scala.Nothing], options: js.Any): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: Double,
     targetModel: js.UndefOr[scala.Nothing],
@@ -838,7 +1052,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.UndefOr[scala.Nothing],
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: Double, targetModel: js.UndefOr[scala.Nothing], options: js.Any, optionsFilter: js.Any): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: Double,
     targetModel: js.UndefOr[scala.Nothing],
@@ -846,7 +1064,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.Any,
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: Double, targetModel: Model): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: Double,
     targetModel: Model,
@@ -854,7 +1076,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.UndefOr[scala.Nothing],
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: Double, targetModel: Model, options: js.UndefOr[scala.Nothing], optionsFilter: js.Any): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: Double,
     targetModel: Model,
@@ -862,7 +1088,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.Any,
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: Double, targetModel: Model, options: js.Any): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: Double,
     targetModel: Model,
@@ -870,7 +1100,11 @@ object PersistedModel extends js.Object {
     optionsFilter: js.UndefOr[scala.Nothing],
     callback: js.Function3[/* err */ js.Error, /* conflicts */ js.Array[Conflict], /* param */ js.Any, Unit]
   ): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(since: Double, targetModel: Model, options: js.Any, optionsFilter: js.Any): js.Promise[Conflicts] | Unit = js.native
+  @JSImport("loopback", "PersistedModel.replicate")
+  @js.native
   def replicate(
     since: Double,
     targetModel: Model,
@@ -898,6 +1132,9 @@ object PersistedModel extends js.Object {
     * [Where filter](docs.strongloop.com/display/LB/Where+filter#Wherefilter-Whereclauseforothermethods).
     * @param {any} data any containing data to replace matching instances, if any.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.updateAll")
+  @js.native
   def updateAll(): js.Promise[Double] = js.native
   /**
     * Update multiple instances that match the where clause.
@@ -907,6 +1144,9 @@ object PersistedModel extends js.Object {
     * @param {number} info.count number of instances (rows, documents) updated.
     *
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.updateAll")
+  @js.native
   def updateAll(callback: CallbackWithMultipleResults[_, Double]): Unit = js.native
   /**
     * Update multiple instances that match the where clause.
@@ -933,9 +1173,18 @@ object PersistedModel extends js.Object {
     * @param {number} info.count number of instances (rows, documents) updated.
     *
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.updateAll")
+  @js.native
   def updateAll(whereOrData: js.Any, callback: CallbackWithMultipleResults[_, Double]): Unit = js.native
+  @JSImport("loopback", "PersistedModel.updateAll")
+  @js.native
   def updateAll(where: js.UndefOr[scala.Nothing], data: js.Any): js.Promise[Double] = js.native
+  @JSImport("loopback", "PersistedModel.updateAll")
+  @js.native
   def updateAll(where: js.Any): js.Promise[Double] = js.native
+  @JSImport("loopback", "PersistedModel.updateAll")
+  @js.native
   def updateAll(where: js.Any, data: js.Any): js.Promise[Double] = js.native
   /**
     * Update multiple instances that match the where clause.
@@ -962,6 +1211,9 @@ object PersistedModel extends js.Object {
     * @param {number} info.count number of instances (rows, documents) updated.
     *
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.updateAll")
+  @js.native
   def updateAll(where: js.Any, data: js.Any, callback: CallbackWithMultipleResults[_, Double]): Unit = js.native
   
   /**
@@ -971,6 +1223,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} model Updated model instance
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.upsert")
+  @js.native
   def upsert[T](data: js.Any): js.Promise[T] = js.native
   /**
     * Update or insert a model instance
@@ -979,6 +1234,9 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} model Updated model instance
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.upsert")
+  @js.native
   def upsert[T](data: js.Any, callback: CallbackWithResult[T]): Unit = js.native
   
   /**
@@ -994,6 +1252,9 @@ object PersistedModel extends js.Object {
     * [Where filter](docs.strongloop.com/display/LB/Where+filter#Wherefilter-Whereclauseforothermethods).
     * @param {any} data The model instance data to insert.
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.upsertWithWhere")
+  @js.native
   def upsertWithWhere[T](data: js.Any): js.Promise[T] = js.native
   /**
     * Update or insert a model instance based on the search criteria.
@@ -1011,5 +1272,8 @@ object PersistedModel extends js.Object {
     * @param {Error} err Error object; see [Error object](docs.strongloop.com/display/LB/Error+object).
     * @param {any} model Updated model instance
     */
+  /* static member */
+  @JSImport("loopback", "PersistedModel.upsertWithWhere")
+  @js.native
   def upsertWithWhere[T](data: js.Any, callback: CallbackWithResult[T]): Unit = js.native
 }

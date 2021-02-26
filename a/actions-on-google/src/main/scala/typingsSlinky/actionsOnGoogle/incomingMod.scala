@@ -6,17 +6,17 @@ import typingsSlinky.actionsOnGoogle.apiV2Mod.GoogleCloudDialogflowV2IntentMessa
 import typingsSlinky.actionsOnGoogle.commonMod.JsonObject
 import typingsSlinky.actionsOnGoogle.v1Mod.DialogflowV1Fulfillment
 import typingsSlinky.std.IterableIterator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("actions-on-google/dist/service/dialogflow/incoming", JSImport.Namespace)
-@js.native
-object incomingMod extends js.Object {
+object incomingMod {
   
+  @JSImport("actions-on-google/dist/service/dialogflow/incoming", "Incoming")
   @js.native
   /** @hidden */
-  class Incoming () extends js.Object {
+  class Incoming () extends StObject {
     def this(fulfillment: js.Array[GoogleCloudDialogflowV2IntentMessage]) = this()
     def this(fulfillment: DialogflowV1Fulfillment) = this()
     
@@ -112,8 +112,6 @@ object incomingMod extends js.Object {
     var parsed: js.Array[IncomingMessage] = js.native
   }
   
-  trait _IncomingMessage extends js.Object
-  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - typingsSlinky.actionsOnGoogle.actionssdkMod.Image
@@ -126,4 +124,6 @@ object incomingMod extends js.Object {
     - typingsSlinky.actionsOnGoogle.commonMod.JsonObject
   */
   type IncomingMessage = _IncomingMessage | String | JsonObject
+  
+  trait _IncomingMessage extends StObject
 }

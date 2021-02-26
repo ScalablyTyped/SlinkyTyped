@@ -38,6 +38,7 @@ import typingsSlinky.reactNativeAnimatable.mod.Direction
 import typingsSlinky.reactNativeAnimatable.mod.Easing
 import typingsSlinky.reactNativeAnimatable.mod.ViewCls
 import typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.infinite
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -46,7 +47,7 @@ object View {
   
   @JSImport("react-native-animatable", "View")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +55,10 @@ object View {
        with StBuildingComponent[tag.type, ViewCls] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -84,10 +85,10 @@ object View {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -114,10 +115,10 @@ object View {
     def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def easingFunction1(value: /* t */ Double => Double): this.type = set("easing", js.Any.fromFunction1(value))
+    def easing(value: Easing): this.type = set("easing", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def easing(value: Easing): this.type = set("easing", value.asInstanceOf[js.Any])
+    def easingFunction1(value: /* t */ Double => Double): this.type = set("easing", js.Any.fromFunction1(value))
     
     @scala.inline
     def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
@@ -246,10 +247,10 @@ object View {
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def transitionVarargs(value: (/* keyof S */ String)*): this.type = set("transition", js.Array(value :_*))
+    def transition(value: (/* keyof S */ String) | (js.Array[/* keyof S */ String])): this.type = set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def transition(value: (/* keyof S */ String) | (js.Array[/* keyof S */ String])): this.type = set("transition", value.asInstanceOf[js.Any])
+    def transitionVarargs(value: (/* keyof S */ String)*): this.type = set("transition", js.Array(value :_*))
     
     @scala.inline
     def tvParallaxMagnification(value: Double): this.type = set("tvParallaxMagnification", value.asInstanceOf[js.Any])
@@ -270,7 +271,7 @@ object View {
     def useNativeDriver(value: Boolean): this.type = set("useNativeDriver", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnimatableProperties[ViewStyle] with ViewProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: View.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AnimatableProperties[ViewStyle] with ViewProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

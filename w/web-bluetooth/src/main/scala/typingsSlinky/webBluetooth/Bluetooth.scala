@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import typingsSlinky.std.EventTarget
 import typingsSlinky.webBluetooth.webBluetoothStrings.advertisementreceived
 import typingsSlinky.webBluetooth.webBluetoothStrings.availabilitychanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

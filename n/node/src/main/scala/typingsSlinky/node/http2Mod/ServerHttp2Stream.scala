@@ -2,6 +2,7 @@ package typingsSlinky.node.http2Mod
 
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
 import typingsSlinky.node.promisesMod.FileHandle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

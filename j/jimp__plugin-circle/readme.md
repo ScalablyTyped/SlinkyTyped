@@ -10,9 +10,9 @@ Creates a circle out of an image.
 | ------------------ | :-------------: |
 | Full name          | @jimp/plugin-circle |
 | Keywords           | - |
-| # releases         | 99 |
-| # dependents       | 6 |
-| # downloads        | 6432233 |
+| # releases         | 102 |
+| # dependents       | 8 |
+| # downloads        | 21707167 |
 | # stars            | 0 |
 
 ## Links

@@ -7,14 +7,14 @@ import typingsSlinky.ionicCore.interfaceMod.RouterDirection
 import typingsSlinky.ionicCore.interfaceMod.RouterEventDetail
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/router/router", JSImport.Namespace)
-@js.native
-object routerMod extends js.Object {
+object routerMod {
   
+  @JSImport("@ionic/core/dist/types/components/router/router", "Router")
   @js.native
   class Router () extends ComponentInterface {
     

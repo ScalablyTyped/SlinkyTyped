@@ -83,6 +83,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -91,12 +92,15 @@ object InputItem {
   
   @JSImport("antd-mobile", "InputItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.InputItem] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -365,9 +369,6 @@ object InputItem {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -383,13 +384,13 @@ object InputItem {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabledKeysVarargs(value: InputKey*): this.type = set("disabledKeys", js.Array(value :_*))
-    
-    @scala.inline
     def disabledKeys(value: js.Array[InputKey]): this.type = set("disabledKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabledKeysNull: this.type = set("disabledKeys", null)
+    
+    @scala.inline
+    def disabledKeysVarargs(value: InputKey*): this.type = set("disabledKeys", js.Array(value :_*))
     
     @scala.inline
     def download(value: js.Any): this.type = set("download", value.asInstanceOf[js.Any])
@@ -407,10 +408,10 @@ object InputItem {
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
@@ -554,10 +555,10 @@ object InputItem {
     def moneyKeyboardAlign(value: String): this.type = set("moneyKeyboardAlign", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def moneyKeyboardHeaderReactElement(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
+    def moneyKeyboardHeader(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def moneyKeyboardHeader(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
+    def moneyKeyboardHeaderReactElement(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
     def moneyKeyboardWrapProps(value: js.Object): this.type = set("moneyKeyboardWrapProps", value.asInstanceOf[js.Any])
@@ -1001,7 +1002,7 @@ object InputItem {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: InputItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: InputItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: InputItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

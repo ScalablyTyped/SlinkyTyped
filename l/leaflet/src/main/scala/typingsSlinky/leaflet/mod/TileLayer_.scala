@@ -1,6 +1,7 @@
 package typingsSlinky.leaflet.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,10 +27,9 @@ class TileLayer_ protected () extends GridLayer_ {
   def setUrl(url: String): this.type = js.native
   def setUrl(url: String, noRedraw: Boolean): this.type = js.native
 }
-@JSImport("leaflet", "TileLayer")
-@js.native
-object TileLayer_ extends js.Object {
+object TileLayer_ {
   
+  @JSImport("leaflet", "TileLayer.WMS")
   @js.native
   class WMS protected () extends TileLayer_ {
     def this(baseUrl: String, options: WMSOptions) = this()

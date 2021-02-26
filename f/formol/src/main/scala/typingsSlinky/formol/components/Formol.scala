@@ -6,6 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.formol.formolStrings.FormolProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Formol {
   
   @JSImport("formol", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,10 +35,10 @@ object Formol {
     def classes(value: js.Any): this.type = set("classes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
     def i18n(value: js.Any): this.type = set("i18n", value.asInstanceOf[js.Any])
@@ -58,10 +59,10 @@ object Formol {
     def submitText(value: js.Any): this.type = set("submitText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def typesVarargs(value: String*): this.type = set("types", js.Array(value :_*))
+    def types(value: js.Array[String]): this.type = set("types", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def types(value: js.Array[String]): this.type = set("types", value.asInstanceOf[js.Any])
+    def typesVarargs(value: String*): this.type = set("types", js.Array(value :_*))
     
     @scala.inline
     def validator(
@@ -71,7 +72,7 @@ object Formol {
     ): this.type = set("validator", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: typingsSlinky.formol.mod.FormolProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Formol.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: typingsSlinky.formol.mod.FormolProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

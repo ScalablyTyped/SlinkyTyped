@@ -10,15 +10,15 @@ Style loading utilities.
 | ------------------ | :-------------: |
 | Full name          | @uifabric/merge-styles |
 | Keywords           | - |
-| # releases         | 120 |
-| # dependents       | 19 |
-| # downloads        | 2072782 |
+| # releases         | 97 |
+| # dependents       | 28 |
+| # downloads        | 4414040 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/OfficeDev/office-ui-fabric-react#readme)
-- [Bugs](https://github.com/OfficeDev/office-ui-fabric-react/issues)
-- [Repository](https://github.com/OfficeDev/office-ui-fabric-react)
+- [Homepage](https://github.com/microsoft/fluentui#readme)
+- [Bugs](https://github.com/microsoft/fluentui/issues)
+- [Repository](https://github.com/microsoft/fluentui)
 - [Npm](https://www.npmjs.com/package/%40uifabric%2Fmerge-styles)
     
 

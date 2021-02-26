@@ -5,6 +5,7 @@ import typingsSlinky.yaml.typesMod.AST.NodeToJsonContext
 import typingsSlinky.yaml.typesMod.Schema.StringifyContext
 import typingsSlinky.yaml.utilMod.Type.FLOW_MAP
 import typingsSlinky.yaml.utilMod.Type.MAP
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

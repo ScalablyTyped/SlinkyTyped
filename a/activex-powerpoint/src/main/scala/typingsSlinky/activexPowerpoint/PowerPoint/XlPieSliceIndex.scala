@@ -9,6 +9,7 @@ import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`6`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`7`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`8`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`3`
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`1`
 */
-trait XlPieSliceIndex extends js.Object
+trait XlPieSliceIndex extends StObject
 object XlPieSliceIndex {
   
   @scala.inline

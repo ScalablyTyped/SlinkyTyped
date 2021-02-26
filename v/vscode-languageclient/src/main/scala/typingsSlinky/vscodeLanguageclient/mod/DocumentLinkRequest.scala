@@ -4,19 +4,24 @@ import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocume
 import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentLinkParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentLinkRegistrationOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageclient", "DocumentLinkRequest")
-@js.native
-object DocumentLinkRequest extends js.Object {
+object DocumentLinkRequest {
   
+  @JSImport("vscode-languageclient", "DocumentLinkRequest.method")
+  @js.native
   val method: textDocumentSlashdocumentLink = js.native
   
   /** @deprecated Use DocumentLinkRequest.type */
+  @JSImport("vscode-languageclient", "DocumentLinkRequest.resultType")
+  @js.native
   val resultType: typingsSlinky.vscodeJsonrpc.mod.ProgressType[js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.DocumentLink]] = js.native
   
+  @JSImport("vscode-languageclient", "DocumentLinkRequest.type")
+  @js.native
   val `type`: ProtocolRequestType[
     DocumentLinkParams, 
     js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.DocumentLink] | Null, 

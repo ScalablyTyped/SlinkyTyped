@@ -7,6 +7,7 @@ import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`3`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`4`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`5`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`6`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexShdocvw.activexShdocvwNumbers.`2`
   - typingsSlinky.activexShdocvw.activexShdocvwNumbers.`0`
 */
-trait SecureLockIconConstants extends js.Object
+trait SecureLockIconConstants extends StObject
 object SecureLockIconConstants {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.xadesjs.xmlMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("xadesjs/build/types/xml", "AttributeRevocationValues")
 @js.native
 class AttributeRevocationValues ()
-  extends typingsSlinky.xadesjs.revocationValuesMod.RevocationValues
+  extends typingsSlinky.xadesjs.unsignedSignaturePropertiesMod.AttributeRevocationValues {
+  def this(properties: js.Object) = this()
+}

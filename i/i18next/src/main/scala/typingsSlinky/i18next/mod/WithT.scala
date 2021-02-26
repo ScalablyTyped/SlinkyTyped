@@ -1,11 +1,12 @@
 package typingsSlinky.i18next.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WithT extends js.Object {
+trait WithT extends StObject {
   
   // basic usage
   // Expose parameterized t in the i18next interface hierarchy

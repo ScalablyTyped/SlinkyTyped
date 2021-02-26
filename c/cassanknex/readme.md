@@ -10,9 +10,9 @@ An Apache Cassandra CQL query builder with support for the DataStax NodeJS drive
 | ------------------ | :-------------: |
 | Full name          | cassanknex |
 | Keywords           | cql, query, builder, cassandra, datastax, driver |
-| # releases         | 8 |
+| # releases         | 4 |
 | # dependents       | 1 |
-| # downloads        | 7588 |
+| # downloads        | 8334 |
 | # stars            | 1 |
 
 ## Links

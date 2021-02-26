@@ -1,5 +1,6 @@
 package typingsSlinky.reactTable.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactTable.reactTableStrings.datetime
   - typingsSlinky.reactTable.reactTableStrings.basic
 */
-trait DefaultSortTypes extends js.Object
+trait DefaultSortTypes extends StObject
 object DefaultSortTypes {
   
   @scala.inline

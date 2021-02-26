@@ -1,12 +1,13 @@
 package typingsSlinky.lodash.fpMod
 
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashDivide extends js.Object {
+trait LodashDivide extends StObject {
   
   def apply(dividend: Double): LodashDivide1x1 = js.native
   def apply(dividend: Double, divisor: Double): Double = js.native

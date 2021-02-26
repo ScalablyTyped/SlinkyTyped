@@ -3,18 +3,19 @@ package typingsSlinky.wordpressBlocks.mod
 import typingsSlinky.wordpressBlocks.anon.TypeofimportedActions
 import typingsSlinky.wordpressBlocks.anon.TypeofimportedSelectors
 import typingsSlinky.wordpressBlocks.wordpressBlocksStrings.coreSlashblocks
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
-@JSImport("@wordpress/data", JSImport.Namespace)
-@js.native
-object wordpressDataAugmentingMod extends js.Object {
+object wordpressDataAugmentingMod {
   
-  @JSName("dispatch")
+  @JSImport("@wordpress/data", "dispatch")
+  @js.native
   def dispatch_coreblocks(key: coreSlashblocks): TypeofimportedActions = js.native
   
-  @JSName("select")
+  @JSImport("@wordpress/data", "select")
+  @js.native
   def select_coreblocks(key: coreSlashblocks): TypeofimportedSelectors = js.native
 }

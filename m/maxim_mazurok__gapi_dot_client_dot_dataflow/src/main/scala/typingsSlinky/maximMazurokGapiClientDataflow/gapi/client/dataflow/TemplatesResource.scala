@@ -11,12 +11,13 @@ import typingsSlinky.maximMazurokGapiClientDataflow.anon.KeyOauthtoken
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.QuotaUserUploadType
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.ResourceUploadType
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.ValidateOnly
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TemplatesResource extends js.Object {
+trait TemplatesResource extends StObject {
   
   def create(request: AccesstokenAltCallback, body: CreateJobFromTemplateRequest): Request[Job] = js.native
   /** Creates a Cloud Dataflow job from a template. */

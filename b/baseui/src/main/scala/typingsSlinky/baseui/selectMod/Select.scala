@@ -16,14 +16,21 @@ import typingsSlinky.baseui.anon.OptionOption
 import typingsSlinky.baseui.anon.OptionState
 import typingsSlinky.dateFns.Locale
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("baseui/select", "Select")
 @js.native
-class Select ()
+class Select protected ()
   extends Component[SelectProps, SelectState, js.Any] {
+  def this(props: SelectProps) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: SelectProps, context: js.Any) = this()
   
   def addValue(item: Option): Unit = js.native
   

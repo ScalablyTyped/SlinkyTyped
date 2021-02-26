@@ -11,15 +11,22 @@ import typingsSlinky.tuyaPanelKit.mod.TabDataSource
 import typingsSlinky.tuyaPanelKit.mod.TabsProps
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.bottom
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tabs {
   
+  @scala.inline
+  def apply(dataSource: js.Array[TabDataSource]): Builder = {
+    val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabsProps]))
+  }
+  
   @JSImport("tuya-panel-kit", "Tabs")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -127,10 +134,4 @@ object Tabs {
   }
   
   def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(dataSource: js.Array[TabDataSource]): Builder = {
-    val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TabsProps]))
-  }
 }

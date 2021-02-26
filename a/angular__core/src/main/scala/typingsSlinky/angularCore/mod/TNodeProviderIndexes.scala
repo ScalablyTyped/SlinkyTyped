@@ -3,6 +3,7 @@ package typingsSlinky.angularCore.mod
 import typingsSlinky.angularCore.angularCoreNumbers.`1048575`
 import typingsSlinky.angularCore.angularCoreNumbers.`1048576`
 import typingsSlinky.angularCore.angularCoreNumbers.`20`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCore.angularCoreNumbers.`20`
   - typingsSlinky.angularCore.angularCoreNumbers.`1048576`
 */
-trait TNodeProviderIndexes extends js.Object
+trait TNodeProviderIndexes extends StObject
 object TNodeProviderIndexes {
   
   /**

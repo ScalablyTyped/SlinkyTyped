@@ -1,5 +1,6 @@
 package typingsSlinky.loopback.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("loopback", "RoleMapping")
 @js.native
-class RoleMapping () extends PersistedModel {
+class RoleMapping protected () extends PersistedModel {
+  def this(data: js.Any) = this()
   
   /**
     * Get the application principal

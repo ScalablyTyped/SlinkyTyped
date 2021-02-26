@@ -19,6 +19,7 @@ import typingsSlinky.reactFloater.reactFloaterStrings.click
 import typingsSlinky.reactFloater.reactFloaterStrings.floater
 import typingsSlinky.reactFloater.reactFloaterStrings.hover
 import typingsSlinky.reactFloater.reactFloaterStrings.wrapper
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,9 +28,15 @@ object ReactFloater {
   
   object PropsWithComponent {
     
+    @scala.inline
+    def apply(component: RenderProps => ReactElement): Builder = {
+      val __props = js.Dynamic.literal(component = js.Any.fromFunction1(component))
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactFloater.mod.PropsWithComponent]))
+    }
+    
     @JSImport("react-floater", JSImport.Default)
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -63,10 +70,10 @@ object ReactFloater {
       def eventDelay(value: Double): this.type = set("eventDelay", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+      def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+      def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
       
       @scala.inline
       def getPopper(value: (/* popper */ Data, /* origin */ floater | wrapper) => Unit): this.type = set("getPopper", js.Any.fromFunction2(value))
@@ -99,38 +106,32 @@ object ReactFloater {
       def styles(value: PartialStyles): this.type = set("styles", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+      def target(value: String | HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def target(value: String | HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+      def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
       
       @scala.inline
       def targetNull: this.type = set("target", null)
       
       @scala.inline
-      def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+      def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+      def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
       
       @scala.inline
       def wrapperOptions(value: Offset): this.type = set("wrapperOptions", value.asInstanceOf[js.Any])
     }
     
     def withProps(p: typingsSlinky.reactFloater.mod.PropsWithComponent): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(component: RenderProps => ReactElement): Builder = {
-      val __props = js.Dynamic.literal(component = js.Any.fromFunction1(component))
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactFloater.mod.PropsWithComponent]))
-    }
   }
   
   object PropsWithContent {
     
     @JSImport("react-floater", JSImport.Default)
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -167,10 +168,10 @@ object ReactFloater {
       def eventDelay(value: Double): this.type = set("eventDelay", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+      def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+      def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
       
       @scala.inline
       def getPopper(value: (/* popper */ Data, /* origin */ floater | wrapper) => Unit): this.type = set("getPopper", js.Any.fromFunction2(value))
@@ -203,26 +204,26 @@ object ReactFloater {
       def styles(value: PartialStyles): this.type = set("styles", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+      def target(value: String | HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def target(value: String | HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+      def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
       
       @scala.inline
       def targetNull: this.type = set("target", null)
       
       @scala.inline
-      def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+      def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+      def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
       
       @scala.inline
       def wrapperOptions(value: Offset): this.type = set("wrapperOptions", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactFloater.mod.PropsWithContent): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: PropsWithContent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: typingsSlinky.reactFloater.mod.PropsWithContent): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
 }

@@ -16,6 +16,7 @@ import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -189,69 +190,57 @@ object ojComboboxOneEventMap {
   }
   
   @scala.inline
-  implicit class ojComboboxOneEventMapOps[Self <: ojComboboxOneEventMap[_, _], K, D] (val x: Self with (ojComboboxOneEventMap[K, D])) extends AnyVal {
+  implicit class ojComboboxOneEventMapMutableBuilder[Self <: ojComboboxOneEventMap[_, _], K, D] (val x: Self with (ojComboboxOneEventMap[K, D])) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAsyncValidatorsChanged(value: CustomEvent): Self = StObject.set(x, "asyncValidatorsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setConverterChanged(value: CustomEvent): Self = StObject.set(x, "converterChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setFilterOnOpenChanged(value: CustomEvent): Self = StObject.set(x, "filterOnOpenChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAsyncValidatorsChanged(value: CustomEvent): Self = this.set("asyncValidatorsChanged", value.asInstanceOf[js.Any])
+    def setMinLengthChanged(value: CustomEvent): Self = StObject.set(x, "minLengthChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setConverterChanged(value: CustomEvent): Self = this.set("converterChanged", value.asInstanceOf[js.Any])
+    def setOjAnimateEnd(value: CustomEvent): Self = StObject.set(x, "ojAnimateEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFilterOnOpenChanged(value: CustomEvent): Self = this.set("filterOnOpenChanged", value.asInstanceOf[js.Any])
+    def setOjAnimateStart(value: CustomEvent): Self = StObject.set(x, "ojAnimateStart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMinLengthChanged(value: CustomEvent): Self = this.set("minLengthChanged", value.asInstanceOf[js.Any])
+    def setOjValueUpdated(value: CustomEvent): Self = StObject.set(x, "ojValueUpdated", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjAnimateEnd(value: CustomEvent): Self = this.set("ojAnimateEnd", value.asInstanceOf[js.Any])
+    def setOptionRendererChanged(value: CustomEvent): Self = StObject.set(x, "optionRendererChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjAnimateStart(value: CustomEvent): Self = this.set("ojAnimateStart", value.asInstanceOf[js.Any])
+    def setOptionsChanged(value: CustomEvent): Self = StObject.set(x, "optionsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjValueUpdated(value: CustomEvent): Self = this.set("ojValueUpdated", value.asInstanceOf[js.Any])
+    def setOptionsKeysChanged(value: CustomEvent): Self = StObject.set(x, "optionsKeysChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptionRendererChanged(value: CustomEvent): Self = this.set("optionRendererChanged", value.asInstanceOf[js.Any])
+    def setPickerAttributesChanged(value: CustomEvent): Self = StObject.set(x, "pickerAttributesChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptionsChanged(value: CustomEvent): Self = this.set("optionsChanged", value.asInstanceOf[js.Any])
+    def setPlaceholderChanged(value: CustomEvent): Self = StObject.set(x, "placeholderChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptionsKeysChanged(value: CustomEvent): Self = this.set("optionsKeysChanged", value.asInstanceOf[js.Any])
+    def setRawValueChanged(value: CustomEvent): Self = StObject.set(x, "rawValueChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPickerAttributesChanged(value: CustomEvent): Self = this.set("pickerAttributesChanged", value.asInstanceOf[js.Any])
+    def setReadOnlyChanged(value: CustomEvent): Self = StObject.set(x, "readOnlyChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPlaceholderChanged(value: CustomEvent): Self = this.set("placeholderChanged", value.asInstanceOf[js.Any])
+    def setRequiredChanged(value: CustomEvent): Self = StObject.set(x, "requiredChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRawValueChanged(value: CustomEvent): Self = this.set("rawValueChanged", value.asInstanceOf[js.Any])
+    def setValidatorsChanged(value: CustomEvent): Self = StObject.set(x, "validatorsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setReadOnlyChanged(value: CustomEvent): Self = this.set("readOnlyChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRequiredChanged(value: CustomEvent): Self = this.set("requiredChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValidatorsChanged(value: CustomEvent): Self = this.set("validatorsChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValueOptionChanged(value: CustomEvent): Self = this.set("valueOptionChanged", value.asInstanceOf[js.Any])
+    def setValueOptionChanged(value: CustomEvent): Self = StObject.set(x, "valueOptionChanged", value.asInstanceOf[js.Any])
   }
 }

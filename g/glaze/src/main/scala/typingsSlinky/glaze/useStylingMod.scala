@@ -7,14 +7,15 @@ import typingsSlinky.glaze.themeMod.Tokens
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.std.Extract
 import typingsSlinky.typeFest.literalUnionMod.LiteralUnion
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("glaze/dist-types/useStyling", JSImport.Namespace)
-@js.native
-object useStylingMod extends js.Object {
+object useStylingMod {
   
+  @JSImport("glaze/dist-types/useStyling", "useStyling")
+  @js.native
   def useStyling(): js.Function1[/* themedStyle */ ThemedStyle, String] = js.native
   
   type ResolveAlias[T /* <: Tokens[aliases] */] = (/* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ThemeOrAny * / any['aliases'][T] */ js.Any) | (ResolveShorthand[

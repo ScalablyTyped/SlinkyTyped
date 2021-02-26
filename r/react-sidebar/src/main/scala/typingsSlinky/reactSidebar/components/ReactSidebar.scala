@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSidebar.mod.SidebarProps
 import typingsSlinky.reactSidebar.mod.SidebarStyles
 import typingsSlinky.reactSidebar.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ReactSidebar {
   
   @JSImport("react-sidebar", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,9 +62,6 @@ object ReactSidebar {
     def shadow(value: Boolean): this.type = set("shadow", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sidebarReactElement(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def sidebar(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -71,6 +69,9 @@ object ReactSidebar {
     
     @scala.inline
     def sidebarId(value: String): this.type = set("sidebarId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def sidebarReactElement(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def styles(value: SidebarStyles): this.type = set("styles", value.asInstanceOf[js.Any])
@@ -85,7 +86,7 @@ object ReactSidebar {
     def transitions(value: Boolean): this.type = set("transitions", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SidebarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactSidebar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SidebarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

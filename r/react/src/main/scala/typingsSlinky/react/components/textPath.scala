@@ -90,13 +90,12 @@ import typingsSlinky.react.reactStrings.terminal
 import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object textPath {
-  
-  val component: String = "textPath"
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1268,7 +1267,9 @@ object textPath {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SVGProps[SVGTextPathElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  val component: String = "textPath"
   
   implicit def make(companion: textPath.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SVGProps[SVGTextPathElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

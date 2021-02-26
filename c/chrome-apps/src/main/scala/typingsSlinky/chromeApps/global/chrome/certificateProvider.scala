@@ -5,6 +5,13 @@ import typingsSlinky.chromeApps.chrome.certificateProvider.PinResponseDetails
 import typingsSlinky.chromeApps.chrome.certificateProvider.RequestPinDetails
 import typingsSlinky.chromeApps.chrome.certificateProvider.SignRequest
 import typingsSlinky.chromeApps.chrome.certificateProvider.StopRequestPinDetails
+import typingsSlinky.chromeApps.chromeAppsStrings.INVALID_PIN
+import typingsSlinky.chromeApps.chromeAppsStrings.INVALID_PUK
+import typingsSlinky.chromeApps.chromeAppsStrings.MAX_ATTEMPTS_EXCEEDED
+import typingsSlinky.chromeApps.chromeAppsStrings.PIN
+import typingsSlinky.chromeApps.chromeAppsStrings.PUK
+import typingsSlinky.chromeApps.chromeAppsStrings.UNKNOWN_ERROR
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,15 +28,73 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Use this API to expose certificates to the platform which
   * can use these certificates for TLS authentications.
   */
-@JSGlobal("chrome.certificateProvider")
-@js.native
-object certificateProvider extends js.Object {
+object certificateProvider {
+  
+  /**
+    * The types of errors that can be presented to the user through the requestPin function.
+    * @enum
+    */
+  object PinRequestErrorType {
+    
+    @JSGlobal("chrome.certificateProvider.PinRequestErrorType")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSGlobal("chrome.certificateProvider.PinRequestErrorType.INVALID_PIN")
+    @js.native
+    def INVALID_PIN: typingsSlinky.chromeApps.chromeAppsStrings.INVALID_PIN = js.native
+    @scala.inline
+    def INVALID_PIN_=(x: INVALID_PIN): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("INVALID_PIN")(x.asInstanceOf[js.Any])
+    
+    @JSGlobal("chrome.certificateProvider.PinRequestErrorType.INVALID_PUK")
+    @js.native
+    def INVALID_PUK: typingsSlinky.chromeApps.chromeAppsStrings.INVALID_PUK = js.native
+    @scala.inline
+    def INVALID_PUK_=(x: INVALID_PUK): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("INVALID_PUK")(x.asInstanceOf[js.Any])
+    
+    @JSGlobal("chrome.certificateProvider.PinRequestErrorType.MAX_ATTEMPTS_EXCEEDED")
+    @js.native
+    def MAX_ATTEMPTS_EXCEEDED: typingsSlinky.chromeApps.chromeAppsStrings.MAX_ATTEMPTS_EXCEEDED = js.native
+    @scala.inline
+    def MAX_ATTEMPTS_EXCEEDED_=(x: MAX_ATTEMPTS_EXCEEDED): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAX_ATTEMPTS_EXCEEDED")(x.asInstanceOf[js.Any])
+    
+    @JSGlobal("chrome.certificateProvider.PinRequestErrorType.UNKNOWN_ERROR")
+    @js.native
+    def UNKNOWN_ERROR: typingsSlinky.chromeApps.chromeAppsStrings.UNKNOWN_ERROR = js.native
+    @scala.inline
+    def UNKNOWN_ERROR_=(x: UNKNOWN_ERROR): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("UNKNOWN_ERROR")(x.asInstanceOf[js.Any])
+  }
+  
+  /**
+    * The type of code being requested by the extension with requestPin function.
+    * @enum
+    */
+  object PinRequestType {
+    
+    @JSGlobal("chrome.certificateProvider.PinRequestType")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSGlobal("chrome.certificateProvider.PinRequestType.PIN")
+    @js.native
+    def PIN: typingsSlinky.chromeApps.chromeAppsStrings.PIN = js.native
+    @scala.inline
+    def PIN_=(x: PIN): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("PIN")(x.asInstanceOf[js.Any])
+    
+    @JSGlobal("chrome.certificateProvider.PinRequestType.PUK")
+    @js.native
+    def PUK: typingsSlinky.chromeApps.chromeAppsStrings.PUK = js.native
+    @scala.inline
+    def PUK_=(x: PUK): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("PUK")(x.asInstanceOf[js.Any])
+  }
   
   /**
     * This event fires every time the browser requests the current list of
     * certificates provided by this app. The app must call *reportCallback*
     * exactly once with the current list of certificates.
     */
+  @JSGlobal("chrome.certificateProvider.onCertificatesRequested")
+  @js.native
   val onCertificatesRequested: typingsSlinky.chromeApps.chrome.events.Event[
     js.Function2[
       /* certificates */ js.Array[CertificateInfo], 
@@ -48,6 +113,8 @@ object certificateProvider extends js.Object {
     * *reportCallback*. *reportCallback* must be called exactly once.
     * @param request: Contains the details about the sign request.
     */
+  @JSGlobal("chrome.certificateProvider.onSignDigestRequested")
+  @js.native
   val onSignDigestRequested: typingsSlinky.chromeApps.chrome.events.Event[
     js.Function2[
       /* signRequest */ SignRequest, 
@@ -66,6 +133,8 @@ object certificateProvider extends js.Object {
     * when the dialog request finishes unsuccessfully (e.g. the dialog was
     * canceled by the user or was not allowed to be shown).
     */
+  @JSGlobal("chrome.certificateProvider.requestPin")
+  @js.native
   def requestPin(
     details: RequestPinDetails,
     callback: js.Function1[/* details */ js.UndefOr[PinResponseDetails], Unit]
@@ -77,33 +146,7 @@ object certificateProvider extends js.Object {
     * @param callback To be used by Chrome to send to the app the status from
     * their request to close PIN dialog for user.
     */
+  @JSGlobal("chrome.certificateProvider.stopPinRequest")
+  @js.native
   def stopPinRequest(details: StopRequestPinDetails, callback: js.Function0[Unit]): Unit = js.native
-  
-  /**
-    * The types of errors that can be presented to the user through the requestPin function.
-    * @enum
-    */
-  @js.native
-  object PinRequestErrorType extends js.Object {
-    
-    var INVALID_PIN: typingsSlinky.chromeApps.chromeAppsStrings.INVALID_PIN = js.native
-    
-    var INVALID_PUK: typingsSlinky.chromeApps.chromeAppsStrings.INVALID_PUK = js.native
-    
-    var MAX_ATTEMPTS_EXCEEDED: typingsSlinky.chromeApps.chromeAppsStrings.MAX_ATTEMPTS_EXCEEDED = js.native
-    
-    var UNKNOWN_ERROR: typingsSlinky.chromeApps.chromeAppsStrings.UNKNOWN_ERROR = js.native
-  }
-  
-  /**
-    * The type of code being requested by the extension with requestPin function.
-    * @enum
-    */
-  @js.native
-  object PinRequestType extends js.Object {
-    
-    var PIN: typingsSlinky.chromeApps.chromeAppsStrings.PIN = js.native
-    
-    var PUK: typingsSlinky.chromeApps.chromeAppsStrings.PUK = js.native
-  }
 }

@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/notification/do-not-disturb", JSImport.Namespace)
-@js.native
-object doNotDisturbMod extends js.Object {
+object doNotDisturbMod {
   
+  @JSImport("material-ui/svg-icons/notification/do-not-disturb", JSImport.Default)
+  @js.native
+  class default () extends NotificationDoNotDisturb
+  
+  @JSImport("material-ui/svg-icons/notification/do-not-disturb", "NotificationDoNotDisturb")
   @js.native
   class NotificationDoNotDisturb ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

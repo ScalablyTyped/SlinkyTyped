@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientGmail.anon.CallbackFields
 import typingsSlinky.maximMazurokGapiClientGmail.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientGmail.anon.SendAsEmail
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SmimeInfoResource extends js.Object {
+trait SmimeInfoResource extends StObject {
   
   /** Deletes the specified S/MIME config for the specified send-as alias. */
   def delete(): Request[Unit] = js.native

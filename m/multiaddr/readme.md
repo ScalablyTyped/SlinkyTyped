@@ -10,9 +10,9 @@ multiaddr implementation (binary + string representation of network addresses)
 | ------------------ | :-------------: |
 | Full name          | multiaddr |
 | Keywords           | multiaddr, binary, string |
-| # releases         | 20 |
-| # dependents       | 102 |
-| # downloads        | 1255776 |
+| # releases         | 22 |
+| # dependents       | 132 |
+| # downloads        | 1578689 |
 | # stars            | 0 |
 
 ## Links

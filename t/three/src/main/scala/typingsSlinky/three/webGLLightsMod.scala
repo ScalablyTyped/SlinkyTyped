@@ -3,16 +3,16 @@ package typingsSlinky.three
 import typingsSlinky.three.anon.Ambient
 import typingsSlinky.three.webGLCapabilitiesMod.WebGLCapabilities
 import typingsSlinky.three.webGLExtensionsMod.WebGLExtensions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/renderers/webgl/WebGLLights", JSImport.Namespace)
-@js.native
-object webGLLightsMod extends js.Object {
+object webGLLightsMod {
   
+  @JSImport("three/src/renderers/webgl/WebGLLights", "WebGLLights")
   @js.native
-  class WebGLLights protected () extends js.Object {
+  class WebGLLights protected () extends StObject {
     def this(extensions: WebGLExtensions, capabilities: WebGLCapabilities) = this()
     
     def get(light: js.Any): js.Any = js.native

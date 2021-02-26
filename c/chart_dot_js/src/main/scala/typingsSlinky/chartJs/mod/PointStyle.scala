@@ -1,5 +1,6 @@
 package typingsSlinky.chartJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chartJs.chartJsStrings.star
   - typingsSlinky.chartJs.chartJsStrings.triangle
 */
-trait PointStyle extends js.Object
+trait PointStyle extends StObject
 object PointStyle {
   
   @scala.inline

@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientAdexchangebuyer.gapi.client.adexchan
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.AccountId
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BillingInfoResource extends js.Object {
+trait BillingInfoResource extends StObject {
   
   /** Returns the billing information for one account specified by account ID. */
   def get(): Request[BillingInfo] = js.native

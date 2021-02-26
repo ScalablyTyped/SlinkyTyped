@@ -2,17 +2,24 @@ package typingsSlinky.bingmaps.global.Microsoft.Maps
 
 import typingsSlinky.bingmaps.Microsoft.Maps.IPrimitive
 import typingsSlinky.bingmaps.Microsoft.Maps.IStylesOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Microsoft.Maps.WellKnownText")
-@js.native
-object WellKnownText extends js.Object {
+object WellKnownText {
   
+  @JSGlobal("Microsoft.Maps.WellKnownText.read")
+  @js.native
   def read(wkt: String): IPrimitive | js.Array[IPrimitive] = js.native
+  @JSGlobal("Microsoft.Maps.WellKnownText.read")
+  @js.native
   def read(wkt: String, styles: IStylesOptions): IPrimitive | js.Array[IPrimitive] = js.native
   
+  @JSGlobal("Microsoft.Maps.WellKnownText.write")
+  @js.native
   def write(data: js.Array[IPrimitive]): String = js.native
+  @JSGlobal("Microsoft.Maps.WellKnownText.write")
+  @js.native
   def write(data: IPrimitive): String = js.native
 }

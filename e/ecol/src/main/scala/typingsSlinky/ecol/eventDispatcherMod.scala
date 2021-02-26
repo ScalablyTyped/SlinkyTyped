@@ -1,19 +1,16 @@
 package typingsSlinky.ecol
 
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
-import typingsSlinky.tstl.icontainerMod.IContainer
-import typingsSlinky.tstl.icontainerMod.IContainer.Iterator
-import typingsSlinky.tstl.icontainerMod.IContainer.ReverseIterator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ecol/lib/basic/EventDispatcher", JSImport.Namespace)
-@js.native
-object eventDispatcherMod extends js.Object {
+object eventDispatcherMod {
   
+  @JSImport("ecol/lib/basic/EventDispatcher", "EventDispatcher")
   @js.native
-  class EventDispatcher[T, SourceT /* <: IContainer[T, SourceT, IteratorT, ReverseT, T] */, IteratorT /* <: Iterator[T, SourceT, IteratorT, ReverseT, T] */, ReverseT /* <: ReverseIterator[T, SourceT, IteratorT, ReverseT, T] */] () extends IEventDispatcher[T, SourceT, IteratorT, ReverseT] {
+  class EventDispatcher[T, SourceT /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IContainer<T, SourceT, IteratorT, ReverseT> */ js.Any */, IteratorT /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IContainer.Iterator<T, SourceT, IteratorT, ReverseT> */ js.Any */, ReverseT /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IContainer.ReverseIterator<T, SourceT, IteratorT, ReverseT> */ js.Any */] () extends IEventDispatcher[T, SourceT, IteratorT, ReverseT] {
     
     /**
       * @hidden

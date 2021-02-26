@@ -1,5 +1,6 @@
 package typingsSlinky.emberArray
 
+import org.scalablytyped.runtime.Shortcut
 import typingsSlinky.emberArray.anon.Fn0
 import typingsSlinky.emberArray.anon.Fn1
 import typingsSlinky.emberArray.anon.FnCall
@@ -9,14 +10,15 @@ import typingsSlinky.emberArray.anon.FnCallPredicateThisArg
 import typingsSlinky.emberArray.nativeArrayMod.NativeArray
 import typingsSlinky.emberObject.computedMod.ComputedProperty
 import typingsSlinky.std.NonNullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ember/array/-private/enumerable", JSImport.Namespace)
-@js.native
-object enumerableMod extends js.Object {
+object enumerableMod extends Shortcut {
   
+  @JSImport("@ember/array/-private/enumerable", JSImport.Default)
+  @js.native
   val default: typingsSlinky.emberObject.mixinMod.default[Enumerable[js.Any], typingsSlinky.emberObject.mod.default] = js.native
   
   /**
@@ -26,7 +28,7 @@ object enumerableMod extends js.Object {
     * cannot be emulated in older versions of JavaScript).
     */
   @js.native
-  trait Enumerable[T] extends js.Object {
+  trait Enumerable[T] extends StObject {
     
     /**
       * This is the handler for the special array content property. If you get
@@ -413,4 +415,9 @@ object enumerableMod extends js.Object {
       */
     def without(value: T): NativeArray[T] = js.native
   }
+  
+  type _To = typingsSlinky.emberObject.mixinMod.default[Enumerable[js.Any], typingsSlinky.emberObject.mod.default]
+  
+  /* This means you don't have to write `default`, but can instead just say `enumerableMod.foo` */
+  override def _to: typingsSlinky.emberObject.mixinMod.default[Enumerable[js.Any], typingsSlinky.emberObject.mod.default] = default
 }

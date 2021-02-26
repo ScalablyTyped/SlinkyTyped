@@ -2,19 +2,19 @@ package typingsSlinky.openpgp.mod
 
 import typingsSlinky.openpgp.anon.Email
 import typingsSlinky.openpgp.anon.Err
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("openpgp", "wkd")
-@js.native
-object wkd extends js.Object {
+object wkd {
   
+  @JSImport("openpgp", "wkd.WKD")
   @js.native
   /**
     * Initialize the WKD client
     */
-  class WKD () extends js.Object {
+  class WKD () extends StObject {
     
     /**
       * Search for a public key using Web Key Directory protocol.

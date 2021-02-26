@@ -1,5 +1,6 @@
 package typingsSlinky.three.constantsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -66,7 +67,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.three.threeStrings.DEPTH24_STENCIL8
   - typingsSlinky.three.threeStrings.DEPTH32F_STENCIL8
 */
-trait PixelFormatGPU extends js.Object
+trait PixelFormatGPU extends StObject
 object PixelFormatGPU {
   
   @scala.inline

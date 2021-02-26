@@ -8,15 +8,22 @@ import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeCheckBox.mod.CheckBoxProps
 import typingsSlinky.reactNativeCheckBox.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeCheckBox {
   
+  @scala.inline
+  def apply(isChecked: Boolean, onClick: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(isChecked = isChecked.asInstanceOf[js.Any], onClick = js.Any.fromFunction0(onClick))
+    new Builder(js.Array(this.component, __props.asInstanceOf[CheckBoxProps]))
+  }
+  
   @JSImport("react-native-check-box", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,10 +52,10 @@ object ReactNativeCheckBox {
     def leftTextStyleNull: this.type = set("leftTextStyle", null)
     
     @scala.inline
-    def leftTextViewReactElement(value: ReactElement): this.type = set("leftTextView", value.asInstanceOf[js.Any])
+    def leftTextView(value: ReactElement): this.type = set("leftTextView", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftTextView(value: ReactElement): this.type = set("leftTextView", value.asInstanceOf[js.Any])
+    def leftTextViewReactElement(value: ReactElement): this.type = set("leftTextView", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rightText(value: String): this.type = set("rightText", value.asInstanceOf[js.Any])
@@ -60,10 +67,10 @@ object ReactNativeCheckBox {
     def rightTextStyleNull: this.type = set("rightTextStyle", null)
     
     @scala.inline
-    def rightTextViewReactElement(value: ReactElement): this.type = set("rightTextView", value.asInstanceOf[js.Any])
+    def rightTextView(value: ReactElement): this.type = set("rightTextView", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightTextView(value: ReactElement): this.type = set("rightTextView", value.asInstanceOf[js.Any])
+    def rightTextViewReactElement(value: ReactElement): this.type = set("rightTextView", value.asInstanceOf[js.Any])
     
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
@@ -79,10 +86,4 @@ object ReactNativeCheckBox {
   }
   
   def withProps(p: CheckBoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(isChecked: Boolean, onClick: () => Unit): Builder = {
-    val __props = js.Dynamic.literal(isChecked = isChecked.asInstanceOf[js.Any], onClick = js.Any.fromFunction0(onClick))
-    new Builder(js.Array(this.component, __props.asInstanceOf[CheckBoxProps]))
-  }
 }

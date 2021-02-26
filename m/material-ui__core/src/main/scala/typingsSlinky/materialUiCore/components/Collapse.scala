@@ -11,6 +11,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.auto
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object Collapse {
   
   @JSImport("@material-ui/core", "Collapse")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,13 +43,13 @@ object Collapse {
     def collapsedHeight(value: String): this.type = set("collapsedHeight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentFunctionComponent(value: ReactComponentClass[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def component(value: ReactType[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def componentFunctionComponent(value: ReactComponentClass[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def enter(value: Boolean): this.type = set("enter", value.asInstanceOf[js.Any])
@@ -60,16 +61,16 @@ object Collapse {
     def in(value: js.Any): this.type = set("in", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def mountOnEnter(value: js.Any): this.type = set("mountOnEnter", value.asInstanceOf[js.Any])
@@ -105,7 +106,7 @@ object Collapse {
     def unmountOnExit(value: js.Any): this.type = set("unmountOnExit", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Collapse.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

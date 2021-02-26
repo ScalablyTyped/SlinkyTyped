@@ -1,5 +1,6 @@
 package typingsSlinky.sharedb
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -59,4 +60,10 @@ package object mod {
   type StringInsertOp = typingsSlinky.sharedb.sharedbMod.StringInsertOp
   
   type SubtypeOp = typingsSlinky.sharedb.sharedbMod.SubtypeOp
+  
+  /* static member */
+  @scala.inline
+  def types: typingsSlinky.sharedb.sharedbMod.Types = typingsSlinky.sharedb.mod.^.asInstanceOf[js.Dynamic].selectDynamic("types").asInstanceOf[typingsSlinky.sharedb.sharedbMod.Types]
+  @scala.inline
+  def types_=(x: typingsSlinky.sharedb.sharedbMod.Types): scala.Unit = typingsSlinky.sharedb.mod.^.asInstanceOf[js.Dynamic].updateDynamic("types")(x.asInstanceOf[js.Any])
 }

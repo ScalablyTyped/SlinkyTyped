@@ -10,9 +10,9 @@ search youtube
 | ------------------ | :-------------: |
 | Full name          | yt-search |
 | Keywords           | - |
-| # releases         | 15 |
-| # dependents       | 7 |
-| # downloads        | 74807 |
+| # releases         | 43 |
+| # dependents       | 27 |
+| # downloads        | 410108 |
 | # stars            | 0 |
 
 ## Links

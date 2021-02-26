@@ -32,6 +32,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.table.BorderLine2
 import typingsSlinky.activexLibreoffice.com_.sun.star.table.ShadowFormat
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.Color
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

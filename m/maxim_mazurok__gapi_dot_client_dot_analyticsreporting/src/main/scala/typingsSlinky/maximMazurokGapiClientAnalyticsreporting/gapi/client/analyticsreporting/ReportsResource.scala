@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientAnalyticsreporting.gapi.client.analy
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAnalyticsreporting.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientAnalyticsreporting.anon.Alt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReportsResource extends js.Object {
+trait ReportsResource extends StObject {
   
   /** Returns the Analytics data. */
   def batchGet(request: Accesstoken): Request[GetReportsResponse] = js.native

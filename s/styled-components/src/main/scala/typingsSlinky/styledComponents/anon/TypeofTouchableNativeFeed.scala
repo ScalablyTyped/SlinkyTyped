@@ -5,6 +5,7 @@ import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.RippleBackgroundPropType
 import typingsSlinky.reactNative.mod.ThemeAttributeBackgroundPropType
 import typingsSlinky.reactNative.mod.TouchableNativeFeedback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

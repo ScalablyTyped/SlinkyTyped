@@ -1,5 +1,6 @@
 package typingsSlinky.nodeZendesk.mod.Users
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nodeZendesk.nodeZendeskStrings.organization
   - typingsSlinky.nodeZendesk.nodeZendeskStrings.requested
 */
-trait TicketRestriction extends js.Object
+trait TicketRestriction extends StObject
 object TicketRestriction {
   
   @scala.inline

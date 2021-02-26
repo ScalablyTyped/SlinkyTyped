@@ -10,9 +10,9 @@ Typings are for version 2.0.1
 | ------------------ | :-------------: |
 | Full name          | @ant-design/icons-react |
 | Keywords           | - |
-| # releases         | 27 |
-| # dependents       | 101 |
-| # downloads        | 7999469 |
+| # releases         | 5 |
+| # dependents       | 114 |
+| # downloads        | 9418650 |
 | # stars            | 0 |
 
 ## Links

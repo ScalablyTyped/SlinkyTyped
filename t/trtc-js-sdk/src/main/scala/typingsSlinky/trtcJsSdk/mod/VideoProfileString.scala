@@ -1,5 +1,6 @@
 package typingsSlinky.trtcJsSdk.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.trtcJsSdk.trtcJsSdkStrings.`1440p`
   - typingsSlinky.trtcJsSdk.trtcJsSdkStrings.`4K`
 */
-trait VideoProfileString extends js.Object
+trait VideoProfileString extends StObject
 object VideoProfileString {
   
   @scala.inline

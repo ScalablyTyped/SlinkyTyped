@@ -1,6 +1,7 @@
 package typingsSlinky.loopback.mod
 
 import typingsSlinky.loopback.anon.AccessTokenIdLength
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("loopback", "AccessToken")
 @js.native
-class AccessToken () extends PersistedModel {
+class AccessToken protected () extends PersistedModel {
+  def this(data: js.Any) = this()
   
   /** When the token was created. */
   var created: js.Date = js.native
@@ -45,10 +47,7 @@ class AccessToken () extends PersistedModel {
     */
   def validate(callback: js.Function2[/* err */ js.Error, /* isValid */ Boolean, Unit]): Unit = js.native
 }
-/* static members */
-@JSImport("loopback", "AccessToken")
-@js.native
-object AccessToken extends js.Object {
+object AccessToken {
   
   /**
     * Create a cryptographically random access token id
@@ -56,6 +55,9 @@ object AccessToken extends js.Object {
     * @param {Error} err
     * @param {string} toke
     */
+  /* static member */
+  @JSImport("loopback", "AccessToken.createAccessTokenId")
+  @js.native
   def createAccessTokenId(callback: js.Function2[/* err */ js.Error, /* token */ String, Unit]): Unit = js.native
   
   /**
@@ -66,16 +68,25 @@ object AccessToken extends js.Object {
     * @param {Error} err
     * @param {AccessToken} toke
     */
+  /* static member */
+  @JSImport("loopback", "AccessToken.findForRequest")
+  @js.native
   def findForRequest(req: js.Any): Unit = js.native
+  @JSImport("loopback", "AccessToken.findForRequest")
+  @js.native
   def findForRequest(
     req: js.Any,
     options: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* err */ js.Error, /* token */ this.type, Unit]
+    callback: js.Function2[/* err */ js.Error, /* token */ AccessToken, Unit]
   ): Unit = js.native
+  @JSImport("loopback", "AccessToken.findForRequest")
+  @js.native
   def findForRequest(req: js.Any, options: js.Any): Unit = js.native
+  @JSImport("loopback", "AccessToken.findForRequest")
+  @js.native
   def findForRequest(
     req: js.Any,
     options: js.Any,
-    callback: js.Function2[/* err */ js.Error, /* token */ this.type, Unit]
+    callback: js.Function2[/* err */ js.Error, /* token */ AccessToken, Unit]
   ): Unit = js.native
 }

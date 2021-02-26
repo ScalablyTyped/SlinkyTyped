@@ -3,6 +3,7 @@ package typingsSlinky.reactDataGrid.AdazzleReactDataGrid
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Information about a specific column to be rendered.
   */
 @js.native
-trait Column[T] extends js.Object {
+trait Column[T] extends StObject {
   
   /**
     * A class name to be applied to the cells in the column
@@ -114,144 +115,132 @@ object Column {
   }
   
   @scala.inline
-  implicit class ColumnOps[Self <: Column[_], T] (val x: Self with Column[T]) extends AnyVal {
+  implicit class ColumnMutableBuilder[Self <: Column[_], T] (val x: Self with Column[T]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCellClass(value: String): Self = StObject.set(x, "cellClass", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setCellClassUndefined: Self = StObject.set(x, "cellClass", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDraggable(value: Boolean): Self = StObject.set(x, "draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setDraggableUndefined: Self = StObject.set(x, "draggable", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setEditable(value: Boolean): Self = StObject.set(x, "editable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCellClass(value: String): Self = this.set("cellClass", value.asInstanceOf[js.Any])
+    def setEditableUndefined: Self = StObject.set(x, "editable", js.undefined)
     
     @scala.inline
-    def deleteCellClass: Self = this.set("cellClass", js.undefined)
+    def setEditor(value: ReactElement | ReactComponentClass[EditorBaseProps]): Self = StObject.set(x, "editor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDraggable(value: Boolean): Self = this.set("draggable", value.asInstanceOf[js.Any])
+    def setEditorComponentClass(value: ReactComponentClass[EditorBaseProps]): Self = StObject.set(x, "editor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDraggable: Self = this.set("draggable", js.undefined)
+    def setEditorFunctionComponent(value: ReactComponentClass[EditorBaseProps]): Self = StObject.set(x, "editor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEditable(value: Boolean): Self = this.set("editable", value.asInstanceOf[js.Any])
+    def setEditorReactElement(value: ReactElement): Self = StObject.set(x, "editor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteEditable: Self = this.set("editable", js.undefined)
+    def setEditorUndefined: Self = StObject.set(x, "editor", js.undefined)
     
     @scala.inline
-    def setEditorReactElement(value: ReactElement): Self = this.set("editor", value.asInstanceOf[js.Any])
+    def setEvents(value: StringDictionary[ColumnEventCallback]): Self = StObject.set(x, "events", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEditorFunctionComponent(value: ReactComponentClass[EditorBaseProps]): Self = this.set("editor", value.asInstanceOf[js.Any])
+    def setEventsUndefined: Self = StObject.set(x, "events", js.undefined)
     
     @scala.inline
-    def setEditorComponentClass(value: ReactComponentClass[EditorBaseProps]): Self = this.set("editor", value.asInstanceOf[js.Any])
+    def setFilterRenderer(value: ReactElement | ReactComponentClass[_]): Self = StObject.set(x, "filterRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEditor(value: ReactElement | ReactComponentClass[EditorBaseProps]): Self = this.set("editor", value.asInstanceOf[js.Any])
+    def setFilterRendererComponentClass(value: ReactComponentClass[_]): Self = StObject.set(x, "filterRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteEditor: Self = this.set("editor", js.undefined)
+    def setFilterRendererFunctionComponent(value: ReactComponentClass[_]): Self = StObject.set(x, "filterRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEvents(value: StringDictionary[ColumnEventCallback]): Self = this.set("events", value.asInstanceOf[js.Any])
+    def setFilterRendererReactElement(value: ReactElement): Self = StObject.set(x, "filterRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteEvents: Self = this.set("events", js.undefined)
+    def setFilterRendererUndefined: Self = StObject.set(x, "filterRenderer", js.undefined)
     
     @scala.inline
-    def setFilterRendererReactElement(value: ReactElement): Self = this.set("filterRenderer", value.asInstanceOf[js.Any])
+    def setFilterable(value: Boolean): Self = StObject.set(x, "filterable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFilterRendererFunctionComponent(value: ReactComponentClass[_]): Self = this.set("filterRenderer", value.asInstanceOf[js.Any])
+    def setFilterableUndefined: Self = StObject.set(x, "filterable", js.undefined)
     
     @scala.inline
-    def setFilterRendererComponentClass(value: ReactComponentClass[_]): Self = this.set("filterRenderer", value.asInstanceOf[js.Any])
+    def setFormatter(value: ReactElement | ReactComponentClass[_]): Self = StObject.set(x, "formatter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFilterRenderer(value: ReactElement | ReactComponentClass[_]): Self = this.set("filterRenderer", value.asInstanceOf[js.Any])
+    def setFormatterComponentClass(value: ReactComponentClass[_]): Self = StObject.set(x, "formatter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteFilterRenderer: Self = this.set("filterRenderer", js.undefined)
+    def setFormatterFunctionComponent(value: ReactComponentClass[_]): Self = StObject.set(x, "formatter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFilterable(value: Boolean): Self = this.set("filterable", value.asInstanceOf[js.Any])
+    def setFormatterReactElement(value: ReactElement): Self = StObject.set(x, "formatter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteFilterable: Self = this.set("filterable", js.undefined)
+    def setFormatterUndefined: Self = StObject.set(x, "formatter", js.undefined)
     
     @scala.inline
-    def setFormatterReactElement(value: ReactElement): Self = this.set("formatter", value.asInstanceOf[js.Any])
+    def setGetRowMetaData(value: (/* rowdata */ T, /* column */ js.UndefOr[Column[T]]) => _): Self = StObject.set(x, "getRowMetaData", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setFormatterFunctionComponent(value: ReactComponentClass[_]): Self = this.set("formatter", value.asInstanceOf[js.Any])
+    def setGetRowMetaDataUndefined: Self = StObject.set(x, "getRowMetaData", js.undefined)
     
     @scala.inline
-    def setFormatterComponentClass(value: ReactComponentClass[_]): Self = this.set("formatter", value.asInstanceOf[js.Any])
+    def setHeaderRenderer(value: ReactElement | ReactComponentClass[_]): Self = StObject.set(x, "headerRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFormatter(value: ReactElement | ReactComponentClass[_]): Self = this.set("formatter", value.asInstanceOf[js.Any])
+    def setHeaderRendererComponentClass(value: ReactComponentClass[_]): Self = StObject.set(x, "headerRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteFormatter: Self = this.set("formatter", js.undefined)
+    def setHeaderRendererFunctionComponent(value: ReactComponentClass[_]): Self = StObject.set(x, "headerRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetRowMetaData(value: (/* rowdata */ T, /* column */ js.UndefOr[Column[T]]) => _): Self = this.set("getRowMetaData", js.Any.fromFunction2(value))
+    def setHeaderRendererReactElement(value: ReactElement): Self = StObject.set(x, "headerRenderer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteGetRowMetaData: Self = this.set("getRowMetaData", js.undefined)
+    def setHeaderRendererUndefined: Self = StObject.set(x, "headerRenderer", js.undefined)
     
     @scala.inline
-    def setHeaderRendererReactElement(value: ReactElement): Self = this.set("headerRenderer", value.asInstanceOf[js.Any])
+    def setKey(value: String): Self = StObject.set(x, "key", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeaderRendererFunctionComponent(value: ReactComponentClass[_]): Self = this.set("headerRenderer", value.asInstanceOf[js.Any])
+    def setLocked(value: Boolean): Self = StObject.set(x, "locked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeaderRendererComponentClass(value: ReactComponentClass[_]): Self = this.set("headerRenderer", value.asInstanceOf[js.Any])
+    def setLockedUndefined: Self = StObject.set(x, "locked", js.undefined)
     
     @scala.inline
-    def setHeaderRenderer(value: ReactElement | ReactComponentClass[_]): Self = this.set("headerRenderer", value.asInstanceOf[js.Any])
+    def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteHeaderRenderer: Self = this.set("headerRenderer", js.undefined)
+    def setResizable(value: Boolean): Self = StObject.set(x, "resizable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLocked(value: Boolean): Self = this.set("locked", value.asInstanceOf[js.Any])
+    def setResizableUndefined: Self = StObject.set(x, "resizable", js.undefined)
     
     @scala.inline
-    def deleteLocked: Self = this.set("locked", js.undefined)
+    def setSortable(value: Boolean): Self = StObject.set(x, "sortable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResizable(value: Boolean): Self = this.set("resizable", value.asInstanceOf[js.Any])
+    def setSortableUndefined: Self = StObject.set(x, "sortable", js.undefined)
     
     @scala.inline
-    def deleteResizable: Self = this.set("resizable", js.undefined)
+    def setWidth(value: Double): Self = StObject.set(x, "width", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSortable(value: Boolean): Self = this.set("sortable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSortable: Self = this.set("sortable", js.undefined)
-    
-    @scala.inline
-    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteWidth: Self = this.set("width", js.undefined)
+    def setWidthUndefined: Self = StObject.set(x, "width", js.undefined)
   }
 }

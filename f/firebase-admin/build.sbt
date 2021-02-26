@@ -1,20 +1,24 @@
 organization := "org.scalablytyped.slinky"
 name := "firebase-admin"
-version := "8.12.1-899650"
-scalaVersion := "2.13.2"
+version := "9.4.1-905fc4"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "gaxios" % "2.0.1-a9f797",
-  "org.scalablytyped.slinky" %%% "google-auth-library" % "5.3.0-181e58",
-  "org.scalablytyped.slinky" %%% "google-cloud__common" % "2.2.3-5c5d1d",
-  "org.scalablytyped.slinky" %%% "google-cloud__firestore" % "3.8.0-acb6c6",
-  "org.scalablytyped.slinky" %%% "google-cloud__storage" % "3.5.0-4feaa2",
-  "org.scalablytyped.slinky" %%% "gtoken" % "4.1.0-b1b091",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
-  "org.scalablytyped.slinky" %%% "teeny-request" % "5.3.0-3c80ff")
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "firebase__app-types" % "0.6.1-e1e312",
+  "org.scalablytyped.slinky" %%% "firebase__database-types" % "0.6.1-754cea",
+  "org.scalablytyped.slinky" %%% "firebase__logger" % "0.2.6-1cc4ee",
+  "org.scalablytyped.slinky" %%% "firebase__util" % "0.3.4-acbd2b",
+  "org.scalablytyped.slinky" %%% "gaxios" % "4.0.1-b7ad40",
+  "org.scalablytyped.slinky" %%% "google-auth-library" % "6.1.3-d0c57d",
+  "org.scalablytyped.slinky" %%% "google-cloud__common" % "3.5.0-fbec67",
+  "org.scalablytyped.slinky" %%% "google-cloud__firestore" % "4.7.1-9e1031",
+  "org.scalablytyped.slinky" %%% "google-cloud__storage" % "5.5.0-e9d169",
+  "org.scalablytyped.slinky" %%% "gtoken" % "5.1.0-039104",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27",
+  "org.scalablytyped.slinky" %%% "teeny-request" % "7.0.1-d3e4ff")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

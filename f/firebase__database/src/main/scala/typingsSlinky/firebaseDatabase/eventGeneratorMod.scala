@@ -5,16 +5,16 @@ import typingsSlinky.firebaseDatabase.eventMod.Event
 import typingsSlinky.firebaseDatabase.eventRegistrationMod.EventRegistration
 import typingsSlinky.firebaseDatabase.nodeMod.Node
 import typingsSlinky.firebaseDatabase.queryMod.Query
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/database/dist/src/core/view/EventGenerator", JSImport.Namespace)
-@js.native
-object eventGeneratorMod extends js.Object {
+object eventGeneratorMod {
   
+  @JSImport("@firebase/database/dist/src/core/view/EventGenerator", "EventGenerator")
   @js.native
-  class EventGenerator protected () extends js.Object {
+  class EventGenerator protected () extends StObject {
     /**
       *
       * @param {!Query} query_

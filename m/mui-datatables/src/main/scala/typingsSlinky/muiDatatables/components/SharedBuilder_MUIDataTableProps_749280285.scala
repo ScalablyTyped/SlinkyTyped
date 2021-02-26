@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.anon.PartialExpandButtonRender
 import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,8 +22,8 @@ class SharedBuilder_MUIDataTableProps_749280285 (val args: js.Array[js.Any])
   def options(value: MUIDataTableOptions): this.type = set("options", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
 }

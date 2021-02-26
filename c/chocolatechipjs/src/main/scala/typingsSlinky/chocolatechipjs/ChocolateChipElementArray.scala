@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Text
 import typingsSlinky.chocolatechipjs.anon.Bottom
 import typingsSlinky.std.Array
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,13 +24,13 @@ trait ChocolateChipElementArray extends Array[HTMLElement] {
   def addClass(className: String): ChocolateChipElementArray = js.native
   
   def after(content: String): ChocolateChipElementArray = js.native
+  def after(content: HTMLElement): ChocolateChipElementArray = js.native
   /**
     * Insert content, specified by the parameter, after each element in the set of matched elements.
     *
     * @param content HTML string, DOM element, array of elements to insert after each element in the set of matched elements.
     */
   def after(content: ChocolateChipElementArray): ChocolateChipElementArray = js.native
-  def after(content: HTMLElement): ChocolateChipElementArray = js.native
   
   /**
     * For each element in the set, get the first element that matches the selector by testing the element
@@ -54,6 +55,8 @@ trait ChocolateChipElementArray extends Array[HTMLElement] {
   def animate(options: js.Object, duration: String, easing: String): Unit = js.native
   
   def append(content: String): ChocolateChipElementArray = js.native
+  def append(content: HTMLElement): ChocolateChipElementArray = js.native
+  def append(content: Text): ChocolateChipElementArray = js.native
   /**
     * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
     *
@@ -61,8 +64,6 @@ trait ChocolateChipElementArray extends Array[HTMLElement] {
     * of matched elements.
     */
   def append(content: ChocolateChipElementArray): ChocolateChipElementArray = js.native
-  def append(content: HTMLElement): ChocolateChipElementArray = js.native
-  def append(content: Text): ChocolateChipElementArray = js.native
   
   def appendTo(target: String): ChocolateChipElementArray = js.native
   /**
@@ -90,13 +91,13 @@ trait ChocolateChipElementArray extends Array[HTMLElement] {
   def attr(attributeName: String, value: String): ChocolateChipElementArray = js.native
   
   def before(content: String): ChocolateChipElementArray = js.native
+  def before(content: HTMLElement): ChocolateChipElementArray = js.native
   /**
     * Insert content, specified by the parameter, before each element in the set of matched elements.
     *
     * @param content HTML string, DOM element, array of elements to insert before each element in the set of matched elements.
     */
   def before(content: ChocolateChipElementArray): ChocolateChipElementArray = js.native
-  def before(content: HTMLElement): ChocolateChipElementArray = js.native
   
   /**
     * Attach a handler to an event for the elements.
@@ -487,14 +488,14 @@ trait ChocolateChipElementArray extends Array[HTMLElement] {
   def parent(selector: String): ChocolateChipElementArray = js.native
   
   def prepend(content: String): ChocolateChipElementArray = js.native
+  def prepend(content: HTMLElement): ChocolateChipElementArray = js.native
+  def prepend(content: Text): ChocolateChipElementArray = js.native
   /**
     * Insert content, specified by the parameter, at the beginning of each element in the set of matched elements.
     *
     * @param content DOM element, array of elements, or HTML string to insert at the beginning of each element in the set of matched elements.
     */
   def prepend(content: ChocolateChipElementArray): ChocolateChipElementArray = js.native
-  def prepend(content: HTMLElement): ChocolateChipElementArray = js.native
-  def prepend(content: Text): ChocolateChipElementArray = js.native
   
   def prependTo(target: String): ChocolateChipElementArray = js.native
   /**

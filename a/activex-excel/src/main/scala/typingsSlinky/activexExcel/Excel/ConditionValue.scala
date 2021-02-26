@@ -6,12 +6,13 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`2`
 import typingsSlinky.activexExcel.activexExcelNumbers.`3`
 import typingsSlinky.activexExcel.activexExcelNumbers.`4`
 import typingsSlinky.activexExcel.activexExcelNumbers.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ConditionValue extends js.Object {
+trait ConditionValue extends StObject {
   
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   

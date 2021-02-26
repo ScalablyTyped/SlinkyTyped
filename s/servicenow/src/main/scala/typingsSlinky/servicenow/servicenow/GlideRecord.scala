@@ -2,6 +2,7 @@ package typingsSlinky.servicenow.servicenow
 
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.servicenow.GlideDateTime
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

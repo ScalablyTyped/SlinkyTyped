@@ -1,13 +1,14 @@
 package typingsSlinky.seleniumWebdriver.mod
 
 import typingsSlinky.seleniumWebdriver.anon.PartialIRectangle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("selenium-webdriver", "Window")
 @js.native
-class Window protected () extends js.Object {
+class Window protected () extends StObject {
   // region Constructors
   /**
     * @param {!WebDriver} driver The parent driver.

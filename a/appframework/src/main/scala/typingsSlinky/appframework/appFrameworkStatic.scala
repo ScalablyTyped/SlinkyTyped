@@ -4,12 +4,13 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.appframework.anon.Android
 import typingsSlinky.appframework.anon.CssPrefix
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait appFrameworkStatic extends js.Object {
+trait appFrameworkStatic extends StObject {
   
   def apply(collection: appFrameworkCollection): appFrameworkCollection = js.native
   def apply(element: HTMLElement): appFrameworkCollection = js.native

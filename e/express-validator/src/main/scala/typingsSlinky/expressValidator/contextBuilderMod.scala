@@ -4,16 +4,16 @@ import typingsSlinky.expressValidator.baseMod.Location
 import typingsSlinky.expressValidator.contextItemMod.ContextItem
 import typingsSlinky.expressValidator.contextMod.Context
 import typingsSlinky.expressValidator.contextMod.Optional
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("express-validator/src/context-builder", JSImport.Namespace)
-@js.native
-object contextBuilderMod extends js.Object {
+object contextBuilderMod {
   
+  @JSImport("express-validator/src/context-builder", "ContextBuilder")
   @js.native
-  class ContextBuilder () extends js.Object {
+  class ContextBuilder () extends StObject {
     
     def addItem(items: ContextItem*): this.type = js.native
     

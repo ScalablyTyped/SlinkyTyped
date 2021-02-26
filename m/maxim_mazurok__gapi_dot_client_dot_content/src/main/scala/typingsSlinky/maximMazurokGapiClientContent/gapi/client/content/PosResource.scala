@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientContent.anon.ResourceTargetMerchantId
 import typingsSlinky.maximMazurokGapiClientContent.anon.StoreCode
 import typingsSlinky.maximMazurokGapiClientContent.anon.TargetMerchantId
 import typingsSlinky.maximMazurokGapiClientContent.anon.TargetMerchantIdUploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PosResource extends js.Object {
+trait PosResource extends StObject {
   
   /** Batches multiple POS-related calls in a single request. */
   def custombatch(request: FieldsKeyOauthtoken): Request[PosCustomBatchResponse] = js.native

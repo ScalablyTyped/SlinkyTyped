@@ -1,16 +1,17 @@
 package typingsSlinky.xadesjs
 
-import typingsSlinky.xmlCore.mod.XmlObject
+import typingsSlinky.xadesjs.xmlBaseMod.XadesObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xadesjs/build/types/xml/encapsulated_pki_data", JSImport.Namespace)
-@js.native
-object encapsulatedPkiDataMod extends js.Object {
+object encapsulatedPkiDataMod {
   
+  @JSImport("xadesjs/build/types/xml/encapsulated_pki_data", "EncapsulatedPKIData")
   @js.native
-  class EncapsulatedPKIData () extends XmlObject {
+  class EncapsulatedPKIData () extends XadesObject {
+    def this(properties: js.Object) = this()
     
     var Encoding: EncodingType = js.native
     
@@ -18,8 +19,6 @@ object encapsulatedPkiDataMod extends js.Object {
     
     var Value: js.typedarray.Uint8Array = js.native
   }
-  
-  trait _EncodingType extends js.Object
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.xadesjs.xadesjsStrings.der
@@ -30,4 +29,6 @@ object encapsulatedPkiDataMod extends js.Object {
     - scala.Null
   */
   type EncodingType = _EncodingType | Null
+  
+  trait _EncodingType extends StObject
 }

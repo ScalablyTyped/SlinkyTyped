@@ -1,17 +1,20 @@
 package typingsSlinky.rmcCalendar
 
-import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.PureComponent
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.Locale
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rmc-calendar/lib/calendar/ShortcutPanel", JSImport.Namespace)
-@js.native
-object shortcutPanelMod extends js.Object {
+object shortcutPanelMod {
+  
+  @JSImport("rmc-calendar/lib/calendar/ShortcutPanel", JSImport.Default)
+  @js.native
+  class default () extends ShortcutPanel
   
   @js.native
-  trait PropsType extends js.Object {
+  trait PropsType extends StObject {
     
     var locale: Locale = js.native
     
@@ -23,11 +26,8 @@ object shortcutPanelMod extends js.Object {
   
   @js.native
   trait ShortcutPanel
-    extends Component[PropsType, js.Object, js.Any] {
+    extends PureComponent[PropsType, js.Object, js.Any] {
     
     def onClick(`type`: String): Unit = js.native
   }
-  
-  @js.native
-  class default () extends ShortcutPanel
 }

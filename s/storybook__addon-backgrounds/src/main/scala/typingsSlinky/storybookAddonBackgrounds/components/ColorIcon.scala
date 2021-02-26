@@ -26,7 +26,6 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
@@ -79,15 +78,22 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.storybookAddonBackgrounds.anon.Background
 import typingsSlinky.storybookTheming.typesMod.Theme
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ColorIcon {
   
+  @scala.inline
+  def apply(background: String): Builder = {
+    val __props = js.Dynamic.literal(background = background.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[(DetailedHTMLProps[HTMLAttributes[HTMLSpanElement], HTMLSpanElement]) with (Omit[Background, theme]) with `0`[Theme]]))
+  }
+  
   @JSImport("@storybook/addon-backgrounds/dist/components/ColorIcon", "ColorIcon")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -277,10 +283,10 @@ object ColorIcon {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -620,16 +626,6 @@ object ColorIcon {
   }
   
   def withProps(
-    p: PropsWithChildren[
-      (DetailedHTMLProps[HTMLAttributes[HTMLSpanElement], HTMLSpanElement]) with (Omit[Background, theme]) with `0`[Theme]
-    ]
+    p: (DetailedHTMLProps[HTMLAttributes[HTMLSpanElement], HTMLSpanElement]) with (Omit[Background, theme]) with `0`[Theme]
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(background: String): Builder = {
-    val __props = js.Dynamic.literal(background = background.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[
-    (DetailedHTMLProps[HTMLAttributes[HTMLSpanElement], HTMLSpanElement]) with (Omit[Background, theme]) with `0`[Theme]
-  ]]))
-  }
 }

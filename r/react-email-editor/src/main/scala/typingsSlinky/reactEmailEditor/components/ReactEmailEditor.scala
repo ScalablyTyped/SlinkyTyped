@@ -8,6 +8,7 @@ import typingsSlinky.reactEmailEditor.mod.EmailEditorProps
 import typingsSlinky.reactEmailEditor.mod.ToolsConfig
 import typingsSlinky.reactEmailEditor.mod.UnlayerOptions
 import typingsSlinky.reactEmailEditor.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object ReactEmailEditor {
   
   @JSImport("react-email-editor", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,7 +46,7 @@ object ReactEmailEditor {
     def tools(value: ToolsConfig): this.type = set("tools", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: EmailEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactEmailEditor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: EmailEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

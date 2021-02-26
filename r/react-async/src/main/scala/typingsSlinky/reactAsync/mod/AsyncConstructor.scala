@@ -9,6 +9,7 @@ import typingsSlinky.react.mod.GetDerivedStateFromProps
 import typingsSlinky.react.mod.ValidationMap
 import typingsSlinky.react.mod.WeakValidationMap
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

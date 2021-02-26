@@ -2,6 +2,7 @@ package typingsSlinky.microsoftAjax.global.Sys
 
 import typingsSlinky.microsoftAjax.Sys.Net.WebRequest
 import typingsSlinky.microsoftAjax.Sys.Net.WebRequestExecutor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,14 +13,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * The Sys.WebForms namespace contains classes related to partial-page rendering in the Microsoft Ajax Library.
   * @see {@link http://msdn.microsoft.com/en-us/library/bb397566(v=vs.100).aspx}
   */
-@JSGlobal("Sys.WebForms")
-@js.native
-object WebForms extends js.Object {
+object WebForms {
   
   /**
     * Used by the beginRequest event of the PageRequestManager class to pass argument information to event handlers.
     * @see {@link http://msdn.microsoft.com/en-us/library/bb384003(v=vs.100).aspx}
     */
+  @JSGlobal("Sys.WebForms.BeginRequestEventArgs")
   @js.native
   class BeginRequestEventArgs protected ()
     extends typingsSlinky.microsoftAjax.Sys.WebForms.BeginRequestEventArgs {
@@ -40,6 +40,7 @@ object WebForms extends js.Object {
     * Used by the endRequest event of the PageRequestManager class to pass argument information to event handlers.
     * @see {@link http://msdn.microsoft.com/en-us/library/bb397499.aspx}
     */
+  @JSGlobal("Sys.WebForms.EndRequestEventArgs")
   @js.native
   class EndRequestEventArgs protected ()
     extends typingsSlinky.microsoftAjax.Sys.WebForms.EndRequestEventArgs {
@@ -61,6 +62,7 @@ object WebForms extends js.Object {
     * This class contains private members that support the client-script infrastructure and are not intended to be used directly from your code. Names of private members begin with an underscore ( _ ).
     * @see {@link http://msdn.microsoft.com/en-us/library/bb311030(v=vs.100).aspx}
     */
+  @JSGlobal("Sys.WebForms.InitializeRequestEventArgs")
   @js.native
   class InitializeRequestEventArgs protected ()
     extends typingsSlinky.microsoftAjax.Sys.WebForms.InitializeRequestEventArgs {
@@ -81,6 +83,7 @@ object WebForms extends js.Object {
     * Used by the pageLoaded event of the PageRequestManager class to send event data that represents the UpdatePanel controls that were updated and created in the most recent postback.
     * @see {@link http://msdn.microsoft.com/en-us/library/bb397476(v=vs.100).aspx}
     */
+  @JSGlobal("Sys.WebForms.PageLoadedEventArgs")
   @js.native
   //#region Constructors
   /**
@@ -93,6 +96,7 @@ object WebForms extends js.Object {
     * Used by the pageLoading event of the PageRequestManager class to send event data that represents the UpdatePanel controls that are being updated and deleted as a result of the most recent postback.
     * @see {@link http://msdn.microsoft.com/en-us/library/bb310960(v=vs.100).aspx}
     */
+  @JSGlobal("Sys.WebForms.PageLoadingEventArgs")
   @js.native
   //#region Constructors
   /**
@@ -105,6 +109,7 @@ object WebForms extends js.Object {
     * Manages client partial-page updates of server UpdatePanel controls. In addition, defines properties, events, and methods that can be used to customize a Web page with client script.
     * @see {@link http://msdn.microsoft.com/en-us/library/bb311028(v=vs.100).aspx}
     */
+  @JSGlobal("Sys.WebForms.PageRequestManager")
   @js.native
   //#region Constructors
   /**
@@ -112,9 +117,7 @@ object WebForms extends js.Object {
     */
   class PageRequestManager ()
     extends typingsSlinky.microsoftAjax.Sys.WebForms.PageRequestManager
-  /* static members */
-  @js.native
-  object PageRequestManager extends js.Object {
+  object PageRequestManager {
     
     //#endregion
     //#region Methods
@@ -122,6 +125,9 @@ object WebForms extends js.Object {
       * Returns the instance of the PageRequestManager class for the page.
       * @return The current instance of the PageRequestManager class. You do not create a new instance of the PageRequestManager class directly. Instead, an instance is available when partial-page rendering is enabled.
       */
+    /* static member */
+    @JSGlobal("Sys.WebForms.PageRequestManager.getInstance")
+    @js.native
     def getInstance(): typingsSlinky.microsoftAjax.Sys.WebForms.PageRequestManager = js.native
   }
   
@@ -132,6 +138,7 @@ object WebForms extends js.Object {
     * For information about how to handle this error condition, see Debugging and Tracing Ajax Applications Overview.
     * @see {@link http://msdn.microsoft.com/en-us/library/bb397466(v=vs.100).aspx}
     */
+  @JSGlobal("Sys.WebForms.PageRequestManagerParserErrorException")
   @js.native
   class PageRequestManagerParserErrorException ()
     extends typingsSlinky.microsoftAjax.Sys.WebForms.PageRequestManagerParserErrorException
@@ -143,6 +150,7 @@ object WebForms extends js.Object {
     * For an example of how to provide custom error handling during partial-page updates, see Customizing Error Handling for ASP.NET UpdatePanel Controls.
     * @see {@link http://msdn.microsoft.com/en-us/library/bb397466(v=vs.100).aspx}        *
     */
+  @JSGlobal("Sys.WebForms.PageRequestManagerServerErrorException")
   @js.native
   class PageRequestManagerServerErrorException ()
     extends typingsSlinky.microsoftAjax.Sys.WebForms.PageRequestManagerServerErrorException
@@ -154,6 +162,7 @@ object WebForms extends js.Object {
     * To change the interval that elapses before asynchronous postbacks time out, set the AsyncPostBackTimeout property of the ScriptManager control.
     * @see {@link http://msdn.microsoft.com/en-us/library/bb397466(v=vs.100).aspx}
     */
+  @JSGlobal("Sys.WebForms.PageRequestManagerTimeoutException")
   @js.native
   class PageRequestManagerTimeoutException ()
     extends typingsSlinky.microsoftAjax.Sys.WebForms.PageRequestManagerTimeoutException

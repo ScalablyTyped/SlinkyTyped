@@ -4,13 +4,12 @@ import typingsSlinky.redux.mod.AnyAction
 import typingsSlinky.redux.mod.Dispatch
 import typingsSlinky.redux.mod.Middleware
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@wordpress/redux-routine", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   /**
     * Creates a Redux middleware, given an object of controls where each key is an action type for
@@ -21,6 +20,10 @@ object mod extends js.Object {
     *
     * @param controls - Object of control handlers.
     */
+  @JSImport("@wordpress/redux-routine", JSImport.Default)
+  @js.native
   def default(): Middleware[js.Object, _, Dispatch[AnyAction]] = js.native
+  @JSImport("@wordpress/redux-routine", JSImport.Default)
+  @js.native
   def default(controls: Record[String, js.Function1[/* action */ AnyAction, _]]): Middleware[js.Object, _, Dispatch[AnyAction]] = js.native
 }

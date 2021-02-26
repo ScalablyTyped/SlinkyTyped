@@ -2,6 +2,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.rendering
 
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 */
-trait FillRule extends js.Object
+trait FillRule extends StObject
 object FillRule {
   
   /** Fill every area, where, when traveling along a line, an uneven number of intersections with polygon edges have happened. */

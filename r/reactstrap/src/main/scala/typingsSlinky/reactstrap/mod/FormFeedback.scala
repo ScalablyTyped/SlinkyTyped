@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.formFeedbackMod.FormFeedbackProps
+import typingsSlinky.reactstrap.formFeedbackMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "FormFeedback")
+@JSImport("reactstrap/lib", "FormFeedback")
 @js.native
-class FormFeedback ()
-  extends Component[FormFeedbackProps, js.Object, js.Any]
+class FormFeedback () extends default

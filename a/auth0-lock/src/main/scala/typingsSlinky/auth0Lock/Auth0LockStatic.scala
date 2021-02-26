@@ -9,6 +9,7 @@ import typingsSlinky.auth0Lock.auth0LockStrings.authorization_error
 import typingsSlinky.auth0Lock.auth0LockStrings.hide
 import typingsSlinky.auth0Lock.auth0LockStrings.show
 import typingsSlinky.auth0Lock.auth0LockStrings.unrecoverable_error
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

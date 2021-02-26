@@ -1,5 +1,6 @@
 package typingsSlinky.popperjsCore.typesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,60 +16,60 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.popperjsCore.anon.PartialPreventOverflowMod
   - typingsSlinky.popperjsCore.anon.PartialPopperOffsetsModif
 */
-trait StrictModifiers extends js.Object
+trait StrictModifiers extends StObject
 object StrictModifiers {
   
   @scala.inline
-  def PartialHideModifier(): StrictModifiers = {
+  def PartialApplyStylesModifie(): typingsSlinky.popperjsCore.anon.PartialApplyStylesModifie = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StrictModifiers]
+    __obj.asInstanceOf[typingsSlinky.popperjsCore.anon.PartialApplyStylesModifie]
   }
   
   @scala.inline
-  def PartialPreventOverflowMod(): StrictModifiers = {
+  def PartialArrowModifier(): typingsSlinky.popperjsCore.anon.PartialArrowModifier = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StrictModifiers]
+    __obj.asInstanceOf[typingsSlinky.popperjsCore.anon.PartialArrowModifier]
   }
   
   @scala.inline
-  def PartialComputeStylesModif(): StrictModifiers = {
+  def PartialComputeStylesModif(): typingsSlinky.popperjsCore.anon.PartialComputeStylesModif = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StrictModifiers]
+    __obj.asInstanceOf[typingsSlinky.popperjsCore.anon.PartialComputeStylesModif]
   }
   
   @scala.inline
-  def PartialFlipModifier(): StrictModifiers = {
+  def PartialEventListenersModi(): typingsSlinky.popperjsCore.anon.PartialEventListenersModi = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StrictModifiers]
+    __obj.asInstanceOf[typingsSlinky.popperjsCore.anon.PartialEventListenersModi]
   }
   
   @scala.inline
-  def PartialEventListenersModi(): StrictModifiers = {
+  def PartialFlipModifier(): typingsSlinky.popperjsCore.anon.PartialFlipModifier = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StrictModifiers]
+    __obj.asInstanceOf[typingsSlinky.popperjsCore.anon.PartialFlipModifier]
   }
   
   @scala.inline
-  def PartialPopperOffsetsModif(): StrictModifiers = {
+  def PartialHideModifier(): typingsSlinky.popperjsCore.anon.PartialHideModifier = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StrictModifiers]
+    __obj.asInstanceOf[typingsSlinky.popperjsCore.anon.PartialHideModifier]
   }
   
   @scala.inline
-  def PartialOffsetModifier(): StrictModifiers = {
+  def PartialOffsetModifier(): typingsSlinky.popperjsCore.anon.PartialOffsetModifier = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StrictModifiers]
+    __obj.asInstanceOf[typingsSlinky.popperjsCore.anon.PartialOffsetModifier]
   }
   
   @scala.inline
-  def PartialArrowModifier(): StrictModifiers = {
+  def PartialPopperOffsetsModif(): typingsSlinky.popperjsCore.anon.PartialPopperOffsetsModif = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StrictModifiers]
+    __obj.asInstanceOf[typingsSlinky.popperjsCore.anon.PartialPopperOffsetsModif]
   }
   
   @scala.inline
-  def PartialApplyStylesModifie(): StrictModifiers = {
+  def PartialPreventOverflowMod(): typingsSlinky.popperjsCore.anon.PartialPreventOverflowMod = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StrictModifiers]
+    __obj.asInstanceOf[typingsSlinky.popperjsCore.anon.PartialPreventOverflowMod]
   }
 }

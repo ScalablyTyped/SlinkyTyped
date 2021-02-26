@@ -7,12 +7,13 @@ import typingsSlinky.skyway.skywayStrings.connection
 import typingsSlinky.skyway.skywayStrings.disconnected
 import typingsSlinky.skyway.skywayStrings.error
 import typingsSlinky.skyway.skywayStrings.open
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Peer extends js.Object {
+trait Peer extends StObject {
   
   def call(peerId: String): js.UndefOr[MediaConnection] = js.native
   def call(peerId: String, stream: js.UndefOr[scala.Nothing], options: CallOptions): js.UndefOr[MediaConnection] = js.native

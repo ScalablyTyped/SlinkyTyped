@@ -10,12 +10,13 @@ import typingsSlinky.icheck.icheckStrings.indeterminate
 import typingsSlinky.icheck.icheckStrings.toggle
 import typingsSlinky.icheck.icheckStrings.uncheck
 import typingsSlinky.icheck.icheckStrings.update
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def iCheck(): this.type = js.native
   def iCheck(options: Options): this.type = js.native

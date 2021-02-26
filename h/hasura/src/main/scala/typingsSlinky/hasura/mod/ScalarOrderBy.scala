@@ -1,5 +1,6 @@
 package typingsSlinky.hasura.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.hasura.hasuraStrings.desc_nulls_first
   - typingsSlinky.hasura.hasuraStrings.desc_nulls_last
 */
-trait ScalarOrderBy extends js.Object
+trait ScalarOrderBy extends StObject
 object ScalarOrderBy {
   
   @scala.inline

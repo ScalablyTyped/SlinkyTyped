@@ -5,6 +5,7 @@ import typingsSlinky.cssTree.cssTreeStrings.Group
 import typingsSlinky.cssTree.cssTreeStrings.Keyword
 import typingsSlinky.cssTree.cssTreeStrings.Property
 import typingsSlinky.cssTree.cssTreeStrings.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,8 +18,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.cssTree.mod.DSNodeString
   - typingsSlinky.cssTree.mod.DSNodeType
 */
-trait DSNodeMultiplied extends js.Object
+trait DSNodeMultiplied extends StObject
 object DSNodeMultiplied {
+  
+  @scala.inline
+  def DSNodeFunction(name: String, `type`: Function): typingsSlinky.cssTree.mod.DSNodeFunction = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeFunction]
+  }
   
   @scala.inline
   def DSNodeGroup(
@@ -27,44 +35,37 @@ object DSNodeMultiplied {
     explicit: Boolean,
     terms: js.Array[DSNode],
     `type`: Group
-  ): DSNodeMultiplied = {
+  ): typingsSlinky.cssTree.mod.DSNodeGroup = {
     val __obj = js.Dynamic.literal(combinator = combinator.asInstanceOf[js.Any], disallowEmpty = disallowEmpty.asInstanceOf[js.Any], explicit = explicit.asInstanceOf[js.Any], terms = terms.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNodeMultiplied]
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeGroup]
   }
   
   @scala.inline
-  def DSNodeProperty(name: String, `type`: Property): DSNodeMultiplied = {
+  def DSNodeKeyword(name: String, `type`: Keyword): typingsSlinky.cssTree.mod.DSNodeKeyword = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNodeMultiplied]
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeKeyword]
   }
   
   @scala.inline
-  def DSNodeKeyword(name: String, `type`: Keyword): DSNodeMultiplied = {
+  def DSNodeProperty(name: String, `type`: Property): typingsSlinky.cssTree.mod.DSNodeProperty = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNodeMultiplied]
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeProperty]
   }
   
   @scala.inline
-  def DSNodeString(`type`: typingsSlinky.cssTree.cssTreeStrings.String, value: String): DSNodeMultiplied = {
+  def DSNodeString(`type`: typingsSlinky.cssTree.cssTreeStrings.String, value: String): typingsSlinky.cssTree.mod.DSNodeString = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNodeMultiplied]
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeString]
   }
   
   @scala.inline
-  def DSNodeType(name: String, `type`: Type): DSNodeMultiplied = {
+  def DSNodeType(name: String, `type`: Type): typingsSlinky.cssTree.mod.DSNodeType = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNodeMultiplied]
-  }
-  
-  @scala.inline
-  def DSNodeFunction(name: String, `type`: Function): DSNodeMultiplied = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DSNodeMultiplied]
+    __obj.asInstanceOf[typingsSlinky.cssTree.mod.DSNodeType]
   }
 }

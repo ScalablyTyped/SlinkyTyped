@@ -3,29 +3,31 @@ package typingsSlinky.maximMazurokGapiClientDatastore
 import typingsSlinky.maximMazurokGapiClientDatastore.gapi.client.datastore.ProjectsResource
 import typingsSlinky.maximMazurokGapiClientDatastore.maximMazurokGapiClientDatastoreStrings.datastore
 import typingsSlinky.maximMazurokGapiClientDatastore.maximMazurokGapiClientDatastoreStrings.v1
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
-  @js.native
-  object gapi extends js.Object {
+  object gapi {
     
-    @js.native
-    object client extends js.Object {
+    object client {
       
-      /** Load Cloud Datastore API v1 */
-      def load(name: datastore, version: v1): js.Thenable[Unit] = js.native
-      def load(name: datastore, version: v1, callback: js.Function0[_]): Unit = js.native
-      
-      @js.native
-      object datastore extends js.Object {
+      object datastore {
         
+        @JSGlobal("gapi.client.datastore.projects")
+        @js.native
         val projects: ProjectsResource = js.native
       }
+      
+      /** Load Cloud Datastore API v1 */
+      @JSGlobal("gapi.client.load")
+      @js.native
+      def load(name: datastore, version: v1): js.Thenable[Unit] = js.native
+      @JSGlobal("gapi.client.load")
+      @js.native
+      def load(name: datastore, version: v1, callback: js.Function0[_]): Unit = js.native
     }
   }
 }

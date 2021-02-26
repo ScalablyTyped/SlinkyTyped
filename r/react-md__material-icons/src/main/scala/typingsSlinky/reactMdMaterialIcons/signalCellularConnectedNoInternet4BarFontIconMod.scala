@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.fontIconMod.FontIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/SignalCellularConnectedNoInternet4BarFontIcon", JSImport.Namespace)
-@js.native
-object signalCellularConnectedNoInternet4BarFontIconMod extends js.Object {
+object signalCellularConnectedNoInternet4BarFontIconMod {
   
+  @JSImport("@react-md/material-icons/types/SignalCellularConnectedNoInternet4BarFontIcon", "SignalCellularConnectedNoInternet4BarFontIcon")
+  @js.native
   val SignalCellularConnectedNoInternet4BarFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

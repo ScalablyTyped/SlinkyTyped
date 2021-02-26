@@ -21,13 +21,12 @@ import typingsSlinky.typedGithubApi.typedGithubApiStrings.none
 import typingsSlinky.typedGithubApi.typedGithubApiStrings.open
 import typingsSlinky.typedGithubApi.typedGithubApiStrings.popularity
 import typingsSlinky.typedGithubApi.typedGithubApiStrings.updated
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typed-github-api/dist/interfaces/repository", JSImport.Namespace)
-@js.native
-object interfacesRepositoryMod extends js.Object {
+object interfacesRepositoryMod {
   
   @js.native
   trait Repository extends RepositoryRef {
@@ -93,7 +92,7 @@ object interfacesRepositoryMod extends js.Object {
   }
   
   @js.native
-  trait RepositoryRef extends js.Object {
+  trait RepositoryRef extends StObject {
     
     def getBranch(name: String): BranchRef = js.native
     

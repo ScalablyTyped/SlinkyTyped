@@ -15,18 +15,31 @@ import typingsSlinky.antdMobile.antdMobileStrings.ios
 import typingsSlinky.antdMobile.antdMobileStrings.middle
 import typingsSlinky.antdMobile.antdMobileStrings.top
 import typingsSlinky.antdMobile.antdMobileStrings.up
+import typingsSlinky.antdMobile.listItemMod.BriefProps
 import typingsSlinky.antdMobile.listItemMod.ListItemProps
 import typingsSlinky.antdMobile.listItemMod.default
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ListItem {
   
+  object Brief {
+    
+    @JSImport("antd-mobile/lib/list/ListItem", "default.Brief")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Brief.type): SharedBuilder_BriefProps265355670[typingsSlinky.antdMobile.listItemMod.default.Brief] = new SharedBuilder_BriefProps265355670[typingsSlinky.antdMobile.listItemMod.default.Brief](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: BriefProps): SharedBuilder_BriefProps265355670[typingsSlinky.antdMobile.listItemMod.default.Brief] = new SharedBuilder_BriefProps265355670[typingsSlinky.antdMobile.listItemMod.default.Brief](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd-mobile/lib/list/ListItem", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,10 +65,10 @@ object ListItem {
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
     def multipleLine(value: Boolean): this.type = set("multipleLine", value.asInstanceOf[js.Any])
@@ -76,19 +89,19 @@ object ListItem {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def thumbReactElement(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def thumb(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
     
     @scala.inline
     def thumbNull: this.type = set("thumb", null)
     
     @scala.inline
+    def thumbReactElement(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def wrap(value: Boolean): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ListItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ListItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ListItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

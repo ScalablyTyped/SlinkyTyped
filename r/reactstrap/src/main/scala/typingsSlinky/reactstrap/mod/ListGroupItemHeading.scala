@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.listGroupItemHeadingMod.ListGroupItemHeadingProps
+import typingsSlinky.reactstrap.listGroupItemHeadingMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "ListGroupItemHeading")
+@JSImport("reactstrap/lib", "ListGroupItemHeading")
 @js.native
-class ListGroupItemHeading ()
-  extends Component[ListGroupItemHeadingProps, js.Object, js.Any]
+class ListGroupItemHeading () extends default

@@ -6,6 +6,7 @@ import typingsSlinky.antDesignReactNative.segmentedIosMod.SegmentedControlProps
 import typingsSlinky.antDesignReactNative.segmentedIosMod.default
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object SegmentedDotios {
   
   @JSImport("@ant-design/react-native/lib/segmented-control/segmented.ios", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -46,13 +47,13 @@ object SegmentedDotios {
     def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valuesVarargs(value: String*): this.type = set("values", js.Array(value :_*))
+    def values(value: js.Array[String]): this.type = set("values", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def values(value: js.Array[String]): this.type = set("values", value.asInstanceOf[js.Any])
+    def valuesVarargs(value: String*): this.type = set("values", js.Array(value :_*))
   }
   
-  def withProps(p: SegmentedControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SegmentedDotios.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SegmentedControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

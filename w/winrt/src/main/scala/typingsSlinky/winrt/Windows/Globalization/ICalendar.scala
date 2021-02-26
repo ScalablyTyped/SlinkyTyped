@@ -1,12 +1,13 @@
 package typingsSlinky.winrt.Windows.Globalization
 
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ICalendar extends js.Object {
+trait ICalendar extends StObject {
   
   def addDays(days: Double): Unit = js.native
   

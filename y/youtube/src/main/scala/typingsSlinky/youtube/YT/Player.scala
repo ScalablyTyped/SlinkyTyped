@@ -8,12 +8,13 @@ import typingsSlinky.youtube.youtubeStrings.onPlaybackQualityChange
 import typingsSlinky.youtube.youtubeStrings.onPlaybackRateChange
 import typingsSlinky.youtube.youtubeStrings.onReady
 import typingsSlinky.youtube.youtubeStrings.onStateChange
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Player extends js.Object {
+trait Player extends StObject {
   
   @JSName("addEventListener")
   def addEventListener_onApiChange[TEvent /* <: PlayerEvent */](eventName: onApiChange, listener: js.Function1[/* event */ TEvent, Unit]): Unit = js.native

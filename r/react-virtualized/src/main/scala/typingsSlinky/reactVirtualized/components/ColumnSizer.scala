@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactVirtualized.esColumnSizerMod.ColumnSizerProps
 import typingsSlinky.reactVirtualized.esColumnSizerMod.SizedColumnProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ColumnSizer {
   
+  @scala.inline
+  def apply(children: SizedColumnProps => ReactElement, width: Double): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ColumnSizerProps]))
+  }
+  
   @JSImport("react-virtualized", "ColumnSizer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,10 +38,4 @@ object ColumnSizer {
   }
   
   def withProps(p: ColumnSizerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: SizedColumnProps => ReactElement, width: Double): Builder = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ColumnSizerProps]))
-  }
 }

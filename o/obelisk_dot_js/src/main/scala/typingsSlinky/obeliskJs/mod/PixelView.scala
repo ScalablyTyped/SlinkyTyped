@@ -2,13 +2,14 @@ package typingsSlinky.obeliskJs.mod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("obelisk.js", "PixelView")
 @js.native
-class PixelView protected () extends js.Object {
+class PixelView protected () extends StObject {
   def this(canvas: HTMLCanvasElement) = this()
   def this(canvas: HTMLCanvasElement, point: Point) = this()
   

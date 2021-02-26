@@ -1,12 +1,13 @@
 package typingsSlinky.babylonjs.BABYLON
 
 import org.scalajs.dom.raw.Blob
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VideoRecorder extends js.Object {
+trait VideoRecorder extends StObject {
   
   var _canvas: js.Any = js.native
   

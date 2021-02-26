@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.toggleButtonMod.ToggleButtonProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/togglebutton", JSImport.Namespace)
-@js.native
-object primereactTogglebuttonMod extends js.Object {
+object primereactTogglebuttonMod {
   
+  @JSImport("primereact/togglebutton", "ToggleButton")
   @js.native
-  class ToggleButton ()
-    extends Component[ToggleButtonProps, js.Any, js.Any]
+  class ToggleButton protected ()
+    extends typingsSlinky.primereact.toggleButtonMod.ToggleButton {
+    def this(props: ToggleButtonProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: ToggleButtonProps, context: js.Any) = this()
+  }
 }

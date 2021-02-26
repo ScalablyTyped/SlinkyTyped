@@ -1,12 +1,13 @@
 package typingsSlinky.arcgisJsApi.global.esri.CIM
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.CIM.BillboardMode")
 @js.native
-object BillboardMode extends js.Object {
+object BillboardMode extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.arcgisJsApi.esri.CIM.BillboardMode with String] = js.native

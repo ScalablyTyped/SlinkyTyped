@@ -1,5 +1,6 @@
 package typingsSlinky.sketchapp
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.sketchapp.sketchappNumbers.`0`
   - typingsSlinky.sketchapp.sketchappNumbers.`1`
 */
-trait SketchMSLayerClippingMaskMode extends js.Object
+trait SketchMSLayerClippingMaskMode extends StObject
 object SketchMSLayerClippingMaskMode {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.slonik.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.slonik.slonikStrings.AND
   - typingsSlinky.slonik.slonikStrings.OR
 */
-trait LogicalBooleanOperatorType extends js.Object
+trait LogicalBooleanOperatorType extends StObject
 object LogicalBooleanOperatorType {
   
   @scala.inline

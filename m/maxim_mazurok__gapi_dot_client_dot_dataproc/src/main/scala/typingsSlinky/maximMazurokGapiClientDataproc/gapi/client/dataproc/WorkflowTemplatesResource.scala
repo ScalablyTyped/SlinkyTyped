@@ -11,12 +11,13 @@ import typingsSlinky.maximMazurokGapiClientDataproc.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientDataproc.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientDataproc.anon.RequestId
 import typingsSlinky.maximMazurokGapiClientDataproc.anon.Resource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WorkflowTemplatesResource extends js.Object {
+trait WorkflowTemplatesResource extends StObject {
   
   def create(request: Alt, body: WorkflowTemplate): Request[WorkflowTemplate] = js.native
   /** Creates new workflow template. */

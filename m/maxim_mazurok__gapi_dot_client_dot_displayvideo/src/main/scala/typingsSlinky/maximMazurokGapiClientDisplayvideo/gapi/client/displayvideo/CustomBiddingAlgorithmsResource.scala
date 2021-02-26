@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDisplayvideo.gapi.client.displayvide
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.CustomBiddingAlgorithmId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.PartnerIdPrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CustomBiddingAlgorithmsResource extends js.Object {
+trait CustomBiddingAlgorithmsResource extends StObject {
   
   /** Gets a custom bidding algorithm. */
   def get(): Request[CustomBiddingAlgorithm] = js.native

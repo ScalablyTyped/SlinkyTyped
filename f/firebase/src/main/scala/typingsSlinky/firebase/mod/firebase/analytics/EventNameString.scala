@@ -1,5 +1,6 @@
 package typingsSlinky.firebase.mod.firebase.analytics
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,7 +34,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firebase.firebaseStrings.view_promotion
   - typingsSlinky.firebase.firebaseStrings.view_search_results
 */
-trait EventNameString extends js.Object
+trait EventNameString extends StObject
 object EventNameString {
   
   @scala.inline

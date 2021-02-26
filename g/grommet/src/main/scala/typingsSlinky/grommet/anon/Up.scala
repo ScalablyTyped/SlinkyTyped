@@ -3,12 +3,13 @@ package typingsSlinky.grommet.anon
 import slinky.core.facade.ReactElement
 import typingsSlinky.grommet.utilsMod.ColorType
 import typingsSlinky.grommet.utilsMod.MarginType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Up extends js.Object {
+trait Up extends StObject {
   
   var color: js.UndefOr[ColorType] = js.native
   
@@ -27,48 +28,36 @@ object Up {
   }
   
   @scala.inline
-  implicit class UpOps[Self <: Up] (val x: Self) extends AnyVal {
+  implicit class UpMutableBuilder[Self <: Up] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setColor(value: ColorType): Self = StObject.set(x, "color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setColorUndefined: Self = StObject.set(x, "color", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDown(value: ReactElement): Self = StObject.set(x, "down", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColor(value: ColorType): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setDownReactElement(value: ReactElement): Self = StObject.set(x, "down", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteColor: Self = this.set("color", js.undefined)
+    def setDownUndefined: Self = StObject.set(x, "down", js.undefined)
     
     @scala.inline
-    def setDownReactElement(value: ReactElement): Self = this.set("down", value.asInstanceOf[js.Any])
+    def setMargin(value: MarginType): Self = StObject.set(x, "margin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDown(value: ReactElement): Self = this.set("down", value.asInstanceOf[js.Any])
+    def setMarginUndefined: Self = StObject.set(x, "margin", js.undefined)
     
     @scala.inline
-    def deleteDown: Self = this.set("down", js.undefined)
+    def setUp(value: ReactElement): Self = StObject.set(x, "up", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMargin(value: MarginType): Self = this.set("margin", value.asInstanceOf[js.Any])
+    def setUpReactElement(value: ReactElement): Self = StObject.set(x, "up", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteMargin: Self = this.set("margin", js.undefined)
-    
-    @scala.inline
-    def setUpReactElement(value: ReactElement): Self = this.set("up", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUp(value: ReactElement): Self = this.set("up", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUp: Self = this.set("up", js.undefined)
+    def setUpUndefined: Self = StObject.set(x, "up", js.undefined)
   }
 }

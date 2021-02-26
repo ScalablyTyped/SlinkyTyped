@@ -4,7 +4,9 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameExpandable
+import typingsSlinky.reactOnsenui.anon.Expandable
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +15,7 @@ object ListItem {
   
   @JSImport("react-onsenui", "ListItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,7 +53,7 @@ object ListItem {
     def tappable(value: Boolean): this.type = set("tappable", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HTMLAttributesidclassNameExpandable): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ListItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HTMLAttributesidclassName with Expandable): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

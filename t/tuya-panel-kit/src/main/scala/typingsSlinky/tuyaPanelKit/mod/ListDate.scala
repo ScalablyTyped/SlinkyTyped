@@ -4,6 +4,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,42 +27,30 @@ object ListDate {
   }
   
   @scala.inline
-  implicit class ListDateOps[Self <: ListDate] (val x: Self) extends AnyVal {
+  implicit class ListDateMutableBuilder[Self <: ListDate] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setIcon(value: ReactElement): Self = StObject.set(x, "Icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setIconComponentClass(value: ReactComponentClass[_]): Self = StObject.set(x, "Icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setIconFunctionComponent(value: ReactComponentClass[_]): Self = StObject.set(x, "Icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setIconUndefined: Self = StObject.set(x, "Icon", js.undefined)
     
     @scala.inline
-    def setIconFunctionComponent(value: ReactComponentClass[_]): Self = this.set("Icon", value.asInstanceOf[js.Any])
+    def setStyles(value: StyleProp[ViewStyle]): Self = StObject.set(x, "styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIconComponentClass(value: ReactComponentClass[_]): Self = this.set("Icon", value.asInstanceOf[js.Any])
+    def setStylesNull: Self = StObject.set(x, "styles", null)
     
     @scala.inline
-    def setIcon(value: ReactElement): Self = this.set("Icon", value.asInstanceOf[js.Any])
+    def setStylesUndefined: Self = StObject.set(x, "styles", js.undefined)
     
     @scala.inline
-    def deleteIcon: Self = this.set("Icon", js.undefined)
-    
-    @scala.inline
-    def setStyles(value: StyleProp[ViewStyle]): Self = this.set("styles", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStyles: Self = this.set("styles", js.undefined)
-    
-    @scala.inline
-    def setStylesNull: Self = this.set("styles", null)
+    def setValue(value: js.Any): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
   }
 }

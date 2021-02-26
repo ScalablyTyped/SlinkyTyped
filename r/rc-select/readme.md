@@ -10,9 +10,9 @@ React Select
 | ------------------ | :-------------: |
 | Full name          | rc-select |
 | Keywords           | react, react-component, react-select, select |
-| # releases         | 119 |
-| # dependents       | 221 |
-| # downloads        | 10819526 |
+| # releases         | 134 |
+| # dependents       | 278 |
+| # downloads        | 24430730 |
 | # stars            | 3 |
 
 ## Links

@@ -3,6 +3,7 @@ package typingsSlinky.googleAppsScript.GoogleAppsScript.Document
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Blob
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.User
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *     doc = DocumentApp.create("Document Title");
   */
 @js.native
-trait Document extends js.Object {
+trait Document extends StObject {
   
   def addBookmark(position: Position): Bookmark = js.native
   

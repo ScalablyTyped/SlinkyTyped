@@ -10,9 +10,9 @@ Client library for TwilSock service
 | ------------------ | :-------------: |
 | Full name          | twilsock |
 | Keywords           | - |
-| # releases         | 20 |
-| # dependents       | 5 |
-| # downloads        | 701714 |
+| # releases         | 29 |
+| # dependents       | 7 |
+| # downloads        | 3366769 |
 | # stars            | 1 |
 
 ## Links

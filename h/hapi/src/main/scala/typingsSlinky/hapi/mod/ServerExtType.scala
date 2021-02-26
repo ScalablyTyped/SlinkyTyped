@@ -1,5 +1,6 @@
 package typingsSlinky.hapi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.hapi.hapiStrings.onPreStop
   - typingsSlinky.hapi.hapiStrings.onPostStop
 */
-trait ServerExtType extends js.Object
+trait ServerExtType extends StObject
 object ServerExtType {
   
   @scala.inline

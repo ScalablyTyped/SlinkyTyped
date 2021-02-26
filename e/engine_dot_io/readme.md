@@ -10,9 +10,9 @@ The realtime engine behind Socket.IO. Provides the foundation of a bidirectional
 | ------------------ | :-------------: |
 | Full name          | engine.io |
 | Keywords           | - |
-| # releases         | 8 |
-| # dependents       | 134 |
-| # downloads        | 133552214 |
+| # releases         | 14 |
+| # dependents       | 139 |
+| # downloads        | 179751707 |
 | # stars            | 27 |
 
 ## Links

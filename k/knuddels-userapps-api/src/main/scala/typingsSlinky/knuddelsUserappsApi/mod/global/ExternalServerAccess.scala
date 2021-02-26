@@ -3,6 +3,7 @@ package typingsSlinky.knuddelsUserappsApi.mod.global
 import typingsSlinky.knuddelsUserappsApi.anon.Method
 import typingsSlinky.knuddelsUserappsApi.anon.OnFailure
 import typingsSlinky.knuddelsUserappsApi.anon.OnSuccess
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 	 */
 @JSGlobal("ExternalServerAccess")
 @js.native
-class ExternalServerAccess () extends js.Object {
+class ExternalServerAccess () extends StObject {
   
   /**
   		 * @see https://developer.knuddels.de/docs/classes/ExternalServerAccess.html#method_callURL

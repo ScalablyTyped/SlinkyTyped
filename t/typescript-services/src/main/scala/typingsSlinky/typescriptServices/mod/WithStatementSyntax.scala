@@ -3,6 +3,7 @@ package typingsSlinky.typescriptServices.mod
 import typingsSlinky.typescriptServices.TypeScript.IExpressionSyntax
 import typingsSlinky.typescriptServices.TypeScript.IStatementSyntax
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,10 +21,10 @@ class WithStatementSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSImport("typescript-services", "WithStatementSyntax")
-@js.native
-object WithStatementSyntax extends js.Object {
+object WithStatementSyntax {
   
+  /* static member */
+  @JSImport("typescript-services", "WithStatementSyntax.create1")
+  @js.native
   def create1(condition: IExpressionSyntax, statement: IStatementSyntax): typingsSlinky.typescriptServices.TypeScript.WithStatementSyntax = js.native
 }

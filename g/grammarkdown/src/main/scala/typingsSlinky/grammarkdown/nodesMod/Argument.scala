@@ -1,6 +1,7 @@
 package typingsSlinky.grammarkdown.nodesMod
 
 import typingsSlinky.grammarkdown.tokensMod.ArgumentOperatorKind
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

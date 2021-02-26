@@ -1,5 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.baiduApp.baiduAppStrings.animationiteration
   - typingsSlinky.baiduApp.baiduAppStrings.animationend
 */
-trait TransitionEventType extends js.Object
+trait TransitionEventType extends StObject
 object TransitionEventType {
   
   @scala.inline

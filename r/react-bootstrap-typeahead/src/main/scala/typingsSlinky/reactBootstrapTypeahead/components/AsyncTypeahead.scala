@@ -14,15 +14,22 @@ import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenuProps
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadResult
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AsyncTypeahead {
   
+  @scala.inline
+  def apply[T /* <: TypeaheadModel */](isLoading: Boolean, onSearch: String => Unit, options: js.Array[T]): Builder[T] = {
+    val __props = js.Dynamic.literal(isLoading = isLoading.asInstanceOf[js.Any], onSearch = js.Any.fromFunction1(onSearch), options = options.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[AsyncTypeaheadProps[T]]))
+  }
+  
   @JSImport("react-bootstrap-typeahead", "AsyncTypeahead")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T /* <: TypeaheadModel */] (val args: js.Array[js.Any])
@@ -39,12 +46,12 @@ object AsyncTypeahead {
     def align(value: TypeaheadAlign): this.type = set("align", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def allowNewFunction2(value: (/* results */ js.Array[T], /* props */ AllTypeaheadOwnAndInjectedProps[T]) => Boolean): this.type = set("allowNew", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def allowNew(
       value: Boolean | (js.Function2[/* results */ js.Array[T], /* props */ AllTypeaheadOwnAndInjectedProps[T], Boolean])
     ): this.type = set("allowNew", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def allowNewFunction2(value: (/* results */ js.Array[T], /* props */ AllTypeaheadOwnAndInjectedProps[T]) => Boolean): this.type = set("allowNew", js.Any.fromFunction2(value))
     
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
@@ -68,10 +75,10 @@ object AsyncTypeahead {
     def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultSelectedVarargs(value: T*): this.type = set("defaultSelected", js.Array(value :_*))
+    def defaultSelected(value: js.Array[T]): this.type = set("defaultSelected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultSelected(value: js.Array[T]): this.type = set("defaultSelected", value.asInstanceOf[js.Any])
+    def defaultSelectedVarargs(value: T*): this.type = set("defaultSelected", js.Array(value :_*))
     
     @scala.inline
     def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
@@ -86,15 +93,15 @@ object AsyncTypeahead {
     def emptyLabel(value: String): this.type = set("emptyLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def filterBy(
+      value: js.Array[String] | (js.Function2[T, /* props */ AllTypeaheadOwnAndInjectedProps[T], Boolean])
+    ): this.type = set("filterBy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def filterByFunction2(value: (T, /* props */ AllTypeaheadOwnAndInjectedProps[T]) => Boolean): this.type = set("filterBy", js.Any.fromFunction2(value))
     
     @scala.inline
     def filterByVarargs(value: String*): this.type = set("filterBy", js.Array(value :_*))
-    
-    @scala.inline
-    def filterBy(
-      value: js.Array[String] | (js.Function2[T, /* props */ AllTypeaheadOwnAndInjectedProps[T], Boolean])
-    ): this.type = set("filterBy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def flip(value: Boolean): this.type = set("flip", value.asInstanceOf[js.Any])
@@ -118,10 +125,10 @@ object AsyncTypeahead {
     def isValid(value: Boolean): this.type = set("isValid", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelKeyFunction1(value: T => String): this.type = set("labelKey", js.Any.fromFunction1(value))
+    def labelKey(value: TypeaheadLabelKey[T]): this.type = set("labelKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelKey(value: TypeaheadLabelKey[T]): this.type = set("labelKey", value.asInstanceOf[js.Any])
+    def labelKeyFunction1(value: T => String): this.type = set("labelKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def maxHeight(value: String): this.type = set("maxHeight", value.asInstanceOf[js.Any])
@@ -184,10 +191,10 @@ object AsyncTypeahead {
     def positionFixed(value: Boolean): this.type = set("positionFixed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def promptTextReactElement(value: ReactElement): this.type = set("promptText", value.asInstanceOf[js.Any])
+    def promptText(value: ReactElement): this.type = set("promptText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def promptText(value: ReactElement): this.type = set("promptText", value.asInstanceOf[js.Any])
+    def promptTextReactElement(value: ReactElement): this.type = set("promptText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def renderMenu(
@@ -203,29 +210,23 @@ object AsyncTypeahead {
     def renderToken(value: (T, /* props */ TypeaheadMenuProps[T], /* index */ Double) => ReactElement): this.type = set("renderToken", js.Any.fromFunction3(value))
     
     @scala.inline
-    def searchTextReactElement(value: ReactElement): this.type = set("searchText", value.asInstanceOf[js.Any])
+    def searchText(value: ReactElement): this.type = set("searchText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def searchText(value: ReactElement): this.type = set("searchText", value.asInstanceOf[js.Any])
+    def searchTextReactElement(value: ReactElement): this.type = set("searchText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def selectHintOnEnter(value: Boolean): this.type = set("selectHintOnEnter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedVarargs(value: T*): this.type = set("selected", js.Array(value :_*))
+    def selected(value: js.Array[T]): this.type = set("selected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selected(value: js.Array[T]): this.type = set("selected", value.asInstanceOf[js.Any])
+    def selectedVarargs(value: T*): this.type = set("selected", js.Array(value :_*))
     
     @scala.inline
     def useCache(value: Boolean): this.type = set("useCache", value.asInstanceOf[js.Any])
   }
   
   def withProps[T /* <: TypeaheadModel */](p: AsyncTypeaheadProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T /* <: TypeaheadModel */](isLoading: Boolean, onSearch: String => Unit, options: js.Array[T]): Builder[T] = {
-    val __props = js.Dynamic.literal(isLoading = isLoading.asInstanceOf[js.Any], onSearch = js.Any.fromFunction1(onSearch), options = options.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[AsyncTypeaheadProps[T]]))
-  }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.yandexMaps.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.yandexMaps.yandexMapsStrings.largeMapDefaultSet
   - typingsSlinky.yandexMaps.yandexMapsStrings.default
 */
-trait ControlKey extends js.Object
+trait ControlKey extends StObject
 object ControlKey {
   
   @scala.inline

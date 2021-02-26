@@ -4,7 +4,6 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -21,7 +20,7 @@ import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeSafeAreaContext.safeAreaTypesMod.EdgeInsets
 import typingsSlinky.reactNavigationStack.anon.Close
-import typingsSlinky.reactNavigationStack.anon.Closing
+import typingsSlinky.reactNavigationStack.anon.Gesture
 import typingsSlinky.reactNavigationStack.anon.Horizontal
 import typingsSlinky.reactNavigationStack.anon.StyleWithAnimatedValue
 import typingsSlinky.reactNavigationStack.cardMod.Props
@@ -39,17 +38,43 @@ import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.radiobutto
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.radiobutton_unchecked
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.yes
 import typingsSlinky.reactNavigationStack.vendorTypesMod.GestureDirection
+import typingsSlinky.reactNavigationStack.vendorTypesMod.Layout
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackCardInterpolatedStyle
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackCardInterpolationProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Card {
   
+  @scala.inline
+  def apply(
+    closing: Boolean,
+    current: AnimatedInterpolation,
+    gesture: Value,
+    gestureDirection: GestureDirection,
+    gestureEnabled: Boolean,
+    gestureVelocityImpact: Double,
+    index: Double,
+    insets: EdgeInsets,
+    layout: Layout,
+    onClose: () => Unit,
+    onOpen: () => Unit,
+    overlay: StyleWithAnimatedValue => ReactElement,
+    overlayEnabled: Boolean,
+    pageOverflowEnabled: Boolean,
+    shadowEnabled: Boolean,
+    styleInterpolator: /* props */ StackCardInterpolationProps => StackCardInterpolatedStyle,
+    transitionSpec: Close
+  ): Builder = {
+    val __props = js.Dynamic.literal(closing = closing.asInstanceOf[js.Any], current = current.asInstanceOf[js.Any], gesture = gesture.asInstanceOf[js.Any], gestureDirection = gestureDirection.asInstanceOf[js.Any], gestureEnabled = gestureEnabled.asInstanceOf[js.Any], gestureVelocityImpact = gestureVelocityImpact.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], insets = insets.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], onClose = js.Any.fromFunction0(onClose), onOpen = js.Any.fromFunction0(onOpen), overlay = js.Any.fromFunction1(overlay), overlayEnabled = overlayEnabled.asInstanceOf[js.Any], pageOverflowEnabled = pageOverflowEnabled.asInstanceOf[js.Any], shadowEnabled = shadowEnabled.asInstanceOf[js.Any], styleInterpolator = js.Any.fromFunction1(styleInterpolator), transitionSpec = transitionSpec.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("react-navigation-stack/lib/typescript/src/vendor/views/Stack/Card", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -57,10 +82,10 @@ object Card {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -87,10 +112,10 @@ object Card {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -162,7 +187,7 @@ object Card {
     def onGestureEnd(value: () => Unit): this.type = set("onGestureEnd", js.Any.fromFunction0(value))
     
     @scala.inline
-    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, typingsSlinky.reactNative.anon.Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))
@@ -219,7 +244,7 @@ object Card {
     def onTouchStart(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onTransitionStart(value: /* props */ Closing => Unit): this.type = set("onTransitionStart", js.Any.fromFunction1(value))
+    def onTransition(value: /* props */ Gesture => Unit): this.type = set("onTransition", js.Any.fromFunction1(value))
     
     @scala.inline
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
@@ -259,28 +284,4 @@ object Card {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    closing: Boolean,
-    current: AnimatedInterpolation,
-    gesture: Value,
-    gestureDirection: GestureDirection,
-    gestureEnabled: Boolean,
-    gestureVelocityImpact: Double,
-    index: Double,
-    insets: EdgeInsets,
-    layout: typingsSlinky.reactNavigationStack.vendorTypesMod.Layout,
-    onClose: () => Unit,
-    onOpen: () => Unit,
-    overlay: StyleWithAnimatedValue => ReactElement,
-    overlayEnabled: Boolean,
-    pageOverflowEnabled: Boolean,
-    shadowEnabled: Boolean,
-    styleInterpolator: /* props */ StackCardInterpolationProps => StackCardInterpolatedStyle,
-    transitionSpec: Close
-  ): Builder = {
-    val __props = js.Dynamic.literal(closing = closing.asInstanceOf[js.Any], current = current.asInstanceOf[js.Any], gesture = gesture.asInstanceOf[js.Any], gestureDirection = gestureDirection.asInstanceOf[js.Any], gestureEnabled = gestureEnabled.asInstanceOf[js.Any], gestureVelocityImpact = gestureVelocityImpact.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], insets = insets.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], onClose = js.Any.fromFunction0(onClose), onOpen = js.Any.fromFunction0(onOpen), overlay = js.Any.fromFunction1(overlay), overlayEnabled = overlayEnabled.asInstanceOf[js.Any], pageOverflowEnabled = pageOverflowEnabled.asInstanceOf[js.Any], shadowEnabled = shadowEnabled.asInstanceOf[js.Any], styleInterpolator = js.Any.fromFunction1(styleInterpolator), transitionSpec = transitionSpec.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

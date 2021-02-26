@@ -1,12 +1,13 @@
 package typingsSlinky.typescriptServices.global.TypeScript
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.AssertionLevel")
 @js.native
-object AssertionLevel extends js.Object {
+object AssertionLevel extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.typescriptServices.TypeScript.AssertionLevel with Double] = js.native

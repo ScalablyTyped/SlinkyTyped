@@ -11,8 +11,8 @@ redux action utils
 | Full name          | redux-action |
 | Keywords           | promise, reducer, actions, action, async, react, redux |
 | # releases         | 0 |
-| # dependents       | 2 |
-| # downloads        | 30600 |
+| # dependents       | 3 |
+| # downloads        | 35966 |
 | # stars            | 0 |
 
 ## Links

@@ -10,9 +10,9 @@ Lightweight library for composing asynchronous and event-based operations in Jav
 | ------------------ | :-------------: |
 | Full name          | rx-lite |
 | Keywords           | React, Reactive, Events, Rx, RxJS |
-| # releases         | 1 |
-| # dependents       | 127 |
-| # downloads        | 187666489 |
+| # releases         | 0 |
+| # dependents       | 160 |
+| # downloads        | 173843451 |
 | # stars            | 9 |
 
 ## Links

@@ -10,6 +10,7 @@ import typingsSlinky.rcGesture.mod.default
 import typingsSlinky.rcGesture.rcGestureStrings.all
 import typingsSlinky.rcGesture.rcGestureStrings.horizontal
 import typingsSlinky.rcGesture.rcGestureStrings.vertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object RcGesture {
   
   @JSImport("rc-gesture", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -134,7 +135,7 @@ object RcGesture {
     def onTouchStart(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: IGesture): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RcGesture.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IGesture): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

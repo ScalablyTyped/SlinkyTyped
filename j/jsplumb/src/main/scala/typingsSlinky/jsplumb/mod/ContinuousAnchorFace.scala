@@ -4,6 +4,7 @@ import typingsSlinky.jsplumb.jsplumbStrings.bottom_
 import typingsSlinky.jsplumb.jsplumbStrings.left_
 import typingsSlinky.jsplumb.jsplumbStrings.right_
 import typingsSlinky.jsplumb.jsplumbStrings.top_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jsplumb.jsplumbStrings.right_
   - typingsSlinky.jsplumb.jsplumbStrings.bottom_
 */
-trait ContinuousAnchorFace extends js.Object
+trait ContinuousAnchorFace extends StObject
 object ContinuousAnchorFace {
   
   @scala.inline

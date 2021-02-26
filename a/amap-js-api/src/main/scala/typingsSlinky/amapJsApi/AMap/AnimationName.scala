@@ -1,5 +1,6 @@
 package typingsSlinky.amapJsApi.AMap
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.amapJsApi.amapJsApiStrings.AMAP_ANIMATION_DROP
   - typingsSlinky.amapJsApi.amapJsApiStrings.AMAP_ANIMATION_BOUNCE
 */
-trait AnimationName extends js.Object
+trait AnimationName extends StObject
 object AnimationName {
   
   @scala.inline

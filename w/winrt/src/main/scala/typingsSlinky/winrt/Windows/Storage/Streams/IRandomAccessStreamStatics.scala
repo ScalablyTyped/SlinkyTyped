@@ -1,12 +1,13 @@
 package typingsSlinky.winrt.Windows.Storage.Streams
 
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperationWithProgress
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IRandomAccessStreamStatics extends js.Object {
+trait IRandomAccessStreamStatics extends StObject {
   
   def copyAndCloseAsync(source: IInputStream, destination: IOutputStream): IAsyncOperationWithProgress[Double, Double] = js.native
   

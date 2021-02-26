@@ -9,6 +9,7 @@ import typingsSlinky.phaser.Phaser.Types.Input.HitAreaCallback
 import typingsSlinky.phaser.Phaser.Types.Math.Vector2Like
 import typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,6 +1,7 @@
 package typingsSlinky.tuyaPanelKit.mod
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,33 +22,21 @@ object TabPaneProps {
   }
   
   @scala.inline
-  implicit class TabPanePropsOps[Self <: TabPaneProps] (val x: Self) extends AnyVal {
+  implicit class TabPanePropsMutableBuilder[Self <: TabPaneProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setTab(value: ReactElement): Self = StObject.set(x, "tab", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setTabReactElement(value: ReactElement): Self = StObject.set(x, "tab", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setTabUndefined: Self = StObject.set(x, "tab", js.undefined)
     
     @scala.inline
-    def setTabReactElement(value: ReactElement): Self = this.set("tab", value.asInstanceOf[js.Any])
+    def setTabWidth(value: Double): Self = StObject.set(x, "tabWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTab(value: ReactElement): Self = this.set("tab", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTab: Self = this.set("tab", js.undefined)
-    
-    @scala.inline
-    def setTabWidth(value: Double): Self = this.set("tabWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTabWidth: Self = this.set("tabWidth", js.undefined)
+    def setTabWidthUndefined: Self = StObject.set(x, "tabWidth", js.undefined)
   }
 }

@@ -1,12 +1,10 @@
 package typingsSlinky.pathfinding.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DijkstraFinder extends AStarFinder
-@JSImport("pathfinding", "DijkstraFinder")
-@js.native
-object DijkstraFinder extends TopLevel[DijkstraFinder]
+trait DijkstraFinder
+  extends typingsSlinky.pathfinding.mod.AStarFinder

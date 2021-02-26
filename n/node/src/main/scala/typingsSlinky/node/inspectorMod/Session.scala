@@ -202,6 +202,7 @@ import typingsSlinky.node.nodeStrings.RuntimeDotrunScript
 import typingsSlinky.node.nodeStrings.RuntimeDotsetCustomObjectFormatterEnabled
 import typingsSlinky.node.nodeStrings.SchemaDotgetDomains
 import typingsSlinky.node.nodeStrings.inspectorNotification
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

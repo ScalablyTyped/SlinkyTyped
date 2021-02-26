@@ -6,6 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.ISetting
 import typingsSlinky.sawtoothSdk.protobufMod.Setting.IEntry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,83 +22,10 @@ class Setting ()
   def this(properties: ISetting) = this()
 }
 /* static members */
-@JSImport("sawtooth-sdk", "protobuf.Setting")
-@js.native
-object Setting extends js.Object {
-  
-  /**
-    * Creates a new Setting instance using the specified properties.
-    * @param [properties] Properties to set
-    * @returns Setting instance
-    */
-  def create(): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
-  def create(properties: ISetting): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
-  
-  /**
-    * Decodes a Setting message from the specified reader or buffer.
-    * @param reader Reader or buffer to decode from
-    * @param [length] Message length if known beforehand
-    * @returns Setting
-    * @throws {Error} If the payload is not a reader or valid buffer
-    * @throws {$protobuf.util.ProtocolError} If required fields are missing
-    */
-  def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
-  def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
-  
-  /**
-    * Decodes a Setting message from the specified reader or buffer, length delimited.
-    * @param reader Reader or buffer to decode from
-    * @returns Setting
-    * @throws {Error} If the payload is not a reader or valid buffer
-    * @throws {$protobuf.util.ProtocolError} If required fields are missing
-    */
-  def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
-  
-  /**
-    * Encodes the specified Setting message. Does not implicitly {@link Setting.verify|verify} messages.
-    * @param message Setting message or plain object to encode
-    * @param [writer] Writer to encode to
-    * @returns Writer
-    */
-  def encode(message: ISetting): Writer = js.native
-  def encode(message: ISetting, writer: Writer): Writer = js.native
-  
-  /**
-    * Encodes the specified Setting message, length delimited. Does not implicitly {@link Setting.verify|verify} messages.
-    * @param message Setting message or plain object to encode
-    * @param [writer] Writer to encode to
-    * @returns Writer
-    */
-  def encodeDelimited(message: ISetting): Writer = js.native
-  def encodeDelimited(message: ISetting, writer: Writer): Writer = js.native
-  
-  /**
-    * Creates a Setting message from a plain object. Also converts values to their respective internal types.
-    * @param object Plain object
-    * @returns Setting
-    */
-  def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
-  
-  /**
-    * Creates a plain object from a Setting message. Also converts values to other types if specified.
-    * @param message Setting
-    * @param [options] Conversion options
-    * @returns Plain object
-    */
-  def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.Setting): StringDictionary[js.Any] = js.native
-  def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.Setting, options: IConversionOptions): StringDictionary[js.Any] = js.native
-  
-  /**
-    * Verifies a Setting message.
-    * @param message Plain object to verify
-    * @returns `null` if valid, otherwise the reason why it is not
-    */
-  def verify(message: StringDictionary[js.Any]): String | Null = js.native
+object Setting {
   
   /** Represents an Entry. */
+  @JSImport("sawtooth-sdk", "protobuf.Setting.Entry")
   @js.native
   /**
     * Constructs a new Entry.
@@ -107,18 +35,27 @@ object Setting extends js.Object {
     extends typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry {
     def this(properties: IEntry) = this()
   }
-  /* static members */
-  @js.native
-  object Entry extends js.Object {
+  object Entry {
     
     /**
       * Creates a new Entry instance using the specified properties.
       * @param [properties] Properties to set
       * @returns Entry instance
       */
+    /* static member */
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.create")
+    @js.native
     def create(): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.create")
+    @js.native
     def create(properties: IEntry): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
     
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.decode")
+    @js.native
+    def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.decode")
+    @js.native
+    def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
     /**
       * Decodes an Entry message from the specified reader or buffer.
       * @param reader Reader or buffer to decode from
@@ -127,11 +64,17 @@ object Setting extends js.Object {
       * @throws {Error} If the payload is not a reader or valid buffer
       * @throws {$protobuf.util.ProtocolError} If required fields are missing
       */
+    /* static member */
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.decode")
+    @js.native
     def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.decode")
+    @js.native
     def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
-    def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
-    def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
     
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.decodeDelimited")
+    @js.native
+    def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
     /**
       * Decodes an Entry message from the specified reader or buffer, length delimited.
       * @param reader Reader or buffer to decode from
@@ -139,8 +82,10 @@ object Setting extends js.Object {
       * @throws {Error} If the payload is not a reader or valid buffer
       * @throws {$protobuf.util.ProtocolError} If required fields are missing
       */
+    /* static member */
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.decodeDelimited")
+    @js.native
     def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
-    def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
     
     /**
       * Encodes the specified Entry message. Does not implicitly {@link Setting.Entry.verify|verify} messages.
@@ -148,7 +93,12 @@ object Setting extends js.Object {
       * @param [writer] Writer to encode to
       * @returns Writer
       */
+    /* static member */
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.encode")
+    @js.native
     def encode(message: IEntry): Writer = js.native
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.encode")
+    @js.native
     def encode(message: IEntry, writer: Writer): Writer = js.native
     
     /**
@@ -157,7 +107,12 @@ object Setting extends js.Object {
       * @param [writer] Writer to encode to
       * @returns Writer
       */
+    /* static member */
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.encodeDelimited")
+    @js.native
     def encodeDelimited(message: IEntry): Writer = js.native
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.encodeDelimited")
+    @js.native
     def encodeDelimited(message: IEntry, writer: Writer): Writer = js.native
     
     /**
@@ -165,6 +120,9 @@ object Setting extends js.Object {
       * @param object Plain object
       * @returns Entry
       */
+    /* static member */
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.fromObject")
+    @js.native
     def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry = js.native
     
     /**
@@ -173,7 +131,12 @@ object Setting extends js.Object {
       * @param [options] Conversion options
       * @returns Plain object
       */
+    /* static member */
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.toObject")
+    @js.native
     def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry): StringDictionary[js.Any] = js.native
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.toObject")
+    @js.native
     def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.Setting.Entry, options: IConversionOptions): StringDictionary[js.Any] = js.native
     
     /**
@@ -181,6 +144,113 @@ object Setting extends js.Object {
       * @param message Plain object to verify
       * @returns `null` if valid, otherwise the reason why it is not
       */
+    /* static member */
+    @JSImport("sawtooth-sdk", "protobuf.Setting.Entry.verify")
+    @js.native
     def verify(message: StringDictionary[js.Any]): String | Null = js.native
   }
+  
+  /**
+    * Creates a new Setting instance using the specified properties.
+    * @param [properties] Properties to set
+    * @returns Setting instance
+    */
+  @JSImport("sawtooth-sdk", "protobuf.Setting.create")
+  @js.native
+  def create(): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
+  @JSImport("sawtooth-sdk", "protobuf.Setting.create")
+  @js.native
+  def create(properties: ISetting): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
+  
+  @JSImport("sawtooth-sdk", "protobuf.Setting.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
+  @JSImport("sawtooth-sdk", "protobuf.Setting.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
+  /**
+    * Decodes a Setting message from the specified reader or buffer.
+    * @param reader Reader or buffer to decode from
+    * @param [length] Message length if known beforehand
+    * @returns Setting
+    * @throws {Error} If the payload is not a reader or valid buffer
+    * @throws {$protobuf.util.ProtocolError} If required fields are missing
+    */
+  @JSImport("sawtooth-sdk", "protobuf.Setting.decode")
+  @js.native
+  def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
+  @JSImport("sawtooth-sdk", "protobuf.Setting.decode")
+  @js.native
+  def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
+  
+  @JSImport("sawtooth-sdk", "protobuf.Setting.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
+  /**
+    * Decodes a Setting message from the specified reader or buffer, length delimited.
+    * @param reader Reader or buffer to decode from
+    * @returns Setting
+    * @throws {Error} If the payload is not a reader or valid buffer
+    * @throws {$protobuf.util.ProtocolError} If required fields are missing
+    */
+  @JSImport("sawtooth-sdk", "protobuf.Setting.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
+  
+  /**
+    * Encodes the specified Setting message. Does not implicitly {@link Setting.verify|verify} messages.
+    * @param message Setting message or plain object to encode
+    * @param [writer] Writer to encode to
+    * @returns Writer
+    */
+  @JSImport("sawtooth-sdk", "protobuf.Setting.encode")
+  @js.native
+  def encode(message: ISetting): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.Setting.encode")
+  @js.native
+  def encode(message: ISetting, writer: Writer): Writer = js.native
+  
+  /**
+    * Encodes the specified Setting message, length delimited. Does not implicitly {@link Setting.verify|verify} messages.
+    * @param message Setting message or plain object to encode
+    * @param [writer] Writer to encode to
+    * @returns Writer
+    */
+  @JSImport("sawtooth-sdk", "protobuf.Setting.encodeDelimited")
+  @js.native
+  def encodeDelimited(message: ISetting): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.Setting.encodeDelimited")
+  @js.native
+  def encodeDelimited(message: ISetting, writer: Writer): Writer = js.native
+  
+  /**
+    * Creates a Setting message from a plain object. Also converts values to their respective internal types.
+    * @param object Plain object
+    * @returns Setting
+    */
+  @JSImport("sawtooth-sdk", "protobuf.Setting.fromObject")
+  @js.native
+  def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.Setting = js.native
+  
+  /**
+    * Creates a plain object from a Setting message. Also converts values to other types if specified.
+    * @param message Setting
+    * @param [options] Conversion options
+    * @returns Plain object
+    */
+  @JSImport("sawtooth-sdk", "protobuf.Setting.toObject")
+  @js.native
+  def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.Setting): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk", "protobuf.Setting.toObject")
+  @js.native
+  def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.Setting, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
+  /**
+    * Verifies a Setting message.
+    * @param message Plain object to verify
+    * @returns `null` if valid, otherwise the reason why it is not
+    */
+  @JSImport("sawtooth-sdk", "protobuf.Setting.verify")
+  @js.native
+  def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

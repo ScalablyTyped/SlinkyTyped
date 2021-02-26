@@ -1,5 +1,6 @@
 package typingsSlinky.atom.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -46,7 +47,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.atom.atomStrings.macroman
   - typingsSlinky.atom.atomStrings.windows1252
 */
-trait FileEncoding extends js.Object
+trait FileEncoding extends StObject
 object FileEncoding {
   
   @scala.inline

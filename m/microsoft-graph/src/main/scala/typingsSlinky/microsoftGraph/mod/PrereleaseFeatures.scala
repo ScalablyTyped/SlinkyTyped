@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.settingsAndExperimentations
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.notAllowed
 */
-trait PrereleaseFeatures extends js.Object
+trait PrereleaseFeatures extends StObject
 object PrereleaseFeatures {
   
   @scala.inline

@@ -4,15 +4,15 @@
 Typings are for version 10.0.0
 
 ## Library description:
-An infinite scroll directive for Angular compatible with AoT compilation and Tree shaking
+An infinite scroll directive for Angular
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | ngx-infinite-scroll |
 | Keywords           | angular, javascript, typescript |
-| # releases         | 18 |
-| # dependents       | 39 |
-| # downloads        | 3671099 |
+| # releases         | 13 |
+| # dependents       | 51 |
+| # downloads        | 5892290 |
 | # stars            | 6 |
 
 ## Links

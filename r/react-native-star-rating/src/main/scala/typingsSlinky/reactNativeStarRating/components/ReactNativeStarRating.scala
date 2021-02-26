@@ -17,6 +17,7 @@ import typingsSlinky.reactNativeStarRating.reactNativeStarRatingStrings.shake
 import typingsSlinky.reactNativeStarRating.reactNativeStarRatingStrings.swing
 import typingsSlinky.reactNativeStarRating.reactNativeStarRatingStrings.tada
 import typingsSlinky.reactNativeStarRating.reactNativeStarRatingStrings.wobble
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ object ReactNativeStarRating {
   
   @JSImport("react-native-star-rating", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -99,7 +100,7 @@ object ReactNativeStarRating {
     def starStyleNull: this.type = set("starStyle", null)
   }
   
-  def withProps(p: StarRatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeStarRating.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StarRatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

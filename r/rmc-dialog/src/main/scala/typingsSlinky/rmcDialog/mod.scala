@@ -5,13 +5,29 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.rmcDialog.anon.OnClose
 import typingsSlinky.rmcDialog.anon.Visible
 import typingsSlinky.rmcDialog.idialogproptypesMod.IDialogPropTypes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rmc-dialog", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
+  
+  @JSImport("rmc-dialog", JSImport.Default)
+  @js.native
+  class default () extends DialogWrap
+  /* static members */
+  object default {
+    
+    @JSImport("rmc-dialog", JSImport.Default)
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("rmc-dialog", "default.defaultProps")
+    @js.native
+    def defaultProps: OnClose = js.native
+    @scala.inline
+    def defaultProps_=(x: OnClose): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
+  }
   
   @js.native
   trait DialogWrap
@@ -42,14 +58,5 @@ object mod extends js.Object {
     
     @JSName("shouldComponentUpdate")
     def shouldComponentUpdate_MDialogWrap(hasVisible: Visible): Boolean = js.native
-  }
-  
-  @js.native
-  class default () extends DialogWrap
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    var defaultProps: OnClose = js.native
   }
 }

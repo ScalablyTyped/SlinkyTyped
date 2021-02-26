@@ -1,5 +1,6 @@
 package typingsSlinky.navermaps.naver.maps
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.navermaps.navermapsStrings.round
   - typingsSlinky.navermaps.navermapsStrings.square
 */
-trait strokeLineCapType extends js.Object
+trait strokeLineCapType extends StObject
 object strokeLineCapType {
   
   @scala.inline

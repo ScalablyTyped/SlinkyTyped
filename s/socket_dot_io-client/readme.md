@@ -4,21 +4,21 @@
 Typings are for version 1.4.5
 
 ## Library description:
-[![Build Status](https://secure.travis-ci.org/socketio/socket.io-client.svg?branch=master)](http://travis-ci.org/socketio/socket.io-client) [![Dependency Status](https://david-dm.org/socketio/socket.io-client.svg)](https://david-dm.org/socketio/socket.io-
+[![Build Status](https://github.com/socketio/socket.io-client/workflows/CI/badge.svg?branch=master)](https://github.com/socketio/socket.io-client/actions) [![Dependency Status](https://david-dm.org/socketio/socket.io-client.svg)](https://david-dm.org/sock
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | socket.io-client |
 | Keywords           | realtime, framework, websocket, tcp, events, client |
-| # releases         | 5 |
-| # dependents       | 3221 |
-| # downloads        | 160128012 |
+| # releases         | 14 |
+| # dependents       | 3962 |
+| # downloads        | 234602659 |
 | # stars            | 111 |
 
 ## Links
-- [Homepage](https://github.com/Automattic/socket.io-client#readme)
-- [Bugs](https://github.com/Automattic/socket.io-client/issues)
-- [Repository](https://github.com/Automattic/socket.io-client)
+- [Homepage](https://github.com/socketio/socket.io-client#readme)
+- [Bugs](https://github.com/socketio/socket.io-client/issues)
+- [Repository](https://github.com/socketio/socket.io-client)
 - [Npm](https://www.npmjs.com/package/socket.io-client)
     
 

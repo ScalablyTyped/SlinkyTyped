@@ -1,7 +1,7 @@
 
 # Scala.js typings for maxim_mazurok__gapi_dot_client_dot_blogger
 
-Typings are for version 3.0.20201119
+Typings are for version 3.0.20201121
 
 ## Library description:
 TypeScript typings for Blogger API v3 v3
@@ -10,9 +10,9 @@ TypeScript typings for Blogger API v3 v3
 | ------------------ | :-------------: |
 | Full name          | @maxim_mazurok/gapi.client.blogger |
 | Keywords           | - |
-| # releases         | 4 |
+| # releases         | 51 |
 | # dependents       | 1 |
-| # downloads        | 134 |
+| # downloads        | 3664 |
 | # stars            | 0 |
 
 ## Links

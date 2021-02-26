@@ -15,15 +15,54 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ComponentPropsWithRef
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Radio {
   
+  object Button {
+    
+    @JSImport("antd", "Radio.Button")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Button.type): SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object] = new SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: RadioButtonProps with RefAttributes[js.Any]): SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object] = new SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  /* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree., Couldn't find props for (js.Object | (/ * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any) | (/ * import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in K ]: T[P]}
+    * / typingsSlinky.std.stdStrings.Pick with (js.Object | (/ * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any)))) with typingsSlinky.react.anon.`1` because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree., Couldn't find props for / * import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in K ]: T[P]}
+    * / typingsSlinky.std.stdStrings.Pick with (js.Object | (/ * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any)) because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.)), Couldn't find props for (js.Any | (/ * import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in K ]: T[P]}
+    * / typingsSlinky.std.stdStrings.Pick with js.Any)) with (typingsSlinky.react.mod.RefAttributes[
+  typingsSlinky.std.InstanceType[
+    typingsSlinky.react.mod.ForwardRefExoticComponent[
+    typingsSlinky.antd.radioInterfaceMod.RadioGroupProps with typingsSlinky.react.mod.RefAttributes[typingsSlinky.std.HTMLDivElement]
+    ]
+  ]]) because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree., Couldn't find props for / * import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in K ]: T[P]}
+    * / typingsSlinky.std.stdStrings.Pick with js.Any because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.)) */
+  object Group {
+    
+    def apply(
+      p: ComponentPropsWithRef[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[HTMLDivElement]]]
+    ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    
+    @JSImport("antd", "Radio.Group")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Group.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+  }
+  
   @JSImport("antd", "Radio")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -85,45 +124,7 @@ object Radio {
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RadioProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Radio.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Button {
-    
-    @JSImport("antd", "Radio.Button")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: RadioButtonProps with RefAttributes[js.Any]): SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object] = new SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Button.type): SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object] = new SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object](js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  /* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree., Couldn't find props for (js.Object | (/ * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any) | (/ * import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in K ]: T[P]}
-    * / typingsSlinky.std.stdStrings.Pick with (js.Object | (/ * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any)))) with typingsSlinky.react.anon.`1` because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree., Couldn't find props for / * import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in K ]: T[P]}
-    * / typingsSlinky.std.stdStrings.Pick with (js.Object | (/ * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any)) because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.)), Couldn't find props for (js.Any | (/ * import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in K ]: T[P]}
-    * / typingsSlinky.std.stdStrings.Pick with js.Any)) with (typingsSlinky.react.mod.RefAttributes[
-  typingsSlinky.std.InstanceType[
-    typingsSlinky.react.mod.ForwardRefExoticComponent[
-    typingsSlinky.antd.radioInterfaceMod.RadioGroupProps with typingsSlinky.react.mod.RefAttributes[typingsSlinky.std.HTMLDivElement]
-    ]
-  ]]) because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree., Couldn't find props for / * import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in K ]: T[P]}
-    * / typingsSlinky.std.stdStrings.Pick with js.Any because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.)) */
-  object Group {
-    
-    @JSImport("antd", "Radio.Group")
-    @js.native
-    object component extends js.Object
-    
-    def apply(
-      p: ComponentPropsWithRef[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[HTMLDivElement]]]
-    ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Group.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: RadioProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

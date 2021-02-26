@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesDeleteBucketEncryptionInputMod.D
 import typingsSlinky.awsSdkClientS3Browser.typesDeleteBucketEncryptionOutputMod.DeleteBucketEncryptionOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/DeleteBucketEncryptionCommand", JSImport.Namespace)
-@js.native
-object deleteBucketEncryptionCommandMod extends js.Object {
+object deleteBucketEncryptionCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/DeleteBucketEncryptionCommand", "DeleteBucketEncryptionCommand")
   @js.native
   class DeleteBucketEncryptionCommand protected () extends Command[
           InputTypesUnion, 

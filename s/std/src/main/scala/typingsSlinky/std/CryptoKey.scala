@@ -1,12 +1,13 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** The CryptoKey dictionary of the Web Crypto API represents a cryptographic key. */
 @js.native
-trait CryptoKey extends js.Object {
+trait CryptoKey extends StObject {
   
   val algorithm: org.scalajs.dom.crypto.KeyAlgorithm = js.native
   
@@ -24,40 +25,28 @@ object CryptoKey {
     extractable: scala.Boolean,
     `type`: org.scalajs.dom.crypto.KeyType,
     usages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): CryptoKey = {
+  ): org.scalajs.dom.crypto.CryptoKey = {
     val __obj = js.Dynamic.literal(algorithm = algorithm.asInstanceOf[js.Any], extractable = extractable.asInstanceOf[js.Any], usages = usages.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CryptoKey]
+    __obj.asInstanceOf[org.scalajs.dom.crypto.CryptoKey]
   }
   
   @scala.inline
-  implicit class CryptoKeyOps[Self <: org.scalajs.dom.crypto.CryptoKey] (val x: Self) extends AnyVal {
+  implicit class CryptoKeyMutableBuilder[Self <: org.scalajs.dom.crypto.CryptoKey] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAlgorithm(value: org.scalajs.dom.crypto.KeyAlgorithm): Self = StObject.set(x, "algorithm", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setExtractable(value: scala.Boolean): Self = StObject.set(x, "extractable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setType(value: org.scalajs.dom.crypto.KeyType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAlgorithm(value: org.scalajs.dom.crypto.KeyAlgorithm): Self = this.set("algorithm", value.asInstanceOf[js.Any])
+    def setUsages(value: js.Array[org.scalajs.dom.crypto.KeyUsage]): Self = StObject.set(x, "usages", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExtractable(value: scala.Boolean): Self = this.set("extractable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setType(value: org.scalajs.dom.crypto.KeyType): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUsagesVarargs(value: org.scalajs.dom.crypto.KeyUsage*): Self = this.set("usages", js.Array(value :_*))
-    
-    @scala.inline
-    def setUsages(value: js.Array[org.scalajs.dom.crypto.KeyUsage]): Self = this.set("usages", value.asInstanceOf[js.Any])
+    def setUsagesVarargs(value: org.scalajs.dom.crypto.KeyUsage*): Self = StObject.set(x, "usages", js.Array(value :_*))
   }
 }

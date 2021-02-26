@@ -6,14 +6,14 @@ import typingsSlinky.libp2pNoise.libp2pMod.INoiseConnection
 import typingsSlinky.libp2pNoise.libp2pMod.SecureOutbound
 import typingsSlinky.peerId.mod.^
 import typingsSlinky.std.ReturnType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("libp2p-noise/dist/src/noise", JSImport.Namespace)
-@js.native
-object noiseMod extends js.Object {
+object noiseMod {
   
+  @JSImport("libp2p-noise/dist/src/noise", "Noise")
   @js.native
   /**
     *

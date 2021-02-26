@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressEditor.wordpressEditorBooleans.`false`
 import typingsSlinky.wordpressEditor.wordpressEditorBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object PostPublishButton {
     
     @JSImport("@wordpress/editor", "PostPublishButton")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -40,16 +41,22 @@ object PostPublishButton {
       def onSubmit(value: () => Unit): this.type = set("onSubmit", js.Any.fromFunction0(value))
     }
     
-    def withProps(p: typingsSlinky.wordpressEditor.postPublishButtonMod.PostPublishButton.SubmitProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: SubmitProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: typingsSlinky.wordpressEditor.postPublishButtonMod.PostPublishButton.SubmitProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object ToggleProps {
     
+    @scala.inline
+    def apply(isToggle: `true`, onToggle: () => Unit): Builder = {
+      val __props = js.Dynamic.literal(isToggle = isToggle.asInstanceOf[js.Any], onToggle = js.Any.fromFunction0(onToggle))
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.wordpressEditor.postPublishButtonMod.PostPublishButton.ToggleProps]))
+    }
+    
     @JSImport("@wordpress/editor", "PostPublishButton")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -70,11 +77,5 @@ object PostPublishButton {
     }
     
     def withProps(p: typingsSlinky.wordpressEditor.postPublishButtonMod.PostPublishButton.ToggleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(isToggle: `true`, onToggle: () => Unit): Builder = {
-      val __props = js.Dynamic.literal(isToggle = isToggle.asInstanceOf[js.Any], onToggle = js.Any.fromFunction0(onToggle))
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.wordpressEditor.postPublishButtonMod.PostPublishButton.ToggleProps]))
-    }
   }
 }

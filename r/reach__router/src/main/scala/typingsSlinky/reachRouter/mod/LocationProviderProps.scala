@@ -1,12 +1,13 @@
 package typingsSlinky.reachRouter.mod
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationProviderProps extends js.Object {
+trait LocationProviderProps extends StObject {
   
   var children: js.UndefOr[ReactElement | LocationProviderRenderFn] = js.native
   
@@ -21,36 +22,24 @@ object LocationProviderProps {
   }
   
   @scala.inline
-  implicit class LocationProviderPropsOps[Self <: LocationProviderProps] (val x: Self) extends AnyVal {
+  implicit class LocationProviderPropsMutableBuilder[Self <: LocationProviderProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChildren(value: ReactElement | LocationProviderRenderFn): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChildrenFunction1(value: /* context */ LocationContext => ReactElement): Self = StObject.set(x, "children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setChildrenReactElement(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
     
     @scala.inline
-    def setChildrenFunction1(value: /* context */ LocationContext => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
+    def setHistory(value: History): Self = StObject.set(x, "history", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildren(value: ReactElement | LocationProviderRenderFn): Self = this.set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
-    
-    @scala.inline
-    def setHistory(value: History): Self = this.set("history", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHistory: Self = this.set("history", js.undefined)
+    def setHistoryUndefined: Self = StObject.set(x, "history", js.undefined)
   }
 }

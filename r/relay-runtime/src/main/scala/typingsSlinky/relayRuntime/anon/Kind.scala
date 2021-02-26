@@ -7,6 +7,7 @@ import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Variables
 import typingsSlinky.relayRuntime.relayStoreTypesMod.MissingFieldHandler
 import typingsSlinky.relayRuntime.relayStoreTypesMod.ReadOnlyRecordSourceProxy
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

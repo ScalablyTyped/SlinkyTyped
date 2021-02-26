@@ -2,18 +2,20 @@ package typingsSlinky.paypalCheckoutComponents
 
 import typingsSlinky.paypalCheckoutComponents.buttonMod.ButtonRenderer
 import typingsSlinky.paypalCheckoutComponents.buttonMod.FundingOption
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("paypal-checkout-components", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("paypal-checkout-components", "Button")
+  @js.native
   val Button: ButtonRenderer = js.native
   
+  @JSImport("paypal-checkout-components", "ButtonColorOption")
   @js.native
-  object ButtonColorOption extends js.Object {
+  object ButtonColorOption extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[
@@ -29,8 +31,9 @@ object mod extends js.Object {
     /* "silver" */ val Silver: typingsSlinky.paypalCheckoutComponents.configurationMod.ButtonColorOption.Silver with String = js.native
   }
   
+  @JSImport("paypal-checkout-components", "ButtonLabelOption")
   @js.native
-  object ButtonLabelOption extends js.Object {
+  object ButtonLabelOption extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[
@@ -48,8 +51,9 @@ object mod extends js.Object {
     /* "paypal" */ val PayPal: typingsSlinky.paypalCheckoutComponents.configurationMod.ButtonLabelOption.PayPal with String = js.native
   }
   
+  @JSImport("paypal-checkout-components", "ButtonShapeOption")
   @js.native
-  object ButtonShapeOption extends js.Object {
+  object ButtonShapeOption extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[
@@ -61,8 +65,9 @@ object mod extends js.Object {
     /* "rect" */ val Rect: typingsSlinky.paypalCheckoutComponents.configurationMod.ButtonShapeOption.Rect with String = js.native
   }
   
+  @JSImport("paypal-checkout-components", "ButtonSizeOption")
   @js.native
-  object ButtonSizeOption extends js.Object {
+  object ButtonSizeOption extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[
@@ -78,8 +83,9 @@ object mod extends js.Object {
     /* "small" */ val Small: typingsSlinky.paypalCheckoutComponents.configurationMod.ButtonSizeOption.Small with String = js.native
   }
   
+  @JSImport("paypal-checkout-components", "Environment")
   @js.native
-  object Environment extends js.Object {
+  object Environment extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.paypalCheckoutComponents.configurationMod.Environment with String] = js.native
@@ -89,8 +95,9 @@ object mod extends js.Object {
     /* "sandbox" */ val Sandbox: typingsSlinky.paypalCheckoutComponents.configurationMod.Environment.Sandbox with String = js.native
   }
   
+  @JSImport("paypal-checkout-components", "FUNDING")
   @js.native
-  object FUNDING extends js.Object {
+  object FUNDING extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[FundingOption with Double] = js.native
@@ -104,8 +111,9 @@ object mod extends js.Object {
     /* 2 */ val VENMO: typingsSlinky.paypalCheckoutComponents.buttonMod.FundingOption.VENMO with Double = js.native
   }
   
+  @JSImport("paypal-checkout-components", "FlowType")
   @js.native
-  object FlowType extends js.Object {
+  object FlowType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.paypalCheckoutComponents.callbackDataMod.FlowType with String] = js.native
@@ -115,8 +123,9 @@ object mod extends js.Object {
     /* "vault" */ val Vault: typingsSlinky.paypalCheckoutComponents.callbackDataMod.FlowType.Vault with String = js.native
   }
   
+  @JSImport("paypal-checkout-components", "Intent")
   @js.native
-  object Intent extends js.Object {
+  object Intent extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.paypalCheckoutComponents.callbackDataMod.Intent with String] = js.native
@@ -128,8 +137,9 @@ object mod extends js.Object {
     /* "order" */ val Order: typingsSlinky.paypalCheckoutComponents.callbackDataMod.Intent.Order with String = js.native
   }
   
+  @JSImport("paypal-checkout-components", "LineItemKind")
   @js.native
-  object LineItemKind extends js.Object {
+  object LineItemKind extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.paypalCheckoutComponents.callbackDataMod.LineItemKind with String] = js.native
@@ -139,8 +149,9 @@ object mod extends js.Object {
     /* "debit" */ val Debit: typingsSlinky.paypalCheckoutComponents.callbackDataMod.LineItemKind.Debit with String = js.native
   }
   
+  @JSImport("paypal-checkout-components", "ShippingOptionType")
   @js.native
-  object ShippingOptionType extends js.Object {
+  object ShippingOptionType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[

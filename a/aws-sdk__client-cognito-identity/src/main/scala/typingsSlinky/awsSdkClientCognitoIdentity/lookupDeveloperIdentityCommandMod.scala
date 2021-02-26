@@ -5,19 +5,19 @@ import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.Servic
 import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.ServiceOutputTypes
 import typingsSlinky.awsSdkClientCognitoIdentity.models0Mod.LookupDeveloperIdentityInput
 import typingsSlinky.awsSdkClientCognitoIdentity.models0Mod.LookupDeveloperIdentityResponse
-import typingsSlinky.awsSdkSmithyClient.commandMod.Command
+import typingsSlinky.awsSdkSmithyClient.mod.Command
 import typingsSlinky.awsSdkTypes.httpMod.HttpHandlerOptions
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity/types/commands/LookupDeveloperIdentityCommand", JSImport.Namespace)
-@js.native
-object lookupDeveloperIdentityCommandMod extends js.Object {
+object lookupDeveloperIdentityCommandMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity/types/commands/LookupDeveloperIdentityCommand", "LookupDeveloperIdentityCommand")
   @js.native
   class LookupDeveloperIdentityCommand protected ()
     extends Command[

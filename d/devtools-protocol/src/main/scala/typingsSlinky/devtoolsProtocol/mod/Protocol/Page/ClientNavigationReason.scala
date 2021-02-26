@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Page
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.reload
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.anchorClick
 */
-trait ClientNavigationReason extends js.Object
+trait ClientNavigationReason extends StObject
 object ClientNavigationReason {
   
   @scala.inline

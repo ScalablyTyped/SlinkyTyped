@@ -1,12 +1,13 @@
 package typingsSlinky.activexPowerpoint.PowerPoint
 
 import typingsSlinky.activexOffice.Office.MsoTriState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SlideShowView extends js.Object {
+trait SlideShowView extends StObject {
   
   var AcceleratorsEnabled: MsoTriState = js.native
   

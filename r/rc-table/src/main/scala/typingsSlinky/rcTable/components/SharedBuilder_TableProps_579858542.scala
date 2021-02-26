@@ -21,6 +21,7 @@ import typingsSlinky.rcTable.rcTableStrings.ltr
 import typingsSlinky.rcTable.rcTableStrings.rtl
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,40 +38,40 @@ class SharedBuilder_TableProps_579858542[RecordType /* <: DefaultRecordType */] 
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def columnsVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): this.type = set("columns", js.Array(value :_*))
+  def columns(value: ColumnsType[RecordType]): this.type = set("columns", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def columns(value: ColumnsType[RecordType]): this.type = set("columns", value.asInstanceOf[js.Any])
+  def columnsVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): this.type = set("columns", js.Array(value :_*))
   
   @scala.inline
   def components(value: TableComponents[RecordType]): this.type = set("components", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def dataVarargs(value: RecordType*): this.type = set("data", js.Array(value :_*))
+  def data(value: js.Array[RecordType]): this.type = set("data", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def data(value: js.Array[RecordType]): this.type = set("data", value.asInstanceOf[js.Any])
+  def dataVarargs(value: RecordType*): this.type = set("data", js.Array(value :_*))
   
   @scala.inline
   def defaultExpandAllRows(value: Boolean): this.type = set("defaultExpandAllRows", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultExpandedRowKeysVarargs(value: Key*): this.type = set("defaultExpandedRowKeys", js.Array(value :_*))
+  def defaultExpandedRowKeys(value: js.Array[Key]): this.type = set("defaultExpandedRowKeys", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultExpandedRowKeys(value: js.Array[Key]): this.type = set("defaultExpandedRowKeys", value.asInstanceOf[js.Any])
+  def defaultExpandedRowKeysVarargs(value: Key*): this.type = set("defaultExpandedRowKeys", js.Array(value :_*))
   
   @scala.inline
   def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def emptyTextReactElement(value: ReactElement): this.type = set("emptyText", value.asInstanceOf[js.Any])
+  def emptyText(value: ReactElement | js.Function0[ReactElement]): this.type = set("emptyText", value.asInstanceOf[js.Any])
   
   @scala.inline
   def emptyTextFunction0(value: () => ReactElement): this.type = set("emptyText", js.Any.fromFunction0(value))
   
   @scala.inline
-  def emptyText(value: ReactElement | js.Function0[ReactElement]): this.type = set("emptyText", value.asInstanceOf[js.Any])
+  def emptyTextReactElement(value: ReactElement): this.type = set("emptyText", value.asInstanceOf[js.Any])
   
   @scala.inline
   def expandIcon(value: /* props */ RenderExpandIconProps[RecordType] => ReactElement): this.type = set("expandIcon", js.Any.fromFunction1(value))
@@ -88,10 +89,10 @@ class SharedBuilder_TableProps_579858542[RecordType /* <: DefaultRecordType */] 
   def expandedRowClassName(value: (RecordType, /* index */ Double, /* indent */ Double) => String): this.type = set("expandedRowClassName", js.Any.fromFunction3(value))
   
   @scala.inline
-  def expandedRowKeysVarargs(value: Key*): this.type = set("expandedRowKeys", js.Array(value :_*))
+  def expandedRowKeys(value: js.Array[Key]): this.type = set("expandedRowKeys", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def expandedRowKeys(value: js.Array[Key]): this.type = set("expandedRowKeys", value.asInstanceOf[js.Any])
+  def expandedRowKeysVarargs(value: Key*): this.type = set("expandedRowKeys", js.Array(value :_*))
   
   @scala.inline
   def expandedRowRender(
@@ -131,16 +132,16 @@ class SharedBuilder_TableProps_579858542[RecordType /* <: DefaultRecordType */] 
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def rowClassNameFunction3(value: (RecordType, /* index */ Double, /* indent */ Double) => String): this.type = set("rowClassName", js.Any.fromFunction3(value))
-  
-  @scala.inline
   def rowClassName(value: String | RowClassName[RecordType]): this.type = set("rowClassName", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def rowKeyFunction2(value: (RecordType, /* index */ js.UndefOr[Double]) => Key): this.type = set("rowKey", js.Any.fromFunction2(value))
+  def rowClassNameFunction3(value: (RecordType, /* index */ Double, /* indent */ Double) => String): this.type = set("rowClassName", js.Any.fromFunction3(value))
   
   @scala.inline
   def rowKey(value: String | GetRowKey[RecordType]): this.type = set("rowKey", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def rowKeyFunction2(value: (RecordType, /* index */ js.UndefOr[Double]) => Key): this.type = set("rowKey", js.Any.fromFunction2(value))
   
   @scala.inline
   def scroll(value: X): this.type = set("scroll", value.asInstanceOf[js.Any])

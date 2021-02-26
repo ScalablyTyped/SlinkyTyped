@@ -1,14 +1,14 @@
 package typingsSlinky.xmldsigjs
 
 import typingsSlinky.xmldsigjs.keyInfoClauseMod.KeyInfoClause
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xmldsigjs/build/types/xml/key_infos/key_value", JSImport.Namespace)
-@js.native
-object keyValueMod extends js.Object {
+object keyValueMod {
   
+  @JSImport("xmldsigjs/build/types/xml/key_infos/key_value", "KeyValue")
   @js.native
   class KeyValue () extends KeyInfoClause {
     def this(value: KeyInfoClause) = this()

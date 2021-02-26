@@ -3,6 +3,8 @@ package typingsSlinky.node.fsMod
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.nodeStrings.ready
 import typingsSlinky.node.streamMod.Writable
+import typingsSlinky.node.streamMod.WritableOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("fs", "WriteStream")
 @js.native
 class WriteStream () extends Writable {
+  def this(opts: WritableOptions) = this()
   
   @JSName("addListener")
   def addListener_open(event: typingsSlinky.node.nodeStrings.open, listener: js.Function1[/* fd */ Double, Unit]): this.type = js.native

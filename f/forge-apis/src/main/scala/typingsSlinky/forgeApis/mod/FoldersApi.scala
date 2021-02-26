@@ -3,13 +3,14 @@ package typingsSlinky.forgeApis.mod
 import typingsSlinky.forgeApis.anon.FilterDirection
 import typingsSlinky.forgeApis.anon.FilterExtensionType
 import typingsSlinky.forgeApis.anon.FilterId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("forge-apis", "FoldersApi")
 @js.native
-class FoldersApi () extends js.Object {
+class FoldersApi () extends StObject {
   
   /**
     * Returns the folder by ID for any folder within a given project. All folders or sub-folders within a project

@@ -1,17 +1,19 @@
 package typingsSlinky.dateFns
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("date-fns/setISOWeek", JSImport.Namespace)
-@js.native
-object dateFnsSetISOWeekMod extends js.Object {
+object dateFnsSetISOWeekMod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
-    def apply(date: Double, isoWeek: Double): js.Date = js.native
+    @JSImport("date-fns/setISOWeek", JSImport.Default)
+    @js.native
     def apply(date: js.Date, isoWeek: Double): js.Date = js.native
+    @JSImport("date-fns/setISOWeek", JSImport.Default)
+    @js.native
+    def apply(date: Double, isoWeek: Double): js.Date = js.native
   }
 }

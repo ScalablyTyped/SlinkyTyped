@@ -1,13 +1,12 @@
 package typingsSlinky.chromeApps.global.chrome
 
 import typingsSlinky.chromeApps.chrome.enterprise.platformKeys.Token
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("chrome.enterprise")
-@js.native
-object enterprise extends js.Object {
+object enterprise {
   
   // #endregion
   // #region chrome.enterprise.*
@@ -22,8 +21,7 @@ object enterprise extends js.Object {
     * @description
     * Use the chrome.enterprise.deviceAttributes API to read device attributes.
     */
-  @js.native
-  object deviceAttributes extends js.Object {
+  object deviceAttributes {
     
     /**
       * @since Chrome 66.
@@ -32,6 +30,8 @@ object enterprise extends js.Object {
       * If the current user is not affiliated or no Annotated Location has been set by the administrator, returns an empty string.
       * @param callback Called with the Annotated Location of the device.
       */
+    @JSGlobal("chrome.enterprise.deviceAttributes.getDeviceAnnotatedLocation")
+    @js.native
     def getDeviceAnnotatedLocation(callback: js.Function1[/* annotatedLocation */ String, Unit]): Unit = js.native
     
     /**
@@ -41,6 +41,8 @@ object enterprise extends js.Object {
       * If the current user is not affiliated or no Asset Id has been set by the administrator, returns an empty string.
       * @param callback Called with the Asset ID of the device.
       */
+    @JSGlobal("chrome.enterprise.deviceAttributes.getDeviceAssetId")
+    @js.native
     def getDeviceAssetId(callback: js.Function1[/* assetId */ String, Unit]): Unit = js.native
     
     /**
@@ -53,6 +55,8 @@ object enterprise extends js.Object {
       * If the current user is not affiliated, returns an empty string.
       * @param callback Called with the serial number of the device.
       */
+    @JSGlobal("chrome.enterprise.deviceAttributes.getDeviceSerialNumber")
+    @js.native
     def getDeviceSerialNumber(callback: js.Function1[/* serialNumber */ String, Unit]): Unit = js.native
     
     /**
@@ -63,6 +67,8 @@ object enterprise extends js.Object {
       * If the current user is not affiliated, returns an empty string.
       * @param callback Called with the device identifier of the directory API when received.
       */
+    @JSGlobal("chrome.enterprise.deviceAttributes.getDirectoryDeviceId")
+    @js.native
     def getDirectoryDeviceId(callback: js.Function1[/* deviceId */ String, Unit]): Unit = js.native
   }
   
@@ -75,8 +81,7 @@ object enterprise extends js.Object {
     * The certificates will be managed by the platform and can be used for TLS authentication, network access or by other extension through chrome.platformKeys.
     * @see[Documentation]{@link https://developer.chrome.com/extensions/enterprise_platformKeys}
     */
-  @js.native
-  object platformKeys extends js.Object {
+  object platformKeys {
     
     /**
       * @since Chrome 50.
@@ -97,6 +102,8 @@ object enterprise extends js.Object {
       * @param challenge A challenge as emitted by the Verified Access Web API.
       * @param callback Called back with the challenge response.
       */
+    @JSGlobal("chrome.enterprise.platformKeys.challengeMachineKey")
+    @js.native
     def challengeMachineKey(
       challenge: js.typedarray.ArrayBuffer,
       callback: js.Function1[/* response */ js.typedarray.ArrayBuffer, Unit]
@@ -123,6 +130,8 @@ object enterprise extends js.Object {
       *                    Subsequent calls to this function will then generate a new Enterprise Machine Key.
       * @param callback Called back with the challenge response.
       */
+    @JSGlobal("chrome.enterprise.platformKeys.challengeMachineKey")
+    @js.native
     def challengeMachineKey(
       challenge: js.typedarray.ArrayBuffer,
       registerKey: Boolean,
@@ -149,6 +158,8 @@ object enterprise extends js.Object {
       *                    This key is 2048-bit RSA. Subsequent calls to this function will then generate a new Enterprise User Key.
       * @param callback Called back with the challenge response.
       */
+    @JSGlobal("chrome.enterprise.platformKeys.challengeUserKey")
+    @js.native
     def challengeUserKey(
       challenge: js.typedarray.ArrayBuffer,
       registerKey: Boolean,
@@ -161,6 +172,8 @@ object enterprise extends js.Object {
       * @param tokenId The id of a Token returned by getTokens.
       * @param callback Called back with the list of the available certificates.
       */
+    @JSGlobal("chrome.enterprise.platformKeys.getCertificates")
+    @js.native
     def getCertificates(
       tokenId: String,
       callback: js.Function1[/* certificates */ js.Array[js.typedarray.ArrayBuffer], Unit]
@@ -173,6 +186,8 @@ object enterprise extends js.Object {
       * The system-wide token will be the same for all sessions on this device (device in the sense of e.g. a Chromebook).
       * @param callback Invoked by getTokens with the list of available Tokens.
       */
+    @JSGlobal("chrome.enterprise.platformKeys.getTokens")
+    @js.native
     def getTokens(callback: js.Function1[/* tokens */ js.Array[Token], Unit]): Unit = js.native
     
     /**
@@ -183,6 +198,8 @@ object enterprise extends js.Object {
       * @param certificate The DER encoding of a X.509 certificate.
       * @param [callback] Called back when this operation is finished.
       */
+    @JSGlobal("chrome.enterprise.platformKeys.importCertificate")
+    @js.native
     def importCertificate(tokenId: String, certificate: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
     
     /**
@@ -194,6 +211,8 @@ object enterprise extends js.Object {
       * @param certificate The DER encoding of a X.509 certificate.
       * @param [callback] Called back when this operation is finished.
       */
+    @JSGlobal("chrome.enterprise.platformKeys.removeCertificate")
+    @js.native
     def removeCertificate(tokenId: String, certificate: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
   }
 }

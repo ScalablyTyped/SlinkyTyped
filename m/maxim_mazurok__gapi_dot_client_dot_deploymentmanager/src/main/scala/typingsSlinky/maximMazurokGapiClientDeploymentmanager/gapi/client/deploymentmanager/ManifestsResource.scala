@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientDeploymentmanager.gapi.client.deploy
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDeploymentmanager.anon.MaxResults
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ManifestsResource extends js.Object {
+trait ManifestsResource extends StObject {
   
   /** Gets information about a specific manifest. */
   def get(): Request[Manifest] = js.native

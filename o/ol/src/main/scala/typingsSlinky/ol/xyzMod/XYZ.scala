@@ -1,9 +1,0 @@
-package typingsSlinky.ol.xyzMod
-
-import scala.scalajs.js
-import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
-
-@js.native
-trait XYZ
-  extends typingsSlinky.ol.tileImageMod.default

@@ -10,9 +10,9 @@ convert a string to snake case
 | ------------------ | :-------------: |
 | Full name          | just-snake-case |
 | Keywords           | snake, snake_case, string, no-dependencies, just |
-| # releases         | 2 |
-| # dependents       | 18 |
-| # downloads        | 552419 |
+| # releases         | 0 |
+| # dependents       | 20 |
+| # downloads        | 255366 |
 | # stars            | 1 |
 
 ## Links

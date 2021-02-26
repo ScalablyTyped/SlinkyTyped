@@ -10,13 +10,14 @@ import typingsSlinky.stripe.mod.products.IProduct
 import typingsSlinky.stripe.mod.products.IProductCreationOptions
 import typingsSlinky.stripe.mod.products.IProductListOptions
 import typingsSlinky.stripe.mod.products.IProductUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.Products")
 @js.native
-class Products () extends js.Object {
+class Products () extends StObject {
   
   def create(data: IProductCreationOptions): js.Promise[IProduct] = js.native
   /**

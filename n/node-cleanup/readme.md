@@ -10,9 +10,9 @@ installs custom cleanup handlers that run on exiting node
 | ------------------ | :-------------: |
 | Full name          | node-cleanup |
 | Keywords           | node, exit, cleanup, sigint, ctrl-c |
-| # releases         | 1 |
-| # dependents       | 65 |
-| # downloads        | 7288157 |
+| # releases         | 0 |
+| # dependents       | 77 |
+| # downloads        | 15423925 |
 | # stars            | 5 |
 
 ## Links

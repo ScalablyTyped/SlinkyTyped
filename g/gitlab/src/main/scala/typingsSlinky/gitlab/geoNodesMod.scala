@@ -1,20 +1,22 @@
 package typingsSlinky.gitlab
 
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.PaginatedRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.Sudo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gitlab/dist/types/core/services/GeoNodes", JSImport.Namespace)
-@js.native
-object geoNodesMod extends js.Object {
+object geoNodesMod {
   
+  @JSImport("gitlab/dist/types/core/services/GeoNodes", "GeoNodes")
   @js.native
   class GeoNodes () extends BaseService {
+    def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
     
     def all(): js.Promise[GetResponse] = js.native
     def all(options: PaginatedRequestOptions): js.Promise[GetResponse] = js.native

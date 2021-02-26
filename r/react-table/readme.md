@@ -10,13 +10,13 @@ Hooks for building lightweight, fast and extendable datagrids for React
 | ------------------ | :-------------: |
 | Full name          | react-table |
 | Keywords           | react, table, react-table, datagrid |
-| # releases         | 97 |
-| # dependents       | 251 |
-| # downloads        | 12455853 |
+| # releases         | 123 |
+| # dependents       | 444 |
+| # downloads        | 22049992 |
 | # stars            | 18 |
 
 ## Links
-- [Homepage](https://github.com/tannerlinsley/react-table#readme)
+- [Homepage](https://react-table.tanstack.com)
 - [Bugs](https://github.com/tannerlinsley/react-table/issues)
 - [Repository](https://github.com/tannerlinsley/react-table)
 - [Npm](https://www.npmjs.com/package/react-table)

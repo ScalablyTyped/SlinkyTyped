@@ -6,6 +6,7 @@ import typingsSlinky.activexShell.activexShellNumbers.`1`
 import typingsSlinky.activexShell.activexShellNumbers.`3`
 import typingsSlinky.activexShell.activexShellNumbers.`4`
 import typingsSlinky.activexShell.activexShellNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexShell.activexShellNumbers.`8`
   - typingsSlinky.activexShell.activexShellNumbers.`16`
 */
-trait ShellFolderViewSelectItem extends js.Object
+trait ShellFolderViewSelectItem extends StObject
 object ShellFolderViewSelectItem {
   
   @scala.inline

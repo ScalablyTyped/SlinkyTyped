@@ -26,13 +26,14 @@ import typingsSlinky.jssip.jssipStrings.sending
 import typingsSlinky.jssip.jssipStrings.unhold
 import typingsSlinky.jssip.jssipStrings.unmuted
 import typingsSlinky.jssip.jssipStrings.update
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jssip", "RTCSession")
 @js.native
-class RTCSession () extends js.Object {
+class RTCSession () extends StObject {
   
   def answer(): Unit = js.native
   def answer(options: SessionAnswerOptions): Unit = js.native
@@ -167,20 +168,20 @@ class RTCSession () extends js.Object {
   def unmute(): Unit = js.native
   def unmute(options: SessionMuteOptions): Unit = js.native
 }
-@JSImport("jssip", "RTCSession")
-@js.native
-object RTCSession extends js.Object {
+object RTCSession {
   
+  @JSImport("jssip", "RTCSession.DTMF")
   @js.native
-  class DTMF () extends js.Object {
+  class DTMF () extends StObject {
     
     var duration: Double = js.native
     
     var tone: String = js.native
   }
   
+  @JSImport("jssip", "RTCSession.Info")
   @js.native
-  class Info () extends js.Object {
+  class Info () extends StObject {
     
     var body: String = js.native
     

@@ -6,14 +6,14 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.renderTargetTextureMod.RenderTargetTexture
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/PostProcesses/circleOfConfusionPostProcess", JSImport.Namespace)
-@js.native
-object circleOfConfusionPostProcessMod extends js.Object {
+object circleOfConfusionPostProcessMod {
   
+  @JSImport("babylonjs/PostProcesses/circleOfConfusionPostProcess", "CircleOfConfusionPostProcess")
   @js.native
   class CircleOfConfusionPostProcess protected () extends PostProcess {
     /**

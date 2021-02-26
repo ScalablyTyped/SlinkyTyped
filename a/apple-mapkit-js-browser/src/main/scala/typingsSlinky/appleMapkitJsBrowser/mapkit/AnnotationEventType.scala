@@ -1,5 +1,6 @@
 package typingsSlinky.appleMapkitJsBrowser.mapkit
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.appleMapkitJsBrowser.appleMapkitJsBrowserStrings.dragging
   - typingsSlinky.appleMapkitJsBrowser.appleMapkitJsBrowserStrings.`drag-end`
 */
-trait AnnotationEventType extends js.Object
+trait AnnotationEventType extends StObject
 object AnnotationEventType {
   
   @scala.inline

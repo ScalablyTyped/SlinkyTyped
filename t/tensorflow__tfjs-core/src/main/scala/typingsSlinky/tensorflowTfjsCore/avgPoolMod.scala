@@ -8,23 +8,20 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.floor
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.round
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-core/dist/ops/avg_pool", JSImport.Namespace)
-@js.native
-object avgPoolMod extends js.Object {
+object avgPoolMod {
   
+  @JSImport("@tensorflow/tfjs-core/dist/ops/avg_pool", "avgPool")
   @js.native
-  object avgPool extends js.Object {
-    
-    def apply[T /* <: Tensor3D | Tensor4D */](
-      x: T | TensorLike,
-      filterSize: (js.Tuple2[Double, Double]) | Double,
-      strides: (js.Tuple2[Double, Double]) | Double,
-      pad: valid_ | same_ | Double,
-      dimRoundingMode: js.UndefOr[floor | round | ceil]
-    ): T = js.native
-  }
+  def avgPool[T /* <: Tensor3D | Tensor4D */](
+    x: T | TensorLike,
+    filterSize: (js.Tuple2[Double, Double]) | Double,
+    strides: (js.Tuple2[Double, Double]) | Double,
+    pad: valid_ | same_ | Double,
+    dimRoundingMode: js.UndefOr[floor | round | ceil]
+  ): T = js.native
 }

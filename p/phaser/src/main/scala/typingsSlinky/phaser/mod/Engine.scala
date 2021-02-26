@@ -2,6 +2,7 @@ package typingsSlinky.phaser.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.phaser.MatterJS.IEngineDefinition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,16 +20,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Engine ()
   extends typingsSlinky.phaser.MatterJS.Engine
-/* static members */
-@JSImport("matter", "Engine")
-@js.native
-object Engine extends js.Object {
+object Engine {
   
   /**
     * Clears the engine including the world, pairs and broadphase.
     * @method clear
     * @param {engine} engine
     */
+  /* static member */
+  @JSImport("matter", "Engine.clear")
+  @js.native
   def clear(engine: typingsSlinky.phaser.MatterJS.Engine): Unit = js.native
   
   /**
@@ -41,6 +42,7 @@ object Engine extends js.Object {
     * @return {engine} engine
     * @deprecated
     */
+  /* static member */
   /**
     * Creates a new engine. The options parameter is an object that specifies any properties you wish to override the defaults.
     * All properties have default values, and many are pre-calculated automatically based on other properties.
@@ -50,12 +52,24 @@ object Engine extends js.Object {
     * @return {engine} engine
     * @deprecated
     */
+  @JSImport("matter", "Engine.create")
+  @js.native
   def create(): typingsSlinky.phaser.MatterJS.Engine = js.native
+  @JSImport("matter", "Engine.create")
+  @js.native
   def create(element: js.UndefOr[scala.Nothing], options: IEngineDefinition): typingsSlinky.phaser.MatterJS.Engine = js.native
-  def create(element: IEngineDefinition): typingsSlinky.phaser.MatterJS.Engine = js.native
-  def create(element: IEngineDefinition, options: IEngineDefinition): typingsSlinky.phaser.MatterJS.Engine = js.native
+  @JSImport("matter", "Engine.create")
+  @js.native
   def create(element: HTMLElement): typingsSlinky.phaser.MatterJS.Engine = js.native
+  @JSImport("matter", "Engine.create")
+  @js.native
   def create(element: HTMLElement, options: IEngineDefinition): typingsSlinky.phaser.MatterJS.Engine = js.native
+  @JSImport("matter", "Engine.create")
+  @js.native
+  def create(element: IEngineDefinition): typingsSlinky.phaser.MatterJS.Engine = js.native
+  @JSImport("matter", "Engine.create")
+  @js.native
+  def create(element: IEngineDefinition, options: IEngineDefinition): typingsSlinky.phaser.MatterJS.Engine = js.native
   
   /**
     * Merges two engines by keeping the configuration of `engineA` but replacing the world with the one from `engineB`.
@@ -63,6 +77,9 @@ object Engine extends js.Object {
     * @param {engine} engineA
     * @param {engine} engineB
     */
+  /* static member */
+  @JSImport("matter", "Engine.merge")
+  @js.native
   def merge(engineA: typingsSlinky.phaser.MatterJS.Engine, engineB: typingsSlinky.phaser.MatterJS.Engine): Unit = js.native
   
   /**
@@ -70,6 +87,9 @@ object Engine extends js.Object {
     * @method run
     * @param {engine} engine
     */
+  /* static member */
+  @JSImport("matter", "Engine.run")
+  @js.native
   def run(engine: typingsSlinky.phaser.MatterJS.Engine): Unit = js.native
   
   /**
@@ -87,8 +107,17 @@ object Engine extends js.Object {
     * @param {number} [delta=16.666]
     * @param {number} [correction=1]
     */
+  /* static member */
+  @JSImport("matter", "Engine.update")
+  @js.native
   def update(engine: typingsSlinky.phaser.MatterJS.Engine): typingsSlinky.phaser.MatterJS.Engine = js.native
+  @JSImport("matter", "Engine.update")
+  @js.native
   def update(engine: typingsSlinky.phaser.MatterJS.Engine, delta: js.UndefOr[scala.Nothing], correction: Double): typingsSlinky.phaser.MatterJS.Engine = js.native
+  @JSImport("matter", "Engine.update")
+  @js.native
   def update(engine: typingsSlinky.phaser.MatterJS.Engine, delta: Double): typingsSlinky.phaser.MatterJS.Engine = js.native
+  @JSImport("matter", "Engine.update")
+  @js.native
   def update(engine: typingsSlinky.phaser.MatterJS.Engine, delta: Double, correction: Double): typingsSlinky.phaser.MatterJS.Engine = js.native
 }

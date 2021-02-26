@@ -1,5 +1,6 @@
 package typingsSlinky.stellarSdk.mod.xdr
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +9,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class RevokeSponsorshipType ()
   extends typingsSlinky.stellarBase.mod.xdr.RevokeSponsorshipType
-/* static members */
-@JSImport("stellar-sdk", "xdr.RevokeSponsorshipType")
-@js.native
-object RevokeSponsorshipType extends js.Object {
+object RevokeSponsorshipType {
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.RevokeSponsorshipType.revokeSponsorshipLedgerEntry")
+  @js.native
   def revokeSponsorshipLedgerEntry(): typingsSlinky.stellarBase.xdrMod.xdr.RevokeSponsorshipType = js.native
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.RevokeSponsorshipType.revokeSponsorshipSigner")
+  @js.native
   def revokeSponsorshipSigner(): typingsSlinky.stellarBase.xdrMod.xdr.RevokeSponsorshipType = js.native
 }

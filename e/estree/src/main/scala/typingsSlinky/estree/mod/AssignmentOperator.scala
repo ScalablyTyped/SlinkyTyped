@@ -1,5 +1,6 @@
 package typingsSlinky.estree.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.estree.estreeStrings.`^Equalssign`
   - typingsSlinky.estree.estreeStrings.AmpersandEqualssign
 */
-trait AssignmentOperator extends js.Object
+trait AssignmentOperator extends StObject
 object AssignmentOperator {
   
   @scala.inline

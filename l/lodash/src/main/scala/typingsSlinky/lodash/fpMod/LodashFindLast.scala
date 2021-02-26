@@ -4,12 +4,13 @@ import typingsSlinky.lodash.mod.List
 import typingsSlinky.lodash.mod.ValueIterateeCustom
 import typingsSlinky.lodash.mod.ValueIteratorTypeGuard
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashFindLast extends js.Object {
+trait LodashFindLast extends StObject {
   
   def apply[T](predicate: ValueIterateeCustom[T, Boolean]): js.UndefOr[T] = js.native
   def apply[T /* <: js.Object */](

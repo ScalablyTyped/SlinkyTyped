@@ -1,7 +1,7 @@
 
 # Scala.js typings for stylable__core
 
-Typings are for version 3.11.5
+Typings are for version 3.11.7
 
 ## Library description:
 CSS for Components
@@ -10,9 +10,9 @@ CSS for Components
 | ------------------ | :-------------: |
 | Full name          | @stylable/core |
 | Keywords           | - |
-| # releases         | 84 |
+| # releases         | 91 |
 | # dependents       | 24 |
-| # downloads        | 310367 |
+| # downloads        | 350254 |
 | # stars            | 0 |
 
 ## Links

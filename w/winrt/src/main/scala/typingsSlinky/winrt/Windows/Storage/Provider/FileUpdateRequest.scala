@@ -2,6 +2,7 @@ package typingsSlinky.winrt.Windows.Storage.Provider
 
 import typingsSlinky.winrt.Windows.Storage.IStorageFile
 import typingsSlinky.winrt.Windows.Storage.StorageFile
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

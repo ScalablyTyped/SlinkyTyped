@@ -1,12 +1,13 @@
 package typingsSlinky.webix.webix
 
 import typingsSlinky.webix.webix.ui.baseview
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TreeDataMove extends js.Object {
+trait TreeDataMove extends StObject {
   
   @JSName("$dropAllow")
   def $dropAllow(args: js.Any*): js.Any = js.native

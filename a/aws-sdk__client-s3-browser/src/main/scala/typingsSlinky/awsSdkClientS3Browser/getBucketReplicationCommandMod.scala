@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesGetBucketReplicationInputMod.Get
 import typingsSlinky.awsSdkClientS3Browser.typesGetBucketReplicationOutputMod.GetBucketReplicationOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/GetBucketReplicationCommand", JSImport.Namespace)
-@js.native
-object getBucketReplicationCommandMod extends js.Object {
+object getBucketReplicationCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/GetBucketReplicationCommand", "GetBucketReplicationCommand")
   @js.native
   class GetBucketReplicationCommand protected () extends Command[
           InputTypesUnion, 

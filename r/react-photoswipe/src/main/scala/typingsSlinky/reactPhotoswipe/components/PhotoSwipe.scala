@@ -8,15 +8,22 @@ import typingsSlinky.photoswipe.mod.Options
 import typingsSlinky.reactPhotoswipe.anon.Prevent
 import typingsSlinky.reactPhotoswipe.anon.X
 import typingsSlinky.reactPhotoswipe.mod.PhotoSwipeProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PhotoSwipe {
   
+  @scala.inline
+  def apply(isOpen: Boolean, items: js.Array[Item]): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PhotoSwipeProps]))
+  }
+  
   @JSImport("react-photoswipe", "PhotoSwipe")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -96,10 +103,4 @@ object PhotoSwipe {
   }
   
   def withProps(p: PhotoSwipeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(isOpen: Boolean, items: js.Array[Item]): Builder = {
-    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PhotoSwipeProps]))
-  }
 }

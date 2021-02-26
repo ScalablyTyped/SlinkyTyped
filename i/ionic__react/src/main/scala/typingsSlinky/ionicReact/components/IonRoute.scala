@@ -4,15 +4,22 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.ionicReact.ionRouteMod.IonRouteProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IonRoute {
   
+  @scala.inline
+  def apply(render: js.UndefOr[js.Any] => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(render = js.Any.fromFunction1(render))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IonRouteProps]))
+  }
+  
   @JSImport("@ionic/react", "IonRoute")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,10 +40,4 @@ object IonRoute {
   }
   
   def withProps(p: IonRouteProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(render: js.UndefOr[js.Any] => ReactElement): Builder = {
-    val __props = js.Dynamic.literal(render = js.Any.fromFunction1(render))
-    new Builder(js.Array(this.component, __props.asInstanceOf[IonRouteProps]))
-  }
 }

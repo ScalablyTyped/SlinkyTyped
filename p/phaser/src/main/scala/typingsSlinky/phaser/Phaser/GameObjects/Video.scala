@@ -19,6 +19,7 @@ import typingsSlinky.phaser.Phaser.Textures.CanvasTexture
 import typingsSlinky.phaser.Phaser.Textures.Texture
 import typingsSlinky.phaser.Phaser.Textures.TextureSource
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -10,9 +10,9 @@ A single spa plugin for React apps
 | ------------------ | :-------------: |
 | Full name          | single-spa-react |
 | Keywords           | single, page, application, spa, react |
-| # releases         | 23 |
-| # dependents       | 19 |
-| # downloads        | 474372 |
+| # releases         | 15 |
+| # dependents       | 41 |
+| # downloads        | 1210555 |
 | # stars            | 1 |
 
 ## Links

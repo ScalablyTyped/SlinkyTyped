@@ -1,5 +1,6 @@
 package typingsSlinky.activexAccess.Access
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAccess.activexAccessStrings.`ODBC Database`
   - typingsSlinky.activexAccess.activexAccessStrings.WSS
 */
-trait DatabaseType extends js.Object
+trait DatabaseType extends StObject
 object DatabaseType {
   
   @scala.inline

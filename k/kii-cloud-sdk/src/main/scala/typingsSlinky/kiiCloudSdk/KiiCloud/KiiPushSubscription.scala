@@ -4,6 +4,7 @@ import typingsSlinky.kiiCloudSdk.anon.`20`
 import typingsSlinky.kiiCloudSdk.anon.`21`
 import typingsSlinky.kiiCloudSdk.anon.`22`
 import typingsSlinky.kiiCloudSdk.anon.`23`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Represents a KiiPushSubscription.
   */
 @js.native
-trait KiiPushSubscription extends js.Object {
+trait KiiPushSubscription extends StObject {
   
   /**
     * Check subscription of bucket, topic.

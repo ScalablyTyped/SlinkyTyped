@@ -16,6 +16,7 @@ import typingsSlinky.recharts.rechartsStrings.left
 import typingsSlinky.recharts.rechartsStrings.middle
 import typingsSlinky.recharts.rechartsStrings.right
 import typingsSlinky.recharts.rechartsStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ object Legend {
   
   @JSImport("recharts", "Legend")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,13 +42,13 @@ object Legend {
     def chartWidth(value: Double): this.type = set("chartWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement | ContentRenderer[LegendProps]): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentFunction1(value: LegendProps => ReactElement): this.type = set("content", js.Any.fromFunction1(value))
     
     @scala.inline
-    def content(value: ReactElement | ContentRenderer[LegendProps]): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def formatter(
@@ -84,10 +85,10 @@ object Legend {
     def onMouseLeave(value: /* repeated */ js.Any => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
     
     @scala.inline
-    def payloadVarargs(value: LegendPayload*): this.type = set("payload", js.Array(value :_*))
+    def payload(value: js.Array[LegendPayload]): this.type = set("payload", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def payload(value: js.Array[LegendPayload]): this.type = set("payload", value.asInstanceOf[js.Any])
+    def payloadVarargs(value: LegendPayload*): this.type = set("payload", js.Array(value :_*))
     
     @scala.inline
     def verticalAlign(value: top | middle | bottom): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
@@ -99,7 +100,7 @@ object Legend {
     def wrapperStyle(value: js.Object): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: LegendProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Legend.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: LegendProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

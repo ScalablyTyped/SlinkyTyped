@@ -1,16 +1,16 @@
 package typingsSlinky.devexpressUtils
 
 import typingsSlinky.devexpressUtils.optionsMod.IDateFormatterOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@devexpress/utils/lib/formatters/date-time-field", JSImport.Namespace)
-@js.native
-object dateTimeFieldMod extends js.Object {
+object dateTimeFieldMod {
   
+  @JSImport("@devexpress/utils/lib/formatters/date-time-field", "DateTimeFieldFormatter")
   @js.native
-  class DateTimeFieldFormatter protected () extends js.Object {
+  class DateTimeFieldFormatter protected () extends StObject {
     def this(options: IDateFormatterOptions) = this()
     
     var AMPMKeyword: js.Any = js.native

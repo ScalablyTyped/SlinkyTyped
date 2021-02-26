@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientXrayNode.typesPutTelemetryRecordsOutputMod.PutT
 import typingsSlinky.awsSdkClientXrayNode.xrayconfigurationMod.XRayResolvedConfiguration
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-xray-node/commands/PutTelemetryRecordsCommand", JSImport.Namespace)
-@js.native
-object putTelemetryRecordsCommandMod extends js.Object {
+object putTelemetryRecordsCommandMod {
   
+  @JSImport("@aws-sdk/client-xray-node/commands/PutTelemetryRecordsCommand", "PutTelemetryRecordsCommand")
   @js.native
   class PutTelemetryRecordsCommand protected () extends Command[
           InputTypesUnion, 

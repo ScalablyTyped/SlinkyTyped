@@ -2,16 +2,16 @@ package typingsSlinky.typeorm
 
 import typingsSlinky.typeorm.commonObjectLiteralMod.ObjectLiteral
 import typingsSlinky.typeorm.metadataEntityMetadataMod.EntityMetadata
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/query-builder/transformer/PlainObjectToNewEntityTransformer", JSImport.Namespace)
-@js.native
-object transformerPlainObjectToNewEntityTransformerMod extends js.Object {
+object transformerPlainObjectToNewEntityTransformerMod {
   
+  @JSImport("typeorm/query-builder/transformer/PlainObjectToNewEntityTransformer", "PlainObjectToNewEntityTransformer")
   @js.native
-  class PlainObjectToNewEntityTransformer () extends js.Object {
+  class PlainObjectToNewEntityTransformer () extends StObject {
     
     /**
       * Since db returns a duplicated rows of the data where accuracies of the same object can be duplicated

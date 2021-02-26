@@ -6,19 +6,19 @@ import typingsSlinky.jsonwebtoken.mod.SignOptions
 import typingsSlinky.jsonwebtoken.mod.VerifyCallback
 import typingsSlinky.jsonwebtoken.mod.VerifyOptions
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sc-auth", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("sc-auth", "AuthEngine")
   @js.native
   class AuthEngine () extends SCAuthEngine
   
   @js.native
-  trait SCAuthEngine extends js.Object {
+  trait SCAuthEngine extends StObject {
     
     def signToken(token: String, key: Secret): Unit = js.native
     def signToken(token: String, key: Secret, options: js.UndefOr[scala.Nothing], callback: SignCallback): Unit = js.native

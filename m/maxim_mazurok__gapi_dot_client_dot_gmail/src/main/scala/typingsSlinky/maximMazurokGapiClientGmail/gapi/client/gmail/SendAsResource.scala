@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientGmail.anon.Alt
 import typingsSlinky.maximMazurokGapiClientGmail.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientGmail.anon.KeyOauthtoken
 import typingsSlinky.maximMazurokGapiClientGmail.anon.OauthtokenPrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SendAsResource extends js.Object {
+trait SendAsResource extends StObject {
   
   def create(request: Alt, body: SendAs): Request[SendAs] = js.native
   /**

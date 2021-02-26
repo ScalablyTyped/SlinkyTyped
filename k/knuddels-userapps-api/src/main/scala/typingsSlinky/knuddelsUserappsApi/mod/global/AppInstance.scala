@@ -1,6 +1,7 @@
 package typingsSlinky.knuddelsUserappsApi.mod.global
 
 import typingsSlinky.knuddelsUserappsApi.mod.KnuddelsEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 	 */
 @JSGlobal("AppInstance")
 @js.native
-class AppInstance () extends js.Object {
+class AppInstance () extends StObject {
   
   /**
   		 * @see https://developer.knuddels.de/docs/classes/AppInstance.html#method_getAllInstances

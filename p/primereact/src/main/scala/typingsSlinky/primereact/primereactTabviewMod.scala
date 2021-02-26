@@ -2,20 +2,34 @@ package typingsSlinky.primereact
 
 import typingsSlinky.primereact.tabViewMod.TabPanelProps
 import typingsSlinky.primereact.tabViewMod.TabViewProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/tabview", JSImport.Namespace)
-@js.native
-object primereactTabviewMod extends js.Object {
+object primereactTabviewMod {
   
+  @JSImport("primereact/tabview", "TabPanel")
   @js.native
-  class TabPanel ()
-    extends Component[TabPanelProps, js.Any, js.Any]
+  class TabPanel protected ()
+    extends typingsSlinky.primereact.tabViewMod.TabPanel {
+    def this(props: TabPanelProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: TabPanelProps, context: js.Any) = this()
+  }
   
+  @JSImport("primereact/tabview", "TabView")
   @js.native
-  class TabView ()
-    extends Component[TabViewProps, js.Any, js.Any]
+  class TabView protected ()
+    extends typingsSlinky.primereact.tabViewMod.TabView {
+    def this(props: TabViewProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: TabViewProps, context: js.Any) = this()
+  }
 }

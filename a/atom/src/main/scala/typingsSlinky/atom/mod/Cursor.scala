@@ -8,12 +8,13 @@ import typingsSlinky.atom.anon.IncludeNonWordCharacters
 import typingsSlinky.atom.anon.MoveToEndOfSelection
 import typingsSlinky.atom.anon.WordRegex
 import typingsSlinky.atom.anon.`31`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Cursor extends js.Object {
+trait Cursor extends StObject {
   
   // Utilities
   /** Prevents this cursor from causing scrolling. */

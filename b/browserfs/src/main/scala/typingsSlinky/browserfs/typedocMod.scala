@@ -8,16 +8,15 @@ import typingsSlinky.browserfs.browserfsStrings.fs
 import typingsSlinky.browserfs.browserfsStrings.path
 import typingsSlinky.browserfs.browserfsStrings.process
 import typingsSlinky.browserfs.fileSystemMod.FileSystem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("browserfs/dist/node/typedoc", JSImport.Namespace)
-@js.native
-object typedocMod extends js.Object {
+object typedocMod {
   
   @js.native
-  trait BrowserFS extends js.Object {
+  trait BrowserFS extends StObject {
     
     /**
       * Emulates Node's `require()` function for filesystem-related modules (`'fs'`, `'path'`, `'buffer'`, etc).

@@ -18,6 +18,7 @@ import typingsSlinky.rcPicker.rcPickerStrings.time
 import typingsSlinky.rcPicker.timePanelMod.SharedTimeProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.std.Exclude
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,9 +27,15 @@ object PickerPanel {
   
   object PickerPanelBaseProps {
     
+    @scala.inline
+    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale, picker: Exclude[PickerMode, date | time]): Builder[DateType] = {
+      val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], picker = picker.asInstanceOf[js.Any])
+      new Builder[DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerPanelMod.PickerPanelBaseProps[DateType]]))
+    }
+    
     @JSImport("rc-picker", "PickerPanel")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder[DateType] (val args: js.Array[js.Any])
@@ -106,19 +113,19 @@ object PickerPanel {
     }
     
     def withProps[DateType](p: typingsSlinky.rcPicker.pickerPanelMod.PickerPanelBaseProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale, picker: Exclude[PickerMode, date | time]): Builder[DateType] = {
-      val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], picker = picker.asInstanceOf[js.Any])
-      new Builder[DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerPanelMod.PickerPanelBaseProps[DateType]]))
-    }
   }
   
   object PickerPanelDateProps {
     
+    @scala.inline
+    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale): Builder[DateType] = {
+      val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any])
+      new Builder[DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerPanelMod.PickerPanelDateProps[DateType]]))
+    }
+    
     @JSImport("rc-picker", "PickerPanel")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder[DateType] (val args: js.Array[js.Any])
@@ -211,19 +218,19 @@ object PickerPanel {
     }
     
     def withProps[DateType](p: typingsSlinky.rcPicker.pickerPanelMod.PickerPanelDateProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale): Builder[DateType] = {
-      val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any])
-      new Builder[DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerPanelMod.PickerPanelDateProps[DateType]]))
-    }
   }
   
   object PickerPanelTimeProps {
     
+    @scala.inline
+    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale, picker: time): Builder[DateType] = {
+      val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], picker = picker.asInstanceOf[js.Any])
+      new Builder[DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerPanelMod.PickerPanelTimeProps[DateType]]))
+    }
+    
     @JSImport("rc-picker", "PickerPanel")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder[DateType] (val args: js.Array[js.Any])
@@ -340,11 +347,5 @@ object PickerPanel {
     }
     
     def withProps[DateType](p: typingsSlinky.rcPicker.pickerPanelMod.PickerPanelTimeProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale, picker: time): Builder[DateType] = {
-      val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], picker = picker.asInstanceOf[js.Any])
-      new Builder[DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerPanelMod.PickerPanelTimeProps[DateType]]))
-    }
   }
 }

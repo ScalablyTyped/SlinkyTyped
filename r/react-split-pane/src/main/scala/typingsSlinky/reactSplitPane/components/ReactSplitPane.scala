@@ -11,6 +11,7 @@ import typingsSlinky.reactSplitPane.reactSplitPaneStrings.first
 import typingsSlinky.reactSplitPane.reactSplitPaneStrings.horizontal
 import typingsSlinky.reactSplitPane.reactSplitPaneStrings.second
 import typingsSlinky.reactSplitPane.reactSplitPaneStrings.vertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object ReactSplitPane {
   
   @JSImport("react-split-pane", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -87,7 +88,7 @@ object ReactSplitPane {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SplitPaneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactSplitPane.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SplitPaneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

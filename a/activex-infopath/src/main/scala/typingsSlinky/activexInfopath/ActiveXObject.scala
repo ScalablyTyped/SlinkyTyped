@@ -70,12 +70,13 @@ import typingsSlinky.activexInfopath.anon.PWindow
 import typingsSlinky.activexInfopath.anon.Pctinfo
 import typingsSlinky.activexInfopath.anon.PfCancel
 import typingsSlinky.activexInfopath.anon.PpvObj
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ActiveXObject extends js.Object {
+trait ActiveXObject extends StObject {
   
   def on(
     obj: ApplicationEvents,

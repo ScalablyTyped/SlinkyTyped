@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesDeleteBucketInventoryConfigurationI
 import typingsSlinky.awsSdkClientS3Node.typesDeleteBucketInventoryConfigurationOutputMod.DeleteBucketInventoryConfigurationOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/DeleteBucketInventoryConfigurationCommand", JSImport.Namespace)
-@js.native
-object deleteBucketInventoryConfigurationCommandMod extends js.Object {
+object deleteBucketInventoryConfigurationCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/DeleteBucketInventoryConfigurationCommand", "DeleteBucketInventoryConfigurationCommand")
   @js.native
   class DeleteBucketInventoryConfigurationCommand protected () extends Command[
           InputTypesUnion, 

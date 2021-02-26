@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.iShaderProcessorMod.IShaderProcessor
 import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Engines/WebGL/webGLShaderProcessors", JSImport.Namespace)
-@js.native
-object webGLShaderProcessorsMod extends js.Object {
+object webGLShaderProcessorsMod {
   
+  @JSImport("babylonjs/Engines/WebGL/webGLShaderProcessors", "WebGLShaderProcessor")
   @js.native
   class WebGLShaderProcessor () extends IShaderProcessor {
     

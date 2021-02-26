@@ -5,16 +5,15 @@ import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestInterfaceMod.RequestInterface
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.octokitTypes.routeMod.Route
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@octokit/types/dist-types/AuthInterface", JSImport.Namespace)
-@js.native
-object authInterfaceMod extends js.Object {
+object authInterfaceMod {
   
   @js.native
-  trait AuthInterface[AuthOptions /* <: js.Array[_] */, Authentication /* <: js.Any */] extends js.Object {
+  trait AuthInterface[AuthOptions /* <: js.Array[_] */, Authentication /* <: js.Any */] extends StObject {
     
     def apply(
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type AuthOptions is not an array type */ args: AuthOptions

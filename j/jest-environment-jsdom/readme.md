@@ -9,9 +9,9 @@ Typings are for version 26.6.2
 | ------------------ | :-------------: |
 | Full name          | jest-environment-jsdom |
 | Keywords           | - |
-| # releases         | 61 |
-| # dependents       | 38 |
-| # downloads        | 245453692 |
+| # releases         | 47 |
+| # dependents       | 65 |
+| # downloads        | 391225111 |
 | # stars            | 0 |
 
 ## Links

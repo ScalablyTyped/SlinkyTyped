@@ -10,9 +10,9 @@ Customize scrollbar in modern browsers with smooth scrolling experience.
 | ------------------ | :-------------: |
 | Full name          | smooth-scrollbar |
 | Keywords           | scrollbar, customize, acceleration, performance |
-| # releases         | 9 |
-| # dependents       | 39 |
-| # downloads        | 410429 |
+| # releases         | 6 |
+| # dependents       | 61 |
+| # downloads        | 613306 |
 | # stars            | 5 |
 
 ## Links

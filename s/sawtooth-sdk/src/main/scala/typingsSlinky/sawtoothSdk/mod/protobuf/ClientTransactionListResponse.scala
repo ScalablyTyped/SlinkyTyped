@@ -5,6 +5,7 @@ import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IClientTransactionListResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,88 +21,12 @@ class ClientTransactionListResponse ()
   def this(properties: IClientTransactionListResponse) = this()
 }
 /* static members */
-@JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse")
-@js.native
-object ClientTransactionListResponse extends js.Object {
-  
-  /**
-    * Creates a new ClientTransactionListResponse instance using the specified properties.
-    * @param [properties] Properties to set
-    * @returns ClientTransactionListResponse instance
-    */
-  def create(): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
-  def create(properties: IClientTransactionListResponse): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
-  
-  /**
-    * Decodes a ClientTransactionListResponse message from the specified reader or buffer.
-    * @param reader Reader or buffer to decode from
-    * @param [length] Message length if known beforehand
-    * @returns ClientTransactionListResponse
-    * @throws {Error} If the payload is not a reader or valid buffer
-    * @throws {$protobuf.util.ProtocolError} If required fields are missing
-    */
-  def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
-  def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
-  
-  /**
-    * Decodes a ClientTransactionListResponse message from the specified reader or buffer, length delimited.
-    * @param reader Reader or buffer to decode from
-    * @returns ClientTransactionListResponse
-    * @throws {Error} If the payload is not a reader or valid buffer
-    * @throws {$protobuf.util.ProtocolError} If required fields are missing
-    */
-  def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
-  
-  /**
-    * Encodes the specified ClientTransactionListResponse message. Does not implicitly {@link ClientTransactionListResponse.verify|verify} messages.
-    * @param message ClientTransactionListResponse message or plain object to encode
-    * @param [writer] Writer to encode to
-    * @returns Writer
-    */
-  def encode(message: IClientTransactionListResponse): Writer = js.native
-  def encode(message: IClientTransactionListResponse, writer: Writer): Writer = js.native
-  
-  /**
-    * Encodes the specified ClientTransactionListResponse message, length delimited. Does not implicitly {@link ClientTransactionListResponse.verify|verify} messages.
-    * @param message ClientTransactionListResponse message or plain object to encode
-    * @param [writer] Writer to encode to
-    * @returns Writer
-    */
-  def encodeDelimited(message: IClientTransactionListResponse): Writer = js.native
-  def encodeDelimited(message: IClientTransactionListResponse, writer: Writer): Writer = js.native
-  
-  /**
-    * Creates a ClientTransactionListResponse message from a plain object. Also converts values to their respective internal types.
-    * @param object Plain object
-    * @returns ClientTransactionListResponse
-    */
-  def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
-  
-  /**
-    * Creates a plain object from a ClientTransactionListResponse message. Also converts values to other types if specified.
-    * @param message ClientTransactionListResponse
-    * @param [options] Conversion options
-    * @returns Plain object
-    */
-  def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse): StringDictionary[js.Any] = js.native
-  def toObject(
-    message: typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse,
-    options: IConversionOptions
-  ): StringDictionary[js.Any] = js.native
-  
-  /**
-    * Verifies a ClientTransactionListResponse message.
-    * @param message Plain object to verify
-    * @returns `null` if valid, otherwise the reason why it is not
-    */
-  def verify(message: StringDictionary[js.Any]): String | Null = js.native
+object ClientTransactionListResponse {
   
   /** Status enum. */
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.Status")
   @js.native
-  object Status extends js.Object {
+  object Status extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -126,4 +51,111 @@ object ClientTransactionListResponse extends js.Object {
     
     /* 0 */ val STATUS_UNSET: typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse.Status.STATUS_UNSET with Double = js.native
   }
+  
+  /**
+    * Creates a new ClientTransactionListResponse instance using the specified properties.
+    * @param [properties] Properties to set
+    * @returns ClientTransactionListResponse instance
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.create")
+  @js.native
+  def create(): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.create")
+  @js.native
+  def create(properties: IClientTransactionListResponse): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
+  
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
+  /**
+    * Decodes a ClientTransactionListResponse message from the specified reader or buffer.
+    * @param reader Reader or buffer to decode from
+    * @param [length] Message length if known beforehand
+    * @returns ClientTransactionListResponse
+    * @throws {Error} If the payload is not a reader or valid buffer
+    * @throws {$protobuf.util.ProtocolError} If required fields are missing
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.decode")
+  @js.native
+  def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.decode")
+  @js.native
+  def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
+  
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
+  /**
+    * Decodes a ClientTransactionListResponse message from the specified reader or buffer, length delimited.
+    * @param reader Reader or buffer to decode from
+    * @returns ClientTransactionListResponse
+    * @throws {Error} If the payload is not a reader or valid buffer
+    * @throws {$protobuf.util.ProtocolError} If required fields are missing
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
+  
+  /**
+    * Encodes the specified ClientTransactionListResponse message. Does not implicitly {@link ClientTransactionListResponse.verify|verify} messages.
+    * @param message ClientTransactionListResponse message or plain object to encode
+    * @param [writer] Writer to encode to
+    * @returns Writer
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.encode")
+  @js.native
+  def encode(message: IClientTransactionListResponse): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.encode")
+  @js.native
+  def encode(message: IClientTransactionListResponse, writer: Writer): Writer = js.native
+  
+  /**
+    * Encodes the specified ClientTransactionListResponse message, length delimited. Does not implicitly {@link ClientTransactionListResponse.verify|verify} messages.
+    * @param message ClientTransactionListResponse message or plain object to encode
+    * @param [writer] Writer to encode to
+    * @returns Writer
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.encodeDelimited")
+  @js.native
+  def encodeDelimited(message: IClientTransactionListResponse): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.encodeDelimited")
+  @js.native
+  def encodeDelimited(message: IClientTransactionListResponse, writer: Writer): Writer = js.native
+  
+  /**
+    * Creates a ClientTransactionListResponse message from a plain object. Also converts values to their respective internal types.
+    * @param object Plain object
+    * @returns ClientTransactionListResponse
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.fromObject")
+  @js.native
+  def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse = js.native
+  
+  /**
+    * Creates a plain object from a ClientTransactionListResponse message. Also converts values to other types if specified.
+    * @param message ClientTransactionListResponse
+    * @param [options] Conversion options
+    * @returns Plain object
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.toObject")
+  @js.native
+  def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.toObject")
+  @js.native
+  def toObject(
+    message: typingsSlinky.sawtoothSdk.protobufMod.ClientTransactionListResponse,
+    options: IConversionOptions
+  ): StringDictionary[js.Any] = js.native
+  
+  /**
+    * Verifies a ClientTransactionListResponse message.
+    * @param message Plain object to verify
+    * @returns `null` if valid, otherwise the reason why it is not
+    */
+  @JSImport("sawtooth-sdk", "protobuf.ClientTransactionListResponse.verify")
+  @js.native
+  def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

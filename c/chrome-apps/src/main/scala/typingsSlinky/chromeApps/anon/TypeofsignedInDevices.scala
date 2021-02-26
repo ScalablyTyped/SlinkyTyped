@@ -2,12 +2,13 @@ package typingsSlinky.chromeApps.anon
 
 import typingsSlinky.chromeApps.chrome.events.Event
 import typingsSlinky.chromeApps.chrome.signedInDevices.DeviceInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofsignedInDevices extends js.Object {
+trait TypeofsignedInDevices extends StObject {
   
   /**
     * Gets the array of signed in devices, signed into the same account as the current profile.

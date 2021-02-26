@@ -3,15 +3,22 @@ package typingsSlinky.storybookComponents.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookComponents.toolbarMod.ToolbarProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Toolbar {
   
+  @scala.inline
+  def apply(resetZoom: () => Unit, zoom: Double => Unit): Builder = {
+    val __props = js.Dynamic.literal(resetZoom = js.Any.fromFunction0(resetZoom), zoom = js.Any.fromFunction1(zoom))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ToolbarProps]))
+  }
+  
   @JSImport("@storybook/components/dist/blocks/Toolbar", "Toolbar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,10 +36,4 @@ object Toolbar {
   }
   
   def withProps(p: ToolbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(resetZoom: () => Unit, zoom: Double => Unit): Builder = {
-    val __props = js.Dynamic.literal(resetZoom = js.Any.fromFunction0(resetZoom), zoom = js.Any.fromFunction1(zoom))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ToolbarProps]))
-  }
 }

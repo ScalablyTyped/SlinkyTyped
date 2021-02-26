@@ -12,7 +12,7 @@ A tiny and fast Leaflet heatmap plugin.
 | Keywords           | heatmap, canvas, visualization, gis, leaflet, plugin |
 | # releases         | 0 |
 | # dependents       | 25 |
-| # downloads        | 322181 |
+| # downloads        | 541412 |
 | # stars            | 0 |
 
 ## Links

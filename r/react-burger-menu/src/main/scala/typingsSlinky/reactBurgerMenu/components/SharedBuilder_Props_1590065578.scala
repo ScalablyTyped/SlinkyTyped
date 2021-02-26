@@ -9,6 +9,7 @@ import typingsSlinky.reactBurgerMenu.anon.PartialStyles
 import typingsSlinky.reactBurgerMenu.mod.HoverState
 import typingsSlinky.reactBurgerMenu.mod.State
 import typingsSlinky.reactBurgerMenu.reactBurgerMenuBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,16 +38,16 @@ class SharedBuilder_Props_1590065578[R <: js.Object] (val args: js.Array[js.Any]
   def crossClassName(value: String): this.type = set("crossClassName", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def customBurgerIconReactElement(value: ReactElement): this.type = set("customBurgerIcon", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def customBurgerIcon(value: ReactElement | `false`): this.type = set("customBurgerIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def customCrossIconReactElement(value: ReactElement): this.type = set("customCrossIcon", value.asInstanceOf[js.Any])
+  def customBurgerIconReactElement(value: ReactElement): this.type = set("customBurgerIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def customCrossIcon(value: ReactElement | `false`): this.type = set("customCrossIcon", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def customCrossIconReactElement(value: ReactElement): this.type = set("customCrossIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def customOnKeyDown(value: /* event */ SyntheticKeyboardEvent[Element] => Unit): this.type = set("customOnKeyDown", js.Any.fromFunction1(value))
@@ -58,10 +59,10 @@ class SharedBuilder_Props_1590065578[R <: js.Object] (val args: js.Array[js.Any]
   def disableCloseOnEsc(value: Boolean): this.type = set("disableCloseOnEsc", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def disableOverlayClickFunction0(value: () => Boolean): this.type = set("disableOverlayClick", js.Any.fromFunction0(value))
+  def disableOverlayClick(value: Boolean | js.Function0[Boolean]): this.type = set("disableOverlayClick", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def disableOverlayClick(value: Boolean | js.Function0[Boolean]): this.type = set("disableOverlayClick", value.asInstanceOf[js.Any])
+  def disableOverlayClickFunction0(value: () => Boolean): this.type = set("disableOverlayClick", js.Any.fromFunction0(value))
   
   @scala.inline
   def htmlClassName(value: String): this.type = set("htmlClassName", value.asInstanceOf[js.Any])

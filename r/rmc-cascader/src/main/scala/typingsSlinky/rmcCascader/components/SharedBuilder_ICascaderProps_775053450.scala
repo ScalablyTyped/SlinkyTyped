@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcCascader.cascaderTypesMod.CascaderOneValue
 import typingsSlinky.rmcCascader.cascaderTypesMod.CascaderValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,10 +21,10 @@ class SharedBuilder_ICascaderProps_775053450[R <: js.Object] (val args: js.Array
   def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: CascaderOneValue*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: CascaderValue): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: CascaderValue): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: CascaderOneValue*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -53,8 +54,8 @@ class SharedBuilder_ICascaderProps_775053450[R <: js.Object] (val args: js.Array
   def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: CascaderOneValue*): this.type = set("value", js.Array(value :_*))
+  def value(value: CascaderValue): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: CascaderValue): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: CascaderOneValue*): this.type = set("value", js.Array(value :_*))
 }

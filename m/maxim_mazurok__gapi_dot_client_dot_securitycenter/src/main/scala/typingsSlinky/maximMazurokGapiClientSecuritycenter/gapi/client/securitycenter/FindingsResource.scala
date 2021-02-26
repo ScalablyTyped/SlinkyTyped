@@ -11,12 +11,13 @@ import typingsSlinky.maximMazurokGapiClientSecuritycenter.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientSecuritycenter.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientSecuritycenter.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientSecuritycenter.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FindingsResource extends js.Object {
+trait FindingsResource extends StObject {
   
   /** Creates a finding. The corresponding source must exist for finding creation to succeed. */
   def create(request: FindingId): Request[Finding] = js.native

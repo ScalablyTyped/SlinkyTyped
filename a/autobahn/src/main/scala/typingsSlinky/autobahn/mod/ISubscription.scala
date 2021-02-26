@@ -1,12 +1,13 @@
 package typingsSlinky.autobahn.mod
 
 import typingsSlinky.when.When.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ISubscription extends js.Object {
+trait ISubscription extends StObject {
   
   var active: Boolean = js.native
   

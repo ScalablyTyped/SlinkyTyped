@@ -9,16 +9,16 @@ import typingsSlinky.sipJs.publisherPublishOptionsMod.PublisherPublishOptions
 import typingsSlinky.sipJs.publisherStateMod.PublisherState
 import typingsSlinky.sipJs.publisherUnpublishOptionsMod.PublisherUnpublishOptions
 import typingsSlinky.sipJs.userAgentMod.UserAgent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/api/publisher", JSImport.Namespace)
-@js.native
-object publisherMod extends js.Object {
+object publisherMod {
   
+  @JSImport("sip.js/lib/api/publisher", "Publisher")
   @js.native
-  class Publisher protected () extends js.Object {
+  class Publisher protected () extends StObject {
     /**
       * Constructs a new instance of the `Publisher` class.
       *

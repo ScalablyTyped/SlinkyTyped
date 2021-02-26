@@ -5,14 +5,14 @@ import typingsSlinky.ionicCore.elementInterfaceMod.AnchorInterface
 import typingsSlinky.ionicCore.elementInterfaceMod.ButtonInterface
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/item-option/item-option", JSImport.Namespace)
-@js.native
-object itemOptionMod extends js.Object {
+object itemOptionMod {
   
+  @JSImport("@ionic/core/dist/types/components/item-option/item-option", "ItemOption")
   @js.native
   class ItemOption ()
     extends ComponentInterface

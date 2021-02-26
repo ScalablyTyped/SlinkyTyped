@@ -1,5 +1,6 @@
 package typingsSlinky.typedoc.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("typedoc", "TypeDocReader")
 @js.native
 class TypeDocReader ()
-  extends typingsSlinky.typedoc.typedocMod.TypeDocReader
+  extends typingsSlinky.typedoc.optionsMod.TypeDocReader

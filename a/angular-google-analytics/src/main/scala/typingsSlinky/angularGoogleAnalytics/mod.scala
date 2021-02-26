@@ -1,27 +1,24 @@
 package typingsSlinky.angularGoogleAnalytics
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
-@JSImport("angular", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  @js.native
-  object google extends js.Object {
+  object google {
     
-    @js.native
-    object analytics extends js.Object {
+    object analytics {
       
       /**
         * @summary Interface for {@link AnalysticsProvider}.
         * @interface
         */
       @js.native
-      trait AnalyticsProvider extends js.Object {
+      trait AnalyticsProvider extends StObject {
         
         /**
           * @summary Use Delay Script Tag Insertion.
@@ -202,7 +199,7 @@ object mod extends js.Object {
         * @interface
         */
       @js.native
-      trait AnalyticsService extends js.Object {
+      trait AnalyticsService extends StObject {
         
         /**
           * @summary Manually create universal analytics (analytics.js) script tag

@@ -4,14 +4,14 @@ import typingsSlinky.devexpressUtils.interfacesMod.IOffsets
 import typingsSlinky.devexpressUtils.typesMod.IEquatable
 import typingsSlinky.devexpressUtils.typesMod.ISupportConverting
 import typingsSlinky.devexpressUtils.typesMod.ISupportCopyFrom
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@devexpress/utils/lib/geometry/offsets", JSImport.Namespace)
-@js.native
-object offsetsMod extends js.Object {
+object offsetsMod {
   
+  @JSImport("@devexpress/utils/lib/geometry/offsets", "Offsets")
   @js.native
   class Offsets protected ()
     extends IEquatable[Offsets]
@@ -39,15 +39,22 @@ object offsetsMod extends js.Object {
     val vertical: Double = js.native
   }
   /* static members */
-  @js.native
-  object Offsets extends js.Object {
+  object Offsets {
     
+    @JSImport("@devexpress/utils/lib/geometry/offsets", "Offsets.empty")
+    @js.native
     def empty(): Offsets = js.native
     
+    @JSImport("@devexpress/utils/lib/geometry/offsets", "Offsets.fromNumber")
+    @js.native
     def fromNumber(offset: Double): Offsets = js.native
     
+    @JSImport("@devexpress/utils/lib/geometry/offsets", "Offsets.fromOffsets")
+    @js.native
     def fromOffsets(offsets: IOffsets): Offsets = js.native
     
+    @JSImport("@devexpress/utils/lib/geometry/offsets", "Offsets.fromSide")
+    @js.native
     def fromSide(horizontal: Double, vertical: Double): Offsets = js.native
   }
 }

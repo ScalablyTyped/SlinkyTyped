@@ -10,6 +10,7 @@ import typingsSlinky.mfiles.mfilesNumbers.`30004`
 import typingsSlinky.mfiles.mfilesNumbers.`30005`
 import typingsSlinky.mfiles.mfilesNumbers.`30006`
 import typingsSlinky.mfiles.mfilesNumbers.`30007`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mfiles.mfilesNumbers.`30006`
   - typingsSlinky.mfiles.mfilesNumbers.`30007`
 */
-trait MFPredefinedSearchFilterType extends js.Object
+trait MFPredefinedSearchFilterType extends StObject
 object MFPredefinedSearchFilterType {
   
   @scala.inline

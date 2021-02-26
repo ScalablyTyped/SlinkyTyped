@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.babylonjs.BABYLON.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -71,9 +72,7 @@ class ActionEvent protected ()
   ) = this()
 }
 /* static members */
-@JSGlobal("BABYLON.ActionEvent")
-@js.native
-object ActionEvent extends js.Object {
+object ActionEvent {
   
   /**
     * Helper function to auto-create an ActionEvent from a source mesh.
@@ -82,13 +81,21 @@ object ActionEvent extends js.Object {
     * @param additionalData additional data for the event
     * @returns the new ActionEvent
     */
+  @JSGlobal("BABYLON.ActionEvent.CreateNew")
+  @js.native
   def CreateNew(source: typingsSlinky.babylonjs.BABYLON.AbstractMesh): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  @JSGlobal("BABYLON.ActionEvent.CreateNew")
+  @js.native
   def CreateNew(
     source: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     evt: js.UndefOr[scala.Nothing],
     additionalData: js.Any
   ): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  @JSGlobal("BABYLON.ActionEvent.CreateNew")
+  @js.native
   def CreateNew(source: typingsSlinky.babylonjs.BABYLON.AbstractMesh, evt: Event): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  @JSGlobal("BABYLON.ActionEvent.CreateNew")
+  @js.native
   def CreateNew(source: typingsSlinky.babylonjs.BABYLON.AbstractMesh, evt: Event, additionalData: js.Any): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
   
   /**
@@ -99,14 +106,22 @@ object ActionEvent extends js.Object {
     * @param additionalData additional data for the event
     * @returns the new ActionEvent
     */
+  @JSGlobal("BABYLON.ActionEvent.CreateNewFromPrimitive")
+  @js.native
   def CreateNewFromPrimitive(prim: js.Any, pointerPos: typingsSlinky.babylonjs.BABYLON.Vector2): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  @JSGlobal("BABYLON.ActionEvent.CreateNewFromPrimitive")
+  @js.native
   def CreateNewFromPrimitive(
     prim: js.Any,
     pointerPos: typingsSlinky.babylonjs.BABYLON.Vector2,
     evt: js.UndefOr[scala.Nothing],
     additionalData: js.Any
   ): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  @JSGlobal("BABYLON.ActionEvent.CreateNewFromPrimitive")
+  @js.native
   def CreateNewFromPrimitive(prim: js.Any, pointerPos: typingsSlinky.babylonjs.BABYLON.Vector2, evt: Event): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  @JSGlobal("BABYLON.ActionEvent.CreateNewFromPrimitive")
+  @js.native
   def CreateNewFromPrimitive(
     prim: js.Any,
     pointerPos: typingsSlinky.babylonjs.BABYLON.Vector2,
@@ -120,6 +135,8 @@ object ActionEvent extends js.Object {
     * @param evt The original (browser) event
     * @returns the new ActionEvent
     */
+  @JSGlobal("BABYLON.ActionEvent.CreateNewFromScene")
+  @js.native
   def CreateNewFromScene(scene: typingsSlinky.babylonjs.BABYLON.Scene, evt: Event): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
   
   /**
@@ -130,18 +147,26 @@ object ActionEvent extends js.Object {
     * @param additionalData additional data for the event
     * @returns the new ActionEvent
     */
+  @JSGlobal("BABYLON.ActionEvent.CreateNewFromSprite")
+  @js.native
   def CreateNewFromSprite(source: typingsSlinky.babylonjs.BABYLON.Sprite, scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  @JSGlobal("BABYLON.ActionEvent.CreateNewFromSprite")
+  @js.native
   def CreateNewFromSprite(
     source: typingsSlinky.babylonjs.BABYLON.Sprite,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     evt: js.UndefOr[scala.Nothing],
     additionalData: js.Any
   ): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  @JSGlobal("BABYLON.ActionEvent.CreateNewFromSprite")
+  @js.native
   def CreateNewFromSprite(
     source: typingsSlinky.babylonjs.BABYLON.Sprite,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     evt: Event
   ): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  @JSGlobal("BABYLON.ActionEvent.CreateNewFromSprite")
+  @js.native
   def CreateNewFromSprite(
     source: typingsSlinky.babylonjs.BABYLON.Sprite,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,

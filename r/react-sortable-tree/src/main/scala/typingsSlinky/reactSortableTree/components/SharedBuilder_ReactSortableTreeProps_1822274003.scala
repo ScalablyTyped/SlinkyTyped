@@ -26,6 +26,7 @@ import typingsSlinky.reactSortableTree.mod.TreeNode
 import typingsSlinky.reactSortableTree.reactSortableTreeStrings.ltr
 import typingsSlinky.reactSortableTree.reactSortableTreeStrings.rtl
 import typingsSlinky.reactVirtualized.mod.Index
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,10 +37,10 @@ class SharedBuilder_ReactSortableTreeProps_1822274003 (val args: js.Array[js.Any
      with StBuildingComponent[tag.type, scala.Nothing] {
   
   @scala.inline
-  def canDragFunction1(value: /* data */ ExtendedNodeData => Boolean): this.type = set("canDrag", js.Any.fromFunction1(value))
+  def canDrag(value: (js.Function1[/* data */ ExtendedNodeData, Boolean]) | Boolean): this.type = set("canDrag", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def canDrag(value: (js.Function1[/* data */ ExtendedNodeData, Boolean]) | Boolean): this.type = set("canDrag", value.asInstanceOf[js.Any])
+  def canDragFunction1(value: /* data */ ExtendedNodeData => Boolean): this.type = set("canDrag", js.Any.fromFunction1(value))
   
   @scala.inline
   def canDrop(value: /* data */ OnDragPreviousAndNextLocation with NodeData => Boolean): this.type = set("canDrop", js.Any.fromFunction1(value))
@@ -69,13 +70,13 @@ class SharedBuilder_ReactSortableTreeProps_1822274003 (val args: js.Array[js.Any
   def maxDepth(value: Double): this.type = set("maxDepth", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def nodeContentRendererFunctionComponent(value: ReactComponentClass[NodeRendererProps]): this.type = set("nodeContentRenderer", value.asInstanceOf[js.Any])
+  def nodeContentRenderer(value: NodeRenderer): this.type = set("nodeContentRenderer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def nodeContentRendererComponentClass(value: ReactComponentClass[NodeRendererProps]): this.type = set("nodeContentRenderer", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def nodeContentRenderer(value: NodeRenderer): this.type = set("nodeContentRenderer", value.asInstanceOf[js.Any])
+  def nodeContentRendererFunctionComponent(value: ReactComponentClass[NodeRendererProps]): this.type = set("nodeContentRenderer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def onDragStateChanged(value: /* data */ OnDragStateChangedData => Unit): this.type = set("onDragStateChanged", js.Any.fromFunction1(value))
@@ -90,13 +91,13 @@ class SharedBuilder_ReactSortableTreeProps_1822274003 (val args: js.Array[js.Any
   def onlyExpandSearchedNodes(value: Boolean): this.type = set("onlyExpandSearchedNodes", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def placeholderRendererFunctionComponent(value: ReactComponentClass[PlaceholderRendererProps]): this.type = set("placeholderRenderer", value.asInstanceOf[js.Any])
+  def placeholderRenderer(value: PlaceholderRenderer): this.type = set("placeholderRenderer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def placeholderRendererComponentClass(value: ReactComponentClass[PlaceholderRendererProps]): this.type = set("placeholderRenderer", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def placeholderRenderer(value: PlaceholderRenderer): this.type = set("placeholderRenderer", value.asInstanceOf[js.Any])
+  def placeholderRendererFunctionComponent(value: ReactComponentClass[PlaceholderRendererProps]): this.type = set("placeholderRenderer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def reactVirtualizedListProps(value: PartialListProps): this.type = set("reactVirtualizedListProps", value.asInstanceOf[js.Any])
@@ -105,10 +106,10 @@ class SharedBuilder_ReactSortableTreeProps_1822274003 (val args: js.Array[js.Any
   def rowDirection(value: ltr | rtl): this.type = set("rowDirection", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def rowHeightFunction1(value: /* info */ NodeData with Index => Double): this.type = set("rowHeight", js.Any.fromFunction1(value))
+  def rowHeight(value: (js.Function1[/* info */ NodeData with Index, Double]) | Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def rowHeight(value: (js.Function1[/* info */ NodeData with Index, Double]) | Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
+  def rowHeightFunction1(value: /* info */ NodeData with Index => Double): this.type = set("rowHeight", js.Any.fromFunction1(value))
   
   @scala.inline
   def scaffoldBlockPxWidth(value: Double): this.type = set("scaffoldBlockPxWidth", value.asInstanceOf[js.Any])
@@ -126,10 +127,10 @@ class SharedBuilder_ReactSortableTreeProps_1822274003 (val args: js.Array[js.Any
   def searchQuery(value: String | js.Any): this.type = set("searchQuery", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def shouldCopyOnOutsideDropFunction1(value: /* data */ ShouldCopyData => Boolean): this.type = set("shouldCopyOnOutsideDrop", js.Any.fromFunction1(value))
+  def shouldCopyOnOutsideDrop(value: Boolean | (js.Function1[/* data */ ShouldCopyData, Boolean])): this.type = set("shouldCopyOnOutsideDrop", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def shouldCopyOnOutsideDrop(value: Boolean | (js.Function1[/* data */ ShouldCopyData, Boolean])): this.type = set("shouldCopyOnOutsideDrop", value.asInstanceOf[js.Any])
+  def shouldCopyOnOutsideDropFunction1(value: /* data */ ShouldCopyData => Boolean): this.type = set("shouldCopyOnOutsideDrop", js.Any.fromFunction1(value))
   
   @scala.inline
   def slideRegionSize(value: Double): this.type = set("slideRegionSize", value.asInstanceOf[js.Any])

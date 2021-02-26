@@ -38,12 +38,13 @@ import typingsSlinky.semanticUiNag.semanticUiNagStrings.speed
 import typingsSlinky.semanticUiNag.semanticUiNagStrings.storageMethod
 import typingsSlinky.semanticUiNag.semanticUiNagStrings.value
 import typingsSlinky.semanticUiNag.semanticUiNagStrings.verbose
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def nag(): JQuery = js.native
   def nag(behavior: setting, name: animation, value: AnimationSettings): JQuery = js.native

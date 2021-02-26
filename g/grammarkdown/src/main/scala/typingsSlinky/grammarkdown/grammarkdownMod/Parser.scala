@@ -2,13 +2,14 @@ package typingsSlinky.grammarkdown.grammarkdownMod
 
 import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.prex.mod.CancellationToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown/dist/grammarkdown", "Parser")
 @js.native
-class Parser () extends js.Object {
+class Parser () extends StObject {
   
   var canBeIdentifier: js.Any = js.native
   

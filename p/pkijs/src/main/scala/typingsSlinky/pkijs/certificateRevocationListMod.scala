@@ -5,16 +5,35 @@ import typingsSlinky.asn1js.mod.BitString
 import typingsSlinky.asn1js.mod.Sequence
 import typingsSlinky.pkijs.anon.IssuerCertificate
 import typingsSlinky.std.AlgorithmIdentifier
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("pkijs/src/CertificateRevocationList", JSImport.Namespace)
-@js.native
-object certificateRevocationListMod extends js.Object {
+object certificateRevocationListMod {
+  
+  @JSImport("pkijs/src/CertificateRevocationList", JSImport.Default)
+  @js.native
+  class default () extends CertificateRevocationList {
+    def this(params: js.Any) = this()
+  }
+  /* static members */
+  object default {
+    
+    @JSImport("pkijs/src/CertificateRevocationList", "default.defaultValues")
+    @js.native
+    def defaultValues(memberName: String): js.Any = js.native
+    
+    @JSImport("pkijs/src/CertificateRevocationList", "default.schema")
+    @js.native
+    def schema(): js.Any = js.native
+    @JSImport("pkijs/src/CertificateRevocationList", "default.schema")
+    @js.native
+    def schema(parameters: js.Any): js.Any = js.native
+  }
   
   @js.native
-  trait CertificateRevocationList extends js.Object {
+  trait CertificateRevocationList extends StObject {
     
     var crlExtensions: js.UndefOr[typingsSlinky.pkijs.extensionsMod.default] = js.native
     
@@ -67,19 +86,5 @@ object certificateRevocationListMod extends js.Object {
     def verify(parameters: IssuerCertificate): js.Thenable[Boolean] = js.native
     
     var version: js.UndefOr[Double] = js.native
-  }
-  
-  @js.native
-  class default () extends CertificateRevocationList {
-    def this(params: js.Any) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    def defaultValues(memberName: String): js.Any = js.native
-    
-    def schema(): js.Any = js.native
-    def schema(parameters: js.Any): js.Any = js.native
   }
 }

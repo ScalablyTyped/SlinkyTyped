@@ -2,6 +2,7 @@ package typingsSlinky.angularCompiler.publicApiMod
 
 import typingsSlinky.angularCompiler.coreMod.SecurityContext
 import typingsSlinky.angularCompiler.templateAstMod.PropertyBindingType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,9 +29,9 @@ class BoundElementPropertyAst protected ()
   ) = this()
 }
 /* static members */
-@JSImport("@angular/compiler/public_api", "BoundElementPropertyAst")
-@js.native
-object BoundElementPropertyAst extends js.Object {
+object BoundElementPropertyAst {
   
+  @JSImport("@angular/compiler/public_api", "BoundElementPropertyAst.fromBoundProperty")
+  @js.native
   def fromBoundProperty(prop: typingsSlinky.angularCompiler.astMod.BoundElementProperty): typingsSlinky.angularCompiler.templateAstMod.BoundElementPropertyAst = js.native
 }

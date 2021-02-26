@@ -66,12 +66,13 @@ import typingsSlinky.activexOffice.anon.CNames
 import typingsSlinky.activexOffice.anon.Itinfo
 import typingsSlinky.activexOffice.anon.Pctinfo
 import typingsSlinky.activexOffice.anon.PpvObj
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ActiveXObject extends js.Object {
+trait ActiveXObject extends StObject {
   
   def on(
     obj: CommandBarButton,

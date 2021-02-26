@@ -2,6 +2,7 @@ package typingsSlinky.activexExcel.Excel
 
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4159`
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4162`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4159`
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4162`
 */
-trait XlDeleteShiftDirection extends js.Object
+trait XlDeleteShiftDirection extends StObject
 object XlDeleteShiftDirection {
   
   @scala.inline

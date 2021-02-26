@@ -9,17 +9,16 @@ import typingsSlinky.beanstalkd.mod.BeanstalkdStats
 import typingsSlinky.beanstalkd.mod.BeanstalkdTubeStats
 import typingsSlinky.beanstalkd.mod.YamlReader
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   /* Inlined std.Required<beanstalkd.beanstalkd.BeanstalkdClient> */
   @js.native
-  trait RequiredBeanstalkdClient extends js.Object {
+  trait RequiredBeanstalkdClient extends StObject {
     
     def _command(command: String, args: js.Array[_], writer: BasicWriter, reader: BasicReader): js.Promise[_] = js.native
     def _command(command: String, args: js.Array[_], writer: BasicWriter, reader: YamlReader): js.Promise[_] = js.native

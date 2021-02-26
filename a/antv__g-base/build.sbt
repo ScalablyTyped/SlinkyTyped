@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "antv__g-base"
-version := "0.5.1-6d1d3b"
+version := "0.5.1-c0cac4"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "antv__event-emitter" % "0.1.2-c8ea55",
-  "org.scalablytyped.slinky" %%% "d3-timer" % "2.0-dt-20201002Z-4daf31",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "antv__event-emitter" % "0.1.2-96771d",
+  "org.scalablytyped.slinky" %%% "d3-timer" % "2.0-dt-20201002Z-ce8821",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

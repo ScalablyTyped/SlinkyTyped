@@ -10,9 +10,9 @@ Wrappers for JavaScript alert(), confirm(), prompt(), and other flexible dialogs
 | ------------------ | :-------------: |
 | Full name          | bootbox |
 | Keywords           | - |
-| # releases         | 15 |
-| # dependents       | 24 |
-| # downloads        | 852782 |
+| # releases         | 18 |
+| # dependents       | 27 |
+| # downloads        | 1302405 |
 | # stars            | 6 |
 
 ## Links

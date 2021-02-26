@@ -1,5 +1,6 @@
 package typingsSlinky.preact.jsxCsstypeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -99,7 +100,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.preact.preactStrings.Colonvalid
   - typingsSlinky.preact.preactStrings.Colonvisited
 */
-trait SimplePseudos extends js.Object
+trait SimplePseudos extends StObject
 object SimplePseudos {
   
   @scala.inline

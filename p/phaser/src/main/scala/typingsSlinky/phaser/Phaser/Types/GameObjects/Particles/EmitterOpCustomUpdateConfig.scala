@@ -1,6 +1,7 @@
 package typingsSlinky.phaser.Phaser.Types.GameObjects.Particles
 
 import typingsSlinky.phaser.Phaser.GameObjects.Particles.Particle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -2,13 +2,14 @@ package typingsSlinky.johnnyFive.mod
 
 import typingsSlinky.johnnyFive.johnnyFiveStrings.close
 import typingsSlinky.johnnyFive.johnnyFiveStrings.open
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("johnny-five", "Switch")
 @js.native
-class Switch protected () extends js.Object {
+class Switch protected () extends StObject {
   def this(option: String) = this()
   def this(option: Double) = this()
   def this(option: SwitchOption) = this()

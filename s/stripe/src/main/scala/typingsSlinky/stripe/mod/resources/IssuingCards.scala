@@ -3,19 +3,22 @@ package typingsSlinky.stripe.mod.resources
 import typingsSlinky.stripe.mod.HeaderOptions
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.issuing.cards.IIssuingCard
 import typingsSlinky.stripe.mod.issuing.cards.IIssuingCardCreateOptions
 import typingsSlinky.stripe.mod.issuing.cards.IIssuingCardDetails
 import typingsSlinky.stripe.mod.issuing.cards.IIssuingCardListOptions
 import typingsSlinky.stripe.mod.issuing.cards.IIssuingCardUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.IssuingCards")
 @js.native
-class IssuingCards () extends StripeResource {
+class IssuingCards protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(data: IIssuingCardCreateOptions): js.Promise[IIssuingCard] = js.native
   /**

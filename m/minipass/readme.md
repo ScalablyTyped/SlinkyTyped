@@ -10,9 +10,9 @@ minimal implementation of a PassThrough stream
 | ------------------ | :-------------: |
 | Full name          | minipass |
 | Keywords           | passthrough, stream |
-| # releases         | 31 |
-| # dependents       | 46 |
-| # downloads        | 300181304 |
+| # releases         | 25 |
+| # dependents       | 78 |
+| # downloads        | 702511543 |
 | # stars            | 2 |
 
 ## Links

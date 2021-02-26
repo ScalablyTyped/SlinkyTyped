@@ -1,13 +1,13 @@
 package typingsSlinky.ol
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/format/filter/GreaterThanOrEqualTo", JSImport.Namespace)
-@js.native
-object greaterThanOrEqualToMod extends js.Object {
+object greaterThanOrEqualToMod {
   
+  @JSImport("ol/format/filter/GreaterThanOrEqualTo", JSImport.Default)
   @js.native
   class default protected ()
     extends typingsSlinky.ol.comparisonBinaryMod.default {

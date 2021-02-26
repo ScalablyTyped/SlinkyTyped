@@ -12,7 +12,7 @@ LinkedList collection API.
 | Keywords           | - |
 | # releases         | 12 |
 | # dependents       | 4 |
-| # downloads        | 21209 |
+| # downloads        | 22574 |
 | # stars            | 0 |
 
 ## Links

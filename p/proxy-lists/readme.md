@@ -10,9 +10,9 @@ Get proxies from publicly available proxy lists.
 | ------------------ | :-------------: |
 | Full name          | proxy-lists |
 | Keywords           | proxies, proxylist, proxylists, proxy |
-| # releases         | 12 |
-| # dependents       | 8 |
-| # downloads        | 9426 |
+| # releases         | 10 |
+| # dependents       | 9 |
+| # downloads        | 12617 |
 | # stars            | 3 |
 
 ## Links

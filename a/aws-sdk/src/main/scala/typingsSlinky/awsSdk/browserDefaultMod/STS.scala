@@ -2,6 +2,7 @@ package typingsSlinky.awsSdk.browserDefaultMod
 
 import typingsSlinky.awsSdk.stsMod.ClientConfiguration
 import typingsSlinky.awsSdk.stsMod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

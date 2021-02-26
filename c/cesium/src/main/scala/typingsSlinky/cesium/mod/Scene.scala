@@ -2,13 +2,14 @@ package typingsSlinky.cesium.mod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.cesium.anon.ContextOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "Scene")
 @js.native
-class Scene () extends js.Object {
+class Scene () extends StObject {
   def this(options: ContextOptions) = this()
   
   var backgroundColor: Color = js.native

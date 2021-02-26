@@ -10,6 +10,7 @@ import typingsSlinky.baseui.phoneInputMod.State
 import typingsSlinky.baseui.phoneInputMod.StateChange
 import typingsSlinky.baseui.phoneInputMod.StatefulPhoneInputContainerProps
 import typingsSlinky.baseui.selectMod.OnChangeParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object StatefulPhoneInputContainer {
   
   @JSImport("baseui/phone-input", "StatefulPhoneInputContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -47,7 +48,7 @@ object StatefulPhoneInputContainer {
     def stateReducer(value: (/* type */ StateChange, /* nextState */ State, /* currentState */ State) => State): this.type = set("stateReducer", js.Any.fromFunction3(value))
   }
   
-  def withProps(p: StatefulPhoneInputContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatefulPhoneInputContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatefulPhoneInputContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

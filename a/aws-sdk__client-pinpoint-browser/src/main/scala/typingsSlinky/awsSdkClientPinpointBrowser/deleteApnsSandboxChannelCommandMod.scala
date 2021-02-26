@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteApnsSandboxChannelIn
 import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteApnsSandboxChannelOutputMod.DeleteApnsSandboxChannelOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteApnsSandboxChannelCommand", JSImport.Namespace)
-@js.native
-object deleteApnsSandboxChannelCommandMod extends js.Object {
+object deleteApnsSandboxChannelCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteApnsSandboxChannelCommand", "DeleteApnsSandboxChannelCommand")
   @js.native
   class DeleteApnsSandboxChannelCommand protected () extends Command[
           InputTypesUnion, 

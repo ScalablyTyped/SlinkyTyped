@@ -18,15 +18,27 @@ import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
 import typingsSlinky.blueprintjsSelect.multiSelectMod.IMultiSelectProps
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.MouseEventHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MultiSelect {
   
+  @scala.inline
+  def apply[T](
+    itemRenderer: (T, /* itemProps */ IItemRendererProps) => ReactElement | Null,
+    items: js.Array[T],
+    onItemSelect: (T, js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => Unit,
+    tagRenderer: T => ReactElement
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(itemRenderer = js.Any.fromFunction2(itemRenderer), items = items.asInstanceOf[js.Any], onItemSelect = js.Any.fromFunction2(onItemSelect), tagRenderer = js.Any.fromFunction1(tagRenderer))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[IMultiSelectProps[T]]))
+  }
+  
   @JSImport("@blueprintjs/select", "MultiSelect")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -57,19 +69,19 @@ object MultiSelect {
     def fill(value: Boolean): this.type = set("fill", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def initialContentReactElement(value: ReactElement): this.type = set("initialContent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def initialContent(value: ReactElement): this.type = set("initialContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def initialContentNull: this.type = set("initialContent", null)
     
     @scala.inline
-    def itemDisabledFunction2(value: (T, /* index */ Double) => Boolean): this.type = set("itemDisabled", js.Any.fromFunction2(value))
+    def initialContentReactElement(value: ReactElement): this.type = set("initialContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def itemDisabled(value: (/* keyof T */ String) | (js.Function2[T, /* index */ Double, Boolean])): this.type = set("itemDisabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def itemDisabledFunction2(value: (T, /* index */ Double) => Boolean): this.type = set("itemDisabled", js.Any.fromFunction2(value))
     
     @scala.inline
     def itemListPredicate(value: (/* query */ String, /* items */ js.Array[T]) => js.Array[T]): this.type = set("itemListPredicate", js.Any.fromFunction2(value))
@@ -83,16 +95,16 @@ object MultiSelect {
     ): this.type = set("itemPredicate", js.Any.fromFunction4(value))
     
     @scala.inline
-    def itemsEqualFunction2(value: (T, T) => Boolean): this.type = set("itemsEqual", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def itemsEqual(value: ItemsEqualProp[T]): this.type = set("itemsEqual", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noResultsReactElement(value: ReactElement): this.type = set("noResults", value.asInstanceOf[js.Any])
+    def itemsEqualFunction2(value: (T, T) => Boolean): this.type = set("itemsEqual", js.Any.fromFunction2(value))
     
     @scala.inline
     def noResults(value: ReactElement): this.type = set("noResults", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def noResultsReactElement(value: ReactElement): this.type = set("noResults", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onActiveItemChange(value: (/* activeItem */ T | Null, /* isCreateNewItem */ Boolean) => Unit): this.type = set("onActiveItemChange", js.Any.fromFunction2(value))
@@ -128,25 +140,14 @@ object MultiSelect {
     def scrollToActiveItem(value: Boolean): this.type = set("scrollToActiveItem", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedItemsVarargs(value: T*): this.type = set("selectedItems", js.Array(value :_*))
+    def selectedItems(value: js.Array[T]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedItems(value: js.Array[T]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
+    def selectedItemsVarargs(value: T*): this.type = set("selectedItems", js.Array(value :_*))
     
     @scala.inline
     def tagInputProps(value: PartialITagInputProps with js.Object): this.type = set("tagInputProps", value.asInstanceOf[js.Any])
   }
   
   def withProps[T](p: IMultiSelectProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](
-    itemRenderer: (T, /* itemProps */ IItemRendererProps) => ReactElement | Null,
-    items: js.Array[T],
-    onItemSelect: (T, js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => Unit,
-    tagRenderer: T => ReactElement
-  ): Builder[T] = {
-    val __props = js.Dynamic.literal(itemRenderer = js.Any.fromFunction2(itemRenderer), items = items.asInstanceOf[js.Any], onItemSelect = js.Any.fromFunction2(onItemSelect), tagRenderer = js.Any.fromFunction1(tagRenderer))
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[IMultiSelectProps[T]]))
-  }
 }

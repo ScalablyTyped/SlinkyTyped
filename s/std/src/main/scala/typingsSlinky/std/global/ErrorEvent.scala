@@ -1,12 +1,12 @@
 package typingsSlinky.std.global
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.ErrorEventInit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("ErrorEvent")
 @js.native
 class ErrorEvent protected ()
@@ -14,12 +14,3 @@ class ErrorEvent protected ()
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: ErrorEventInit) = this()
 }
-@JSGlobal("ErrorEvent")
-@js.native
-object ErrorEvent
-  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.ErrorEvent]
-     with Instantiable2[
-      /* type */ java.lang.String, 
-      /* eventInitDict */ ErrorEventInit, 
-      org.scalajs.dom.raw.ErrorEvent
-    ]

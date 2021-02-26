@@ -75,20 +75,30 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactGa.mod.OutboundLinkProps
 import typingsSlinky.reactGa.mod.OutboundLink_
 import typingsSlinky.reactGa.mod.TrackerNames
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OutboundLink {
   
+  @scala.inline
+  def apply(eventLabel: String, to: String): Builder = {
+    val __props = js.Dynamic.literal(eventLabel = eventLabel.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OutboundLinkProps with HTMLProps[HTMLAnchorElement]]))
+  }
+  
   @JSImport("react-ga", "OutboundLink")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, OutboundLink_] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -351,16 +361,13 @@ object OutboundLink {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -897,10 +904,10 @@ object OutboundLink {
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def trackerNamesVarargs(value: String*): this.type = set("trackerNames", js.Array(value :_*))
+    def trackerNames(value: TrackerNames): this.type = set("trackerNames", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def trackerNames(value: TrackerNames): this.type = set("trackerNames", value.asInstanceOf[js.Any])
+    def trackerNamesVarargs(value: String*): this.type = set("trackerNames", js.Array(value :_*))
     
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
@@ -918,10 +925,10 @@ object OutboundLink {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -937,10 +944,4 @@ object OutboundLink {
   }
   
   def withProps(p: OutboundLinkProps with HTMLProps[HTMLAnchorElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(eventLabel: String, to: String): Builder = {
-    val __props = js.Dynamic.literal(eventLabel = eventLabel.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[OutboundLinkProps with HTMLProps[HTMLAnchorElement]]))
-  }
 }

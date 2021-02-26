@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.alwaysEnabled
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.scheduled
 */
-trait AutomaticRepliesStatus extends js.Object
+trait AutomaticRepliesStatus extends StObject
 object AutomaticRepliesStatus {
   
   @scala.inline

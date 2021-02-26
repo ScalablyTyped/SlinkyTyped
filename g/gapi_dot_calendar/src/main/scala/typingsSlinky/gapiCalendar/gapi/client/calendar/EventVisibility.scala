@@ -1,5 +1,6 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,14 +12,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gapiCalendar.gapiCalendarStrings.`private`
   - typingsSlinky.gapiCalendar.gapiCalendarStrings.confidential
 */
-trait EventVisibility extends js.Object
+trait EventVisibility extends StObject
 object EventVisibility {
   
   @scala.inline
-  def confidential: typingsSlinky.gapiCalendar.gapiCalendarStrings.confidential = "confidential".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.confidential]
+  def default: typingsSlinky.gapiCalendar.gapiCalendarStrings.default = "default".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.default]
   
   @scala.inline
-  def default: typingsSlinky.gapiCalendar.gapiCalendarStrings.default = "default".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.default]
+  def confidential: typingsSlinky.gapiCalendar.gapiCalendarStrings.confidential = "confidential".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.confidential]
   
   @scala.inline
   def `private`: typingsSlinky.gapiCalendar.gapiCalendarStrings.`private` = "private".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.`private`]

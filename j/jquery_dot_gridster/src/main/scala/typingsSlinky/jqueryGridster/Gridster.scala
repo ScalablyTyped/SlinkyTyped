@@ -1,12 +1,13 @@
 package typingsSlinky.jqueryGridster
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Gridster extends js.Object {
+trait Gridster extends StObject {
   
   /**
     * Create a new widget with the given html and add it to the grid.
@@ -60,49 +61,6 @@ trait Gridster extends js.Object {
   /**
     * @see add_widget
     **/
-  def add_widget(html: JQuery): JQuery = js.native
-  def add_widget(
-    html: JQuery,
-    size_x: js.UndefOr[scala.Nothing],
-    size_y: js.UndefOr[scala.Nothing],
-    col: js.UndefOr[scala.Nothing],
-    row: Double
-  ): JQuery = js.native
-  def add_widget(html: JQuery, size_x: js.UndefOr[scala.Nothing], size_y: js.UndefOr[scala.Nothing], col: Double): JQuery = js.native
-  def add_widget(
-    html: JQuery,
-    size_x: js.UndefOr[scala.Nothing],
-    size_y: js.UndefOr[scala.Nothing],
-    col: Double,
-    row: Double
-  ): JQuery = js.native
-  def add_widget(html: JQuery, size_x: js.UndefOr[scala.Nothing], size_y: Double): JQuery = js.native
-  def add_widget(
-    html: JQuery,
-    size_x: js.UndefOr[scala.Nothing],
-    size_y: Double,
-    col: js.UndefOr[scala.Nothing],
-    row: Double
-  ): JQuery = js.native
-  def add_widget(html: JQuery, size_x: js.UndefOr[scala.Nothing], size_y: Double, col: Double): JQuery = js.native
-  def add_widget(html: JQuery, size_x: js.UndefOr[scala.Nothing], size_y: Double, col: Double, row: Double): JQuery = js.native
-  def add_widget(html: JQuery, size_x: Double): JQuery = js.native
-  def add_widget(
-    html: JQuery,
-    size_x: Double,
-    size_y: js.UndefOr[scala.Nothing],
-    col: js.UndefOr[scala.Nothing],
-    row: Double
-  ): JQuery = js.native
-  def add_widget(html: JQuery, size_x: Double, size_y: js.UndefOr[scala.Nothing], col: Double): JQuery = js.native
-  def add_widget(html: JQuery, size_x: Double, size_y: js.UndefOr[scala.Nothing], col: Double, row: Double): JQuery = js.native
-  def add_widget(html: JQuery, size_x: Double, size_y: Double): JQuery = js.native
-  def add_widget(html: JQuery, size_x: Double, size_y: Double, col: js.UndefOr[scala.Nothing], row: Double): JQuery = js.native
-  def add_widget(html: JQuery, size_x: Double, size_y: Double, col: Double): JQuery = js.native
-  def add_widget(html: JQuery, size_x: Double, size_y: Double, col: Double, row: Double): JQuery = js.native
-  /**
-    * @see add_widget
-    **/
   def add_widget(html: HTMLElement): JQuery = js.native
   def add_widget(
     html: HTMLElement,
@@ -148,6 +106,49 @@ trait Gridster extends js.Object {
   def add_widget(html: HTMLElement, size_x: Double, size_y: Double, col: js.UndefOr[scala.Nothing], row: Double): JQuery = js.native
   def add_widget(html: HTMLElement, size_x: Double, size_y: Double, col: Double): JQuery = js.native
   def add_widget(html: HTMLElement, size_x: Double, size_y: Double, col: Double, row: Double): JQuery = js.native
+  /**
+    * @see add_widget
+    **/
+  def add_widget(html: JQuery): JQuery = js.native
+  def add_widget(
+    html: JQuery,
+    size_x: js.UndefOr[scala.Nothing],
+    size_y: js.UndefOr[scala.Nothing],
+    col: js.UndefOr[scala.Nothing],
+    row: Double
+  ): JQuery = js.native
+  def add_widget(html: JQuery, size_x: js.UndefOr[scala.Nothing], size_y: js.UndefOr[scala.Nothing], col: Double): JQuery = js.native
+  def add_widget(
+    html: JQuery,
+    size_x: js.UndefOr[scala.Nothing],
+    size_y: js.UndefOr[scala.Nothing],
+    col: Double,
+    row: Double
+  ): JQuery = js.native
+  def add_widget(html: JQuery, size_x: js.UndefOr[scala.Nothing], size_y: Double): JQuery = js.native
+  def add_widget(
+    html: JQuery,
+    size_x: js.UndefOr[scala.Nothing],
+    size_y: Double,
+    col: js.UndefOr[scala.Nothing],
+    row: Double
+  ): JQuery = js.native
+  def add_widget(html: JQuery, size_x: js.UndefOr[scala.Nothing], size_y: Double, col: Double): JQuery = js.native
+  def add_widget(html: JQuery, size_x: js.UndefOr[scala.Nothing], size_y: Double, col: Double, row: Double): JQuery = js.native
+  def add_widget(html: JQuery, size_x: Double): JQuery = js.native
+  def add_widget(
+    html: JQuery,
+    size_x: Double,
+    size_y: js.UndefOr[scala.Nothing],
+    col: js.UndefOr[scala.Nothing],
+    row: Double
+  ): JQuery = js.native
+  def add_widget(html: JQuery, size_x: Double, size_y: js.UndefOr[scala.Nothing], col: Double): JQuery = js.native
+  def add_widget(html: JQuery, size_x: Double, size_y: js.UndefOr[scala.Nothing], col: Double, row: Double): JQuery = js.native
+  def add_widget(html: JQuery, size_x: Double, size_y: Double): JQuery = js.native
+  def add_widget(html: JQuery, size_x: Double, size_y: Double, col: js.UndefOr[scala.Nothing], row: Double): JQuery = js.native
+  def add_widget(html: JQuery, size_x: Double, size_y: Double, col: Double): JQuery = js.native
+  def add_widget(html: JQuery, size_x: Double, size_y: Double, col: Double, row: Double): JQuery = js.native
   
   /**
     * Disables dragging.
@@ -174,17 +175,6 @@ trait Gridster extends js.Object {
   var options: GridsterOptions = js.native
   
   /**
-    * @see remove_widget
-    **/
-  def remove_widget(el: JQuery): Gridster = js.native
-  /**
-    * @see remove_widget
-    **/
-  def remove_widget(el: JQuery, callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
-  def remove_widget(el: JQuery, silent: js.UndefOr[scala.Nothing], callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
-  def remove_widget(el: JQuery, silent: Boolean): Gridster = js.native
-  def remove_widget(el: JQuery, silent: Boolean, callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
-  /**
     * Remove a widget from the grid.
     * @param el The jQuery wrapped HTMLElement you want to remove.
     * @param silent Boolean If true widgets below the removed one will not move up.
@@ -203,6 +193,17 @@ trait Gridster extends js.Object {
   ): Gridster = js.native
   def remove_widget(el: HTMLElement, silent: Boolean): Gridster = js.native
   def remove_widget(el: HTMLElement, silent: Boolean, callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
+  /**
+    * @see remove_widget
+    **/
+  def remove_widget(el: JQuery): Gridster = js.native
+  /**
+    * @see remove_widget
+    **/
+  def remove_widget(el: JQuery, callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
+  def remove_widget(el: JQuery, silent: js.UndefOr[scala.Nothing], callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
+  def remove_widget(el: JQuery, silent: Boolean): Gridster = js.native
+  def remove_widget(el: JQuery, silent: Boolean, callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
   
   /**
     * Change the size of a widget.

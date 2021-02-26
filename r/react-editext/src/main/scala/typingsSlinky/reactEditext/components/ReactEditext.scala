@@ -6,15 +6,23 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactEditext.mod.EdiTextProps
 import typingsSlinky.reactEditext.mod.EdiTextType
 import typingsSlinky.reactEditext.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactEditext {
   
+  @scala.inline
+  def apply(onSave: /* repeated */ String => js.Any, `type`: EdiTextType, value: String): Builder = {
+    val __props = js.Dynamic.literal(onSave = js.Any.fromFunction1(onSave), value = value.asInstanceOf[js.Any])
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[EdiTextProps]))
+  }
+  
   @JSImport("react-editext", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,10 +45,10 @@ object ReactEditext {
     def hideIcons(value: Boolean): this.type = set("hideIcons", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def hintReactElement(value: ReactElement): this.type = set("hint", value.asInstanceOf[js.Any])
+    def hint(value: ReactElement): this.type = set("hint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def hint(value: ReactElement): this.type = set("hint", value.asInstanceOf[js.Any])
+    def hintReactElement(value: ReactElement): this.type = set("hint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputProps(value: js.Object): this.type = set("inputProps", value.asInstanceOf[js.Any])
@@ -68,11 +76,4 @@ object ReactEditext {
   }
   
   def withProps(p: EdiTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onSave: /* repeated */ String => js.Any, `type`: EdiTextType, value: String): Builder = {
-    val __props = js.Dynamic.literal(onSave = js.Any.fromFunction1(onSave), value = value.asInstanceOf[js.Any])
-    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[EdiTextProps]))
-  }
 }

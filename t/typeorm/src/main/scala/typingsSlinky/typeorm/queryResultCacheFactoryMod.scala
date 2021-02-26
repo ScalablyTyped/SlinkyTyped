@@ -2,16 +2,16 @@ package typingsSlinky.typeorm
 
 import typingsSlinky.typeorm.connectionMod.Connection
 import typingsSlinky.typeorm.queryResultCacheMod.QueryResultCache
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/cache/QueryResultCacheFactory", JSImport.Namespace)
-@js.native
-object queryResultCacheFactoryMod extends js.Object {
+object queryResultCacheFactoryMod {
   
+  @JSImport("typeorm/browser/cache/QueryResultCacheFactory", "QueryResultCacheFactory")
   @js.native
-  class QueryResultCacheFactory protected () extends js.Object {
+  class QueryResultCacheFactory protected () extends StObject {
     def this(connection: Connection) = this()
     
     var connection: Connection = js.native

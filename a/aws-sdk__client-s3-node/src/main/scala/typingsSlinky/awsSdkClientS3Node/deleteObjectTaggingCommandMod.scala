@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesDeleteObjectTaggingInputMod.DeleteO
 import typingsSlinky.awsSdkClientS3Node.typesDeleteObjectTaggingOutputMod.DeleteObjectTaggingOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/DeleteObjectTaggingCommand", JSImport.Namespace)
-@js.native
-object deleteObjectTaggingCommandMod extends js.Object {
+object deleteObjectTaggingCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/DeleteObjectTaggingCommand", "DeleteObjectTaggingCommand")
   @js.native
   class DeleteObjectTaggingCommand protected () extends Command[
           InputTypesUnion, 

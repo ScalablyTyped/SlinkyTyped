@@ -3,6 +3,7 @@ package typingsSlinky.phaser.Phaser.GameObjects
 import typingsSlinky.phaser.Phaser.Math.Vector2
 import typingsSlinky.phaser.Phaser.Tweens.Tween
 import typingsSlinky.phaser.Phaser.Types.GameObjects.PathFollower.PathConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

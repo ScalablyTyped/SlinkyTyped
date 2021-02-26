@@ -3,18 +3,18 @@ package typingsSlinky.winrtUwp.global.Windows.Data
 import typingsSlinky.winrtUwp.Windows.Data.Text.UnicodeGeneralCategory
 import typingsSlinky.winrtUwp.Windows.Data.Text.UnicodeNumericType
 import typingsSlinky.winrtUwp.anon.HighSurrogate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides support for identifying text segments and for determining the properties of Unicode characters. */
-@JSGlobal("Windows.Data.Text")
-@js.native
-object Text extends js.Object {
+object Text {
   
   /** Identifies the normalization format of an AlternateWordForm object. */
+  @JSGlobal("Windows.Data.Text.AlternateNormalizationFormat")
   @js.native
-  object AlternateNormalizationFormat extends js.Object {
+  object AlternateNormalizationFormat extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -33,16 +33,19 @@ object Text extends js.Object {
   }
   
   /** Identifies an alternate form of the word represented by a WordSegment object.. For example, this may contain a number in a normalized format. */
+  @JSGlobal("Windows.Data.Text.AlternateWordForm")
   @js.native
   abstract class AlternateWordForm ()
     extends typingsSlinky.winrtUwp.Windows.Data.Text.AlternateWordForm
   
   /** Represents a segment from your provided text that includes a word and any trailing whitespace and/or punctuation after this word. */
+  @JSGlobal("Windows.Data.Text.SelectableWordSegment")
   @js.native
   abstract class SelectableWordSegment ()
     extends typingsSlinky.winrtUwp.Windows.Data.Text.SelectableWordSegment
   
   /** A segmenter class that is able to segment provided text into units appropriate for selecting text by words. */
+  @JSGlobal("Windows.Data.Text.SelectableWordsSegmenter")
   @js.native
   class SelectableWordsSegmenter protected ()
     extends typingsSlinky.winrtUwp.Windows.Data.Text.SelectableWordsSegmenter {
@@ -54,6 +57,7 @@ object Text extends js.Object {
   }
   
   /** Permits apps to perform text queries using Advanced Query Syntax (AQS) strings, with the option of providing a language tag to be employed in the query. */
+  @JSGlobal("Windows.Data.Text.SemanticTextQuery")
   @js.native
   class SemanticTextQuery protected ()
     extends typingsSlinky.winrtUwp.Windows.Data.Text.SemanticTextQuery {
@@ -71,6 +75,7 @@ object Text extends js.Object {
   }
   
   /** Converts input phonetic characters into a collection of corresponding ideographic characters (Chinese characters). */
+  @JSGlobal("Windows.Data.Text.TextConversionGenerator")
   @js.native
   class TextConversionGenerator protected ()
     extends typingsSlinky.winrtUwp.Windows.Data.Text.TextConversionGenerator {
@@ -82,6 +87,7 @@ object Text extends js.Object {
   }
   
   /** Predicts Japanese words based on a phonetic characters prefix. */
+  @JSGlobal("Windows.Data.Text.TextPredictionGenerator")
   @js.native
   class TextPredictionGenerator protected ()
     extends typingsSlinky.winrtUwp.Windows.Data.Text.TextPredictionGenerator {
@@ -93,6 +99,7 @@ object Text extends js.Object {
   }
   
   /** Reverse-converts a Japanese string which is mix of phonetic and ideographic characters, to a string of phonetic characters. */
+  @JSGlobal("Windows.Data.Text.TextReverseConversionGenerator")
   @js.native
   class TextReverseConversionGenerator protected ()
     extends typingsSlinky.winrtUwp.Windows.Data.Text.TextReverseConversionGenerator {
@@ -104,12 +111,11 @@ object Text extends js.Object {
   }
   
   /** Provides a way for apps to get information about Unicode characters. */
+  @JSGlobal("Windows.Data.Text.UnicodeCharacters")
   @js.native
   abstract class UnicodeCharacters ()
     extends typingsSlinky.winrtUwp.Windows.Data.Text.UnicodeCharacters
-  /* static members */
-  @js.native
-  object UnicodeCharacters extends js.Object {
+  object UnicodeCharacters {
     
     /**
       * Returns the supplementary Unicode character for the specified high and low surrogate pair.
@@ -117,6 +123,9 @@ object Text extends js.Object {
       * @param lowSurrogate The low surrogate value. This must be in the proper range: 0xDC00 <= lowSurrogate <= 0xDFFF.
       * @return The supplementary Unicode character.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.getCodepointFromSurrogatePair")
+    @js.native
     def getCodepointFromSurrogatePair(highSurrogate: Double, lowSurrogate: Double): Double = js.native
     
     /**
@@ -124,6 +133,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return The Unicode general category for codepoint.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.getGeneralCategory")
+    @js.native
     def getGeneralCategory(codepoint: Double): UnicodeGeneralCategory = js.native
     
     /**
@@ -131,12 +143,18 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return The Unicode numeric type for codepoint.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.getNumericType")
+    @js.native
     def getNumericType(codepoint: Double): UnicodeNumericType = js.native
     
     /**
       * Returns the high and low surrogate pair values for the specified supplementary Unicode character.
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.getSurrogatePairFromCodepoint")
+    @js.native
     def getSurrogatePairFromCodepoint(codepoint: Double): HighSurrogate = js.native
     
     /**
@@ -144,6 +162,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is alphabetic; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isAlphabetic")
+    @js.native
     def isAlphabetic(codepoint: Double): Boolean = js.native
     
     /**
@@ -151,6 +172,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is cased; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isCased")
+    @js.native
     def isCased(codepoint: Double): Boolean = js.native
     
     /**
@@ -158,6 +182,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is the beginning of a grapheme; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isGraphemeBase")
+    @js.native
     def isGraphemeBase(codepoint: Double): Boolean = js.native
     
     /**
@@ -165,6 +192,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint continues the previous grapheme; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isGraphemeExtend")
+    @js.native
     def isGraphemeExtend(codepoint: Double): Boolean = js.native
     
     /**
@@ -172,6 +202,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is a high surrogate; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isHighSurrogate")
+    @js.native
     def isHighSurrogate(codepoint: Double): Boolean = js.native
     
     /**
@@ -179,6 +212,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is a continuation character of an identifier in programming; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isIdContinue")
+    @js.native
     def isIdContinue(codepoint: Double): Boolean = js.native
     
     /**
@@ -186,6 +222,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is the start character of an identifier in programming; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isIdStart")
+    @js.native
     def isIdStart(codepoint: Double): Boolean = js.native
     
     /**
@@ -193,6 +232,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is a low surrogate; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isLowSurrogate")
+    @js.native
     def isLowSurrogate(codepoint: Double): Boolean = js.native
     
     /**
@@ -200,6 +242,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is a lower case character; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isLowercase")
+    @js.native
     def isLowercase(codepoint: Double): Boolean = js.native
     
     /**
@@ -207,6 +252,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is a non-character; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isNoncharacter")
+    @js.native
     def isNoncharacter(codepoint: Double): Boolean = js.native
     
     /**
@@ -214,6 +262,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is a supplementary character; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isSupplementary")
+    @js.native
     def isSupplementary(codepoint: Double): Boolean = js.native
     
     /**
@@ -221,6 +272,9 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is an upper case character; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isUppercase")
+    @js.native
     def isUppercase(codepoint: Double): Boolean = js.native
     
     /**
@@ -228,12 +282,16 @@ object Text extends js.Object {
       * @param codepoint A Unicode character. This must be in the proper range: 0 <= codepoint <= 0x10FFFF.
       * @return TRUE if codepoint is whitespace; otherwise FALSE.
       */
+    /* static member */
+    @JSGlobal("Windows.Data.Text.UnicodeCharacters.isWhitespace")
+    @js.native
     def isWhitespace(codepoint: Double): Boolean = js.native
   }
   
   /** Defines the Unicode general category of a character. */
+  @JSGlobal("Windows.Data.Text.UnicodeGeneralCategory")
   @js.native
-  object UnicodeGeneralCategory extends js.Object {
+  object UnicodeGeneralCategory extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Data.Text.UnicodeGeneralCategory with Double] = js.native
@@ -300,8 +358,9 @@ object Text extends js.Object {
   }
   
   /** Defines the type of numeral when a Unicode character represents a number. */
+  @JSGlobal("Windows.Data.Text.UnicodeNumericType")
   @js.native
-  object UnicodeNumericType extends js.Object {
+  object UnicodeNumericType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Data.Text.UnicodeNumericType with Double] = js.native
@@ -316,11 +375,13 @@ object Text extends js.Object {
   }
   
   /** Represents a word from your provided text. */
+  @JSGlobal("Windows.Data.Text.WordSegment")
   @js.native
   abstract class WordSegment ()
     extends typingsSlinky.winrtUwp.Windows.Data.Text.WordSegment
   
   /** A segmenter class that is able to segment provided text into words. */
+  @JSGlobal("Windows.Data.Text.WordsSegmenter")
   @js.native
   class WordsSegmenter protected ()
     extends typingsSlinky.winrtUwp.Windows.Data.Text.WordsSegmenter {

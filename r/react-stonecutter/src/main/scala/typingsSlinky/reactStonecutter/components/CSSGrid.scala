@@ -7,15 +7,22 @@ import typingsSlinky.reactStonecutter.mod.CSSGridProps
 import typingsSlinky.reactStonecutter.mod.Easing
 import typingsSlinky.reactStonecutter.mod.Layout_
 import typingsSlinky.reactStonecutter.mod.LengthUnit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CSSGrid {
   
+  @scala.inline
+  def apply(columnWidth: Double, columns: Double, duration: Double): Builder = {
+    val __props = js.Dynamic.literal(columnWidth = columnWidth.asInstanceOf[js.Any], columns = columns.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CSSGridProps]))
+  }
+  
   @JSImport("react-stonecutter", "CSSGrid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -57,10 +64,4 @@ object CSSGrid {
   }
   
   def withProps(p: CSSGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(columnWidth: Double, columns: Double, duration: Double): Builder = {
-    val __props = js.Dynamic.literal(columnWidth = columnWidth.asInstanceOf[js.Any], columns = columns.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CSSGridProps]))
-  }
 }

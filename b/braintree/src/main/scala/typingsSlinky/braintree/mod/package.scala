@@ -1,5 +1,6 @@
 package typingsSlinky.braintree
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -63,4 +64,7 @@ package object mod {
     - typingsSlinky.braintree.braintreeStrings.recipient_updated_granted_payment_method
   */
   type WebhookNotificationKind = typingsSlinky.braintree.mod._WebhookNotificationKind | typingsSlinky.braintree.mod.AccountUpdaterNotificationKind | typingsSlinky.braintree.mod.SubMerchantAccountApprovedNotificationKind | typingsSlinky.braintree.mod.SubMerchantAccountDeclinedNotificationKind | typingsSlinky.braintree.mod.PaymentMethodNotificationKind
+  
+  @scala.inline
+  def connect(config: typingsSlinky.braintree.mod.GatewayConfig): typingsSlinky.braintree.mod.BraintreeGateway = typingsSlinky.braintree.mod.^.asInstanceOf[js.Dynamic].applyDynamic("connect")(config.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.braintree.mod.BraintreeGateway]
 }

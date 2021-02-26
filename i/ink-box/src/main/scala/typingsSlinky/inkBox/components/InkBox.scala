@@ -12,6 +12,7 @@ import typingsSlinky.inkBox.inkBoxStrings.singleDouble
 import typingsSlinky.inkBox.mod.Alignment
 import typingsSlinky.inkBox.mod.BoxProps
 import typingsSlinky.inkBox.mod.Spacing
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object InkBox {
   
   @JSImport("ink-box", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,7 +53,7 @@ object InkBox {
     def padding(value: Spacing): this.type = set("padding", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: BoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: InkBox.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: BoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

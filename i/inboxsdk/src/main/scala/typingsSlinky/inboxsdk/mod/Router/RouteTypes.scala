@@ -1,5 +1,6 @@
 package typingsSlinky.inboxsdk.mod.Router
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.inboxsdk.inboxsdkStrings.CUSTOM
   - typingsSlinky.inboxsdk.inboxsdkStrings.UNKNOWN
 */
-trait RouteTypes extends js.Object
+trait RouteTypes extends StObject
 object RouteTypes {
   
   @scala.inline

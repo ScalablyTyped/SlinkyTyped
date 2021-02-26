@@ -1,12 +1,13 @@
 package typingsSlinky.nodePgMigrate.anon
 
 import typingsSlinky.nodePgMigrate.viewsTypesMod.RenameViewFn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReverseRenameViewFn extends js.Object {
+trait ReverseRenameViewFn extends StObject {
   
   def reverse(
     viewName: typingsSlinky.nodePgMigrate.generalTypesMod.Name,

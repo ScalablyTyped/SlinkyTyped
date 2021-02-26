@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices.Enumeration
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** The type of event. */
 @JSGlobal("Windows.Devices.Enumeration.DeviceWatcherEventKind")
 @js.native
-object DeviceWatcherEventKind extends js.Object {
+object DeviceWatcherEventKind extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[

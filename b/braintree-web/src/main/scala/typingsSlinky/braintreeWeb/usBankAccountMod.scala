@@ -3,16 +3,15 @@ package typingsSlinky.braintreeWeb
 import typingsSlinky.braintreeWeb.anon.BankDetails
 import typingsSlinky.braintreeWeb.anon.Client
 import typingsSlinky.braintreeWeb.coreMod.callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("braintree-web/modules/us-bank-account", JSImport.Namespace)
-@js.native
-object usBankAccountMod extends js.Object {
+object usBankAccountMod {
   
   @js.native
-  trait USBankAccount extends js.Object {
+  trait USBankAccount extends StObject {
     
     var VERSION: String = js.native
     

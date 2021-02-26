@@ -10,9 +10,9 @@ gRPC Library for Node
 | ------------------ | :-------------: |
 | Full name          | grpc |
 | Keywords           | - |
-| # releases         | 73 |
-| # dependents       | 625 |
-| # downloads        | 44079664 |
+| # releases         | 29 |
+| # dependents       | 808 |
+| # downloads        | 42887484 |
 | # stars            | 25 |
 
 ## Links

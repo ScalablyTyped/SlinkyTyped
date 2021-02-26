@@ -2,13 +2,14 @@ package typingsSlinky.forgeApis.mod
 
 import typingsSlinky.forgeApis.anon.Limit
 import typingsSlinky.forgeApis.anon.XAdsRegion
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("forge-apis", "BucketsApi")
 @js.native
-class BucketsApi () extends js.Object {
+class BucketsApi () extends StObject {
   
   /**
     * Use this endpoint to create a bucket. Buckets are arbitrary spaces created and owned by applications.

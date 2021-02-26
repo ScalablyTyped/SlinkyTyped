@@ -22,16 +22,18 @@ import typingsSlinky.plottable.interfacesMod.IRangeProjector
 import typingsSlinky.plottable.interfacesMod.Point
 import typingsSlinky.plottable.interfacesMod.Range
 import typingsSlinky.plottable.interfacesMod.SimpleSelection
+import typingsSlinky.plottable.plottableStrings.canvas
+import typingsSlinky.plottable.plottableStrings.svg
 import typingsSlinky.plottable.scaleMod.Scale
 import typingsSlinky.plottable.utilsMod.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("plottable/build/src/plots/plot", JSImport.Namespace)
-@js.native
-object plotMod extends js.Object {
+object plotMod {
   
+  @JSImport("plottable/build/src/plots/plot", "Plot")
   @js.native
   /**
     * A Plot draws some visualization of the inputted Datasets.
@@ -437,17 +439,34 @@ object plotMod extends js.Object {
     def selections(datasets: js.Array[Dataset]): SimpleSelection[_] = js.native
   }
   /* static members */
-  @js.native
-  object Plot extends js.Object {
+  object Plot {
     
-    var OPTIMIZE_MEMOIZE_PROJECTORS: Boolean = js.native
+    @JSImport("plottable/build/src/plots/plot", "Plot")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var _ANIMATION_MAX_DURATION: Double = js.native
+    @JSImport("plottable/build/src/plots/plot", "Plot.OPTIMIZE_MEMOIZE_PROJECTORS")
+    @js.native
+    def OPTIMIZE_MEMOIZE_PROJECTORS: Boolean = js.native
+    @scala.inline
+    def OPTIMIZE_MEMOIZE_PROJECTORS_=(x: Boolean): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("OPTIMIZE_MEMOIZE_PROJECTORS")(x.asInstanceOf[js.Any])
     
-    /* protected */ def _scaledAccessor[D, R](binding: IAccessorScaleBinding[D, R]): IAccessor[_] = js.native
+    @JSImport("plottable/build/src/plots/plot", "Plot._ANIMATION_MAX_DURATION")
+    @js.native
+    def _ANIMATION_MAX_DURATION: Double = js.native
+    @scala.inline
+    def _ANIMATION_MAX_DURATION_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_ANIMATION_MAX_DURATION")(x.asInstanceOf[js.Any])
     
+    @JSImport("plottable/build/src/plots/plot", "Plot._scaledAccessor")
+    @js.native
+    def _scaledAccessor[D, R](binding: IAccessorScaleBinding[D, R]): IAccessor[_] = js.native
+    
+    @JSImport("plottable/build/src/plots/plot", "Plot.applyDrawSteps")
+    @js.native
     def applyDrawSteps(drawSteps: js.Array[DrawStep], dataset: Dataset): js.Array[AppliedDrawStep] = js.native
     
+    @JSImport("plottable/build/src/plots/plot", "Plot.getTotalDrawTime")
+    @js.native
     def getTotalDrawTime(data: js.Array[_], drawSteps: js.Array[DrawStep]): Double = js.native
   }
   
@@ -455,12 +474,23 @@ object plotMod extends js.Object {
     - typingsSlinky.plottable.plottableStrings.svg
     - typingsSlinky.plottable.plottableStrings.canvas
   */
-  trait Renderer extends js.Object
-  @js.native
-  object Renderer extends js.Object {
+  trait Renderer extends StObject
+  object Renderer {
     
-    var canvas: typingsSlinky.plottable.plottableStrings.canvas = js.native
+    @JSImport("plottable/build/src/plots/plot", "Renderer")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var svg: typingsSlinky.plottable.plottableStrings.svg = js.native
+    @JSImport("plottable/build/src/plots/plot", "Renderer.canvas")
+    @js.native
+    def canvas: typingsSlinky.plottable.plottableStrings.canvas = js.native
+    @scala.inline
+    def canvas_=(x: canvas): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("canvas")(x.asInstanceOf[js.Any])
+    
+    @JSImport("plottable/build/src/plots/plot", "Renderer.svg")
+    @js.native
+    def svg: typingsSlinky.plottable.plottableStrings.svg = js.native
+    @scala.inline
+    def svg_=(x: svg): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("svg")(x.asInstanceOf[js.Any])
   }
 }

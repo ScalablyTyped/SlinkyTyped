@@ -1,6 +1,7 @@
 package typingsSlinky.vexflow.mod.Flow
 
 import typingsSlinky.vexflow.anon.Beatvalue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,12 +12,11 @@ class Voice protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Voice {
   def this(time: Beatvalue) = this()
 }
-@JSImport("vexflow", "Flow.Voice")
-@js.native
-object Voice extends js.Object {
+object Voice {
   
+  @JSImport("vexflow", "Flow.Voice.Mode")
   @js.native
-  object Mode extends js.Object {
+  object Mode extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.vexflow.Vex.Flow.Voice.Mode with Double] = js.native

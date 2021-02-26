@@ -1,111 +1,92 @@
 package typingsSlinky.kythe.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait FactName extends js.Object
+sealed trait FactName extends StObject
 @JSImport("kythe", "FactName")
 @js.native
-object FactName extends js.Object {
+object FactName extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[FactName with String] = js.native
   
   @js.native
   sealed trait BUILD_CONFIG extends FactName
-  /* "/kythe/build/config" */ @js.native
-  object BUILD_CONFIG extends TopLevel[BUILD_CONFIG with String]
+  /* "/kythe/build/config" */ val BUILD_CONFIG: typingsSlinky.kythe.mod.FactName.BUILD_CONFIG with String = js.native
   
   @js.native
   sealed trait CODE extends FactName
-  /* "/kythe/code" */ @js.native
-  object CODE extends TopLevel[CODE with String]
+  /* "/kythe/code" */ val CODE: typingsSlinky.kythe.mod.FactName.CODE with String = js.native
   
   @js.native
   sealed trait COMPLETE extends FactName
-  /* "/kythe/complete" */ @js.native
-  object COMPLETE extends TopLevel[COMPLETE with String]
+  /* "/kythe/complete" */ val COMPLETE: typingsSlinky.kythe.mod.FactName.COMPLETE with String = js.native
   
   @js.native
   sealed trait CONTEXT_URL extends FactName
-  /* "/kythe/context/url" */ @js.native
-  object CONTEXT_URL extends TopLevel[CONTEXT_URL with String]
+  /* "/kythe/context/url" */ val CONTEXT_URL: typingsSlinky.kythe.mod.FactName.CONTEXT_URL with String = js.native
   
   @js.native
   sealed trait DETAILS extends FactName
-  /* "/kythe/details" */ @js.native
-  object DETAILS extends TopLevel[DETAILS with String]
+  /* "/kythe/details" */ val DETAILS: typingsSlinky.kythe.mod.FactName.DETAILS with String = js.native
   
   @js.native
   sealed trait DOC_URI extends FactName
-  /* "/kythe/doc/uri" */ @js.native
-  object DOC_URI extends TopLevel[DOC_URI with String]
+  /* "/kythe/doc/uri" */ val DOC_URI: typingsSlinky.kythe.mod.FactName.DOC_URI with String = js.native
   
   @js.native
   sealed trait LABEL extends FactName
-  /* "/kythe/label" */ @js.native
-  object LABEL extends TopLevel[LABEL with String]
+  /* "/kythe/label" */ val LABEL: typingsSlinky.kythe.mod.FactName.LABEL with String = js.native
   
   @js.native
   sealed trait LOC_END extends FactName
-  /* "/kythe/loc/end" */ @js.native
-  object LOC_END extends TopLevel[LOC_END with String]
+  /* "/kythe/loc/end" */ val LOC_END: typingsSlinky.kythe.mod.FactName.LOC_END with String = js.native
   
   @js.native
   sealed trait LOC_START extends FactName
-  /* "/kythe/loc/start" */ @js.native
-  object LOC_START extends TopLevel[LOC_START with String]
+  /* "/kythe/loc/start" */ val LOC_START: typingsSlinky.kythe.mod.FactName.LOC_START with String = js.native
   
   @js.native
   sealed trait MESSAGE extends FactName
-  /* "/kythe/message" */ @js.native
-  object MESSAGE extends TopLevel[MESSAGE with String]
+  /* "/kythe/message" */ val MESSAGE: typingsSlinky.kythe.mod.FactName.MESSAGE with String = js.native
   
   @js.native
   sealed trait NODE_KIND extends FactName
-  /* "/kythe/node/kind" */ @js.native
-  object NODE_KIND extends TopLevel[NODE_KIND with String]
+  /* "/kythe/node/kind" */ val NODE_KIND: typingsSlinky.kythe.mod.FactName.NODE_KIND with String = js.native
   
   @js.native
   sealed trait PARAM_DEFAULT extends FactName
-  /* "/kythe/param/default" */ @js.native
-  object PARAM_DEFAULT extends TopLevel[PARAM_DEFAULT with String]
+  /* "/kythe/param/default" */ val PARAM_DEFAULT: typingsSlinky.kythe.mod.FactName.PARAM_DEFAULT with String = js.native
   
   @js.native
   sealed trait RULE_CLASS extends FactName
-  /* "/kythe/ruleclass" */ @js.native
-  object RULE_CLASS extends TopLevel[RULE_CLASS with String]
+  /* "/kythe/ruleclass" */ val RULE_CLASS: typingsSlinky.kythe.mod.FactName.RULE_CLASS with String = js.native
   
   @js.native
   sealed trait SNIPPET_END extends FactName
-  /* "/kythe/snippet/end" */ @js.native
-  object SNIPPET_END extends TopLevel[SNIPPET_END with String]
+  /* "/kythe/snippet/end" */ val SNIPPET_END: typingsSlinky.kythe.mod.FactName.SNIPPET_END with String = js.native
   
   @js.native
   sealed trait SNIPPET_START extends FactName
-  /* "/kythe/snippet/start" */ @js.native
-  object SNIPPET_START extends TopLevel[SNIPPET_START with String]
+  /* "/kythe/snippet/start" */ val SNIPPET_START: typingsSlinky.kythe.mod.FactName.SNIPPET_START with String = js.native
   
   @js.native
   sealed trait SUBKIND extends FactName
-  /* "/kythe/subkind" */ @js.native
-  object SUBKIND extends TopLevel[SUBKIND with String]
+  /* "/kythe/subkind" */ val SUBKIND: typingsSlinky.kythe.mod.FactName.SUBKIND with String = js.native
   
   @js.native
   sealed trait TEXT extends FactName
-  /* "/kythe/text" */ @js.native
-  object TEXT extends TopLevel[TEXT with String]
+  /* "/kythe/text" */ val TEXT: typingsSlinky.kythe.mod.FactName.TEXT with String = js.native
   
   @js.native
   sealed trait TEXT_ENCODING extends FactName
-  /* "/kythe/text/encoding" */ @js.native
-  object TEXT_ENCODING extends TopLevel[TEXT_ENCODING with String]
+  /* "/kythe/text/encoding" */ val TEXT_ENCODING: typingsSlinky.kythe.mod.FactName.TEXT_ENCODING with String = js.native
   
   @js.native
   sealed trait VISIBILITY extends FactName
-  /* "/kythe/visibility" */ @js.native
-  object VISIBILITY extends TopLevel[VISIBILITY with String]
+  /* "/kythe/visibility" */ val VISIBILITY: typingsSlinky.kythe.mod.FactName.VISIBILITY with String = js.native
 }

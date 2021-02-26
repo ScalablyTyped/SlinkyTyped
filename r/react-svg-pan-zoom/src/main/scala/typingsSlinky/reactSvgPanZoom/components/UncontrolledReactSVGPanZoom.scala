@@ -10,15 +10,22 @@ import typingsSlinky.reactSvgPanZoom.mod.Tool
 import typingsSlinky.reactSvgPanZoom.mod.UncontrolledProps
 import typingsSlinky.reactSvgPanZoom.mod.Value
 import typingsSlinky.reactSvgPanZoom.mod.ViewerMouseEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object UncontrolledReactSVGPanZoom {
   
+  @scala.inline
+  def apply(height: Double, width: Double): Builder = {
+    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[UncontrolledProps]))
+  }
+  
   @JSImport("react-svg-pan-zoom", "UncontrolledReactSVGPanZoom")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,25 +42,25 @@ object UncontrolledReactSVGPanZoom {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customMiniatureReactElement(value: ReactElement): this.type = set("customMiniature", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def customMiniatureFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("customMiniature", value.asInstanceOf[js.Any])
+    def customMiniature(value: ReactElement | ReactComponentClass[js.Object]): this.type = set("customMiniature", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customMiniatureComponentClass(value: ReactComponentClass[js.Object]): this.type = set("customMiniature", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customMiniature(value: ReactElement | ReactComponentClass[js.Object]): this.type = set("customMiniature", value.asInstanceOf[js.Any])
+    def customMiniatureFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("customMiniature", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customToolbarFunctionComponent(value: ReactComponentClass[_]): this.type = set("customToolbar", value.asInstanceOf[js.Any])
+    def customMiniatureReactElement(value: ReactElement): this.type = set("customMiniature", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def customToolbar(value: ReactComponentClass[_]): this.type = set("customToolbar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customToolbarComponent(value: ReactComponentClass[_]): this.type = set("customToolbar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customToolbar(value: ReactComponentClass[_]): this.type = set("customToolbar", value.asInstanceOf[js.Any])
+    def customToolbarFunctionComponent(value: ReactComponentClass[_]): this.type = set("customToolbar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def detectAutoPan(value: Boolean): this.type = set("detectAutoPan", value.asInstanceOf[js.Any])
@@ -71,10 +78,10 @@ object UncontrolledReactSVGPanZoom {
     def miniatureProps(value: Background): this.type = set("miniatureProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def modifierKeysVarargs(value: String*): this.type = set("modifierKeys", js.Array(value :_*))
+    def modifierKeys(value: js.Array[String]): this.type = set("modifierKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def modifierKeys(value: js.Array[String]): this.type = set("modifierKeys", value.asInstanceOf[js.Any])
+    def modifierKeysVarargs(value: String*): this.type = set("modifierKeys", js.Array(value :_*))
     
     @scala.inline
     def onChangeTool(value: /* tool */ Tool => Unit): this.type = set("onChangeTool", js.Any.fromFunction1(value))
@@ -135,10 +142,4 @@ object UncontrolledReactSVGPanZoom {
   }
   
   def withProps(p: UncontrolledProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(height: Double, width: Double): Builder = {
-    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[UncontrolledProps]))
-  }
 }

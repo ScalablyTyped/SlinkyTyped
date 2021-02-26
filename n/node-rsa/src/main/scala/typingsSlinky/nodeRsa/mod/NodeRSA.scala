@@ -3,12 +3,13 @@ package typingsSlinky.nodeRsa.mod
 import typingsSlinky.node.Buffer
 import typingsSlinky.nodeRsa.nodeRsaStrings.buffer
 import typingsSlinky.nodeRsa.nodeRsaStrings.json
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NodeRSA extends js.Object {
+trait NodeRSA extends StObject {
   
   def decrypt(data: String): Buffer = js.native
   def decrypt(data: String, encoding: Encoding): String = js.native

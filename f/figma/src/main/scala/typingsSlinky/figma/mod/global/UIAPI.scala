@@ -1,12 +1,13 @@
 package typingsSlinky.figma.mod.global
 
 import typingsSlinky.figma.figmaStrings.message
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UIAPI extends js.Object {
+trait UIAPI extends StObject {
   
   def close(): Unit = js.native
   

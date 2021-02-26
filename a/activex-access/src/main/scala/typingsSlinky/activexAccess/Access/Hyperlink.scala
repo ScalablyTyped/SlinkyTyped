@@ -1,12 +1,13 @@
 package typingsSlinky.activexAccess.Access
 
 import typingsSlinky.activexOffice.Office.MsoExtraInfoMethod
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Hyperlink extends js.Object {
+trait Hyperlink extends StObject {
   
   @JSName("Access.Hyperlink_typekey")
   var AccessDotHyperlink_typekey: Hyperlink = js.native

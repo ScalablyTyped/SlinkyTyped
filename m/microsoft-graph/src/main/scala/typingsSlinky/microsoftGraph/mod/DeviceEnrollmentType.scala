@@ -1,6 +1,7 @@
 package typingsSlinky.microsoftGraph.mod
 
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.unknown_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsBulkAzureDomainJoin
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsCoManagement
 */
-trait DeviceEnrollmentType extends js.Object
+trait DeviceEnrollmentType extends StObject
 object DeviceEnrollmentType {
   
   @scala.inline

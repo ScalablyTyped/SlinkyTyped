@@ -10,9 +10,9 @@ A simple javascript image cropper
 | ------------------ | :-------------: |
 | Full name          | croppie |
 | Keywords           | crop, cropper, image, cropping |
-| # releases         | 5 |
-| # dependents       | 30 |
-| # downloads        | 1169438 |
+| # releases         | 3 |
+| # dependents       | 38 |
+| # downloads        | 1595983 |
 | # stars            | 0 |
 
 ## Links

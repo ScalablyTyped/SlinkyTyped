@@ -8,6 +8,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`4`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`5`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`6`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`7`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`5`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`4`
 */
-trait CurveStyle extends js.Object
+trait CurveStyle extends StObject
 object CurveStyle {
   
   /** Data points are connected via a parametric, interpolating B-spline curve. */

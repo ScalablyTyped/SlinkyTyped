@@ -73,6 +73,7 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`96`
 import typingsSlinky.activexExcel.activexExcelNumbers.`97`
 import typingsSlinky.activexExcel.activexExcelNumbers.`98`
 import typingsSlinky.activexExcel.activexExcelNumbers.`99`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -152,7 +153,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`72`
   - typingsSlinky.activexExcel.activexExcelNumbers.`73`
 */
-trait XlChartType extends js.Object
+trait XlChartType extends StObject
 object XlChartType {
   
   @scala.inline

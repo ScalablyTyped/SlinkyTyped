@@ -2,17 +2,18 @@ package typingsSlinky.xmldsigjs
 
 import org.scalajs.dom.crypto.Algorithm
 import org.scalajs.dom.crypto.CryptoKey
-import typingsSlinky.xmlCore.mod.XmlObject
+import typingsSlinky.xmldsigjs.xmlObjectMod.XmlSignatureObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xmldsigjs/build/types/xml/key_infos/key_info_clause", JSImport.Namespace)
-@js.native
-object keyInfoClauseMod extends js.Object {
+object keyInfoClauseMod {
   
+  @JSImport("xmldsigjs/build/types/xml/key_infos/key_info_clause", "KeyInfoClause")
   @js.native
-  abstract class KeyInfoClause () extends XmlObject {
+  abstract class KeyInfoClause () extends XmlSignatureObject {
+    def this(properties: js.Object) = this()
     
     var Key: CryptoKey | Null = js.native
     

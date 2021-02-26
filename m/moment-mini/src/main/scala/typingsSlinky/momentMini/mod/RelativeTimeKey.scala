@@ -3,6 +3,7 @@ package typingsSlinky.momentMini.mod
 import typingsSlinky.momentMini.momentMiniStrings.d_
 import typingsSlinky.momentMini.momentMiniStrings.m_
 import typingsSlinky.momentMini.momentMiniStrings.mm_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.momentMini.momentMiniStrings.y
   - typingsSlinky.momentMini.momentMiniStrings.yy
 */
-trait RelativeTimeKey extends js.Object
+trait RelativeTimeKey extends StObject
 object RelativeTimeKey {
   
   @scala.inline

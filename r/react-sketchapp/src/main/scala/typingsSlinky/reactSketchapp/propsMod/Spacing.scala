@@ -1,5 +1,6 @@
 package typingsSlinky.reactSketchapp.propsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactSketchapp.reactSketchappStrings.auto
   - typingsSlinky.reactSketchapp.reactSketchappStrings.exact
 */
-trait Spacing extends js.Object
+trait Spacing extends StObject
 object Spacing {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.qrcodeGenerator
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Q
   - typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.H
 */
-trait ErrorCorrectionLevel extends js.Object
+trait ErrorCorrectionLevel extends StObject
 object ErrorCorrectionLevel {
   
   @scala.inline

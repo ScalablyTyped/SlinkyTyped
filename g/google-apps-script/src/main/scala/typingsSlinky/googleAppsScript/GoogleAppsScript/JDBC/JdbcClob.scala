@@ -3,6 +3,7 @@ package typingsSlinky.googleAppsScript.GoogleAppsScript.JDBC
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Blob
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.BlobSource
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * .
   */
 @js.native
-trait JdbcClob extends js.Object {
+trait JdbcClob extends StObject {
   
   def free(): Unit = js.native
   

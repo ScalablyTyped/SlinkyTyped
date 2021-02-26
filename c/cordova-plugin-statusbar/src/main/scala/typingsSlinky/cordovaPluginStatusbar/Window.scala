@@ -2,12 +2,13 @@ package typingsSlinky.cordovaPluginStatusbar
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.cordovaPluginStatusbar.cordovaPluginStatusbarStrings.statusTap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Window extends js.Object {
+trait Window extends StObject {
   
   var StatusBar: typingsSlinky.cordovaPluginStatusbar.StatusBar = js.native
   

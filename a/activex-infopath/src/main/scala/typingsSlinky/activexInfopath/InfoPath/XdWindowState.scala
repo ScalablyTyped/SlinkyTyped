@@ -3,6 +3,7 @@ package typingsSlinky.activexInfopath.InfoPath
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`1`
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`2`
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`3`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexInfopath.activexInfopathNumbers.`3`
   - typingsSlinky.activexInfopath.activexInfopathNumbers.`2`
 */
-trait XdWindowState extends js.Object
+trait XdWindowState extends StObject
 object XdWindowState {
   
   @scala.inline

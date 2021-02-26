@@ -6,14 +6,14 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.officeUiFabricReact.contextualMenuItemWrapperTypesMod.IContextualMenuItemWrapperProps
 import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenuItem
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/ContextualMenu/ContextualMenuItemWrapper/ContextualMenuItemWrapper", JSImport.Namespace)
-@js.native
-object contextualMenuItemWrapperContextualMenuItemWrapperMod extends js.Object {
+object contextualMenuItemWrapperContextualMenuItemWrapperMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/ContextualMenu/ContextualMenuItemWrapper/ContextualMenuItemWrapper", "ContextualMenuItemWrapper")
   @js.native
   class ContextualMenuItemWrapper protected ()
     extends Component[IContextualMenuItemWrapperProps, js.Object, js.Any] {

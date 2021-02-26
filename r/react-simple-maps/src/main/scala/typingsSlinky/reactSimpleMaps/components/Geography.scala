@@ -95,6 +95,7 @@ import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.time
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.tree
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.vertical
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -103,7 +104,7 @@ object Geography {
   
   @JSImport("react-simple-maps", "Geography")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1276,7 +1277,7 @@ object Geography {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GeographyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Geography.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GeographyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.cannon.mod
 
 import typingsSlinky.cannon.anon.BOX
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,9 +11,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Shape ()
   extends typingsSlinky.cannon.CANNON.Shape
 /* static members */
-@JSImport("cannon", "Shape")
-@js.native
-object Shape extends js.Object {
+object Shape {
   
-  var types: BOX = js.native
+  @JSImport("cannon", "Shape")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  @JSImport("cannon", "Shape.types")
+  @js.native
+  def types: BOX = js.native
+  @scala.inline
+  def types_=(x: BOX): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("types")(x.asInstanceOf[js.Any])
 }

@@ -8,12 +8,13 @@ import typingsSlinky.chromeApps.chrome.sockets.ReceiveEventArgs
 import typingsSlinky.chromeApps.chrome.sockets.SendInfo
 import typingsSlinky.chromeApps.chrome.sockets.SocketInfo
 import typingsSlinky.chromeApps.chrome.sockets.SocketProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofudp extends js.Object {
+trait Typeofudp extends StObject {
   
   /**
     * Binds the local address and port for the socket. For a client socket, it

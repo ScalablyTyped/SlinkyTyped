@@ -1,5 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.weixinApp.weixinAppStrings.`step-start`
   - typingsSlinky.weixinApp.weixinAppStrings.`step-end`
 */
-trait TimingFunction extends js.Object
+trait TimingFunction extends StObject
 object TimingFunction {
   
   @scala.inline

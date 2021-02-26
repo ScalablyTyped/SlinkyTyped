@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientRun.gapi.client.run
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientRun.anon.Filter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationsResource extends js.Object {
+trait LocationsResource extends StObject {
   
   var authorizeddomains: AuthorizeddomainsResource = js.native
   

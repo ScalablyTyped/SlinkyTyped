@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,18 +29,26 @@ class TransactionList () extends ITransactionList {
   var transactions_TransactionList: js.Array[ITransaction] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "TransactionList")
-@js.native
-object TransactionList extends js.Object {
+object TransactionList {
   
   /**
     * Creates a new TransactionList instance using the specified properties.
     * @param [properties] Properties to set
     * @returns TransactionList instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.create")
+  @js.native
   def create(): TransactionList = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.create")
+  @js.native
   def create(properties: ITransactionList): TransactionList = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): TransactionList = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): TransactionList = js.native
   /**
     * Decodes a TransactionList message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -48,11 +57,16 @@ object TransactionList extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.decode")
+  @js.native
   def decode(reader: Reader): TransactionList = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.decode")
+  @js.native
   def decode(reader: Reader, length: Double): TransactionList = js.native
-  def decode(reader: js.typedarray.Uint8Array): TransactionList = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): TransactionList = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): TransactionList = js.native
   /**
     * Decodes a TransactionList message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -60,8 +74,9 @@ object TransactionList extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): TransactionList = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): TransactionList = js.native
   
   /**
     * Encodes the specified TransactionList message. Does not implicitly {@link TransactionList.verify|verify} messages.
@@ -69,7 +84,11 @@ object TransactionList extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.encode")
+  @js.native
   def encode(message: ITransactionList): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.encode")
+  @js.native
   def encode(message: ITransactionList, writer: Writer): Writer = js.native
   
   /**
@@ -78,7 +97,11 @@ object TransactionList extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITransactionList): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITransactionList, writer: Writer): Writer = js.native
   
   /**
@@ -86,6 +109,8 @@ object TransactionList extends js.Object {
     * @param object Plain object
     * @returns TransactionList
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): TransactionList = js.native
   
   /**
@@ -94,7 +119,11 @@ object TransactionList extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.toObject")
+  @js.native
   def toObject(message: TransactionList): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.toObject")
+  @js.native
   def toObject(message: TransactionList, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -102,5 +131,7 @@ object TransactionList extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionList.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

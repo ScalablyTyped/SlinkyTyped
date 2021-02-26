@@ -3,6 +3,7 @@ package typingsSlinky.titanium.Titanium.UI.iOS
 import typingsSlinky.titanium.Point
 import typingsSlinky.titanium.Titanium.Proxy
 import typingsSlinky.titanium.Titanium.UI.View
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -3,6 +3,7 @@ package typingsSlinky.grammarkdown.mod
 import typingsSlinky.grammarkdown.nodesMod.LexicalSymbol
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.ButKeyword
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.NotKeyword
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

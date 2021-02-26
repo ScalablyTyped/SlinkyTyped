@@ -12,12 +12,13 @@ import typingsSlinky.pickadate.pickadateStrings.select
 import typingsSlinky.pickadate.pickadateStrings.start
 import typingsSlinky.pickadate.pickadateStrings.value
 import typingsSlinky.pickadate.pickadateStrings.view
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Picker[TPickerObject, TItemObject /* <: Item */, TOptions /* <: SetObject */] extends js.Object {
+trait Picker[TPickerObject, TItemObject /* <: Item */, TOptions /* <: SetObject */] extends StObject {
   
   /**
     * The picker's relative input element wrapped as a jQuery object.

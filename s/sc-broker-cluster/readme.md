@@ -10,9 +10,9 @@ Realtime clustering engine
 | ------------------ | :-------------: |
 | Full name          | sc-broker-cluster |
 | Keywords           | broker, cluster, realtime, socket, engine, socketcluster |
-| # releases         | 12 |
-| # dependents       | 2 |
-| # downloads        | 892315 |
+| # releases         | 2 |
+| # dependents       | 1 |
+| # downloads        | 890420 |
 | # stars            | 0 |
 
 ## Links

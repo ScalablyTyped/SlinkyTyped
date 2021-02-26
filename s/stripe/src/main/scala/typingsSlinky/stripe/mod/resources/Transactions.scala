@@ -3,17 +3,20 @@ package typingsSlinky.stripe.mod.resources
 import typingsSlinky.stripe.mod.HeaderOptions
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.issuing.transactions.ITransaction
 import typingsSlinky.stripe.mod.issuing.transactions.ITransactionListOptions
 import typingsSlinky.stripe.mod.issuing.transactions.ITransactionUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.Transactions")
 @js.native
-class Transactions () extends StripeResource {
+class Transactions protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def list(): js.Promise[IList[ITransaction]] = js.native
   def list(data: ITransactionListOptions): js.Promise[IList[ITransaction]] = js.native

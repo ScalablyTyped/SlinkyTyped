@@ -10,9 +10,9 @@ JSON.Stringify as a readable stream
 | ------------------ | :-------------: |
 | Full name          | json-stream-stringify |
 | Keywords           | - |
-| # releases         | 6 |
-| # dependents       | 4 |
-| # downloads        | 377313 |
+| # releases         | 3 |
+| # dependents       | 5 |
+| # downloads        | 865798 |
 | # stars            | 0 |
 
 ## Links

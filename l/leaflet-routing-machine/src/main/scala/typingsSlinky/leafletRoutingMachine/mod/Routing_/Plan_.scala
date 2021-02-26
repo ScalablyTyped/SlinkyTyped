@@ -2,6 +2,7 @@ package typingsSlinky.leafletRoutingMachine.mod.Routing_
 
 import typingsSlinky.leaflet.mod.LatLng_
 import typingsSlinky.leaflet.mod.Layer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

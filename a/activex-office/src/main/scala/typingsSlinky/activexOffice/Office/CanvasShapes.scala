@@ -1,12 +1,13 @@
 package typingsSlinky.activexOffice.Office
 
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CanvasShapes extends js.Object {
+trait CanvasShapes extends StObject {
   
   def apply(Index: String): Shape = js.native
   def apply(Index: Double): Shape = js.native

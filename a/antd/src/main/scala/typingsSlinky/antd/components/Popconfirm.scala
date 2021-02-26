@@ -22,6 +22,7 @@ import typingsSlinky.rcTrigger.interfaceMod.AnimationType
 import typingsSlinky.rcTrigger.interfaceMod.BuildInPlacements
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ object Popconfirm {
   
   @JSImport("antd", "Popconfirm")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -47,10 +48,10 @@ object Popconfirm {
     def animation(value: AnimationType): this.type = set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def arrowContentReactElement(value: ReactElement): this.type = set("arrowContent", value.asInstanceOf[js.Any])
+    def arrowContent(value: ReactElement): this.type = set("arrowContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def arrowContent(value: ReactElement): this.type = set("arrowContent", value.asInstanceOf[js.Any])
+    def arrowContentReactElement(value: ReactElement): this.type = set("arrowContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def arrowPointAtCenter(value: Boolean): this.type = set("arrowPointAtCenter", value.asInstanceOf[js.Any])
@@ -65,10 +66,10 @@ object Popconfirm {
     def cancelButtonProps(value: NativeButtonProps): this.type = set("cancelButtonProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelTextReactElement(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
+    def cancelText(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelText(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
+    def cancelTextReactElement(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -92,10 +93,10 @@ object Popconfirm {
     def getTooltipContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getTooltipContainer", js.Any.fromFunction1(value))
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -110,10 +111,10 @@ object Popconfirm {
     def okButtonProps(value: NativeButtonProps): this.type = set("okButtonProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    def okText(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okText(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def okType(value: LegacyButtonType): this.type = set("okType", value.asInstanceOf[js.Any])
@@ -136,19 +137,19 @@ object Popconfirm {
     def openClassName(value: String): this.type = set("openClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def overlayFunction0(value: () => ReactElement): this.type = set("overlay", js.Any.fromFunction0(value))
-    
-    @scala.inline
     def overlay(value: js.Function0[ReactElement] | ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
     
     @scala.inline
     def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def overlayFunction0(value: () => ReactElement): this.type = set("overlay", js.Any.fromFunction0(value))
+    
+    @scala.inline
     def overlayInnerStyle(value: CSSProperties): this.type = set("overlayInnerStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
     
     @scala.inline
     def overlayStyle(value: CSSProperties): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
@@ -166,28 +167,28 @@ object Popconfirm {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement | RenderFunction): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def titleFunction0(value: () => ReactElement): this.type = set("title", js.Any.fromFunction0(value))
     
     @scala.inline
-    def title(value: ReactElement | RenderFunction): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def triggerVarargs(value: ActionType*): this.type = set("trigger", js.Array(value :_*))
+    def trigger(value: ActionType | js.Array[ActionType]): this.type = set("trigger", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def trigger(value: ActionType | js.Array[ActionType]): this.type = set("trigger", value.asInstanceOf[js.Any])
+    def triggerVarargs(value: ActionType*): this.type = set("trigger", js.Array(value :_*))
     
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PopconfirmProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Popconfirm.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PopconfirmProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

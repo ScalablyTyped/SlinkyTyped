@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.FieldsFloodlightGroupId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.FloodlightGroupId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.FloodlightGroupIdKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FloodlightGroupsResource extends js.Object {
+trait FloodlightGroupsResource extends StObject {
   
   /** Gets a Floodlight group. */
   def get(): Request[FloodlightGroup] = js.native

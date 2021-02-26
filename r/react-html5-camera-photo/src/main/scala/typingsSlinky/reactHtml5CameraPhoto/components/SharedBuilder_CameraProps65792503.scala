@@ -7,6 +7,7 @@ import typingsSlinky.reactHtml5CameraPhoto.reactHtml5CameraPhotoStrings.environm
 import typingsSlinky.reactHtml5CameraPhoto.reactHtml5CameraPhotoStrings.jpg
 import typingsSlinky.reactHtml5CameraPhoto.reactHtml5CameraPhotoStrings.png
 import typingsSlinky.reactHtml5CameraPhoto.reactHtml5CameraPhotoStrings.user
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

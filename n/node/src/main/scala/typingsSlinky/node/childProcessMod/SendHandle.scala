@@ -1,5 +1,6 @@
 package typingsSlinky.node.childProcessMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.node.netMod.Socket
   - typingsSlinky.node.netMod.Server
 */
-trait SendHandle extends js.Object
+trait SendHandle extends StObject

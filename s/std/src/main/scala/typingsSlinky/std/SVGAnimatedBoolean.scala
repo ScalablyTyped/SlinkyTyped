@@ -1,12 +1,13 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Used for attributes of type boolean which can be animated. */
 @js.native
-trait SVGAnimatedBoolean extends js.Object {
+trait SVGAnimatedBoolean extends StObject {
   
   val animVal: scala.Boolean = js.native
   
@@ -15,30 +16,18 @@ trait SVGAnimatedBoolean extends js.Object {
 object SVGAnimatedBoolean {
   
   @scala.inline
-  def apply(animVal: scala.Boolean, baseVal: scala.Boolean): SVGAnimatedBoolean = {
+  def apply(animVal: scala.Boolean, baseVal: scala.Boolean): org.scalajs.dom.raw.SVGAnimatedBoolean = {
     val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SVGAnimatedBoolean]
+    __obj.asInstanceOf[org.scalajs.dom.raw.SVGAnimatedBoolean]
   }
   
   @scala.inline
-  implicit class SVGAnimatedBooleanOps[Self <: org.scalajs.dom.raw.SVGAnimatedBoolean] (val x: Self) extends AnyVal {
+  implicit class SVGAnimatedBooleanMutableBuilder[Self <: org.scalajs.dom.raw.SVGAnimatedBoolean] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAnimVal(value: scala.Boolean): Self = StObject.set(x, "animVal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setAnimVal(value: scala.Boolean): Self = this.set("animVal", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBaseVal(value: scala.Boolean): Self = this.set("baseVal", value.asInstanceOf[js.Any])
+    def setBaseVal(value: scala.Boolean): Self = StObject.set(x, "baseVal", value.asInstanceOf[js.Any])
   }
 }

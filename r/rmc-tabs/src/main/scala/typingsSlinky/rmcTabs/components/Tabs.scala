@@ -14,15 +14,22 @@ import typingsSlinky.rmcTabs.rmcTabsStrings.right
 import typingsSlinky.rmcTabs.rmcTabsStrings.top
 import typingsSlinky.rmcTabs.rmcTabsStrings.vertical
 import typingsSlinky.rmcTabs.tabsMod.PropsType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tabs {
   
+  @scala.inline
+  def apply(tabs: js.Array[TabData]): Builder = {
+    val __props = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
+  }
+  
   @JSImport("rmc-tabs", "Tabs")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,10 +67,10 @@ object Tabs {
     def prerenderingSiblingsNumber(value: Double): this.type = set("prerenderingSiblingsNumber", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderTabBarFunction1(value: /* props */ TabBarPropsType => ReactElement): this.type = set("renderTabBar", js.Any.fromFunction1(value))
+    def renderTabBar(value: (js.Function1[/* props */ TabBarPropsType, ReactElement]) | `false`): this.type = set("renderTabBar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderTabBar(value: (js.Function1[/* props */ TabBarPropsType, ReactElement]) | `false`): this.type = set("renderTabBar", value.asInstanceOf[js.Any])
+    def renderTabBarFunction1(value: /* props */ TabBarPropsType => ReactElement): this.type = set("renderTabBar", js.Any.fromFunction1(value))
     
     @scala.inline
     def swipeable(value: Boolean): this.type = set("swipeable", value.asInstanceOf[js.Any])
@@ -100,10 +107,4 @@ object Tabs {
   }
   
   def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(tabs: js.Array[TabData]): Builder = {
-    val __props = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
-  }
 }

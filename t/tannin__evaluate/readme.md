@@ -10,9 +10,9 @@ Evaluates the result of an expression given as postfix terms
 | ------------------ | :-------------: |
 | Full name          | @tannin/evaluate |
 | Keywords           | - |
-| # releases         | 7 |
+| # releases         | 4 |
 | # dependents       | 1 |
-| # downloads        | 390847 |
+| # downloads        | 984635 |
 | # stars            | 0 |
 
 ## Links

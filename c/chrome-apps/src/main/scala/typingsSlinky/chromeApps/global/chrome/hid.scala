@@ -5,6 +5,7 @@ import typingsSlinky.chromeApps.chrome.hid.DeviceOptions
 import typingsSlinky.chromeApps.chrome.hid.HidDeviceInfo
 import typingsSlinky.chromeApps.chrome.hid.UserSelectedDevicePickerOptions
 import typingsSlinky.chromeApps.chrome.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,9 +26,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @requires Permissions: 'hid'
   * @since Chrome 38.
   */
-@JSGlobal("chrome.hid")
-@js.native
-object hid extends js.Object {
+object hid {
   
   /**
     * Open a connection to an HID device for communication.
@@ -35,6 +34,8 @@ object hid extends js.Object {
     * @param callback The callback function returns an object, containing the connectionId.
     *                 The connectionId is the opaque ID used to identify this connection in all other functions.
     */
+  @JSGlobal("chrome.hid.connect")
+  @js.native
   def connect(deviceId: integer, callback: js.Function1[/* connection */ ConnectionId, Unit]): Unit = js.native
   
   /**
@@ -43,7 +44,11 @@ object hid extends js.Object {
     * @param connectionId The connectionId returned by connect.
     * @param [callback]
     */
+  @JSGlobal("chrome.hid.disconnect")
+  @js.native
   def disconnect(connectionId: integer): Unit = js.native
+  @JSGlobal("chrome.hid.disconnect")
+  @js.native
   def disconnect(connectionId: integer, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -51,6 +56,8 @@ object hid extends js.Object {
     * @param options The properties to search for on target devices.
     * @param callback
     */
+  @JSGlobal("chrome.hid.getDevices")
+  @js.native
   def getDevices(options: DeviceOptions, callback: js.Function1[/* devices */ js.Array[HidDeviceInfo], Unit]): Unit = js.native
   
   /**
@@ -65,6 +72,8 @@ object hid extends js.Object {
     * filters are provided devices matching any filter will be displayed.
     * @param callback Invoked with a list of chosen Devices.
     */
+  @JSGlobal("chrome.hid.getUserSelectedDevices")
+  @js.native
   def getUserSelectedDevices(callback: js.Function1[/* devices */ HidDeviceInfo, Unit]): Unit = js.native
   /**
     * @since Chrome 45.
@@ -79,6 +88,8 @@ object hid extends js.Object {
     * @param options Configuration of the device picker dialog box.
     * @param callback Invoked with a list of chosen Devices.
     */
+  @JSGlobal("chrome.hid.getUserSelectedDevices")
+  @js.native
   def getUserSelectedDevices(
     options: UserSelectedDevicePickerOptions,
     callback: js.Function1[/* devices */ HidDeviceInfo, Unit]
@@ -93,6 +104,8 @@ object hid extends js.Object {
     * @since Chrome 41.
     * @see[permissions.request]{@link https://developer.chrome.com/apps/permissions#method-request}
     */
+  @JSGlobal("chrome.hid.onDeviceAdded")
+  @js.native
   val onDeviceAdded: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* device */ HidDeviceInfo, Unit]] = js.native
   
   /**
@@ -101,6 +114,8 @@ object hid extends js.Object {
     * @since Chrome 41.
     * @see[See onDeviceAdded for which events are delivered]{@link https://developer.chrome.com/apps/hid#event-onDeviceAdded}.
     */
+  @JSGlobal("chrome.hid.onDeviceRemoved")
+  @js.native
   val onDeviceRemoved: typingsSlinky.chromeApps.chrome.events.Event[js.Function1[/* deviceId */ integer, Unit]] = js.native
   
   /**
@@ -110,6 +125,8 @@ object hid extends js.Object {
     *                      * reportId - The report ID or 0 if none.
     *                      * data - The report data, the report ID prefix (if present) is removed.
     */
+  @JSGlobal("chrome.hid.receive")
+  @js.native
   def receive(
     connectionId: integer,
     callback: js.Function2[/* reportId */ integer, /* data */ js.typedarray.ArrayBuffer, Unit]
@@ -121,6 +138,8 @@ object hid extends js.Object {
     * @param reportId The report ID, or 0 if none.
     * @param callback Will provide `data` which contain the report data, including a report ID prefix if one is sent by the device.
     */
+  @JSGlobal("chrome.hid.receiveFeatureReport")
+  @js.native
   def receiveFeatureReport(
     connectionId: integer,
     reportId: integer,
@@ -135,6 +154,8 @@ object hid extends js.Object {
     * @param data The report data.
     * @param callback
     */
+  @JSGlobal("chrome.hid.send")
+  @js.native
   def send(
     connectionId: integer,
     reportId: integer,
@@ -150,6 +171,8 @@ object hid extends js.Object {
     * @param data The report data.
     * @param callback
     */
+  @JSGlobal("chrome.hid.sendFeatureReport")
+  @js.native
   def sendFeatureReport(
     connectionId: integer,
     reportId: integer,

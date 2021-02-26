@@ -1,11 +1,12 @@
 package typingsSlinky.activexExcel.Excel
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Legend extends js.Object {
+trait Legend extends StObject {
   
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   

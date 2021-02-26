@@ -10,9 +10,9 @@ CSS Object Model implementation and CSS parser
 | ------------------ | :-------------: |
 | Full name          | cssom |
 | Keywords           | CSS, CSSOM, parser, styleSheet |
-| # releases         | 12 |
-| # dependents       | 148 |
-| # downloads        | 294552368 |
+| # releases         | 10 |
+| # dependents       | 191 |
+| # downloads        | 635854135 |
 | # stars            | 7 |
 
 ## Links

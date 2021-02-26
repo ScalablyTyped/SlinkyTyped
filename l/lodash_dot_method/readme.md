@@ -11,8 +11,8 @@ The lodash method `_.method` exported as a module.
 | Full name          | lodash.method |
 | Keywords           | lodash-modularized, method |
 | # releases         | 0 |
-| # dependents       | 1 |
-| # downloads        | 1411 |
+| # dependents       | 3 |
+| # downloads        | 1713 |
 | # stars            | 0 |
 
 ## Links

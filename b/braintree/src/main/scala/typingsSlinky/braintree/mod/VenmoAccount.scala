@@ -1,5 +1,6 @@
 package typingsSlinky.braintree.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,11 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class VenmoAccount () extends PaymentMethod {
   
+  var default: Boolean = js.native
+  
   var createdAt: js.Date = js.native
   
   var customerId: String = js.native
-  
-  var default: Boolean = js.native
   
   var imageUrl: String = js.native
   

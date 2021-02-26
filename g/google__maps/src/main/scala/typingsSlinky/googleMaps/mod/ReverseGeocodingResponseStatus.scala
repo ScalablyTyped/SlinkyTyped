@@ -1,5 +1,6 @@
 package typingsSlinky.googleMaps.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleMaps.googleMapsStrings.INVALID_REQUEST
   - typingsSlinky.googleMaps.googleMapsStrings.UNKNOWN_ERROR
 */
-trait ReverseGeocodingResponseStatus extends js.Object
+trait ReverseGeocodingResponseStatus extends StObject
 object ReverseGeocodingResponseStatus {
   
   @scala.inline

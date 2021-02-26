@@ -1,5 +1,6 @@
 package typingsSlinky.escpos.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.escpos.escposStrings.CODE93
   - typingsSlinky.escpos.escposStrings.CODE128
 */
-trait BARCODE_TYPE extends js.Object
+trait BARCODE_TYPE extends StObject
 object BARCODE_TYPE {
   
   @scala.inline

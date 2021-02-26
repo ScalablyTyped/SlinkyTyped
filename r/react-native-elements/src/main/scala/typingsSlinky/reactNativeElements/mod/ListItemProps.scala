@@ -10,6 +10,7 @@ import typingsSlinky.reactNative.mod.TouchableHighlightProps
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.anon.PartialAvatarProps
 import typingsSlinky.reactNativeElements.anon.PartialIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -96,294 +97,282 @@ object ListItemProps {
   }
   
   @scala.inline
-  implicit class ListItemPropsOps[Self <: ListItemProps] (val x: Self) extends AnyVal {
+  implicit class ListItemPropsMutableBuilder[Self <: ListItemProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBadge(value: BadgeProps): Self = StObject.set(x, "badge", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setBadgeUndefined: Self = StObject.set(x, "badge", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setBottomDivider(value: Boolean): Self = StObject.set(x, "bottomDivider", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setComponentFunctionComponent(value: ReactComponentClass[js.Object]): Self = this.set("Component", value.asInstanceOf[js.Any])
+    def setBottomDividerUndefined: Self = StObject.set(x, "bottomDivider", js.undefined)
     
     @scala.inline
-    def setComponentComponentClass(value: ReactComponentClass[js.Object]): Self = this.set("Component", value.asInstanceOf[js.Any])
+    def setButtonGroup(value: ButtonGroupProps): Self = StObject.set(x, "buttonGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setComponent(value: ReactComponentClass[js.Object]): Self = this.set("Component", value.asInstanceOf[js.Any])
+    def setButtonGroupUndefined: Self = StObject.set(x, "buttonGroup", js.undefined)
     
     @scala.inline
-    def deleteComponent: Self = this.set("Component", js.undefined)
+    def setCheckBox(value: CheckBoxProps): Self = StObject.set(x, "checkBox", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setViewComponentFunctionComponent(value: ReactComponentClass[js.Object]): Self = this.set("ViewComponent", value.asInstanceOf[js.Any])
+    def setCheckBoxUndefined: Self = StObject.set(x, "checkBox", js.undefined)
     
     @scala.inline
-    def setViewComponentComponentClass(value: ReactComponentClass[js.Object]): Self = this.set("ViewComponent", value.asInstanceOf[js.Any])
+    def setCheckmark(value: Boolean | PartialIconProps | ReactElement): Self = StObject.set(x, "checkmark", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setViewComponent(value: ReactComponentClass[js.Object]): Self = this.set("ViewComponent", value.asInstanceOf[js.Any])
+    def setCheckmarkReactElement(value: ReactElement): Self = StObject.set(x, "checkmark", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteViewComponent: Self = this.set("ViewComponent", js.undefined)
+    def setCheckmarkUndefined: Self = StObject.set(x, "checkmark", js.undefined)
     
     @scala.inline
-    def setBadge(value: BadgeProps): Self = this.set("badge", value.asInstanceOf[js.Any])
+    def setChevron(value: Boolean | PartialIconProps | ReactElement): Self = StObject.set(x, "chevron", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBadge: Self = this.set("badge", js.undefined)
+    def setChevronReactElement(value: ReactElement): Self = StObject.set(x, "chevron", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBottomDivider(value: Boolean): Self = this.set("bottomDivider", value.asInstanceOf[js.Any])
+    def setChevronUndefined: Self = StObject.set(x, "chevron", js.undefined)
     
     @scala.inline
-    def deleteBottomDivider: Self = this.set("bottomDivider", js.undefined)
+    def setComponent(value: ReactComponentClass[js.Object]): Self = StObject.set(x, "Component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setButtonGroup(value: ButtonGroupProps): Self = this.set("buttonGroup", value.asInstanceOf[js.Any])
+    def setComponentComponentClass(value: ReactComponentClass[js.Object]): Self = StObject.set(x, "Component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteButtonGroup: Self = this.set("buttonGroup", js.undefined)
+    def setComponentFunctionComponent(value: ReactComponentClass[js.Object]): Self = StObject.set(x, "Component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCheckBox(value: CheckBoxProps): Self = this.set("checkBox", value.asInstanceOf[js.Any])
+    def setComponentUndefined: Self = StObject.set(x, "Component", js.undefined)
     
     @scala.inline
-    def deleteCheckBox: Self = this.set("checkBox", js.undefined)
+    def setContainerStyle(value: StyleProp[ViewStyle]): Self = StObject.set(x, "containerStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCheckmarkReactElement(value: ReactElement): Self = this.set("checkmark", value.asInstanceOf[js.Any])
+    def setContainerStyleNull: Self = StObject.set(x, "containerStyle", null)
     
     @scala.inline
-    def setCheckmark(value: Boolean | PartialIconProps | ReactElement): Self = this.set("checkmark", value.asInstanceOf[js.Any])
+    def setContainerStyleUndefined: Self = StObject.set(x, "containerStyle", js.undefined)
     
     @scala.inline
-    def deleteCheckmark: Self = this.set("checkmark", js.undefined)
+    def setContentContainerStyle(value: StyleProp[ViewStyle]): Self = StObject.set(x, "contentContainerStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChevronReactElement(value: ReactElement): Self = this.set("chevron", value.asInstanceOf[js.Any])
+    def setContentContainerStyleNull: Self = StObject.set(x, "contentContainerStyle", null)
     
     @scala.inline
-    def setChevron(value: Boolean | PartialIconProps | ReactElement): Self = this.set("chevron", value.asInstanceOf[js.Any])
+    def setContentContainerStyleUndefined: Self = StObject.set(x, "contentContainerStyle", js.undefined)
     
     @scala.inline
-    def deleteChevron: Self = this.set("chevron", js.undefined)
+    def setDisabledStyle(value: StyleProp[ViewStyle]): Self = StObject.set(x, "disabledStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("containerStyle", value.asInstanceOf[js.Any])
+    def setDisabledStyleNull: Self = StObject.set(x, "disabledStyle", null)
     
     @scala.inline
-    def deleteContainerStyle: Self = this.set("containerStyle", js.undefined)
+    def setDisabledStyleUndefined: Self = StObject.set(x, "disabledStyle", js.undefined)
     
     @scala.inline
-    def setContainerStyleNull: Self = this.set("containerStyle", null)
+    def setInput(value: InputProps): Self = StObject.set(x, "input", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContentContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("contentContainerStyle", value.asInstanceOf[js.Any])
+    def setInputUndefined: Self = StObject.set(x, "input", js.undefined)
     
     @scala.inline
-    def deleteContentContainerStyle: Self = this.set("contentContainerStyle", js.undefined)
+    def setLeftAvatar(value: PartialAvatarProps | ReactElement): Self = StObject.set(x, "leftAvatar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContentContainerStyleNull: Self = this.set("contentContainerStyle", null)
+    def setLeftAvatarReactElement(value: ReactElement): Self = StObject.set(x, "leftAvatar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDisabledStyle(value: StyleProp[ViewStyle]): Self = this.set("disabledStyle", value.asInstanceOf[js.Any])
+    def setLeftAvatarUndefined: Self = StObject.set(x, "leftAvatar", js.undefined)
     
     @scala.inline
-    def deleteDisabledStyle: Self = this.set("disabledStyle", js.undefined)
+    def setLeftElement(value: ReactElement): Self = StObject.set(x, "leftElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDisabledStyleNull: Self = this.set("disabledStyle", null)
+    def setLeftElementUndefined: Self = StObject.set(x, "leftElement", js.undefined)
     
     @scala.inline
-    def setInput(value: InputProps): Self = this.set("input", value.asInstanceOf[js.Any])
+    def setLeftIcon(value: PartialIconProps | ReactElement): Self = StObject.set(x, "leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteInput: Self = this.set("input", js.undefined)
+    def setLeftIconReactElement(value: ReactElement): Self = StObject.set(x, "leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLeftAvatarReactElement(value: ReactElement): Self = this.set("leftAvatar", value.asInstanceOf[js.Any])
+    def setLeftIconUndefined: Self = StObject.set(x, "leftIcon", js.undefined)
     
     @scala.inline
-    def setLeftAvatar(value: PartialAvatarProps | ReactElement): Self = this.set("leftAvatar", value.asInstanceOf[js.Any])
+    def setPad(value: Double): Self = StObject.set(x, "pad", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLeftAvatar: Self = this.set("leftAvatar", js.undefined)
+    def setPadUndefined: Self = StObject.set(x, "pad", js.undefined)
     
     @scala.inline
-    def setLeftElement(value: ReactElement): Self = this.set("leftElement", value.asInstanceOf[js.Any])
+    def setRightAvatar(value: PartialAvatarProps | ReactElement): Self = StObject.set(x, "rightAvatar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLeftElement: Self = this.set("leftElement", js.undefined)
+    def setRightAvatarReactElement(value: ReactElement): Self = StObject.set(x, "rightAvatar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLeftIconReactElement(value: ReactElement): Self = this.set("leftIcon", value.asInstanceOf[js.Any])
+    def setRightAvatarUndefined: Self = StObject.set(x, "rightAvatar", js.undefined)
     
     @scala.inline
-    def setLeftIcon(value: PartialIconProps | ReactElement): Self = this.set("leftIcon", value.asInstanceOf[js.Any])
+    def setRightContentContainerStyle(value: StyleProp[ViewStyle]): Self = StObject.set(x, "rightContentContainerStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLeftIcon: Self = this.set("leftIcon", js.undefined)
+    def setRightContentContainerStyleNull: Self = StObject.set(x, "rightContentContainerStyle", null)
     
     @scala.inline
-    def setPad(value: Double): Self = this.set("pad", value.asInstanceOf[js.Any])
+    def setRightContentContainerStyleUndefined: Self = StObject.set(x, "rightContentContainerStyle", js.undefined)
     
     @scala.inline
-    def deletePad: Self = this.set("pad", js.undefined)
+    def setRightElement(value: ReactElement): Self = StObject.set(x, "rightElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightAvatarReactElement(value: ReactElement): Self = this.set("rightAvatar", value.asInstanceOf[js.Any])
+    def setRightElementUndefined: Self = StObject.set(x, "rightElement", js.undefined)
     
     @scala.inline
-    def setRightAvatar(value: PartialAvatarProps | ReactElement): Self = this.set("rightAvatar", value.asInstanceOf[js.Any])
+    def setRightIcon(value: PartialIconProps | ReactElement): Self = StObject.set(x, "rightIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRightAvatar: Self = this.set("rightAvatar", js.undefined)
+    def setRightIconReactElement(value: ReactElement): Self = StObject.set(x, "rightIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightContentContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("rightContentContainerStyle", value.asInstanceOf[js.Any])
+    def setRightIconUndefined: Self = StObject.set(x, "rightIcon", js.undefined)
     
     @scala.inline
-    def deleteRightContentContainerStyle: Self = this.set("rightContentContainerStyle", js.undefined)
+    def setRightSubtitle(value: String | ReactElement): Self = StObject.set(x, "rightSubtitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightContentContainerStyleNull: Self = this.set("rightContentContainerStyle", null)
+    def setRightSubtitleProps(value: TextProperties): Self = StObject.set(x, "rightSubtitleProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightElement(value: ReactElement): Self = this.set("rightElement", value.asInstanceOf[js.Any])
+    def setRightSubtitlePropsUndefined: Self = StObject.set(x, "rightSubtitleProps", js.undefined)
     
     @scala.inline
-    def deleteRightElement: Self = this.set("rightElement", js.undefined)
+    def setRightSubtitleReactElement(value: ReactElement): Self = StObject.set(x, "rightSubtitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightIconReactElement(value: ReactElement): Self = this.set("rightIcon", value.asInstanceOf[js.Any])
+    def setRightSubtitleStyle(value: StyleProp[TextStyle]): Self = StObject.set(x, "rightSubtitleStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightIcon(value: PartialIconProps | ReactElement): Self = this.set("rightIcon", value.asInstanceOf[js.Any])
+    def setRightSubtitleStyleNull: Self = StObject.set(x, "rightSubtitleStyle", null)
     
     @scala.inline
-    def deleteRightIcon: Self = this.set("rightIcon", js.undefined)
+    def setRightSubtitleStyleUndefined: Self = StObject.set(x, "rightSubtitleStyle", js.undefined)
     
     @scala.inline
-    def setRightSubtitleReactElement(value: ReactElement): Self = this.set("rightSubtitle", value.asInstanceOf[js.Any])
+    def setRightSubtitleUndefined: Self = StObject.set(x, "rightSubtitle", js.undefined)
     
     @scala.inline
-    def setRightSubtitle(value: String | ReactElement): Self = this.set("rightSubtitle", value.asInstanceOf[js.Any])
+    def setRightTitle(value: String | ReactElement): Self = StObject.set(x, "rightTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRightSubtitle: Self = this.set("rightSubtitle", js.undefined)
+    def setRightTitleProps(value: TextProperties): Self = StObject.set(x, "rightTitleProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightSubtitleProps(value: TextProperties): Self = this.set("rightSubtitleProps", value.asInstanceOf[js.Any])
+    def setRightTitlePropsUndefined: Self = StObject.set(x, "rightTitleProps", js.undefined)
     
     @scala.inline
-    def deleteRightSubtitleProps: Self = this.set("rightSubtitleProps", js.undefined)
+    def setRightTitleReactElement(value: ReactElement): Self = StObject.set(x, "rightTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightSubtitleStyle(value: StyleProp[TextStyle]): Self = this.set("rightSubtitleStyle", value.asInstanceOf[js.Any])
+    def setRightTitleStyle(value: StyleProp[TextStyle]): Self = StObject.set(x, "rightTitleStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRightSubtitleStyle: Self = this.set("rightSubtitleStyle", js.undefined)
+    def setRightTitleStyleNull: Self = StObject.set(x, "rightTitleStyle", null)
     
     @scala.inline
-    def setRightSubtitleStyleNull: Self = this.set("rightSubtitleStyle", null)
+    def setRightTitleStyleUndefined: Self = StObject.set(x, "rightTitleStyle", js.undefined)
     
     @scala.inline
-    def setRightTitleReactElement(value: ReactElement): Self = this.set("rightTitle", value.asInstanceOf[js.Any])
+    def setRightTitleUndefined: Self = StObject.set(x, "rightTitle", js.undefined)
     
     @scala.inline
-    def setRightTitle(value: String | ReactElement): Self = this.set("rightTitle", value.asInstanceOf[js.Any])
+    def setScaleProps(value: ScaleProps): Self = StObject.set(x, "scaleProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRightTitle: Self = this.set("rightTitle", js.undefined)
+    def setScalePropsUndefined: Self = StObject.set(x, "scaleProps", js.undefined)
     
     @scala.inline
-    def setRightTitleProps(value: TextProperties): Self = this.set("rightTitleProps", value.asInstanceOf[js.Any])
+    def setSubtitle(value: String | ReactElement): Self = StObject.set(x, "subtitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRightTitleProps: Self = this.set("rightTitleProps", js.undefined)
+    def setSubtitleProps(value: TextProperties): Self = StObject.set(x, "subtitleProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightTitleStyle(value: StyleProp[TextStyle]): Self = this.set("rightTitleStyle", value.asInstanceOf[js.Any])
+    def setSubtitlePropsUndefined: Self = StObject.set(x, "subtitleProps", js.undefined)
     
     @scala.inline
-    def deleteRightTitleStyle: Self = this.set("rightTitleStyle", js.undefined)
+    def setSubtitleReactElement(value: ReactElement): Self = StObject.set(x, "subtitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightTitleStyleNull: Self = this.set("rightTitleStyle", null)
+    def setSubtitleStyle(value: StyleProp[TextStyle]): Self = StObject.set(x, "subtitleStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScaleProps(value: ScaleProps): Self = this.set("scaleProps", value.asInstanceOf[js.Any])
+    def setSubtitleStyleNull: Self = StObject.set(x, "subtitleStyle", null)
     
     @scala.inline
-    def deleteScaleProps: Self = this.set("scaleProps", js.undefined)
+    def setSubtitleStyleUndefined: Self = StObject.set(x, "subtitleStyle", js.undefined)
     
     @scala.inline
-    def setSubtitleReactElement(value: ReactElement): Self = this.set("subtitle", value.asInstanceOf[js.Any])
+    def setSubtitleUndefined: Self = StObject.set(x, "subtitle", js.undefined)
     
     @scala.inline
-    def setSubtitle(value: String | ReactElement): Self = this.set("subtitle", value.asInstanceOf[js.Any])
+    def setSwitch(value: SwitchProperties): Self = StObject.set(x, "switch", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteSubtitle: Self = this.set("subtitle", js.undefined)
+    def setSwitchUndefined: Self = StObject.set(x, "switch", js.undefined)
     
     @scala.inline
-    def setSubtitleProps(value: TextProperties): Self = this.set("subtitleProps", value.asInstanceOf[js.Any])
+    def setTitle(value: String | ReactElement): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteSubtitleProps: Self = this.set("subtitleProps", js.undefined)
+    def setTitleProps(value: TextProperties): Self = StObject.set(x, "titleProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSubtitleStyle(value: StyleProp[TextStyle]): Self = this.set("subtitleStyle", value.asInstanceOf[js.Any])
+    def setTitlePropsUndefined: Self = StObject.set(x, "titleProps", js.undefined)
     
     @scala.inline
-    def deleteSubtitleStyle: Self = this.set("subtitleStyle", js.undefined)
+    def setTitleReactElement(value: ReactElement): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSubtitleStyleNull: Self = this.set("subtitleStyle", null)
+    def setTitleStyle(value: StyleProp[TextStyle]): Self = StObject.set(x, "titleStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSwitch(value: SwitchProperties): Self = this.set("switch", value.asInstanceOf[js.Any])
+    def setTitleStyleNull: Self = StObject.set(x, "titleStyle", null)
     
     @scala.inline
-    def deleteSwitch: Self = this.set("switch", js.undefined)
+    def setTitleStyleUndefined: Self = StObject.set(x, "titleStyle", js.undefined)
     
     @scala.inline
-    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitleUndefined: Self = StObject.set(x, "title", js.undefined)
     
     @scala.inline
-    def setTitle(value: String | ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTopDivider(value: Boolean): Self = StObject.set(x, "topDivider", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteTitle: Self = this.set("title", js.undefined)
+    def setTopDividerUndefined: Self = StObject.set(x, "topDivider", js.undefined)
     
     @scala.inline
-    def setTitleProps(value: TextProperties): Self = this.set("titleProps", value.asInstanceOf[js.Any])
+    def setViewComponent(value: ReactComponentClass[js.Object]): Self = StObject.set(x, "ViewComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteTitleProps: Self = this.set("titleProps", js.undefined)
+    def setViewComponentComponentClass(value: ReactComponentClass[js.Object]): Self = StObject.set(x, "ViewComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTitleStyle(value: StyleProp[TextStyle]): Self = this.set("titleStyle", value.asInstanceOf[js.Any])
+    def setViewComponentFunctionComponent(value: ReactComponentClass[js.Object]): Self = StObject.set(x, "ViewComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteTitleStyle: Self = this.set("titleStyle", js.undefined)
-    
-    @scala.inline
-    def setTitleStyleNull: Self = this.set("titleStyle", null)
-    
-    @scala.inline
-    def setTopDivider(value: Boolean): Self = this.set("topDivider", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTopDivider: Self = this.set("topDivider", js.undefined)
+    def setViewComponentUndefined: Self = StObject.set(x, "ViewComponent", js.undefined)
   }
 }

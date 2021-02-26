@@ -2,12 +2,13 @@ package typingsSlinky.chartJs.mod
 
 import org.scalajs.dom.raw.CanvasGradient
 import org.scalajs.dom.raw.CanvasPattern
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ChartRectangleOptions extends js.Object {
+trait ChartRectangleOptions extends StObject {
   
   var backgroundColor: js.UndefOr[ChartColor] = js.native
   
@@ -26,60 +27,48 @@ object ChartRectangleOptions {
   }
   
   @scala.inline
-  implicit class ChartRectangleOptionsOps[Self <: ChartRectangleOptions] (val x: Self) extends AnyVal {
+  implicit class ChartRectangleOptionsMutableBuilder[Self <: ChartRectangleOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBackgroundColor(value: ChartColor): Self = StObject.set(x, "backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setBackgroundColorCanvasGradient(value: CanvasGradient): Self = StObject.set(x, "backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setBackgroundColorCanvasPattern(value: CanvasPattern): Self = StObject.set(x, "backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBackgroundColorVarargs(value: String*): Self = this.set("backgroundColor", js.Array(value :_*))
+    def setBackgroundColorUndefined: Self = StObject.set(x, "backgroundColor", js.undefined)
     
     @scala.inline
-    def setBackgroundColorCanvasPattern(value: CanvasPattern): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColorVarargs(value: String*): Self = StObject.set(x, "backgroundColor", js.Array(value :_*))
     
     @scala.inline
-    def setBackgroundColorCanvasGradient(value: CanvasGradient): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBorderColor(value: ChartColor): Self = StObject.set(x, "borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBackgroundColor(value: ChartColor): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBorderColorCanvasGradient(value: CanvasGradient): Self = StObject.set(x, "borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
+    def setBorderColorCanvasPattern(value: CanvasPattern): Self = StObject.set(x, "borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBorderColorVarargs(value: String*): Self = this.set("borderColor", js.Array(value :_*))
+    def setBorderColorUndefined: Self = StObject.set(x, "borderColor", js.undefined)
     
     @scala.inline
-    def setBorderColorCanvasPattern(value: CanvasPattern): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    def setBorderColorVarargs(value: String*): Self = StObject.set(x, "borderColor", js.Array(value :_*))
     
     @scala.inline
-    def setBorderColorCanvasGradient(value: CanvasGradient): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    def setBorderSkipped(value: String): Self = StObject.set(x, "borderSkipped", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBorderColor(value: ChartColor): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    def setBorderSkippedUndefined: Self = StObject.set(x, "borderSkipped", js.undefined)
     
     @scala.inline
-    def deleteBorderColor: Self = this.set("borderColor", js.undefined)
+    def setBorderWidth(value: Double): Self = StObject.set(x, "borderWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBorderSkipped(value: String): Self = this.set("borderSkipped", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBorderSkipped: Self = this.set("borderSkipped", js.undefined)
-    
-    @scala.inline
-    def setBorderWidth(value: Double): Self = this.set("borderWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBorderWidth: Self = this.set("borderWidth", js.undefined)
+    def setBorderWidthUndefined: Self = StObject.set(x, "borderWidth", js.undefined)
   }
 }

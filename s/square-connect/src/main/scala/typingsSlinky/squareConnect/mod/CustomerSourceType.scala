@@ -1,5 +1,6 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.squareConnect.squareConnectStrings.THIRD_PARTY_IMPORT
   - typingsSlinky.squareConnect.squareConnectStrings.UNMERGE_RECOVERY
 */
-trait CustomerSourceType extends js.Object
+trait CustomerSourceType extends StObject
 object CustomerSourceType {
   
   @scala.inline

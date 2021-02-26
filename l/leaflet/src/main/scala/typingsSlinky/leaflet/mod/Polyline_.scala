@@ -2,6 +2,7 @@ package typingsSlinky.leaflet.mod
 
 import typingsSlinky.geojson.mod.Feature
 import typingsSlinky.geojson.mod.GeometryObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

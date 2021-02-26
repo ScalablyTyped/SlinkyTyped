@@ -1,5 +1,6 @@
 package typingsSlinky.nodeRsa.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nodeRsa.nodeRsaStrings.`pss-sha384`
   - typingsSlinky.nodeRsa.nodeRsaStrings.`pss-sha512`
 */
-trait SigningSchemeHash extends js.Object
+trait SigningSchemeHash extends StObject
 object SigningSchemeHash {
   
   @scala.inline

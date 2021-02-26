@@ -1,5 +1,6 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.KEYBOARD
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.URL
 */
-trait GoogleActionsV2RawInputInputType extends js.Object
+trait GoogleActionsV2RawInputInputType extends StObject
 object GoogleActionsV2RawInputInputType {
   
   @scala.inline

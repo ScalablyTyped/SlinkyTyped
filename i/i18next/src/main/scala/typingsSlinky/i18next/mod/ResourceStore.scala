@@ -2,13 +2,14 @@ package typingsSlinky.i18next.mod
 
 import typingsSlinky.i18next.i18nextStrings.added
 import typingsSlinky.i18next.i18nextStrings.removed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("i18next", "ResourceStore")
 @js.native
-class ResourceStore protected () extends js.Object {
+class ResourceStore protected () extends StObject {
   def this(data: Resource, options: InitOptions) = this()
   
   var data: Resource = js.native

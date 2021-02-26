@@ -9,15 +9,18 @@ import typingsSlinky.relayRuntime.relayRuntimeTypesMod.DisposeFn
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.VariablesOf
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-relay/lib/relay-experimental/useQueryLoader", JSImport.Namespace)
-@js.native
-object useQueryLoaderMod extends js.Object {
+object useQueryLoaderMod {
   
+  @JSImport("react-relay/lib/relay-experimental/useQueryLoader", "useQueryLoader")
+  @js.native
   def useQueryLoader[TQuery /* <: OperationType */](preloadableRequest: PreloadableConcreteRequest[TQuery]): useQueryLoaderHookType[TQuery] = js.native
+  @JSImport("react-relay/lib/relay-experimental/useQueryLoader", "useQueryLoader")
+  @js.native
   def useQueryLoader[TQuery /* <: OperationType */](preloadableRequest: GraphQLTaggedNode): useQueryLoaderHookType[TQuery] = js.native
   
   type useQueryLoaderHookType[TQuery /* <: OperationType */] = js.Tuple3[

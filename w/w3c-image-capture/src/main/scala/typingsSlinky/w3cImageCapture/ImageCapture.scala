@@ -3,12 +3,13 @@ package typingsSlinky.w3cImageCapture
 import org.scalajs.dom.experimental.mediastream.MediaStreamTrack
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.std.ImageBitmap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ImageCapture extends js.Object {
+trait ImageCapture extends StObject {
   
   def getPhotoCapabilities(): js.Promise[PhotoCapabilities] = js.native
   

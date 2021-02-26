@@ -16,12 +16,13 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Animation.SeekAnimationsReque
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Animation.SetPausedRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Animation.SetPlaybackRateRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Animation.SetTimingRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AnimationApi extends js.Object {
+trait AnimationApi extends StObject {
   
   /**
     * Disables animation domain notifications.

@@ -1,6 +1,7 @@
 package typingsSlinky.esquery.mod
 
 import typingsSlinky.esquery.esqueryStrings.literal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,20 +10,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.esquery.mod.StringLiteral
   - typingsSlinky.esquery.mod.NumericLiteral
 */
-trait Literal extends js.Object
+trait Literal extends StObject
 object Literal {
   
   @scala.inline
-  def StringLiteral(`type`: literal, value: String): Literal = {
+  def NumericLiteral(`type`: literal, value: Double): typingsSlinky.esquery.mod.NumericLiteral = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Literal]
+    __obj.asInstanceOf[typingsSlinky.esquery.mod.NumericLiteral]
   }
   
   @scala.inline
-  def NumericLiteral(`type`: literal, value: Double): Literal = {
+  def StringLiteral(`type`: literal, value: String): typingsSlinky.esquery.mod.StringLiteral = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Literal]
+    __obj.asInstanceOf[typingsSlinky.esquery.mod.StringLiteral]
   }
 }

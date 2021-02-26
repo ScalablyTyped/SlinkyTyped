@@ -1,29 +1,70 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.accordionAccordionAccordionMod.AccordionAccordionProps
 import typingsSlinky.semanticUiReact.accordionAccordionMod.AccordionProps
 import typingsSlinky.semanticUiReact.accordionContentMod.AccordionContentProps
 import typingsSlinky.semanticUiReact.accordionPanelMod.AccordionPanelProps
 import typingsSlinky.semanticUiReact.accordionTitleMod.AccordionTitleProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
-import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
-import typingsSlinky.semanticUiReact.iconIconMod.IconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Accordion {
   
+  object Accordion {
+    
+    @JSImport("semantic-ui-react", "Accordion.Accordion")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Accordion.type): SharedBuilder_AccordionAccordionProps_1044969128[typingsSlinky.semanticUiReact.mod.Accordion.Accordion] = new SharedBuilder_AccordionAccordionProps_1044969128[typingsSlinky.semanticUiReact.mod.Accordion.Accordion](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: AccordionAccordionProps): SharedBuilder_AccordionAccordionProps_1044969128[typingsSlinky.semanticUiReact.mod.Accordion.Accordion] = new SharedBuilder_AccordionAccordionProps_1044969128[typingsSlinky.semanticUiReact.mod.Accordion.Accordion](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Content {
+    
+    @JSImport("semantic-ui-react", "Accordion.Content")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Content.type): SharedBuilder_AccordionContentProps_1656243680 = new SharedBuilder_AccordionContentProps_1656243680(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: AccordionContentProps): SharedBuilder_AccordionContentProps_1656243680 = new SharedBuilder_AccordionContentProps_1656243680(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Panel {
+    
+    @JSImport("semantic-ui-react", "Accordion.Panel")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Panel.type): SharedBuilder_AccordionPanelProps1195011765[typingsSlinky.semanticUiReact.mod.Accordion.Panel] = new SharedBuilder_AccordionPanelProps1195011765[typingsSlinky.semanticUiReact.mod.Accordion.Panel](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: AccordionPanelProps): SharedBuilder_AccordionPanelProps1195011765[typingsSlinky.semanticUiReact.mod.Accordion.Panel] = new SharedBuilder_AccordionPanelProps1195011765[typingsSlinky.semanticUiReact.mod.Accordion.Panel](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Title {
+    
+    @JSImport("semantic-ui-react", "Accordion.Title")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Title.type): SharedBuilder_AccordionTitleProps1986434512[typingsSlinky.semanticUiReact.mod.Accordion.Title] = new SharedBuilder_AccordionTitleProps1986434512[typingsSlinky.semanticUiReact.mod.Accordion.Title](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: AccordionTitleProps): SharedBuilder_AccordionTitleProps1986434512[typingsSlinky.semanticUiReact.mod.Accordion.Title] = new SharedBuilder_AccordionTitleProps1986434512[typingsSlinky.semanticUiReact.mod.Accordion.Title](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Accordion")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,10 +72,10 @@ object Accordion {
        with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Accordion] {
     
     @scala.inline
-    def activeIndexVarargs(value: Double*): this.type = set("activeIndex", js.Array(value :_*))
+    def activeIndex(value: Double | js.Array[Double]): this.type = set("activeIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def activeIndex(value: Double | js.Array[Double]): this.type = set("activeIndex", value.asInstanceOf[js.Any])
+    def activeIndexVarargs(value: Double*): this.type = set("activeIndex", js.Array(value :_*))
     
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
@@ -43,10 +84,10 @@ object Accordion {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultActiveIndexVarargs(value: Double*): this.type = set("defaultActiveIndex", js.Array(value :_*))
+    def defaultActiveIndex(value: Double | js.Array[Double]): this.type = set("defaultActiveIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultActiveIndex(value: Double | js.Array[Double]): this.type = set("defaultActiveIndex", value.asInstanceOf[js.Any])
+    def defaultActiveIndexVarargs(value: Double*): this.type = set("defaultActiveIndex", js.Array(value :_*))
     
     @scala.inline
     def exclusive(value: Boolean): this.type = set("exclusive", value.asInstanceOf[js.Any])
@@ -61,134 +102,16 @@ object Accordion {
     def onTitleClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ AccordionTitleProps) => Unit): this.type = set("onTitleClick", js.Any.fromFunction2(value))
     
     @scala.inline
-    def panelsVarargs(value: SemanticShorthandItem[AccordionPanelProps]*): this.type = set("panels", js.Array(value :_*))
+    def panels(value: SemanticShorthandCollection[AccordionPanelProps]): this.type = set("panels", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def panels(value: SemanticShorthandCollection[AccordionPanelProps]): this.type = set("panels", value.asInstanceOf[js.Any])
+    def panelsVarargs(value: SemanticShorthandItem[AccordionPanelProps]*): this.type = set("panels", js.Array(value :_*))
     
     @scala.inline
     def styled(value: Boolean): this.type = set("styled", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AccordionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Accordion.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Accordion {
-    
-    @JSImport("semantic-ui-react", "Accordion.Accordion")
-    @js.native
-    object component extends js.Object
-    
-    @scala.inline
-    class Builder (val args: js.Array[js.Any])
-      extends AnyVal
-         with StBuildingComponent[tag.type, js.Object] {
-      
-      @scala.inline
-      def activeIndexVarargs(value: Double*): this.type = set("activeIndex", js.Array(value :_*))
-      
-      @scala.inline
-      def activeIndex(value: Double | js.Array[Double]): this.type = set("activeIndex", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def defaultActiveIndexVarargs(value: Double*): this.type = set("defaultActiveIndex", js.Array(value :_*))
-      
-      @scala.inline
-      def defaultActiveIndex(value: Double | js.Array[Double]): this.type = set("defaultActiveIndex", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def exclusive(value: Boolean): this.type = set("exclusive", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def onTitleClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ AccordionTitleProps) => Unit): this.type = set("onTitleClick", js.Any.fromFunction2(value))
-      
-      @scala.inline
-      def panelsVarargs(value: SemanticShorthandItem[AccordionPanelProps]*): this.type = set("panels", js.Array(value :_*))
-      
-      @scala.inline
-      def panels(value: SemanticShorthandCollection[AccordionPanelProps]): this.type = set("panels", value.asInstanceOf[js.Any])
-    }
-    
-    def withProps(p: AccordionAccordionProps): typingsSlinky.semanticUiReact.components.Accordion.Accordion.Builder = new typingsSlinky.semanticUiReact.components.Accordion.Accordion.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Accordion.type): typingsSlinky.semanticUiReact.components.Accordion.Accordion.Builder = new typingsSlinky.semanticUiReact.components.Accordion.Accordion.Builder(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Content {
-    
-    @JSImport("semantic-ui-react", "Accordion.Content")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: AccordionContentProps): SharedBuilder_AccordionContentProps_1656243680 = new SharedBuilder_AccordionContentProps_1656243680(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Content.type): SharedBuilder_AccordionContentProps_1656243680 = new SharedBuilder_AccordionContentProps_1656243680(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Panel {
-    
-    @JSImport("semantic-ui-react", "Accordion.Panel")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: AccordionPanelProps): SharedBuilder_AccordionPanelProps1195011765[typingsSlinky.semanticUiReact.mod.Accordion.Panel] = new SharedBuilder_AccordionPanelProps1195011765[typingsSlinky.semanticUiReact.mod.Accordion.Panel](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Panel.type): SharedBuilder_AccordionPanelProps1195011765[typingsSlinky.semanticUiReact.mod.Accordion.Panel] = new SharedBuilder_AccordionPanelProps1195011765[typingsSlinky.semanticUiReact.mod.Accordion.Panel](js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Title {
-    
-    @JSImport("semantic-ui-react", "Accordion.Title")
-    @js.native
-    object component extends js.Object
-    
-    @scala.inline
-    class Builder (val args: js.Array[js.Any])
-      extends AnyVal
-         with StBuildingComponent[tag.type, js.Object] {
-      
-      @scala.inline
-      def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def iconFunction3(
-        value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
-      ): this.type = set("icon", js.Any.fromFunction3(value))
-      
-      @scala.inline
-      def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def index(value: Double | String): this.type = set("index", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def onClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ AccordionTitleProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
-    }
-    
-    def withProps(p: AccordionTitleProps): typingsSlinky.semanticUiReact.components.Accordion.Title.Builder = new typingsSlinky.semanticUiReact.components.Accordion.Title.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Title.type): typingsSlinky.semanticUiReact.components.Accordion.Title.Builder = new typingsSlinky.semanticUiReact.components.Accordion.Title.Builder(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: AccordionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

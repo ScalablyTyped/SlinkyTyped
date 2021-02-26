@@ -1,10 +1,11 @@
 package typingsSlinky.ember.mod.default
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ember", "LinkComponent")
+@JSImport("ember", "default.LinkComponent")
 @js.native
 class LinkComponent ()
-  extends typingsSlinky.emberRouting.linkComponentMod.LinkComponent
+  extends typingsSlinky.ember.mod.Ember.LinkComponent

@@ -1,5 +1,6 @@
 package typingsSlinky.webvrApi
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webvrApi.webvrApiStrings.left
   - typingsSlinky.webvrApi.webvrApiStrings.right
 */
-trait VREyeDtAlias extends js.Object
+trait VREyeDtAlias extends StObject
 object VREyeDtAlias {
   
   @scala.inline

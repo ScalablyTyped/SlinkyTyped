@@ -2,6 +2,7 @@ package typingsSlinky.webappsecCredentialManagement
 
 import org.scalajs.dom.raw.FormData
 import typingsSlinky.webappsecCredentialManagement.webappsecCredentialManagementStrings.password
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -64,42 +65,30 @@ object PasswordCredential {
   }
   
   @scala.inline
-  implicit class PasswordCredentialOps[Self <: PasswordCredential] (val x: Self) extends AnyVal {
+  implicit class PasswordCredentialMutableBuilder[Self <: PasswordCredential] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAdditionalData(value: CredentialBodyType): Self = StObject.set(x, "additionalData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAdditionalDataFormData(value: FormData): Self = StObject.set(x, "additionalData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setAdditionalDataNull: Self = StObject.set(x, "additionalData", null)
     
     @scala.inline
-    def setIdName(value: String): Self = this.set("idName", value.asInstanceOf[js.Any])
+    def setIdName(value: String): Self = StObject.set(x, "idName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPasswordName(value: String): Self = this.set("passwordName", value.asInstanceOf[js.Any])
+    def setPassword(value: String): Self = StObject.set(x, "password", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: password): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setPasswordName(value: String): Self = StObject.set(x, "passwordName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAdditionalDataFormData(value: FormData): Self = this.set("additionalData", value.asInstanceOf[js.Any])
+    def setPasswordUndefined: Self = StObject.set(x, "password", js.undefined)
     
     @scala.inline
-    def setAdditionalData(value: CredentialBodyType): Self = this.set("additionalData", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAdditionalDataNull: Self = this.set("additionalData", null)
-    
-    @scala.inline
-    def setPassword(value: String): Self = this.set("password", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePassword: Self = this.set("password", js.undefined)
+    def setType(value: password): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
   }
 }

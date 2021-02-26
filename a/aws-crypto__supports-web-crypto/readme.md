@@ -12,7 +12,7 @@ Provides functions for detecting if the host environment supports the WebCrypto 
 | Keywords           | - |
 | # releases         | 5 |
 | # dependents       | 3 |
-| # downloads        | 9068 |
+| # downloads        | 5323396 |
 | # stars            | 0 |
 
 ## Links

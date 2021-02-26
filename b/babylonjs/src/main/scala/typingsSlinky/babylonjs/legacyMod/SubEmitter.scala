@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.legacyMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,9 +19,7 @@ class SubEmitter protected ()
   particleSystem: typingsSlinky.babylonjs.particleSystemMod.ParticleSystem) = this()
 }
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "SubEmitter")
-@js.native
-object SubEmitter extends js.Object {
+object SubEmitter {
   
   /**
     * Creates a new SubEmitter from a serialized JSON version
@@ -29,11 +28,15 @@ object SubEmitter extends js.Object {
     * @param rootUrl defines the rootUrl for data loading
     * @returns a new SubEmitter
     */
+  @JSImport("babylonjs/Legacy/legacy", "SubEmitter.Parse")
+  @js.native
   def Parse(
     serializationObject: js.Any,
     sceneOrEngine: typingsSlinky.babylonjs.sceneMod.Scene,
     rootUrl: String
   ): typingsSlinky.babylonjs.subEmitterMod.SubEmitter = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SubEmitter.Parse")
+  @js.native
   def Parse(
     serializationObject: js.Any,
     sceneOrEngine: typingsSlinky.babylonjs.thinEngineMod.ThinEngine,
@@ -41,6 +44,10 @@ object SubEmitter extends js.Object {
   ): typingsSlinky.babylonjs.subEmitterMod.SubEmitter = js.native
   
   /** @hidden */
+  @JSImport("babylonjs/Legacy/legacy", "SubEmitter._ParseParticleSystem")
+  @js.native
   def _ParseParticleSystem(system: js.Any, sceneOrEngine: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.particleSystemMod.ParticleSystem = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SubEmitter._ParseParticleSystem")
+  @js.native
   def _ParseParticleSystem(system: js.Any, sceneOrEngine: typingsSlinky.babylonjs.thinEngineMod.ThinEngine, rootUrl: String): typingsSlinky.babylonjs.particleSystemMod.ParticleSystem = js.native
 }

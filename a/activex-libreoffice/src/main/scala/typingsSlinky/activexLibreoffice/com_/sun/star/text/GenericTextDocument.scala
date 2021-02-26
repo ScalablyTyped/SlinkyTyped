@@ -9,6 +9,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.tiledrendering.XTiledRende
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XNumberFormatsSupplier
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XRefreshable
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XReplaceable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

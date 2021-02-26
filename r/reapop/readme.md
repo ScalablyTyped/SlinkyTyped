@@ -4,15 +4,15 @@
 Typings are for version 3.0.0
 
 ## Library description:
-A React and Redux notifications system
+A simple & customizable notifications system for React
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | reapop |
-| Keywords           | reapop, react, redux, notifications, notification, component |
-| # releases         | 5 |
-| # dependents       | 1 |
-| # downloads        | 169200 |
+| Keywords           | reapop, react, redux, mobx, notifications, notification, toast, toasts, component |
+| # releases         | 6 |
+| # dependents       | 3 |
+| # downloads        | 236652 |
 | # stars            | 4 |
 
 ## Links

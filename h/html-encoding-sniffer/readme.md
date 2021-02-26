@@ -11,8 +11,8 @@ Sniff the encoding from a HTML byte stream
 | Full name          | html-encoding-sniffer |
 | Keywords           | encoding, html |
 | # releases         | 3 |
-| # dependents       | 52 |
-| # downloads        | 238285729 |
+| # dependents       | 92 |
+| # downloads        | 432376598 |
 | # stars            | 0 |
 
 ## Links

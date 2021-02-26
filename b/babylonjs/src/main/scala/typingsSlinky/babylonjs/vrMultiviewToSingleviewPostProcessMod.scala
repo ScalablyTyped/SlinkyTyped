@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/PostProcesses/vrMultiviewToSingleviewPostProcess", JSImport.Namespace)
-@js.native
-object vrMultiviewToSingleviewPostProcessMod extends js.Object {
+object vrMultiviewToSingleviewPostProcessMod {
   
+  @JSImport("babylonjs/PostProcesses/vrMultiviewToSingleviewPostProcess", "VRMultiviewToSingleviewPostProcess")
   @js.native
   class VRMultiviewToSingleviewPostProcess protected () extends PostProcess {
     /**

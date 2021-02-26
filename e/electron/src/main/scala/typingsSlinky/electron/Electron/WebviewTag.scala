@@ -137,6 +137,7 @@ import typingsSlinky.electron.electronStrings.waiting
 import typingsSlinky.electron.electronStrings.wheel
 import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

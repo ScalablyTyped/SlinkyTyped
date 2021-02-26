@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeSvg.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`after-edge`
   - typingsSlinky.reactNativeSvg.reactNativeSvgStrings.hanging
 */
-trait AlignmentBaseline extends js.Object
+trait AlignmentBaseline extends StObject
 object AlignmentBaseline {
   
   @scala.inline

@@ -1,6 +1,7 @@
 package typingsSlinky.std
 
 import typingsSlinky.std.stdStrings.complete
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,13 +41,13 @@ trait OfflineAudioContext extends BaseAudioContext {
   def removeEventListener_complete(
     `type`: complete,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.OfflineAudioCompletionEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_complete(
     `type`: complete,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.OfflineAudioCompletionEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   def resume(): js.Promise[Unit] = js.native

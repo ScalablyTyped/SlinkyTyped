@@ -1,5 +1,6 @@
 package typingsSlinky.openssiWebsdk.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.openssiWebsdk.openssiWebsdkStrings.in_band
   - typingsSlinky.openssiWebsdk.openssiWebsdkStrings.invitation
 */
-trait ConnectionMethod extends js.Object
+trait ConnectionMethod extends StObject
 object ConnectionMethod {
   
   @scala.inline

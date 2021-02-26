@@ -7,6 +7,7 @@ import typingsSlinky.std.stdStrings.mark
 import typingsSlinky.std.stdStrings.pause
 import typingsSlinky.std.stdStrings.resume
 import typingsSlinky.std.stdStrings.start
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -149,13 +150,13 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_boundary(
     `type`: boundary,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_boundary(
     `type`: boundary,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_end(`type`: end, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _]): Unit = js.native
@@ -163,13 +164,13 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_end(
     `type`: end,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_end(
     `type`: end,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
@@ -180,13 +181,13 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisErrorEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisErrorEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mark(`type`: mark, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _]): Unit = js.native
@@ -194,13 +195,13 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_mark(
     `type`: mark,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mark(
     `type`: mark,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _]): Unit = js.native
@@ -208,13 +209,13 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_pause(
     `type`: pause,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(
     `type`: pause,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_resume(`type`: resume, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _]): Unit = js.native
@@ -222,13 +223,13 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_resume(
     `type`: resume,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_resume(
     `type`: resume,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_start(`type`: start, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _]): Unit = js.native
@@ -236,13 +237,13 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_start(
     `type`: start,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_start(
     `type`: start,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   var text: java.lang.String = js.native

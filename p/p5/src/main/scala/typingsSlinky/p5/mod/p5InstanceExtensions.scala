@@ -3,13 +3,14 @@ package typingsSlinky.p5.mod
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // tslint:disable-next-line:no-empty-interface
 @js.native
-trait p5InstanceExtensions extends js.Object {
+trait p5InstanceExtensions extends StObject {
   
   val ADD: typingsSlinky.p5.mod.ADD = js.native
   
@@ -7377,6 +7378,10 @@ trait p5InstanceExtensions extends js.Object {
   def saveCanvas(filename: js.UndefOr[scala.Nothing], extension: String): Unit = js.native
   def saveCanvas(filename: String): Unit = js.native
   def saveCanvas(filename: String, extension: String): Unit = js.native
+  def saveCanvas(selectedCanvas: HTMLCanvasElement): Unit = js.native
+  def saveCanvas(selectedCanvas: HTMLCanvasElement, filename: js.UndefOr[scala.Nothing], extension: String): Unit = js.native
+  def saveCanvas(selectedCanvas: HTMLCanvasElement, filename: String): Unit = js.native
+  def saveCanvas(selectedCanvas: HTMLCanvasElement, filename: String, extension: String): Unit = js.native
   /**
     *   Save the current canvas as an image. The browser
     *   will either save the file immediately, or prompt
@@ -7389,10 +7394,6 @@ trait p5InstanceExtensions extends js.Object {
   def saveCanvas(selectedCanvas: Element, filename: js.UndefOr[scala.Nothing], extension: String): Unit = js.native
   def saveCanvas(selectedCanvas: Element, filename: String): Unit = js.native
   def saveCanvas(selectedCanvas: Element, filename: String, extension: String): Unit = js.native
-  def saveCanvas(selectedCanvas: HTMLCanvasElement): Unit = js.native
-  def saveCanvas(selectedCanvas: HTMLCanvasElement, filename: js.UndefOr[scala.Nothing], extension: String): Unit = js.native
-  def saveCanvas(selectedCanvas: HTMLCanvasElement, filename: String): Unit = js.native
-  def saveCanvas(selectedCanvas: HTMLCanvasElement, filename: String, extension: String): Unit = js.native
   
   /**
     *   Capture a sequence of frames that can be used to
@@ -7573,8 +7574,8 @@ trait p5InstanceExtensions extends js.Object {
     */
   def select(name: String): Element | Null = js.native
   def select(name: String, container: String): Element | Null = js.native
-  def select(name: String, container: Element): Element | Null = js.native
   def select(name: String, container: HTMLElement): Element | Null = js.native
+  def select(name: String, container: Element): Element | Null = js.native
   
   /**
     *   Searches the page for elements with the given

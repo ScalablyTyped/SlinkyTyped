@@ -1,5 +1,6 @@
 package typingsSlinky.raphael.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.raphael.raphaelStrings.SVG
   - typingsSlinky.raphael.raphaelStrings.VML
 */
-trait RaphaelTechnology extends js.Object
+trait RaphaelTechnology extends StObject
 object RaphaelTechnology {
   
   @scala.inline

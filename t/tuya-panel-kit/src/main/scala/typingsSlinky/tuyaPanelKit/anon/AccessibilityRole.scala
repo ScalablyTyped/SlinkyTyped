@@ -6,12 +6,13 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.link
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AccessibilityRole extends js.Object {
+trait AccessibilityRole extends StObject {
   
   var accessibilityRole: link = js.native
   
@@ -19,6 +20,6 @@ trait AccessibilityRole extends js.Object {
   
   // tslint:disable-next-line no-redundant-undefined
   def onPress(): Unit = js.native
-  def onPress(e: SyntheticMouseEvent[HTMLAnchorElement]): Unit = js.native
   def onPress(e: SyntheticEvent[NodeHandle, NativeTouchEvent]): Unit = js.native
+  def onPress(e: SyntheticMouseEvent[HTMLAnchorElement]): Unit = js.native
 }

@@ -2,14 +2,14 @@ package typingsSlinky.ow
 
 import typingsSlinky.ow.predicateMod.Predicate
 import typingsSlinky.ow.predicateMod.PredicateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ow/dist/source/predicates/boolean", JSImport.Namespace)
-@js.native
-object booleanMod extends js.Object {
+object booleanMod {
   
+  @JSImport("ow/dist/source/predicates/boolean", "BooleanPredicate")
   @js.native
   /**
     @hidden

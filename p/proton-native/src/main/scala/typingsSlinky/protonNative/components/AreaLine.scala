@@ -9,15 +9,22 @@ import typingsSlinky.protonNative.protonNativeStrings.bevel
 import typingsSlinky.protonNative.protonNativeStrings.flat
 import typingsSlinky.protonNative.protonNativeStrings.miter
 import typingsSlinky.protonNative.protonNativeStrings.round
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AreaLine {
   
+  @scala.inline
+  def apply(x1: Double | String, x2: Double | String, y1: Double | String, y2: Double | String): Builder = {
+    val __props = js.Dynamic.literal(x1 = x1.asInstanceOf[js.Any], x2 = x2.asInstanceOf[js.Any], y1 = y1.asInstanceOf[js.Any], y2 = y2.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AreaLineProps]))
+  }
+  
   @JSImport("proton-native", "AreaLine")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -74,10 +81,4 @@ object AreaLine {
   }
   
   def withProps(p: AreaLineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(x1: Double | String, x2: Double | String, y1: Double | String, y2: Double | String): Builder = {
-    val __props = js.Dynamic.literal(x1 = x1.asInstanceOf[js.Any], x2 = x2.asInstanceOf[js.Any], y1 = y1.asInstanceOf[js.Any], y2 = y2.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AreaLineProps]))
-  }
 }

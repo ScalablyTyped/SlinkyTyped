@@ -1,16 +1,16 @@
 package typingsSlinky.twilioSync
 
 import typingsSlinky.twilioSync.entityMod.SyncEntity
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("twilio-sync/lib/entitiesCache", JSImport.Namespace)
-@js.native
-object entitiesCacheMod extends js.Object {
+object entitiesCacheMod {
   
+  @JSImport("twilio-sync/lib/entitiesCache", "EntitiesCache")
   @js.native
-  class EntitiesCache () extends js.Object {
+  class EntitiesCache () extends StObject {
     
     val entities: js.Any = js.native
     

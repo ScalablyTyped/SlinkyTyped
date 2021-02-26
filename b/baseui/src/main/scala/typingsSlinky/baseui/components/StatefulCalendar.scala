@@ -21,6 +21,7 @@ import typingsSlinky.baseui.datepickerMod.CalendarProps
 import typingsSlinky.baseui.datepickerMod.ContainerState
 import typingsSlinky.baseui.datepickerMod.DatepickerOverrides
 import typingsSlinky.baseui.datepickerMod.SharedStylePropsT
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ object StatefulCalendar {
   
   @JSImport("baseui/datepicker", "StatefulCalendar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,10 +44,10 @@ object StatefulCalendar {
     def children(value: /* args */ CalendarProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def excludeDatesVarargs(value: js.Date*): this.type = set("excludeDates", js.Array(value :_*))
+    def excludeDates(value: js.Array[js.Date]): this.type = set("excludeDates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def excludeDates(value: js.Array[js.Date]): this.type = set("excludeDates", value.asInstanceOf[js.Any])
+    def excludeDatesVarargs(value: js.Date*): this.type = set("excludeDates", js.Array(value :_*))
     
     @scala.inline
     def filterDate(value: /* day */ js.Date => Boolean): this.type = set("filterDate", js.Any.fromFunction1(value))
@@ -55,10 +56,10 @@ object StatefulCalendar {
     def highlightedDate(value: js.Date): this.type = set("highlightedDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def includeDatesVarargs(value: js.Date*): this.type = set("includeDates", js.Array(value :_*))
+    def includeDates(value: js.Array[js.Date]): this.type = set("includeDates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def includeDates(value: js.Array[js.Date]): this.type = set("includeDates", value.asInstanceOf[js.Any])
+    def includeDatesVarargs(value: js.Date*): this.type = set("includeDates", js.Array(value :_*))
     
     @scala.inline
     def initialState(value: ContainerState): this.type = set("initialState", value.asInstanceOf[js.Any])
@@ -106,10 +107,10 @@ object StatefulCalendar {
     def quickSelect(value: Boolean): this.type = set("quickSelect", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def quickSelectOptionsVarargs(value: BeginDate*): this.type = set("quickSelectOptions", js.Array(value :_*))
+    def quickSelectOptions(value: js.Array[BeginDate]): this.type = set("quickSelectOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def quickSelectOptions(value: js.Array[BeginDate]): this.type = set("quickSelectOptions", value.asInstanceOf[js.Any])
+    def quickSelectOptionsVarargs(value: BeginDate*): this.type = set("quickSelectOptions", js.Array(value :_*))
     
     @scala.inline
     def range(value: Boolean): this.type = set("range", value.asInstanceOf[js.Any])
@@ -129,19 +130,19 @@ object StatefulCalendar {
     def trapTabbing(value: Boolean): this.type = set("trapTabbing", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: js.Date*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Date | js.Array[js.Date]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def valueDate(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Date | js.Array[js.Date]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueNull: this.type = set("value", null)
     
     @scala.inline
-    def valueNull: this.type = set("value", null)
+    def valueVarargs(value: js.Date*): this.type = set("value", js.Array(value :_*))
   }
   
-  def withProps(p: StatefulDatepickerPropsCa): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatefulCalendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatefulDatepickerPropsCa): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

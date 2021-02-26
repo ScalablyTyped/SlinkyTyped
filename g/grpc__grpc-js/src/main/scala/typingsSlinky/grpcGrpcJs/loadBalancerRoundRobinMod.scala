@@ -4,16 +4,14 @@ import typingsSlinky.grpcGrpcJs.loadBalancerMod.ChannelControlHelper
 import typingsSlinky.grpcGrpcJs.loadBalancerMod.LoadBalancer
 import typingsSlinky.grpcGrpcJs.loadBalancingConfigMod.LoadBalancingConfig
 import typingsSlinky.grpcGrpcJs.subchannelMod.SubchannelAddress
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@grpc/grpc-js/build/src/load-balancer-round-robin", JSImport.Namespace)
-@js.native
-object loadBalancerRoundRobinMod extends js.Object {
+object loadBalancerRoundRobinMod {
   
-  def setup(): Unit = js.native
-  
+  @JSImport("@grpc/grpc-js/build/src/load-balancer-round-robin", "RoundRobinLoadBalancer")
   @js.native
   class RoundRobinLoadBalancer protected () extends LoadBalancer {
     def this(channelControlHelper: ChannelControlHelper) = this()
@@ -38,4 +36,8 @@ object loadBalancerRoundRobinMod extends js.Object {
     
     var updateState: js.Any = js.native
   }
+  
+  @JSImport("@grpc/grpc-js/build/src/load-balancer-round-robin", "setup")
+  @js.native
+  def setup(): Unit = js.native
 }

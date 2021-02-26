@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientSecuritycenter.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientSecuritycenter.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientSecuritycenter.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientSecuritycenter.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SourcesResource extends js.Object {
+trait SourcesResource extends StObject {
   
   def create(request: Alt, body: Source): Request[Source] = js.native
   /** Creates a source. */

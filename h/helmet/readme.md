@@ -9,10 +9,10 @@ help secure Express/Connect apps with various HTTP headers
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | helmet |
-| Keywords           | security, headers, express, connect, x-frame-options, x-powered-by, csp, hsts, clickjack |
-| # releases         | 19 |
-| # dependents       | 1208 |
-| # downloads        | 27760905 |
+| Keywords           | express, security, headers |
+| # releases         | 31 |
+| # dependents       | 1566 |
+| # downloads        | 49152889 |
 | # stars            | 284 |
 
 ## Links

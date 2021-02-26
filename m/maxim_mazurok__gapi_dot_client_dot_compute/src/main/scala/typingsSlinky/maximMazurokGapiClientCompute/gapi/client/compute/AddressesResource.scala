@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.Alt
 import typingsSlinky.maximMazurokGapiClientCompute.anon.Filter
 import typingsSlinky.maximMazurokGapiClientCompute.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientCompute.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AddressesResource extends js.Object {
+trait AddressesResource extends StObject {
   
   /** Retrieves an aggregated list of addresses. */
   def aggregatedList(): Request[AddressAggregatedList] = js.native

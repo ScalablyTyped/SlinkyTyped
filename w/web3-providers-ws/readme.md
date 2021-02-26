@@ -10,9 +10,9 @@ Module to handle web3 RPC connections over WebSockets.
 | ------------------ | :-------------: |
 | Full name          | web3-providers-ws |
 | Keywords           | - |
-| # releases         | 16 |
-| # dependents       | 19 |
-| # downloads        | 3547881 |
+| # releases         | 27 |
+| # dependents       | 25 |
+| # downloads        | 6864579 |
 | # stars            | 0 |
 
 ## Links

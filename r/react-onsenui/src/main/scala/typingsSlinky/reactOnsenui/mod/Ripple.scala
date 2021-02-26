@@ -1,11 +1,20 @@
 package typingsSlinky.reactOnsenui.mod
 
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameBackground
+import typingsSlinky.reactOnsenui.anon.Background
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-onsenui", "Ripple")
 @js.native
-class Ripple ()
-  extends typingsSlinky.react.mod.Component[HTMLAttributesidclassNameBackground, js.Any, js.Any]
+class Ripple protected ()
+  extends Component[Background, js.Any] {
+  def this(props: HTMLAttributesidclassName with Background) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: HTMLAttributesidclassName with Background, context: js.Any) = this()
+}

@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientMonitoring.anon.Alt
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.Callback
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.Fields
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AlertPoliciesResource extends js.Object {
+trait AlertPoliciesResource extends StObject {
   
   /** Creates a new alerting policy. */
   def create(request: Accesstoken): Request[AlertPolicy] = js.native

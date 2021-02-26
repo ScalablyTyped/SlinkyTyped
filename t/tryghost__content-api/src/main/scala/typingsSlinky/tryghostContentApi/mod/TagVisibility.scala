@@ -1,5 +1,6 @@
 package typingsSlinky.tryghostContentApi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.tryghostContentApi.tryghostContentApiStrings.public
   - typingsSlinky.tryghostContentApi.tryghostContentApiStrings.internal
 */
-trait TagVisibility extends js.Object
+trait TagVisibility extends StObject
 object TagVisibility {
   
   @scala.inline

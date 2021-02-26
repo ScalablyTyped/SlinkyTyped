@@ -1,5 +1,6 @@
 package typingsSlinky.angularCompiler.publicApiMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@angular/compiler/public_api", "Xmb")
 @js.native
 class Xmb ()
-  extends typingsSlinky.angularCompiler.xmbMod.Xmb
+  extends typingsSlinky.angularCompiler.srcCompilerMod.Xmb

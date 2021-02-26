@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.BABYLON
 import typingsSlinky.babylonjs.anon.DeepImmutableObjectMatrixAdd
 import typingsSlinky.babylonjs.anon.Report
 import typingsSlinky.babylonjs.anon.Sizes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

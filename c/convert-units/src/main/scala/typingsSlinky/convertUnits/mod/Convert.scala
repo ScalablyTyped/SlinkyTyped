@@ -5,12 +5,13 @@ import typingsSlinky.convertUnits.anon.CutOffNumber
 import typingsSlinky.convertUnits.anon.Measure
 import typingsSlinky.convertUnits.anon.Plural
 import typingsSlinky.convertUnits.anon.System
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Convert extends js.Object {
+trait Convert extends StObject {
   
   def describe[T /* <: unit */](abbr: T): Measure[T] = js.native
   

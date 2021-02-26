@@ -10,9 +10,9 @@ Easing functions for smooth animation.
 | ------------------ | :-------------: |
 | Full name          | d3-ease |
 | Keywords           | d3, d3-module, ease, easing, animation, transition |
-| # releases         | 4 |
-| # dependents       | 159 |
-| # downloads        | 30367655 |
+| # releases         | 5 |
+| # dependents       | 234 |
+| # downloads        | 58356771 |
 | # stars            | 3 |
 
 ## Links

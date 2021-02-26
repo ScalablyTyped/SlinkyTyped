@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientDataproc.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDataproc.anon.Fields
 import typingsSlinky.maximMazurokGapiClientDataproc.anon.Key
 import typingsSlinky.maximMazurokGapiClientDataproc.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AutoscalingPoliciesResource extends js.Object {
+trait AutoscalingPoliciesResource extends StObject {
   
   /** Creates new autoscaling policy. */
   def create(request: Accesstoken): Request[AutoscalingPolicy] = js.native

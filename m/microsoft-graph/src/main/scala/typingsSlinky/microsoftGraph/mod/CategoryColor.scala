@@ -1,6 +1,7 @@
 package typingsSlinky.microsoftGraph.mod
 
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.none_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,7 +34,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.preset23
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.preset24
 */
-trait CategoryColor extends js.Object
+trait CategoryColor extends StObject
 object CategoryColor {
   
   @scala.inline

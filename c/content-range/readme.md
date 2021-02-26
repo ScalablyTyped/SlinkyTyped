@@ -4,21 +4,21 @@
 Typings are for version 1.1
 
 ## Library description:
-Content-range header formatter.
+Content-Range header formatter .
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | content-range |
 | Keywords           | content-range, header, formatter, parser |
-| # releases         | 0 |
-| # dependents       | 7 |
-| # downloads        | 82671 |
+| # releases         | 1 |
+| # dependents       | 8 |
+| # downloads        | 189063 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/neoziro/content-range)
-- [Bugs](https://github.com/neoziro/content-range/issues)
-- [Repository](https://github.com/neoziro/content-range)
+- [Homepage](https://github.com/gregberge/content-range#readme)
+- [Bugs](https://github.com/gregberge/content-range/issues)
+- [Repository](https://github.com/gregberge/content-range)
 - [Npm](https://www.npmjs.com/package/content-range)
     
 

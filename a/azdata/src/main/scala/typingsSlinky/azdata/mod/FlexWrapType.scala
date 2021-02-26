@@ -1,5 +1,6 @@
 package typingsSlinky.azdata.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.azdata.azdataStrings.wrap
   - typingsSlinky.azdata.azdataStrings.`wrap-reverse`
 */
-trait FlexWrapType extends js.Object
+trait FlexWrapType extends StObject
 object FlexWrapType {
   
   @scala.inline

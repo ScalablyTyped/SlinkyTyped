@@ -2,6 +2,7 @@ package typingsSlinky.phaser.global
 
 import typingsSlinky.phaser.Phaser.Plugins.PluginManager
 import typingsSlinky.phaser.Phaser.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

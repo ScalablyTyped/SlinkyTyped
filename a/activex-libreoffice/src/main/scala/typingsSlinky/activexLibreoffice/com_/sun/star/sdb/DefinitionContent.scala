@@ -3,26 +3,20 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.sdb
 import typingsSlinky.activexLibreoffice.LibreOffice.SeqEquiv
 import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertiesChangeListener
-import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertiesChangeNotifier
-import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyContainer
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfoChangeListener
-import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfoChangeNotifier
-import typingsSlinky.activexLibreoffice.com_.sun.star.container.XChild
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XHierarchicalName
-import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.Command
+import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.Content
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.ContentInfo
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XCommandEnvironment
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XCommandInfoChangeListener
-import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XCommandInfoChangeNotifier
-import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XCommandProcessor2
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XContent
-import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XContentCreator
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XContentEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XContentIdentifier
 import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,15 +28,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait DefinitionContent
-  extends XCommandProcessor2
-     with XContent
-     with XComponent
-     with XPropertiesChangeNotifier
-     with XPropertyContainer
-     with XPropertySetInfoChangeNotifier
-     with XCommandInfoChangeNotifier
-     with XContentCreator
-     with XChild
+  extends Content
      with XHierarchicalName
 object DefinitionContent {
   

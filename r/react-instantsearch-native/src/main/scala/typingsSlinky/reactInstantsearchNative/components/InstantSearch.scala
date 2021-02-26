@@ -3,15 +3,22 @@ package typingsSlinky.reactInstantsearchNative.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactInstantsearchCore.mod.InstantSearchProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object InstantSearch {
   
+  @scala.inline
+  def apply(indexName: String, searchClient: js.Any): Builder = {
+    val __props = js.Dynamic.literal(indexName = indexName.asInstanceOf[js.Any], searchClient = searchClient.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[InstantSearchProps]))
+  }
+  
   @JSImport("react-instantsearch-native", "InstantSearch")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,10 +48,4 @@ object InstantSearch {
   }
   
   def withProps(p: InstantSearchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(indexName: String, searchClient: js.Any): Builder = {
-    val __props = js.Dynamic.literal(indexName = indexName.asInstanceOf[js.Any], searchClient = searchClient.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[InstantSearchProps]))
-  }
 }

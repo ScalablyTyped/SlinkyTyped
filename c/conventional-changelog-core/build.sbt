@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "conventional-changelog-core"
-version := "4.1-dt-20201028Z-b51135"
+version := "4.1-dt-20201028Z-8761f7"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "conventional-changelog-writer" % "4.0-dt-20200113Z-daf932",
-  "org.scalablytyped.slinky" %%% "conventional-commits-parser" % "3.0-dt-20201026Z-c33846",
-  "org.scalablytyped.slinky" %%% "conventional-recommended-bump" % "6.0-dt-20201028Z-cca751",
-  "org.scalablytyped.slinky" %%% "git-raw-commits" % "2.0-dt-20200113Z-bc595c",
-  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
-  "org.scalablytyped.slinky" %%% "normalize-package-data" % "2.4-dt-20200515Z-c10513",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "conventional-changelog-writer" % "4.0-dt-20200113Z-abd33a",
+  "org.scalablytyped.slinky" %%% "conventional-commits-parser" % "3.0-dt-20201026Z-1dafd8",
+  "org.scalablytyped.slinky" %%% "conventional-recommended-bump" % "6.0-dt-20201028Z-fa0d88",
+  "org.scalablytyped.slinky" %%% "git-raw-commits" % "2.0-dt-20200113Z-066230",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "normalize-package-data" % "2.4-dt-20200515Z-50ee21",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

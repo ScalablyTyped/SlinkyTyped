@@ -8,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.settingsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,12 +27,23 @@ abstract class ProjectSettingsPart protected () extends Element[IModel] {
   
   def containerAsProjectSettings: ProjectSettings = js.native
 }
-/* static members */
-@JSImport("mendixmodelsdk/dist/gen/settings", "settings.ProjectSettingsPart")
-@js.native
-object ProjectSettingsPart extends js.Object {
+object ProjectSettingsPart {
   
-  var structureTypeName: String = js.native
+  @JSImport("mendixmodelsdk/dist/gen/settings", "settings.ProjectSettingsPart")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var versionInfo: StructureVersionInfo = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/settings", "settings.ProjectSettingsPart.structureTypeName")
+  @js.native
+  def structureTypeName: String = js.native
+  @scala.inline
+  def structureTypeName_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("structureTypeName")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/settings", "settings.ProjectSettingsPart.versionInfo")
+  @js.native
+  def versionInfo: StructureVersionInfo = js.native
+  @scala.inline
+  def versionInfo_=(x: StructureVersionInfo): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(x.asInstanceOf[js.Any])
 }

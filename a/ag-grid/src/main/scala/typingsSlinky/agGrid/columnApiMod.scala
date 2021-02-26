@@ -8,16 +8,16 @@ import typingsSlinky.agGrid.columnGroupChildMod.ColumnGroupChild
 import typingsSlinky.agGrid.columnGroupMod.ColumnGroup
 import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.originalColumnGroupMod.OriginalColumnGroup
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/columnController/columnApi", JSImport.Namespace)
-@js.native
-object columnApiMod extends js.Object {
+object columnApiMod {
   
+  @JSImport("ag-grid/dist/lib/columnController/columnApi", "ColumnApi")
   @js.native
-  class ColumnApi () extends js.Object {
+  class ColumnApi () extends StObject {
     
     def addAggregationColumn(colKey: String): Unit = js.native
     def addAggregationColumn(colKey: Column): Unit = js.native

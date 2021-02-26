@@ -5,6 +5,7 @@ import typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.I
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,19 +21,27 @@ class CommandInitializeTestCase ()
   extends typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase {
   def this(properties: ICommandInitializeTestCase) = this()
 }
-/* static members */
-@JSImport("cucumber-messages", "messages.CommandInitializeTestCase")
-@js.native
-object CommandInitializeTestCase extends js.Object {
+object CommandInitializeTestCase {
   
   /**
     * Creates a new CommandInitializeTestCase instance using the specified properties.
     * @param [properties] Properties to set
     * @returns CommandInitializeTestCase instance
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.create")
+  @js.native
   def create(): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.create")
+  @js.native
   def create(properties: ICommandInitializeTestCase): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
   
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
   /**
     * Decodes a CommandInitializeTestCase message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -41,11 +50,17 @@ object CommandInitializeTestCase extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
   
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
   /**
     * Decodes a CommandInitializeTestCase message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -53,8 +68,10 @@ object CommandInitializeTestCase extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
   
   /**
     * Encodes the specified CommandInitializeTestCase message. Does not implicitly {@link io.cucumber.messages.CommandInitializeTestCase.verify|verify} messages.
@@ -62,7 +79,12 @@ object CommandInitializeTestCase extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.encode")
+  @js.native
   def encode(message: ICommandInitializeTestCase): Writer = js.native
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.encode")
+  @js.native
   def encode(message: ICommandInitializeTestCase, writer: Writer): Writer = js.native
   
   /**
@@ -71,7 +93,12 @@ object CommandInitializeTestCase extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ICommandInitializeTestCase): Writer = js.native
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ICommandInitializeTestCase, writer: Writer): Writer = js.native
   
   /**
@@ -79,6 +106,9 @@ object CommandInitializeTestCase extends js.Object {
     * @param object Plain object
     * @returns CommandInitializeTestCase
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase = js.native
   
   /**
@@ -87,9 +117,14 @@ object CommandInitializeTestCase extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.toObject")
+  @js.native
   def toObject(
     message: typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase
   ): StringDictionary[js.Any] = js.native
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.toObject")
+  @js.native
   def toObject(
     message: typingsSlinky.cucumberMessages.cucumberMessagesMod.io.cucumber.messages.CommandInitializeTestCase,
     options: IConversionOptions
@@ -100,5 +135,8 @@ object CommandInitializeTestCase extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("cucumber-messages", "messages.CommandInitializeTestCase.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

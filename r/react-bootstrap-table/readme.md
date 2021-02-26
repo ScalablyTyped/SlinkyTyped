@@ -10,9 +10,9 @@ It's a react table for bootstrap
 | ------------------ | :-------------: |
 | Full name          | react-bootstrap-table |
 | Keywords           | react, bootstrap, table, grid, react-component |
-| # releases         | 1 |
-| # dependents       | 57 |
-| # downloads        | 1554885 |
+| # releases         | 0 |
+| # dependents       | 63 |
+| # downloads        | 1430416 |
 | # stars            | 6 |
 
 ## Links

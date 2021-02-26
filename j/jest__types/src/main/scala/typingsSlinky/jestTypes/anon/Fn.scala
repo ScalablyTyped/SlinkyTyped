@@ -5,6 +5,7 @@ import typingsSlinky.jestTypes.circusMod.HookType
 import typingsSlinky.jestTypes.circusMod.SyncEvent
 import typingsSlinky.jestTypes.globalMod.DoneFn
 import typingsSlinky.jestTypes.jestTypesStrings.add_hook
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

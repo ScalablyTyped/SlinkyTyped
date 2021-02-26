@@ -1,5 +1,6 @@
 package typingsSlinky.deezerSdk.DeezerSdk
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.deezerSdk.deezerSdkStrings.POST
   - typingsSlinky.deezerSdk.deezerSdkStrings.DELETE
 */
-trait HttpMethod extends js.Object
+trait HttpMethod extends StObject
 object HttpMethod {
   
   @scala.inline

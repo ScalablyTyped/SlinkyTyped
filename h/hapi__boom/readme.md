@@ -10,9 +10,9 @@ HTTP-friendly error objects
 | ------------------ | :-------------: |
 | Full name          | @hapi/boom |
 | Keywords           | error, http |
-| # releases         | 15 |
-| # dependents       | 223 |
-| # downloads        | 6624272 |
+| # releases         | 18 |
+| # dependents       | 369 |
+| # downloads        | 39829266 |
 | # stars            | 0 |
 
 ## Links

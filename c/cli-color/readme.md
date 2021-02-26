@@ -10,9 +10,9 @@ Colors, formatting and other tools for the console
 | ------------------ | :-------------: |
 | Full name          | cli-color |
 | Keywords           | ansi, color, console, terminal, cli, shell, log, logging, xterm |
-| # releases         | 4 |
-| # dependents       | 1461 |
-| # downloads        | 36589727 |
+| # releases         | 2 |
+| # dependents       | 1623 |
+| # downloads        | 88586623 |
 | # stars            | 57 |
 
 ## Links

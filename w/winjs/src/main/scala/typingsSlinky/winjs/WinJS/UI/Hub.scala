@@ -3,6 +3,7 @@ package typingsSlinky.winjs.WinJS.UI
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.winjs.WinJS.Binding.List
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Creates a hub navigation pattern consisting of sections that can be navigated to. Each section is defined by a HubSection object.
   **/
 @js.native
-trait Hub extends js.Object {
+trait Hub extends StObject {
   
   //#endregion Events
   //#region Methods

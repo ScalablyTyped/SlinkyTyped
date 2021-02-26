@@ -10,10 +10,10 @@ A PDF generation library for Node.js
 | ------------------ | :-------------: |
 | Full name          | pdfkit |
 | Keywords           | pdf, pdf writer, pdf generator, graphics, document, vector |
-| # releases         | 5 |
-| # dependents       | 183 |
-| # downloads        | 8302787 |
-| # stars            | 75 |
+| # releases         | 4 |
+| # dependents       | 237 |
+| # downloads        | 20065326 |
+| # stars            | 76 |
 
 ## Links
 - [Homepage](http://pdfkit.org/)

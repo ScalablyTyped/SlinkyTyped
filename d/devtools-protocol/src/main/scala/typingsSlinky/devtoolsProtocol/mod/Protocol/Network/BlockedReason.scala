@@ -1,6 +1,7 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Network
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.other_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`corp-not-same-origin-after-defaulted-to-same-origin-by-coep`
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`corp-not-same-site`
 */
-trait BlockedReason extends js.Object
+trait BlockedReason extends StObject
 object BlockedReason {
   
   @scala.inline

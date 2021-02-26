@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesDeleteBucketInputMod.DeleteBucketIn
 import typingsSlinky.awsSdkClientS3Node.typesDeleteBucketOutputMod.DeleteBucketOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/DeleteBucketCommand", JSImport.Namespace)
-@js.native
-object deleteBucketCommandMod extends js.Object {
+object deleteBucketCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/DeleteBucketCommand", "DeleteBucketCommand")
   @js.native
   class DeleteBucketCommand protected () extends Command[
           InputTypesUnion, 

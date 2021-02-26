@@ -11,8 +11,8 @@ Unabashedly-barebones memoization library with an aim toward speed
 | Full name          | memize |
 | Keywords           | memoize, memoization, memoisation, cache |
 | # releases         | 2 |
-| # dependents       | 12 |
-| # downloads        | 406883 |
+| # dependents       | 15 |
+| # downloads        | 1045528 |
 | # stars            | 0 |
 
 ## Links

@@ -10,6 +10,7 @@ import typingsSlinky.reactNativeFbsdk.mod.LoginButtonProps
 import typingsSlinky.reactNativeFbsdk.mod.LoginResult
 import typingsSlinky.reactNativeFbsdk.mod.Permissions
 import typingsSlinky.reactNativeFbsdk.mod.TooltipBehaviorIOS
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object LoginButton {
   
   @JSImport("react-native-fbsdk", "LoginButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,10 +42,10 @@ object LoginButton {
     def onLogoutFinished(value: () => Unit): this.type = set("onLogoutFinished", js.Any.fromFunction0(value))
     
     @scala.inline
-    def permissionsVarargs(value: Permissions*): this.type = set("permissions", js.Array(value :_*))
+    def permissions(value: js.Array[Permissions]): this.type = set("permissions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def permissions(value: js.Array[Permissions]): this.type = set("permissions", value.asInstanceOf[js.Any])
+    def permissionsVarargs(value: Permissions*): this.type = set("permissions", js.Array(value :_*))
     
     @scala.inline
     def style(value: ViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
@@ -53,7 +54,7 @@ object LoginButton {
     def tooltipBehaviorIOS(value: TooltipBehaviorIOS): this.type = set("tooltipBehaviorIOS", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: LoginButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: LoginButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: LoginButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

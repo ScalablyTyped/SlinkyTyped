@@ -15,12 +15,13 @@ import typingsSlinky.maximMazurokGapiClientHealthcare.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.Resource
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.UpdateMask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DicomStoresResource extends js.Object {
+trait DicomStoresResource extends StObject {
   
   /** Creates a new DICOM store within the parent dataset. */
   def create(request: Callback): Request[DicomStore] = js.native

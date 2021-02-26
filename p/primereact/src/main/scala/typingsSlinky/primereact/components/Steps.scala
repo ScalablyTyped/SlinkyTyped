@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.IndexItem
 import typingsSlinky.primereact.menuItemMod.MenuItem
 import typingsSlinky.primereact.stepsMod.StepsProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Steps {
   
+  @scala.inline
+  def apply(model: js.Array[MenuItem]): Builder = {
+    val __props = js.Dynamic.literal(model = model.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StepsProps]))
+  }
+  
   @JSImport("primereact/steps", "Steps")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +47,4 @@ object Steps {
   }
   
   def withProps(p: StepsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(model: js.Array[MenuItem]): Builder = {
-    val __props = js.Dynamic.literal(model = model.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StepsProps]))
-  }
 }

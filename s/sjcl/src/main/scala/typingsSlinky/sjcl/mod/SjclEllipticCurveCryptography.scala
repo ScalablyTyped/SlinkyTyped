@@ -1,13 +1,14 @@
 package typingsSlinky.sjcl.mod
 
 import typingsSlinky.sjcl.anon.C192
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // ________________________________________________________________________
 @js.native
-trait SjclEllipticCurveCryptography extends js.Object {
+trait SjclEllipticCurveCryptography extends StObject {
   
   var basicKey: SjclECCBasic = js.native
   

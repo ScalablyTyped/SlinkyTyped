@@ -10,13 +10,14 @@ import typingsSlinky.winrtUwp.Windows.Media.MediaProperties.AudioEncodingPropert
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.audioframecompleted
 import typingsSlinky.winrtUwp.winrtUwpStrings.quantumstarted
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents an audio frame input node. */
 @js.native
-trait AudioFrameInputNode extends js.Object {
+trait AudioFrameInputNode extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

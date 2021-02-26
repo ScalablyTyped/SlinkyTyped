@@ -1,12 +1,13 @@
 package typingsSlinky.aceBuilds.mod.Ace
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SyntaxMode extends js.Object {
+trait SyntaxMode extends StObject {
   
   def autoOutdent(state: js.Any, doc: Document, row: Double): Unit = js.native
   

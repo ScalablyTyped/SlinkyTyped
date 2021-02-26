@@ -1,5 +1,6 @@
 package typingsSlinky.csstype.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.revert
   - typingsSlinky.csstype.csstypeStrings.unset
 */
-trait ResizeProperty extends js.Object
+trait ResizeProperty extends StObject
 object ResizeProperty {
   
   @scala.inline

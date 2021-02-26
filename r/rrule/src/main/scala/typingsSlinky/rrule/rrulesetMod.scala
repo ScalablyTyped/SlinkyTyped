@@ -1,12 +1,23 @@
 package typingsSlinky.rrule
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rrule/dist/esm/src/rruleset", JSImport.Namespace)
-@js.native
-object rrulesetMod extends js.Object {
+object rrulesetMod {
+  
+  @JSImport("rrule/dist/esm/src/rruleset", JSImport.Default)
+  @js.native
+  /**
+    *
+    * @param {Boolean?} noCache
+    *  The same stratagy as RRule on cache, default to false
+    * @constructor
+    */
+  class default () extends RRuleSet {
+    def this(noCache: Boolean) = this()
+  }
   
   @js.native
   trait RRuleSet
@@ -83,16 +94,5 @@ object rrulesetMod extends js.Object {
     def rrules(): js.Array[typingsSlinky.rrule.rruleMod.default | RRuleSet] = js.native
     
     var tzid: js.Any = js.native
-  }
-  
-  @js.native
-  /**
-    *
-    * @param {Boolean?} noCache
-    *  The same stratagy as RRule on cache, default to false
-    * @constructor
-    */
-  class default () extends RRuleSet {
-    def this(noCache: Boolean) = this()
   }
 }

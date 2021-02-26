@@ -2,13 +2,12 @@ package typingsSlinky.rdfExt
 
 import typingsSlinky.rdfExt.anon.Value
 import typingsSlinky.rdfJs.mod.DefaultGraph
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rdf-ext/lib/DefaultGraph", JSImport.Namespace)
-@js.native
-object defaultGraphMod extends js.Object {
+object defaultGraphMod {
   
   @js.native
   trait DefaultGraphExt extends DefaultGraph {

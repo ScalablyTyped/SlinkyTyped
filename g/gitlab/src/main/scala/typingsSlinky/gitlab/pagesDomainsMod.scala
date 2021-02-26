@@ -1,20 +1,22 @@
 package typingsSlinky.gitlab
 
 import typingsSlinky.gitlab.anon.projectIdstringnumberunde
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.Sudo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gitlab/dist/types/core/services/PagesDomains", JSImport.Namespace)
-@js.native
-object pagesDomainsMod extends js.Object {
+object pagesDomainsMod {
   
+  @JSImport("gitlab/dist/types/core/services/PagesDomains", "PagesDomains")
   @js.native
   class PagesDomains () extends BaseService {
+    def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
     
     def all(): js.Promise[GetResponse] = js.native
     def all(hasProjectIdOptions: projectIdstringnumberunde): js.Promise[GetResponse] = js.native

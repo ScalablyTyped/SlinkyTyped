@@ -1,62 +1,90 @@
 package typingsSlinky.imageQ.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("image-q", "distance")
-@js.native
-object distance extends js.Object {
+object distance {
   
+  @JSImport("image-q", "distance.AbstractDistanceCalculator")
   @js.native
   abstract class AbstractDistanceCalculator ()
     extends typingsSlinky.imageQ.distanceMod.AbstractDistanceCalculator
   
+  @JSImport("image-q", "distance.AbstractEuclidean")
   @js.native
   class AbstractEuclidean ()
-    extends typingsSlinky.imageQ.euclideanMod.AbstractEuclidean
+    extends typingsSlinky.imageQ.distanceMod.AbstractEuclidean
   
+  @JSImport("image-q", "distance.AbstractManhattan")
   @js.native
   abstract class AbstractManhattan ()
-    extends typingsSlinky.imageQ.manhattanMod.AbstractManhattan
+    extends typingsSlinky.imageQ.distanceMod.AbstractManhattan
   
+  @JSImport("image-q", "distance.CIE94GraphicArts")
   @js.native
   class CIE94GraphicArts ()
-    extends typingsSlinky.imageQ.cie94Mod.CIE94GraphicArts
+    extends typingsSlinky.imageQ.distanceMod.CIE94GraphicArts
   
+  @JSImport("image-q", "distance.CIE94Textiles")
   @js.native
   class CIE94Textiles ()
-    extends typingsSlinky.imageQ.cie94Mod.CIE94Textiles
+    extends typingsSlinky.imageQ.distanceMod.CIE94Textiles
   
+  @JSImport("image-q", "distance.CIEDE2000")
   @js.native
   class CIEDE2000 ()
     extends typingsSlinky.imageQ.distanceMod.CIEDE2000
   /* static members */
-  @js.native
-  object CIEDE2000 extends js.Object {
+  object CIEDE2000 {
     
-    /* private */ def _calculateRT(ahp: js.Any, aCp: js.Any): js.Any = js.native
+    @JSImport("image-q", "distance.CIEDE2000._calculateRT")
+    @js.native
+    def _calculateRT(ahp: js.Any, aCp: js.Any): js.Any = js.native
     
-    /* private */ def _calculateT(ahp: js.Any): js.Any = js.native
+    @JSImport("image-q", "distance.CIEDE2000._calculateT")
+    @js.native
+    def _calculateT(ahp: js.Any): js.Any = js.native
     
-    /* private */ def _calculate_ahp(C1pC2p: js.Any, h_bar: js.Any, h1p: js.Any, h2p: js.Any): js.Any = js.native
+    @JSImport("image-q", "distance.CIEDE2000._calculate_ahp")
+    @js.native
+    def _calculate_ahp(C1pC2p: js.Any, h_bar: js.Any, h1p: js.Any, h2p: js.Any): js.Any = js.native
     
-    /* private */ def _calculate_dHp(C1pC2p: js.Any, h_bar: js.Any, h2p: js.Any, h1p: js.Any): js.Any = js.native
+    @JSImport("image-q", "distance.CIEDE2000._calculate_dHp")
+    @js.native
+    def _calculate_dHp(C1pC2p: js.Any, h_bar: js.Any, h2p: js.Any, h1p: js.Any): js.Any = js.native
     
-    /* private */ def _calculatehp(b: js.Any, ap: js.Any): js.Any = js.native
+    @JSImport("image-q", "distance.CIEDE2000._calculatehp")
+    @js.native
+    def _calculatehp(b: js.Any, ap: js.Any): js.Any = js.native
     
+    @JSImport("image-q", "distance.CIEDE2000._deg180InRad")
+    @js.native
     val _deg180InRad: js.Any = js.native
     
+    @JSImport("image-q", "distance.CIEDE2000._deg25InRad")
+    @js.native
     val _deg25InRad: js.Any = js.native
     
+    @JSImport("image-q", "distance.CIEDE2000._deg275InRad")
+    @js.native
     val _deg275InRad: js.Any = js.native
     
+    @JSImport("image-q", "distance.CIEDE2000._deg30InRad")
+    @js.native
     val _deg30InRad: js.Any = js.native
     
+    @JSImport("image-q", "distance.CIEDE2000._deg360InRad")
+    @js.native
     val _deg360InRad: js.Any = js.native
     
+    @JSImport("image-q", "distance.CIEDE2000._deg63InRad")
+    @js.native
     val _deg63InRad: js.Any = js.native
     
+    @JSImport("image-q", "distance.CIEDE2000._deg6InRad")
+    @js.native
     val _deg6InRad: js.Any = js.native
     
     /**
@@ -64,40 +92,52 @@ object distance extends js.Object {
       * Max DeltaE: 100
       * Max DeltaA: 255
       */
+    @JSImport("image-q", "distance.CIEDE2000._kA")
+    @js.native
     val _kA: js.Any = js.native
     
+    @JSImport("image-q", "distance.CIEDE2000._pow25to7")
+    @js.native
     val _pow25to7: js.Any = js.native
   }
   
+  @JSImport("image-q", "distance.CMETRIC")
   @js.native
   class CMETRIC ()
-    extends typingsSlinky.imageQ.cmetricMod.CMETRIC
+    extends typingsSlinky.imageQ.distanceMod.CMETRIC
   
+  @JSImport("image-q", "distance.Euclidean")
   @js.native
   class Euclidean ()
-    extends typingsSlinky.imageQ.euclideanMod.Euclidean
+    extends typingsSlinky.imageQ.distanceMod.Euclidean
   
+  @JSImport("image-q", "distance.EuclideanRgbQuantWOAlpha")
   @js.native
   class EuclideanRgbQuantWOAlpha ()
-    extends typingsSlinky.imageQ.euclideanMod.EuclideanRgbQuantWOAlpha
+    extends typingsSlinky.imageQ.distanceMod.EuclideanRgbQuantWOAlpha
   
+  @JSImport("image-q", "distance.EuclideanRgbQuantWithAlpha")
   @js.native
   class EuclideanRgbQuantWithAlpha ()
-    extends typingsSlinky.imageQ.euclideanMod.EuclideanRgbQuantWithAlpha
+    extends typingsSlinky.imageQ.distanceMod.EuclideanRgbQuantWithAlpha
   
+  @JSImport("image-q", "distance.Manhattan")
   @js.native
   class Manhattan ()
-    extends typingsSlinky.imageQ.manhattanMod.Manhattan
+    extends typingsSlinky.imageQ.distanceMod.Manhattan
   
+  @JSImport("image-q", "distance.ManhattanNommyde")
   @js.native
   class ManhattanNommyde ()
-    extends typingsSlinky.imageQ.manhattanMod.ManhattanNommyde
+    extends typingsSlinky.imageQ.distanceMod.ManhattanNommyde
   
+  @JSImport("image-q", "distance.ManhattanSRGB")
   @js.native
   class ManhattanSRGB ()
-    extends typingsSlinky.imageQ.manhattanMod.ManhattanSRGB
+    extends typingsSlinky.imageQ.distanceMod.ManhattanSRGB
   
+  @JSImport("image-q", "distance.PNGQUANT")
   @js.native
   class PNGQUANT ()
-    extends typingsSlinky.imageQ.pngQuantMod.PNGQUANT
+    extends typingsSlinky.imageQ.distanceMod.PNGQUANT
 }

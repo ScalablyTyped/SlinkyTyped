@@ -3,16 +3,16 @@ package typingsSlinky.sipJs
 import typingsSlinky.sipJs.coreMod.IncomingRequestMessage
 import typingsSlinky.sipJs.methodsInfoMod.IncomingInfoRequest
 import typingsSlinky.sipJs.outgoingResponseMod.ResponseOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/api/info", JSImport.Namespace)
-@js.native
-object infoMod extends js.Object {
+object infoMod {
   
+  @JSImport("sip.js/lib/api/info", "Info")
   @js.native
-  class Info protected () extends js.Object {
+  class Info protected () extends StObject {
     /** @internal */
     def this(incomingInfoRequest: IncomingInfoRequest) = this()
     

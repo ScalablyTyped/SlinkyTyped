@@ -1,12 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Sensors
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a barometer reading. */
 @js.native
-trait BarometerReading extends js.Object {
+trait BarometerReading extends StObject {
   
   /** Gets the barometric pressure determined by the barometer sensor. */
   var stationPressureInHectopascals: Double = js.native
@@ -23,24 +24,12 @@ object BarometerReading {
   }
   
   @scala.inline
-  implicit class BarometerReadingOps[Self <: BarometerReading] (val x: Self) extends AnyVal {
+  implicit class BarometerReadingMutableBuilder[Self <: BarometerReading] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setStationPressureInHectopascals(value: Double): Self = StObject.set(x, "stationPressureInHectopascals", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setStationPressureInHectopascals(value: Double): Self = this.set("stationPressureInHectopascals", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTimestamp(value: js.Date): Self = this.set("timestamp", value.asInstanceOf[js.Any])
+    def setTimestamp(value: js.Date): Self = StObject.set(x, "timestamp", value.asInstanceOf[js.Any])
   }
 }

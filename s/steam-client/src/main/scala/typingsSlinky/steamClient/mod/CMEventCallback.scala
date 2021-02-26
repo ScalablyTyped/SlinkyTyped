@@ -3,12 +3,13 @@ package typingsSlinky.steamClient.mod
 import typingsSlinky.node.Buffer
 import typingsSlinky.steamClient.anon.Msg
 import typingsSlinky.steamClient.steamClientBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CMEventCallback extends js.Object {
+trait CMEventCallback extends StObject {
   
   /**
     * Encryption handshake complete.

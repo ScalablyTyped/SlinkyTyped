@@ -1,6 +1,7 @@
 package typingsSlinky.typescriptServices.global.TypeScript
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,12 +17,15 @@ class ContinueStatementSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSGlobal("TypeScript.ContinueStatementSyntax")
-@js.native
-object ContinueStatementSyntax extends js.Object {
+object ContinueStatementSyntax {
   
+  /* static member */
+  @JSGlobal("TypeScript.ContinueStatementSyntax.create")
+  @js.native
   def create(continueKeyword: ISyntaxToken, semicolonToken: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.ContinueStatementSyntax = js.native
   
+  /* static member */
+  @JSGlobal("TypeScript.ContinueStatementSyntax.create1")
+  @js.native
   def create1(): typingsSlinky.typescriptServices.TypeScript.ContinueStatementSyntax = js.native
 }

@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/action/remove-shopping-cart", JSImport.Namespace)
-@js.native
-object removeShoppingCartMod extends js.Object {
+object removeShoppingCartMod {
   
+  @JSImport("material-ui/svg-icons/action/remove-shopping-cart", JSImport.Default)
+  @js.native
+  class default () extends ActionRemoveShoppingCart
+  
+  @JSImport("material-ui/svg-icons/action/remove-shopping-cart", "ActionRemoveShoppingCart")
   @js.native
   class ActionRemoveShoppingCart ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

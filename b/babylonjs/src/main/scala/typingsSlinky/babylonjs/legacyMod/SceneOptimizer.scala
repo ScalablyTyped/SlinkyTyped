@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.legacyMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -56,9 +57,7 @@ class SceneOptimizer protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "SceneOptimizer")
-@js.native
-object SceneOptimizer extends js.Object {
+object SceneOptimizer {
   
   /**
     * Helper function to create a SceneOptimizer with one single line of code
@@ -68,39 +67,55 @@ object SceneOptimizer extends js.Object {
     * @param onFailure defines a callback to call on failure
     * @returns the new SceneOptimizer object
     */
+  @JSImport("babylonjs/Legacy/legacy", "SceneOptimizer.OptimizeAsync")
+  @js.native
   def OptimizeAsync(scene: typingsSlinky.babylonjs.sceneMod.Scene): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizer = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SceneOptimizer.OptimizeAsync")
+  @js.native
   def OptimizeAsync(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     options: js.UndefOr[scala.Nothing],
     onSuccess: js.UndefOr[scala.Nothing],
     onFailure: js.Function0[Unit]
   ): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizer = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SceneOptimizer.OptimizeAsync")
+  @js.native
   def OptimizeAsync(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     options: js.UndefOr[scala.Nothing],
     onSuccess: js.Function0[Unit]
   ): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizer = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SceneOptimizer.OptimizeAsync")
+  @js.native
   def OptimizeAsync(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     options: js.UndefOr[scala.Nothing],
     onSuccess: js.Function0[Unit],
     onFailure: js.Function0[Unit]
   ): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizer = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SceneOptimizer.OptimizeAsync")
+  @js.native
   def OptimizeAsync(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     options: typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizerOptions
   ): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizer = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SceneOptimizer.OptimizeAsync")
+  @js.native
   def OptimizeAsync(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     options: typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizerOptions,
     onSuccess: js.UndefOr[scala.Nothing],
     onFailure: js.Function0[Unit]
   ): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizer = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SceneOptimizer.OptimizeAsync")
+  @js.native
   def OptimizeAsync(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     options: typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizerOptions,
     onSuccess: js.Function0[Unit]
   ): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizer = js.native
+  @JSImport("babylonjs/Legacy/legacy", "SceneOptimizer.OptimizeAsync")
+  @js.native
   def OptimizeAsync(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     options: typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizerOptions,

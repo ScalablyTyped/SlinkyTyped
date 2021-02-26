@@ -2,6 +2,7 @@ package typingsSlinky.grammarkdown.nodesMod
 
 import typingsSlinky.grammarkdown.tokensMod.ProseFragmentLiteralKind
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

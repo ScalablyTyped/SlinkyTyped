@@ -9,15 +9,22 @@ import typingsSlinky.reactNative.mod.TextInputProps
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNativeMaterialDesignSearchbar.mod.SearchBarProps
 import typingsSlinky.reactNativeMaterialDesignSearchbar.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeMaterialDesignSearchbar {
   
+  @scala.inline
+  def apply(height: Double): Builder = {
+    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SearchBarProps]))
+  }
+  
   @JSImport("react-native-material-design-searchbar", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -92,10 +99,4 @@ object ReactNativeMaterialDesignSearchbar {
   }
   
   def withProps(p: SearchBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(height: Double): Builder = {
-    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SearchBarProps]))
-  }
 }

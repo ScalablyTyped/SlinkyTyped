@@ -3,21 +3,12 @@ package typingsSlinky.baseui.components
 import typingsSlinky.baseui.ratingMod.StyledRatingItemProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.styletronReact.mod.StyletronComponentInjectedProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StyledEmoticon {
-  
-  @JSImport("baseui/rating", "StyledEmoticon")
-  @js.native
-  object component extends js.Object
-  
-  def withProps(
-    p: PropsWithChildren[
-      StyledRatingItemProps with StyletronComponentInjectedProps[StyledRatingItemProps]
-    ]
-  ): SharedBuilder_PropsWithChildren_115721362 = new SharedBuilder_PropsWithChildren_115721362(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -31,4 +22,14 @@ object StyledEmoticon {
     StyledRatingItemProps with StyletronComponentInjectedProps[StyledRatingItemProps]
   ]]))
   }
+  
+  @JSImport("baseui/rating", "StyledEmoticon")
+  @js.native
+  val component: js.Object = js.native
+  
+  def withProps(
+    p: PropsWithChildren[
+      StyledRatingItemProps with StyletronComponentInjectedProps[StyledRatingItemProps]
+    ]
+  ): SharedBuilder_PropsWithChildren_115721362 = new SharedBuilder_PropsWithChildren_115721362(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

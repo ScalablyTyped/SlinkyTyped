@@ -2,6 +2,7 @@ package typingsSlinky.mfiles.MFiles
 
 import typingsSlinky.mfiles.mfilesNumbers.`0`
 import typingsSlinky.mfiles.mfilesNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mfiles.mfilesNumbers.`0`
   - typingsSlinky.mfiles.mfilesNumbers.`1`
 */
-trait MFVaultConnectionTestResult extends js.Object
+trait MFVaultConnectionTestResult extends StObject
 object MFVaultConnectionTestResult {
   
   @scala.inline

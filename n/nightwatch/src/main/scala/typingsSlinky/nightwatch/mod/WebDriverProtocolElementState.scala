@@ -1,12 +1,13 @@
 package typingsSlinky.nightwatch.mod
 
 import typingsSlinky.nightwatch.anon.Height
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebDriverProtocolElementState extends js.Object {
+trait WebDriverProtocolElementState extends StObject {
   
   /**
     * Get the value of an element's attribute.

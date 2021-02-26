@@ -10,9 +10,9 @@ Markdown-it - modern pluggable markdown parser.
 | ------------------ | :-------------: |
 | Full name          | markdown-it |
 | Keywords           | markdown, parser, commonmark, markdown-it, markdown-it-plugin |
-| # releases         | 7 |
-| # dependents       | 1485 |
-| # downloads        | 35355893 |
+| # releases         | 12 |
+| # dependents       | 2010 |
+| # downloads        | 73071199 |
 | # stars            | 81 |
 
 ## Links

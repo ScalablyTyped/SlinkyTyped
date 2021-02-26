@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.managedApps
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked
 */
-trait ManagedAppClipboardSharingLevel extends js.Object
+trait ManagedAppClipboardSharingLevel extends StObject
 object ManagedAppClipboardSharingLevel {
   
   @scala.inline

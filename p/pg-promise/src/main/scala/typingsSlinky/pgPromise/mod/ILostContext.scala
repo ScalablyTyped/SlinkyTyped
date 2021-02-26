@@ -1,12 +1,13 @@
 package typingsSlinky.pgPromise.mod
 
 import typingsSlinky.pgPromise.pgSubsetMod.IClient
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ILostContext[C /* <: IClient */] extends js.Object {
+trait ILostContext[C /* <: IClient */] extends StObject {
   
   var client: C = js.native
   
@@ -25,30 +26,18 @@ object ILostContext {
   }
   
   @scala.inline
-  implicit class ILostContextOps[Self <: ILostContext[_], C /* <: IClient */] (val x: Self with ILostContext[C]) extends AnyVal {
+  implicit class ILostContextMutableBuilder[Self <: ILostContext[_], C /* <: IClient */] (val x: Self with ILostContext[C]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setClient(value: C): Self = StObject.set(x, "client", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setCn(value: String): Self = StObject.set(x, "cn", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDc(value: js.Any): Self = StObject.set(x, "dc", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClient(value: C): Self = this.set("client", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setCn(value: String): Self = this.set("cn", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDc(value: js.Any): Self = this.set("dc", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStart(value: js.Date): Self = this.set("start", value.asInstanceOf[js.Any])
+    def setStart(value: js.Date): Self = StObject.set(x, "start", value.asInstanceOf[js.Any])
   }
 }

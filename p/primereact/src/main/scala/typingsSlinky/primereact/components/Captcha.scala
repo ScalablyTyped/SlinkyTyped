@@ -3,6 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.captchaCaptchaMod.CaptchaProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ object Captcha {
   
   @JSImport("primereact/captcha", "Captcha")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -46,7 +47,7 @@ object Captcha {
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CaptchaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Captcha.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CaptchaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

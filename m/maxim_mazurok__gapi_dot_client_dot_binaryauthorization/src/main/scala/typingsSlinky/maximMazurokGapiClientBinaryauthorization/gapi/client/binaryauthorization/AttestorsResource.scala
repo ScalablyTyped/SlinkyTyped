@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientBinaryauthorization.anon.Key
 import typingsSlinky.maximMazurokGapiClientBinaryauthorization.anon.Name
 import typingsSlinky.maximMazurokGapiClientBinaryauthorization.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientBinaryauthorization.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AttestorsResource extends js.Object {
+trait AttestorsResource extends StObject {
   
   /**
     * Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the

@@ -1,11 +1,12 @@
 package typingsSlinky.quixote
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Quixote extends js.Object {
+trait Quixote extends StObject {
   
   // Create a test iframe. This is a slow operation, so once you have a frame, it's best to use QFrame.reset() on it rather than creating a new frame for each test
   def createFrame(
@@ -24,23 +25,11 @@ object Quixote {
   }
   
   @scala.inline
-  implicit class QuixoteOps[Self <: Quixote] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+  implicit class QuixoteMutableBuilder[Self <: Quixote] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setCreateFrame(
       value: (QuixoteFrameOptions, js.Function2[/* err */ js.Error, /* loadedFrame */ QFrame, Unit]) => QFrame
-    ): Self = this.set("createFrame", js.Any.fromFunction2(value))
+    ): Self = StObject.set(x, "createFrame", js.Any.fromFunction2(value))
   }
 }

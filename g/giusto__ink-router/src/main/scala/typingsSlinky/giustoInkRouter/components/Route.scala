@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.giustoInkRouter.anon.Key
 import typingsSlinky.giustoInkRouter.mod.RouteProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Route {
   
+  @scala.inline
+  def apply(component: ReactComponentClass[_], path: String): Builder = {
+    val __props = js.Dynamic.literal(component = component.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RouteProps]))
+  }
+  
   @JSImport("@giusto/ink-router", "Route")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -28,10 +35,4 @@ object Route {
   }
   
   def withProps(p: RouteProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(component: ReactComponentClass[_], path: String): Builder = {
-    val __props = js.Dynamic.literal(component = component.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RouteProps]))
-  }
 }

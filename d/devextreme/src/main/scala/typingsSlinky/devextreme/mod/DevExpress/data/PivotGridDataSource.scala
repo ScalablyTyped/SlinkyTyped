@@ -3,12 +3,13 @@ package typingsSlinky.devextreme.mod.DevExpress.data
 import typingsSlinky.devextreme.anon.ColumnPath
 import typingsSlinky.devextreme.mod.global.JQueryPromise
 import typingsSlinky.devextreme.mod.global.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PivotGridDataSource extends js.Object {
+trait PivotGridDataSource extends StObject {
   
   def collapseAll(id: String): Unit = js.native
   /**

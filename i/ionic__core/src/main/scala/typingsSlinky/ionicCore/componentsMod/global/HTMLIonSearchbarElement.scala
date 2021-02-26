@@ -1,6 +1,5 @@
 package typingsSlinky.ionicCore.componentsMod.global
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.HTMLInputElement
 import typingsSlinky.ionicCore.ionicCoreStrings.always
 import typingsSlinky.ionicCore.ionicCoreStrings.decimal
@@ -28,6 +27,7 @@ import typingsSlinky.ionicCore.ionicCoreStrings.url
 import typingsSlinky.ionicCore.mod.AutocompleteTypes
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.HTMLStencilElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -131,6 +131,3 @@ trait HTMLIonSearchbarElement extends HTMLStencilElement {
     */
   var value: js.UndefOr[String | Null] = js.native
 }
-@JSGlobal("HTMLIonSearchbarElement")
-@js.native
-object HTMLIonSearchbarElement extends Instantiable0[HTMLIonSearchbarElement]

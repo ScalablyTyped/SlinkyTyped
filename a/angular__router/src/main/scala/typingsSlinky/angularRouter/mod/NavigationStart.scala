@@ -4,6 +4,7 @@ import typingsSlinky.angularRouter.angularRouterStrings.hashchange
 import typingsSlinky.angularRouter.angularRouterStrings.imperative
 import typingsSlinky.angularRouter.angularRouterStrings.popstate
 import typingsSlinky.angularRouter.anon.Dictk
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

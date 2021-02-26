@@ -11,8 +11,8 @@ SES transport for Nodemailer
 | Full name          | nodemailer-ses-transport |
 | Keywords           | SES, Nodemailer |
 | # releases         | 0 |
-| # dependents       | 57 |
-| # downloads        | 920768 |
+| # dependents       | 59 |
+| # downloads        | 1264594 |
 | # stars            | 8 |
 
 ## Links

@@ -10,9 +10,9 @@ A high-level browser automation library.
 | ------------------ | :-------------: |
 | Full name          | nightmare |
 | Keywords           | nightmare, electron |
-| # releases         | 4 |
-| # dependents       | 283 |
-| # downloads        | 1113308 |
+| # releases         | 2 |
+| # dependents       | 285 |
+| # downloads        | 756834 |
 | # stars            | 79 |
 
 ## Links

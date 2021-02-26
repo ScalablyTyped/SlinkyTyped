@@ -75,6 +75,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -83,12 +84,15 @@ object ActivityItem {
   
   @JSImport("office-ui-fabric-react", "ActivityItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.ActivityItem] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -106,28 +110,28 @@ object ActivityItem {
     def action(value: String): this.type = set("action", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def activityDescriptionReactElement(value: ReactElement): this.type = set("activityDescription", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def activityDescriptionVarargs(value: ReactElement*): this.type = set("activityDescription", js.Array(value :_*))
-    
-    @scala.inline
     def activityDescription(value: js.Array[ReactElement] | ReactElement): this.type = set("activityDescription", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def activityDescriptionReactElement(value: ReactElement): this.type = set("activityDescription", value.asInstanceOf[js.Any])
     
     @scala.inline
     def activityDescriptionText(value: String): this.type = set("activityDescriptionText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def activityIconReactElement(value: ReactElement): this.type = set("activityIcon", value.asInstanceOf[js.Any])
+    def activityDescriptionVarargs(value: ReactElement*): this.type = set("activityDescription", js.Array(value :_*))
     
     @scala.inline
     def activityIcon(value: ReactElement): this.type = set("activityIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def activityPersonasVarargs(value: IPersonaSharedProps*): this.type = set("activityPersonas", js.Array(value :_*))
+    def activityIconReactElement(value: ReactElement): this.type = set("activityIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def activityPersonas(value: js.Array[IPersonaSharedProps]): this.type = set("activityPersonas", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def activityPersonasVarargs(value: IPersonaSharedProps*): this.type = set("activityPersonas", js.Array(value :_*))
     
     @scala.inline
     def allowFullScreen(value: Boolean): this.type = set("allowFullScreen", value.asInstanceOf[js.Any])
@@ -357,13 +361,13 @@ object ActivityItem {
     def commentText(value: String): this.type = set("commentText", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def comments(value: js.Array[ReactElement] | ReactElement): this.type = set("comments", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def commentsReactElement(value: ReactElement): this.type = set("comments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def commentsVarargs(value: ReactElement*): this.type = set("comments", js.Array(value :_*))
-    
-    @scala.inline
-    def comments(value: js.Array[ReactElement] | ReactElement): this.type = set("comments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
@@ -396,16 +400,13 @@ object ActivityItem {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -965,13 +966,13 @@ object ActivityItem {
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def timeStamp(value: String | js.Array[ReactElement] | ReactElement): this.type = set("timeStamp", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def timeStampReactElement(value: ReactElement): this.type = set("timeStamp", value.asInstanceOf[js.Any])
     
     @scala.inline
     def timeStampVarargs(value: ReactElement*): this.type = set("timeStamp", js.Array(value :_*))
-    
-    @scala.inline
-    def timeStamp(value: String | js.Array[ReactElement] | ReactElement): this.type = set("timeStamp", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -992,10 +993,10 @@ object ActivityItem {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -1010,7 +1011,7 @@ object ActivityItem {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IActivityItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ActivityItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IActivityItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

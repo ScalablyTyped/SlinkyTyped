@@ -11,15 +11,22 @@ import typingsSlinky.ionicCore.componentsMod.global.HTMLIonAlertElement
 import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicReact.anon.AlertOptionsReactControll
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IonAlert {
   
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AlertOptionsReactControll]))
+  }
+  
   @JSImport("@ionic/react", "IonAlert")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,16 +40,16 @@ object IonAlert {
     def backdropDismiss(value: Boolean): this.type = set("backdropDismiss", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttonsVarargs(value: (AlertButton | String)*): this.type = set("buttons", js.Array(value :_*))
-    
-    @scala.inline
     def buttons(value: js.Array[AlertButton | String]): this.type = set("buttons", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cssClassVarargs(value: String*): this.type = set("cssClass", js.Array(value :_*))
+    def buttonsVarargs(value: (AlertButton | String)*): this.type = set("buttons", js.Array(value :_*))
     
     @scala.inline
     def cssClass(value: String | js.Array[String]): this.type = set("cssClass", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def cssClassVarargs(value: String*): this.type = set("cssClass", js.Array(value :_*))
     
     @scala.inline
     def enterAnimation(value: (/* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => Animation): this.type = set("enterAnimation", js.Any.fromFunction2(value))
@@ -57,10 +64,10 @@ object IonAlert {
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputsVarargs(value: AlertInput*): this.type = set("inputs", js.Array(value :_*))
+    def inputs(value: js.Array[AlertInput]): this.type = set("inputs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputs(value: js.Array[AlertInput]): this.type = set("inputs", value.asInstanceOf[js.Any])
+    def inputsVarargs(value: AlertInput*): this.type = set("inputs", js.Array(value :_*))
     
     @scala.inline
     def keyboardClose(value: Boolean): this.type = set("keyboardClose", value.asInstanceOf[js.Any])
@@ -94,10 +101,4 @@ object IonAlert {
   }
   
   def withProps(p: AlertOptionsReactControll): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(isOpen: Boolean): Builder = {
-    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AlertOptionsReactControll]))
-  }
 }

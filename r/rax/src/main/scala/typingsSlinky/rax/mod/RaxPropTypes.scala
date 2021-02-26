@@ -16,12 +16,13 @@ import typingsSlinky.rax.anon.FnCallType
 import typingsSlinky.rax.anon.FnCallTypes
 import typingsSlinky.std.NonNullable
 import typingsSlinky.std.Required
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RaxPropTypes extends js.Object {
+trait RaxPropTypes extends StObject {
   
   def any(
     props: StringDictionary[js.Any],

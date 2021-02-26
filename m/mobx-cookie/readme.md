@@ -12,7 +12,7 @@ Syncs a cookie's value with a MobX observable, allowing observers to react to it
 | Keywords           | - |
 | # releases         | 7 |
 | # dependents       | 0 |
-| # downloads        | 27449 |
+| # downloads        | 50657 |
 | # stars            | 0 |
 
 ## Links

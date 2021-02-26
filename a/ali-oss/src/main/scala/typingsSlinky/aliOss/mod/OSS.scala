@@ -12,12 +12,13 @@ import typingsSlinky.aliOss.anon.ResRules
 import typingsSlinky.aliOss.anon.Rules
 import typingsSlinky.aliOss.anon.SourceBucketName
 import typingsSlinky.aliOss.anon.Timeout
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OSS extends js.Object {
+trait OSS extends StObject {
   
   /**
     * Abort a multipart upload for object.

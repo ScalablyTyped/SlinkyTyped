@@ -6,13 +6,14 @@ import typingsSlinky.datejs.sugarpak.IDatePartComparer
 import typingsSlinky.datejs.sugarpak.IOrientation
 import typingsSlinky.datejs.sugarpak.IPredicate
 import typingsSlinky.datejs.sugarpak.ITimeLiteral
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** DateJS Public Instance Methods */
 @js.native
-trait Date extends js.Object {
+trait Date extends StObject {
   
   /** Adds(or subtracts) to the value of the year, month, day, hour, minute, second, millisecond of the date instance using given configuration object. Positive and Negative values allowed. */
   def add(): Date = js.native

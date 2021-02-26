@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,19 +35,27 @@ class UriToLinesMapping () extends IUriToLinesMapping {
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-/* static members */
-@JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping")
-@js.native
-object UriToLinesMapping extends js.Object {
+object UriToLinesMapping {
   
   /**
     * Creates a new UriToLinesMapping instance using the specified properties.
     * @param [properties] Properties to set
     * @returns UriToLinesMapping instance
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.create")
+  @js.native
   def create(): UriToLinesMapping = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.create")
+  @js.native
   def create(properties: IUriToLinesMapping): UriToLinesMapping = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): UriToLinesMapping = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): UriToLinesMapping = js.native
   /**
     * Decodes an UriToLinesMapping message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -55,11 +64,17 @@ object UriToLinesMapping extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.decode")
+  @js.native
   def decode(reader: Reader): UriToLinesMapping = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.decode")
+  @js.native
   def decode(reader: Reader, length: Double): UriToLinesMapping = js.native
-  def decode(reader: js.typedarray.Uint8Array): UriToLinesMapping = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): UriToLinesMapping = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): UriToLinesMapping = js.native
   /**
     * Decodes an UriToLinesMapping message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -67,8 +82,10 @@ object UriToLinesMapping extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): UriToLinesMapping = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): UriToLinesMapping = js.native
   
   /**
     * Encodes the specified UriToLinesMapping message. Does not implicitly {@link io.cucumber.messages.UriToLinesMapping.verify|verify} messages.
@@ -76,7 +93,12 @@ object UriToLinesMapping extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.encode")
+  @js.native
   def encode(message: IUriToLinesMapping): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.encode")
+  @js.native
   def encode(message: IUriToLinesMapping, writer: Writer): Writer = js.native
   
   /**
@@ -85,7 +107,12 @@ object UriToLinesMapping extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IUriToLinesMapping): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IUriToLinesMapping, writer: Writer): Writer = js.native
   
   /**
@@ -93,6 +120,9 @@ object UriToLinesMapping extends js.Object {
     * @param object Plain object
     * @returns UriToLinesMapping
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): UriToLinesMapping = js.native
   
   /**
@@ -101,7 +131,12 @@ object UriToLinesMapping extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.toObject")
+  @js.native
   def toObject(message: UriToLinesMapping): StringDictionary[js.Any] = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.toObject")
+  @js.native
   def toObject(message: UriToLinesMapping, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -109,5 +144,8 @@ object UriToLinesMapping extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.UriToLinesMapping.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

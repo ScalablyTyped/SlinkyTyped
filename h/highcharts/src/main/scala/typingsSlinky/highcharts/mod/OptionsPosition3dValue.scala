@@ -1,6 +1,7 @@
 package typingsSlinky.highcharts.mod
 
 import typingsSlinky.highcharts.highchartsStrings.chart_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.offset
   - typingsSlinky.highcharts.highchartsStrings.ortho
 */
-trait OptionsPosition3dValue extends js.Object
+trait OptionsPosition3dValue extends StObject
 object OptionsPosition3dValue {
   
   @scala.inline

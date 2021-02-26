@@ -10,9 +10,9 @@ Output wrapper is a library to write output file to outputpath.
 | ------------------ | :-------------: |
 | Full name          | broccoli-output-wrapper |
 | Keywords           | - |
-| # releases         | 10 |
-| # dependents       | 1 |
-| # downloads        | 135941 |
+| # releases         | 14 |
+| # dependents       | 3 |
+| # downloads        | 8673075 |
 | # stars            | 0 |
 
 ## Links

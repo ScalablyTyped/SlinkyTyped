@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import typingsSlinky.babylonjs.ispritesMod.ISpriteJSONAtlas
 import typingsSlinky.babylonjs.spriteMapMod.ISpriteMapOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

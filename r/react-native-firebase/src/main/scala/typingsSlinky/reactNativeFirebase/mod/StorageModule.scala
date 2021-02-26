@@ -2,13 +2,14 @@ package typingsSlinky.reactNativeFirebase.mod
 
 import typingsSlinky.reactNativeFirebase.anon.CACHESDIRECTORYPATH
 import typingsSlinky.reactNativeFirebase.mod.RNFirebase.storage.Storage
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined react-native-firebase.react-native-firebase.FirebaseModuleAndStatics<react-native-firebase.react-native-firebase.RNFirebase.storage.Storage, react-native-firebase.react-native-firebase.RNFirebase.storage.StorageStatics> */
 @js.native
-trait StorageModule extends js.Object {
+trait StorageModule extends StObject {
   
   def apply(): Storage = js.native
   

@@ -83,15 +83,22 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.vertical
 import typingsSlinky.reactMdForm.reactMdFormStrings.yes
 import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
 import typingsSlinky.reactTransitionGroup.csstransitionMod.CSSTransitionClassNames
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Radio {
   
+  @scala.inline
+  def apply(id: String, value: js.Array[String] | String | Double): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RadioProps with RefAttributes[HTMLInputElement]]))
+  }
+  
   @JSImport("@react-md/form", "Radio")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -302,10 +309,10 @@ object Radio {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -359,9 +366,6 @@ object Radio {
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -369,6 +373,9 @@ object Radio {
     
     @scala.inline
     def iconClassName(value: String): this.type = set("iconClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconStyle(value: CSSProperties): this.type = set("iconStyle", value.asInstanceOf[js.Any])
@@ -407,9 +414,6 @@ object Radio {
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -417,6 +421,9 @@ object Radio {
     
     @scala.inline
     def labelDisabled(value: Boolean): this.type = set("labelDisabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelStyle(value: CSSProperties): this.type = set("labelStyle", value.asInstanceOf[js.Any])
@@ -774,10 +781,4 @@ object Radio {
   }
   
   def withProps(p: RadioProps with RefAttributes[HTMLInputElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String, value: js.Array[String] | String | Double): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RadioProps with RefAttributes[HTMLInputElement]]))
-  }
 }

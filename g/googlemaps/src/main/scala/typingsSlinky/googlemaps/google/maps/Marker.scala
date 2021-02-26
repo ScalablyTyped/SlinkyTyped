@@ -22,6 +22,7 @@ import typingsSlinky.googlemaps.googlemapsStrings.shape_changed
 import typingsSlinky.googlemaps.googlemapsStrings.title_changed
 import typingsSlinky.googlemaps.googlemapsStrings.visible_changed
 import typingsSlinky.googlemaps.googlemapsStrings.zindex_changed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

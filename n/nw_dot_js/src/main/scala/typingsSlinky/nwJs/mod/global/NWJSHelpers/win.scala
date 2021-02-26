@@ -22,6 +22,7 @@ import typingsSlinky.nwJs.nwJsStrings.navigation
 import typingsSlinky.nwJs.nwJsStrings.resize
 import typingsSlinky.nwJs.nwJsStrings.restore
 import typingsSlinky.nwJs.nwJsStrings.zoom
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

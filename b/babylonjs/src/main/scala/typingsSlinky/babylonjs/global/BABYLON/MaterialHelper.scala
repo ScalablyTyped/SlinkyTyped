@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.IEffectCreationOptions
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.LightmapMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,9 +13,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class MaterialHelper ()
   extends typingsSlinky.babylonjs.BABYLON.MaterialHelper
 /* static members */
-@JSGlobal("BABYLON.MaterialHelper")
-@js.native
-object MaterialHelper extends js.Object {
+object MaterialHelper {
+  
+  @JSGlobal("BABYLON.MaterialHelper")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Binds the bones information from the mesh to the effect.
@@ -22,25 +25,41 @@ object MaterialHelper extends js.Object {
     * @param effect The effect we are binding the data to
     * @param prePassConfiguration Configuration for the prepass, in case prepass is activated
     */
+  @JSGlobal("BABYLON.MaterialHelper.BindBonesParameters")
+  @js.native
   def BindBonesParameters(): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindBonesParameters")
+  @js.native
   def BindBonesParameters(
     mesh: js.UndefOr[scala.Nothing],
     effect: js.UndefOr[scala.Nothing],
     prePassConfiguration: typingsSlinky.babylonjs.BABYLON.PrePassConfiguration
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindBonesParameters")
+  @js.native
   def BindBonesParameters(mesh: js.UndefOr[scala.Nothing], effect: typingsSlinky.babylonjs.BABYLON.Effect): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindBonesParameters")
+  @js.native
   def BindBonesParameters(
     mesh: js.UndefOr[scala.Nothing],
     effect: typingsSlinky.babylonjs.BABYLON.Effect,
     prePassConfiguration: typingsSlinky.babylonjs.BABYLON.PrePassConfiguration
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindBonesParameters")
+  @js.native
   def BindBonesParameters(mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindBonesParameters")
+  @js.native
   def BindBonesParameters(
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     effect: js.UndefOr[scala.Nothing],
     prePassConfiguration: typingsSlinky.babylonjs.BABYLON.PrePassConfiguration
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindBonesParameters")
+  @js.native
   def BindBonesParameters(mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh, effect: typingsSlinky.babylonjs.BABYLON.Effect): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindBonesParameters")
+  @js.native
   def BindBonesParameters(
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     effect: typingsSlinky.babylonjs.BABYLON.Effect,
@@ -52,6 +71,8 @@ object MaterialHelper extends js.Object {
     * @param scene The scene the clip plane information are extracted from
     * @param effect The effect we are binding the data to
     */
+  @JSGlobal("BABYLON.MaterialHelper.BindClipPlane")
+  @js.native
   def BindClipPlane(effect: typingsSlinky.babylonjs.BABYLON.Effect, scene: typingsSlinky.babylonjs.BABYLON.Scene): Unit = js.native
   
   /**
@@ -60,7 +81,11 @@ object MaterialHelper extends js.Object {
     * @param scene The scene the eyes position is used from
     * @param variableName name of the shader variable that will hold the eye position
     */
+  @JSGlobal("BABYLON.MaterialHelper.BindEyePosition")
+  @js.native
   def BindEyePosition(effect: typingsSlinky.babylonjs.BABYLON.Effect, scene: typingsSlinky.babylonjs.BABYLON.Scene): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindEyePosition")
+  @js.native
   def BindEyePosition(
     effect: typingsSlinky.babylonjs.BABYLON.Effect,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
@@ -74,11 +99,15 @@ object MaterialHelper extends js.Object {
     * @param effect The effect we are binding the data to
     * @param linearSpace Defines if the fog effect is applied in linear space
     */
+  @JSGlobal("BABYLON.MaterialHelper.BindFogParameters")
+  @js.native
   def BindFogParameters(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     effect: typingsSlinky.babylonjs.BABYLON.Effect
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindFogParameters")
+  @js.native
   def BindFogParameters(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
@@ -95,6 +124,8 @@ object MaterialHelper extends js.Object {
     * @param useSpecular Defines if specular is supported
     * @param rebuildInParallel Specifies whether the shader is rebuilding in parallel
     */
+  @JSGlobal("BABYLON.MaterialHelper.BindLight")
+  @js.native
   def BindLight(
     light: typingsSlinky.babylonjs.BABYLON.Light,
     lightIndex: Double,
@@ -102,6 +133,8 @@ object MaterialHelper extends js.Object {
     effect: typingsSlinky.babylonjs.BABYLON.Effect,
     useSpecular: Boolean
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindLight")
+  @js.native
   def BindLight(
     light: typingsSlinky.babylonjs.BABYLON.Light,
     lightIndex: Double,
@@ -117,6 +150,8 @@ object MaterialHelper extends js.Object {
     * @param effect The effect we are binding the data to
     * @param lightIndex The light index in the effect used to render
     */
+  @JSGlobal("BABYLON.MaterialHelper.BindLightProperties")
+  @js.native
   def BindLightProperties(
     light: typingsSlinky.babylonjs.BABYLON.Light,
     effect: typingsSlinky.babylonjs.BABYLON.Effect,
@@ -132,12 +167,16 @@ object MaterialHelper extends js.Object {
     * @param maxSimultaneousLights The maximum number of light that can be bound to the effect
     * @param rebuildInParallel Specifies whether the shader is rebuilding in parallel
     */
+  @JSGlobal("BABYLON.MaterialHelper.BindLights")
+  @js.native
   def BindLights(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     effect: typingsSlinky.babylonjs.BABYLON.Effect,
     defines: js.Any
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindLights")
+  @js.native
   def BindLights(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
@@ -146,6 +185,8 @@ object MaterialHelper extends js.Object {
     maxSimultaneousLights: js.UndefOr[scala.Nothing],
     rebuildInParallel: Boolean
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindLights")
+  @js.native
   def BindLights(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
@@ -153,6 +194,8 @@ object MaterialHelper extends js.Object {
     defines: js.Any,
     maxSimultaneousLights: Double
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.BindLights")
+  @js.native
   def BindLights(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
@@ -168,6 +211,8 @@ object MaterialHelper extends js.Object {
     * @param effect The effect we are binding the data to
     * @param scene The scene we are willing to render with logarithmic scale for
     */
+  @JSGlobal("BABYLON.MaterialHelper.BindLogDepth")
+  @js.native
   def BindLogDepth(
     defines: js.Any,
     effect: typingsSlinky.babylonjs.BABYLON.Effect,
@@ -179,6 +224,8 @@ object MaterialHelper extends js.Object {
     * @param abstractMesh The mesh we are binding the information to render
     * @param effect The effect we are binding the data to
     */
+  @JSGlobal("BABYLON.MaterialHelper.BindMorphTargetParameters")
+  @js.native
   def BindMorphTargetParameters(
     abstractMesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     effect: typingsSlinky.babylonjs.BABYLON.Effect
@@ -190,6 +237,8 @@ object MaterialHelper extends js.Object {
     * @param uniformBuffer The uniform buffer receivin the data
     * @param key The channel key "diffuse", "specular"... used in the shader
     */
+  @JSGlobal("BABYLON.MaterialHelper.BindTextureMatrix")
+  @js.native
   def BindTextureMatrix(
     texture: typingsSlinky.babylonjs.BABYLON.BaseTexture,
     uniformBuffer: typingsSlinky.babylonjs.BABYLON.UniformBuffer,
@@ -202,6 +251,8 @@ object MaterialHelper extends js.Object {
     * @param scene defines the hosting scene
     * @returns true if fog must be enabled
     */
+  @JSGlobal("BABYLON.MaterialHelper.GetFogState")
+  @js.native
   def GetFogState(mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh, scene: typingsSlinky.babylonjs.BABYLON.Scene): Boolean = js.native
   
   /**
@@ -212,18 +263,26 @@ object MaterialHelper extends js.Object {
     * @param rank the current rank of the Effect
     * @returns The newly affected rank
     */
+  @JSGlobal("BABYLON.MaterialHelper.HandleFallbacksForShadows")
+  @js.native
   def HandleFallbacksForShadows(defines: js.Any, fallbacks: typingsSlinky.babylonjs.BABYLON.EffectFallbacks): Double = js.native
+  @JSGlobal("BABYLON.MaterialHelper.HandleFallbacksForShadows")
+  @js.native
   def HandleFallbacksForShadows(
     defines: js.Any,
     fallbacks: typingsSlinky.babylonjs.BABYLON.EffectFallbacks,
     maxSimultaneousLights: js.UndefOr[scala.Nothing],
     rank: Double
   ): Double = js.native
+  @JSGlobal("BABYLON.MaterialHelper.HandleFallbacksForShadows")
+  @js.native
   def HandleFallbacksForShadows(
     defines: js.Any,
     fallbacks: typingsSlinky.babylonjs.BABYLON.EffectFallbacks,
     maxSimultaneousLights: Double
   ): Double = js.native
+  @JSGlobal("BABYLON.MaterialHelper.HandleFallbacksForShadows")
+  @js.native
   def HandleFallbacksForShadows(
     defines: js.Any,
     fallbacks: typingsSlinky.babylonjs.BABYLON.EffectFallbacks,
@@ -238,6 +297,8 @@ object MaterialHelper extends js.Object {
     * @param defines The current Defines of the effect
     * @param fallbacks The current efffect fallback strategy
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareAttributesForBones")
+  @js.native
   def PrepareAttributesForBones(
     attribs: js.Array[String],
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
@@ -250,6 +311,8 @@ object MaterialHelper extends js.Object {
     * @param attribs The current list of supported attribs
     * @param defines The current MaterialDefines of the effect
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareAttributesForInstances")
+  @js.native
   def PrepareAttributesForInstances(attribs: js.Array[String], defines: typingsSlinky.babylonjs.BABYLON.MaterialDefines): Unit = js.native
   
   /**
@@ -258,6 +321,8 @@ object MaterialHelper extends js.Object {
     * @param mesh The mesh to prepare the morph targets attributes for
     * @param defines The current Defines of the effect
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareAttributesForMorphTargets")
+  @js.native
   def PrepareAttributesForMorphTargets(attribs: js.Array[String], mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh, defines: js.Any): Unit = js.native
   
   /**
@@ -266,6 +331,8 @@ object MaterialHelper extends js.Object {
     * @param mesh The mesh to prepare the morph targets attributes for
     * @param influencers The number of influencers
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareAttributesForMorphTargetsInfluencers")
+  @js.native
   def PrepareAttributesForMorphTargetsInfluencers(attribs: js.Array[String], mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh, influencers: Double): Unit = js.native
   
   /**
@@ -278,12 +345,16 @@ object MaterialHelper extends js.Object {
     * @param useVertexAlpha Precise whether vertex alpha should be used or not (override mesh info)
     * @returns false if defines are considered not dirty and have not been checked
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForAttributes")
+  @js.native
   def PrepareDefinesForAttributes(
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     defines: js.Any,
     useVertexColor: Boolean,
     useBones: Boolean
   ): Boolean = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForAttributes")
+  @js.native
   def PrepareDefinesForAttributes(
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     defines: js.Any,
@@ -292,6 +363,8 @@ object MaterialHelper extends js.Object {
     useMorphTargets: js.UndefOr[scala.Nothing],
     useVertexAlpha: Boolean
   ): Boolean = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForAttributes")
+  @js.native
   def PrepareDefinesForAttributes(
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     defines: js.Any,
@@ -299,6 +372,8 @@ object MaterialHelper extends js.Object {
     useBones: Boolean,
     useMorphTargets: Boolean
   ): Boolean = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForAttributes")
+  @js.native
   def PrepareDefinesForAttributes(
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     defines: js.Any,
@@ -313,6 +388,8 @@ object MaterialHelper extends js.Object {
     * @param mesh The mesh containing the geometry data we will draw
     * @param defines The defines to update
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForBones")
+  @js.native
   def PrepareDefinesForBones(mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh, defines: js.Any): Unit = js.native
   
   /**
@@ -325,12 +402,16 @@ object MaterialHelper extends js.Object {
     * @param useInstances defines if instances have to be turned on
     * @param useThinInstances defines if thin instances have to be turned on
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForFrameBoundValues")
+  @js.native
   def PrepareDefinesForFrameBoundValues(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     engine: typingsSlinky.babylonjs.BABYLON.Engine,
     defines: js.Any,
     useInstances: Boolean
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForFrameBoundValues")
+  @js.native
   def PrepareDefinesForFrameBoundValues(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     engine: typingsSlinky.babylonjs.BABYLON.Engine,
@@ -339,6 +420,8 @@ object MaterialHelper extends js.Object {
     useClipPlane: js.UndefOr[Nullable[Boolean]],
     useThinInstances: Boolean
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForFrameBoundValues")
+  @js.native
   def PrepareDefinesForFrameBoundValues(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     engine: typingsSlinky.babylonjs.BABYLON.Engine,
@@ -357,6 +440,8 @@ object MaterialHelper extends js.Object {
     * @param specularSupported Specifies whether specular is supported or not (override lights data)
     * @param state Defines the current state regarding what is needed (normals, etc...)
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForLight")
+  @js.native
   def PrepareDefinesForLight(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
@@ -377,12 +462,16 @@ object MaterialHelper extends js.Object {
     * @param disableLighting Specifies whether the lighting is disabled (override scene and light)
     * @returns true if normals will be required for the rest of the effect
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForLights")
+  @js.native
   def PrepareDefinesForLights(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     defines: js.Any,
     specularSupported: Boolean
   ): Boolean = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForLights")
+  @js.native
   def PrepareDefinesForLights(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
@@ -391,6 +480,8 @@ object MaterialHelper extends js.Object {
     maxSimultaneousLights: js.UndefOr[scala.Nothing],
     disableLighting: Boolean
   ): Boolean = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForLights")
+  @js.native
   def PrepareDefinesForLights(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
@@ -398,6 +489,8 @@ object MaterialHelper extends js.Object {
     specularSupported: Boolean,
     maxSimultaneousLights: Double
   ): Boolean = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForLights")
+  @js.native
   def PrepareDefinesForLights(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
@@ -414,6 +507,8 @@ object MaterialHelper extends js.Object {
     * @param defines The defines to update
     * @param key The channel key "diffuse", "specular"... used in the shader
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForMergedUV")
+  @js.native
   def PrepareDefinesForMergedUV(texture: typingsSlinky.babylonjs.BABYLON.BaseTexture, defines: js.Any, key: String): Unit = js.native
   
   /**
@@ -426,6 +521,8 @@ object MaterialHelper extends js.Object {
     * @param alphaTest defines if alpha testing has to be turned on
     * @param defines defines the current list of defines
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForMisc")
+  @js.native
   def PrepareDefinesForMisc(
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
@@ -441,6 +538,8 @@ object MaterialHelper extends js.Object {
     * @param mesh The mesh containing the geometry data we will draw
     * @param defines The defines to update
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForMorphTargets")
+  @js.native
   def PrepareDefinesForMorphTargets(mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh, defines: js.Any): Unit = js.native
   
   /**
@@ -448,6 +547,8 @@ object MaterialHelper extends js.Object {
     * @param scene The scene we are intending to draw
     * @param defines The defines to update
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForMultiview")
+  @js.native
   def PrepareDefinesForMultiview(scene: typingsSlinky.babylonjs.BABYLON.Scene, defines: js.Any): Unit = js.native
   
   /**
@@ -456,6 +557,8 @@ object MaterialHelper extends js.Object {
     * @param defines The defines to update
     * @param canRenderToMRT Indicates if this material renders to several textures in the prepass
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareDefinesForPrePass")
+  @js.native
   def PrepareDefinesForPrePass(scene: typingsSlinky.babylonjs.BABYLON.Scene, defines: js.Any, canRenderToMRT: Boolean): Unit = js.native
   
   /**
@@ -467,7 +570,11 @@ object MaterialHelper extends js.Object {
     * @param uniformBuffersList defines an optional list of uniform buffers
     * @param updateOnlyBuffersList True to only update the uniformBuffersList array
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersForLight")
+  @js.native
   def PrepareUniformsAndSamplersForLight(lightIndex: Double, uniformsList: js.Array[String], samplersList: js.Array[String]): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersForLight")
+  @js.native
   def PrepareUniformsAndSamplersForLight(
     lightIndex: Double,
     uniformsList: js.Array[String],
@@ -476,6 +583,8 @@ object MaterialHelper extends js.Object {
     uniformBuffersList: js.UndefOr[Nullable[js.Array[String]]],
     updateOnlyBuffersList: Boolean
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersForLight")
+  @js.native
   def PrepareUniformsAndSamplersForLight(
     lightIndex: Double,
     uniformsList: js.Array[String],
@@ -483,12 +592,16 @@ object MaterialHelper extends js.Object {
     projectedLightTexture: js.UndefOr[scala.Nothing],
     uniformBuffersList: Nullable[js.Array[String]]
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersForLight")
+  @js.native
   def PrepareUniformsAndSamplersForLight(
     lightIndex: Double,
     uniformsList: js.Array[String],
     samplersList: js.Array[String],
     projectedLightTexture: js.Any
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersForLight")
+  @js.native
   def PrepareUniformsAndSamplersForLight(
     lightIndex: Double,
     uniformsList: js.Array[String],
@@ -497,6 +610,8 @@ object MaterialHelper extends js.Object {
     uniformBuffersList: js.UndefOr[Nullable[js.Array[String]]],
     updateOnlyBuffersList: Boolean
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersForLight")
+  @js.native
   def PrepareUniformsAndSamplersForLight(
     lightIndex: Double,
     uniformsList: js.Array[String],
@@ -512,60 +627,92 @@ object MaterialHelper extends js.Object {
     * @param defines The defines helping in the list generation
     * @param maxSimultaneousLights The maximum number of simultanous light allowed in the effect
     */
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(uniformsListOrOptions: js.Array[String]): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(
     uniformsListOrOptions: js.Array[String],
     samplersList: js.UndefOr[scala.Nothing],
     defines: js.UndefOr[scala.Nothing],
     maxSimultaneousLights: Double
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(uniformsListOrOptions: js.Array[String], samplersList: js.UndefOr[scala.Nothing], defines: js.Any): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(
     uniformsListOrOptions: js.Array[String],
     samplersList: js.UndefOr[scala.Nothing],
     defines: js.Any,
     maxSimultaneousLights: Double
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(uniformsListOrOptions: js.Array[String], samplersList: js.Array[String]): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(
     uniformsListOrOptions: js.Array[String],
     samplersList: js.Array[String],
     defines: js.UndefOr[scala.Nothing],
     maxSimultaneousLights: Double
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(uniformsListOrOptions: js.Array[String], samplersList: js.Array[String], defines: js.Any): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(
     uniformsListOrOptions: js.Array[String],
     samplersList: js.Array[String],
     defines: js.Any,
     maxSimultaneousLights: Double
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(uniformsListOrOptions: IEffectCreationOptions): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(
     uniformsListOrOptions: IEffectCreationOptions,
     samplersList: js.UndefOr[scala.Nothing],
     defines: js.UndefOr[scala.Nothing],
     maxSimultaneousLights: Double
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(
     uniformsListOrOptions: IEffectCreationOptions,
     samplersList: js.UndefOr[scala.Nothing],
     defines: js.Any
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(
     uniformsListOrOptions: IEffectCreationOptions,
     samplersList: js.UndefOr[scala.Nothing],
     defines: js.Any,
     maxSimultaneousLights: Double
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(uniformsListOrOptions: IEffectCreationOptions, samplersList: js.Array[String]): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(
     uniformsListOrOptions: IEffectCreationOptions,
     samplersList: js.Array[String],
     defines: js.UndefOr[scala.Nothing],
     maxSimultaneousLights: Double
   ): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(uniformsListOrOptions: IEffectCreationOptions, samplersList: js.Array[String], defines: js.Any): Unit = js.native
+  @JSGlobal("BABYLON.MaterialHelper.PrepareUniformsAndSamplersList")
+  @js.native
   def PrepareUniformsAndSamplersList(
     uniformsListOrOptions: IEffectCreationOptions,
     samplersList: js.Array[String],
@@ -577,11 +724,25 @@ object MaterialHelper extends js.Object {
     * Add the list of attributes required for instances to the attribs array.
     * @param attribs The current list of supported attribs
     */
+  @JSGlobal("BABYLON.MaterialHelper.PushAttributesForInstances")
+  @js.native
   def PushAttributesForInstances(attribs: js.Array[String]): Unit = js.native
   
-  var _CopyBonesTransformationMatrices: js.Any = js.native
+  @JSGlobal("BABYLON.MaterialHelper._CopyBonesTransformationMatrices")
+  @js.native
+  def _CopyBonesTransformationMatrices: js.Any = js.native
+  @scala.inline
+  def _CopyBonesTransformationMatrices_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_CopyBonesTransformationMatrices")(x.asInstanceOf[js.Any])
   
-  var _TmpMorphInfluencers: js.Any = js.native
+  @JSGlobal("BABYLON.MaterialHelper._TmpMorphInfluencers")
+  @js.native
+  def _TmpMorphInfluencers: js.Any = js.native
+  @scala.inline
+  def _TmpMorphInfluencers_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_TmpMorphInfluencers")(x.asInstanceOf[js.Any])
   
-  var _tempFogColor: js.Any = js.native
+  @JSGlobal("BABYLON.MaterialHelper._tempFogColor")
+  @js.native
+  def _tempFogColor: js.Any = js.native
+  @scala.inline
+  def _tempFogColor_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_tempFogColor")(x.asInstanceOf[js.Any])
 }

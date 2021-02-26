@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactBootstrapTable2Toolkit.mod.SearchBarProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SearchBar {
   
+  @scala.inline
+  def apply(onSearch: String => Unit): Builder = {
+    val __props = js.Dynamic.literal(onSearch = js.Any.fromFunction1(onSearch))
+    new Builder(js.Array(this.component, __props.asInstanceOf[SearchBarProps]))
+  }
+  
   @JSImport("react-bootstrap-table2-toolkit", "Search.SearchBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,10 +46,4 @@ object SearchBar {
   }
   
   def withProps(p: SearchBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onSearch: String => Unit): Builder = {
-    val __props = js.Dynamic.literal(onSearch = js.Any.fromFunction1(onSearch))
-    new Builder(js.Array(this.component, __props.asInstanceOf[SearchBarProps]))
-  }
 }

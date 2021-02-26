@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -71,9 +72,7 @@ class ActionEvent protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/index", "ActionEvent")
-@js.native
-object ActionEvent extends js.Object {
+object ActionEvent {
   
   /**
     * Helper function to auto-create an ActionEvent from a source mesh.
@@ -82,13 +81,21 @@ object ActionEvent extends js.Object {
     * @param additionalData additional data for the event
     * @returns the new ActionEvent
     */
+  @JSImport("babylonjs/index", "ActionEvent.CreateNew")
+  @js.native
   def CreateNew(source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
+  @JSImport("babylonjs/index", "ActionEvent.CreateNew")
+  @js.native
   def CreateNew(
     source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
     evt: js.UndefOr[scala.Nothing],
     additionalData: js.Any
   ): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
+  @JSImport("babylonjs/index", "ActionEvent.CreateNew")
+  @js.native
   def CreateNew(source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh, evt: Event): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
+  @JSImport("babylonjs/index", "ActionEvent.CreateNew")
+  @js.native
   def CreateNew(source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh, evt: Event, additionalData: js.Any): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
   
   /**
@@ -99,14 +106,22 @@ object ActionEvent extends js.Object {
     * @param additionalData additional data for the event
     * @returns the new ActionEvent
     */
+  @JSImport("babylonjs/index", "ActionEvent.CreateNewFromPrimitive")
+  @js.native
   def CreateNewFromPrimitive(prim: js.Any, pointerPos: typingsSlinky.babylonjs.mathVectorMod.Vector2): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
+  @JSImport("babylonjs/index", "ActionEvent.CreateNewFromPrimitive")
+  @js.native
   def CreateNewFromPrimitive(
     prim: js.Any,
     pointerPos: typingsSlinky.babylonjs.mathVectorMod.Vector2,
     evt: js.UndefOr[scala.Nothing],
     additionalData: js.Any
   ): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
+  @JSImport("babylonjs/index", "ActionEvent.CreateNewFromPrimitive")
+  @js.native
   def CreateNewFromPrimitive(prim: js.Any, pointerPos: typingsSlinky.babylonjs.mathVectorMod.Vector2, evt: Event): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
+  @JSImport("babylonjs/index", "ActionEvent.CreateNewFromPrimitive")
+  @js.native
   def CreateNewFromPrimitive(
     prim: js.Any,
     pointerPos: typingsSlinky.babylonjs.mathVectorMod.Vector2,
@@ -120,6 +135,8 @@ object ActionEvent extends js.Object {
     * @param evt The original (browser) event
     * @returns the new ActionEvent
     */
+  @JSImport("babylonjs/index", "ActionEvent.CreateNewFromScene")
+  @js.native
   def CreateNewFromScene(scene: typingsSlinky.babylonjs.sceneMod.Scene, evt: Event): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
   
   /**
@@ -130,18 +147,26 @@ object ActionEvent extends js.Object {
     * @param additionalData additional data for the event
     * @returns the new ActionEvent
     */
+  @JSImport("babylonjs/index", "ActionEvent.CreateNewFromSprite")
+  @js.native
   def CreateNewFromSprite(source: typingsSlinky.babylonjs.spriteMod.Sprite, scene: typingsSlinky.babylonjs.sceneMod.Scene): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
+  @JSImport("babylonjs/index", "ActionEvent.CreateNewFromSprite")
+  @js.native
   def CreateNewFromSprite(
     source: typingsSlinky.babylonjs.spriteMod.Sprite,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     evt: js.UndefOr[scala.Nothing],
     additionalData: js.Any
   ): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
+  @JSImport("babylonjs/index", "ActionEvent.CreateNewFromSprite")
+  @js.native
   def CreateNewFromSprite(
     source: typingsSlinky.babylonjs.spriteMod.Sprite,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     evt: Event
   ): typingsSlinky.babylonjs.actionEventMod.ActionEvent = js.native
+  @JSImport("babylonjs/index", "ActionEvent.CreateNewFromSprite")
+  @js.native
   def CreateNewFromSprite(
     source: typingsSlinky.babylonjs.spriteMod.Sprite,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,

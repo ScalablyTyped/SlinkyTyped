@@ -2,16 +2,16 @@ package typingsSlinky.inversifyExpressUtils
 
 import typingsSlinky.inversifyExpressUtils.httpContentMod.HttpContent
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("inversify-express-utils/dts/httpResponseMessage", JSImport.Namespace)
-@js.native
-object httpResponseMessageMod extends js.Object {
+object httpResponseMessageMod {
   
+  @JSImport("inversify-express-utils/dts/httpResponseMessage", "HttpResponseMessage")
   @js.native
-  class HttpResponseMessage () extends js.Object {
+  class HttpResponseMessage () extends StObject {
     def this(statusCode: Double) = this()
     
     var _content: js.Any = js.native

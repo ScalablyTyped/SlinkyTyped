@@ -1,22 +1,24 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.ionic.definitionsMod.CommandInstanceInfo
+import typingsSlinky.ionic.definitionsMod.INamespace
 import typingsSlinky.ionic.sslBaseMod.SSLBaseCommand
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineInputs
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ionic/commands/ssl/generate", JSImport.Namespace)
-@js.native
-object sslGenerateMod extends js.Object {
+object sslGenerateMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.ionicCliFramework.definitionsMod.ICommand because Already inherited
   - typingsSlinky.ionic.definitionsMod.ICommand because Already inherited
-  - typingsSlinky.ionic.definitionsMod.CommandPreRun because var conflicts: env, namespace, project. Inlined preRun */ @js.native
-  class SSLGenerateCommand () extends SSLBaseCommand {
+  - typingsSlinky.ionic.definitionsMod.CommandPreRun because var conflicts: env, namespace, project. Inlined preRun */ @JSImport("ionic/commands/ssl/generate", "SSLGenerateCommand")
+  @js.native
+  class SSLGenerateCommand protected () extends SSLBaseCommand {
+    def this(namespace: INamespace) = this()
     
     var checkExistingFile: js.Any = js.native
     

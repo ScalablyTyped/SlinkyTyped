@@ -3,14 +3,14 @@ package typingsSlinky.typeorm
 import typingsSlinky.typeorm.connectionMod.Connection
 import typingsSlinky.typeorm.entityManagerMod.EntityManager
 import typingsSlinky.typeorm.queryRunnerMod.QueryRunner
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/entity-manager/SqljsEntityManager", JSImport.Namespace)
-@js.native
-object sqljsEntityManagerMod extends js.Object {
+object sqljsEntityManagerMod {
   
+  @JSImport("typeorm/browser/entity-manager/SqljsEntityManager", "SqljsEntityManager")
   @js.native
   class SqljsEntityManager protected () extends EntityManager {
     def this(connection: Connection) = this()

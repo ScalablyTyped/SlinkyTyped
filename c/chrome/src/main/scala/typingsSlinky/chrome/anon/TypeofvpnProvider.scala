@@ -6,12 +6,13 @@ import typingsSlinky.chrome.chrome.vpnProvider.VpnPacketReceptionEvent
 import typingsSlinky.chrome.chrome.vpnProvider.VpnPlatformMessageEvent
 import typingsSlinky.chrome.chrome.vpnProvider.VpnSessionParameters
 import typingsSlinky.chrome.chrome.vpnProvider.VpnUiEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofvpnProvider extends js.Object {
+trait TypeofvpnProvider extends StObject {
   
   def createConfig(name: String, callback: js.Function1[/* id */ String, Unit]): Unit = js.native
   

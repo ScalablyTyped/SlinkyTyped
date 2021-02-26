@@ -1,10 +1,18 @@
 package typingsSlinky.typedoc.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "ParameterReflection")
 @js.native
-class ParameterReflection ()
-  extends typingsSlinky.typedoc.reflectionsParameterMod.ParameterReflection
+class ParameterReflection protected ()
+  extends typingsSlinky.typedoc.reflectionsMod.ParameterReflection {
+  def this(name: String, kind: typingsSlinky.typedoc.abstractMod.ReflectionKind) = this()
+  def this(
+    name: String,
+    kind: typingsSlinky.typedoc.abstractMod.ReflectionKind,
+    parent: typingsSlinky.typedoc.abstractMod.Reflection
+  ) = this()
+}

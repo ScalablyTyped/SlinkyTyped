@@ -2,6 +2,7 @@ package typingsSlinky.vexflow.Vex.Flow
 
 import typingsSlinky.vexflow.Vex.Flow.Modifier.Position
 import typingsSlinky.vexflow.Vex.IRenderContext
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

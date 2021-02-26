@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientServicenetworking.anon.CallbackFields
 import typingsSlinky.maximMazurokGapiClientServicenetworking.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientServicenetworking.anon.Key
 import typingsSlinky.maximMazurokGapiClientServicenetworking.anon.KeyOauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServicesResource extends js.Object {
+trait ServicesResource extends StObject {
   
   /**
     * For service producers, provisions a new subnet in a peered service's shared VPC network in the requested region and with the requested size that's expressed as a CIDR range (number

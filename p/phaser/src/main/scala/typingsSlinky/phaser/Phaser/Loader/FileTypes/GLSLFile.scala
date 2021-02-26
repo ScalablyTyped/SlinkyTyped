@@ -9,6 +9,7 @@ import typingsSlinky.phaser.Phaser.Loader.MultiFile
 import typingsSlinky.phaser.Phaser.Textures.TextureManager
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -84,27 +85,15 @@ object GLSLFile {
   }
   
   @scala.inline
-  implicit class GLSLFileOps[Self <: GLSLFile] (val x: Self) extends AnyVal {
+  implicit class GLSLFileMutableBuilder[Self <: GLSLFile] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setGetShaderName(value: js.Array[String] => String): Self = StObject.set(x, "getShaderName", js.Any.fromFunction1(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setGetShaderType(value: js.Array[String] => String): Self = StObject.set(x, "getShaderType", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setGetShaderName(value: js.Array[String] => String): Self = this.set("getShaderName", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setGetShaderType(value: js.Array[String] => String): Self = this.set("getShaderType", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setGetShaderUniforms(value: js.Array[String] => js.Any): Self = this.set("getShaderUniforms", js.Any.fromFunction1(value))
+    def setGetShaderUniforms(value: js.Array[String] => js.Any): Self = StObject.set(x, "getShaderUniforms", js.Any.fromFunction1(value))
   }
 }

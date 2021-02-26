@@ -8,16 +8,16 @@ import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.sceneMod.IDisposable
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/DeviceInput/InputDevices/deviceSourceManager", JSImport.Namespace)
-@js.native
-object deviceSourceManagerMod extends js.Object {
+object deviceSourceManagerMod {
   
+  @JSImport("babylonjs/DeviceInput/InputDevices/deviceSourceManager", "DeviceSource")
   @js.native
-  class DeviceSource[T /* <: DeviceType */] protected () extends js.Object {
+  class DeviceSource[T /* <: DeviceType */] protected () extends StObject {
     /**
       * Default Constructor
       * @param deviceInputSystem Reference to DeviceInputSystem
@@ -55,6 +55,7 @@ object deviceSourceManagerMod extends js.Object {
     val onInputChangedObservable: Observable[CurrentState[T]] = js.native
   }
   
+  @JSImport("babylonjs/DeviceInput/InputDevices/deviceSourceManager", "DeviceSourceManager")
   @js.native
   class DeviceSourceManager protected () extends IDisposable {
     /**

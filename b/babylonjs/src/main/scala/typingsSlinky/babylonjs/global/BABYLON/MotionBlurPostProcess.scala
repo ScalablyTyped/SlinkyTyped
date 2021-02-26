@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.BABYLON.PostProcessOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,11 +38,11 @@ class MotionBlurPostProcess protected ()
   ) = this()
 }
 /* static members */
-@JSGlobal("BABYLON.MotionBlurPostProcess")
-@js.native
-object MotionBlurPostProcess extends js.Object {
+object MotionBlurPostProcess {
   
   /** @hidden */
+  @JSGlobal("BABYLON.MotionBlurPostProcess._Parse")
+  @js.native
   def _Parse(
     parsedPostProcess: js.Any,
     targetCamera: typingsSlinky.babylonjs.BABYLON.Camera,

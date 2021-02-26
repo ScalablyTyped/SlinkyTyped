@@ -2,6 +2,7 @@ package typingsSlinky.activexExcel.Excel
 
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4131`
 import typingsSlinky.activexExcel.activexExcelNumbers.`-4152`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4131`
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4152`
 */
-trait XlSummaryColumn extends js.Object
+trait XlSummaryColumn extends StObject
 object XlSummaryColumn {
   
   @scala.inline

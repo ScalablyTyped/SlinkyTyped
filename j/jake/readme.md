@@ -9,9 +9,9 @@ JavaScript build tool, similar to Make or Rake
 | ------------------ | :-------------: |
 | Full name          | jake |
 | Keywords           | build, cli, make, rake |
-| # releases         | 24 |
-| # dependents       | 36 |
-| # downloads        | 393557 |
+| # releases         | 30 |
+| # dependents       | 57 |
+| # downloads        | 49271640 |
 | # stars            | 11 |
 
 ## Links

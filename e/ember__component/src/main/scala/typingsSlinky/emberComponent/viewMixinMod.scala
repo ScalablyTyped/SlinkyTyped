@@ -1,5 +1,6 @@
 package typingsSlinky.emberComponent
 
+import org.scalablytyped.runtime.Shortcut
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
@@ -11,18 +12,19 @@ import typingsSlinky.jquery.JQuery.Selector
 import typingsSlinky.jquery.JQuery.htmlString
 import typingsSlinky.jquery.JQueryStatic
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ember/component/-private/view-mixin", JSImport.Namespace)
-@js.native
-object viewMixinMod extends js.Object {
+object viewMixinMod extends Shortcut {
   
+  @JSImport("@ember/component/-private/view-mixin", JSImport.Default)
+  @js.native
   val default: typingsSlinky.emberObject.mixinMod.default[ViewMixin, typingsSlinky.emberObject.mod.default] = js.native
   
   @js.native
-  trait ViewMixin extends js.Object {
+  trait ViewMixin extends StObject {
     
     /**
       * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
@@ -164,14 +166,14 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
-    def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
+    def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document): JQuery[TElement] = js.native
     /**
       * Returns a jQuery object for this view's element. If you pass in a selector
       * string, this method will return a jQuery object, using the current element
       * as its buffer.
       */
     @JSName("$")
-    def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document): JQuery[TElement] = js.native
+    def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
     /**
       * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
       * @param selection An existing jQuery object to clone.
@@ -191,6 +193,13 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
+    def $[TElement /* <: Element */](selector: Selector, context: Element): JQuery[TElement] = js.native
+    /**
+      * Returns a jQuery object for this view's element. If you pass in a selector
+      * string, this method will return a jQuery object, using the current element
+      * as its buffer.
+      */
+    @JSName("$")
     def $[TElement /* <: Element */](selector: Selector, context: JQuery[HTMLElement]): JQuery[TElement] = js.native
     /**
       * Returns a jQuery object for this view's element. If you pass in a selector
@@ -199,13 +208,6 @@ object viewMixinMod extends js.Object {
       */
     @JSName("$")
     def $[TElement /* <: Element */](selector: Selector, context: Selector): JQuery[TElement] = js.native
-    /**
-      * Returns a jQuery object for this view's element. If you pass in a selector
-      * string, this method will return a jQuery object, using the current element
-      * as its buffer.
-      */
-    @JSName("$")
-    def $[TElement /* <: Element */](selector: Selector, context: Element): JQuery[TElement] = js.native
     /**
       * Returns a jQuery object for this view's element. If you pass in a selector
       * string, this method will return a jQuery object, using the current element
@@ -338,4 +340,9 @@ object viewMixinMod extends js.Object {
       */
     def willInsertElement(): Unit = js.native
   }
+  
+  type _To = typingsSlinky.emberObject.mixinMod.default[ViewMixin, typingsSlinky.emberObject.mod.default]
+  
+  /* This means you don't have to write `default`, but can instead just say `viewMixinMod.foo` */
+  override def _to: typingsSlinky.emberObject.mixinMod.default[ViewMixin, typingsSlinky.emberObject.mod.default] = default
 }

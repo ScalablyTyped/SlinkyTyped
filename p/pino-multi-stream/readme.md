@@ -10,9 +10,9 @@ A wrapper for the Pino logger that provides Bunyan's multipe destination stream 
 | ------------------ | :-------------: |
 | Full name          | pino-multi-stream |
 | Keywords           | pino, logger |
-| # releases         | 5 |
-| # dependents       | 12 |
-| # downloads        | 815817 |
+| # releases         | 9 |
+| # dependents       | 24 |
+| # downloads        | 1346954 |
 | # stars            | 0 |
 
 ## Links

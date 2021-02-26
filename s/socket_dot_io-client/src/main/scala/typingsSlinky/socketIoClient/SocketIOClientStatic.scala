@@ -5,12 +5,13 @@ import typingsSlinky.socketIoClient.SocketIOClient.ConnectOpts
 import typingsSlinky.socketIoClient.SocketIOClient.Manager
 import typingsSlinky.socketIoClient.SocketIOClient.ManagerStatic
 import typingsSlinky.socketIoClient.SocketIOClient.Socket
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SocketIOClientStatic extends js.Object {
+trait SocketIOClientStatic extends StObject {
   
   /**
     * Auto-connects to the window location and defalt namespace.

@@ -2,12 +2,13 @@ package typingsSlinky.webmidi
 
 import typingsSlinky.webmidi.WebMidi.MIDIAccess
 import typingsSlinky.webmidi.WebMidi.MIDIOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Navigator extends js.Object {
+trait Navigator extends StObject {
   
   /**
     * When invoked, returns a Promise object representing a request for access to MIDI

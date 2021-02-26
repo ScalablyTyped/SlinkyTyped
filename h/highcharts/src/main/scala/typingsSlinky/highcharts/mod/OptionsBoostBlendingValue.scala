@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.darken
   - typingsSlinky.highcharts.highchartsStrings.multiply
 */
-trait OptionsBoostBlendingValue extends js.Object
+trait OptionsBoostBlendingValue extends StObject
 object OptionsBoostBlendingValue {
   
   @scala.inline

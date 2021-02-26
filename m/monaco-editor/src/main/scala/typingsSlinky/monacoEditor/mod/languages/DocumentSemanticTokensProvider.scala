@@ -3,12 +3,13 @@ package typingsSlinky.monacoEditor.mod.languages
 import typingsSlinky.monacoEditor.mod.CancellationToken
 import typingsSlinky.monacoEditor.mod.IEvent
 import typingsSlinky.monacoEditor.mod.editor.ITextModel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DocumentSemanticTokensProvider extends js.Object {
+trait DocumentSemanticTokensProvider extends StObject {
   
   def getLegend(): SemanticTokensLegend = js.native
   

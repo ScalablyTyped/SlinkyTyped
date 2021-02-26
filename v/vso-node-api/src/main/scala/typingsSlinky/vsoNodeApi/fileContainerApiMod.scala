@@ -8,18 +8,18 @@ import typingsSlinky.vsoNodeApi.fileContainerInterfacesMod.FileContainerItem
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IHeaders
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestHandler
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vso-node-api/FileContainerApi", JSImport.Namespace)
-@js.native
-object fileContainerApiMod extends js.Object {
+object fileContainerApiMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.vsoNodeApi.clientApiBasesMod.ClientApiBase because Already inherited
   - typingsSlinky.vsoNodeApi.fileContainerApiBaseMod.IFileContainerApiBase because Already inherited
-  - typingsSlinky.vsoNodeApi.fileContainerApiMod.IFileContainerApi because var conflicts: baseUrl, http, rest, userAgent, vsoClient. Inlined createItem, getItem, getItem, getItem, getItem, getItem, getItem, getItem, getItem */ @js.native
+  - typingsSlinky.vsoNodeApi.fileContainerApiMod.IFileContainerApi because var conflicts: baseUrl, http, rest, userAgent, vsoClient. Inlined createItem, getItem, getItem, getItem, getItem, getItem, getItem, getItem, getItem */ @JSImport("vso-node-api/FileContainerApi", "FileContainerApi")
+  @js.native
   class FileContainerApi protected () extends FileContainerApiBase {
     def this(baseUrl: String, handlers: js.Array[IRequestHandler]) = this()
     def this(baseUrl: String, handlers: js.Array[IRequestHandler], options: IRequestOptions) = this()

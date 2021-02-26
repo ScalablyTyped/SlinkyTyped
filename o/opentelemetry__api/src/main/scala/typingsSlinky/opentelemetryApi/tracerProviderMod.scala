@@ -1,16 +1,15 @@
 package typingsSlinky.opentelemetryApi
 
 import typingsSlinky.opentelemetryApi.tracerMod.Tracer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@opentelemetry/api/build/src/trace/tracer_provider", JSImport.Namespace)
-@js.native
-object tracerProviderMod extends js.Object {
+object tracerProviderMod {
   
   @js.native
-  trait TracerProvider extends js.Object {
+  trait TracerProvider extends StObject {
     
     /**
       * Returns a Tracer, creating one if one with the given name and version is

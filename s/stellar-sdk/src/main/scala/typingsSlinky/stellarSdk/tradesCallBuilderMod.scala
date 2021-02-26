@@ -4,14 +4,14 @@ import typingsSlinky.stellarBase.mod.Asset
 import typingsSlinky.stellarSdk.callBuilderMod.CallBuilder
 import typingsSlinky.stellarSdk.serverApiMod.ServerApi.CollectionPage
 import typingsSlinky.stellarSdk.serverApiMod.ServerApi.TradeRecord
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("stellar-sdk/lib/trades_call_builder", JSImport.Namespace)
-@js.native
-object tradesCallBuilderMod extends js.Object {
+object tradesCallBuilderMod {
   
+  @JSImport("stellar-sdk/lib/trades_call_builder", "TradesCallBuilder")
   @js.native
   class TradesCallBuilder protected () extends CallBuilder[CollectionPage[TradeRecord]] {
     def this(serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify URI */ js.Any) = this()

@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.dropdownItemMod.DropdownItemProps
+import typingsSlinky.reactstrap.dropdownItemMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "DropdownItem")
+@JSImport("reactstrap/lib", "DropdownItem")
 @js.native
-class DropdownItem ()
-  extends Component[DropdownItemProps, js.Object, js.Any]
+class DropdownItem () extends default

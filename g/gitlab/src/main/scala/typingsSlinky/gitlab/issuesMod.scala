@@ -2,21 +2,23 @@ package typingsSlinky.gitlab
 
 import typingsSlinky.gitlab.anon.GroupId
 import typingsSlinky.gitlab.anon.ProjectId
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.PaginatedRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.Sudo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gitlab/dist/types/core/services/Issues", JSImport.Namespace)
-@js.native
-object issuesMod extends js.Object {
+object issuesMod {
   
+  @JSImport("gitlab/dist/types/core/services/Issues", "Issues")
   @js.native
   class Issues () extends BaseService {
+    def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
     
     def addSpentTime(projectId: String, issueId: Double, duration: String): js.Promise[js.Object] = js.native
     def addSpentTime(projectId: String, issueId: Double, duration: String, options: Sudo): js.Promise[js.Object] = js.native

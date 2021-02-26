@@ -5,16 +5,15 @@ import typingsSlinky.node.anon.EmitClose
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.ReadStream
 import typingsSlinky.node.fsMod.WriteStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait FnCall extends js.Object {
+  trait FnCall extends StObject {
     
     def apply(path: PathLike): ReadStream = js.native
     def apply(path: PathLike, options: String): ReadStream = js.native
@@ -22,7 +21,7 @@ object anon extends js.Object {
   }
   
   @js.native
-  trait FnCallPathOptions extends js.Object {
+  trait FnCallPathOptions extends StObject {
     
     def apply(path: PathLike): WriteStream = js.native
     def apply(path: PathLike, options: String): WriteStream = js.native

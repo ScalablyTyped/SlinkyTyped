@@ -3,6 +3,7 @@ package typingsSlinky.devtoolsProtocol.mod.Protocol.IndexedDB
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`null`
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.array
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.string
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.string
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.array
 */
-trait KeyPathType extends js.Object
+trait KeyPathType extends StObject
 object KeyPathType {
   
   @scala.inline

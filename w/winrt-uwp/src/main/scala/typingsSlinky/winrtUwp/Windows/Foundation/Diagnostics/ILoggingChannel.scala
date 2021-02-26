@@ -1,6 +1,7 @@
 package typingsSlinky.winrtUwp.Windows.Foundation.Diagnostics
 
 import typingsSlinky.winrtUwp.Windows.Foundation.IClosable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

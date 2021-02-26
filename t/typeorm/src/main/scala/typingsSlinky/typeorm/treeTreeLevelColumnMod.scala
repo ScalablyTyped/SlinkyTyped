@@ -1,13 +1,14 @@
 package typingsSlinky.typeorm
 
 import typingsSlinky.std.PropertyDecorator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/decorator/tree/TreeLevelColumn", JSImport.Namespace)
-@js.native
-object treeTreeLevelColumnMod extends js.Object {
+object treeTreeLevelColumnMod {
   
+  @JSImport("typeorm/decorator/tree/TreeLevelColumn", "TreeLevelColumn")
+  @js.native
   def TreeLevelColumn(): PropertyDecorator = js.native
 }

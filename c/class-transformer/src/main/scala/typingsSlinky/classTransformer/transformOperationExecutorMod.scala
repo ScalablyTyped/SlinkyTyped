@@ -4,18 +4,16 @@ import typingsSlinky.classTransformer.classTransformOptionsMod.ClassTransformOpt
 import typingsSlinky.classTransformer.transformationTypeEnumMod.TransformationType
 import typingsSlinky.classTransformer.typeMetadataMod.TypeMetadata
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("class-transformer/TransformOperationExecutor", JSImport.Namespace)
-@js.native
-object transformOperationExecutorMod extends js.Object {
+object transformOperationExecutorMod {
   
-  def testForBuffer(): Boolean = js.native
-  
+  @JSImport("class-transformer/TransformOperationExecutor", "TransformOperationExecutor")
   @js.native
-  class TransformOperationExecutor protected () extends js.Object {
+  class TransformOperationExecutor protected () extends StObject {
     def this(transformationType: TransformationType, options: ClassTransformOptions) = this()
     
     var applyCustomTransformations: js.Any = js.native
@@ -295,4 +293,8 @@ object transformOperationExecutorMod extends js.Object {
     
     var transformationType: js.Any = js.native
   }
+  
+  @JSImport("class-transformer/TransformOperationExecutor", "testForBuffer")
+  @js.native
+  def testForBuffer(): Boolean = js.native
 }

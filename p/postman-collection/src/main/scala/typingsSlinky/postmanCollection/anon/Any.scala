@@ -3,12 +3,13 @@ package typingsSlinky.postmanCollection.anon
 import typingsSlinky.std.BooleanConstructor
 import typingsSlinky.std.NumberConstructor
 import typingsSlinky.std.StringConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Any extends js.Object {
+trait Any extends StObject {
   
   var any: Out = js.native
   

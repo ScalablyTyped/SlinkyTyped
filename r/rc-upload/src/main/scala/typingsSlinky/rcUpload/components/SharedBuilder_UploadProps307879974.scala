@@ -86,6 +86,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.JSXElementConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -105,10 +106,10 @@ class SharedBuilder_UploadProps307879974[R <: js.Object] (val args: js.Array[js.
   def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def actionFunction1(value: /* file */ RcFile => String): this.type = set("action", js.Any.fromFunction1(value))
+  def action(value: String | (js.Function1[/* file */ RcFile, String])): this.type = set("action", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def action(value: String | (js.Function1[/* file */ RcFile, String])): this.type = set("action", value.asInstanceOf[js.Any])
+  def actionFunction1(value: /* file */ RcFile => String): this.type = set("action", js.Any.fromFunction1(value))
   
   @scala.inline
   def alt(value: String): this.type = set("alt", value.asInstanceOf[js.Any])
@@ -290,10 +291,10 @@ class SharedBuilder_UploadProps307879974[R <: js.Object] (val args: js.Array[js.
   def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def componentFunction1(value: _ => ReactElement | Null): this.type = set("component", js.Any.fromFunction1(value))
+  def component(value: JSXElementConstructor[_]): this.type = set("component", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def component(value: JSXElementConstructor[_]): this.type = set("component", value.asInstanceOf[js.Any])
+  def componentFunction1(value: _ => ReactElement | Null): this.type = set("component", js.Any.fromFunction1(value))
   
   @scala.inline
   def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -311,10 +312,10 @@ class SharedBuilder_UploadProps307879974[R <: js.Object] (val args: js.Array[js.
   def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def dataFunction1(value: /* file */ RcFile | String | Blob => js.Object): this.type = set("data", js.Any.fromFunction1(value))
+  def data(value: js.Object | (js.Function1[/* file */ RcFile | String | Blob, js.Object])): this.type = set("data", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def data(value: js.Object | (js.Function1[/* file */ RcFile | String | Blob, js.Object])): this.type = set("data", value.asInstanceOf[js.Any])
+  def dataFunction1(value: /* file */ RcFile | String | Blob => js.Object): this.type = set("data", js.Any.fromFunction1(value))
   
   @scala.inline
   def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
@@ -323,10 +324,10 @@ class SharedBuilder_UploadProps307879974[R <: js.Object] (val args: js.Array[js.
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -754,10 +755,10 @@ class SharedBuilder_UploadProps307879974[R <: js.Object] (val args: js.Array[js.
   def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
   
   @scala.inline
   def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])

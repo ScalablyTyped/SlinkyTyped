@@ -3,13 +3,14 @@ package typingsSlinky.typedoc.abstractMod
 import typingsSlinky.typedoc.commentsCommentMod.Comment
 import typingsSlinky.typedoc.fileMod.SourceReference
 import typingsSlinky.typedoc.modelsTypesMod.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc/dist/lib/models/reflections/abstract", "Reflection")
 @js.native
-abstract class Reflection protected () extends js.Object {
+abstract class Reflection protected () extends StObject {
   def this(name: String, kind: ReflectionKind) = this()
   def this(name: String, kind: ReflectionKind, parent: Reflection) = this()
   

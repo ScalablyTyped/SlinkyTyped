@@ -1,5 +1,6 @@
 package typingsSlinky.reactAutosuggest.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionContainerFirst
   - typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionTitle
 */
-trait ThemeKey extends js.Object
+trait ThemeKey extends StObject
 object ThemeKey {
   
   @scala.inline

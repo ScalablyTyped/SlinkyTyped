@@ -1,5 +1,6 @@
 package typingsSlinky.styledComponents.styledComponentsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -181,4 +182,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.styledComponents.styledComponentsStrings.use
   - typingsSlinky.styledComponents.styledComponentsStrings.view
 */
-trait IntrinsicElementsKeys extends js.Object
+trait IntrinsicElementsKeys extends StObject

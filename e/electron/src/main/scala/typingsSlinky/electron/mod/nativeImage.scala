@@ -1,41 +1,58 @@
 package typingsSlinky.electron.mod
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.electron.Electron.CreateFromBitmapOptions
 import typingsSlinky.electron.Electron.CreateFromBufferOptions
 import typingsSlinky.electron.Electron.Size
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* was `typeof NativeImage` */
 @JSImport("electron", "nativeImage")
 @js.native
-object nativeImage
-  extends Instantiable0[typingsSlinky.electron.Electron.NativeImage_] {
+class nativeImage ()
+  extends typingsSlinky.electron.Electron.NativeImage_
+/* was `typeof NativeImage` */
+object nativeImage {
   
   // Docs: https://electronjs.org/docs/api/native-image
   /**
     * Creates an empty `NativeImage` instance.
     */
+  /* static member */
+  @JSImport("electron", "nativeImage.createEmpty")
+  @js.native
   def createEmpty(): typingsSlinky.electron.Electron.NativeImage_ = js.native
   
   /**
     * Creates a new `NativeImage` instance from `buffer` that contains the raw bitmap
     * pixel data returned by `toBitmap()`. The specific format is platform-dependent.
     */
+  /* static member */
+  @JSImport("electron", "nativeImage.createFromBitmap")
+  @js.native
   def createFromBitmap(buffer: Buffer, options: CreateFromBitmapOptions): typingsSlinky.electron.Electron.NativeImage_ = js.native
   
   /**
     * Creates a new `NativeImage` instance from `buffer`. Tries to decode as PNG or
     * JPEG first.
     */
+  /* static member */
+  @JSImport("electron", "nativeImage.createFromBuffer")
+  @js.native
   def createFromBuffer(buffer: Buffer): typingsSlinky.electron.Electron.NativeImage_ = js.native
+  @JSImport("electron", "nativeImage.createFromBuffer")
+  @js.native
   def createFromBuffer(buffer: Buffer, options: CreateFromBufferOptions): typingsSlinky.electron.Electron.NativeImage_ = js.native
   
   /**
     * Creates a new `NativeImage` instance from `dataURL`.
     */
+  /* static member */
+  @JSImport("electron", "nativeImage.createFromDataURL")
+  @js.native
   def createFromDataURL(dataURL: String): typingsSlinky.electron.Electron.NativeImage_ = js.native
   
   /**
@@ -69,7 +86,12 @@ object nativeImage
     *
     * @platform darwin
     */
+  /* static member */
+  @JSImport("electron", "nativeImage.createFromNamedImage")
+  @js.native
   def createFromNamedImage(imageName: String): typingsSlinky.electron.Electron.NativeImage_ = js.native
+  @JSImport("electron", "nativeImage.createFromNamedImage")
+  @js.native
   def createFromNamedImage(imageName: String, hslShift: js.Array[Double]): typingsSlinky.electron.Electron.NativeImage_ = js.native
   
   /**
@@ -77,6 +99,9 @@ object nativeImage
     * returns an empty image if the `path` does not exist, cannot be read, or is not a
     * valid image.
     */
+  /* static member */
+  @JSImport("electron", "nativeImage.createFromPath")
+  @js.native
   def createFromPath(path: String): typingsSlinky.electron.Electron.NativeImage_ = js.native
   
   /**
@@ -84,5 +109,8 @@ object nativeImage
     *
     * @platform darwin,win32
     */
+  /* static member */
+  @JSImport("electron", "nativeImage.createThumbnailFromPath")
+  @js.native
   def createThumbnailFromPath(path: String, maxSize: Size): js.Promise[typingsSlinky.electron.Electron.NativeImage_] = js.native
 }

@@ -3,6 +3,7 @@ package typingsSlinky.googleAppsScript.GoogleAppsScript.Script
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Document.Document
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.Form
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.Spreadsheet
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * triggers and control publishing the script as a service.
   */
 @js.native
-trait ScriptApp extends js.Object {
+trait ScriptApp extends StObject {
   
   var AuthMode: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof AuthMode */ js.Any = js.native
   

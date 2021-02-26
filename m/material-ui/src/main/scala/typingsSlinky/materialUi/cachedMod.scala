@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/action/cached", JSImport.Namespace)
-@js.native
-object cachedMod extends js.Object {
+object cachedMod {
   
+  @JSImport("material-ui/svg-icons/action/cached", JSImport.Default)
+  @js.native
+  class default () extends ActionCached
+  
+  @JSImport("material-ui/svg-icons/action/cached", "ActionCached")
   @js.native
   class ActionCached ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

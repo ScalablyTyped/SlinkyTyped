@@ -5,6 +5,7 @@ import typingsSlinky.sharepoint.sharepointNumbers.`2`
 import typingsSlinky.sharepoint.sharepointNumbers.`3`
 import typingsSlinky.sharepoint.sharepointNumbers.`4`
 import typingsSlinky.sharepoint.sharepointNumbers.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.sharepoint.sharepointNumbers.`4`
   - typingsSlinky.sharepoint.sharepointNumbers.`5`
 */
-trait Sods extends js.Object
+trait Sods extends StObject
 object Sods {
   
   @scala.inline

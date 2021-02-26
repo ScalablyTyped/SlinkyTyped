@@ -1,12 +1,13 @@
 package typingsSlinky.tableau.global.tableau
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("tableau.SheetSizeBehaviour")
 @js.native
-object SheetSizeBehaviour extends js.Object {
+object SheetSizeBehaviour extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.tableau.tableau.SheetSizeBehaviour with String] = js.native

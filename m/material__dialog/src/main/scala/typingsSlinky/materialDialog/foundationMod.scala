@@ -4,18 +4,21 @@ import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialDialog.adapterMod.MDCDialogAdapter
-import typingsSlinky.materialDialog.anon.ACTIONATTRIBUTE
-import typingsSlinky.materialDialog.anon.CLOSING
-import typingsSlinky.materialDialog.anon.DIALOGANIMATIONCLOSETIMEMS
 import typingsSlinky.materialDialog.anon.PartialMDCDialogAdapter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/dialog/foundation", JSImport.Namespace)
-@js.native
-object foundationMod extends js.Object {
+object foundationMod {
   
+  @JSImport("@material/dialog/foundation", JSImport.Default)
+  @js.native
+  class default () extends MDCDialogFoundation {
+    def this(adapter: PartialMDCDialogAdapter) = this()
+  }
+  
+  @JSImport("@material/dialog/foundation", "MDCDialogFoundation")
   @js.native
   class MDCDialogFoundation () extends MDCFoundation[MDCDialogAdapter] {
     def this(adapter: PartialMDCDialogAdapter) = this()
@@ -53,34 +56,5 @@ object foundationMod extends js.Object {
     def setScrimClickAction(action: String): Unit = js.native
     
     def setSuppressDefaultPressSelector(selector: String): Unit = js.native
-  }
-  /* static members */
-  @js.native
-  object MDCDialogFoundation extends js.Object {
-    
-    def cssClasses: CLOSING = js.native
-    
-    def defaultAdapter: MDCDialogAdapter = js.native
-    
-    def numbers: DIALOGANIMATIONCLOSETIMEMS = js.native
-    
-    def strings: ACTIONATTRIBUTE = js.native
-  }
-  
-  @js.native
-  class default () extends MDCDialogFoundation {
-    def this(adapter: PartialMDCDialogAdapter) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    def cssClasses: CLOSING = js.native
-    
-    def defaultAdapter: MDCDialogAdapter = js.native
-    
-    def numbers: DIALOGANIMATIONCLOSETIMEMS = js.native
-    
-    def strings: ACTIONATTRIBUTE = js.native
   }
 }

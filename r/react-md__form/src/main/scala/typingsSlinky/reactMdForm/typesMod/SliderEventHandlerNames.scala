@@ -1,5 +1,6 @@
 package typingsSlinky.reactMdForm.typesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactMdForm.reactMdFormStrings.onMouseDown
   - typingsSlinky.reactMdForm.reactMdFormStrings.onTouchStart
 */
-trait SliderEventHandlerNames extends js.Object
+trait SliderEventHandlerNames extends StObject
 object SliderEventHandlerNames {
   
   @scala.inline

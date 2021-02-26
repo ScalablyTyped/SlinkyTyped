@@ -10,9 +10,9 @@ Touch backend for react-dnd
 | ------------------ | :-------------: |
 | Full name          | react-dnd-touch-backend |
 | Keywords           | - |
-| # releases         | 27 |
-| # dependents       | 44 |
-| # downloads        | 1925749 |
+| # releases         | 21 |
+| # dependents       | 73 |
+| # downloads        | 3353112 |
 | # stars            | 1 |
 
 ## Links

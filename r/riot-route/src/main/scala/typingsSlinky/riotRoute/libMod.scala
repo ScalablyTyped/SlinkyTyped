@@ -1,18 +1,20 @@
 package typingsSlinky.riotRoute
 
+import org.scalablytyped.runtime.Shortcut
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("riot-route/lib", JSImport.Namespace)
-@js.native
-object libMod extends js.Object {
+object libMod extends Shortcut {
   
+  @JSImport("riot-route/lib", JSImport.Default)
+  @js.native
   val default: RiotRoute = js.native
   
   @js.native
-  trait RiotRoute extends js.Object {
+  trait RiotRoute extends StObject {
     
     /**
       * Execute the given callback when the URL changes.
@@ -83,4 +85,9 @@ object libMod extends js.Object {
   
   @js.native
   trait RiotSubRoute extends RiotRoute
+  
+  type _To = RiotRoute
+  
+  /* This means you don't have to write `default`, but can instead just say `libMod.foo` */
+  override def _to: RiotRoute = default
 }

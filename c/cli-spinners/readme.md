@@ -11,9 +11,9 @@ Spinners for use in the terminal
 | Full name          | cli-spinners |
 | Keywords           | cli, spinner, spinners, terminal, term, console, ascii, unicode, loading, indicator, progress, busy, wait, idle, json |
 | # releases         | 7 |
-| # dependents       | 233 |
-| # downloads        | 132383911 |
-| # stars            | 22 |
+| # dependents       | 347 |
+| # downloads        | 288582107 |
+| # stars            | 23 |
 
 ## Links
 - [Homepage](https://github.com/sindresorhus/cli-spinners#readme)

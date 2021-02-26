@@ -11,15 +11,22 @@ import typingsSlinky.reactEasyChart.mod.ScatterplotData
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.linear
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.text
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.time
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ScatterplotChart {
   
+  @scala.inline
+  def apply(data: js.Array[ScatterplotData]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ScatterplotChartProps]))
+  }
+  
   @JSImport("react-easy-chart", "ScatterplotChart")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +43,10 @@ object ScatterplotChart {
     def clickHandler(value: (/* data */ ScatterplotData, /* mouseEvent */ MouseEvent) => _): this.type = set("clickHandler", js.Any.fromFunction2(value))
     
     @scala.inline
-    def configVarargs(value: Stroke*): this.type = set("config", js.Array(value :_*))
+    def config(value: js.Array[Stroke]): this.type = set("config", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def config(value: js.Array[Stroke]): this.type = set("config", value.asInstanceOf[js.Any])
+    def configVarargs(value: Stroke*): this.type = set("config", js.Array(value :_*))
     
     @scala.inline
     def dotRadius(value: Double): this.type = set("dotRadius", value.asInstanceOf[js.Any])
@@ -69,10 +76,10 @@ object ScatterplotChart {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def xDomainRangeVarargs(value: (js.Date | Double | String)*): this.type = set("xDomainRange", js.Array(value :_*))
+    def xDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("xDomainRange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def xDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("xDomainRange", value.asInstanceOf[js.Any])
+    def xDomainRangeVarargs(value: (js.Date | Double | String)*): this.type = set("xDomainRange", js.Array(value :_*))
     
     @scala.inline
     def xType(value: time | text | linear): this.type = set("xType", value.asInstanceOf[js.Any])
@@ -81,20 +88,14 @@ object ScatterplotChart {
     def yAxisOrientRight(value: Boolean): this.type = set("yAxisOrientRight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def yDomainRangeVarargs(value: (js.Date | Double | String)*): this.type = set("yDomainRange", js.Array(value :_*))
+    def yDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("yDomainRange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def yDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("yDomainRange", value.asInstanceOf[js.Any])
+    def yDomainRangeVarargs(value: (js.Date | Double | String)*): this.type = set("yDomainRange", js.Array(value :_*))
     
     @scala.inline
     def yType(value: time | text | linear): this.type = set("yType", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ScatterplotChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[ScatterplotData]): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ScatterplotChartProps]))
-  }
 }

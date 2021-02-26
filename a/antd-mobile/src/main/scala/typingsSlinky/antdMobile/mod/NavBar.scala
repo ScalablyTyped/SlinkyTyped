@@ -2,6 +2,7 @@ package typingsSlinky.antdMobile.mod
 
 import typingsSlinky.antdMobile.anon.Mode
 import typingsSlinky.antdMobile.navBarMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,9 +11,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class NavBar () extends default
 /* static members */
-@JSImport("antd-mobile", "NavBar")
-@js.native
-object NavBar extends js.Object {
+object NavBar {
   
-  var defaultProps: Mode = js.native
+  @JSImport("antd-mobile", "NavBar")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  @JSImport("antd-mobile", "NavBar.defaultProps")
+  @js.native
+  def defaultProps: Mode = js.native
+  @scala.inline
+  def defaultProps_=(x: Mode): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
 }

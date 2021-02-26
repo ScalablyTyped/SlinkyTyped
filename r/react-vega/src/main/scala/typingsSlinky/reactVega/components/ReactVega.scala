@@ -11,15 +11,22 @@ import typingsSlinky.std.Record
 import typingsSlinky.vegaTypings.mod.View
 import typingsSlinky.vegaTypings.runtimeMod.Item
 import typingsSlinky.vegaTypings.specMod.Spec
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactVega {
   
+  @scala.inline
+  def apply(spec: Spec): Builder = {
+    val __props = js.Dynamic.literal(spec = spec.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[VegaPropsWithSpec]))
+  }
+  
   @JSImport("react-vega", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -69,10 +76,4 @@ object ReactVega {
   }
   
   def withProps(p: VegaPropsWithSpec): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(spec: Spec): Builder = {
-    val __props = js.Dynamic.literal(spec = spec.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[VegaPropsWithSpec]))
-  }
 }

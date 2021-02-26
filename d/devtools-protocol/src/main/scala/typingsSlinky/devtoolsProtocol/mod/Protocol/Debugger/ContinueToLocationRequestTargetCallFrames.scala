@@ -2,6 +2,7 @@ package typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.any
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.current
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.any
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.current
 */
-trait ContinueToLocationRequestTargetCallFrames extends js.Object
+trait ContinueToLocationRequestTargetCallFrames extends StObject
 object ContinueToLocationRequestTargetCallFrames {
   
   @scala.inline

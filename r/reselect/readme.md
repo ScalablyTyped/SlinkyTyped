@@ -10,9 +10,9 @@ Selectors for Redux.
 | ------------------ | :-------------: |
 | Full name          | reselect |
 | Keywords           | react, redux |
-| # releases         | 3 |
-| # dependents       | 1333 |
-| # downloads        | 77425709 |
+| # releases         | 0 |
+| # dependents       | 1631 |
+| # downloads        | 129458351 |
 | # stars            | 57 |
 
 ## Links

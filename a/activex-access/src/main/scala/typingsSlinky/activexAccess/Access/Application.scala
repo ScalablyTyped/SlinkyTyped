@@ -25,12 +25,13 @@ import typingsSlinky.activexOffice.Office.MsoExtraInfoMethod
 import typingsSlinky.activexOffice.Office.MsoFeatureInstall
 import typingsSlinky.activexOffice.Office.MsoFileDialogType
 import typingsSlinky.activexOffice.Office.NewFile
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Application extends js.Object {
+trait Application extends StObject {
   
   val ADOConnectString: String = js.native
   

@@ -23,15 +23,30 @@ import typingsSlinky.reactVirtualized.mod.Index
 import typingsSlinky.reactVirtualized.mod.IndexRange
 import typingsSlinky.reactVirtualized.mod.OverscanIndexRange
 import typingsSlinky.reactVirtualized.mod.ScrollEventData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Table {
   
+  @scala.inline
+  def apply(
+    headerHeight: Double,
+    height: Double with js.UndefOr[Double],
+    onScroll: (js.UndefOr[js.Function1[/* params */ ScrollParams, _]]) with (js.UndefOr[js.Function1[/* info */ ScrollEventData, Unit]]),
+    rowCount: Double,
+    rowHeight: Double | (js.Function1[/* params */ Index, Double]),
+    scrollToAlignment: js.UndefOr[Alignment] with js.UndefOr[String],
+    width: Double with js.UndefOr[Double]
+  ): Builder = {
+    val __props = js.Dynamic.literal(headerHeight = headerHeight.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], onScroll = onScroll.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], scrollToAlignment = scrollToAlignment.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TableProps]))
+  }
+  
   @JSImport("react-virtualized", "Table")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -147,10 +162,10 @@ object Table {
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowClassNameFunction1(value: /* info */ Index => String): this.type = set("rowClassName", js.Any.fromFunction1(value))
+    def rowClassName(value: String | (js.Function1[/* info */ Index, String])): this.type = set("rowClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowClassName(value: String | (js.Function1[/* info */ Index, String])): this.type = set("rowClassName", value.asInstanceOf[js.Any])
+    def rowClassNameFunction1(value: /* info */ Index => String): this.type = set("rowClassName", js.Any.fromFunction1(value))
     
     @scala.inline
     def rowGetter(value: /* info */ Index => _): this.type = set("rowGetter", js.Any.fromFunction1(value))
@@ -159,10 +174,10 @@ object Table {
     def rowRenderer(value: /* props */ TableRowProps => ReactElement): this.type = set("rowRenderer", js.Any.fromFunction1(value))
     
     @scala.inline
-    def rowStyleFunction1(value: /* info */ Index => CSSProperties): this.type = set("rowStyle", js.Any.fromFunction1(value))
+    def rowStyle(value: CSSProperties | (js.Function1[/* info */ Index, CSSProperties])): this.type = set("rowStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowStyle(value: CSSProperties | (js.Function1[/* info */ Index, CSSProperties])): this.type = set("rowStyle", value.asInstanceOf[js.Any])
+    def rowStyleFunction1(value: /* info */ Index => CSSProperties): this.type = set("rowStyle", js.Any.fromFunction1(value))
     
     @scala.inline
     def scrollLeft(value: Double): this.type = set("scrollLeft", value.asInstanceOf[js.Any])
@@ -202,18 +217,4 @@ object Table {
   }
   
   def withProps(p: TableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    headerHeight: Double,
-    height: Double with js.UndefOr[Double],
-    onScroll: (js.UndefOr[js.Function1[/* params */ ScrollParams, _]]) with (js.UndefOr[js.Function1[/* info */ ScrollEventData, Unit]]),
-    rowCount: Double,
-    rowHeight: Double | (js.Function1[/* params */ Index, Double]),
-    scrollToAlignment: js.UndefOr[Alignment] with js.UndefOr[String],
-    width: Double with js.UndefOr[Double]
-  ): Builder = {
-    val __props = js.Dynamic.literal(headerHeight = headerHeight.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], onScroll = onScroll.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], scrollToAlignment = scrollToAlignment.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TableProps]))
-  }
 }

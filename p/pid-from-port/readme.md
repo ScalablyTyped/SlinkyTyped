@@ -10,9 +10,9 @@ Get PID from a port
 | ------------------ | :-------------: |
 | Full name          | pid-from-port |
 | Keywords           | get, pid, netstat, port |
-| # releases         | 8 |
+| # releases         | 0 |
 | # dependents       | 8 |
-| # downloads        | 4313825 |
+| # downloads        | 7438008 |
 | # stars            | 0 |
 
 ## Links

@@ -10,9 +10,9 @@ Datastore implementation with level(up|down) backend
 | ------------------ | :-------------: |
 | Full name          | datastore-level |
 | Keywords           | interface, key-value, ipfs, datastore, leveldb, levelup, leveldown |
-| # releases         | 8 |
-| # dependents       | 8 |
-| # downloads        | 294562 |
+| # releases         | 10 |
+| # dependents       | 15 |
+| # downloads        | 505349 |
 | # stars            | 0 |
 
 ## Links

@@ -2,6 +2,7 @@ package typingsSlinky.std
 
 import typingsSlinky.std.stdStrings.cancel
 import typingsSlinky.std.stdStrings.finish
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -81,13 +82,13 @@ trait Animation extends EventTarget {
   def removeEventListener_cancel(
     `type`: cancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationPlaybackEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cancel(
     `type`: cancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationPlaybackEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_finish(
@@ -98,13 +99,13 @@ trait Animation extends EventTarget {
   def removeEventListener_finish(
     `type`: finish,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationPlaybackEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_finish(
     `type`: finish,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationPlaybackEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   
   def reverse(): Unit = js.native

@@ -3,6 +3,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.configuration
 import typingsSlinky.activexLibreoffice.LibreOffice.SeqEquiv
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.PropertyState
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,8 +20,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait SetUpdate
-  extends SimpleSetUpdate
-     with HierarchyAccess {
+  extends SetAccess
+     with SimpleSetUpdate {
   
   /**
     * @param aPropertyName specifies the names of the properties. All names must be unique. This sequence must be alphabetically sorted.

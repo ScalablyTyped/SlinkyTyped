@@ -1,5 +1,6 @@
 package typingsSlinky.nightwatch.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nightwatch.nightwatchStrings.`tag name`
   - typingsSlinky.nightwatch.nightwatchStrings.xpath
 */
-trait LocateStrategy extends js.Object
+trait LocateStrategy extends StObject
 object LocateStrategy {
   
   @scala.inline

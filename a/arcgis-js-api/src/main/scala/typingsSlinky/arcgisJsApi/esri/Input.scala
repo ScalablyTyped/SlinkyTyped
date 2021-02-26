@@ -3,6 +3,7 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`datetime-picker`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-area`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-box`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

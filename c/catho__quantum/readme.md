@@ -10,9 +10,9 @@ Catho react components
 | ------------------ | :-------------: |
 | Full name          | @catho/quantum |
 | Keywords           | catho, react, components, style, guide, quantum |
-| # releases         | 82 |
+| # releases         | 135 |
 | # dependents       | 1 |
-| # downloads        | 18241 |
+| # downloads        | 50091 |
 | # stars            | 0 |
 
 ## Links

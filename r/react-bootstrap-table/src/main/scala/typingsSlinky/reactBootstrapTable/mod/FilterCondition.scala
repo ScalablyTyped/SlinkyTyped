@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTable.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.eq
   - typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.like
 */
-trait FilterCondition extends js.Object
+trait FilterCondition extends StObject
 object FilterCondition {
   
   @scala.inline

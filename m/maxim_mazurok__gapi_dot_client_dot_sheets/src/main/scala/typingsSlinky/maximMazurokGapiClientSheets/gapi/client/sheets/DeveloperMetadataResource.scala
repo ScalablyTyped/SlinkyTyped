@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientSheets.gapi.client.sheets
 import typingsSlinky.maximMazurokGapiClientSheets.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientSheets.anon.Alt
 import typingsSlinky.maximMazurokGapiClientSheets.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DeveloperMetadataResource extends js.Object {
+trait DeveloperMetadataResource extends StObject {
   
   /** Returns the developer metadata with the specified ID. The caller must specify the spreadsheet ID and the developer metadata's unique metadataId. */
   def get(): typingsSlinky.gapiClient.gapi.client.Request[DeveloperMetadata] = js.native

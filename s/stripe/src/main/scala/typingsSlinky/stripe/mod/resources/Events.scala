@@ -5,16 +5,19 @@ import typingsSlinky.stripe.mod.IDataOptions
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.events.IEvent
 import typingsSlinky.stripe.mod.events.IEventListOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.Events")
 @js.native
-class Events () extends StripeResource {
+class Events protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def list(): IListPromise[IEvent] = js.native
   def list(data: IEventListOptions): IListPromise[IEvent] = js.native

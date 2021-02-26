@@ -1,12 +1,13 @@
 package typingsSlinky.sipJs.mod.Core
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js", "Core.Levels")
 @js.native
-object Levels extends js.Object {
+object Levels extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.sipJs.levelsMod.Levels with Double] = js.native

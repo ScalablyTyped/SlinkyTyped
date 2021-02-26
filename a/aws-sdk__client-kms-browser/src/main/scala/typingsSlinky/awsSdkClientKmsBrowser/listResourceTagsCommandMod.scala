@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsBrowser.typesListResourceTagsInputMod.ListRe
 import typingsSlinky.awsSdkClientKmsBrowser.typesListResourceTagsOutputMod.ListResourceTagsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-browser/commands/ListResourceTagsCommand", JSImport.Namespace)
-@js.native
-object listResourceTagsCommandMod extends js.Object {
+object listResourceTagsCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-browser/commands/ListResourceTagsCommand", "ListResourceTagsCommand")
   @js.native
   class ListResourceTagsCommand protected () extends Command[
           InputTypesUnion, 

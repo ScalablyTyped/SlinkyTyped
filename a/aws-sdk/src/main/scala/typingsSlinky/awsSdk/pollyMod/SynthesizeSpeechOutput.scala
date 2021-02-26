@@ -1,11 +1,12 @@
 package typingsSlinky.awsSdk.pollyMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SynthesizeSpeechOutput extends js.Object {
+trait SynthesizeSpeechOutput extends StObject {
   
   /**
     *  Stream containing the synthesized speech. 
@@ -31,39 +32,27 @@ object SynthesizeSpeechOutput {
   }
   
   @scala.inline
-  implicit class SynthesizeSpeechOutputOps[Self <: SynthesizeSpeechOutput] (val x: Self) extends AnyVal {
+  implicit class SynthesizeSpeechOutputMutableBuilder[Self <: SynthesizeSpeechOutput] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAudioStream(value: AudioStream): Self = StObject.set(x, "AudioStream", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAudioStreamUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "AudioStream", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setAudioStreamUndefined: Self = StObject.set(x, "AudioStream", js.undefined)
     
     @scala.inline
-    def setAudioStreamUint8Array(value: js.typedarray.Uint8Array): Self = this.set("AudioStream", value.asInstanceOf[js.Any])
+    def setContentType(value: ContentType): Self = StObject.set(x, "ContentType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAudioStream(value: AudioStream): Self = this.set("AudioStream", value.asInstanceOf[js.Any])
+    def setContentTypeUndefined: Self = StObject.set(x, "ContentType", js.undefined)
     
     @scala.inline
-    def deleteAudioStream: Self = this.set("AudioStream", js.undefined)
+    def setRequestCharacters(value: RequestCharacters): Self = StObject.set(x, "RequestCharacters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContentType(value: ContentType): Self = this.set("ContentType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteContentType: Self = this.set("ContentType", js.undefined)
-    
-    @scala.inline
-    def setRequestCharacters(value: RequestCharacters): Self = this.set("RequestCharacters", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRequestCharacters: Self = this.set("RequestCharacters", js.undefined)
+    def setRequestCharactersUndefined: Self = StObject.set(x, "RequestCharacters", js.undefined)
   }
 }

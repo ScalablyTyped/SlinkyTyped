@@ -17,14 +17,14 @@ import typingsSlinky.ionicCore.ionicCoreStrings.solid
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/button/button", JSImport.Namespace)
-@js.native
-object buttonMod extends js.Object {
+object buttonMod {
   
+  @JSImport("@ionic/core/dist/types/components/button/button", "Button")
   @js.native
   class Button ()
     extends ComponentInterface

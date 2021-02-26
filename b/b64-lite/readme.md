@@ -10,9 +10,9 @@ isomorphic base64 library in 152 bytes
 | ------------------ | :-------------: |
 | Full name          | b64-lite |
 | Keywords           | b64, isomorphic, small, atob, btoa |
-| # releases         | 9 |
-| # dependents       | 4 |
-| # downloads        | 52644 |
+| # releases         | 2 |
+| # dependents       | 6 |
+| # downloads        | 848654 |
 | # stars            | 0 |
 
 ## Links

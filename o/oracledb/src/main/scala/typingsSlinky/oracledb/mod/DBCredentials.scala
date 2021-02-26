@@ -1,5 +1,6 @@
 package typingsSlinky.oracledb.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,18 +9,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.oracledb.anon.ConnectionString
   - typingsSlinky.oracledb.anon.ConnectString
 */
-trait DBCredentials extends js.Object
+trait DBCredentials extends StObject
 object DBCredentials {
   
   @scala.inline
-  def ConnectionString(connectionString: String, password: String, user: String): DBCredentials = {
-    val __obj = js.Dynamic.literal(connectionString = connectionString.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DBCredentials]
+  def ConnectString(connectString: String, password: String, user: String): typingsSlinky.oracledb.anon.ConnectString = {
+    val __obj = js.Dynamic.literal(connectString = connectString.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.oracledb.anon.ConnectString]
   }
   
   @scala.inline
-  def ConnectString(connectString: String, password: String, user: String): DBCredentials = {
-    val __obj = js.Dynamic.literal(connectString = connectString.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DBCredentials]
+  def ConnectionString(connectionString: String, password: String, user: String): typingsSlinky.oracledb.anon.ConnectionString = {
+    val __obj = js.Dynamic.literal(connectionString = connectionString.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.oracledb.anon.ConnectionString]
   }
 }

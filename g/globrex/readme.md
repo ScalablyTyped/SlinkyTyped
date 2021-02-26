@@ -10,9 +10,9 @@ Glob to regular expression with support for extended globs
 | ------------------ | :-------------: |
 | Full name          | globrex |
 | Keywords           | glob, regex, regexp, parser, glob2regx, compiler |
-| # releases         | 9 |
-| # dependents       | 16 |
-| # downloads        | 3475404 |
+| # releases         | 0 |
+| # dependents       | 27 |
+| # downloads        | 15473483 |
 | # stars            | 0 |
 
 ## Links

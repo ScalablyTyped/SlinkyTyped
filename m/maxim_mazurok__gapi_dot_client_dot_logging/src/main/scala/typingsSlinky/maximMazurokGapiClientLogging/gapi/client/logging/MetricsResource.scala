@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientLogging.anon.KeyMetricName
 import typingsSlinky.maximMazurokGapiClientLogging.anon.KeyOauthtoken
 import typingsSlinky.maximMazurokGapiClientLogging.anon.MetricName
 import typingsSlinky.maximMazurokGapiClientLogging.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MetricsResource extends js.Object {
+trait MetricsResource extends StObject {
   
   /** Creates a logs-based metric. */
   def create(request: KeyOauthtoken): Request[LogMetric] = js.native

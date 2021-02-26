@@ -3,13 +3,14 @@ package typingsSlinky.cesium.mod
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.cesium.anon.CreditContainer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "CesiumWidget")
 @js.native
-class CesiumWidget protected () extends js.Object {
+class CesiumWidget protected () extends StObject {
   def this(container: String) = this()
   def this(container: Element) = this()
   def this(container: String, options: CreditContainer) = this()

@@ -3,14 +3,14 @@ package typingsSlinky.homeworks
 import typingsSlinky.angularCore.mod.ElementRef
 import typingsSlinky.angularCore.mod.Renderer2
 import typingsSlinky.homeworks.managerMod.HomeworksManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("homeworks/lib/ng2-homeworks/src/components/spinner/component.option", JSImport.Namespace)
-@js.native
-object componentOptionMod extends js.Object {
+object componentOptionMod {
   
+  @JSImport("homeworks/lib/ng2-homeworks/src/components/spinner/component.option", "WorksOption")
   @js.native
   class WorksOption protected () extends HomeworksManager {
     def this(renderer: Renderer2, elementRef: ElementRef[_]) = this()

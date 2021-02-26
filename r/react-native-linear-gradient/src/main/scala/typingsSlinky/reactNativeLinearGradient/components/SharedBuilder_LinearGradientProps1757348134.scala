@@ -29,6 +29,7 @@ import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNativeLinearGradient.anon.X
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -39,10 +40,10 @@ class SharedBuilder_LinearGradientProps1757348134[R <: js.Object] (val args: js.
      with StBuildingComponent[tag.type, R] {
   
   @scala.inline
-  def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+  def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+  def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
   
   @scala.inline
   def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -69,10 +70,10 @@ class SharedBuilder_LinearGradientProps1757348134[R <: js.Object] (val args: js.
   def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+  def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+  def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
   
   @scala.inline
   def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -111,10 +112,10 @@ class SharedBuilder_LinearGradientProps1757348134[R <: js.Object] (val args: js.
   def isTVSelectable(value: Boolean): this.type = set("isTVSelectable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def locationsVarargs(value: Double*): this.type = set("locations", js.Array(value :_*))
+  def locations(value: js.Array[Double]): this.type = set("locations", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def locations(value: js.Array[Double]): this.type = set("locations", value.asInstanceOf[js.Any])
+  def locationsVarargs(value: Double*): this.type = set("locations", js.Array(value :_*))
   
   @scala.inline
   def nativeID(value: String): this.type = set("nativeID", value.asInstanceOf[js.Any])

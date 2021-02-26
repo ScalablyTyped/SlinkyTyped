@@ -1,13 +1,14 @@
 package typingsSlinky.antd
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antd/lib/result/noFound", JSImport.Namespace)
-@js.native
-object noFoundMod extends js.Object {
+object noFoundMod {
   
+  @JSImport("antd/lib/result/noFound", JSImport.Default)
+  @js.native
   def default(): ReactElement = js.native
 }

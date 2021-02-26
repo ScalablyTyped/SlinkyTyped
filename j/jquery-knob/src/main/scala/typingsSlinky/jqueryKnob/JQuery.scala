@@ -1,12 +1,13 @@
 package typingsSlinky.jqueryKnob
 
 import typingsSlinky.jqueryKnob.JQueryKnob.JQueryKnobOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Create a knob for the given input field, with optional options

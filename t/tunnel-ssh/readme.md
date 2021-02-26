@@ -10,9 +10,9 @@ Easy extendable SSH tunnel
 | ------------------ | :-------------: |
 | Full name          | tunnel-ssh |
 | Keywords           | tunnel, ssh, mysql, develop, net |
-| # releases         | 2 |
-| # dependents       | 35 |
-| # downloads        | 2943743 |
+| # releases         | 0 |
+| # dependents       | 54 |
+| # downloads        | 4244719 |
 | # stars            | 16 |
 
 ## Links

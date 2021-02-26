@@ -13,6 +13,7 @@ import typingsSlinky.officeJs.officeJsStrings.Custom
 import typingsSlinky.officeJs.officeJsStrings.DataBar
 import typingsSlinky.officeJs.officeJsStrings.PresetCriteria
 import typingsSlinky.officeJs.officeJsStrings.TopBottom
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

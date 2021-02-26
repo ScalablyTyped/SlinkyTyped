@@ -4,6 +4,7 @@ import typingsSlinky.blessed.blessedStrings.cd
 import typingsSlinky.blessed.blessedStrings.error
 import typingsSlinky.blessed.blessedStrings.file
 import typingsSlinky.blessed.blessedStrings.refresh
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

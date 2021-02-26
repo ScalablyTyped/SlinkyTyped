@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.CallbackFields
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Fields
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EvaluationJobsResource extends js.Object {
+trait EvaluationJobsResource extends StObject {
   
   def create(request: Alt, body: GoogleCloudDatalabelingV1beta1CreateEvaluationJobRequest): Request[GoogleCloudDatalabelingV1beta1EvaluationJob] = js.native
   /** Creates an evaluation job. */

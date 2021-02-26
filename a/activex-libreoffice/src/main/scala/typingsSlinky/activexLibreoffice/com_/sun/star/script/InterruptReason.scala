@@ -8,6 +8,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`4`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`5`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`6`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`7`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`5`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`7`
 */
-trait InterruptReason extends js.Object
+trait InterruptReason extends StObject
 object InterruptReason {
   
   /** script stopped at a breakpoint. */

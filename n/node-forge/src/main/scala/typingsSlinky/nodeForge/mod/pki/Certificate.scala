@@ -5,12 +5,13 @@ import typingsSlinky.nodeForge.anon.Id
 import typingsSlinky.nodeForge.anon.Name
 import typingsSlinky.nodeForge.anon.NotAfter
 import typingsSlinky.nodeForge.mod.md.MessageDigest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Certificate extends js.Object {
+trait Certificate extends StObject {
   
   var extensions: js.Array[_] = js.native
   

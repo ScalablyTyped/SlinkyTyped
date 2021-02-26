@@ -9,9 +9,9 @@ Format and manipulate numbers.
 | ------------------ | :-------------: |
 | Full name          | numeral |
 | Keywords           | numeral, number, format, time, money, percentage |
-| # releases         | 1 |
-| # dependents       | 1002 |
-| # downloads        | 21525824 |
+| # releases         | 0 |
+| # dependents       | 1257 |
+| # downloads        | 31735964 |
 | # stars            | 76 |
 
 ## Links

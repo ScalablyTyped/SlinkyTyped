@@ -15,6 +15,7 @@ import typingsSlinky.activexAdodb.activexAdodbNumbers.`6`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`7`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`8`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,7 +37,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAdodb.activexAdodbNumbers.`4`
   - typingsSlinky.activexAdodb.activexAdodbNumbers.`3`
 */
-trait EventReasonEnum extends js.Object
+trait EventReasonEnum extends StObject
 object EventReasonEnum {
   
   @scala.inline

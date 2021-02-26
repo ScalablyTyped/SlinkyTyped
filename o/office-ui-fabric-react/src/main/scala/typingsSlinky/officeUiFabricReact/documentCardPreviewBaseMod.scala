@@ -2,14 +2,14 @@ package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.documentCardPreviewTypesMod.IDocumentCardPreviewProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/DocumentCard/DocumentCardPreview.base", JSImport.Namespace)
-@js.native
-object documentCardPreviewBaseMod extends js.Object {
+object documentCardPreviewBaseMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/DocumentCard/DocumentCardPreview.base", "DocumentCardPreviewBase")
   @js.native
   class DocumentCardPreviewBase protected ()
     extends Component[IDocumentCardPreviewProps, js.Any, js.Any] {

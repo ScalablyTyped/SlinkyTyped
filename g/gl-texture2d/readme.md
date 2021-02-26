@@ -11,8 +11,8 @@ WebGL texture wrapper
 | Full name          | gl-texture2d |
 | Keywords           | webgl, texture, wrap, ndarray |
 | # releases         | 0 |
-| # dependents       | 54 |
-| # downloads        | 1850433 |
+| # dependents       | 64 |
+| # downloads        | 3482486 |
 | # stars            | 0 |
 
 ## Links

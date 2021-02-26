@@ -3,6 +3,7 @@ package typingsSlinky.openlayers.mod.source
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.ImageLoadFunctionType
 import typingsSlinky.openlayers.mod.olx.source.ImageMapGuideOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

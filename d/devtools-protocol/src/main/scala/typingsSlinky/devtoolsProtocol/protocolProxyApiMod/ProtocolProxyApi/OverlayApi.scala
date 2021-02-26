@@ -30,12 +30,13 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowLayoutShiftReg
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowPaintRectsRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowScrollBottleneckRectsRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowViewportSizeOnResizeRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OverlayApi extends js.Object {
+trait OverlayApi extends StObject {
   
   /**
     * Disables domain notifications.

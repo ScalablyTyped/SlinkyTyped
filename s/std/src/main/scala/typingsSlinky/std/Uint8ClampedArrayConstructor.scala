@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,11 +36,6 @@ trait Uint8ClampedArrayConstructor
   /**
     * Creates an array from an array-like or iterable object.
     * @param arrayLike An array-like or iterable object to convert to an array.
-    */
-  def from(arrayLike: ArrayLike[Double]): js.typedarray.Uint8ClampedArray = js.native
-  /**
-    * Creates an array from an array-like or iterable object.
-    * @param arrayLike An array-like or iterable object to convert to an array.
     * @param mapfn A mapping function to call on every element of the array.
     * @param thisArg Value of 'this' used to invoke the mapfn.
     */
@@ -51,6 +47,11 @@ trait Uint8ClampedArrayConstructor
     mapfn: js.Function2[/* v */ Double, /* k */ Double, Double],
     thisArg: js.Any
   ): js.typedarray.Uint8ClampedArray = js.native
+  /**
+    * Creates an array from an array-like or iterable object.
+    * @param arrayLike An array-like or iterable object to convert to an array.
+    */
+  def from(arrayLike: ArrayLike[Double]): js.typedarray.Uint8ClampedArray = js.native
   /**
     * Creates an array from an array-like or iterable object.
     * @param arrayLike An array-like or iterable object to convert to an array.

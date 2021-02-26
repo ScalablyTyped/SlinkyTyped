@@ -5,12 +5,13 @@ import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.atom.anon.Command
 import typingsSlinky.atom.anon.PriorityNumber
 import typingsSlinky.atom.anon.Watch
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait KeymapManager extends js.Object {
+trait KeymapManager extends StObject {
   
   /** Add sets of key bindings grouped by CSS selector. */
   def add(source: String, bindings: StringDictionary[StringDictionary[String]]): Disposable = js.native

@@ -6,6 +6,7 @@ import typingsSlinky.kendoUi.JQueryPromise
 import typingsSlinky.kendoUi.kendo.data.DataSource
 import typingsSlinky.kendoUi.kendo.data.ObservableArray
 import typingsSlinky.kendoUi.kendo.data.ObservableObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,8 +25,8 @@ trait Grid extends Widget {
   def cancelRow(): Unit = js.native
   
   def cellIndex(cell: String): Double = js.native
-  def cellIndex(cell: JQuery): Double = js.native
   def cellIndex(cell: Element): Double = js.native
+  def cellIndex(cell: JQuery): Double = js.native
   
   def clearSelection(): Unit = js.native
   
@@ -33,12 +34,12 @@ trait Grid extends Widget {
   def closeCell(isCancel: Boolean): Unit = js.native
   
   def collapseGroup(row: String): Unit = js.native
-  def collapseGroup(row: JQuery): Unit = js.native
   def collapseGroup(row: Element): Unit = js.native
+  def collapseGroup(row: JQuery): Unit = js.native
   
   def collapseRow(row: String): Unit = js.native
-  def collapseRow(row: JQuery): Unit = js.native
   def collapseRow(row: Element): Unit = js.native
+  def collapseRow(row: JQuery): Unit = js.native
   
   var columns: js.Array[GridColumn] = js.native
   
@@ -48,8 +49,8 @@ trait Grid extends Widget {
   def current(cell: JQuery): Unit = js.native
   
   def dataItem(row: String): ObservableObject = js.native
-  def dataItem(row: JQuery): ObservableObject = js.native
   def dataItem(row: Element): ObservableObject = js.native
+  def dataItem(row: JQuery): ObservableObject = js.native
   
   def dataItems(): ObservableArray = js.native
   
@@ -60,12 +61,12 @@ trait Grid extends Widget {
   def editRow(row: JQuery): Unit = js.native
   
   def expandGroup(row: String): Unit = js.native
-  def expandGroup(row: JQuery): Unit = js.native
   def expandGroup(row: Element): Unit = js.native
+  def expandGroup(row: JQuery): Unit = js.native
   
   def expandRow(row: String): Unit = js.native
-  def expandRow(row: JQuery): Unit = js.native
   def expandRow(row: Element): Unit = js.native
+  def expandRow(row: JQuery): Unit = js.native
   
   var footer: JQuery = js.native
   
@@ -94,8 +95,8 @@ trait Grid extends Widget {
   def refresh(): Unit = js.native
   
   def removeRow(row: String): Unit = js.native
-  def removeRow(row: JQuery): Unit = js.native
   def removeRow(row: Element): Unit = js.native
+  def removeRow(row: JQuery): Unit = js.native
   
   def reorderColumn(destIndex: Double, column: js.Any): Unit = js.native
   
@@ -111,8 +112,8 @@ trait Grid extends Widget {
   
   def select(): JQuery = js.native
   def select(rows: String): Unit = js.native
-  def select(rows: JQuery): Unit = js.native
   def select(rows: Element): Unit = js.native
+  def select(rows: JQuery): Unit = js.native
   
   def selectedKeyNames(): js.Any = js.native
   

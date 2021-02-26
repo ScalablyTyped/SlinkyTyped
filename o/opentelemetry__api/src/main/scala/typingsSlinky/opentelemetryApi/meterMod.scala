@@ -9,16 +9,15 @@ import typingsSlinky.opentelemetryApi.metricMod.UpDownCounter
 import typingsSlinky.opentelemetryApi.metricMod.ValueObserver
 import typingsSlinky.opentelemetryApi.metricMod.ValueRecorder
 import typingsSlinky.opentelemetryApi.observerResultMod.ObserverResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@opentelemetry/api/build/src/metrics/Meter", JSImport.Namespace)
-@js.native
-object meterMod extends js.Object {
+object meterMod {
   
   @js.native
-  trait Meter extends js.Object {
+  trait Meter extends StObject {
     
     /**
       * Creates a new `BatchObserver` metric, can be used to update many metrics

@@ -3,6 +3,7 @@ package typingsSlinky.twilioVideo.mod
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.twilioVideo.mod.Track.ID
 import typingsSlinky.twilioVideo.twilioVideoStrings.data
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -14,16 +14,16 @@ import typingsSlinky.reactNativeNavigation.eventsMod.BottomTabLongPressedEvent
 import typingsSlinky.reactNativeNavigation.eventsMod.BottomTabPressedEvent
 import typingsSlinky.reactNativeNavigation.eventsMod.BottomTabSelectedEvent
 import typingsSlinky.reactNativeNavigation.eventsMod.CommandCompletedEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-navigation/lib/dist/adapters/NativeEventsReceiver", JSImport.Namespace)
-@js.native
-object nativeEventsReceiverMod extends js.Object {
+object nativeEventsReceiverMod {
   
+  @JSImport("react-native-navigation/lib/dist/adapters/NativeEventsReceiver", "NativeEventsReceiver")
   @js.native
-  class NativeEventsReceiver () extends js.Object {
+  class NativeEventsReceiver () extends StObject {
     
     var emitter: js.Any = js.native
     

@@ -14,15 +14,22 @@ import typingsSlinky.reactFacebookLogin.mod.default
 import typingsSlinky.reactFacebookLogin.reactFacebookLoginStrings.medium
 import typingsSlinky.reactFacebookLogin.reactFacebookLoginStrings.metro
 import typingsSlinky.reactFacebookLogin.reactFacebookLoginStrings.small
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactFacebookLogin {
   
+  @scala.inline
+  def apply(appId: String, callback: ReactFacebookFailureResponse | ReactFacebookLoginInfo => Unit): Builder = {
+    val __props = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], callback = js.Any.fromFunction1(callback))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactFacebookLoginProps]))
+  }
+  
   @JSImport("react-facebook-login", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +61,10 @@ object ReactFacebookLogin {
     def fields(value: String): this.type = set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def isDisabled(value: Boolean): this.type = set("isDisabled", value.asInstanceOf[js.Any])
@@ -96,13 +103,13 @@ object ReactFacebookLogin {
     def state(value: String): this.type = set("state", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tagNode(value: Node): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: Node | ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tagComponent(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tag(value: Node | ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tagNode(value: Node): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def textButton(value: String): this.type = set("textButton", value.asInstanceOf[js.Any])
@@ -118,10 +125,4 @@ object ReactFacebookLogin {
   }
   
   def withProps(p: ReactFacebookLoginProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(appId: String, callback: ReactFacebookFailureResponse | ReactFacebookLoginInfo => Unit): Builder = {
-    val __props = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], callback = js.Any.fromFunction1(callback))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactFacebookLoginProps]))
-  }
 }

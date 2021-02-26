@@ -2,6 +2,7 @@ package typingsSlinky.googlemaps.global.google.maps
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.googlemaps.google.maps.StreetViewPanoramaOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -7,6 +7,7 @@ import typingsSlinky.googlemaps.googlemapsStrings.content_changed
 import typingsSlinky.googlemaps.googlemapsStrings.domready
 import typingsSlinky.googlemaps.googlemapsStrings.position_changed
 import typingsSlinky.googlemaps.googlemapsStrings.zindex_changed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

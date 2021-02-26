@@ -14,15 +14,22 @@ import typingsSlinky.reactJoyride.mod.StoreHelpers
 import typingsSlinky.reactJoyride.mod.Styles
 import typingsSlinky.reactJoyride.mod.TooltipRenderProps
 import typingsSlinky.reactJoyride.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactJoyride {
   
+  @scala.inline
+  def apply(steps: js.Array[Step]): Builder = {
+    val __props = js.Dynamic.literal(steps = steps.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("react-joyride", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,13 +37,13 @@ object ReactJoyride {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def beaconComponentFunctionComponent(value: ReactComponentClass[BeaconRenderProps]): this.type = set("beaconComponent", value.asInstanceOf[js.Any])
+    def beaconComponent(value: ReactElement): this.type = set("beaconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def beaconComponentComponentClass(value: ReactComponentClass[BeaconRenderProps]): this.type = set("beaconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def beaconComponent(value: ReactElement): this.type = set("beaconComponent", value.asInstanceOf[js.Any])
+    def beaconComponentFunctionComponent(value: ReactComponentClass[BeaconRenderProps]): this.type = set("beaconComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def callback(value: /* data */ CallBackProps => Unit): this.type = set("callback", js.Any.fromFunction1(value))
@@ -102,20 +109,14 @@ object ReactJoyride {
     def styles(value: Styles): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tooltipComponentFunctionComponent(value: ReactComponentClass[TooltipRenderProps]): this.type = set("tooltipComponent", value.asInstanceOf[js.Any])
+    def tooltipComponent(value: ReactElement): this.type = set("tooltipComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tooltipComponentComponentClass(value: ReactComponentClass[TooltipRenderProps]): this.type = set("tooltipComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tooltipComponent(value: ReactElement): this.type = set("tooltipComponent", value.asInstanceOf[js.Any])
+    def tooltipComponentFunctionComponent(value: ReactComponentClass[TooltipRenderProps]): this.type = set("tooltipComponent", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(steps: js.Array[Step]): Builder = {
-    val __props = js.Dynamic.literal(steps = steps.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

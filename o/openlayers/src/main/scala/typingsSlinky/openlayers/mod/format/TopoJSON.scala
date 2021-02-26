@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.Node
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.olx.format.TopoJSONOptions
 import typingsSlinky.openlayers.mod.proj.Projection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,6 @@ class TopoJSON () extends JSONFeature {
   def this(opt_options: TopoJSONOptions) = this()
   
   def readFeatures(source: String): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: GlobalObject): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   /**
     * Read all features from a TopoJSON source.
     *
@@ -39,9 +39,9 @@ class TopoJSON () extends JSONFeature {
     */
   def readFeatures(source: Document): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: GlobalObject): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   
   def readProjection(`object`: String): Projection = js.native
-  def readProjection(`object`: GlobalObject): Projection = js.native
   /**
     * Read the projection from a TopoJSON source.
     *
@@ -51,4 +51,5 @@ class TopoJSON () extends JSONFeature {
     */
   def readProjection(`object`: Document): Projection = js.native
   def readProjection(`object`: Node): Projection = js.native
+  def readProjection(`object`: GlobalObject): Projection = js.native
 }

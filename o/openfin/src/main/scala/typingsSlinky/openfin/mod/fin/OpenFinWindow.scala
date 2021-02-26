@@ -3,6 +3,7 @@ package typingsSlinky.openfin.mod.fin
 import typingsSlinky.openfin.openfinStrings.maximized
 import typingsSlinky.openfin.openfinStrings.minimized
 import typingsSlinky.openfin.openfinStrings.normal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * The new window appears in the same process as the parent window.
   */
 @js.native
-trait OpenFinWindow extends js.Object {
+trait OpenFinWindow extends StObject {
   
   /**
     * Registers an event listener on the specified event.

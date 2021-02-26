@@ -6,6 +6,7 @@ import typingsSlinky.phaser.spine.Color
 import typingsSlinky.phaser.spine.Disposable
 import typingsSlinky.phaser.spine.Skeleton
 import typingsSlinky.phaser.spine.TextureAtlasRegion
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

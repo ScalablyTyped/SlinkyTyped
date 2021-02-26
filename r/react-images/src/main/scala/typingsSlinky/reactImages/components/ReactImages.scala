@@ -9,15 +9,22 @@ import typingsSlinky.react.mod.ReactHTMLElement
 import typingsSlinky.reactImages.mod.Image
 import typingsSlinky.reactImages.mod.LightboxProps
 import typingsSlinky.reactImages.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactImages {
   
+  @scala.inline
+  def apply(images: js.Array[Image], onClose: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(images = images.asInstanceOf[js.Any], onClose = js.Any.fromFunction0(onClose))
+    new Builder(js.Array(this.component, __props.asInstanceOf[LightboxProps]))
+  }
+  
   @JSImport("react-images", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,10 +41,10 @@ object ReactImages {
     def currentImage(value: Double): this.type = set("currentImage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customControlsVarargs(value: ReactHTMLElement[js.Any]*): this.type = set("customControls", js.Array(value :_*))
+    def customControls(value: js.Array[ReactHTMLElement[_]]): this.type = set("customControls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customControls(value: js.Array[ReactHTMLElement[_]]): this.type = set("customControls", value.asInstanceOf[js.Any])
+    def customControlsVarargs(value: ReactHTMLElement[js.Any]*): this.type = set("customControls", js.Array(value :_*))
     
     @scala.inline
     def enableKeyboardInput(value: Boolean): this.type = set("enableKeyboardInput", value.asInstanceOf[js.Any])
@@ -95,10 +102,4 @@ object ReactImages {
   }
   
   def withProps(p: LightboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(images: js.Array[Image], onClose: () => Unit): Builder = {
-    val __props = js.Dynamic.literal(images = images.asInstanceOf[js.Any], onClose = js.Any.fromFunction0(onClose))
-    new Builder(js.Array(this.component, __props.asInstanceOf[LightboxProps]))
-  }
 }

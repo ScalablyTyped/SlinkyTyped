@@ -18,6 +18,7 @@ import typingsSlinky.officeJs.officeJsStrings.Outline
 import typingsSlinky.officeJs.officeJsStrings.Row
 import typingsSlinky.officeJs.officeJsStrings.Tabular
 import typingsSlinky.officeJs.officeJsStrings.Unknown_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -2,13 +2,14 @@ package typingsSlinky.nextServer.anon
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.nextServer.sideEffectMod.State
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Readonly<next-server.next-server/dist/lib/side-effect.SideEffectProps> & std.Readonly<{  children :react.react.ReactNode | undefined}> */
 @js.native
-trait ReadonlySideEffectPropsRe extends js.Object {
+trait ReadonlySideEffectPropsRe extends StObject {
   
   val children: js.UndefOr[ReactElement] = js.native
   
@@ -27,42 +28,30 @@ object ReadonlySideEffectPropsRe {
   }
   
   @scala.inline
-  implicit class ReadonlySideEffectPropsReOps[Self <: ReadonlySideEffectPropsRe] (val x: Self) extends AnyVal {
+  implicit class ReadonlySideEffectPropsReMutableBuilder[Self <: ReadonlySideEffectPropsRe] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChildren(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChildrenReactElement(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
     
     @scala.inline
-    def setReduceComponentsToState(value: (/* components */ js.Array[ReactElement], /* props */ js.Any) => State): Self = this.set("reduceComponentsToState", js.Any.fromFunction2(value))
+    def setHandleStateChange(value: /* state */ State => Unit): Self = StObject.set(x, "handleStateChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setHandleStateChangeUndefined: Self = StObject.set(x, "handleStateChange", js.undefined)
     
     @scala.inline
-    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setInAmpMode(value: Boolean): Self = StObject.set(x, "inAmpMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
+    def setInAmpModeUndefined: Self = StObject.set(x, "inAmpMode", js.undefined)
     
     @scala.inline
-    def setHandleStateChange(value: /* state */ State => Unit): Self = this.set("handleStateChange", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteHandleStateChange: Self = this.set("handleStateChange", js.undefined)
-    
-    @scala.inline
-    def setInAmpMode(value: Boolean): Self = this.set("inAmpMode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteInAmpMode: Self = this.set("inAmpMode", js.undefined)
+    def setReduceComponentsToState(value: (/* components */ js.Array[ReactElement], /* props */ js.Any) => State): Self = StObject.set(x, "reduceComponentsToState", js.Any.fromFunction2(value))
   }
 }

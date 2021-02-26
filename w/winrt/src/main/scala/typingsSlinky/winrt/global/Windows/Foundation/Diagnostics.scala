@@ -1,15 +1,15 @@
 package typingsSlinky.winrt.global.Windows.Foundation
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Windows.Foundation.Diagnostics")
-@js.native
-object Diagnostics extends js.Object {
+object Diagnostics {
   
+  @JSGlobal("Windows.Foundation.Diagnostics.ErrorOptions")
   @js.native
-  object ErrorOptions extends js.Object {
+  object ErrorOptions extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Foundation.Diagnostics.ErrorOptions with Double] = js.native
@@ -25,6 +25,7 @@ object Diagnostics extends js.Object {
     /* 3 */ val useSetErrorInfo: typingsSlinky.winrt.Windows.Foundation.Diagnostics.ErrorOptions.useSetErrorInfo with Double = js.native
   }
   
+  @JSGlobal("Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings")
   @js.native
   class RuntimeBrokerErrorSettings ()
     extends typingsSlinky.winrt.Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings

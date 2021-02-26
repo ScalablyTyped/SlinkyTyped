@@ -9,6 +9,7 @@ import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.reactImgix.mod.CommonProps
 import typingsSlinky.reactImgix.mod.ImgixHTMLAttributes
 import typingsSlinky.std.HTMLPictureElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object Picture {
   
   @JSImport("react-imgix", "Picture")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,7 +37,7 @@ object Picture {
     ): this.type = set("onMounted", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: PropsWithChildren[CommonProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Picture.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PropsWithChildren[CommonProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

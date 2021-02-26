@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.fontIconMod.FontIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/CropLandscapeFontIcon", JSImport.Namespace)
-@js.native
-object cropLandscapeFontIconMod extends js.Object {
+object cropLandscapeFontIconMod {
   
+  @JSImport("@react-md/material-icons/types/CropLandscapeFontIcon", "CropLandscapeFontIcon")
+  @js.native
   val CropLandscapeFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

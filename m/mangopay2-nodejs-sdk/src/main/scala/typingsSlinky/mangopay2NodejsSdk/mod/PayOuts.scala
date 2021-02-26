@@ -3,13 +3,14 @@ package typingsSlinky.mangopay2NodejsSdk.mod
 import typingsSlinky.mangopay2NodejsSdk.mod.PayOut.CreatePayOut
 import typingsSlinky.mangopay2NodejsSdk.mod.PayOut.PayOutData
 import typingsSlinky.mangopay2NodejsSdk.mod.refund.RefundData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mangopay2-nodejs-sdk", "PayOuts")
 @js.native
-class PayOuts () extends js.Object {
+class PayOuts () extends StObject {
   
   /**
     * Create new pay-out

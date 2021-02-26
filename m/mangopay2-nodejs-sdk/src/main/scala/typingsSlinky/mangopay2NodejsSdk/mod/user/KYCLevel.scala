@@ -1,5 +1,6 @@
 package typingsSlinky.mangopay2NodejsSdk.mod.user
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LIGHT
   - typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.REGULAR
 */
-trait KYCLevel extends js.Object
+trait KYCLevel extends StObject
 object KYCLevel {
   
   @scala.inline

@@ -10,9 +10,9 @@ Transform into a space separated string with each word capitalized
 | ------------------ | :-------------: |
 | Full name          | capital-case |
 | Keywords           | capital, case, title, capital-case, convert, transform, capitalize |
-| # releases         | 6 |
-| # dependents       | 5 |
-| # downloads        | 3467706 |
+| # releases         | 7 |
+| # dependents       | 8 |
+| # downloads        | 17169977 |
 | # stars            | 0 |
 
 ## Links

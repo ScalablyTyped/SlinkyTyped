@@ -8,13 +8,14 @@ import typingsSlinky.winrtUwp.Windows.Media.Devices.VideoDeviceController
 import typingsSlinky.winrtUwp.Windows.Media.MediaProperties.VideoEncodingProperties
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.enabledchanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents an effect that stabilizes a video stream. */
 @js.native
-trait VideoStabilizationEffect extends js.Object {
+trait VideoStabilizationEffect extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

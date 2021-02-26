@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,18 +29,26 @@ class ConsensusFinalizeBlockRequest () extends IConsensusFinalizeBlockRequest {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest")
-@js.native
-object ConsensusFinalizeBlockRequest extends js.Object {
+object ConsensusFinalizeBlockRequest {
   
   /**
     * Creates a new ConsensusFinalizeBlockRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ConsensusFinalizeBlockRequest instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.create")
+  @js.native
   def create(): ConsensusFinalizeBlockRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.create")
+  @js.native
   def create(properties: IConsensusFinalizeBlockRequest): ConsensusFinalizeBlockRequest = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): ConsensusFinalizeBlockRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusFinalizeBlockRequest = js.native
   /**
     * Decodes a ConsensusFinalizeBlockRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -48,11 +57,16 @@ object ConsensusFinalizeBlockRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.decode")
+  @js.native
   def decode(reader: Reader): ConsensusFinalizeBlockRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): ConsensusFinalizeBlockRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): ConsensusFinalizeBlockRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusFinalizeBlockRequest = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusFinalizeBlockRequest = js.native
   /**
     * Decodes a ConsensusFinalizeBlockRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -60,8 +74,9 @@ object ConsensusFinalizeBlockRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): ConsensusFinalizeBlockRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusFinalizeBlockRequest = js.native
   
   /**
     * Encodes the specified ConsensusFinalizeBlockRequest message. Does not implicitly {@link ConsensusFinalizeBlockRequest.verify|verify} messages.
@@ -69,7 +84,11 @@ object ConsensusFinalizeBlockRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.encode")
+  @js.native
   def encode(message: IConsensusFinalizeBlockRequest): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.encode")
+  @js.native
   def encode(message: IConsensusFinalizeBlockRequest, writer: Writer): Writer = js.native
   
   /**
@@ -78,7 +97,11 @@ object ConsensusFinalizeBlockRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusFinalizeBlockRequest): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusFinalizeBlockRequest, writer: Writer): Writer = js.native
   
   /**
@@ -86,6 +109,8 @@ object ConsensusFinalizeBlockRequest extends js.Object {
     * @param object Plain object
     * @returns ConsensusFinalizeBlockRequest
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusFinalizeBlockRequest = js.native
   
   /**
@@ -94,7 +119,11 @@ object ConsensusFinalizeBlockRequest extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.toObject")
+  @js.native
   def toObject(message: ConsensusFinalizeBlockRequest): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.toObject")
+  @js.native
   def toObject(message: ConsensusFinalizeBlockRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -102,5 +131,7 @@ object ConsensusFinalizeBlockRequest extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusFinalizeBlockRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

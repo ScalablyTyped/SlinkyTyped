@@ -4,6 +4,7 @@ import typingsSlinky.sharepoint.SP.FieldLookup
 import typingsSlinky.sharepoint.SP.Guid
 import typingsSlinky.sharepoint.SP.ListItem
 import typingsSlinky.sharepoint.SP.StringResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

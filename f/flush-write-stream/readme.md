@@ -10,9 +10,9 @@ A write stream constructor that supports a flush function that is called before 
 | ------------------ | :-------------: |
 | Full name          | flush-write-stream |
 | Keywords           | - |
-| # releases         | 5 |
-| # dependents       | 45 |
-| # downloads        | 286995259 |
+| # releases         | 3 |
+| # dependents       | 77 |
+| # downloads        | 489439420 |
 | # stars            | 1 |
 
 ## Links

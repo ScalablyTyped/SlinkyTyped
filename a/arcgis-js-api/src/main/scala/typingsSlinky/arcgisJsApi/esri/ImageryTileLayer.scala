@@ -5,6 +5,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.bilinear
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.cubic
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.majority
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.nearest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

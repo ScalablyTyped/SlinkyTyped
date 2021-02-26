@@ -1,5 +1,6 @@
 package typingsSlinky.angularCompiler.astMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCompiler.astMod.VariableBinding
   - typingsSlinky.angularCompiler.astMod.ExpressionBinding
 */
-trait TemplateBinding extends js.Object
+trait TemplateBinding extends StObject

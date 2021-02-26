@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Page
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.ReturnAsBase64
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.ReturnAsStream
 */
-trait PrintToPDFRequestTransferMode extends js.Object
+trait PrintToPDFRequestTransferMode extends StObject
 object PrintToPDFRequestTransferMode {
   
   @scala.inline

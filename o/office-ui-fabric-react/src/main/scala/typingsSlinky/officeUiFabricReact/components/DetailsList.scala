@@ -36,15 +36,22 @@ import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DetailsList {
   
+  @scala.inline
+  def apply(items: js.Array[_]): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsListProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "DetailsList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -85,22 +92,22 @@ object DetailsList {
     def columnReorderOptions(value: IColumnReorderOptions): this.type = set("columnReorderOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columnsVarargs(value: IColumn*): this.type = set("columns", js.Array(value :_*))
-    
-    @scala.inline
     def columns(value: js.Array[IColumn]): this.type = set("columns", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def columnsVarargs(value: IColumn*): this.type = set("columns", js.Array(value :_*))
+    
+    @scala.inline
     def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def componentRef(value: IRefObject[IDetailsList]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentRefFunction1(value: /* ref */ IDetailsList | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IDetailsList]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IDetailsList]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def constrainMode(value: ConstrainMode): this.type = set("constrainMode", value.asInstanceOf[js.Any])
@@ -141,10 +148,10 @@ object DetailsList {
     def groupProps(value: IDetailsGroupRenderProps): this.type = set("groupProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
+    def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
+    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
     
     @scala.inline
     def indentWidth(value: Double): this.type = set("indentWidth", value.asInstanceOf[js.Any])
@@ -244,10 +251,10 @@ object DetailsList {
     def onShouldVirtualize(value: /* props */ IListProps[_] => Boolean): this.type = set("onShouldVirtualize", js.Any.fromFunction1(value))
     
     @scala.inline
-    def rowElementEventMapVarargs(value: Callback*): this.type = set("rowElementEventMap", js.Array(value :_*))
+    def rowElementEventMap(value: js.Array[Callback]): this.type = set("rowElementEventMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowElementEventMap(value: js.Array[Callback]): this.type = set("rowElementEventMap", value.asInstanceOf[js.Any])
+    def rowElementEventMapVarargs(value: Callback*): this.type = set("rowElementEventMap", js.Array(value :_*))
     
     @scala.inline
     def selection(value: ISelection[IObjectWithKey]): this.type = set("selection", value.asInstanceOf[js.Any])
@@ -271,10 +278,10 @@ object DetailsList {
     def skipViewportMeasures(value: Boolean): this.type = set("skipViewportMeasures", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IDetailsListStyleProps => DeepPartial[IDetailsListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IDetailsListStyleProps, IDetailsListStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IDetailsListStyleProps, IDetailsListStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IDetailsListStyleProps => DeepPartial[IDetailsListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -293,10 +300,4 @@ object DetailsList {
   }
   
   def withProps(p: IDetailsListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(items: js.Array[_]): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsListProps]))
-  }
 }

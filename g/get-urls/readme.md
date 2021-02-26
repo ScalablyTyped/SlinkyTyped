@@ -10,10 +10,10 @@ Get all URLs in a string
 | ------------------ | :-------------: |
 | Full name          | get-urls |
 | Keywords           | get, urls, url, extract, find, scrape, text, string |
-| # releases         | 5 |
-| # dependents       | 37 |
-| # downloads        | 1162089 |
-| # stars            | 8 |
+| # releases         | 6 |
+| # dependents       | 51 |
+| # downloads        | 2507532 |
+| # stars            | 7 |
 
 ## Links
 - [Homepage](https://github.com/sindresorhus/get-urls#readme)

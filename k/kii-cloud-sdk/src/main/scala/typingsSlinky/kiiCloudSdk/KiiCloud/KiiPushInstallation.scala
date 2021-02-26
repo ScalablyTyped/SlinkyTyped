@@ -4,6 +4,7 @@ import typingsSlinky.kiiCloudSdk.anon.`16`
 import typingsSlinky.kiiCloudSdk.anon.`17`
 import typingsSlinky.kiiCloudSdk.anon.`18`
 import typingsSlinky.kiiCloudSdk.anon.`19`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Represents a KiiPushInstallation object
   */
 @js.native
-trait KiiPushInstallation extends js.Object {
+trait KiiPushInstallation extends StObject {
   
   /**
     * Get MQTT endpoint.

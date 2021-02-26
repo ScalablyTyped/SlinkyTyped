@@ -21,6 +21,7 @@ import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.bottomRight
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.topCenter
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.topLeft
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.topRight
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ object Tips {
   
   @JSImport("tuya-panel-kit", "Tips")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -72,7 +73,7 @@ object Tips {
     def withModal(value: Boolean): this.type = set("withModal", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TipsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tips.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TipsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

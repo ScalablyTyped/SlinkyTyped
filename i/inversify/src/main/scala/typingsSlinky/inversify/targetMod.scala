@@ -3,14 +3,14 @@ package typingsSlinky.inversify
 import typingsSlinky.inversify.interfacesMod.interfaces.ServiceIdentifier
 import typingsSlinky.inversify.interfacesMod.interfaces.TargetType
 import typingsSlinky.inversify.metadataMod.Metadata
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("inversify/dts/planning/target", JSImport.Namespace)
-@js.native
-object targetMod extends js.Object {
+object targetMod {
   
+  @JSImport("inversify/dts/planning/target", "Target")
   @js.native
   class Target protected ()
     extends typingsSlinky.inversify.interfacesMod.interfaces.Target {

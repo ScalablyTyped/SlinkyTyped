@@ -3,19 +3,19 @@ package typingsSlinky.twilsock
 import typingsSlinky.loglevel.mod.LogLevelDesc
 import typingsSlinky.std.Set
 import typingsSlinky.twilsock.initregistrationMod.InitRegistration
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("twilsock/lib/configuration", JSImport.Namespace)
-@js.native
-object configurationMod extends js.Object {
+object configurationMod {
   
   /**
     * Settings container for the Twilsock client library
     */
+  @JSImport("twilsock/lib/configuration", "Configuration")
   @js.native
-  class Configuration protected () extends js.Object {
+  class Configuration protected () extends StObject {
     /**
       * @param {String} token - authentication token
       * @param {Object} options - options to override defaults

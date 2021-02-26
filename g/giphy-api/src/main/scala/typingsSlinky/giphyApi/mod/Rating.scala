@@ -1,5 +1,6 @@
 package typingsSlinky.giphyApi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.giphyApi.giphyApiStrings.`pg-13`
   - typingsSlinky.giphyApi.giphyApiStrings.r
 */
-trait Rating extends js.Object
+trait Rating extends StObject
 object Rating {
   
   @scala.inline

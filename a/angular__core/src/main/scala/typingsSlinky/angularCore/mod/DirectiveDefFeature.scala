@@ -1,12 +1,13 @@
 package typingsSlinky.angularCore.mod
 
 import typingsSlinky.angularCore.angularCoreBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DirectiveDefFeature extends js.Object {
+trait DirectiveDefFeature extends StObject {
   
   def apply[T](directiveDef: ɵDirectiveDef[T]): Unit = js.native
   

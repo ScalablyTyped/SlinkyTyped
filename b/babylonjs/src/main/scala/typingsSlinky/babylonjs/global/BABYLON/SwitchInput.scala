@@ -1,12 +1,13 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.SwitchInput")
 @js.native
-object SwitchInput extends js.Object {
+object SwitchInput extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.babylonjs.BABYLON.SwitchInput with Double] = js.native

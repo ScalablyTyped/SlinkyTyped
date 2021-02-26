@@ -4,16 +4,15 @@ import typingsSlinky.node.childProcessMod.ExecOptions
 import typingsSlinky.shipitCli.mod.EmptyCallback
 import typingsSlinky.shipitCli.mod.ShipitLocal
 import typingsSlinky.shipitCli.mod.Tasks_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait Typeofshipit extends js.Object {
+  trait Typeofshipit extends StObject {
     
     def blTask(name: String, depsOrFn: js.Array[String]): js.Any = js.native
     def blTask(name: String, depsOrFn: js.Array[String], fn: js.Function0[Unit]): js.Any = js.native

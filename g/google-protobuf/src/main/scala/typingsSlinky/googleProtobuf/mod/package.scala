@@ -1,5 +1,6 @@
 package typingsSlinky.googleProtobuf
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,8 +39,6 @@ package object mod {
   type FieldValue = js.UndefOr[
     java.lang.String | scala.Double | scala.Boolean | js.typedarray.Uint8Array | typingsSlinky.googleProtobuf.mod.FieldValueArray
   ]
-  
-  type Map[K, V] = typingsSlinky.googleProtobuf.mod.Map_[K, V]
   
   type RepeatedFieldType = js.Array[typingsSlinky.googleProtobuf.mod.ScalarFieldType | js.typedarray.Uint8Array]
   

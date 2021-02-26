@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.WebAudio
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`a-rate`
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`k-rate`
 */
-trait AutomationRate extends js.Object
+trait AutomationRate extends StObject
 object AutomationRate {
   
   @scala.inline

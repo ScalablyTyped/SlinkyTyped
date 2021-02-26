@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "SearchShiftsResponse")
 @js.native
-class SearchShiftsResponse () extends js.Object {
+class SearchShiftsResponse () extends StObject {
   
   /**
     * Opaque cursor for fetching the next page.

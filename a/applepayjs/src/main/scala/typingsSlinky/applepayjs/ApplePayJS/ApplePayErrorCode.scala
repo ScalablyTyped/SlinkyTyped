@@ -1,5 +1,6 @@
 package typingsSlinky.applepayjs.ApplePayJS
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.applepayjs.applepayjsStrings.addressUnserviceable
   - typingsSlinky.applepayjs.applepayjsStrings.unknown
 */
-trait ApplePayErrorCode extends js.Object
+trait ApplePayErrorCode extends StObject
 object ApplePayErrorCode {
   
   @scala.inline

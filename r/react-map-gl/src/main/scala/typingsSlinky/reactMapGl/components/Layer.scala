@@ -13,15 +13,26 @@ import typingsSlinky.mapboxGl.mod.LinePaint
 import typingsSlinky.mapboxGl.mod.RasterPaint
 import typingsSlinky.mapboxGl.mod.SymbolPaint
 import typingsSlinky.reactMapGl.mod.LayerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Layer {
   
+  @scala.inline
+  def apply(
+    paint: BackgroundPaint | FillPaint | FillExtrusionPaint | LinePaint | SymbolPaint | RasterPaint | CirclePaint | HeatmapPaint | HillshadePaint,
+    `type`: String
+  ): Builder = {
+    val __props = js.Dynamic.literal(paint = paint.asInstanceOf[js.Any])
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LayerProps]))
+  }
+  
   @JSImport("react-map-gl", "Layer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +43,10 @@ object Layer {
     def beforeId(value: String): this.type = set("beforeId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filterVarargs(value: js.Any*): this.type = set("filter", js.Array(value :_*))
+    def filter(value: js.Array[_]): this.type = set("filter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filter(value: js.Array[_]): this.type = set("filter", value.asInstanceOf[js.Any])
+    def filterVarargs(value: js.Any*): this.type = set("filter", js.Array(value :_*))
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -54,14 +65,4 @@ object Layer {
   }
   
   def withProps(p: LayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    paint: BackgroundPaint | FillPaint | FillExtrusionPaint | LinePaint | SymbolPaint | RasterPaint | CirclePaint | HeatmapPaint | HillshadePaint,
-    `type`: String
-  ): Builder = {
-    val __props = js.Dynamic.literal(paint = paint.asInstanceOf[js.Any])
-    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[LayerProps]))
-  }
 }

@@ -1,14 +1,15 @@
 package typingsSlinky.coreJs
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.TemplateStringsArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("core-js/fn/string/raw", JSImport.Namespace)
-@js.native
-object rawMod
-  extends TopLevel[
-      js.Function2[/* template */ TemplateStringsArray, /* repeated */ js.Any, java.lang.String]
-    ]
+object rawMod {
+  
+  /* was `typeof core.String.raw` */
+  @JSImport("core-js/fn/string/raw", JSImport.Namespace)
+  @js.native
+  def apply(template: TemplateStringsArray, substitutions: js.Any*): java.lang.String = js.native
+}

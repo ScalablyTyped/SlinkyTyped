@@ -3,6 +3,7 @@ package typingsSlinky.ejWebAll.global.ej.datavisualization
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
 import typingsSlinky.ejWebAll.ej.Model
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,22 +12,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Barcode protected ()
   extends typingsSlinky.ejWebAll.ej.datavisualization.Barcode {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: Model) = this()
+  def this(element: JQuery) = this()
   def this(element: Element, options: Model) = this()
+  def this(element: JQuery, options: Model) = this()
 }
-/* static members */
-@JSGlobal("ej.datavisualization.Barcode")
-@js.native
-object Barcode extends js.Object {
+object Barcode {
   
-  var Locale: js.Any = js.native
-  
-  var fn: typingsSlinky.ejWebAll.ej.datavisualization.Barcode = js.native
-  
+  @JSGlobal("ej.datavisualization.Barcode")
   @js.native
-  object SymbologyType extends js.Object {
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSGlobal("ej.datavisualization.Barcode.Locale")
+  @js.native
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("ej.datavisualization.Barcode.SymbologyType")
+  @js.native
+  object SymbologyType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.datavisualization.Barcode.SymbologyType with Double] = js.native
@@ -55,4 +61,11 @@ object Barcode extends js.Object {
     
     /* 0 */ val QRBarcode: typingsSlinky.ejWebAll.ej.datavisualization.Barcode.SymbologyType.QRBarcode with Double = js.native
   }
+  
+  /* static member */
+  @JSGlobal("ej.datavisualization.Barcode.fn")
+  @js.native
+  def fn: typingsSlinky.ejWebAll.ej.datavisualization.Barcode = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.datavisualization.Barcode): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

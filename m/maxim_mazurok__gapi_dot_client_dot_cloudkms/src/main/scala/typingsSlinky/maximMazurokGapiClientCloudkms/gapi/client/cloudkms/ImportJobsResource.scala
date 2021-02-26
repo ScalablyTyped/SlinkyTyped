@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCloudkms.anon.ImportJobId
 import typingsSlinky.maximMazurokGapiClientCloudkms.anon.OptionsrequestedPolicyVersion
 import typingsSlinky.maximMazurokGapiClientCloudkms.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientCloudkms.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ImportJobsResource extends js.Object {
+trait ImportJobsResource extends StObject {
   
   def create(request: AltCallback, body: ImportJob): Request[ImportJob] = js.native
   /** Create a new ImportJob within a KeyRing. ImportJob.import_method is required. */

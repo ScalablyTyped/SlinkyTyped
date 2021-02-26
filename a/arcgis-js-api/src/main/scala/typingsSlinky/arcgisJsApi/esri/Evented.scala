@@ -1,12 +1,13 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.arcgisJsApi.IHandle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Evented extends js.Object {
+trait Evented extends StObject {
   
   /**
     * Emits an event on the instance.

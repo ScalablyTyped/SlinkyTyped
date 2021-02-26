@@ -1,12 +1,13 @@
 package typingsSlinky.winrt.global.Windows.Storage
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Windows.Storage.StreamedFileFailureMode")
 @js.native
-object StreamedFileFailureMode extends js.Object {
+object StreamedFileFailureMode extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Storage.StreamedFileFailureMode with Double] = js.native

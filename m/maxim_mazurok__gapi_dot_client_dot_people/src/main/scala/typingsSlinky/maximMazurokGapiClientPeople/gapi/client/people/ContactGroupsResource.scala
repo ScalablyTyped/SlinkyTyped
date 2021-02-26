@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientPeople.anon.Key
 import typingsSlinky.maximMazurokGapiClientPeople.anon.MaxMembers
 import typingsSlinky.maximMazurokGapiClientPeople.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientPeople.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ContactGroupsResource extends js.Object {
+trait ContactGroupsResource extends StObject {
   
   /** Get a list of contact groups owned by the authenticated user by specifying a list of contact group resource names. */
   def batchGet(): Request[BatchGetContactGroupsResponse] = js.native

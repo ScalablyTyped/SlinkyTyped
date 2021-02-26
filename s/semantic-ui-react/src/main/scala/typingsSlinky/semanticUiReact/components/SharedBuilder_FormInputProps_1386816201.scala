@@ -96,6 +96,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.massive
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.mini
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.small
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -300,13 +301,13 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
   def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
   def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
@@ -327,10 +328,10 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -378,7 +379,7 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+  def icon(value: js.Any | SemanticShorthandItem[InputProps]): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def iconFunction3(
@@ -386,10 +387,10 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   ): this.type = set("icon", js.Any.fromFunction3(value))
   
   @scala.inline
-  def icon(value: js.Any | SemanticShorthandItem[InputProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+  def iconPosition(value: left): this.type = set("iconPosition", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def iconPosition(value: left): this.type = set("iconPosition", value.asInstanceOf[js.Any])
+  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -401,7 +402,7 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def inputReactElement(value: ReactElement): this.type = set("input", value.asInstanceOf[js.Any])
+  def input(value: SemanticShorthandItem[HtmlInputrops]): this.type = set("input", value.asInstanceOf[js.Any])
   
   @scala.inline
   def inputFunction3(
@@ -409,10 +410,10 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   ): this.type = set("input", js.Any.fromFunction3(value))
   
   @scala.inline
-  def input(value: SemanticShorthandItem[HtmlInputrops]): this.type = set("input", value.asInstanceOf[js.Any])
+  def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
+  def inputReactElement(value: ReactElement): this.type = set("input", value.asInstanceOf[js.Any])
   
   @scala.inline
   def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
@@ -436,7 +437,7 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+  def label(value: SemanticShorthandItem[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
   
   @scala.inline
   def labelFunction3(
@@ -444,10 +445,10 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   ): this.type = set("label", js.Any.fromFunction3(value))
   
   @scala.inline
-  def label(value: SemanticShorthandItem[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
+  def labelPosition(value: left | right | (`left corner`) | (`right corner`)): this.type = set("labelPosition", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def labelPosition(value: left | right | (`left corner`) | (`right corner`)): this.type = set("labelPosition", value.asInstanceOf[js.Any])
+  def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
   
   @scala.inline
   def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
@@ -792,10 +793,10 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
   
   @scala.inline
   def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])

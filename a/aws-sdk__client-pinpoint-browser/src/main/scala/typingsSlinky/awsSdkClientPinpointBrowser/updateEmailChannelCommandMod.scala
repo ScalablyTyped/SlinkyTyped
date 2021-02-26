@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateEmailChannelInputMod
 import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateEmailChannelOutputMod.UpdateEmailChannelOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/UpdateEmailChannelCommand", JSImport.Namespace)
-@js.native
-object updateEmailChannelCommandMod extends js.Object {
+object updateEmailChannelCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/UpdateEmailChannelCommand", "UpdateEmailChannelCommand")
   @js.native
   class UpdateEmailChannelCommand protected () extends Command[
           InputTypesUnion, 

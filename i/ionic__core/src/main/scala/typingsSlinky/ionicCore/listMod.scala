@@ -5,14 +5,14 @@ import typingsSlinky.ionicCore.ionicCoreStrings.full
 import typingsSlinky.ionicCore.ionicCoreStrings.inset
 import typingsSlinky.ionicCore.ionicCoreStrings.none
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/list/list", JSImport.Namespace)
-@js.native
-object listMod extends js.Object {
+object listMod {
   
+  @JSImport("@ionic/core/dist/types/components/list/list", "List")
   @js.native
   class List () extends ComponentInterface {
     

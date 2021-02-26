@@ -6,13 +6,14 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.avatarAvatarMod.AvatarProps
 import typingsSlinky.antd.breadcrumbBreadcrumbMod.BreadcrumbProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined antd.antd/lib/page-header.PageHeaderProps & {  children :react.react.ReactNode | undefined} */
 @js.native
-trait PageHeaderPropschildrenRe extends js.Object {
+trait PageHeaderPropschildrenRe extends StObject {
   
   var avatar: js.UndefOr[AvatarProps] = js.native
   
@@ -51,123 +52,111 @@ object PageHeaderPropschildrenRe {
   }
   
   @scala.inline
-  implicit class PageHeaderPropschildrenReOps[Self <: PageHeaderPropschildrenRe] (val x: Self) extends AnyVal {
+  implicit class PageHeaderPropschildrenReMutableBuilder[Self <: PageHeaderPropschildrenRe] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAvatar(value: AvatarProps): Self = StObject.set(x, "avatar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAvatarUndefined: Self = StObject.set(x, "avatar", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setBackIcon(value: ReactElement): Self = StObject.set(x, "backIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAvatar(value: AvatarProps): Self = this.set("avatar", value.asInstanceOf[js.Any])
+    def setBackIconReactElement(value: ReactElement): Self = StObject.set(x, "backIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAvatar: Self = this.set("avatar", js.undefined)
+    def setBackIconUndefined: Self = StObject.set(x, "backIcon", js.undefined)
     
     @scala.inline
-    def setBackIconReactElement(value: ReactElement): Self = this.set("backIcon", value.asInstanceOf[js.Any])
+    def setBreadcrumb(value: BreadcrumbProps): Self = StObject.set(x, "breadcrumb", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBackIcon(value: ReactElement): Self = this.set("backIcon", value.asInstanceOf[js.Any])
+    def setBreadcrumbUndefined: Self = StObject.set(x, "breadcrumb", js.undefined)
     
     @scala.inline
-    def deleteBackIcon: Self = this.set("backIcon", js.undefined)
+    def setChildren(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBreadcrumb(value: BreadcrumbProps): Self = this.set("breadcrumb", value.asInstanceOf[js.Any])
+    def setChildrenReactElement(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBreadcrumb: Self = this.set("breadcrumb", js.undefined)
+    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
     
     @scala.inline
-    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setClassNameUndefined: Self = StObject.set(x, "className", js.undefined)
     
     @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
+    def setExtra(value: ReactElement): Self = StObject.set(x, "extra", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    def setExtraReactElement(value: ReactElement): Self = StObject.set(x, "extra", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteClassName: Self = this.set("className", js.undefined)
+    def setExtraUndefined: Self = StObject.set(x, "extra", js.undefined)
     
     @scala.inline
-    def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
+    def setFooter(value: ReactElement): Self = StObject.set(x, "footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExtra(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
+    def setFooterReactElement(value: ReactElement): Self = StObject.set(x, "footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteExtra: Self = this.set("extra", js.undefined)
+    def setFooterUndefined: Self = StObject.set(x, "footer", js.undefined)
     
     @scala.inline
-    def setFooterReactElement(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
+    def setGhost(value: Boolean): Self = StObject.set(x, "ghost", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFooter(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
+    def setGhostUndefined: Self = StObject.set(x, "ghost", js.undefined)
     
     @scala.inline
-    def deleteFooter: Self = this.set("footer", js.undefined)
+    def setOnBack(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): Self = StObject.set(x, "onBack", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setGhost(value: Boolean): Self = this.set("ghost", value.asInstanceOf[js.Any])
+    def setOnBackUndefined: Self = StObject.set(x, "onBack", js.undefined)
     
     @scala.inline
-    def deleteGhost: Self = this.set("ghost", js.undefined)
+    def setPrefixCls(value: String): Self = StObject.set(x, "prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnBack(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onBack", js.Any.fromFunction1(value))
+    def setPrefixClsUndefined: Self = StObject.set(x, "prefixCls", js.undefined)
     
     @scala.inline
-    def deleteOnBack: Self = this.set("onBack", js.undefined)
+    def setStyle(value: CSSProperties): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    def setStyleUndefined: Self = StObject.set(x, "style", js.undefined)
     
     @scala.inline
-    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    def setSubTitle(value: ReactElement): Self = StObject.set(x, "subTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    def setSubTitleReactElement(value: ReactElement): Self = StObject.set(x, "subTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteStyle: Self = this.set("style", js.undefined)
+    def setSubTitleUndefined: Self = StObject.set(x, "subTitle", js.undefined)
     
     @scala.inline
-    def setSubTitleReactElement(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
+    def setTags(value: ReactElement | js.Array[ReactElement]): Self = StObject.set(x, "tags", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSubTitle(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
+    def setTagsReactElement(value: ReactElement): Self = StObject.set(x, "tags", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteSubTitle: Self = this.set("subTitle", js.undefined)
+    def setTagsUndefined: Self = StObject.set(x, "tags", js.undefined)
     
     @scala.inline
-    def setTagsReactElement(value: ReactElement): Self = this.set("tags", value.asInstanceOf[js.Any])
+    def setTagsVarargs(value: ReactElement*): Self = StObject.set(x, "tags", js.Array(value :_*))
     
     @scala.inline
-    def setTagsVarargs(value: ReactElement*): Self = this.set("tags", js.Array(value :_*))
+    def setTitle(value: ReactElement): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTags(value: ReactElement | js.Array[ReactElement]): Self = this.set("tags", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTags: Self = this.set("tags", js.undefined)
-    
-    @scala.inline
-    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTitle: Self = this.set("title", js.undefined)
+    def setTitleUndefined: Self = StObject.set(x, "title", js.undefined)
   }
 }

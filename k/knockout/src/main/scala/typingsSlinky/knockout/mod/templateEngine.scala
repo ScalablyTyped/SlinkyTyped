@@ -2,13 +2,14 @@ package typingsSlinky.knockout.mod
 
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Node
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("knockout", "templateEngine")
 @js.native
-abstract class templateEngine () extends js.Object {
+abstract class templateEngine () extends StObject {
   
   var allowTemplateRewriting: Boolean = js.native
   

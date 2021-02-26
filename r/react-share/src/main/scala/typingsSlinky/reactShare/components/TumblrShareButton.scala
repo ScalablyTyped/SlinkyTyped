@@ -9,15 +9,22 @@ import typingsSlinky.react.mod.StyleHTMLAttributes
 import typingsSlinky.reactShare.anon.CommonShareButtonPropstitCaption
 import typingsSlinky.reactShare.reactShareStrings.screenCenter
 import typingsSlinky.reactShare.reactShareStrings.windowCenter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TumblrShareButton {
   
+  @scala.inline
+  def apply(url: String): Builder = {
+    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropstitCaption]))
+  }
+  
   @JSImport("react-share", "TumblrShareButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,10 +68,10 @@ object TumblrShareButton {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tagsVarargs(value: String*): this.type = set("tags", js.Array(value :_*))
+    def tags(value: js.Array[String]): this.type = set("tags", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tags(value: js.Array[String]): this.type = set("tags", value.asInstanceOf[js.Any])
+    def tagsVarargs(value: String*): this.type = set("tags", js.Array(value :_*))
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -80,10 +87,4 @@ object TumblrShareButton {
   }
   
   def withProps(p: CommonShareButtonPropstitCaption): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(url: String): Builder = {
-    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropstitCaption]))
-  }
 }

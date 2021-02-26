@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSparklines.mod.Point
 import typingsSlinky.reactSparklines.mod.SparklinesTextProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object SparklinesText {
   
   @JSImport("react-sparklines", "SparklinesText")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,7 +33,7 @@ object SparklinesText {
     def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SparklinesTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SparklinesText.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SparklinesTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -131,11 +132,11 @@ class DisplayPassPostProcess protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs", "DisplayPassPostProcess")
-@js.native
-object DisplayPassPostProcess extends js.Object {
+object DisplayPassPostProcess {
   
   /** @hidden */
+  @JSImport("babylonjs", "DisplayPassPostProcess._Parse")
+  @js.native
   def _Parse(
     parsedPostProcess: js.Any,
     targetCamera: typingsSlinky.babylonjs.cameraMod.Camera,

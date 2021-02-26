@@ -2,14 +2,14 @@ package typingsSlinky.plottable
 
 import typingsSlinky.plottable.componentMod.Component
 import typingsSlinky.plottable.scaleMod.Scale
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("plottable/build/src/components/gridlines", JSImport.Namespace)
-@js.native
-object gridlinesMod extends js.Object {
+object gridlinesMod {
   
+  @JSImport("plottable/build/src/components/gridlines", "Gridlines")
   @js.native
   /**
     * @constructor

@@ -3,15 +3,22 @@ package typingsSlinky.rmcTabs.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcTabs.tabPaneMod.PropsType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TabPane {
   
+  @scala.inline
+  def apply(active: Boolean): Builder = {
+    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
+  }
+  
   @JSImport("rmc-tabs/lib/TabPane", "TabPane")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +39,4 @@ object TabPane {
   }
   
   def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(active: Boolean): Builder = {
-    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
-  }
 }

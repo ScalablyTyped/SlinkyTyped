@@ -2,13 +2,14 @@ package typingsSlinky.johnnyFive.mod
 
 import typingsSlinky.johnnyFive.johnnyFiveStrings.change
 import typingsSlinky.johnnyFive.johnnyFiveStrings.data
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("johnny-five", "Altimeter")
 @js.native
-class Altimeter protected () extends js.Object {
+class Altimeter protected () extends StObject {
   def this(option: AltimeterOption) = this()
   
   val feet: Double = js.native

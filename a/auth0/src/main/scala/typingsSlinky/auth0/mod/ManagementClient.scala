@@ -1,12 +1,13 @@
 package typingsSlinky.auth0.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("auth0", "ManagementClient")
 @js.native
-class ManagementClient[A, U] protected () extends js.Object {
+class ManagementClient[A, U] protected () extends StObject {
   def this(options: ManagementClientOptions) = this()
   
   def addPermissionsInRole(params: ObjectWithId, data: PermissionsData): js.Promise[Unit] = js.native

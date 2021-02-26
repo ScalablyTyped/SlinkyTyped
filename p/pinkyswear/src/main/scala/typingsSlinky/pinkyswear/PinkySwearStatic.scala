@@ -1,12 +1,13 @@
 package typingsSlinky.pinkyswear
 
 import typingsSlinky.pinkyswear.PinkySwear.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PinkySwearStatic extends js.Object {
+trait PinkySwearStatic extends StObject {
   
   /**
     * Create a new promise in pending state that promises a value or set of values.

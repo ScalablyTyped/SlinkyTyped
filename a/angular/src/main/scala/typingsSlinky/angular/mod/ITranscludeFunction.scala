@@ -2,6 +2,7 @@ package typingsSlinky.angular.mod
 
 import typingsSlinky.angular.JQLite
 import typingsSlinky.angular.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * http://teropa.info/blog/2015/06/09/transclusion.html
   */
 @js.native
-trait ITranscludeFunction extends js.Object {
+trait ITranscludeFunction extends StObject {
   
   // If one argument is provided, then it's assumed to be the cloneAttachFn.
   def apply(): JQLite = js.native

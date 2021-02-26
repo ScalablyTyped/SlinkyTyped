@@ -1,12 +1,13 @@
 package typingsSlinky.sipJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js", "SessionState")
 @js.native
-object SessionState extends js.Object {
+object SessionState extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.sipJs.sessionStateMod.SessionState with String] = js.native

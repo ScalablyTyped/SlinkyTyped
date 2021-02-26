@@ -1,51 +1,41 @@
 package typingsSlinky.reactIntl.anon
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactIntl.reactIntlStrings.formatDate
+import typingsSlinky.reactIntl.reactIntlStrings.formatTime
+import typingsSlinky.std.Intl.DateTimeFormatPart
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `4` extends js.Object {
+trait `4`[Name /* <: formatDate | formatTime */] extends StObject {
   
-  var children: js.UndefOr[js.Function1[/* val */ String, ReactElement | Null]] = js.native
+  def children(`val`: js.Array[DateTimeFormatPart]): ReactElement | Null = js.native
   
-  var value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.react-intl/lib/src/types.IntlShape['formatTime']>[0] */ js.Any = js.native
+  var value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.react-intl/src/types.IntlShape[Name]>[0] */ js.Any = js.native
 }
 object `4` {
   
   @scala.inline
-  def apply(
-    value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.react-intl/lib/src/types.IntlShape['formatTime']>[0] */ js.Any
-  ): `4` = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[`4`]
+  def apply[Name /* <: formatDate | formatTime */](
+    children: js.Array[DateTimeFormatPart] => ReactElement | Null,
+    value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.react-intl/src/types.IntlShape[Name]>[0] */ js.Any
+  ): `4`[Name] = {
+    val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[`4`[Name]]
   }
   
   @scala.inline
-  implicit class `4Ops`[Self <: `4`] (val x: Self) extends AnyVal {
+  implicit class `4MutableBuilder`[Self <: `4`[_], Name /* <: formatDate | formatTime */] (val x: Self with `4`[Name]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setChildren(value: js.Array[DateTimeFormatPart] => ReactElement | Null): Self = StObject.set(x, "children", js.Any.fromFunction1(value))
     
     @scala.inline
     def setValue(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.react-intl/lib/src/types.IntlShape['formatTime']>[0] */ js.Any
-    ): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setChildren(value: /* val */ String => ReactElement | Null): Self = this.set("children", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
+      value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.react-intl/src/types.IntlShape[Name]>[0] */ js.Any
+    ): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
   }
 }

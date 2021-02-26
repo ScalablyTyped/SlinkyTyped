@@ -5,16 +5,15 @@ import typingsSlinky.firebaseDatabase.completeChildSourceMod.CompleteChildSource
 import typingsSlinky.firebaseDatabase.indexMod.Index
 import typingsSlinky.firebaseDatabase.nodeMod.Node
 import typingsSlinky.firebaseDatabase.pathMod.Path
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/database/dist/src/core/view/filter/NodeFilter", JSImport.Namespace)
-@js.native
-object nodeFilterMod extends js.Object {
+object nodeFilterMod {
   
   @js.native
-  trait NodeFilter extends js.Object {
+  trait NodeFilter extends StObject {
     
     /**
       * Returns true if children might be filtered due to query criteria

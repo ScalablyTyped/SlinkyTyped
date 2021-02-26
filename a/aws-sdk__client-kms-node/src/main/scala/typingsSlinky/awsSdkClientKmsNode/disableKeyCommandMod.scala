@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsNode.typesDisableKeyInputMod.DisableKeyInput
 import typingsSlinky.awsSdkClientKmsNode.typesDisableKeyOutputMod.DisableKeyOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-node/commands/DisableKeyCommand", JSImport.Namespace)
-@js.native
-object disableKeyCommandMod extends js.Object {
+object disableKeyCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-node/commands/DisableKeyCommand", "DisableKeyCommand")
   @js.native
   class DisableKeyCommand protected () extends Command[
           InputTypesUnion, 

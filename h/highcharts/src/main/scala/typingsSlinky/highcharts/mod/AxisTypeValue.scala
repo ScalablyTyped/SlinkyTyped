@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.logarithmic
   - typingsSlinky.highcharts.highchartsStrings.treegrid
 */
-trait AxisTypeValue extends js.Object
+trait AxisTypeValue extends StObject
 object AxisTypeValue {
   
   @scala.inline

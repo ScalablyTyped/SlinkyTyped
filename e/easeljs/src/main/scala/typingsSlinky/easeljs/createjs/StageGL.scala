@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.WebGLProgram
 import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLTexture
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,10 +37,10 @@ trait StageGL extends Stage {
   def purgeTextures(): Unit = js.native
   def purgeTextures(count: Double): Unit = js.native
   
-  def releaseTexture(item: DisplayObject): Unit = js.native
   def releaseTexture(item: HTMLCanvasElement): Unit = js.native
   def releaseTexture(item: HTMLImageElement): Unit = js.native
   def releaseTexture(item: WebGLTexture): Unit = js.native
+  def releaseTexture(item: DisplayObject): Unit = js.native
   
   def setTextureParams(gl: WebGLRenderingContext): Unit = js.native
   def setTextureParams(gl: WebGLRenderingContext, isPOT: Boolean): Unit = js.native

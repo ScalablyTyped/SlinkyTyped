@@ -10,9 +10,9 @@ Easy way to make a Readable Stream
 | ------------------ | :-------------: |
 | Full name          | from |
 | Keywords           | stream, streams, readable, easy |
-| # releases         | 1 |
-| # dependents       | 33 |
-| # downloads        | 56863134 |
+| # releases         | 0 |
+| # dependents       | 40 |
+| # downloads        | 78584205 |
 | # stars            | 2 |
 
 ## Links

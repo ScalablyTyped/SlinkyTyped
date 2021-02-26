@@ -10,9 +10,9 @@ Pulumi's Node.js SDK
 | ------------------ | :-------------: |
 | Full name          | @pulumi/pulumi |
 | Keywords           | - |
-| # releases         | 1757 |
-| # dependents       | 87 |
-| # downloads        | 2153457 |
+| # releases         | 1754 |
+| # dependents       | 148 |
+| # downloads        | 3030037 |
 | # stars            | 0 |
 
 ## Links

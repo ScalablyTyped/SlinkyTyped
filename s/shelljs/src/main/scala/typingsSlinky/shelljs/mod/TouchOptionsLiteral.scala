@@ -1,5 +1,6 @@
 package typingsSlinky.shelljs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.shelljs.shelljsStrings.`-d`
   - typingsSlinky.shelljs.shelljsStrings.`-r`
 */
-trait TouchOptionsLiteral extends js.Object
+trait TouchOptionsLiteral extends StObject
 object TouchOptionsLiteral {
   
   @scala.inline

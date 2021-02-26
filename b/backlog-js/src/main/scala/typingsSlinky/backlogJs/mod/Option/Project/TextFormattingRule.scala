@@ -1,5 +1,6 @@
 package typingsSlinky.backlogJs.mod.Option.Project
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.backlogJs.backlogJsStrings.backlog
   - typingsSlinky.backlogJs.backlogJsStrings.markdown
 */
-trait TextFormattingRule extends js.Object
+trait TextFormattingRule extends StObject
 object TextFormattingRule {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.muiDatatables.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.muiDatatables.muiDatatablesStrings.outlined
   - typingsSlinky.muiDatatables.muiDatatablesStrings.default
 */
-trait ChipVariant extends js.Object
+trait ChipVariant extends StObject
 object ChipVariant {
   
   @scala.inline

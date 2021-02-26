@@ -13,15 +13,22 @@ import typingsSlinky.reactNativeSortableList.mod.default
 import typingsSlinky.reactNativeSortableList.reactNativeSortableListStrings.always
 import typingsSlinky.reactNativeSortableList.reactNativeSortableListStrings.handled
 import typingsSlinky.reactNativeSortableList.reactNativeSortableListStrings.never
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeSortableList {
   
+  @scala.inline
+  def apply[T, K](data: DataByNumber[T] | DataByString[T], renderRow: RowProps[T, K] => ReactElement | Null): Builder[T, K] = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderRow = js.Any.fromFunction1(renderRow))
+    new Builder[T, K](js.Array(this.component, __props.asInstanceOf[SortableListProps[T, K]]))
+  }
+  
   @JSImport("react-native-sortable-list", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T, K] (val args: js.Array[js.Any])
@@ -65,10 +72,10 @@ object ReactNativeSortableList {
     def onReleaseRow(value: (K, /* currentOrder */ js.Array[K]) => Unit): this.type = set("onReleaseRow", js.Any.fromFunction2(value))
     
     @scala.inline
-    def orderVarargs(value: K*): this.type = set("order", js.Array(value :_*))
+    def order(value: js.Array[K]): this.type = set("order", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def order(value: js.Array[K]): this.type = set("order", value.asInstanceOf[js.Any])
+    def orderVarargs(value: K*): this.type = set("order", js.Array(value :_*))
     
     @scala.inline
     def refreshControl(value: ReactElement): this.type = set("refreshControl", value.asInstanceOf[js.Any])
@@ -102,10 +109,4 @@ object ReactNativeSortableList {
   }
   
   def withProps[T, K](p: SortableListProps[T, K]): Builder[T, K] = new Builder[T, K](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T, K](data: DataByNumber[T] | DataByString[T], renderRow: RowProps[T, K] => ReactElement | Null): Builder[T, K] = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderRow = js.Any.fromFunction1(renderRow))
-    new Builder[T, K](js.Array(this.component, __props.asInstanceOf[SortableListProps[T, K]]))
-  }
 }

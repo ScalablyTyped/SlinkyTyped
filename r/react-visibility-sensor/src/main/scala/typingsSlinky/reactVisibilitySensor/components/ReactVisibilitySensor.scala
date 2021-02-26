@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactVisibilitySensor.anon.IsVisible
 import typingsSlinky.reactVisibilitySensor.mod.Props
 import typingsSlinky.reactVisibilitySensor.mod.Shape
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ReactVisibilitySensor {
   
   @JSImport("react-visibility-sensor", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,13 +26,13 @@ object ReactVisibilitySensor {
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    def children(value: ReactElement | (js.Function1[/* args */ IsVisible, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenFunction1(value: /* args */ IsVisible => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def children(value: ReactElement | (js.Function1[/* args */ IsVisible, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containment(value: js.Any): this.type = set("containment", value.asInstanceOf[js.Any])
@@ -76,7 +77,7 @@ object ReactVisibilitySensor {
     def scrollThrottle(value: Double): this.type = set("scrollThrottle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactVisibilitySensor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

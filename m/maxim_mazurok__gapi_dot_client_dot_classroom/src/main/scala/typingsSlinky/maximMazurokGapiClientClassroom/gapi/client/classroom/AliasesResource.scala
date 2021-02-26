@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientClassroom.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.Alias
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.Alt
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AliasesResource extends js.Object {
+trait AliasesResource extends StObject {
   
   /**
     * Creates an alias for a course. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to create the alias or for access errors.

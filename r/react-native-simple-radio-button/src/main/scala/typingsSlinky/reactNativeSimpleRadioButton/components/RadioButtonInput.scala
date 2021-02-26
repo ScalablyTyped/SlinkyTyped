@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeSimpleRadioButton.mod.RadioButtonInputProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RadioButtonInput {
   
+  @scala.inline
+  def apply(index: Double, obj: js.Object): Builder = {
+    val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any], obj = obj.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RadioButtonInputProps]))
+  }
+  
   @JSImport("react-native-simple-radio-button", "RadioButtonInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,10 +68,4 @@ object RadioButtonInput {
   }
   
   def withProps(p: RadioButtonInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(index: Double, obj: js.Object): Builder = {
-    val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any], obj = obj.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RadioButtonInputProps]))
-  }
 }

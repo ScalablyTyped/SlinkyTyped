@@ -11,15 +11,22 @@ import typingsSlinky.reactOutsideClickHandler.reactOutsideClickHandlerStrings.`i
 import typingsSlinky.reactOutsideClickHandler.reactOutsideClickHandlerStrings.block
 import typingsSlinky.reactOutsideClickHandler.reactOutsideClickHandlerStrings.contents
 import typingsSlinky.reactOutsideClickHandler.reactOutsideClickHandlerStrings.flex
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactOutsideClickHandler {
   
+  @scala.inline
+  def apply(onOutsideClick: SyntheticMouseEvent[HTMLElement] => Unit): Builder = {
+    val __props = js.Dynamic.literal(onOutsideClick = js.Any.fromFunction1(onOutsideClick))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("react-outside-click-handler", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,10 +44,4 @@ object ReactOutsideClickHandler {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onOutsideClick: SyntheticMouseEvent[HTMLElement] => Unit): Builder = {
-    val __props = js.Dynamic.literal(onOutsideClick = js.Any.fromFunction1(onOutsideClick))
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

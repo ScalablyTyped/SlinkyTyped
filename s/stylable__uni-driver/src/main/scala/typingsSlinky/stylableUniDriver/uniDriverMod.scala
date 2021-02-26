@@ -3,16 +3,16 @@ package typingsSlinky.stylableUniDriver
 import typingsSlinky.stylableUniDriver.typesMod.ElementRemoteApi
 import typingsSlinky.stylableUniDriver.typesMod.MinimalStylesheet
 import typingsSlinky.stylableUniDriver.typesMod.StateValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@stylable/uni-driver/cjs/uni-driver", JSImport.Namespace)
-@js.native
-object uniDriverMod extends js.Object {
+object uniDriverMod {
   
+  @JSImport("@stylable/uni-driver/cjs/uni-driver", "StylableUnidriverUtil")
   @js.native
-  class StylableUnidriverUtil protected () extends js.Object {
+  class StylableUnidriverUtil protected () extends StObject {
     def this(stylesheet: MinimalStylesheet) = this()
     
     var getBaseStateWithParam: js.Any = js.native

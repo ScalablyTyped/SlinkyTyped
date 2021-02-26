@@ -15,12 +15,13 @@ import typingsSlinky.reactDates.mod.NavPositionShape
 import typingsSlinky.reactDates.mod.OpenDirectionShape
 import typingsSlinky.reactDates.mod.OrientationShape
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AnchorDirection extends js.Object {
+trait AnchorDirection extends StObject {
   
   var anchorDirection: js.UndefOr[AnchorDirectionShape] = js.native
   

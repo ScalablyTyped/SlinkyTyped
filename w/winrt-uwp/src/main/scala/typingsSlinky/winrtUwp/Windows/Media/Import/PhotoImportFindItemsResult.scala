@@ -8,13 +8,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.TypedEventHandler
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.itemimported
 import typingsSlinky.winrtUwp.winrtUwpStrings.selectionchanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents the result of a operation that finds media items on a source. */
 @js.native
-trait PhotoImportFindItemsResult extends js.Object {
+trait PhotoImportFindItemsResult extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

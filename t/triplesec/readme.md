@@ -10,9 +10,9 @@ A CommonJS-compliant system for secure encryption of smallish secrets
 | ------------------ | :-------------: |
 | Full name          | triplesec |
 | Keywords           | - |
-| # releases         | 5 |
-| # dependents       | 26 |
-| # downloads        | 152855 |
+| # releases         | 3 |
+| # dependents       | 28 |
+| # downloads        | 184679 |
 | # stars            | 1 |
 
 ## Links

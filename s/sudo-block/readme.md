@@ -11,8 +11,8 @@ Block users from running your app with root permissions
 | Full name          | sudo-block |
 | Keywords           | sudo, root, user, permissions, uid, block, prevent, stop |
 | # releases         | 2 |
-| # dependents       | 30 |
-| # downloads        | 2515996 |
+| # dependents       | 36 |
+| # downloads        | 4185669 |
 | # stars            | 2 |
 
 ## Links

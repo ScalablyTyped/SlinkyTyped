@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientHealthcare.gapi.client.healthcare
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.Accesstoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FramesResource extends js.Object {
+trait FramesResource extends StObject {
   
   /**
     * RetrieveFrames returns instances associated with the given study, series, SOP Instance UID and frame numbers. See [RetrieveTransaction]

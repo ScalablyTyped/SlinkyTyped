@@ -1,5 +1,6 @@
 package typingsSlinky.weappApi.mod.wx
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.weappApi.weappApiStrings.loading
   - typingsSlinky.weappApi.weappApiStrings.none
 */
-trait icon extends js.Object
+trait icon extends StObject
 object icon {
   
   @scala.inline

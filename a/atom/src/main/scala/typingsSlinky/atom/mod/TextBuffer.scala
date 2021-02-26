@@ -7,6 +7,7 @@ import typingsSlinky.atom.anon.Role
 import typingsSlinky.atom.anon.ShouldDestroyOnFileDelete
 import typingsSlinky.atom.anon.`27`
 import typingsSlinky.atom.anon.groupingIntervalnumberund
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("atom", "TextBuffer")
 @js.native
 /** Create a new buffer with the given params. */
-class TextBuffer () extends js.Object {
+class TextBuffer () extends StObject {
   def this(params: ShouldDestroyOnFileDelete) = this()
   /** Create a new buffer with the given starting text. */
   def this(text: String) = this()
@@ -512,26 +513,38 @@ class TextBuffer () extends js.Object {
   def undo(options: HistoryTraversalOptions): Boolean = js.native
 }
 /* static members */
-@JSImport("atom", "TextBuffer")
-@js.native
-object TextBuffer extends js.Object {
+object TextBuffer {
   
   /**
     *  Restore a TextBuffer based on an earlier state created using the
     *  TextBuffer::serialize method.
     */
+  @JSImport("atom", "TextBuffer.deserialize")
+  @js.native
   def deserialize(params: js.Object): js.Promise[TextBuffer] = js.native
   
   /** Create a new buffer backed by the given file path. */
+  @JSImport("atom", "TextBuffer.load")
+  @js.native
   def load(filePath: String): js.Promise[TextBuffer] = js.native
+  @JSImport("atom", "TextBuffer.load")
+  @js.native
   def load(filePath: String, params: BufferLoadOptions): js.Promise[TextBuffer] = js.native
+  @JSImport("atom", "TextBuffer.load")
+  @js.native
   def load(filePath: TextBufferFileBackend): js.Promise[TextBuffer] = js.native
+  @JSImport("atom", "TextBuffer.load")
+  @js.native
   def load(filePath: TextBufferFileBackend, params: BufferLoadOptions): js.Promise[TextBuffer] = js.native
   
   /**
     *  Create a new buffer backed by the given file path. For better performance,
     *  use TextBuffer.load instead.
     */
+  @JSImport("atom", "TextBuffer.loadSync")
+  @js.native
   def loadSync(filePath: String): TextBuffer = js.native
+  @JSImport("atom", "TextBuffer.loadSync")
+  @js.native
   def loadSync(filePath: String, params: BufferLoadOptions): TextBuffer = js.native
 }

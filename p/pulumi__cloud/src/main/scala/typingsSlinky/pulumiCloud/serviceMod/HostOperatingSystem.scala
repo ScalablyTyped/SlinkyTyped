@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiCloud.serviceMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pulumiCloud.pulumiCloudStrings.linux
   - typingsSlinky.pulumiCloud.pulumiCloudStrings.windows
 */
-trait HostOperatingSystem extends js.Object
+trait HostOperatingSystem extends StObject
 object HostOperatingSystem {
   
   @scala.inline

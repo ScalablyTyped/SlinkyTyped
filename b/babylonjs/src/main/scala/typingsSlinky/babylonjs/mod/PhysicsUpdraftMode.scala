@@ -1,12 +1,13 @@
 package typingsSlinky.babylonjs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "PhysicsUpdraftMode")
 @js.native
-object PhysicsUpdraftMode extends js.Object {
+object PhysicsUpdraftMode extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.babylonjs.physicsHelperMod.PhysicsUpdraftMode with Double] = js.native

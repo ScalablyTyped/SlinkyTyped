@@ -1,5 +1,6 @@
 package typingsSlinky.postcss.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.postcss.mod.Root_
   - typingsSlinky.postcss.mod.ChildNode
 */
-trait Node extends js.Object
+trait Node extends StObject

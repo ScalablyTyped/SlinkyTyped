@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.navbarTextMod.NavbarTextProps
+import typingsSlinky.reactstrap.navbarTextMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "NavbarText")
+@JSImport("reactstrap/lib", "NavbarText")
 @js.native
-class NavbarText ()
-  extends Component[NavbarTextProps, js.Object, js.Any]
+class NavbarText () extends default

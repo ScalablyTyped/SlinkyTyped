@@ -7,15 +7,22 @@ import typingsSlinky.materialUiCore.muiThemeProviderMod.MuiThemeProviderProps
 import typingsSlinky.materialUiCore.muiThemeProviderMod.SheetManagerTheme
 import typingsSlinky.materialUiCore.withStylesMod.StylesCreator
 import typingsSlinky.std.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MuiThemeProvider {
   
+  @scala.inline
+  def apply(theme: Theme | (js.Function1[/* outer */ Theme | Null, Theme])): Builder = {
+    val __props = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MuiThemeProviderProps]))
+  }
+  
   @JSImport("@material-ui/core/styles", "MuiThemeProvider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +37,4 @@ object MuiThemeProvider {
   }
   
   def withProps(p: MuiThemeProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(theme: Theme | (js.Function1[/* outer */ Theme | Null, Theme])): Builder = {
-    val __props = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MuiThemeProviderProps]))
-  }
 }

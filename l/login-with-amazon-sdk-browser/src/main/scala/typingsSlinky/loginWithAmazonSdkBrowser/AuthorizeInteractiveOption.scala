@@ -1,5 +1,6 @@
 package typingsSlinky.loginWithAmazonSdkBrowser
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.always
   - typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.never
 */
-trait AuthorizeInteractiveOption extends js.Object
+trait AuthorizeInteractiveOption extends StObject
 object AuthorizeInteractiveOption {
   
   @scala.inline

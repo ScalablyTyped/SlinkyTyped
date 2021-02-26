@@ -7,6 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,16 +25,20 @@ class ListViewTemplate protected ()
     container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
-/* static members */
-@JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.ListViewTemplate")
-@js.native
-object ListViewTemplate extends js.Object {
+object ListViewTemplate {
+  
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.ListViewTemplate")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Creates and returns a new ListViewTemplate instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.ListViewTemplate.create")
+  @js.native
   def create(model: IModel): typingsSlinky.mendixmodelsdk.pagesMod.pages.ListViewTemplate = js.native
   
   /**
@@ -41,9 +46,22 @@ object ListViewTemplate extends js.Object {
     * The new ListViewTemplate will be automatically stored in the 'templates' property
     * of the parent ListView element passed as argument.
     */
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.ListViewTemplate.createIn")
+  @js.native
   def createIn(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.ListViewTemplate = js.native
   
-  var structureTypeName: String = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.ListViewTemplate.structureTypeName")
+  @js.native
+  def structureTypeName: String = js.native
+  @scala.inline
+  def structureTypeName_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("structureTypeName")(x.asInstanceOf[js.Any])
   
-  var versionInfo: StructureVersionInfo = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.ListViewTemplate.versionInfo")
+  @js.native
+  def versionInfo: StructureVersionInfo = js.native
+  @scala.inline
+  def versionInfo_=(x: StructureVersionInfo): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(x.asInstanceOf[js.Any])
 }

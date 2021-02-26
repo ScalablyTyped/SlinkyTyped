@@ -1,12 +1,13 @@
 package typingsSlinky.mssql.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mssql", "Table")
 @js.native
-class Table () extends js.Object {
+class Table () extends StObject {
   def this(tableName: String) = this()
   
   var columns: typingsSlinky.mssql.mod.columns = js.native

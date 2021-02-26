@@ -1,15 +1,15 @@
 package typingsSlinky.winrt.global.Windows.ApplicationModel
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Windows.ApplicationModel.Activation")
-@js.native
-object Activation extends js.Object {
+object Activation {
   
+  @JSGlobal("Windows.ApplicationModel.Activation.ActivationKind")
   @js.native
-  object ActivationKind extends js.Object {
+  object ActivationKind extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -77,8 +77,9 @@ object Activation extends js.Object {
     /* 23 */ val webAuthenticationBrokerContinuation: typingsSlinky.winrt.Windows.ApplicationModel.Activation.ActivationKind.webAuthenticationBrokerContinuation with Double = js.native
   }
   
+  @JSGlobal("Windows.ApplicationModel.Activation.ApplicationExecutionState")
   @js.native
-  object ApplicationExecutionState extends js.Object {
+  object ApplicationExecutionState extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -96,54 +97,67 @@ object Activation extends js.Object {
     /* 3 */ val terminated: typingsSlinky.winrt.Windows.ApplicationModel.Activation.ApplicationExecutionState.terminated with Double = js.native
   }
   
+  @JSGlobal("Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs")
   @js.native
   class CachedFileUpdaterActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs")
   @js.native
   class CameraSettingsActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs")
   @js.native
   class ContactPickerActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.DeviceActivatedEventArgs")
   @js.native
   class DeviceActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.DeviceActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.FileActivatedEventArgs")
   @js.native
   class FileActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.FileActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs")
   @js.native
   class FileOpenPickerActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs")
   @js.native
   class FileSavePickerActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.LaunchActivatedEventArgs")
   @js.native
   class LaunchActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.LaunchActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs")
   @js.native
   class PrintTaskSettingsActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs")
   @js.native
   class ProtocolActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.SearchActivatedEventArgs")
   @js.native
   class SearchActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.SearchActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs")
   @js.native
   class ShareTargetActivatedEventArgs ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs
   
+  @JSGlobal("Windows.ApplicationModel.Activation.SplashScreen")
   @js.native
   class SplashScreen ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen

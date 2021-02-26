@@ -1,6 +1,8 @@
 package typingsSlinky.rascal.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitterOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("rascal", "Broker")
 @js.native
 class Broker () extends EventEmitter {
+  def this(options: EventEmitterOptions) = this()
   
   def bounce(next: ErrorCb): Unit = js.native
   
@@ -51,11 +54,14 @@ class Broker () extends EventEmitter {
   
   def unsubscribeAll(next: ErrorCb): Unit = js.native
 }
-/* static members */
-@JSImport("rascal", "Broker")
-@js.native
-object Broker extends js.Object {
+object Broker {
   
+  /* static member */
+  @JSImport("rascal", "Broker.create")
+  @js.native
   def create(config: BrokerConfig, components: js.Any, next: CreateCb): Unit = js.native
+  /* static member */
+  @JSImport("rascal", "Broker.create")
+  @js.native
   def create(config: BrokerConfig, next: CreateCb): Unit = js.native
 }

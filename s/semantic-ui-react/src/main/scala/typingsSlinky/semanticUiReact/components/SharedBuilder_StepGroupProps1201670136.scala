@@ -33,6 +33,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.two
 import typingsSlinky.semanticUiReact.stepStepMod.StepProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -52,19 +53,19 @@ class SharedBuilder_StepGroupProps1201670136 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
   def fluid(value: Boolean): this.type = set("fluid", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def itemsVarargs(value: SemanticShorthandItem[StepProps]*): this.type = set("items", js.Array(value :_*))
+  def items(value: SemanticShorthandCollection[StepProps]): this.type = set("items", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def items(value: SemanticShorthandCollection[StepProps]): this.type = set("items", value.asInstanceOf[js.Any])
+  def itemsVarargs(value: SemanticShorthandItem[StepProps]*): this.type = set("items", js.Array(value :_*))
   
   @scala.inline
   def ordered(value: Boolean): this.type = set("ordered", value.asInstanceOf[js.Any])

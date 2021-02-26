@@ -8,6 +8,7 @@ import typingsSlinky.reactSketchapp.mod.StyleReference
 import typingsSlinky.reactSketchapp.mod.ViewProps
 import typingsSlinky.reactSketchapp.typesMod.ResizeConstraints
 import typingsSlinky.reactSketchapp.typesMod.SketchShadow
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,12 +17,15 @@ object View {
   
   @JSImport("react-sketchapp", "View")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactSketchapp.mod.View] {
+    
+    @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
@@ -30,25 +34,22 @@ object View {
     def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
     
     @scala.inline
-    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def resizingConstraint(value: ResizeConstraints): this.type = set("resizingConstraint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shadowsVarargs(value: SketchShadow*): this.type = set("shadows", js.Array(value :_*))
+    def shadows(value: js.Array[SketchShadow]): this.type = set("shadows", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shadows(value: js.Array[SketchShadow]): this.type = set("shadows", value.asInstanceOf[js.Any])
+    def shadowsVarargs(value: SketchShadow*): this.type = set("shadows", js.Array(value :_*))
     
     @scala.inline
     def style(value: Style | StyleReference): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: View.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

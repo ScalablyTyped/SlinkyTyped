@@ -1,13 +1,14 @@
 package typingsSlinky.winrtUwp.Windows.Globalization
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Manipulates the representation of a date and time within a given calendar and clock. */
 @js.native
-trait Calendar extends js.Object {
+trait Calendar extends StObject {
   
   /**
     * Increments or decrements the day.

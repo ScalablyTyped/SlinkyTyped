@@ -5,13 +5,14 @@ import typingsSlinky.fundamentalReact.fundamentalReactStrings.TileDotContent
 import typingsSlinky.fundamentalReact.tileMod.TileContentProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined react.react.FC<fundamental-react.fundamental-react/lib/Tile/Tile.TileContentProps> & {  displayName :'Tile.Content'} */
 @js.native
-trait FCTileContentPropsdisplay extends js.Object {
+trait FCTileContentPropsdisplay extends StObject {
   
   def apply(props: PropsWithChildren[TileContentProps]): ReactElement | Null = js.native
   def apply(props: PropsWithChildren[TileContentProps], context: js.Any): ReactElement | Null = js.native

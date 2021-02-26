@@ -3,16 +3,16 @@ package typingsSlinky.classTransformer
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.classTransformer.classTransformOptionsMod.ClassTransformOptions
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("class-transformer/ClassTransformer", JSImport.Namespace)
-@js.native
-object classTransformerMod extends js.Object {
+object classTransformerMod {
   
+  @JSImport("class-transformer/ClassTransformer", "ClassTransformer")
   @js.native
-  class ClassTransformer () extends js.Object {
+  class ClassTransformer () extends StObject {
     
     /**
       * Converts class (constructor) object to new class (constructor) object. Also works with arrays.

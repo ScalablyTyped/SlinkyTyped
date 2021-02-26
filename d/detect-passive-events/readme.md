@@ -10,15 +10,15 @@ Detect if the browser supports passive events
 | ------------------ | :-------------: |
 | Full name          | detect-passive-events |
 | Keywords           | detect, passive, passive events |
-| # releases         | 0 |
-| # dependents       | 23 |
-| # downloads        | 5736126 |
+| # releases         | 4 |
+| # dependents       | 29 |
+| # downloads        | 8164816 |
 | # stars            | 1 |
 
 ## Links
-- [Homepage](https://github.com/rafrex/detect-passive-events#readme)
-- [Bugs](https://github.com/rafrex/detect-passive-events/issues)
-- [Repository](https://github.com/rafrex/detect-passive-events)
+- [Homepage](https://detect-it.rafgraph.dev)
+- [Bugs](https://github.com/rafgraph/detect-passive-events/issues)
+- [Repository](https://github.com/rafgraph/detect-passive-events)
 - [Npm](https://www.npmjs.com/package/detect-passive-events)
     
 

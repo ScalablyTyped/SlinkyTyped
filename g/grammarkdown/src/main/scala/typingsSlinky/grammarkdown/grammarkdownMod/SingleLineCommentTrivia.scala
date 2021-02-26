@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.grammarkdownMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/grammarkdown", "SingleLineCommentTrivia")
 @js.native
 class SingleLineCommentTrivia ()
-  extends Node2[typingsSlinky.grammarkdown.grammarkdownMod.SyntaxKind.SingleLineCommentTrivia]
+  extends CommentTriviaBase[typingsSlinky.grammarkdown.grammarkdownMod.SyntaxKind.SingleLineCommentTrivia]

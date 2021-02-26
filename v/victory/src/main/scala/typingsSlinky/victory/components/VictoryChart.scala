@@ -18,6 +18,7 @@ import typingsSlinky.victory.mod.ScalePropType
 import typingsSlinky.victory.mod.StringOrNumberOrCallback
 import typingsSlinky.victory.mod.VictoryChartProps
 import typingsSlinky.victory.mod.VictoryThemeDefinition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ object VictoryChart {
   
   @JSImport("victory", "VictoryChart")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -46,16 +47,16 @@ object VictoryChart {
     def domainPadding(value: DomainPaddingPropType): this.type = set("domainPadding", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventKeyFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("eventKey", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def eventKey(value: StringOrNumberOrCallback): this.type = set("eventKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventsVarargs(value: (EventPropTypeInterface[String, StringOrNumberOrCallback])*): this.type = set("events", js.Array(value :_*))
+    def eventKeyFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("eventKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def events(value: js.Array[EventPropTypeInterface[String, StringOrNumberOrCallback]]): this.type = set("events", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def eventsVarargs(value: (EventPropTypeInterface[String, StringOrNumberOrCallback])*): this.type = set("events", js.Array(value :_*))
     
     @scala.inline
     def groupComponent(value: ReactElement): this.type = set("groupComponent", value.asInstanceOf[js.Any])
@@ -97,7 +98,7 @@ object VictoryChart {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: VictoryChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: VictoryChart.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: VictoryChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

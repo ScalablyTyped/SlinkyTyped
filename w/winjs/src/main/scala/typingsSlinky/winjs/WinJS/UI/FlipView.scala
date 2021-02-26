@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.winjs.WinJS.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Displays a collection, such as a set of photos, one item at a time.
   **/
 @js.native
-trait FlipView[T] extends js.Object {
+trait FlipView[T] extends StObject {
   
   //#endregion Events
   //#region Methods

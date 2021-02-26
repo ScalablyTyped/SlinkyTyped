@@ -3,6 +3,7 @@ package typingsSlinky.mapboxGl.mod
 import typingsSlinky.mapboxGl.mapboxGlStrings.`-_`
 import typingsSlinky.mapboxGl.mapboxGlStrings.get_
 import typingsSlinky.mapboxGl.mapboxGlStrings.image_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -87,7 +88,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mapboxGl.mapboxGlStrings.zoom
   - typingsSlinky.mapboxGl.mapboxGlStrings.`heatmap-density`
 */
-trait ExpressionName extends js.Object
+trait ExpressionName extends StObject
 object ExpressionName {
   
   @scala.inline

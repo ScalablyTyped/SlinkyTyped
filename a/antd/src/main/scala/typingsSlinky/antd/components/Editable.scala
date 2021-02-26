@@ -6,15 +6,22 @@ import typingsSlinky.antd.configProviderContextMod.DirectionType
 import typingsSlinky.antd.editableMod.EditableProps
 import typingsSlinky.rcTextarea.resizableTextAreaMod.AutoSizeType
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Editable {
   
+  @scala.inline
+  def apply(onCancel: () => Unit, onSave: String => Unit, value: String): Builder = {
+    val __props = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onSave = js.Any.fromFunction1(onSave), value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[EditableProps]))
+  }
+  
   @JSImport("antd/lib/typography/Editable", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -44,10 +51,4 @@ object Editable {
   }
   
   def withProps(p: EditableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onCancel: () => Unit, onSave: String => Unit, value: String): Builder = {
-    val __props = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onSave = js.Any.fromFunction1(onSave), value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[EditableProps]))
-  }
 }

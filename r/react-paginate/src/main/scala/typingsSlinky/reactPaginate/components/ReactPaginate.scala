@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactPaginate.anon.Selected
 import typingsSlinky.reactPaginate.mod.ReactPaginateProps
 import typingsSlinky.reactPaginate.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactPaginate {
   
+  @scala.inline
+  def apply(marginPagesDisplayed: Double, pageCount: Double, pageRangeDisplayed: Double): Builder = {
+    val __props = js.Dynamic.literal(marginPagesDisplayed = marginPagesDisplayed.asInstanceOf[js.Any], pageCount = pageCount.asInstanceOf[js.Any], pageRangeDisplayed = pageRangeDisplayed.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactPaginateProps]))
+  }
+  
   @JSImport("react-paginate", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,10 +38,10 @@ object ReactPaginate {
     def breakClassName(value: String): this.type = set("breakClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def breakLabelReactElement(value: ReactElement): this.type = set("breakLabel", value.asInstanceOf[js.Any])
+    def breakLabel(value: String | ReactElement): this.type = set("breakLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def breakLabel(value: String | ReactElement): this.type = set("breakLabel", value.asInstanceOf[js.Any])
+    def breakLabelReactElement(value: ReactElement): this.type = set("breakLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def breakLinkClassName(value: String): this.type = set("breakLinkClassName", value.asInstanceOf[js.Any])
@@ -64,10 +71,10 @@ object ReactPaginate {
     def nextClassName(value: String): this.type = set("nextClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextLabelReactElement(value: ReactElement): this.type = set("nextLabel", value.asInstanceOf[js.Any])
+    def nextLabel(value: ReactElement): this.type = set("nextLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextLabel(value: ReactElement): this.type = set("nextLabel", value.asInstanceOf[js.Any])
+    def nextLabelReactElement(value: ReactElement): this.type = set("nextLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def nextLinkClassName(value: String): this.type = set("nextLinkClassName", value.asInstanceOf[js.Any])
@@ -85,20 +92,14 @@ object ReactPaginate {
     def previousClassName(value: String): this.type = set("previousClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def previousLabelReactElement(value: ReactElement): this.type = set("previousLabel", value.asInstanceOf[js.Any])
+    def previousLabel(value: ReactElement): this.type = set("previousLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def previousLabel(value: ReactElement): this.type = set("previousLabel", value.asInstanceOf[js.Any])
+    def previousLabelReactElement(value: ReactElement): this.type = set("previousLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def previousLinkClassName(value: String): this.type = set("previousLinkClassName", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ReactPaginateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(marginPagesDisplayed: Double, pageCount: Double, pageRangeDisplayed: Double): Builder = {
-    val __props = js.Dynamic.literal(marginPagesDisplayed = marginPagesDisplayed.asInstanceOf[js.Any], pageCount = pageCount.asInstanceOf[js.Any], pageRangeDisplayed = pageRangeDisplayed.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactPaginateProps]))
-  }
 }

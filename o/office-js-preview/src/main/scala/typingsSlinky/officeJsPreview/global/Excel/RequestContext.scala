@@ -1,6 +1,7 @@
 package typingsSlinky.officeJsPreview.global.Excel
 
 import typingsSlinky.officeJsPreview.Excel.Session
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

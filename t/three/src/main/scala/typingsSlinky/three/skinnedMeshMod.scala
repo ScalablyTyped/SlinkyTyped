@@ -7,14 +7,14 @@ import typingsSlinky.three.matrix4Mod.Matrix4
 import typingsSlinky.three.meshMod.Mesh
 import typingsSlinky.three.skeletonMod.Skeleton
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/objects/SkinnedMesh", JSImport.Namespace)
-@js.native
-object skinnedMeshMod extends js.Object {
+object skinnedMeshMod {
   
+  @JSImport("three/src/objects/SkinnedMesh", "SkinnedMesh")
   @js.native
   class SkinnedMesh[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: Material | js.Array[Material] */] () extends Mesh[TGeometry, TMaterial] {
     def this(geometry: TGeometry) = this()

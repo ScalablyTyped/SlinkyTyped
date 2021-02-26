@@ -1,6 +1,7 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Core
 
 import typingsSlinky.winrtUwp.Windows.Media.Core.IMediaStreamDescriptor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

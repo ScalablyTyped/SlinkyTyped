@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.cardBodyMod.CardBodyProps
+import typingsSlinky.reactstrap.cardBodyMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "CardBody")
+@JSImport("reactstrap/lib", "CardBody")
 @js.native
-class CardBody ()
-  extends Component[CardBodyProps, js.Object, js.Any]
+class CardBody () extends default

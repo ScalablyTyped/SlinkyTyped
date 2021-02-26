@@ -9,9 +9,9 @@ simplified stream construction
 | ------------------ | :-------------: |
 | Full name          | through |
 | Keywords           | stream, streams, user-streams, pipe |
-| # releases         | 1 |
-| # dependents       | 1955 |
-| # downloads        | 413397514 |
+| # releases         | 0 |
+| # dependents       | 2076 |
+| # downloads        | 710563257 |
 | # stars            | 102 |
 
 ## Links

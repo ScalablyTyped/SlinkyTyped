@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.transformMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.vegaTypingsStrings.center
   - typingsSlinky.vegaTypings.vegaTypingsStrings.normalize
 */
-trait StackOffset extends js.Object
+trait StackOffset extends StObject
 object StackOffset {
   
   @scala.inline

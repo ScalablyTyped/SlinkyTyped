@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTouch.mod.SwipeableConfig
 import typingsSlinky.reactTouch.mod.SwipeableProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object Swipeable {
   
   @JSImport("react-touch", "Swipeable")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,7 +42,7 @@ object Swipeable {
     def onTouchStart(value: () => Unit): this.type = set("onTouchStart", js.Any.fromFunction0(value))
   }
   
-  def withProps(p: SwipeableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Swipeable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SwipeableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

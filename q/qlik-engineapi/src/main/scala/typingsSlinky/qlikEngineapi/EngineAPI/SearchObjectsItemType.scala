@@ -1,5 +1,6 @@
 package typingsSlinky.qlikEngineapi.EngineAPI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.`0`
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.`1`
 */
-trait SearchObjectsItemType extends js.Object
+trait SearchObjectsItemType extends StObject
 object SearchObjectsItemType {
   
   @scala.inline

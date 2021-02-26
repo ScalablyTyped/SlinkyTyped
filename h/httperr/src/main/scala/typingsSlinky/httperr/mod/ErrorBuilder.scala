@@ -2,6 +2,7 @@ package typingsSlinky.httperr.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,6 +25,6 @@ Instantiable0[HttpError]
     */
   def apply(): HttpError = js.native
   def apply(config: String): HttpError = js.native
-  def apply(config: Config): HttpError = js.native
   def apply(config: js.Error): HttpError = js.native
+  def apply(config: Config): HttpError = js.native
 }

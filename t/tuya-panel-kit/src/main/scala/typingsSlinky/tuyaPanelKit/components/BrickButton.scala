@@ -17,6 +17,7 @@ import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.primary
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.primaryBorder
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.primaryGradient
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.small
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ object BrickButton {
   
   @JSImport("tuya-panel-kit", "BrickButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -105,7 +106,7 @@ object BrickButton {
     def wrapperStyleNull: this.type = set("wrapperStyle", null)
   }
   
-  def withProps(p: BrickButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: BrickButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: BrickButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,12 +1,13 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins
 
 import typingsSlinky.handsontable.mod._Handsontable.Core
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Sheet extends js.Object {
+trait Sheet extends StObject {
   
   var alterManager: AlterManager = js.native
   

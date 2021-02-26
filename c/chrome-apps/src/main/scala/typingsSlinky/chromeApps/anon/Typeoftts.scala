@@ -2,12 +2,13 @@ package typingsSlinky.chromeApps.anon
 
 import typingsSlinky.chromeApps.chrome.tts.SpeakOptions
 import typingsSlinky.chromeApps.chrome.tts.TtsVoice
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeoftts extends js.Object {
+trait Typeoftts extends StObject {
   
   /** Gets an array of all available voices. */
   def getVoices(): Unit = js.native

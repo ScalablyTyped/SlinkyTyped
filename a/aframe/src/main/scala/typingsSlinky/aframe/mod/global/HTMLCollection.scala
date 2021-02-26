@@ -6,6 +6,7 @@ import typingsSlinky.aframe.mod.Entity
 import typingsSlinky.aframe.mod.ObjectMap
 import typingsSlinky.aframe.mod.System
 import typingsSlinky.std.HTMLCollectionBase
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

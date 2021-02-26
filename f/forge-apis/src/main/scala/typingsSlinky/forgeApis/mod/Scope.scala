@@ -1,5 +1,6 @@
 package typingsSlinky.forgeApis.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.forgeApis.forgeApisStrings.accountColonread
   - typingsSlinky.forgeApis.forgeApisStrings.accountColonwrite
 */
-trait Scope extends js.Object
+trait Scope extends StObject
 object Scope {
   
   @scala.inline

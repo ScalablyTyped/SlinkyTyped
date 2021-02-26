@@ -7,16 +7,15 @@ import typingsSlinky.zfont.mod.zdogAugmentingMod.FontOptions
 import typingsSlinky.zfont.mod.zdogAugmentingMod.MultilineText
 import typingsSlinky.zfont.mod.zdogAugmentingMod.TextGroupOptions
 import typingsSlinky.zfont.mod.zdogAugmentingMod.TextOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait Typeofzdog extends js.Object {
+  trait Typeofzdog extends StObject {
     
     var Anchor: Instantiable0[typingsSlinky.zdog.mod.Anchor] = js.native
     

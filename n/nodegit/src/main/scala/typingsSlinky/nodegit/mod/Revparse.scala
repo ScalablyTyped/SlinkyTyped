@@ -1,5 +1,6 @@
 package typingsSlinky.nodegit.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,10 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Revparse ()
   extends typingsSlinky.nodegit.revParseMod.Revparse
 /* static members */
-@JSImport("nodegit", "Revparse")
-@js.native
-object Revparse extends js.Object {
+object Revparse {
   
+  @JSImport("nodegit", "Revparse.ext")
+  @js.native
   def ext(
     objectOut: typingsSlinky.nodegit.objectMod.Object,
     referenceOut: typingsSlinky.nodegit.referenceMod.Reference,
@@ -20,5 +21,7 @@ object Revparse extends js.Object {
     spec: String
   ): Double = js.native
   
+  @JSImport("nodegit", "Revparse.single")
+  @js.native
   def single(repo: typingsSlinky.nodegit.repositoryMod.Repository, spec: String): js.Promise[typingsSlinky.nodegit.objectMod.Object] = js.native
 }

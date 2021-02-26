@@ -2,12 +2,13 @@ package typingsSlinky.ionicCore.componentsMod.Components
 
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IonSlides extends js.Object {
+trait IonSlides extends StObject {
   
   /**
     * Get the index of the active slide.

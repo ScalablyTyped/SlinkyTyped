@@ -11,8 +11,8 @@ Because stdin with node is annoying
 | Full name          | stdin |
 | Keywords           | - |
 | # releases         | 0 |
-| # dependents       | 60 |
-| # downloads        | 2711551 |
+| # dependents       | 67 |
+| # downloads        | 5609811 |
 | # stars            | 2 |
 
 ## Links

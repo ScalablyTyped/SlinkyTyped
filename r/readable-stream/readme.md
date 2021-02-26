@@ -10,9 +10,9 @@ Streams3, a user-land copy of the stream library from Node.js
 | ------------------ | :-------------: |
 | Full name          | readable-stream |
 | Keywords           | readable, stream, pipe |
-| # releases         | 18 |
-| # dependents       | 2004 |
-| # downloads        | 1730021497 |
+| # releases         | 7 |
+| # dependents       | 2268 |
+| # downloads        | 2627489994 |
 | # stars            | 46 |
 
 ## Links

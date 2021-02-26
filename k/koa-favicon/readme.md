@@ -11,8 +11,8 @@ favicon bounce middleware for koa
 | Full name          | koa-favicon |
 | Keywords           | koa, middleware, favicon |
 | # releases         | 2 |
-| # dependents       | 148 |
-| # downloads        | 712381 |
+| # dependents       | 157 |
+| # downloads        | 1940631 |
 | # stars            | 7 |
 
 ## Links

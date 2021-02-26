@@ -3,18 +3,29 @@ package typingsSlinky.promisifySupertest
 import typingsSlinky.express.mod.Express
 import typingsSlinky.superagent.mod.SuperAgent
 import typingsSlinky.superagent.mod.SuperAgentRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("promisify-supertest", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("promisify-supertest", JSImport.Namespace)
+  @js.native
   def apply(app: Express): SuperTest = js.native
   
+  @JSImport("promisify-supertest", "agent")
+  @js.native
   def agent(): SuperTest = js.native
+  @JSImport("promisify-supertest", "agent")
+  @js.native
   def agent(app: js.Any): SuperTest = js.native
+  
+  type CallbackHandler = js.Function2[/* err */ js.Any, /* res */ Response, Unit]
+  
+  type Response = typingsSlinky.superagent.mod.Response
+  
+  type SuperTest = SuperAgent[Test]
   
   @js.native
   trait Test extends SuperAgentRequest {
@@ -37,10 +48,4 @@ object mod extends js.Object {
     
     def serverAddress(app: js.Any, path: String): String = js.native
   }
-  
-  type CallbackHandler = js.Function2[/* err */ js.Any, /* res */ Response, Unit]
-  
-  type Response = typingsSlinky.superagent.mod.Response
-  
-  type SuperTest = SuperAgent[Test]
 }

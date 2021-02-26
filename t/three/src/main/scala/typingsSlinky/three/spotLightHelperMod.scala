@@ -7,14 +7,14 @@ import typingsSlinky.three.lightMod.Light
 import typingsSlinky.three.lineSegmentsMod.LineSegments
 import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.object3DMod.Object3D
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/helpers/SpotLightHelper", JSImport.Namespace)
-@js.native
-object spotLightHelperMod extends js.Object {
+object spotLightHelperMod {
   
+  @JSImport("three/src/helpers/SpotLightHelper", "SpotLightHelper")
   @js.native
   class SpotLightHelper protected () extends Object3D {
     def this(light: Light) = this()

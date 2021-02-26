@@ -1,6 +1,9 @@
 package typingsSlinky.playcanvas.global.pc
 
+import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.playcanvas.anon.App
 import typingsSlinky.playcanvas.anon.TypeofScriptType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,5 +17,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ScriptAttributes protected ()
   extends typingsSlinky.playcanvas.pc.ScriptAttributes {
-  def this(scriptType: TypeofScriptType) = this()
+  def this(scriptType: TypeofScriptType with (Instantiable1[/* args */ App, typingsSlinky.playcanvas.pc.ScriptType])) = this()
 }

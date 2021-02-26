@@ -1,13 +1,14 @@
 package typingsSlinky.googleProtobuf.mod
 
 import typingsSlinky.googleProtobuf.mod.BinaryConstants.FieldType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("google-protobuf", "BinaryWriter")
 @js.native
-class BinaryWriter () extends js.Object {
+class BinaryWriter () extends StObject {
   
   def beginSubMessage(field: Double): Unit = js.native
   

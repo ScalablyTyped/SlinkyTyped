@@ -4,12 +4,13 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.highlightJs.anon.LanguageName
 import typingsSlinky.highlightJs.anon.PartialHLJSOptions
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PublicApi extends js.Object {
+trait PublicApi extends StObject {
   
   def addPlugin(plugin: HLJSPlugin): Unit = js.native
   

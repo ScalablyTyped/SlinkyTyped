@@ -10,15 +10,22 @@ import typingsSlinky.reactCalendarTimeline.mod.IntervalRenderer
 import typingsSlinky.reactCalendarTimeline.mod.SidebarHeaderChildrenFnProps
 import typingsSlinky.reactCalendarTimeline.mod.Unit
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.primaryHeader
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DateHeader {
   
+  @scala.inline
+  def apply[Data](): Builder[Data] = {
+    val __props = js.Dynamic.literal()
+    new Builder[Data](js.Array(this.component, __props.asInstanceOf[DateHeaderProps[Data]]))
+  }
+  
   @JSImport("react-calendar-timeline", "DateHeader")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[Data] (val args: js.Array[js.Any])
@@ -41,11 +48,6 @@ object DateHeader {
     def intervalRenderer(value: /* props */ js.UndefOr[IntervalRenderer[Data]] => ReactElement): this.type = set("intervalRenderer", js.Any.fromFunction1(value))
     
     @scala.inline
-    def labelFormatFunction3(
-      value: (/* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], /* unit */ Unit, /* labelWidth */ Double) => String
-    ): this.type = set("labelFormat", js.Any.fromFunction3(value))
-    
-    @scala.inline
     def labelFormat(
       value: String | (js.Function3[
           /* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], 
@@ -56,19 +58,18 @@ object DateHeader {
     ): this.type = set("labelFormat", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def labelFormatFunction3(
+      value: (/* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], /* unit */ Unit, /* labelWidth */ Double) => String
+    ): this.type = set("labelFormat", js.Any.fromFunction3(value))
+    
+    @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def unit(value: Unit | primaryHeader): this.type = set("unit", value.asInstanceOf[js.Any])
   }
   
-  def withProps[Data](p: DateHeaderProps[Data]): Builder[Data] = new Builder[Data](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[Data](): Builder[Data] = {
-    val __props = js.Dynamic.literal()
-    new Builder[Data](js.Array(this.component, __props.asInstanceOf[DateHeaderProps[Data]]))
-  }
-  
   implicit def make[Data](companion: DateHeader.type): Builder[Data] = new Builder[Data](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps[Data](p: DateHeaderProps[Data]): Builder[Data] = new Builder[Data](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -5,6 +5,7 @@ import typingsSlinky.activexAccess.activexAccessNumbers.`1`
 import typingsSlinky.activexAccess.activexAccessNumbers.`2`
 import typingsSlinky.activexAccess.activexAccessNumbers.`3`
 import typingsSlinky.activexAccess.activexAccessNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAccess.activexAccessNumbers.`1`
   - typingsSlinky.activexAccess.activexAccessNumbers.`0`
 */
-trait AcWebBrowserState extends js.Object
+trait AcWebBrowserState extends StObject
 object AcWebBrowserState {
   
   @scala.inline

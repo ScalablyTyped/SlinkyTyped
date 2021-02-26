@@ -1,5 +1,6 @@
 package typingsSlinky.vueI18n
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -57,8 +58,6 @@ package object mod {
   type TranslateResult = typingsSlinky.vueI18n.mod.VueI18n.TranslateResult
   
   type Values = typingsSlinky.vueI18n.mod.VueI18n.Values
-  
-  type VueI18n = typingsSlinky.vueI18n.mod.VueI18n_
   
   type WarnHtmlInMessageLevel = typingsSlinky.vueI18n.mod.VueI18n.WarnHtmlInMessageLevel
 }

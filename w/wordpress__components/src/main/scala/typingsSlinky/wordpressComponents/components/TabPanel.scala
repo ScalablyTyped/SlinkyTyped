@@ -7,15 +7,22 @@ import typingsSlinky.wordpressComponents.tabPanelMod.TabPanel.Props
 import typingsSlinky.wordpressComponents.tabPanelMod.TabPanel.Tab
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.horizontal
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.vertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TabPanel {
   
+  @scala.inline
+  def apply(children: Tab => ReactElement, tabs: js.Array[Tab]): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), tabs = tabs.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@wordpress/components", "TabPanel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,10 +46,4 @@ object TabPanel {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: Tab => ReactElement, tabs: js.Array[Tab]): Builder = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), tabs = tabs.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

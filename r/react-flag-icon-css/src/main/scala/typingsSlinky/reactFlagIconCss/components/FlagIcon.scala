@@ -6,15 +6,22 @@ import typingsSlinky.reactFlagIconCss.mod.FlagIconFlip
 import typingsSlinky.reactFlagIconCss.mod.FlagIconProps
 import typingsSlinky.reactFlagIconCss.mod.FlagIconRotate
 import typingsSlinky.reactFlagIconCss.mod.FlagIconSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FlagIcon {
   
+  @scala.inline
+  def apply(code: String): Builder = {
+    val __props = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[FlagIconProps]))
+  }
+  
   @JSImport("react-flag-icon-css", "FlagIcon")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -44,10 +51,4 @@ object FlagIcon {
   }
   
   def withProps(p: FlagIconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(code: String): Builder = {
-    val __props = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[FlagIconProps]))
-  }
 }

@@ -10,9 +10,9 @@ Convenient parsing for Fetch.
 | ------------------ | :-------------: |
 | Full name          | d3-fetch |
 | Keywords           | d3, d3-module, fetch, ajax, XMLHttpRequest |
-| # releases         | 7 |
-| # dependents       | 22 |
-| # downloads        | 10856594 |
+| # releases         | 4 |
+| # dependents       | 33 |
+| # downloads        | 28781436 |
 | # stars            | 0 |
 
 ## Links

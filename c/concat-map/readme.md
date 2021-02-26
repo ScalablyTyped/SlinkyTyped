@@ -11,8 +11,8 @@ concatenative mapdashery
 | Full name          | concat-map |
 | Keywords           | concat, concatMap, map, functional, higher-order |
 | # releases         | 0 |
-| # dependents       | 127 |
-| # downloads        | 512273770 |
+| # dependents       | 222 |
+| # downloads        | 847511075 |
 | # stars            | 3 |
 
 ## Links

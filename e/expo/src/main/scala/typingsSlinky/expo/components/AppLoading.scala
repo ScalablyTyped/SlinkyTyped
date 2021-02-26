@@ -3,6 +3,7 @@ package typingsSlinky.expo.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.StBuildingComponent.Default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object AppLoading {
     
     @JSImport("expo", "AppLoading")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -33,23 +34,23 @@ object AppLoading {
       def startAsync(value: () => js.Promise[Unit]): this.type = set("startAsync", js.Any.fromFunction0(value))
     }
     
-    def withProps(p: typingsSlinky.expo.anon.AutoHideSplash): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: AutoHideSplash.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: typingsSlinky.expo.anon.AutoHideSplash): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object OnError {
-    
-    @JSImport("expo", "AppLoading")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: typingsSlinky.expo.anon.OnError): Default[tag.type, typingsSlinky.expo.mod.AppLoading] = new Default[tag.type, typingsSlinky.expo.mod.AppLoading](js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
     def apply(onError: Null, onFinish: Null, startAsync: Null): Default[tag.type, typingsSlinky.expo.mod.AppLoading] = {
       val __props = js.Dynamic.literal(onError = onError.asInstanceOf[js.Any], onFinish = onFinish.asInstanceOf[js.Any], startAsync = startAsync.asInstanceOf[js.Any])
       new Default[tag.type, typingsSlinky.expo.mod.AppLoading](js.Array(this.component, __props.asInstanceOf[typingsSlinky.expo.anon.OnError]))
     }
+    
+    @JSImport("expo", "AppLoading")
+    @js.native
+    val component: js.Object = js.native
+    
+    def withProps(p: typingsSlinky.expo.anon.OnError): Default[tag.type, typingsSlinky.expo.mod.AppLoading] = new Default[tag.type, typingsSlinky.expo.mod.AppLoading](js.Array(this.component, p.asInstanceOf[js.Any]))
   }
 }

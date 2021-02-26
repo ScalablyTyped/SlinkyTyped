@@ -4,16 +4,16 @@ import typingsSlinky.three.anon.NeedsUpdate
 import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.webGLPropertiesMod.WebGLProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/renderers/webgl/WebGLClipping", JSImport.Namespace)
-@js.native
-object webGLClippingMod extends js.Object {
+object webGLClippingMod {
   
+  @JSImport("three/src/renderers/webgl/WebGLClipping", "WebGLClipping")
   @js.native
-  class WebGLClipping protected () extends js.Object {
+  class WebGLClipping protected () extends StObject {
     def this(properties: WebGLProperties) = this()
     
     def beginShadows(): Unit = js.native

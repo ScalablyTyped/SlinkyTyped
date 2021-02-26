@@ -10,9 +10,9 @@ Human readable time measurements
 | ------------------ | :-------------: |
 | Full name          | human-interval |
 | Keywords           | interval, time, date |
-| # releases         | 2 |
-| # dependents       | 58 |
-| # downloads        | 1651849 |
+| # releases         | 4 |
+| # dependents       | 65 |
+| # downloads        | 2703963 |
 | # stars            | 4 |
 
 ## Links

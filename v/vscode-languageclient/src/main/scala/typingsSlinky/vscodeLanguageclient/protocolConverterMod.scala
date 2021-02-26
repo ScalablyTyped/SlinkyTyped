@@ -38,19 +38,22 @@ import typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind
 import typingsSlinky.vscodeLanguageserverTypes.mod.SymbolTag
 import typingsSlinky.vscodeLanguageserverTypes.mod.TextEdit
 import typingsSlinky.vscodeLanguageserverTypes.mod.WorkspaceEdit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageclient/lib/protocolConverter", JSImport.Namespace)
-@js.native
-object protocolConverterMod extends js.Object {
+object protocolConverterMod {
   
+  @JSImport("vscode-languageclient/lib/protocolConverter", "createConverter")
+  @js.native
   def createConverter(): Converter = js.native
+  @JSImport("vscode-languageclient/lib/protocolConverter", "createConverter")
+  @js.native
   def createConverter(uriConverter: URIConverter): Converter = js.native
   
   @js.native
-  trait Converter extends js.Object {
+  trait Converter extends StObject {
     
     def asCodeAction(): js.UndefOr[scala.Nothing] = js.native
     def asCodeAction(item: CodeAction): js.UndefOr[typingsSlinky.vscode.mod.CodeAction] = js.native

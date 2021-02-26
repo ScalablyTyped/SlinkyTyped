@@ -7,12 +7,13 @@ import typingsSlinky.astTypes.kindsMod.TSIndexSignatureKind
 import typingsSlinky.astTypes.kindsMod.TSMethodSignatureKind
 import typingsSlinky.astTypes.kindsMod.TSPropertySignatureKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeLiteral
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TSTypeLiteralBuilder extends js.Object {
+trait TSTypeLiteralBuilder extends StObject {
   
   def apply(
     members: js.Array[

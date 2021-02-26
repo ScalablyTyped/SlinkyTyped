@@ -4,14 +4,14 @@ import typingsSlinky.jupyterlabDocumentsearch.interfacesMod.ISearchProvider
 import typingsSlinky.luminoDisposable.mod.IDisposable
 import typingsSlinky.luminoSignaling.mod.ISignal
 import typingsSlinky.luminoWidgets.mod.Widget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/documentsearch/lib/searchinstance", JSImport.Namespace)
-@js.native
-object searchinstanceMod extends js.Object {
+object searchinstanceMod {
   
+  @JSImport("@jupyterlab/documentsearch/lib/searchinstance", "SearchInstance")
   @js.native
   class SearchInstance protected () extends IDisposable {
     def this(widget: Widget, searchProvider: ISearchProvider[Widget]) = this()

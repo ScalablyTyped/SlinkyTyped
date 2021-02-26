@@ -2,6 +2,7 @@ package typingsSlinky.lodash.mod
 
 import typingsSlinky.std.Parameters
 import typingsSlinky.std.ReturnType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

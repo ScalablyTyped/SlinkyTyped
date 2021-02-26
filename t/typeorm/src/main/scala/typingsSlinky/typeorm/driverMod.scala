@@ -12,16 +12,15 @@ import typingsSlinky.typeorm.queryRunnerMod.QueryRunner
 import typingsSlinky.typeorm.replicationModeMod.ReplicationMode
 import typingsSlinky.typeorm.schemaBuilderMod.SchemaBuilder
 import typingsSlinky.typeorm.tableColumnMod.TableColumn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/driver/Driver", JSImport.Namespace)
-@js.native
-object driverMod extends js.Object {
+object driverMod {
   
   @js.native
-  trait Driver extends js.Object {
+  trait Driver extends StObject {
     
     /**
       * Makes any action after connection (e.g. create extensions in Postgres driver).

@@ -1,5 +1,6 @@
 package typingsSlinky.ipp.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ipp.ippStrings.`shake-128`
   - typingsSlinky.ipp.ippStrings.`shake-256`
 */
-trait JobPasswordEncryption extends js.Object
+trait JobPasswordEncryption extends StObject
 object JobPasswordEncryption {
   
   @scala.inline

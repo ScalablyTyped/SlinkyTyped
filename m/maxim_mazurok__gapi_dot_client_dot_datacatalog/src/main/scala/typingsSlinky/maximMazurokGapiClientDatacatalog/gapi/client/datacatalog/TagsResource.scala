@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.Parent
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.Resource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TagsResource extends js.Object {
+trait TagsResource extends StObject {
   
   /**
     * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the

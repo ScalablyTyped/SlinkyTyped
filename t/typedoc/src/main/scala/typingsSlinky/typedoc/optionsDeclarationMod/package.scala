@@ -1,5 +1,6 @@
 package typingsSlinky.typedoc
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,4 +38,17 @@ package object optionsDeclarationMod {
       typingsSlinky.typedoc.typescriptMod.IgnoredTsOptionKeys
     ]
   ])
+  
+  @scala.inline
+  def convert(value: js.Any, option: typingsSlinky.typedoc.optionsDeclarationMod.ArrayDeclarationOption): typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.ArrayDeclarationOption] = (typingsSlinky.typedoc.optionsDeclarationMod.^.asInstanceOf[js.Dynamic].applyDynamic("convert")(value.asInstanceOf[js.Any], option.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.ArrayDeclarationOption]]
+  @scala.inline
+  def convert(value: js.Any, option: typingsSlinky.typedoc.optionsDeclarationMod.BooleanDeclarationOption): typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.BooleanDeclarationOption] = (typingsSlinky.typedoc.optionsDeclarationMod.^.asInstanceOf[js.Dynamic].applyDynamic("convert")(value.asInstanceOf[js.Any], option.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.BooleanDeclarationOption]]
+  @scala.inline
+  def convert(value: js.Any, option: typingsSlinky.typedoc.optionsDeclarationMod.MapDeclarationOption[_]): typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.MapDeclarationOption[_]] = (typingsSlinky.typedoc.optionsDeclarationMod.^.asInstanceOf[js.Dynamic].applyDynamic("convert")(value.asInstanceOf[js.Any], option.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.MapDeclarationOption[_]]]
+  @scala.inline
+  def convert(value: js.Any, option: typingsSlinky.typedoc.optionsDeclarationMod.MixedDeclarationOption): typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.MixedDeclarationOption] = (typingsSlinky.typedoc.optionsDeclarationMod.^.asInstanceOf[js.Dynamic].applyDynamic("convert")(value.asInstanceOf[js.Any], option.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.MixedDeclarationOption]]
+  @scala.inline
+  def convert(value: js.Any, option: typingsSlinky.typedoc.optionsDeclarationMod.NumberDeclarationOption): typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.NumberDeclarationOption] = (typingsSlinky.typedoc.optionsDeclarationMod.^.asInstanceOf[js.Dynamic].applyDynamic("convert")(value.asInstanceOf[js.Any], option.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.NumberDeclarationOption]]
+  @scala.inline
+  def convert(value: js.Any, option: typingsSlinky.typedoc.optionsDeclarationMod.StringDeclarationOption): typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.StringDeclarationOption] = (typingsSlinky.typedoc.optionsDeclarationMod.^.asInstanceOf[js.Dynamic].applyDynamic("convert")(value.asInstanceOf[js.Any], option.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.typedoc.optionsDeclarationMod.DeclarationOptionToOptionType[typingsSlinky.typedoc.optionsDeclarationMod.StringDeclarationOption]]
 }

@@ -7,13 +7,14 @@ import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.activated
 import typingsSlinky.winrtUwp.winrtUwpStrings.dismissed
 import typingsSlinky.winrtUwp.winrtUwpStrings.failed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Defines the content, associated metadata and events, and expiration time of a toast notification. */
 @js.native
-trait ToastNotification extends js.Object {
+trait ToastNotification extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

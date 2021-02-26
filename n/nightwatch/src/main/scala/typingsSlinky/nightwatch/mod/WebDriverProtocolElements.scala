@@ -1,12 +1,13 @@
 package typingsSlinky.nightwatch.mod
 
 import typingsSlinky.nightwatch.anon.ELEMENT
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebDriverProtocolElements extends js.Object {
+trait WebDriverProtocolElements extends StObject {
   
   /**
     * Search for an element on the page, starting from the document root. The located element will be returned as a web element JSON object.

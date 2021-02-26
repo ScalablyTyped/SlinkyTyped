@@ -19,15 +19,18 @@ import typingsSlinky.webdriverJsExtender.webdriverJsExtenderStrings.pressKey
 import typingsSlinky.webdriverJsExtender.webdriverJsExtenderStrings.swipeDown
 import typingsSlinky.webdriverJsExtender.webdriverJsExtenderStrings.tapOut
 import typingsSlinky.webdriverJsExtender.webdriverJsExtenderStrings.tapOutside
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("webdriver-js-extender", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("webdriver-js-extender", "extend")
+  @js.native
   def extend(baseDriver: WebDriver): ExtendedWebDriver = js.native
+  @JSImport("webdriver-js-extender", "extend")
+  @js.native
   def extend(baseDriver: WebDriver, fallbackGracefully: Boolean): ExtendedWebDriver = js.native
   
   @js.native

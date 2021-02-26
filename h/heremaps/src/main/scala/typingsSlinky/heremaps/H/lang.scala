@@ -1,12 +1,11 @@
 package typingsSlinky.heremaps.H
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("H.lang")
-@js.native
-object lang extends js.Object {
+object lang {
   
   /**
     * @link https://developer.here.com/documentation/maps/api_reference/H.lang.IllegalOperationError.html

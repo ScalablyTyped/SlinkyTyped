@@ -1,10 +1,14 @@
 package typingsSlinky.i18next
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
+  @scala.inline
+  def default: typingsSlinky.i18next.mod.i18n = typingsSlinky.i18next.mod.^.asInstanceOf[js.Dynamic].selectDynamic("default").asInstanceOf[typingsSlinky.i18next.mod.i18n]
   
   type Callback = js.Function2[/* error */ js.Any, /* t */ typingsSlinky.i18next.mod.TFunction, scala.Unit]
   

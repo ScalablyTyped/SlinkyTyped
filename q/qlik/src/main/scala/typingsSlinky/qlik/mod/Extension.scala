@@ -2,12 +2,13 @@ package typingsSlinky.qlik.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Extension extends js.Object {
+trait Extension extends StObject {
   
   var definition: Definition = js.native
   

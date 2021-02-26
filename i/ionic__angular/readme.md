@@ -10,9 +10,9 @@ Angular specific wrappers for @ionic/core
 | ------------------ | :-------------: |
 | Full name          | @ionic/angular |
 | Keywords           | ionic, framework, angular, mobile, app, webapp, capacitor, cordova, progressive web app, pwa |
-| # releases         | 458 |
-| # dependents       | 64 |
-| # downloads        | 2518271 |
+| # releases         | 928 |
+| # dependents       | 126 |
+| # downloads        | 4425484 |
 | # stars            | 0 |
 
 ## Links

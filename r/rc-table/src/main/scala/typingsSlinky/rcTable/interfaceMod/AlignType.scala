@@ -1,5 +1,6 @@
 package typingsSlinky.rcTable.interfaceMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.rcTable.rcTableStrings.center
   - typingsSlinky.rcTable.rcTableStrings.right
 */
-trait AlignType extends js.Object
+trait AlignType extends StObject
 object AlignType {
   
   @scala.inline

@@ -1,13 +1,12 @@
 package typingsSlinky.webicon
 
 import typingsSlinky.webicon.publicApiMod.PublicApi
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("webicon/System/ConfigurationHandler", JSImport.Namespace)
-@js.native
-object configurationHandlerMod extends js.Object {
+object configurationHandlerMod {
   
   type ConfigurationHandler = js.Function1[/* api */ PublicApi, Unit]
 }

@@ -4,16 +4,16 @@ import typingsSlinky.typescript.mod.CallExpression
 import typingsSlinky.typescript.mod.Node
 import typingsSlinky.typescript.mod.ObjectLiteralExpression
 import typingsSlinky.typescript.mod.TypeChecker
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/core/schematics/migrations/relative-link-resolution/collector", JSImport.Namespace)
-@js.native
-object relativeLinkResolutionCollectorMod extends js.Object {
+object relativeLinkResolutionCollectorMod {
   
+  @JSImport("@angular/core/schematics/migrations/relative-link-resolution/collector", "RelativeLinkResolutionCollector")
   @js.native
-  class RelativeLinkResolutionCollector protected () extends js.Object {
+  class RelativeLinkResolutionCollector protected () extends StObject {
     def this(typeChecker: TypeChecker) = this()
     
     val extraOptionsLiterals: js.Array[ObjectLiteralExpression] = js.native

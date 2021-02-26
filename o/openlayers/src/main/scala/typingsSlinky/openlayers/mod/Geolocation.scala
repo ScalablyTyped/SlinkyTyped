@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.PositionOptions
 import typingsSlinky.openlayers.mod.geom.Geometry
 import typingsSlinky.openlayers.mod.olx.GeolocationOptions
 import typingsSlinky.openlayers.mod.proj.Projection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

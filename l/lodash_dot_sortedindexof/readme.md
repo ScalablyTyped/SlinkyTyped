@@ -11,8 +11,8 @@ The lodash method `_.sortedIndexOf` exported as a module.
 | Full name          | lodash.sortedindexof |
 | Keywords           | lodash-modularized, sortedindexof |
 | # releases         | 0 |
-| # dependents       | 4 |
-| # downloads        | 26385 |
+| # dependents       | 5 |
+| # downloads        | 26135 |
 | # stars            | 0 |
 
 ## Links

@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.resizableMod.IResizableProps
 import typingsSlinky.blueprintjsTable.resizeHandleMod.Orientation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Resizable {
   
+  @scala.inline
+  def apply(onLayoutLock: js.UndefOr[Boolean] => Unit, orientation: Orientation, size: Double): Builder = {
+    val __props = js.Dynamic.literal(onLayoutLock = js.Any.fromFunction1(onLayoutLock), orientation = orientation.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IResizableProps]))
+  }
+  
   @JSImport("@blueprintjs/table/lib/esm/interactions/resizable", "Resizable")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,10 +49,4 @@ object Resizable {
   }
   
   def withProps(p: IResizableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onLayoutLock: js.UndefOr[Boolean] => Unit, orientation: Orientation, size: Double): Builder = {
-    val __props = js.Dynamic.literal(onLayoutLock = js.Any.fromFunction1(onLayoutLock), orientation = orientation.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IResizableProps]))
-  }
 }

@@ -10,9 +10,9 @@ Animated component props for React
 | ------------------ | :-------------: |
 | Full name          | @react-spring/animated |
 | Keywords           | animated, animation, hooks, motion, react, react-native, spring, typescript, velocity |
-| # releases         | 51 |
+| # releases         | 50 |
 | # dependents       | 10 |
-| # downloads        | 1631680 |
+| # downloads        | 2755515 |
 | # stars            | 0 |
 
 ## Links

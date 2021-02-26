@@ -4,12 +4,13 @@ import typingsSlinky.activexOffice.Office.Script
 import typingsSlinky.activexOffice.Office.Scripts
 import typingsSlinky.activexWord.activexWordNumbers.`9999998`
 import typingsSlinky.activexWord.activexWordNumbers.`9999999`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Range extends js.Object {
+trait Range extends StObject {
   
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   

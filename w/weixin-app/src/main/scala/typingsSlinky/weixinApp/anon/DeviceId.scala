@@ -1,11 +1,12 @@
 package typingsSlinky.weixinApp.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DeviceId extends js.Object {
+trait DeviceId extends StObject {
   
   /**
     * 特征值 uuid
@@ -36,30 +37,18 @@ object DeviceId {
   }
   
   @scala.inline
-  implicit class DeviceIdOps[Self <: DeviceId] (val x: Self) extends AnyVal {
+  implicit class DeviceIdMutableBuilder[Self <: DeviceId] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCharacteristicId(value: String): Self = StObject.set(x, "characteristicId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDeviceId(value: String): Self = StObject.set(x, "deviceId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setServiceId(value: String): Self = StObject.set(x, "serviceId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCharacteristicId(value: String): Self = this.set("characteristicId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDeviceId(value: String): Self = this.set("deviceId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setServiceId(value: String): Self = this.set("serviceId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValue(value: js.typedarray.ArrayBuffer): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
   }
 }

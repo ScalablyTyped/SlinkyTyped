@@ -1,17 +1,12 @@
 package typingsSlinky.activexLibreoffice.com_.sun.star.sdb
 
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XTabControllerModel
-import typingsSlinky.activexLibreoffice.com_.sun.star.container.XChild
-import typingsSlinky.activexLibreoffice.com_.sun.star.container.XEnumerationAccess
-import typingsSlinky.activexLibreoffice.com_.sun.star.form.XConfirmDeleteBroadcaster
-import typingsSlinky.activexLibreoffice.com_.sun.star.form.XDatabaseParameterBroadcaster
-import typingsSlinky.activexLibreoffice.com_.sun.star.form.XFormController
+import typingsSlinky.activexLibreoffice.com_.sun.star.form.FormController
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XController
-import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XDispatchProvider
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XModel
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XInitialization
 import typingsSlinky.activexLibreoffice.com_.sun.star.ui.XContextMenuInterception
-import typingsSlinky.activexLibreoffice.com_.sun.star.util.XModifyBroadcaster
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -63,15 +58,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait DataSourceBrowser
-  extends XFormController
-     with XDispatchProvider
-     with XChild
-     with XEnumerationAccess
-     with XModifyBroadcaster
-     with XConfirmDeleteBroadcaster
-     with XSQLErrorBroadcaster
-     with XRowSetApproveBroadcaster
-     with XDatabaseParameterBroadcaster
+  extends FormController
      with XController
      with XInitialization
      with XContextMenuInterception {

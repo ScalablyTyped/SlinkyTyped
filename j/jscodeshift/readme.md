@@ -10,9 +10,9 @@ A toolkit for JavaScript codemods
 | ------------------ | :-------------: |
 | Full name          | jscodeshift |
 | Keywords           | codemod, recast, babel |
-| # releases         | 10 |
-| # dependents       | 246 |
-| # downloads        | 24243886 |
+| # releases         | 8 |
+| # dependents       | 350 |
+| # downloads        | 48671634 |
 | # stars            | 10 |
 
 ## Links

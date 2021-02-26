@@ -8,12 +8,13 @@ import typingsSlinky.node.childProcessMod.SpawnOptionsWithStdioTuple
 import typingsSlinky.node.childProcessMod.SpawnOptionsWithoutStdio
 import typingsSlinky.node.childProcessMod.StdioNull
 import typingsSlinky.node.childProcessMod.StdioPipe
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FnCall extends js.Object {
+trait FnCall extends StObject {
   
   def apply(command: String): ChildProcessWithoutNullStreams = js.native
   def apply(command: String, args: js.UndefOr[scala.Nothing], options: SpawnOptionsWithoutStdio): ChildProcessWithoutNullStreams = js.native

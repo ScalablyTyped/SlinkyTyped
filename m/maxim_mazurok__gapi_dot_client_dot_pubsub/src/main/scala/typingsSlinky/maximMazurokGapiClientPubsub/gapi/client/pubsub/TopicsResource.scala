@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientPubsub.anon.Fields
 import typingsSlinky.maximMazurokGapiClientPubsub.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientPubsub.anon.Key
 import typingsSlinky.maximMazurokGapiClientPubsub.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TopicsResource extends js.Object {
+trait TopicsResource extends StObject {
   
   /** Creates the given topic with the given name. See the [resource name rules] (https://cloud.google.com/pubsub/docs/admin#resource_names). */
   def create(request: AltCallback): Request[Topic] = js.native

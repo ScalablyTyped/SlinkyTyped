@@ -10,9 +10,9 @@ merge single level defaults over a config object
 | ------------------ | :-------------: |
 | Full name          | defaults |
 | Keywords           | config, defaults |
-| # releases         | 1 |
-| # dependents       | 320 |
-| # downloads        | 121977040 |
+| # releases         | 0 |
+| # dependents       | 377 |
+| # downloads        | 266830143 |
 | # stars            | 10 |
 
 ## Links

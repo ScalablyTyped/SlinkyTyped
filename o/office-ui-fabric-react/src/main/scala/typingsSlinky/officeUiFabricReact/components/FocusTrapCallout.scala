@@ -87,6 +87,7 @@ import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricReactHooks.useTargetMod.Target
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -95,7 +96,7 @@ object FocusTrapCallout {
   
   @JSImport("office-ui-fabric-react", "FocusTrapCallout")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -282,11 +283,6 @@ object FocusTrapCallout {
     def beakWidth(value: Double): this.type = set("beakWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def boundsFunction2(
-      value: (/* target */ js.UndefOr[Target], /* targetWindow */ js.UndefOr[Window]) => js.UndefOr[IRectangle]
-    ): this.type = set("bounds", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def bounds(
       value: IRectangle | (js.Function2[
           /* target */ js.UndefOr[Target], 
@@ -294,6 +290,11 @@ object FocusTrapCallout {
           js.UndefOr[IRectangle]
         ])
     ): this.type = set("bounds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def boundsFunction2(
+      value: (/* target */ js.UndefOr[Target], /* targetWindow */ js.UndefOr[Window]) => js.UndefOr[IRectangle]
+    ): this.type = set("bounds", js.Any.fromFunction2(value))
     
     @scala.inline
     def calloutMaxHeight(value: Double): this.type = set("calloutMaxHeight", value.asInstanceOf[js.Any])
@@ -329,10 +330,10 @@ object FocusTrapCallout {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -718,10 +719,10 @@ object FocusTrapCallout {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: ICalloutContentStyleProps => DeepPartial[ICalloutContentStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[ICalloutContentStyleProps, ICalloutContentStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[ICalloutContentStyleProps, ICalloutContentStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: ICalloutContentStyleProps => DeepPartial[ICalloutContentStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -733,7 +734,7 @@ object FocusTrapCallout {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def targetRefObject(value: ReactRef[Element]): this.type = set("target", value.asInstanceOf[js.Any])
+    def target(value: Target): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetElement(value: Element): this.type = set("target", value.asInstanceOf[js.Any])
@@ -742,10 +743,10 @@ object FocusTrapCallout {
     def targetMouseEvent(value: MouseEvent): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def target(value: Target): this.type = set("target", value.asInstanceOf[js.Any])
+    def targetNull: this.type = set("target", null)
     
     @scala.inline
-    def targetNull: this.type = set("target", null)
+    def targetRefObject(value: ReactRef[Element]): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -766,7 +767,7 @@ object FocusTrapCallout {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IFocusTrapCalloutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FocusTrapCallout.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IFocusTrapCalloutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

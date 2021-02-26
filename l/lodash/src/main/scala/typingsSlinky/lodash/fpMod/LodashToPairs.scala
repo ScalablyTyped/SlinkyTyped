@@ -2,12 +2,13 @@ package typingsSlinky.lodash.fpMod
 
 import typingsSlinky.lodash.mod.Dictionary
 import typingsSlinky.lodash.mod.NumericDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashToPairs extends js.Object {
+trait LodashToPairs extends StObject {
   
   def apply(`object`: js.Object): js.Array[js.Tuple2[String, _]] = js.native
   def apply[T](`object`: Dictionary[T]): js.Array[js.Tuple2[String, T]] = js.native

@@ -8,6 +8,7 @@ import typingsSlinky.openlayers.mod.olx.format.EsriJSONOptions
 import typingsSlinky.openlayers.mod.olx.format.ReadOptions
 import typingsSlinky.openlayers.mod.olx.format.WriteOptions
 import typingsSlinky.openlayers.mod.proj.Projection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,8 +34,6 @@ class EsriJSON () extends JSONFeature {
   
   def readFeature(source: String): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: String, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
-  def readFeature(source: GlobalObject): typingsSlinky.openlayers.mod.Feature = js.native
-  def readFeature(source: GlobalObject, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   /**
     * Read a feature from a EsriJSON Feature source.  Only works for Feature,
     * use `readFeatures` to read FeatureCollection source.
@@ -50,11 +49,11 @@ class EsriJSON () extends JSONFeature {
   def readFeature(source: Document, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: Node): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: Node, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
+  def readFeature(source: GlobalObject): typingsSlinky.openlayers.mod.Feature = js.native
+  def readFeature(source: GlobalObject, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   
   def readFeatures(source: String): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: String, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: GlobalObject): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: GlobalObject, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   /**
     * Read all features from a EsriJSON source.  Works with both Feature and
     * FeatureCollection sources.
@@ -70,11 +69,11 @@ class EsriJSON () extends JSONFeature {
   def readFeatures(source: Document, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: GlobalObject): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: GlobalObject, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   
   def readGeometry(source: String): Geometry = js.native
   def readGeometry(source: String, opt_options: ReadOptions): Geometry = js.native
-  def readGeometry(source: GlobalObject): Geometry = js.native
-  def readGeometry(source: GlobalObject, opt_options: ReadOptions): Geometry = js.native
   /**
     * Read a geometry from a EsriJSON source.
     *
@@ -89,9 +88,10 @@ class EsriJSON () extends JSONFeature {
   def readGeometry(source: Document, opt_options: ReadOptions): Geometry = js.native
   def readGeometry(source: Node): Geometry = js.native
   def readGeometry(source: Node, opt_options: ReadOptions): Geometry = js.native
+  def readGeometry(source: GlobalObject): Geometry = js.native
+  def readGeometry(source: GlobalObject, opt_options: ReadOptions): Geometry = js.native
   
   def readProjection(source: String): Projection = js.native
-  def readProjection(source: GlobalObject): Projection = js.native
   /**
     * Read the projection from a EsriJSON source.
     *
@@ -102,6 +102,7 @@ class EsriJSON () extends JSONFeature {
   def readProjection(source: js.typedarray.ArrayBuffer): Projection = js.native
   def readProjection(source: Document): Projection = js.native
   def readProjection(source: Node): Projection = js.native
+  def readProjection(source: GlobalObject): Projection = js.native
   
   /**
     * Encode a feature as a EsriJSON Feature string.

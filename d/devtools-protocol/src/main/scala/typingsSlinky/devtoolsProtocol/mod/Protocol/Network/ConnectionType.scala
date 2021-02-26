@@ -2,6 +2,7 @@ package typingsSlinky.devtoolsProtocol.mod.Protocol.Network
 
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.none_
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.other_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.wimax
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.other_
 */
-trait ConnectionType extends js.Object
+trait ConnectionType extends StObject
 object ConnectionType {
   
   @scala.inline

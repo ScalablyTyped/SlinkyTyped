@@ -8,12 +8,13 @@ import typingsSlinky.sparkpost.mod.SendingDomain
 import typingsSlinky.sparkpost.mod.UpdateSendingDomain
 import typingsSlinky.sparkpost.mod.VerifyOptions
 import typingsSlinky.sparkpost.mod.VerifyResults
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait List extends js.Object {
+trait List extends StObject {
   
   /**
     * Create a sending domain by providing a sending domain object as the POST request body.

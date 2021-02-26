@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactLoadingIndicator.mod.LoadingIndicatorColor
 import typingsSlinky.reactLoadingIndicator.mod.LoadingIndicatorProps
 import typingsSlinky.reactLoadingIndicator.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object ReactLoadingIndicator {
   
   @JSImport("react-loading-indicator", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,7 +43,7 @@ object ReactLoadingIndicator {
     def spacing(value: Double): this.type = set("spacing", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: LoadingIndicatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactLoadingIndicator.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: LoadingIndicatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

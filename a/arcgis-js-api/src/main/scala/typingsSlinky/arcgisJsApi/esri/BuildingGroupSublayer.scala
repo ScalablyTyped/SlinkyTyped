@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`building-group`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`hide-children`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.hide
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.show
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

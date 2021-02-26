@@ -10,9 +10,9 @@ Scroller for DataTables
 | ------------------ | :-------------: |
 | Full name          | datatables.net-scroller |
 | Keywords           | virtual scrolling, DataTables, jQuery, table, DataTables |
-| # releases         | 6 |
-| # dependents       | 7 |
-| # downloads        | 442728 |
+| # releases         | 5 |
+| # dependents       | 9 |
+| # downloads        | 1683384 |
 | # stars            | 0 |
 
 ## Links

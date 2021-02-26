@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.simpleDownload
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.bypassMode
 */
-trait WindowsDeliveryOptimizationMode extends js.Object
+trait WindowsDeliveryOptimizationMode extends StObject
 object WindowsDeliveryOptimizationMode {
   
   @scala.inline

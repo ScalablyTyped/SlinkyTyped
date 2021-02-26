@@ -7,6 +7,7 @@ import typingsSlinky.activexShell.activexShellNumbers.`32`
 import typingsSlinky.activexShell.activexShellNumbers.`4`
 import typingsSlinky.activexShell.activexShellNumbers.`64`
 import typingsSlinky.activexShell.activexShellNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexShell.activexShellNumbers.`64`
   - typingsSlinky.activexShell.activexShellNumbers.`128`
 */
-trait ShellLinkResolveFlags extends js.Object
+trait ShellLinkResolveFlags extends StObject
 object ShellLinkResolveFlags {
   
   /** Call the Windows Installer. */

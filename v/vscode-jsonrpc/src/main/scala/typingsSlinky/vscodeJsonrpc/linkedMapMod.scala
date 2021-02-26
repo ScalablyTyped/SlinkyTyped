@@ -3,16 +3,16 @@ package typingsSlinky.vscodeJsonrpc
 import typingsSlinky.vscodeJsonrpc.vscodeJsonrpcNumbers.`0`
 import typingsSlinky.vscodeJsonrpc.vscodeJsonrpcNumbers.`1`
 import typingsSlinky.vscodeJsonrpc.vscodeJsonrpcNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-jsonrpc/lib/linkedMap", JSImport.Namespace)
-@js.native
-object linkedMapMod extends js.Object {
+object linkedMapMod {
   
+  @JSImport("vscode-jsonrpc/lib/linkedMap", "LinkedMap")
   @js.native
-  class LinkedMap[K, V] () extends js.Object {
+  class LinkedMap[K, V] () extends StObject {
     
     var _head: js.Any = js.native
     
@@ -69,14 +69,19 @@ object linkedMapMod extends js.Object {
     - typingsSlinky.vscodeJsonrpc.vscodeJsonrpcNumbers.`1`
     - typingsSlinky.vscodeJsonrpc.vscodeJsonrpcNumbers.`2`
   */
-  trait Touch extends js.Object
-  @js.native
-  object Touch extends js.Object {
+  trait Touch extends StObject
+  object Touch {
     
+    @JSImport("vscode-jsonrpc/lib/linkedMap", "Touch.First")
+    @js.native
     val First: `1` = js.native
     
+    @JSImport("vscode-jsonrpc/lib/linkedMap", "Touch.Last")
+    @js.native
     val Last: `2` = js.native
     
+    @JSImport("vscode-jsonrpc/lib/linkedMap", "Touch.None")
+    @js.native
     val None: `0` = js.native
   }
 }

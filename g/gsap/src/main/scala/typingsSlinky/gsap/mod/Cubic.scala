@@ -1,5 +1,6 @@
 package typingsSlinky.gsap.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +9,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Cubic ()
   extends typingsSlinky.gsap.gsap.Ease
-/* static members */
-@JSImport("gsap", "Cubic")
-@js.native
-object Cubic extends js.Object {
+object Cubic {
   
-  var easeIn: typingsSlinky.gsap.gsap.Cubic = js.native
+  @JSImport("gsap", "Cubic")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var easeInOut: typingsSlinky.gsap.gsap.Cubic = js.native
+  /* static member */
+  @JSImport("gsap", "Cubic.easeIn")
+  @js.native
+  def easeIn: typingsSlinky.gsap.gsap.Cubic = js.native
   
-  var easeOut: typingsSlinky.gsap.gsap.Cubic = js.native
+  /* static member */
+  @JSImport("gsap", "Cubic.easeInOut")
+  @js.native
+  def easeInOut: typingsSlinky.gsap.gsap.Cubic = js.native
+  @scala.inline
+  def easeInOut_=(x: typingsSlinky.gsap.gsap.Cubic): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("easeInOut")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def easeIn_=(x: typingsSlinky.gsap.gsap.Cubic): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("easeIn")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("gsap", "Cubic.easeOut")
+  @js.native
+  def easeOut: typingsSlinky.gsap.gsap.Cubic = js.native
+  @scala.inline
+  def easeOut_=(x: typingsSlinky.gsap.gsap.Cubic): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("easeOut")(x.asInstanceOf[js.Any])
 }

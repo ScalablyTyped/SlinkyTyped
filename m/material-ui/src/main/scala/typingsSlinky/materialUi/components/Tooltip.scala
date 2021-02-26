@@ -7,15 +7,22 @@ import typingsSlinky.materialUi.MaterialUI.propTypes.vertical
 import typingsSlinky.materialUi.tooltipMod.TooltipProps
 import typingsSlinky.materialUi.tooltipMod.default
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tooltip {
   
+  @scala.inline
+  def apply(label: js.Any): Builder = {
+    val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
+  }
+  
   @JSImport("material-ui/internal/Tooltip", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,10 +49,4 @@ object Tooltip {
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(label: js.Any): Builder = {
-    val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
-  }
 }

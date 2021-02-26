@@ -3,6 +3,7 @@ package typingsSlinky.titanium.Titanium.Android
 import typingsSlinky.titanium.Titanium.Blob
 import typingsSlinky.titanium.Titanium.Filesystem.File
 import typingsSlinky.titanium.Titanium.Proxy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

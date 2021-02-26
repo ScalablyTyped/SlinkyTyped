@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.spinMod.SpinProps
 import typingsSlinky.antd.spinMod.SpinSize
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Spin {
   
   @JSImport("antd", "Spin")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,7 +50,7 @@ object Spin {
     def wrapperClassName(value: String): this.type = set("wrapperClassName", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SpinProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Spin.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SpinProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

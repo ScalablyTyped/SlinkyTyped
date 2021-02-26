@@ -1,19 +1,34 @@
 package typingsSlinky.mendixmodelsdk.mod.pages
 
+import typingsSlinky.mendixmodelsdk.versionChecksMod.ILifeCycle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "pages.ScrollBehavior")
 @js.native
-class ScrollBehavior ()
-  extends typingsSlinky.mendixmodelsdk.allModelClassesMod.pages.ScrollBehavior
-/* static members */
-@JSImport("mendixmodelsdk", "pages.ScrollBehavior")
-@js.native
-object ScrollBehavior extends js.Object {
+class ScrollBehavior protected ()
+  extends typingsSlinky.mendixmodelsdk.allModelClassesMod.pages.ScrollBehavior {
+  def this(_name: String, lifeCycleInfo: ILifeCycle) = this()
+}
+object ScrollBehavior {
   
-  var FullWidget: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollBehavior = js.native
+  @JSImport("mendixmodelsdk", "pages.ScrollBehavior")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var PerRegion: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollBehavior = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk", "pages.ScrollBehavior.FullWidget")
+  @js.native
+  def FullWidget: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollBehavior = js.native
+  @scala.inline
+  def FullWidget_=(x: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollBehavior): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("FullWidget")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("mendixmodelsdk", "pages.ScrollBehavior.PerRegion")
+  @js.native
+  def PerRegion: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollBehavior = js.native
+  @scala.inline
+  def PerRegion_=(x: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollBehavior): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("PerRegion")(x.asInstanceOf[js.Any])
 }

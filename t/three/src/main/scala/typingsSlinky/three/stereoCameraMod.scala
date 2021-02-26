@@ -2,14 +2,14 @@ package typingsSlinky.three
 
 import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.perspectiveCameraMod.PerspectiveCamera
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/cameras/StereoCamera", JSImport.Namespace)
-@js.native
-object stereoCameraMod extends js.Object {
+object stereoCameraMod {
   
+  @JSImport("three/src/cameras/StereoCamera", "StereoCamera")
   @js.native
   class StereoCamera () extends Camera {
     

@@ -2,12 +2,13 @@ package typingsSlinky.antdMobile.anon
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClassName extends js.Object {
+trait ClassName extends StObject {
   
   var className: js.UndefOr[String] = js.native
   

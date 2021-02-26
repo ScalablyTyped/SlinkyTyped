@@ -10,9 +10,9 @@ Color palettes calculator of Ant Design
 | ------------------ | :-------------: |
 | Full name          | @ant-design/colors |
 | Keywords           | - |
-| # releases         | 15 |
-| # dependents       | 18 |
-| # downloads        | 5108555 |
+| # releases         | 18 |
+| # dependents       | 73 |
+| # downloads        | 23326818 |
 | # stars            | 0 |
 
 ## Links

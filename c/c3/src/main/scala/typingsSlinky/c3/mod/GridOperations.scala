@@ -1,12 +1,13 @@
 package typingsSlinky.c3.mod
 
 import typingsSlinky.c3.anon.ClassValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GridOperations extends js.Object {
+trait GridOperations extends StObject {
   
   /**
     * Update the grid lines.

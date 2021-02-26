@@ -1,5 +1,6 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.displaySource
   - typingsSlinky.chromeApps.chromeAppsStrings.signedInDevices
 */
-trait DevOnly extends js.Object
+trait DevOnly extends StObject
 object DevOnly {
   
   @scala.inline

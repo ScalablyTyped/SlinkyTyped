@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientMl.anon.Key
 import typingsSlinky.maximMazurokGapiClientMl.anon.Name
 import typingsSlinky.maximMazurokGapiClientMl.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientMl.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JobsResource extends js.Object {
+trait JobsResource extends StObject {
   
   /** Cancels a running job. */
   def cancel(request: Accesstoken): Request[js.Object] = js.native

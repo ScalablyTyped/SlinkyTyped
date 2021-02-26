@@ -11,8 +11,8 @@ richer JavaScript errors
 | Full name          | verror |
 | Keywords           | - |
 | # releases         | 1 |
-| # dependents       | 574 |
-| # downloads        | 539690364 |
+| # dependents       | 702 |
+| # downloads        | 824405915 |
 | # stars            | 52 |
 
 ## Links

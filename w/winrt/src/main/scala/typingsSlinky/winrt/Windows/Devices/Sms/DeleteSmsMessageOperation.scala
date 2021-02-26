@@ -3,6 +3,7 @@ package typingsSlinky.winrt.Windows.Devices.Sms
 import typingsSlinky.winrt.Windows.Foundation.IAsyncAction
 import typingsSlinky.winrt.Windows.Foundation.IPromise
 import typingsSlinky.winrt.anon.CompletedGetResults
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

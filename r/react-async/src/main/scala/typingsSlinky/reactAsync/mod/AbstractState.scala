@@ -1,11 +1,12 @@
 package typingsSlinky.reactAsync.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AbstractState[T] extends js.Object {
+trait AbstractState[T] extends StObject {
   
   def cancel(): Unit = js.native
   

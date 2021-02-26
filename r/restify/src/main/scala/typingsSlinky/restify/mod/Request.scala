@@ -1,10 +1,10 @@
 package typingsSlinky.restify.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.bunyan.mod.^
 import typingsSlinky.formidable.mod.File
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.urlMod.Url
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -170,7 +170,7 @@ trait Request extends IncomingMessage {
   def isUpload(): Boolean = js.native
   
   /** bunyan logger you can piggyback on. */
-  var log: ^ = js.native
+  var log: typingsSlinky.bunyan.mod.^ = js.native
   
   /**
     * returns the version of the route that matched.

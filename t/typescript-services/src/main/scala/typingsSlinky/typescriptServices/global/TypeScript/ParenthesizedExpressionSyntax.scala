@@ -2,6 +2,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 
 import typingsSlinky.typescriptServices.TypeScript.IExpressionSyntax
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,10 +18,10 @@ class ParenthesizedExpressionSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSGlobal("TypeScript.ParenthesizedExpressionSyntax")
-@js.native
-object ParenthesizedExpressionSyntax extends js.Object {
+object ParenthesizedExpressionSyntax {
   
+  /* static member */
+  @JSGlobal("TypeScript.ParenthesizedExpressionSyntax.create1")
+  @js.native
   def create1(expression: IExpressionSyntax): typingsSlinky.typescriptServices.TypeScript.ParenthesizedExpressionSyntax = js.native
 }

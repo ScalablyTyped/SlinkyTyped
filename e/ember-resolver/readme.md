@@ -10,9 +10,9 @@ The default modules based resolver for Ember CLI.
 | ------------------ | :-------------: |
 | Full name          | ember-resolver |
 | Keywords           | ember-addon |
-| # releases         | 20 |
+| # releases         | 13 |
 | # dependents       | 5 |
-| # downloads        | 5592258 |
+| # downloads        | 7085177 |
 | # stars            | 0 |
 
 ## Links

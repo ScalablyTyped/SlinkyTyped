@@ -8,16 +8,16 @@ import typingsSlinky.typeorm.repositorySaveOptionsMod.SaveOptions
 import typingsSlinky.typeorm.subscriberBroadcasterResultMod.BroadcasterResult
 import typingsSlinky.typeorm.typeormStrings.delete
 import typingsSlinky.typeorm.typeormStrings.insert
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/persistence/SubjectExecutor", JSImport.Namespace)
-@js.native
-object persistenceSubjectExecutorMod extends js.Object {
+object persistenceSubjectExecutorMod {
   
+  @JSImport("typeorm/persistence/SubjectExecutor", "SubjectExecutor")
   @js.native
-  class SubjectExecutor protected () extends js.Object {
+  class SubjectExecutor protected () extends StObject {
     def this(queryRunner: QueryRunner, subjects: js.Array[Subject]) = this()
     def this(queryRunner: QueryRunner, subjects: js.Array[Subject], options: SaveOptions with RemoveOptions) = this()
     

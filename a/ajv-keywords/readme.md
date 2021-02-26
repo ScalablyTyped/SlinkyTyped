@@ -10,9 +10,9 @@ Custom JSON-Schema keywords for Ajv validator
 | ------------------ | :-------------: |
 | Full name          | ajv-keywords |
 | Keywords           | JSON-Schema, ajv, keywords |
-| # releases         | 6 |
-| # dependents       | 205 |
-| # downloads        | 456930254 |
+| # releases         | 13 |
+| # dependents       | 277 |
+| # downloads        | 637361837 |
 | # stars            | 7 |
 
 ## Links

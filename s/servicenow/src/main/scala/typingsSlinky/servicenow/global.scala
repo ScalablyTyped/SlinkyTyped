@@ -2,16 +2,15 @@ package typingsSlinky.servicenow
 
 import typingsSlinky.servicenow.servicenow.GlideRecord
 import typingsSlinky.servicenow.servicenow.GlideRecordOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("global")
-@js.native
-object global extends js.Object {
+object global {
   
   @js.native
-  trait Workflow extends js.Object {
+  trait Workflow extends StObject {
     
     def broadcastEvent(contextId: String, eventName: String): Unit = js.native
     

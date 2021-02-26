@@ -9,15 +9,22 @@ import typingsSlinky.reactMotion.mod.Style
 import typingsSlinky.reactMotion.mod.TransitionPlainStyle
 import typingsSlinky.reactMotion.mod.TransitionProps
 import typingsSlinky.reactMotion.mod.TransitionStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TransitionMotion {
   
+  @scala.inline
+  def apply(styles: js.Array[TransitionStyle] | InterpolateFunction): Builder = {
+    val __props = js.Dynamic.literal(styles = styles.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TransitionProps]))
+  }
+  
   @JSImport("react-motion", "TransitionMotion")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -28,10 +35,10 @@ object TransitionMotion {
     def children(value: /* interpolatedStyles */ js.Array[TransitionPlainStyle] => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def defaultStylesVarargs(value: TransitionPlainStyle*): this.type = set("defaultStyles", js.Array(value :_*))
+    def defaultStyles(value: js.Array[TransitionPlainStyle]): this.type = set("defaultStyles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultStyles(value: js.Array[TransitionPlainStyle]): this.type = set("defaultStyles", value.asInstanceOf[js.Any])
+    def defaultStylesVarargs(value: TransitionPlainStyle*): this.type = set("defaultStyles", js.Array(value :_*))
     
     @scala.inline
     def didLeave(value: /* styleThatLeft */ TransitionStyle => Unit): this.type = set("didLeave", js.Any.fromFunction1(value))
@@ -44,10 +51,4 @@ object TransitionMotion {
   }
   
   def withProps(p: TransitionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(styles: js.Array[TransitionStyle] | InterpolateFunction): Builder = {
-    val __props = js.Dynamic.literal(styles = styles.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TransitionProps]))
-  }
 }

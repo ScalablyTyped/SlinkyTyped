@@ -16,15 +16,27 @@ import typingsSlinky.rcTree.treeNodeMod.TreeNodeProps
 import typingsSlinky.rcTree.treeUtilMod.TreeNodeRequiredProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MotionTreeNode {
   
+  @scala.inline
+  def apply(
+    active: Boolean,
+    onMotionEnd: () => Unit,
+    onMotionStart: () => Unit,
+    treeNodeRequiredProps: TreeNodeRequiredProps
+  ): Builder = {
+    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any], onMotionEnd = js.Any.fromFunction0(onMotionEnd), onMotionStart = js.Any.fromFunction0(onMotionStart), treeNodeRequiredProps = treeNodeRequiredProps.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MotionTreeNodeProps with RefAttributes[HTMLDivElement]]))
+  }
+  
   @JSImport("rc-tree/es/MotionTreeNode", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -68,28 +80,28 @@ object MotionTreeNode {
     def halfChecked(value: Boolean): this.type = set("halfChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: IconType): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconFunction1(value: /* props */ TreeNodeProps => ReactElement): this.type = set("icon", js.Any.fromFunction1(value))
     
     @scala.inline
-    def icon(value: IconType): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def isEndVarargs(value: Boolean*): this.type = set("isEnd", js.Array(value :_*))
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def isEnd(value: js.Array[Boolean]): this.type = set("isEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def isEndVarargs(value: Boolean*): this.type = set("isEnd", js.Array(value :_*))
+    
+    @scala.inline
     def isLeaf(value: Boolean): this.type = set("isLeaf", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def isStartVarargs(value: Boolean*): this.type = set("isStart", js.Array(value :_*))
+    def isStart(value: js.Array[Boolean]): this.type = set("isStart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def isStart(value: js.Array[Boolean]): this.type = set("isStart", value.asInstanceOf[js.Any])
+    def isStartVarargs(value: Boolean*): this.type = set("isStart", js.Array(value :_*))
     
     @scala.inline
     def loaded(value: Boolean): this.type = set("loaded", value.asInstanceOf[js.Any])
@@ -101,10 +113,10 @@ object MotionTreeNode {
     def motion(value: js.Any): this.type = set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def motionNodesVarargs(value: FlattenNode*): this.type = set("motionNodes", js.Array(value :_*))
+    def motionNodes(value: js.Array[FlattenNode]): this.type = set("motionNodes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def motionNodes(value: js.Array[FlattenNode]): this.type = set("motionNodes", value.asInstanceOf[js.Any])
+    def motionNodesVarargs(value: FlattenNode*): this.type = set("motionNodes", js.Array(value :_*))
     
     @scala.inline
     def motionType(value: show | hide): this.type = set("motionType", value.asInstanceOf[js.Any])
@@ -128,34 +140,23 @@ object MotionTreeNode {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def switcherIconReactElement(value: ReactElement): this.type = set("switcherIcon", value.asInstanceOf[js.Any])
+    def switcherIcon(value: IconType): this.type = set("switcherIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def switcherIconFunction1(value: /* props */ TreeNodeProps => ReactElement): this.type = set("switcherIcon", js.Any.fromFunction1(value))
     
     @scala.inline
-    def switcherIcon(value: IconType): this.type = set("switcherIcon", value.asInstanceOf[js.Any])
+    def switcherIconReactElement(value: ReactElement): this.type = set("switcherIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement | (js.Function1[/* data */ DataNode, ReactElement])): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def titleFunction1(value: /* data */ DataNode => ReactElement): this.type = set("title", js.Any.fromFunction1(value))
     
     @scala.inline
-    def title(value: ReactElement | (js.Function1[/* data */ DataNode, ReactElement])): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MotionTreeNodeProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    active: Boolean,
-    onMotionEnd: () => Unit,
-    onMotionStart: () => Unit,
-    treeNodeRequiredProps: TreeNodeRequiredProps
-  ): Builder = {
-    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any], onMotionEnd = js.Any.fromFunction0(onMotionEnd), onMotionStart = js.Any.fromFunction0(onMotionStart), treeNodeRequiredProps = treeNodeRequiredProps.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MotionTreeNodeProps with RefAttributes[HTMLDivElement]]))
-  }
 }

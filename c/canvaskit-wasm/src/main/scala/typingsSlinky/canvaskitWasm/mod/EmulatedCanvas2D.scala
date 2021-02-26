@@ -1,12 +1,13 @@
 package typingsSlinky.canvaskitWasm.mod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EmulatedCanvas2D extends js.Object {
+trait EmulatedCanvas2D extends StObject {
   
   /**
     * Decodes an image with the given bytes.

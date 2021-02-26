@@ -2,12 +2,13 @@ package typingsSlinky.tizenCommonWeb.applicationMod
 
 import typingsSlinky.tizenCommonWeb.tizenMod.ErrorCallback
 import typingsSlinky.tizenCommonWeb.tizenMod.SuccessCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ApplicationManager extends js.Object {
+trait ApplicationManager extends StObject {
   
   /**
     * Adds a listener for receiving any notification for changes in the list of installed applications

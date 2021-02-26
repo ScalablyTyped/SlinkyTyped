@@ -2,13 +2,14 @@ package typingsSlinky.openseadragon.mod
 
 import typingsSlinky.openseadragon.anon.AnimationTime
 import typingsSlinky.openseadragon.anon.Time
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openseadragon", "Spring")
 @js.native
-class Spring protected () extends js.Object {
+class Spring protected () extends StObject {
   def this(options: AnimationTime) = this()
   
   var animationTime: Double = js.native

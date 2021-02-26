@@ -7,6 +7,7 @@ import typingsSlinky.antdMobile.checkboxCheckboxMod.CheckboxProps
 import typingsSlinky.antdMobile.checkboxItemMod.CheckboxItemProps
 import typingsSlinky.antdMobile.checkboxItemMod.default
 import typingsSlinky.antdMobile.checkboxPropsTypeMod.OnChangeParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object CheckboxItem {
   
   @JSImport("antd-mobile/lib/checkbox/CheckboxItem", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +39,10 @@ object CheckboxItem {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
     def listPrefixCls(value: String): this.type = set("listPrefixCls", value.asInstanceOf[js.Any])
@@ -62,7 +63,7 @@ object CheckboxItem {
     def wrapLabel(value: Boolean): this.type = set("wrapLabel", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CheckboxItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: CheckboxItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CheckboxItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

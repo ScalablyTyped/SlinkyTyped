@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientGlacierNode.typesListProvisionedCapacityInputMo
 import typingsSlinky.awsSdkClientGlacierNode.typesListProvisionedCapacityOutputMod.ListProvisionedCapacityOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/commands/ListProvisionedCapacityCommand", JSImport.Namespace)
-@js.native
-object listProvisionedCapacityCommandMod extends js.Object {
+object listProvisionedCapacityCommandMod {
   
+  @JSImport("@aws-sdk/client-glacier-node/commands/ListProvisionedCapacityCommand", "ListProvisionedCapacityCommand")
   @js.native
   class ListProvisionedCapacityCommand protected () extends Command[
           InputTypesUnion, 

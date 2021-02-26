@@ -1,14 +1,16 @@
 package typingsSlinky.videoJs.videoCoreMod.default
 
+import typingsSlinky.videoJs.mod.videojs.Button
 import typingsSlinky.videoJs.mod.videojs.ComponentOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("video.js/dist/alt/video.core", "Button")
+/* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
+@JSImport("video.js/dist/alt/video.core", "default.Button")
 @js.native
-class ButtonCls protected ()
-  extends typingsSlinky.videoJs.mod.videojs.Button {
+class ButtonCls protected () extends Button {
   /**
     * Creates an instance of this class.
     *

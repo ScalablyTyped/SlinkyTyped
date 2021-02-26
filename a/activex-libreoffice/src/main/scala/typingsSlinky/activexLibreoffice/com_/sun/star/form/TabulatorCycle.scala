@@ -3,6 +3,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.form
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 */
-trait TabulatorCycle extends js.Object
+trait TabulatorCycle extends StObject
 object TabulatorCycle {
   
   /**

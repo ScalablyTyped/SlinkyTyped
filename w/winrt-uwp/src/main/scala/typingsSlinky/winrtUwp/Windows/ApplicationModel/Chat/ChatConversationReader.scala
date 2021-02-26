@@ -2,13 +2,14 @@ package typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides functionality for reading batches of conversations from the ChatMessageStore . */
 @js.native
-trait ChatConversationReader extends js.Object {
+trait ChatConversationReader extends StObject {
   
   /**
     * Asynchronously reads batches of conversations from the ChatMessageStore .

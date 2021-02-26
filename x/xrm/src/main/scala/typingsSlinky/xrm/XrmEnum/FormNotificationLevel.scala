@@ -3,6 +3,7 @@ package typingsSlinky.xrm.XrmEnum
 import typingsSlinky.xrm.xrmStrings.ERROR
 import typingsSlinky.xrm.xrmStrings.INFO
 import typingsSlinky.xrm.xrmStrings.WARNING
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.INFO
   - typingsSlinky.xrm.xrmStrings.WARNING
 */
-trait FormNotificationLevel extends js.Object
+trait FormNotificationLevel extends StObject
 object FormNotificationLevel {
   
   @scala.inline

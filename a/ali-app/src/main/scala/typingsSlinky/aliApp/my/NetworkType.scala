@@ -1,5 +1,6 @@
 package typingsSlinky.aliApp.my
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.aliApp.aliAppStrings.`4G`
   - typingsSlinky.aliApp.aliAppStrings.WWAN
 */
-trait NetworkType extends js.Object
+trait NetworkType extends StObject
 object NetworkType {
   
   @scala.inline

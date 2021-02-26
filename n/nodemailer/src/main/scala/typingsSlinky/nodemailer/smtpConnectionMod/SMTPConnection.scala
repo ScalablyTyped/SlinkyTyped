@@ -11,6 +11,7 @@ import typingsSlinky.nodemailer.nodemailerStrings.end
 import typingsSlinky.nodemailer.nodemailerStrings.error
 import typingsSlinky.nodemailer.nodemailerStrings.init
 import typingsSlinky.nodemailer.sharedMod.Logger
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

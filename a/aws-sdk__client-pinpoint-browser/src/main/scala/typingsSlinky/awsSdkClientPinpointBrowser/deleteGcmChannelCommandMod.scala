@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteGcmChannelInputMod.D
 import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteGcmChannelOutputMod.DeleteGcmChannelOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteGcmChannelCommand", JSImport.Namespace)
-@js.native
-object deleteGcmChannelCommandMod extends js.Object {
+object deleteGcmChannelCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteGcmChannelCommand", "DeleteGcmChannelCommand")
   @js.native
   class DeleteGcmChannelCommand protected () extends Command[
           InputTypesUnion, 

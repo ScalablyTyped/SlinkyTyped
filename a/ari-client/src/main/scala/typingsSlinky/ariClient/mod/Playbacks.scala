@@ -2,12 +2,13 @@ package typingsSlinky.ariClient.mod
 
 import typingsSlinky.ariClient.anon.Operation
 import typingsSlinky.ariClient.anon.PlaybackIdString
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Playbacks extends js.Object {
+trait Playbacks extends StObject {
   
   /**
     * Control a playback.

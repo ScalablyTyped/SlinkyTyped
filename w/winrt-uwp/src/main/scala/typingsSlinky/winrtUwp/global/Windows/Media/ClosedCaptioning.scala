@@ -6,31 +6,31 @@ import typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionOpacit
 import typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionSize
 import typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle
 import typingsSlinky.winrtUwp.Windows.UI.Color
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides APIs for retrieving the closed caption formatting settings that the user can set through the system's closed captioning settings page. */
-@JSGlobal("Windows.Media.ClosedCaptioning")
-@js.native
-object ClosedCaptioning extends js.Object {
+object ClosedCaptioning {
   
   /** Specifies the color of closed caption UI elements. */
+  @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionColor")
   @js.native
-  object ClosedCaptionColor extends js.Object {
+  object ClosedCaptionColor extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
         typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionColor with Double
       ] = js.native
     
+    /* 0 */ val default: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionColor.default with Double = js.native
+    
     /* 2 */ val black: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionColor.black with Double = js.native
     
     /* 5 */ val blue: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionColor.blue with Double = js.native
     
     /* 8 */ val cyan: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionColor.cyan with Double = js.native
-    
-    /* 0 */ val default: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionColor.default with Double = js.native
     
     /* 4 */ val green: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionColor.green with Double = js.native
     
@@ -44,8 +44,9 @@ object ClosedCaptioning extends js.Object {
   }
   
   /** Specifies the edge effect of closed caption text. */
+  @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect")
   @js.native
-  object ClosedCaptionEdgeEffect extends js.Object {
+  object ClosedCaptionEdgeEffect extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -66,8 +67,9 @@ object ClosedCaptioning extends js.Object {
   }
   
   /** Specifies the opacity of closed caption text. */
+  @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionOpacity")
   @js.native
-  object ClosedCaptionOpacity extends js.Object {
+  object ClosedCaptionOpacity extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -86,53 +88,117 @@ object ClosedCaptioning extends js.Object {
   }
   
   /** Exposes properties for retrieving the closed caption formatting settings that the user can set through the system's closed captioning settings page. */
+  @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties")
   @js.native
   abstract class ClosedCaptionProperties ()
     extends typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionProperties
-  /* static members */
-  @js.native
-  object ClosedCaptionProperties extends js.Object {
+  object ClosedCaptionProperties {
+    
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties")
+    @js.native
+    val ^ : js.Any = js.native
     
     /** Gets the background color of lines of closed caption text. */
-    var backgroundColor: ClosedCaptionColor = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.backgroundColor")
+    @js.native
+    def backgroundColor: ClosedCaptionColor = js.native
+    @scala.inline
+    def backgroundColor_=(x: ClosedCaptionColor): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(x.asInstanceOf[js.Any])
     
     /** Gets the background opacity of lines of closed caption text. */
-    var backgroundOpacity: ClosedCaptionOpacity = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.backgroundOpacity")
+    @js.native
+    def backgroundOpacity: ClosedCaptionOpacity = js.native
+    @scala.inline
+    def backgroundOpacity_=(x: ClosedCaptionOpacity): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("backgroundOpacity")(x.asInstanceOf[js.Any])
     
     /** Gets the computed background color of lines of closed caption text. */
-    var computedBackgroundColor: Color = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.computedBackgroundColor")
+    @js.native
+    def computedBackgroundColor: Color = js.native
+    @scala.inline
+    def computedBackgroundColor_=(x: Color): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("computedBackgroundColor")(x.asInstanceOf[js.Any])
     
     /** Gets the computed font color for closed caption text. */
-    var computedFontColor: Color = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.computedFontColor")
+    @js.native
+    def computedFontColor: Color = js.native
+    @scala.inline
+    def computedFontColor_=(x: Color): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("computedFontColor")(x.asInstanceOf[js.Any])
     
     /** Gets the computed region color for closed caption text. */
-    var computedRegionColor: Color = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.computedRegionColor")
+    @js.native
+    def computedRegionColor: Color = js.native
+    @scala.inline
+    def computedRegionColor_=(x: Color): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("computedRegionColor")(x.asInstanceOf[js.Any])
     
     /** Gets the font color for closed caption text. */
-    var fontColor: ClosedCaptionColor = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.fontColor")
+    @js.native
+    def fontColor: ClosedCaptionColor = js.native
+    @scala.inline
+    def fontColor_=(x: ClosedCaptionColor): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(x.asInstanceOf[js.Any])
     
     /** Gets the font effect for closed caption text. */
-    var fontEffect: ClosedCaptionEdgeEffect = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.fontEffect")
+    @js.native
+    def fontEffect: ClosedCaptionEdgeEffect = js.native
+    @scala.inline
+    def fontEffect_=(x: ClosedCaptionEdgeEffect): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fontEffect")(x.asInstanceOf[js.Any])
     
     /** Gets the font opacity for closed caption text. */
-    var fontOpacity: ClosedCaptionOpacity = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.fontOpacity")
+    @js.native
+    def fontOpacity: ClosedCaptionOpacity = js.native
+    @scala.inline
+    def fontOpacity_=(x: ClosedCaptionOpacity): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fontOpacity")(x.asInstanceOf[js.Any])
     
     /** Gets the font size for closed caption text. */
-    var fontSize: ClosedCaptionSize = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.fontSize")
+    @js.native
+    def fontSize: ClosedCaptionSize = js.native
+    @scala.inline
+    def fontSize_=(x: ClosedCaptionSize): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(x.asInstanceOf[js.Any])
     
     /** Gets the font style for closed caption text. */
-    var fontStyle: ClosedCaptionStyle = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.fontStyle")
+    @js.native
+    def fontStyle: ClosedCaptionStyle = js.native
+    @scala.inline
+    def fontStyle_=(x: ClosedCaptionStyle): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(x.asInstanceOf[js.Any])
     
     /** Gets the region color for closed caption text. */
-    var regionColor: ClosedCaptionColor = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.regionColor")
+    @js.native
+    def regionColor: ClosedCaptionColor = js.native
+    @scala.inline
+    def regionColor_=(x: ClosedCaptionColor): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("regionColor")(x.asInstanceOf[js.Any])
     
     /** Gets the region opacity for closed caption text. */
-    var regionOpacity: ClosedCaptionOpacity = js.native
+    /* static member */
+    @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionProperties.regionOpacity")
+    @js.native
+    def regionOpacity: ClosedCaptionOpacity = js.native
+    @scala.inline
+    def regionOpacity_=(x: ClosedCaptionOpacity): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("regionOpacity")(x.asInstanceOf[js.Any])
   }
   
   /** Specifies the size of closed caption text. */
+  @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionSize")
   @js.native
-  object ClosedCaptionSize extends js.Object {
+  object ClosedCaptionSize extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -151,19 +217,20 @@ object ClosedCaptioning extends js.Object {
   }
   
   /** Specifies the style of closed caption text. */
+  @JSGlobal("Windows.Media.ClosedCaptioning.ClosedCaptionStyle")
   @js.native
-  object ClosedCaptionStyle extends js.Object {
+  object ClosedCaptionStyle extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
         typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle with Double
       ] = js.native
     
+    /* 0 */ val default: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.default with Double = js.native
+    
     /* 5 */ val casual: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.casual with Double = js.native
     
     /* 6 */ val cursive: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.cursive with Double = js.native
-    
-    /* 0 */ val default: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.default with Double = js.native
     
     /* 1 */ val monospacedWithSerifs: typingsSlinky.winrtUwp.Windows.Media.ClosedCaptioning.ClosedCaptionStyle.monospacedWithSerifs with Double = js.native
     

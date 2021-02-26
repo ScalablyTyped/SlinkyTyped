@@ -1,6 +1,7 @@
 package typingsSlinky.webappsecCredentialManagement
 
 import typingsSlinky.std.BufferSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,30 +25,18 @@ object PublicKeyCredentialUserEntity {
   }
   
   @scala.inline
-  implicit class PublicKeyCredentialUserEntityOps[Self <: PublicKeyCredentialUserEntity] (val x: Self) extends AnyVal {
+  implicit class PublicKeyCredentialUserEntityMutableBuilder[Self <: PublicKeyCredentialUserEntity] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDisplayName(value: String): Self = StObject.set(x, "displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setId(value: BufferSource): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setIdArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIdArrayBufferView(value: js.typedarray.ArrayBufferView): Self = this.set("id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIdArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setId(value: BufferSource): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setIdArrayBufferView(value: js.typedarray.ArrayBufferView): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
   }
 }

@@ -1,11 +1,20 @@
 package typingsSlinky.reactOnsenui.mod
 
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameIsCancelable
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import typingsSlinky.reactOnsenui.anon.IsCancelable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-onsenui", "Dialog")
 @js.native
-class Dialog ()
-  extends typingsSlinky.react.mod.Component[HTMLAttributesidclassNameIsCancelable, js.Any, js.Any]
+class Dialog protected ()
+  extends Component[IsCancelable, js.Any] {
+  def this(props: HTMLAttributesidclassName with IsCancelable) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: HTMLAttributesidclassName with IsCancelable, context: js.Any) = this()
+}

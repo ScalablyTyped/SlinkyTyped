@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.CallbackFieldsKeyOauthtoken
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.FieldsIdKeyOauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RemarketingListsResource extends js.Object {
+trait RemarketingListsResource extends StObject {
   
   /** Gets one remarketing list by ID. */
   def get(): Request[RemarketingList] = js.native

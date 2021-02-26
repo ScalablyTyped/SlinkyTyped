@@ -3,12 +3,13 @@ package typingsSlinky.swaggerExpressMiddleware.mod
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait StorageEngine extends js.Object {
+trait StorageEngine extends StObject {
   
   def _handleFile(
     req: Request_[ParamsDictionary, _, _, Query],
@@ -34,28 +35,16 @@ object StorageEngine {
   }
   
   @scala.inline
-  implicit class StorageEngineOps[Self <: StorageEngine] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+  implicit class StorageEngineMutableBuilder[Self <: StorageEngine] (val x: Self) extends AnyVal {
     
     @scala.inline
     def set_handleFile(
       value: (Request_[ParamsDictionary, _, _, Query], File, js.Function2[/* error */ js.UndefOr[js.Any], /* info */ js.UndefOr[File], Unit]) => Unit
-    ): Self = this.set("_handleFile", js.Any.fromFunction3(value))
+    ): Self = StObject.set(x, "_handleFile", js.Any.fromFunction3(value))
     
     @scala.inline
     def set_removeFile(
       value: (Request_[ParamsDictionary, _, _, Query], File, js.Function1[/* error */ js.Error, Unit]) => Unit
-    ): Self = this.set("_removeFile", js.Any.fromFunction3(value))
+    ): Self = StObject.set(x, "_removeFile", js.Any.fromFunction3(value))
   }
 }

@@ -2,6 +2,7 @@ package typingsSlinky.three.mod
 
 import typingsSlinky.three.webXRMod.DOMPointInit
 import typingsSlinky.three.webXRMod.XRRayDirectionInit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

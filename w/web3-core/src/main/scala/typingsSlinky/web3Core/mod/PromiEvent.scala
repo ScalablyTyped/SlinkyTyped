@@ -6,6 +6,7 @@ import typingsSlinky.web3Core.web3CoreStrings.receipt
 import typingsSlinky.web3Core.web3CoreStrings.sending
 import typingsSlinky.web3Core.web3CoreStrings.sent
 import typingsSlinky.web3Core.web3CoreStrings.transactionHash
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

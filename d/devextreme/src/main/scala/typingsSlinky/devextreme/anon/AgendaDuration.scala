@@ -17,12 +17,13 @@ import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxSchedulerScrolling
 import typingsSlinky.devextreme.mod.global.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AgendaDuration extends js.Object {
+trait AgendaDuration extends StObject {
   
   var agendaDuration: js.UndefOr[Double] = js.native
   
@@ -136,33 +137,13 @@ object AgendaDuration {
   }
   
   @scala.inline
-  implicit class AgendaDurationOps[Self <: AgendaDuration] (val x: Self) extends AnyVal {
+  implicit class AgendaDurationMutableBuilder[Self <: AgendaDuration] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAgendaDuration(value: Double): Self = StObject.set(x, "agendaDuration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setAgendaDuration(value: Double): Self = this.set("agendaDuration", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAgendaDuration: Self = this.set("agendaDuration", js.undefined)
-    
-    @scala.inline
-    def setAppointmentCollectorTemplateFunction2(
-      value: (/* data */ AppointmentCount, /* collectorElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
-    ): Self = this.set("appointmentCollectorTemplate", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def setAppointmentCollectorTemplateElement(value: org.scalajs.dom.raw.Element): Self = this.set("appointmentCollectorTemplate", value.asInstanceOf[js.Any])
+    def setAgendaDurationUndefined: Self = StObject.set(x, "agendaDuration", js.undefined)
     
     @scala.inline
     def setAppointmentCollectorTemplate(
@@ -171,18 +152,18 @@ object AgendaDuration {
           /* collectorElement */ dxElement, 
           String | org.scalajs.dom.raw.Element | JQuery
         ])
-    ): Self = this.set("appointmentCollectorTemplate", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "appointmentCollectorTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAppointmentCollectorTemplate: Self = this.set("appointmentCollectorTemplate", js.undefined)
+    def setAppointmentCollectorTemplateElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "appointmentCollectorTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAppointmentTemplateElement(value: org.scalajs.dom.raw.Element): Self = this.set("appointmentTemplate", value.asInstanceOf[js.Any])
+    def setAppointmentCollectorTemplateFunction2(
+      value: (/* data */ AppointmentCount, /* collectorElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
+    ): Self = StObject.set(x, "appointmentCollectorTemplate", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setAppointmentTemplateFunction3(
-      value: (/* model */ AppointmentData, /* itemIndex */ Double, /* contentElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
-    ): Self = this.set("appointmentTemplate", js.Any.fromFunction3(value))
+    def setAppointmentCollectorTemplateUndefined: Self = StObject.set(x, "appointmentCollectorTemplate", js.undefined)
     
     @scala.inline
     def setAppointmentTemplate(
@@ -192,18 +173,18 @@ object AgendaDuration {
           /* contentElement */ dxElement, 
           String | org.scalajs.dom.raw.Element | JQuery
         ])
-    ): Self = this.set("appointmentTemplate", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "appointmentTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAppointmentTemplate: Self = this.set("appointmentTemplate", js.undefined)
+    def setAppointmentTemplateElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "appointmentTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAppointmentTooltipTemplateElement(value: org.scalajs.dom.raw.Element): Self = this.set("appointmentTooltipTemplate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAppointmentTooltipTemplateFunction3(
+    def setAppointmentTemplateFunction3(
       value: (/* model */ AppointmentData, /* itemIndex */ Double, /* contentElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
-    ): Self = this.set("appointmentTooltipTemplate", js.Any.fromFunction3(value))
+    ): Self = StObject.set(x, "appointmentTemplate", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setAppointmentTemplateUndefined: Self = StObject.set(x, "appointmentTemplate", js.undefined)
     
     @scala.inline
     def setAppointmentTooltipTemplate(
@@ -213,24 +194,24 @@ object AgendaDuration {
           /* contentElement */ dxElement, 
           String | org.scalajs.dom.raw.Element | JQuery
         ])
-    ): Self = this.set("appointmentTooltipTemplate", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "appointmentTooltipTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAppointmentTooltipTemplate: Self = this.set("appointmentTooltipTemplate", js.undefined)
+    def setAppointmentTooltipTemplateElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "appointmentTooltipTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCellDuration(value: Double): Self = this.set("cellDuration", value.asInstanceOf[js.Any])
+    def setAppointmentTooltipTemplateFunction3(
+      value: (/* model */ AppointmentData, /* itemIndex */ Double, /* contentElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
+    ): Self = StObject.set(x, "appointmentTooltipTemplate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def deleteCellDuration: Self = this.set("cellDuration", js.undefined)
+    def setAppointmentTooltipTemplateUndefined: Self = StObject.set(x, "appointmentTooltipTemplate", js.undefined)
     
     @scala.inline
-    def setDataCellTemplateElement(value: org.scalajs.dom.raw.Element): Self = this.set("dataCellTemplate", value.asInstanceOf[js.Any])
+    def setCellDuration(value: Double): Self = StObject.set(x, "cellDuration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDataCellTemplateFunction3(
-      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
-    ): Self = this.set("dataCellTemplate", js.Any.fromFunction3(value))
+    def setCellDurationUndefined: Self = StObject.set(x, "cellDuration", js.undefined)
     
     @scala.inline
     def setDataCellTemplate(
@@ -240,18 +221,18 @@ object AgendaDuration {
           /* itemElement */ dxElement, 
           String | org.scalajs.dom.raw.Element | JQuery
         ])
-    ): Self = this.set("dataCellTemplate", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "dataCellTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDataCellTemplate: Self = this.set("dataCellTemplate", js.undefined)
+    def setDataCellTemplateElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "dataCellTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDateCellTemplateElement(value: org.scalajs.dom.raw.Element): Self = this.set("dateCellTemplate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDateCellTemplateFunction3(
+    def setDataCellTemplateFunction3(
       value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
-    ): Self = this.set("dateCellTemplate", js.Any.fromFunction3(value))
+    ): Self = StObject.set(x, "dataCellTemplate", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setDataCellTemplateUndefined: Self = StObject.set(x, "dataCellTemplate", js.undefined)
     
     @scala.inline
     def setDateCellTemplate(
@@ -261,18 +242,18 @@ object AgendaDuration {
           /* itemElement */ dxElement, 
           String | org.scalajs.dom.raw.Element | JQuery
         ])
-    ): Self = this.set("dateCellTemplate", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "dateCellTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDateCellTemplate: Self = this.set("dateCellTemplate", js.undefined)
+    def setDateCellTemplateElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "dateCellTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDropDownAppointmentTemplateElement(value: org.scalajs.dom.raw.Element): Self = this.set("dropDownAppointmentTemplate", value.asInstanceOf[js.Any])
+    def setDateCellTemplateFunction3(
+      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
+    ): Self = StObject.set(x, "dateCellTemplate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setDropDownAppointmentTemplateFunction3(
-      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* contentElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
-    ): Self = this.set("dropDownAppointmentTemplate", js.Any.fromFunction3(value))
+    def setDateCellTemplateUndefined: Self = StObject.set(x, "dateCellTemplate", js.undefined)
     
     @scala.inline
     def setDropDownAppointmentTemplate(
@@ -282,71 +263,71 @@ object AgendaDuration {
           /* contentElement */ dxElement, 
           String | org.scalajs.dom.raw.Element | JQuery
         ])
-    ): Self = this.set("dropDownAppointmentTemplate", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "dropDownAppointmentTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDropDownAppointmentTemplate: Self = this.set("dropDownAppointmentTemplate", js.undefined)
+    def setDropDownAppointmentTemplateElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "dropDownAppointmentTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEndDayHour(value: Double): Self = this.set("endDayHour", value.asInstanceOf[js.Any])
+    def setDropDownAppointmentTemplateFunction3(
+      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* contentElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
+    ): Self = StObject.set(x, "dropDownAppointmentTemplate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def deleteEndDayHour: Self = this.set("endDayHour", js.undefined)
+    def setDropDownAppointmentTemplateUndefined: Self = StObject.set(x, "dropDownAppointmentTemplate", js.undefined)
+    
+    @scala.inline
+    def setEndDayHour(value: Double): Self = StObject.set(x, "endDayHour", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEndDayHourUndefined: Self = StObject.set(x, "endDayHour", js.undefined)
     
     @scala.inline
     def setFirstDayOfWeek(
       value: typingsSlinky.devextreme.devextremeNumbers.`0` | typingsSlinky.devextreme.devextremeNumbers.`1` | typingsSlinky.devextreme.devextremeNumbers.`2` | typingsSlinky.devextreme.devextremeNumbers.`3` | typingsSlinky.devextreme.devextremeNumbers.`4` | typingsSlinky.devextreme.devextremeNumbers.`5` | typingsSlinky.devextreme.devextremeNumbers.`6`
-    ): Self = this.set("firstDayOfWeek", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "firstDayOfWeek", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteFirstDayOfWeek: Self = this.set("firstDayOfWeek", js.undefined)
+    def setFirstDayOfWeekUndefined: Self = StObject.set(x, "firstDayOfWeek", js.undefined)
     
     @scala.inline
-    def setGroupByDate(value: Boolean): Self = this.set("groupByDate", value.asInstanceOf[js.Any])
+    def setGroupByDate(value: Boolean): Self = StObject.set(x, "groupByDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteGroupByDate: Self = this.set("groupByDate", js.undefined)
+    def setGroupByDateUndefined: Self = StObject.set(x, "groupByDate", js.undefined)
     
     @scala.inline
-    def setGroupOrientation(value: horizontal | vertical): Self = this.set("groupOrientation", value.asInstanceOf[js.Any])
+    def setGroupOrientation(value: horizontal | vertical): Self = StObject.set(x, "groupOrientation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteGroupOrientation: Self = this.set("groupOrientation", js.undefined)
+    def setGroupOrientationUndefined: Self = StObject.set(x, "groupOrientation", js.undefined)
     
     @scala.inline
-    def setGroupsVarargs(value: String*): Self = this.set("groups", js.Array(value :_*))
+    def setGroups(value: js.Array[String]): Self = StObject.set(x, "groups", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGroups(value: js.Array[String]): Self = this.set("groups", value.asInstanceOf[js.Any])
+    def setGroupsUndefined: Self = StObject.set(x, "groups", js.undefined)
     
     @scala.inline
-    def deleteGroups: Self = this.set("groups", js.undefined)
+    def setGroupsVarargs(value: String*): Self = StObject.set(x, "groups", js.Array(value :_*))
     
     @scala.inline
-    def setIntervalCount(value: Double): Self = this.set("intervalCount", value.asInstanceOf[js.Any])
+    def setIntervalCount(value: Double): Self = StObject.set(x, "intervalCount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteIntervalCount: Self = this.set("intervalCount", js.undefined)
+    def setIntervalCountUndefined: Self = StObject.set(x, "intervalCount", js.undefined)
     
     @scala.inline
-    def setMaxAppointmentsPerCell(value: Double | auto | unlimited): Self = this.set("maxAppointmentsPerCell", value.asInstanceOf[js.Any])
+    def setMaxAppointmentsPerCell(value: Double | auto | unlimited): Self = StObject.set(x, "maxAppointmentsPerCell", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteMaxAppointmentsPerCell: Self = this.set("maxAppointmentsPerCell", js.undefined)
+    def setMaxAppointmentsPerCellUndefined: Self = StObject.set(x, "maxAppointmentsPerCell", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteName: Self = this.set("name", js.undefined)
-    
-    @scala.inline
-    def setResourceCellTemplateElement(value: org.scalajs.dom.raw.Element): Self = this.set("resourceCellTemplate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setResourceCellTemplateFunction3(
-      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
-    ): Self = this.set("resourceCellTemplate", js.Any.fromFunction3(value))
+    def setNameUndefined: Self = StObject.set(x, "name", js.undefined)
     
     @scala.inline
     def setResourceCellTemplate(
@@ -356,39 +337,39 @@ object AgendaDuration {
           /* itemElement */ dxElement, 
           String | org.scalajs.dom.raw.Element | JQuery
         ])
-    ): Self = this.set("resourceCellTemplate", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "resourceCellTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteResourceCellTemplate: Self = this.set("resourceCellTemplate", js.undefined)
+    def setResourceCellTemplateElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "resourceCellTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScrolling(value: dxSchedulerScrolling): Self = this.set("scrolling", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteScrolling: Self = this.set("scrolling", js.undefined)
-    
-    @scala.inline
-    def setStartDateDate(value: js.Date): Self = this.set("startDate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStartDate(value: js.Date | Double | String): Self = this.set("startDate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStartDate: Self = this.set("startDate", js.undefined)
-    
-    @scala.inline
-    def setStartDayHour(value: Double): Self = this.set("startDayHour", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStartDayHour: Self = this.set("startDayHour", js.undefined)
-    
-    @scala.inline
-    def setTimeCellTemplateElement(value: org.scalajs.dom.raw.Element): Self = this.set("timeCellTemplate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTimeCellTemplateFunction3(
+    def setResourceCellTemplateFunction3(
       value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
-    ): Self = this.set("timeCellTemplate", js.Any.fromFunction3(value))
+    ): Self = StObject.set(x, "resourceCellTemplate", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setResourceCellTemplateUndefined: Self = StObject.set(x, "resourceCellTemplate", js.undefined)
+    
+    @scala.inline
+    def setScrolling(value: dxSchedulerScrolling): Self = StObject.set(x, "scrolling", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setScrollingUndefined: Self = StObject.set(x, "scrolling", js.undefined)
+    
+    @scala.inline
+    def setStartDate(value: js.Date | Double | String): Self = StObject.set(x, "startDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStartDateDate(value: js.Date): Self = StObject.set(x, "startDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStartDateUndefined: Self = StObject.set(x, "startDate", js.undefined)
+    
+    @scala.inline
+    def setStartDayHour(value: Double): Self = StObject.set(x, "startDayHour", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStartDayHourUndefined: Self = StObject.set(x, "startDayHour", js.undefined)
     
     @scala.inline
     def setTimeCellTemplate(
@@ -398,17 +379,25 @@ object AgendaDuration {
           /* itemElement */ dxElement, 
           String | org.scalajs.dom.raw.Element | JQuery
         ])
-    ): Self = this.set("timeCellTemplate", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "timeCellTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteTimeCellTemplate: Self = this.set("timeCellTemplate", js.undefined)
+    def setTimeCellTemplateElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "timeCellTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTimeCellTemplateFunction3(
+      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
+    ): Self = StObject.set(x, "timeCellTemplate", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setTimeCellTemplateUndefined: Self = StObject.set(x, "timeCellTemplate", js.undefined)
     
     @scala.inline
     def setType(
       value: agenda | day | month | timelineDay | timelineMonth | timelineWeek | timelineWorkWeek | week | workWeek
-    ): Self = this.set("type", value.asInstanceOf[js.Any])
+    ): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteType: Self = this.set("type", js.undefined)
+    def setTypeUndefined: Self = StObject.set(x, "type", js.undefined)
   }
 }

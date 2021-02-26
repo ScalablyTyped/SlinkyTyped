@@ -9,15 +9,22 @@ import typingsSlinky.reactNative.mod.ViewProperties
 import typingsSlinky.reactNativeHtmlview.mod.HTMLViewNode
 import typingsSlinky.reactNativeHtmlview.mod.HTMLViewProps
 import typingsSlinky.reactNativeHtmlview.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeHtmlview {
   
+  @scala.inline
+  def apply(value: String): Builder = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLViewProps]))
+  }
+  
   @JSImport("react-native-htmlview", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,31 +32,31 @@ object ReactNativeHtmlview {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def NodeComponentFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("NodeComponent", value.asInstanceOf[js.Any])
+    def NodeComponent(value: ReactComponentClass[js.Object]): this.type = set("NodeComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def NodeComponentComponentClass(value: ReactComponentClass[js.Object]): this.type = set("NodeComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def NodeComponent(value: ReactComponentClass[js.Object]): this.type = set("NodeComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def RootComponentFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("RootComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def RootComponentComponentClass(value: ReactComponentClass[js.Object]): this.type = set("RootComponent", value.asInstanceOf[js.Any])
+    def NodeComponentFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("NodeComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def RootComponent(value: ReactComponentClass[js.Object]): this.type = set("RootComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TextComponentFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("TextComponent", value.asInstanceOf[js.Any])
+    def RootComponentComponentClass(value: ReactComponentClass[js.Object]): this.type = set("RootComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def RootComponentFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("RootComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def TextComponent(value: ReactComponentClass[js.Object]): this.type = set("TextComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def TextComponentComponentClass(value: ReactComponentClass[js.Object]): this.type = set("TextComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TextComponent(value: ReactComponentClass[js.Object]): this.type = set("TextComponent", value.asInstanceOf[js.Any])
+    def TextComponentFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("TextComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def addLineBreaks(value: Boolean): this.type = set("addLineBreaks", value.asInstanceOf[js.Any])
@@ -85,10 +92,4 @@ object ReactNativeHtmlview {
   }
   
   def withProps(p: HTMLViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(value: String): Builder = {
-    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLViewProps]))
-  }
 }

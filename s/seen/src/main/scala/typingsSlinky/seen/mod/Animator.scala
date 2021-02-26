@@ -1,13 +1,14 @@
 package typingsSlinky.seen.mod
 
 import typingsSlinky.seen.mod.Events.Dispatcher
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("seen", "Animator")
 @js.native
-class Animator () extends js.Object {
+class Animator () extends StObject {
   
   def animateFrame(): this.type = js.native
   

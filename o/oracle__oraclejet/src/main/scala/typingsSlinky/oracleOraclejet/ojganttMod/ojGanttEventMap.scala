@@ -17,6 +17,7 @@ import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -203,93 +204,81 @@ object ojGanttEventMap {
   }
   
   @scala.inline
-  implicit class ojGanttEventMapOps[Self <: ojGanttEventMap[_, _, _, _], K1, K2, D1, D2] (val x: Self with (ojGanttEventMap[K1, K2, D1, D2])) extends AnyVal {
+  implicit class ojGanttEventMapMutableBuilder[Self <: ojGanttEventMap[_, _, _, _], K1, K2, D1, D2] (val x: Self with (ojGanttEventMap[K1, K2, D1, D2])) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAnimationOnDataChangeChanged(value: CustomEvent): Self = StObject.set(x, "animationOnDataChangeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAnimationOnDisplayChanged(value: CustomEvent): Self = StObject.set(x, "animationOnDisplayChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setAsChanged(value: CustomEvent): Self = StObject.set(x, "asChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAnimationOnDataChangeChanged(value: CustomEvent): Self = this.set("animationOnDataChangeChanged", value.asInstanceOf[js.Any])
+    def setAxisPositionChanged(value: CustomEvent): Self = StObject.set(x, "axisPositionChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAnimationOnDisplayChanged(value: CustomEvent): Self = this.set("animationOnDisplayChanged", value.asInstanceOf[js.Any])
+    def setDependencyDataChanged(value: CustomEvent): Self = StObject.set(x, "dependencyDataChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAsChanged(value: CustomEvent): Self = this.set("asChanged", value.asInstanceOf[js.Any])
+    def setDndChanged(value: CustomEvent): Self = StObject.set(x, "dndChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAxisPositionChanged(value: CustomEvent): Self = this.set("axisPositionChanged", value.asInstanceOf[js.Any])
+    def setEndChanged(value: CustomEvent): Self = StObject.set(x, "endChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDependencyDataChanged(value: CustomEvent): Self = this.set("dependencyDataChanged", value.asInstanceOf[js.Any])
+    def setGridlinesChanged(value: CustomEvent): Self = StObject.set(x, "gridlinesChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDndChanged(value: CustomEvent): Self = this.set("dndChanged", value.asInstanceOf[js.Any])
+    def setMajorAxisChanged(value: CustomEvent): Self = StObject.set(x, "majorAxisChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEndChanged(value: CustomEvent): Self = this.set("endChanged", value.asInstanceOf[js.Any])
+    def setMinorAxisChanged(value: CustomEvent): Self = StObject.set(x, "minorAxisChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGridlinesChanged(value: CustomEvent): Self = this.set("gridlinesChanged", value.asInstanceOf[js.Any])
+    def setOjMove(value: CustomEvent): Self = StObject.set(x, "ojMove", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMajorAxisChanged(value: CustomEvent): Self = this.set("majorAxisChanged", value.asInstanceOf[js.Any])
+    def setOjViewportChange(value: CustomEvent): Self = StObject.set(x, "ojViewportChange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMinorAxisChanged(value: CustomEvent): Self = this.set("minorAxisChanged", value.asInstanceOf[js.Any])
+    def setReferenceObjectsChanged(value: CustomEvent): Self = StObject.set(x, "referenceObjectsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjMove(value: CustomEvent): Self = this.set("ojMove", value.asInstanceOf[js.Any])
+    def setRowAxisChanged(value: CustomEvent): Self = StObject.set(x, "rowAxisChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjViewportChange(value: CustomEvent): Self = this.set("ojViewportChange", value.asInstanceOf[js.Any])
+    def setRowDefaultsChanged(value: CustomEvent): Self = StObject.set(x, "rowDefaultsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setReferenceObjectsChanged(value: CustomEvent): Self = this.set("referenceObjectsChanged", value.asInstanceOf[js.Any])
+    def setScrollPositionChanged(value: CustomEvent): Self = StObject.set(x, "scrollPositionChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRowAxisChanged(value: CustomEvent): Self = this.set("rowAxisChanged", value.asInstanceOf[js.Any])
+    def setSelectionChanged(value: CustomEvent): Self = StObject.set(x, "selectionChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRowDefaultsChanged(value: CustomEvent): Self = this.set("rowDefaultsChanged", value.asInstanceOf[js.Any])
+    def setSelectionModeChanged(value: CustomEvent): Self = StObject.set(x, "selectionModeChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScrollPositionChanged(value: CustomEvent): Self = this.set("scrollPositionChanged", value.asInstanceOf[js.Any])
+    def setStartChanged(value: CustomEvent): Self = StObject.set(x, "startChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSelectionChanged(value: CustomEvent): Self = this.set("selectionChanged", value.asInstanceOf[js.Any])
+    def setTaskDataChanged(value: CustomEvent): Self = StObject.set(x, "taskDataChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSelectionModeChanged(value: CustomEvent): Self = this.set("selectionModeChanged", value.asInstanceOf[js.Any])
+    def setTaskDefaultsChanged(value: CustomEvent): Self = StObject.set(x, "taskDefaultsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStartChanged(value: CustomEvent): Self = this.set("startChanged", value.asInstanceOf[js.Any])
+    def setTooltipChanged(value: CustomEvent): Self = StObject.set(x, "tooltipChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTaskDataChanged(value: CustomEvent): Self = this.set("taskDataChanged", value.asInstanceOf[js.Any])
+    def setValueFormatsChanged(value: CustomEvent): Self = StObject.set(x, "valueFormatsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTaskDefaultsChanged(value: CustomEvent): Self = this.set("taskDefaultsChanged", value.asInstanceOf[js.Any])
+    def setViewportEndChanged(value: CustomEvent): Self = StObject.set(x, "viewportEndChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTooltipChanged(value: CustomEvent): Self = this.set("tooltipChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValueFormatsChanged(value: CustomEvent): Self = this.set("valueFormatsChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setViewportEndChanged(value: CustomEvent): Self = this.set("viewportEndChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setViewportStartChanged(value: CustomEvent): Self = this.set("viewportStartChanged", value.asInstanceOf[js.Any])
+    def setViewportStartChanged(value: CustomEvent): Self = StObject.set(x, "viewportStartChanged", value.asInstanceOf[js.Any])
   }
 }

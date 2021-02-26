@@ -9,6 +9,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.enhancedButtonMod.EnhancedButtonProps
 import typingsSlinky.materialUi.enhancedButtonMod.default
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object EnhancedButton {
   
   @JSImport("material-ui/internal/EnhancedButton", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -28,10 +29,10 @@ object EnhancedButton {
     def centerRipple(value: Boolean): this.type = set("centerRipple", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disableFocusRipple(value: Boolean): this.type = set("disableFocusRipple", value.asInstanceOf[js.Any])
@@ -91,7 +92,7 @@ object EnhancedButton {
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: EnhancedButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: EnhancedButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: EnhancedButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

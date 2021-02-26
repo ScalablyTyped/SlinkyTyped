@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesDeleteObjectsInputMod.DeleteObje
 import typingsSlinky.awsSdkClientS3Browser.typesDeleteObjectsOutputMod.DeleteObjectsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/DeleteObjectsCommand", JSImport.Namespace)
-@js.native
-object deleteObjectsCommandMod extends js.Object {
+object deleteObjectsCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/DeleteObjectsCommand", "DeleteObjectsCommand")
   @js.native
   class DeleteObjectsCommand protected () extends Command[
           InputTypesUnion, 

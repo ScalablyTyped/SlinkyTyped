@@ -3,14 +3,14 @@ package typingsSlinky.rxjs
 import typingsSlinky.rxjs.animationFrameSchedulerMod.AnimationFrameScheduler
 import typingsSlinky.rxjs.asyncActionMod.AsyncAction
 import typingsSlinky.rxjs.typesMod.SchedulerAction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rxjs/internal/scheduler/AnimationFrameAction", JSImport.Namespace)
-@js.native
-object animationFrameActionMod extends js.Object {
+object animationFrameActionMod {
   
+  @JSImport("rxjs/internal/scheduler/AnimationFrameAction", "AnimationFrameAction")
   @js.native
   class AnimationFrameAction[T] protected () extends AsyncAction[T] {
     def this(

@@ -1,11 +1,11 @@
 package typingsSlinky.sawtoothSdk.protobufMod
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetResponse.Status
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,18 +30,57 @@ class ClientBlockGetResponse () extends IClientBlockGetResponse {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse")
-@js.native
-object ClientBlockGetResponse extends js.Object {
+object ClientBlockGetResponse {
+  
+  @js.native
+  sealed trait Status extends StObject
+  /** Status enum. */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.Status")
+  @js.native
+  object Status extends StObject {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[Status with Double] = js.native
+    
+    @js.native
+    sealed trait INTERNAL_ERROR extends Status
+    /* 2 */ val INTERNAL_ERROR: typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetResponse.Status.INTERNAL_ERROR with Double = js.native
+    
+    @js.native
+    sealed trait INVALID_ID extends Status
+    /* 8 */ val INVALID_ID: typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetResponse.Status.INVALID_ID with Double = js.native
+    
+    @js.native
+    sealed trait NO_RESOURCE extends Status
+    /* 5 */ val NO_RESOURCE: typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetResponse.Status.NO_RESOURCE with Double = js.native
+    
+    @js.native
+    sealed trait OK extends Status
+    /* 1 */ val OK: typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetResponse.Status.OK with Double = js.native
+    
+    @js.native
+    sealed trait STATUS_UNSET extends Status
+    /* 0 */ val STATUS_UNSET: typingsSlinky.sawtoothSdk.protobufMod.ClientBlockGetResponse.Status.STATUS_UNSET with Double = js.native
+  }
   
   /**
     * Creates a new ClientBlockGetResponse instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ClientBlockGetResponse instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.create")
+  @js.native
   def create(): ClientBlockGetResponse = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.create")
+  @js.native
   def create(properties: IClientBlockGetResponse): ClientBlockGetResponse = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): ClientBlockGetResponse = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ClientBlockGetResponse = js.native
   /**
     * Decodes a ClientBlockGetResponse message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -50,11 +89,16 @@ object ClientBlockGetResponse extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.decode")
+  @js.native
   def decode(reader: Reader): ClientBlockGetResponse = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.decode")
+  @js.native
   def decode(reader: Reader, length: Double): ClientBlockGetResponse = js.native
-  def decode(reader: js.typedarray.Uint8Array): ClientBlockGetResponse = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): ClientBlockGetResponse = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ClientBlockGetResponse = js.native
   /**
     * Decodes a ClientBlockGetResponse message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -62,8 +106,9 @@ object ClientBlockGetResponse extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): ClientBlockGetResponse = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): ClientBlockGetResponse = js.native
   
   /**
     * Encodes the specified ClientBlockGetResponse message. Does not implicitly {@link ClientBlockGetResponse.verify|verify} messages.
@@ -71,7 +116,11 @@ object ClientBlockGetResponse extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.encode")
+  @js.native
   def encode(message: IClientBlockGetResponse): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.encode")
+  @js.native
   def encode(message: IClientBlockGetResponse, writer: Writer): Writer = js.native
   
   /**
@@ -80,7 +129,11 @@ object ClientBlockGetResponse extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientBlockGetResponse): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientBlockGetResponse, writer: Writer): Writer = js.native
   
   /**
@@ -88,6 +141,8 @@ object ClientBlockGetResponse extends js.Object {
     * @param object Plain object
     * @returns ClientBlockGetResponse
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): ClientBlockGetResponse = js.native
   
   /**
@@ -96,7 +151,11 @@ object ClientBlockGetResponse extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.toObject")
+  @js.native
   def toObject(message: ClientBlockGetResponse): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.toObject")
+  @js.native
   def toObject(message: ClientBlockGetResponse, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -104,40 +163,7 @@ object ClientBlockGetResponse extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "ClientBlockGetResponse.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
-  
-  @js.native
-  sealed trait Status extends js.Object
-  /** Status enum. */
-  @js.native
-  object Status extends js.Object {
-    
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[Status with Double] = js.native
-    
-    @js.native
-    sealed trait INTERNAL_ERROR extends Status
-    /* 2 */ @js.native
-    object INTERNAL_ERROR extends TopLevel[INTERNAL_ERROR with Double]
-    
-    @js.native
-    sealed trait INVALID_ID extends Status
-    /* 8 */ @js.native
-    object INVALID_ID extends TopLevel[INVALID_ID with Double]
-    
-    @js.native
-    sealed trait NO_RESOURCE extends Status
-    /* 5 */ @js.native
-    object NO_RESOURCE extends TopLevel[NO_RESOURCE with Double]
-    
-    @js.native
-    sealed trait OK extends Status
-    /* 1 */ @js.native
-    object OK extends TopLevel[OK with Double]
-    
-    @js.native
-    sealed trait STATUS_UNSET extends Status
-    /* 0 */ @js.native
-    object STATUS_UNSET extends TopLevel[STATUS_UNSET with Double]
-  }
 }

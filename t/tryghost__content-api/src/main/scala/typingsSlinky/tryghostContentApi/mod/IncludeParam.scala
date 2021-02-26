@@ -1,5 +1,6 @@
 package typingsSlinky.tryghostContentApi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.tryghostContentApi.tryghostContentApiStrings.tags
   - typingsSlinky.tryghostContentApi.tryghostContentApiStrings.countDotposts
 */
-trait IncludeParam extends js.Object
+trait IncludeParam extends StObject
 object IncludeParam {
   
   @scala.inline

@@ -2,6 +2,7 @@ package typingsSlinky.powerappsComponentFramework.ComponentFramework
 
 import typingsSlinky.powerappsComponentFramework.ComponentFramework.UserSettingApi.DateFormattingInfo
 import typingsSlinky.powerappsComponentFramework.ComponentFramework.UserSettingApi.NumberFormattingInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * The interface for context.userSettings
   */
 @js.native
-trait UserSettings extends js.Object {
+trait UserSettings extends StObject {
   
   /**
     * Date formatting information as retrieved from the server.

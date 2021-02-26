@@ -2,6 +2,7 @@ package typingsSlinky.activexPowerpoint.PowerPoint
 
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`1`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`2`
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`1`
 */
-trait MsoAnimAccumulate extends js.Object
+trait MsoAnimAccumulate extends StObject
 object MsoAnimAccumulate {
   
   @scala.inline

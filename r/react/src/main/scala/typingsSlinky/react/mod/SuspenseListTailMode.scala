@@ -1,5 +1,6 @@
 package typingsSlinky.react.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.react.reactStrings.collapsed
   - typingsSlinky.react.reactStrings.hidden
 */
-trait SuspenseListTailMode extends js.Object
+trait SuspenseListTailMode extends StObject
 object SuspenseListTailMode {
   
   @scala.inline

@@ -1,23 +1,25 @@
 package typingsSlinky.antvComponent
 
-import typingsSlinky.antvComponent.baseMod.AxisBase
+import typingsSlinky.antvComponent.baseMod.default
 import typingsSlinky.antvComponent.typesMod.AxisBaseCfg
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/axis", JSImport.Namespace)
-@js.native
-object axisMod extends js.Object {
+object axisMod {
   
+  @JSImport("@antv/component/lib/axis", "Base")
   @js.native
-  abstract class Base[T /* <: AxisBaseCfg */] () extends AxisBase[T]
+  abstract class Base[T /* <: AxisBaseCfg */] () extends default[T]
   
+  @JSImport("@antv/component/lib/axis", "Circle")
   @js.native
   class Circle ()
-    extends typingsSlinky.antvComponent.circleMod.Circle
+    extends typingsSlinky.antvComponent.circleMod.default
   
+  @JSImport("@antv/component/lib/axis", "Line")
   @js.native
   class Line ()
-    extends typingsSlinky.antvComponent.axisLineMod.Line
+    extends typingsSlinky.antvComponent.axisLineMod.default
 }

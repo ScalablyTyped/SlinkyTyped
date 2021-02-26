@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/social/domain", JSImport.Namespace)
-@js.native
-object domainMod extends js.Object {
+object domainMod {
   
+  @JSImport("material-ui/svg-icons/social/domain", JSImport.Default)
+  @js.native
+  class default () extends SocialDomain
+  
+  @JSImport("material-ui/svg-icons/social/domain", "SocialDomain")
   @js.native
   class SocialDomain ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

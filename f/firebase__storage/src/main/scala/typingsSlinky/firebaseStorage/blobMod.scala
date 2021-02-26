@@ -1,22 +1,22 @@
 package typingsSlinky.firebaseStorage
 
 import org.scalajs.dom.raw.Blob
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/storage/dist/src/implementation/blob", JSImport.Namespace)
-@js.native
-object blobMod extends js.Object {
+object blobMod {
   
+  @JSImport("@firebase/storage/dist/src/implementation/blob", "FbsBlob")
   @js.native
-  class FbsBlob protected () extends js.Object {
+  class FbsBlob protected () extends StObject {
     def this(data: js.typedarray.ArrayBuffer) = this()
-    def this(data: Blob) = this()
     def this(data: js.typedarray.Uint8Array) = this()
+    def this(data: Blob) = this()
     def this(data: js.typedarray.ArrayBuffer, elideCopy: Boolean) = this()
-    def this(data: Blob, elideCopy: Boolean) = this()
     def this(data: js.typedarray.Uint8Array, elideCopy: Boolean) = this()
+    def this(data: Blob, elideCopy: Boolean) = this()
     
     var data_ : js.Any = js.native
     
@@ -33,9 +33,10 @@ object blobMod extends js.Object {
     def uploadData(): Blob | js.typedarray.Uint8Array = js.native
   }
   /* static members */
-  @js.native
-  object FbsBlob extends js.Object {
+  object FbsBlob {
     
+    @JSImport("@firebase/storage/dist/src/implementation/blob", "FbsBlob.getBlob")
+    @js.native
     def getBlob(args: (String | FbsBlob)*): FbsBlob | Null = js.native
   }
 }

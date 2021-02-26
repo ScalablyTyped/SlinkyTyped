@@ -2,13 +2,14 @@ package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.verticalDividerTypesMod.IVerticalDividerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/Divider", JSImport.Namespace)
-@js.native
-object libDividerMod extends js.Object {
+object libDividerMod {
   
+  @JSImport("office-ui-fabric-react/lib/Divider", "VerticalDivider")
+  @js.native
   val VerticalDivider: ReactComponentClass[IVerticalDividerProps] = js.native
 }

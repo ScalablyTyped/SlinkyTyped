@@ -1,12 +1,13 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ToolbarProps extends js.Object {
+trait ToolbarProps extends StObject {
   
   var centerElement: js.UndefOr[ReactElement | String] = js.native
   
@@ -39,96 +40,84 @@ object ToolbarProps {
   }
   
   @scala.inline
-  implicit class ToolbarPropsOps[Self <: ToolbarProps] (val x: Self) extends AnyVal {
+  implicit class ToolbarPropsMutableBuilder[Self <: ToolbarProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCenterElement(value: ReactElement | String): Self = StObject.set(x, "centerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setCenterElementReactElement(value: ReactElement): Self = StObject.set(x, "centerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setCenterElementUndefined: Self = StObject.set(x, "centerElement", js.undefined)
     
     @scala.inline
-    def setCenterElementReactElement(value: ReactElement): Self = this.set("centerElement", value.asInstanceOf[js.Any])
+    def setHidden(value: Boolean): Self = StObject.set(x, "hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCenterElement(value: ReactElement | String): Self = this.set("centerElement", value.asInstanceOf[js.Any])
+    def setHiddenUndefined: Self = StObject.set(x, "hidden", js.undefined)
     
     @scala.inline
-    def deleteCenterElement: Self = this.set("centerElement", js.undefined)
+    def setIsSearchActive(value: Boolean): Self = StObject.set(x, "isSearchActive", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
+    def setIsSearchActiveUndefined: Self = StObject.set(x, "isSearchActive", js.undefined)
     
     @scala.inline
-    def deleteHidden: Self = this.set("hidden", js.undefined)
+    def setLeftElement(value: ReactElement | String): Self = StObject.set(x, "leftElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIsSearchActive(value: Boolean): Self = this.set("isSearchActive", value.asInstanceOf[js.Any])
+    def setLeftElementReactElement(value: ReactElement): Self = StObject.set(x, "leftElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteIsSearchActive: Self = this.set("isSearchActive", js.undefined)
+    def setLeftElementUndefined: Self = StObject.set(x, "leftElement", js.undefined)
     
     @scala.inline
-    def setLeftElementReactElement(value: ReactElement): Self = this.set("leftElement", value.asInstanceOf[js.Any])
+    def setOnLeftElementPress(value: () => Unit): Self = StObject.set(x, "onLeftElementPress", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setLeftElement(value: ReactElement | String): Self = this.set("leftElement", value.asInstanceOf[js.Any])
+    def setOnLeftElementPressUndefined: Self = StObject.set(x, "onLeftElementPress", js.undefined)
     
     @scala.inline
-    def deleteLeftElement: Self = this.set("leftElement", js.undefined)
+    def setOnPress(value: () => Unit): Self = StObject.set(x, "onPress", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setOnLeftElementPress(value: () => Unit): Self = this.set("onLeftElementPress", js.Any.fromFunction0(value))
+    def setOnPressUndefined: Self = StObject.set(x, "onPress", js.undefined)
     
     @scala.inline
-    def deleteOnLeftElementPress: Self = this.set("onLeftElementPress", js.undefined)
+    def setOnRightElementPress(value: /* e */ RightElementPressEvent => Unit): Self = StObject.set(x, "onRightElementPress", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnPress(value: () => Unit): Self = this.set("onPress", js.Any.fromFunction0(value))
+    def setOnRightElementPressUndefined: Self = StObject.set(x, "onRightElementPress", js.undefined)
     
     @scala.inline
-    def deleteOnPress: Self = this.set("onPress", js.undefined)
+    def setRightElement(value: ReactElement | String | js.Array[String] | ToolBarRightElement): Self = StObject.set(x, "rightElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnRightElementPress(value: /* e */ RightElementPressEvent => Unit): Self = this.set("onRightElementPress", js.Any.fromFunction1(value))
+    def setRightElementReactElement(value: ReactElement): Self = StObject.set(x, "rightElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteOnRightElementPress: Self = this.set("onRightElementPress", js.undefined)
+    def setRightElementUndefined: Self = StObject.set(x, "rightElement", js.undefined)
     
     @scala.inline
-    def setRightElementReactElement(value: ReactElement): Self = this.set("rightElement", value.asInstanceOf[js.Any])
+    def setRightElementVarargs(value: String*): Self = StObject.set(x, "rightElement", js.Array(value :_*))
     
     @scala.inline
-    def setRightElementVarargs(value: String*): Self = this.set("rightElement", js.Array(value :_*))
+    def setSearchable(value: Searchable): Self = StObject.set(x, "searchable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightElement(value: ReactElement | String | js.Array[String] | ToolBarRightElement): Self = this.set("rightElement", value.asInstanceOf[js.Any])
+    def setSearchableUndefined: Self = StObject.set(x, "searchable", js.undefined)
     
     @scala.inline
-    def deleteRightElement: Self = this.set("rightElement", js.undefined)
+    def setSize(value: Double): Self = StObject.set(x, "size", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSearchable(value: Searchable): Self = this.set("searchable", value.asInstanceOf[js.Any])
+    def setSizeUndefined: Self = StObject.set(x, "size", js.undefined)
     
     @scala.inline
-    def deleteSearchable: Self = this.set("searchable", js.undefined)
+    def setStyle(value: ToolbarStyle): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSize: Self = this.set("size", js.undefined)
-    
-    @scala.inline
-    def setStyle(value: ToolbarStyle): Self = this.set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStyle: Self = this.set("style", js.undefined)
+    def setStyleUndefined: Self = StObject.set(x, "style", js.undefined)
   }
 }

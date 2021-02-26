@@ -3,12 +3,13 @@ package typingsSlinky.atom.mod
 import typingsSlinky.atom.anon.Autoscroll
 import typingsSlinky.atom.anon.AutoscrollPreserveFolds
 import typingsSlinky.atom.anon.PreserveFoldsReversed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Selection extends js.Object {
+trait Selection extends StObject {
   
   /** Moves the selection up one row. */
   def addSelectionAbove(): Unit = js.native

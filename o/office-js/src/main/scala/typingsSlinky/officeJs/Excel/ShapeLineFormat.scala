@@ -23,6 +23,7 @@ import typingsSlinky.officeJs.officeJsStrings.ThickBetweenThin
 import typingsSlinky.officeJs.officeJsStrings.ThickThin
 import typingsSlinky.officeJs.officeJsStrings.ThinThick
 import typingsSlinky.officeJs.officeJsStrings.ThinThin
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

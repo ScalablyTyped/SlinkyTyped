@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.heavy
   - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.black
 */
-trait FontWeightIOS extends js.Object
+trait FontWeightIOS extends StObject
 object FontWeightIOS {
   
   @scala.inline

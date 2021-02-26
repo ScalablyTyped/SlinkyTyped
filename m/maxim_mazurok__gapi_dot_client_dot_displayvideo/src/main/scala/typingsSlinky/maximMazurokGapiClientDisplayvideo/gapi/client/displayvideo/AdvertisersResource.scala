@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.OauthtokenPrettyPri
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.PageTokenPartnerId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.QuotaUserUploadType
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.ReadMask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AdvertisersResource extends js.Object {
+trait AdvertisersResource extends StObject {
   
   var assets: AssetsResource = js.native
   

@@ -3,6 +3,7 @@ package typingsSlinky.googlemaps.google.maps
 import typingsSlinky.googlemaps.googlemapsStrings.insert_at
 import typingsSlinky.googlemaps.googlemapsStrings.remove_at
 import typingsSlinky.googlemaps.googlemapsStrings.set_at
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

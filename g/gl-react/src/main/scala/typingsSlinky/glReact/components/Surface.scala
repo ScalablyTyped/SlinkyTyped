@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.glReact.mod.SurfaceProps
 import typingsSlinky.glReact.mod.Visitor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Surface {
   
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[SurfaceProps]))
+  }
+  
   @JSImport("gl-react", "Surface")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -29,10 +36,10 @@ object Surface {
     def onLoadError(value: /* e */ js.Error => Unit): this.type = set("onLoadError", js.Any.fromFunction1(value))
     
     @scala.inline
-    def preloadVarargs(value: js.Any*): this.type = set("preload", js.Array(value :_*))
+    def preload(value: js.Array[_]): this.type = set("preload", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def preload(value: js.Array[_]): this.type = set("preload", value.asInstanceOf[js.Any])
+    def preloadVarargs(value: js.Any*): this.type = set("preload", js.Array(value :_*))
     
     @scala.inline
     def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
@@ -41,13 +48,7 @@ object Surface {
     def visitor(value: Visitor): this.type = set("visitor", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: SurfaceProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[SurfaceProps]))
-  }
-  
   implicit def make[T](companion: Surface.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps[T](p: SurfaceProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

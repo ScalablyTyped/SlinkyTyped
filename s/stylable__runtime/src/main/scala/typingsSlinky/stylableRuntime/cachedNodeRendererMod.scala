@@ -197,14 +197,14 @@ import typingsSlinky.stylableRuntime.stylableRuntimeStrings.wbr
 import typingsSlinky.stylableRuntime.stylableRuntimeStrings.xmp
 import typingsSlinky.stylableRuntime.typesMod.NodeRenderer
 import typingsSlinky.stylableRuntime.typesMod.RenderableStylesheet
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@stylable/runtime/cjs/cached-node-renderer", JSImport.Namespace)
-@js.native
-object cachedNodeRendererMod extends js.Object {
+object cachedNodeRendererMod {
   
+  @JSImport("@stylable/runtime/cjs/cached-node-renderer", "CacheStyleNodeRenderer")
   @js.native
   class CacheStyleNodeRenderer protected () extends NodeRenderer[RenderableStylesheet, HTMLStyleElement] {
     def this(options: CachedNodeRendererOptions) = this()
@@ -213,7 +213,7 @@ object cachedNodeRendererMod extends js.Object {
   }
   
   @js.native
-  trait CachedNodeRendererOptions extends js.Object {
+  trait CachedNodeRendererOptions extends StObject {
     
     var attrKey: String = js.native
     

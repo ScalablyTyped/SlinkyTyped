@@ -2,14 +2,15 @@ package typingsSlinky.forkTsCheckerWebpackPlugin
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("fork-ts-checker-webpack-plugin/lib/hooks/getWatcher", JSImport.Namespace)
-@js.native
-object getWatcherMod extends js.Object {
+object getWatcherMod {
   
+  @JSImport("fork-ts-checker-webpack-plugin/lib/hooks/getWatcher", "getWatcher")
+  @js.native
   def getWatcher(
     compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.Compiler */ js.Any
   ): js.UndefOr[Watcher] = js.native

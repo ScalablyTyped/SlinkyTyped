@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesPutBucketEncryptionInputMod.PutB
 import typingsSlinky.awsSdkClientS3Browser.typesPutBucketEncryptionOutputMod.PutBucketEncryptionOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/PutBucketEncryptionCommand", JSImport.Namespace)
-@js.native
-object putBucketEncryptionCommandMod extends js.Object {
+object putBucketEncryptionCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/PutBucketEncryptionCommand", "PutBucketEncryptionCommand")
   @js.native
   class PutBucketEncryptionCommand protected () extends Command[
           InputTypesUnion, 

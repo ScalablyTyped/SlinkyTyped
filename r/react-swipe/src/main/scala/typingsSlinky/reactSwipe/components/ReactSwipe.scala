@@ -6,6 +6,7 @@ import typingsSlinky.reactSwipe.mod.Props
 import typingsSlinky.reactSwipe.mod.Style
 import typingsSlinky.reactSwipe.mod.^
 import typingsSlinky.swipe.SwipeOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ReactSwipe {
   
   @JSImport("react-swipe", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,7 +38,7 @@ object ReactSwipe {
     def swipeOptions(value: SwipeOptions): this.type = set("swipeOptions", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactSwipe.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactJsonTree.mod.JSONTreeProps
 import typingsSlinky.reactJsonTree.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactJsonTree {
   
+  @scala.inline
+  def apply(data: js.Array[_] | js.Object): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[JSONTreeProps]))
+  }
+  
   @JSImport("react-json-tree", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +45,10 @@ object ReactJsonTree {
     def isCustomNode(value: () => Boolean): this.type = set("isCustomNode", js.Any.fromFunction0(value))
     
     @scala.inline
-    def keyPathVarargs(value: (String | Double)*): this.type = set("keyPath", js.Array(value :_*))
+    def keyPath(value: js.Array[String | Double]): this.type = set("keyPath", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def keyPath(value: js.Array[String | Double]): this.type = set("keyPath", value.asInstanceOf[js.Any])
+    def keyPathVarargs(value: (String | Double)*): this.type = set("keyPath", js.Array(value :_*))
     
     @scala.inline
     def labelRenderer(
@@ -69,10 +76,4 @@ object ReactJsonTree {
   }
   
   def withProps(p: JSONTreeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[_] | js.Object): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[JSONTreeProps]))
-  }
 }

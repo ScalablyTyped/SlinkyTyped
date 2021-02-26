@@ -5,12 +5,13 @@ import typingsSlinky.googleapis.googleapisStrings.v3
 import typingsSlinky.googleapis.googleapisStrings.v3p1beta1
 import typingsSlinky.googleapis.jobsV2Mod.jobsV2.Jobs
 import typingsSlinky.googleapis.jobsV2Mod.jobsV2.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Fn87 extends js.Object {
+trait Fn87 extends StObject {
   
   def apply(options: Options): Jobs = js.native
   def apply(options: typingsSlinky.googleapis.jobsV3Mod.jobsV3.Options): typingsSlinky.googleapis.jobsV3Mod.jobsV3.Jobs = js.native

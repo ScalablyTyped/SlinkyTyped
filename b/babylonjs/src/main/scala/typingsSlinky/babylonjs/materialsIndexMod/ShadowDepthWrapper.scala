@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.materialsIndexMod
 
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.shadowDepthWrapperMod.IIOptionShadowDepthMaterial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -19,14 +19,14 @@ import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.BodyInit
 import typingsSlinky.std.XMLHttpRequestResponseType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Misc/webRequest", JSImport.Namespace)
-@js.native
-object webRequestMod extends js.Object {
+object webRequestMod {
   
+  @JSImport("babylonjs/Misc/webRequest", "WebRequest")
   @js.native
   class WebRequest () extends IWebRequest {
     
@@ -187,13 +187,13 @@ object webRequestMod extends js.Object {
     def removeEventListener_abort(
       `type`: abort,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: Boolean
+      options: EventListenerOptions
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_abort(
       `type`: abort,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: EventListenerOptions
+      options: Boolean
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -201,13 +201,13 @@ object webRequestMod extends js.Object {
     def removeEventListener_error(
       `type`: error,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: Boolean
+      options: EventListenerOptions
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_error(
       `type`: error,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: EventListenerOptions
+      options: Boolean
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -215,13 +215,13 @@ object webRequestMod extends js.Object {
     def removeEventListener_load(
       `type`: load,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: Boolean
+      options: EventListenerOptions
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_load(
       `type`: load,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: EventListenerOptions
+      options: Boolean
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_loadend(`type`: loadend, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -229,13 +229,13 @@ object webRequestMod extends js.Object {
     def removeEventListener_loadend(
       `type`: loadend,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: Boolean
+      options: EventListenerOptions
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_loadend(
       `type`: loadend,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: EventListenerOptions
+      options: Boolean
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_loadstart(
@@ -246,13 +246,13 @@ object webRequestMod extends js.Object {
     def removeEventListener_loadstart(
       `type`: loadstart,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: Boolean
+      options: EventListenerOptions
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_loadstart(
       `type`: loadstart,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: EventListenerOptions
+      options: Boolean
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_progress(`type`: progress, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -260,13 +260,13 @@ object webRequestMod extends js.Object {
     def removeEventListener_progress(
       `type`: progress,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: Boolean
+      options: EventListenerOptions
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_progress(
       `type`: progress,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: EventListenerOptions
+      options: Boolean
     ): Unit = js.native
     /** @hidden */
     @JSName("removeEventListener")
@@ -275,13 +275,13 @@ object webRequestMod extends js.Object {
     def removeEventListener_readystatechange(
       `type`: readystatechange,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event, _],
-      options: Boolean
+      options: EventListenerOptions
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_readystatechange(
       `type`: readystatechange,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event, _],
-      options: EventListenerOptions
+      options: Boolean
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_timeout(`type`: timeout, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _]): Unit = js.native
@@ -289,13 +289,13 @@ object webRequestMod extends js.Object {
     def removeEventListener_timeout(
       `type`: timeout,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: Boolean
+      options: EventListenerOptions
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_timeout(
       `type`: timeout,
       listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ ProgressEvent, _],
-      options: EventListenerOptions
+      options: Boolean
     ): Unit = js.native
     
     /**
@@ -325,8 +325,8 @@ object webRequestMod extends js.Object {
       * @param body defines an optional request body
       */
     def send(): Unit = js.native
-    def send(body: BodyInit): Unit = js.native
     def send(body: Document): Unit = js.native
+    def send(body: BodyInit): Unit = js.native
     
     /**
       * Sets the value of a request header.
@@ -348,18 +348,29 @@ object webRequestMod extends js.Object {
     def status_MWebRequest: Double = js.native
   }
   /* static members */
-  @js.native
-  object WebRequest extends js.Object {
+  object WebRequest {
+    
+    @JSImport("babylonjs/Misc/webRequest", "WebRequest")
+    @js.native
+    val ^ : js.Any = js.native
     
     /**
       * Custom HTTP Request Headers to be sent with XMLHttpRequests
       * i.e. when loading files, where the server/service expects an Authorization header
       */
-    var CustomRequestHeaders: StringDictionary[String] = js.native
+    @JSImport("babylonjs/Misc/webRequest", "WebRequest.CustomRequestHeaders")
+    @js.native
+    def CustomRequestHeaders: StringDictionary[String] = js.native
+    @scala.inline
+    def CustomRequestHeaders_=(x: StringDictionary[String]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("CustomRequestHeaders")(x.asInstanceOf[js.Any])
     
     /**
       * Add callback functions in this array to update all the requests before they get sent to the network
       */
-    var CustomRequestModifiers: js.Array[js.Function2[/* request */ XMLHttpRequest, /* url */ String, Unit]] = js.native
+    @JSImport("babylonjs/Misc/webRequest", "WebRequest.CustomRequestModifiers")
+    @js.native
+    def CustomRequestModifiers: js.Array[js.Function2[/* request */ XMLHttpRequest, /* url */ String, Unit]] = js.native
+    @scala.inline
+    def CustomRequestModifiers_=(x: js.Array[js.Function2[/* request */ XMLHttpRequest, /* url */ String, Unit]]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("CustomRequestModifiers")(x.asInstanceOf[js.Any])
   }
 }

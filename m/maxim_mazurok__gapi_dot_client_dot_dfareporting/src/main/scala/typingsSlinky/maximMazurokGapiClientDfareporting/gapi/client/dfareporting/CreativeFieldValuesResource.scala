@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.CreativeFieldId
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.CreativeFieldIdFields
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.QuotaUserResource
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.SortField
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CreativeFieldValuesResource extends js.Object {
+trait CreativeFieldValuesResource extends StObject {
   
   /** Deletes an existing creative field value. */
   def delete(): Request[Unit] = js.native

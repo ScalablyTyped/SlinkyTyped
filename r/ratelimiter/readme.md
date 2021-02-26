@@ -10,9 +10,9 @@ abstract rate limiter backed by redis
 | ------------------ | :-------------: |
 | Full name          | ratelimiter |
 | Keywords           | rate, ratelimit, limiter, limit |
-| # releases         | 6 |
+| # releases         | 5 |
 | # dependents       | 29 |
-| # downloads        | 421041 |
+| # downloads        | 975623 |
 | # stars            | 29 |
 
 ## Links

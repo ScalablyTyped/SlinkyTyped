@@ -10,9 +10,9 @@ Get your internal IP address
 | ------------------ | :-------------: |
 | Full name          | internal-ip |
 | Keywords           | ip, ipv6, ipv4, address, internal, local, machine, system, net, gateway |
-| # releases         | 6 |
-| # dependents       | 195 |
-| # downloads        | 222907532 |
+| # releases         | 9 |
+| # dependents       | 263 |
+| # downloads        | 332243776 |
 | # stars            | 10 |
 
 ## Links

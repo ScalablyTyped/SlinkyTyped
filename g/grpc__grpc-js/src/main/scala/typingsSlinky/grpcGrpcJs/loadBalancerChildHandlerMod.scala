@@ -2,14 +2,14 @@ package typingsSlinky.grpcGrpcJs
 
 import typingsSlinky.grpcGrpcJs.loadBalancerMod.ChannelControlHelper
 import typingsSlinky.grpcGrpcJs.loadBalancerMod.LoadBalancer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@grpc/grpc-js/build/src/load-balancer-child-handler", JSImport.Namespace)
-@js.native
-object loadBalancerChildHandlerMod extends js.Object {
+object loadBalancerChildHandlerMod {
   
+  @JSImport("@grpc/grpc-js/build/src/load-balancer-child-handler", "ChildLoadBalancerHandler")
   @js.native
   class ChildLoadBalancerHandler protected () extends LoadBalancer {
     def this(channelControlHelper: ChannelControlHelper) = this()

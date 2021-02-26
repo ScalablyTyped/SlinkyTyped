@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientMl.gapi.client.ml
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientMl.anon.Alt
 import typingsSlinky.maximMazurokGapiClientMl.anon.PageToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationsResource extends js.Object {
+trait LocationsResource extends StObject {
   
   /** Get the complete list of CMLE capabilities in a location, along with their location-specific properties. */
   def get(): Request[GoogleCloudMlV1Location] = js.native

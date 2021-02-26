@@ -6,12 +6,13 @@ import typingsSlinky.wechatMiniprogram.anon.RQIGetDocumentOptions
 import typingsSlinky.wechatMiniprogram.anon.RQIRemoveSingleDocumentOp
 import typingsSlinky.wechatMiniprogram.anon.RQISetSingleDocumentOptio
 import typingsSlinky.wechatMiniprogram.anon.RQIUpdateSingleDocumentOp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DocumentReference extends js.Object {
+trait DocumentReference extends StObject {
   
   def field(`object`: Record[String, _]): this.type = js.native
   

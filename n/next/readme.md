@@ -10,15 +10,15 @@ The React Framework
 | ------------------ | :-------------: |
 | Full name          | next |
 | Keywords           | - |
-| # releases         | 482 |
-| # dependents       | 391 |
-| # downloads        | 12162569 |
+| # releases         | 675 |
+| # dependents       | 633 |
+| # downloads        | 24522937 |
 | # stars            | 31 |
 
 ## Links
 - [Homepage](https://nextjs.org)
-- [Bugs](https://github.com/zeit/next.js/issues)
-- [Repository](https://github.com/zeit/next.js)
+- [Bugs](https://github.com/vercel/next.js/issues)
+- [Repository](https://github.com/vercel/next.js)
 - [Npm](https://www.npmjs.com/package/next)
     
 

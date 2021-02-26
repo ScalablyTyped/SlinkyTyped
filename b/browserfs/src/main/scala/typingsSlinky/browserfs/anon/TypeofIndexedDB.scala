@@ -8,6 +8,7 @@ import typingsSlinky.browserfs.fileSystemMod.FileSystemOptions
 import typingsSlinky.browserfs.indexedDBMod.IndexedDBFileSystem
 import typingsSlinky.browserfs.indexedDBMod.IndexedDBFileSystemOptions
 import typingsSlinky.browserfs.indexedDBMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,6 +1,7 @@
 package typingsSlinky.phaser.global.MatterJS
 
 import typingsSlinky.phaser.MatterJS.BodyType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,10 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Vertices ()
   extends typingsSlinky.phaser.MatterJS.Vertices
-/* static members */
-@JSGlobal("MatterJS.Vertices")
-@js.native
-object Vertices extends js.Object {
+object Vertices {
   
   /**
     * Returns the area of the set of vertices.
@@ -30,6 +28,9 @@ object Vertices extends js.Object {
     * @param {bool} signed
     * @return {number} The area
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.area")
+  @js.native
   def area(vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector], signed: Boolean): Double = js.native
   
   /**
@@ -38,8 +39,13 @@ object Vertices extends js.Object {
     * @param {vertices} vertices
     * @return {vector} The centre point
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.centre")
+  @js.native
   def centre(vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector]): typingsSlinky.phaser.MatterJS.Vector = js.native
   
+  @JSGlobal("MatterJS.Vertices.chamfer")
+  @js.native
   def chamfer(
     vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector],
     radius: js.Array[Double],
@@ -57,6 +63,9 @@ object Vertices extends js.Object {
     * @param {number} qualityMin
     * @param {number} qualityMax
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.chamfer")
+  @js.native
   def chamfer(
     vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector],
     radius: Double,
@@ -71,6 +80,9 @@ object Vertices extends js.Object {
     * @param {vertices} vertices
     * @return {vertices} vertices
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.clockwiseSort")
+  @js.native
   def clockwiseSort(vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector]): js.Array[typingsSlinky.phaser.MatterJS.Vector] = js.native
   
   /**
@@ -80,6 +92,9 @@ object Vertices extends js.Object {
     * @param {vector} point
     * @return {boolean} True if the vertices contains point, otherwise false
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.contains")
+  @js.native
   def contains(
     vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector],
     point: typingsSlinky.phaser.MatterJS.Vector
@@ -100,6 +115,9 @@ object Vertices extends js.Object {
     * @param {vector[]} points
     * @param {body} body
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.create")
+  @js.native
   def create(points: js.Array[typingsSlinky.phaser.MatterJS.Vector], body: BodyType): js.Array[typingsSlinky.phaser.MatterJS.Vector] = js.native
   
   /**
@@ -111,6 +129,9 @@ object Vertices extends js.Object {
     * @param {body} body
     * @return {vertices} vertices
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.fromPath")
+  @js.native
   def fromPath(path: String, body: BodyType): js.Array[typingsSlinky.phaser.MatterJS.Vector] = js.native
   
   /**
@@ -119,6 +140,9 @@ object Vertices extends js.Object {
     * @param {vertices} vertices
     * @return [vertex] vertices
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.hull")
+  @js.native
   def hull(vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector]): js.Array[typingsSlinky.phaser.MatterJS.Vector] = js.native
   
   /**
@@ -128,6 +152,9 @@ object Vertices extends js.Object {
     * @param {number} mass
     * @return {number} The polygon's moment of inertia
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.inertia")
+  @js.native
   def inertia(vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector], mass: Double): Double = js.native
   
   /**
@@ -136,6 +163,9 @@ object Vertices extends js.Object {
     * @param {vertices} vertices
     * @return {bool} `true` if the `vertices` are convex, `false` if not (or `null` if not computable).
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.isConvex")
+  @js.native
   def isConvex(vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector]): Boolean = js.native
   
   /**
@@ -144,6 +174,9 @@ object Vertices extends js.Object {
     * @param {vertices} vertices
     * @return {vector} The average point
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.mean")
+  @js.native
   def mean(vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector]): js.Array[typingsSlinky.phaser.MatterJS.Vector] = js.native
   
   /**
@@ -153,6 +186,9 @@ object Vertices extends js.Object {
     * @param {number} angle
     * @param {vector} point
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.rotate")
+  @js.native
   def rotate(
     vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector],
     angle: Double,
@@ -167,6 +203,9 @@ object Vertices extends js.Object {
     * @param {number} scaleY
     * @param {vector} point
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.scale")
+  @js.native
   def scale(
     vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector],
     scaleX: Double,
@@ -181,6 +220,9 @@ object Vertices extends js.Object {
     * @param {vector} vector
     * @param {number} scalar
     */
+  /* static member */
+  @JSGlobal("MatterJS.Vertices.translate")
+  @js.native
   def translate(
     vertices: js.Array[typingsSlinky.phaser.MatterJS.Vector],
     vector: typingsSlinky.phaser.MatterJS.Vector,

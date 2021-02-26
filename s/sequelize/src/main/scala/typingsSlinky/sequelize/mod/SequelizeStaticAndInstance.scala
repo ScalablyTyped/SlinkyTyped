@@ -1,6 +1,9 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.anon.Instantiable
+import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.bluebird.mod.Resolvable
+import typingsSlinky.sequelize.anon.TypeofPromise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,7 +36,18 @@ trait SequelizeStaticAndInstance extends Errors {
   /**
     * A modified version of bluebird promises, that allows listening for sql events
     */
-  var Promise: Instantiable = js.native
+  var Promise: TypeofPromise with (Instantiable1[
+    /* callback */ js.Function3[
+      /* resolve */ js.Function1[
+        /* thenableOrResult */ js.UndefOr[Resolvable[/* import warning: RewrittenClass.unapply cls was tparam R */ js.Any]], 
+        Unit
+      ], 
+      /* reject */ js.Function1[/* error */ js.UndefOr[js.Any], Unit], 
+      /* onCancel */ js.UndefOr[js.Function1[/* callback */ js.Function0[Unit], Unit]], 
+      Unit
+    ], 
+    typingsSlinky.bluebird.mod.^[js.Object]
+  ]) = js.native
   
   /**
     * Available query types for use with `sequelize.query`

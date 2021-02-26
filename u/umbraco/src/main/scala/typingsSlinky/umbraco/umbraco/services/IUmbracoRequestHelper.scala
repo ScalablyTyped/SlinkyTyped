@@ -4,6 +4,7 @@ import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.umbraco.anon.Error
 import typingsSlinky.umbraco.anon.ErrorMsg
 import typingsSlinky.umbraco.mod.resources.IResourcePromise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @description A helper object used for sending requests to the server
   */
 @js.native
-trait IUmbracoRequestHelper extends js.Object {
+trait IUmbracoRequestHelper extends StObject {
   
   /**
     * @ngdoc method

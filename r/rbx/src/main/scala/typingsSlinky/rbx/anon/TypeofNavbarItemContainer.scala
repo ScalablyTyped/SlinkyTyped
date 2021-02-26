@@ -3,6 +3,7 @@ package typingsSlinky.rbx.anon
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.rbx.navbarItemContainerMod.NavbarItemContainer
 import typingsSlinky.rbx.navbarItemContainerMod.NavbarItemContainerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

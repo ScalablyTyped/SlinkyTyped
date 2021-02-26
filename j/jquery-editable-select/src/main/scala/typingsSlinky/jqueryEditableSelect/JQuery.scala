@@ -10,12 +10,13 @@ import typingsSlinky.jqueryEditableSelect.jqueryEditableSelectStrings.hide
 import typingsSlinky.jqueryEditableSelect.jqueryEditableSelectStrings.remove
 import typingsSlinky.jqueryEditableSelect.jqueryEditableSelectStrings.select
 import typingsSlinky.jqueryEditableSelect.jqueryEditableSelectStrings.show
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Transforms the <select> into a typeahead field. Accepts an optional options object.

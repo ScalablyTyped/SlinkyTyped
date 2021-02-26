@@ -1,10 +1,14 @@
 package typingsSlinky.typedoc.serializersMod
 
+import typingsSlinky.typedoc.serializerMod.Serializer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc/dist/lib/serialization/serializers", "IndexedAccessTypeSerializer")
 @js.native
-class IndexedAccessTypeSerializer ()
-  extends typingsSlinky.typedoc.serializersTypesIndexedAccessMod.IndexedAccessTypeSerializer
+class IndexedAccessTypeSerializer protected ()
+  extends typingsSlinky.typedoc.serializersTypesMod.IndexedAccessTypeSerializer {
+  def this(owner: Serializer) = this()
+}

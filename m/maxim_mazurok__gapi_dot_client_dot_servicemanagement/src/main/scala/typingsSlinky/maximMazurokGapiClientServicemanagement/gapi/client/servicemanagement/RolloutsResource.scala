@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientServicemanagement.anon.Fields
 import typingsSlinky.maximMazurokGapiClientServicemanagement.anon.Filter
 import typingsSlinky.maximMazurokGapiClientServicemanagement.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientServicemanagement.anon.RolloutId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RolloutsResource extends js.Object {
+trait RolloutsResource extends StObject {
   
   def create(request: Fields, body: Rollout): Request[Operation] = js.native
   /**

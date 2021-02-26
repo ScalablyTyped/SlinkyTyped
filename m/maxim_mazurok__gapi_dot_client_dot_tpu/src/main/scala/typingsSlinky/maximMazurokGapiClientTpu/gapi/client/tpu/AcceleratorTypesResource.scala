@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientTpu.gapi.client.tpu
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientTpu.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientTpu.anon.Alt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AcceleratorTypesResource extends js.Object {
+trait AcceleratorTypesResource extends StObject {
   
   /** Gets AcceleratorType. */
   def get(): Request[AcceleratorType] = js.native

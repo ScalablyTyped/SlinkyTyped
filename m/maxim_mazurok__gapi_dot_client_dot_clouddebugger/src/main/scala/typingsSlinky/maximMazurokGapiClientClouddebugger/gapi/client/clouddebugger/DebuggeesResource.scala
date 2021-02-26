@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientClouddebugger.anon.Fields
 import typingsSlinky.maximMazurokGapiClientClouddebugger.anon.IncludeInactive
 import typingsSlinky.maximMazurokGapiClientClouddebugger.anon.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DebuggeesResource extends js.Object {
+trait DebuggeesResource extends StObject {
   
   var breakpoints: BreakpointsResource = js.native
   

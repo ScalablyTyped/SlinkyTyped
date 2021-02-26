@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.xrm.Xrm.Async.PromiseLike
 import typingsSlinky.xrm.xrmStrings.MaxChildIncidentNumber
 import typingsSlinky.xrm.xrmStrings.MaxIncidentMergeNumber
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * GetGlobalContext()
   */
 @js.native
-trait GlobalContext extends js.Object {
+trait GlobalContext extends StObject {
   
   /**
     * The client's context instance.

@@ -6,9 +6,9 @@ import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.theme
 import typingsSlinky.emotionStyledBase.helperMod.Omit
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.storybookAddonActions.anon.PickDetailedHTMLPropsHTML
 import typingsSlinky.storybookTheming.typesMod.Theme
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,13 +17,11 @@ object InspectorContainer {
   
   @JSImport("@storybook/addon-actions/dist/components/ActionLogger/style", "InspectorContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
+  
+  implicit def make(companion: InspectorContainer.type): SharedBuilder_DetailedHTMLPropsOmit0912121036[HTMLDivElement] = new SharedBuilder_DetailedHTMLPropsOmit0912121036[HTMLDivElement](js.Array(this.component, js.Dictionary.empty))()
   
   def withProps(
-    p: PropsWithChildren[
-      (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with (Omit[PickDetailedHTMLPropsHTML, theme]) with `0`[Theme]
-    ]
-  ): SharedBuilder_PropsWithChildren526938709[HTMLDivElement] = new SharedBuilder_PropsWithChildren526938709[HTMLDivElement](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: InspectorContainer.type): SharedBuilder_PropsWithChildren526938709[HTMLDivElement] = new SharedBuilder_PropsWithChildren526938709[HTMLDivElement](js.Array(this.component, js.Dictionary.empty))()
+    p: (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with (Omit[PickDetailedHTMLPropsHTML, theme]) with `0`[Theme]
+  ): SharedBuilder_DetailedHTMLPropsOmit0912121036[HTMLDivElement] = new SharedBuilder_DetailedHTMLPropsOmit0912121036[HTMLDivElement](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -9,6 +9,7 @@ import typingsSlinky.reactColor.anon.PartialClassesSketchPicke
 import typingsSlinky.reactColor.mod.Color
 import typingsSlinky.reactColor.mod.ColorResult
 import typingsSlinky.reactColor.sketchMod.PresetColor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,10 +38,10 @@ class SharedBuilder_SketchPickerProps_1920055515[R <: js.Object] (val args: js.A
   def onSwatchHover(value: (/* color */ ColorResult, /* event */ MouseEvent) => Unit): this.type = set("onSwatchHover", js.Any.fromFunction2(value))
   
   @scala.inline
-  def presetColorsVarargs(value: PresetColor*): this.type = set("presetColors", js.Array(value :_*))
+  def presetColors(value: js.Array[PresetColor]): this.type = set("presetColors", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def presetColors(value: js.Array[PresetColor]): this.type = set("presetColors", value.asInstanceOf[js.Any])
+  def presetColorsVarargs(value: PresetColor*): this.type = set("presetColors", js.Array(value :_*))
   
   @scala.inline
   def styles(value: PartialClassesSketchPicke): this.type = set("styles", value.asInstanceOf[js.Any])

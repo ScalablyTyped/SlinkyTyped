@@ -3,6 +3,7 @@ package typingsSlinky.xrm.XrmEnum
 import typingsSlinky.xrm.xrmStrings.always
 import typingsSlinky.xrm.xrmStrings.dirty
 import typingsSlinky.xrm.xrmStrings.never
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.dirty
   - typingsSlinky.xrm.xrmStrings.never
 */
-trait SubmitMode extends js.Object
+trait SubmitMode extends StObject
 object SubmitMode {
   
   @scala.inline

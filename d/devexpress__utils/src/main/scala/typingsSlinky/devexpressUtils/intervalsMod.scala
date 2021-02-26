@@ -3,16 +3,16 @@ package typingsSlinky.devexpressUtils
 import typingsSlinky.devexpressUtils.constMod.ConstInterval
 import typingsSlinky.devexpressUtils.iteratorMod.SparseIntervalsIterator
 import typingsSlinky.devexpressUtils.objectsIteratorMod.SparseObjectsIterator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@devexpress/utils/lib/intervals/sparse/intervals", JSImport.Namespace)
-@js.native
-object intervalsMod extends js.Object {
+object intervalsMod {
   
+  @JSImport("@devexpress/utils/lib/intervals/sparse/intervals", "SparseIntervals")
   @js.native
-  class SparseIntervals[T /* <: ConstInterval */] () extends js.Object {
+  class SparseIntervals[T /* <: ConstInterval */] () extends StObject {
     def this(list: js.Array[T]) = this()
     
     var _count: js.Any = js.native

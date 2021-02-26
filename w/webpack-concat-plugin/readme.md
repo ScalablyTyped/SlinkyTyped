@@ -10,9 +10,9 @@ Webpack file concatenation.
 | ------------------ | :-------------: |
 | Full name          | webpack-concat-plugin |
 | Keywords           | - |
-| # releases         | 2 |
-| # dependents       | 15 |
-| # downloads        | 1292086 |
+| # releases         | 0 |
+| # dependents       | 14 |
+| # downloads        | 1229342 |
 | # stars            | 1 |
 
 ## Links

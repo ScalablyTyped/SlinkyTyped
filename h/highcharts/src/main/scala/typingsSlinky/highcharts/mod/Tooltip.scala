@@ -1,13 +1,14 @@
 package typingsSlinky.highcharts.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts", "Tooltip")
 @js.native
-class Tooltip protected () extends js.Object {
+class Tooltip protected () extends StObject {
   /**
     * Tooltip of a chart.
     *

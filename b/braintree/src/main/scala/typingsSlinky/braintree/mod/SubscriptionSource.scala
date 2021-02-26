@@ -2,6 +2,7 @@ package typingsSlinky.braintree.mod
 
 import typingsSlinky.braintree.braintreeStrings.api_
 import typingsSlinky.braintree.braintreeStrings.recurring_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.braintree.braintreeStrings.control_panel
   - typingsSlinky.braintree.braintreeStrings.recurring_
 */
-trait SubscriptionSource extends js.Object
+trait SubscriptionSource extends StObject
 object SubscriptionSource {
   
   @scala.inline

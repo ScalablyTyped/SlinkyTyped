@@ -22,13 +22,12 @@ import typingsSlinky.vegaTypings.encodeMod.SymbolShapeValueRef
 import typingsSlinky.vegaTypings.encodeMod.TextBaseline
 import typingsSlinky.vegaTypings.encodeMod.TextBaselineValueRef
 import typingsSlinky.vegaTypings.titleMod.TitleAnchor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vega-typings/types/spec/values", JSImport.Namespace)
-@js.native
-object valuesMod extends js.Object {
+object valuesMod {
   
   type AlignValue = Align | AlignValueRef
   

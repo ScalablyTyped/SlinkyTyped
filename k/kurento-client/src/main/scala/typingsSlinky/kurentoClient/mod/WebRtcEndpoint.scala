@@ -15,6 +15,7 @@ import typingsSlinky.kurentoClient.kurentoClientStrings.IceComponentStateChange
 import typingsSlinky.kurentoClient.kurentoClientStrings.IceGatheringDone
 import typingsSlinky.kurentoClient.kurentoClientStrings.NewCandidatePairSelected
 import typingsSlinky.kurentoClient.kurentoClientStrings.OnIceCandidate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

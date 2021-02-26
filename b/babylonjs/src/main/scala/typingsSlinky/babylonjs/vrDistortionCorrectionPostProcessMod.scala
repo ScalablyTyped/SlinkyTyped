@@ -3,14 +3,14 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.vrCameraMetricsMod.VRCameraMetrics
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/PostProcesses/vrDistortionCorrectionPostProcess", JSImport.Namespace)
-@js.native
-object vrDistortionCorrectionPostProcessMod extends js.Object {
+object vrDistortionCorrectionPostProcessMod {
   
+  @JSImport("babylonjs/PostProcesses/vrDistortionCorrectionPostProcess", "VRDistortionCorrectionPostProcess")
   @js.native
   class VRDistortionCorrectionPostProcess protected () extends PostProcess {
     /**

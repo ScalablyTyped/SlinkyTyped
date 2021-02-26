@@ -1,6 +1,7 @@
 package typingsSlinky.angularCore.mod
 
 import typingsSlinky.angularCore.anon.PropName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,12 +17,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("@angular/core", "ComponentFactory")
 @js.native
-abstract class ComponentFactory[C] () extends js.Object {
+abstract class ComponentFactory[C] () extends StObject {
   
   /**
     * The type of component the factory will create.
     */
-  def componentType: Type[_] = js.native
+  def componentType: typingsSlinky.angularCore.mod.Type[_] = js.native
   
   /**
     * Creates a new component.

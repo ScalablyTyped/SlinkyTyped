@@ -11,6 +11,7 @@ import typingsSlinky.tuyaPanelKit.routersTypesMod.NavigationAction
 import typingsSlinky.tuyaPanelKit.routersTypesMod.NavigationState
 import typingsSlinky.tuyaPanelKit.routersTypesMod.ParamListBase
 import typingsSlinky.tuyaPanelKit.typesMod.NavigationContainerRef
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object NavigationContainer {
   
   @JSImport("tuya-panel-kit/@react-navigation/native", "NavigationContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +31,10 @@ object NavigationContainer {
     def documentTitle(value: DocumentTitleOptions): this.type = set("documentTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fallbackReactElement(value: ReactElement): this.type = set("fallback", value.asInstanceOf[js.Any])
+    def fallback(value: ReactElement): this.type = set("fallback", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fallback(value: ReactElement): this.type = set("fallback", value.asInstanceOf[js.Any])
+    def fallbackReactElement(value: ReactElement): this.type = set("fallback", value.asInstanceOf[js.Any])
     
     @scala.inline
     def independent(value: Boolean): this.type = set("independent", value.asInstanceOf[js.Any])
@@ -57,7 +58,7 @@ object NavigationContainer {
     def theme(value: typingsSlinky.tuyaPanelKit.nativeTypesMod.Theme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: NavigationContainerPropst): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: NavigationContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: NavigationContainerPropst): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

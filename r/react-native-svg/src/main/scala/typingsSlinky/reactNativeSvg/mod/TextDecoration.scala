@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeSvg.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`line-through`
   - typingsSlinky.reactNativeSvg.reactNativeSvgStrings.blink
 */
-trait TextDecoration extends js.Object
+trait TextDecoration extends StObject
 object TextDecoration {
   
   @scala.inline

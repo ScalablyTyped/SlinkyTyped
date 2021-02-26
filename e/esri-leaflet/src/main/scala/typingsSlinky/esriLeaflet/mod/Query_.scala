@@ -1,6 +1,7 @@
 package typingsSlinky.esriLeaflet.mod
 
 import typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.QueryOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

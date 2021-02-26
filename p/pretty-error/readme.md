@@ -11,8 +11,8 @@ See nodejs errors with less clutter
 | Full name          | pretty-error |
 | Keywords           | pretty, error, exception, debug, error-handling, readable, colorful, prettify, format, human |
 | # releases         | 1 |
-| # dependents       | 424 |
-| # downloads        | 177493664 |
+| # dependents       | 468 |
+| # downloads        | 230255507 |
 | # stars            | 36 |
 
 ## Links

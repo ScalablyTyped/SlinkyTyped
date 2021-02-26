@@ -100,15 +100,27 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.HTMLTableHeaderCellElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TablePagination {
   
+  @scala.inline
+  def apply(
+    count: Double,
+    onChangePage: (SyntheticMouseEvent[HTMLButtonElement] | Null, Double) => Unit,
+    page: Double,
+    rowsPerPage: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(count = count.asInstanceOf[js.Any], onChangePage = js.Any.fromFunction2(onChangePage), page = page.asInstanceOf[js.Any], rowsPerPage = rowsPerPage.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TablePaginationProps]))
+  }
+  
   @JSImport("@material-ui/core", "TablePagination")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -116,13 +128,13 @@ object TablePagination {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def ActionsComponentFunctionComponent(value: ReactComponentClass[TablePaginationActionsProps]): this.type = set("ActionsComponent", value.asInstanceOf[js.Any])
+    def ActionsComponent(value: ReactType[TablePaginationActionsProps]): this.type = set("ActionsComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ActionsComponentComponentClass(value: ReactComponentClass[TablePaginationActionsProps]): this.type = set("ActionsComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ActionsComponent(value: ReactType[TablePaginationActionsProps]): this.type = set("ActionsComponent", value.asInstanceOf[js.Any])
+    def ActionsComponentFunctionComponent(value: ReactComponentClass[TablePaginationActionsProps]): this.type = set("ActionsComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def SelectProps(value: PartialSelectProps): this.type = set("SelectProps", value.asInstanceOf[js.Any])
@@ -310,13 +322,13 @@ object TablePagination {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentFunctionComponent(value: ReactComponentClass[TablePaginationBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[TablePaginationBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[TablePaginationBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def component(value: ReactType[TablePaginationBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def componentFunctionComponent(value: ReactComponentClass[TablePaginationBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -334,10 +346,10 @@ object TablePagination {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -361,16 +373,16 @@ object TablePagination {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -397,10 +409,10 @@ object TablePagination {
     def labelDisplayedRows(value: /* paginationInfo */ LabelDisplayedRowsArgs => ReactElement): this.type = set("labelDisplayedRows", js.Any.fromFunction1(value))
     
     @scala.inline
-    def labelRowsPerPageReactElement(value: ReactElement): this.type = set("labelRowsPerPage", value.asInstanceOf[js.Any])
+    def labelRowsPerPage(value: ReactElement): this.type = set("labelRowsPerPage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelRowsPerPage(value: ReactElement): this.type = set("labelRowsPerPage", value.asInstanceOf[js.Any])
+    def labelRowsPerPageReactElement(value: ReactElement): this.type = set("labelRowsPerPage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
@@ -679,10 +691,10 @@ object TablePagination {
     def rowSpan(value: Double): this.type = set("rowSpan", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
+    def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
+    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
     
     @scala.inline
     def scope(value: String): this.type = set("scope", value.asInstanceOf[js.Any])
@@ -737,15 +749,4 @@ object TablePagination {
   }
   
   def withProps(p: TablePaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    count: Double,
-    onChangePage: (SyntheticMouseEvent[HTMLButtonElement] | Null, Double) => Unit,
-    page: Double,
-    rowsPerPage: Double
-  ): Builder = {
-    val __props = js.Dynamic.literal(count = count.asInstanceOf[js.Any], onChangePage = js.Any.fromFunction2(onChangePage), page = page.asInstanceOf[js.Any], rowsPerPage = rowsPerPage.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TablePaginationProps]))
-  }
 }

@@ -8,6 +8,7 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.stepDescriptionMod.StepDescriptionProps
 import typingsSlinky.semanticUiReact.stepTitleMod.StepTitleProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,13 +25,13 @@ class SharedBuilder_StepContentProps774867170 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def description(value: SemanticShorthandItem[StepDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
   
   @scala.inline
   def descriptionFunction3(
@@ -38,10 +39,10 @@ class SharedBuilder_StepContentProps774867170 (val args: js.Array[js.Any])
   ): this.type = set("description", js.Any.fromFunction3(value))
   
   @scala.inline
-  def description(value: SemanticShorthandItem[StepDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
+  def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: SemanticShorthandItem[StepTitleProps]): this.type = set("title", value.asInstanceOf[js.Any])
   
   @scala.inline
   def titleFunction3(
@@ -49,5 +50,5 @@ class SharedBuilder_StepContentProps774867170 (val args: js.Array[js.Any])
   ): this.type = set("title", js.Any.fromFunction3(value))
   
   @scala.inline
-  def title(value: SemanticShorthandItem[StepTitleProps]): this.type = set("title", value.asInstanceOf[js.Any])
+  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
 }

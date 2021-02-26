@@ -6,14 +6,14 @@ import typingsSlinky.ionicCore.componentsMod.global.HTMLIonActionSheetElement
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/action-sheet/action-sheet", JSImport.Namespace)
-@js.native
-object actionSheetMod extends js.Object {
+object actionSheetMod {
   
+  @JSImport("@ionic/core/dist/types/components/action-sheet/action-sheet", "ActionSheet")
   @js.native
   class ActionSheet ()
     extends ComponentInterface

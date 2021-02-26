@@ -1,12 +1,13 @@
 package typingsSlinky.aframe.mod
 
 import typingsSlinky.three.mod.Material
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Shader extends js.Object {
+trait Shader extends StObject {
   
   var data: js.Object = js.native
   

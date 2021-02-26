@@ -2,16 +2,19 @@ package typingsSlinky.stripe.mod.resources
 
 import typingsSlinky.stripe.mod.HeaderOptions
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.usageRecords.IUsageRecord
 import typingsSlinky.stripe.mod.usageRecords.IUsageRecordCreationOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.UsageRecords")
 @js.native
-class UsageRecords () extends StripeResource {
+class UsageRecords protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(subscription: String, data: IUsageRecordCreationOptions): js.Promise[IUsageRecord] = js.native
   /**

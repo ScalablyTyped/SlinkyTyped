@@ -44,6 +44,7 @@ import typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesShared
 import typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.minecraftColonwatersplash
 import typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.minecraftColonwaterwake
 import typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.minecraftColonwitchspell
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -94,7 +95,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.minecraftColontrackingemitter
   - typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.minecraftColonwitchspell
 */
-trait MinecraftParticleEffect extends js.Object
+trait MinecraftParticleEffect extends StObject
 object MinecraftParticleEffect {
   
   /**

@@ -12,6 +12,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.task.XInteractionHandler
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XFlushListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XNumberFormatsSupplier
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

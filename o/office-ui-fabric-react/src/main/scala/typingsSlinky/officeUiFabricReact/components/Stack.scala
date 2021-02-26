@@ -89,15 +89,27 @@ import typingsSlinky.uifabricFoundation.ihtmlslotsMod.IHTMLSlot
 import typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunctionOrObject
 import typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject
 import typingsSlinky.uifabricFoundation.uifabricFoundationStrings.Slots
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Stack {
   
+  object Item {
+    
+    @JSImport("office-ui-fabric-react", "Stack.Item")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Item.type): SharedBuilder_IStackItemProps1971397930 = new SharedBuilder_IStackItemProps1971397930(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: IStackItemProps): SharedBuilder_IStackItemProps1971397930 = new SharedBuilder_IStackItemProps1971397930(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("office-ui-fabric-react", "Stack")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -257,13 +269,13 @@ object Stack {
     def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def asFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: ReactElement): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def asComponentClass(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def as(value: ReactElement): this.type = set("as", value.asInstanceOf[js.Any])
+    def asFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def autoCapitalize(value: String): this.type = set("autoCapitalize", value.asInstanceOf[js.Any])
@@ -296,10 +308,10 @@ object Stack {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -653,10 +665,10 @@ object Stack {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction3(value: (IStackProps, /* theme */ ITheme, IStackTokens) => IStackStyles): this.type = set("styles", js.Any.fromFunction3(value))
+    def styles(value: IStylesFunctionOrObject[IStackProps, IStackTokens, IStackStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStylesFunctionOrObject[IStackProps, IStackTokens, IStackStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction3(value: (IStackProps, /* theme */ ITheme, IStackTokens) => IStackStyles): this.type = set("styles", js.Any.fromFunction3(value))
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -698,18 +710,7 @@ object Stack {
     def wrap(value: Boolean): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PropsWithChildren[IStackProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Stack.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Item {
-    
-    @JSImport("office-ui-fabric-react", "Stack.Item")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: IStackItemProps): SharedBuilder_IStackItemProps1971397930 = new SharedBuilder_IStackItemProps1971397930(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Item.type): SharedBuilder_IStackItemProps1971397930 = new SharedBuilder_IStackItemProps1971397930(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: PropsWithChildren[IStackProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

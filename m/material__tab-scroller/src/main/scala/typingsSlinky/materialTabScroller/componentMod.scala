@@ -3,16 +3,18 @@ package typingsSlinky.materialTabScroller
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialTabScroller.foundationMod.MDCTabScrollerFoundation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/tab-scroller/component", JSImport.Namespace)
-@js.native
-object componentMod extends js.Object {
+object componentMod {
   
+  @JSImport("@material/tab-scroller/component", "MDCTabScroller")
   @js.native
-  class MDCTabScroller () extends MDCComponent[MDCTabScrollerFoundation] {
+  class MDCTabScroller protected () extends MDCComponent[MDCTabScrollerFoundation] {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(root: Element, foundation: MDCTabScrollerFoundation, args: js.Any*) = this()
     
     /**
       * Returns the width of the scroll content
@@ -39,9 +41,10 @@ object componentMod extends js.Object {
     def scrollTo(scrollX: Double): Unit = js.native
   }
   /* static members */
-  @js.native
-  object MDCTabScroller extends js.Object {
+  object MDCTabScroller {
     
+    @JSImport("@material/tab-scroller/component", "MDCTabScroller.attachTo")
+    @js.native
     def attachTo(root: Element): MDCTabScroller = js.native
   }
   

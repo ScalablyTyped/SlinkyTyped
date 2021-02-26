@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientNotebooks.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientNotebooks.anon.Alt
 import typingsSlinky.maximMazurokGapiClientNotebooks.anon.Callback
 import typingsSlinky.maximMazurokGapiClientNotebooks.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EnvironmentsResource extends js.Object {
+trait EnvironmentsResource extends StObject {
   
   /** Creates a new Environment. */
   def create(request: Accesstoken): Request[Operation] = js.native

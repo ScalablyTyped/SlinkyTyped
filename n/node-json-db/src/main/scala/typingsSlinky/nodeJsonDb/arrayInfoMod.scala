@@ -1,18 +1,16 @@
 package typingsSlinky.nodeJsonDb
 
 import typingsSlinky.nodeJsonDb.utilsMod.KeyValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("node-json-db/dist/lib/ArrayInfo", JSImport.Namespace)
-@js.native
-object arrayInfoMod extends js.Object {
+object arrayInfoMod {
   
-  def arrayRegex(): js.RegExp = js.native
-  
+  @JSImport("node-json-db/dist/lib/ArrayInfo", "ArrayInfo")
   @js.native
-  class ArrayInfo protected () extends js.Object {
+  class ArrayInfo protected () extends StObject {
     def this(property: String, index: js.Any) = this()
     
     val append: Boolean = js.native
@@ -55,14 +53,21 @@ object arrayInfoMod extends js.Object {
     def setData(data: KeyValue, value: js.Any): Unit = js.native
   }
   /* static members */
-  @js.native
-  object ArrayInfo extends js.Object {
+  object ArrayInfo {
     
     /**
       * Check if the property want to access an Array
       * @param property
       */
+    @JSImport("node-json-db/dist/lib/ArrayInfo", "ArrayInfo.processArray")
+    @js.native
     def processArray(): ArrayInfo | Null = js.native
+    @JSImport("node-json-db/dist/lib/ArrayInfo", "ArrayInfo.processArray")
+    @js.native
     def processArray(property: String): ArrayInfo | Null = js.native
   }
+  
+  @JSImport("node-json-db/dist/lib/ArrayInfo", "arrayRegex")
+  @js.native
+  def arrayRegex(): js.RegExp = js.native
 }

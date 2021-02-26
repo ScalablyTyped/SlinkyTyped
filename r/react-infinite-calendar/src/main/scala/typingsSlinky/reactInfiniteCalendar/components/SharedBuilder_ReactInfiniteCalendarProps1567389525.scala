@@ -22,6 +22,7 @@ import typingsSlinky.reactInfiniteCalendar.reactInfiniteCalendarStrings.`100Perc
 import typingsSlinky.reactInfiniteCalendar.reactInfiniteCalendarStrings.auto
 import typingsSlinky.reactInfiniteCalendar.reactInfiniteCalendarStrings.days
 import typingsSlinky.reactInfiniteCalendar.reactInfiniteCalendarStrings.years
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,16 +42,16 @@ class SharedBuilder_ReactInfiniteCalendarProps1567389525[R <: js.Object] (val ar
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def disabledDatesVarargs(value: DateType*): this.type = set("disabledDates", js.Array(value :_*))
-  
-  @scala.inline
   def disabledDates(value: js.Array[DateType]): this.type = set("disabledDates", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def disabledDaysVarargs(value: (`0` | `1` | `2` | `3` | `4` | `5` | `6`)*): this.type = set("disabledDays", js.Array(value :_*))
+  def disabledDatesVarargs(value: DateType*): this.type = set("disabledDates", js.Array(value :_*))
   
   @scala.inline
   def disabledDays(value: js.Array[`0` | `1` | `2` | `3` | `4` | `5` | `6`]): this.type = set("disabledDays", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def disabledDaysVarargs(value: (`0` | `1` | `2` | `3` | `4` | `5` | `6`)*): this.type = set("disabledDays", js.Array(value :_*))
   
   @scala.inline
   def display(value: days | years): this.type = set("display", value.asInstanceOf[js.Any])
@@ -68,19 +69,19 @@ class SharedBuilder_ReactInfiniteCalendarProps1567389525[R <: js.Object] (val ar
   def locale(value: Blank): this.type = set("locale", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def maxDate(value: js.Date): this.type = set("max", value.asInstanceOf[js.Any])
+  def max(value: DateType): this.type = set("max", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def max(value: DateType): this.type = set("max", value.asInstanceOf[js.Any])
+  def maxDate(value: js.Date): this.type = set("max", value.asInstanceOf[js.Any])
   
   @scala.inline
   def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def minDate(value: js.Date): this.type = set("min", value.asInstanceOf[js.Any])
+  def min(value: DateType): this.type = set("min", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def min(value: DateType): this.type = set("min", value.asInstanceOf[js.Any])
+  def minDate(value: js.Date): this.type = set("min", value.asInstanceOf[js.Any])
   
   @scala.inline
   def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
@@ -98,13 +99,13 @@ class SharedBuilder_ReactInfiniteCalendarProps1567389525[R <: js.Object] (val ar
   def rowHeight(value: Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def selectedVarargs(value: DateType*): this.type = set("selected", js.Array(value :_*))
+  def selected(value: DateType | `false` | End | js.Array[DateType]): this.type = set("selected", value.asInstanceOf[js.Any])
   
   @scala.inline
   def selectedDate(value: js.Date): this.type = set("selected", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def selected(value: DateType | `false` | End | js.Array[DateType]): this.type = set("selected", value.asInstanceOf[js.Any])
+  def selectedVarargs(value: DateType*): this.type = set("selected", js.Array(value :_*))
   
   @scala.inline
   def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])

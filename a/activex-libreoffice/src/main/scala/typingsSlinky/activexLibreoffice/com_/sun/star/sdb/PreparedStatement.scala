@@ -20,6 +20,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.util.Date
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.DateTime
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.Time
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

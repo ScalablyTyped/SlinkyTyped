@@ -1,12 +1,13 @@
 package typingsSlinky.reactTable.mod
 
 import typingsSlinky.reactTable.anon.PartialTableExpandedToggl
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UseExpandedRowProps[D /* <: js.Object */] extends js.Object {
+trait UseExpandedRowProps[D /* <: js.Object */] extends StObject {
   
   var canExpand: Boolean = js.native
   

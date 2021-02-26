@@ -1,19 +1,16 @@
 package typingsSlinky.parse.mod.global.Parse.Cloud
 
-import typingsSlinky.parse.mod.global.Parse.ErrorOption
-import typingsSlinky.parse.mod.global.Parse.SessionTokenOption
-import typingsSlinky.parse.mod.global.Parse.SuccessOption
-import typingsSlinky.parse.mod.global.Parse.UseMasterKeyOption
+import typingsSlinky.parse.mod.global.Parse.ScopeOptions
+import typingsSlinky.parse.mod.global.Parse.SuccessFailureOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RunOptions
-  extends SuccessOption
-     with ErrorOption
-     with SessionTokenOption
-     with UseMasterKeyOption
+  extends SuccessFailureOptions
+     with ScopeOptions
 object RunOptions {
   
   @scala.inline

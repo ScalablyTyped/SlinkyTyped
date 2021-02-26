@@ -1,5 +1,6 @@
 package typingsSlinky.arangodb.ArangoDB
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -69,7 +70,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arangodb.arangodbStrings.`not extended`
   - typingsSlinky.arangodb.arangodbStrings.`network authentication required`
 */
-trait HttpStatus extends js.Object
+trait HttpStatus extends StObject
 object HttpStatus {
   
   @scala.inline

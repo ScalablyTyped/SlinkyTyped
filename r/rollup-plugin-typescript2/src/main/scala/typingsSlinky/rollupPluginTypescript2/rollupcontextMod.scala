@@ -3,14 +3,14 @@ package typingsSlinky.rollupPluginTypescript2
 import typingsSlinky.rollup.mod.PluginContext
 import typingsSlinky.rollupPluginTypescript2.contextMod.IContext
 import typingsSlinky.rollupPluginTypescript2.contextMod.VerbosityLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rollup-plugin-typescript2/dist/rollupcontext", JSImport.Namespace)
-@js.native
-object rollupcontextMod extends js.Object {
+object rollupcontextMod {
   
+  @JSImport("rollup-plugin-typescript2/dist/rollupcontext", "RollupContext")
   @js.native
   class RollupContext protected () extends IContext {
     def this(verbosity: VerbosityLevel, bail: Boolean, context: PluginContext) = this()

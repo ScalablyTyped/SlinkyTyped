@@ -10,9 +10,9 @@ Angular - library for using Angular in a web browser with JIT compilation
 | ------------------ | :-------------: |
 | Full name          | @angular/platform-browser-dynamic |
 | Keywords           | - |
-| # releases         | 180 |
-| # dependents       | 6099 |
-| # downloads        | 53889243 |
+| # releases         | 211 |
+| # dependents       | 7236 |
+| # downloads        | 77729315 |
 | # stars            | 9 |
 
 ## Links

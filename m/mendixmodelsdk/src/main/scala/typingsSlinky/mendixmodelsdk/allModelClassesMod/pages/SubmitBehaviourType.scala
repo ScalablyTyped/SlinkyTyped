@@ -1,19 +1,34 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod.pages
 
+import typingsSlinky.mendixmodelsdk.versionChecksMod.ILifeCycle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.SubmitBehaviourType")
 @js.native
-class SubmitBehaviourType ()
-  extends typingsSlinky.mendixmodelsdk.pagesMod.pages.SubmitBehaviourType
-/* static members */
-@JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.SubmitBehaviourType")
-@js.native
-object SubmitBehaviourType extends js.Object {
+class SubmitBehaviourType protected ()
+  extends typingsSlinky.mendixmodelsdk.pagesMod.pages.SubmitBehaviourType {
+  def this(_name: String, lifeCycleInfo: ILifeCycle) = this()
+}
+object SubmitBehaviourType {
   
-  var OnEndEditing: typingsSlinky.mendixmodelsdk.pagesMod.pages.SubmitBehaviourType = js.native
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.SubmitBehaviourType")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var WhileEditing: typingsSlinky.mendixmodelsdk.pagesMod.pages.SubmitBehaviourType = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.SubmitBehaviourType.OnEndEditing")
+  @js.native
+  def OnEndEditing: typingsSlinky.mendixmodelsdk.pagesMod.pages.SubmitBehaviourType = js.native
+  @scala.inline
+  def OnEndEditing_=(x: typingsSlinky.mendixmodelsdk.pagesMod.pages.SubmitBehaviourType): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("OnEndEditing")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.SubmitBehaviourType.WhileEditing")
+  @js.native
+  def WhileEditing: typingsSlinky.mendixmodelsdk.pagesMod.pages.SubmitBehaviourType = js.native
+  @scala.inline
+  def WhileEditing_=(x: typingsSlinky.mendixmodelsdk.pagesMod.pages.SubmitBehaviourType): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("WhileEditing")(x.asInstanceOf[js.Any])
 }

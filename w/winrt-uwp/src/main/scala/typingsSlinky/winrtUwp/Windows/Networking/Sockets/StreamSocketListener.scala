@@ -7,13 +7,14 @@ import typingsSlinky.winrtUwp.Windows.Networking.Connectivity.NetworkAdapter
 import typingsSlinky.winrtUwp.Windows.Networking.HostName
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.connectionreceived
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Supports listening for an incoming network connection using a TCP stream socket or Bluetooth RFCOMM. */
 @js.native
-trait StreamSocketListener extends js.Object {
+trait StreamSocketListener extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

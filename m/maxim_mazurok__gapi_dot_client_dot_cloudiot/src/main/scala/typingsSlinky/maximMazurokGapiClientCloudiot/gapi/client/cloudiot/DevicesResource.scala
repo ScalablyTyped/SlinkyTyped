@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientCloudiot.anon.Name
 import typingsSlinky.maximMazurokGapiClientCloudiot.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientCloudiot.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientCloudiot.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DevicesResource extends js.Object {
+trait DevicesResource extends StObject {
   
   var configVersions: ConfigVersionsResource = js.native
   

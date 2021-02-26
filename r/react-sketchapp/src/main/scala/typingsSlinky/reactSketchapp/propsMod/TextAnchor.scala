@@ -1,5 +1,6 @@
 package typingsSlinky.reactSketchapp.propsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactSketchapp.reactSketchappStrings.middle
   - typingsSlinky.reactSketchapp.reactSketchappStrings.end
 */
-trait TextAnchor extends js.Object
+trait TextAnchor extends StObject
 object TextAnchor {
   
   @scala.inline

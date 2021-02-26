@@ -10,9 +10,9 @@ Generates command-line usage information
 | ------------------ | :-------------: |
 | Full name          | command-line-usage |
 | Keywords           | terminal, command line, usage, generator |
-| # releases         | 15 |
-| # dependents       | 608 |
-| # downloads        | 10229715 |
+| # releases         | 9 |
+| # dependents       | 787 |
+| # downloads        | 21795683 |
 | # stars            | 4 |
 
 ## Links

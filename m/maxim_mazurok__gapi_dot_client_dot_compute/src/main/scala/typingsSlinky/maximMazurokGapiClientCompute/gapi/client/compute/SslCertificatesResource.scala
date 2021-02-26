@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.FieldsKeyOauthtokenPrett
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientCompute.anon.QuotaUserSslCertificate
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RequestIdSslCertificate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SslCertificatesResource extends js.Object {
+trait SslCertificatesResource extends StObject {
   
   /** Retrieves the list of all SslCertificate resources, regional and global, available to the specified project. */
   def aggregatedList(): Request[SslCertificateAggregatedList] = js.native

@@ -10,9 +10,9 @@ Slack API library for node
 | ------------------ | :-------------: |
 | Full name          | slack-node |
 | Keywords           | slack, node, sdk |
-| # releases         | 1 |
-| # dependents       | 126 |
-| # downloads        | 11184584 |
+| # releases         | 0 |
+| # dependents       | 135 |
+| # downloads        | 9154967 |
 | # stars            | 18 |
 
 ## Links

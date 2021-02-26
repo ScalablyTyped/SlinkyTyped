@@ -13,6 +13,7 @@ import typingsSlinky.jointjs.mod.dia.Link.EndJSON
 import typingsSlinky.jointjs.mod.g.Rect
 import typingsSlinky.jointjs.mod.mvc.View
 import typingsSlinky.jquery.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,12 +35,12 @@ abstract class CellViewGeneric[T /* <: Cell */] () extends View[T] {
   
   def findBySelector(selector: String): JQuery[HTMLElement] = js.native
   def findBySelector(selector: String, root: String): JQuery[HTMLElement] = js.native
-  def findBySelector(selector: String, root: JQuery[HTMLElement]): JQuery[HTMLElement] = js.native
   def findBySelector(selector: String, root: SVGElement): JQuery[HTMLElement] = js.native
+  def findBySelector(selector: String, root: JQuery[HTMLElement]): JQuery[HTMLElement] = js.native
   
   def findMagnet(el: String): js.UndefOr[SVGElement] = js.native
-  def findMagnet(el: JQuery[HTMLElement]): js.UndefOr[SVGElement] = js.native
   def findMagnet(el: SVGElement): js.UndefOr[SVGElement] = js.native
+  def findMagnet(el: JQuery[HTMLElement]): js.UndefOr[SVGElement] = js.native
   
   def getBBox(): Rect = js.native
   def getBBox(opt: UseModelGeometry): Rect = js.native
@@ -73,10 +74,10 @@ abstract class CellViewGeneric[T /* <: Cell */] () extends View[T] {
   def highlight(el: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]): this.type = js.native
   def highlight(el: String): this.type = js.native
   def highlight(el: String, opt: StringDictionary[js.Any]): this.type = js.native
-  def highlight(el: JQuery[HTMLElement]): this.type = js.native
-  def highlight(el: JQuery[HTMLElement], opt: StringDictionary[js.Any]): this.type = js.native
   def highlight(el: SVGElement): this.type = js.native
   def highlight(el: SVGElement, opt: StringDictionary[js.Any]): this.type = js.native
+  def highlight(el: JQuery[HTMLElement]): this.type = js.native
+  def highlight(el: JQuery[HTMLElement], opt: StringDictionary[js.Any]): this.type = js.native
   
   var initFlag: Double = js.native
   
@@ -126,18 +127,18 @@ abstract class CellViewGeneric[T /* <: Cell */] () extends View[T] {
   def unhighlight(el: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]): this.type = js.native
   def unhighlight(el: String): this.type = js.native
   def unhighlight(el: String, opt: StringDictionary[js.Any]): this.type = js.native
-  def unhighlight(el: JQuery[HTMLElement]): this.type = js.native
-  def unhighlight(el: JQuery[HTMLElement], opt: StringDictionary[js.Any]): this.type = js.native
   def unhighlight(el: SVGElement): this.type = js.native
   def unhighlight(el: SVGElement, opt: StringDictionary[js.Any]): this.type = js.native
+  def unhighlight(el: JQuery[HTMLElement]): this.type = js.native
+  def unhighlight(el: JQuery[HTMLElement], opt: StringDictionary[js.Any]): this.type = js.native
   
   def updateTools(): this.type = js.native
   def updateTools(opt: StringDictionary[js.Any]): this.type = js.native
 }
-/* static members */
-@JSImport("jointjs", "dia.CellViewGeneric")
-@js.native
-object CellViewGeneric extends js.Object {
+object CellViewGeneric {
   
+  /* static member */
+  @JSImport("jointjs", "dia.CellViewGeneric.addPresentationAttributes")
+  @js.native
   def addPresentationAttributes(attributes: PresentationAttributes): PresentationAttributes = js.native
 }

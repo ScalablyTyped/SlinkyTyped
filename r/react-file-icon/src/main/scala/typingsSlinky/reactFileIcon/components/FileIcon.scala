@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFileIcon.mod.FileIconProps
 import typingsSlinky.reactFileIcon.mod.IconType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object FileIcon {
   
   @JSImport("react-file-icon", "FileIcon")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,7 +60,7 @@ object FileIcon {
     def `type`(value: IconType): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FileIconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FileIcon.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FileIconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

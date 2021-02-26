@@ -7,15 +7,22 @@ import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SelectionZone {
   
+  @scala.inline
+  def apply(selection: ISelection[IObjectWithKey]): Builder = {
+    val __props = js.Dynamic.literal(selection = selection.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ISelectionZoneProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "SelectionZone")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,10 +68,4 @@ object SelectionZone {
   }
   
   def withProps(p: ISelectionZoneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(selection: ISelection[IObjectWithKey]): Builder = {
-    val __props = js.Dynamic.literal(selection = selection.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ISelectionZoneProps]))
-  }
 }

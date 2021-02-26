@@ -5,12 +5,13 @@ import typingsSlinky.mfiles.MFiles.MFBuiltInView
 import typingsSlinky.mfiles.MFiles.MFFolderUIStateLocationType
 import typingsSlinky.mfiles.MFiles.MFSearchFlags
 import typingsSlinky.mfiles.MFiles.MFViewCategory
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultViewOperations extends js.Object {
+trait IVaultViewOperations extends StObject {
   
   def AddOfflineFilter(OfflineFilter: IView): IView = js.native
   

@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabNbformat.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jupyterlabNbformat.jupyterlabNbformatStrings.markdown
   - typingsSlinky.jupyterlabNbformat.jupyterlabNbformatStrings.raw
 */
-trait CellType extends js.Object
+trait CellType extends StObject
 object CellType {
   
   @scala.inline

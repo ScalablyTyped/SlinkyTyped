@@ -40,12 +40,13 @@ import typingsSlinky.node.fsMod.WriteFileOptions
 import typingsSlinky.node.fsMod.WriteStream
 import typingsSlinky.node.fsMod.symlink.Type
 import typingsSlinky.walkSync.walkSyncStrings.buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeoffsNode extends js.Object {
+trait TypeoffsNode extends StObject {
   
   var BigIntStats: Instantiable0[typingsSlinky.node.fsMod.BigIntStats] = js.native
   
@@ -134,14 +135,14 @@ trait TypeoffsNode extends js.Object {
   val futimes: Typeoffutimes = js.native
   
   def futimesSync(fd: Double, atime: String, mtime: String): Unit = js.native
-  def futimesSync(fd: Double, atime: String, mtime: Double): Unit = js.native
   def futimesSync(fd: Double, atime: String, mtime: js.Date): Unit = js.native
-  def futimesSync(fd: Double, atime: Double, mtime: String): Unit = js.native
-  def futimesSync(fd: Double, atime: Double, mtime: Double): Unit = js.native
-  def futimesSync(fd: Double, atime: Double, mtime: js.Date): Unit = js.native
+  def futimesSync(fd: Double, atime: String, mtime: Double): Unit = js.native
   def futimesSync(fd: Double, atime: js.Date, mtime: String): Unit = js.native
-  def futimesSync(fd: Double, atime: js.Date, mtime: Double): Unit = js.native
   def futimesSync(fd: Double, atime: js.Date, mtime: js.Date): Unit = js.native
+  def futimesSync(fd: Double, atime: js.Date, mtime: Double): Unit = js.native
+  def futimesSync(fd: Double, atime: Double, mtime: String): Unit = js.native
+  def futimesSync(fd: Double, atime: Double, mtime: js.Date): Unit = js.native
+  def futimesSync(fd: Double, atime: Double, mtime: Double): Unit = js.native
   
   val lchmod: Typeoflchmod = js.native
   
@@ -162,14 +163,14 @@ trait TypeoffsNode extends js.Object {
   val lutimes: Typeoflutimes = js.native
   
   def lutimesSync(path: PathLike, atime: String, mtime: String): Unit = js.native
-  def lutimesSync(path: PathLike, atime: String, mtime: Double): Unit = js.native
   def lutimesSync(path: PathLike, atime: String, mtime: js.Date): Unit = js.native
-  def lutimesSync(path: PathLike, atime: Double, mtime: String): Unit = js.native
-  def lutimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
-  def lutimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
+  def lutimesSync(path: PathLike, atime: String, mtime: Double): Unit = js.native
   def lutimesSync(path: PathLike, atime: js.Date, mtime: String): Unit = js.native
-  def lutimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
   def lutimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
+  def lutimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
+  def lutimesSync(path: PathLike, atime: Double, mtime: String): Unit = js.native
+  def lutimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
+  def lutimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
   
   val mkdir: Typeofmkdir = js.native
   
@@ -307,14 +308,14 @@ trait TypeoffsNode extends js.Object {
   val utimes: Typeofutimes = js.native
   
   def utimesSync(path: PathLike, atime: String, mtime: String): Unit = js.native
-  def utimesSync(path: PathLike, atime: String, mtime: Double): Unit = js.native
   def utimesSync(path: PathLike, atime: String, mtime: js.Date): Unit = js.native
-  def utimesSync(path: PathLike, atime: Double, mtime: String): Unit = js.native
-  def utimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
-  def utimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
+  def utimesSync(path: PathLike, atime: String, mtime: Double): Unit = js.native
   def utimesSync(path: PathLike, atime: js.Date, mtime: String): Unit = js.native
-  def utimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
   def utimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
+  def utimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
+  def utimesSync(path: PathLike, atime: Double, mtime: String): Unit = js.native
+  def utimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
+  def utimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
   
   def watch(filename: PathLike): FSWatcher = js.native
   def watch(filename: PathLike, listener: js.Function2[/* event */ String, /* filename */ String, _]): FSWatcher = js.native

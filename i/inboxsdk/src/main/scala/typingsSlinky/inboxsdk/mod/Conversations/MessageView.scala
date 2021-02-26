@@ -6,12 +6,13 @@ import typingsSlinky.inboxsdk.inboxsdkStrings.destroy
 import typingsSlinky.inboxsdk.inboxsdkStrings.load
 import typingsSlinky.inboxsdk.inboxsdkStrings.viewStateChange
 import typingsSlinky.inboxsdk.mod.Common.Contact
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MessageView extends js.Object {
+trait MessageView extends StObject {
   
   def addAttachmentCardView(cardOptions: AttachmentCardNoPreviewOptions): AttachmentCardView = js.native
   def addAttachmentCardView(cardOptions: AttachmentCardOptions): AttachmentCardView = js.native

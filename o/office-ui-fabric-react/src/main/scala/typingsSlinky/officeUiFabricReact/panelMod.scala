@@ -5,32 +5,44 @@ import typingsSlinky.officeUiFabricReact.anon.PartialIPanelState
 import typingsSlinky.officeUiFabricReact.anon.ReadonlyIPanelProps
 import typingsSlinky.officeUiFabricReact.anon.ReadonlyIPanelState
 import typingsSlinky.officeUiFabricReact.panelTypesMod.IPanelProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/Panel", JSImport.Namespace)
-@js.native
-object panelMod extends js.Object {
+object panelMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/Panel", "Panel")
+  @js.native
   val Panel: ReactComponentClass[IPanelProps] = js.native
   
+  @JSImport("office-ui-fabric-react/lib/components/Panel", "PanelBase")
   @js.native
   class PanelBase protected ()
     extends typingsSlinky.officeUiFabricReact.panelBaseMod.PanelBase {
     def this(props: IPanelProps) = this()
   }
   /* static members */
-  @js.native
-  object PanelBase extends js.Object {
+  object PanelBase {
     
-    var defaultProps: IPanelProps = js.native
+    @JSImport("office-ui-fabric-react/lib/components/Panel", "PanelBase")
+    @js.native
+    val ^ : js.Any = js.native
     
+    @JSImport("office-ui-fabric-react/lib/components/Panel", "PanelBase.defaultProps")
+    @js.native
+    def defaultProps: IPanelProps = js.native
+    @scala.inline
+    def defaultProps_=(x: IPanelProps): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
+    
+    @JSImport("office-ui-fabric-react/lib/components/Panel", "PanelBase.getDerivedStateFromProps")
+    @js.native
     def getDerivedStateFromProps(nextProps: ReadonlyIPanelProps, prevState: ReadonlyIPanelState): PartialIPanelState | Null = js.native
   }
   
+  @JSImport("office-ui-fabric-react/lib/components/Panel", "PanelType")
   @js.native
-  object PanelType extends js.Object {
+  object PanelType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.panelTypesMod.PanelType with Double] = js.native
@@ -54,8 +66,9 @@ object panelMod extends js.Object {
     /* 0 */ val smallFluid: typingsSlinky.officeUiFabricReact.panelTypesMod.PanelType.smallFluid with Double = js.native
   }
   
+  @JSImport("office-ui-fabric-react/lib/components/Panel", "PanelVisibilityState")
   @js.native
-  object PanelVisibilityState extends js.Object {
+  object PanelVisibilityState extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.panelBaseMod.PanelVisibilityState with Double] = js.native

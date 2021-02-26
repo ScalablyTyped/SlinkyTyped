@@ -3,6 +3,7 @@ package typingsSlinky.ssh2.mod
 import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.ssh2.ssh2Booleans.`true`
 import typingsSlinky.ssh2.ssh2Strings.close
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

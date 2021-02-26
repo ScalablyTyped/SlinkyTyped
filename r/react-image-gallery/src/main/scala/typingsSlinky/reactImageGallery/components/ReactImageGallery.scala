@@ -18,15 +18,22 @@ import typingsSlinky.reactImageGallery.reactImageGalleryStrings.bottom
 import typingsSlinky.reactImageGallery.reactImageGalleryStrings.left
 import typingsSlinky.reactImageGallery.reactImageGalleryStrings.right
 import typingsSlinky.reactImageGallery.reactImageGalleryStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactImageGallery {
   
+  @scala.inline
+  def apply(items: js.Array[ReactImageGalleryItem]): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactImageGalleryProps]))
+  }
+  
   @JSImport("react-image-gallery", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -185,10 +192,4 @@ object ReactImageGallery {
   }
   
   def withProps(p: ReactImageGalleryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(items: js.Array[ReactImageGalleryItem]): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactImageGalleryProps]))
-  }
 }

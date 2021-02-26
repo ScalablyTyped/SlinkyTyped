@@ -13,6 +13,7 @@ import typingsSlinky.reactNativeElements.reactNativeElementsStrings.error
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.primary
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.success
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.warning
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ object Badge {
   
   @JSImport("react-native-elements", "Badge")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,13 +60,13 @@ object Badge {
     def textStyleNull: this.type = set("textStyle", null)
     
     @scala.inline
-    def valueReactElement(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
+    def value(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueReactElement(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: BadgeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Badge.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: BadgeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

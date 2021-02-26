@@ -5,12 +5,13 @@ import typingsSlinky.express.mod.RequestHandler
 import typingsSlinky.express.mod.Router
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ParseRequestSignature extends js.Object {
+trait ParseRequestSignature extends StObject {
   
   def apply(): RequestHandler[ParamsDictionary, _, _, Query] = js.native
   def apply(/**

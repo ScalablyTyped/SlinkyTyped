@@ -5,16 +5,17 @@ import typingsSlinky.stormReactDiagrams.abstractFactoryMod.AbstractFactory
 import typingsSlinky.stormReactDiagrams.diagramEngineMod.DiagramEngine
 import typingsSlinky.stormReactDiagrams.linkModelMod.LinkModel
 import typingsSlinky.stormReactDiagrams.linkModelMod.LinkModelListener
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("storm-react-diagrams/dist/src/factories/AbstractLinkFactory", JSImport.Namespace)
-@js.native
-object abstractLinkFactoryMod extends js.Object {
+object abstractLinkFactoryMod {
   
+  @JSImport("storm-react-diagrams/dist/src/factories/AbstractLinkFactory", "AbstractLinkFactory")
   @js.native
-  abstract class AbstractLinkFactory[T /* <: LinkModel[LinkModelListener] */] () extends AbstractFactory[T] {
+  abstract class AbstractLinkFactory[T /* <: LinkModel[LinkModelListener] */] protected () extends AbstractFactory[T] {
+    def this(name: String) = this()
     
     def generateReactWidget(diagramEngine: DiagramEngine, link: T): ReactElement = js.native
   }

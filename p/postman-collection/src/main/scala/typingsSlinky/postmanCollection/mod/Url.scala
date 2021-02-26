@@ -4,6 +4,7 @@ import typingsSlinky.postmanCollection.anon.ForcePort
 import typingsSlinky.postmanCollection.anon.IgnoredDisabled
 import typingsSlinky.postmanCollection.anon.Password
 import typingsSlinky.postmanCollection.anon.Unresolved
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -64,11 +65,13 @@ class Url protected () extends PropertyBase[UrlDefinition] {
   var variables: VariableList = js.native
 }
 /* static members */
-@JSImport("postman-collection", "Url")
-@js.native
-object Url extends js.Object {
+object Url {
   
+  @JSImport("postman-collection", "Url.isUrl")
+  @js.native
   def isUrl(obj: js.Any): Boolean = js.native
   
+  @JSImport("postman-collection", "Url.parse")
+  @js.native
   def parse(url: String): UrlDefinition = js.native
 }

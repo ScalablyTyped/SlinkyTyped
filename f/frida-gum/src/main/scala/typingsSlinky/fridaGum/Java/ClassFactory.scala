@@ -1,12 +1,13 @@
 package typingsSlinky.fridaGum.Java
 
 import typingsSlinky.fridaGum.NativePointerValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClassFactory extends js.Object {
+trait ClassFactory extends StObject {
   
   /**
     * Creates a Java array with elements of the specified `type`, from a

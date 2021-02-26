@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/av/library-music", JSImport.Namespace)
-@js.native
-object libraryMusicMod extends js.Object {
+object libraryMusicMod {
   
+  @JSImport("material-ui/svg-icons/av/library-music", JSImport.Default)
+  @js.native
+  class default () extends AvLibraryMusic
+  
+  @JSImport("material-ui/svg-icons/av/library-music", "AvLibraryMusic")
   @js.native
   class AvLibraryMusic ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

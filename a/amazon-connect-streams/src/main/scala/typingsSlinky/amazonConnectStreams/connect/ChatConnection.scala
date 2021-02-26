@@ -1,6 +1,7 @@
 package typingsSlinky.amazonConnectStreams.connect
 
 import typingsSlinky.amazonConnectStreams.connect.MediaType.CHAT
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookComponents.controlsTypesMod.NumberValue
 import typingsSlinky.storybookComponents.numberMod.NumberProps
 import typingsSlinky.storybookComponents.typesMod.ArgType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object NumberControl {
   
+  @scala.inline
+  def apply(name: String, onChange: NumberValue | Null => NumberValue | Null | Unit): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[NumberProps]))
+  }
+  
   @JSImport("@storybook/components", "NumberControl")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,10 +59,4 @@ object NumberControl {
   }
   
   def withProps(p: NumberProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(name: String, onChange: NumberValue | Null => NumberValue | Null | Unit): Builder = {
-    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[NumberProps]))
-  }
 }

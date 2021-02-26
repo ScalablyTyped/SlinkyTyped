@@ -1,5 +1,6 @@
 package typingsSlinky.plugapi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,3 +18,6 @@ class ^ protected () extends PlugAPI {
       ]
   ) = this()
 }
+@JSImport("plugapi", JSImport.Namespace)
+@js.native
+object ^ extends StObject

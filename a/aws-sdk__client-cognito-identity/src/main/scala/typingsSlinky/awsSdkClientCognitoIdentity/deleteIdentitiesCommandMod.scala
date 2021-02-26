@@ -5,19 +5,19 @@ import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.Servic
 import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.ServiceOutputTypes
 import typingsSlinky.awsSdkClientCognitoIdentity.models0Mod.DeleteIdentitiesInput
 import typingsSlinky.awsSdkClientCognitoIdentity.models0Mod.DeleteIdentitiesResponse
-import typingsSlinky.awsSdkSmithyClient.commandMod.Command
+import typingsSlinky.awsSdkSmithyClient.mod.Command
 import typingsSlinky.awsSdkTypes.httpMod.HttpHandlerOptions
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity/types/commands/DeleteIdentitiesCommand", JSImport.Namespace)
-@js.native
-object deleteIdentitiesCommandMod extends js.Object {
+object deleteIdentitiesCommandMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity/types/commands/DeleteIdentitiesCommand", "DeleteIdentitiesCommand")
   @js.native
   class DeleteIdentitiesCommand protected ()
     extends Command[

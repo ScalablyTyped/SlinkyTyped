@@ -2,14 +2,15 @@ package typingsSlinky.tensorflowTfjsCore
 
 import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-core/dist/ops/sparse_to_dense_util", JSImport.Namespace)
-@js.native
-object sparseToDenseUtilMod extends js.Object {
+object sparseToDenseUtilMod {
   
+  @JSImport("@tensorflow/tfjs-core/dist/ops/sparse_to_dense_util", "validateInput")
+  @js.native
   def validateInput(
     sparseIndices: Tensor[Rank],
     sparseValues: Tensor[Rank],

@@ -2,6 +2,7 @@ package typingsSlinky.leafletDraw.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.leaflet.mod.Class
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -4,6 +4,7 @@ import typingsSlinky.winrt.Windows.Foundation.Collections.IPropertySet
 import typingsSlinky.winrt.Windows.Foundation.Point
 import typingsSlinky.winrt.Windows.Foundation.Rect
 import typingsSlinky.winrt.Windows.System.VirtualKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

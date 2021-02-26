@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.messageMod.MessageProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/message", JSImport.Namespace)
-@js.native
-object primereactMessageMod extends js.Object {
+object primereactMessageMod {
   
+  @JSImport("primereact/message", "Message")
   @js.native
-  class Message ()
-    extends Component[MessageProps, js.Any, js.Any]
+  class Message protected ()
+    extends typingsSlinky.primereact.messageMod.Message {
+    def this(props: MessageProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: MessageProps, context: js.Any) = this()
+  }
 }

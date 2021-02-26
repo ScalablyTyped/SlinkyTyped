@@ -10,15 +10,22 @@ import typingsSlinky.reactNativeSvgCharts.anon.PartialTextProps
 import typingsSlinky.reactNativeSvgCharts.mod.AccessorFunctionProps
 import typingsSlinky.reactNativeSvgCharts.mod.ScaleType
 import typingsSlinky.reactNativeSvgCharts.mod.XAxisProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object XAxis {
   
+  @scala.inline
+  def apply[T](data: js.Array[T]): Builder[T] = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[XAxisProps[T]]))
+  }
+  
   @JSImport("react-native-svg-charts", "XAxis")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -57,10 +64,4 @@ object XAxis {
   }
   
   def withProps[T](p: XAxisProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](data: js.Array[T]): Builder[T] = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[XAxisProps[T]]))
-  }
 }

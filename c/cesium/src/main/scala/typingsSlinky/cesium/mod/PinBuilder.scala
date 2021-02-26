@@ -1,13 +1,14 @@
 package typingsSlinky.cesium.mod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "PinBuilder")
 @js.native
-class PinBuilder () extends js.Object {
+class PinBuilder () extends StObject {
   
   def fromColor(color: Color, size: Double): HTMLCanvasElement = js.native
   

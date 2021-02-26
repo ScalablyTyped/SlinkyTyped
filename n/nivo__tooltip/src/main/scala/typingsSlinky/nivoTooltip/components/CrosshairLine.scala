@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.nivoTooltip.crosshairLineMod.CrosshairLineProps
 import typingsSlinky.react.mod.ComponentPropsWithRef
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,11 +27,11 @@ typingsSlinky.std.InstanceType[
   * / typingsSlinky.std.stdStrings.Pick with js.Any because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.)) */
 object CrosshairLine {
   
+  def apply(p: ComponentPropsWithRef[js.Function1[/* hasX0X1Y0Y1 */ CrosshairLineProps, ReactElement]]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @JSImport("@nivo/tooltip/dist/types/CrosshairLine", "CrosshairLine")
   @js.native
-  object component extends js.Object
-  
-  def apply(p: ComponentPropsWithRef[js.Function1[/* hasX0X1Y0Y1 */ CrosshairLineProps, ReactElement]]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  val component: js.Object = js.native
   
   implicit def make(companion: CrosshairLine.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }

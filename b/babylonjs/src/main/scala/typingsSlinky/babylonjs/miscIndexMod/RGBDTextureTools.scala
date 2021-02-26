@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.miscIndexMod
 
 import typingsSlinky.babylonjs.textureMod.Texture
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,13 +11,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class RGBDTextureTools ()
   extends typingsSlinky.babylonjs.rgbdTextureToolsMod.RGBDTextureTools
 /* static members */
-@JSImport("babylonjs/Misc/index", "RGBDTextureTools")
-@js.native
-object RGBDTextureTools extends js.Object {
+object RGBDTextureTools {
   
   /**
     * Expand the RGBD Texture from RGBD to Half Float if possible.
     * @param texture the texture to expand.
     */
+  @JSImport("babylonjs/Misc/index", "RGBDTextureTools.ExpandRGBDTexture")
+  @js.native
   def ExpandRGBDTexture(texture: Texture): Unit = js.native
 }

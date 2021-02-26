@@ -13,6 +13,7 @@ import typingsSlinky.phaser.Phaser.Physics.Matter.Components.Static
 import typingsSlinky.phaser.Phaser.Tilemaps.Tile
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterBody
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterBodyTileOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -4,16 +4,18 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialCheckbox.componentMod.MDCCheckboxFactory
 import typingsSlinky.materialDataTable.foundationMod.MDCDataTableFoundation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/data-table/component", JSImport.Namespace)
-@js.native
-object componentMod extends js.Object {
+object componentMod {
   
+  @JSImport("@material/data-table/component", "MDCDataTable")
   @js.native
-  class MDCDataTable () extends MDCComponent[MDCDataTableFoundation] {
+  class MDCDataTable protected () extends MDCComponent[MDCDataTableFoundation] {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(root: Element, foundation: MDCDataTableFoundation, args: js.Any*) = this()
     
     /**
       * @return Returns array of header row cell elements.
@@ -55,9 +57,10 @@ object componentMod extends js.Object {
     def showProgress(): Unit = js.native
   }
   /* static members */
-  @js.native
-  object MDCDataTable extends js.Object {
+  object MDCDataTable {
     
+    @JSImport("@material/data-table/component", "MDCDataTable.attachTo")
+    @js.native
     def attachTo(root: Element): MDCDataTable = js.native
   }
 }

@@ -1,12 +1,13 @@
 package typingsSlinky.es6Shim
 
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ArrayConstructor extends js.Object {
+trait ArrayConstructor extends StObject {
   
   /**
     * Creates an array from an array-like object.

@@ -4,14 +4,14 @@ import typingsSlinky.sipJs.dialogsMod.SessionDialog
 import typingsSlinky.sipJs.outgoingRequestMod.OutgoingRequestDelegate
 import typingsSlinky.sipJs.outgoingRequestMod.RequestOptions
 import typingsSlinky.sipJs.userAgentClientMod.UserAgentClient
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/core/user-agents/info-user-agent-client", JSImport.Namespace)
-@js.native
-object infoUserAgentClientMod extends js.Object {
+object infoUserAgentClientMod {
   
+  @JSImport("sip.js/lib/core/user-agents/info-user-agent-client", "InfoUserAgentClient")
   @js.native
   class InfoUserAgentClient protected () extends UserAgentClient {
     def this(dialog: SessionDialog) = this()

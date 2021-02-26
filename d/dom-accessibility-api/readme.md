@@ -10,9 +10,9 @@ Typings are for version 0.5.4
 | ------------------ | :-------------: |
 | Full name          | dom-accessibility-api |
 | Keywords           | accessibility, ARIA, accname |
-| # releases         | 14 |
+| # releases         | 16 |
 | # dependents       | 2 |
-| # downloads        | 26814713 |
+| # downloads        | 45904504 |
 | # stars            | 0 |
 
 ## Links

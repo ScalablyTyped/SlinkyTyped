@@ -10,9 +10,9 @@ Array#isArray for older browsers
 | ------------------ | :-------------: |
 | Full name          | isarray |
 | Keywords           | browser, isarray, array |
-| # releases         | 4 |
-| # dependents       | 325 |
-| # downloads        | 1138785373 |
+| # releases         | 2 |
+| # dependents       | 422 |
+| # downloads        | 1836786989 |
 | # stars            | 8 |
 
 ## Links

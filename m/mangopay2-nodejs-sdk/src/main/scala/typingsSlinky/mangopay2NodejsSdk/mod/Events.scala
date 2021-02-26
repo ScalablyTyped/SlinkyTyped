@@ -1,13 +1,14 @@
 package typingsSlinky.mangopay2NodejsSdk.mod
 
 import typingsSlinky.mangopay2NodejsSdk.mod.event.EventData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mangopay2-nodejs-sdk", "Events")
 @js.native
-class Events () extends js.Object {
+class Events () extends StObject {
   
   /**
     * Get events

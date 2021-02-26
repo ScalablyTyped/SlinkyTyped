@@ -1,11 +1,12 @@
 package typingsSlinky.awsSdk.iamMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VirtualMFADevice extends js.Object {
+trait VirtualMFADevice extends StObject {
   
   /**
     *  The base32 seed defined as specified in RFC3548. The Base32StringSeed is base64-encoded. 
@@ -41,51 +42,39 @@ object VirtualMFADevice {
   }
   
   @scala.inline
-  implicit class VirtualMFADeviceOps[Self <: VirtualMFADevice] (val x: Self) extends AnyVal {
+  implicit class VirtualMFADeviceMutableBuilder[Self <: VirtualMFADevice] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBase32StringSeed(value: BootstrapDatum): Self = StObject.set(x, "Base32StringSeed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setBase32StringSeedUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "Base32StringSeed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setBase32StringSeedUndefined: Self = StObject.set(x, "Base32StringSeed", js.undefined)
     
     @scala.inline
-    def setSerialNumber(value: serialNumberType): Self = this.set("SerialNumber", value.asInstanceOf[js.Any])
+    def setEnableDate(value: js.Date): Self = StObject.set(x, "EnableDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBase32StringSeedUint8Array(value: js.typedarray.Uint8Array): Self = this.set("Base32StringSeed", value.asInstanceOf[js.Any])
+    def setEnableDateUndefined: Self = StObject.set(x, "EnableDate", js.undefined)
     
     @scala.inline
-    def setBase32StringSeed(value: BootstrapDatum): Self = this.set("Base32StringSeed", value.asInstanceOf[js.Any])
+    def setQRCodePNG(value: BootstrapDatum): Self = StObject.set(x, "QRCodePNG", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBase32StringSeed: Self = this.set("Base32StringSeed", js.undefined)
+    def setQRCodePNGUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "QRCodePNG", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEnableDate(value: js.Date): Self = this.set("EnableDate", value.asInstanceOf[js.Any])
+    def setQRCodePNGUndefined: Self = StObject.set(x, "QRCodePNG", js.undefined)
     
     @scala.inline
-    def deleteEnableDate: Self = this.set("EnableDate", js.undefined)
+    def setSerialNumber(value: serialNumberType): Self = StObject.set(x, "SerialNumber", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setQRCodePNGUint8Array(value: js.typedarray.Uint8Array): Self = this.set("QRCodePNG", value.asInstanceOf[js.Any])
+    def setUser(value: User): Self = StObject.set(x, "User", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setQRCodePNG(value: BootstrapDatum): Self = this.set("QRCodePNG", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteQRCodePNG: Self = this.set("QRCodePNG", js.undefined)
-    
-    @scala.inline
-    def setUser(value: User): Self = this.set("User", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUser: Self = this.set("User", js.undefined)
+    def setUserUndefined: Self = StObject.set(x, "User", js.undefined)
   }
 }

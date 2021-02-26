@@ -7,6 +7,7 @@ import typingsSlinky.reactNative.mod.StatusBarProps
 import typingsSlinky.reactNative.mod.StatusBarStyle
 import typingsSlinky.reactNative.reactNativeStrings.fade
 import typingsSlinky.reactNative.reactNativeStrings.slide
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object StatusBar {
   
   @JSImport("react-native", "StatusBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -44,7 +45,7 @@ object StatusBar {
     def translucent(value: Boolean): this.type = set("translucent", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StatusBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatusBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatusBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

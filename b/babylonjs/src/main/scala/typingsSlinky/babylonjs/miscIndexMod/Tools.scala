@@ -17,6 +17,7 @@ import typingsSlinky.babylonjs.screenshotSizeMod.IScreenshotSize
 import typingsSlinky.babylonjs.toolsMod.IColor4Like
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.std.IArguments
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,13 +27,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Tools ()
   extends typingsSlinky.babylonjs.toolsMod.Tools
 /* static members */
-@JSImport("babylonjs/Misc/index", "Tools")
-@js.native
-object Tools extends js.Object {
+object Tools {
+  
+  @JSImport("babylonjs/Misc/index", "Tools")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * All logs
     */
+  @JSImport("babylonjs/Misc/index", "Tools.AllLogLevel")
+  @js.native
   val AllLogLevel: Double = js.native
   
   /**
@@ -42,35 +47,31 @@ object Tools extends js.Object {
     * @param args arguments passed to the attachControl function
     * @returns the correct value for noPreventDefault
     */
+  @JSImport("babylonjs/Misc/index", "Tools.BackCompatCameraNoPreventDefault")
+  @js.native
   def BackCompatCameraNoPreventDefault(args: IArguments): Boolean = js.native
-  
-  /**
-    * Gets or sets the base URL to use to load assets
-    */
-  def BaseUrl: String = js.native
-  def BaseUrl_=(value: String): Unit = js.native
   
   /**
     * Removes unwanted characters from an url
     * @param url defines the url to clean
     * @returns the cleaned url
     */
+  @JSImport("babylonjs/Misc/index", "Tools.CleanUrl")
+  @js.native
   def CleanUrl(url: String): String = js.native
   
   /**
     * Clears the log cache
     */
+  @JSImport("babylonjs/Misc/index", "Tools.ClearLogCache")
+  @js.native
   def ClearLogCache(): Unit = js.native
   
-  /**
-    * Default behaviour for cors in the application.
-    * It can be a string if the expected behavior is identical in the entire app.
-    * Or a callback to be able to set it per url or on a group of them (in case of Video source for instance)
-    */
-  def CorsBehavior: String | (js.Function1[/* url */ String | js.Array[String], String]) = js.native
-  def CorsBehavior_=(value: String | (js.Function1[/* url */ String | js.Array[String], String])): Unit = js.native
-  
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshot")
+  @js.native
   def CreateScreenshot(engine: Engine, camera: Camera, size: Double): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshot")
+  @js.native
   def CreateScreenshot(
     engine: Engine,
     camera: Camera,
@@ -78,12 +79,16 @@ object Tools extends js.Object {
     successCallback: js.UndefOr[scala.Nothing],
     mimeType: String
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshot")
+  @js.native
   def CreateScreenshot(
     engine: Engine,
     camera: Camera,
     size: Double,
     successCallback: js.Function1[/* data */ String, Unit]
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshot")
+  @js.native
   def CreateScreenshot(
     engine: Engine,
     camera: Camera,
@@ -107,7 +112,11 @@ object Tools extends js.Object {
     * @param mimeType defines the MIME type of the screenshot image (default: image/png).
     * Check your browser for supported MIME types
     */
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshot")
+  @js.native
   def CreateScreenshot(engine: Engine, camera: Camera, size: IScreenshotSize): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshot")
+  @js.native
   def CreateScreenshot(
     engine: Engine,
     camera: Camera,
@@ -115,12 +124,16 @@ object Tools extends js.Object {
     successCallback: js.UndefOr[scala.Nothing],
     mimeType: String
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshot")
+  @js.native
   def CreateScreenshot(
     engine: Engine,
     camera: Camera,
     size: IScreenshotSize,
     successCallback: js.Function1[/* data */ String, Unit]
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshot")
+  @js.native
   def CreateScreenshot(
     engine: Engine,
     camera: Camera,
@@ -129,7 +142,11 @@ object Tools extends js.Object {
     mimeType: String
   ): Unit = js.native
   
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotAsync")
+  @js.native
   def CreateScreenshotAsync(engine: Engine, camera: Camera, size: Double): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotAsync")
+  @js.native
   def CreateScreenshotAsync(engine: Engine, camera: Camera, size: Double, mimeType: String): js.Promise[String] = js.native
   /**
     * Captures a screenshot of the current rendering
@@ -146,7 +163,11 @@ object Tools extends js.Object {
     * @returns screenshot as a string of base64-encoded characters. This string can be assigned
     * to the src parameter of an <img> to display it
     */
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotAsync")
+  @js.native
   def CreateScreenshotAsync(engine: Engine, camera: Camera, size: IScreenshotSize): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotAsync")
+  @js.native
   def CreateScreenshotAsync(engine: Engine, camera: Camera, size: IScreenshotSize, mimeType: String): js.Promise[String] = js.native
   
   /**
@@ -168,6 +189,8 @@ object Tools extends js.Object {
     * @param antialiasing Whether antialiasing should be turned on or not (default: false)
     * @param fileName A name for for the downloaded file.
     */
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTarget")
+  @js.native
   def CreateScreenshotUsingRenderTarget(
     engine: Engine,
     camera: Camera,
@@ -179,7 +202,11 @@ object Tools extends js.Object {
     fileName: js.UndefOr[String]
   ): Unit = js.native
   
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(engine: Engine, camera: Camera, size: Double): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -189,6 +216,8 @@ object Tools extends js.Object {
     antialiasing: js.UndefOr[scala.Nothing],
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -197,6 +226,8 @@ object Tools extends js.Object {
     samples: js.UndefOr[scala.Nothing],
     antialiasing: Boolean
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -206,7 +237,11 @@ object Tools extends js.Object {
     antialiasing: Boolean,
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(engine: Engine, camera: Camera, size: Double, mimeType: js.UndefOr[scala.Nothing], samples: Double): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -216,6 +251,8 @@ object Tools extends js.Object {
     antialiasing: js.UndefOr[scala.Nothing],
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -224,6 +261,8 @@ object Tools extends js.Object {
     samples: Double,
     antialiasing: Boolean
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -233,7 +272,11 @@ object Tools extends js.Object {
     antialiasing: Boolean,
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(engine: Engine, camera: Camera, size: Double, mimeType: String): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -243,6 +286,8 @@ object Tools extends js.Object {
     antialiasing: js.UndefOr[scala.Nothing],
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -251,6 +296,8 @@ object Tools extends js.Object {
     samples: js.UndefOr[scala.Nothing],
     antialiasing: Boolean
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -260,7 +307,11 @@ object Tools extends js.Object {
     antialiasing: Boolean,
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(engine: Engine, camera: Camera, size: Double, mimeType: String, samples: Double): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -270,6 +321,8 @@ object Tools extends js.Object {
     antialiasing: js.UndefOr[scala.Nothing],
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -278,6 +331,8 @@ object Tools extends js.Object {
     samples: Double,
     antialiasing: Boolean
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -305,7 +360,11 @@ object Tools extends js.Object {
     * @returns screenshot as a string of base64-encoded characters. This string can be assigned
     * to the src parameter of an <img> to display it
     */
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(engine: Engine, camera: Camera, size: IScreenshotSize): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -315,6 +374,8 @@ object Tools extends js.Object {
     antialiasing: js.UndefOr[scala.Nothing],
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -323,6 +384,8 @@ object Tools extends js.Object {
     samples: js.UndefOr[scala.Nothing],
     antialiasing: Boolean
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -332,6 +395,8 @@ object Tools extends js.Object {
     antialiasing: Boolean,
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -339,6 +404,8 @@ object Tools extends js.Object {
     mimeType: js.UndefOr[scala.Nothing],
     samples: Double
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -348,6 +415,8 @@ object Tools extends js.Object {
     antialiasing: js.UndefOr[scala.Nothing],
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -356,6 +425,8 @@ object Tools extends js.Object {
     samples: Double,
     antialiasing: Boolean
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -365,7 +436,11 @@ object Tools extends js.Object {
     antialiasing: Boolean,
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(engine: Engine, camera: Camera, size: IScreenshotSize, mimeType: String): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -375,6 +450,8 @@ object Tools extends js.Object {
     antialiasing: js.UndefOr[scala.Nothing],
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -383,6 +460,8 @@ object Tools extends js.Object {
     samples: js.UndefOr[scala.Nothing],
     antialiasing: Boolean
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -392,7 +471,11 @@ object Tools extends js.Object {
     antialiasing: Boolean,
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(engine: Engine, camera: Camera, size: IScreenshotSize, mimeType: String, samples: Double): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -402,6 +485,8 @@ object Tools extends js.Object {
     antialiasing: js.UndefOr[scala.Nothing],
     fileName: String
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -410,6 +495,8 @@ object Tools extends js.Object {
     samples: Double,
     antialiasing: Boolean
   ): js.Promise[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CreateScreenshotUsingRenderTargetAsync")
+  @js.native
   def CreateScreenshotUsingRenderTargetAsync(
     engine: Engine,
     camera: Camera,
@@ -424,13 +511,19 @@ object Tools extends js.Object {
     * Custom HTTP Request Headers to be sent with XMLHttpRequests
     * i.e. when loading files, where the server/service expects an Authorization header
     */
-  var CustomRequestHeaders: org.scalablytyped.runtime.StringDictionary[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.CustomRequestHeaders")
+  @js.native
+  def CustomRequestHeaders: org.scalablytyped.runtime.StringDictionary[String] = js.native
+  @scala.inline
+  def CustomRequestHeaders_=(x: org.scalablytyped.runtime.StringDictionary[String]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("CustomRequestHeaders")(x.asInstanceOf[js.Any])
   
   /**
     * Decode the given base64 uri.
     * @param uri The uri to decode
     * @return The decoded base64 data.
     */
+  @JSImport("babylonjs/Misc/index", "Tools.DecodeBase64")
+  @js.native
   def DecodeBase64(uri: String): js.typedarray.ArrayBuffer = js.native
   
   /**
@@ -440,14 +533,22 @@ object Tools extends js.Object {
     * @param doNotCopyList defines a list of properties to avoid
     * @param mustCopyList defines a list of properties to copy (even if they start with _)
     */
+  @JSImport("babylonjs/Misc/index", "Tools.DeepCopy")
+  @js.native
   def DeepCopy(source: js.Any, destination: js.Any): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.DeepCopy")
+  @js.native
   def DeepCopy(
     source: js.Any,
     destination: js.Any,
     doNotCopyList: js.UndefOr[scala.Nothing],
     mustCopyList: js.Array[String]
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.DeepCopy")
+  @js.native
   def DeepCopy(source: js.Any, destination: js.Any, doNotCopyList: js.Array[String]): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.DeepCopy")
+  @js.native
   def DeepCopy(
     source: js.Any,
     destination: js.Any,
@@ -456,28 +557,12 @@ object Tools extends js.Object {
   ): Unit = js.native
   
   /**
-    * Gets or sets the retry strategy to apply when an error happens while loading an asset
-    */
-  def DefaultRetryStrategy: js.Function3[
-    /* url */ String, 
-    /* request */ typingsSlinky.babylonjs.webRequestMod.WebRequest, 
-    /* retryIndex */ Double, 
-    Double
-  ] = js.native
-  def DefaultRetryStrategy_=(
-    strategy: js.Function3[
-      /* url */ String, 
-      /* request */ typingsSlinky.babylonjs.webRequestMod.WebRequest, 
-      /* retryIndex */ Double, 
-      Double
-    ]
-  ): Unit = js.native
-  
-  /**
     * Returns a promise that resolves after the given amount of time.
     * @param delay Number of milliseconds to delay
     * @returns Promise that resolves after the given amount of time
     */
+  @JSImport("babylonjs/Misc/index", "Tools.DelayAsync")
+  @js.native
   def DelayAsync(delay: Double): js.Promise[Unit] = js.native
   
   /**
@@ -485,6 +570,8 @@ object Tools extends js.Object {
     * @param blob defines the blob to download
     * @param fileName defines the name of the downloaded file
     */
+  @JSImport("babylonjs/Misc/index", "Tools.Download")
+  @js.native
   def Download(blob: Blob, fileName: String): Unit = js.native
   
   /**
@@ -496,7 +583,11 @@ object Tools extends js.Object {
     * @param mimeType defines the mime type of the result
     * @param fileName defines the filename to download. If present, the result will automatically be downloaded
     */
+  @JSImport("babylonjs/Misc/index", "Tools.DumpFramebuffer")
+  @js.native
   def DumpFramebuffer(width: Double, height: Double, engine: Engine): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.DumpFramebuffer")
+  @js.native
   def DumpFramebuffer(
     width: Double,
     height: Double,
@@ -505,6 +596,8 @@ object Tools extends js.Object {
     mimeType: js.UndefOr[scala.Nothing],
     fileName: String
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.DumpFramebuffer")
+  @js.native
   def DumpFramebuffer(
     width: Double,
     height: Double,
@@ -512,6 +605,8 @@ object Tools extends js.Object {
     successCallback: js.UndefOr[scala.Nothing],
     mimeType: String
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.DumpFramebuffer")
+  @js.native
   def DumpFramebuffer(
     width: Double,
     height: Double,
@@ -520,12 +615,16 @@ object Tools extends js.Object {
     mimeType: String,
     fileName: String
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.DumpFramebuffer")
+  @js.native
   def DumpFramebuffer(
     width: Double,
     height: Double,
     engine: Engine,
     successCallback: js.Function1[/* data */ String, Unit]
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.DumpFramebuffer")
+  @js.native
   def DumpFramebuffer(
     width: Double,
     height: Double,
@@ -534,6 +633,8 @@ object Tools extends js.Object {
     mimeType: js.UndefOr[scala.Nothing],
     fileName: String
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.DumpFramebuffer")
+  @js.native
   def DumpFramebuffer(
     width: Double,
     height: Double,
@@ -541,6 +642,8 @@ object Tools extends js.Object {
     successCallback: js.Function1[/* data */ String, Unit],
     mimeType: String
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.DumpFramebuffer")
+  @js.native
   def DumpFramebuffer(
     width: Double,
     height: Double,
@@ -556,34 +659,58 @@ object Tools extends js.Object {
     * @param mimeType defines the mime type of the result
     * @param fileName defines he filename to download. If present, the result will automatically be downloaded
     */
+  @JSImport("babylonjs/Misc/index", "Tools.EncodeScreenshotCanvasData")
+  @js.native
   def EncodeScreenshotCanvasData(): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.EncodeScreenshotCanvasData")
+  @js.native
   def EncodeScreenshotCanvasData(successCallback: js.UndefOr[scala.Nothing], mimeType: js.UndefOr[scala.Nothing], fileName: String): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.EncodeScreenshotCanvasData")
+  @js.native
   def EncodeScreenshotCanvasData(successCallback: js.UndefOr[scala.Nothing], mimeType: String): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.EncodeScreenshotCanvasData")
+  @js.native
   def EncodeScreenshotCanvasData(successCallback: js.UndefOr[scala.Nothing], mimeType: String, fileName: String): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.EncodeScreenshotCanvasData")
+  @js.native
   def EncodeScreenshotCanvasData(successCallback: js.Function1[/* data */ String, Unit]): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.EncodeScreenshotCanvasData")
+  @js.native
   def EncodeScreenshotCanvasData(
     successCallback: js.Function1[/* data */ String, Unit],
     mimeType: js.UndefOr[scala.Nothing],
     fileName: String
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.EncodeScreenshotCanvasData")
+  @js.native
   def EncodeScreenshotCanvasData(successCallback: js.Function1[/* data */ String, Unit], mimeType: String): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.EncodeScreenshotCanvasData")
+  @js.native
   def EncodeScreenshotCanvasData(successCallback: js.Function1[/* data */ String, Unit], mimeType: String, fileName: String): Unit = js.native
   
   /**
     * Ends a specific performance coutner
     */
+  @JSImport("babylonjs/Misc/index", "Tools.EndPerformanceCounter")
+  @js.native
   def EndPerformanceCounter(counterName: String): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.EndPerformanceCounter")
+  @js.native
   def EndPerformanceCounter(counterName: String, condition: Boolean): Unit = js.native
   
   /**
     * Write an error message to the console
     * @param message defines the message to log
     */
+  @JSImport("babylonjs/Misc/index", "Tools.Error")
+  @js.native
   def Error(message: String): Unit = js.native
   
   /**
     * Only error logs
     */
+  @JSImport("babylonjs/Misc/index", "Tools.ErrorLogLevel")
+  @js.native
   val ErrorLogLevel: Double = js.native
   
   /**
@@ -595,6 +722,8 @@ object Tools extends js.Object {
     * @param pixels defines the source byte array
     * @param color defines the output color
     */
+  @JSImport("babylonjs/Misc/index", "Tools.FetchToRef")
+  @js.native
   def FetchToRef(
     u: Double,
     v: Double,
@@ -609,6 +738,8 @@ object Tools extends js.Object {
     * @param content defines the content to convert
     * @returns the new data url link
     */
+  @JSImport("babylonjs/Misc/index", "Tools.FileAsURL")
+  @js.native
   def FileAsURL(content: String): String = js.native
   
   /**
@@ -617,6 +748,8 @@ object Tools extends js.Object {
     * @param predicate defines the predicate to use
     * @returns null if not found or the element
     */
+  @JSImport("babylonjs/Misc/index", "Tools.First")
+  @js.native
   def First[T](array: js.Array[T], predicate: js.Function1[/* item */ T, Boolean]): Nullable[T] = js.native
   
   /**
@@ -625,6 +758,8 @@ object Tools extends js.Object {
     * to a number or to NaN if it cannot be converted
     * @returns number
     */
+  @JSImport("babylonjs/Misc/index", "Tools.FloatRound")
+  @js.native
   def FloatRound(value: Double): Double = js.native
   
   /**
@@ -633,7 +768,11 @@ object Tools extends js.Object {
     * @param decimals defines the number of decimals to use
     * @returns the formatted string
     */
+  @JSImport("babylonjs/Misc/index", "Tools.Format")
+  @js.native
   def Format(value: Double): String = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.Format")
+  @js.native
   def Format(value: Double, decimals: Double): String = js.native
   
   /**
@@ -641,6 +780,8 @@ object Tools extends js.Object {
     * @param url the input url
     * @return the absolute url
     */
+  @JSImport("babylonjs/Misc/index", "Tools.GetAbsoluteUrl")
+  @js.native
   def GetAbsoluteUrl(url: String): String = js.native
   
   /**
@@ -650,20 +791,32 @@ object Tools extends js.Object {
     * @param isType defines if the object is actually a type
     * @returns the name of the class, will be "object" for a custom data type not using the @className decorator
     */
+  @JSImport("babylonjs/Misc/index", "Tools.GetClassName")
+  @js.native
   def GetClassName(`object`: js.Any): String = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.GetClassName")
+  @js.native
   def GetClassName(`object`: js.Any, isType: Boolean): String = js.native
   
   /**
     * Extracts text content from a DOM element hierarchy
     * Back Compat only, please use DomManagement.GetDOMTextContent instead.
     */
-  var GetDOMTextContent: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DomManagement.GetDOMTextContent */ js.Any = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.GetDOMTextContent")
+  @js.native
+  def GetDOMTextContent: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DomManagement.GetDOMTextContent */ js.Any = js.native
+  @scala.inline
+  def GetDOMTextContent_=(
+    x: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DomManagement.GetDOMTextContent */ js.Any
+  ): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("GetDOMTextContent")(x.asInstanceOf[js.Any])
   
   /**
     * Extracts the filename from a path
     * @param path defines the path to use
     * @returns the filename
     */
+  @JSImport("babylonjs/Misc/index", "Tools.GetFilename")
+  @js.native
   def GetFilename(path: String): String = js.native
   
   /**
@@ -672,7 +825,11 @@ object Tools extends js.Object {
     * @param returnUnchangedIfNoSlash Do not touch the URI if no slashes are present
     * @returns The "folder" part of the path
     */
+  @JSImport("babylonjs/Misc/index", "Tools.GetFolderPath")
+  @js.native
   def GetFolderPath(uri: String): String = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.GetFolderPath")
+  @js.native
   def GetFolderPath(uri: String, returnUnchangedIfNoSlash: Boolean): String = js.native
   
   /**
@@ -680,6 +837,8 @@ object Tools extends js.Object {
     * @param engine defines the engine we are finding the prefix for
     * @returns "pointer" if touch is enabled. Else returns "mouse"
     */
+  @JSImport("babylonjs/Misc/index", "Tools.GetPointerPrefix")
+  @js.native
   def GetPointerPrefix(engine: Engine): String = js.native
   
   /**
@@ -687,6 +846,8 @@ object Tools extends js.Object {
     * @param className defines the class name to instantiate
     * @returns the new object or null if the system was not able to do the instantiation
     */
+  @JSImport("babylonjs/Misc/index", "Tools.Instantiate")
+  @js.native
   def Instantiate(className: String): js.Any = js.native
   
   /**
@@ -694,6 +855,8 @@ object Tools extends js.Object {
     * @param uri The uri to test
     * @return True if the uri is a base64 string or false otherwise
     */
+  @JSImport("babylonjs/Misc/index", "Tools.IsBase64")
+  @js.native
   def IsBase64(uri: String): Boolean = js.native
   
   /**
@@ -701,6 +864,8 @@ object Tools extends js.Object {
     * @param obj defines the object to test
     * @returns true if object has no own property
     */
+  @JSImport("babylonjs/Misc/index", "Tools.IsEmpty")
+  @js.native
   def IsEmpty(obj: js.Any): Boolean = js.native
   
   /**
@@ -708,19 +873,29 @@ object Tools extends js.Object {
     * @param value defines the value to test
     * @returns true if the value is an exponent of 2
     */
+  @JSImport("babylonjs/Misc/index", "Tools.IsExponentOfTwo")
+  @js.native
   def IsExponentOfTwo(value: Double): Boolean = js.native
   
   /**
     * Utility function to detect if the current user agent is Safari
     * @returns whether or not the current user agent is safari
     */
+  @JSImport("babylonjs/Misc/index", "Tools.IsSafari")
+  @js.native
   def IsSafari(): Boolean = js.native
   
   /**
     * Checks if the window object exists
     * Back Compat only, please use DomManagement.IsWindowObjectExist instead.
     */
-  var IsWindowObjectExist: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DomManagement.IsWindowObjectExist */ js.Any = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.IsWindowObjectExist")
+  @js.native
+  def IsWindowObjectExist: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DomManagement.IsWindowObjectExist */ js.Any = js.native
+  @scala.inline
+  def IsWindowObjectExist_=(
+    x: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DomManagement.IsWindowObjectExist */ js.Any
+  ): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("IsWindowObjectExist")(x.asInstanceOf[js.Any])
   
   /**
     * Loads a file from a url
@@ -732,6 +907,8 @@ object Tools extends js.Object {
     * @param onError callback called when the file fails to load
     * @returns a file request object
     */
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -740,6 +917,8 @@ object Tools extends js.Object {
       Unit
     ]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -756,6 +935,8 @@ object Tools extends js.Object {
       Unit
     ]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -767,6 +948,8 @@ object Tools extends js.Object {
     offlineProvider: js.UndefOr[scala.Nothing],
     useArrayBuffer: Boolean
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -783,6 +966,8 @@ object Tools extends js.Object {
       Unit
     ]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -793,6 +978,8 @@ object Tools extends js.Object {
     onProgress: js.UndefOr[scala.Nothing],
     offlineProvider: IOfflineProvider
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -809,6 +996,8 @@ object Tools extends js.Object {
       Unit
     ]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -820,6 +1009,8 @@ object Tools extends js.Object {
     offlineProvider: IOfflineProvider,
     useArrayBuffer: Boolean
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -836,6 +1027,8 @@ object Tools extends js.Object {
       Unit
     ]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -845,6 +1038,8 @@ object Tools extends js.Object {
     ],
     onProgress: js.Function1[/* data */ js.Any, Unit]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -861,6 +1056,8 @@ object Tools extends js.Object {
       Unit
     ]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -872,6 +1069,8 @@ object Tools extends js.Object {
     offlineProvider: js.UndefOr[scala.Nothing],
     useArrayBuffer: Boolean
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -888,6 +1087,8 @@ object Tools extends js.Object {
       Unit
     ]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -898,6 +1099,8 @@ object Tools extends js.Object {
     onProgress: js.Function1[/* data */ js.Any, Unit],
     offlineProvider: IOfflineProvider
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -914,6 +1117,8 @@ object Tools extends js.Object {
       Unit
     ]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -925,6 +1130,8 @@ object Tools extends js.Object {
     offlineProvider: IOfflineProvider,
     useArrayBuffer: Boolean
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFile")
+  @js.native
   def LoadFile(
     url: String,
     onSuccess: js.Function2[
@@ -948,7 +1155,11 @@ object Tools extends js.Object {
     * @param useArrayBuffer defines a boolean indicating that date must be returned as ArrayBuffer
     * @returns a promise containing an ArrayBuffer corresponding to the loaded file
     */
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFileAsync")
+  @js.native
   def LoadFileAsync(url: String): js.Promise[js.typedarray.ArrayBuffer | String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadFileAsync")
+  @js.native
   def LoadFileAsync(url: String, useArrayBuffer: Boolean): js.Promise[js.typedarray.ArrayBuffer | String] = js.native
   
   /**
@@ -960,12 +1171,16 @@ object Tools extends js.Object {
     * @param mimeType optional mime type
     * @returns the HTMLImageElement of the loaded image
     */
+  @JSImport("babylonjs/Misc/index", "Tools.LoadImage")
+  @js.native
   def LoadImage(
     input: String,
     onLoad: js.Function1[/* img */ HTMLImageElement | ImageBitmap, Unit],
     onError: js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[js.Any], Unit],
     offlineProvider: Nullable[IOfflineProvider]
   ): Nullable[HTMLImageElement] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadImage")
+  @js.native
   def LoadImage(
     input: String,
     onLoad: js.Function1[/* img */ HTMLImageElement | ImageBitmap, Unit],
@@ -973,12 +1188,16 @@ object Tools extends js.Object {
     offlineProvider: Nullable[IOfflineProvider],
     mimeType: String
   ): Nullable[HTMLImageElement] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadImage")
+  @js.native
   def LoadImage(
     input: js.typedarray.ArrayBuffer,
     onLoad: js.Function1[/* img */ HTMLImageElement | ImageBitmap, Unit],
     onError: js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[js.Any], Unit],
     offlineProvider: Nullable[IOfflineProvider]
   ): Nullable[HTMLImageElement] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadImage")
+  @js.native
   def LoadImage(
     input: js.typedarray.ArrayBuffer,
     onLoad: js.Function1[/* img */ HTMLImageElement | ImageBitmap, Unit],
@@ -986,12 +1205,16 @@ object Tools extends js.Object {
     offlineProvider: Nullable[IOfflineProvider],
     mimeType: String
   ): Nullable[HTMLImageElement] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadImage")
+  @js.native
   def LoadImage(
     input: Blob,
     onLoad: js.Function1[/* img */ HTMLImageElement | ImageBitmap, Unit],
     onError: js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[js.Any], Unit],
     offlineProvider: Nullable[IOfflineProvider]
   ): Nullable[HTMLImageElement] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadImage")
+  @js.native
   def LoadImage(
     input: Blob,
     onLoad: js.Function1[/* img */ HTMLImageElement | ImageBitmap, Unit],
@@ -1008,18 +1231,26 @@ object Tools extends js.Object {
     * @param onError defines the callback to call if an error occurs
     * @param scriptId defines the id of the script element
     */
+  @JSImport("babylonjs/Misc/index", "Tools.LoadScript")
+  @js.native
   def LoadScript(scriptUrl: String, onSuccess: js.Function0[Unit]): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadScript")
+  @js.native
   def LoadScript(
     scriptUrl: String,
     onSuccess: js.Function0[Unit],
     onError: js.UndefOr[scala.Nothing],
     scriptId: String
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadScript")
+  @js.native
   def LoadScript(
     scriptUrl: String,
     onSuccess: js.Function0[Unit],
     onError: js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[js.Any], Unit]
   ): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadScript")
+  @js.native
   def LoadScript(
     scriptUrl: String,
     onSuccess: js.Function0[Unit],
@@ -1034,24 +1265,20 @@ object Tools extends js.Object {
     * @param scriptId defines the id of the script element
     * @returns a promise request object
     */
+  @JSImport("babylonjs/Misc/index", "Tools.LoadScriptAsync")
+  @js.native
   def LoadScriptAsync(scriptUrl: String): js.Promise[Unit] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.LoadScriptAsync")
+  @js.native
   def LoadScriptAsync(scriptUrl: String, scriptId: String): js.Promise[Unit] = js.native
   
   /**
     * Log a message to the console
     * @param message defines the message to log
     */
+  @JSImport("babylonjs/Misc/index", "Tools.Log")
+  @js.native
   def Log(message: String): Unit = js.native
-  
-  /**
-    * Gets current log cache (list of logs)
-    */
-  def LogCache: String = js.native
-  
-  /**
-    * Sets the current log level (MessageLogLevel / WarningLogLevel / ErrorLogLevel)
-    */
-  def LogLevels_=(level: Double): Unit = js.native
   
   /**
     * Returns an array if obj is not an array
@@ -1059,12 +1286,18 @@ object Tools extends js.Object {
     * @param allowsNullUndefined defines a boolean indicating if obj is allowed to be null or undefined
     * @returns either obj directly if obj is an array or a new array containing obj
     */
+  @JSImport("babylonjs/Misc/index", "Tools.MakeArray")
+  @js.native
   def MakeArray(obj: js.Any): Nullable[js.Array[_]] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.MakeArray")
+  @js.native
   def MakeArray(obj: js.Any, allowsNullUndefined: Boolean): Nullable[js.Array[_]] = js.native
   
   /**
     * Only message logs
     */
+  @JSImport("babylonjs/Misc/index", "Tools.MessageLogLevel")
+  @js.native
   val MessageLogLevel: Double = js.native
   
   /**
@@ -1074,48 +1307,44 @@ object Tools extends js.Object {
     * @param alpha The interpolation-factor
     * @return The mixed value
     */
+  @JSImport("babylonjs/Misc/index", "Tools.Mix")
+  @js.native
   def Mix(a: Double, b: Double, alpha: Double): Double = js.native
   
   /**
     * No log
     */
+  @JSImport("babylonjs/Misc/index", "Tools.NoneLogLevel")
+  @js.native
   val NoneLogLevel: Double = js.native
-  
-  /**
-    * Gets either window.performance.now() if supported or Date.now() else
-    */
-  def Now: Double = js.native
   
   /**
     * Callback called when a new log is added
     */
+  @JSImport("babylonjs/Misc/index", "Tools.OnNewCacheEntry")
+  @js.native
   def OnNewCacheEntry(entry: String): Unit = js.native
   
   /**
     * Log performance to the console
     */
+  @JSImport("babylonjs/Misc/index", "Tools.PerformanceConsoleLogLevel")
+  @js.native
   val PerformanceConsoleLogLevel: Double = js.native
-  
-  /**
-    * Sets the current performance log level
-    */
-  def PerformanceLogLevel_=(level: Double): Unit = js.native
   
   /**
     * No performance log
     */
+  @JSImport("babylonjs/Misc/index", "Tools.PerformanceNoneLogLevel")
+  @js.native
   val PerformanceNoneLogLevel: Double = js.native
   
   /**
     * Use user marks to log performance
     */
+  @JSImport("babylonjs/Misc/index", "Tools.PerformanceUserMarkLogLevel")
+  @js.native
   val PerformanceUserMarkLogLevel: Double = js.native
-  
-  /**
-    * Gets or sets a function used to pre-process url before using them to load assets
-    */
-  def PreprocessUrl: js.Function1[/* url */ String, String] = js.native
-  def PreprocessUrl_=(processor: js.Function1[/* url */ String, String]): Unit = js.native
   
   /**
     * Implementation from http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript/2117523#answer-2117523
@@ -1123,6 +1352,8 @@ object Tools extends js.Object {
     * "All but 6 of the 128 bits of the ID are randomly generated, which means that for any two ids, there's a 1 in 2^^122 (or 5.3x10^^36) chance they'll collide"
     * @returns a pseudo random id
     */
+  @JSImport("babylonjs/Misc/index", "Tools.RandomId")
+  @js.native
   def RandomId(): String = js.native
   
   /**
@@ -1134,7 +1365,11 @@ object Tools extends js.Object {
     * @param onError defines the callback to call when an error occurs
     * @returns a file request object
     */
+  @JSImport("babylonjs/Misc/index", "Tools.ReadFile")
+  @js.native
   def ReadFile(file: File, onSuccess: js.Function1[/* data */ js.Any, Unit]): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.ReadFile")
+  @js.native
   def ReadFile(
     file: File,
     onSuccess: js.Function1[/* data */ js.Any, Unit],
@@ -1142,12 +1377,16 @@ object Tools extends js.Object {
     useArrayBuffer: js.UndefOr[scala.Nothing],
     onError: js.Function1[/* error */ typingsSlinky.babylonjs.fileToolsMod.ReadFileError, Unit]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.ReadFile")
+  @js.native
   def ReadFile(
     file: File,
     onSuccess: js.Function1[/* data */ js.Any, Unit],
     onProgress: js.UndefOr[scala.Nothing],
     useArrayBuffer: Boolean
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.ReadFile")
+  @js.native
   def ReadFile(
     file: File,
     onSuccess: js.Function1[/* data */ js.Any, Unit],
@@ -1155,11 +1394,15 @@ object Tools extends js.Object {
     useArrayBuffer: Boolean,
     onError: js.Function1[/* error */ typingsSlinky.babylonjs.fileToolsMod.ReadFileError, Unit]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.ReadFile")
+  @js.native
   def ReadFile(
     file: File,
     onSuccess: js.Function1[/* data */ js.Any, Unit],
     onProgress: js.Function1[/* ev */ ProgressEvent, _]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.ReadFile")
+  @js.native
   def ReadFile(
     file: File,
     onSuccess: js.Function1[/* data */ js.Any, Unit],
@@ -1167,12 +1410,16 @@ object Tools extends js.Object {
     useArrayBuffer: js.UndefOr[scala.Nothing],
     onError: js.Function1[/* error */ typingsSlinky.babylonjs.fileToolsMod.ReadFileError, Unit]
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.ReadFile")
+  @js.native
   def ReadFile(
     file: File,
     onSuccess: js.Function1[/* data */ js.Any, Unit],
     onProgress: js.Function1[/* ev */ ProgressEvent, _],
     useArrayBuffer: Boolean
   ): IFileRequest = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.ReadFile")
+  @js.native
   def ReadFile(
     file: File,
     onSuccess: js.Function1[/* data */ js.Any, Unit],
@@ -1188,6 +1435,8 @@ object Tools extends js.Object {
     * @param progressCallback defines the callback to call during loading process
     * @returns a file request object
     */
+  @JSImport("babylonjs/Misc/index", "Tools.ReadFileAsDataURL")
+  @js.native
   def ReadFileAsDataURL(
     fileToLoad: Blob,
     callback: js.Function1[/* data */ js.Any, Unit],
@@ -1199,27 +1448,28 @@ object Tools extends js.Object {
     * @param windowElement defines the Window object to use
     * @param events defines the events to register
     */
+  @JSImport("babylonjs/Misc/index", "Tools.RegisterTopRootEvents")
+  @js.native
   def RegisterTopRootEvents(windowElement: Window, events: js.Array[Handler]): Unit = js.native
-  
-  /**
-    * Use this object to register external classes like custom textures or material
-    * to allow the laoders to instantiate them
-    */
-  def RegisteredExternalClasses: org.scalablytyped.runtime.StringDictionary[js.Object] = js.native
-  def RegisteredExternalClasses_=(classes: org.scalablytyped.runtime.StringDictionary[js.Object]): Unit = js.native
   
   /**
     * Sets the cors behavior on a dom element. This will add the required Tools.CorsBehavior to the element.
     * @param url define the url we are trying
     * @param element define the dom element where to configure the cors policy
     */
+  @JSImport("babylonjs/Misc/index", "Tools.SetCorsBehavior")
+  @js.native
   def SetCorsBehavior(url: String, element: CrossOrigin): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.SetCorsBehavior")
+  @js.native
   def SetCorsBehavior(url: js.Array[String], element: CrossOrigin): Unit = js.native
   
   /**
     * Polyfill for setImmediate
     * @param action defines the action to execute after the current execution block
     */
+  @JSImport("babylonjs/Misc/index", "Tools.SetImmediate")
+  @js.native
   def SetImmediate(action: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -1229,9 +1479,17 @@ object Tools extends js.Object {
     * @param end defines the end of the data (optional)
     * @returns the new sliced array
     */
+  @JSImport("babylonjs/Misc/index", "Tools.Slice")
+  @js.native
   def Slice[T](data: T): T = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.Slice")
+  @js.native
   def Slice[T](data: T, start: js.UndefOr[scala.Nothing], end: Double): T = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.Slice")
+  @js.native
   def Slice[T](data: T, start: Double): T = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.Slice")
+  @js.native
   def Slice[T](data: T, start: Double, end: Double): T = js.native
   
   /**
@@ -1242,15 +1500,27 @@ object Tools extends js.Object {
     * @param end defines the end of the data (optional)
     * @returns the new sliced array
     */
+  @JSImport("babylonjs/Misc/index", "Tools.SliceToArray")
+  @js.native
   def SliceToArray[T, P](data: T): js.Array[P] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.SliceToArray")
+  @js.native
   def SliceToArray[T, P](data: T, start: js.UndefOr[scala.Nothing], end: Double): js.Array[P] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.SliceToArray")
+  @js.native
   def SliceToArray[T, P](data: T, start: Double): js.Array[P] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.SliceToArray")
+  @js.native
   def SliceToArray[T, P](data: T, start: Double, end: Double): js.Array[P] = js.native
   
   /**
     * Starts a performance counter
     */
+  @JSImport("babylonjs/Misc/index", "Tools.StartPerformanceCounter")
+  @js.native
   def StartPerformanceCounter(counterName: String): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.StartPerformanceCounter")
+  @js.native
   def StartPerformanceCounter(counterName: String, condition: Boolean): Unit = js.native
   
   /**
@@ -1260,7 +1530,11 @@ object Tools extends js.Object {
     * @param successCallback Defines the callback triggered once the data are available
     * @param mimeType Defines the mime type of the result
     */
+  @JSImport("babylonjs/Misc/index", "Tools.ToBlob")
+  @js.native
   def ToBlob(canvas: HTMLCanvasElement, successCallback: js.Function1[/* blob */ Nullable[Blob], Unit]): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.ToBlob")
+  @js.native
   def ToBlob(
     canvas: HTMLCanvasElement,
     successCallback: js.Function1[/* blob */ Nullable[Blob], Unit],
@@ -1272,6 +1546,8 @@ object Tools extends js.Object {
     * @param angle defines the angle to convert
     * @returns the angle in degrees
     */
+  @JSImport("babylonjs/Misc/index", "Tools.ToDegrees")
+  @js.native
   def ToDegrees(angle: Double): Double = js.native
   
   /**
@@ -1279,6 +1555,8 @@ object Tools extends js.Object {
     * @param angle defines the angle to convert
     * @returns the angle in radians
     */
+  @JSImport("babylonjs/Misc/index", "Tools.ToRadians")
+  @js.native
   def ToRadians(angle: Double): Double = js.native
   
   /**
@@ -1286,6 +1564,8 @@ object Tools extends js.Object {
     * @param windowElement defines the Window object to use
     * @param events defines the events to unregister
     */
+  @JSImport("babylonjs/Misc/index", "Tools.UnregisterTopRootEvents")
+  @js.native
   def UnregisterTopRootEvents(windowElement: Window, events: js.Array[Handler]): Unit = js.native
   
   /**
@@ -1293,59 +1573,83 @@ object Tools extends js.Object {
     * default = false
     * @see CustomRequestHeaders
     */
-  var UseCustomRequestHeaders: Boolean = js.native
-  
-  /**
-    * Gets or sets a global variable indicating if fallback texture must be used when a texture cannot be loaded
-    * @ignorenaming
-    */
-  def UseFallbackTexture: Boolean = js.native
-  def UseFallbackTexture_=(value: Boolean): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.UseCustomRequestHeaders")
+  @js.native
+  def UseCustomRequestHeaders: Boolean = js.native
+  @scala.inline
+  def UseCustomRequestHeaders_=(x: Boolean): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("UseCustomRequestHeaders")(x.asInstanceOf[js.Any])
   
   /**
     * Write a warning message to the console
     * @param message defines the message to log
     */
+  @JSImport("babylonjs/Misc/index", "Tools.Warn")
+  @js.native
   def Warn(message: String): Unit = js.native
   
   /**
     * Only warning logs
     */
+  @JSImport("babylonjs/Misc/index", "Tools.WarningLogLevel")
+  @js.native
   val WarningLogLevel: Double = js.native
   
-  var _EndPerformanceConsole: js.Any = js.native
+  @JSImport("babylonjs/Misc/index", "Tools._EndPerformanceConsole")
+  @js.native
+  def _EndPerformanceConsole: js.Any = js.native
+  @scala.inline
+  def _EndPerformanceConsole_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_EndPerformanceConsole")(x.asInstanceOf[js.Any])
   
-  var _EndPerformanceCounterDisabled: js.Any = js.native
+  @JSImport("babylonjs/Misc/index", "Tools._EndPerformanceCounterDisabled")
+  @js.native
+  def _EndPerformanceCounterDisabled: js.Any = js.native
+  @scala.inline
+  def _EndPerformanceCounterDisabled_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_EndPerformanceCounterDisabled")(x.asInstanceOf[js.Any])
   
-  var _EndUserMark: js.Any = js.native
+  @JSImport("babylonjs/Misc/index", "Tools._EndUserMark")
+  @js.native
+  def _EndUserMark: js.Any = js.native
+  @scala.inline
+  def _EndUserMark_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_EndUserMark")(x.asInstanceOf[js.Any])
   
   /**
     * @ignore
     */
-  var _ScreenshotCanvas: HTMLCanvasElement = js.native
+  @JSImport("babylonjs/Misc/index", "Tools._ScreenshotCanvas")
+  @js.native
+  def _ScreenshotCanvas: HTMLCanvasElement = js.native
+  @scala.inline
+  def _ScreenshotCanvas_=(x: HTMLCanvasElement): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_ScreenshotCanvas")(x.asInstanceOf[js.Any])
   
-  var _StartPerformanceConsole: js.Any = js.native
+  @JSImport("babylonjs/Misc/index", "Tools._StartPerformanceConsole")
+  @js.native
+  def _StartPerformanceConsole: js.Any = js.native
+  @scala.inline
+  def _StartPerformanceConsole_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_StartPerformanceConsole")(x.asInstanceOf[js.Any])
   
-  var _StartPerformanceCounterDisabled: js.Any = js.native
+  @JSImport("babylonjs/Misc/index", "Tools._StartPerformanceCounterDisabled")
+  @js.native
+  def _StartPerformanceCounterDisabled: js.Any = js.native
+  @scala.inline
+  def _StartPerformanceCounterDisabled_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_StartPerformanceCounterDisabled")(x.asInstanceOf[js.Any])
   
-  var _StartUserMark: js.Any = js.native
+  @JSImport("babylonjs/Misc/index", "Tools._StartUserMark")
+  @js.native
+  def _StartUserMark: js.Any = js.native
+  @scala.inline
+  def _StartUserMark_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_StartUserMark")(x.asInstanceOf[js.Any])
   
-  var _performance: js.Any = js.native
+  @JSImport("babylonjs/Misc/index", "Tools._performance")
+  @js.native
+  def _performance: js.Any = js.native
+  @scala.inline
+  def _performance_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_performance")(x.asInstanceOf[js.Any])
   
-  var _tmpFloatArray: js.Any = js.native
-  
-  /**
-    * Gets a value indicating the number of loading errors
-    * @ignorenaming
-    */
-  def errorsCount: Double = js.native
-  
-  /**
-    * Texture content used if a texture cannot loaded
-    * @ignorenaming
-    */
-  def fallbackTexture: String = js.native
-  def fallbackTexture_=(value: String): Unit = js.native
+  @JSImport("babylonjs/Misc/index", "Tools._tmpFloatArray")
+  @js.native
+  def _tmpFloatArray: js.Any = js.native
+  @scala.inline
+  def _tmpFloatArray_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_tmpFloatArray")(x.asInstanceOf[js.Any])
   
   /**
     * This method will return the name of the full name of the class, including its owning module (if any).
@@ -1355,6 +1659,10 @@ object Tools extends js.Object {
     * @return a string that can have two forms: "moduleName.className" if module was specified when the class' Name was registered or "className" if there was not module specified.
     * @ignorenaming
     */
+  @JSImport("babylonjs/Misc/index", "Tools.getFullClassName")
+  @js.native
   def getFullClassName(`object`: js.Any): Nullable[String] = js.native
+  @JSImport("babylonjs/Misc/index", "Tools.getFullClassName")
+  @js.native
   def getFullClassName(`object`: js.Any, isType: Boolean): Nullable[String] = js.native
 }

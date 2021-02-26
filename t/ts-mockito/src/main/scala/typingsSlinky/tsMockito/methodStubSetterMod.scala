@@ -1,16 +1,16 @@
 package typingsSlinky.tsMockito
 
 import typingsSlinky.tsMockito.methodToStubMod.MethodToStub
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ts-mockito/lib/MethodStubSetter", JSImport.Namespace)
-@js.native
-object methodStubSetterMod extends js.Object {
+object methodStubSetterMod {
   
+  @JSImport("ts-mockito/lib/MethodStubSetter", "MethodStubSetter")
   @js.native
-  class MethodStubSetter[T, ResolveType, RejectType] protected () extends js.Object {
+  class MethodStubSetter[T, ResolveType, RejectType] protected () extends StObject {
     def this(methodToStub: MethodToStub) = this()
     
     var convertToPropertyIfIsNotAFunction: js.Any = js.native
@@ -32,9 +32,16 @@ object methodStubSetterMod extends js.Object {
     def thenThrow(rest: js.Error*): this.type = js.native
   }
   /* static members */
-  @js.native
-  object MethodStubSetter extends js.Object {
+  object MethodStubSetter {
     
-    var globalGroupIndex: js.Any = js.native
+    @JSImport("ts-mockito/lib/MethodStubSetter", "MethodStubSetter")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("ts-mockito/lib/MethodStubSetter", "MethodStubSetter.globalGroupIndex")
+    @js.native
+    def globalGroupIndex: js.Any = js.native
+    @scala.inline
+    def globalGroupIndex_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("globalGroupIndex")(x.asInstanceOf[js.Any])
   }
 }

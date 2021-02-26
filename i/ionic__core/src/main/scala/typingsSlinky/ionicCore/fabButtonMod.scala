@@ -9,14 +9,14 @@ import typingsSlinky.ionicCore.ionicCoreStrings.small
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/fab-button/fab-button", JSImport.Namespace)
-@js.native
-object fabButtonMod extends js.Object {
+object fabButtonMod {
   
+  @JSImport("@ionic/core/dist/types/components/fab-button/fab-button", "FabButton")
   @js.native
   class FabButton ()
     extends ComponentInterface

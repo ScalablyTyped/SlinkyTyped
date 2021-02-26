@@ -22,6 +22,7 @@ import typingsSlinky.videoJs.mod.videojs.TimeRange
 import typingsSlinky.videoJs.videoJsStrings._empty
 import typingsSlinky.videoJs.videoJsStrings.maybe
 import typingsSlinky.videoJs.videoJsStrings.probably
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -318,8 +319,8 @@ trait VideoJsPlayer extends Component {
   
   def error(): MediaError | Null = js.native
   def error(err: String): Unit = js.native
-  def error(err: Double): Unit = js.native
   def error(err: MediaError): Unit = js.native
+  def error(err: Double): Unit = js.native
   
   var errorDisplay: ModalDialog = js.native
   

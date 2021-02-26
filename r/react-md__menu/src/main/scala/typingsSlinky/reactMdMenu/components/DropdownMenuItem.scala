@@ -86,15 +86,22 @@ import typingsSlinky.reactMdPortal.getContainerMod.PortalInto
 import typingsSlinky.reactMdStates.typesMod.MergableRippleHandlers
 import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
 import typingsSlinky.reactTransitionGroup.csstransitionMod.CSSTransitionClassNames
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DropdownMenuItem {
   
+  @scala.inline
+  def apply(id: String, items: js.Array[ValidMenuItem]): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DropdownMenuItemProps with RefAttributes[HTMLLIElement]]))
+  }
+  
   @JSImport("@react-md/menu", "DropdownMenuItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -296,10 +303,10 @@ object DropdownMenuItem {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defaultVisible(value: Boolean): this.type = set("defaultVisible", value.asInstanceOf[js.Any])
@@ -338,10 +345,10 @@ object DropdownMenuItem {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dropdownIconReactElement(value: ReactElement): this.type = set("dropdownIcon", value.asInstanceOf[js.Any])
+    def dropdownIcon(value: ReactElement): this.type = set("dropdownIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dropdownIcon(value: ReactElement): this.type = set("dropdownIcon", value.asInstanceOf[js.Any])
+    def dropdownIconReactElement(value: ReactElement): this.type = set("dropdownIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def enablePressedAndRipple(value: Boolean): this.type = set("enablePressedAndRipple", value.asInstanceOf[js.Any])
@@ -392,13 +399,13 @@ object DropdownMenuItem {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftAddonReactElement(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def leftAddon(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftAddonPosition(value: ListItemAddonPosition): this.type = set("leftAddonPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def leftAddonReactElement(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftAddonType(value: ListItemAddonType): this.type = set("leftAddonType", value.asInstanceOf[js.Any])
@@ -665,19 +672,19 @@ object DropdownMenuItem {
     def portal(value: Boolean): this.type = set("portal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
+    def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portalIntoFunction0(value: () => HTMLElement | Null): this.type = set("portalInto", js.Any.fromFunction0(value))
     
     @scala.inline
-    def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def portalIntoNull: this.type = set("portalInto", null)
+    def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portalIntoId(value: String): this.type = set("portalIntoId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def portalIntoNull: this.type = set("portalInto", null)
     
     @scala.inline
     def positionOptions(value: js.Any): this.type = set("positionOptions", value.asInstanceOf[js.Any])
@@ -686,10 +693,10 @@ object DropdownMenuItem {
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+    def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+    def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -704,13 +711,13 @@ object DropdownMenuItem {
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightAddonReactElement(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def rightAddon(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rightAddonPosition(value: ListItemAddonPosition): this.type = set("rightAddonPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def rightAddonReactElement(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rightAddonType(value: ListItemAddonType): this.type = set("rightAddonType", value.asInstanceOf[js.Any])
@@ -731,13 +738,13 @@ object DropdownMenuItem {
     def role(value: menuitem | button): this.type = set("role", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def secondaryText(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def secondaryTextClassName(value: String): this.type = set("secondaryTextClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
@@ -786,10 +793,4 @@ object DropdownMenuItem {
   }
   
   def withProps(p: DropdownMenuItemProps with RefAttributes[HTMLLIElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String, items: js.Array[ValidMenuItem]): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DropdownMenuItemProps with RefAttributes[HTMLLIElement]]))
-  }
 }

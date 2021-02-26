@@ -1,27 +1,14 @@
 package typingsSlinky.googleCloudFirestore.FirebaseFirestore
 
+import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DocumentReference[T] extends js.Object {
-  /**
-    * The `Firestore` for the Firestore database (useful for performing
-    * transactions, etc.).
-    */
-  val firestore: Firestore = js.native
-  /** The identifier of the document within its collection. */
-  val id: String = js.native
-  /**
-    * A reference to the Collection to which this DocumentReference belongs.
-    */
-  val parent: CollectionReference[T] = js.native
-  /**
-    * A string representing the path of the referenced document (relative
-    * to the root of the database).
-    */
-  val path: String = js.native
+trait DocumentReference[T] extends StObject {
+  
   /**
     * Gets a `CollectionReference` instance that refers to the collection at
     * the specified path.
@@ -30,6 +17,7 @@ trait DocumentReference[T] extends js.Object {
     * @return The `CollectionReference` instance.
     */
   def collection(collectionPath: String): CollectionReference[DocumentData] = js.native
+  
   /**
     * Creates a document referred to by this `DocumentReference` with the
     * provided object values. The write fails if the document already exists
@@ -38,6 +26,7 @@ trait DocumentReference[T] extends js.Object {
     * @return A Promise resolved with the write time of this create.
     */
   def create(data: T): js.Promise[WriteResult] = js.native
+  
   /**
     * Deletes the document referred to by this `DocumentReference`.
     *
@@ -46,6 +35,13 @@ trait DocumentReference[T] extends js.Object {
     */
   def delete(): js.Promise[WriteResult] = js.native
   def delete(precondition: Precondition): js.Promise[WriteResult] = js.native
+  
+  /**
+    * The `Firestore` for the Firestore database (useful for performing
+    * transactions, etc.).
+    */
+  val firestore: Firestore = js.native
+  
   /**
     * Reads the document referred to by this `DocumentReference`.
     *
@@ -53,6 +49,10 @@ trait DocumentReference[T] extends js.Object {
     * current document contents.
     */
   def get(): js.Promise[DocumentSnapshot[T]] = js.native
+  
+  /** The identifier of the document within its collection. */
+  val id: String = js.native
+  
   /**
     * Returns true if this `DocumentReference` is equal to the provided one.
     *
@@ -60,12 +60,14 @@ trait DocumentReference[T] extends js.Object {
     * @return true if this `DocumentReference` is equal to the provided one.
     */
   def isEqual(other: DocumentReference[T]): Boolean = js.native
+  
   /**
     * Fetches the subcollections that are direct children of this document.
     *
     * @returns A Promise that resolves with an array of CollectionReferences.
     */
   def listCollections(): js.Promise[js.Array[CollectionReference[DocumentData]]] = js.native
+  
   /**
     * Attaches a listener for DocumentSnapshot events.
     *
@@ -81,6 +83,19 @@ trait DocumentReference[T] extends js.Object {
     onNext: js.Function1[/* snapshot */ DocumentSnapshot[T], Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): js.Function0[Unit] = js.native
+  
+  /**
+    * A reference to the Collection to which this DocumentReference belongs.
+    */
+  val parent: CollectionReference[T] = js.native
+  
+  /**
+    * A string representing the path of the referenced document (relative
+    * to the root of the database).
+    */
+  val path: String = js.native
+  
+  def set(data: T): js.Promise[WriteResult] = js.native
   /**
     * Writes to the document referred to by this `DocumentReference`. If the
     * document does not yet exist, it will be created. If you pass
@@ -90,8 +105,8 @@ trait DocumentReference[T] extends js.Object {
     * @param options An object to configure the set behavior.
     * @return A Promise resolved with the write time of this set.
     */
-  def set(data: T): js.Promise[WriteResult] = js.native
-  def set(data: T, options: SetOptions): js.Promise[WriteResult] = js.native
+  def set(data: Partial[T], options: SetOptions): js.Promise[WriteResult] = js.native
+  
   /**
     * Updates fields in the document referred to by this `DocumentReference`.
     * The update will fail if applied to a document that does not exist.
@@ -125,6 +140,7 @@ trait DocumentReference[T] extends js.Object {
     */
   def update(field: String, value: js.Any, moreFieldsOrPrecondition: js.Any*): js.Promise[WriteResult] = js.native
   def update(field: FieldPath, value: js.Any, moreFieldsOrPrecondition: js.Any*): js.Promise[WriteResult] = js.native
+  
   /**
     * Applies a custom data converter to this DocumentReference, allowing you
     * to use your own custom model objects with Firestore. When you call
@@ -137,4 +153,3 @@ trait DocumentReference[T] extends js.Object {
     */
   def withConverter[U](converter: FirestoreDataConverter[U]): DocumentReference[U] = js.native
 }
-

@@ -3,15 +3,22 @@ package typingsSlinky.reactTagcloud.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTagcloud.ReactTagCloud_.TagCloudProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TagCloud {
   
+  @scala.inline
+  def apply(maxSize: Double, minSize: Double, tags: js.Array[_]): Builder = {
+    val __props = js.Dynamic.literal(maxSize = maxSize.asInstanceOf[js.Any], minSize = minSize.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TagCloudProps]))
+  }
+  
   @JSImport("react-tagcloud", "TagCloud")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +45,4 @@ object TagCloud {
   }
   
   def withProps(p: TagCloudProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(maxSize: Double, minSize: Double, tags: js.Array[_]): Builder = {
-    val __props = js.Dynamic.literal(maxSize = maxSize.asInstanceOf[js.Any], minSize = minSize.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TagCloudProps]))
-  }
 }

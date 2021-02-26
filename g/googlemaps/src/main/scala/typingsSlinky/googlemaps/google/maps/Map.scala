@@ -20,6 +20,7 @@ import typingsSlinky.googlemaps.googlemapsStrings.rightclick
 import typingsSlinky.googlemaps.googlemapsStrings.tilesloaded
 import typingsSlinky.googlemaps.googlemapsStrings.tilt_changed
 import typingsSlinky.googlemaps.googlemapsStrings.zoom_changed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

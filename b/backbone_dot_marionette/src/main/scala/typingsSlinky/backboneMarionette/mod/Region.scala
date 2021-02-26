@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.backbone.mod.Model
 import typingsSlinky.backbone.mod.ModelSetOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.paginationMod.PaginationProps
 import typingsSlinky.cathoQuantum.paginationMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Pagination {
   
+  @scala.inline
+  def apply(totalPages: Double): Builder = {
+    val __props = js.Dynamic.literal(totalPages = totalPages.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PaginationProps]))
+  }
+  
   @JSImport("@catho/quantum/Pagination", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +61,4 @@ object Pagination {
   }
   
   def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(totalPages: Double): Builder = {
-    val __props = js.Dynamic.literal(totalPages = totalPages.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PaginationProps]))
-  }
 }

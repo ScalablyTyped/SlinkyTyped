@@ -3,12 +3,13 @@ package typingsSlinky.reactNavigationCore.anon
 import typingsSlinky.reactNavigationCore.reactNavigationCoreBooleans.`true`
 import typingsSlinky.reactNavigationRouters.typesMod.NavigationState
 import typingsSlinky.reactNavigationRouters.typesMod.ParamListBase
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AddOptionsGetter extends js.Object {
+trait AddOptionsGetter extends StObject {
   
   var addOptionsGetter: js.UndefOr[
     js.Function2[/* key */ String, /* getter */ js.Function0[js.UndefOr[js.Object | Null]], Unit]

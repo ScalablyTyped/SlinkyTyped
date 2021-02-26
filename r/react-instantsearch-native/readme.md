@@ -10,9 +10,9 @@ Typings are for version 6.3
 | ------------------ | :-------------: |
 | Full name          | react-instantsearch-native |
 | Keywords           | algolia, components, fast, instantsearch, react, react-native, search |
-| # releases         | 23 |
+| # releases         | 19 |
 | # dependents       | 1 |
-| # downloads        | 637713 |
+| # downloads        | 990027 |
 | # stars            | 0 |
 
 ## Links

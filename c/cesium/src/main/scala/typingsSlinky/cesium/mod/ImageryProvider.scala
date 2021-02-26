@@ -3,13 +3,14 @@ package typingsSlinky.cesium.mod
 import org.scalajs.dom.experimental.Request
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "ImageryProvider")
 @js.native
-abstract class ImageryProvider () extends js.Object {
+abstract class ImageryProvider () extends StObject {
   
   var credit: Credit = js.native
   
@@ -60,10 +61,10 @@ abstract class ImageryProvider () extends js.Object {
   
   val tilingScheme: TilingScheme = js.native
 }
-/* static members */
-@JSImport("cesium", "ImageryProvider")
-@js.native
-object ImageryProvider extends js.Object {
+object ImageryProvider {
   
+  /* static member */
+  @JSImport("cesium", "ImageryProvider.loadImage")
+  @js.native
   def loadImage(imageryProvider: ImageryProvider, url: String): js.UndefOr[js.Promise[HTMLImageElement | HTMLCanvasElement]] = js.native
 }

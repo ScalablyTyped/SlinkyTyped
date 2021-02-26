@@ -1,11 +1,10 @@
 package typingsSlinky.activexLibreoffice.com_.sun.star.configuration
 
-import typingsSlinky.activexLibreoffice.com_.sun.star.container.XContainer
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XNameContainer
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XMultiServiceFactory
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XSingleServiceFactory
 import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
-import typingsSlinky.activexLibreoffice.com_.sun.star.util.XStringEscape
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,10 +18,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait SimpleSetUpdate
-  extends XNameContainer
-     with XTemplateContainer
-     with XStringEscape
-     with XContainer
+  extends SimpleSetAccess
+     with XNameContainer
      with XSingleServiceFactory
      with XMultiServiceFactory {
   

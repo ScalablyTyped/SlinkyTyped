@@ -1,5 +1,6 @@
 package typingsSlinky.nodegit.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Revwalk ()
   extends typingsSlinky.nodegit.revWalkMod.Revwalk
 /* static members */
-@JSImport("nodegit", "Revwalk")
-@js.native
-object Revwalk extends js.Object {
+object Revwalk {
   
+  @JSImport("nodegit", "Revwalk.create")
+  @js.native
   def create(repo: typingsSlinky.nodegit.repositoryMod.Repository): typingsSlinky.nodegit.revWalkMod.Revwalk = js.native
 }

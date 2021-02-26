@@ -1,23 +1,23 @@
 organization := "org.scalablytyped.slinky"
 name := "ant-design__icons-angular"
-version := "10.2.0-e2d520"
+version := "10.2.0-53e9c7"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "angular__animations" % "11.0.2-c5d5f8",
-  "org.scalablytyped.slinky" %%% "angular__common" % "11.0.2-3ba406",
-  "org.scalablytyped.slinky" %%% "angular__compiler" % "11.0.2-660a27",
-  "org.scalablytyped.slinky" %%% "angular__core" % "11.0.2-77d222",
-  "org.scalablytyped.slinky" %%% "angular__platform-browser" % "11.0.2-6fb38d",
-  "org.scalablytyped.slinky" %%% "inquirer" % "7.3-dt-20200820Z-dd25f1",
-  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
-  "org.scalablytyped.slinky" %%% "rxjs" % "6.6.3-d2f269",
-  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.6.3-6703be",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
-  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20201002Z-ca33b3",
-  "org.scalablytyped.slinky" %%% "typescript" % "4.1.2-27142e")
+  "org.scalablytyped.slinky" %%% "angular__animations" % "11.0.2-f73d3f",
+  "org.scalablytyped.slinky" %%% "angular__common" % "11.0.2-41e1ca",
+  "org.scalablytyped.slinky" %%% "angular__compiler" % "11.0.2-bbe9d7",
+  "org.scalablytyped.slinky" %%% "angular__core" % "11.0.2-f17331",
+  "org.scalablytyped.slinky" %%% "angular__platform-browser" % "11.0.2-3ec61c",
+  "org.scalablytyped.slinky" %%% "inquirer" % "7.3-dt-20200820Z-bf84f7",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "rxjs" % "6.6.3-2c76fd",
+  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.6.3-7ba562",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27",
+  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20201002Z-62ab37",
+  "org.scalablytyped.slinky" %%% "typescript" % "4.1.2-67d95e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDfareporting.gapi.client.dfareportin
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MobileCarriersResource extends js.Object {
+trait MobileCarriersResource extends StObject {
   
   /** Gets one mobile carrier by ID. */
   def get(): Request[MobileCarrier] = js.native

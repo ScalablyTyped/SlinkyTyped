@@ -10,9 +10,9 @@ A Functional Reactive Programming (FRP) library for JavaScript
 | ------------------ | :-------------: |
 | Full name          | sodiumjs |
 | Keywords           | frp, functional, reactive, typescript, sodium |
-| # releases         | 16 |
+| # releases         | 8 |
 | # dependents       | 2 |
-| # downloads        | 2019 |
+| # downloads        | 686 |
 | # stars            | 0 |
 
 ## Links

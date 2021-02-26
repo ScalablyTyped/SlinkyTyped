@@ -4,12 +4,13 @@ import typingsSlinky.jqueryCountdown.jQueryCountdown.Controls
 import typingsSlinky.jqueryCountdown.jQueryCountdown.Event
 import typingsSlinky.jqueryCountdown.jQueryCountdown.Methods
 import typingsSlinky.jqueryCountdown.jQueryCountdown.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Methods to control the execution flow of countdown

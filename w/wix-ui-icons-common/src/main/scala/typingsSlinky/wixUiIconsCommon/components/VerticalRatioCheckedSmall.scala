@@ -95,15 +95,16 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.wixUiIconsCommon.verticalRatioCheckedSmallMod.VerticalRatioCheckedSmallProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object VerticalRatioCheckedSmall {
   
-  @JSImport("wix-ui-icons-common/dist/es/src/general/dist", "VerticalRatioCheckedSmall")
+  @JSImport("wix-ui-icons-common/dist/src", "VerticalRatioCheckedSmall")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1276,7 +1277,7 @@ object VerticalRatioCheckedSmall {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: VerticalRatioCheckedSmallProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: VerticalRatioCheckedSmall.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: VerticalRatioCheckedSmallProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

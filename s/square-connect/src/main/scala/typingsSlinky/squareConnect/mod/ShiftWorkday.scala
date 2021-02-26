@@ -3,13 +3,14 @@ package typingsSlinky.squareConnect.mod
 import typingsSlinky.squareConnect.squareConnectStrings.END_AT
 import typingsSlinky.squareConnect.squareConnectStrings.INTERSECTION
 import typingsSlinky.squareConnect.squareConnectStrings.START_AT
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "ShiftWorkday")
 @js.native
-class ShiftWorkday () extends js.Object {
+class ShiftWorkday () extends StObject {
   
   /**
     * Dates for fetching the shifts

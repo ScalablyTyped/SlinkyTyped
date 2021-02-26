@@ -6,6 +6,7 @@ import typingsSlinky.hapiJoi.hapiJoiStrings.NFKC
 import typingsSlinky.hapiJoi.hapiJoiStrings.NFKD
 import typingsSlinky.hapiJoi.hapiJoiStrings.lower
 import typingsSlinky.hapiJoi.hapiJoiStrings.upper
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

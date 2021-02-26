@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.notSpecified
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.high
 */
-trait SelectionLikelihoodInfo extends js.Object
+trait SelectionLikelihoodInfo extends StObject
 object SelectionLikelihoodInfo {
   
   @scala.inline

@@ -9,14 +9,14 @@ import typingsSlinky.libp2pNoise.libp2pMod.KeyPair
 import typingsSlinky.libp2pNoise.noiseMod.WrappedConnection
 import typingsSlinky.node.Buffer
 import typingsSlinky.peerId.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("libp2p-noise/dist/src/handshake-ik", JSImport.Namespace)
-@js.native
-object handshakeIkMod extends js.Object {
+object handshakeIkMod {
   
+  @JSImport("libp2p-noise/dist/src/handshake-ik", "IKHandshake")
   @js.native
   class IKHandshake protected () extends IHandshake {
     def this(

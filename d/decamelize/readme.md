@@ -9,10 +9,10 @@ Convert a camelized string into a lowercased one with a custom separator: unicor
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | decamelize |
-| Keywords           | decamelize, decamelcase, camelcase, lowercase, case, dash, hyphen, string, str, text, convert |
-| # releases         | 6 |
-| # dependents       | 420 |
-| # downloads        | 557525009 |
+| Keywords           | decamelize, decamelcase, camelcase, lowercase, case, dash, hyphen, string, text, convert |
+| # releases         | 7 |
+| # dependents       | 557 |
+| # downloads        | 810817315 |
 | # stars            | 8 |
 
 ## Links

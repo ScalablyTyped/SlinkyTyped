@@ -2,6 +2,7 @@ package typingsSlinky.ejWebAll.global.ej
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,22 +11,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Sparkline protected ()
   extends typingsSlinky.ejWebAll.ej.Sparkline {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Model) = this()
+  def this(element: JQuery) = this()
   def this(element: Element, options: typingsSlinky.ejWebAll.ej.Model) = this()
+  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Model) = this()
 }
-/* static members */
-@JSGlobal("ej.Sparkline")
-@js.native
-object Sparkline extends js.Object {
+object Sparkline {
   
-  var Locale: js.Any = js.native
-  
-  var fn: typingsSlinky.ejWebAll.ej.Sparkline = js.native
-  
+  @JSGlobal("ej.Sparkline")
   @js.native
-  object FontStyle extends js.Object {
+  val ^ : js.Any = js.native
+  
+  @JSGlobal("ej.Sparkline.FontStyle")
+  @js.native
+  object FontStyle extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Sparkline.FontStyle with Double] = js.native
@@ -35,8 +34,9 @@ object Sparkline extends js.Object {
     /* 0 */ val Normal: typingsSlinky.ejWebAll.ej.Sparkline.FontStyle.Normal with Double = js.native
   }
   
+  @JSGlobal("ej.Sparkline.FontWeight")
   @js.native
-  object FontWeight extends js.Object {
+  object FontWeight extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Sparkline.FontWeight with Double] = js.native
@@ -48,8 +48,16 @@ object Sparkline extends js.Object {
     /* 0 */ val Regular: typingsSlinky.ejWebAll.ej.Sparkline.FontWeight.Regular with Double = js.native
   }
   
+  /* static member */
+  @JSGlobal("ej.Sparkline.Locale")
   @js.native
-  object Theme extends js.Object {
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("ej.Sparkline.Theme")
+  @js.native
+  object Theme extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Sparkline.Theme with Double] = js.native
@@ -75,8 +83,9 @@ object Sparkline extends js.Object {
     /* 7 */ val SaffronDark: typingsSlinky.ejWebAll.ej.Sparkline.Theme.SaffronDark with Double = js.native
   }
   
+  @JSGlobal("ej.Sparkline.Type")
   @js.native
-  object Type extends js.Object {
+  object Type extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Sparkline.Type with Double] = js.native
@@ -91,4 +100,11 @@ object Sparkline extends js.Object {
     
     /* 4 */ val WinLoss: typingsSlinky.ejWebAll.ej.Sparkline.Type.WinLoss with Double = js.native
   }
+  
+  /* static member */
+  @JSGlobal("ej.Sparkline.fn")
+  @js.native
+  def fn: typingsSlinky.ejWebAll.ej.Sparkline = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.Sparkline): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

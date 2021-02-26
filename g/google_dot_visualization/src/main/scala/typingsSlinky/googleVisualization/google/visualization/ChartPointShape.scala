@@ -1,5 +1,6 @@
 package typingsSlinky.googleVisualization.google.visualization
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleVisualization.googleVisualizationStrings.star
   - typingsSlinky.googleVisualization.googleVisualizationStrings.polygon
 */
-trait ChartPointShape extends js.Object
+trait ChartPointShape extends StObject
 object ChartPointShape {
   
   @scala.inline

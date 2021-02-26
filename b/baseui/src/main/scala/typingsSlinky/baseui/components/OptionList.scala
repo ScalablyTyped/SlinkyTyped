@@ -8,15 +8,22 @@ import typingsSlinky.baseui.anon.ChildMenuPopover
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.menuMod.OptionListProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OptionList {
   
+  @scala.inline
+  def apply(getItemLabel: js.Any => ReactElement, item: js.Any): Builder = {
+    val __props = js.Dynamic.literal(getItemLabel = js.Any.fromFunction1(getItemLabel), item = item.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OptionListProps]))
+  }
+  
   @JSImport("baseui/menu", "OptionList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,10 +59,4 @@ object OptionList {
   }
   
   def withProps(p: OptionListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(getItemLabel: js.Any => ReactElement, item: js.Any): Builder = {
-    val __props = js.Dynamic.literal(getItemLabel = js.Any.fromFunction1(getItemLabel), item = item.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[OptionListProps]))
-  }
 }

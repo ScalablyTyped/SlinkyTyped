@@ -3,6 +3,7 @@ package typingsSlinky.reactRouterDom.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactRouterDom.mod.BrowserRouterProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ object BrowserRouter {
   
   @JSImport("react-router-dom", "BrowserRouter")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,7 +32,7 @@ object BrowserRouter {
     def keyLength(value: Double): this.type = set("keyLength", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: BrowserRouterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: BrowserRouter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: BrowserRouterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

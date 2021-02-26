@@ -1,11 +1,12 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait meshUtils extends js.Object {
+trait meshUtils extends StObject {
   
   /**
     * Creates an elevation sampler from a mesh.

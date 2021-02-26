@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.textureMod.Texture
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Textures/rawTexture3D", JSImport.Namespace)
-@js.native
-object rawTexture3DMod extends js.Object {
+object rawTexture3DMod {
   
+  @JSImport("babylonjs/Materials/Textures/rawTexture3D", "RawTexture3D")
   @js.native
   class RawTexture3D protected () extends Texture {
     /**

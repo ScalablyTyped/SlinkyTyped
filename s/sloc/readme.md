@@ -10,10 +10,10 @@ sloc is a simple tool to count SLOC (source lines of code)
 | ------------------ | :-------------: |
 | Full name          | sloc |
 | Keywords           | - |
-| # releases         | 2 |
-| # dependents       | 34 |
-| # downloads        | 381351 |
-| # stars            | 40 |
+| # releases         | 1 |
+| # dependents       | 39 |
+| # downloads        | 614149 |
+| # stars            | 41 |
 
 ## Links
 - [Homepage](https://github.com/flosse/sloc#readme)

@@ -7,14 +7,14 @@ import typingsSlinky.pulumiAws.vaultLockMod.VaultLockState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws/glacier", JSImport.Namespace)
-@js.native
-object glacierMod extends js.Object {
+object glacierMod {
   
+  @JSImport("@pulumi/aws/glacier", "Vault")
   @js.native
   class Vault protected ()
     extends typingsSlinky.pulumiAws.glacierVaultMod.Vault {
@@ -31,8 +31,7 @@ object glacierMod extends js.Object {
     def this(name: String, args: VaultArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object Vault extends js.Object {
+  object Vault {
     
     /**
       * Get an existing Vault resource's state with the given name, ID, and optional extra
@@ -43,18 +42,29 @@ object glacierMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/glacier", "Vault.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.glacierVaultMod.Vault = js.native
+    @JSImport("@pulumi/aws/glacier", "Vault.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.glacierVaultMod.Vault = js.native
+    @JSImport("@pulumi/aws/glacier", "Vault.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VaultState): typingsSlinky.pulumiAws.glacierVaultMod.Vault = js.native
+    @JSImport("@pulumi/aws/glacier", "Vault.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VaultState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.glacierVaultMod.Vault = js.native
     
     /**
       * Returns true if the given object is an instance of Vault.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/glacier", "Vault.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/glacier/vault.Vault */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws/glacier", "VaultLock")
   @js.native
   class VaultLock protected ()
     extends typingsSlinky.pulumiAws.vaultLockMod.VaultLock {
@@ -69,8 +79,7 @@ object glacierMod extends js.Object {
     def this(name: String, args: VaultLockArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object VaultLock extends js.Object {
+  object VaultLock {
     
     /**
       * Get an existing VaultLock resource's state with the given name, ID, and optional extra
@@ -81,15 +90,25 @@ object glacierMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws/glacier", "VaultLock.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.vaultLockMod.VaultLock = js.native
+    @JSImport("@pulumi/aws/glacier", "VaultLock.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.vaultLockMod.VaultLock = js.native
+    @JSImport("@pulumi/aws/glacier", "VaultLock.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VaultLockState): typingsSlinky.pulumiAws.vaultLockMod.VaultLock = js.native
+    @JSImport("@pulumi/aws/glacier", "VaultLock.get")
+    @js.native
     def get(name: String, id: Input[ID], state: VaultLockState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.vaultLockMod.VaultLock = js.native
     
     /**
       * Returns true if the given object is an instance of VaultLock.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws/glacier", "VaultLock.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/glacier/vaultLock.VaultLock */ Boolean = js.native
   }
 }

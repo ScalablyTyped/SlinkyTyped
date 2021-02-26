@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientTagmanager.anon.CallbackFields
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Fields
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.FieldsFingerprint
 import typingsSlinky.maximMazurokGapiClientTagmanager.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TriggersResource extends js.Object {
+trait TriggersResource extends StObject {
   
   def create(request: Alt, body: Trigger): Request[Trigger] = js.native
   /** Creates a GTM Trigger. */

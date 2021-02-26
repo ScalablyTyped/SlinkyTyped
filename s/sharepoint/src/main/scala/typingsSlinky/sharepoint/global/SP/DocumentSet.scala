@@ -1,20 +1,21 @@
 package typingsSlinky.sharepoint.global.SP
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("SP.DocumentSet")
-@js.native
-object DocumentSet extends js.Object {
+object DocumentSet {
   
+  @JSGlobal("SP.DocumentSet.DocumentSet")
   @js.native
   class DocumentSet ()
     extends typingsSlinky.sharepoint.SP.ClientObject
-  /* static members */
-  @js.native
-  object DocumentSet extends js.Object {
+  object DocumentSet {
     
+    /* static member */
+    @JSGlobal("SP.DocumentSet.DocumentSet.create")
+    @js.native
     def create(
       context: typingsSlinky.sharepoint.SP.ClientContext,
       parentFolder: typingsSlinky.sharepoint.SP.Folder,

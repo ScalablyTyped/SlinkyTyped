@@ -17,15 +17,22 @@ import typingsSlinky.reactNativeModalFilterPicker.reactNativeModalFilterPickerSt
 import typingsSlinky.reactNativeModalFilterPicker.reactNativeModalFilterPickerStrings.handle
 import typingsSlinky.reactNativeModalFilterPicker.reactNativeModalFilterPickerStrings.never
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeModalFilterPicker {
   
+  @scala.inline
+  def apply[T /* <: ModalFilterPickerOption */](onCancel: () => Unit, onSelect: String => Unit, options: js.Array[T]): Builder[T] = {
+    val __props = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onSelect = js.Any.fromFunction1(onSelect), options = options.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ModalFilterPickerProps[T]]))
+  }
+  
   @JSImport("react-native-modal-filter-picker", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T /* <: ModalFilterPickerOption */] (val args: js.Array[js.Any])
@@ -142,10 +149,4 @@ object ReactNativeModalFilterPicker {
   }
   
   def withProps[T /* <: ModalFilterPickerOption */](p: ModalFilterPickerProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T /* <: ModalFilterPickerOption */](onCancel: () => Unit, onSelect: String => Unit, options: js.Array[T]): Builder[T] = {
-    val __props = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onSelect = js.Any.fromFunction1(onSelect), options = options.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ModalFilterPickerProps[T]]))
-  }
 }

@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.winjs.WinJS.Binding.List
 import typingsSlinky.winjs.WinJS.Binding.Template
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Contains a group of NavBarCommand objects in a NavBar.
   **/
 @js.native
-trait NavBarContainer extends js.Object {
+trait NavBarContainer extends StObject {
   
   //#endregion Events
   //#region Methods

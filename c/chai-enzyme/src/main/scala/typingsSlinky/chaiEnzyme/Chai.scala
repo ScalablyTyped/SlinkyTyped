@@ -2,16 +2,15 @@ package typingsSlinky.chaiEnzyme
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Chai")
-@js.native
-object Chai extends js.Object {
+object Chai {
   
   @js.native
-  trait Assertion extends js.Object {
+  trait Assertion extends StObject {
     
     /**
       * Assert that the wrapper has given attribute [with value]:
@@ -159,8 +158,10 @@ object Chai extends js.Object {
     def value(str: String): Assertion = js.native
   }
   
+  type EnzymeSelector = String | ReactComponentClass[js.Any] | StringDictionary[js.Any]
+  
   @js.native
-  trait Include extends js.Object {
+  trait Include extends StObject {
     
     /**
       * Assert that the wrapper contains a given node:
@@ -175,8 +176,6 @@ object Chai extends js.Object {
     def text(): Assertion = js.native
     def text(str: String): Assertion = js.native
   }
-  
-  type EnzymeSelector = String | ReactComponentClass[js.Any] | StringDictionary[js.Any]
   
   type Match = js.Function1[/* selector */ EnzymeSelector, Assertion]
 }

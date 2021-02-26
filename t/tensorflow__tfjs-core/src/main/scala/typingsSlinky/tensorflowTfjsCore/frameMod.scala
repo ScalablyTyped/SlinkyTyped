@@ -3,14 +3,15 @@ package typingsSlinky.tensorflowTfjsCore
 import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-core/dist/ops/signal/frame", JSImport.Namespace)
-@js.native
-object frameMod extends js.Object {
+object frameMod {
   
+  @JSImport("@tensorflow/tfjs-core/dist/ops/signal/frame", "frame")
+  @js.native
   val frame: js.Function5[
     /* signal */ Tensor1D, 
     /* frameLength */ Double, 

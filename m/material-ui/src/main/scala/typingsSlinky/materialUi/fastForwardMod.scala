@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/av/fast-forward", JSImport.Namespace)
-@js.native
-object fastForwardMod extends js.Object {
+object fastForwardMod {
   
+  @JSImport("material-ui/svg-icons/av/fast-forward", JSImport.Default)
+  @js.native
+  class default () extends AvFastForward
+  
+  @JSImport("material-ui/svg-icons/av/fast-forward", "AvFastForward")
   @js.native
   class AvFastForward ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

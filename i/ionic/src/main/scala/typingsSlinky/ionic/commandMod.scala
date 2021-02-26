@@ -12,17 +12,17 @@ import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineOptions
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput
 import typingsSlinky.ionicCliFramework.mod.BaseCommand
 import typingsSlinky.ionicCliFramework.mod.TaskChain
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ionic/lib/command", JSImport.Namespace)
-@js.native
-object commandMod extends js.Object {
+object commandMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.ionicCliFramework.definitionsMod.ICommand because var conflicts: namespace. Inlined 
-  - typingsSlinky.ionic.definitionsMod.ICommand because var conflicts: namespace. Inlined env, project, execute */ @js.native
+  - typingsSlinky.ionic.definitionsMod.ICommand because var conflicts: namespace. Inlined env, project, execute */ @JSImport("ionic/lib/command", "Command")
+  @js.native
   abstract class Command protected () extends BaseCommand[ICommand, INamespace, CommandMetadata, CommandMetadataInput, CommandMetadataOption] {
     def this(namespace: INamespace) = this()
     

@@ -33,6 +33,7 @@ import typingsSlinky.cookieclicker.cookieclickerStrings.toString
 import typingsSlinky.cookieclicker.cookieclickerStrings.toggle
 import typingsSlinky.cookieclicker.cookieclickerStrings.unshift
 import typingsSlinky.cookieclicker.cookieclickerStrings.values
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

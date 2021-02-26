@@ -7,6 +7,7 @@ import typingsSlinky.officeJsPreview.Visio.Interfaces.ShapeData
 import typingsSlinky.officeJsPreview.Visio.Interfaces.ShapeLoadOptions
 import typingsSlinky.officeJsPreview.Visio.Interfaces.ShapeUpdateData
 import typingsSlinky.officeJsPreview.anon.Expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

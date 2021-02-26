@@ -11,8 +11,8 @@ Offers convenient getters and setters for the stat `mode`
 | Full name          | stat-mode |
 | Keywords           | stat, mode, owner, group, others, chmod, octal, symbolic, permissions |
 | # releases         | 3 |
-| # dependents       | 65 |
-| # downloads        | 24209825 |
+| # dependents       | 71 |
+| # downloads        | 21727436 |
 | # stars            | 2 |
 
 ## Links

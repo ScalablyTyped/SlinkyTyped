@@ -18,6 +18,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`us-feet`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ellipsoidal
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.feet_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.meters_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

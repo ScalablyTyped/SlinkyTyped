@@ -4,6 +4,7 @@ import typingsSlinky.babylonjs.anon.Size
 import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,9 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class PlaneBuilder ()
   extends typingsSlinky.babylonjs.planeBuilderMod.PlaneBuilder
 /* static members */
-@JSImport("babylonjs/Meshes/Builders/index", "PlaneBuilder")
-@js.native
-object PlaneBuilder extends js.Object {
+object PlaneBuilder {
   
   /**
     * Creates a plane mesh
@@ -31,6 +30,10 @@ object PlaneBuilder extends js.Object {
     * @returns the plane mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#plane
     */
+  @JSImport("babylonjs/Meshes/Builders/index", "PlaneBuilder.CreatePlane")
+  @js.native
   def CreatePlane(name: String, options: Size): Mesh = js.native
+  @JSImport("babylonjs/Meshes/Builders/index", "PlaneBuilder.CreatePlane")
+  @js.native
   def CreatePlane(name: String, options: Size, scene: Nullable[Scene]): Mesh = js.native
 }

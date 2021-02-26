@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,19 +15,19 @@ class SharedBuilder_ListItemMetaProps1028006195 (val args: js.Array[js.Any])
      with StBuildingComponent[tag.type, scala.Nothing] {
   
   @scala.inline
-  def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
+  def avatar(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def avatar(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
+  def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
   
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
+  def description(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def description(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
+  def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
   
   @scala.inline
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
@@ -35,8 +36,8 @@ class SharedBuilder_ListItemMetaProps1028006195 (val args: js.Array[js.Any])
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+  def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
 }

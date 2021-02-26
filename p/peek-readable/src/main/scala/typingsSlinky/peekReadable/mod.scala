@@ -2,20 +2,21 @@ package typingsSlinky.peekReadable
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Readable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("peek-readable", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("peek-readable", "EndOfStreamError")
   @js.native
   class EndOfStreamError ()
     extends typingsSlinky.peekReadable.endOfFileStreamMod.EndOfStreamError
   
+  @JSImport("peek-readable", "StreamReader")
   @js.native
-  class StreamReader protected () extends js.Object {
+  class StreamReader protected () extends StObject {
     def this(s: Readable) = this()
     
     /**
@@ -29,6 +30,7 @@ object mod extends js.Object {
     
     var endOfStream: js.Any = js.native
     
+    def peek(buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[Double] = js.native
     /**
       * Read ahead (peek) from stream. Subsequent read or peeks will return the same data
       * @param buffer - Buffer to store data read from stream in
@@ -37,7 +39,6 @@ object mod extends js.Object {
       * @returns Number of bytes peeked
       */
     def peek(buffer: Buffer, offset: Double, length: Double): js.Promise[Double] = js.native
-    def peek(buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[Double] = js.native
     
     /**
       * Store peeked data
@@ -45,6 +46,7 @@ object mod extends js.Object {
       */
     var peekQueue: js.Any = js.native
     
+    def read(buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[Double] = js.native
     /**
       * Read chunk from stream
       * @param buffer - Target buffer to store data read from stream in
@@ -53,7 +55,6 @@ object mod extends js.Object {
       * @returns Number of bytes read
       */
     def read(buffer: Buffer, offset: Double, length: Double): js.Promise[Double] = js.native
-    def read(buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[Double] = js.native
     
     var reject: js.Any = js.native
     

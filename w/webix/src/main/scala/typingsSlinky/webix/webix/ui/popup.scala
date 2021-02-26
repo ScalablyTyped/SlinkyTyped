@@ -2,6 +2,7 @@ package typingsSlinky.webix.webix.ui
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.webix.webix.WebixCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

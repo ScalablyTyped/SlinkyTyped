@@ -1,10 +1,26 @@
 package typingsSlinky.got
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
+  @scala.inline
+  def apply(url: typingsSlinky.got.mod.GotUrl): typingsSlinky.got.mod.GotPromise[java.lang.String] = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].apply(url.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def apply(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotBodyOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].apply(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def apply(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotFormOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].apply(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def apply(url: typingsSlinky.got.mod.GotUrl, options: typingsSlinky.got.mod.GotJSONOptions): typingsSlinky.got.mod.GotPromise[_] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].apply(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[_]]
   
   /**
     * @param response Response object.
@@ -59,4 +75,147 @@ package object mod {
   type InitHook[Options] = js.Function1[/* options */ Options, scala.Unit]
   
   type RetryFunction = js.Function2[/* retry */ scala.Double, /* error */ js.Any, scala.Double]
+  
+  @scala.inline
+  def delete: typingsSlinky.got.mod.GotFn = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].selectDynamic("delete").asInstanceOf[typingsSlinky.got.mod.GotFn]
+  @scala.inline
+  def delete(url: typingsSlinky.got.mod.GotUrl): typingsSlinky.got.mod.GotPromise[java.lang.String] = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("delete")(url.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def delete(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotBodyOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("delete")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def delete(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotFormOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("delete")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def delete(url: typingsSlinky.got.mod.GotUrl, options: typingsSlinky.got.mod.GotJSONOptions): typingsSlinky.got.mod.GotPromise[_] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("delete")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[_]]
+  @scala.inline
+  def delete_=(x: typingsSlinky.got.mod.GotFn): scala.Unit = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].updateDynamic("delete")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def extend: typingsSlinky.got.mod.GotExtend = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].selectDynamic("extend").asInstanceOf[typingsSlinky.got.mod.GotExtend]
+  @scala.inline
+  def extend(options: typingsSlinky.got.mod.GotBodyOptions[scala.Null]): typingsSlinky.got.anon.GotInstanceGotBodyFnnull = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("extend")(options.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.anon.GotInstanceGotBodyFnnull]
+  @scala.inline
+  def extend(options: typingsSlinky.got.mod.GotFormOptions[java.lang.String]): typingsSlinky.got.anon.GotInstanceGotFormFnstrin = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("extend")(options.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.anon.GotInstanceGotFormFnstrin]
+  @scala.inline
+  def extend(options: typingsSlinky.got.mod.GotJSONOptions): typingsSlinky.got.anon.GotInstanceGotJSONFn = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("extend")(options.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.anon.GotInstanceGotJSONFn]
+  @scala.inline
+  def extend_=(x: typingsSlinky.got.mod.GotExtend): scala.Unit = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].updateDynamic("extend")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def extend_GotInstanceGotBodyFnstrin(options: typingsSlinky.got.mod.GotBodyOptions[java.lang.String]): typingsSlinky.got.anon.GotInstanceGotBodyFnstrin = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("extend")(options.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.anon.GotInstanceGotBodyFnstrin]
+  
+  @scala.inline
+  def extend_GotInstanceGotFormFnnull(options: typingsSlinky.got.mod.GotFormOptions[scala.Null]): typingsSlinky.got.anon.GotInstanceGotFormFnnull = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("extend")(options.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.anon.GotInstanceGotFormFnnull]
+  
+  @scala.inline
+  def get: typingsSlinky.got.mod.GotFn = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].selectDynamic("get").asInstanceOf[typingsSlinky.got.mod.GotFn]
+  @scala.inline
+  def get(url: typingsSlinky.got.mod.GotUrl): typingsSlinky.got.mod.GotPromise[java.lang.String] = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def get(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotBodyOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def get(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotFormOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def get(url: typingsSlinky.got.mod.GotUrl, options: typingsSlinky.got.mod.GotJSONOptions): typingsSlinky.got.mod.GotPromise[_] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[_]]
+  @scala.inline
+  def get_=(x: typingsSlinky.got.mod.GotFn): scala.Unit = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].updateDynamic("get")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def head: typingsSlinky.got.mod.GotFn = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].selectDynamic("head").asInstanceOf[typingsSlinky.got.mod.GotFn]
+  @scala.inline
+  def head(url: typingsSlinky.got.mod.GotUrl): typingsSlinky.got.mod.GotPromise[java.lang.String] = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("head")(url.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def head(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotBodyOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("head")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def head(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotFormOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("head")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def head(url: typingsSlinky.got.mod.GotUrl, options: typingsSlinky.got.mod.GotJSONOptions): typingsSlinky.got.mod.GotPromise[_] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("head")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[_]]
+  @scala.inline
+  def head_=(x: typingsSlinky.got.mod.GotFn): scala.Unit = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].updateDynamic("head")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def patch: typingsSlinky.got.mod.GotFn = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].selectDynamic("patch").asInstanceOf[typingsSlinky.got.mod.GotFn]
+  @scala.inline
+  def patch(url: typingsSlinky.got.mod.GotUrl): typingsSlinky.got.mod.GotPromise[java.lang.String] = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("patch")(url.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def patch(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotBodyOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("patch")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def patch(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotFormOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("patch")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def patch(url: typingsSlinky.got.mod.GotUrl, options: typingsSlinky.got.mod.GotJSONOptions): typingsSlinky.got.mod.GotPromise[_] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("patch")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[_]]
+  @scala.inline
+  def patch_=(x: typingsSlinky.got.mod.GotFn): scala.Unit = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].updateDynamic("patch")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def post: typingsSlinky.got.mod.GotFn = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].selectDynamic("post").asInstanceOf[typingsSlinky.got.mod.GotFn]
+  @scala.inline
+  def post(url: typingsSlinky.got.mod.GotUrl): typingsSlinky.got.mod.GotPromise[java.lang.String] = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("post")(url.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def post(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotBodyOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("post")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def post(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotFormOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("post")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def post(url: typingsSlinky.got.mod.GotUrl, options: typingsSlinky.got.mod.GotJSONOptions): typingsSlinky.got.mod.GotPromise[_] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("post")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[_]]
+  @scala.inline
+  def post_=(x: typingsSlinky.got.mod.GotFn): scala.Unit = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].updateDynamic("post")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def put: typingsSlinky.got.mod.GotFn = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].selectDynamic("put").asInstanceOf[typingsSlinky.got.mod.GotFn]
+  @scala.inline
+  def put(url: typingsSlinky.got.mod.GotUrl): typingsSlinky.got.mod.GotPromise[java.lang.String] = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("put")(url.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def put(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotBodyOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("put")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def put(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotFormOptions[scala.Null | java.lang.String]
+  ): typingsSlinky.got.mod.GotPromise[java.lang.String] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("put")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[java.lang.String]]
+  @scala.inline
+  def put(url: typingsSlinky.got.mod.GotUrl, options: typingsSlinky.got.mod.GotJSONOptions): typingsSlinky.got.mod.GotPromise[_] = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("put")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotPromise[_]]
+  @scala.inline
+  def put_=(x: typingsSlinky.got.mod.GotFn): scala.Unit = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].updateDynamic("put")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def stream: typingsSlinky.got.mod.GotStreamFn with typingsSlinky.got.anon.Recordgetpostputpatchhead = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].selectDynamic("stream").asInstanceOf[typingsSlinky.got.mod.GotStreamFn with typingsSlinky.got.anon.Recordgetpostputpatchhead]
+  @scala.inline
+  def stream(url: typingsSlinky.got.mod.GotUrl): typingsSlinky.got.mod.GotEmitter with typingsSlinky.node.streamMod.Duplex = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("stream")(url.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.got.mod.GotEmitter with typingsSlinky.node.streamMod.Duplex]
+  @scala.inline
+  def stream(
+    url: typingsSlinky.got.mod.GotUrl,
+    options: typingsSlinky.got.mod.GotOptions[java.lang.String | scala.Null]
+  ): typingsSlinky.got.mod.GotEmitter with typingsSlinky.node.streamMod.Duplex = (typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].applyDynamic("stream")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.got.mod.GotEmitter with typingsSlinky.node.streamMod.Duplex]
+  @scala.inline
+  def stream_=(x: typingsSlinky.got.mod.GotStreamFn with typingsSlinky.got.anon.Recordgetpostputpatchhead): scala.Unit = typingsSlinky.got.mod.^.asInstanceOf[js.Dynamic].updateDynamic("stream")(x.asInstanceOf[js.Any])
 }

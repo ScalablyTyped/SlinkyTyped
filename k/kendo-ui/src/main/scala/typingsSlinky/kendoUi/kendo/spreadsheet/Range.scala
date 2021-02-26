@@ -1,6 +1,7 @@
 package typingsSlinky.kendoUi.kendo.spreadsheet
 
 import typingsSlinky.kendoUi.kendo.Observable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -98,8 +99,8 @@ trait Range extends Observable {
   
   def input(): js.Any = js.native
   def input(value: String): Unit = js.native
-  def input(value: Double): Unit = js.native
   def input(value: js.Date): Unit = js.native
+  def input(value: Double): Unit = js.native
   @JSName("input")
   def input_Unit(): Unit = js.native
   
@@ -140,8 +141,8 @@ trait Range extends Observable {
   
   def value(): js.Any = js.native
   def value(value: String): Unit = js.native
-  def value(value: Double): Unit = js.native
   def value(value: js.Date): Unit = js.native
+  def value(value: Double): Unit = js.native
   @JSName("value")
   def value_Unit(): Unit = js.native
   

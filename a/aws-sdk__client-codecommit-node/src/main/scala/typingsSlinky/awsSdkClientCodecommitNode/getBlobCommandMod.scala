@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.typesGetBlobInputMod.GetBlobInpu
 import typingsSlinky.awsSdkClientCodecommitNode.typesGetBlobOutputMod.GetBlobOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-codecommit-node/commands/GetBlobCommand", JSImport.Namespace)
-@js.native
-object getBlobCommandMod extends js.Object {
+object getBlobCommandMod {
   
+  @JSImport("@aws-sdk/client-codecommit-node/commands/GetBlobCommand", "GetBlobCommand")
   @js.native
   class GetBlobCommand protected () extends Command[
           InputTypesUnion, 

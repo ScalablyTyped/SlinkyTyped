@@ -3,6 +3,7 @@ package typingsSlinky.reactInspector.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactInspector.mod.ObjectRootLabelProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ object ObjectRootLabel {
   
   @JSImport("react-inspector", "ObjectRootLabel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,7 +26,7 @@ object ObjectRootLabel {
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ObjectRootLabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ObjectRootLabel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ObjectRootLabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

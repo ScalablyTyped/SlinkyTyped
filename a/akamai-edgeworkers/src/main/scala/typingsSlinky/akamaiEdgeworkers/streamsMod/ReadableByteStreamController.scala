@@ -1,11 +1,12 @@
 package typingsSlinky.akamaiEdgeworkers.streamsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReadableByteStreamController extends js.Object {
+trait ReadableByteStreamController extends StObject {
   
   val byobRequest: js.UndefOr[ReadableStreamBYOBRequest] = js.native
   

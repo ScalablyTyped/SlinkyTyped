@@ -1,6 +1,7 @@
 package typingsSlinky.typescriptServices.global.TypeScript
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,16 +18,19 @@ class FunctionExpressionSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSGlobal("TypeScript.FunctionExpressionSyntax")
-@js.native
-object FunctionExpressionSyntax extends js.Object {
+object FunctionExpressionSyntax {
   
+  /* static member */
+  @JSGlobal("TypeScript.FunctionExpressionSyntax.create")
+  @js.native
   def create(
     functionKeyword: ISyntaxToken,
     callSignature: typingsSlinky.typescriptServices.TypeScript.CallSignatureSyntax,
     block: typingsSlinky.typescriptServices.TypeScript.BlockSyntax
   ): typingsSlinky.typescriptServices.TypeScript.FunctionExpressionSyntax = js.native
   
+  /* static member */
+  @JSGlobal("TypeScript.FunctionExpressionSyntax.create1")
+  @js.native
   def create1(): typingsSlinky.typescriptServices.TypeScript.FunctionExpressionSyntax = js.native
 }

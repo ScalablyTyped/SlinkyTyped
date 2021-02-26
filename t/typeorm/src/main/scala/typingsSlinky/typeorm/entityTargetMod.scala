@@ -1,15 +1,12 @@
 package typingsSlinky.typeorm
 
 import typingsSlinky.typeorm.objectTypeMod.ObjectType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/common/EntityTarget", JSImport.Namespace)
-@js.native
-object entityTargetMod extends js.Object {
-  
-  trait _EntityTarget[Entity] extends js.Object
+object entityTargetMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.typeorm.objectTypeMod.ObjectType[Entity]
@@ -18,4 +15,6 @@ object entityTargetMod extends js.Object {
     - typingsSlinky.typeorm.anon.Name[Entity]
   */
   type EntityTarget[Entity] = _EntityTarget[Entity] | ObjectType[Entity] | String
+  
+  trait _EntityTarget[Entity] extends StObject
 }

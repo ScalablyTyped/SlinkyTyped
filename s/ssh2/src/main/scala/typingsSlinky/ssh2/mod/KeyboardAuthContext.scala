@@ -2,6 +2,7 @@ package typingsSlinky.ssh2.mod
 
 import typingsSlinky.ssh2.ssh2Strings.`keyboard-interactive`
 import typingsSlinky.ssh2Streams.mod.Prompt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

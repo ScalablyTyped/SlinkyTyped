@@ -11,8 +11,8 @@ jquery plugin for sortable, nestable lists
 | Full name          | jquery-sortable |
 | Keywords           | sortable, sort, sorting, drag, dragging |
 | # releases         | 0 |
-| # dependents       | 5 |
-| # downloads        | 259965 |
+| # dependents       | 6 |
+| # downloads        | 150079 |
 | # stars            | 0 |
 
 ## Links

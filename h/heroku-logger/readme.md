@@ -10,9 +10,9 @@ A dead simple logger, designed to be perfect for Heroku apps.
 | ------------------ | :-------------: |
 | Full name          | heroku-logger |
 | Keywords           | bunyan, heroku, log, logfmt, logger, logging, winston |
-| # releases         | 3 |
-| # dependents       | 4 |
-| # downloads        | 48086 |
+| # releases         | 0 |
+| # dependents       | 6 |
+| # downloads        | 95132 |
 | # stars            | 0 |
 
 ## Links

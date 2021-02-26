@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTable.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dropdown
   - typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dropup
 */
-trait DropDirection extends js.Object
+trait DropDirection extends StObject
 object DropDirection {
   
   @scala.inline

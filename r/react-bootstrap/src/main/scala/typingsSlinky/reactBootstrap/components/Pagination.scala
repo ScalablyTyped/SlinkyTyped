@@ -71,21 +71,97 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactBootstrap.mod.Sizes
+import typingsSlinky.reactBootstrap.paginationEllipsisMod.PaginationEllipsisProps
+import typingsSlinky.reactBootstrap.paginationFirstMod.PaginationFirstProps
+import typingsSlinky.reactBootstrap.paginationItemMod.PaginationItemProps
+import typingsSlinky.reactBootstrap.paginationLastMod.PaginationLastProps
 import typingsSlinky.reactBootstrap.paginationMod.PaginationProps
+import typingsSlinky.reactBootstrap.paginationNextMod.PaginationNextProps
+import typingsSlinky.reactBootstrap.paginationPrevMod.PaginationPrevProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Pagination {
   
+  object Ellipsis {
+    
+    @JSImport("react-bootstrap", "Pagination.Ellipsis")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Ellipsis.type): SharedBuilder_PaginationEllipsisProps1941165064[typingsSlinky.reactBootstrap.mod.Pagination.Ellipsis] = new SharedBuilder_PaginationEllipsisProps1941165064[typingsSlinky.reactBootstrap.mod.Pagination.Ellipsis](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PaginationEllipsisProps): SharedBuilder_PaginationEllipsisProps1941165064[typingsSlinky.reactBootstrap.mod.Pagination.Ellipsis] = new SharedBuilder_PaginationEllipsisProps1941165064[typingsSlinky.reactBootstrap.mod.Pagination.Ellipsis](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object First {
+    
+    @JSImport("react-bootstrap", "Pagination.First")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: First.type): SharedBuilder_PaginationFirstProps638751567[typingsSlinky.reactBootstrap.mod.Pagination.First] = new SharedBuilder_PaginationFirstProps638751567[typingsSlinky.reactBootstrap.mod.Pagination.First](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PaginationFirstProps): SharedBuilder_PaginationFirstProps638751567[typingsSlinky.reactBootstrap.mod.Pagination.First] = new SharedBuilder_PaginationFirstProps638751567[typingsSlinky.reactBootstrap.mod.Pagination.First](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Item {
+    
+    @JSImport("react-bootstrap", "Pagination.Item")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Item.type): SharedBuilder_PaginationItemProps1712651289[typingsSlinky.reactBootstrap.mod.Pagination.Item] = new SharedBuilder_PaginationItemProps1712651289[typingsSlinky.reactBootstrap.mod.Pagination.Item](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PaginationItemProps): SharedBuilder_PaginationItemProps1712651289[typingsSlinky.reactBootstrap.mod.Pagination.Item] = new SharedBuilder_PaginationItemProps1712651289[typingsSlinky.reactBootstrap.mod.Pagination.Item](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Last {
+    
+    @JSImport("react-bootstrap", "Pagination.Last")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Last.type): SharedBuilder_PaginationLastProps1598010682[typingsSlinky.reactBootstrap.mod.Pagination.Last] = new SharedBuilder_PaginationLastProps1598010682[typingsSlinky.reactBootstrap.mod.Pagination.Last](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PaginationLastProps): SharedBuilder_PaginationLastProps1598010682[typingsSlinky.reactBootstrap.mod.Pagination.Last] = new SharedBuilder_PaginationLastProps1598010682[typingsSlinky.reactBootstrap.mod.Pagination.Last](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Next {
+    
+    @JSImport("react-bootstrap", "Pagination.Next")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Next.type): SharedBuilder_PaginationNextProps57964132[typingsSlinky.reactBootstrap.mod.Pagination.Next] = new SharedBuilder_PaginationNextProps57964132[typingsSlinky.reactBootstrap.mod.Pagination.Next](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PaginationNextProps): SharedBuilder_PaginationNextProps57964132[typingsSlinky.reactBootstrap.mod.Pagination.Next] = new SharedBuilder_PaginationNextProps57964132[typingsSlinky.reactBootstrap.mod.Pagination.Next](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Prev {
+    
+    @JSImport("react-bootstrap", "Pagination.Prev")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Prev.type): SharedBuilder_PaginationPrevProps1893975578[typingsSlinky.reactBootstrap.mod.Pagination.Prev] = new SharedBuilder_PaginationPrevProps1893975578[typingsSlinky.reactBootstrap.mod.Pagination.Prev](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PaginationPrevProps): SharedBuilder_PaginationPrevProps1893975578[typingsSlinky.reactBootstrap.mod.Pagination.Prev] = new SharedBuilder_PaginationPrevProps1893975578[typingsSlinky.reactBootstrap.mod.Pagination.Prev](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("react-bootstrap", "Pagination")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Pagination] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -351,16 +427,13 @@ object Pagination {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -924,10 +997,10 @@ object Pagination {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -942,7 +1015,7 @@ object Pagination {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Pagination.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

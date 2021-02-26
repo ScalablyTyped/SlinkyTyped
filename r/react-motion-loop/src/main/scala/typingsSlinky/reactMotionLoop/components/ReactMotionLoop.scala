@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMotion.mod.PlainStyle
 import typingsSlinky.reactMotion.mod.Style
 import typingsSlinky.reactMotionLoop.mod.ReactMotionLoopProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactMotionLoop {
   
+  @scala.inline
+  def apply(styleFrom: Style, styleTo: Style): Builder = {
+    val __props = js.Dynamic.literal(styleFrom = styleFrom.asInstanceOf[js.Any], styleTo = styleTo.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactMotionLoopProps]))
+  }
+  
   @JSImport("react-motion-loop", "ReactMotionLoop")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,10 +42,4 @@ object ReactMotionLoop {
   }
   
   def withProps(p: ReactMotionLoopProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(styleFrom: Style, styleTo: Style): Builder = {
-    val __props = js.Dynamic.literal(styleFrom = styleFrom.asInstanceOf[js.Any], styleTo = styleTo.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactMotionLoopProps]))
-  }
 }

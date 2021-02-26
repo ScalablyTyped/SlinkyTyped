@@ -1,5 +1,6 @@
 package typingsSlinky.reactNavigation.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNavigation.reactNavigationStrings.didBlur
   - typingsSlinky.reactNavigation.reactNavigationStrings.action
 */
-trait EventType extends js.Object
+trait EventType extends StObject
 object EventType {
   
   @scala.inline

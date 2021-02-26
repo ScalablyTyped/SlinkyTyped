@@ -1,31 +1,41 @@
 organization := "org.scalablytyped.slinky"
 name := "storybook__ui"
-version := "5.3.19-4cb0f3"
+version := "6.1.2-f80886"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-fce754",
-  "org.scalablytyped.slinky" %%% "emotion-theming" % "10.0.27-ac1388",
-  "org.scalablytyped.slinky" %%% "emotion__core" % "10.0.28-f55723",
-  "org.scalablytyped.slinky" %%% "emotion__serialize" % "0.11.16-e1b0d7",
-  "org.scalablytyped.slinky" %%% "emotion__styled" % "10.0.27-fa2c85",
-  "org.scalablytyped.slinky" %%% "emotion__styled-base" % "10.0.31-bdeb17",
-  "org.scalablytyped.slinky" %%% "emotion__utils" % "0.11.3-07d215",
-  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20200518Z-8944d8",
-  "org.scalablytyped.slinky" %%% "popper_dot_js" % "1.16.1-a800bc",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ce652f",
-  "org.scalablytyped.slinky" %%% "reach__router" % "1.3-dt-20200426Z-c5224b",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a9854",
-  "org.scalablytyped.slinky" %%% "react-syntax-highlighter" % "11.0-dt-20200515Z-f764a1",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
-  "org.scalablytyped.slinky" %%% "storybook__addon-actions" % "5.3.19-ac145e",
-  "org.scalablytyped.slinky" %%% "storybook__api" % "5.3.19-b5fbf5",
-  "org.scalablytyped.slinky" %%% "storybook__channels" % "5.3.19-84ffe6",
-  "org.scalablytyped.slinky" %%% "storybook__components" % "5.3.19-e346ef",
-  "org.scalablytyped.slinky" %%% "storybook__router" % "5.3.19-3d4d4b",
-  "org.scalablytyped.slinky" %%% "storybook__theming" % "5.3.19-76fbf6")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.14-58bcb0",
+  "org.scalablytyped.slinky" %%% "downshift" % "6.0.6-1e74f8",
+  "org.scalablytyped.slinky" %%% "emotion__core" % "10.1.1-978917",
+  "org.scalablytyped.slinky" %%% "emotion__serialize" % "0.11.16-a8d0ee",
+  "org.scalablytyped.slinky" %%% "emotion__styled" % "10.0.27-040617",
+  "org.scalablytyped.slinky" %%% "emotion__styled-base" % "10.0.31-857dc1",
+  "org.scalablytyped.slinky" %%% "emotion__utils" % "0.11.3-562ee1",
+  "org.scalablytyped.slinky" %%% "fuse_dot_js" % "3.6.1-afa6af",
+  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20201002Z-67d6e3",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "overlayscrollbars" % "1.12-dt-20200515Z-6e3654",
+  "org.scalablytyped.slinky" %%% "popperjs__core" % "2.5.4-769459",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-931d77",
+  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20201002Z-9bc0d9",
+  "org.scalablytyped.slinky" %%% "reach__router" % "1.3-dt-20200925Z-b26fdb",
+  "org.scalablytyped.slinky" %%% "react" % "17.0-dt-20201121Z-9cde70",
+  "org.scalablytyped.slinky" %%% "react-draggable" % "4.4.3-9fc635",
+  "org.scalablytyped.slinky" %%% "react-sizeme" % "2.6.12-3edd39",
+  "org.scalablytyped.slinky" %%% "react-syntax-highlighter" % "13.5-dt-20201016Z-368a3c",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27",
+  "org.scalablytyped.slinky" %%% "store2" % "2.12.0-48e3d8",
+  "org.scalablytyped.slinky" %%% "storybook__addon-actions" % "6.1.2-7aac3f",
+  "org.scalablytyped.slinky" %%% "storybook__addons" % "6.1.2-679664",
+  "org.scalablytyped.slinky" %%% "storybook__api" % "6.1.2-2b31f1",
+  "org.scalablytyped.slinky" %%% "storybook__channels" % "6.1.2-4cfe7c",
+  "org.scalablytyped.slinky" %%% "storybook__client-api" % "6.1.2-74609b",
+  "org.scalablytyped.slinky" %%% "storybook__components" % "6.1.2-460e71",
+  "org.scalablytyped.slinky" %%% "storybook__react" % "6.1.2-4f374d",
+  "org.scalablytyped.slinky" %%% "storybook__router" % "6.1.2-a94bde",
+  "org.scalablytyped.slinky" %%% "storybook__theming" % "6.1.2-d2f90a")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -3,13 +3,14 @@ package typingsSlinky.vueCompilerCore.mod
 import typingsSlinky.sourceMap.mod.SourceMapGenerator
 import typingsSlinky.vueCompilerCore.vueCompilerCoreStrings.function
 import typingsSlinky.vueCompilerCore.vueCompilerCoreStrings.module
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent std.Omit<std.Required<@vue/compiler-core.@vue/compiler-core.CodegenOptions>, 'bindingMetadata'> */
 @js.native
-trait CodegenContext extends js.Object {
+trait CodegenContext extends StObject {
   
   var code: String = js.native
   

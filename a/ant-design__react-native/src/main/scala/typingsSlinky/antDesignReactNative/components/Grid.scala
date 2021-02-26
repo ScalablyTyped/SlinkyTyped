@@ -10,15 +10,22 @@ import typingsSlinky.antDesignReactNative.gridStyleMod.GridStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Grid {
   
+  @scala.inline
+  def apply(carouselMaxRow: Double, columnNum: Double): Builder = {
+    val __props = js.Dynamic.literal(carouselMaxRow = carouselMaxRow.asInstanceOf[js.Any], columnNum = columnNum.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[GridProps]))
+  }
+  
   @JSImport("@ant-design/react-native", "Grid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,10 +36,10 @@ object Grid {
     def carouselProps(value: CarouselProps): this.type = set("carouselProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: js.UndefOr[DataItem]*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[js.UndefOr[DataItem]]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[js.UndefOr[DataItem]]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: js.UndefOr[DataItem]*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def hasLine(value: Boolean): this.type = set("hasLine", value.asInstanceOf[js.Any])
@@ -57,10 +64,4 @@ object Grid {
   }
   
   def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(carouselMaxRow: Double, columnNum: Double): Builder = {
-    val __props = js.Dynamic.literal(carouselMaxRow = carouselMaxRow.asInstanceOf[js.Any], columnNum = columnNum.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[GridProps]))
-  }
 }

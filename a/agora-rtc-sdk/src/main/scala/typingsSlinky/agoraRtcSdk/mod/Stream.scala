@@ -22,6 +22,7 @@ import typingsSlinky.agoraRtcSdk.anon.Fit
 import typingsSlinky.agoraRtcSdk.anon.Info
 import typingsSlinky.agoraRtcSdk.anon.LighteningContrastLevel
 import typingsSlinky.agoraRtcSdk.anon.SoundId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,7 +35,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * All Stream methods can be called for both local and remote streams if not specified.
   */
 @js.native
-trait Stream extends js.Object {
+trait Stream extends StObject {
   
   /**
     * Adds the Audio or Video Track

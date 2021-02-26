@@ -11,6 +11,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.io.XSeekable
 import typingsSlinky.activexLibreoffice.com_.sun.star.io.XStream
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

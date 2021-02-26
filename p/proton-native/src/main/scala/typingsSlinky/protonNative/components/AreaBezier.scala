@@ -9,15 +9,31 @@ import typingsSlinky.protonNative.protonNativeStrings.bevel
 import typingsSlinky.protonNative.protonNativeStrings.flat
 import typingsSlinky.protonNative.protonNativeStrings.miter
 import typingsSlinky.protonNative.protonNativeStrings.round
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AreaBezier {
   
+  @scala.inline
+  def apply(
+    cx1: Double | String,
+    cx2: Double | String,
+    cy1: Double | String,
+    cy2: Double | String,
+    x1: Double | String,
+    x2: Double | String,
+    y1: Double | String,
+    y2: Double | String
+  ): Builder = {
+    val __props = js.Dynamic.literal(cx1 = cx1.asInstanceOf[js.Any], cx2 = cx2.asInstanceOf[js.Any], cy1 = cy1.asInstanceOf[js.Any], cy2 = cy2.asInstanceOf[js.Any], x1 = x1.asInstanceOf[js.Any], x2 = x2.asInstanceOf[js.Any], y1 = y1.asInstanceOf[js.Any], y2 = y2.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AreaBezierProps]))
+  }
+  
   @JSImport("proton-native", "AreaBezier")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -74,19 +90,4 @@ object AreaBezier {
   }
   
   def withProps(p: AreaBezierProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    cx1: Double | String,
-    cx2: Double | String,
-    cy1: Double | String,
-    cy2: Double | String,
-    x1: Double | String,
-    x2: Double | String,
-    y1: Double | String,
-    y2: Double | String
-  ): Builder = {
-    val __props = js.Dynamic.literal(cx1 = cx1.asInstanceOf[js.Any], cx2 = cx2.asInstanceOf[js.Any], cy1 = cy1.asInstanceOf[js.Any], cy2 = cy2.asInstanceOf[js.Any], x1 = x1.asInstanceOf[js.Any], x2 = x2.asInstanceOf[js.Any], y1 = y1.asInstanceOf[js.Any], y2 = y2.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AreaBezierProps]))
-  }
 }

@@ -9,6 +9,7 @@ import typingsSlinky.browserfs.isoFSMod.IsoFS
 import typingsSlinky.browserfs.isoFSMod.IsoFSOptions
 import typingsSlinky.browserfs.isoFSMod.default
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

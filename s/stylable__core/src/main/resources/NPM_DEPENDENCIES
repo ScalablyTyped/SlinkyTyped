@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "@stylable/core" : "3.11.5"
+      "@stylable/core" : "3.11.7"
     }
   ],
   "test-dependencies" : [
     {
-      "@stylable/core" : "3.11.5"
+      "@stylable/core" : "3.11.7"
     }
   ],
   "compile-devDependencies" : [

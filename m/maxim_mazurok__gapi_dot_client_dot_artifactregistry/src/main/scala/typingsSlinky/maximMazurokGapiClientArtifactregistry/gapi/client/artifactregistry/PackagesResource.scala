@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientArtifactregistry.gapi.client.artifac
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientArtifactregistry.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientArtifactregistry.anon.PageToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PackagesResource extends js.Object {
+trait PackagesResource extends StObject {
   
   /** Deletes a package and all of its versions and tags. The returned operation will complete once the package has been deleted. */
   def delete(): Request[Operation] = js.native

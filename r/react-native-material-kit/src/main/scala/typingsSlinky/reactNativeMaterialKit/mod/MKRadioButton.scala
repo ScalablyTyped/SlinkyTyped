@@ -1,17 +1,24 @@
 package typingsSlinky.reactNativeMaterialKit.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-material-kit", "MKRadioButton")
 @js.native
-class MKRadioButton ()
-  extends MKComponent[MKRadioButtonProperties, js.Any]
-@JSImport("react-native-material-kit", "MKRadioButton")
-@js.native
-object MKRadioButton extends js.Object {
+class MKRadioButton protected ()
+  extends MKComponent[MKRadioButtonProperties, js.Any] {
+  def this(props: MKRadioButtonProperties) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: MKRadioButtonProperties, context: js.Any) = this()
+}
+object MKRadioButton {
   
+  @JSImport("react-native-material-kit", "MKRadioButton.Group")
   @js.native
   class Group () extends MKRadioButtonGroup {
     def this(onAdd: js.Function1[
@@ -43,6 +50,7 @@ object MKRadioButton extends js.Object {
     def onRemoved(btn: typingsSlinky.reactNativeMaterialKit.mod.MKRadioButton.MKRadioButton): Unit = js.native
   }
   
+  @JSImport("react-native-material-kit", "MKRadioButton.MKRadioButton")
   @js.native
-  class MKRadioButton () extends js.Object
+  class MKRadioButton () extends StObject
 }

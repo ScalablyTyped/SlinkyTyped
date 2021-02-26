@@ -1,5 +1,6 @@
 package typingsSlinky.webix.mod.ui
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webix.webixStrings.onDestruct
   - typingsSlinky.webix.webixStrings.onViewShow
 */
-trait headerlayoutEventName extends js.Object
+trait headerlayoutEventName extends StObject
 object headerlayoutEventName {
   
   @scala.inline

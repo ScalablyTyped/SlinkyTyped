@@ -6,6 +6,7 @@ import typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.NFKC
 import typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.NFKD
 import typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.lower
 import typingsSlinky.gatsbyPluginUtils.gatsbyPluginUtilsStrings.upper
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

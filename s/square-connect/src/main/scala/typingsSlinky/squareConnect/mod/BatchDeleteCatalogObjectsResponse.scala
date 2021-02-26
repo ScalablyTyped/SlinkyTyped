@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "BatchDeleteCatalogObjectsResponse")
 @js.native
-class BatchDeleteCatalogObjectsResponse () extends js.Object {
+class BatchDeleteCatalogObjectsResponse () extends StObject {
   
   /**
     * The database [timestamp](https://developer.squareup.com/docs/build-basics/working-with-dates) of this deletion

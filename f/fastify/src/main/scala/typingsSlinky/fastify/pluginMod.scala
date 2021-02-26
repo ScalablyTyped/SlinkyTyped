@@ -7,13 +7,12 @@ import typingsSlinky.fastify.utilsMod.RawRequestDefaultExpression
 import typingsSlinky.fastify.utilsMod.RawServerBase
 import typingsSlinky.fastify.utilsMod.RawServerDefault
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("fastify/types/plugin", JSImport.Namespace)
-@js.native
-object pluginMod extends js.Object {
+object pluginMod {
   
   type FastifyPlugin[Options /* <: FastifyPluginOptions */] = (FastifyPluginCallback[Options, RawServerDefault]) | (FastifyPluginAsync[Options, RawServerDefault])
   

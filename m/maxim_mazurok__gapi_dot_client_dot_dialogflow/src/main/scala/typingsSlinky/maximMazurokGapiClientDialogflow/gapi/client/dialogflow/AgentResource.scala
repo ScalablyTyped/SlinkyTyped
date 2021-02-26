@@ -11,12 +11,13 @@ import typingsSlinky.maximMazurokGapiClientDialogflow.anon.Parent
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.ParentPrettyPrint
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.PrettyPrintQuotaUser
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AgentResource extends js.Object {
+trait AgentResource extends StObject {
   
   var entityTypes: EntityTypesResource = js.native
   

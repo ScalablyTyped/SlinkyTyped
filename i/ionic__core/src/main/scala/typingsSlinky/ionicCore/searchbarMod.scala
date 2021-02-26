@@ -30,14 +30,14 @@ import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.searchbarInterfaceMod.SearchbarChangeEventDetail
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/searchbar/searchbar", JSImport.Namespace)
-@js.native
-object searchbarMod extends js.Object {
+object searchbarMod {
   
+  @JSImport("@ionic/core/dist/types/components/searchbar/searchbar", "Searchbar")
   @js.native
   class Searchbar () extends ComponentInterface {
     

@@ -1,12 +1,13 @@
 package typingsSlinky.ejWebAll.global.ej
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ej.InputMode")
 @js.native
-object InputMode extends js.Object {
+object InputMode extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.InputMode with Double] = js.native

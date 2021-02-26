@@ -9,15 +9,22 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.mod.ButtonGroupProps
 import typingsSlinky.reactNativeElements.mod.ElementObject
 import typingsSlinky.reactNativeElements.mod.InnerBorderStyleProperty
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ButtonGroup {
   
+  @scala.inline
+  def apply(buttons: js.Array[ElementObject | String], onPress: Double => Unit): Builder = {
+    val __props = js.Dynamic.literal(buttons = buttons.asInstanceOf[js.Any], onPress = js.Any.fromFunction1(onPress))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ButtonGroupProps]))
+  }
+  
   @JSImport("react-native-elements", "ButtonGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,13 +32,13 @@ object ButtonGroup {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.ButtonGroup] {
     
     @scala.inline
-    def ComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("Component", value.asInstanceOf[js.Any])
+    def Component(value: ReactComponentClass[_]): this.type = set("Component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ComponentComponentClass(value: ReactComponentClass[_]): this.type = set("Component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def Component(value: ReactComponentClass[_]): this.type = set("Component", value.asInstanceOf[js.Any])
+    def ComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("Component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def activeOpacity(value: Double): this.type = set("activeOpacity", value.asInstanceOf[js.Any])
@@ -56,9 +63,6 @@ object ButtonGroup {
     
     @scala.inline
     def containerStyleNull: this.type = set("containerStyle", null)
-    
-    @scala.inline
-    def disabledVarargs(value: Double*): this.type = set("disabled", js.Array(value :_*))
     
     @scala.inline
     def disabled(value: Boolean | js.Array[Double]): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -88,6 +92,9 @@ object ButtonGroup {
     def disabledTextStyleNull: this.type = set("disabledTextStyle", null)
     
     @scala.inline
+    def disabledVarargs(value: Double*): this.type = set("disabled", js.Array(value :_*))
+    
+    @scala.inline
     def innerBorderStyle(value: InnerBorderStyleProperty): this.type = set("innerBorderStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -112,10 +119,10 @@ object ButtonGroup {
     def selectedIndexNull: this.type = set("selectedIndex", null)
     
     @scala.inline
-    def selectedIndexesVarargs(value: Double*): this.type = set("selectedIndexes", js.Array(value :_*))
+    def selectedIndexes(value: js.Array[Double]): this.type = set("selectedIndexes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedIndexes(value: js.Array[Double]): this.type = set("selectedIndexes", value.asInstanceOf[js.Any])
+    def selectedIndexesVarargs(value: Double*): this.type = set("selectedIndexes", js.Array(value :_*))
     
     @scala.inline
     def selectedTextStyle(value: StyleProp[TextStyle]): this.type = set("selectedTextStyle", value.asInstanceOf[js.Any])
@@ -140,10 +147,4 @@ object ButtonGroup {
   }
   
   def withProps(p: ButtonGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(buttons: js.Array[ElementObject | String], onPress: Double => Unit): Builder = {
-    val __props = js.Dynamic.literal(buttons = buttons.asInstanceOf[js.Any], onPress = js.Any.fromFunction1(onPress))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ButtonGroupProps]))
-  }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.node.cryptoMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.node.nodeStrings.`aes-192-gcm`
   - typingsSlinky.node.nodeStrings.`aes-256-gcm`
 */
-trait CipherGCMTypes extends js.Object
+trait CipherGCMTypes extends StObject
 object CipherGCMTypes {
   
   @scala.inline

@@ -8,6 +8,7 @@ import typingsSlinky.ptomasroosReactNativeMultiSlider.mod.MarkerProps
 import typingsSlinky.ptomasroosReactNativeMultiSlider.mod.MultiSliderProps
 import typingsSlinky.ptomasroosReactNativeMultiSlider.mod.default
 import typingsSlinky.reactNative.mod.ViewStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object ReactNativeMultiSlider {
   
   @JSImport("@ptomasroos/react-native-multi-slider", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,31 +31,31 @@ object ReactNativeMultiSlider {
     def containerStyle(value: ViewStyle): this.type = set("containerStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customMarkerFunctionComponent(value: ReactComponentClass[MarkerProps]): this.type = set("customMarker", value.asInstanceOf[js.Any])
+    def customMarker(value: ReactComponentClass[MarkerProps]): this.type = set("customMarker", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customMarkerComponentClass(value: ReactComponentClass[MarkerProps]): this.type = set("customMarker", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customMarker(value: ReactComponentClass[MarkerProps]): this.type = set("customMarker", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def customMarkerLeftFunctionComponent(value: ReactComponentClass[MarkerProps]): this.type = set("customMarkerLeft", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def customMarkerLeftComponentClass(value: ReactComponentClass[MarkerProps]): this.type = set("customMarkerLeft", value.asInstanceOf[js.Any])
+    def customMarkerFunctionComponent(value: ReactComponentClass[MarkerProps]): this.type = set("customMarker", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customMarkerLeft(value: ReactComponentClass[MarkerProps]): this.type = set("customMarkerLeft", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customMarkerRightFunctionComponent(value: ReactComponentClass[MarkerProps]): this.type = set("customMarkerRight", value.asInstanceOf[js.Any])
+    def customMarkerLeftComponentClass(value: ReactComponentClass[MarkerProps]): this.type = set("customMarkerLeft", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def customMarkerLeftFunctionComponent(value: ReactComponentClass[MarkerProps]): this.type = set("customMarkerLeft", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def customMarkerRight(value: ReactComponentClass[MarkerProps]): this.type = set("customMarkerRight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customMarkerRightComponentClass(value: ReactComponentClass[MarkerProps]): this.type = set("customMarkerRight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customMarkerRight(value: ReactComponentClass[MarkerProps]): this.type = set("customMarkerRight", value.asInstanceOf[js.Any])
+    def customMarkerRightFunctionComponent(value: ReactComponentClass[MarkerProps]): this.type = set("customMarkerRight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def enabledOne(value: Boolean): this.type = set("enabledOne", value.asInstanceOf[js.Any])
@@ -99,10 +100,10 @@ object ReactNativeMultiSlider {
     def onValuesChangeStart(value: () => Unit): this.type = set("onValuesChangeStart", js.Any.fromFunction0(value))
     
     @scala.inline
-    def optionsArrayVarargs(value: Double*): this.type = set("optionsArray", js.Array(value :_*))
+    def optionsArray(value: js.Array[Double]): this.type = set("optionsArray", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def optionsArray(value: js.Array[Double]): this.type = set("optionsArray", value.asInstanceOf[js.Any])
+    def optionsArrayVarargs(value: Double*): this.type = set("optionsArray", js.Array(value :_*))
     
     @scala.inline
     def pressedMarkerStyle(value: ViewStyle): this.type = set("pressedMarkerStyle", value.asInstanceOf[js.Any])
@@ -135,13 +136,13 @@ object ReactNativeMultiSlider {
     def valueSuffix(value: String): this.type = set("valueSuffix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valuesVarargs(value: Double*): this.type = set("values", js.Array(value :_*))
+    def values(value: js.Array[Double]): this.type = set("values", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def values(value: js.Array[Double]): this.type = set("values", value.asInstanceOf[js.Any])
+    def valuesVarargs(value: Double*): this.type = set("values", js.Array(value :_*))
   }
   
-  def withProps(p: MultiSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeMultiSlider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MultiSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

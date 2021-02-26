@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Fragment/fragmentOutputBlock", JSImport.Namespace)
-@js.native
-object fragmentOutputBlockMod extends js.Object {
+object fragmentOutputBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/fragmentOutputBlock", "FragmentOutputBlock")
   @js.native
   class FragmentOutputBlock protected () extends NodeMaterialBlock {
     /**

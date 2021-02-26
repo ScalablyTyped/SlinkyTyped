@@ -1,5 +1,6 @@
 package typingsSlinky.dockerode.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.dockerode.dockerodeStrings.etwlogs
   - typingsSlinky.dockerode.dockerodeStrings.none
 */
-trait LoggingDriverType extends js.Object
+trait LoggingDriverType extends StObject
 object LoggingDriverType {
   
   @scala.inline

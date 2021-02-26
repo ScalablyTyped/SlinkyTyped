@@ -2,12 +2,13 @@ package typingsSlinky.activexPowerpoint.PowerPoint
 
 import typingsSlinky.activexOffice.Office.MsoLanguageID
 import typingsSlinky.activexOffice.Office.MsoTriState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TextRange extends js.Object {
+trait TextRange extends StObject {
   
   val ActionSettings: typingsSlinky.activexPowerpoint.PowerPoint.ActionSettings = js.native
   

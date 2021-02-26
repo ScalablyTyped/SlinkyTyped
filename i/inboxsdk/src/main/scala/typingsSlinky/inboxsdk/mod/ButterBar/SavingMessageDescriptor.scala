@@ -1,6 +1,7 @@
 package typingsSlinky.inboxsdk.mod.ButterBar
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,24 +11,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.inboxsdk.mod.ButterBar.SavingMessageDescriptorHtml
   - typingsSlinky.inboxsdk.mod.ButterBar.SavingMessageDescriptorHtmlElement
 */
-trait SavingMessageDescriptor extends js.Object
+trait SavingMessageDescriptor extends StObject
 object SavingMessageDescriptor {
   
   @scala.inline
-  def SavingMessageDescriptorText(text: String): SavingMessageDescriptor = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SavingMessageDescriptor]
-  }
-  
-  @scala.inline
-  def SavingMessageDescriptorHtml(html: String): SavingMessageDescriptor = {
+  def SavingMessageDescriptorHtml(html: String): typingsSlinky.inboxsdk.mod.ButterBar.SavingMessageDescriptorHtml = {
     val __obj = js.Dynamic.literal(html = html.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SavingMessageDescriptor]
+    __obj.asInstanceOf[typingsSlinky.inboxsdk.mod.ButterBar.SavingMessageDescriptorHtml]
   }
   
   @scala.inline
-  def SavingMessageDescriptorHtmlElement(el: HTMLElement): SavingMessageDescriptor = {
+  def SavingMessageDescriptorHtmlElement(el: HTMLElement): typingsSlinky.inboxsdk.mod.ButterBar.SavingMessageDescriptorHtmlElement = {
     val __obj = js.Dynamic.literal(el = el.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SavingMessageDescriptor]
+    __obj.asInstanceOf[typingsSlinky.inboxsdk.mod.ButterBar.SavingMessageDescriptorHtmlElement]
+  }
+  
+  @scala.inline
+  def SavingMessageDescriptorText(text: String): typingsSlinky.inboxsdk.mod.ButterBar.SavingMessageDescriptorText = {
+    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.inboxsdk.mod.ButterBar.SavingMessageDescriptorText]
   }
 }

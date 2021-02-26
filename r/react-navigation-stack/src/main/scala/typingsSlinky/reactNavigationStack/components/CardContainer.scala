@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.react.mod.ComponentPropsWithRef
 import typingsSlinky.reactNavigationStack.cardContainerMod.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,10 +27,6 @@ typingsSlinky.std.InstanceType[
   * / typingsSlinky.std.stdStrings.Pick with js.Any because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.)) */
 object CardContainer {
   
-  @JSImport("react-navigation-stack/lib/typescript/src/vendor/views/Stack/CardContainer", JSImport.Default)
-  @js.native
-  object component extends js.Object
-  
   def apply(
     p: ComponentPropsWithRef[
       js.Function1[
@@ -38,6 +35,10 @@ object CardContainer {
       ]
     ]
   ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
+  @JSImport("react-navigation-stack/lib/typescript/src/vendor/views/Stack/CardContainer", JSImport.Default)
+  @js.native
+  val component: js.Object = js.native
   
   implicit def make(companion: CardContainer.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }

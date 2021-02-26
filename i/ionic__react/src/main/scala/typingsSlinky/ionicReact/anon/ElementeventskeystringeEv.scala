@@ -331,13 +331,14 @@ import typingsSlinky.std.ScrollIntoViewOptions
 import typingsSlinky.std.ScrollToOptions
 import typingsSlinky.std.ShadowRoot
 import typingsSlinky.std.ShadowRootInit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Element & {  __events :{[key: string] : (e : std.Event): any | undefined} | undefined} */
 @js.native
-trait ElementeventskeystringeEv extends js.Object {
+trait ElementeventskeystringeEv extends StObject {
   
   val ATTRIBUTE_NODE: Double = js.native
   
@@ -2194,24 +2195,24 @@ trait ElementeventskeystringeEv extends js.Object {
     * Removes the event listener in target's event listener list with the same type, callback, and options.
     */
   def removeEventListener(`type`: String): Unit = js.native
-  def removeEventListener(`type`: String, callback: Null, options: Boolean): Unit = js.native
   def removeEventListener(`type`: String, callback: Null, options: EventListenerOptions): Unit = js.native
+  def removeEventListener(`type`: String, callback: Null, options: Boolean): Unit = js.native
   def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject): Unit = js.native
-  def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
   def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject, options: EventListenerOptions): Unit = js.native
+  def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -2219,13 +2220,13 @@ trait ElementeventskeystringeEv extends js.Object {
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   
   def replaceChild[T /* <: Node */](newChild: Node, oldChild: T): T = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.twit.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.twit.twitStrings.user
   - typingsSlinky.twit.twitStrings.site
 */
-trait StreamEndpoint extends js.Object
+trait StreamEndpoint extends StObject
 object StreamEndpoint {
   
   @scala.inline

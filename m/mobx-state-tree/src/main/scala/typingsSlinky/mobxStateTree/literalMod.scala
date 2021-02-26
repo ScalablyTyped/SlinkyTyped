@@ -1,20 +1,33 @@
 package typingsSlinky.mobxStateTree
 
 import typingsSlinky.mobxStateTree.typeMod.ISimpleType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("mobx-state-tree/dist/types/utility-types/literal", JSImport.Namespace)
-@js.native
-object literalMod extends js.Object {
+object literalMod {
   
+  @JSImport("mobx-state-tree/dist/types/utility-types/literal", "isLiteralType")
+  @js.native
   def isLiteralType[IT /* <: ISimpleType[_] */](`type`: IT): /* is IT */ Boolean = js.native
   
+  @JSImport("mobx-state-tree/dist/types/utility-types/literal", "literal")
+  @js.native
   def literal(value: js.UndefOr[scala.Nothing]): ISimpleType[js.UndefOr[scala.Nothing]] = js.native
+  @JSImport("mobx-state-tree/dist/types/utility-types/literal", "literal")
+  @js.native
   def literal(value: String): ISimpleType[String] = js.native
-  def literal(value: Boolean): ISimpleType[Boolean] = js.native
-  def literal(value: Double): ISimpleType[Double] = js.native
-  def literal(value: Null): ISimpleType[Null] = js.native
+  @JSImport("mobx-state-tree/dist/types/utility-types/literal", "literal")
+  @js.native
   def literal(value: js.Date): ISimpleType[js.Date] = js.native
+  @JSImport("mobx-state-tree/dist/types/utility-types/literal", "literal")
+  @js.native
+  def literal(value: Boolean): ISimpleType[Boolean] = js.native
+  @JSImport("mobx-state-tree/dist/types/utility-types/literal", "literal")
+  @js.native
+  def literal(value: Double): ISimpleType[Double] = js.native
+  @JSImport("mobx-state-tree/dist/types/utility-types/literal", "literal")
+  @js.native
+  def literal(value: Null): ISimpleType[Null] = js.native
 }

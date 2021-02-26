@@ -10,9 +10,9 @@ Deprecate all the things
 | ------------------ | :-------------: |
 | Full name          | depd |
 | Keywords           | deprecate, deprecated |
-| # releases         | 3 |
-| # dependents       | 442 |
-| # downloads        | 587953500 |
+| # releases         | 0 |
+| # dependents       | 548 |
+| # downloads        | 912754610 |
 | # stars            | 24 |
 
 ## Links

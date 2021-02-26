@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientPubsub.anon.Key
 import typingsSlinky.maximMazurokGapiClientPubsub.anon.Name
 import typingsSlinky.maximMazurokGapiClientPubsub.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientPubsub.anon.PageSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SnapshotsResource extends js.Object {
+trait SnapshotsResource extends StObject {
   
   /**
     * Creates a snapshot from the requested subscription. Snapshots are used in [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations, which allow you to manage message

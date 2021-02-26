@@ -3,12 +3,13 @@ package typingsSlinky.arangodb.ArangoDB
 import typingsSlinky.arangodb.anon.IsSystem
 import typingsSlinky.arangodb.anon.Limit
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Collection[T /* <: js.Object */] extends js.Object {
+trait Collection[T /* <: js.Object */] extends StObject {
   
   // Document
   def all(): Cursor[Document[T]] = js.native

@@ -5,15 +5,22 @@ import org.scalajs.dom.raw.WebGLRenderingContext
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.glReactHeadless.glviewheadlessMod.GLViewHeadlessProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object GLViewHeadless {
   
+  @scala.inline
+  def apply(height: Double, width: Double): Builder = {
+    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[GLViewHeadlessProps]))
+  }
+  
   @JSImport("gl-react-headless/GLViewHeadless", "GLViewHeadless")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +47,4 @@ object GLViewHeadless {
   }
   
   def withProps(p: GLViewHeadlessProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(height: Double, width: Double): Builder = {
-    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[GLViewHeadlessProps]))
-  }
 }

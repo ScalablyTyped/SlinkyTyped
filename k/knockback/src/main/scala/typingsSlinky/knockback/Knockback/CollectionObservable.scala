@@ -3,13 +3,14 @@ package typingsSlinky.knockback.Knockback
 import typingsSlinky.backbone.mod.Collection
 import typingsSlinky.backbone.mod.Model
 import typingsSlinky.backbone.mod.ModelSetOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
 - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservableArray<any> * / any */ @js.native
-trait CollectionObservable extends js.Object {
+trait CollectionObservable extends StObject {
   
   def collection(): Collection[Model[_, ModelSetOptions, js.Object]] = js.native
   def collection(colleciton: Collection[Model[_, ModelSetOptions, js.Object]]): js.Any = js.native

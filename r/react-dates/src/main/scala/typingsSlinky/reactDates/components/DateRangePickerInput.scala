@@ -14,6 +14,7 @@ import typingsSlinky.reactDates.mod.DateRangePickerInputShape
 import typingsSlinky.reactDates.mod.DisabledShape
 import typingsSlinky.reactDates.mod.IconPositionShape
 import typingsSlinky.reactDates.mod.OpenDirectionShape
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ object DateRangePickerInput {
   
   @JSImport("react-dates", "DateRangePickerInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,22 +34,22 @@ object DateRangePickerInput {
     def block(value: Boolean): this.type = set("block", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customArrowIconReactElement(value: ReactElement): this.type = set("customArrowIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def customArrowIcon(value: ReactElement): this.type = set("customArrowIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customCloseIconReactElement(value: ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
+    def customArrowIconReactElement(value: ReactElement): this.type = set("customArrowIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customCloseIcon(value: ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customInputIconReactElement(value: ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
+    def customCloseIconReactElement(value: ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customInputIcon(value: ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def customInputIconReactElement(value: ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: DisabledShape): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -156,7 +157,7 @@ object DateRangePickerInput {
     def verticalSpacing(value: Double): this.type = set("verticalSpacing", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DateRangePickerInputShape): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DateRangePickerInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DateRangePickerInputShape): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

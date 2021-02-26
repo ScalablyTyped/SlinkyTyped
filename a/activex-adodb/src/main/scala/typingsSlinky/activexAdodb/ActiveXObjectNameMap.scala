@@ -7,12 +7,13 @@ import typingsSlinky.activexAdodb.ADODB.Parameter
 import typingsSlinky.activexAdodb.ADODB.Record
 import typingsSlinky.activexAdodb.ADODB.Recordset
 import typingsSlinky.activexAdodb.ADODB.Stream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ActiveXObjectNameMap extends js.Object {
+trait ActiveXObjectNameMap extends StObject {
   
   @JSName("ADODB.Command")
   var ADODBDotCommand: Command = js.native

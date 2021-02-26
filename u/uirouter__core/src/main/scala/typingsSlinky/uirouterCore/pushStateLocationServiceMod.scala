@@ -3,14 +3,14 @@ package typingsSlinky.uirouterCore
 import typingsSlinky.uirouterCore.baseLocationServiceMod.BaseLocationServices
 import typingsSlinky.uirouterCore.coreservicesMod.LocationConfig
 import typingsSlinky.uirouterCore.routerMod.UIRouter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/vanilla/pushStateLocationService", JSImport.Namespace)
-@js.native
-object pushStateLocationServiceMod extends js.Object {
+object pushStateLocationServiceMod {
   
+  @JSImport("@uirouter/core/lib/vanilla/pushStateLocationService", "PushStateLocationService")
   @js.native
   class PushStateLocationService protected () extends BaseLocationServices {
     def this(router: UIRouter) = this()

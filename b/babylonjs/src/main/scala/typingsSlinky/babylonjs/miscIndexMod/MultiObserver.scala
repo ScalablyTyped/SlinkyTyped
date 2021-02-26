@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.miscIndexMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class MultiObserver[T] ()
   extends typingsSlinky.babylonjs.observableMod.MultiObserver[T]
 /* static members */
-@JSImport("babylonjs/Misc/index", "MultiObserver")
-@js.native
-object MultiObserver extends js.Object {
+object MultiObserver {
   
   /**
     * Raise a callback when one of the observable will notify
@@ -21,6 +20,8 @@ object MultiObserver extends js.Object {
     * @param scope defines the current scope used to restore the JS context
     * @returns the new MultiObserver
     */
+  @JSImport("babylonjs/Misc/index", "MultiObserver.Watch")
+  @js.native
   def Watch[T](
     observables: js.Array[typingsSlinky.babylonjs.observableMod.Observable[T]],
     callback: js.Function2[
@@ -29,6 +30,8 @@ object MultiObserver extends js.Object {
       Unit
     ]
   ): typingsSlinky.babylonjs.observableMod.MultiObserver[T] = js.native
+  @JSImport("babylonjs/Misc/index", "MultiObserver.Watch")
+  @js.native
   def Watch[T](
     observables: js.Array[typingsSlinky.babylonjs.observableMod.Observable[T]],
     callback: js.Function2[
@@ -39,6 +42,8 @@ object MultiObserver extends js.Object {
     mask: js.UndefOr[scala.Nothing],
     scope: js.Any
   ): typingsSlinky.babylonjs.observableMod.MultiObserver[T] = js.native
+  @JSImport("babylonjs/Misc/index", "MultiObserver.Watch")
+  @js.native
   def Watch[T](
     observables: js.Array[typingsSlinky.babylonjs.observableMod.Observable[T]],
     callback: js.Function2[
@@ -48,6 +53,8 @@ object MultiObserver extends js.Object {
     ],
     mask: Double
   ): typingsSlinky.babylonjs.observableMod.MultiObserver[T] = js.native
+  @JSImport("babylonjs/Misc/index", "MultiObserver.Watch")
+  @js.native
   def Watch[T](
     observables: js.Array[typingsSlinky.babylonjs.observableMod.Observable[T]],
     callback: js.Function2[

@@ -3,12 +3,13 @@ package typingsSlinky.std
 import typingsSlinky.std.stdStrings.copy
 import typingsSlinky.std.stdStrings.cut
 import typingsSlinky.std.stdStrings.paste
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DocumentAndElementEventHandlers extends js.Object {
+trait DocumentAndElementEventHandlers extends StObject {
   
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
@@ -76,12 +77,12 @@ trait DocumentAndElementEventHandlers extends js.Object {
   var onpaste: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _]) | Null = js.native
   
   def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
-  def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_copy(
     `type`: copy,
@@ -91,13 +92,13 @@ trait DocumentAndElementEventHandlers extends js.Object {
   def removeEventListener_copy(
     `type`: copy,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_copy(
     `type`: copy,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cut(
@@ -108,13 +109,13 @@ trait DocumentAndElementEventHandlers extends js.Object {
   def removeEventListener_cut(
     `type`: cut,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cut(
     `type`: cut,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_paste(
@@ -125,12 +126,12 @@ trait DocumentAndElementEventHandlers extends js.Object {
   def removeEventListener_paste(
     `type`: paste,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _],
-    options: scala.Boolean
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_paste(
     `type`: paste,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: scala.Boolean
   ): Unit = js.native
 }

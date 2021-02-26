@@ -3,15 +3,22 @@ package typingsSlinky.reactBootstrap.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrap.overlayTriggerMod.OverlayTriggerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OverlayTrigger {
   
+  @scala.inline
+  def apply(overlay: js.Any): Builder = {
+    val __props = js.Dynamic.literal(overlay = overlay.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OverlayTriggerProps]))
+  }
+  
   @JSImport("react-bootstrap", "OverlayTrigger")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -64,17 +71,11 @@ object OverlayTrigger {
     def rootClose(value: Boolean): this.type = set("rootClose", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def triggerVarargs(value: String*): this.type = set("trigger", js.Array(value :_*))
+    def trigger(value: String | js.Array[String]): this.type = set("trigger", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def trigger(value: String | js.Array[String]): this.type = set("trigger", value.asInstanceOf[js.Any])
+    def triggerVarargs(value: String*): this.type = set("trigger", js.Array(value :_*))
   }
   
   def withProps(p: OverlayTriggerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(overlay: js.Any): Builder = {
-    val __props = js.Dynamic.literal(overlay = overlay.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[OverlayTriggerProps]))
-  }
 }

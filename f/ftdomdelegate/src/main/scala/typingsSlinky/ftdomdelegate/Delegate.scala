@@ -2,12 +2,13 @@ package typingsSlinky.ftdomdelegate
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Delegate extends js.Object {
+trait Delegate extends StObject {
   
   def destroy(): Unit = js.native
   

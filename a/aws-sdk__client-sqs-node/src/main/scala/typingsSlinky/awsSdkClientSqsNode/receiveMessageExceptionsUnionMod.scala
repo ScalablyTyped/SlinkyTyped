@@ -1,13 +1,12 @@
 package typingsSlinky.awsSdkClientSqsNode
 
 import typingsSlinky.awsSdkClientSqsNode.typesOverLimitMod.OverLimit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-sqs-node/types/ReceiveMessageExceptionsUnion", JSImport.Namespace)
-@js.native
-object receiveMessageExceptionsUnionMod extends js.Object {
+object receiveMessageExceptionsUnionMod {
   
   type ReceiveMessageExceptionsUnion = OverLimit
 }

@@ -5,6 +5,7 @@ import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.JQueryPromise
 import typingsSlinky.kendoUi.kendo.data.DataSource
 import typingsSlinky.kendoUi.kendo.data.SchedulerDataSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -58,8 +59,8 @@ trait Scheduler extends Widget {
   
   def setDataSource(dataSource: SchedulerDataSource): Unit = js.native
   
-  def slotByElement(element: JQuery): js.Any = js.native
   def slotByElement(element: Element): js.Any = js.native
+  def slotByElement(element: JQuery): js.Any = js.native
   
   def slotByPosition(xPosition: Double, yPosition: Double): js.Any = js.native
   

@@ -1,12 +1,13 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "MessageBarType")
 @js.native
-object MessageBarType extends js.Object {
+object MessageBarType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.messageBarTypesMod.MessageBarType with Double] = js.native

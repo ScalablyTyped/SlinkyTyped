@@ -1,22 +1,24 @@
 package typingsSlinky.antvComponent
 
 import typingsSlinky.antvComponent.interfacesMod.IList
-import typingsSlinky.antvComponent.legendBaseMod.LegendBase
 import typingsSlinky.antvComponent.typesMod.CategoryLegendCfg
 import typingsSlinky.antvComponent.typesMod.ListItem
 import typingsSlinky.antvEventEmitter.mod.EventType
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/legend/category", JSImport.Namespace)
-@js.native
-object categoryMod extends js.Object {
+object categoryMod {
+  
+  @JSImport("@antv/component/lib/legend/category", JSImport.Default)
+  @js.native
+  class default () extends Category
   
   @js.native
   trait Category
-    extends LegendBase[CategoryLegendCfg]
+    extends typingsSlinky.antvComponent.legendBaseMod.default[CategoryLegendCfg]
        with IList {
     
     var adjustNavigation: js.Any = js.native
@@ -100,7 +102,4 @@ object categoryMod extends js.Object {
     
     var updateNavigation: js.Any = js.native
   }
-  
-  @js.native
-  class default () extends Category
 }

@@ -1,11 +1,19 @@
 package typingsSlinky.protonNative.mod
 
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("proton-native", "ColorButton")
 @js.native
-class ColorButton ()
-  extends Component[ColorButtonProps, js.Object, js.Any]
+class ColorButton protected ()
+  extends Component[ColorButtonProps, js.Object, js.Any] {
+  def this(props: ColorButtonProps) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: ColorButtonProps, context: js.Any) = this()
+}

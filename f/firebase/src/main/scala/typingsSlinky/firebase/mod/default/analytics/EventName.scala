@@ -1,153 +1,126 @@
 package typingsSlinky.firebase.mod.default.analytics
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait EventName extends js.Object
-@JSImport("firebase", "analytics.EventName")
+sealed trait EventName extends StObject
+@JSImport("firebase", "default.analytics.EventName")
 @js.native
-object EventName extends js.Object {
+object EventName extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[EventName with String] = js.native
   
   @js.native
   sealed trait ADD_PAYMENT_INFO extends EventName
-  /* "add_payment_info" */ @js.native
-  object ADD_PAYMENT_INFO extends TopLevel[ADD_PAYMENT_INFO with String]
+  /* "add_payment_info" */ val ADD_PAYMENT_INFO: typingsSlinky.firebase.mod.default.analytics.EventName.ADD_PAYMENT_INFO with String = js.native
   
   @js.native
   sealed trait ADD_SHIPPING_INFO extends EventName
-  /* "add_shipping_info" */ @js.native
-  object ADD_SHIPPING_INFO extends TopLevel[ADD_SHIPPING_INFO with String]
+  /* "add_shipping_info" */ val ADD_SHIPPING_INFO: typingsSlinky.firebase.mod.default.analytics.EventName.ADD_SHIPPING_INFO with String = js.native
   
   @js.native
   sealed trait ADD_TO_CART extends EventName
-  /* "add_to_cart" */ @js.native
-  object ADD_TO_CART extends TopLevel[ADD_TO_CART with String]
+  /* "add_to_cart" */ val ADD_TO_CART: typingsSlinky.firebase.mod.default.analytics.EventName.ADD_TO_CART with String = js.native
   
   @js.native
   sealed trait ADD_TO_WISHLIST extends EventName
-  /* "add_to_wishlist" */ @js.native
-  object ADD_TO_WISHLIST extends TopLevel[ADD_TO_WISHLIST with String]
+  /* "add_to_wishlist" */ val ADD_TO_WISHLIST: typingsSlinky.firebase.mod.default.analytics.EventName.ADD_TO_WISHLIST with String = js.native
   
   @js.native
   sealed trait BEGIN_CHECKOUT extends EventName
-  /* "begin_checkout" */ @js.native
-  object BEGIN_CHECKOUT extends TopLevel[BEGIN_CHECKOUT with String]
+  /* "begin_checkout" */ val BEGIN_CHECKOUT: typingsSlinky.firebase.mod.default.analytics.EventName.BEGIN_CHECKOUT with String = js.native
   
   /** @deprecated */
   @js.native
   sealed trait CHECKOUT_PROGRESS extends EventName
-  /* "checkout_progress" */ @js.native
-  object CHECKOUT_PROGRESS extends TopLevel[CHECKOUT_PROGRESS with String]
+  /* "checkout_progress" */ val CHECKOUT_PROGRESS: typingsSlinky.firebase.mod.default.analytics.EventName.CHECKOUT_PROGRESS with String = js.native
   
   @js.native
   sealed trait EXCEPTION extends EventName
-  /* "exception" */ @js.native
-  object EXCEPTION extends TopLevel[EXCEPTION with String]
+  /* "exception" */ val EXCEPTION: typingsSlinky.firebase.mod.default.analytics.EventName.EXCEPTION with String = js.native
   
   @js.native
   sealed trait GENERATE_LEAD extends EventName
-  /* "generate_lead" */ @js.native
-  object GENERATE_LEAD extends TopLevel[GENERATE_LEAD with String]
+  /* "generate_lead" */ val GENERATE_LEAD: typingsSlinky.firebase.mod.default.analytics.EventName.GENERATE_LEAD with String = js.native
   
   @js.native
   sealed trait LOGIN extends EventName
-  /* "login" */ @js.native
-  object LOGIN extends TopLevel[LOGIN with String]
+  /* "login" */ val LOGIN: typingsSlinky.firebase.mod.default.analytics.EventName.LOGIN with String = js.native
   
   @js.native
   sealed trait PAGE_VIEW extends EventName
-  /* "page_view" */ @js.native
-  object PAGE_VIEW extends TopLevel[PAGE_VIEW with String]
+  /* "page_view" */ val PAGE_VIEW: typingsSlinky.firebase.mod.default.analytics.EventName.PAGE_VIEW with String = js.native
   
   @js.native
   sealed trait PURCHASE extends EventName
-  /* "purchase" */ @js.native
-  object PURCHASE extends TopLevel[PURCHASE with String]
+  /* "purchase" */ val PURCHASE: typingsSlinky.firebase.mod.default.analytics.EventName.PURCHASE with String = js.native
   
   @js.native
   sealed trait REFUND extends EventName
-  /* "refund" */ @js.native
-  object REFUND extends TopLevel[REFUND with String]
+  /* "refund" */ val REFUND: typingsSlinky.firebase.mod.default.analytics.EventName.REFUND with String = js.native
   
   @js.native
   sealed trait REMOVE_FROM_CART extends EventName
-  /* "remove_from_cart" */ @js.native
-  object REMOVE_FROM_CART extends TopLevel[REMOVE_FROM_CART with String]
+  /* "remove_from_cart" */ val REMOVE_FROM_CART: typingsSlinky.firebase.mod.default.analytics.EventName.REMOVE_FROM_CART with String = js.native
   
   @js.native
   sealed trait SCREEN_VIEW extends EventName
-  /* "screen_view" */ @js.native
-  object SCREEN_VIEW extends TopLevel[SCREEN_VIEW with String]
+  /* "screen_view" */ val SCREEN_VIEW: typingsSlinky.firebase.mod.default.analytics.EventName.SCREEN_VIEW with String = js.native
   
   @js.native
   sealed trait SEARCH extends EventName
-  /* "search" */ @js.native
-  object SEARCH extends TopLevel[SEARCH with String]
+  /* "search" */ val SEARCH: typingsSlinky.firebase.mod.default.analytics.EventName.SEARCH with String = js.native
   
   @js.native
   sealed trait SELECT_CONTENT extends EventName
-  /* "select_content" */ @js.native
-  object SELECT_CONTENT extends TopLevel[SELECT_CONTENT with String]
+  /* "select_content" */ val SELECT_CONTENT: typingsSlinky.firebase.mod.default.analytics.EventName.SELECT_CONTENT with String = js.native
   
   @js.native
   sealed trait SELECT_ITEM extends EventName
-  /* "select_item" */ @js.native
-  object SELECT_ITEM extends TopLevel[SELECT_ITEM with String]
+  /* "select_item" */ val SELECT_ITEM: typingsSlinky.firebase.mod.default.analytics.EventName.SELECT_ITEM with String = js.native
   
   @js.native
   sealed trait SELECT_PROMOTION extends EventName
-  /* "select_promotion" */ @js.native
-  object SELECT_PROMOTION extends TopLevel[SELECT_PROMOTION with String]
+  /* "select_promotion" */ val SELECT_PROMOTION: typingsSlinky.firebase.mod.default.analytics.EventName.SELECT_PROMOTION with String = js.native
   
   /** @deprecated */
   @js.native
   sealed trait SET_CHECKOUT_OPTION extends EventName
-  /* "set_checkout_option" */ @js.native
-  object SET_CHECKOUT_OPTION extends TopLevel[SET_CHECKOUT_OPTION with String]
+  /* "set_checkout_option" */ val SET_CHECKOUT_OPTION: typingsSlinky.firebase.mod.default.analytics.EventName.SET_CHECKOUT_OPTION with String = js.native
   
   @js.native
   sealed trait SHARE extends EventName
-  /* "share" */ @js.native
-  object SHARE extends TopLevel[SHARE with String]
+  /* "share" */ val SHARE: typingsSlinky.firebase.mod.default.analytics.EventName.SHARE with String = js.native
   
   @js.native
   sealed trait SIGN_UP extends EventName
-  /* "sign_up" */ @js.native
-  object SIGN_UP extends TopLevel[SIGN_UP with String]
+  /* "sign_up" */ val SIGN_UP: typingsSlinky.firebase.mod.default.analytics.EventName.SIGN_UP with String = js.native
   
   @js.native
   sealed trait TIMING_COMPLETE extends EventName
-  /* "timing_complete" */ @js.native
-  object TIMING_COMPLETE extends TopLevel[TIMING_COMPLETE with String]
+  /* "timing_complete" */ val TIMING_COMPLETE: typingsSlinky.firebase.mod.default.analytics.EventName.TIMING_COMPLETE with String = js.native
   
   @js.native
   sealed trait VIEW_CART extends EventName
-  /* "view_cart" */ @js.native
-  object VIEW_CART extends TopLevel[VIEW_CART with String]
+  /* "view_cart" */ val VIEW_CART: typingsSlinky.firebase.mod.default.analytics.EventName.VIEW_CART with String = js.native
   
   @js.native
   sealed trait VIEW_ITEM extends EventName
-  /* "view_item" */ @js.native
-  object VIEW_ITEM extends TopLevel[VIEW_ITEM with String]
+  /* "view_item" */ val VIEW_ITEM: typingsSlinky.firebase.mod.default.analytics.EventName.VIEW_ITEM with String = js.native
   
   @js.native
   sealed trait VIEW_ITEM_LIST extends EventName
-  /* "view_item_list" */ @js.native
-  object VIEW_ITEM_LIST extends TopLevel[VIEW_ITEM_LIST with String]
+  /* "view_item_list" */ val VIEW_ITEM_LIST: typingsSlinky.firebase.mod.default.analytics.EventName.VIEW_ITEM_LIST with String = js.native
   
   @js.native
   sealed trait VIEW_PROMOTION extends EventName
-  /* "view_promotion" */ @js.native
-  object VIEW_PROMOTION extends TopLevel[VIEW_PROMOTION with String]
+  /* "view_promotion" */ val VIEW_PROMOTION: typingsSlinky.firebase.mod.default.analytics.EventName.VIEW_PROMOTION with String = js.native
   
   @js.native
   sealed trait VIEW_SEARCH_RESULTS extends EventName
-  /* "view_search_results" */ @js.native
-  object VIEW_SEARCH_RESULTS extends TopLevel[VIEW_SEARCH_RESULTS with String]
+  /* "view_search_results" */ val VIEW_SEARCH_RESULTS: typingsSlinky.firebase.mod.default.analytics.EventName.VIEW_SEARCH_RESULTS with String = js.native
 }

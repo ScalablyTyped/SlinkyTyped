@@ -3,14 +3,14 @@ package typingsSlinky.ionicCore
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/item-divider/item-divider", JSImport.Namespace)
-@js.native
-object itemDividerMod extends js.Object {
+object itemDividerMod {
   
+  @JSImport("@ionic/core/dist/types/components/item-divider/item-divider", "ItemDivider")
   @js.native
   class ItemDivider () extends ComponentInterface {
     

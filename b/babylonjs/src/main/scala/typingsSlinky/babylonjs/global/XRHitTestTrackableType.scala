@@ -1,12 +1,13 @@
 package typingsSlinky.babylonjs.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("XRHitTestTrackableType")
 @js.native
-object XRHitTestTrackableType extends js.Object {
+object XRHitTestTrackableType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.babylonjs.XRHitTestTrackableType with Double] = js.native

@@ -8,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.rest.ODataKeyPart
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,16 +26,20 @@ class BooleanAttributeType protected ()
     container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
-/* static members */
-@JSImport("mendixmodelsdk", "domainmodels.BooleanAttributeType")
-@js.native
-object BooleanAttributeType extends js.Object {
+object BooleanAttributeType {
+  
+  @JSImport("mendixmodelsdk", "domainmodels.BooleanAttributeType")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Creates and returns a new BooleanAttributeType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
+  /* static member */
+  @JSImport("mendixmodelsdk", "domainmodels.BooleanAttributeType.create")
+  @js.native
   def create(model: IModel): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.BooleanAttributeType = js.native
   
   /**
@@ -45,6 +50,9 @@ object BooleanAttributeType extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  6.0.0 to 8.8.0
     */
+  /* static member */
+  @JSImport("mendixmodelsdk", "domainmodels.BooleanAttributeType.createIn")
+  @js.native
   def createIn(container: typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.Attribute): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.BooleanAttributeType = js.native
   
   /**
@@ -52,6 +60,9 @@ object BooleanAttributeType extends js.Object {
     * The new BooleanAttributeType will be automatically stored in the 'type' property
     * of the parent Attribute element passed as argument.
     */
+  /* static member */
+  @JSImport("mendixmodelsdk", "domainmodels.BooleanAttributeType.createInAttributeUnderType")
+  @js.native
   def createInAttributeUnderType(container: typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.Attribute): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.BooleanAttributeType = js.native
   
   /**
@@ -62,6 +73,9 @@ object BooleanAttributeType extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.9.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk", "domainmodels.BooleanAttributeType.createInEntityKeyPartUnderType")
+  @js.native
   def createInEntityKeyPartUnderType(container: typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.EntityKeyPart): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.BooleanAttributeType = js.native
   
   /**
@@ -72,9 +86,22 @@ object BooleanAttributeType extends js.Object {
     * Warning! Can only be used on models with the following Mendix meta model versions:
     *  8.9.0 and higher
     */
+  /* static member */
+  @JSImport("mendixmodelsdk", "domainmodels.BooleanAttributeType.createInODataKeyPartUnderType")
+  @js.native
   def createInODataKeyPartUnderType(container: ODataKeyPart): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.BooleanAttributeType = js.native
   
-  var structureTypeName: String = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk", "domainmodels.BooleanAttributeType.structureTypeName")
+  @js.native
+  def structureTypeName: String = js.native
+  @scala.inline
+  def structureTypeName_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("structureTypeName")(x.asInstanceOf[js.Any])
   
-  var versionInfo: StructureVersionInfo = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk", "domainmodels.BooleanAttributeType.versionInfo")
+  @js.native
+  def versionInfo: StructureVersionInfo = js.native
+  @scala.inline
+  def versionInfo_=(x: StructureVersionInfo): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(x.asInstanceOf[js.Any])
 }

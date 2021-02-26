@@ -4,13 +4,14 @@ import typingsSlinky.squareConnect.squareConnectStrings.APPROVED
 import typingsSlinky.squareConnect.squareConnectStrings.FAILED
 import typingsSlinky.squareConnect.squareConnectStrings.PENDING
 import typingsSlinky.squareConnect.squareConnectStrings.REJECTED
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "Refund")
 @js.native
-class Refund () extends js.Object {
+class Refund () extends StObject {
   
   /**
     * Additional recipients (other than the merchant) receiving a portion of this refund.

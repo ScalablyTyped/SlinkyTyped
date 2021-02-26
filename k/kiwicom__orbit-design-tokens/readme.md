@@ -10,9 +10,9 @@ Design tokens for Kiwi.com.
 | ------------------ | :-------------: |
 | Full name          | @kiwicom/orbit-design-tokens |
 | Keywords           | orbit, ui, design |
-| # releases         | 44 |
-| # dependents       | 6 |
-| # downloads        | 332391 |
+| # releases         | 28 |
+| # dependents       | 4 |
+| # downloads        | 343461 |
 | # stars            | 0 |
 
 ## Links

@@ -4,13 +4,29 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.rmcDialog.anon.AfterClose
 import typingsSlinky.rmcDialog.idialogproptypesMod.IDialogPropTypes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rmc-dialog/lib/Dialog", JSImport.Namespace)
-@js.native
-object dialogMod extends js.Object {
+object dialogMod {
+  
+  @JSImport("rmc-dialog/lib/Dialog", JSImport.Default)
+  @js.native
+  class default () extends Dialog
+  /* static members */
+  object default {
+    
+    @JSImport("rmc-dialog/lib/Dialog", JSImport.Default)
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("rmc-dialog/lib/Dialog", "default.defaultProps")
+    @js.native
+    def defaultProps: AfterClose = js.native
+    @scala.inline
+    def defaultProps_=(x: AfterClose): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
+  }
   
   @js.native
   trait Dialog
@@ -50,14 +66,5 @@ object dialogMod extends js.Object {
     def onMaskClick(e: js.Any): Unit = js.native
     
     var wrapRef: js.Any = js.native
-  }
-  
-  @js.native
-  class default () extends Dialog
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    var defaultProps: AfterClose = js.native
   }
 }

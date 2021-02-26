@@ -9,6 +9,7 @@ import typingsSlinky.atlaskitLayer.mod.FlipPositionType
 import typingsSlinky.atlaskitLayer.mod.PositionType
 import typingsSlinky.atlaskitLayer.mod.Props
 import typingsSlinky.atlaskitLayer.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object Layer {
   
   @JSImport("@atlaskit/layer", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,19 +26,19 @@ object Layer {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def autoFlipVarargs(value: FlipPositionType*): this.type = set("autoFlip", js.Array(value :_*))
+    def autoFlip(value: Boolean | FlipPositionType | js.Array[FlipPositionType]): this.type = set("autoFlip", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def autoFlip(value: Boolean | FlipPositionType | js.Array[FlipPositionType]): this.type = set("autoFlip", value.asInstanceOf[js.Any])
+    def autoFlipVarargs(value: FlipPositionType*): this.type = set("autoFlip", js.Array(value :_*))
     
     @scala.inline
     def boundariesElement(value: BoundariesElementType): this.type = set("boundariesElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lockScroll(value: Boolean): this.type = set("lockScroll", value.asInstanceOf[js.Any])
@@ -57,7 +58,7 @@ object Layer {
     def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Layer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

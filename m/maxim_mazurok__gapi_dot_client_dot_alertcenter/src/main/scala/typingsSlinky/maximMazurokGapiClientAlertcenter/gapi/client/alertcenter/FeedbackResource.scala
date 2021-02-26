@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAlertcenter.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientAlertcenter.anon.AlertId
 import typingsSlinky.maximMazurokGapiClientAlertcenter.anon.Alt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FeedbackResource extends js.Object {
+trait FeedbackResource extends StObject {
   
   /**
     * Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert returns `NOT_FOUND` error. Attempting to create a feedback for an alert that is marked

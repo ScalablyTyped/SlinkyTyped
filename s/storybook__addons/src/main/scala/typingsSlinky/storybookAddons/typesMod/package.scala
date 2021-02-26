@@ -1,5 +1,6 @@
 package typingsSlinky.storybookAddons
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,4 +93,7 @@ package object typesMod {
   ]
   
   type Types_ = typingsSlinky.storybookAddons.typesMod.types | java.lang.String
+  
+  @scala.inline
+  def isSupportedType(`type`: typingsSlinky.storybookAddons.typesMod.Types_): scala.Boolean = typingsSlinky.storybookAddons.typesMod.^.asInstanceOf[js.Dynamic].applyDynamic("isSupportedType")(`type`.asInstanceOf[js.Any]).asInstanceOf[scala.Boolean]
 }

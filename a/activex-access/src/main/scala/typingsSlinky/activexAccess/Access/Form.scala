@@ -1,12 +1,13 @@
 package typingsSlinky.activexAccess.Access
 
 import typingsSlinky.activexDao.DAO.Recordset
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Form extends js.Object {
+trait Form extends StObject {
   
   @JSName("Access.Form_typekey")
   var AccessDotForm_typekey: typingsSlinky.activexAccess.Access.Form = js.native

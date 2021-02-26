@@ -20,12 +20,13 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.HeapProfiler.StartTrackingHea
 import typingsSlinky.devtoolsProtocol.mod.Protocol.HeapProfiler.StopSamplingResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.HeapProfiler.StopTrackingHeapObjectsRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.HeapProfiler.TakeHeapSnapshotRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HeapProfilerApi extends js.Object {
+trait HeapProfilerApi extends StObject {
   
   /**
     * Enables console to refer to the node with given id via $x (see Command Line API for more details

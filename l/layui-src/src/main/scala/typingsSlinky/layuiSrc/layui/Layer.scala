@@ -8,6 +8,7 @@ import typingsSlinky.layuiSrc.layuiSrcStrings.iframe
 import typingsSlinky.layuiSrc.layuiSrcStrings.loading
 import typingsSlinky.layuiSrc.layuiSrcStrings.page
 import typingsSlinky.layuiSrc.layuiSrcStrings.tips
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * https://www.layui.com/doc/modules/layer.html#layer.tips
   */
 @js.native
-trait Layer extends js.Object {
+trait Layer extends StObject {
   
   /**
     * 普通信息框
@@ -130,10 +131,10 @@ trait Layer extends js.Object {
   // 第二参数可以是'#id' 获取document.bod 或者JQuery
   def tips(content: String, follow: String): Double = js.native
   def tips(content: String, follow: String, options: LayerOptions): Double = js.native
-  def tips(content: String, follow: JQuery[HTMLElement]): Double = js.native
-  def tips(content: String, follow: JQuery[HTMLElement], options: LayerOptions): Double = js.native
   def tips(content: String, follow: HTMLElement): Double = js.native
   def tips(content: String, follow: HTMLElement, options: LayerOptions): Double = js.native
+  def tips(content: String, follow: JQuery[HTMLElement]): Double = js.native
+  def tips(content: String, follow: JQuery[HTMLElement], options: LayerOptions): Double = js.native
   
   def title(title: String, index: Double): Unit = js.native
 }

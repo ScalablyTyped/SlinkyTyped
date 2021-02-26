@@ -90,13 +90,12 @@ import typingsSlinky.react.reactStrings.terminal
 import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object radialGradient {
-  
-  val component: String = "radialGradient"
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1268,7 +1267,9 @@ object radialGradient {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SVGProps[SVGRadialGradientElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  val component: String = "radialGradient"
   
   implicit def make(companion: radialGradient.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SVGProps[SVGRadialGradientElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

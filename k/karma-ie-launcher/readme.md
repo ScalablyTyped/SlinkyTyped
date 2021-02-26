@@ -11,8 +11,8 @@ A Karma plugin. Launcher for Internet Explorer.
 | Full name          | karma-ie-launcher |
 | Keywords           | karma-plugin, karma-launcher, ie |
 | # releases         | 0 |
-| # dependents       | 91 |
-| # downloads        | 2624958 |
+| # dependents       | 90 |
+| # downloads        | 2791272 |
 | # stars            | 7 |
 
 ## Links

@@ -79,6 +79,7 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -274,10 +275,10 @@ class SharedBuilder_ISeparatorProps286181022 (val args: js.Array[js.Any])
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -589,10 +590,10 @@ class SharedBuilder_ISeparatorProps286181022 (val args: js.Array[js.Any])
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def stylesFunction1(value: ISeparatorStyleProps => DeepPartial[ISeparatorStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def styles(value: IStyleFunctionOrObject[ISeparatorStyleProps, ISeparatorStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def styles(value: IStyleFunctionOrObject[ISeparatorStyleProps, ISeparatorStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+  def stylesFunction1(value: ISeparatorStyleProps => DeepPartial[ISeparatorStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   
   @scala.inline
   def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])

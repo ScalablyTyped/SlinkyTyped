@@ -10,9 +10,9 @@ Attach cloud and local files in Rails applications
 | ------------------ | :-------------: |
 | Full name          | activestorage |
 | Keywords           | - |
-| # releases         | 13 |
+| # releases         | 9 |
 | # dependents       | 5 |
-| # downloads        | 1458788 |
+| # downloads        | 3494997 |
 | # stars            | 2 |
 
 ## Links

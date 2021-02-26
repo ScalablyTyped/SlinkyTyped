@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDatalabeling.gapi.client.datalabelin
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AnnotatedDatasetsResource extends js.Object {
+trait AnnotatedDatasetsResource extends StObject {
   
   var dataItems: DataItemsResource = js.native
   

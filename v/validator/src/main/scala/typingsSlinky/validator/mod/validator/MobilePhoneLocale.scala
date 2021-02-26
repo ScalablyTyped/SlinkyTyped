@@ -1,5 +1,6 @@
 package typingsSlinky.validator.mod.validator
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,7 +93,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.validator.validatorStrings.`fr-BE`
   - typingsSlinky.validator.validatorStrings.`zh-HK`
 */
-trait MobilePhoneLocale extends js.Object
+trait MobilePhoneLocale extends StObject
 object MobilePhoneLocale {
   
   @scala.inline

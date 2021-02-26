@@ -26,16 +26,16 @@ import typingsSlinky.sipJs.userAgentsMod.SubscribeUserAgentClient
 import typingsSlinky.sipJs.userAgentsMod.UserAgentClient
 import typingsSlinky.sipJs.userAgentsMod.UserAgentServer
 import typingsSlinky.std.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/core/user-agent-core/user-agent-core", JSImport.Namespace)
-@js.native
-object userAgentCoreUserAgentCoreMod extends js.Object {
+object userAgentCoreUserAgentCoreMod {
   
+  @JSImport("sip.js/lib/core/user-agent-core/user-agent-core", "UserAgentCore")
   @js.native
-  class UserAgentCore protected () extends js.Object {
+  class UserAgentCore protected () extends StObject {
     /**
       * Constructor.
       * @param configuration - Configuration.

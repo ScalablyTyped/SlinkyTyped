@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.apigatewayDeploymentMod.DeploymentState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,9 +25,7 @@ class Deployment protected ()
   def this(name: String, args: DeploymentArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/aws", "apigateway.Deployment")
-@js.native
-object Deployment extends js.Object {
+object Deployment {
   
   /**
     * Get an existing Deployment resource's state with the given name, ID, and optional extra
@@ -37,14 +36,24 @@ object Deployment extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/aws", "apigateway.Deployment.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.apigatewayDeploymentMod.Deployment = js.native
+  @JSImport("@pulumi/aws", "apigateway.Deployment.get")
+  @js.native
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayDeploymentMod.Deployment = js.native
+  @JSImport("@pulumi/aws", "apigateway.Deployment.get")
+  @js.native
   def get(name: String, id: Input[ID], state: DeploymentState): typingsSlinky.pulumiAws.apigatewayDeploymentMod.Deployment = js.native
+  @JSImport("@pulumi/aws", "apigateway.Deployment.get")
+  @js.native
   def get(name: String, id: Input[ID], state: DeploymentState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayDeploymentMod.Deployment = js.native
   
   /**
     * Returns true if the given object is an instance of Deployment.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/aws", "apigateway.Deployment.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/apigateway/deployment.Deployment */ Boolean = js.native
 }

@@ -1,12 +1,13 @@
 package typingsSlinky.agGrid.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ag-grid", "VDirection")
 @js.native
-object VDirection extends js.Object {
+object VDirection extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.agGrid.dragAndDropServiceMod.VDirection with Double] = js.native

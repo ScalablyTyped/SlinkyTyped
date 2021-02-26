@@ -10,6 +10,7 @@ import typingsSlinky.reactNativeMaterialMenu.reactNativeMaterialMenuStrings.clip
 import typingsSlinky.reactNativeMaterialMenu.reactNativeMaterialMenuStrings.head
 import typingsSlinky.reactNativeMaterialMenu.reactNativeMaterialMenuStrings.middle
 import typingsSlinky.reactNativeMaterialMenu.reactNativeMaterialMenuStrings.tail
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object MenuItem {
   
   @JSImport("react-native-material-menu", "MenuItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -53,7 +54,7 @@ object MenuItem {
     def underlayColor(value: String): this.type = set("underlayColor", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MenuItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

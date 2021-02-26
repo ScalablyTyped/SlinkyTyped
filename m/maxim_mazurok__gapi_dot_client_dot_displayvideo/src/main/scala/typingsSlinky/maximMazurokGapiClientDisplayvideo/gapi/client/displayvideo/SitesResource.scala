@@ -13,12 +13,13 @@ import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.Uploadprotocol
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.UrlOrAppId
 import typingsSlinky.maximMazurokGapiClientDisplayvideo.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SitesResource extends js.Object {
+trait SitesResource extends StObject {
   
   /**
     * Bulk edits sites under a single channel. The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then create the sites provided in

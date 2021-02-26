@@ -37,6 +37,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`8192`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`8388608`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`8`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -87,7 +88,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`268435456`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
 */
-trait TransliterationModules extends js.Object
+trait TransliterationModules extends StObject
 object TransliterationModules {
   
   @scala.inline

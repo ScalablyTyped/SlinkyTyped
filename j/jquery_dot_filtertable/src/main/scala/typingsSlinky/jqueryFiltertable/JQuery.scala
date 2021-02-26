@@ -2,12 +2,13 @@ package typingsSlinky.jqueryFiltertable
 
 import typingsSlinky.jqueryFiltertable.FilterTable.FilterTableOptions
 import typingsSlinky.jqueryFiltertable.FilterTable.FilterTableStatic
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * init with default options

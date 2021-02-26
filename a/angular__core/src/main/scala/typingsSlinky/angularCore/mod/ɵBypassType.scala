@@ -3,6 +3,7 @@ package typingsSlinky.angularCore.mod
 import typingsSlinky.angularCore.angularCoreStrings.HTML
 import typingsSlinky.angularCore.angularCoreStrings.ResourceURL
 import typingsSlinky.angularCore.angularCoreStrings.URL
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCore.angularCoreStrings.Script
   - typingsSlinky.angularCore.angularCoreStrings.Style
 */
-trait ɵBypassType extends js.Object
+trait ɵBypassType extends StObject
 object ɵBypassType {
   
   @scala.inline

@@ -2,18 +2,19 @@ package typingsSlinky.keystonejsEmail
 
 import typingsSlinky.keystonejsEmail.anon.Root
 import typingsSlinky.keystonejsEmail.anon.Send
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@keystonejs/email", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@keystonejs/email", "emailSender")
+  @js.native
   val emailSender: MailSenderBuilder = js.native
   
   @js.native
-  trait MailSenderBuilder extends js.Object {
+  trait MailSenderBuilder extends StObject {
     
     def jsx(): Sender = js.native
     def jsx(opts: Root): Sender = js.native

@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -60,18 +61,26 @@ class TransactionHeader () extends ITransactionHeader {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "TransactionHeader")
-@js.native
-object TransactionHeader extends js.Object {
+object TransactionHeader {
   
   /**
     * Creates a new TransactionHeader instance using the specified properties.
     * @param [properties] Properties to set
     * @returns TransactionHeader instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.create")
+  @js.native
   def create(): TransactionHeader = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.create")
+  @js.native
   def create(properties: ITransactionHeader): TransactionHeader = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): TransactionHeader = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): TransactionHeader = js.native
   /**
     * Decodes a TransactionHeader message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -80,11 +89,16 @@ object TransactionHeader extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.decode")
+  @js.native
   def decode(reader: Reader): TransactionHeader = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.decode")
+  @js.native
   def decode(reader: Reader, length: Double): TransactionHeader = js.native
-  def decode(reader: js.typedarray.Uint8Array): TransactionHeader = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): TransactionHeader = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): TransactionHeader = js.native
   /**
     * Decodes a TransactionHeader message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -92,8 +106,9 @@ object TransactionHeader extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): TransactionHeader = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): TransactionHeader = js.native
   
   /**
     * Encodes the specified TransactionHeader message. Does not implicitly {@link TransactionHeader.verify|verify} messages.
@@ -101,7 +116,11 @@ object TransactionHeader extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.encode")
+  @js.native
   def encode(message: ITransactionHeader): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.encode")
+  @js.native
   def encode(message: ITransactionHeader, writer: Writer): Writer = js.native
   
   /**
@@ -110,7 +129,11 @@ object TransactionHeader extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITransactionHeader): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ITransactionHeader, writer: Writer): Writer = js.native
   
   /**
@@ -118,6 +141,8 @@ object TransactionHeader extends js.Object {
     * @param object Plain object
     * @returns TransactionHeader
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): TransactionHeader = js.native
   
   /**
@@ -126,7 +151,11 @@ object TransactionHeader extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.toObject")
+  @js.native
   def toObject(message: TransactionHeader): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.toObject")
+  @js.native
   def toObject(message: TransactionHeader, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -134,5 +163,7 @@ object TransactionHeader extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "TransactionHeader.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

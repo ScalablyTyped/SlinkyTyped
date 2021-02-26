@@ -1,11 +1,12 @@
 package typingsSlinky.ot.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClientAdapter extends js.Object {
+trait ClientAdapter extends StObject {
   
   def applyOperation(operation: TextOperation): Unit = js.native
   

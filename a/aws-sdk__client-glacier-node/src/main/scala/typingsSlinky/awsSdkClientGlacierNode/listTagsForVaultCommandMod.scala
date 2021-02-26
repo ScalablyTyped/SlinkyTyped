@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientGlacierNode.typesListTagsForVaultInputMod.ListT
 import typingsSlinky.awsSdkClientGlacierNode.typesListTagsForVaultOutputMod.ListTagsForVaultOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/commands/ListTagsForVaultCommand", JSImport.Namespace)
-@js.native
-object listTagsForVaultCommandMod extends js.Object {
+object listTagsForVaultCommandMod {
   
+  @JSImport("@aws-sdk/client-glacier-node/commands/ListTagsForVaultCommand", "ListTagsForVaultCommand")
   @js.native
   class ListTagsForVaultCommand protected () extends Command[
           InputTypesUnion, 

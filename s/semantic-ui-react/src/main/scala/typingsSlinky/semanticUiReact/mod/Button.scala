@@ -5,6 +5,7 @@ import typingsSlinky.semanticUiReact.buttonButtonMod.default
 import typingsSlinky.semanticUiReact.buttonContentMod.ButtonContentProps
 import typingsSlinky.semanticUiReact.buttonGroupMod.ButtonGroupProps
 import typingsSlinky.semanticUiReact.buttonOrMod.ButtonOrProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,14 +13,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("semantic-ui-react", "Button")
 @js.native
 class Button () extends default
-/* static members */
-@JSImport("semantic-ui-react", "Button")
-@js.native
-object Button extends js.Object {
+object Button {
   
-  var Content: ReactComponentClass[ButtonContentProps] = js.native
+  /* was `typeof ButtonContent` */
+  @JSImport("semantic-ui-react", "Button.Content")
+  @js.native
+  val Content: ReactComponentClass[ButtonContentProps] = js.native
   
-  var Group: ReactComponentClass[ButtonGroupProps] = js.native
+  /* was `typeof ButtonGroup` */
+  @JSImport("semantic-ui-react", "Button.Group")
+  @js.native
+  val Group: ReactComponentClass[ButtonGroupProps] = js.native
   
-  var Or: ReactComponentClass[ButtonOrProps] = js.native
+  /* was `typeof ButtonOr` */
+  @JSImport("semantic-ui-react", "Button.Or")
+  @js.native
+  val Or: ReactComponentClass[ButtonOrProps] = js.native
 }

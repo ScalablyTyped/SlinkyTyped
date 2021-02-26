@@ -3,16 +3,16 @@ package typingsSlinky.three
 import org.scalajs.dom.raw.AnalyserNode
 import org.scalajs.dom.raw.AudioNode
 import typingsSlinky.three.audioMod.Audio
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/audio/AudioAnalyser", JSImport.Namespace)
-@js.native
-object audioAnalyserMod extends js.Object {
+object audioAnalyserMod {
   
+  @JSImport("three/src/audio/AudioAnalyser", "AudioAnalyser")
   @js.native
-  class AudioAnalyser protected () extends js.Object {
+  class AudioAnalyser protected () extends StObject {
     /**
     	 * @param audio
     	 * @param [fftSize=2048]

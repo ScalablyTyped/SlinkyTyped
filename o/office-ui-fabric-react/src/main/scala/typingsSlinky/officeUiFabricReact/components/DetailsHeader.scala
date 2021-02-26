@@ -28,15 +28,22 @@ import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DetailsHeader {
   
+  @scala.inline
+  def apply(layoutMode: DetailsListLayoutMode): Builder = {
+    val __props = js.Dynamic.literal(layoutMode = layoutMode.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsHeaderBaseProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "DetailsHeader")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -74,19 +81,19 @@ object DetailsHeader {
     def columnReorderProps(value: IColumnReorderHeaderProps): this.type = set("columnReorderProps", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def columns(value: js.Array[IColumn]): this.type = set("columns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def columnsVarargs(value: IColumn*): this.type = set("columns", js.Array(value :_*))
     
     @scala.inline
-    def columns(value: js.Array[IColumn]): this.type = set("columns", value.asInstanceOf[js.Any])
+    def componentRef(value: IRefObject[IDetailsHeader]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentRefFunction1(value: /* ref */ IDetailsHeader | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IDetailsHeader]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IDetailsHeader]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def groupNestingDepth(value: Double): this.type = set("groupNestingDepth", value.asInstanceOf[js.Any])
@@ -143,10 +150,10 @@ object DetailsHeader {
     def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IDetailsHeaderStyleProps => DeepPartial[IDetailsHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IDetailsHeaderStyleProps, IDetailsHeaderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IDetailsHeaderStyleProps, IDetailsHeaderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IDetailsHeaderStyleProps => DeepPartial[IDetailsHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -159,10 +166,4 @@ object DetailsHeader {
   }
   
   def withProps(p: IDetailsHeaderBaseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(layoutMode: DetailsListLayoutMode): Builder = {
-    val __props = js.Dynamic.literal(layoutMode = layoutMode.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsHeaderBaseProps]))
-  }
 }

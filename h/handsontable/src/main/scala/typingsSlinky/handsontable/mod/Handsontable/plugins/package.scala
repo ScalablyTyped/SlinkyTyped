@@ -1,5 +1,6 @@
 package typingsSlinky.handsontable.mod.Handsontable
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,6 +10,4 @@ package object plugins {
   type CellReference = typingsSlinky.handsontable.mod.Handsontable.plugins.BaseCell
   
   type Parser = js.Object
-  
-  type UndoRedoAction = typingsSlinky.handsontable.mod.Handsontable.plugins.UndoRedoAction.Change | typingsSlinky.handsontable.mod.Handsontable.plugins.UndoRedoAction.InsertRow | typingsSlinky.handsontable.mod.Handsontable.plugins.UndoRedoAction.RemoveRow | typingsSlinky.handsontable.mod.Handsontable.plugins.UndoRedoAction.InsertCol | typingsSlinky.handsontable.mod.Handsontable.plugins.UndoRedoAction.RemoveCol | typingsSlinky.handsontable.mod.Handsontable.plugins.UndoRedoAction.Filter
 }

@@ -9,6 +9,7 @@ import typingsSlinky.officeUiFabricReact.peoplePickerItemTypesMod.IPeoplePickerI
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaProps
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,12 +29,12 @@ class SharedBuilder_IPeoplePickerItemSuggestionProps644981553 (val args: js.Arra
   def personaProps(value: IPersonaProps): this.type = set("personaProps", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def stylesFunction1(value: IPeoplePickerItemSuggestionStyleProps => DeepPartial[IPeoplePickerItemSuggestionStyles]): this.type = set("styles", js.Any.fromFunction1(value))
-  
-  @scala.inline
   def styles(
     value: IStyleFunctionOrObject[IPeoplePickerItemSuggestionStyleProps, IPeoplePickerItemSuggestionStyles]
   ): this.type = set("styles", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def stylesFunction1(value: IPeoplePickerItemSuggestionStyleProps => DeepPartial[IPeoplePickerItemSuggestionStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   
   @scala.inline
   def suggestionsProps(value: IBasePickerSuggestionsProps[_]): this.type = set("suggestionsProps", value.asInstanceOf[js.Any])

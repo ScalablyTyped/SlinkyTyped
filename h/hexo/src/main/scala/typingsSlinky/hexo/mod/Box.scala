@@ -10,6 +10,7 @@ import typingsSlinky.hexoUtil.mod.Pattern
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.fsMod.Stats
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,8 +24,8 @@ trait Box extends EventEmitter {
     * Register a new processor with the `addProcessor` method.
     */
   def addProcessor(pattern: String, fn: js.Function1[/* file */ File, Unit]): Unit = js.native
-  def addProcessor(pattern: Pattern[Boolean], fn: js.Function1[/* file */ File, Unit]): Unit = js.native
   def addProcessor(pattern: js.RegExp, fn: js.Function1[/* file */ File, Unit]): Unit = js.native
+  def addProcessor(pattern: Pattern[Boolean], fn: js.Function1[/* file */ File, Unit]): Unit = js.native
   
   /**
     * Loads all files in the folder.
@@ -42,12 +43,10 @@ trait Box extends EventEmitter {
   def watch(): js.Promise[Unit] = js.native
   def watch(fn: js.Function1[/* err */ js.Any, Unit]): js.Promise[Unit] = js.native
 }
-@JSImport("hexo", "Box")
-@js.native
-object Box extends js.Object {
+object Box {
   
   @js.native
-  trait File extends js.Object {
+  trait File extends StObject {
     
     /**
       * The information from path matching.

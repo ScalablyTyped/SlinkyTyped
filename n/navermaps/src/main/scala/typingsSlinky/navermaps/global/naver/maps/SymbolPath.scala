@@ -1,12 +1,13 @@
 package typingsSlinky.navermaps.global.naver.maps
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("naver.maps.SymbolPath")
 @js.native
-object SymbolPath extends js.Object {
+object SymbolPath extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.navermaps.naver.maps.SymbolPath with Double] = js.native

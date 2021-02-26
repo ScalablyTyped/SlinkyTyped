@@ -5,14 +5,14 @@ import typingsSlinky.sipJs.incomingRequestMod.IncomingRequestDelegate
 import typingsSlinky.sipJs.messagesMod.IncomingRequestMessage
 import typingsSlinky.sipJs.userAgentCoreMod.UserAgentCore
 import typingsSlinky.sipJs.userAgentServerMod.UserAgentServer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/core/user-agents/notify-user-agent-server", JSImport.Namespace)
-@js.native
-object notifyUserAgentServerMod extends js.Object {
+object notifyUserAgentServerMod {
   
+  @JSImport("sip.js/lib/core/user-agents/notify-user-agent-server", "NotifyUserAgentServer")
   @js.native
   class NotifyUserAgentServer protected () extends UserAgentServer {
     /**

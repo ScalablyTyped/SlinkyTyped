@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientAccesscontextmanager.anon.AltCallback
 import typingsSlinky.maximMazurokGapiClientAccesscontextmanager.anon.Callback
 import typingsSlinky.maximMazurokGapiClientAccesscontextmanager.anon.Name
 import typingsSlinky.maximMazurokGapiClientAccesscontextmanager.anon.PageSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GcpUserAccessBindingsResource extends js.Object {
+trait GcpUserAccessBindingsResource extends StObject {
   
   /**
     * Creates a GcpUserAccessBinding. If the client specifies a name, the server will ignore it. Fails if a resource already exists with the same group_key. Completion of this

@@ -10,9 +10,9 @@ A React library for hCaptcha
 | ------------------ | :-------------: |
 | Full name          | @hcaptcha/react-hcaptcha |
 | Keywords           | hcaptcha, hcaptcha-react, react, captcha |
-| # releases         | 7 |
-| # dependents       | 0 |
-| # downloads        | 1886 |
+| # releases         | 14 |
+| # dependents       | 4 |
+| # downloads        | 120695 |
 | # stars            | 0 |
 
 ## Links

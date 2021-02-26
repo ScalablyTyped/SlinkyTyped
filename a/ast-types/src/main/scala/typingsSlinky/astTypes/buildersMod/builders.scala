@@ -430,6 +430,7 @@ import typingsSlinky.astTypes.namedTypesMod.namedTypes.VoidTypeAnnotation
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.WhileStatement
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.WithStatement
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.YieldExpression
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -1688,9 +1689,9 @@ trait builders
   
   def literal(): Literal = js.native
   def literal(value: String): Literal = js.native
+  def literal(value: js.RegExp): Literal = js.native
   def literal(value: Boolean): Literal = js.native
   def literal(value: Double): Literal = js.native
-  def literal(value: js.RegExp): Literal = js.native
   @JSName("literal")
   var literal_Original: LiteralBuilder = js.native
   

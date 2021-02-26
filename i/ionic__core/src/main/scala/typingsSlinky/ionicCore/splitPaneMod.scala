@@ -4,14 +4,14 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.anon.Visible
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/split-pane/split-pane", JSImport.Namespace)
-@js.native
-object splitPaneMod extends js.Object {
+object splitPaneMod {
   
+  @JSImport("@ionic/core/dist/types/components/split-pane/split-pane", "SplitPane")
   @js.native
   class SplitPane () extends ComponentInterface {
     

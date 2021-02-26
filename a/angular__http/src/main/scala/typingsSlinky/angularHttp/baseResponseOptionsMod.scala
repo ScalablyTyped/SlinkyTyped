@@ -3,19 +3,20 @@ package typingsSlinky.angularHttp
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.angularHttp.headersMod.Headers
 import typingsSlinky.angularHttp.interfacesMod.ResponseOptionsArgs
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/http/src/base_response_options", JSImport.Namespace)
-@js.native
-object baseResponseOptionsMod extends js.Object {
+object baseResponseOptionsMod {
   
+  @JSImport("@angular/http/src/base_response_options", "BaseResponseOptions")
   @js.native
   class BaseResponseOptions () extends ResponseOptions
   
+  @JSImport("@angular/http/src/base_response_options", "ResponseOptions")
   @js.native
-  class ResponseOptions () extends js.Object {
+  class ResponseOptions () extends StObject {
     def this(opts: ResponseOptionsArgs) = this()
     
     /**

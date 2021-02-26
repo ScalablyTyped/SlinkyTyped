@@ -1,14 +1,17 @@
 package typingsSlinky.materialTabScroller
 
 import org.scalajs.dom.raw.Document
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/tab-scroller/util", JSImport.Namespace)
-@js.native
-object utilMod extends js.Object {
+object utilMod {
   
+  @JSImport("@material/tab-scroller/util", "computeHorizontalScrollbarHeight")
+  @js.native
   def computeHorizontalScrollbarHeight(documentObj: Document): Double = js.native
+  @JSImport("@material/tab-scroller/util", "computeHorizontalScrollbarHeight")
+  @js.native
   def computeHorizontalScrollbarHeight(documentObj: Document, shouldCacheResult: Boolean): Double = js.native
 }

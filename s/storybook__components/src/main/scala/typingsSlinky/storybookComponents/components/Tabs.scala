@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.std.Record
 import typingsSlinky.storybookComponents.anon.OnSelect
 import typingsSlinky.storybookComponents.tabsMod.TabsProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Tabs {
   
   @JSImport("@storybook/components", "Tabs")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,13 +41,13 @@ object Tabs {
     def selected(value: String): this.type = set("selected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def toolsReactElement(value: ReactElement): this.type = set("tools", value.asInstanceOf[js.Any])
+    def tools(value: ReactElement): this.type = set("tools", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tools(value: ReactElement): this.type = set("tools", value.asInstanceOf[js.Any])
+    def toolsReactElement(value: ReactElement): this.type = set("tools", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tabs.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -11,8 +11,8 @@ Unicode to ACSII transliteration / slugify module for node.js, browser, Web Work
 | Full name          | transliteration |
 | Keywords           | transliterate, transliteration, utf8, slug, slugify, romanization, unicode, unidecode |
 | # releases         | 19 |
-| # dependents       | 154 |
-| # downloads        | 1364890 |
+| # dependents       | 211 |
+| # downloads        | 3050880 |
 | # stars            | 14 |
 
 ## Links

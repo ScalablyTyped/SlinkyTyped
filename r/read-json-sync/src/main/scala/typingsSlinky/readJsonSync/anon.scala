@@ -6,16 +6,15 @@ import typingsSlinky.node.anon.BaseEncodingOptionsflagst
 import typingsSlinky.node.anon.EncodingBufferEncoding
 import typingsSlinky.node.anon.`3`
 import typingsSlinky.node.fsMod.PathLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait FnCall extends js.Object {
+  trait FnCall extends StObject {
     
     def apply(path: Double): String | Buffer = js.native
     def apply(path: Double, options: BufferEncoding): String = js.native

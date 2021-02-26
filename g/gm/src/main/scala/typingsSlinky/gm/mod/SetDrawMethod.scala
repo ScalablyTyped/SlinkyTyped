@@ -1,10 +1,12 @@
 package typingsSlinky.gm.mod
 
 import typingsSlinky.gm.gmStrings.point_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** Change dimensions only if image is larger than width or height */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.gm.gmStrings.point_
   - typingsSlinky.gm.gmStrings.replace
@@ -12,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gm.gmStrings.filltoborder
   - typingsSlinky.gm.gmStrings.reset
 */
-trait SetDrawMethod extends js.Object
+trait SetDrawMethod extends StObject
 object SetDrawMethod {
   
   @scala.inline

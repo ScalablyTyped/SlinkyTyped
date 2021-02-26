@@ -1,17 +1,18 @@
 package typingsSlinky.angularForms.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/forms", "Validators")
 @js.native
-class Validators () extends js.Object
+class Validators () extends StObject
 /* static members */
-@JSImport("@angular/forms", "Validators")
-@js.native
-object Validators extends js.Object {
+object Validators {
   
+  @JSImport("@angular/forms", "Validators.compose")
+  @js.native
   def compose(validators: js.Array[js.UndefOr[ValidatorFn | Null]]): ValidatorFn | Null = js.native
   /**
     * @description
@@ -24,6 +25,8 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.compose")
+  @js.native
   def compose(validators: Null): Null = js.native
   
   /**
@@ -37,6 +40,8 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.composeAsync")
+  @js.native
   def composeAsync(validators: js.Array[AsyncValidatorFn | Null]): AsyncValidatorFn | Null = js.native
   
   /**
@@ -75,6 +80,8 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.email")
+  @js.native
   def email(control: AbstractControl): ValidationErrors | Null = js.native
   
   /**
@@ -98,6 +105,8 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.max")
+  @js.native
   def max(max: Double): ValidatorFn = js.native
   
   /**
@@ -127,6 +136,8 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.maxLength")
+  @js.native
   def maxLength(maxLength: Double): ValidatorFn = js.native
   
   /**
@@ -150,6 +161,8 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.min")
+  @js.native
   def min(min: Double): ValidatorFn = js.native
   
   /**
@@ -182,6 +195,8 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.minLength")
+  @js.native
   def minLength(minLength: Double): ValidatorFn = js.native
   
   /**
@@ -191,6 +206,8 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.nullValidator")
+  @js.native
   def nullValidator(control: AbstractControl): ValidationErrors | Null = js.native
   
   /**
@@ -242,7 +259,11 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.pattern")
+  @js.native
   def pattern(pattern: String): ValidatorFn = js.native
+  @JSImport("@angular/forms", "Validators.pattern")
+  @js.native
   def pattern(pattern: js.RegExp): ValidatorFn = js.native
   
   /**
@@ -265,6 +286,8 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.required")
+  @js.native
   def required(control: AbstractControl): ValidationErrors | Null = js.native
   
   /**
@@ -288,5 +311,7 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
+  @JSImport("@angular/forms", "Validators.requiredTrue")
+  @js.native
   def requiredTrue(control: AbstractControl): ValidationErrors | Null = js.native
 }

@@ -2,6 +2,7 @@ package typingsSlinky.kendoUi.global.kendo.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.ui.TileLayoutOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,12 +14,21 @@ class TileLayout protected ()
   def this(element: Element) = this()
   def this(element: Element, options: TileLayoutOptions) = this()
 }
-/* static members */
-@JSGlobal("kendo.ui.TileLayout")
-@js.native
-object TileLayout extends js.Object {
+object TileLayout {
   
+  @JSGlobal("kendo.ui.TileLayout")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSGlobal("kendo.ui.TileLayout.extend")
+  @js.native
   def extend(proto: js.Object): typingsSlinky.kendoUi.kendo.ui.TileLayout = js.native
   
-  var fn: typingsSlinky.kendoUi.kendo.ui.TileLayout = js.native
+  /* static member */
+  @JSGlobal("kendo.ui.TileLayout.fn")
+  @js.native
+  def fn: typingsSlinky.kendoUi.kendo.ui.TileLayout = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.kendoUi.kendo.ui.TileLayout): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

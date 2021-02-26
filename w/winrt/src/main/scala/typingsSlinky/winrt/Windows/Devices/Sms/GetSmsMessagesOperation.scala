@@ -7,6 +7,7 @@ import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncInfo
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperationWithProgress
 import typingsSlinky.winrt.anon.Progress
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

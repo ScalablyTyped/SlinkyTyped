@@ -25,6 +25,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.large
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.mini
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.small
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,7 +34,7 @@ object Confirm {
   
   @JSImport("semantic-ui-react", "Confirm")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,7 +42,7 @@ object Confirm {
        with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Confirm] {
     
     @scala.inline
-    def actionsReactElement(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actions(value: SemanticShorthandItem[ModalActionsProps]): this.type = set("actions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def actionsFunction3(
@@ -49,7 +50,7 @@ object Confirm {
     ): this.type = set("actions", js.Any.fromFunction3(value))
     
     @scala.inline
-    def actions(value: SemanticShorthandItem[ModalActionsProps]): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actionsReactElement(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
@@ -58,7 +59,7 @@ object Confirm {
     def basic(value: Boolean): this.type = set("basic", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelButtonReactElement(value: ReactElement): this.type = set("cancelButton", value.asInstanceOf[js.Any])
+    def cancelButton(value: SemanticShorthandItem[ButtonProps]): this.type = set("cancelButton", value.asInstanceOf[js.Any])
     
     @scala.inline
     def cancelButtonFunction3(
@@ -66,7 +67,7 @@ object Confirm {
     ): this.type = set("cancelButton", js.Any.fromFunction3(value))
     
     @scala.inline
-    def cancelButton(value: SemanticShorthandItem[ButtonProps]): this.type = set("cancelButton", value.asInstanceOf[js.Any])
+    def cancelButtonReactElement(value: ReactElement): this.type = set("cancelButton", value.asInstanceOf[js.Any])
     
     @scala.inline
     def centered(value: Boolean): this.type = set("centered", value.asInstanceOf[js.Any])
@@ -99,7 +100,7 @@ object Confirm {
     def closeOnTriggerMouseLeave(value: Boolean): this.type = set("closeOnTriggerMouseLeave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def confirmButtonReactElement(value: ReactElement): this.type = set("confirmButton", value.asInstanceOf[js.Any])
+    def confirmButton(value: SemanticShorthandItem[ButtonProps]): this.type = set("confirmButton", value.asInstanceOf[js.Any])
     
     @scala.inline
     def confirmButtonFunction3(
@@ -107,10 +108,10 @@ object Confirm {
     ): this.type = set("confirmButton", js.Any.fromFunction3(value))
     
     @scala.inline
-    def confirmButton(value: SemanticShorthandItem[ButtonProps]): this.type = set("confirmButton", value.asInstanceOf[js.Any])
+    def confirmButtonReactElement(value: ReactElement): this.type = set("confirmButton", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: SemanticShorthandItem[ModalContentProps]): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentFunction3(
@@ -118,13 +119,13 @@ object Confirm {
     ): this.type = set("content", js.Any.fromFunction3(value))
     
     @scala.inline
-    def content(value: SemanticShorthandItem[ModalContentProps]): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dimmerReactElement(value: ReactElement): this.type = set("dimmer", value.asInstanceOf[js.Any])
+    def dimmer(value: `true` | blurring | inverted | SemanticShorthandItem[ModalDimmerProps]): this.type = set("dimmer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dimmerFunction3(
@@ -132,13 +133,13 @@ object Confirm {
     ): this.type = set("dimmer", js.Any.fromFunction3(value))
     
     @scala.inline
-    def dimmer(value: `true` | blurring | inverted | SemanticShorthandItem[ModalDimmerProps]): this.type = set("dimmer", value.asInstanceOf[js.Any])
+    def dimmerReactElement(value: ReactElement): this.type = set("dimmer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def eventPool(value: String): this.type = set("eventPool", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    def header(value: SemanticShorthandItem[ModalHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
     def headerFunction3(
@@ -146,7 +147,7 @@ object Confirm {
     ): this.type = set("header", js.Any.fromFunction3(value))
     
     @scala.inline
-    def header(value: SemanticShorthandItem[ModalHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
     def mountNode(value: js.Any): this.type = set("mountNode", value.asInstanceOf[js.Any])
@@ -197,25 +198,25 @@ object Confirm {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def trigger(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def triggerRefRefObject(value: ReactRef[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def triggerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("triggerRef", js.Any.fromFunction1(value))
+    def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     
     @scala.inline
     def triggerRef(value: typingsSlinky.react.mod.Ref[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def triggerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("triggerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def triggerRefNull: this.type = set("triggerRef", null)
+    
+    @scala.inline
+    def triggerRefRefObject(value: ReactRef[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ConfirmProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Confirm.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ConfirmProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

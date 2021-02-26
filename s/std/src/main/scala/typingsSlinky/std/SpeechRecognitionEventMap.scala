@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SpeechRecognitionEventMap extends js.Object {
+trait SpeechRecognitionEventMap extends StObject {
   
   var audioend: org.scalajs.dom.raw.Event = js.native
   
@@ -50,51 +51,39 @@ object SpeechRecognitionEventMap {
   }
   
   @scala.inline
-  implicit class SpeechRecognitionEventMapOps[Self <: SpeechRecognitionEventMap] (val x: Self) extends AnyVal {
+  implicit class SpeechRecognitionEventMapMutableBuilder[Self <: SpeechRecognitionEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAudioend(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "audioend", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAudiostart(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "audiostart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setEnd(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "end", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAudioend(value: org.scalajs.dom.raw.Event): Self = this.set("audioend", value.asInstanceOf[js.Any])
+    def setError(value: org.scalajs.dom.raw.ErrorEvent): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAudiostart(value: org.scalajs.dom.raw.Event): Self = this.set("audiostart", value.asInstanceOf[js.Any])
+    def setNomatch(value: SpeechRecognitionEvent): Self = StObject.set(x, "nomatch", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEnd(value: org.scalajs.dom.raw.Event): Self = this.set("end", value.asInstanceOf[js.Any])
+    def setResult(value: SpeechRecognitionEvent): Self = StObject.set(x, "result", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setError(value: org.scalajs.dom.raw.ErrorEvent): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setSoundend(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "soundend", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNomatch(value: SpeechRecognitionEvent): Self = this.set("nomatch", value.asInstanceOf[js.Any])
+    def setSoundstart(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "soundstart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResult(value: SpeechRecognitionEvent): Self = this.set("result", value.asInstanceOf[js.Any])
+    def setSpeechend(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "speechend", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSoundend(value: org.scalajs.dom.raw.Event): Self = this.set("soundend", value.asInstanceOf[js.Any])
+    def setSpeechstart(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "speechstart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSoundstart(value: org.scalajs.dom.raw.Event): Self = this.set("soundstart", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSpeechend(value: org.scalajs.dom.raw.Event): Self = this.set("speechend", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSpeechstart(value: org.scalajs.dom.raw.Event): Self = this.set("speechstart", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStart(value: org.scalajs.dom.raw.Event): Self = this.set("start", value.asInstanceOf[js.Any])
+    def setStart(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "start", value.asInstanceOf[js.Any])
   }
 }

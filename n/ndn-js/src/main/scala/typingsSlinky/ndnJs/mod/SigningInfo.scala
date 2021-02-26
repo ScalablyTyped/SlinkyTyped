@@ -1,6 +1,7 @@
 package typingsSlinky.ndnJs.mod
 
 import typingsSlinky.ndnJs.keyChainMod.SigningInfo.SignerType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,12 +16,11 @@ class SigningInfo ()
   def this(arg: typingsSlinky.ndnJs.keyChainMod.SigningInfo) = this()
   def this(signerType: SignerType, signerName: typingsSlinky.ndnJs.nameMod.Name) = this()
 }
-@JSImport("ndn-js", "SigningInfo")
-@js.native
-object SigningInfo extends js.Object {
+object SigningInfo {
   
+  @JSImport("ndn-js", "SigningInfo.SignerType")
   @js.native
-  object SignerType extends js.Object {
+  object SignerType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ndnJs.keyChainMod.SigningInfo.SignerType with Double] = js.native

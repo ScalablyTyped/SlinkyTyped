@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.fall
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.spring
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.summer
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.winter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -9,9 +9,9 @@ Typings are for version 4.8.0
 | ------------------ | :-------------: |
 | Full name          | @algolia/client-recommendation |
 | Keywords           | - |
-| # releases         | 18 |
-| # dependents       | 1 |
-| # downloads        | 1697819 |
+| # releases         | 28 |
+| # dependents       | 3 |
+| # downloads        | 6725365 |
 | # stars            | 0 |
 
 ## Links

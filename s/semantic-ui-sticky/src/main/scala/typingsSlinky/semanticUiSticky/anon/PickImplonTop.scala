@@ -1,13 +1,14 @@
 package typingsSlinky.semanticUiSticky.anon
 
 import typingsSlinky.semanticUiSticky.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Pick<semantic-ui-sticky.SemanticUI.StickySettings._Impl, 'onTop'> */
 @js.native
-trait PickImplonTop extends js.Object {
+trait PickImplonTop extends StObject {
   
   def onTop(): Unit = js.native
   @JSName("onTop")

@@ -13,6 +13,7 @@ import typingsSlinky.activexWord.activexWordNumbers.`4`
 import typingsSlinky.activexWord.activexWordNumbers.`5`
 import typingsSlinky.activexWord.activexWordNumbers.`6`
 import typingsSlinky.activexWord.activexWordNumbers.`7`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,7 +33,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWord.activexWordNumbers.`7`
   - typingsSlinky.activexWord.activexWordNumbers.`15`
 */
-trait WdReferenceKind extends js.Object
+trait WdReferenceKind extends StObject
 object WdReferenceKind {
   
   @scala.inline

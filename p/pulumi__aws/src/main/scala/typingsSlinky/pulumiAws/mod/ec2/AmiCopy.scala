@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.amiCopyMod.AmiCopyState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,9 +25,7 @@ class AmiCopy protected ()
   def this(name: String, args: AmiCopyArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/aws", "ec2.AmiCopy")
-@js.native
-object AmiCopy extends js.Object {
+object AmiCopy {
   
   /**
     * Get an existing AmiCopy resource's state with the given name, ID, and optional extra
@@ -37,14 +36,24 @@ object AmiCopy extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/aws", "ec2.AmiCopy.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.amiCopyMod.AmiCopy = js.native
+  @JSImport("@pulumi/aws", "ec2.AmiCopy.get")
+  @js.native
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.amiCopyMod.AmiCopy = js.native
+  @JSImport("@pulumi/aws", "ec2.AmiCopy.get")
+  @js.native
   def get(name: String, id: Input[ID], state: AmiCopyState): typingsSlinky.pulumiAws.amiCopyMod.AmiCopy = js.native
+  @JSImport("@pulumi/aws", "ec2.AmiCopy.get")
+  @js.native
   def get(name: String, id: Input[ID], state: AmiCopyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.amiCopyMod.AmiCopy = js.native
   
   /**
     * Returns true if the given object is an instance of AmiCopy.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/aws", "ec2.AmiCopy.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/ec2/amiCopy.AmiCopy */ Boolean = js.native
 }

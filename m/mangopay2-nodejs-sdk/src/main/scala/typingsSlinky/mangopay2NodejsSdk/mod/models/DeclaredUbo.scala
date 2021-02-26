@@ -2,6 +2,7 @@ package typingsSlinky.mangopay2NodejsSdk.mod.models
 
 import typingsSlinky.mangopay2NodejsSdk.anon.PartialUboDeclarationData
 import typingsSlinky.mangopay2NodejsSdk.mod.uboDeclaration.UboDeclarationData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

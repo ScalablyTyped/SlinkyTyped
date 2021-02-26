@@ -8,6 +8,7 @@ import typingsSlinky.officeUiFabricReact.verticalDividerTypesMod.IVerticalDivide
 import typingsSlinky.officeUiFabricReact.verticalDividerTypesMod.IVerticalDividerStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,10 +25,10 @@ class SharedBuilder_IVerticalDividerProps_601226333 (val args: js.Array[js.Any])
   def getClassNames(value: /* theme */ ITheme => IVerticalDividerClassNames): this.type = set("getClassNames", js.Any.fromFunction1(value))
   
   @scala.inline
-  def stylesFunction1(value: IVerticalDividerPropsStyles => DeepPartial[IVerticalDividerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def styles(value: IStyleFunctionOrObject[IVerticalDividerPropsStyles, IVerticalDividerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def styles(value: IStyleFunctionOrObject[IVerticalDividerPropsStyles, IVerticalDividerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+  def stylesFunction1(value: IVerticalDividerPropsStyles => DeepPartial[IVerticalDividerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   
   @scala.inline
   def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])

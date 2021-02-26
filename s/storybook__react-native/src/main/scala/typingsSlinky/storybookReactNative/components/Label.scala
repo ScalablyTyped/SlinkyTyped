@@ -6,7 +6,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.emotionStyledBase.anon.`0`
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.theme
 import typingsSlinky.emotionStyledBase.helperMod.Omit
-import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
@@ -46,6 +45,7 @@ import typingsSlinky.reactNative.reactNativeStrings.tail
 import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.storybookReactNative.anon.BackgroundColor
 import typingsSlinky.storybookReactNative.anon.PickTextPropsRefAttribute
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -54,7 +54,7 @@ object Label {
   
   @JSImport("@storybook/react-native/dist/preview/components/Shared/text", "Label")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -62,10 +62,10 @@ object Label {
        with StBuildingComponent[tag.type, Text] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -95,10 +95,10 @@ object Label {
     def accessibilityStates(value: js.Any): this.type = set("accessibilityStates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -194,11 +194,9 @@ object Label {
     def theme(value: BackgroundColor): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
-  def withProps(
-    p: PropsWithChildren[
-      TextProps with RefAttributes[Text] with (Omit[PickTextPropsRefAttribute, theme]) with `0`[BackgroundColor]
-    ]
-  ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Label.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(
+    p: TextProps with RefAttributes[Text] with (Omit[PickTextPropsRefAttribute, theme]) with `0`[BackgroundColor]
+  ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

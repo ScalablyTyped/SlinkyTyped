@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.svgiconMod.SVGIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/ChromeReaderModeSVGIcon", JSImport.Namespace)
-@js.native
-object chromeReaderModeSVGIconMod extends js.Object {
+object chromeReaderModeSVGIconMod {
   
+  @JSImport("@react-md/material-icons/types/ChromeReaderModeSVGIcon", "ChromeReaderModeSVGIcon")
+  @js.native
   val ChromeReaderModeSVGIcon: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
 }

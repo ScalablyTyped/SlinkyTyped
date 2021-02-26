@@ -1,14 +1,14 @@
 package typingsSlinky.webix.mod
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DragControl extends js.Object {
+trait DragControl extends StObject {
   
   @JSName("$drag")
   def $drag(source: HTMLElement, ev: Event): HTMLElement = js.native
@@ -28,15 +28,15 @@ trait DragControl extends js.Object {
   def $drop(source: HTMLElement, target: HTMLElement, ev: Event): Unit = js.native
   
   def addDrag(node: String, ctrl: js.Any): Unit = js.native
-  def addDrag(node: Double, ctrl: js.Any): Unit = js.native
   def addDrag(node: HTMLElement, ctrl: js.Any): Unit = js.native
+  def addDrag(node: Double, ctrl: js.Any): Unit = js.native
   
   def addDrop(node: String, ctrl: js.Any): Unit = js.native
   def addDrop(node: String, ctrl: js.Any, master_mode: Boolean): Unit = js.native
-  def addDrop(node: Double, ctrl: js.Any): Unit = js.native
-  def addDrop(node: Double, ctrl: js.Any, master_mode: Boolean): Unit = js.native
   def addDrop(node: HTMLElement, ctrl: js.Any): Unit = js.native
   def addDrop(node: HTMLElement, ctrl: js.Any, master_mode: Boolean): Unit = js.native
+  def addDrop(node: Double, ctrl: js.Any): Unit = js.native
+  def addDrop(node: Double, ctrl: js.Any, master_mode: Boolean): Unit = js.native
   
   def createDrag(event: Event): Unit = js.native
   
@@ -54,6 +54,3 @@ trait DragControl extends js.Object {
   
   var top: Double = js.native
 }
-@JSImport("webix", "DragControl")
-@js.native
-object DragControl extends TopLevel[DragControl]

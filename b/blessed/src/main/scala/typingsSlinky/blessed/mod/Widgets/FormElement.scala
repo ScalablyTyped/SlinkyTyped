@@ -3,6 +3,7 @@ package typingsSlinky.blessed.mod.Widgets
 import typingsSlinky.blessed.blessedStrings.cancel
 import typingsSlinky.blessed.blessedStrings.reset
 import typingsSlinky.blessed.blessedStrings.submit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

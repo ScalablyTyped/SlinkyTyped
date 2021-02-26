@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesDeleteIdentityPoolI
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesDeleteIdentityPoolOutputMod.DeleteIdentityPoolOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity-browser/commands/DeleteIdentityPoolCommand", JSImport.Namespace)
-@js.native
-object deleteIdentityPoolCommandMod extends js.Object {
+object deleteIdentityPoolCommandMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity-browser/commands/DeleteIdentityPoolCommand", "DeleteIdentityPoolCommand")
   @js.native
   class DeleteIdentityPoolCommand protected () extends Command[
           InputTypesUnion, 

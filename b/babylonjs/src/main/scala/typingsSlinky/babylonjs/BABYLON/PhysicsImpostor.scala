@@ -2,12 +2,13 @@ package typingsSlinky.babylonjs.BABYLON
 
 import typingsSlinky.babylonjs.anon.OtherImpostors
 import typingsSlinky.babylonjs.anon.Point
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PhysicsImpostor extends js.Object {
+trait PhysicsImpostor extends StObject {
   
   var _bodyUpdateRequired: js.Any = js.native
   

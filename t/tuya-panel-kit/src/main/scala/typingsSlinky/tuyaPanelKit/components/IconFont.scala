@@ -11,6 +11,7 @@ import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.butt
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.miter
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.round
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.square
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object IconFont {
   
   @JSImport("tuya-panel-kit", "IconFont")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -75,10 +76,10 @@ object IconFont {
     def strokeCap(value: round | butt | square): this.type = set("strokeCap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDashVarargs(value: Double*): this.type = set("strokeDash", js.Array(value :_*))
+    def strokeDash(value: js.Array[Double]): this.type = set("strokeDash", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDash(value: js.Array[Double]): this.type = set("strokeDash", value.asInstanceOf[js.Any])
+    def strokeDashVarargs(value: Double*): this.type = set("strokeDash", js.Array(value :_*))
     
     @scala.inline
     def strokeJoin(value: round | miter | bevel): this.type = set("strokeJoin", value.asInstanceOf[js.Any])
@@ -114,7 +115,7 @@ object IconFont {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IconFontProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: IconFont.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IconFontProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

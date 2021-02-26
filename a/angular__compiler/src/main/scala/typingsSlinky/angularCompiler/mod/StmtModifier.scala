@@ -1,12 +1,13 @@
 package typingsSlinky.angularCompiler.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler", "StmtModifier")
 @js.native
-object StmtModifier extends js.Object {
+object StmtModifier extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.angularCompiler.outputAstMod.StmtModifier with Double] = js.native

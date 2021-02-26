@@ -1,5 +1,6 @@
 package typingsSlinky.opentok.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.opentok.opentokStrings.stopped
   - typingsSlinky.opentok.opentokStrings.uploaded
 */
-trait ArchiveStatus extends js.Object
+trait ArchiveStatus extends StObject
 object ArchiveStatus {
   
   @scala.inline

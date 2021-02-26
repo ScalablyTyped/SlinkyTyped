@@ -7,14 +7,14 @@ import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayInterface
 import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/loading/loading", JSImport.Namespace)
-@js.native
-object loadingMod extends js.Object {
+object loadingMod {
   
+  @JSImport("@ionic/core/dist/types/components/loading/loading", "Loading")
   @js.native
   class Loading ()
     extends ComponentInterface

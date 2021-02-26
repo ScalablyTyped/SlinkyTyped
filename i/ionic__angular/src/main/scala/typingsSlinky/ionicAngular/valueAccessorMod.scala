@@ -6,16 +6,14 @@ import typingsSlinky.angularCore.mod.ElementRef
 import typingsSlinky.angularCore.mod.Injector
 import typingsSlinky.angularCore.mod.OnDestroy
 import typingsSlinky.angularForms.mod.ControlValueAccessor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/angular/directives/control-value-accessors/value-accessor", JSImport.Namespace)
-@js.native
-object valueAccessorMod extends js.Object {
+object valueAccessorMod {
   
-  def setIonicClasses(element: ElementRef[_]): Unit = js.native
-  
+  @JSImport("@ionic/angular/directives/control-value-accessors/value-accessor", "ValueAccessor")
   @js.native
   class ValueAccessor protected ()
     extends ControlValueAccessor
@@ -46,4 +44,8 @@ object valueAccessorMod extends js.Object {
     
     var statusChanges: js.Any = js.native
   }
+  
+  @JSImport("@ionic/angular/directives/control-value-accessors/value-accessor", "setIonicClasses")
+  @js.native
+  def setIonicClasses(element: ElementRef[_]): Unit = js.native
 }

@@ -9,6 +9,7 @@ import typingsSlinky.reactNativeModalPopover.popoverGeometryMod.Rect
 import typingsSlinky.reactNativeModalPopover.popoverGeometryMod.Size
 import typingsSlinky.reactNativeModalPopover.popoverMod.Orientation
 import typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.auto
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -64,10 +65,10 @@ class SharedBuilder_PopoverProps149441464[R <: js.Object] (val args: js.Array[js
   def popoverStyleNull: this.type = set("popoverStyle", null)
   
   @scala.inline
-  def supportedOrientationsVarargs(value: Orientation*): this.type = set("supportedOrientations", js.Array(value :_*))
+  def supportedOrientations(value: js.Array[Orientation]): this.type = set("supportedOrientations", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def supportedOrientations(value: js.Array[Orientation]): this.type = set("supportedOrientations", value.asInstanceOf[js.Any])
+  def supportedOrientationsVarargs(value: Orientation*): this.type = set("supportedOrientations", js.Array(value :_*))
   
   @scala.inline
   def useNativeDriver(value: Boolean): this.type = set("useNativeDriver", value.asInstanceOf[js.Any])

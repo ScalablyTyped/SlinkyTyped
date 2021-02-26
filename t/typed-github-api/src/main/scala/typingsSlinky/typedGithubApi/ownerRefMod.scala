@@ -15,16 +15,15 @@ import typingsSlinky.typedGithubApi.typedGithubApiStrings.public
 import typingsSlinky.typedGithubApi.typedGithubApiStrings.pushed
 import typingsSlinky.typedGithubApi.typedGithubApiStrings.sources
 import typingsSlinky.typedGithubApi.typedGithubApiStrings.updated
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typed-github-api/dist/interfaces/owner-ref", JSImport.Namespace)
-@js.native
-object ownerRefMod extends js.Object {
+object ownerRefMod {
   
   @js.native
-  trait OwnerRef extends js.Object {
+  trait OwnerRef extends StObject {
     
     def getRepository(name: String): RepositoryRef = js.native
     

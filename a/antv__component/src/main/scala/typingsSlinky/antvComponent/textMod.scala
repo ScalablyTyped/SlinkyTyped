@@ -1,24 +1,24 @@
 package typingsSlinky.antvComponent
 
-import typingsSlinky.antvComponent.groupComponentMod.GroupComponent
 import typingsSlinky.antvComponent.typesMod.PointLocationCfg
 import typingsSlinky.antvComponent.typesMod.TextAnnotationCfg
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/annotation/text", JSImport.Namespace)
-@js.native
-object textMod extends js.Object {
+object textMod {
+  
+  @JSImport("@antv/component/lib/annotation/text", JSImport.Default)
+  @js.native
+  class default () extends TextAnnotation
   
   @js.native
-  trait TextAnnotation extends GroupComponent[TextAnnotationCfg] {
+  trait TextAnnotation
+    extends typingsSlinky.antvComponent.groupComponentMod.default[TextAnnotationCfg] {
     
     var resetLocation: js.Any = js.native
     
     def setLocation(location: PointLocationCfg): Unit = js.native
   }
-  
-  @js.native
-  class default () extends TextAnnotation
 }

@@ -10,9 +10,9 @@ ProseMirror editor state
 | ------------------ | :-------------: |
 | Full name          | prosemirror-state |
 | Keywords           | - |
-| # releases         | 11 |
-| # dependents       | 132 |
-| # downloads        | 2567636 |
+| # releases         | 6 |
+| # dependents       | 252 |
+| # downloads        | 6838066 |
 | # stars            | 0 |
 
 ## Links

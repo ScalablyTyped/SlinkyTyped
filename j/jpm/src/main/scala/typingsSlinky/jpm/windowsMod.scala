@@ -7,6 +7,7 @@ import typingsSlinky.jpm.jpmStrings.close
 import typingsSlinky.jpm.jpmStrings.deactivate
 import typingsSlinky.jpm.jpmStrings.open
 import typingsSlinky.std.Array
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,10 +15,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * Enumerate and examine open browser windows, open new windows, and listen for window events
   */
-@JSImport("sdk/windows", JSImport.Namespace)
-@js.native
-object windowsMod extends js.Object {
+object windowsMod {
   
+  @JSImport("sdk/windows", "browserWindows")
+  @js.native
   val browserWindows: BrowserWindows_ = js.native
   
   @js.native

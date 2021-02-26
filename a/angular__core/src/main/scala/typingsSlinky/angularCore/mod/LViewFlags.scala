@@ -14,6 +14,7 @@ import typingsSlinky.angularCore.angularCoreNumbers.`4`
 import typingsSlinky.angularCore.angularCoreNumbers.`512`
 import typingsSlinky.angularCore.angularCoreNumbers.`64`
 import typingsSlinky.angularCore.angularCoreNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCore.angularCoreNumbers.`11`
   - typingsSlinky.angularCore.angularCoreNumbers.`2047`
 */
-trait LViewFlags extends js.Object
+trait LViewFlags extends StObject
 object LViewFlags {
   
   /** Whether or not this view is currently attached to change detection tree. */

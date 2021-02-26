@@ -2,14 +2,14 @@ package typingsSlinky.rxjs
 
 import typingsSlinky.rxjs.outerSubscriberMod.OuterSubscriber
 import typingsSlinky.rxjs.subscriberMod.Subscriber
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rxjs/internal/InnerSubscriber", JSImport.Namespace)
-@js.native
-object innerSubscriberMod extends js.Object {
+object innerSubscriberMod {
   
+  @JSImport("rxjs/internal/InnerSubscriber", "InnerSubscriber")
   @js.native
   class InnerSubscriber[T, R] protected () extends Subscriber[R] {
     def this(parent: OuterSubscriber[T, R], outerValue: T, outerIndex: Double) = this()

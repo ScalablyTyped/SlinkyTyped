@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.2
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/signing-middleware |
 | Keywords           | - |
-| # releases         | 12 |
-| # dependents       | 368 |
-| # downloads        | 38188 |
+| # releases         | 10 |
+| # dependents       | 2 |
+| # downloads        | 285138 |
 | # stars            | 0 |
 
 ## Links

@@ -6,6 +6,7 @@ import typingsSlinky.awsSdk.dynamodbMod.CreateTableOutput
 import typingsSlinky.awsSdk.dynamodbMod.DescribeTableOutput
 import typingsSlinky.awsSdk.dynamodbMod.UpdateTableOutput
 import typingsSlinky.dynogels.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

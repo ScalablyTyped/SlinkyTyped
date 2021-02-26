@@ -1,11 +1,12 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BoneIKController extends js.Object {
+trait BoneIKController extends StObject {
   
   var _adjustRoll: js.Any = js.native
   

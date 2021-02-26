@@ -11,12 +11,13 @@ import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.latin1
 import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.ucs2
 import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.utf16le
 import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.utf8
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FileSystemManager extends js.Object {
+trait FileSystemManager extends StObject {
   
   /** [FileSystemManager.access(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/file/FileSystemManager.access.html)
     *

@@ -1,14 +1,17 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.ionic.cordovaRunMod.RunCommand
+import typingsSlinky.ionic.definitionsMod.INamespace
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ionic/commands/cordova/emulate", JSImport.Namespace)
-@js.native
-object emulateMod extends js.Object {
+object emulateMod {
   
+  @JSImport("ionic/commands/cordova/emulate", "EmulateCommand")
   @js.native
-  class EmulateCommand () extends RunCommand
+  class EmulateCommand protected () extends RunCommand {
+    def this(namespace: INamespace) = this()
+  }
 }

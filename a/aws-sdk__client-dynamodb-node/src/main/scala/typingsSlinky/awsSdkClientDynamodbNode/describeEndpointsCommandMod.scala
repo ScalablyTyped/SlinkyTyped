@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientDynamodbNode.typesDescribeEndpointsInputMod.Des
 import typingsSlinky.awsSdkClientDynamodbNode.typesDescribeEndpointsOutputMod.DescribeEndpointsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-node/commands/DescribeEndpointsCommand", JSImport.Namespace)
-@js.native
-object describeEndpointsCommandMod extends js.Object {
+object describeEndpointsCommandMod {
   
+  @JSImport("@aws-sdk/client-dynamodb-node/commands/DescribeEndpointsCommand", "DescribeEndpointsCommand")
   @js.native
   class DescribeEndpointsCommand protected () extends Command[
           InputTypesUnion, 

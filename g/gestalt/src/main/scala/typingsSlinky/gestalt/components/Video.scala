@@ -24,15 +24,22 @@ import typingsSlinky.gestalt.gestaltStrings.fill
 import typingsSlinky.gestalt.gestaltStrings.metadata
 import typingsSlinky.gestalt.gestaltStrings.none
 import typingsSlinky.gestalt.mod.VideoProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Video {
   
+  @scala.inline
+  def apply(aspectRatio: Double, captions: String, src: String | js.Array[Src]): Builder = {
+    val __props = js.Dynamic.literal(aspectRatio = aspectRatio.asInstanceOf[js.Any], captions = captions.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[VideoProps]))
+  }
+  
   @JSImport("gestalt", "Video")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -150,10 +157,4 @@ object Video {
   }
   
   def withProps(p: VideoProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(aspectRatio: Double, captions: String, src: String | js.Array[Src]): Builder = {
-    val __props = js.Dynamic.literal(aspectRatio = aspectRatio.asInstanceOf[js.Any], captions = captions.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[VideoProps]))
-  }
 }

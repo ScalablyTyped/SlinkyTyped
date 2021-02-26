@@ -12,15 +12,26 @@ import typingsSlinky.reactour.mod.default
 import typingsSlinky.reactour.reactourStrings.esc
 import typingsSlinky.reactour.reactourStrings.left
 import typingsSlinky.reactour.reactourStrings.right
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Reactour {
   
+  @scala.inline
+  def apply(
+    isOpen: Boolean,
+    onRequestClose: SyntheticMouseEvent[HTMLDivElement] => Unit,
+    steps: js.Array[ReactourStep]
+  ): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction1(onRequestClose), steps = steps.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactourProps]))
+  }
+  
   @JSImport("reactour", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,10 +63,10 @@ object Reactour {
     def disableInteraction(value: Boolean): this.type = set("disableInteraction", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disableKeyboardNavigationVarargs(value: (esc | right | left)*): this.type = set("disableKeyboardNavigation", js.Array(value :_*))
+    def disableKeyboardNavigation(value: Boolean | (js.Array[esc | right | left])): this.type = set("disableKeyboardNavigation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disableKeyboardNavigation(value: Boolean | (js.Array[esc | right | left])): this.type = set("disableKeyboardNavigation", value.asInstanceOf[js.Any])
+    def disableKeyboardNavigationVarargs(value: (esc | right | left)*): this.type = set("disableKeyboardNavigation", js.Array(value :_*))
     
     @scala.inline
     def getCurrentStep(value: /* currentStep */ Double => Unit): this.type = set("getCurrentStep", js.Any.fromFunction1(value))
@@ -70,10 +81,10 @@ object Reactour {
     def inViewThreshold(value: Double): this.type = set("inViewThreshold", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lastStepNextButtonReactElement(value: ReactElement): this.type = set("lastStepNextButton", value.asInstanceOf[js.Any])
+    def lastStepNextButton(value: ReactElement): this.type = set("lastStepNextButton", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def lastStepNextButton(value: ReactElement): this.type = set("lastStepNextButton", value.asInstanceOf[js.Any])
+    def lastStepNextButtonReactElement(value: ReactElement): this.type = set("lastStepNextButton", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maskClassName(value: String): this.type = set("maskClassName", value.asInstanceOf[js.Any])
@@ -82,10 +93,10 @@ object Reactour {
     def maskSpace(value: Double): this.type = set("maskSpace", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextButtonReactElement(value: ReactElement): this.type = set("nextButton", value.asInstanceOf[js.Any])
+    def nextButton(value: ReactElement): this.type = set("nextButton", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextButton(value: ReactElement): this.type = set("nextButton", value.asInstanceOf[js.Any])
+    def nextButtonReactElement(value: ReactElement): this.type = set("nextButton", value.asInstanceOf[js.Any])
     
     @scala.inline
     def nextStep(value: () => Unit): this.type = set("nextStep", js.Any.fromFunction0(value))
@@ -97,10 +108,10 @@ object Reactour {
     def onBeforeClose(value: /* target */ HTMLDivElement => Unit): this.type = set("onBeforeClose", js.Any.fromFunction1(value))
     
     @scala.inline
-    def prevButtonReactElement(value: ReactElement): this.type = set("prevButton", value.asInstanceOf[js.Any])
+    def prevButton(value: ReactElement): this.type = set("prevButton", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prevButton(value: ReactElement): this.type = set("prevButton", value.asInstanceOf[js.Any])
+    def prevButtonReactElement(value: ReactElement): this.type = set("prevButton", value.asInstanceOf[js.Any])
     
     @scala.inline
     def prevStep(value: () => Unit): this.type = set("prevStep", js.Any.fromFunction0(value))
@@ -140,14 +151,4 @@ object Reactour {
   }
   
   def withProps(p: ReactourProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    isOpen: Boolean,
-    onRequestClose: SyntheticMouseEvent[HTMLDivElement] => Unit,
-    steps: js.Array[ReactourStep]
-  ): Builder = {
-    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction1(onRequestClose), steps = steps.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactourProps]))
-  }
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.lokijs
 
 import typingsSlinky.lokijs.lokijsBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,18 +10,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.lokijs.anon.Delimited
   - typingsSlinky.lokijs.anon.Delimiter
 */
-trait DeserializeOptions extends js.Object
+trait DeserializeOptions extends StObject
 object DeserializeOptions {
   
   @scala.inline
-  def Delimited(delimited: `false`): DeserializeOptions = {
+  def Delimited(delimited: `false`): typingsSlinky.lokijs.anon.Delimited = {
     val __obj = js.Dynamic.literal(delimited = delimited.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DeserializeOptions]
+    __obj.asInstanceOf[typingsSlinky.lokijs.anon.Delimited]
   }
   
   @scala.inline
-  def Delimiter(delimiter: String): DeserializeOptions = {
+  def Delimiter(delimiter: String): typingsSlinky.lokijs.anon.Delimiter = {
     val __obj = js.Dynamic.literal(delimiter = delimiter.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DeserializeOptions]
+    __obj.asInstanceOf[typingsSlinky.lokijs.anon.Delimiter]
   }
 }

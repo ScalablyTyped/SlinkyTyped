@@ -14,6 +14,7 @@ import typingsSlinky.cathoQuantum.cathoQuantumStrings.top
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.warning
 import typingsSlinky.cathoQuantum.popoverMod.PopoverProps
 import typingsSlinky.cathoQuantum.popoverMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ object Popover {
   
   @JSImport("@catho/quantum/Popover", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,13 +31,13 @@ object Popover {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
-    
-    @scala.inline
-    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
@@ -57,7 +58,7 @@ object Popover {
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Popover.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

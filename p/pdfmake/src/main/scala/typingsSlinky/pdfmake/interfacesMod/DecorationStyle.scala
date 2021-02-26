@@ -1,5 +1,6 @@
 package typingsSlinky.pdfmake.interfacesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pdfmake.pdfmakeStrings.double
   - typingsSlinky.pdfmake.pdfmakeStrings.wavy
 */
-trait DecorationStyle extends js.Object
+trait DecorationStyle extends StObject
 object DecorationStyle {
   
   @scala.inline

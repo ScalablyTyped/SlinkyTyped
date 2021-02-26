@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientCompute.gapi.client.compute
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientCompute.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientCompute.anon.ParentId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GlobalOrganizationOperationsResource extends js.Object {
+trait GlobalOrganizationOperationsResource extends StObject {
   
   /** Deletes the specified Operations resource. */
   def delete(): Request[Unit] = js.native

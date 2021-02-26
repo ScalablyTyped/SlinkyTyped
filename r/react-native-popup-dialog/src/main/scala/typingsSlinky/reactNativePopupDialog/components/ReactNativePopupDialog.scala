@@ -10,6 +10,7 @@ import typingsSlinky.reactNativePopupDialog.mod.OverlayPointerEventTypes
 import typingsSlinky.reactNativePopupDialog.mod.ScaleAnimation
 import typingsSlinky.reactNativePopupDialog.mod.SlideAnimation
 import typingsSlinky.reactNativePopupDialog.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object ReactNativePopupDialog {
   
   @JSImport("react-native-popup-dialog", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -89,7 +90,7 @@ object ReactNativePopupDialog {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativePopupDialog.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

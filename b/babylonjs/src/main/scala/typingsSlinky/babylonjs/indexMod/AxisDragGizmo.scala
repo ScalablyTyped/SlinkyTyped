@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.indexMod
 
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -85,26 +86,32 @@ class AxisDragGizmo protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/index", "AxisDragGizmo")
-@js.native
-object AxisDragGizmo extends js.Object {
+object AxisDragGizmo {
   
   /** @hidden */
+  @JSImport("babylonjs/index", "AxisDragGizmo._CreateArrow")
+  @js.native
   def _CreateArrow(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     material: typingsSlinky.babylonjs.standardMaterialMod.StandardMaterial
   ): typingsSlinky.babylonjs.transformNodeMod.TransformNode = js.native
+  @JSImport("babylonjs/index", "AxisDragGizmo._CreateArrow")
+  @js.native
   def _CreateArrow(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     material: typingsSlinky.babylonjs.standardMaterialMod.StandardMaterial,
     thickness: js.UndefOr[scala.Nothing],
     isCollider: Boolean
   ): typingsSlinky.babylonjs.transformNodeMod.TransformNode = js.native
+  @JSImport("babylonjs/index", "AxisDragGizmo._CreateArrow")
+  @js.native
   def _CreateArrow(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     material: typingsSlinky.babylonjs.standardMaterialMod.StandardMaterial,
     thickness: Double
   ): typingsSlinky.babylonjs.transformNodeMod.TransformNode = js.native
+  @JSImport("babylonjs/index", "AxisDragGizmo._CreateArrow")
+  @js.native
   def _CreateArrow(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     material: typingsSlinky.babylonjs.standardMaterialMod.StandardMaterial,
@@ -113,6 +120,8 @@ object AxisDragGizmo extends js.Object {
   ): typingsSlinky.babylonjs.transformNodeMod.TransformNode = js.native
   
   /** @hidden */
+  @JSImport("babylonjs/index", "AxisDragGizmo._CreateArrowInstance")
+  @js.native
   def _CreateArrowInstance(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     arrow: typingsSlinky.babylonjs.transformNodeMod.TransformNode

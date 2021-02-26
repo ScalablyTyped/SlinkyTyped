@@ -2,6 +2,7 @@ package typingsSlinky.ejWebAll.ej
 
 import typingsSlinky.ejWebAll.anon.Accept
 import typingsSlinky.ejWebAll.anon.DataType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

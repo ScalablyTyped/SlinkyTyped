@@ -4,15 +4,15 @@
 Typings are for version 0.13
 
 ## Library description:
-SAP Fundamentals, implemented in React
+SAP Fundamental Library, implemented in React
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | fundamental-react |
 | Keywords           | - |
-| # releases         | 380 |
-| # dependents       | 3 |
-| # downloads        | 101168 |
+| # releases         | 523 |
+| # dependents       | 2 |
+| # downloads        | 131669 |
 | # stars            | 0 |
 
 ## Links

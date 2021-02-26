@@ -3,14 +3,10 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.configuration
 import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.Property
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.PropertyState
-import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XProperty
-import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyWithState
-import typingsSlinky.activexLibreoffice.com_.sun.star.container.XChild
-import typingsSlinky.activexLibreoffice.com_.sun.star.container.XHierarchicalName
-import typingsSlinky.activexLibreoffice.com_.sun.star.container.XNamed
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,11 +45,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait SetElement
-  extends XHierarchicalName
-     with XNamed
-     with XProperty
-     with XPropertyWithState
-     with XChild
+  extends HierarchyElement
      with XComponent
      with XTemplateInstance
 object SetElement {

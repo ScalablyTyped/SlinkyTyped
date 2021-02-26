@@ -7,12 +7,13 @@ import typingsSlinky.astTypes.pathMod.PathConstructor
 import typingsSlinky.astTypes.pathVisitorMod.PathVisitorConstructor
 import typingsSlinky.astTypes.typesMod.ASTNode
 import typingsSlinky.astTypes.visitorMod.Visitor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AstNodesAreEquivalent extends js.Object {
+trait AstNodesAreEquivalent extends StObject {
   
   var NodePath: NodePathConstructor = js.native
   

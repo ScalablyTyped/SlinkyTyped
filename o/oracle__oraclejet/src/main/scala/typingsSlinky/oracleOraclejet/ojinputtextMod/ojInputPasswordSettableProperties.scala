@@ -12,6 +12,7 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.off
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.on
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.pending
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

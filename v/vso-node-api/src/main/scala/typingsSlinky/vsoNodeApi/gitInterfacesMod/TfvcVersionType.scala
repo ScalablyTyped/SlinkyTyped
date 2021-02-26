@@ -1,57 +1,48 @@
 package typingsSlinky.vsoNodeApi.gitInterfacesMod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait TfvcVersionType extends js.Object
+sealed trait TfvcVersionType extends StObject
 @JSImport("vso-node-api/interfaces/GitInterfaces", "TfvcVersionType")
 @js.native
-object TfvcVersionType extends js.Object {
+object TfvcVersionType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[TfvcVersionType with Double] = js.native
   
   @js.native
   sealed trait Change extends TfvcVersionType
-  /* 3 */ @js.native
-  object Change
-    extends TopLevel[typingsSlinky.vsoNodeApi.gitInterfacesMod.TfvcVersionType.Change with Double]
+  /* 3 */ val Change: typingsSlinky.vsoNodeApi.gitInterfacesMod.TfvcVersionType.Change with Double = js.native
   
   @js.native
   sealed trait Changeset extends TfvcVersionType
-  /* 1 */ @js.native
-  object Changeset extends TopLevel[Changeset with Double]
+  /* 1 */ val Changeset: typingsSlinky.vsoNodeApi.gitInterfacesMod.TfvcVersionType.Changeset with Double = js.native
   
   @js.native
   sealed trait Date extends TfvcVersionType
-  /* 4 */ @js.native
-  object Date extends TopLevel[Date with Double]
+  /* 4 */ val Date: typingsSlinky.vsoNodeApi.gitInterfacesMod.TfvcVersionType.Date with Double = js.native
   
   @js.native
   sealed trait Latest extends TfvcVersionType
-  /* 5 */ @js.native
-  object Latest extends TopLevel[Latest with Double]
+  /* 5 */ val Latest: typingsSlinky.vsoNodeApi.gitInterfacesMod.TfvcVersionType.Latest with Double = js.native
   
   @js.native
   sealed trait MergeSource extends TfvcVersionType
-  /* 7 */ @js.native
-  object MergeSource extends TopLevel[MergeSource with Double]
+  /* 7 */ val MergeSource: typingsSlinky.vsoNodeApi.gitInterfacesMod.TfvcVersionType.MergeSource with Double = js.native
   
   @js.native
   sealed trait None extends TfvcVersionType
-  /* 0 */ @js.native
-  object None extends TopLevel[None with Double]
+  /* 0 */ val None: typingsSlinky.vsoNodeApi.gitInterfacesMod.TfvcVersionType.None with Double = js.native
   
   @js.native
   sealed trait Shelveset extends TfvcVersionType
-  /* 2 */ @js.native
-  object Shelveset extends TopLevel[Shelveset with Double]
+  /* 2 */ val Shelveset: typingsSlinky.vsoNodeApi.gitInterfacesMod.TfvcVersionType.Shelveset with Double = js.native
   
   @js.native
   sealed trait Tip extends TfvcVersionType
-  /* 6 */ @js.native
-  object Tip extends TopLevel[Tip with Double]
+  /* 6 */ val Tip: typingsSlinky.vsoNodeApi.gitInterfacesMod.TfvcVersionType.Tip with Double = js.native
 }

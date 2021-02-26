@@ -7,6 +7,7 @@ import typingsSlinky.reactList.mod.ReactListProps
 import typingsSlinky.reactList.mod.^
 import typingsSlinky.reactList.reactListStrings.x
 import typingsSlinky.reactList.reactListStrings.y
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object ReactList {
   
   @JSImport("react-list", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -65,7 +66,7 @@ object ReactList {
     def useTranslate3d(value: Boolean): this.type = set("useTranslate3d", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactList.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -10,15 +10,15 @@ The official JavaScript implementation of Cucumber.
 | ------------------ | :-------------: |
 | Full name          | cucumber |
 | Keywords           | testing, bdd, cucumber, gherkin, tests |
-| # releases         | 16 |
-| # dependents       | 182 |
-| # downloads        | 11699136 |
+| # releases         | 8 |
+| # dependents       | 227 |
+| # downloads        | 20669460 |
 | # stars            | 52 |
 
 ## Links
-- [Homepage](http://github.com/cucumber/cucumber-js)
-- [Bugs](http://github.com/cucumber/cucumber-js/issues)
-- [Repository](https://github.com/cucumber/cucumber-js)
+- [Homepage](https://github.com/cucumber/cucumber-js#readme)
+- [Bugs](https://github.com/cucumber/cucumber-js/issues)
+- [Repository](https://github.com/cucumber/cucumber-js-package-upgrade)
 - [Npm](https://www.npmjs.com/package/cucumber)
     
 

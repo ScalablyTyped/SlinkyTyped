@@ -11,8 +11,8 @@ Convenience wrapper for ReadableStream, with an API lifted from "from" and "thro
 | Full name          | from2 |
 | Keywords           | from, stream, readable, pull, convenience, wrapper |
 | # releases         | 0 |
-| # dependents       | 185 |
-| # downloads        | 282230782 |
+| # dependents       | 214 |
+| # downloads        | 552973739 |
 | # stars            | 9 |
 
 ## Links

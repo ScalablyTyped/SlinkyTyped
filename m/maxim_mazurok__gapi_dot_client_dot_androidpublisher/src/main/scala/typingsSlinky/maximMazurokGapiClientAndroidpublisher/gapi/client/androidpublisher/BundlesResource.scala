@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientAndroidpublisher.gapi.client.android
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAndroidpublisher.anon.AckBundleInstallationWarning
 import typingsSlinky.maximMazurokGapiClientAndroidpublisher.anon.Alt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BundlesResource extends js.Object {
+trait BundlesResource extends StObject {
   
   /** Lists all current Android App Bundles of the app and edit. */
   def list(): Request[BundlesListResponse] = js.native

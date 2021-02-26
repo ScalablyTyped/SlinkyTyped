@@ -3,6 +3,7 @@ package typingsSlinky.uirouterCore.anon
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.uirouterCore.stateInterfaceMod.StateDeclaration
 import typingsSlinky.uirouterCore.stateInterfaceMod._StateDeclaration
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,18 +1,20 @@
 package typingsSlinky.dateFns
 
 import typingsSlinky.dateFns.anon.Step
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("date-fns/eachHourOfInterval/index", JSImport.Namespace)
-@js.native
-object eachHourOfIntervalIndexMod extends js.Object {
+object eachHourOfIntervalIndexMod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
+    @JSImport("date-fns/eachHourOfInterval/index", JSImport.Default)
+    @js.native
     def apply(interval: typingsSlinky.dateFns.mod.Interval): js.Array[js.Date] = js.native
+    @JSImport("date-fns/eachHourOfInterval/index", JSImport.Default)
+    @js.native
     def apply(interval: typingsSlinky.dateFns.mod.Interval, options: Step): js.Array[js.Date] = js.native
   }
 }

@@ -6,16 +6,16 @@ import typingsSlinky.three.bufferAttributeMod.BufferAttribute
 import typingsSlinky.three.interleavedBufferMod.InterleavedBuffer
 import typingsSlinky.three.matrix4Mod.Matrix4
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/core/InterleavedBufferAttribute", JSImport.Namespace)
-@js.native
-object interleavedBufferAttributeMod extends js.Object {
+object interleavedBufferAttributeMod {
   
+  @JSImport("three/src/core/InterleavedBufferAttribute", "InterleavedBufferAttribute")
   @js.native
-  class InterleavedBufferAttribute protected () extends js.Object {
+  class InterleavedBufferAttribute protected () extends StObject {
     def this(interleavedBuffer: InterleavedBuffer, itemSize: Double, offset: Double) = this()
     def this(interleavedBuffer: InterleavedBuffer, itemSize: Double, offset: Double, normalized: Boolean) = this()
     

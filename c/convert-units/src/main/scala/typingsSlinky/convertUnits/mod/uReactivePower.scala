@@ -1,10 +1,12 @@
 package typingsSlinky.convertUnits.mod
 
 import typingsSlinky.convertUnits.convertUnitsStrings.mVAR_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// Apparent Power
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.convertUnits.convertUnitsStrings.VAR
   - typingsSlinky.convertUnits.convertUnitsStrings.mVAR_
@@ -12,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.convertUnits.convertUnitsStrings.MVAR
   - typingsSlinky.convertUnits.convertUnitsStrings.GVAR
 */
-trait uReactivePower extends js.Object
+trait uReactivePower extends StObject
 object uReactivePower {
   
   @scala.inline

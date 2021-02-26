@@ -1,11 +1,12 @@
 package typingsSlinky.devextreme.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FilterOperation extends js.Object {
+trait FilterOperation extends StObject {
   
   var field: js.UndefOr[this.type] = js.native
   
@@ -24,45 +25,33 @@ object FilterOperation {
   }
   
   @scala.inline
-  implicit class FilterOperationOps[Self <: FilterOperation] (val x: Self) extends AnyVal {
+  implicit class FilterOperationMutableBuilder[Self <: FilterOperation] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setField(value: FilterOperation): Self = StObject.set(x, "field", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setFieldUndefined: Self = StObject.set(x, "field", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setFilterOperation(value: String): Self = StObject.set(x, "filterOperation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setField(value: FilterOperation): Self = this.set("field", value.asInstanceOf[js.Any])
+    def setFilterOperationUndefined: Self = StObject.set(x, "filterOperation", js.undefined)
     
     @scala.inline
-    def deleteField: Self = this.set("field", js.undefined)
+    def setSetValue(value: js.Function): Self = StObject.set(x, "setValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFilterOperation(value: String): Self = this.set("filterOperation", value.asInstanceOf[js.Any])
+    def setSetValueUndefined: Self = StObject.set(x, "setValue", js.undefined)
     
     @scala.inline
-    def deleteFilterOperation: Self = this.set("filterOperation", js.undefined)
+    def setValue(value: String | Double | js.Date): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSetValue(value: js.Function): Self = this.set("setValue", value.asInstanceOf[js.Any])
+    def setValueDate(value: js.Date): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteSetValue: Self = this.set("setValue", js.undefined)
-    
-    @scala.inline
-    def setValueDate(value: js.Date): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValue(value: String | Double | js.Date): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValue: Self = this.set("value", js.undefined)
+    def setValueUndefined: Self = StObject.set(x, "value", js.undefined)
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CHANGE_REQUESTED
 */
-trait GoogleActionsOrdersV3VerticalsPurchasePurchaseOrderExtensionStatus extends js.Object
+trait GoogleActionsOrdersV3VerticalsPurchasePurchaseOrderExtensionStatus extends StObject
 object GoogleActionsOrdersV3VerticalsPurchasePurchaseOrderExtensionStatus {
   
   @scala.inline

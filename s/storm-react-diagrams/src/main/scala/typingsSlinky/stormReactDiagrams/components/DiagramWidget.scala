@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.stormReactDiagrams.baseActionMod.BaseAction
 import typingsSlinky.stormReactDiagrams.diagramEngineMod.DiagramEngine
 import typingsSlinky.stormReactDiagrams.diagramWidgetMod.DiagramProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DiagramWidget {
   
+  @scala.inline
+  def apply(diagramEngine: DiagramEngine): Builder = {
+    val __props = js.Dynamic.literal(diagramEngine = diagramEngine.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DiagramProps]))
+  }
+  
   @JSImport("storm-react-diagrams", "DiagramWidget")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,10 +52,10 @@ object DiagramWidget {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteKeysVarargs(value: Double*): this.type = set("deleteKeys", js.Array(value :_*))
+    def deleteKeys(value: js.Array[Double]): this.type = set("deleteKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteKeys(value: js.Array[Double]): this.type = set("deleteKeys", value.asInstanceOf[js.Any])
+    def deleteKeysVarargs(value: Double*): this.type = set("deleteKeys", js.Array(value :_*))
     
     @scala.inline
     def extraProps(value: js.Any): this.type = set("extraProps", value.asInstanceOf[js.Any])
@@ -64,10 +71,4 @@ object DiagramWidget {
   }
   
   def withProps(p: DiagramProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(diagramEngine: DiagramEngine): Builder = {
-    val __props = js.Dynamic.literal(diagramEngine = diagramEngine.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DiagramProps]))
-  }
 }

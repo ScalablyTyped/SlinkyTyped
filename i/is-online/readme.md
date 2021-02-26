@@ -10,9 +10,9 @@ Check if the internet connection is up
 | ------------------ | :-------------: |
 | Full name          | is-online |
 | Keywords           | browser, online, offline, is-online, network, connected, connectivity, internet, is, has, detect, hostname, hostnames, dns, socket, reachable, reachability, accessible, no, disconnected |
-| # releases         | 3 |
-| # dependents       | 131 |
-| # downloads        | 2386334 |
+| # releases         | 9 |
+| # dependents       | 150 |
+| # downloads        | 3302396 |
 | # stars            | 17 |
 
 ## Links

@@ -1,14 +1,14 @@
 package typingsSlinky.tensorflowTfjsBackendWebgl
 
 import typingsSlinky.tensorflowTfjsBackendWebgl.gpgpuMathMod.GPGPUProgram
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-backend-webgl/dist/rotate_gpu", JSImport.Namespace)
-@js.native
-object rotateGpuMod extends js.Object {
+object rotateGpuMod {
   
+  @JSImport("@tensorflow/tfjs-backend-webgl/dist/rotate_gpu", "RotateProgram")
   @js.native
   class RotateProgram protected () extends GPGPUProgram {
     def this(

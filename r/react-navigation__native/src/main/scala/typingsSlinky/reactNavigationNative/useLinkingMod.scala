@@ -4,14 +4,15 @@ import slinky.core.facade.ReactRef
 import typingsSlinky.reactNavigationCore.typesMod.NavigationContainerRef
 import typingsSlinky.reactNavigationNative.anon.GetInitialState
 import typingsSlinky.reactNavigationNative.typesMod.LinkingOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-navigation/native/lib/typescript/src/useLinking", JSImport.Namespace)
-@js.native
-object useLinkingMod extends js.Object {
+object useLinkingMod {
   
+  @JSImport("@react-navigation/native/lib/typescript/src/useLinking", JSImport.Default)
+  @js.native
   def default(
     ref: ReactRef[NavigationContainerRef],
     hasEnabledConfigGetStateFromPathGetPathFromState: LinkingOptions

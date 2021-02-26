@@ -7,15 +7,22 @@ import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.mod.ButtonInformation
 import typingsSlinky.reactNativeElements.mod.PricingCardProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PricingCard {
   
+  @scala.inline
+  def apply(button: ButtonInformation, price: String): Builder = {
+    val __props = js.Dynamic.literal(button = button.asInstanceOf[js.Any], price = price.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PricingCardProps]))
+  }
+  
   @JSImport("react-native-elements", "PricingCard")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,9 +39,6 @@ object PricingCard {
     def containerStyleNull: this.type = set("containerStyle", null)
     
     @scala.inline
-    def infoVarargs(value: String*): this.type = set("info", js.Array(value :_*))
-    
-    @scala.inline
     def info(value: js.Array[String]): this.type = set("info", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -42,6 +46,9 @@ object PricingCard {
     
     @scala.inline
     def infoStyleNull: this.type = set("infoStyle", null)
+    
+    @scala.inline
+    def infoVarargs(value: String*): this.type = set("info", js.Array(value :_*))
     
     @scala.inline
     def onButtonPress(value: () => Unit): this.type = set("onButtonPress", js.Any.fromFunction0(value))
@@ -69,10 +76,4 @@ object PricingCard {
   }
   
   def withProps(p: PricingCardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(button: ButtonInformation, price: String): Builder = {
-    val __props = js.Dynamic.literal(button = button.asInstanceOf[js.Any], price = price.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PricingCardProps]))
-  }
 }

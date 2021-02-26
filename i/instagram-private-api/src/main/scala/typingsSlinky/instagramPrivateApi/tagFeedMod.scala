@@ -1,18 +1,20 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.tagFeedResponseMod.TagFeedResponse
 import typingsSlinky.instagramPrivateApi.tagFeedResponseMod.TagFeedResponseItemsItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/tag.feed", JSImport.Namespace)
-@js.native
-object tagFeedMod extends js.Object {
+object tagFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/tag.feed", "TagFeed")
   @js.native
-  class TagFeed () extends Feed[TagFeedResponse, TagFeedResponseItemsItem] {
+  class TagFeed protected () extends Feed[TagFeedResponse, TagFeedResponseItemsItem] {
+    def this(client: IgApiClient) = this()
     
     var nextMaxId: js.Any = js.native
     

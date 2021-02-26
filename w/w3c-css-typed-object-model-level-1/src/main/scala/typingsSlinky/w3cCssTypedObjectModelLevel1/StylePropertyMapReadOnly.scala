@@ -1,12 +1,13 @@
 package typingsSlinky.w3cCssTypedObjectModelLevel1
 
 import typingsSlinky.std.IterableIterator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait StylePropertyMapReadOnly extends js.Object {
+trait StylePropertyMapReadOnly extends StObject {
   
   def get(property: String): js.UndefOr[CSSStyleValue] = js.native
   

@@ -4,23 +4,28 @@ import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocume
 import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentSymbolParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentSymbolRegistrationOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageclient", "DocumentSymbolRequest")
-@js.native
-object DocumentSymbolRequest extends js.Object {
+object DocumentSymbolRequest {
   
+  @JSImport("vscode-languageclient", "DocumentSymbolRequest.method")
+  @js.native
   val method: textDocumentSlashdocumentSymbol = js.native
   
   /** @deprecated Use DocumentSymbolRequest.type */
+  @JSImport("vscode-languageclient", "DocumentSymbolRequest.resultType")
+  @js.native
   val resultType: typingsSlinky.vscodeJsonrpc.mod.ProgressType[
     js.Array[
       typingsSlinky.vscodeLanguageserverTypes.mod.DocumentSymbol | typingsSlinky.vscodeLanguageserverTypes.mod.SymbolInformation
     ]
   ] = js.native
   
+  @JSImport("vscode-languageclient", "DocumentSymbolRequest.type")
+  @js.native
   val `type`: ProtocolRequestType[
     DocumentSymbolParams, 
     (js.Array[

@@ -5,6 +5,7 @@ import typingsSlinky.firebase.mod.firebase.Unsubscribe
 import typingsSlinky.firebase.mod.firebase.User
 import typingsSlinky.firebase.mod.firebase.app.App
 import typingsSlinky.firebase.mod.firebase.auth.Auth.Persistence
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   */
 @js.native
-trait Auth extends js.Object {
+trait Auth extends StObject {
   
   /**
     * The {@link firebase.app.App app} associated with the `Auth` service
@@ -1112,9 +1113,7 @@ trait Auth extends js.Object {
     */
   def verifyPasswordResetCode(code: String): js.Promise[String] = js.native
 }
-@JSImport("firebase", "firebase.auth.Auth")
-@js.native
-object Auth extends js.Object {
+object Auth {
   
   type Persistence = String
 }

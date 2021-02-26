@@ -4,21 +4,21 @@
 Typings are for version 7.6
 
 ## Library description:
-react.js powered YouTube player component
+React.js powered YouTube player component
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | react-youtube |
 | Keywords           | react, youtube, player, react-component |
-| # releases         | 5 |
-| # dependents       | 56 |
-| # downloads        | 2846301 |
+| # releases         | 22 |
+| # dependents       | 72 |
+| # downloads        | 4938530 |
 | # stars            | 7 |
 
 ## Links
-- [Homepage](https://github.com/compedit/react-youtube)
-- [Bugs](https://github.com/compedit/react-youtube/issues)
-- [Repository](https://github.com/compedit/react-youtube)
+- [Homepage](https://github.com/tjallingt/react-youtube)
+- [Bugs](https://github.com/tjallingt/react-youtube/issues)
+- [Repository](https://github.com/tjallingt/react-youtube)
 - [Npm](https://www.npmjs.com/package/react-youtube)
     
 

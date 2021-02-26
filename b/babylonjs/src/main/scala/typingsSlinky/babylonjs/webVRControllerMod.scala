@@ -9,14 +9,14 @@ import typingsSlinky.babylonjs.poseEnabledControllerMod.MutableGamepadButton
 import typingsSlinky.babylonjs.poseEnabledControllerMod.PoseEnabledController
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Gamepads/Controllers/webVRController", JSImport.Namespace)
-@js.native
-object webVRControllerMod extends js.Object {
+object webVRControllerMod {
   
+  @JSImport("babylonjs/Gamepads/Controllers/webVRController", "WebVRController")
   @js.native
   abstract class WebVRController protected () extends PoseEnabledController {
     /**

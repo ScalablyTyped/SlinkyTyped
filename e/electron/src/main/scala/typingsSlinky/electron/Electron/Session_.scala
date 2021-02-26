@@ -18,6 +18,7 @@ import typingsSlinky.electron.electronStrings.pointerLock
 import typingsSlinky.electron.electronStrings.preconnect
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

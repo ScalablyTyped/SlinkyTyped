@@ -1,12 +1,13 @@
 package typingsSlinky.reactOnsenui.mod
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TabbarRenderTab extends js.Object {
+trait TabbarRenderTab extends StObject {
   
   var content: ReactElement = js.native
   
@@ -21,24 +22,12 @@ object TabbarRenderTab {
   }
   
   @scala.inline
-  implicit class TabbarRenderTabOps[Self <: TabbarRenderTab] (val x: Self) extends AnyVal {
+  implicit class TabbarRenderTabMutableBuilder[Self <: TabbarRenderTab] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setContent(value: ReactElement): Self = StObject.set(x, "content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setContent(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTab(value: ReactElement): Self = this.set("tab", value.asInstanceOf[js.Any])
+    def setTab(value: ReactElement): Self = StObject.set(x, "tab", value.asInstanceOf[js.Any])
   }
 }

@@ -11,6 +11,7 @@ import typingsSlinky.antd.drawerMod.PushState
 import typingsSlinky.antd.drawerMod.getContainerFunc
 import typingsSlinky.antd.drawerMod.placementType
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object Drawer {
   
   @JSImport("antd", "Drawer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,10 +40,10 @@ object Drawer {
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def destroyOnClose(value: Boolean): this.type = set("destroyOnClose", value.asInstanceOf[js.Any])
@@ -51,10 +52,10 @@ object Drawer {
     def drawerStyle(value: CSSProperties): this.type = set("drawerStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def footerStyle(value: CSSProperties): this.type = set("footerStyle", value.asInstanceOf[js.Any])
@@ -63,19 +64,19 @@ object Drawer {
     def forceRender(value: Boolean): this.type = set("forceRender", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
+    def getContainer(value: String | HTMLElement | getContainerFunc | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def getContainerFunction0(value: () => HTMLElement): this.type = set("getContainer", js.Any.fromFunction0(value))
     
     @scala.inline
-    def getContainer(value: String | HTMLElement | getContainerFunc | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def handlerReactElement(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
+    def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def handler(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def handlerReactElement(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
     
     @scala.inline
     def headerStyle(value: CSSProperties): this.type = set("headerStyle", value.asInstanceOf[js.Any])
@@ -111,10 +112,10 @@ object Drawer {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
@@ -126,7 +127,7 @@ object Drawer {
     def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DrawerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Drawer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DrawerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

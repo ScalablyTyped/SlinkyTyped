@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.fontIconMod.FontIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/BorderInnerFontIcon", JSImport.Namespace)
-@js.native
-object borderInnerFontIconMod extends js.Object {
+object borderInnerFontIconMod {
   
+  @JSImport("@react-md/material-icons/types/BorderInnerFontIcon", "BorderInnerFontIcon")
+  @js.native
   val BorderInnerFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

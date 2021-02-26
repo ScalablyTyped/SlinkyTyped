@@ -3,14 +3,14 @@ package typingsSlinky.agGrid
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.agGrid.beanStubMod.BeanStub
 import typingsSlinky.agGrid.columnMod.Column
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/headerRendering/hoverFeature", JSImport.Namespace)
-@js.native
-object hoverFeatureMod extends js.Object {
+object hoverFeatureMod {
   
+  @JSImport("ag-grid/dist/lib/headerRendering/hoverFeature", "HoverFeature")
   @js.native
   class HoverFeature protected () extends BeanStub {
     def this(columns: js.Array[Column], element: HTMLElement) = this()

@@ -3,6 +3,7 @@ package typingsSlinky.winjs.WinJS.UI
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.winjs.WinJS.Binding.List
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Displays ICommands within the flow of the app. Use the ToolBar around other statically positioned app content.
   **/
 @js.native
-trait ToolBar extends js.Object {
+trait ToolBar extends StObject {
   
   /**
     * Registers an event handler for the specified event.

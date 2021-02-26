@@ -1,18 +1,20 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.mediaCommentsFeedResponseMod.MediaCommentsFeedResponse
 import typingsSlinky.instagramPrivateApi.mediaCommentsFeedResponseMod.MediaCommentsFeedResponseCommentsItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/media-comments.feed", JSImport.Namespace)
-@js.native
-object mediaCommentsFeedMod extends js.Object {
+object mediaCommentsFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/media-comments.feed", "MediaCommentsFeed")
   @js.native
-  class MediaCommentsFeed () extends Feed[MediaCommentsFeedResponse, MediaCommentsFeedResponseCommentsItem] {
+  class MediaCommentsFeed protected () extends Feed[MediaCommentsFeedResponse, MediaCommentsFeedResponseCommentsItem] {
+    def this(client: IgApiClient) = this()
     
     var id: String = js.native
     

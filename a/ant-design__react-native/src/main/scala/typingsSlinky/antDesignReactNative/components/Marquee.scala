@@ -7,6 +7,7 @@ import typingsSlinky.antDesignReactNative.marqueeMod.MarqueeProps
 import typingsSlinky.antDesignReactNative.marqueeMod.default
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object Marquee {
   
   @JSImport("@ant-design/react-native/lib/notice-bar/Marquee", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -44,16 +45,16 @@ object Marquee {
     def styleNull: this.type = set("style", null)
     
     @scala.inline
-    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
     def trailing(value: Double): this.type = set("trailing", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MarqueeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Marquee.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MarqueeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

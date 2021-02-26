@@ -4,47 +4,64 @@ import typingsSlinky.classValidator.validationOptionsMod.ValidationOptions
 import typingsSlinky.std.PropertyDecorator
 import typingsSlinky.validator.mod.validator.IsMobilePhoneOptions
 import typingsSlinky.validator.mod.validator.MobilePhoneLocale
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("class-validator/types/decorator/string/IsMobilePhone", JSImport.Namespace)
-@js.native
-object isMobilePhoneMod extends js.Object {
+object isMobilePhoneMod {
   
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "IS_MOBILE_PHONE")
+  @js.native
   val IS_MOBILE_PHONE: /* "isMobilePhone" */ String = js.native
   
-  @JSName("IsMobilePhone")
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "IsMobilePhone")
+  @js.native
   def IsMobilePhone_(): PropertyDecorator = js.native
-  @JSName("IsMobilePhone")
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "IsMobilePhone")
+  @js.native
   def IsMobilePhone_(
     locale: js.UndefOr[scala.Nothing],
     options: js.UndefOr[scala.Nothing],
     validationOptions: ValidationOptions
   ): PropertyDecorator = js.native
-  @JSName("IsMobilePhone")
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "IsMobilePhone")
+  @js.native
   def IsMobilePhone_(locale: js.UndefOr[scala.Nothing], options: IsMobilePhoneOptions): PropertyDecorator = js.native
-  @JSName("IsMobilePhone")
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "IsMobilePhone")
+  @js.native
   def IsMobilePhone_(
     locale: js.UndefOr[scala.Nothing],
     options: IsMobilePhoneOptions,
     validationOptions: ValidationOptions
   ): PropertyDecorator = js.native
-  @JSName("IsMobilePhone")
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "IsMobilePhone")
+  @js.native
   def IsMobilePhone_(locale: MobilePhoneLocale): PropertyDecorator = js.native
-  @JSName("IsMobilePhone")
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "IsMobilePhone")
+  @js.native
   def IsMobilePhone_(
     locale: MobilePhoneLocale,
     options: js.UndefOr[scala.Nothing],
     validationOptions: ValidationOptions
   ): PropertyDecorator = js.native
-  @JSName("IsMobilePhone")
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "IsMobilePhone")
+  @js.native
   def IsMobilePhone_(locale: MobilePhoneLocale, options: IsMobilePhoneOptions): PropertyDecorator = js.native
-  @JSName("IsMobilePhone")
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "IsMobilePhone")
+  @js.native
   def IsMobilePhone_(locale: MobilePhoneLocale, options: IsMobilePhoneOptions, validationOptions: ValidationOptions): PropertyDecorator = js.native
   
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "isMobilePhone")
+  @js.native
   def isMobilePhone(value: js.Any): Boolean = js.native
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "isMobilePhone")
+  @js.native
   def isMobilePhone(value: js.Any, locale: js.UndefOr[scala.Nothing], options: IsMobilePhoneOptions): Boolean = js.native
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "isMobilePhone")
+  @js.native
   def isMobilePhone(value: js.Any, locale: MobilePhoneLocale): Boolean = js.native
+  @JSImport("class-validator/types/decorator/string/IsMobilePhone", "isMobilePhone")
+  @js.native
   def isMobilePhone(value: js.Any, locale: MobilePhoneLocale, options: IsMobilePhoneOptions): Boolean = js.native
 }

@@ -1,13 +1,14 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
 import typingsSlinky.officeUiFabricReact.personaTypesMod.PersonaSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "PersonaSize")
 @js.native
-object PersonaSize_ extends js.Object {
+object PersonaSize_ extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[PersonaSize with Double] = js.native

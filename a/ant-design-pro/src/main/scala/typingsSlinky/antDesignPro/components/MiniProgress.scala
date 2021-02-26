@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.miniProgressMod.IMiniProgressProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MiniProgress {
   
+  @scala.inline
+  def apply(target: Double, targetLabel: String): Builder = {
+    val __props = js.Dynamic.literal(target = target.asInstanceOf[js.Any], targetLabel = targetLabel.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IMiniProgressProps]))
+  }
+  
   @JSImport("ant-design-pro/lib/Charts", "MiniProgress")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,10 +40,4 @@ object MiniProgress {
   }
   
   def withProps(p: IMiniProgressProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(target: Double, targetLabel: String): Builder = {
-    val __props = js.Dynamic.literal(target = target.asInstanceOf[js.Any], targetLabel = targetLabel.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IMiniProgressProps]))
-  }
 }

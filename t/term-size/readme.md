@@ -10,9 +10,9 @@ Reliably get the terminal window size (columns & rows)
 | ------------------ | :-------------: |
 | Full name          | term-size |
 | Keywords           | terminal, size, console, window, width, height, columns, rows, lines, tty, redirected |
-| # releases         | 2 |
-| # dependents       | 57 |
-| # downloads        | 185267720 |
+| # releases         | 6 |
+| # dependents       | 109 |
+| # downloads        | 402642685 |
 | # stars            | 2 |
 
 ## Links

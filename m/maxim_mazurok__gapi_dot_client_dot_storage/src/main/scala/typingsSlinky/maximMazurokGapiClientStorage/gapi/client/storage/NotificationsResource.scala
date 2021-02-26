@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientStorage.gapi.client.storage
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientStorage.anon.BucketFields
 import typingsSlinky.maximMazurokGapiClientStorage.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NotificationsResource extends js.Object {
+trait NotificationsResource extends StObject {
   
   /** Permanently deletes a notification subscription. */
   def delete(): Request[Unit] = js.native

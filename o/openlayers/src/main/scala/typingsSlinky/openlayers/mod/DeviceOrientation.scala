@@ -1,6 +1,7 @@
 package typingsSlinky.openlayers.mod
 
 import typingsSlinky.openlayers.mod.olx.DeviceOrientationOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

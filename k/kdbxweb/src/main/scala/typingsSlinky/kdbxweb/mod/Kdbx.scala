@@ -1,13 +1,14 @@
 package typingsSlinky.kdbxweb.mod
 
 import org.scalajs.dom.raw.Document
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("kdbxweb", "Kdbx")
 @js.native
-class Kdbx () extends js.Object {
+class Kdbx () extends StObject {
   
   def addDeletedObject(uuid: KdbxUuid, dt: js.Date): Unit = js.native
   
@@ -15,8 +16,8 @@ class Kdbx () extends js.Object {
   
   def cleanup(settings: Settings): Unit = js.native
   
-  def createBinary(value: ProtectedValue): js.Promise[ProtectedValue | js.typedarray.ArrayBuffer] = js.native
   def createBinary(value: js.typedarray.ArrayBuffer): js.Promise[ProtectedValue | js.typedarray.ArrayBuffer] = js.native
+  def createBinary(value: ProtectedValue): js.Promise[ProtectedValue | js.typedarray.ArrayBuffer] = js.native
   
   def createDefaultGroup(): Unit = js.native
   
@@ -65,13 +66,17 @@ class Kdbx () extends js.Object {
   var xml: Document = js.native
 }
 /* static members */
-@JSImport("kdbxweb", "Kdbx")
-@js.native
-object Kdbx extends js.Object {
+object Kdbx {
   
+  @JSImport("kdbxweb", "Kdbx.create")
+  @js.native
   def create(credentials: Credentials, name: String): Kdbx = js.native
   
+  @JSImport("kdbxweb", "Kdbx.load")
+  @js.native
   def load(data: js.typedarray.ArrayBuffer, credentials: Credentials): js.Promise[Kdbx] = js.native
   
+  @JSImport("kdbxweb", "Kdbx.loadXml")
+  @js.native
   def loadXml(data: String, credentials: Credentials): js.Promise[Kdbx] = js.native
 }

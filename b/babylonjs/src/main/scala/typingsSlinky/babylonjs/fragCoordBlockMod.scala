@@ -3,14 +3,14 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
 import typingsSlinky.babylonjs.nodeMaterialBuildStateMod.NodeMaterialBuildState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Fragment/fragCoordBlock", JSImport.Namespace)
-@js.native
-object fragCoordBlockMod extends js.Object {
+object fragCoordBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/fragCoordBlock", "FragCoordBlock")
   @js.native
   class FragCoordBlock protected () extends NodeMaterialBlock {
     /**

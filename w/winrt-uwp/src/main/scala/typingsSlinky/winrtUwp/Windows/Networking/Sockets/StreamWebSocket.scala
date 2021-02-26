@@ -8,13 +8,14 @@ import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStream
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IOutputStream
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.closed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Supports network communication that allows reading and writing streams using a WebSocket. */
 @js.native
-trait StreamWebSocket extends js.Object {
+trait StreamWebSocket extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

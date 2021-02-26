@@ -80,20 +80,30 @@ import typingsSlinky.reactCollapsible.reactCollapsibleStrings.initial
 import typingsSlinky.reactCollapsible.reactCollapsibleStrings.scroll
 import typingsSlinky.reactCollapsible.reactCollapsibleStrings.unset
 import typingsSlinky.reactCollapsible.reactCollapsibleStrings.visible
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactCollapsible {
   
+  @scala.inline
+  def apply(trigger: String | ReactElement): Builder = {
+    val __props = js.Dynamic.literal(trigger = trigger.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CollapsibleProps]))
+  }
+  
   @JSImport("react-collapsible", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -377,16 +387,13 @@ object ReactCollapsible {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -994,10 +1001,10 @@ object ReactCollapsible {
     def triggerTagName(value: String): this.type = set("triggerTagName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def triggerWhenOpenReactElement(value: ReactElement): this.type = set("triggerWhenOpen", value.asInstanceOf[js.Any])
+    def triggerWhenOpen(value: String | ReactElement): this.type = set("triggerWhenOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def triggerWhenOpen(value: String | ReactElement): this.type = set("triggerWhenOpen", value.asInstanceOf[js.Any])
+    def triggerWhenOpenReactElement(value: ReactElement): this.type = set("triggerWhenOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
@@ -1012,10 +1019,10 @@ object ReactCollapsible {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -1031,10 +1038,4 @@ object ReactCollapsible {
   }
   
   def withProps(p: CollapsibleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(trigger: String | ReactElement): Builder = {
-    val __props = js.Dynamic.literal(trigger = trigger.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CollapsibleProps]))
-  }
 }

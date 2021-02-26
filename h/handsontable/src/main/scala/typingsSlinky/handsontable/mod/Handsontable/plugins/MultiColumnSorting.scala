@@ -1,6 +1,7 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins
 
 import typingsSlinky.handsontable.mod.Handsontable.columnSorting.Config
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

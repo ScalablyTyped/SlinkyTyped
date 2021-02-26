@@ -1,13 +1,34 @@
 package typingsSlinky.semanticUiReact
 
+import org.scalablytyped.runtime.Shortcut
+import typingsSlinky.react.mod.Component
+import typingsSlinky.semanticUiReact.commentActionMod.CommentActionProps
 import typingsSlinky.semanticUiReact.commentCommentMod.CommentComponent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("semantic-ui-react/dist/commonjs/views/Comment", JSImport.Namespace)
-@js.native
-object commentMod extends js.Object {
+object commentMod {
   
-  val default: CommentComponent = js.native
+  object default extends Shortcut {
+    
+    @JSImport("semantic-ui-react/dist/commonjs/views/Comment", JSImport.Default)
+    @js.native
+    val ^ : CommentComponent = js.native
+    
+    /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+    @JSImport("semantic-ui-react/dist/commonjs/views/Comment", "default.Action")
+    @js.native
+    class Action protected ()
+      extends Component[CommentActionProps, js.Object, js.Any] {
+      def this(props: CommentActionProps) = this()
+      def this(props: CommentActionProps, context: js.Any) = this()
+    }
+    
+    type _To = CommentComponent
+    
+    /* This means you don't have to write `^`, but can instead just say `default.foo` */
+    override def _to: CommentComponent = ^
+  }
 }

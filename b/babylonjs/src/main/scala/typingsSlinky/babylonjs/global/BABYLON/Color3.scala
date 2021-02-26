@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.BABYLON.DeepImmutable
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -98,25 +99,26 @@ class Color3 ()
   ) = this()
 }
 /* static members */
-@JSGlobal("BABYLON.Color3")
-@js.native
-object Color3 extends js.Object {
+object Color3 {
+  
+  @JSGlobal("BABYLON.Color3")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Returns a Color3 value containing a black color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Black")
+  @js.native
   def Black(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
-  
-  /**
-    * Gets a Color3 value containing a black color that must not be updated
-    */
-  def BlackReadOnly: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Color3] = js.native
   
   /**
     * Returns a Color3 value containing a blue color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Blue")
+  @js.native
   def Blue(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
@@ -125,9 +127,15 @@ object Color3 extends js.Object {
     * @param offset defines an offset in the source array
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.FromArray")
+  @js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]]): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
+  @JSGlobal("BABYLON.Color3.FromArray")
+  @js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
+  @JSGlobal("BABYLON.Color3.FromArrayToRef")
+  @js.native
   def FromArrayToRef(
     array: DeepImmutable[ArrayLike[Double]],
     offset: js.UndefOr[scala.Nothing],
@@ -139,6 +147,8 @@ object Color3 extends js.Object {
     * @param offset defines the offset in the source array
     * @param result defines the target Color3 object
     */
+  @JSGlobal("BABYLON.Color3.FromArrayToRef")
+  @js.native
   def FromArrayToRef(
     array: DeepImmutable[ArrayLike[Double]],
     offset: Double,
@@ -150,6 +160,8 @@ object Color3 extends js.Object {
     * @param hex defines a string containing valid hexadecimal values
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.FromHexString")
+  @js.native
   def FromHexString(hex: String): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
@@ -159,18 +171,24 @@ object Color3 extends js.Object {
     * @param b defines the blue component to read from (value between 0 and 255)
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.FromInts")
+  @js.native
   def FromInts(r: Double, g: Double, b: Double): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
     * Returns a Color3 value containing a gray color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Gray")
+  @js.native
   def Gray(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
     * Returns a Color3 value containing a green color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Green")
+  @js.native
   def Green(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
@@ -180,6 +198,8 @@ object Color3 extends js.Object {
     * @param value defines the value
     * @param result defines the Color3 where to store the RGB values
     */
+  @JSGlobal("BABYLON.Color3.HSVtoRGBToRef")
+  @js.native
   def HSVtoRGBToRef(hue: Double, saturation: Double, value: Double, result: typingsSlinky.babylonjs.BABYLON.Color3): Unit = js.native
   
   /**
@@ -189,6 +209,8 @@ object Color3 extends js.Object {
     * @param amount defines the gradient value between start and end
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Lerp")
+  @js.native
   def Lerp(
     start: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Color3],
     end: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Color3],
@@ -202,6 +224,8 @@ object Color3 extends js.Object {
     * @param amount defines the gradient factor
     * @param result defines the Color3 object where to store the result
     */
+  @JSGlobal("BABYLON.Color3.LerpToRef")
+  @js.native
   def LerpToRef(
     left: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Color3],
     right: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Color3],
@@ -213,43 +237,61 @@ object Color3 extends js.Object {
     * Returns a Color3 value containing a magenta color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Magenta")
+  @js.native
   def Magenta(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
     * Returns a Color3 value containing a purple color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Purple")
+  @js.native
   def Purple(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
     * Returns a Color3 value containing a random color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Random")
+  @js.native
   def Random(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
     * Returns a Color3 value containing a red color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Red")
+  @js.native
   def Red(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
     * Returns a Color3 value containing a teal color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Teal")
+  @js.native
   def Teal(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
     * Returns a Color3 value containing a white color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.White")
+  @js.native
   def White(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
   /**
     * Returns a Color3 value containing a yellow color
     * @returns a new Color3 object
     */
+  @JSGlobal("BABYLON.Color3.Yellow")
+  @js.native
   def Yellow(): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
-  var _BlackReadOnly: js.Any = js.native
+  @JSGlobal("BABYLON.Color3._BlackReadOnly")
+  @js.native
+  def _BlackReadOnly: js.Any = js.native
+  @scala.inline
+  def _BlackReadOnly_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_BlackReadOnly")(x.asInstanceOf[js.Any])
 }

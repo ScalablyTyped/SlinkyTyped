@@ -11,8 +11,8 @@ GraphicsMagick and ImageMagick for node.js
 | Full name          | gm |
 | Keywords           | graphics, magick, image, graphicsmagick, imagemagick, gm, convert, identify, compare |
 | # releases         | 1 |
-| # dependents       | 852 |
-| # downloads        | 6487449 |
+| # dependents       | 918 |
+| # downloads        | 8402332 |
 | # stars            | 235 |
 
 ## Links

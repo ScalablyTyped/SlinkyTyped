@@ -9,6 +9,7 @@ import typingsSlinky.officeJs.officeJsStrings.EdgeBottom
 import typingsSlinky.officeJs.officeJsStrings.EdgeLeft
 import typingsSlinky.officeJs.officeJsStrings.EdgeRight
 import typingsSlinky.officeJs.officeJsStrings.EdgeTop
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

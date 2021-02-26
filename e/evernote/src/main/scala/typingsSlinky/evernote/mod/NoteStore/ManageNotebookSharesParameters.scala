@@ -2,13 +2,14 @@ package typingsSlinky.evernote.mod.NoteStore
 
 import typingsSlinky.evernote.anon.InvitationsToCreateOrUpdate
 import typingsSlinky.evernote.mod.Types.UserIdentity
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("evernote", "NoteStore.ManageNotebookSharesParameters")
 @js.native
-class ManageNotebookSharesParameters () extends js.Object {
+class ManageNotebookSharesParameters () extends StObject {
   def this(args: InvitationsToCreateOrUpdate) = this()
   
   var invitationsToCreateOrUpdate: js.UndefOr[js.Array[InvitationShareRelationship]] = js.native

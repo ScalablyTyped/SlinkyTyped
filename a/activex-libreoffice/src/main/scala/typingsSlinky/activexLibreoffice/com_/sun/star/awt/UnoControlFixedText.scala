@@ -1,10 +1,10 @@
 package typingsSlinky.activexLibreoffice.com_.sun.star.awt
 
 import typingsSlinky.activexLibreoffice.`type`
-import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessible
 import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessibleContext
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,10 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** specifies a control for displaying fixed text. */
 @js.native
 trait UnoControlFixedText
-  extends XControl
-     with XWindow
-     with XView
-     with XAccessible
+  extends UnoControl
      with XFixedText
      with XLayoutConstrains
 object UnoControlFixedText {

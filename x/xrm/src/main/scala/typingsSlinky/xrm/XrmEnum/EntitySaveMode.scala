@@ -2,6 +2,7 @@ package typingsSlinky.xrm.XrmEnum
 
 import typingsSlinky.xrm.xrmStrings.saveandclose
 import typingsSlinky.xrm.xrmStrings.saveandnew
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.saveandclose
   - typingsSlinky.xrm.xrmStrings.saveandnew
 */
-trait EntitySaveMode extends js.Object
+trait EntitySaveMode extends StObject
 object EntitySaveMode {
   
   @scala.inline

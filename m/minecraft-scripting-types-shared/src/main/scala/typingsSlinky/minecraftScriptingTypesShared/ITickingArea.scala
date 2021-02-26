@@ -2,6 +2,7 @@ package typingsSlinky.minecraftScriptingTypesShared
 
 import typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.entity_ticking_area
 import typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.level_ticking_area
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,14 +15,14 @@ trait ITickingArea extends _IMinecraftObject
 object ITickingArea {
   
   @scala.inline
-  def IEntityTickingArea(__type__ : entity_ticking_area, entity_ticking_area_id: Int64): ITickingArea = {
+  def IEntityTickingArea(__type__ : entity_ticking_area, entity_ticking_area_id: Int64): typingsSlinky.minecraftScriptingTypesShared.IEntityTickingArea = {
     val __obj = js.Dynamic.literal(__type__ = __type__.asInstanceOf[js.Any], entity_ticking_area_id = entity_ticking_area_id.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ITickingArea]
+    __obj.asInstanceOf[typingsSlinky.minecraftScriptingTypesShared.IEntityTickingArea]
   }
   
   @scala.inline
-  def ILevelTickingArea(__type__ : level_ticking_area, level_ticking_area_id: String): ITickingArea = {
+  def ILevelTickingArea(__type__ : level_ticking_area, level_ticking_area_id: String): typingsSlinky.minecraftScriptingTypesShared.ILevelTickingArea = {
     val __obj = js.Dynamic.literal(__type__ = __type__.asInstanceOf[js.Any], level_ticking_area_id = level_ticking_area_id.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ITickingArea]
+    __obj.asInstanceOf[typingsSlinky.minecraftScriptingTypesShared.ILevelTickingArea]
   }
 }

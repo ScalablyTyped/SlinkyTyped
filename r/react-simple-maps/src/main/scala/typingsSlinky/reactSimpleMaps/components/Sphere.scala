@@ -95,15 +95,22 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactSimpleMaps.mod.SphereProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Sphere {
   
+  @scala.inline
+  def apply(fill: String, id: String, stroke: String, strokeWidth: Double): Builder = {
+    val __props = js.Dynamic.literal(fill = fill.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], stroke = stroke.asInstanceOf[js.Any], strokeWidth = strokeWidth.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SphereProps]))
+  }
+  
   @JSImport("react-simple-maps", "Sphere")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -1262,10 +1269,4 @@ object Sphere {
   }
   
   def withProps(p: SphereProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(fill: String, id: String, stroke: String, strokeWidth: Double): Builder = {
-    val __props = js.Dynamic.literal(fill = fill.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], stroke = stroke.asInstanceOf[js.Any], strokeWidth = strokeWidth.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SphereProps]))
-  }
 }

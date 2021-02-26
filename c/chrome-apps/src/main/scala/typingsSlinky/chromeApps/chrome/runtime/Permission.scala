@@ -1,5 +1,6 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -65,4 +66,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 typingsSlinky.chromeApps.chrome.runtime.UrlMatches
   - typingsSlinky.chromeApps.chrome.runtime.USBDevicesPermission
 */
-trait Permission extends js.Object
+trait Permission extends StObject

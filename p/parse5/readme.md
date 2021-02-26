@@ -10,9 +10,9 @@ HTML parser and serializer.
 | ------------------ | :-------------: |
 | Full name          | parse5 |
 | Keywords           | html, parser, html5, WHATWG, specification, fast, html parser, html5 parser, htmlparser, parse5, serializer, html serializer, htmlserializer, parse, serialize |
-| # releases         | 6 |
-| # dependents       | 679 |
-| # downloads        | 500059441 |
+| # releases         | 4 |
+| # dependents       | 836 |
+| # downloads        | 967119186 |
 | # stars            | 31 |
 
 ## Links

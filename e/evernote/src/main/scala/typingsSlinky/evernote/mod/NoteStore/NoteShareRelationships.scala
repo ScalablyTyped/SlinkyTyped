@@ -1,13 +1,14 @@
 package typingsSlinky.evernote.mod.NoteStore
 
 import typingsSlinky.evernote.anon.InvitationRestrictions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("evernote", "NoteStore.NoteShareRelationships")
 @js.native
-class NoteShareRelationships () extends js.Object {
+class NoteShareRelationships () extends StObject {
   def this(args: InvitationRestrictions) = this()
   
   var invitationRestrictions: js.UndefOr[NoteShareRelationshipRestrictions] = js.native

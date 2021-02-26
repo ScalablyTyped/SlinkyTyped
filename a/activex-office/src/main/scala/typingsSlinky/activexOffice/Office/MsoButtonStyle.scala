@@ -8,6 +8,7 @@ import typingsSlinky.activexOffice.activexOfficeNumbers.`1`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`2`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`3`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`7`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`15`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`14`
 */
-trait MsoButtonStyle extends js.Object
+trait MsoButtonStyle extends StObject
 object MsoButtonStyle {
   
   @scala.inline

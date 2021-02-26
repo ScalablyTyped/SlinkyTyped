@@ -6,13 +6,14 @@ import typingsSlinky.kafkaNode.kafkaNodeStrings.message
 import typingsSlinky.kafkaNode.kafkaNodeStrings.offsetOutOfRange
 import typingsSlinky.kafkaNode.kafkaNodeStrings.rebalanced
 import typingsSlinky.kafkaNode.kafkaNodeStrings.rebalancing
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("kafka-node", "ConsumerGroup")
 @js.native
-class ConsumerGroup protected () extends js.Object {
+class ConsumerGroup protected () extends StObject {
   def this(options: ConsumerGroupOptions, topics: String) = this()
   def this(options: ConsumerGroupOptions, topics: js.Array[String]) = this()
   

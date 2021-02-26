@@ -10,9 +10,9 @@ node-ral with mcpack and nshead
 | ------------------ | :-------------: |
 | Full name          | yog-ral |
 | Keywords           | ral |
-| # releases         | 3 |
+| # releases         | 0 |
 | # dependents       | 0 |
-| # downloads        | 3132 |
+| # downloads        | 2213 |
 | # stars            | 0 |
 
 ## Links

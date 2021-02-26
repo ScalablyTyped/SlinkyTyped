@@ -2,16 +2,16 @@ package typingsSlinky.postmark
 
 import typingsSlinky.axios.mod.AxiosError
 import typingsSlinky.postmark.errorsMod.PostmarkError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("postmark/dist/client/ErrorHandler", JSImport.Namespace)
-@js.native
-object errorHandlerMod extends js.Object {
+object errorHandlerMod {
   
+  @JSImport("postmark/dist/client/ErrorHandler", "ErrorHandler")
   @js.native
-  class ErrorHandler () extends js.Object {
+  class ErrorHandler () extends StObject {
     
     /**
       * Build Postmark error based on response from http client.

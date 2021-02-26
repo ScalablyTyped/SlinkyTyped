@@ -3,12 +3,13 @@ package typingsSlinky.activexOutlook.Outlook
 import typingsSlinky.activexStdole.stdole.OLE_COLOR
 import typingsSlinky.activexStdole.stdole.StdFont
 import typingsSlinky.activexStdole.stdole.StdPicture
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OlkComboBox extends js.Object {
+trait OlkComboBox extends StObject {
   
   def AddItem(ItemText: String): Unit = js.native
   def AddItem(ItemText: String, Index: js.Any): Unit = js.native

@@ -11,16 +11,15 @@ import typingsSlinky.juiGrid.juiGridStrings.open
 import typingsSlinky.juiGrid.juiGridStrings.resize
 import typingsSlinky.juiGrid.juiGridStrings.show
 import typingsSlinky.juiGrid.juiGridStrings.sum
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("jui-grid", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   @js.native
-  trait GridBase extends js.Object {
+  trait GridBase extends StObject {
     
     def appendColumn(tplType: String, dataList: js.Array[_]): Unit = js.native
     
@@ -92,7 +91,7 @@ object mod extends js.Object {
   }
   
   @js.native
-  trait GridColumn extends js.Object {
+  trait GridColumn extends StObject {
     
     def apply(index: String): this.type = js.native
     def apply(index: Double): this.type = js.native
@@ -142,7 +141,7 @@ object mod extends js.Object {
   }
   
   @js.native
-  trait GridRow extends js.Object {
+  trait GridRow extends StObject {
     
     def appendChild(row: GridRow): Unit = js.native
     

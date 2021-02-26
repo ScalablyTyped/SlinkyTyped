@@ -1,5 +1,6 @@
 package typingsSlinky.hapiJoi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.hapiJoi.hapiJoiStrings.string
   - typingsSlinky.hapiJoi.hapiJoiStrings.symbol
 */
-trait Types extends js.Object
+trait Types extends StObject
 object Types {
   
   @scala.inline

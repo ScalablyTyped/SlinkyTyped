@@ -10,9 +10,9 @@ A module used internally by Jest to check which files have changed since you las
 | ------------------ | :-------------: |
 | Full name          | jest-changed-files |
 | Keywords           | - |
-| # releases         | 33 |
-| # dependents       | 30 |
-| # downloads        | 226676675 |
+| # releases         | 36 |
+| # dependents       | 68 |
+| # downloads        | 430500456 |
 | # stars            | 2 |
 
 ## Links

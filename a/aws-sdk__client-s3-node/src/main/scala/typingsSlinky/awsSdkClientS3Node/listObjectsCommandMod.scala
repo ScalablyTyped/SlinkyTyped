@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesListObjectsInputMod.ListObjectsInpu
 import typingsSlinky.awsSdkClientS3Node.typesListObjectsOutputMod.ListObjectsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/ListObjectsCommand", JSImport.Namespace)
-@js.native
-object listObjectsCommandMod extends js.Object {
+object listObjectsCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/ListObjectsCommand", "ListObjectsCommand")
   @js.native
   class ListObjectsCommand protected () extends Command[
           InputTypesUnion, 

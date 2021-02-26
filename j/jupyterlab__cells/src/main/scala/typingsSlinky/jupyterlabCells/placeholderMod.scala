@@ -3,14 +3,14 @@ package typingsSlinky.jupyterlabCells
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.jupyterlabApputils.mod.ReactWidget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/cells/lib/placeholder", JSImport.Namespace)
-@js.native
-object placeholderMod extends js.Object {
+object placeholderMod {
   
+  @JSImport("@jupyterlab/cells/lib/placeholder", "InputPlaceholder")
   @js.native
   class InputPlaceholder protected () extends Placeholder {
     /**
@@ -19,6 +19,7 @@ object placeholderMod extends js.Object {
     def this(callback: js.Function1[/* e */ SyntheticMouseEvent[HTMLDivElement], Unit]) = this()
   }
   
+  @JSImport("@jupyterlab/cells/lib/placeholder", "OutputPlaceholder")
   @js.native
   class OutputPlaceholder protected () extends Placeholder {
     /**
@@ -27,6 +28,7 @@ object placeholderMod extends js.Object {
     def this(callback: js.Function1[/* e */ SyntheticMouseEvent[HTMLDivElement], Unit]) = this()
   }
   
+  @JSImport("@jupyterlab/cells/lib/placeholder", "Placeholder")
   @js.native
   abstract class Placeholder protected () extends ReactWidget {
     /**

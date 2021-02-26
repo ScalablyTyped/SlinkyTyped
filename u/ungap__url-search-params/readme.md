@@ -10,9 +10,9 @@ The URLSearchParams polyfill.
 | ------------------ | :-------------: |
 | Full name          | @ungap/url-search-params |
 | Keywords           | URLSearchParams, polyfill, ungap |
-| # releases         | 7 |
-| # dependents       | 25 |
-| # downloads        | 1081773 |
+| # releases         | 6 |
+| # dependents       | 41 |
+| # downloads        | 2232618 |
 | # stars            | 0 |
 
 ## Links

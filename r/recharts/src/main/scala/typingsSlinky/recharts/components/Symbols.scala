@@ -32,6 +32,7 @@ import typingsSlinky.recharts.rechartsStrings.square
 import typingsSlinky.recharts.rechartsStrings.star
 import typingsSlinky.recharts.rechartsStrings.triangle
 import typingsSlinky.recharts.rechartsStrings.wye
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,7 +41,7 @@ object Symbols {
   
   @JSImport("recharts", "Symbols")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -272,7 +273,7 @@ object Symbols {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SymbolsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Symbols.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SymbolsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -10,9 +10,9 @@ Find a file given a declaration of locations.
 | ------------------ | :-------------: |
 | Full name          | fined |
 | Keywords           | find, lookup, config |
-| # releases         | 3 |
-| # dependents       | 13 |
-| # downloads        | 83950862 |
+| # releases         | 2 |
+| # dependents       | 16 |
+| # downloads        | 103964261 |
 | # stars            | 0 |
 
 ## Links

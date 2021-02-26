@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,24 +10,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.mod.YAxisTitleOptions
   - typingsSlinky.highcharts.mod.ZAxisTitleOptions
 */
-trait AxisTitleOptions extends js.Object
+trait AxisTitleOptions extends StObject
 object AxisTitleOptions {
   
   @scala.inline
-  def XAxisTitleOptions(): AxisTitleOptions = {
+  def XAxisTitleOptions(): typingsSlinky.highcharts.mod.XAxisTitleOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisTitleOptions]
+    __obj.asInstanceOf[typingsSlinky.highcharts.mod.XAxisTitleOptions]
   }
   
   @scala.inline
-  def YAxisTitleOptions(): AxisTitleOptions = {
+  def YAxisTitleOptions(): typingsSlinky.highcharts.mod.YAxisTitleOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisTitleOptions]
+    __obj.asInstanceOf[typingsSlinky.highcharts.mod.YAxisTitleOptions]
   }
   
   @scala.inline
-  def ZAxisTitleOptions(): AxisTitleOptions = {
+  def ZAxisTitleOptions(): typingsSlinky.highcharts.mod.ZAxisTitleOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisTitleOptions]
+    __obj.asInstanceOf[typingsSlinky.highcharts.mod.ZAxisTitleOptions]
   }
 }

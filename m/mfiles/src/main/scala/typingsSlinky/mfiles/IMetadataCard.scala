@@ -1,12 +1,13 @@
 package typingsSlinky.mfiles
 
 import typingsSlinky.mfiles.MFiles.MFBuiltInObjectType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IMetadataCard extends js.Object {
+trait IMetadataCard extends StObject {
   
   val ActiveView: String = js.native
   

@@ -1,12 +1,13 @@
 package typingsSlinky.baidumapWebSdk.BMap
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WalkingRoute extends js.Object {
+trait WalkingRoute extends StObject {
   
   def clearResults(): Unit = js.native
   

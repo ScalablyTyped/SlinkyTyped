@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("babylonjs", "SineEase")
 @js.native
 class SineEase ()
-  extends typingsSlinky.babylonjs.easingMod.SineEase
+  extends typingsSlinky.babylonjs.legacyMod.SineEase

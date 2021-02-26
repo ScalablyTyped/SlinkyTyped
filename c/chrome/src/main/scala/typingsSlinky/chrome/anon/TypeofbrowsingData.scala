@@ -3,12 +3,13 @@ package typingsSlinky.chrome.anon
 import typingsSlinky.chrome.chrome.browsingData.DataTypeSet
 import typingsSlinky.chrome.chrome.browsingData.RemovalOptions
 import typingsSlinky.chrome.chrome.browsingData.SettingsCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofbrowsingData extends js.Object {
+trait TypeofbrowsingData extends StObject {
   
   def remove(options: RemovalOptions, dataToRemove: DataTypeSet): Unit = js.native
   def remove(options: RemovalOptions, dataToRemove: DataTypeSet, callback: js.Function0[Unit]): Unit = js.native

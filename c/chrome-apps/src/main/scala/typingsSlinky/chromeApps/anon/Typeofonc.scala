@@ -14,12 +14,13 @@ import typingsSlinky.chromeApps.chromeAppsBooleans.`false`
 import typingsSlinky.chromeApps.chromeAppsStrings.full
 import typingsSlinky.chromeApps.chromeAppsStrings.setter
 import typingsSlinky.chromeApps.chromeAppsStrings.unmanaged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofonc extends js.Object {
+trait Typeofonc extends StObject {
   
   /**
     * Partial classes for internal use

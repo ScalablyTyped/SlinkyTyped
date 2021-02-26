@@ -2,6 +2,7 @@ package typingsSlinky.angularCore.mod
 
 import typingsSlinky.angularCore.angularCoreStrings.`array-map`
 import typingsSlinky.std.Array
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

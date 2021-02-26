@@ -8,18 +8,19 @@ import typingsSlinky.ionicReact.ionicReactStrings.push
 import typingsSlinky.ionicReact.ionicReactStrings.replace
 import typingsSlinky.ionicReact.routeInfoMod.RouteInfo
 import typingsSlinky.react.mod.Context
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/react/dist/types/contexts/NavContext", JSImport.Namespace)
-@js.native
-object navContextMod extends js.Object {
+object navContextMod {
   
+  @JSImport("@ionic/react/dist/types/contexts/NavContext", "NavContext")
+  @js.native
   val NavContext: Context[NavContextState] = js.native
   
   @js.native
-  trait NavContextState extends js.Object {
+  trait NavContextState extends StObject {
     
     def changeTab(tab: String, path: String): Unit = js.native
     def changeTab(tab: String, path: String, routeOptions: js.Any): Unit = js.native

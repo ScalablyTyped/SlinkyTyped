@@ -8,14 +8,14 @@ import typingsSlinky.ionicCore.contentInterfaceMod.ScrollDetail
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/content/content", JSImport.Namespace)
-@js.native
-object contentMod extends js.Object {
+object contentMod {
   
+  @JSImport("@ionic/core/dist/types/components/content/content", "Content")
   @js.native
   class Content () extends ComponentInterface {
     

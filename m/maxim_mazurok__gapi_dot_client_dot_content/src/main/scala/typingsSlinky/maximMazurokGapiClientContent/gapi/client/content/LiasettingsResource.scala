@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientContent.anon.MerchantIdOauthtoken
 import typingsSlinky.maximMazurokGapiClientContent.anon.OauthtokenPrettyPrint
 import typingsSlinky.maximMazurokGapiClientContent.anon.PosDataProviderId
 import typingsSlinky.maximMazurokGapiClientContent.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LiasettingsResource extends js.Object {
+trait LiasettingsResource extends StObject {
   
   def custombatch(request: Key, body: LiasettingsCustomBatchRequest): Request[LiasettingsCustomBatchResponse] = js.native
   /** Retrieves and/or updates the LIA settings of multiple accounts in a single request. */

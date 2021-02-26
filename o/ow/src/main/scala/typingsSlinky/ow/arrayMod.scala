@@ -3,14 +3,14 @@ package typingsSlinky.ow
 import typingsSlinky.ow.basePredicateMod.BasePredicate
 import typingsSlinky.ow.predicateMod.Predicate
 import typingsSlinky.ow.predicateMod.PredicateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ow/dist/source/predicates/array", JSImport.Namespace)
-@js.native
-object arrayMod extends js.Object {
+object arrayMod {
   
+  @JSImport("ow/dist/source/predicates/array", "ArrayPredicate")
   @js.native
   /**
     @hidden

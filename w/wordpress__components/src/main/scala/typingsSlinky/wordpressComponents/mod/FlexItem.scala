@@ -1,12 +1,21 @@
 package typingsSlinky.wordpressComponents.mod
 
-import org.scalablytyped.runtime.TopLevel
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.Shortcut
+import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.wordpressComponents.itemMod.FlexItem.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@wordpress/components", "FlexItem")
-@js.native
-object FlexItem extends TopLevel[ReactComponentClass[Props]]
+object FlexItem extends Shortcut {
+  
+  @JSImport("@wordpress/components", "FlexItem")
+  @js.native
+  val ^ : ComponentType[Props] = js.native
+  
+  type _To = ComponentType[Props]
+  
+  /* This means you don't have to write `^`, but can instead just say `FlexItem.foo` */
+  override def _to: ComponentType[Props] = ^
+}

@@ -1,13 +1,14 @@
 package typingsSlinky.phonon.Phonon
 
 import typingsSlinky.phonon.Element
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /*** Internationalization ***/
 @js.native
-trait PhononI18n extends js.Object {
+trait PhononI18n extends StObject {
   
   def bind(): Unit = js.native
   def bind(callback: js.Function0[Unit]): Unit = js.native

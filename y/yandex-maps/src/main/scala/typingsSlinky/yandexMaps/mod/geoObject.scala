@@ -1,19 +1,20 @@
 package typingsSlinky.yandexMaps.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("yandex-maps", "geoObject")
-@js.native
-object geoObject extends js.Object {
+object geoObject {
   
+  @JSImport("yandex-maps", "geoObject.Balloon")
   @js.native
   class Balloon protected ()
     extends IBalloonManager[GeoObject_[IGeometry, js.Object]] {
     def this(geoObject: GeoObject_[IGeometry, js.Object]) = this()
   }
   
+  @JSImport("yandex-maps", "geoObject.Hint")
   @js.native
   class Hint protected ()
     extends IPopupManager[GeoObject_[IGeometry, js.Object]] {
@@ -24,7 +25,8 @@ object geoObject extends js.Object {
   - typingsSlinky.yandexMaps.mod.IEventEmitter because Already inherited
   - typingsSlinky.yandexMaps.mod.IParentOnMap because Already inherited
   - typingsSlinky.yandexMaps.mod.ICustomizable because Already inherited
-  - typingsSlinky.yandexMaps.mod.IGeoObjectSequence because var conflicts: events, options. Inlined each, each, get, getBounds, getIterator, getLength, getPixelBounds, indexOf */ @js.native
+  - typingsSlinky.yandexMaps.mod.IGeoObjectSequence because var conflicts: events, options. Inlined each, each, get, getBounds, getIterator, getLength, getPixelBounds, indexOf */ @JSImport("yandex-maps", "geoObject.Sequence")
+  @js.native
   class Sequence protected () extends IGeoObject[IGeometry] {
     def this(geoObject: GeoObject_[IGeometry, js.Object]) = this()
     

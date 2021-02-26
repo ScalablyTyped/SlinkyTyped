@@ -10,9 +10,9 @@ Simply beautiful open source icons as Vue functional components.
 | ------------------ | :-------------: |
 | Full name          | vue-feather-icons |
 | Keywords           | - |
-| # releases         | 7 |
-| # dependents       | 24 |
-| # downloads        | 183314 |
+| # releases         | 5 |
+| # dependents       | 47 |
+| # downloads        | 485925 |
 | # stars            | 0 |
 
 ## Links

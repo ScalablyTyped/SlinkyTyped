@@ -24,6 +24,7 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.url
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valueChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.virtualKeyboard
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.virtualKeyboardChanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -125,9 +126,7 @@ trait ojInputText
   
   var virtualKeyboard: auto | email | number | search | tel | text | url = js.native
 }
-@JSImport("@oracle/oraclejet/ojinputtext", "ojInputText")
-@js.native
-object ojInputText extends js.Object {
+object ojInputText {
   
   type ojAnimateEnd = CustomEvent
   

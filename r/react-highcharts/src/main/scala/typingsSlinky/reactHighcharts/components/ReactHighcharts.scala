@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.highcharts.mod.Options
 import typingsSlinky.reactHighcharts.mod.ReactHighchartsProps
 import typingsSlinky.reactHighcharts.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactHighcharts {
   
+  @scala.inline
+  def apply(config: Options): Builder = {
+    val __props = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactHighchartsProps]))
+  }
+  
   @JSImport("react-highcharts", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +37,4 @@ object ReactHighcharts {
   }
   
   def withProps(p: ReactHighchartsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(config: Options): Builder = {
-    val __props = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactHighchartsProps]))
-  }
 }

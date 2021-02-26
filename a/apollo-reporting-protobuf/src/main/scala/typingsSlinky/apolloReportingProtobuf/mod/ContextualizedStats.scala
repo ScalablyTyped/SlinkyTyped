@@ -5,6 +5,7 @@ import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import typingsSlinky.apolloReportingProtobuf.protobufMod.IContextualizedStats
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,18 +21,26 @@ class ContextualizedStats ()
   def this(properties: IContextualizedStats) = this()
 }
 /* static members */
-@JSImport("apollo-reporting-protobuf", "ContextualizedStats")
-@js.native
-object ContextualizedStats extends js.Object {
+object ContextualizedStats {
   
   /**
     * Creates a new ContextualizedStats instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ContextualizedStats instance
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.create")
+  @js.native
   def create(): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.create")
+  @js.native
   def create(properties: IContextualizedStats): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
   
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
   /**
     * Decodes a ContextualizedStats message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -40,11 +49,16 @@ object ContextualizedStats extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
   
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
   /**
     * Decodes a ContextualizedStats message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,8 +66,9 @@ object ContextualizedStats extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
   
   /**
     * Encodes the specified ContextualizedStats message. Does not implicitly {@link ContextualizedStats.verify|verify} messages.
@@ -61,7 +76,11 @@ object ContextualizedStats extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.encode")
+  @js.native
   def encode(message: IContextualizedStats): Writer = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.encode")
+  @js.native
   def encode(message: IContextualizedStats, writer: Writer): Writer = js.native
   
   /**
@@ -70,7 +89,11 @@ object ContextualizedStats extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IContextualizedStats): Writer = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IContextualizedStats, writer: Writer): Writer = js.native
   
   /**
@@ -78,6 +101,8 @@ object ContextualizedStats extends js.Object {
     * @param object Plain object
     * @returns ContextualizedStats
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats = js.native
   
   /**
@@ -86,7 +111,11 @@ object ContextualizedStats extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.toObject")
+  @js.native
   def toObject(message: typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats): StringDictionary[js.Any] = js.native
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.toObject")
+  @js.native
   def toObject(
     message: typingsSlinky.apolloReportingProtobuf.protobufMod.ContextualizedStats,
     options: IConversionOptions
@@ -97,5 +126,7 @@ object ContextualizedStats extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("apollo-reporting-protobuf", "ContextualizedStats.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

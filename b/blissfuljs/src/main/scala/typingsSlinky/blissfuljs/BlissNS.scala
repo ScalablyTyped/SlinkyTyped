@@ -416,13 +416,12 @@ import typingsSlinky.std.MSInputMethodContext
 import typingsSlinky.std.MSPointerEvent
 import typingsSlinky.std.Number
 import typingsSlinky.std.SVGForeignObjectElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("BlissNS")
-@js.native
-object BlissNS extends js.Object {
+object BlissNS {
   
   @js.native
   trait AriaRequestEvent extends Event {
@@ -433,7 +432,7 @@ object BlissNS extends js.Object {
   }
   
   @js.native
-  trait BlissBindedArray[T] extends js.Object {
+  trait BlissBindedArray[T] extends StObject {
     
     def all(method: String, args: js.Any*): Array[_] = js.native
     @JSName("all")
@@ -453,8 +452,8 @@ object BlissNS extends js.Object {
     
     def contents(elements: String): BlissDecoratedElement[T] = js.native
     def contents(elements: js.Object): BlissDecoratedElement[T] = js.native
-    def contents(elements: Array[_]): BlissDecoratedElement[T] = js.native
     def contents(elements: Node): BlissDecoratedElement[T] = js.native
+    def contents(elements: Array[_]): BlissDecoratedElement[T] = js.native
     def contents(elements: Number): BlissDecoratedElement[T] = js.native
     
     def delegate(
@@ -496,7 +495,7 @@ object BlissNS extends js.Object {
   }
   
   @js.native
-  trait BlissCollectionArray[T] extends js.Object {
+  trait BlissCollectionArray[T] extends StObject {
     
     def addEventListener(`type`: String, listener: EventListenerOrEventListenerObject): BlissCollectionArray[T] = js.native
     def addEventListener(`type`: String, listener: EventListenerOrEventListenerObject, useCapture: Boolean): BlissCollectionArray[T] = js.native
@@ -511,8 +510,8 @@ object BlissNS extends js.Object {
     
     def contents(elements: String): BlissCollectionArray[T] = js.native
     def contents(elements: js.Object): BlissCollectionArray[T] = js.native
-    def contents(elements: Array[_]): BlissCollectionArray[T] = js.native
     def contents(elements: Node): BlissCollectionArray[T] = js.native
+    def contents(elements: Array[_]): BlissCollectionArray[T] = js.native
     def contents(elements: Number): BlissCollectionArray[T] = js.native
     
     def delegate(
@@ -553,10 +552,14 @@ object BlissNS extends js.Object {
     def transition(properties: js.Object, duration: Double): Array[js.Promise[T]] = js.native
   }
   
+  type BlissDecoratedArrayElement[T] = Array[T] with BlissCollectionArray[T]
+  
+  type BlissDecoratedElement[T] = Element with T
+  
   // Native methods added into "_" property, but methods that return "void" now return thi stype in order to be chainables
   // Methods are All HTMLElement a ELement methods
   @js.native
-  trait BlissNativeExtentions[T] extends js.Object {
+  trait BlissNativeExtentions[T] extends StObject {
     
     def addEventListener(`type`: String, listener: EventListenerOrEventListenerObject): T = js.native
     def addEventListener(`type`: String, listener: EventListenerOrEventListenerObject, useCapture: Boolean): T = js.native
@@ -1486,7 +1489,10 @@ object BlissNS extends js.Object {
   }
   
   @js.native
-  trait BlissStatic extends js.Object {
+  trait BlissStatic extends StObject {
+    
+    def apply[T](selector: String): BlissDecoratedElement[T] = js.native
+    def apply[T](selector: String, context: Element): BlissDecoratedElement[T] = js.native
     
     @JSName("$")
     def $(expr: Node): js.Array[Node] = js.native
@@ -1510,9 +1516,6 @@ object BlissNS extends js.Object {
     def $_T_BlissDecoratedElement[T](selector: String): BlissDecoratedElement[T] = js.native
     @JSName("$")
     def $_T_BlissDecoratedElement[T](selector: String, context: Element): BlissDecoratedElement[T] = js.native
-    
-    def apply[T](selector: String): BlissDecoratedElement[T] = js.native
-    def apply[T](selector: String, context: Element): BlissDecoratedElement[T] = js.native
     
     def Class(options: DictpropertyName): js.Object = js.native
     @JSName("Class")
@@ -1548,13 +1551,13 @@ object BlissNS extends js.Object {
     
     def contents[T](subject: Array[BlissDecoratedElement[T]], elements: String): Array[BlissDecoratedElement[T]] = js.native
     def contents[T](subject: Array[BlissDecoratedElement[T]], elements: js.Object): Array[BlissDecoratedElement[T]] = js.native
-    def contents[T](subject: Array[BlissDecoratedElement[T]], elements: Array[_]): Array[BlissDecoratedElement[T]] = js.native
     def contents[T](subject: Array[BlissDecoratedElement[T]], elements: Node): Array[BlissDecoratedElement[T]] = js.native
+    def contents[T](subject: Array[BlissDecoratedElement[T]], elements: Array[_]): Array[BlissDecoratedElement[T]] = js.native
     def contents[T](subject: Array[BlissDecoratedElement[T]], elements: Number): Array[BlissDecoratedElement[T]] = js.native
     def contents[T](subject: BlissDecoratedElement[T], elements: String): BlissDecoratedElement[T] = js.native
     def contents[T](subject: BlissDecoratedElement[T], elements: js.Object): BlissDecoratedElement[T] = js.native
-    def contents[T](subject: BlissDecoratedElement[T], elements: Array[_]): BlissDecoratedElement[T] = js.native
     def contents[T](subject: BlissDecoratedElement[T], elements: Node): BlissDecoratedElement[T] = js.native
+    def contents[T](subject: BlissDecoratedElement[T], elements: Array[_]): BlissDecoratedElement[T] = js.native
     def contents[T](subject: BlissDecoratedElement[T], elements: Number): BlissDecoratedElement[T] = js.native
     
     def create[T](args: js.Any*): BlissDecoratedElement[T] = js.native
@@ -1814,8 +1817,8 @@ object BlissNS extends js.Object {
     def extend(target: js.Object, source: js.Any): js.Object = js.native
     def extend(target: js.Object, source: js.Any, whitelist: String): js.Object = js.native
     def extend(target: js.Object, source: js.Any, whitelist: js.Function): js.Object = js.native
-    def extend(target: js.Object, source: js.Any, whitelist: Array[String]): js.Object = js.native
     def extend(target: js.Object, source: js.Any, whitelist: js.RegExp): js.Object = js.native
+    def extend(target: js.Object, source: js.Any, whitelist: Array[String]): js.Object = js.native
     @JSName("extend")
     def extend_T_T[T](target: js.Object, source: js.Any): T = js.native
     @JSName("extend")
@@ -1823,9 +1826,9 @@ object BlissNS extends js.Object {
     @JSName("extend")
     def extend_T_T[T](target: js.Object, source: js.Any, whitelist: js.Function): T = js.native
     @JSName("extend")
-    def extend_T_T[T](target: js.Object, source: js.Any, whitelist: Array[String]): T = js.native
-    @JSName("extend")
     def extend_T_T[T](target: js.Object, source: js.Any, whitelist: js.RegExp): T = js.native
+    @JSName("extend")
+    def extend_T_T[T](target: js.Object, source: js.Any, whitelist: Array[String]): T = js.native
     
     def fetch(url: String): js.Promise[XMLHttpRequest] = js.native
     def fetch(url: String, options: Data): js.Promise[XMLHttpRequest] = js.native
@@ -1919,8 +1922,4 @@ object BlissNS extends js.Object {
     
     val detail: String | Null = js.native
   }
-  
-  type BlissDecoratedArrayElement[T] = Array[T] with BlissCollectionArray[T]
-  
-  type BlissDecoratedElement[T] = Element with T
 }

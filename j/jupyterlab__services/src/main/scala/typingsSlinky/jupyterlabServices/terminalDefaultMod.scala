@@ -6,14 +6,14 @@ import typingsSlinky.jupyterlabServices.terminalTerminalMod.IMessage
 import typingsSlinky.jupyterlabServices.terminalTerminalMod.ITerminalConnection
 import typingsSlinky.jupyterlabServices.terminalTerminalMod.ITerminalConnection.IOptions
 import typingsSlinky.luminoSignaling.mod.ISignal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/services/lib/terminal/default", JSImport.Namespace)
-@js.native
-object terminalDefaultMod extends js.Object {
+object terminalDefaultMod {
   
+  @JSImport("@jupyterlab/services/lib/terminal/default", "TerminalConnection")
   @js.native
   class TerminalConnection protected () extends ITerminalConnection {
     /**

@@ -17,6 +17,7 @@ import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.oracleOraclejet.ojinputtextMod.inputBaseEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -179,51 +180,39 @@ object ojInputDateEventMap {
   }
   
   @scala.inline
-  implicit class ojInputDateEventMapOps[Self <: ojInputDateEventMap[_], SP /* <: ojInputDateSettableProperties */] (val x: Self with ojInputDateEventMap[SP]) extends AnyVal {
+  implicit class ojInputDateEventMapMutableBuilder[Self <: ojInputDateEventMap[_], SP /* <: ojInputDateSettableProperties */] (val x: Self with ojInputDateEventMap[SP]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setConverterChanged(value: CustomEvent): Self = StObject.set(x, "converterChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDatePickerChanged(value: CustomEvent): Self = StObject.set(x, "datePickerChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDayFormatterChanged(value: CustomEvent): Self = StObject.set(x, "dayFormatterChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setConverterChanged(value: CustomEvent): Self = this.set("converterChanged", value.asInstanceOf[js.Any])
+    def setDayMetaDataChanged(value: CustomEvent): Self = StObject.set(x, "dayMetaDataChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDatePickerChanged(value: CustomEvent): Self = this.set("datePickerChanged", value.asInstanceOf[js.Any])
+    def setKeyboardEditChanged(value: CustomEvent): Self = StObject.set(x, "keyboardEditChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDayFormatterChanged(value: CustomEvent): Self = this.set("dayFormatterChanged", value.asInstanceOf[js.Any])
+    def setMaxChanged(value: CustomEvent): Self = StObject.set(x, "maxChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDayMetaDataChanged(value: CustomEvent): Self = this.set("dayMetaDataChanged", value.asInstanceOf[js.Any])
+    def setMinChanged(value: CustomEvent): Self = StObject.set(x, "minChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setKeyboardEditChanged(value: CustomEvent): Self = this.set("keyboardEditChanged", value.asInstanceOf[js.Any])
+    def setOjAnimateEnd(value: CustomEvent): Self = StObject.set(x, "ojAnimateEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMaxChanged(value: CustomEvent): Self = this.set("maxChanged", value.asInstanceOf[js.Any])
+    def setOjAnimateStart(value: CustomEvent): Self = StObject.set(x, "ojAnimateStart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMinChanged(value: CustomEvent): Self = this.set("minChanged", value.asInstanceOf[js.Any])
+    def setPickerAttributesChanged(value: CustomEvent): Self = StObject.set(x, "pickerAttributesChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOjAnimateEnd(value: CustomEvent): Self = this.set("ojAnimateEnd", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOjAnimateStart(value: CustomEvent): Self = this.set("ojAnimateStart", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPickerAttributesChanged(value: CustomEvent): Self = this.set("pickerAttributesChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRenderModeChanged(value: CustomEvent): Self = this.set("renderModeChanged", value.asInstanceOf[js.Any])
+    def setRenderModeChanged(value: CustomEvent): Self = StObject.set(x, "renderModeChanged", value.asInstanceOf[js.Any])
   }
 }

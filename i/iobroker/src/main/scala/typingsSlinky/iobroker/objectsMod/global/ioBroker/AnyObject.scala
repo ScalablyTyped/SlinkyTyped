@@ -16,6 +16,7 @@ import typingsSlinky.iobroker.iobrokerStrings.script
 import typingsSlinky.iobroker.iobrokerStrings.state
 import typingsSlinky.iobroker.iobrokerStrings.user
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,28 +37,70 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.iobroker.objectsMod.global.ioBroker.ScriptObject
   - typingsSlinky.iobroker.objectsMod.global.ioBroker.OtherObject
 */
-trait AnyObject extends js.Object
+trait AnyObject extends StObject
 object AnyObject {
   
   @scala.inline
-  def DeviceObject(_id: String, common: DeviceCommon, native: Record[String, _], `type`: device): AnyObject = {
+  def AdapterObject(_id: String, common: AdapterCommon, native: Record[String, _], `type`: adapter): typingsSlinky.iobroker.objectsMod.global.ioBroker.AdapterObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.AdapterObject]
   }
   
   @scala.inline
-  def StateObject(_id: String, common: StateCommon, native: Record[String, _], `type`: state): AnyObject = {
+  def ChannelObject(_id: String, common: ChannelCommon, native: Record[String, _], `type`: channel): typingsSlinky.iobroker.objectsMod.global.ioBroker.ChannelObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.ChannelObject]
   }
   
   @scala.inline
-  def AdapterObject(_id: String, common: AdapterCommon, native: Record[String, _], `type`: adapter): AnyObject = {
+  def DeviceObject(_id: String, common: DeviceCommon, native: Record[String, _], `type`: device): typingsSlinky.iobroker.objectsMod.global.ioBroker.DeviceObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.DeviceObject]
+  }
+  
+  @scala.inline
+  def EnumObject(_id: String, common: EnumCommon, native: Record[String, _], `type`: enum): typingsSlinky.iobroker.objectsMod.global.ioBroker.EnumObject = {
+    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.EnumObject]
+  }
+  
+  @scala.inline
+  def FolderObject(_id: String, common: OtherCommon, native: Record[String, _], `type`: folder): typingsSlinky.iobroker.objectsMod.global.ioBroker.FolderObject = {
+    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.FolderObject]
+  }
+  
+  @scala.inline
+  def GroupObject(_id: String, common: GroupCommon, native: Record[String, _], `type`: group): typingsSlinky.iobroker.objectsMod.global.ioBroker.GroupObject = {
+    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.GroupObject]
+  }
+  
+  @scala.inline
+  def HostObject(_id: String, common: HostCommon, native: HostNative, `type`: host): typingsSlinky.iobroker.objectsMod.global.ioBroker.HostObject = {
+    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.HostObject]
+  }
+  
+  @scala.inline
+  def InstanceObject(_id: String, common: InstanceCommon, native: Record[String, _], `type`: instance): typingsSlinky.iobroker.objectsMod.global.ioBroker.InstanceObject = {
+    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.InstanceObject]
+  }
+  
+  @scala.inline
+  def MetaObject(_id: String, common: MetaCommon, native: Record[String, _], `type`: meta): typingsSlinky.iobroker.objectsMod.global.ioBroker.MetaObject = {
+    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.MetaObject]
   }
   
   @scala.inline
@@ -66,72 +109,30 @@ object AnyObject {
     common: OtherCommon,
     native: Record[String, _],
     `type`: adapter | config | info | chart
-  ): AnyObject = {
+  ): typingsSlinky.iobroker.objectsMod.global.ioBroker.OtherObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.OtherObject]
   }
   
   @scala.inline
-  def HostObject(_id: String, common: HostCommon, native: HostNative, `type`: host): AnyObject = {
+  def ScriptObject(_id: String, common: ScriptCommon, native: Record[String, _], `type`: script): typingsSlinky.iobroker.objectsMod.global.ioBroker.ScriptObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.ScriptObject]
   }
   
   @scala.inline
-  def GroupObject(_id: String, common: GroupCommon, native: Record[String, _], `type`: group): AnyObject = {
+  def StateObject(_id: String, common: StateCommon, native: Record[String, _], `type`: state): typingsSlinky.iobroker.objectsMod.global.ioBroker.StateObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.StateObject]
   }
   
   @scala.inline
-  def InstanceObject(_id: String, common: InstanceCommon, native: Record[String, _], `type`: instance): AnyObject = {
+  def UserObject(_id: String, common: UserCommon, native: Record[String, _], `type`: user): typingsSlinky.iobroker.objectsMod.global.ioBroker.UserObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
-  }
-  
-  @scala.inline
-  def ScriptObject(_id: String, common: ScriptCommon, native: Record[String, _], `type`: script): AnyObject = {
-    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
-  }
-  
-  @scala.inline
-  def UserObject(_id: String, common: UserCommon, native: Record[String, _], `type`: user): AnyObject = {
-    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
-  }
-  
-  @scala.inline
-  def EnumObject(_id: String, common: EnumCommon, native: Record[String, _], `type`: enum): AnyObject = {
-    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
-  }
-  
-  @scala.inline
-  def ChannelObject(_id: String, common: ChannelCommon, native: Record[String, _], `type`: channel): AnyObject = {
-    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
-  }
-  
-  @scala.inline
-  def FolderObject(_id: String, common: OtherCommon, native: Record[String, _], `type`: folder): AnyObject = {
-    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
-  }
-  
-  @scala.inline
-  def MetaObject(_id: String, common: MetaCommon, native: Record[String, _], `type`: meta): AnyObject = {
-    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyObject]
+    __obj.asInstanceOf[typingsSlinky.iobroker.objectsMod.global.ioBroker.UserObject]
   }
 }

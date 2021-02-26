@@ -1,6 +1,7 @@
 package typingsSlinky.awsSdkClientCognitoIdentity
 
 import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.CognitoIdentityClient
+import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.CognitoIdentityClientConfig
 import typingsSlinky.awsSdkClientCognitoIdentity.createIdentityPoolCommandMod.CreateIdentityPoolCommandInput
 import typingsSlinky.awsSdkClientCognitoIdentity.createIdentityPoolCommandMod.CreateIdentityPoolCommandOutput
 import typingsSlinky.awsSdkClientCognitoIdentity.deleteIdentitiesCommandMod.DeleteIdentitiesCommandInput
@@ -44,16 +45,17 @@ import typingsSlinky.awsSdkClientCognitoIdentity.untagResourceCommandMod.UntagRe
 import typingsSlinky.awsSdkClientCognitoIdentity.updateIdentityPoolCommandMod.UpdateIdentityPoolCommandInput
 import typingsSlinky.awsSdkClientCognitoIdentity.updateIdentityPoolCommandMod.UpdateIdentityPoolCommandOutput
 import typingsSlinky.awsSdkTypes.httpMod.HttpHandlerOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity/types/CognitoIdentity", JSImport.Namespace)
-@js.native
-object cognitoIdentityMod extends js.Object {
+object cognitoIdentityMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity/types/CognitoIdentity", "CognitoIdentity")
   @js.native
-  class CognitoIdentity () extends CognitoIdentityClient {
+  class CognitoIdentity protected () extends CognitoIdentityClient {
+    def this(configuration: CognitoIdentityClientConfig) = this()
     
     /**
       * <p>Creates a new identity pool. The identity pool is a store of user identity

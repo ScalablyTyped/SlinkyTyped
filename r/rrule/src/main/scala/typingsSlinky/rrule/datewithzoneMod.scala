@@ -1,15 +1,15 @@
 package typingsSlinky.rrule
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rrule/dist/esm/src/datewithzone", JSImport.Namespace)
-@js.native
-object datewithzoneMod extends js.Object {
+object datewithzoneMod {
   
+  @JSImport("rrule/dist/esm/src/datewithzone", "DateWithZone")
   @js.native
-  class DateWithZone protected () extends js.Object {
+  class DateWithZone protected () extends StObject {
     def this(date: js.Date) = this()
     def this(date: js.Date, tzid: String) = this()
     

@@ -3,6 +3,7 @@ package typingsSlinky.microsoftAjax.Sys
 import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -75,8 +76,8 @@ Instantiable0[Unit] {
     */
   def endCreateComponents(): Unit = js.native
   
-  def findComponent(id: String, parent: Component): Component = js.native
   def findComponent(id: String, parent: HTMLElement): Component = js.native
+  def findComponent(id: String, parent: Component): Component = js.native
   
   //#endregion
   //#region Properties

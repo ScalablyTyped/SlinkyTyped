@@ -6,12 +6,13 @@ import typingsSlinky.chromeApps.chrome.identity.TokenDetails
 import typingsSlinky.chromeApps.chrome.identity.TokenInformation
 import typingsSlinky.chromeApps.chrome.identity.UserInfo
 import typingsSlinky.chromeApps.chrome.identity.WebAuthFlowOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofidentity extends js.Object {
+trait Typeofidentity extends StObject {
   
   /**
     * @requires(dev) **Dev channel only.**

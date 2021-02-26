@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Text
 import org.scalajs.dom.raw.XMLHttpRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -65,6 +66,8 @@ trait JQuery
   
   def after(content1: String, content2: js.Any*): JQuery = js.native
   def after(content1: js.Array[_], content2: js.Any*): JQuery = js.native
+  def after(content1: Element, content2: js.Any*): JQuery = js.native
+  def after(content1: Text, content2: js.Any*): JQuery = js.native
   /**
     * Insert content, specified by the parameter, after each element in the set of matched elements.
     * 
@@ -72,8 +75,6 @@ trait JQuery
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert after each element in the set of matched elements.
     */
   def after(content1: JQuery, content2: js.Any*): JQuery = js.native
-  def after(content1: Element, content2: js.Any*): JQuery = js.native
-  def after(content1: Text, content2: js.Any*): JQuery = js.native
   /**
     * Insert content, specified by the parameter, after each element in the set of matched elements.
     * 
@@ -189,6 +190,8 @@ trait JQuery
   
   def append(content1: String, content2: js.Any*): JQuery = js.native
   def append(content1: js.Array[_], content2: js.Any*): JQuery = js.native
+  def append(content1: Element, content2: js.Any*): JQuery = js.native
+  def append(content1: Text, content2: js.Any*): JQuery = js.native
   /**
     * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
     * 
@@ -196,8 +199,6 @@ trait JQuery
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the end of each element in the set of matched elements.
     */
   def append(content1: JQuery, content2: js.Any*): JQuery = js.native
-  def append(content1: Element, content2: js.Any*): JQuery = js.native
-  def append(content1: Text, content2: js.Any*): JQuery = js.native
   /**
     * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
     * 
@@ -207,13 +208,13 @@ trait JQuery
   
   def appendTo(target: String): JQuery = js.native
   def appendTo(target: js.Array[_]): JQuery = js.native
+  def appendTo(target: Element): JQuery = js.native
   /**
     * Insert every element in the set of matched elements to the end of the target.
     * 
     * @param target A selector, element, HTML string, array of elements, or jQuery object; the matched set of elements will be inserted at the end of the element(s) specified by this parameter.
     */
   def appendTo(target: JQuery): JQuery = js.native
-  def appendTo(target: Element): JQuery = js.native
   
   /**
     * Get the value of an attribute for the first element in the set of matched elements.
@@ -245,6 +246,8 @@ trait JQuery
   
   def before(content1: String, content2: js.Any*): JQuery = js.native
   def before(content1: js.Array[_], content2: js.Any*): JQuery = js.native
+  def before(content1: Element, content2: js.Any*): JQuery = js.native
+  def before(content1: Text, content2: js.Any*): JQuery = js.native
   /**
     * Insert content, specified by the parameter, before each element in the set of matched elements.
     * 
@@ -252,8 +255,6 @@ trait JQuery
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert before each element in the set of matched elements.
     */
   def before(content1: JQuery, content2: js.Any*): JQuery = js.native
-  def before(content1: Element, content2: js.Any*): JQuery = js.native
-  def before(content1: Text, content2: js.Any*): JQuery = js.native
   /**
     * Insert content, specified by the parameter, before each element in the set of matched elements.
     * 
@@ -877,8 +878,8 @@ trait JQuery
     * @param selector A selector representing a jQuery collection in which to look for an element.
     */
   def index(selector: String): Double = js.native
-  def index(selector: JQuery): Double = js.native
   def index(selector: Element): Double = js.native
+  def index(selector: JQuery): Double = js.native
   
   /**
     * Get the current computed height for the first element in the set of matched elements, including padding but not border.
@@ -906,25 +907,25 @@ trait JQuery
   
   def insertAfter(target: String): JQuery = js.native
   def insertAfter(target: js.Array[_]): JQuery = js.native
+  def insertAfter(target: Element): JQuery = js.native
+  def insertAfter(target: Text): JQuery = js.native
   /**
     * Insert every element in the set of matched elements after the target.
     * 
     * param target A selector, element, array of elements, HTML string, or jQuery object; the matched set of elements will be inserted after the element(s) specified by this parameter.
     */
   def insertAfter(target: JQuery): JQuery = js.native
-  def insertAfter(target: Element): JQuery = js.native
-  def insertAfter(target: Text): JQuery = js.native
   
   def insertBefore(target: String): JQuery = js.native
   def insertBefore(target: js.Array[_]): JQuery = js.native
+  def insertBefore(target: Element): JQuery = js.native
+  def insertBefore(target: Text): JQuery = js.native
   /**
     * Insert every element in the set of matched elements before the target.
     * 
     * param target A selector, element, array of elements, HTML string, or jQuery object; the matched set of elements will be inserted before the element(s) specified by this parameter.
     */
   def insertBefore(target: JQuery): JQuery = js.native
-  def insertBefore(target: Element): JQuery = js.native
-  def insertBefore(target: Text): JQuery = js.native
   
   /**
     * Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments.
@@ -1499,6 +1500,8 @@ trait JQuery
   
   def prepend(content1: String, content2: js.Any*): JQuery = js.native
   def prepend(content1: js.Array[_], content2: js.Any*): JQuery = js.native
+  def prepend(content1: Element, content2: js.Any*): JQuery = js.native
+  def prepend(content1: Text, content2: js.Any*): JQuery = js.native
   /**
     * Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
     * 
@@ -1506,8 +1509,6 @@ trait JQuery
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the beginning of each element in the set of matched elements.
     */
   def prepend(content1: JQuery, content2: js.Any*): JQuery = js.native
-  def prepend(content1: Element, content2: js.Any*): JQuery = js.native
-  def prepend(content1: Text, content2: js.Any*): JQuery = js.native
   /**
     * Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
     * 
@@ -1517,13 +1518,13 @@ trait JQuery
   
   def prependTo(target: String): JQuery = js.native
   def prependTo(target: js.Array[_]): JQuery = js.native
+  def prependTo(target: Element): JQuery = js.native
   /**
     * Insert every element in the set of matched elements to the beginning of the target.
     * 
     * @param target A selector, element, HTML string, array of elements, or jQuery object; the matched set of elements will be inserted at the beginning of the element(s) specified by this parameter.
     */
   def prependTo(target: JQuery): JQuery = js.native
-  def prependTo(target: Element): JQuery = js.native
   
   /**
     * Get the immediately preceding sibling of each element in the set of matched elements, optionally filtered by a selector.
@@ -1708,13 +1709,13 @@ trait JQuery
   
   def replaceAll(target: String): JQuery = js.native
   def replaceAll(target: js.Array[_]): JQuery = js.native
+  def replaceAll(target: Element): JQuery = js.native
   /**
     * Replace each target element with the set of matched elements.
     * 
     * @param target A selector string, jQuery object, DOM element, or array of elements indicating which element(s) to replace.
     */
   def replaceAll(target: JQuery): JQuery = js.native
-  def replaceAll(target: Element): JQuery = js.native
   
   /**
     * Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.
@@ -1724,14 +1725,14 @@ trait JQuery
   def replaceWith(func: js.Function0[Element | this.type]): JQuery = js.native
   def replaceWith(newContent: String): JQuery = js.native
   def replaceWith(newContent: js.Array[_]): JQuery = js.native
+  def replaceWith(newContent: Element): JQuery = js.native
+  def replaceWith(newContent: Text): JQuery = js.native
   /**
     * Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.
     * 
     * param newContent The content to insert. May be an HTML string, DOM element, array of DOM elements, or jQuery object.
     */
   def replaceWith(newContent: JQuery): JQuery = js.native
-  def replaceWith(newContent: Element): JQuery = js.native
-  def replaceWith(newContent: Text): JQuery = js.native
   
   /**
     * Trigger the "resize" event on an element.
@@ -2229,23 +2230,23 @@ trait JQuery
     */
   def wrap(func: js.Function1[/* index */ Double, String | this.type]): JQuery = js.native
   def wrap(wrappingElement: String): JQuery = js.native
+  def wrap(wrappingElement: Element): JQuery = js.native
   /**
     * Wrap an HTML structure around each element in the set of matched elements.
     * 
     * @param wrappingElement A selector, element, HTML string, or jQuery object specifying the structure to wrap around the matched elements.
     */
   def wrap(wrappingElement: JQuery): JQuery = js.native
-  def wrap(wrappingElement: Element): JQuery = js.native
   
   def wrapAll(func: js.Function1[/* index */ Double, String]): JQuery = js.native
   def wrapAll(wrappingElement: String): JQuery = js.native
+  def wrapAll(wrappingElement: Element): JQuery = js.native
   /**
     * Wrap an HTML structure around all elements in the set of matched elements.
     * 
     * @param wrappingElement A selector, element, HTML string, or jQuery object specifying the structure to wrap around the matched elements.
     */
   def wrapAll(wrappingElement: JQuery): JQuery = js.native
-  def wrapAll(wrappingElement: Element): JQuery = js.native
   
   /**
     * Wrap an HTML structure around the content of each element in the set of matched elements.
@@ -2254,11 +2255,11 @@ trait JQuery
     */
   def wrapInner(func: js.Function1[/* index */ Double, String]): JQuery = js.native
   def wrapInner(wrappingElement: String): JQuery = js.native
+  def wrapInner(wrappingElement: Element): JQuery = js.native
   /**
     * Wrap an HTML structure around the content of each element in the set of matched elements.
     * 
     * @param wrappingElement An HTML snippet, selector expression, jQuery object, or DOM element specifying the structure to wrap around the content of the matched elements.
     */
   def wrapInner(wrappingElement: JQuery): JQuery = js.native
-  def wrapInner(wrappingElement: Element): JQuery = js.native
 }

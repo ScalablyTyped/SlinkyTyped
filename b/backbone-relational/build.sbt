@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "backbone-relational"
-version := "0.10-dt-20200515Z-b90f2a"
+version := "0.10-dt-20200515Z-94ea6d"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "backbone" % "1.4-dt-20200925Z-abc3de",
-  "org.scalablytyped.slinky" %%% "jquery" % "3.5-dt-20201028Z-467d08",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20201002Z-017d7b",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
-  "org.scalablytyped.slinky" %%% "underscore" % "1.10-dt-20201002Z-bdd5d4")
+  "org.scalablytyped.slinky" %%% "backbone" % "1.4-dt-20200925Z-743e4b",
+  "org.scalablytyped.slinky" %%% "jquery" % "3.5-dt-20201028Z-7b4ce2",
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20201002Z-da3788",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27",
+  "org.scalablytyped.slinky" %%% "underscore" % "1.10-dt-20201002Z-b5036b")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

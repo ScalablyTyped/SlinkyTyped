@@ -1,5 +1,6 @@
 package typingsSlinky.reactNative.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNative.reactNativeStrings.screenReaderChanged
   - typingsSlinky.reactNative.reactNativeStrings.reduceTransparencyChanged
 */
-trait AccessibilityChangeEventName extends js.Object
+trait AccessibilityChangeEventName extends StObject
 object AccessibilityChangeEventName {
   
   @scala.inline

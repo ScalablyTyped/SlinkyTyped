@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeSquareInAppPayments.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeSquareInAppPayments.reactNativeSquareInAppPaymentsStrings.CREDIT
   - typingsSlinky.reactNativeSquareInAppPayments.reactNativeSquareInAppPaymentsStrings.UNKNOWN
 */
-trait CardType extends js.Object
+trait CardType extends StObject
 object CardType {
   
   @scala.inline

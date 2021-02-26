@@ -1,5 +1,6 @@
 package typingsSlinky.nodeTelegramBotApi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.left
   - typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.kicked
 */
-trait ChatMemberStatus extends js.Object
+trait ChatMemberStatus extends StObject
 object ChatMemberStatus {
   
   @scala.inline

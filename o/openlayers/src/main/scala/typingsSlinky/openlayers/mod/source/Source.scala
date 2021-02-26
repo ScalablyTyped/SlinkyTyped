@@ -6,6 +6,7 @@ import typingsSlinky.openlayers.mod.Object
 import typingsSlinky.openlayers.mod.SourceSourceOptions
 import typingsSlinky.openlayers.mod.olx.LogoOptions
 import typingsSlinky.openlayers.mod.proj.Projection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

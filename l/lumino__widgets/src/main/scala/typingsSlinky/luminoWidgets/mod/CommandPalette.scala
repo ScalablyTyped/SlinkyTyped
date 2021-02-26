@@ -1,6 +1,7 @@
 package typingsSlinky.luminoWidgets.mod
 
 import typingsSlinky.luminoWidgets.commandpaletteMod.CommandPalette.IOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,19 +17,20 @@ class CommandPalette protected ()
     */
   def this(options: IOptions) = this()
 }
-@JSImport("@lumino/widgets", "CommandPalette")
-@js.native
-object CommandPalette extends js.Object {
-  
-  /**
-    * The default `Renderer` instance.
-    */
-  val defaultRenderer: typingsSlinky.luminoWidgets.commandpaletteMod.CommandPalette.Renderer = js.native
+object CommandPalette {
   
   /**
     * The default implementation of `IRenderer`.
     */
+  @JSImport("@lumino/widgets", "CommandPalette.Renderer")
   @js.native
   class Renderer ()
     extends typingsSlinky.luminoWidgets.commandpaletteMod.CommandPalette.Renderer
+  
+  /**
+    * The default `Renderer` instance.
+    */
+  @JSImport("@lumino/widgets", "CommandPalette.defaultRenderer")
+  @js.native
+  val defaultRenderer: typingsSlinky.luminoWidgets.commandpaletteMod.CommandPalette.Renderer = js.native
 }

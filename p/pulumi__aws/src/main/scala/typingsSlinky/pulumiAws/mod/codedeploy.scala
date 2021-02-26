@@ -9,14 +9,14 @@ import typingsSlinky.pulumiAws.deploymentGroupMod.DeploymentGroupState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws", "codedeploy")
-@js.native
-object codedeploy extends js.Object {
+object codedeploy {
   
+  @JSImport("@pulumi/aws", "codedeploy.Application")
   @js.native
   class Application protected ()
     extends typingsSlinky.pulumiAws.codedeployMod.Application {
@@ -33,8 +33,7 @@ object codedeploy extends js.Object {
     def this(name: String, args: ApplicationArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object Application extends js.Object {
+  object Application {
     
     /**
       * Get an existing Application resource's state with the given name, ID, and optional extra
@@ -45,18 +44,29 @@ object codedeploy extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws", "codedeploy.Application.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.applicationMod.Application = js.native
+    @JSImport("@pulumi/aws", "codedeploy.Application.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.applicationMod.Application = js.native
+    @JSImport("@pulumi/aws", "codedeploy.Application.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ApplicationState): typingsSlinky.pulumiAws.applicationMod.Application = js.native
+    @JSImport("@pulumi/aws", "codedeploy.Application.get")
+    @js.native
     def get(name: String, id: Input[ID], state: ApplicationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.applicationMod.Application = js.native
     
     /**
       * Returns true if the given object is an instance of Application.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws", "codedeploy.Application.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codedeploy/application.Application */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws", "codedeploy.DeploymentConfig")
   @js.native
   class DeploymentConfig protected ()
     extends typingsSlinky.pulumiAws.codedeployMod.DeploymentConfig {
@@ -71,8 +81,7 @@ object codedeploy extends js.Object {
     def this(name: String, args: DeploymentConfigArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object DeploymentConfig extends js.Object {
+  object DeploymentConfig {
     
     /**
       * Get an existing DeploymentConfig resource's state with the given name, ID, and optional extra
@@ -83,18 +92,29 @@ object codedeploy extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws", "codedeploy.DeploymentConfig.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.deploymentConfigMod.DeploymentConfig = js.native
+    @JSImport("@pulumi/aws", "codedeploy.DeploymentConfig.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.deploymentConfigMod.DeploymentConfig = js.native
+    @JSImport("@pulumi/aws", "codedeploy.DeploymentConfig.get")
+    @js.native
     def get(name: String, id: Input[ID], state: DeploymentConfigState): typingsSlinky.pulumiAws.deploymentConfigMod.DeploymentConfig = js.native
+    @JSImport("@pulumi/aws", "codedeploy.DeploymentConfig.get")
+    @js.native
     def get(name: String, id: Input[ID], state: DeploymentConfigState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.deploymentConfigMod.DeploymentConfig = js.native
     
     /**
       * Returns true if the given object is an instance of DeploymentConfig.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws", "codedeploy.DeploymentConfig.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codedeploy/deploymentConfig.DeploymentConfig */ Boolean = js.native
   }
   
+  @JSImport("@pulumi/aws", "codedeploy.DeploymentGroup")
   @js.native
   class DeploymentGroup protected ()
     extends typingsSlinky.pulumiAws.codedeployMod.DeploymentGroup {
@@ -109,8 +129,7 @@ object codedeploy extends js.Object {
     def this(name: String, args: DeploymentGroupArgs, opts: CustomResourceOptions) = this()
   }
   /* static members */
-  @js.native
-  object DeploymentGroup extends js.Object {
+  object DeploymentGroup {
     
     /**
       * Get an existing DeploymentGroup resource's state with the given name, ID, and optional extra
@@ -121,15 +140,25 @@ object codedeploy extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
+    @JSImport("@pulumi/aws", "codedeploy.DeploymentGroup.get")
+    @js.native
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.deploymentGroupMod.DeploymentGroup = js.native
+    @JSImport("@pulumi/aws", "codedeploy.DeploymentGroup.get")
+    @js.native
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.deploymentGroupMod.DeploymentGroup = js.native
+    @JSImport("@pulumi/aws", "codedeploy.DeploymentGroup.get")
+    @js.native
     def get(name: String, id: Input[ID], state: DeploymentGroupState): typingsSlinky.pulumiAws.deploymentGroupMod.DeploymentGroup = js.native
+    @JSImport("@pulumi/aws", "codedeploy.DeploymentGroup.get")
+    @js.native
     def get(name: String, id: Input[ID], state: DeploymentGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.deploymentGroupMod.DeploymentGroup = js.native
     
     /**
       * Returns true if the given object is an instance of DeploymentGroup.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
+    @JSImport("@pulumi/aws", "codedeploy.DeploymentGroup.isInstance")
+    @js.native
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codedeploy/deploymentGroup.DeploymentGroup */ Boolean = js.native
   }
 }

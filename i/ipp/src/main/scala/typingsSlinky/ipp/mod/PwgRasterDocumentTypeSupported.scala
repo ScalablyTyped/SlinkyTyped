@@ -1,5 +1,6 @@
 package typingsSlinky.ipp.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -50,7 +51,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ipp.ippStrings.srgb_8
   - typingsSlinky.ipp.ippStrings.srgb_16
 */
-trait PwgRasterDocumentTypeSupported extends js.Object
+trait PwgRasterDocumentTypeSupported extends StObject
 object PwgRasterDocumentTypeSupported {
   
   @scala.inline

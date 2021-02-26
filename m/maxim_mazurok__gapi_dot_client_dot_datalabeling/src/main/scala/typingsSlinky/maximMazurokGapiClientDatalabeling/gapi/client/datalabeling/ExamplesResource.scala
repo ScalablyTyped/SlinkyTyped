@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDatalabeling.gapi.client.datalabelin
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Fields
 import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Filter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ExamplesResource extends js.Object {
+trait ExamplesResource extends StObject {
   
   /** Gets an example by resource name, including both data and annotation. */
   def get(): Request[GoogleCloudDatalabelingV1beta1Example] = js.native

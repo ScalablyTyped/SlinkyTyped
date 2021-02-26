@@ -6,14 +6,14 @@ import typingsSlinky.angularCore.mod.Renderer2
 import typingsSlinky.angularForms.mod.ControlValueAccessor
 import typingsSlinky.homeworks.homeworks.Event
 import typingsSlinky.homeworks.managerMod.HomeworksManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("homeworks/lib/ng2-homeworks/src/components/spinner/component.spinner", JSImport.Namespace)
-@js.native
-object componentSpinnerMod extends js.Object {
+object componentSpinnerMod {
   
+  @JSImport("homeworks/lib/ng2-homeworks/src/components/spinner/component.spinner", "WorksSpinner")
   @js.native
   class WorksSpinner protected ()
     extends HomeworksManager

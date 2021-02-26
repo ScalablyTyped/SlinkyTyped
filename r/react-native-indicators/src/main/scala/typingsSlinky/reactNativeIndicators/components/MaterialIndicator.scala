@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeIndicators.mod.MaterialIndicatorProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object MaterialIndicator {
   
   @JSImport("react-native-indicators", "MaterialIndicator")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,7 +52,7 @@ object MaterialIndicator {
     def trackWidth(value: Double): this.type = set("trackWidth", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MaterialIndicatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MaterialIndicator.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MaterialIndicatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

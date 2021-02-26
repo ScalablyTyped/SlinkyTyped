@@ -2,6 +2,7 @@ package typingsSlinky.phaser.global.MatterJS
 
 import typingsSlinky.phaser.MatterJS.BodyType
 import typingsSlinky.phaser.MatterJS.IGridDefinition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,16 +16,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Grid ()
   extends typingsSlinky.phaser.MatterJS.Grid
-/* static members */
-@JSGlobal("MatterJS.Grid")
-@js.native
-object Grid extends js.Object {
+object Grid {
   
   /**
     * Clears the grid.
     * @method clear
     * @param {grid} grid
     */
+  /* static member */
+  @JSGlobal("MatterJS.Grid.clear")
+  @js.native
   def clear(grid: typingsSlinky.phaser.MatterJS.Grid): Unit = js.native
   
   /**
@@ -33,7 +34,12 @@ object Grid extends js.Object {
     * @param {} options
     * @return {grid} A new grid
     */
+  /* static member */
+  @JSGlobal("MatterJS.Grid.create")
+  @js.native
   def create(): typingsSlinky.phaser.MatterJS.Grid = js.native
+  @JSGlobal("MatterJS.Grid.create")
+  @js.native
   def create(options: IGridDefinition): typingsSlinky.phaser.MatterJS.Grid = js.native
   
   /**
@@ -44,6 +50,9 @@ object Grid extends js.Object {
     * @param {engine} engine
     * @param {boolean} forceUpdate
     */
+  /* static member */
+  @JSGlobal("MatterJS.Grid.update")
+  @js.native
   def update(
     grid: typingsSlinky.phaser.MatterJS.Grid,
     bodies: js.Array[BodyType],

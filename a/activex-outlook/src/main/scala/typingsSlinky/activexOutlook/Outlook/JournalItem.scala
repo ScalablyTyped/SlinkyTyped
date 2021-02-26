@@ -1,12 +1,13 @@
 package typingsSlinky.activexOutlook.Outlook
 
 import typingsSlinky.std.VarDate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JournalItem extends js.Object {
+trait JournalItem extends StObject {
   
   val Actions: typingsSlinky.activexOutlook.Outlook.Actions = js.native
   

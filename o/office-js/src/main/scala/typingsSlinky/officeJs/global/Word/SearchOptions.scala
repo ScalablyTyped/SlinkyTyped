@@ -1,6 +1,7 @@
 package typingsSlinky.officeJs.global.Word
 
 import typingsSlinky.officeJs.OfficeExtension.ClientRequestContext
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,13 +18,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class SearchOptions ()
   extends typingsSlinky.officeJs.Word.SearchOptions
-/* static members */
-@JSGlobal("Word.SearchOptions")
-@js.native
-object SearchOptions extends js.Object {
+object SearchOptions {
   
   /**
     * Create a new instance of Word.SearchOptions object
     */
+  /* static member */
+  @JSGlobal("Word.SearchOptions.newObject")
+  @js.native
   def newObject(context: ClientRequestContext): typingsSlinky.officeJs.Word.SearchOptions = js.native
 }

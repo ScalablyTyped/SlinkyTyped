@@ -1,12 +1,13 @@
 package typingsSlinky.nodeForge.anon
 
 import typingsSlinky.nodeForge.mod.pki.ed25519.BinaryBuffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PrivateKeyBinaryBuffer extends js.Object {
+trait PrivateKeyBinaryBuffer extends StObject {
   
   var privateKey: BinaryBuffer = js.native
 }
@@ -19,24 +20,12 @@ object PrivateKeyBinaryBuffer {
   }
   
   @scala.inline
-  implicit class PrivateKeyBinaryBufferOps[Self <: PrivateKeyBinaryBuffer] (val x: Self) extends AnyVal {
+  implicit class PrivateKeyBinaryBufferMutableBuilder[Self <: PrivateKeyBinaryBuffer] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setPrivateKey(value: BinaryBuffer): Self = StObject.set(x, "privateKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setPrivateKeyUint8Array(value: js.typedarray.Uint8Array): Self = this.set("privateKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPrivateKey(value: BinaryBuffer): Self = this.set("privateKey", value.asInstanceOf[js.Any])
+    def setPrivateKeyUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "privateKey", value.asInstanceOf[js.Any])
   }
 }

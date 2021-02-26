@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientYoutube.anon.FieldsId
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.Mine
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.OauthtokenOnBehalfOfContentOwner
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LiveStreamsResource extends js.Object {
+trait LiveStreamsResource extends StObject {
   
   /** Deletes an existing stream for the authenticated user. */
   def delete(): Request[Unit] = js.native

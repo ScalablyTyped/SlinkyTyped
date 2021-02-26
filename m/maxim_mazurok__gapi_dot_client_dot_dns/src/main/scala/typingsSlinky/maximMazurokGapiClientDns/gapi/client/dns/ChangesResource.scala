@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientDns.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientDns.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDns.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDns.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ChangesResource extends js.Object {
+trait ChangesResource extends StObject {
   
   /** Atomically update the ResourceRecordSet collection. */
   def create(request: Accesstoken): Request[Change] = js.native

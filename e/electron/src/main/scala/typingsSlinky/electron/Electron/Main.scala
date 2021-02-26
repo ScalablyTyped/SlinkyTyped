@@ -1,12 +1,11 @@
 package typingsSlinky.electron.Electron
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Electron.Main")
-@js.native
-object Main extends js.Object {
+object Main {
   
   type AboutPanelOptionsOptions = typingsSlinky.electron.Electron.AboutPanelOptionsOptions
   
@@ -458,7 +457,9 @@ object Main extends js.Object {
   
   type WillNavigateEvent = typingsSlinky.electron.Electron.WillNavigateEvent
   
+  /* was `typeof Session` */
   type session = typingsSlinky.electron.Electron.Main.Session_
   
+  /* was `typeof WebContents` */
   type webContents = typingsSlinky.electron.Electron.Main.WebContents_
 }

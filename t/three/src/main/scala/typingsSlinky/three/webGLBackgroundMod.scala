@@ -8,16 +8,16 @@ import typingsSlinky.three.webGLObjectsMod.WebGLObjects
 import typingsSlinky.three.webGLRenderListsMod.WebGLRenderList
 import typingsSlinky.three.webGLRendererMod.WebGLRenderer
 import typingsSlinky.three.webGLStateMod.WebGLState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/renderers/webgl/WebGLBackground", JSImport.Namespace)
-@js.native
-object webGLBackgroundMod extends js.Object {
+object webGLBackgroundMod {
   
+  @JSImport("three/src/renderers/webgl/WebGLBackground", "WebGLBackground")
   @js.native
-  class WebGLBackground protected () extends js.Object {
+  class WebGLBackground protected () extends StObject {
     def this(
       renderer: WebGLRenderer,
       cubemaps: WebGLCubeMaps,

@@ -1,5 +1,6 @@
 package typingsSlinky.figma.mod.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.figma.figmaStrings.COLOR
   - typingsSlinky.figma.figmaStrings.LUMINOSITY
 */
-trait BlendMode extends js.Object
+trait BlendMode extends StObject
 object BlendMode {
   
   @scala.inline

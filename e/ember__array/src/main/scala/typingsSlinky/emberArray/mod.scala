@@ -1,23 +1,31 @@
 package typingsSlinky.emberArray
 
+import org.scalablytyped.runtime.Shortcut
 import typingsSlinky.emberArray.enumerableMod.Enumerable
 import typingsSlinky.emberArray.nativeArrayMod.NativeArray
 import typingsSlinky.emberObject.computedMod.ComputedProperty
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ember/array", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
-  
-  def A[T](): NativeArray[T] = js.native
-  def A[T](arr: Array[T]): NativeArray[T] = js.native
+object mod extends Shortcut {
   
   // Ember.Array rather than Array because the `array-type` lint rule doesn't realize the global is shadowed
   // tslint:disable-next-line:array-type
+  @JSImport("@ember/array", JSImport.Default)
+  @js.native
   val default: typingsSlinky.emberObject.mixinMod.default[Array[js.Any], typingsSlinky.emberObject.mod.default] = js.native
   
+  @JSImport("@ember/array", "A")
+  @js.native
+  def A[T](): NativeArray[T] = js.native
+  @JSImport("@ember/array", "A")
+  @js.native
+  def A[T](arr: Array[T]): NativeArray[T] = js.native
+  
+  @JSImport("@ember/array", "isArray")
+  @js.native
   def isArray(obj: js.Any): /* is std.ArrayLike<any> */ Boolean = js.native
   
   /**
@@ -115,4 +123,9 @@ object mod extends js.Object {
     def slice(beginIndex: Double): Array[T] = js.native
     def slice(beginIndex: Double, endIndex: Double): Array[T] = js.native
   }
+  
+  type _To = typingsSlinky.emberObject.mixinMod.default[Array[js.Any], typingsSlinky.emberObject.mod.default]
+  
+  /* This means you don't have to write `default`, but can instead just say `mod.foo` */
+  override def _to: typingsSlinky.emberObject.mixinMod.default[Array[js.Any], typingsSlinky.emberObject.mod.default] = default
 }

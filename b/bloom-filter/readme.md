@@ -10,9 +10,9 @@ A bloom filter suitable for use in Bitcoin Connection Bloom Filtering as part of
 | ------------------ | :-------------: |
 | Full name          | bloom-filter |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 115 |
-| # downloads        | 65649 |
+| # releases         | 0 |
+| # dependents       | 129 |
+| # downloads        | 62695 |
 | # stars            | 0 |
 
 ## Links

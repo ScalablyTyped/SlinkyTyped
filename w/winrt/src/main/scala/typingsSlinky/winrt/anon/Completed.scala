@@ -4,12 +4,13 @@ import typingsSlinky.winrt.Windows.Foundation.AsyncOperationProgressHandler
 import typingsSlinky.winrt.Windows.Foundation.AsyncOperationWithProgressCompletedHandler
 import typingsSlinky.winrt.Windows.Foundation.AsyncStatus
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperationWithProgress
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Completed[TResult, TProgress] extends js.Object {
+trait Completed[TResult, TProgress] extends StObject {
   
   def completed(asyncInfo: IAsyncOperationWithProgress[TResult, TProgress], asyncStatus: AsyncStatus): Unit = js.native
   @JSName("completed")

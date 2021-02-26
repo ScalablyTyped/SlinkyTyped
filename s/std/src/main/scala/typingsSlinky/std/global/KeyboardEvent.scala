@@ -1,12 +1,12 @@
 package typingsSlinky.std.global
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import org.scalajs.dom.raw.KeyboardEventInit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("KeyboardEvent")
 @js.native
 class KeyboardEvent protected ()
@@ -14,21 +14,21 @@ class KeyboardEvent protected ()
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: KeyboardEventInit) = this()
 }
-@JSGlobal("KeyboardEvent")
-@js.native
-object KeyboardEvent
-  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.KeyboardEvent]
-     with Instantiable2[
-      /* type */ java.lang.String, 
-      /* eventInitDict */ KeyboardEventInit, 
-      org.scalajs.dom.raw.KeyboardEvent
-    ] {
+object KeyboardEvent {
   
+  @JSGlobal("KeyboardEvent.DOM_KEY_LOCATION_LEFT")
+  @js.native
   val DOM_KEY_LOCATION_LEFT: Double = js.native
   
+  @JSGlobal("KeyboardEvent.DOM_KEY_LOCATION_NUMPAD")
+  @js.native
   val DOM_KEY_LOCATION_NUMPAD: Double = js.native
   
+  @JSGlobal("KeyboardEvent.DOM_KEY_LOCATION_RIGHT")
+  @js.native
   val DOM_KEY_LOCATION_RIGHT: Double = js.native
   
+  @JSGlobal("KeyboardEvent.DOM_KEY_LOCATION_STANDARD")
+  @js.native
   val DOM_KEY_LOCATION_STANDARD: Double = js.native
 }

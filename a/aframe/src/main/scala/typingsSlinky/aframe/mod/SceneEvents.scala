@@ -1,5 +1,6 @@
 package typingsSlinky.aframe.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.aframe.aframeStrings.loaded
   - typingsSlinky.aframe.aframeStrings.renderstart
 */
-trait SceneEvents extends js.Object
+trait SceneEvents extends StObject
 object SceneEvents {
   
   @scala.inline

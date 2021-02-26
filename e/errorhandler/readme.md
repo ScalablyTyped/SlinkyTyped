@@ -11,8 +11,8 @@ Development-only error handler middleware
 | Full name          | errorhandler |
 | Keywords           | - |
 | # releases         | 2 |
-| # dependents       | 645 |
-| # downloads        | 28967298 |
+| # dependents       | 729 |
+| # downloads        | 39942827 |
 | # stars            | 60 |
 
 ## Links

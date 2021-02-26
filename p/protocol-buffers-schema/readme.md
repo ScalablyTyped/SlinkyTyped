@@ -10,9 +10,9 @@ No nonsense protocol buffers schema parser written in Javascript
 | ------------------ | :-------------: |
 | Full name          | protocol-buffers-schema |
 | Keywords           | protobuf, protocol, buffers, schema, parser, parse |
-| # releases         | 0 |
-| # dependents       | 37 |
-| # downloads        | 11976142 |
+| # releases         | 5 |
+| # dependents       | 41 |
+| # downloads        | 24836893 |
 | # stars            | 1 |
 
 ## Links

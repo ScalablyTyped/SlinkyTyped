@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.ProposalId
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.Resource
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer.anon.UserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MarketplacedealsResource extends js.Object {
+trait MarketplacedealsResource extends StObject {
   
   /** Delete the specified deals from the proposal */
   def delete(request: ProposalId): Request[DeleteOrderDealsResponse] = js.native

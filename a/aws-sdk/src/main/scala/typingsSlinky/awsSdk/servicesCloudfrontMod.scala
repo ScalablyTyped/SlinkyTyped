@@ -1,25 +1,39 @@
 package typingsSlinky.awsSdk
 
 import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.awsSdk.cloudfrontSignerMod.Signer
 import typingsSlinky.awsSdk.serviceMod.Service
+import typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("aws-sdk/lib/services/cloudfront", JSImport.Namespace)
-@js.native
-object servicesCloudfrontMod extends js.Object {
+object servicesCloudfrontMod {
   
+  @JSImport("aws-sdk/lib/services/cloudfront", "CloudFrontCustomizations")
   @js.native
-  class CloudFrontCustomizations () extends Service
+  /**
+    * Creates a new service object with a configuration object.
+    */
+  class CloudFrontCustomizations () extends Service {
+    def this(config: ServiceConfigurationOptions) = this()
+  }
   /* static members */
-  @js.native
-  object CloudFrontCustomizations extends js.Object {
+  object CloudFrontCustomizations {
     
-    var Signer: Instantiable2[
+    @JSImport("aws-sdk/lib/services/cloudfront", "CloudFrontCustomizations")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("aws-sdk/lib/services/cloudfront", "CloudFrontCustomizations.Signer")
+    @js.native
+    def Signer: Instantiable2[
         /* keyPairId */ String, 
         /* privateKey */ String, 
         typingsSlinky.awsSdk.cloudfrontSignerMod.Signer
       ] = js.native
+    @scala.inline
+    def Signer_=(x: Instantiable2[/* keyPairId */ String, /* privateKey */ String, Signer]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Signer")(x.asInstanceOf[js.Any])
   }
 }

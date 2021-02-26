@@ -13,6 +13,7 @@ import typingsSlinky.activexAccess.activexAccessNumbers.`6`
 import typingsSlinky.activexAccess.activexAccessNumbers.`7`
 import typingsSlinky.activexAccess.activexAccessNumbers.`8`
 import typingsSlinky.activexAccess.activexAccessNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,7 +33,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAccess.activexAccessNumbers.`8`
   - typingsSlinky.activexAccess.activexAccessNumbers.`1`
 */
-trait AcPrintPaperBin extends js.Object
+trait AcPrintPaperBin extends StObject
 object AcPrintPaperBin {
   
   @scala.inline

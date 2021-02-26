@@ -9,6 +9,7 @@ import typingsSlinky.reactNativeInputSpinner.mod.ReactNativeInputSpinnerProps
 import typingsSlinky.reactNativeInputSpinner.mod.default
 import typingsSlinky.reactNativeInputSpinner.reactNativeInputSpinnerStrings.float
 import typingsSlinky.reactNativeInputSpinner.reactNativeInputSpinnerStrings.int
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object ReactNativeInputSpinner {
   
   @JSImport("react-native-input-spinner", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -181,7 +182,7 @@ object ReactNativeInputSpinner {
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactNativeInputSpinnerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeInputSpinner.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactNativeInputSpinnerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

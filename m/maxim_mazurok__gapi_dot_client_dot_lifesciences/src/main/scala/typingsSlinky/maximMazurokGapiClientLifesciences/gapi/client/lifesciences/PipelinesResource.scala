@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientLifesciences.gapi.client.lifescience
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientLifesciences.anon.Fields
 import typingsSlinky.maximMazurokGapiClientLifesciences.anon.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PipelinesResource extends js.Object {
+trait PipelinesResource extends StObject {
   
   /**
     * Runs a pipeline. The returned Operation's metadata field will contain a google.cloud.lifesciences.v2beta.Metadata object describing the status of the pipeline execution. The

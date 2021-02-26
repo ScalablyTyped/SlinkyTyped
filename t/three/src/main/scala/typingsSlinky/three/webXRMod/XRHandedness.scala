@@ -1,5 +1,6 @@
 package typingsSlinky.three.webXRMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.three.threeStrings.left
   - typingsSlinky.three.threeStrings.right
 */
-trait XRHandedness extends js.Object
+trait XRHandedness extends StObject
 object XRHandedness {
   
   @scala.inline

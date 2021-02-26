@@ -189,12 +189,13 @@ import typingsSlinky.activexAccess.anon.CommandAny
 import typingsSlinky.activexAccess.anon.DrawObject
 import typingsSlinky.activexAccess.anon.FieldListKeyAscii
 import typingsSlinky.activexAccess.anon.PDisp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ActiveXObject extends js.Object {
+trait ActiveXObject extends StObject {
   
   def on(
     obj: FieldList,

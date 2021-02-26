@@ -8,14 +8,14 @@ import typingsSlinky.awsSdkClientGlacierNode.typesGetJobOutputOutputMod.GetJobOu
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/commands/GetJobOutputCommand", JSImport.Namespace)
-@js.native
-object getJobOutputCommandMod extends js.Object {
+object getJobOutputCommandMod {
   
+  @JSImport("@aws-sdk/client-glacier-node/commands/GetJobOutputCommand", "GetJobOutputCommand")
   @js.native
   class GetJobOutputCommand protected () extends Command[
           InputTypesUnion, 

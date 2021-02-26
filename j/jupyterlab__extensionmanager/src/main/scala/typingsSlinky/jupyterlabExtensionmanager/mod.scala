@@ -5,54 +5,61 @@ import typingsSlinky.jupyterlabExtensionmanager.modelMod.IEntry
 import typingsSlinky.jupyterlabExtensionmanager.widgetMod.CollapsibleSection.IProperties
 import typingsSlinky.jupyterlabServices.mod.ServiceManager
 import typingsSlinky.jupyterlabSettingregistry.tokensMod.ISettingRegistry.ISettings
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/extensionmanager", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  def isJupyterOrg(name: String): Boolean = js.native
-  
+  @JSImport("@jupyterlab/extensionmanager", "CollapsibleSection")
   @js.native
   class CollapsibleSection protected ()
     extends typingsSlinky.jupyterlabExtensionmanager.widgetMod.CollapsibleSection {
     def this(props: IProperties) = this()
   }
   
+  @JSImport("@jupyterlab/extensionmanager", "ExtensionView")
   @js.native
   class ExtensionView protected ()
     extends typingsSlinky.jupyterlabExtensionmanager.widgetMod.ExtensionView {
     def this(serviceManager: ServiceManager, settings: ISettings) = this()
   }
   
+  @JSImport("@jupyterlab/extensionmanager", "ListModel")
   @js.native
   class ListModel protected ()
     extends typingsSlinky.jupyterlabExtensionmanager.modelMod.ListModel {
     def this(serviceManager: ServiceManager, settings: ISettings) = this()
   }
-  @js.native
-  object ListModel extends js.Object {
+  object ListModel {
     
     /**
       * Utility function to check whether an entry can be updated.
       *
       * @param entry The entry to check.
       */
+    @JSImport("@jupyterlab/extensionmanager", "ListModel.entryHasUpdate")
+    @js.native
     def entryHasUpdate(entry: IEntry): Boolean = js.native
     
+    @JSImport("@jupyterlab/extensionmanager", "ListModel.isDisclaimed")
+    @js.native
     def isDisclaimed(): Boolean = js.native
     
+    @JSImport("@jupyterlab/extensionmanager", "ListModel.toogleDisclaimed")
+    @js.native
     def toogleDisclaimed(): Unit = js.native
   }
   
-  @js.native
-  object ListView extends js.Object {
+  object ListView {
     
+    @JSImport("@jupyterlab/extensionmanager", "ListView")
+    @js.native
     def apply(props: typingsSlinky.jupyterlabExtensionmanager.widgetMod.ListView.IProperties): ReactElement = js.native
   }
   
+  @JSImport("@jupyterlab/extensionmanager", "Lister")
   @js.native
   /**
     * Create a Lister object.
@@ -60,12 +67,14 @@ object mod extends js.Object {
   class Lister ()
     extends typingsSlinky.jupyterlabExtensionmanager.listingsMod.Lister
   
+  @JSImport("@jupyterlab/extensionmanager", "SearchBar")
   @js.native
   class SearchBar protected ()
     extends typingsSlinky.jupyterlabExtensionmanager.widgetMod.SearchBar {
     def this(props: typingsSlinky.jupyterlabExtensionmanager.widgetMod.SearchBar.IProperties) = this()
   }
   
+  @JSImport("@jupyterlab/extensionmanager", "Searcher")
   @js.native
   /**
     * Create a Searcher object.
@@ -79,4 +88,8 @@ object mod extends js.Object {
     def this(repoUri: js.UndefOr[scala.Nothing], cdnUri: String) = this()
     def this(repoUri: String, cdnUri: String) = this()
   }
+  
+  @JSImport("@jupyterlab/extensionmanager", "isJupyterOrg")
+  @js.native
+  def isJupyterOrg(name: String): Boolean = js.native
 }

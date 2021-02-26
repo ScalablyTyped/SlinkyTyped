@@ -1,5 +1,6 @@
 package typingsSlinky.devexpressWeb.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,14 +12,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ASPxClientRadioButtonList ()
   extends typingsSlinky.devexpressWeb.ASPxClientCheckListBase
-/* static members */
-@JSGlobal("ASPxClientRadioButtonList")
-@js.native
-object ASPxClientRadioButtonList extends js.Object {
+object ASPxClientRadioButtonList {
   
   /**
     * Converts the specified object to the ASPxClientRadioButtonList type. The converted client object specified by the obj parameter.
     * @param obj The client object to be type cast.
     */
+  /* static member */
+  @JSGlobal("ASPxClientRadioButtonList.Cast")
+  @js.native
   def Cast(obj: js.Any): typingsSlinky.devexpressWeb.ASPxClientRadioButtonList = js.native
 }

@@ -24,15 +24,22 @@ import typingsSlinky.baseui.inputMod.SharedProps
 import typingsSlinky.baseui.inputMod.State
 import typingsSlinky.baseui.inputMod.StatefulInputProps
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StatefulInput {
   
+  @scala.inline
+  def apply(children: js.UndefOr[ReactElement] with js.UndefOr[scala.Nothing]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StatefulInputProps]))
+  }
+  
   @JSImport("baseui/input", "StatefulInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -73,13 +80,13 @@ object StatefulInput {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    def endEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def endEnhancerFunction1(value: /* args */ SharedProps => ReactElement): this.type = set("endEnhancer", js.Any.fromFunction1(value))
     
     @scala.inline
-    def endEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
@@ -94,16 +101,16 @@ object StatefulInput {
     def inputMode(value: String): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRef(value: Ref[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def inputRef(value: Ref[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRefNull: this.type = set("inputRef", null)
     
     @scala.inline
-    def inputRefNull: this.type = set("inputRef", null)
+    def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
@@ -157,13 +164,13 @@ object StatefulInput {
     def size(value: mini | default_ | compact | large_): this.type = set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def startEnhancerReactElement(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    def startEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def startEnhancerFunction1(value: /* args */ SharedProps => ReactElement): this.type = set("startEnhancer", js.Any.fromFunction1(value))
     
     @scala.inline
-    def startEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    def startEnhancerReactElement(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def stateReducer(value: (change_, /* nextState */ State, /* currentState */ State) => State): this.type = set("stateReducer", js.Any.fromFunction3(value))
@@ -179,10 +186,4 @@ object StatefulInput {
   }
   
   def withProps(p: StatefulInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: js.UndefOr[ReactElement] with js.UndefOr[scala.Nothing]): Builder = {
-    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StatefulInputProps]))
-  }
 }

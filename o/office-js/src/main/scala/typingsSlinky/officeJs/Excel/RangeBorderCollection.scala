@@ -13,6 +13,7 @@ import typingsSlinky.officeJs.officeJsStrings.EdgeRight
 import typingsSlinky.officeJs.officeJsStrings.EdgeTop
 import typingsSlinky.officeJs.officeJsStrings.InsideHorizontal
 import typingsSlinky.officeJs.officeJsStrings.InsideVertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

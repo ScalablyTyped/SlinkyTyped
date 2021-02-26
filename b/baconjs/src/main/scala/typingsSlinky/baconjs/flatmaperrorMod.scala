@@ -1,14 +1,15 @@
 package typingsSlinky.baconjs
 
 import typingsSlinky.baconjs.typesFlatmapMod.EventOrValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("baconjs/types/flatmaperror", JSImport.Namespace)
-@js.native
-object flatmaperrorMod extends js.Object {
+object flatmaperrorMod {
   
+  @JSImport("baconjs/types/flatmaperror", JSImport.Default)
+  @js.native
   def default[V, V2](
     src: typingsSlinky.baconjs.observableMod.default[V],
     f: js.Function1[

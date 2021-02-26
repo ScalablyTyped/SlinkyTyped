@@ -2,6 +2,7 @@ package typingsSlinky.pixiJs.PIXI
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @memberof PIXI
   */
 @js.native
-trait Extract extends js.Object {
+trait Extract extends StObject {
   
   /**
     * Will return a a base64 encoded string of this target. It works by calling

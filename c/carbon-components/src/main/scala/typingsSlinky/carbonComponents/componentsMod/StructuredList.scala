@@ -1,8 +1,8 @@
 package typingsSlinky.carbonComponents.componentsMod
 
-import typingsSlinky.carbonComponents.anon.SelectorListInput
 import typingsSlinky.carbonComponents.structuredListMod.default
 import typingsSlinky.std.WeakMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,12 +12,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class StructuredList protected () extends default {
   def this(element: js.Any, options: js.Any) = this()
 }
-/* static members */
-@JSImport("carbon-components/globals/js/components", "StructuredList")
-@js.native
-object StructuredList extends js.Object {
+object StructuredList {
   
-  var components: WeakMap[js.Object, _] = js.native
+  @JSImport("carbon-components/globals/js/components", "StructuredList")
+  @js.native
+  val ^ : js.Any = js.native
   
-  def options: SelectorListInput = js.native
+  /* static member */
+  @JSImport("carbon-components/globals/js/components", "StructuredList.components")
+  @js.native
+  def components: WeakMap[js.Object, js.Any] = js.native
+  @scala.inline
+  def components_=(x: WeakMap[js.Object, js.Any]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("components")(x.asInstanceOf[js.Any])
 }

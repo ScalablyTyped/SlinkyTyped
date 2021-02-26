@@ -14,14 +14,15 @@ import typingsSlinky.reactNavigationRouters.typesMod.ParamListBase
 import typingsSlinky.reactNavigationRouters.typesMod.Router
 import typingsSlinky.std.Record
 import typingsSlinky.std.Set
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-navigation/core/lib/typescript/src/useDescriptors", JSImport.Namespace)
-@js.native
-object useDescriptorsMod extends js.Object {
+object useDescriptorsMod {
   
+  @JSImport("@react-navigation/core/lib/typescript/src/useDescriptors", JSImport.Default)
+  @js.native
   def default[State /* <: NavigationState[ParamListBase] */, ScreenOptions /* <: js.Object */, EventMap /* <: EventMapBase */](
     hasStateScreensNavigationScreenOptionsOnActionGetStateSetStateAddListenerAddKeyedListenerOnRouteFocusRouterEmitter: Options[State, ScreenOptions, EventMap]
   ): Record[
@@ -30,7 +31,7 @@ object useDescriptorsMod extends js.Object {
   ] = js.native
   
   @js.native
-  trait Options[State /* <: NavigationState[ParamListBase] */, ScreenOptions /* <: js.Object */, EventMap /* <: EventMapBase */] extends js.Object {
+  trait Options[State /* <: NavigationState[ParamListBase] */, ScreenOptions /* <: js.Object */, EventMap /* <: EventMapBase */] extends StObject {
     
     var addKeyedListener: AddKeyedListener = js.native
     

@@ -1,6 +1,7 @@
 package typingsSlinky.anydbSql.mod
 
 import typingsSlinky.anydbSql.anon.RTRIM
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

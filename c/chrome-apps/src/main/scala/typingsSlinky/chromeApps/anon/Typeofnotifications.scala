@@ -7,12 +7,13 @@ import typingsSlinky.chromeApps.chrome.integer
 import typingsSlinky.chromeApps.chrome.notifications.NotificationOptions
 import typingsSlinky.chromeApps.chromeAppsBooleans.`true`
 import typingsSlinky.std.Exclude
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofnotifications extends js.Object {
+trait Typeofnotifications extends StObject {
   
   /**
     * @enum

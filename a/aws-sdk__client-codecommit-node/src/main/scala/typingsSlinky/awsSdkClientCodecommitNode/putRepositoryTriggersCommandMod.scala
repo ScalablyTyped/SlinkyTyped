@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.typesPutRepositoryTriggersInputM
 import typingsSlinky.awsSdkClientCodecommitNode.typesPutRepositoryTriggersOutputMod.PutRepositoryTriggersOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-codecommit-node/commands/PutRepositoryTriggersCommand", JSImport.Namespace)
-@js.native
-object putRepositoryTriggersCommandMod extends js.Object {
+object putRepositoryTriggersCommandMod {
   
+  @JSImport("@aws-sdk/client-codecommit-node/commands/PutRepositoryTriggersCommand", "PutRepositoryTriggersCommand")
   @js.native
   class PutRepositoryTriggersCommand protected () extends Command[
           InputTypesUnion, 

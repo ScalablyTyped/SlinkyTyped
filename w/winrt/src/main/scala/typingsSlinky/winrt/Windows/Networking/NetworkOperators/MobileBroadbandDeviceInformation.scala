@@ -2,6 +2,7 @@ package typingsSlinky.winrt.Windows.Networking.NetworkOperators
 
 import typingsSlinky.winrt.Windows.Devices.Sms.CellularClass
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

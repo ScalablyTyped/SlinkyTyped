@@ -1,14 +1,17 @@
 package typingsSlinky.fluentuiDomUtilities
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@fluentui/dom-utilities/lib/setVirtualParent", JSImport.Namespace)
-@js.native
-object setVirtualParentMod extends js.Object {
+object setVirtualParentMod {
   
+  @JSImport("@fluentui/dom-utilities/lib/setVirtualParent", "setVirtualParent")
+  @js.native
   def setVirtualParent(child: HTMLElement): Unit = js.native
+  @JSImport("@fluentui/dom-utilities/lib/setVirtualParent", "setVirtualParent")
+  @js.native
   def setVirtualParent(child: HTMLElement, parent: HTMLElement): Unit = js.native
 }

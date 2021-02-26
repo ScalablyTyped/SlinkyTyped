@@ -19,6 +19,7 @@ import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +28,7 @@ object GroupHeaderBase {
   
   @JSImport("office-ui-fabric-react/lib/components/GroupedList/GroupHeader.base", "GroupHeaderBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -50,13 +51,13 @@ object GroupHeaderBase {
     def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ js.Object | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def expandButtonIcon(value: String): this.type = set("expandButtonIcon", value.asInstanceOf[js.Any])
@@ -80,10 +81,10 @@ object GroupHeaderBase {
     def groupedListId(value: String): this.type = set("groupedListId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
+    def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
+    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
     
     @scala.inline
     def indentWidth(value: Double): this.type = set("indentWidth", value.asInstanceOf[js.Any])
@@ -140,10 +141,10 @@ object GroupHeaderBase {
     def showAllLinkText(value: String): this.type = set("showAllLinkText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IGroupHeaderStyleProps => DeepPartial[IGroupHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IGroupHeaderStyleProps, IGroupHeaderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IGroupHeaderStyleProps, IGroupHeaderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IGroupHeaderStyleProps => DeepPartial[IGroupHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -155,7 +156,7 @@ object GroupHeaderBase {
     def viewport(value: IViewport): this.type = set("viewport", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IGroupHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: GroupHeaderBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IGroupHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

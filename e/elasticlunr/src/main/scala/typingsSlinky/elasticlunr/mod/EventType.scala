@@ -1,5 +1,6 @@
 package typingsSlinky.elasticlunr.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.elasticlunr.elasticlunrStrings.update
   - typingsSlinky.elasticlunr.elasticlunrStrings.remove
 */
-trait EventType extends js.Object
+trait EventType extends StObject
 object EventType {
   
   @scala.inline

@@ -7,15 +7,22 @@ import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.tuyaPanelKit.mod.TabBarArr
 import typingsSlinky.tuyaPanelKit.mod.TabBarProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TabBar {
   
+  @scala.inline
+  def apply(tabs: js.Array[TabBarArr]): Builder = {
+    val __props = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabBarProps]))
+  }
+  
   @JSImport("tuya-panel-kit", "TabBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -93,10 +100,4 @@ object TabBar {
   }
   
   def withProps(p: TabBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(tabs: js.Array[TabBarArr]): Builder = {
-    val __props = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TabBarProps]))
-  }
 }

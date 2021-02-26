@@ -11,8 +11,8 @@ transform humanize time to ms
 | Full name          | humanize-ms |
 | Keywords           | humanize, ms |
 | # releases         | 0 |
-| # dependents       | 45 |
-| # downloads        | 74984765 |
+| # dependents       | 60 |
+| # downloads        | 147902193 |
 | # stars            | 4 |
 
 ## Links

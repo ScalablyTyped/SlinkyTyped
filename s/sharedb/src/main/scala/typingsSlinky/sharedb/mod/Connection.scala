@@ -2,13 +2,14 @@ package typingsSlinky.sharedb.mod
 
 import org.scalajs.dom.raw.WebSocket
 import typingsSlinky.sharedb.anon.Results
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sharedb", "Connection")
 @js.native
-class Connection protected () extends js.Object {
+class Connection protected () extends StObject {
   def this(ws: WebSocket) = this()
   
   def createFetchQuery(

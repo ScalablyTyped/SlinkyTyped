@@ -1,8 +1,9 @@
 package typingsSlinky.emberData.mod.DS
 
+import typingsSlinky.ember.mod.default.ArrayProxy
 import typingsSlinky.ember.mod.default.ComputedProperty
-import typingsSlinky.emberArray.proxyMod.ArrayProxy
 import typingsSlinky.emberObject.eventedMod.Evented
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

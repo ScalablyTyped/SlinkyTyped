@@ -2,6 +2,7 @@ package typingsSlinky.xrm.Xrm
 
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.xrm.Xrm.Async.PromiseLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

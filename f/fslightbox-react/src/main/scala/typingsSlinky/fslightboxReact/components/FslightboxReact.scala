@@ -8,15 +8,22 @@ import typingsSlinky.fslightboxReact.mod.SourceType
 import typingsSlinky.fslightboxReact.mod.VideoDimensions
 import typingsSlinky.fslightboxReact.mod.VideoPoster
 import typingsSlinky.fslightboxReact.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FslightboxReact {
   
+  @scala.inline
+  def apply(toggler: Boolean): Builder = {
+    val __props = js.Dynamic.literal(toggler = toggler.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[FsLightboxProps]))
+  }
+  
   @JSImport("fslightbox-react", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -24,10 +31,10 @@ object FslightboxReact {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
-    def customSourcesVarargs(value: ReactElement*): this.type = set("customSources", js.Array(value :_*))
+    def customSources(value: js.Array[ReactElement]): this.type = set("customSources", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customSources(value: js.Array[ReactElement]): this.type = set("customSources", value.asInstanceOf[js.Any])
+    def customSourcesVarargs(value: ReactElement*): this.type = set("customSources", js.Array(value :_*))
     
     @scala.inline
     def disableLocalStorage(value: Boolean): this.type = set("disableLocalStorage", value.asInstanceOf[js.Any])
@@ -66,10 +73,10 @@ object FslightboxReact {
     def sourceIndex(value: Double): this.type = set("sourceIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sourcesVarargs(value: String*): this.type = set("sources", js.Array(value :_*))
+    def sources(value: js.Array[String]): this.type = set("sources", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sources(value: js.Array[String]): this.type = set("sources", value.asInstanceOf[js.Any])
+    def sourcesVarargs(value: String*): this.type = set("sources", js.Array(value :_*))
     
     @scala.inline
     def `type`(value: SourceType): this.type = set("type", value.asInstanceOf[js.Any])
@@ -78,23 +85,17 @@ object FslightboxReact {
     def typeNull: this.type = set("type", null)
     
     @scala.inline
-    def typesVarargs(value: SourceType*): this.type = set("types", js.Array(value :_*))
-    
-    @scala.inline
     def types(value: js.Array[SourceType]): this.type = set("types", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def videosPostersVarargs(value: VideoPoster*): this.type = set("videosPosters", js.Array(value :_*))
+    def typesVarargs(value: SourceType*): this.type = set("types", js.Array(value :_*))
     
     @scala.inline
     def videosPosters(value: js.Array[VideoPoster]): this.type = set("videosPosters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def videosPostersVarargs(value: VideoPoster*): this.type = set("videosPosters", js.Array(value :_*))
   }
   
   def withProps(p: FsLightboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(toggler: Boolean): Builder = {
-    val __props = js.Dynamic.literal(toggler = toggler.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[FsLightboxProps]))
-  }
 }

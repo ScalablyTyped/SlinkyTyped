@@ -6,16 +6,15 @@ import typingsSlinky.ytSearch.mod.PlaylistMetadataResult
 import typingsSlinky.ytSearch.mod.SearchResult
 import typingsSlinky.ytSearch.mod.VideoMetadataOptions
 import typingsSlinky.ytSearch.mod.VideoMetadataResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait FnCall extends js.Object {
+  trait FnCall extends StObject {
     
     def apply(query: String): js.Promise[SearchResult] = js.native
     def apply(

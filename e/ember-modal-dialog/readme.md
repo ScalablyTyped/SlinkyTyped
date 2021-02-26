@@ -10,9 +10,9 @@ An ember-cli addon for implementing modal dialogs
 | ------------------ | :-------------: |
 | Full name          | ember-modal-dialog |
 | Keywords           | ember-addon |
-| # releases         | 10 |
-| # dependents       | 17 |
-| # downloads        | 1154961 |
+| # releases         | 3 |
+| # dependents       | 19 |
+| # downloads        | 1497636 |
 | # stars            | 11 |
 
 ## Links

@@ -2,13 +2,14 @@ package typingsSlinky.foundationSites.FoundationSites
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.foundationSites.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // https://get.foundation/sites/docs/offcanvas.html#javascript-reference
 @js.native
-trait OffCanvas extends js.Object {
+trait OffCanvas extends StObject {
   
   def close(): Unit = js.native
   def close(cb: js.Function): Unit = js.native

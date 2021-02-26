@@ -1,5 +1,6 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gapiCalendar.gapiCalendarStrings.tentative
   - typingsSlinky.gapiCalendar.gapiCalendarStrings.cancelled
 */
-trait EventStatus extends js.Object
+trait EventStatus extends StObject
 object EventStatus {
   
   @scala.inline

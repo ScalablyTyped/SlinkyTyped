@@ -9,6 +9,7 @@ import typingsSlinky.momentMini.momentMiniStrings.`Leftparenthesis]`
 import typingsSlinky.momentMini.momentMiniStrings.`[Rightparenthesis`
 import typingsSlinky.momentMini.momentMiniStrings.`[]`
 import typingsSlinky.std.Object
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

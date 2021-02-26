@@ -4,6 +4,7 @@ import typingsSlinky.mfiles.mfilesNumbers.`0`
 import typingsSlinky.mfiles.mfilesNumbers.`1`
 import typingsSlinky.mfiles.mfilesNumbers.`2`
 import typingsSlinky.mfiles.mfilesNumbers.`3`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mfiles.mfilesNumbers.`2`
   - typingsSlinky.mfiles.mfilesNumbers.`3`
 */
-trait MFFileOpenMethod extends js.Object
+trait MFFileOpenMethod extends StObject
 object MFFileOpenMethod {
   
   @scala.inline

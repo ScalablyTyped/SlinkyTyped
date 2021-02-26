@@ -5,36 +5,35 @@ import typingsSlinky.nodeHtmlParser.anon.PartialOptions
 import typingsSlinky.nodeHtmlParser.anon.PartialOptionsnoFixfalse
 import typingsSlinky.nodeHtmlParser.anon.PartialOptionsnoFixtrue
 import typingsSlinky.nodeHtmlParser.anon.Valid
+import typingsSlinky.nodeHtmlParser.commentMod.default
 import typingsSlinky.nodeHtmlParser.htmlMod.KeyAttributes
-import typingsSlinky.nodeHtmlParser.textMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("node-html-parser", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  def default(data: String): HTMLElementvalidboolean = js.native
-  def default(data: String, options: PartialOptions): HTMLElementvalidboolean = js.native
-  def default(data: String, options: PartialOptionsnoFixfalse): HTMLElementvalidboolean = js.native
-  def default(data: String, options: PartialOptionsnoFixtrue): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | typingsSlinky.nodeHtmlParser.textMod.default) with Valid = js.native
-  @JSName("default")
-  def default_Intersection(data: String): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | default) with Valid = js.native
-  
-  def parse(data: String): HTMLElementvalidboolean = js.native
-  def parse(data: String, options: PartialOptions): HTMLElementvalidboolean = js.native
-  def parse(data: String, options: PartialOptionsnoFixfalse): HTMLElementvalidboolean = js.native
-  def parse(data: String, options: PartialOptionsnoFixtrue): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | default) with Valid = js.native
-  @JSName("parse")
-  def parse_Intersection(data: String): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | default) with Valid = js.native
-  
+  @JSImport("node-html-parser", JSImport.Default)
   @js.native
-  class CommentNode protected ()
-    extends typingsSlinky.nodeHtmlParser.commentMod.default {
+  def default(data: String): HTMLElementvalidboolean = js.native
+  @JSImport("node-html-parser", JSImport.Default)
+  @js.native
+  def default(data: String, options: PartialOptions): HTMLElementvalidboolean = js.native
+  @JSImport("node-html-parser", JSImport.Default)
+  @js.native
+  def default(data: String, options: PartialOptionsnoFixfalse): HTMLElementvalidboolean = js.native
+  @JSImport("node-html-parser", JSImport.Default)
+  @js.native
+  def default(data: String, options: PartialOptionsnoFixtrue): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | typingsSlinky.nodeHtmlParser.textMod.default) with Valid = js.native
+  
+  @JSImport("node-html-parser", "CommentNode")
+  @js.native
+  class CommentNode protected () extends default {
     def this(rawText: String) = this()
   }
   
+  @JSImport("node-html-parser", "HTMLElement")
   @js.native
   class HTMLElement protected ()
     extends typingsSlinky.nodeHtmlParser.htmlMod.default {
@@ -61,12 +60,14 @@ object mod extends js.Object {
     ) = this()
   }
   
+  @JSImport("node-html-parser", "Node")
   @js.native
   abstract class Node ()
-    extends typingsSlinky.nodeHtmlParser.nodeMod.Node
+    extends typingsSlinky.nodeHtmlParser.nodeMod.default
   
+  @JSImport("node-html-parser", "NodeType")
   @js.native
-  object NodeType extends js.Object {
+  object NodeType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.nodeHtmlParser.typeMod.NodeType with Double] = js.native
@@ -78,8 +79,30 @@ object mod extends js.Object {
     /* 3 */ val TEXT_NODE: typingsSlinky.nodeHtmlParser.typeMod.NodeType.TEXT_NODE with Double = js.native
   }
   
+  @JSImport("node-html-parser", "TextNode")
   @js.native
-  class TextNode protected () extends default {
+  class TextNode protected ()
+    extends typingsSlinky.nodeHtmlParser.textMod.default {
     def this(rawText: String) = this()
   }
+  
+  @JSImport("node-html-parser", JSImport.Default)
+  @js.native
+  def default_Intersection(data: String): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | typingsSlinky.nodeHtmlParser.textMod.default) with Valid = js.native
+  
+  @JSImport("node-html-parser", "parse")
+  @js.native
+  def parse(data: String): HTMLElementvalidboolean = js.native
+  @JSImport("node-html-parser", "parse")
+  @js.native
+  def parse(data: String, options: PartialOptions): HTMLElementvalidboolean = js.native
+  @JSImport("node-html-parser", "parse")
+  @js.native
+  def parse(data: String, options: PartialOptionsnoFixfalse): HTMLElementvalidboolean = js.native
+  @JSImport("node-html-parser", "parse")
+  @js.native
+  def parse(data: String, options: PartialOptionsnoFixtrue): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | typingsSlinky.nodeHtmlParser.textMod.default) with Valid = js.native
+  @JSImport("node-html-parser", "parse")
+  @js.native
+  def parse_Intersection(data: String): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | typingsSlinky.nodeHtmlParser.textMod.default) with Valid = js.native
 }

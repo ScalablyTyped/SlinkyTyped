@@ -84,6 +84,7 @@ import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,7 +93,7 @@ object StepButton {
   
   @JSImport("@material-ui/core", "StepButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -276,16 +277,16 @@ object StepButton {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttonRefRefObject(value: ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
+    def buttonRef(value: Ref[_] | ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def buttonRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("buttonRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def buttonRef(value: Ref[_] | ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
+    def buttonRefNull: this.type = set("buttonRef", null)
     
     @scala.inline
-    def buttonRefNull: this.type = set("buttonRef", null)
+    def buttonRefRefObject(value: ReactRef[_]): this.type = set("buttonRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def centerRipple(value: Boolean): this.type = set("centerRipple", value.asInstanceOf[js.Any])
@@ -303,13 +304,13 @@ object StepButton {
     def completed(value: Boolean): this.type = set("completed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentFunctionComponent(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def component(value: ReactType[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def componentFunctionComponent(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -327,10 +328,10 @@ object StepButton {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -384,13 +385,13 @@ object StepButton {
     def hrefLang(value: String): this.type = set("hrefLang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: StepButtonIcon): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconNull: this.type = set("icon", null)
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -399,16 +400,16 @@ object StepButton {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -684,10 +685,10 @@ object StepButton {
     def onWheel(value: SyntheticWheelEvent[HTMLElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def optionalReactElement(value: ReactElement): this.type = set("optional", value.asInstanceOf[js.Any])
+    def optional(value: ReactElement): this.type = set("optional", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def optional(value: ReactElement): this.type = set("optional", value.asInstanceOf[js.Any])
+    def optionalReactElement(value: ReactElement): this.type = set("optional", value.asInstanceOf[js.Any])
     
     @scala.inline
     def orientation(value: Orientation): this.type = set("orientation", value.asInstanceOf[js.Any])
@@ -762,16 +763,16 @@ object StepButton {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StepButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StepButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StepButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

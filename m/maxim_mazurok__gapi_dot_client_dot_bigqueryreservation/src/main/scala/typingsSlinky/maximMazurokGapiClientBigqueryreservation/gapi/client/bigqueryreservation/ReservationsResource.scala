@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.ReservationId
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReservationsResource extends js.Object {
+trait ReservationsResource extends StObject {
   
   var assignments: AssignmentsResource = js.native
   

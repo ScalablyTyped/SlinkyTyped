@@ -85,6 +85,7 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -93,7 +94,7 @@ object MenuItem {
   
   @JSImport("rc-menu/es/MenuItem", "MenuItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -289,10 +290,10 @@ object MenuItem {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -334,13 +335,13 @@ object MenuItem {
     def itemID(value: String): this.type = set("itemID", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemIconReactElement(value: ReactElement): this.type = set("itemIcon", value.asInstanceOf[js.Any])
+    def itemIcon(value: RenderIconType): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def itemIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("itemIcon", js.Any.fromFunction1(value))
     
     @scala.inline
-    def itemIcon(value: RenderIconType): this.type = set("itemIcon", value.asInstanceOf[js.Any])
+    def itemIconReactElement(value: ReactElement): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def itemProp(value: String): this.type = set("itemProp", value.asInstanceOf[js.Any])
@@ -616,13 +617,13 @@ object MenuItem {
     def onWheel(value: SyntheticWheelEvent[HTMLLIElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def parentMenuElement(value: Element): this.type = set("parentMenu", value.asInstanceOf[js.Any])
+    def parentMenu(value: ReactInstance): this.type = set("parentMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
     def parentMenuComponent(value: ReactComponentClass[js.Any]): this.type = set("parentMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def parentMenu(value: ReactInstance): this.type = set("parentMenu", value.asInstanceOf[js.Any])
+    def parentMenuElement(value: Element): this.type = set("parentMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -652,10 +653,10 @@ object MenuItem {
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
+    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
     
     @scala.inline
     def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
@@ -691,7 +692,7 @@ object MenuItem {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MenuItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

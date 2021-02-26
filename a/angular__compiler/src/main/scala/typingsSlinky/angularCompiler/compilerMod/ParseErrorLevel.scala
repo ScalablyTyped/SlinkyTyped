@@ -1,12 +1,13 @@
 package typingsSlinky.angularCompiler.compilerMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/compiler", "ParseErrorLevel")
 @js.native
-object ParseErrorLevel extends js.Object {
+object ParseErrorLevel extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.angularCompiler.srcParseUtilMod.ParseErrorLevel with Double] = js.native

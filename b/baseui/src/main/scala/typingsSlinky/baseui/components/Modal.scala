@@ -11,6 +11,7 @@ import typingsSlinky.baseui.baseuiStrings.dialog
 import typingsSlinky.baseui.baseuiStrings.full
 import typingsSlinky.baseui.modalMod.ModalOverrides
 import typingsSlinky.baseui.modalMod.ModalProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object Modal {
   
   @JSImport("baseui/modal", "Modal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,7 +61,7 @@ object Modal {
     def unstable_ModalBackdropScroll(value: Boolean): this.type = set("unstable_ModalBackdropScroll", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Modal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

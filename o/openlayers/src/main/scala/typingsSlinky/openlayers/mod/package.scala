@@ -1,5 +1,6 @@
 package typingsSlinky.openlayers
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -144,4 +145,7 @@ package object mod {
   type WFSFeatureCollectionMetadata = typingsSlinky.openlayers.mod.GlobalObject
   
   type WFSTransactionResponse = typingsSlinky.openlayers.mod.GlobalObject
+  
+  @scala.inline
+  def inherits(childCtor: js.Function0[_], parentCtor: js.Function0[_]): scala.Unit = (typingsSlinky.openlayers.mod.^.asInstanceOf[js.Dynamic].applyDynamic("inherits")(childCtor.asInstanceOf[js.Any], parentCtor.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
 }

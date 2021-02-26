@@ -1,13 +1,14 @@
 package typingsSlinky.winrtUwp.Windows.UI.Notifications
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Updates a badge overlay on the specific tile that the updater is bound to. */
 @js.native
-trait BadgeUpdater extends js.Object {
+trait BadgeUpdater extends StObject {
   
   /** Removes the badge from the tile that the updater is bound to. */
   def clear(): Unit = js.native

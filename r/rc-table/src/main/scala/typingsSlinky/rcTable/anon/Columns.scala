@@ -14,12 +14,13 @@ import typingsSlinky.rcTable.interfaceMod.TriggerEventHandler
 import typingsSlinky.rcTable.rcTableStrings.ltr
 import typingsSlinky.rcTable.rcTableStrings.rtl
 import typingsSlinky.std.Set
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Columns[RecordType] extends js.Object {
+trait Columns[RecordType] extends StObject {
   
   var children: js.UndefOr[ReactElement] = js.native
   
@@ -59,84 +60,72 @@ object Columns {
   }
   
   @scala.inline
-  implicit class ColumnsOps[Self <: Columns[_], RecordType] (val x: Self with Columns[RecordType]) extends AnyVal {
+  implicit class ColumnsMutableBuilder[Self <: Columns[_], RecordType] (val x: Self with Columns[RecordType]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChildren(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChildrenReactElement(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
     
     @scala.inline
-    def setExpandable(value: Boolean): Self = this.set("expandable", value.asInstanceOf[js.Any])
+    def setColumns(value: ColumnsType[RecordType]): Self = StObject.set(x, "columns", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExpandedKeys(value: Set[Key]): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
+    def setColumnsUndefined: Self = StObject.set(x, "columns", js.undefined)
     
     @scala.inline
-    def setGetRowKey(value: (RecordType, /* index */ js.UndefOr[Double]) => Key): Self = this.set("getRowKey", js.Any.fromFunction2(value))
+    def setColumnsVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): Self = StObject.set(x, "columns", js.Array(value :_*))
     
     @scala.inline
-    def setOnTriggerExpand(value: (RecordType, /* event */ SyntheticMouseEvent[HTMLElement]) => Unit): Self = this.set("onTriggerExpand", js.Any.fromFunction2(value))
+    def setDirection(value: ltr | rtl): Self = StObject.set(x, "direction", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setDirectionUndefined: Self = StObject.set(x, "direction", js.undefined)
     
     @scala.inline
-    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setExpandIcon(value: /* props */ RenderExpandIconProps[RecordType] => ReactElement): Self = StObject.set(x, "expandIcon", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
+    def setExpandIconColumnIndex(value: Double): Self = StObject.set(x, "expandIconColumnIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColumnsVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): Self = this.set("columns", js.Array(value :_*))
+    def setExpandIconColumnIndexUndefined: Self = StObject.set(x, "expandIconColumnIndex", js.undefined)
     
     @scala.inline
-    def setColumns(value: ColumnsType[RecordType]): Self = this.set("columns", value.asInstanceOf[js.Any])
+    def setExpandIconUndefined: Self = StObject.set(x, "expandIcon", js.undefined)
     
     @scala.inline
-    def deleteColumns: Self = this.set("columns", js.undefined)
+    def setExpandRowByClick(value: Boolean): Self = StObject.set(x, "expandRowByClick", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDirection(value: ltr | rtl): Self = this.set("direction", value.asInstanceOf[js.Any])
+    def setExpandRowByClickUndefined: Self = StObject.set(x, "expandRowByClick", js.undefined)
     
     @scala.inline
-    def deleteDirection: Self = this.set("direction", js.undefined)
+    def setExpandable(value: Boolean): Self = StObject.set(x, "expandable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExpandIcon(value: /* props */ RenderExpandIconProps[RecordType] => ReactElement): Self = this.set("expandIcon", js.Any.fromFunction1(value))
+    def setExpandedKeys(value: Set[Key]): Self = StObject.set(x, "expandedKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteExpandIcon: Self = this.set("expandIcon", js.undefined)
+    def setGetRowKey(value: (RecordType, /* index */ js.UndefOr[Double]) => Key): Self = StObject.set(x, "getRowKey", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setExpandIconColumnIndex(value: Double): Self = this.set("expandIconColumnIndex", value.asInstanceOf[js.Any])
+    def setOnTriggerExpand(value: (RecordType, /* event */ SyntheticMouseEvent[HTMLElement]) => Unit): Self = StObject.set(x, "onTriggerExpand", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteExpandIconColumnIndex: Self = this.set("expandIconColumnIndex", js.undefined)
+    def setPrefixCls(value: String): Self = StObject.set(x, "prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExpandRowByClick(value: Boolean): Self = this.set("expandRowByClick", value.asInstanceOf[js.Any])
+    def setPrefixClsUndefined: Self = StObject.set(x, "prefixCls", js.undefined)
     
     @scala.inline
-    def deleteExpandRowByClick: Self = this.set("expandRowByClick", js.undefined)
+    def setRowExpandable(value: /* record */ RecordType => Boolean): Self = StObject.set(x, "rowExpandable", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
-    
-    @scala.inline
-    def setRowExpandable(value: /* record */ RecordType => Boolean): Self = this.set("rowExpandable", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteRowExpandable: Self = this.set("rowExpandable", js.undefined)
+    def setRowExpandableUndefined: Self = StObject.set(x, "rowExpandable", js.undefined)
   }
 }

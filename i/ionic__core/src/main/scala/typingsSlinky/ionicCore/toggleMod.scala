@@ -6,14 +6,14 @@ import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import typingsSlinky.ionicCore.toggleInterfaceMod.ToggleChangeEventDetail
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/toggle/toggle", JSImport.Namespace)
-@js.native
-object toggleMod extends js.Object {
+object toggleMod {
   
+  @JSImport("@ionic/core/dist/types/components/toggle/toggle", "Toggle")
   @js.native
   class Toggle () extends ComponentInterface {
     

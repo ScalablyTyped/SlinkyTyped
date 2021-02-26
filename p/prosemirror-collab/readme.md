@@ -10,9 +10,9 @@ Collaborative editing for ProseMirror
 | ------------------ | :-------------: |
 | Full name          | prosemirror-collab |
 | Keywords           | - |
-| # releases         | 7 |
-| # dependents       | 13 |
-| # downloads        | 774000 |
+| # releases         | 5 |
+| # dependents       | 33 |
+| # downloads        | 2405936 |
 | # stars            | 0 |
 
 ## Links

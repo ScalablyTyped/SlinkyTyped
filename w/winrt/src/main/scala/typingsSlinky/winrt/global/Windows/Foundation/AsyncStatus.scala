@@ -1,12 +1,13 @@
 package typingsSlinky.winrt.global.Windows.Foundation
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Windows.Foundation.AsyncStatus")
 @js.native
-object AsyncStatus extends js.Object {
+object AsyncStatus extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Foundation.AsyncStatus with Double] = js.native

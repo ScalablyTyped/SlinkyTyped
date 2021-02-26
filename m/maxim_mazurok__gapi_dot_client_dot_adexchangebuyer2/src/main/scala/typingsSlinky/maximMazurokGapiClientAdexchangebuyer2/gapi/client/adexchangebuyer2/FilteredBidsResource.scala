@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.gapi.client.adexcha
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAdexchangebuyer2.anon.FilterSetName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FilteredBidsResource extends js.Object {
+trait FilteredBidsResource extends StObject {
   
   var creatives: CreativesResource = js.native
   

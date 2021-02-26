@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAnalytics.anon.AltFieldsKey
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.FieldsKeyOauthtoken
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.Maxresults
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebpropertiesResource extends js.Object {
+trait WebpropertiesResource extends StObject {
   
   /** Gets a web property to which the user has access. */
   def get(): Request[Webproperty] = js.native

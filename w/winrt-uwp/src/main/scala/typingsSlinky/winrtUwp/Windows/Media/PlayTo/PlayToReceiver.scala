@@ -14,13 +14,14 @@ import typingsSlinky.winrtUwp.winrtUwpStrings.sourcechangerequested
 import typingsSlinky.winrtUwp.winrtUwpStrings.stoprequested
 import typingsSlinky.winrtUwp.winrtUwpStrings.timeupdaterequested
 import typingsSlinky.winrtUwp.winrtUwpStrings.volumechangerequested
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a Play To target. */
 @js.native
-trait PlayToReceiver extends js.Object {
+trait PlayToReceiver extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

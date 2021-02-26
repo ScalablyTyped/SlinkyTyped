@@ -1,11 +1,12 @@
 package typingsSlinky.nodeForge.mod.pki
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait KeyPair extends js.Object {
+trait KeyPair extends StObject {
   
   var privateKey: PrivateKey = js.native
   
@@ -20,30 +21,18 @@ object KeyPair {
   }
   
   @scala.inline
-  implicit class KeyPairOps[Self <: KeyPair] (val x: Self) extends AnyVal {
+  implicit class KeyPairMutableBuilder[Self <: KeyPair] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setPrivateKey(value: PrivateKey): Self = StObject.set(x, "privateKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setPrivateKeyUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "privateKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setPublicKey(value: PublicKey): Self = StObject.set(x, "publicKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPrivateKeyUint8Array(value: js.typedarray.Uint8Array): Self = this.set("privateKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPrivateKey(value: PrivateKey): Self = this.set("privateKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPublicKeyUint8Array(value: js.typedarray.Uint8Array): Self = this.set("publicKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPublicKey(value: PublicKey): Self = this.set("publicKey", value.asInstanceOf[js.Any])
+    def setPublicKeyUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "publicKey", value.asInstanceOf[js.Any])
   }
 }

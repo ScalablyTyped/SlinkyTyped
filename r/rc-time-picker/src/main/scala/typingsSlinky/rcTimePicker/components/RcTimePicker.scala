@@ -7,6 +7,7 @@ import typingsSlinky.moment.mod.Moment
 import typingsSlinky.rcTimePicker.anon.Open
 import typingsSlinky.rcTimePicker.anon.PartialTimePickerProps
 import typingsSlinky.rcTimePicker.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object RcTimePicker {
   
   @JSImport("rc-time-picker", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +33,10 @@ object RcTimePicker {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def clearText(value: String): this.type = set("clearText", value.asInstanceOf[js.Any])
@@ -74,10 +75,10 @@ object RcTimePicker {
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputIconReactElement(value: ReactElement): this.type = set("inputIcon", value.asInstanceOf[js.Any])
+    def inputIcon(value: ReactElement): this.type = set("inputIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputIcon(value: ReactElement): this.type = set("inputIcon", value.asInstanceOf[js.Any])
+    def inputIconReactElement(value: ReactElement): this.type = set("inputIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
@@ -131,7 +132,7 @@ object RcTimePicker {
     def value(value: Moment): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PartialTimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RcTimePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PartialTimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

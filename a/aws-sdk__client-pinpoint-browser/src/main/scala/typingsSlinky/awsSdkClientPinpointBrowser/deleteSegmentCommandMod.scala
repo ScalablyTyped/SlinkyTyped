@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteSegmentInputMod.Dele
 import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteSegmentOutputMod.DeleteSegmentOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteSegmentCommand", JSImport.Namespace)
-@js.native
-object deleteSegmentCommandMod extends js.Object {
+object deleteSegmentCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteSegmentCommand", "DeleteSegmentCommand")
   @js.native
   class DeleteSegmentCommand protected () extends Command[
           InputTypesUnion, 

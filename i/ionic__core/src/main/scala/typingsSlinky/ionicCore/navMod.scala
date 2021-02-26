@@ -11,14 +11,14 @@ import typingsSlinky.ionicCore.navInterfaceMod.NavComponentWithProps
 import typingsSlinky.ionicCore.navInterfaceMod.NavOptions
 import typingsSlinky.ionicCore.navInterfaceMod.TransitionDoneFn
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/nav/nav", JSImport.Namespace)
-@js.native
-object navMod extends js.Object {
+object navMod {
   
+  @JSImport("@ionic/core/dist/types/components/nav/nav", "Nav")
   @js.native
   class Nav () extends NavOutlet {
     
@@ -257,6 +257,84 @@ object navMod extends js.Object {
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
+    def insert(insertIndex: Double, component: HTMLElement): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: js.UndefOr[scala.Nothing],
+      opts: js.UndefOr[scala.Nothing],
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: js.UndefOr[scala.Nothing],
+      opts: Null,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: js.UndefOr[scala.Nothing],
+      opts: NavOptions
+    ): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: js.UndefOr[scala.Nothing],
+      opts: NavOptions,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: Null,
+      opts: js.UndefOr[scala.Nothing],
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: Null,
+      opts: Null,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def insert(insertIndex: Double, component: HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: Null,
+      opts: NavOptions,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def insert(insertIndex: Double, component: HTMLElement, componentProps: ComponentProps[HTMLElement]): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
+      opts: js.UndefOr[scala.Nothing],
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
+      opts: Null,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
+      opts: NavOptions
+    ): js.Promise[Boolean] = js.native
+    def insert(
+      insertIndex: Double,
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
+      opts: NavOptions,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
     def insert(
       insertIndex: Double,
       component: Null,
@@ -402,84 +480,6 @@ object navMod extends js.Object {
       insertIndex: Double,
       component: typingsSlinky.ionicCore.viewControllerMod.ViewController,
       componentProps: ComponentProps[typingsSlinky.ionicCore.viewControllerMod.ViewController],
-      opts: NavOptions,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def insert(insertIndex: Double, component: HTMLElement): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: js.UndefOr[scala.Nothing],
-      opts: js.UndefOr[scala.Nothing],
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: js.UndefOr[scala.Nothing],
-      opts: Null,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: js.UndefOr[scala.Nothing],
-      opts: NavOptions
-    ): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: js.UndefOr[scala.Nothing],
-      opts: NavOptions,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: Null,
-      opts: js.UndefOr[scala.Nothing],
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: Null,
-      opts: Null,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def insert(insertIndex: Double, component: HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: Null,
-      opts: NavOptions,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def insert(insertIndex: Double, component: HTMLElement, componentProps: ComponentProps[HTMLElement]): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: ComponentProps[HTMLElement],
-      opts: js.UndefOr[scala.Nothing],
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: ComponentProps[HTMLElement],
-      opts: Null,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: ComponentProps[HTMLElement],
-      opts: NavOptions
-    ): js.Promise[Boolean] = js.native
-    def insert(
-      insertIndex: Double,
-      component: HTMLElement,
-      componentProps: ComponentProps[HTMLElement],
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
@@ -688,6 +688,55 @@ object navMod extends js.Object {
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement): js.Promise[Boolean] = js.native
+    def push(
+      component: HTMLElement,
+      componentProps: js.UndefOr[scala.Nothing],
+      opts: js.UndefOr[scala.Nothing],
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def push(
+      component: HTMLElement,
+      componentProps: js.UndefOr[scala.Nothing],
+      opts: Null,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: js.UndefOr[scala.Nothing], opts: NavOptions): js.Promise[Boolean] = js.native
+    def push(
+      component: HTMLElement,
+      componentProps: js.UndefOr[scala.Nothing],
+      opts: NavOptions,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def push(
+      component: HTMLElement,
+      componentProps: Null,
+      opts: js.UndefOr[scala.Nothing],
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: Null, opts: Null, done: TransitionDoneFn): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: Null, opts: NavOptions, done: TransitionDoneFn): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: ComponentProps[HTMLElement]): js.Promise[Boolean] = js.native
+    def push(
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
+      opts: js.UndefOr[scala.Nothing],
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def push(
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
+      opts: Null,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def push(component: HTMLElement, componentProps: ComponentProps[HTMLElement], opts: NavOptions): js.Promise[Boolean] = js.native
+    def push(
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
+      opts: NavOptions,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
     def push(
       component: Null,
       componentProps: js.UndefOr[scala.Nothing],
@@ -787,55 +836,6 @@ object navMod extends js.Object {
     def push(
       component: typingsSlinky.ionicCore.viewControllerMod.ViewController,
       componentProps: ComponentProps[typingsSlinky.ionicCore.viewControllerMod.ViewController],
-      opts: NavOptions,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def push(component: HTMLElement): js.Promise[Boolean] = js.native
-    def push(
-      component: HTMLElement,
-      componentProps: js.UndefOr[scala.Nothing],
-      opts: js.UndefOr[scala.Nothing],
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def push(
-      component: HTMLElement,
-      componentProps: js.UndefOr[scala.Nothing],
-      opts: Null,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def push(component: HTMLElement, componentProps: js.UndefOr[scala.Nothing], opts: NavOptions): js.Promise[Boolean] = js.native
-    def push(
-      component: HTMLElement,
-      componentProps: js.UndefOr[scala.Nothing],
-      opts: NavOptions,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def push(
-      component: HTMLElement,
-      componentProps: Null,
-      opts: js.UndefOr[scala.Nothing],
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def push(component: HTMLElement, componentProps: Null, opts: Null, done: TransitionDoneFn): js.Promise[Boolean] = js.native
-    def push(component: HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
-    def push(component: HTMLElement, componentProps: Null, opts: NavOptions, done: TransitionDoneFn): js.Promise[Boolean] = js.native
-    def push(component: HTMLElement, componentProps: ComponentProps[HTMLElement]): js.Promise[Boolean] = js.native
-    def push(
-      component: HTMLElement,
-      componentProps: ComponentProps[HTMLElement],
-      opts: js.UndefOr[scala.Nothing],
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def push(
-      component: HTMLElement,
-      componentProps: ComponentProps[HTMLElement],
-      opts: Null,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def push(component: HTMLElement, componentProps: ComponentProps[HTMLElement], opts: NavOptions): js.Promise[Boolean] = js.native
-    def push(
-      component: HTMLElement,
-      componentProps: ComponentProps[HTMLElement],
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
@@ -1003,6 +1003,55 @@ object navMod extends js.Object {
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement): js.Promise[Boolean] = js.native
+    def setRoot(
+      component: HTMLElement,
+      componentProps: js.UndefOr[scala.Nothing],
+      opts: js.UndefOr[scala.Nothing],
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def setRoot(
+      component: HTMLElement,
+      componentProps: js.UndefOr[scala.Nothing],
+      opts: Null,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: js.UndefOr[scala.Nothing], opts: NavOptions): js.Promise[Boolean] = js.native
+    def setRoot(
+      component: HTMLElement,
+      componentProps: js.UndefOr[scala.Nothing],
+      opts: NavOptions,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def setRoot(
+      component: HTMLElement,
+      componentProps: Null,
+      opts: js.UndefOr[scala.Nothing],
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: Null, opts: Null, done: TransitionDoneFn): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: Null, opts: NavOptions, done: TransitionDoneFn): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: ComponentProps[HTMLElement]): js.Promise[Boolean] = js.native
+    def setRoot(
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
+      opts: js.UndefOr[scala.Nothing],
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def setRoot(
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
+      opts: Null,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
+    def setRoot(component: HTMLElement, componentProps: ComponentProps[HTMLElement], opts: NavOptions): js.Promise[Boolean] = js.native
+    def setRoot(
+      component: HTMLElement,
+      componentProps: ComponentProps[HTMLElement],
+      opts: NavOptions,
+      done: TransitionDoneFn
+    ): js.Promise[Boolean] = js.native
     def setRoot(
       component: Null,
       componentProps: js.UndefOr[scala.Nothing],
@@ -1102,55 +1151,6 @@ object navMod extends js.Object {
     def setRoot(
       component: typingsSlinky.ionicCore.viewControllerMod.ViewController,
       componentProps: ComponentProps[typingsSlinky.ionicCore.viewControllerMod.ViewController],
-      opts: NavOptions,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def setRoot(component: HTMLElement): js.Promise[Boolean] = js.native
-    def setRoot(
-      component: HTMLElement,
-      componentProps: js.UndefOr[scala.Nothing],
-      opts: js.UndefOr[scala.Nothing],
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def setRoot(
-      component: HTMLElement,
-      componentProps: js.UndefOr[scala.Nothing],
-      opts: Null,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def setRoot(component: HTMLElement, componentProps: js.UndefOr[scala.Nothing], opts: NavOptions): js.Promise[Boolean] = js.native
-    def setRoot(
-      component: HTMLElement,
-      componentProps: js.UndefOr[scala.Nothing],
-      opts: NavOptions,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def setRoot(
-      component: HTMLElement,
-      componentProps: Null,
-      opts: js.UndefOr[scala.Nothing],
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def setRoot(component: HTMLElement, componentProps: Null, opts: Null, done: TransitionDoneFn): js.Promise[Boolean] = js.native
-    def setRoot(component: HTMLElement, componentProps: Null, opts: NavOptions): js.Promise[Boolean] = js.native
-    def setRoot(component: HTMLElement, componentProps: Null, opts: NavOptions, done: TransitionDoneFn): js.Promise[Boolean] = js.native
-    def setRoot(component: HTMLElement, componentProps: ComponentProps[HTMLElement]): js.Promise[Boolean] = js.native
-    def setRoot(
-      component: HTMLElement,
-      componentProps: ComponentProps[HTMLElement],
-      opts: js.UndefOr[scala.Nothing],
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def setRoot(
-      component: HTMLElement,
-      componentProps: ComponentProps[HTMLElement],
-      opts: Null,
-      done: TransitionDoneFn
-    ): js.Promise[Boolean] = js.native
-    def setRoot(component: HTMLElement, componentProps: ComponentProps[HTMLElement], opts: NavOptions): js.Promise[Boolean] = js.native
-    def setRoot(
-      component: HTMLElement,
-      componentProps: ComponentProps[HTMLElement],
       opts: NavOptions,
       done: TransitionDoneFn
     ): js.Promise[Boolean] = js.native

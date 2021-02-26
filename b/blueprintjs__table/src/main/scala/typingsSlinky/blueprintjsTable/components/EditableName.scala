@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsTable.editableNameMod.IEditableNameProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object EditableName {
   
   @JSImport("@blueprintjs/table", "EditableName")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,7 +42,7 @@ object EditableName {
     def onConfirm(value: (/* value */ String, /* columnIndex */ js.UndefOr[Double]) => Unit): this.type = set("onConfirm", js.Any.fromFunction2(value))
   }
   
-  def withProps(p: IEditableNameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: EditableName.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IEditableNameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -5,12 +5,13 @@ import typingsSlinky.express.mod.RequestHandler
 import typingsSlinky.express.mod.Router
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SwaggerMiddleware extends js.Object {
+trait SwaggerMiddleware extends StObject {
   
   /**
     * Handles CORS preflight requests and sets CORS headers for all requests according the Swagger API definition.

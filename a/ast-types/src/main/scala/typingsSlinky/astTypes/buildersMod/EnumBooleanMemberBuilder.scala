@@ -4,12 +4,13 @@ import typingsSlinky.astTypes.anon.IdInit
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.EnumBooleanMember
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EnumBooleanMemberBuilder extends js.Object {
+trait EnumBooleanMemberBuilder extends StObject {
   
   def apply(id: IdentifierKind, init: Boolean): EnumBooleanMember = js.native
   def apply(id: IdentifierKind, init: LiteralKind): EnumBooleanMember = js.native

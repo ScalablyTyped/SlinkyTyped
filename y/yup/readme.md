@@ -3,24 +3,6 @@
 
 Typings are for version 0.29
 
-## Library description:
-Dead simple Object schema validation
-
-|                    |                 |
-| ------------------ | :-------------: |
-| Full name          | yup |
-| Keywords           | - |
-| # releases         | 18 |
-| # dependents       | 441 |
-| # downloads        | 41360490 |
-| # stars            | 4 |
-
-## Links
-- [Homepage](https://github.com/jquense/yup)
-- [Bugs](https://github.com/jquense/yup/issues)
-- [Repository](https://github.com/jquense/yup)
-- [Npm](https://www.npmjs.com/package/yup)
-    
 
 
 ## Note

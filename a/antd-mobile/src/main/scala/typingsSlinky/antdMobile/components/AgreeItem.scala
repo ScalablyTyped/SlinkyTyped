@@ -6,6 +6,7 @@ import typingsSlinky.antdMobile.agreeItemMod.AgreeItemPropsType
 import typingsSlinky.antdMobile.agreeItemMod.default
 import typingsSlinky.antdMobile.checkboxPropsTypeMod.OnChangeParams
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object AgreeItem {
   
   @JSImport("antd-mobile/lib/checkbox/AgreeItem", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,7 +50,7 @@ object AgreeItem {
     def wrapLabel(value: Boolean): this.type = set("wrapLabel", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AgreeItemPropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: AgreeItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AgreeItemPropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

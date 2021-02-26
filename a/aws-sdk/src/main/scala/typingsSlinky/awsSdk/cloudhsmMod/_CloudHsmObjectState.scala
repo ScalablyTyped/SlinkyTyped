@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.cloudhsmMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _CloudHsmObjectState extends js.Object
+trait _CloudHsmObjectState extends StObject

@@ -1,11 +1,12 @@
 package typingsSlinky.echarts.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EdgeLength extends js.Object {
+trait EdgeLength extends StObject {
   
   /**
     * The distance between 2 nodes on edge.
@@ -109,60 +110,48 @@ object EdgeLength {
   }
   
   @scala.inline
-  implicit class EdgeLengthOps[Self <: EdgeLength] (val x: Self) extends AnyVal {
+  implicit class EdgeLengthMutableBuilder[Self <: EdgeLength] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setEdgeLength(value: js.Array[_] | Double): Self = StObject.set(x, "edgeLength", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setEdgeLengthUndefined: Self = StObject.set(x, "edgeLength", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setEdgeLengthVarargs(value: js.Any*): Self = StObject.set(x, "edgeLength", js.Array(value :_*))
     
     @scala.inline
-    def setEdgeLengthVarargs(value: js.Any*): Self = this.set("edgeLength", js.Array(value :_*))
+    def setFriction(value: Double): Self = StObject.set(x, "friction", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEdgeLength(value: js.Array[_] | Double): Self = this.set("edgeLength", value.asInstanceOf[js.Any])
+    def setFrictionUndefined: Self = StObject.set(x, "friction", js.undefined)
     
     @scala.inline
-    def deleteEdgeLength: Self = this.set("edgeLength", js.undefined)
+    def setGravity(value: Double): Self = StObject.set(x, "gravity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFriction(value: Double): Self = this.set("friction", value.asInstanceOf[js.Any])
+    def setGravityUndefined: Self = StObject.set(x, "gravity", js.undefined)
     
     @scala.inline
-    def deleteFriction: Self = this.set("friction", js.undefined)
+    def setInitLayout(value: String): Self = StObject.set(x, "initLayout", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGravity(value: Double): Self = this.set("gravity", value.asInstanceOf[js.Any])
+    def setInitLayoutUndefined: Self = StObject.set(x, "initLayout", js.undefined)
     
     @scala.inline
-    def deleteGravity: Self = this.set("gravity", js.undefined)
+    def setLayoutAnimation(value: Boolean): Self = StObject.set(x, "layoutAnimation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInitLayout(value: String): Self = this.set("initLayout", value.asInstanceOf[js.Any])
+    def setLayoutAnimationUndefined: Self = StObject.set(x, "layoutAnimation", js.undefined)
     
     @scala.inline
-    def deleteInitLayout: Self = this.set("initLayout", js.undefined)
+    def setRepulsion(value: js.Array[_] | Double): Self = StObject.set(x, "repulsion", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLayoutAnimation(value: Boolean): Self = this.set("layoutAnimation", value.asInstanceOf[js.Any])
+    def setRepulsionUndefined: Self = StObject.set(x, "repulsion", js.undefined)
     
     @scala.inline
-    def deleteLayoutAnimation: Self = this.set("layoutAnimation", js.undefined)
-    
-    @scala.inline
-    def setRepulsionVarargs(value: js.Any*): Self = this.set("repulsion", js.Array(value :_*))
-    
-    @scala.inline
-    def setRepulsion(value: js.Array[_] | Double): Self = this.set("repulsion", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRepulsion: Self = this.set("repulsion", js.undefined)
+    def setRepulsionVarargs(value: js.Any*): Self = StObject.set(x, "repulsion", js.Array(value :_*))
   }
 }

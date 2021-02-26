@@ -2,6 +2,7 @@ package typingsSlinky.ejWebAll.global.ej
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,22 +11,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Rotator protected ()
   extends typingsSlinky.ejWebAll.ej.Rotator {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Rotator.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Rotator.Model) = this()
+  def this(element: JQuery) = this()
+  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Model) = this()
+  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Model) = this()
 }
-/* static members */
-@JSGlobal("ej.Rotator")
-@js.native
-object Rotator extends js.Object {
+object Rotator {
   
-  var Locale: js.Any = js.native
-  
-  var fn: typingsSlinky.ejWebAll.ej.Rotator = js.native
-  
+  @JSGlobal("ej.Rotator")
   @js.native
-  object PagerPosition extends js.Object {
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSGlobal("ej.Rotator.Locale")
+  @js.native
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("ej.Rotator.PagerPosition")
+  @js.native
+  object PagerPosition extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Rotator.PagerPosition with Double] = js.native
@@ -42,4 +48,11 @@ object Rotator extends js.Object {
     
     /* 5 */ val TopRight: typingsSlinky.ejWebAll.ej.Rotator.PagerPosition.TopRight with Double = js.native
   }
+  
+  /* static member */
+  @JSGlobal("ej.Rotator.fn")
+  @js.native
+  def fn: typingsSlinky.ejWebAll.ej.Rotator = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.Rotator): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

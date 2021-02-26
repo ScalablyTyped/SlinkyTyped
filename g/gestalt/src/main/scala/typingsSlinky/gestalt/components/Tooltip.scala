@@ -9,15 +9,22 @@ import typingsSlinky.gestalt.gestaltStrings.right
 import typingsSlinky.gestalt.gestaltStrings.up
 import typingsSlinky.gestalt.mod.Indexable
 import typingsSlinky.gestalt.mod.TooltipProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tooltip {
   
+  @scala.inline
+  def apply(text: String): Builder = {
+    val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
+  }
+  
   @JSImport("gestalt", "Tooltip")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,20 +38,14 @@ object Tooltip {
     def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def linkReactElement(value: ReactElement): this.type = set("link", value.asInstanceOf[js.Any])
+    def link(value: ReactElement): this.type = set("link", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def link(value: ReactElement): this.type = set("link", value.asInstanceOf[js.Any])
+    def linkReactElement(value: ReactElement): this.type = set("link", value.asInstanceOf[js.Any])
     
     @scala.inline
     def zIndex(value: Indexable): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(text: String): Builder = {
-    val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
-  }
 }

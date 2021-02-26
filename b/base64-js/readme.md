@@ -10,9 +10,9 @@ Base64 encoding/decoding in pure JS
 | ------------------ | :-------------: |
 | Full name          | base64-js |
 | Keywords           | base64 |
-| # releases         | 5 |
-| # dependents       | 467 |
-| # downloads        | 485621107 |
+| # releases         | 4 |
+| # dependents       | 675 |
+| # downloads        | 823066260 |
 | # stars            | 21 |
 
 ## Links

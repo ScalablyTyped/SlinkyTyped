@@ -10,9 +10,9 @@ Vision, and Face Intelligence with Project Oxford
 | ------------------ | :-------------: |
 | Full name          | project-oxford |
 | Keywords           | - |
-| # releases         | 3 |
+| # releases         | 0 |
 | # dependents       | 0 |
-| # downloads        | 24385 |
+| # downloads        | 18757 |
 | # stars            | 5 |
 
 ## Links

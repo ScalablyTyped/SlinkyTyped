@@ -1,12 +1,13 @@
 package typingsSlinky.chromeApps.anon
 
 import typingsSlinky.chromeApps.chrome.enterprise.platformKeys.Token
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofplatformKeys extends js.Object {
+trait TypeofplatformKeys extends StObject {
   
   /**
     * @since Chrome 50.

@@ -8,15 +8,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactLazylog.lazyLogMod.LazyLogProps
 import typingsSlinky.reactLazylog.lazyLogMod.WebsocketOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object LazyLog {
   
+  @scala.inline
+  def apply(url: String): Builder = {
+    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LazyLogProps]))
+  }
+  
   @JSImport("react-lazylog", "LazyLog")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -48,13 +55,13 @@ object LazyLog {
     def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def highlightVarargs(value: Double*): this.type = set("highlight", js.Array(value :_*))
-    
-    @scala.inline
     def highlight(value: Double | js.Array[Double]): this.type = set("highlight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def highlightLineClassName(value: String): this.type = set("highlightLineClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def highlightVarargs(value: Double*): this.type = set("highlight", js.Array(value :_*))
     
     @scala.inline
     def lineClassName(value: String): this.type = set("lineClassName", value.asInstanceOf[js.Any])
@@ -103,10 +110,4 @@ object LazyLog {
   }
   
   def withProps(p: LazyLogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(url: String): Builder = {
-    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[LazyLogProps]))
-  }
 }

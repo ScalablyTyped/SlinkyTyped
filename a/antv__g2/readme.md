@@ -9,14 +9,14 @@ the Grammar of Graphics in Javascript
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @antv/g2 |
-| Keywords           | g2, chart |
-| # releases         | 119 |
-| # dependents       | 63 |
-| # downloads        | 1157373 |
+| Keywords           | antv, g2, visualization, chart, grammar, graphics, interaction |
+| # releases         | 131 |
+| # dependents       | 132 |
+| # downloads        | 2542995 |
 | # stars            | 2 |
 
 ## Links
-- [Homepage](https://github.com/antvis/g2)
+- [Homepage](https://g2.antv.vision)
 - [Bugs](https://github.com/antvis/g2/issues)
 - [Repository](https://github.com/antvis/g2)
 - [Npm](https://www.npmjs.com/package/%40antv%2Fg2)

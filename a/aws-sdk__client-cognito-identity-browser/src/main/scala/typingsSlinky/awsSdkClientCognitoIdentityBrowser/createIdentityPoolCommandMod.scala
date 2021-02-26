@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesCreateIdentityPoolI
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesCreateIdentityPoolOutputMod.CreateIdentityPoolOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity-browser/commands/CreateIdentityPoolCommand", JSImport.Namespace)
-@js.native
-object createIdentityPoolCommandMod extends js.Object {
+object createIdentityPoolCommandMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity-browser/commands/CreateIdentityPoolCommand", "CreateIdentityPoolCommand")
   @js.native
   class CreateIdentityPoolCommand protected () extends Command[
           InputTypesUnion, 

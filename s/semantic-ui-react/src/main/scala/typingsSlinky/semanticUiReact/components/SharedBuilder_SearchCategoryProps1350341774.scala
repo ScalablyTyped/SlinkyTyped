@@ -7,6 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.searchCategoryMod.SearchCategoryProps
 import typingsSlinky.semanticUiReact.searchResultMod.SearchResultProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,10 +27,10 @@ class SharedBuilder_SearchCategoryProps1350341774 (val args: js.Array[js.Any])
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
   def layoutRenderer(value: (/* categoryContent */ ReactElement, /* resultsContent */ ReactElement) => ReactElement): this.type = set("layoutRenderer", js.Any.fromFunction2(value))
@@ -41,8 +42,8 @@ class SharedBuilder_SearchCategoryProps1350341774 (val args: js.Array[js.Any])
   def renderer(value: /* props */ SearchCategoryProps => ReactElement): this.type = set("renderer", js.Any.fromFunction1(value))
   
   @scala.inline
-  def resultsVarargs(value: ReactComponentClass[SearchResultProps]*): this.type = set("results", js.Array(value :_*))
+  def results(value: js.Array[ReactComponentClass[SearchResultProps]]): this.type = set("results", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def results(value: js.Array[ReactComponentClass[SearchResultProps]]): this.type = set("results", value.asInstanceOf[js.Any])
+  def resultsVarargs(value: ReactComponentClass[SearchResultProps]*): this.type = set("results", js.Array(value :_*))
 }

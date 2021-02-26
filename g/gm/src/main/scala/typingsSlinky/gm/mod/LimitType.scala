@@ -1,5 +1,6 @@
 package typingsSlinky.gm.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gm.gmStrings.pixels
   - typingsSlinky.gm.gmStrings.threads
 */
-trait LimitType extends js.Object
+trait LimitType extends StObject
 object LimitType {
   
   @scala.inline

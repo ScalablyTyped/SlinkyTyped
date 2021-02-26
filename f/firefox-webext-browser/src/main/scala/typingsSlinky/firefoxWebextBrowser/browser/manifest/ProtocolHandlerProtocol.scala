@@ -1,5 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,7 +32,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.wtai
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.xmpp
 */
-trait ProtocolHandlerProtocol extends js.Object
+trait ProtocolHandlerProtocol extends StObject
 object ProtocolHandlerProtocol {
   
   @scala.inline

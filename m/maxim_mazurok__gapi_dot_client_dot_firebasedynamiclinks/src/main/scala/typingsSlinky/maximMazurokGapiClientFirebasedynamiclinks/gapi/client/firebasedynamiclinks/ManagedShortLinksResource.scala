@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientFirebasedynamiclinks.gapi.client.fir
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientFirebasedynamiclinks.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientFirebasedynamiclinks.anon.Alt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ManagedShortLinksResource extends js.Object {
+trait ManagedShortLinksResource extends StObject {
   
   /**
     * Creates a managed short Dynamic Link given either a valid long Dynamic Link or details such as Dynamic Link domain, Android and iOS app information. The created short Dynamic Link

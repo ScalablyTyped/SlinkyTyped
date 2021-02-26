@@ -2,6 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -46,27 +47,15 @@ object FetchResource {
   }
   
   @scala.inline
-  implicit class FetchResourceOps[Self <: FetchResource] (val x: Self) extends AnyVal {
+  implicit class FetchResourceMutableBuilder[Self <: FetchResource] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCreated(value: js.Date): Self = StObject.set(x, "created", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setResource(value: PortalItemResource): Self = StObject.set(x, "resource", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setCreated(value: js.Date): Self = this.set("created", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setResource(value: PortalItemResource): Self = this.set("resource", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setSize(value: Double): Self = StObject.set(x, "size", value.asInstanceOf[js.Any])
   }
 }

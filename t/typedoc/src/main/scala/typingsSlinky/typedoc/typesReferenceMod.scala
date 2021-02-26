@@ -2,19 +2,22 @@ package typingsSlinky.typedoc
 
 import typingsSlinky.typedoc.componentsMod.TypeNodeConverter
 import typingsSlinky.typedoc.contextMod.Context
+import typingsSlinky.typedoc.converterConverterMod.Converter
 import typingsSlinky.typedoc.modelsTypesMod.Type
 import typingsSlinky.typescript.mod.TypeReference
 import typingsSlinky.typescript.mod.TypeReferenceNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/converter/types/reference", JSImport.Namespace)
-@js.native
-object typesReferenceMod extends js.Object {
+object typesReferenceMod {
   
+  @JSImport("typedoc/dist/lib/converter/types/reference", "ReferenceConverter")
   @js.native
-  class ReferenceConverter () extends TypeNodeConverter[TypeReference, TypeReferenceNode] {
+  class ReferenceConverter protected () extends TypeNodeConverter[TypeReference, TypeReferenceNode] {
+    def this(owner: js.Symbol) = this()
+    def this(owner: Converter) = this()
     
     var convertLiteral: js.Any = js.native
     

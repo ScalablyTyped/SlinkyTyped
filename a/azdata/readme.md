@@ -12,7 +12,7 @@ The azdata NPM module provides Azure Data Studio extension authors tools to writ
 | Keywords           | - |
 | # releases         | 3 |
 | # dependents       | 0 |
-| # downloads        | 1172 |
+| # downloads        | 1766 |
 | # stars            | 0 |
 
 ## Links

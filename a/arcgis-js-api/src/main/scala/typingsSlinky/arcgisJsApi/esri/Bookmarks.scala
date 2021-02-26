@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bookmark-edit`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bookmark-select`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`select-bookmark`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

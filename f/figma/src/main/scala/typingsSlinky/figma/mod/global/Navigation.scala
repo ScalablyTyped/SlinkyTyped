@@ -1,5 +1,6 @@
 package typingsSlinky.figma.mod.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.figma.figmaStrings.SWAP
   - typingsSlinky.figma.figmaStrings.OVERLAY
 */
-trait Navigation extends js.Object
+trait Navigation extends StObject
 object Navigation {
   
   @scala.inline

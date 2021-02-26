@@ -1,11 +1,11 @@
 package typingsSlinky.ionicCore.componentsMod.global
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.ionicCore.componentsMod.Components.IonSkeletonText
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.HTMLStencilElement
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,10 +25,7 @@ trait HTMLIonSkeletonTextElement
   /* InferMemberOverrides */
   override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
-  override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
-  /* InferMemberOverrides */
   override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: EventListenerOptions): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
 }
-@JSGlobal("HTMLIonSkeletonTextElement")
-@js.native
-object HTMLIonSkeletonTextElement extends Instantiable0[HTMLIonSkeletonTextElement]

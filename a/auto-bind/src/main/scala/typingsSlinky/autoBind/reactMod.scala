@@ -2,13 +2,12 @@ package typingsSlinky.autoBind
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.autoBind.mod.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("auto-bind/react", JSImport.Namespace)
-@js.native
-object reactMod extends js.Object {
+object reactMod {
   
   /**
   Same as `autoBind`, but excludes the default [React component methods](https://reactjs.org/docs/react-component.html).
@@ -25,6 +24,10 @@ object reactMod extends js.Object {
   }
   ```
   */
+  @JSImport("auto-bind/react", JSImport.Namespace)
+  @js.native
   def apply[SelfType /* <: ReactComponentClass[js.Object] */](self: SelfType): SelfType = js.native
+  @JSImport("auto-bind/react", JSImport.Namespace)
+  @js.native
   def apply[SelfType /* <: ReactComponentClass[js.Object] */](self: SelfType, options: Options): SelfType = js.native
 }

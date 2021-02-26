@@ -3,18 +3,22 @@
 
 Typings are for version 1.0.0-rc.7
 
-
+## Library description:
+[![NPM version](https://img.shields.io/npm/v/@aws-sdk/middleware-content-length/latest.svg)](https://www.npmjs.com/package/@aws-sdk/middleware-content-length) [![NPM downloads](https://img.shields.io/npm/dm/@aws-sdk/middleware-content-length.svg)](https:/
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/middleware-content-length |
 | Keywords           | - |
-| # releases         | 11 |
-| # dependents       | 556 |
-| # downloads        | 37877 |
+| # releases         | 42 |
+| # dependents       | 249 |
+| # downloads        | 7017417 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/aws/aws-sdk-js-v3/tree/main/packages/middleware-content-length)
+- [Bugs](https://github.com/aws/aws-sdk-js-v3/issues)
+- [Repository](https://github.com/aws/aws-sdk-js-v3)
 - [Npm](https://www.npmjs.com/package/%40aws-sdk%2Fmiddleware-content-length)
     
 

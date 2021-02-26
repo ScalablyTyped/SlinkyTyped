@@ -10,9 +10,9 @@ Serverless plugin for test driven development using Jest
 | ------------------ | :-------------: |
 | Full name          | serverless-jest-plugin |
 | Keywords           | - |
-| # releases         | 4 |
-| # dependents       | 2 |
-| # downloads        | 164787 |
+| # releases         | 2 |
+| # dependents       | 1 |
+| # downloads        | 431224 |
 | # stars            | 0 |
 
 ## Links

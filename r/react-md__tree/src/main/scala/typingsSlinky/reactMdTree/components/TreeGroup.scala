@@ -74,15 +74,22 @@ import typingsSlinky.reactMdTree.reactMdTreeStrings.tree
 import typingsSlinky.reactMdTree.reactMdTreeStrings.url
 import typingsSlinky.reactMdTree.reactMdTreeStrings.vertical
 import typingsSlinky.reactMdTree.reactMdTreeStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TreeGroup {
   
+  @scala.inline
+  def apply(collapsed: Boolean): Builder = {
+    val __props = js.Dynamic.literal(collapsed = collapsed.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PickTreeGroupPropshiddenc]))
+  }
+  
   @JSImport("@react-md/tree", "TreeGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -275,10 +282,10 @@ object TreeGroup {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dense(value: Boolean): this.type = set("dense", value.asInstanceOf[js.Any])
@@ -906,10 +913,4 @@ object TreeGroup {
   }
   
   def withProps(p: PickTreeGroupPropshiddenc): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(collapsed: Boolean): Builder = {
-    val __props = js.Dynamic.literal(collapsed = collapsed.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PickTreeGroupPropshiddenc]))
-  }
 }

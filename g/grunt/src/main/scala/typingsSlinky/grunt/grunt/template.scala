@@ -1,15 +1,14 @@
 package typingsSlinky.grunt.grunt
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("grunt.template")
-@js.native
-object template extends js.Object {
+object template {
   
   @js.native
-  trait TemplateModule extends js.Object {
+  trait TemplateModule extends StObject {
     
     /**
       * Add a named set of Lo-Dash template delimiters.
@@ -29,10 +28,10 @@ object template extends js.Object {
     def date(date: js.UndefOr[scala.Nothing], format: String): String = js.native
     def date(date: String): String = js.native
     def date(date: String, format: String): String = js.native
-    def date(date: Double): String = js.native
-    def date(date: Double, format: String): String = js.native
     def date(date: js.Date): String = js.native
     def date(date: js.Date, format: String): String = js.native
+    def date(date: Double): String = js.native
+    def date(date: Double, format: String): String = js.native
     
     /**
       * Process a Lo-Dash template string.

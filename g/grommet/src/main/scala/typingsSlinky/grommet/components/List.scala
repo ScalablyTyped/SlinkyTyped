@@ -84,15 +84,16 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object List {
   
-  @JSImport("grommet/es6", "List")
+  @JSImport("grommet", "List")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -273,10 +274,10 @@ object List {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def backgroundVarargs(value: String*): this.type = set("background", js.Array(value :_*))
+    def background(value: String | js.Array[String] | Light): this.type = set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def background(value: String | js.Array[String] | Light): this.type = set("background", value.asInstanceOf[js.Any])
+    def backgroundVarargs(value: String*): this.type = set("background", js.Array(value :_*))
     
     @scala.inline
     def border(value: BorderType): this.type = set("border", value.asInstanceOf[js.Any])
@@ -297,10 +298,10 @@ object List {
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: (js.Object | String)*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[js.Object | String]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[js.Object | String]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: (js.Object | String)*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
@@ -309,10 +310,10 @@ object List {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -612,10 +613,10 @@ object List {
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def primaryKeyFunction1(value: /* item */ js.Any => ReactElement): this.type = set("primaryKey", js.Any.fromFunction1(value))
+    def primaryKey(value: String | (js.Function1[/* item */ js.Any, ReactElement])): this.type = set("primaryKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def primaryKey(value: String | (js.Function1[/* item */ js.Any, ReactElement])): this.type = set("primaryKey", value.asInstanceOf[js.Any])
+    def primaryKeyFunction1(value: /* item */ js.Any => ReactElement): this.type = set("primaryKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -633,10 +634,10 @@ object List {
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def secondaryKeyFunction1(value: /* item */ js.Any => ReactElement): this.type = set("secondaryKey", js.Any.fromFunction1(value))
+    def secondaryKey(value: String | (js.Function1[/* item */ js.Any, ReactElement])): this.type = set("secondaryKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def secondaryKey(value: String | (js.Function1[/* item */ js.Any, ReactElement])): this.type = set("secondaryKey", value.asInstanceOf[js.Any])
+    def secondaryKeyFunction1(value: /* item */ js.Any => ReactElement): this.type = set("secondaryKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
@@ -678,7 +679,7 @@ object List {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ListProps with (DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement])): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: List.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ListProps with (DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement])): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

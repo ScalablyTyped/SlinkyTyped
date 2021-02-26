@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeSwipeout.mod.SwipeoutButtonProperties
 import typingsSlinky.reactNativeSwipeout.mod.SwipeoutProperties
 import typingsSlinky.reactNativeSwipeout.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object ReactNativeSwipeout {
   
   @JSImport("react-native-swipeout", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +37,10 @@ object ReactNativeSwipeout {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftVarargs(value: SwipeoutButtonProperties*): this.type = set("left", js.Array(value :_*))
+    def left(value: js.Array[SwipeoutButtonProperties]): this.type = set("left", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def left(value: js.Array[SwipeoutButtonProperties]): this.type = set("left", value.asInstanceOf[js.Any])
+    def leftVarargs(value: SwipeoutButtonProperties*): this.type = set("left", js.Array(value :_*))
     
     @scala.inline
     def onClose(value: (/* sectionId */ Double, /* rowId */ Double, /* direction */ String) => Unit): this.type = set("onClose", js.Any.fromFunction3(value))
@@ -54,10 +55,10 @@ object ReactNativeSwipeout {
     def openRight(value: Boolean): this.type = set("openRight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightVarargs(value: SwipeoutButtonProperties*): this.type = set("right", js.Array(value :_*))
+    def right(value: js.Array[SwipeoutButtonProperties]): this.type = set("right", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def right(value: js.Array[SwipeoutButtonProperties]): this.type = set("right", value.asInstanceOf[js.Any])
+    def rightVarargs(value: SwipeoutButtonProperties*): this.type = set("right", js.Array(value :_*))
     
     @scala.inline
     def rowId(value: Double): this.type = set("rowId", value.asInstanceOf[js.Any])
@@ -75,7 +76,7 @@ object ReactNativeSwipeout {
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SwipeoutProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeSwipeout.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SwipeoutProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

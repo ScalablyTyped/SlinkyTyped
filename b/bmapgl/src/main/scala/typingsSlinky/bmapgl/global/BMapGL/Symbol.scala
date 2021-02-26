@@ -2,6 +2,7 @@ package typingsSlinky.bmapgl.global.BMapGL
 
 import typingsSlinky.bmapgl.BMapGL.SymbolOptions
 import typingsSlinky.bmapgl.BMapGL.SymbolShapeType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

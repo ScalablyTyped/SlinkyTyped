@@ -10,9 +10,9 @@ JavaScript library for working with recurrence rules for calendar dates.
 | ------------------ | :-------------: |
 | Full name          | rrule |
 | Keywords           | dates, recurrences, calendar, icalendar, rfc |
-| # releases         | 24 |
-| # dependents       | 66 |
-| # downloads        | 2116175 |
+| # releases         | 6 |
+| # dependents       | 113 |
+| # downloads        | 4518128 |
 | # stars            | 9 |
 
 ## Links

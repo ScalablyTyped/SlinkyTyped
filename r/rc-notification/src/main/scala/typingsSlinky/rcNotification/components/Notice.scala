@@ -10,15 +10,22 @@ import typingsSlinky.rcNotification.noticeMod.NoticeProps
 import typingsSlinky.rcNotification.noticeMod.default
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Notice {
   
+  @scala.inline
+  def apply(noticeKey: Key, prefixCls: String): Builder = {
+    val __props = js.Dynamic.literal(noticeKey = noticeKey.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[NoticeProps]))
+  }
+  
   @JSImport("rc-notification/es/Notice", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +39,10 @@ object Notice {
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
@@ -63,10 +70,4 @@ object Notice {
   }
   
   def withProps(p: NoticeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(noticeKey: Key, prefixCls: String): Builder = {
-    val __props = js.Dynamic.literal(noticeKey = noticeKey.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[NoticeProps]))
-  }
 }

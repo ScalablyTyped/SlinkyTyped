@@ -12,15 +12,22 @@ import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.mini
 import typingsSlinky.baseui.comboboxMod.ComboboxOverrides
 import typingsSlinky.baseui.comboboxMod.PropsT
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Combobox {
   
+  @scala.inline
+  def apply(mapOptionToString: js.Any => String, options: js.Any, value: String): Builder = {
+    val __props = js.Dynamic.literal(mapOptionToString = js.Any.fromFunction1(mapOptionToString), options = options.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsT[js.Any]]))
+  }
+  
   @JSImport("baseui/combobox", "Combobox")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -62,10 +69,4 @@ object Combobox {
   }
   
   def withProps(p: PropsT[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(mapOptionToString: js.Any => String, options: js.Any, value: String): Builder = {
-    val __props = js.Dynamic.literal(mapOptionToString = js.Any.fromFunction1(mapOptionToString), options = options.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PropsT[js.Any]]))
-  }
 }

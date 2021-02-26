@@ -10,9 +10,9 @@ Convert an object's keys to snake case
 | ------------------ | :-------------: |
 | Full name          | snakecase-keys |
 | Keywords           | snake, case, camel, keys, object |
-| # releases         | 6 |
-| # dependents       | 39 |
-| # downloads        | 5643317 |
+| # releases         | 7 |
+| # dependents       | 70 |
+| # downloads        | 11865090 |
 | # stars            | 1 |
 
 ## Links

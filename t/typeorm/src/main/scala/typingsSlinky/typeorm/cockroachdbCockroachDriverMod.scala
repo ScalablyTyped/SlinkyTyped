@@ -8,14 +8,14 @@ import typingsSlinky.typeorm.connectionConnectionMod.Connection
 import typingsSlinky.typeorm.driverDriverMod.Driver
 import typingsSlinky.typeorm.metadataEntityMetadataMod.EntityMetadata
 import typingsSlinky.typeorm.queryRunnerQueryRunnerMod.QueryRunner
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/driver/cockroachdb/CockroachDriver", JSImport.Namespace)
-@js.native
-object cockroachdbCockroachDriverMod extends js.Object {
+object cockroachdbCockroachDriverMod {
   
+  @JSImport("typeorm/driver/cockroachdb/CockroachDriver", "CockroachDriver")
   @js.native
   class CockroachDriver protected () extends Driver {
     def this(connection: Connection) = this()

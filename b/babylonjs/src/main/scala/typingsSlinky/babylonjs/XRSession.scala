@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.babylonjs.anon.PlaneDetectionState
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.DOMHighResTimeStamp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 // They are intended for use with either Babylon Native https://github.com/BabylonJS/BabylonNative or
 // Babylon React Native: https://github.com/BabylonJS/BabylonReactNative
 @js.native
-trait XRSession extends js.Object {
+trait XRSession extends StObject {
   
   def addEventListener(`type`: XREventType, listener: XREventHandler): Unit = js.native
   def addEventListener(`type`: XREventType, listener: XREventHandler, options: Boolean): Unit = js.native
@@ -74,8 +75,8 @@ trait XRSession extends js.Object {
   var onvisibilitychange_Original: XREventHandler = js.native
   
   def removeEventListener(`type`: XREventType, listener: XREventHandler): Unit = js.native
-  def removeEventListener(`type`: XREventType, listener: XREventHandler, options: Boolean): Unit = js.native
   def removeEventListener(`type`: XREventType, listener: XREventHandler, options: EventListenerOptions): Unit = js.native
+  def removeEventListener(`type`: XREventType, listener: XREventHandler, options: Boolean): Unit = js.native
   
   /**
     * object which contains options affecting how the imagery is rendered.

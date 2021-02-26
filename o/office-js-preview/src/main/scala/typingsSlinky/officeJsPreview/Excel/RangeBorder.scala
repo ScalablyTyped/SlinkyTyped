@@ -26,6 +26,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.None
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.SlantDashDot
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Thick
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Thin
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

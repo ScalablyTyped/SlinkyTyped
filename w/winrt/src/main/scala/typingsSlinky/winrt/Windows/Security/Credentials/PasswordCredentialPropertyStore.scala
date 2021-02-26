@@ -3,14 +3,14 @@ package typingsSlinky.winrt.Windows.Security.Credentials
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrt.Windows.Foundation.Collections.IKeyValuePair
 import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
-import typingsSlinky.winrt.Windows.Foundation.Collections.IObservableMap
+import typingsSlinky.winrt.Windows.Foundation.Collections.IPropertySet
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PasswordCredentialPropertyStore
-  extends IObservableMap[String, js.Any]
+trait PasswordCredentialPropertyStore extends IPropertySet
 object PasswordCredentialPropertyStore {
   
   @scala.inline

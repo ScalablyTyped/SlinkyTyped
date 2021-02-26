@@ -10,9 +10,9 @@ Create api documentation for TypeScript projects.
 | ------------------ | :-------------: |
 | Full name          | typedoc |
 | Keywords           | typescript, documentation, generator |
-| # releases         | 35 |
-| # dependents       | 193 |
-| # downloads        | 7051595 |
+| # releases         | 113 |
+| # dependents       | 344 |
+| # downloads        | 13851191 |
 | # stars            | 16 |
 
 ## Links

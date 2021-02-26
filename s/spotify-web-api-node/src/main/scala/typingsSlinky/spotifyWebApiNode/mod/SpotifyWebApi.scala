@@ -52,12 +52,13 @@ import typingsSlinky.spotifyApi.SpotifyApi.UsersSavedAlbumsResponse
 import typingsSlinky.spotifyApi.SpotifyApi.UsersSavedTracksResponse
 import typingsSlinky.spotifyApi.SpotifyApi.UsersTopArtistsResponse
 import typingsSlinky.spotifyApi.SpotifyApi.UsersTopTracksResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SpotifyWebApi extends js.Object {
+trait SpotifyWebApi extends StObject {
   
   def addToMySavedAlbums(albumIds: js.Array[String]): js.Promise[Response[SaveAlbumsForUserResponse]] = js.native
   /**

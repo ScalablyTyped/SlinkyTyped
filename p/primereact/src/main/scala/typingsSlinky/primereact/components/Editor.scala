@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.HtmlValue
 import typingsSlinky.primereact.anon.OldRange
 import typingsSlinky.primereact.editorMod.EditorProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Editor {
   
   @JSImport("primereact/editor", "Editor")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,10 +26,10 @@ object Editor {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def formatsVarargs(value: js.Any*): this.type = set("formats", js.Array(value :_*))
+    def formats(value: js.Array[_]): this.type = set("formats", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def formats(value: js.Array[_]): this.type = set("formats", value.asInstanceOf[js.Any])
+    def formatsVarargs(value: js.Any*): this.type = set("formats", js.Array(value :_*))
     
     @scala.inline
     def headerTemplate(value: ReactElement): this.type = set("headerTemplate", value.asInstanceOf[js.Any])
@@ -61,7 +62,7 @@ object Editor {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: EditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Editor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: EditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -68,12 +68,13 @@ import typingsSlinky.lodash.mod.__
 import typingsSlinky.lodash.mod.isMatchWithCustomizer
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LoDashFp extends js.Object {
+trait LoDashFp extends StObject {
   
   def F(): `false` = js.native
   @JSName("F")
@@ -4844,17 +4845,17 @@ trait LoDashFp extends js.Object {
   def replace(pattern: java.lang.String, replacement: ReplaceFunction): LodashReplace1x3 = js.native
   def replace(pattern: java.lang.String, replacement: ReplaceFunction, string: java.lang.String): java.lang.String = js.native
   def replace(pattern: java.lang.String, replacement: __, string: java.lang.String): LodashReplace1x5 = js.native
-  def replace(pattern: __, replacement: java.lang.String): LodashReplace1x2 = js.native
-  def replace(pattern: __, replacement: java.lang.String, string: java.lang.String): LodashReplace1x6 = js.native
-  def replace(pattern: __, replacement: ReplaceFunction): LodashReplace1x2 = js.native
-  def replace(pattern: __, replacement: ReplaceFunction, string: java.lang.String): LodashReplace1x6 = js.native
-  def replace(pattern: __, replacement: __, string: java.lang.String): LodashReplace1x4 = js.native
   def replace(pattern: js.RegExp): LodashReplace1x1 = js.native
   def replace(pattern: js.RegExp, replacement: java.lang.String): LodashReplace1x3 = js.native
   def replace(pattern: js.RegExp, replacement: java.lang.String, string: java.lang.String): java.lang.String = js.native
   def replace(pattern: js.RegExp, replacement: ReplaceFunction): LodashReplace1x3 = js.native
   def replace(pattern: js.RegExp, replacement: ReplaceFunction, string: java.lang.String): java.lang.String = js.native
   def replace(pattern: js.RegExp, replacement: __, string: java.lang.String): LodashReplace1x5 = js.native
+  def replace(pattern: __, replacement: java.lang.String): LodashReplace1x2 = js.native
+  def replace(pattern: __, replacement: java.lang.String, string: java.lang.String): LodashReplace1x6 = js.native
+  def replace(pattern: __, replacement: ReplaceFunction): LodashReplace1x2 = js.native
+  def replace(pattern: __, replacement: ReplaceFunction, string: java.lang.String): LodashReplace1x6 = js.native
+  def replace(pattern: __, replacement: __, string: java.lang.String): LodashReplace1x4 = js.native
   @JSName("replace")
   var replace_Original: LodashReplace = js.native
   
@@ -5138,10 +5139,10 @@ trait LoDashFp extends js.Object {
   
   def split(separator: java.lang.String): LodashSplit1x1 = js.native
   def split(separator: java.lang.String, string: java.lang.String): js.Array[java.lang.String] = js.native
-  def split(separator: __): LodashSplit1x2 = js.native
-  def split(separator: __, string: java.lang.String): LodashSplit1x2 = js.native
   def split(separator: js.RegExp): LodashSplit1x1 = js.native
   def split(separator: js.RegExp, string: java.lang.String): js.Array[java.lang.String] = js.native
+  def split(separator: __): LodashSplit1x2 = js.native
+  def split(separator: __, string: java.lang.String): LodashSplit1x2 = js.native
   @JSName("split")
   def split_Array(separator: java.lang.String): js.Array[java.lang.String] = js.native
   @JSName("split")

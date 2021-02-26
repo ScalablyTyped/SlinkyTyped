@@ -1,5 +1,6 @@
 package typingsSlinky.chrome.chrome.input.ime
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chrome.chromeStrings.undo
   - typingsSlinky.chrome.chromeStrings.addToDictionary
 */
-trait AssistiveWindowButton extends js.Object
+trait AssistiveWindowButton extends StObject
 object AssistiveWindowButton {
   
   @scala.inline

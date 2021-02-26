@@ -4,14 +4,14 @@ import typingsSlinky.ionic.angularMod.AngularProject
 import typingsSlinky.ionic.definitionsMod.AngularGenerateOptions
 import typingsSlinky.ionic.libGenerateMod.GenerateRunner
 import typingsSlinky.ionic.libGenerateMod.GenerateRunnerDeps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ionic/lib/project/angular/generate", JSImport.Namespace)
-@js.native
-object angularGenerateMod extends js.Object {
+object angularGenerateMod {
   
+  @JSImport("ionic/lib/project/angular/generate", "AngularGenerateRunner")
   @js.native
   class AngularGenerateRunner protected () extends GenerateRunner[AngularGenerateOptions] {
     def this(e: AngularGenerateRunnerDeps) = this()

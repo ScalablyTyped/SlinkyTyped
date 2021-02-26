@@ -8,15 +8,22 @@ import typingsSlinky.reactNative.reactNativeStrings.butt
 import typingsSlinky.reactNative.reactNativeStrings.miter
 import typingsSlinky.reactNative.reactNativeStrings.round
 import typingsSlinky.reactNative.reactNativeStrings.square
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Shape {
   
+  @scala.inline
+  def apply(d: String): Builder = {
+    val __props = js.Dynamic.literal(d = d.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ARTShapeProps]))
+  }
+  
   @JSImport("react-native", "Shape")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +61,10 @@ object Shape {
     def strokeCap(value: butt | square | round): this.type = set("strokeCap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDashVarargs(value: Double*): this.type = set("strokeDash", js.Array(value :_*))
+    def strokeDash(value: js.Array[Double]): this.type = set("strokeDash", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDash(value: js.Array[Double]): this.type = set("strokeDash", value.asInstanceOf[js.Any])
+    def strokeDashVarargs(value: Double*): this.type = set("strokeDash", js.Array(value :_*))
     
     @scala.inline
     def strokeJoin(value: bevel | miter | round): this.type = set("strokeJoin", value.asInstanceOf[js.Any])
@@ -82,10 +89,4 @@ object Shape {
   }
   
   def withProps(p: ARTShapeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(d: String): Builder = {
-    val __props = js.Dynamic.literal(d = d.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ARTShapeProps]))
-  }
 }

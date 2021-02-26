@@ -1,5 +1,6 @@
 package typingsSlinky.reactNavigation.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNavigation.reactNavigationStrings.light
   - typingsSlinky.reactNavigation.reactNavigationStrings.dark
 */
-trait SupportedThemes extends js.Object
+trait SupportedThemes extends StObject
 object SupportedThemes {
   
   @scala.inline

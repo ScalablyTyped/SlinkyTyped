@@ -2,12 +2,13 @@ package typingsSlinky.vscode.mod
 
 import typingsSlinky.vscode.Thenable
 import typingsSlinky.vscode.anon.UndoStopAfter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TextEditor extends js.Object {
+trait TextEditor extends StObject {
   
   /**
     * The document associated with this text editor. The document will be the same for the entire lifetime of this text editor.

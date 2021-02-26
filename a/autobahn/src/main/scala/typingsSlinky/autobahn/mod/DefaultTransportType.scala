@@ -1,5 +1,6 @@
 package typingsSlinky.autobahn.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.autobahn.autobahnStrings.longpoll
   - typingsSlinky.autobahn.autobahnStrings.rawsocket
 */
-trait DefaultTransportType extends js.Object
+trait DefaultTransportType extends StObject
 object DefaultTransportType {
   
   @scala.inline

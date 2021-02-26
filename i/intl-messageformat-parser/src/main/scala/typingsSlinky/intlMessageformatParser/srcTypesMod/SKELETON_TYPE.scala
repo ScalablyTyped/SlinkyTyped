@@ -2,6 +2,7 @@ package typingsSlinky.intlMessageformatParser.srcTypesMod
 
 import typingsSlinky.intlMessageformatParser.intlMessageformatParserNumbers.`0`
 import typingsSlinky.intlMessageformatParser.intlMessageformatParserNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.intlMessageformatParser.intlMessageformatParserNumbers.`0`
   - typingsSlinky.intlMessageformatParser.intlMessageformatParserNumbers.`1`
 */
-trait SKELETON_TYPE extends js.Object
+trait SKELETON_TYPE extends StObject
 object SKELETON_TYPE {
   
   @scala.inline

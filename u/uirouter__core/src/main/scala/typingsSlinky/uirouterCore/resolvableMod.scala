@@ -5,18 +5,20 @@ import typingsSlinky.uirouterCore.resolveInterfaceMod.ResolvableLiteral
 import typingsSlinky.uirouterCore.resolveInterfaceMod.ResolvePolicy
 import typingsSlinky.uirouterCore.stateObjectMod.StateObject
 import typingsSlinky.uirouterCore.transitionTransitionMod.Transition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/resolve/resolvable", JSImport.Namespace)
-@js.native
-object resolvableMod extends js.Object {
+object resolvableMod {
   
-  var defaultResolvePolicy: ResolvePolicy = js.native
+  @JSImport("@uirouter/core/lib/resolve/resolvable", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-  - typingsSlinky.uirouterCore.stateInterfaceMod.ResolveTypes because Already inherited */ @js.native
+  - typingsSlinky.uirouterCore.stateInterfaceMod.ResolveTypes because Already inherited */ @JSImport("@uirouter/core/lib/resolve/resolvable", "Resolvable")
+  @js.native
   class Resolvable protected () extends ResolvableLiteral {
     /** This constructor creates a Resolvable copy */
     def this(resolvable: Resolvable) = this()
@@ -100,9 +102,16 @@ object resolvableMod extends js.Object {
     var resolved: Boolean = js.native
   }
   /* static members */
-  @js.native
-  object Resolvable extends js.Object {
+  object Resolvable {
     
+    @JSImport("@uirouter/core/lib/resolve/resolvable", "Resolvable.fromData")
+    @js.native
     def fromData(token: js.Any, data: js.Any): Resolvable = js.native
   }
+  
+  @JSImport("@uirouter/core/lib/resolve/resolvable", "defaultResolvePolicy")
+  @js.native
+  def defaultResolvePolicy: ResolvePolicy = js.native
+  @scala.inline
+  def defaultResolvePolicy_=(x: ResolvePolicy): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultResolvePolicy")(x.asInstanceOf[js.Any])
 }

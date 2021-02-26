@@ -26,7 +26,6 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
@@ -78,6 +77,7 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.storybookTheming.typesMod.Theme
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -86,7 +86,7 @@ object Span {
   
   @JSImport("@storybook/components/dist/html", "Span")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -276,10 +276,10 @@ object Span {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -618,11 +618,9 @@ object Span {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(
-    p: PropsWithChildren[
-      (DetailedHTMLProps[HTMLAttributes[HTMLSpanElement], HTMLSpanElement]) with (Omit[js.Object, theme]) with `0`[Theme]
-    ]
-  ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Span.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(
+    p: (DetailedHTMLProps[HTMLAttributes[HTMLSpanElement], HTMLSpanElement]) with (Omit[js.Object, theme]) with `0`[Theme]
+  ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -2,6 +2,7 @@ package typingsSlinky.webpackEnv
 
 import typingsSlinky.webpackEnv.WebpackModuleApi.NodeProcess
 import typingsSlinky.webpackEnv.WebpackModuleApi.RequireFunction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
 * Declare process variable
 */
-@JSGlobal("NodeJS")
-@js.native
-object NodeJS extends js.Object {
+object NodeJS {
   
   type Module = typingsSlinky.webpackEnv.WebpackModuleApi.Module
   

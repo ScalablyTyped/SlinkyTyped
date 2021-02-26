@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientClassroom.anon.InvitationIdKey
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.InvitedEmailAddress
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.QuotaUserStudentId
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.StudentId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GuardianInvitationsResource extends js.Object {
+trait GuardianInvitationsResource extends StObject {
   
   def create(request: QuotaUserStudentId, body: GuardianInvitation): Request[GuardianInvitation] = js.native
   /**

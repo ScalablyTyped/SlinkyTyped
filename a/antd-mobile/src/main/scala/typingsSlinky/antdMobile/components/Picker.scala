@@ -7,15 +7,22 @@ import typingsSlinky.antdMobile.abstractPickerMod.AbstractPickerProps
 import typingsSlinky.antdMobile.pickerPropsTypeMod.PickerData
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.rmcCascader.cascaderTypesMod.CascaderValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Picker {
   
+  @scala.inline
+  def apply(data: js.Array[js.Array[PickerData] | PickerData]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AbstractPickerProps]))
+  }
+  
   @JSImport("antd-mobile", "Picker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,19 +48,19 @@ object Picker {
     def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement | String): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: ReactElement | String): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dismissTextReactElement(value: ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
+    def dismissText(value: String | ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dismissText(value: String | ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
+    def dismissTextReactElement(value: ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def extra(value: String): this.type = set("extra", value.asInstanceOf[js.Any])
@@ -71,10 +78,10 @@ object Picker {
     def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    def okText(value: String | ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okText(value: String | ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onChange(value: /* date */ js.UndefOr[CascaderValue] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
@@ -119,10 +126,10 @@ object Picker {
     def styles(value: js.Any): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
@@ -131,10 +138,10 @@ object Picker {
     def triggerType(value: String): this.type = set("triggerType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: (String | Double)*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Array[String | Double]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Array[String | Double]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: (String | Double)*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
@@ -144,10 +151,4 @@ object Picker {
   }
   
   def withProps(p: AbstractPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[js.Array[PickerData] | PickerData]): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AbstractPickerProps]))
-  }
 }

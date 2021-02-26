@@ -1,5 +1,6 @@
 package typingsSlinky.elasticsearch.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.elasticsearch.elasticsearchStrings.p
   - typingsSlinky.elasticsearch.elasticsearchStrings.pb
 */
-trait CatBytes extends js.Object
+trait CatBytes extends StObject
 object CatBytes {
   
   @scala.inline

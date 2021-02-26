@@ -75,20 +75,30 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reduxInfiniteScroll.mod.InfiniteScrollerProps
 import typingsSlinky.reduxInfiniteScroll.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReduxInfiniteScroll {
   
+  @scala.inline
+  def apply(loadMore: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(loadMore = js.Any.fromFunction0(loadMore))
+    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteScrollerProps with HTMLProps[HTMLDivElement]]))
+  }
+  
   @JSImport("redux-infinite-scroll", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -303,10 +313,10 @@ object ReduxInfiniteScroll {
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    def children(value: js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def children(value: js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
     
     @scala.inline
     def cite(value: String): this.type = set("cite", value.asInstanceOf[js.Any])
@@ -360,16 +370,13 @@ object ReduxInfiniteScroll {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -474,10 +481,10 @@ object ReduxInfiniteScroll {
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemsVarargs(value: ReactElement*): this.type = set("items", js.Array(value :_*))
+    def items(value: js.Array[ReactElement]): this.type = set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def items(value: js.Array[ReactElement]): this.type = set("items", value.asInstanceOf[js.Any])
+    def itemsVarargs(value: ReactElement*): this.type = set("items", js.Array(value :_*))
     
     @scala.inline
     def keyParams(value: String): this.type = set("keyParams", value.asInstanceOf[js.Any])
@@ -948,10 +955,10 @@ object ReduxInfiniteScroll {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -967,10 +974,4 @@ object ReduxInfiniteScroll {
   }
   
   def withProps(p: InfiniteScrollerProps with HTMLProps[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(loadMore: () => Unit): Builder = {
-    val __props = js.Dynamic.literal(loadMore = js.Any.fromFunction0(loadMore))
-    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteScrollerProps with HTMLProps[HTMLDivElement]]))
-  }
 }

@@ -2,6 +2,7 @@ package typingsSlinky.activexAdodb.ADODB
 
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`-1`
 import typingsSlinky.activexAdodb.activexAdodbNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAdodb.activexAdodbNumbers.`-1`
   - typingsSlinky.activexAdodb.activexAdodbNumbers.`1`
 */
-trait SearchDirection extends js.Object
+trait SearchDirection extends StObject
 object SearchDirection {
   
   @scala.inline

@@ -2,13 +2,14 @@ package typingsSlinky.johnnyFive.mod
 
 import typingsSlinky.johnnyFive.johnnyFiveStrings.change
 import typingsSlinky.johnnyFive.johnnyFiveStrings.data
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("johnny-five", "Sensor")
 @js.native
-class Sensor protected () extends js.Object {
+class Sensor protected () extends StObject {
   def this(option: String) = this()
   def this(option: Double) = this()
   def this(option: SensorOption) = this()

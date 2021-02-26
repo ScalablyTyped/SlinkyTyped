@@ -1,5 +1,6 @@
 package typingsSlinky.scriptableIos.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,10 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 class ContactsGroup ()
   extends typingsSlinky.scriptableIos.ContactsGroup
-/* static members */
-@JSGlobal("ContactsGroup")
-@js.native
-object ContactsGroup extends js.Object {
+object ContactsGroup {
   
   /**
     * _Queues a contacts group to be added._
@@ -38,7 +36,12 @@ object ContactsGroup extends js.Object {
     * @param containerIdentifier - Optional. Identifier of container to add the contacts group to. If null is specified, the group will be added to the default container.
     * @see https://docs.scriptable.app/contactsgroup/#add
     */
+  /* static member */
+  @JSGlobal("ContactsGroup.add")
+  @js.native
   def add(group: typingsSlinky.scriptableIos.ContactsGroup): Unit = js.native
+  @JSGlobal("ContactsGroup.add")
+  @js.native
   def add(group: typingsSlinky.scriptableIos.ContactsGroup, containerIdentifier: String): Unit = js.native
   
   /**
@@ -48,6 +51,9 @@ object ContactsGroup extends js.Object {
     * @param containers - Container to fetch contacts groups from.
     * @see https://docs.scriptable.app/contactsgroup/#all
     */
+  /* static member */
+  @JSGlobal("ContactsGroup.all")
+  @js.native
   def all(containers: js.Array[typingsSlinky.scriptableIos.ContactsContainer]): js.Promise[js.Array[typingsSlinky.scriptableIos.ContactsGroup]] = js.native
   
   /**
@@ -60,6 +66,9 @@ object ContactsGroup extends js.Object {
     * @param group - Contacts group to queue to be deleted.
     * @see https://docs.scriptable.app/contactsgroup/#delete
     */
+  /* static member */
+  @JSGlobal("ContactsGroup.delete")
+  @js.native
   def delete(group: typingsSlinky.scriptableIos.ContactsGroup): Unit = js.native
   
   /**
@@ -73,5 +82,8 @@ object ContactsGroup extends js.Object {
     * @param group - Contacts group to queue to be updated.
     * @see https://docs.scriptable.app/contactsgroup/#update
     */
+  /* static member */
+  @JSGlobal("ContactsGroup.update")
+  @js.native
   def update(group: typingsSlinky.scriptableIos.ContactsGroup): Unit = js.native
 }

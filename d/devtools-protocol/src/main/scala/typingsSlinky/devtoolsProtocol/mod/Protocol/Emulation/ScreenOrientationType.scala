@@ -4,6 +4,7 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.landscapePrimary
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.landscapeSecondary
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.portraitPrimary
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.portraitSecondary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.landscapePrimary
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.landscapeSecondary
 */
-trait ScreenOrientationType extends js.Object
+trait ScreenOrientationType extends StObject
 object ScreenOrientationType {
   
   @scala.inline

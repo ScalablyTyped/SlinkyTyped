@@ -6,12 +6,13 @@ import typingsSlinky.seleniumWebdriver.mod.error.ErrorCodeType
 import typingsSlinky.seleniumWebdriver.mod.error.ErrorData
 import typingsSlinky.seleniumWebdriver.mod.error.MaybeLegacyResponse
 import typingsSlinky.seleniumWebdriver.mod.error.Response
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeoferror extends js.Object {
+trait Typeoferror extends StObject {
   
   /**
     * Indicates a {@linkplain ./webdriver.WebElement#click click command} could

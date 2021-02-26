@@ -18,12 +18,13 @@ import typingsSlinky.activexOffice.Office.SmartArtLayout
 import typingsSlinky.activexOffice.Office.SmartArtLayouts
 import typingsSlinky.activexOffice.Office.SmartArtQuickStyle
 import typingsSlinky.activexOffice.Office.SmartArtQuickStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Application extends js.Object {
+trait Application extends StObject {
   
   def Activate(): Unit = js.native
   

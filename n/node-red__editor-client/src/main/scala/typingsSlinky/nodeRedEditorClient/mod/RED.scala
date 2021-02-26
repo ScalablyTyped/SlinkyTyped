@@ -8,12 +8,13 @@ import typingsSlinky.nodeRedEditorClient.anon.FnCall
 import typingsSlinky.nodeRedEditorClient.mod.global.JQuery
 import typingsSlinky.nodeRedUtil.mod.I18nTFunction
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RED extends js.Object {
+trait RED extends StObject {
   
   // assigned in i18n.js (on init)
   @JSName("_")

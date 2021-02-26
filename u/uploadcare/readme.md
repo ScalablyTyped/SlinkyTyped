@@ -10,9 +10,9 @@ Library for uploadcare.com.
 | ------------------ | :-------------: |
 | Full name          | uploadcare |
 | Keywords           | upload, uploadcare, api, wrapper |
-| # releases         | 2 |
-| # dependents       | 1 |
-| # downloads        | 26695 |
+| # releases         | 0 |
+| # dependents       | 2 |
+| # downloads        | 71718 |
 | # stars            | 1 |
 
 ## Links

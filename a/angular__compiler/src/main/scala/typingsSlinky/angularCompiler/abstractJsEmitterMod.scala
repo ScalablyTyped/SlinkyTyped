@@ -4,14 +4,14 @@ import typingsSlinky.angularCompiler.abstractEmitterMod.AbstractEmitterVisitor
 import typingsSlinky.angularCompiler.abstractEmitterMod.EmitterVisitorContext
 import typingsSlinky.angularCompiler.outputAstMod.CastExpr
 import typingsSlinky.angularCompiler.outputAstMod.DeclareFunctionStmt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/compiler/src/output/abstract_js_emitter", JSImport.Namespace)
-@js.native
-object abstractJsEmitterMod extends js.Object {
+object abstractJsEmitterMod {
   
+  @JSImport("@angular/compiler/src/output/abstract_js_emitter", "AbstractJsEmitterVisitor")
   @js.native
   abstract class AbstractJsEmitterVisitor () extends AbstractEmitterVisitor {
     

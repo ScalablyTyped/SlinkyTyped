@@ -1,6 +1,7 @@
 package typingsSlinky.screeps
 
 import typingsSlinky.screeps.anon.StoreRESOURCEENERGYMinera
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

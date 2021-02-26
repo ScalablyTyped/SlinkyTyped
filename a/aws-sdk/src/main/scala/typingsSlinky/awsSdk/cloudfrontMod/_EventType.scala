@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.cloudfrontMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _EventType extends js.Object
+trait _EventType extends StObject

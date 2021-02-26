@@ -10,15 +10,22 @@ import typingsSlinky.reactD3Graph.mod.GraphLink
 import typingsSlinky.reactD3Graph.mod.GraphNode
 import typingsSlinky.reactD3Graph.mod.GraphProps
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Graph {
   
+  @scala.inline
+  def apply[N /* <: GraphNode */, L /* <: GraphLink */](id: String): Builder[N, L] = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder[N, L](js.Array(this.component, __props.asInstanceOf[GraphProps[N, L]]))
+  }
+  
   @JSImport("react-d3-graph", "Graph")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[N /* <: GraphNode */, L /* <: GraphLink */] (val args: js.Array[js.Any])
@@ -68,10 +75,4 @@ object Graph {
   }
   
   def withProps[N /* <: GraphNode */, L /* <: GraphLink */](p: GraphProps[N, L]): Builder[N, L] = new Builder[N, L](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[N /* <: GraphNode */, L /* <: GraphLink */](id: String): Builder[N, L] = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    new Builder[N, L](js.Array(this.component, __props.asInstanceOf[GraphProps[N, L]]))
-  }
 }

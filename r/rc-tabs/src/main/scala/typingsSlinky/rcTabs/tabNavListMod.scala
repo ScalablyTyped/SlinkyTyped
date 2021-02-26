@@ -1,5 +1,6 @@
 package typingsSlinky.rcTabs
 
+import org.scalablytyped.runtime.Shortcut
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
@@ -16,18 +17,19 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-tabs/es/TabNavList", JSImport.Namespace)
-@js.native
-object tabNavListMod extends js.Object {
+object tabNavListMod extends Shortcut {
   
+  @JSImport("rc-tabs/es/TabNavList", JSImport.Default)
+  @js.native
   val default: ForwardRefExoticComponent[TabNavListProps with RefAttributes[HTMLDivElement]] = js.native
   
   @js.native
-  trait TabNavListProps extends js.Object {
+  trait TabNavListProps extends StObject {
     
     var activeKey: String = js.native
     
@@ -68,4 +70,9 @@ object tabNavListMod extends js.Object {
     
     var tabPosition: TabPosition = js.native
   }
+  
+  type _To = ForwardRefExoticComponent[TabNavListProps with RefAttributes[HTMLDivElement]]
+  
+  /* This means you don't have to write `default`, but can instead just say `tabNavListMod.foo` */
+  override def _to: ForwardRefExoticComponent[TabNavListProps with RefAttributes[HTMLDivElement]] = default
 }

@@ -19,12 +19,13 @@ import typingsSlinky.maximMazurokGapiClientDataflow.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.ReplaceJobId
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.StartTime
 import typingsSlinky.maximMazurokGapiClientDataflow.anon.View
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JobsResource extends js.Object {
+trait JobsResource extends StObject {
   
   /** List the jobs of a project across all regions. */
   def aggregated(): Request[ListJobsResponse] = js.native

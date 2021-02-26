@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.KeyNetworkOauthtoken
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientCompute.anon.NetworkOauthtoken
 import typingsSlinky.maximMazurokGapiClientCompute.anon.NetworkOauthtokenPrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NetworksResource extends js.Object {
+trait NetworksResource extends StObject {
   
   def addPeering(request: KeyNetwork, body: NetworksAddPeeringRequest): Request[Operation] = js.native
   /** Adds a peering to the specified network. */

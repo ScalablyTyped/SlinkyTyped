@@ -6,6 +6,7 @@ import typingsSlinky.wouter.anon.PartialRouterPropschildre
 import typingsSlinky.wouter.matcherMod.DefaultParams
 import typingsSlinky.wouter.matcherMod.Match
 import typingsSlinky.wouter.wouterUseLocationMod.Path
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Router {
   
   @JSImport("wouter", "Router")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,7 +34,7 @@ object Router {
     def matcher(value: (/* pattern */ Path, /* path */ Path) => Match[DefaultParams]): this.type = set("matcher", js.Any.fromFunction2(value))
   }
   
-  def withProps(p: PartialRouterPropschildre): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Router.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PartialRouterPropschildre): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

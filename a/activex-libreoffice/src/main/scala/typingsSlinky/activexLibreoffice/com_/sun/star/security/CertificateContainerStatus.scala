@@ -3,6 +3,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.security
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
 */
-trait CertificateContainerStatus extends js.Object
+trait CertificateContainerStatus extends StObject
 object CertificateContainerStatus {
   
   /** The certificate was not found. */

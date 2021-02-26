@@ -6,14 +6,14 @@ import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.instancedBufferGeometryMod.InstancedBufferGeometry
 import typingsSlinky.three.loaderMod.Loader
 import typingsSlinky.three.loadingManagerMod.LoadingManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/loaders/BufferGeometryLoader", JSImport.Namespace)
-@js.native
-object bufferGeometryLoaderMod extends js.Object {
+object bufferGeometryLoaderMod {
   
+  @JSImport("three/src/loaders/BufferGeometryLoader", "BufferGeometryLoader")
   @js.native
   class BufferGeometryLoader () extends Loader {
     def this(manager: LoadingManager) = this()

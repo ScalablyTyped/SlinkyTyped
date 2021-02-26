@@ -10,9 +10,9 @@ Create accessible tabs to organize data across multiple screens or interactions.
 | ------------------ | :-------------: |
 | Full name          | @react-md/tabs |
 | Keywords           | accessibility, a11y, react-md, material design, react, tab, tabs, component, components |
-| # releases         | 13 |
+| # releases         | 28 |
 | # dependents       | 1 |
-| # downloads        | 1786 |
+| # downloads        | 15803 |
 | # stars            | 0 |
 
 ## Links

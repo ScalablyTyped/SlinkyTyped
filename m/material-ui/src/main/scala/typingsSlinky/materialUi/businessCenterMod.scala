@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/places/business-center", JSImport.Namespace)
-@js.native
-object businessCenterMod extends js.Object {
+object businessCenterMod {
   
+  @JSImport("material-ui/svg-icons/places/business-center", JSImport.Default)
+  @js.native
+  class default () extends PlacesBusinessCenter
+  
+  @JSImport("material-ui/svg-icons/places/business-center", "PlacesBusinessCenter")
   @js.native
   class PlacesBusinessCenter ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

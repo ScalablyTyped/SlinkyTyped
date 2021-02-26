@@ -3,12 +3,13 @@ package typingsSlinky.winrt.Windows.Data.Xml.Dom
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Foundation.Uri
 import typingsSlinky.winrt.Windows.Storage.IStorageFile
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IXmlDocumentStatics extends js.Object {
+trait IXmlDocumentStatics extends StObject {
   
   def loadFromFileAsync(file: IStorageFile): IAsyncOperation[XmlDocument] = js.native
   def loadFromFileAsync(file: IStorageFile, loadSettings: XmlLoadSettings): IAsyncOperation[XmlDocument] = js.native

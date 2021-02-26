@@ -1,6 +1,7 @@
 package typingsSlinky.guacamoleClient.mod
 
 import typingsSlinky.guacamoleClient.guacCommonMod.Mimetype
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,9 +17,7 @@ class RawAudioFormat protected ()
   def this(template: typingsSlinky.guacamoleClient.rawAudioFormatMod.RawAudioFormat) = this()
 }
 /* static members */
-@JSImport("guacamole-client", "RawAudioFormat")
-@js.native
-object RawAudioFormat extends js.Object {
+object RawAudioFormat {
   
   /**
     * Parses the given mimetype, returning a new Guacamole.RawAudioFormat
@@ -31,5 +30,7 @@ object RawAudioFormat extends js.Object {
     *     audio data represented by the given mimetype, or null if the given
     *     mimetype is not supported.
     */
+  @JSImport("guacamole-client", "RawAudioFormat.parse")
+  @js.native
   def parse(mimetype: Mimetype): typingsSlinky.guacamoleClient.rawAudioFormatMod.RawAudioFormat = js.native
 }

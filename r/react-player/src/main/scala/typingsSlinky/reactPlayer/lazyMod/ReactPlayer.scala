@@ -3,6 +3,7 @@ package typingsSlinky.reactPlayer.lazyMod
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactPlayer.reactPlayerStrings.fraction
 import typingsSlinky.reactPlayer.reactPlayerStrings.seconds
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -6,12 +6,13 @@ import typingsSlinky.wegameApi.wegameApiStrings.webgl
 import typingsSlinky.wegameApi.wx.types.RenderingContextConfig
 import typingsSlinky.wegameApi.wx.types.ToTempFileParams
 import typingsSlinky.wegameApi.wx.types.ToTempFileSyncParams
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Canvas extends js.Object {
+trait Canvas extends StObject {
   
   /**
     * 获取画布对象的绘图上下文

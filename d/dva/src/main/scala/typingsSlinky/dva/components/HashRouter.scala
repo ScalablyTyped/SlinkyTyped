@@ -6,6 +6,7 @@ import typingsSlinky.reactRouterDom.mod.HashRouterProps
 import typingsSlinky.reactRouterDom.reactRouterDomStrings.hashbang
 import typingsSlinky.reactRouterDom.reactRouterDomStrings.noslash
 import typingsSlinky.reactRouterDom.reactRouterDomStrings.slash
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object HashRouter {
   
   @JSImport("dva/router", "HashRouter")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,7 +32,7 @@ object HashRouter {
     def hashType(value: slash | noslash | hashbang): this.type = set("hashType", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HashRouterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: HashRouter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HashRouterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

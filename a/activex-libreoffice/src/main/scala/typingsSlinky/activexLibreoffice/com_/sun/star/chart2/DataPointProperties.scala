@@ -8,6 +8,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfo
 import typingsSlinky.activexLibreoffice.com_.sun.star.drawing.FillProperties
 import typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineDash
 import typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

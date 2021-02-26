@@ -19,12 +19,13 @@ import typingsSlinky.maximMazurokGapiClientNotebooks.anon.Resource
 import typingsSlinky.maximMazurokGapiClientNotebooks.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientNotebooks.anon.Uploadprotocol
 import typingsSlinky.maximMazurokGapiClientNotebooks.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InstancesResource extends js.Object {
+trait InstancesResource extends StObject {
   
   /** Creates a new Instance in a given project and location. */
   def create(request: InstanceId): Request[Operation] = js.native

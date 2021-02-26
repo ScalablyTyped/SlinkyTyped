@@ -3,12 +3,13 @@ package typingsSlinky.kurentoClient.mod
 import typingsSlinky.kurentoClient.anon.NetworkCache
 import typingsSlinky.kurentoClient.anon.UseDataChannels
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClientInstance extends js.Object {
+trait ClientInstance extends StObject {
   
   def close(): Unit = js.native
   

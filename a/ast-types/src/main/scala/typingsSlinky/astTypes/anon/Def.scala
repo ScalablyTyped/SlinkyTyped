@@ -1,12 +1,13 @@
 package typingsSlinky.astTypes.anon
 
 import typingsSlinky.astTypes.typesMod.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Def extends js.Object {
+trait Def extends StObject {
   
   def `def`(typeName: String): typingsSlinky.astTypes.typesMod.Def[_] = js.native
   

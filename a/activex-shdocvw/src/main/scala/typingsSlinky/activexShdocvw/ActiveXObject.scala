@@ -144,12 +144,13 @@ import typingsSlinky.activexShdocvw.anon.PDispAny
 import typingsSlinky.activexShdocvw.anon.PDispWindow
 import typingsSlinky.activexShdocvw.anon.PpDisp
 import typingsSlinky.activexShdocvw.anon.SzProperty
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ActiveXObject extends js.Object {
+trait ActiveXObject extends StObject {
   
   def on(
     obj: InternetExplorerMedium,

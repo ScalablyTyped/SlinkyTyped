@@ -1,6 +1,7 @@
 package typingsSlinky.vexflow.global.Vex.Flow
 
 import typingsSlinky.vexflow.anon.Cps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,15 +13,22 @@ class Curve protected ()
   def this(from: typingsSlinky.vexflow.Vex.Flow.Note, to: typingsSlinky.vexflow.Vex.Flow.Note) = this()
   def this(from: typingsSlinky.vexflow.Vex.Flow.Note, to: typingsSlinky.vexflow.Vex.Flow.Note, options: Cps) = this()
 }
-/* static members */
-@JSGlobal("Vex.Flow.Curve")
-@js.native
-object Curve extends js.Object {
+object Curve {
   
-  var DEBUG: Boolean = js.native
-  
+  @JSGlobal("Vex.Flow.Curve")
   @js.native
-  object Position extends js.Object {
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSGlobal("Vex.Flow.Curve.DEBUG")
+  @js.native
+  def DEBUG: Boolean = js.native
+  @scala.inline
+  def DEBUG_=(x: Boolean): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DEBUG")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("Vex.Flow.Curve.Position")
+  @js.native
+  object Position extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.vexflow.Vex.Flow.Curve.Position with Double] = js.native

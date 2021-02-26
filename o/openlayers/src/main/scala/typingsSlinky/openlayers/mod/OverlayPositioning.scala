@@ -1,5 +1,6 @@
 package typingsSlinky.openlayers.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.openlayers.openlayersStrings.`top-center`
   - typingsSlinky.openlayers.openlayersStrings.`top-right`
 */
-trait OverlayPositioning extends js.Object
+trait OverlayPositioning extends StObject
 object OverlayPositioning {
   
   @scala.inline

@@ -4,15 +4,15 @@
 Typings are for version 2.2.0
 
 ## Library description:
-gridstack.js is a jQuery plugin for widget layout
+TypeScript/Javascript lib for dashboard layout and creation, no external dependencies, with many wrappers (React, Angular, Ember, knockout...)
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | gridstack |
-| Keywords           | gridstack, grid, gridster, layout |
-| # releases         | 9 |
-| # dependents       | 8 |
-| # downloads        | 419929 |
+| Keywords           | Typescript, gridstack.js, grid, gridster, layout, responsive, dashboard, resize, drag&drop, widgets, Angular, React, JavaScript |
+| # releases         | 33 |
+| # dependents       | 20 |
+| # downloads        | 1338090 |
 | # stars            | 1 |
 
 ## Links

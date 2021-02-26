@@ -300,16 +300,15 @@ import typingsSlinky.stylableDomTestKit.stylableDomTestKitStrings.use
 import typingsSlinky.stylableDomTestKit.stylableDomTestKitStrings.video
 import typingsSlinky.stylableDomTestKit.stylableDomTestKitStrings.view
 import typingsSlinky.stylableDomTestKit.stylableDomTestKitStrings.wbr
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait FnCall extends js.Object {
+  trait FnCall extends StObject {
     
     def apply(selectors: `object`): HTMLObjectElement | Null = js.native
     def apply(selectors: `var`): HTMLElement | Null = js.native
@@ -487,7 +486,7 @@ object anon extends js.Object {
   }
   
   @js.native
-  trait FnCallSelectors extends js.Object {
+  trait FnCallSelectors extends StObject {
     
     def apply(selectors: `object`): NodeListOf[HTMLObjectElement with Node] = js.native
     def apply(selectors: `var`): NodeListOf[HTMLElement with Node] = js.native

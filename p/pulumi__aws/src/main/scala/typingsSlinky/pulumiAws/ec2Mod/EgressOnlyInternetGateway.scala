@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.egressOnlyInternetGatewayMod.EgressOnlyInternetGa
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,9 +25,7 @@ class EgressOnlyInternetGateway protected ()
   def this(name: String, args: EgressOnlyInternetGatewayArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/aws/ec2", "EgressOnlyInternetGateway")
-@js.native
-object EgressOnlyInternetGateway extends js.Object {
+object EgressOnlyInternetGateway {
   
   /**
     * Get an existing EgressOnlyInternetGateway resource's state with the given name, ID, and optional extra
@@ -37,14 +36,24 @@ object EgressOnlyInternetGateway extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/aws/ec2", "EgressOnlyInternetGateway.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.egressOnlyInternetGatewayMod.EgressOnlyInternetGateway = js.native
+  @JSImport("@pulumi/aws/ec2", "EgressOnlyInternetGateway.get")
+  @js.native
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.egressOnlyInternetGatewayMod.EgressOnlyInternetGateway = js.native
+  @JSImport("@pulumi/aws/ec2", "EgressOnlyInternetGateway.get")
+  @js.native
   def get(name: String, id: Input[ID], state: EgressOnlyInternetGatewayState): typingsSlinky.pulumiAws.egressOnlyInternetGatewayMod.EgressOnlyInternetGateway = js.native
+  @JSImport("@pulumi/aws/ec2", "EgressOnlyInternetGateway.get")
+  @js.native
   def get(name: String, id: Input[ID], state: EgressOnlyInternetGatewayState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.egressOnlyInternetGatewayMod.EgressOnlyInternetGateway = js.native
   
   /**
     * Returns true if the given object is an instance of EgressOnlyInternetGateway.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/aws/ec2", "EgressOnlyInternetGateway.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/ec2/egressOnlyInternetGateway.EgressOnlyInternetGateway */ Boolean = js.native
 }

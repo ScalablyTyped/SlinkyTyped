@@ -5,6 +5,7 @@ import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.data.DataSource
 import typingsSlinky.kendoUi.kendo.data.HierarchicalDataSource
 import typingsSlinky.kendoUi.kendo.data.Node
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,31 +23,31 @@ trait TreeView extends Widget {
   def append(nodeData: JQuery, parentNode: JQuery, success: js.Function): JQuery = js.native
   
   def collapse(nodes: String): Unit = js.native
-  def collapse(nodes: JQuery): Unit = js.native
   def collapse(nodes: Element): Unit = js.native
+  def collapse(nodes: JQuery): Unit = js.native
   
   def dataItem(node: String): Node = js.native
-  def dataItem(node: JQuery): Node = js.native
   def dataItem(node: Element): Node = js.native
+  def dataItem(node: JQuery): Node = js.native
   
   var dataSource: DataSource = js.native
   
   def detach(node: String): JQuery = js.native
-  def detach(node: JQuery): JQuery = js.native
   def detach(node: Element): JQuery = js.native
+  def detach(node: JQuery): JQuery = js.native
   
   def enable(nodes: String): Unit = js.native
   def enable(nodes: String, enable: Boolean): Unit = js.native
+  def enable(nodes: Element): Unit = js.native
+  def enable(nodes: Element, enable: Boolean): Unit = js.native
   def enable(nodes: Boolean): Unit = js.native
   def enable(nodes: Boolean, enable: Boolean): Unit = js.native
   def enable(nodes: JQuery): Unit = js.native
   def enable(nodes: JQuery, enable: Boolean): Unit = js.native
-  def enable(nodes: Element): Unit = js.native
-  def enable(nodes: Element, enable: Boolean): Unit = js.native
   
   def expand(nodes: String): Unit = js.native
-  def expand(nodes: JQuery): Unit = js.native
   def expand(nodes: Element): Unit = js.native
+  def expand(nodes: JQuery): Unit = js.native
   
   def expandPath(path: js.Any, complete: js.Function): Unit = js.native
   
@@ -69,17 +70,17 @@ trait TreeView extends Widget {
   var options_TreeView: TreeViewOptions = js.native
   
   def parent(node: String): JQuery = js.native
-  def parent(node: JQuery): JQuery = js.native
   def parent(node: Element): JQuery = js.native
+  def parent(node: JQuery): JQuery = js.native
   
   def remove(node: String): Unit = js.native
-  def remove(node: JQuery): Unit = js.native
   def remove(node: Element): Unit = js.native
+  def remove(node: JQuery): Unit = js.native
   
   def select(): JQuery = js.native
   def select(node: String): Unit = js.native
-  def select(node: JQuery): Unit = js.native
   def select(node: Element): Unit = js.native
+  def select(node: JQuery): Unit = js.native
   @JSName("select")
   def select_Unit(): Unit = js.native
   
@@ -87,14 +88,14 @@ trait TreeView extends Widget {
   
   def text(node: String): String = js.native
   def text(node: String, newText: String): Unit = js.native
-  def text(node: JQuery): String = js.native
-  def text(node: JQuery, newText: String): Unit = js.native
   def text(node: Element): String = js.native
   def text(node: Element, newText: String): Unit = js.native
+  def text(node: JQuery): String = js.native
+  def text(node: JQuery, newText: String): Unit = js.native
   
   def toggle(node: String): Unit = js.native
-  def toggle(node: JQuery): Unit = js.native
   def toggle(node: Element): Unit = js.native
+  def toggle(node: JQuery): Unit = js.native
   
   def updateIndeterminate(node: JQuery): Unit = js.native
   

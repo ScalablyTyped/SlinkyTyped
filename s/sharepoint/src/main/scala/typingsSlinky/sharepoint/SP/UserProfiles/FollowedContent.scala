@@ -3,6 +3,7 @@ package typingsSlinky.sharepoint.SP.UserProfiles
 import typingsSlinky.sharepoint.SP.BooleanResult
 import typingsSlinky.sharepoint.SP.ClientObject
 import typingsSlinky.sharepoint.SP.IntResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

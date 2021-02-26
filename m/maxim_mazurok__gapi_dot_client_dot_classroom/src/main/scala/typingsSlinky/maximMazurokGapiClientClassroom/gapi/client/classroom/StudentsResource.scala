@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientClassroom.anon.Callback
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.CourseIdEnrollmentCode
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.EnrollmentCode
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.UserId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait StudentsResource extends js.Object {
+trait StudentsResource extends StObject {
   
   def create(request: CourseIdEnrollmentCode, body: Student): Request[Student] = js.native
   /**

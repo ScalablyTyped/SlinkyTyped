@@ -7,12 +7,13 @@ import typingsSlinky.sinon.sinonStrings.get
 import typingsSlinky.sinon.sinonStrings.set
 import typingsSlinky.std.Parameters
 import typingsSlinky.std.ReturnType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SinonSandbox extends js.Object {
+trait SinonSandbox extends StObject {
   
   /**
     * A convenience reference for sinon.assert
@@ -223,9 +224,9 @@ trait SinonSandbox extends js.Object {
     * @param config
     */
   def useFakeTimers(): SinonFakeTimers = js.native
+  def useFakeTimers(config: js.Date): SinonFakeTimers = js.native
   def useFakeTimers(config: Double): SinonFakeTimers = js.native
   def useFakeTimers(config: PartialSinonFakeTimersCon): SinonFakeTimers = js.native
-  def useFakeTimers(config: js.Date): SinonFakeTimers = js.native
   
   /**
     * Causes Sinon to replace the native XMLHttpRequest object in browsers that support it with a custom implementation which does not send actual requests.

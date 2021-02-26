@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`forward-down`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`forward-up`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.pan
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.zoom
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

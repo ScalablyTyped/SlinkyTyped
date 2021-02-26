@@ -10,9 +10,9 @@ Global styles for JSS
 | ------------------ | :-------------: |
 | Full name          | jss-plugin-global |
 | Keywords           | cssinjs, css-in-js, css in js, jss, plugin, global, unscoped |
-| # releases         | 32 |
-| # dependents       | 14 |
-| # downloads        | 11537145 |
+| # releases         | 30 |
+| # dependents       | 17 |
+| # downloads        | 57000386 |
 | # stars            | 0 |
 
 ## Links

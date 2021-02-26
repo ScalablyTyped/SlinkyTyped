@@ -10,9 +10,9 @@ Cookie jar plugin for Hapi
 | ------------------ | :-------------: |
 | Full name          | @hapi/yar |
 | Keywords           | hapi, plugin, cookies, jar, session |
-| # releases         | 3 |
-| # dependents       | 0 |
-| # downloads        | 22465 |
+| # releases         | 6 |
+| # dependents       | 2 |
+| # downloads        | 88240 |
 | # stars            | 0 |
 
 ## Links

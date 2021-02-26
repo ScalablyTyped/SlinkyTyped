@@ -1,17 +1,18 @@
 package typingsSlinky.xmldsigjs
 
-import typingsSlinky.xmlCore.mod.XmlCollection
-import typingsSlinky.xmlCore.mod.XmlObject
+import typingsSlinky.xmldsigjs.xmlObjectMod.XmlSignatureCollection
+import typingsSlinky.xmldsigjs.xmlObjectMod.XmlSignatureObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xmldsigjs/build/types/xml/data_object", JSImport.Namespace)
-@js.native
-object dataObjectMod extends js.Object {
+object dataObjectMod {
   
+  @JSImport("xmldsigjs/build/types/xml/data_object", "DataObject")
   @js.native
-  class DataObject () extends XmlObject {
+  class DataObject () extends XmlSignatureObject {
+    def this(properties: js.Object) = this()
     
     var Encoding: String = js.native
     
@@ -20,6 +21,9 @@ object dataObjectMod extends js.Object {
     var MimeType: String = js.native
   }
   
+  @JSImport("xmldsigjs/build/types/xml/data_object", "DataObjects")
   @js.native
-  class DataObjects () extends XmlCollection[DataObject]
+  class DataObjects () extends XmlSignatureCollection[DataObject] {
+    def this(properties: js.Object) = this()
+  }
 }

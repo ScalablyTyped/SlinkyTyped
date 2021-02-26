@@ -3,13 +3,12 @@ package typingsSlinky.firebaseStorage
 import typingsSlinky.firebaseStorage.requestMod.Request
 import typingsSlinky.firebaseStorage.requestinfoMod.RequestInfo
 import typingsSlinky.firebaseStorage.xhriopoolMod.XhrIoPool
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/storage/dist/src/implementation/requestmaker", JSImport.Namespace)
-@js.native
-object requestmakerMod extends js.Object {
+object requestmakerMod {
   
   type requestMaker = js.Function4[
     /* requestInfo */ RequestInfo[js.Any], 

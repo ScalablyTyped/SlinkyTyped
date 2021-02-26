@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientContent.anon.QuotaUserRuleId
 import typingsSlinky.maximMazurokGapiClientContent.anon.ResourceRuleId
 import typingsSlinky.maximMazurokGapiClientContent.anon.RuleId
 import typingsSlinky.maximMazurokGapiClientContent.anon.RuleIdUploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RepricingrulesResource extends js.Object {
+trait RepricingrulesResource extends StObject {
   
   def create(request: QuotaUserRuleId, body: RepricingRule): Request[RepricingRule] = js.native
   /** Creates a repricing rule for your Merchant Center account. */

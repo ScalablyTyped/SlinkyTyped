@@ -1,5 +1,6 @@
 package typingsSlinky.firebase.mod.default.firestore
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firebase.firebaseStrings.`data-loss`
   - typingsSlinky.firebase.firebaseStrings.unauthenticated
 */
-trait FirestoreErrorCode extends js.Object
+trait FirestoreErrorCode extends StObject
 object FirestoreErrorCode {
   
   @scala.inline

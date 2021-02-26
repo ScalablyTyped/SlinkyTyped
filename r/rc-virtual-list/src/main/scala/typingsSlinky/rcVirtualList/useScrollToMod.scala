@@ -4,14 +4,15 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.rcVirtualList.interfaceMod.GetKey
 import typingsSlinky.rcVirtualList.listMod.ScrollTo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-virtual-list/es/hooks/useScrollTo", JSImport.Namespace)
-@js.native
-object useScrollToMod extends js.Object {
+object useScrollToMod {
   
+  @JSImport("rc-virtual-list/es/hooks/useScrollTo", JSImport.Default)
+  @js.native
   def default[T](
     containerRef: ReactRef[HTMLDivElement],
     data: js.Array[T],

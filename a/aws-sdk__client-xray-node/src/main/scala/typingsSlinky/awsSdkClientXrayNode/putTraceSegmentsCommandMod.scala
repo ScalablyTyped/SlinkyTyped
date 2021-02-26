@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientXrayNode.typesPutTraceSegmentsOutputMod.PutTrac
 import typingsSlinky.awsSdkClientXrayNode.xrayconfigurationMod.XRayResolvedConfiguration
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-xray-node/commands/PutTraceSegmentsCommand", JSImport.Namespace)
-@js.native
-object putTraceSegmentsCommandMod extends js.Object {
+object putTraceSegmentsCommandMod {
   
+  @JSImport("@aws-sdk/client-xray-node/commands/PutTraceSegmentsCommand", "PutTraceSegmentsCommand")
   @js.native
   class PutTraceSegmentsCommand protected () extends Command[
           InputTypesUnion, 

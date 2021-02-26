@@ -11,8 +11,8 @@ React implementation of smooth-scrollbar
 | Full name          | react-smooth-scrollbar |
 | Keywords           | react, smooth, scroll, performance, scrollbar |
 | # releases         | 0 |
-| # dependents       | 12 |
-| # downloads        | 191483 |
+| # dependents       | 22 |
+| # downloads        | 200986 |
 | # stars            | 1 |
 
 ## Links

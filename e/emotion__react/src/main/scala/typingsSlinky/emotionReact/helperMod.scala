@@ -4,13 +4,12 @@ import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@emotion/react/types/helper", JSImport.Namespace)
-@js.native
-object helperMod extends js.Object {
+object helperMod {
   
   type DistributiveOmit[T, U] = Pick[T, Exclude[/* keyof T */ String, U]]
   

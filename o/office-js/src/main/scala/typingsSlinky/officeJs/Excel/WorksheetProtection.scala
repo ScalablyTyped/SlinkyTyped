@@ -4,6 +4,7 @@ import typingsSlinky.officeJs.Excel.Interfaces.WorksheetProtectionData
 import typingsSlinky.officeJs.Excel.Interfaces.WorksheetProtectionLoadOptions
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.anon.Expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

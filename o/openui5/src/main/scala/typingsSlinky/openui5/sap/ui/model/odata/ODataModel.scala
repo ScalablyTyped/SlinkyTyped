@@ -4,6 +4,7 @@ import typingsSlinky.jquery.JQueryPromise
 import typingsSlinky.openui5.anon.TypeofCountMode
 import typingsSlinky.openui5.sap.ui.model.Context
 import typingsSlinky.openui5.sap.ui.model.Model
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

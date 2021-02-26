@@ -1,5 +1,6 @@
 package typingsSlinky.xrm.XrmEnum
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.Online
   - typingsSlinky.xrm.xrmStrings.Offline
 */
-trait ClientState extends js.Object
+trait ClientState extends StObject
 object ClientState {
   
   @scala.inline

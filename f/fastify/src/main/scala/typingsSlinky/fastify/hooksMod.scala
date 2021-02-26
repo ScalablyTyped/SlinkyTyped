@@ -11,30 +11,29 @@ import typingsSlinky.fastify.utilsMod.RawRequestDefaultExpression
 import typingsSlinky.fastify.utilsMod.RawServerBase
 import typingsSlinky.fastifyError.mod.FastifyError
 import typingsSlinky.node.streamMod.Readable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("fastify/types/hooks", JSImport.Namespace)
-@js.native
-object hooksMod extends js.Object {
+object hooksMod {
   
   // This is used within the `preSerialization` and `onSend` hook handlers
   @js.native
-  trait DoneFuncWithErrOrRes extends js.Object {
+  trait DoneFuncWithErrOrRes extends StObject {
     
     def apply(): Unit = js.native
     def apply(err: Null, res: js.Any): Unit = js.native
     def apply[TError /* <: js.Error */](err: TError): Unit = js.native
   }
   
+  type HookHandlerDoneFunction = js.Function1[/* err */ js.UndefOr[FastifyError], Unit]
+  
   @js.native
   trait RequestPayload extends Readable {
     
     var receivedEncodedLength: js.UndefOr[Double] = js.native
   }
-  
-  type HookHandlerDoneFunction = js.Function1[/* err */ js.UndefOr[FastifyError], Unit]
   
   type onCloseHookHandler[RawServer /* <: RawServerBase */, RawRequest /* <: RawRequestDefaultExpression[RawServer] */, RawReply /* <: RawReplyDefaultExpression[RawServer] */, Logger] = js.Function2[
     /* instance */ FastifyInstance[RawServer, RawRequest, RawReply, Logger], 

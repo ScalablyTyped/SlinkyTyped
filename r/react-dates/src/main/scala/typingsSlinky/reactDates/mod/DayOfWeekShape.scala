@@ -1,5 +1,6 @@
 package typingsSlinky.reactDates.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactDates.reactDatesNumbers.`5`
   - typingsSlinky.reactDates.reactDatesNumbers.`6`
 */
-trait DayOfWeekShape extends js.Object
+trait DayOfWeekShape extends StObject
 object DayOfWeekShape {
   
   @scala.inline

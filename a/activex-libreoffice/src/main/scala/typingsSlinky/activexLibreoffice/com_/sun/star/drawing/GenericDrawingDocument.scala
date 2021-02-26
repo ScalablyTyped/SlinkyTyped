@@ -7,6 +7,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.i18n.XForbiddenCharacters
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.Locale
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XMultiServiceFactory
 import typingsSlinky.activexLibreoffice.com_.sun.star.style.XStyleFamiliesSupplier
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

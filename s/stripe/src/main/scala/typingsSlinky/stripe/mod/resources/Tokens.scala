@@ -3,6 +3,7 @@ package typingsSlinky.stripe.mod.resources
 import typingsSlinky.stripe.mod.HeaderOptions
 import typingsSlinky.stripe.mod.IDataOptions
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.tokens.IBankAccountToken
 import typingsSlinky.stripe.mod.tokens.IBankAccountTokenCreationOptions
@@ -10,13 +11,15 @@ import typingsSlinky.stripe.mod.tokens.ICardToken
 import typingsSlinky.stripe.mod.tokens.ICardTokenCreationOptions
 import typingsSlinky.stripe.mod.tokens.IPiiTokenCreationOptions
 import typingsSlinky.stripe.mod.tokens.IToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.Tokens")
 @js.native
-class Tokens () extends StripeResource {
+class Tokens protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(data: IBankAccountTokenCreationOptions): js.Promise[IBankAccountToken] = js.native
   /**

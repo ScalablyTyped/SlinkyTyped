@@ -1,5 +1,6 @@
 package typingsSlinky.cookieclicker.Game
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.cookieclicker.cookieclickerNumbers.`0`
   - typingsSlinky.cookieclicker.cookieclickerNumbers.`1`
 */
-trait PseudoBoolean extends js.Object
+trait PseudoBoolean extends StObject
 object PseudoBoolean {
   
   @scala.inline

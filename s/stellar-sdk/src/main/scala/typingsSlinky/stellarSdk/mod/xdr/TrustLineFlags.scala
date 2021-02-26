@@ -1,5 +1,6 @@
 package typingsSlinky.stellarSdk.mod.xdr
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +9,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class TrustLineFlags ()
   extends typingsSlinky.stellarBase.mod.xdr.TrustLineFlags
-/* static members */
-@JSImport("stellar-sdk", "xdr.TrustLineFlags")
-@js.native
-object TrustLineFlags extends js.Object {
+object TrustLineFlags {
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.TrustLineFlags.authorizedFlag")
+  @js.native
   def authorizedFlag(): typingsSlinky.stellarBase.xdrMod.xdr.TrustLineFlags = js.native
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.TrustLineFlags.authorizedToMaintainLiabilitiesFlag")
+  @js.native
   def authorizedToMaintainLiabilitiesFlag(): typingsSlinky.stellarBase.xdrMod.xdr.TrustLineFlags = js.native
 }

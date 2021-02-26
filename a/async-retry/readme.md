@@ -10,9 +10,9 @@ Retrying made simple, easy and async
 | ------------------ | :-------------: |
 | Full name          | async-retry |
 | Keywords           | - |
-| # releases         | 6 |
-| # dependents       | 134 |
-| # downloads        | 27891696 |
+| # releases         | 2 |
+| # dependents       | 251 |
+| # downloads        | 75057669 |
 | # stars            | 5 |
 
 ## Links

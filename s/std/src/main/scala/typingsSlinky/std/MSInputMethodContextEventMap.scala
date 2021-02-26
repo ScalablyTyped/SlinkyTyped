@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MSInputMethodContextEventMap extends js.Object {
+trait MSInputMethodContextEventMap extends StObject {
   
   var MSCandidateWindowHide: org.scalajs.dom.raw.Event = js.native
   
@@ -26,27 +27,15 @@ object MSInputMethodContextEventMap {
   }
   
   @scala.inline
-  implicit class MSInputMethodContextEventMapOps[Self <: MSInputMethodContextEventMap] (val x: Self) extends AnyVal {
+  implicit class MSInputMethodContextEventMapMutableBuilder[Self <: MSInputMethodContextEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setMSCandidateWindowHide(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSCandidateWindowHide", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setMSCandidateWindowShow(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSCandidateWindowShow", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setMSCandidateWindowHide(value: org.scalajs.dom.raw.Event): Self = this.set("MSCandidateWindowHide", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSCandidateWindowShow(value: org.scalajs.dom.raw.Event): Self = this.set("MSCandidateWindowShow", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSCandidateWindowUpdate(value: org.scalajs.dom.raw.Event): Self = this.set("MSCandidateWindowUpdate", value.asInstanceOf[js.Any])
+    def setMSCandidateWindowUpdate(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSCandidateWindowUpdate", value.asInstanceOf[js.Any])
   }
 }

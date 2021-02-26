@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ApplicationCacheEventMap extends js.Object {
+trait ApplicationCacheEventMap extends StObject {
   
   var cached: org.scalajs.dom.raw.Event = js.native
   
@@ -41,42 +42,30 @@ object ApplicationCacheEventMap {
   }
   
   @scala.inline
-  implicit class ApplicationCacheEventMapOps[Self <: ApplicationCacheEventMap] (val x: Self) extends AnyVal {
+  implicit class ApplicationCacheEventMapMutableBuilder[Self <: ApplicationCacheEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCached(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "cached", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChecking(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "checking", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDownloading(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "downloading", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCached(value: org.scalajs.dom.raw.Event): Self = this.set("cached", value.asInstanceOf[js.Any])
+    def setError(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChecking(value: org.scalajs.dom.raw.Event): Self = this.set("checking", value.asInstanceOf[js.Any])
+    def setNoupdate(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "noupdate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDownloading(value: org.scalajs.dom.raw.Event): Self = this.set("downloading", value.asInstanceOf[js.Any])
+    def setObsolete(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "obsolete", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setError(value: org.scalajs.dom.raw.Event): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setProgress(value: org.scalajs.dom.raw.ProgressEvent): Self = StObject.set(x, "progress", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNoupdate(value: org.scalajs.dom.raw.Event): Self = this.set("noupdate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setObsolete(value: org.scalajs.dom.raw.Event): Self = this.set("obsolete", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setProgress(value: org.scalajs.dom.raw.ProgressEvent): Self = this.set("progress", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUpdateready(value: org.scalajs.dom.raw.Event): Self = this.set("updateready", value.asInstanceOf[js.Any])
+    def setUpdateready(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "updateready", value.asInstanceOf[js.Any])
   }
 }

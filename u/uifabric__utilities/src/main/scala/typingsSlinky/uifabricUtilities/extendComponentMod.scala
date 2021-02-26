@@ -2,14 +2,15 @@ package typingsSlinky.uifabricUtilities
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uifabric/utilities/lib/extendComponent", JSImport.Namespace)
-@js.native
-object extendComponentMod extends js.Object {
+object extendComponentMod {
   
+  @JSImport("@uifabric/utilities/lib/extendComponent", "extendComponent")
+  @js.native
   def extendComponent[T /* <: ReactComponentClass[js.Object] */](
     parent: T,
     methods: /* import warning: importer.ImportType#apply c Unsupported type mapping: 

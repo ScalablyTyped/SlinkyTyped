@@ -5,6 +5,7 @@ import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IConsensusNotifyBlockNew
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,18 +21,26 @@ class ConsensusNotifyBlockNew ()
   def this(properties: IConsensusNotifyBlockNew) = this()
 }
 /* static members */
-@JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew")
-@js.native
-object ConsensusNotifyBlockNew extends js.Object {
+object ConsensusNotifyBlockNew {
   
   /**
     * Creates a new ConsensusNotifyBlockNew instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ConsensusNotifyBlockNew instance
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.create")
+  @js.native
   def create(): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.create")
+  @js.native
   def create(properties: IConsensusNotifyBlockNew): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
   /**
     * Decodes a ConsensusNotifyBlockNew message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -40,11 +49,16 @@ object ConsensusNotifyBlockNew extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
   /**
     * Decodes a ConsensusNotifyBlockNew message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,8 +66,9 @@ object ConsensusNotifyBlockNew extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
   
   /**
     * Encodes the specified ConsensusNotifyBlockNew message. Does not implicitly {@link ConsensusNotifyBlockNew.verify|verify} messages.
@@ -61,7 +76,11 @@ object ConsensusNotifyBlockNew extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.encode")
+  @js.native
   def encode(message: IConsensusNotifyBlockNew): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.encode")
+  @js.native
   def encode(message: IConsensusNotifyBlockNew, writer: Writer): Writer = js.native
   
   /**
@@ -70,7 +89,11 @@ object ConsensusNotifyBlockNew extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusNotifyBlockNew): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusNotifyBlockNew, writer: Writer): Writer = js.native
   
   /**
@@ -78,6 +101,8 @@ object ConsensusNotifyBlockNew extends js.Object {
     * @param object Plain object
     * @returns ConsensusNotifyBlockNew
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew = js.native
   
   /**
@@ -86,7 +111,11 @@ object ConsensusNotifyBlockNew extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.toObject")
+  @js.native
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.toObject")
+  @js.native
   def toObject(
     message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockNew,
     options: IConversionOptions
@@ -97,5 +126,7 @@ object ConsensusNotifyBlockNew extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockNew.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

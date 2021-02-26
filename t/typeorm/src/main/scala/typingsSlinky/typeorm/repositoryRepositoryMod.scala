@@ -17,16 +17,16 @@ import typingsSlinky.typeorm.repositorySaveOptionsMod.SaveOptions
 import typingsSlinky.typeorm.resultDeleteResultMod.DeleteResult
 import typingsSlinky.typeorm.resultInsertResultMod.InsertResult
 import typingsSlinky.typeorm.resultUpdateResultMod.UpdateResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/repository/Repository", JSImport.Namespace)
-@js.native
-object repositoryRepositoryMod extends js.Object {
+object repositoryRepositoryMod {
   
+  @JSImport("typeorm/repository/Repository", "Repository")
   @js.native
-  class Repository[Entity /* <: ObjectLiteral */] () extends js.Object {
+  class Repository[Entity /* <: ObjectLiteral */] () extends StObject {
     
     /**
       * Clears all the data from the given table/collection (truncates/drops it).
@@ -80,8 +80,8 @@ object repositoryRepositoryMod extends js.Object {
       */
     def delete(criteria: String): js.Promise[DeleteResult] = js.native
     def delete(criteria: js.Array[js.Date | Double | ObjectID | String]): js.Promise[DeleteResult] = js.native
-    def delete(criteria: Double): js.Promise[DeleteResult] = js.native
     def delete(criteria: js.Date): js.Promise[DeleteResult] = js.native
+    def delete(criteria: Double): js.Promise[DeleteResult] = js.native
     def delete(criteria: FindConditions[Entity]): js.Promise[DeleteResult] = js.native
     def delete(criteria: ObjectID): js.Promise[DeleteResult] = js.native
     
@@ -118,10 +118,10 @@ object repositoryRepositoryMod extends js.Object {
     def findOne(id: js.UndefOr[scala.Nothing], options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne(id: String): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne(id: String, options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
-    def findOne(id: Double): js.Promise[js.UndefOr[Entity]] = js.native
-    def findOne(id: Double, options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne(id: js.Date): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne(id: js.Date, options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
+    def findOne(id: Double): js.Promise[js.UndefOr[Entity]] = js.native
+    def findOne(id: Double, options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne(id: ObjectID): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne(id: ObjectID, options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
     def findOne(options: FindOneOptions[Entity]): js.Promise[js.UndefOr[Entity]] = js.native
@@ -135,10 +135,10 @@ object repositoryRepositoryMod extends js.Object {
     def findOneOrFail(id: js.UndefOr[scala.Nothing], options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
     def findOneOrFail(id: String): js.Promise[Entity] = js.native
     def findOneOrFail(id: String, options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
-    def findOneOrFail(id: Double): js.Promise[Entity] = js.native
-    def findOneOrFail(id: Double, options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
     def findOneOrFail(id: js.Date): js.Promise[Entity] = js.native
     def findOneOrFail(id: js.Date, options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
+    def findOneOrFail(id: Double): js.Promise[Entity] = js.native
+    def findOneOrFail(id: Double, options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
     def findOneOrFail(id: ObjectID): js.Promise[Entity] = js.native
     def findOneOrFail(id: ObjectID, options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
     def findOneOrFail(options: FindOneOptions[Entity]): js.Promise[Entity] = js.native
@@ -245,8 +245,8 @@ object repositoryRepositoryMod extends js.Object {
       */
     def restore(criteria: String): js.Promise[UpdateResult] = js.native
     def restore(criteria: js.Array[js.Date | Double | ObjectID | String]): js.Promise[UpdateResult] = js.native
-    def restore(criteria: Double): js.Promise[UpdateResult] = js.native
     def restore(criteria: js.Date): js.Promise[UpdateResult] = js.native
+    def restore(criteria: Double): js.Promise[UpdateResult] = js.native
     def restore(criteria: FindConditions[Entity]): js.Promise[UpdateResult] = js.native
     def restore(criteria: ObjectID): js.Promise[UpdateResult] = js.native
     
@@ -281,8 +281,8 @@ object repositoryRepositoryMod extends js.Object {
       */
     def softDelete(criteria: String): js.Promise[UpdateResult] = js.native
     def softDelete(criteria: js.Array[js.Date | Double | ObjectID | String]): js.Promise[UpdateResult] = js.native
-    def softDelete(criteria: Double): js.Promise[UpdateResult] = js.native
     def softDelete(criteria: js.Date): js.Promise[UpdateResult] = js.native
+    def softDelete(criteria: Double): js.Promise[UpdateResult] = js.native
     def softDelete(criteria: FindConditions[Entity]): js.Promise[UpdateResult] = js.native
     def softDelete(criteria: ObjectID): js.Promise[UpdateResult] = js.native
     
@@ -323,8 +323,8 @@ object repositoryRepositoryMod extends js.Object {
       criteria: js.Array[js.Date | Double | ObjectID | String],
       partialEntity: QueryDeepPartialEntity[Entity]
     ): js.Promise[UpdateResult] = js.native
-    def update(criteria: Double, partialEntity: QueryDeepPartialEntity[Entity]): js.Promise[UpdateResult] = js.native
     def update(criteria: js.Date, partialEntity: QueryDeepPartialEntity[Entity]): js.Promise[UpdateResult] = js.native
+    def update(criteria: Double, partialEntity: QueryDeepPartialEntity[Entity]): js.Promise[UpdateResult] = js.native
     def update(criteria: FindConditions[Entity], partialEntity: QueryDeepPartialEntity[Entity]): js.Promise[UpdateResult] = js.native
     def update(criteria: ObjectID, partialEntity: QueryDeepPartialEntity[Entity]): js.Promise[UpdateResult] = js.native
   }

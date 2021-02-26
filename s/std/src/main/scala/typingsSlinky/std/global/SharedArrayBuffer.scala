@@ -1,17 +1,14 @@
 package typingsSlinky.std.global
 
-import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.SharedArrayBufferConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("SharedArrayBuffer")
 @js.native
 class SharedArrayBuffer protected ()
   extends typingsSlinky.std.SharedArrayBuffer {
   def this(byteLength: Double) = this()
 }
-@JSGlobal("SharedArrayBuffer")
-@js.native
-object SharedArrayBuffer extends TopLevel[SharedArrayBufferConstructor]

@@ -10,6 +10,7 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
 import typingsSlinky.semanticUiReact.statisticStatisticMod.StatisticProps
 import typingsSlinky.semanticUiReact.statisticStatisticMod.StatisticSizeProp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,10 +30,10 @@ class SharedBuilder_StatisticGroupProps_674403293 (val args: js.Array[js.Any])
   def color(value: SemanticCOLORS): this.type = set("color", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+  def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
   
   @scala.inline
   def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
@@ -41,10 +42,10 @@ class SharedBuilder_StatisticGroupProps_674403293 (val args: js.Array[js.Any])
   def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def itemsVarargs(value: SemanticShorthandItem[StatisticProps]*): this.type = set("items", js.Array(value :_*))
+  def items(value: SemanticShorthandCollection[StatisticProps]): this.type = set("items", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def items(value: SemanticShorthandCollection[StatisticProps]): this.type = set("items", value.asInstanceOf[js.Any])
+  def itemsVarargs(value: SemanticShorthandItem[StatisticProps]*): this.type = set("items", js.Array(value :_*))
   
   @scala.inline
   def size(value: StatisticSizeProp): this.type = set("size", value.asInstanceOf[js.Any])

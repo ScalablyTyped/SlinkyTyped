@@ -10,15 +10,22 @@ import typingsSlinky.cytoscape.mod.Stylesheet
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactCytoscapejs.mod.CytoscapeComponentProps
 import typingsSlinky.reactCytoscapejs.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactCytoscapejs {
   
+  @scala.inline
+  def apply(elements: js.Array[ElementDefinition]): Builder = {
+    val __props = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CytoscapeComponentProps]))
+  }
+  
   @JSImport("react-cytoscapejs", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,10 +66,10 @@ object ReactCytoscapejs {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesheetVarargs(value: Stylesheet*): this.type = set("stylesheet", js.Array(value :_*))
+    def stylesheet(value: Stylesheet | js.Array[Stylesheet] | String): this.type = set("stylesheet", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesheet(value: Stylesheet | js.Array[Stylesheet] | String): this.type = set("stylesheet", value.asInstanceOf[js.Any])
+    def stylesheetVarargs(value: Stylesheet*): this.type = set("stylesheet", js.Array(value :_*))
     
     @scala.inline
     def userZoomingEnabled(value: Boolean): this.type = set("userZoomingEnabled", value.asInstanceOf[js.Any])
@@ -78,10 +85,4 @@ object ReactCytoscapejs {
   }
   
   def withProps(p: CytoscapeComponentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(elements: js.Array[ElementDefinition]): Builder = {
-    val __props = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CytoscapeComponentProps]))
-  }
 }

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteAppInputMod.DeleteAp
 import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteAppOutputMod.DeleteAppOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteAppCommand", JSImport.Namespace)
-@js.native
-object deleteAppCommandMod extends js.Object {
+object deleteAppCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteAppCommand", "DeleteAppCommand")
   @js.native
   class DeleteAppCommand protected () extends Command[
           InputTypesUnion, 

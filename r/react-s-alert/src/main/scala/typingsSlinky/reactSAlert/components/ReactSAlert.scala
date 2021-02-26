@@ -6,6 +6,7 @@ import typingsSlinky.reactSAlert.mod.SAlert.SAlertBeepProps
 import typingsSlinky.reactSAlert.mod.SAlert.SAlertProps
 import typingsSlinky.reactSAlert.mod.SAlert.SAlertStackProps
 import typingsSlinky.reactSAlert.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ReactSAlert {
   
   @JSImport("react-s-alert", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -58,7 +59,7 @@ object ReactSAlert {
     def timeout(value: String | Double): this.type = set("timeout", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SAlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactSAlert.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SAlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

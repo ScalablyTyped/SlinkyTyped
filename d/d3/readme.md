@@ -10,10 +10,10 @@ Data-Driven Documents
 | ------------------ | :-------------: |
 | Full name          | d3 |
 | Keywords           | dom, visualization, svg, animation, canvas |
-| # releases         | 37 |
-| # dependents       | 2383 |
-| # downloads        | 38405973 |
-| # stars            | 155 |
+| # releases         | 34 |
+| # dependents       | 2876 |
+| # downloads        | 61342449 |
+| # stars            | 154 |
 
 ## Links
 - [Homepage](https://d3js.org)

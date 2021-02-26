@@ -1,5 +1,6 @@
 package typingsSlinky.stellarSdk.mod.xdr
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +9,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class AccountFlags ()
   extends typingsSlinky.stellarBase.mod.xdr.AccountFlags
-/* static members */
-@JSImport("stellar-sdk", "xdr.AccountFlags")
-@js.native
-object AccountFlags extends js.Object {
+object AccountFlags {
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.AccountFlags.authImmutableFlag")
+  @js.native
   def authImmutableFlag(): typingsSlinky.stellarBase.xdrMod.xdr.AccountFlags = js.native
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.AccountFlags.authRequiredFlag")
+  @js.native
   def authRequiredFlag(): typingsSlinky.stellarBase.xdrMod.xdr.AccountFlags = js.native
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.AccountFlags.authRevocableFlag")
+  @js.native
   def authRevocableFlag(): typingsSlinky.stellarBase.xdrMod.xdr.AccountFlags = js.native
 }

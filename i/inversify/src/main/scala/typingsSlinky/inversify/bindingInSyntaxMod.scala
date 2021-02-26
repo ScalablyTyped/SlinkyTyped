@@ -1,14 +1,14 @@
 package typingsSlinky.inversify
 
 import typingsSlinky.inversify.interfacesMod.interfaces.Binding
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("inversify/dts/syntax/binding_in_syntax", JSImport.Namespace)
-@js.native
-object bindingInSyntaxMod extends js.Object {
+object bindingInSyntaxMod {
   
+  @JSImport("inversify/dts/syntax/binding_in_syntax", "BindingInSyntax")
   @js.native
   class BindingInSyntax[T] protected ()
     extends typingsSlinky.inversify.interfacesMod.interfaces.BindingInSyntax[T] {

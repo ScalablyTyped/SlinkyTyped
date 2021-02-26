@@ -5,12 +5,13 @@ import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.ValueType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClearValue[OptionType /* <: OptionTypeBase */] extends js.Object {
+trait ClearValue[OptionType /* <: OptionTypeBase */] extends StObject {
   
   def clearValue(): Unit = js.native
   

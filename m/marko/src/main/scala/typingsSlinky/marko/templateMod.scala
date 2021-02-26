@@ -5,14 +5,14 @@ import typingsSlinky.marko.asyncStreamMod.AsyncStream
 import typingsSlinky.marko.asyncVDOMBuilderMod.AsyncVDOMBuilder
 import typingsSlinky.marko.renderResultMod.RenderResult
 import typingsSlinky.node.NodeJS.WritableStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("marko/src/runtime/html/Template", JSImport.Namespace)
-@js.native
-object templateMod extends js.Object {
+object templateMod {
   
+  @JSImport("marko/src/runtime/html/Template", "Readable")
   @js.native
   class Readable protected ()
     extends typingsSlinky.node.streamMod.Readable {
@@ -30,7 +30,7 @@ object templateMod extends js.Object {
   }
   
   @js.native
-  trait Renderable extends js.Object {
+  trait Renderable extends StObject {
     
     var createOut: js.Any = js.native
     

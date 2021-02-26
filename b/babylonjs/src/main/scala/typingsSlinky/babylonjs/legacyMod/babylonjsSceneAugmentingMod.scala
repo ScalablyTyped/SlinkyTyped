@@ -9,17 +9,16 @@ import typingsSlinky.babylonjs.rayMod.TrianglePickingPredicate
 import typingsSlinky.babylonjs.spriteManagerMod.ISpriteManager
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.vrExperienceHelperMod.VRExperienceHelperOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
-@JSImport("babylonjs/Legacy/legacy", "babylonjs/scene")
-@js.native
-object babylonjsSceneAugmentingMod extends js.Object {
+object babylonjsSceneAugmentingMod {
   
   @js.native
-  trait Scene extends js.Object {
+  trait Scene extends StObject {
     
     /** @hidden (Backing field) */
     var _boundingBoxRenderer: typingsSlinky.babylonjs.boundingBoxRendererMod.BoundingBoxRenderer = js.native

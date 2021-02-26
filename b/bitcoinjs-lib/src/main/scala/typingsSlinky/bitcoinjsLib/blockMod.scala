@@ -2,16 +2,16 @@ package typingsSlinky.bitcoinjsLib
 
 import typingsSlinky.bitcoinjsLib.transactionMod.Transaction
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("bitcoinjs-lib/types/block", JSImport.Namespace)
-@js.native
-object blockMod extends js.Object {
+object blockMod {
   
+  @JSImport("bitcoinjs-lib/types/block", "Block")
   @js.native
-  class Block () extends js.Object {
+  class Block () extends StObject {
     
     var __checkMerkleRoot: js.Any = js.native
     
@@ -63,16 +63,25 @@ object blockMod extends js.Object {
     var witnessCommit: js.UndefOr[Buffer] = js.native
   }
   /* static members */
-  @js.native
-  object Block extends js.Object {
+  object Block {
     
+    @JSImport("bitcoinjs-lib/types/block", "Block.calculateMerkleRoot")
+    @js.native
     def calculateMerkleRoot(transactions: js.Array[Transaction]): Buffer = js.native
+    @JSImport("bitcoinjs-lib/types/block", "Block.calculateMerkleRoot")
+    @js.native
     def calculateMerkleRoot(transactions: js.Array[Transaction], forWitness: Boolean): Buffer = js.native
     
+    @JSImport("bitcoinjs-lib/types/block", "Block.calculateTarget")
+    @js.native
     def calculateTarget(bits: Double): Buffer = js.native
     
+    @JSImport("bitcoinjs-lib/types/block", "Block.fromBuffer")
+    @js.native
     def fromBuffer(buffer: Buffer): Block = js.native
     
+    @JSImport("bitcoinjs-lib/types/block", "Block.fromHex")
+    @js.native
     def fromHex(hex: String): Block = js.native
   }
 }

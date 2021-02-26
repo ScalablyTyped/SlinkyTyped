@@ -5,18 +5,25 @@ import typingsSlinky.architect.architectStrings.plugin
 import typingsSlinky.architect.architectStrings.ready
 import typingsSlinky.architect.architectStrings.service
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("architect", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("architect", "createApp")
+  @js.native
   def createApp(config: Config): Architect = js.native
+  @JSImport("architect", "createApp")
+  @js.native
   def createApp(config: Config, callback: js.Function2[/* err */ js.Error, /* app */ Architect, Unit]): Architect = js.native
   
+  @JSImport("architect", "loadConfig")
+  @js.native
   def loadConfig(configPath: String): Unit = js.native
+  @JSImport("architect", "loadConfig")
+  @js.native
   def loadConfig(configPath: String, callback: js.Function2[/* err */ js.Error, /* config */ Config, Unit]): Unit = js.native
   
   @js.native

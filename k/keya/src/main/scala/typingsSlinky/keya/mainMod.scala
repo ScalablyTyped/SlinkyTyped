@@ -1,15 +1,18 @@
 package typingsSlinky.keya
 
 import typingsSlinky.keya.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("keya/out/browser/main", JSImport.Namespace)
-@js.native
-object mainMod extends js.Object {
+object mainMod {
   
+  @JSImport("keya/out/browser/main", "store")
+  @js.native
   def store[T](name: String): js.Promise[default[T] | typingsSlinky.keya.localhostMod.default[T]] = js.native
   
+  @JSImport("keya/out/browser/main", "stores")
+  @js.native
   def stores(): js.Promise[js.Array[String]] = js.native
 }

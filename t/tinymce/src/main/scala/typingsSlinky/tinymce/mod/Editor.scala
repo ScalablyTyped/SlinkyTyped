@@ -13,6 +13,7 @@ import typingsSlinky.tinymce.mod.html.DomParser
 import typingsSlinky.tinymce.mod.html.Schema
 import typingsSlinky.tinymce.mod.util.Observable
 import typingsSlinky.tinymce.mod.util.URI
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("tinymce", "Editor")
 @js.native
 class Editor protected () extends Observable {
-  def this(id: String, settings: Settings_, editorManager: EditorManager) = this()
+  def this(id: String, settings: Settings_, editorManager: typingsSlinky.tinymce.mod.EditorManager) = this()
   
   @JSName("$")
   var $: DomQuery = js.native

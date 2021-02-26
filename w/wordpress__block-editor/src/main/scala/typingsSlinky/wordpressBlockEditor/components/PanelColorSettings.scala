@@ -7,15 +7,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressBlockEditor.panelColorSettingsMod.PanelColorSettings.ColorSetting
 import typingsSlinky.wordpressBlockEditor.panelColorSettingsMod.PanelColorSettings.Props
 import typingsSlinky.wordpressComponents.iconMod.Icon.IconType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PanelColorSettings {
   
+  @scala.inline
+  def apply(colorSettings: js.Array[ColorSetting]): Builder = {
+    val __props = js.Dynamic.literal(colorSettings = colorSettings.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@wordpress/block-editor", "PanelColorSettings")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,16 +36,16 @@ object PanelColorSettings {
     def disableCustomColors(value: Boolean): this.type = set("disableCustomColors", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def iconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: IconType[js.Object]): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: IconType[js.Object]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def initialOpen(value: Boolean): this.type = set("initialOpen", value.asInstanceOf[js.Any])
@@ -54,10 +61,4 @@ object PanelColorSettings {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(colorSettings: js.Array[ColorSetting]): Builder = {
-    val __props = js.Dynamic.literal(colorSettings = colorSettings.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

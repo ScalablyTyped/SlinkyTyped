@@ -8,15 +8,27 @@ import typingsSlinky.reactNavigationStack.vendorTypesMod.StackCardMode
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackDescriptorMap
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderMode
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackNavigationHelpers
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StackView {
   
+  @scala.inline
+  def apply(
+    descriptors: StackDescriptorMap,
+    navigation: StackNavigationHelpers,
+    screenProps: js.Any,
+    state: NavigationState
+  ): Builder = {
+    val __props = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], screenProps = screenProps.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("react-navigation-stack", "StackView")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,15 +49,4 @@ object StackView {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    descriptors: StackDescriptorMap,
-    navigation: StackNavigationHelpers,
-    screenProps: js.Any,
-    state: NavigationState
-  ): Builder = {
-    val __props = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], screenProps = screenProps.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

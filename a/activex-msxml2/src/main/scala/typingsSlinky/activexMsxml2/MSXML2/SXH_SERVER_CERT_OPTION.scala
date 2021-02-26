@@ -5,6 +5,7 @@ import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`256`
 import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`4096`
 import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`512`
 import typingsSlinky.activexMsxml2.activexMsxml2Numbers.`8192`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMsxml2.activexMsxml2Numbers.`256`
   - typingsSlinky.activexMsxml2.activexMsxml2Numbers.`512`
 */
-trait SXH_SERVER_CERT_OPTION extends js.Object
+trait SXH_SERVER_CERT_OPTION extends StObject
 object SXH_SERVER_CERT_OPTION {
   
   @scala.inline

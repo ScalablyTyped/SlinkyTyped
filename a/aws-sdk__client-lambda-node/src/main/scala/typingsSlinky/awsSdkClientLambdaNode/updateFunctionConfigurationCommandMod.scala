@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientLambdaNode.typesUpdateFunctionConfigurationInpu
 import typingsSlinky.awsSdkClientLambdaNode.typesUpdateFunctionConfigurationOutputMod.UpdateFunctionConfigurationOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-lambda-node/commands/UpdateFunctionConfigurationCommand", JSImport.Namespace)
-@js.native
-object updateFunctionConfigurationCommandMod extends js.Object {
+object updateFunctionConfigurationCommandMod {
   
+  @JSImport("@aws-sdk/client-lambda-node/commands/UpdateFunctionConfigurationCommand", "UpdateFunctionConfigurationCommand")
   @js.native
   class UpdateFunctionConfigurationCommand protected () extends Command[
           InputTypesUnion, 

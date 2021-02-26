@@ -1,5 +1,6 @@
 package typingsSlinky.backlogJs.mod.Option.Project
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.backlogJs.backlogJsStrings.Numbersignff3265
   - typingsSlinky.backlogJs.backlogJsStrings.Numbersign666665
 */
-trait IssueTypeColor extends js.Object
+trait IssueTypeColor extends StObject
 object IssueTypeColor {
   
   @scala.inline

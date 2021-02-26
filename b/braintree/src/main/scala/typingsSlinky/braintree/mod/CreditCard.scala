@@ -1,5 +1,6 @@
 package typingsSlinky.braintree.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("braintree", "CreditCard")
 @js.native
 class CreditCard () extends PaymentMethod {
+  
+  var default: Boolean = js.native
   
   var billingAddress: js.UndefOr[Address] = js.native
   
@@ -27,8 +30,6 @@ class CreditCard () extends PaymentMethod {
   var customerLocation: CustomerLocation = js.native
   
   var debit: String = js.native
-  
-  var default: Boolean = js.native
   
   var durbinRegulated: DurbinRegulated = js.native
   

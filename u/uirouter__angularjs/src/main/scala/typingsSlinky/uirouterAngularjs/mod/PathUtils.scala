@@ -3,6 +3,7 @@ package typingsSlinky.uirouterAngularjs.mod
 import typingsSlinky.uirouterCore.commonCommonMod.Predicate
 import typingsSlinky.uirouterCore.pathNodeMod.GetParamsFn
 import typingsSlinky.uirouterCore.transitionInterfaceMod.TreeChanges
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,24 +13,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class PathUtils ()
   extends typingsSlinky.uirouterCore.mod.PathUtils
 /* static members */
-@JSImport("@uirouter/angularjs", "PathUtils")
-@js.native
-object PathUtils extends js.Object {
+object PathUtils {
   
   /**
     * Creates ViewConfig objects and adds to nodes.
     *
     * On each [[PathNode]], creates ViewConfig objects from the views: property of the node's state
     */
+  @JSImport("@uirouter/angularjs", "PathUtils.applyViewConfigs")
+  @js.native
   def applyViewConfigs(
     $view: typingsSlinky.uirouterCore.viewViewMod.ViewService,
     path: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     states: js.Array[typingsSlinky.uirouterCore.stateObjectMod.StateObject]
   ): Unit = js.native
   
+  @JSImport("@uirouter/angularjs", "PathUtils.buildPath")
+  @js.native
   def buildPath(targetState: typingsSlinky.uirouterCore.targetStateMod.TargetState): js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode] = js.native
   
   /** Given a fromPath: PathNode[] and a TargetState, builds a toPath: PathNode[] */
+  @JSImport("@uirouter/angularjs", "PathUtils.buildToPath")
+  @js.native
   def buildToPath(
     fromPath: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     targetState: typingsSlinky.uirouterCore.targetStateMod.TargetState
@@ -43,10 +48,14 @@ object PathUtils extends js.Object {
     * @param paramsFn a function which returns the parameters to consider when comparing
     * @returns true if the the states and parameter values for both paths are identical
     */
+  @JSImport("@uirouter/angularjs", "PathUtils.equals")
+  @js.native
   def equals(
     pathA: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     pathB: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode]
   ): Boolean = js.native
+  @JSImport("@uirouter/angularjs", "PathUtils.equals")
+  @js.native
   def equals(
     pathA: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     pathB: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
@@ -64,10 +73,14 @@ object PathUtils extends js.Object {
     * caller, for instance, $state.transitionTo(..., toParams).  If a key was found in toParams,
     * it is not inherited from the fromPath.
     */
+  @JSImport("@uirouter/angularjs", "PathUtils.inheritParams")
+  @js.native
   def inheritParams(
     fromPath: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     toPath: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode]
   ): js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode] = js.native
+  @JSImport("@uirouter/angularjs", "PathUtils.inheritParams")
+  @js.native
   def inheritParams(
     fromPath: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     toPath: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
@@ -75,6 +88,8 @@ object PathUtils extends js.Object {
   ): js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode] = js.native
   
   /** Given a PathNode[], create an TargetState */
+  @JSImport("@uirouter/angularjs", "PathUtils.makeTargetState")
+  @js.native
   def makeTargetState(
     registry: typingsSlinky.uirouterCore.stateMod.StateRegistry,
     path: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode]
@@ -95,19 +110,27 @@ object PathUtils extends js.Object {
     *
     * @returns an array of PathNodes from the first path which match the nodes in the second path
     */
+  @JSImport("@uirouter/angularjs", "PathUtils.matching")
+  @js.native
   def matching(
     pathA: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     pathB: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode]
   ): js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode] = js.native
+  @JSImport("@uirouter/angularjs", "PathUtils.matching")
+  @js.native
   def matching(
     pathA: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     pathB: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     paramsFn: GetParamsFn
   ): js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode] = js.native
   
+  @JSImport("@uirouter/angularjs", "PathUtils.nonDynamicParams")
+  @js.native
   def nonDynamicParams(node: typingsSlinky.uirouterCore.pathNodeMod.PathNode): js.Array[typingsSlinky.uirouterCore.paramMod.Param] = js.native
   
   /** Gets the raw parameter values from a path */
+  @JSImport("@uirouter/angularjs", "PathUtils.paramValues")
+  @js.native
   def paramValues(path: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode]): js.Any = js.native
   
   /**
@@ -120,6 +143,8 @@ object PathUtils extends js.Object {
     * @param predicate a [[Predicate]] fn that matches [[PathNode]]s
     * @returns a subpath up to the matching node, or undefined if no match is found
     */
+  @JSImport("@uirouter/angularjs", "PathUtils.subPath")
+  @js.native
   def subPath(
     path: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     predicate: Predicate[typingsSlinky.uirouterCore.pathNodeMod.PathNode]
@@ -128,6 +153,8 @@ object PathUtils extends js.Object {
   /**
     * Computes the tree changes (entering, exiting) between a fromPath and toPath.
     */
+  @JSImport("@uirouter/angularjs", "PathUtils.treeChanges")
+  @js.native
   def treeChanges(
     fromPath: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],
     toPath: js.Array[typingsSlinky.uirouterCore.pathNodeMod.PathNode],

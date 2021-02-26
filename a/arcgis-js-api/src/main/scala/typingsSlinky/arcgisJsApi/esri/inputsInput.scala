@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arcgisJsApi.esri.TextAreaInput
   - typingsSlinky.arcgisJsApi.esri.TextBoxInput
 */
-trait inputsInput extends js.Object
+trait inputsInput extends StObject

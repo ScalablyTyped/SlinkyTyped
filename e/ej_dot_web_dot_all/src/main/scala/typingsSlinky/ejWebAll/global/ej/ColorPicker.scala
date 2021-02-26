@@ -2,6 +2,7 @@ package typingsSlinky.ejWebAll.global.ej
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,22 +11,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ColorPicker protected ()
   extends typingsSlinky.ejWebAll.ej.ColorPicker {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.ColorPicker.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.ColorPicker.Model) = this()
+  def this(element: JQuery) = this()
+  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Model) = this()
+  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Model) = this()
 }
-/* static members */
-@JSGlobal("ej.ColorPicker")
-@js.native
-object ColorPicker extends js.Object {
+object ColorPicker {
   
-  var Locale: js.Any = js.native
-  
-  var fn: typingsSlinky.ejWebAll.ej.ColorPicker = js.native
-  
+  @JSGlobal("ej.ColorPicker")
   @js.native
-  object ModelType extends js.Object {
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSGlobal("ej.ColorPicker.Locale")
+  @js.native
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("ej.ColorPicker.ModelType")
+  @js.native
+  object ModelType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.ColorPicker.ModelType with Double] = js.native
@@ -35,8 +41,9 @@ object ColorPicker extends js.Object {
     /* 1 */ val Picker: typingsSlinky.ejWebAll.ej.ColorPicker.ModelType.Picker with Double = js.native
   }
   
+  @JSGlobal("ej.ColorPicker.Palette")
   @js.native
-  object Palette extends js.Object {
+  object Palette extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.ColorPicker.Palette with Double] = js.native
@@ -46,8 +53,9 @@ object ColorPicker extends js.Object {
     /* 1 */ val CustomPalette: typingsSlinky.ejWebAll.ej.ColorPicker.Palette.CustomPalette with Double = js.native
   }
   
+  @JSGlobal("ej.ColorPicker.Presets")
   @js.native
-  object Presets extends js.Object {
+  object Presets extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.ColorPicker.Presets with Double] = js.native
@@ -74,4 +82,11 @@ object ColorPicker extends js.Object {
     
     /* 10 */ val WebColors: typingsSlinky.ejWebAll.ej.ColorPicker.Presets.WebColors with Double = js.native
   }
+  
+  /* static member */
+  @JSGlobal("ej.ColorPicker.fn")
+  @js.native
+  def fn: typingsSlinky.ejWebAll.ej.ColorPicker = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.ColorPicker): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

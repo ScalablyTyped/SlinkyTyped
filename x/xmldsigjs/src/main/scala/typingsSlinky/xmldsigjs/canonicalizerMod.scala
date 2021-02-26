@@ -1,21 +1,20 @@
 package typingsSlinky.xmldsigjs
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
 import typingsSlinky.xmlCore.mod.NamespaceManager
 import typingsSlinky.xmlCore.xmlMod.XmlNodeType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xmldsigjs/build/types/canonicalizer", JSImport.Namespace)
-@js.native
-object canonicalizerMod extends js.Object {
+object canonicalizerMod {
   
+  @JSImport("xmldsigjs/build/types/canonicalizer", "XmlCanonicalizer")
   @js.native
-  class XmlCanonicalizer protected () extends js.Object {
+  class XmlCanonicalizer protected () extends StObject {
     def this(withComments: Boolean, excC14N: Boolean) = this()
     def this(withComments: Boolean, excC14N: Boolean, propagatedNamespaces: NamespaceManager) = this()
     
@@ -67,26 +66,24 @@ object canonicalizerMod extends js.Object {
   }
   
   @js.native
-  sealed trait XmlCanonicalizerState extends js.Object
+  sealed trait XmlCanonicalizerState extends StObject
+  @JSImport("xmldsigjs/build/types/canonicalizer", "XmlCanonicalizerState")
   @js.native
-  object XmlCanonicalizerState extends js.Object {
+  object XmlCanonicalizerState extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[XmlCanonicalizerState with Double] = js.native
     
     @js.native
     sealed trait AfterDocElement extends XmlCanonicalizerState
-    /* 2 */ @js.native
-    object AfterDocElement extends TopLevel[AfterDocElement with Double]
+    /* 2 */ val AfterDocElement: typingsSlinky.xmldsigjs.canonicalizerMod.XmlCanonicalizerState.AfterDocElement with Double = js.native
     
     @js.native
     sealed trait BeforeDocElement extends XmlCanonicalizerState
-    /* 0 */ @js.native
-    object BeforeDocElement extends TopLevel[BeforeDocElement with Double]
+    /* 0 */ val BeforeDocElement: typingsSlinky.xmldsigjs.canonicalizerMod.XmlCanonicalizerState.BeforeDocElement with Double = js.native
     
     @js.native
     sealed trait InsideDocElement extends XmlCanonicalizerState
-    /* 1 */ @js.native
-    object InsideDocElement extends TopLevel[InsideDocElement with Double]
+    /* 1 */ val InsideDocElement: typingsSlinky.xmldsigjs.canonicalizerMod.XmlCanonicalizerState.InsideDocElement with Double = js.native
   }
 }

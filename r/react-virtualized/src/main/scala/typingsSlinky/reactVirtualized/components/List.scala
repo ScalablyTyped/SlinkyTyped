@@ -17,15 +17,30 @@ import typingsSlinky.reactVirtualized.esListMod.RenderedRows
 import typingsSlinky.reactVirtualized.esScrollSyncMod.OnScrollParams
 import typingsSlinky.reactVirtualized.mod.Alignment
 import typingsSlinky.reactVirtualized.mod.Index
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object List {
   
+  @scala.inline
+  def apply(
+    height: Double,
+    onScroll: (js.UndefOr[js.Function1[/* params */ ScrollParams, _]]) with (js.UndefOr[js.Function1[/* params */ OnScrollParams, Unit]]),
+    rowCount: Double,
+    rowHeight: Double | (js.Function1[/* params */ Index, Double]),
+    rowRenderer: /* props */ ListRowProps => ReactElement,
+    scrollToAlignment: js.UndefOr[Alignment] with js.UndefOr[String],
+    width: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], onScroll = onScroll.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], rowRenderer = js.Any.fromFunction1(rowRenderer), scrollToAlignment = scrollToAlignment.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ListProps]))
+  }
+  
   @JSImport("react-virtualized", "List")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -136,18 +151,4 @@ object List {
   }
   
   def withProps(p: ListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    height: Double,
-    onScroll: (js.UndefOr[js.Function1[/* params */ ScrollParams, _]]) with (js.UndefOr[js.Function1[/* params */ OnScrollParams, Unit]]),
-    rowCount: Double,
-    rowHeight: Double | (js.Function1[/* params */ Index, Double]),
-    rowRenderer: /* props */ ListRowProps => ReactElement,
-    scrollToAlignment: js.UndefOr[Alignment] with js.UndefOr[String],
-    width: Double
-  ): Builder = {
-    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], onScroll = onScroll.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], rowRenderer = js.Any.fromFunction1(rowRenderer), scrollToAlignment = scrollToAlignment.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ListProps]))
-  }
 }

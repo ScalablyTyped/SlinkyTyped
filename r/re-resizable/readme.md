@@ -10,9 +10,9 @@ Resizable component for React.
 | ------------------ | :-------------: |
 | Full name          | re-resizable |
 | Keywords           | react, resize, resizable, component |
-| # releases         | 39 |
-| # dependents       | 68 |
-| # downloads        | 4084202 |
+| # releases         | 23 |
+| # dependents       | 118 |
+| # downloads        | 8191723 |
 | # stars            | 1 |
 
 ## Links

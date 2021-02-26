@@ -10,15 +10,15 @@ Handler for htmlparser2 that turns pages into a dom
 | ------------------ | :-------------: |
 | Full name          | domhandler |
 | Keywords           | dom, htmlparser2 |
-| # releases         | 3 |
-| # dependents       | 71 |
-| # downloads        | 343462261 |
+| # releases         | 6 |
+| # dependents       | 123 |
+| # downloads        | 539946235 |
 | # stars            | 5 |
 
 ## Links
-- [Homepage](https://github.com/fb55/DomHandler#readme)
-- [Bugs](https://github.com/fb55/DomHandler/issues)
-- [Repository](https://github.com/fb55/DomHandler)
+- [Homepage](https://github.com/fb55/domhandler#readme)
+- [Bugs](https://github.com/fb55/domhandler/issues)
+- [Repository](https://github.com/fb55/domhandler)
 - [Npm](https://www.npmjs.com/package/domhandler)
     
 

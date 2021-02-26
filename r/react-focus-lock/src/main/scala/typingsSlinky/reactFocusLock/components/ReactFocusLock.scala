@@ -11,6 +11,7 @@ import typingsSlinky.reactFocusLock.interfacesMod.ReactFocusLockProps
 import typingsSlinky.reactFocusLock.reactFocusLockStrings.tail
 import typingsSlinky.std.FocusOptions
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object ReactFocusLock {
   
   @JSImport("react-focus-lock", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,13 +31,13 @@ object ReactFocusLock {
     def allowTextSelection(value: Boolean): this.type = set("allowTextSelection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def asFunctionComponent(value: ReactComponentClass[(Record[String, js.Any]) with ChildrenChildrenType[ReactElement]]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: String | ReactElement): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def asComponentClass(value: ReactComponentClass[(Record[String, js.Any]) with ChildrenChildrenType[ReactElement]]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def as(value: String | ReactElement): this.type = set("as", value.asInstanceOf[js.Any])
+    def asFunctionComponent(value: ReactComponentClass[(Record[String, js.Any]) with ChildrenChildrenType[ReactElement]]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
@@ -72,16 +73,16 @@ object ReactFocusLock {
     def returnFocus(value: Boolean | FocusOptions): this.type = set("returnFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shardsVarargs(value: (ReactRef[js.Any] | HTMLElement)*): this.type = set("shards", js.Array(value :_*))
+    def shards(value: js.Array[ReactRef[_] | HTMLElement]): this.type = set("shards", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shards(value: js.Array[ReactRef[_] | HTMLElement]): this.type = set("shards", value.asInstanceOf[js.Any])
+    def shardsVarargs(value: (ReactRef[js.Any] | HTMLElement)*): this.type = set("shards", js.Array(value :_*))
     
     @scala.inline
     def whiteList(value: /* activeElement */ HTMLElement => Boolean): this.type = set("whiteList", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: ReactFocusLockProps[ReactElement, Record[String, js.Any]]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactFocusLock.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactFocusLockProps[ReactElement, Record[String, js.Any]]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

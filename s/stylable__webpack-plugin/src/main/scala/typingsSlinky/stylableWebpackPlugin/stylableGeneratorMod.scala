@@ -4,16 +4,16 @@ import typingsSlinky.stylableCore.mod.Stylable
 import typingsSlinky.stylableWebpackPlugin.anon.PartialStylableGeneratorO
 import typingsSlinky.stylableWebpackPlugin.typesMod.StylableModule
 import typingsSlinky.stylableWebpackPlugin.typesMod.WebpackAssetModule
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@stylable/webpack-plugin/cjs/stylable-generator", JSImport.Namespace)
-@js.native
-object stylableGeneratorMod extends js.Object {
+object stylableGeneratorMod {
   
+  @JSImport("@stylable/webpack-plugin/cjs/stylable-generator", "StylableGenerator")
   @js.native
-  class StylableGenerator protected () extends js.Object {
+  class StylableGenerator protected () extends StObject {
     def this(
       stylable: Stylable,
       compilation: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.compilation.Compilation */ js.Any,

@@ -51,12 +51,13 @@ import typingsSlinky.jquery.jqueryStrings.symbol
 import typingsSlinky.jquery.jqueryStrings.undefined
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.XMLDocument
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQueryStatic extends js.Object {
+trait JQueryStatic extends StObject {
   
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
@@ -150,8 +151,8 @@ trait JQueryStatic extends js.Object {
     */
   // tslint:disable-next-line:no-unnecessary-generics
   def apply[TElement /* <: HTMLElement */](html: htmlString): JQuery[TElement] = js.native
-  def apply[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
   def apply[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document): JQuery[TElement] = js.native
+  def apply[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param selection An existing jQuery object to clone.
@@ -159,9 +160,9 @@ trait JQueryStatic extends js.Object {
     * @since 1.0
     */
   def apply[T](selection: JQuery[T]): JQuery[T] = js.native
+  def apply[TElement /* <: Element */](selector: Selector, context: Element): JQuery[TElement] = js.native
   def apply[TElement /* <: Element */](selector: Selector, context: JQuery[HTMLElement]): JQuery[TElement] = js.native
   def apply[TElement /* <: Element */](selector: Selector, context: Selector): JQuery[TElement] = js.native
-  def apply[TElement /* <: Element */](selector: Selector, context: Element): JQuery[TElement] = js.native
   
   /**
     * @see \`{@link https://gist.github.com/gnarf/54829d408993526fe475#animation-factory }\`
@@ -433,12 +434,6 @@ trait JQueryStatic extends js.Object {
     */
   var cssNumber: PlainObject[Boolean] = js.native
   
-  def data(element: PlainObject[_]): js.Any = js.native
-  def data(element: PlainObject[_], key: String): js.Any = js.native
-  def data(element: PlainObject[_], key: String, value: String): String = js.native
-  def data(element: PlainObject[_], key: String, value: js.Symbol): js.Symbol = js.native
-  def data(element: PlainObject[_], key: String, value: Boolean): Boolean = js.native
-  def data(element: PlainObject[_], key: String, value: Double): Double = js.native
   def data(element: Document): js.Any = js.native
   def data(element: Document, key: String): js.Any = js.native
   def data(element: Document, key: String, value: String): String = js.native
@@ -587,18 +582,24 @@ trait JQueryStatic extends js.Object {
   def data(element: Window, key: String, value: js.Symbol): js.Symbol = js.native
   def data(element: Window, key: String, value: Boolean): Boolean = js.native
   def data(element: Window, key: String, value: Double): Double = js.native
-  def data[T /* <: js.Object */](element: PlainObject[_], key: String, value: T): T = js.native
+  def data(element: PlainObject[_]): js.Any = js.native
+  def data(element: PlainObject[_], key: String): js.Any = js.native
+  def data(element: PlainObject[_], key: String, value: String): String = js.native
+  def data(element: PlainObject[_], key: String, value: js.Symbol): js.Symbol = js.native
+  def data(element: PlainObject[_], key: String, value: Boolean): Boolean = js.native
+  def data(element: PlainObject[_], key: String, value: Double): Double = js.native
   def data[T /* <: js.Object */](element: Document, key: String, value: T): T = js.native
   def data[T /* <: js.Object */](element: Element, key: String, value: T): T = js.native
   def data[T /* <: js.Object */](element: Window, key: String, value: T): T = js.native
-  @JSName("data")
-  def data_Null(element: PlainObject[_], key: String): Null = js.native
+  def data[T /* <: js.Object */](element: PlainObject[_], key: String, value: T): T = js.native
   @JSName("data")
   def data_Null(element: Document, key: String): Null = js.native
   @JSName("data")
   def data_Null(element: Element, key: String): Null = js.native
   @JSName("data")
   def data_Null(element: Window, key: String): Null = js.native
+  @JSName("data")
+  def data_Null(element: PlainObject[_], key: String): Null = js.native
   
   /**
     * Execute the next function on the queue for the matched element.
@@ -2040,7 +2041,6 @@ trait JQueryStatic extends js.Object {
     invert: Boolean
   ): js.Array[T] = js.native
   
-  def hasData(element: PlainObject[_]): Boolean = js.native
   def hasData(element: Document): Boolean = js.native
   /**
     * Determine whether an element has any jQuery data associated with it.
@@ -2083,6 +2083,7 @@ trait JQueryStatic extends js.Object {
     */
   def hasData(element: Element): Boolean = js.native
   def hasData(element: Window): Boolean = js.native
+  def hasData(element: PlainObject[_]): Boolean = js.native
   
   /**
     * Holds or releases the execution of jQuery's ready event.
@@ -2784,10 +2785,9 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def parseHTML(data: String): js.Array[typingsSlinky.jquery.JQuery.Node] = js.native
-  def parseHTML(data: String, context_keepScripts: Boolean): js.Array[typingsSlinky.jquery.JQuery.Node] = js.native
   def parseHTML(data: String, context_keepScripts: Document): js.Array[typingsSlinky.jquery.JQuery.Node] = js.native
+  def parseHTML(data: String, context_keepScripts: Boolean): js.Array[typingsSlinky.jquery.JQuery.Node] = js.native
   def parseHTML(data: String, context: js.UndefOr[scala.Nothing], keepScripts: Boolean): js.Array[typingsSlinky.jquery.JQuery.Node] = js.native
-  def parseHTML(data: String, context: Null, keepScripts: Boolean): js.Array[typingsSlinky.jquery.JQuery.Node] = js.native
   /**
     * Parses a string into an array of DOM nodes.
     * @param data HTML string to be parsed
@@ -2797,6 +2797,7 @@ trait JQueryStatic extends js.Object {
     * @since 1.8
     */
   def parseHTML(data: String, context: Document, keepScripts: Boolean): js.Array[typingsSlinky.jquery.JQuery.Node] = js.native
+  def parseHTML(data: String, context: Null, keepScripts: Boolean): js.Array[typingsSlinky.jquery.JQuery.Node] = js.native
   
   /**
     * Takes a well-formed JSON string and returns the resulting JavaScript value.
@@ -15155,8 +15156,6 @@ trait JQueryStatic extends js.Object {
     */
   def readyException(error: js.Error): js.Any = js.native
   
-  def removeData(element: PlainObject[_]): Unit = js.native
-  def removeData(element: PlainObject[_], name: String): Unit = js.native
   def removeData(element: Document): Unit = js.native
   def removeData(element: Document, name: String): Unit = js.native
   /**
@@ -15209,6 +15208,8 @@ trait JQueryStatic extends js.Object {
   def removeData(element: Element, name: String): Unit = js.native
   def removeData(element: Window): Unit = js.native
   def removeData(element: Window, name: String): Unit = js.native
+  def removeData(element: PlainObject[_]): Unit = js.native
+  def removeData(element: PlainObject[_], name: String): Unit = js.native
   
   /**
     * Creates an object containing a set of properties ready to be used in the definition of custom animations.

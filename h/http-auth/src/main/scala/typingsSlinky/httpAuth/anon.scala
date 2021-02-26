@@ -17,20 +17,19 @@ import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.node.httpMod.IncomingHttpHeaders
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.ReadableOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   /* Inlined node.http.IncomingMessage & {  user :string | undefined} */
   @js.native
-  trait IncomingMessageuserstring extends js.Object {
+  trait IncomingMessageuserstring extends StObject {
     
-    def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     def _destroy(error: js.Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+    def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     
     def _read(size: Double): Unit = js.native
     

@@ -10,9 +10,9 @@ A minimal node SOAP client
 | ------------------ | :-------------: |
 | Full name          | soap |
 | Keywords           | soap |
-| # releases         | 9 |
-| # dependents       | 417 |
-| # downloads        | 5231174 |
+| # releases         | 13 |
+| # dependents       | 498 |
+| # downloads        | 8467852 |
 | # stars            | 74 |
 
 ## Links

@@ -6,6 +6,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.griddleReact.mod.components.SettingsToggleProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object SettingsToggle {
   
   @JSImport("griddle-react", "components.SettingsToggle")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,7 +35,7 @@ object SettingsToggle {
     def text(value: js.Any): this.type = set("text", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SettingsToggleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SettingsToggle.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SettingsToggleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

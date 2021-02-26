@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.version
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.boolean
 */
-trait Win32LobAppPowerShellScriptRuleOperationType extends js.Object
+trait Win32LobAppPowerShellScriptRuleOperationType extends StObject
 object Win32LobAppPowerShellScriptRuleOperationType {
   
   @scala.inline

@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,11 +38,11 @@ class ChromaticAberrationPostProcess protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs", "ChromaticAberrationPostProcess")
-@js.native
-object ChromaticAberrationPostProcess extends js.Object {
+object ChromaticAberrationPostProcess {
   
   /** @hidden */
+  @JSImport("babylonjs", "ChromaticAberrationPostProcess._Parse")
+  @js.native
   def _Parse(
     parsedPostProcess: js.Any,
     targetCamera: typingsSlinky.babylonjs.cameraMod.Camera,

@@ -1,5 +1,6 @@
 package typingsSlinky.rollup.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.rollup.rollupStrings.system
   - typingsSlinky.rollup.rollupStrings.umd
 */
-trait ModuleFormat extends js.Object
+trait ModuleFormat extends StObject
 object ModuleFormat {
   
   @scala.inline

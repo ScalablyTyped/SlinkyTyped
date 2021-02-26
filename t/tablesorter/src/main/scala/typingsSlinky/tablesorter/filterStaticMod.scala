@@ -3,16 +3,15 @@ package typingsSlinky.tablesorter
 import typingsSlinky.tablesorter.mod.global.HTMLElement
 import typingsSlinky.tablesorter.mod.global.JQuery
 import typingsSlinky.tablesorter.parsedOptionMod.ParsedOption
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tablesorter/Filtering/FilterStatic", JSImport.Namespace)
-@js.native
-object filterStaticMod extends js.Object {
+object filterStaticMod {
   
   @js.native
-  trait FilterStatic[TElement] extends js.Object {
+  trait FilterStatic[TElement] extends StObject {
     
     def bindSearch(table: TElement, controls: JQuery[HTMLElement], forceStart: Boolean): Unit = js.native
     /**

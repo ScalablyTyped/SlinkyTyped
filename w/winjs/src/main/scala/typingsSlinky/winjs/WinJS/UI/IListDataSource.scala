@@ -2,6 +2,7 @@ package typingsSlinky.winjs.WinJS.UI
 
 import org.scalajs.dom.raw.CustomEvent
 import typingsSlinky.winjs.WinJS.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Provides access to a data source and enables you to bind, change, add, remove, and move items in that data source.
   **/
 @js.native
-trait IListDataSource[T] extends js.Object {
+trait IListDataSource[T] extends StObject {
   
   //#endregion Events
   //#region Methods

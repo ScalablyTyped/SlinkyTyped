@@ -93,15 +93,22 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Dialog {
   
+  @scala.inline
+  def apply(open: Boolean): Builder = {
+    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DialogProps]))
+  }
+  
   @JSImport("@material-ui/core", "Dialog")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -109,37 +116,37 @@ object Dialog {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def BackdropComponentFunctionComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
+    def BackdropComponent(value: ReactType[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def BackdropComponentComponentClass(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def BackdropComponent(value: ReactType[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
+    def BackdropComponentFunctionComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def BackdropProps(value: PartialBackdropProps): this.type = set("BackdropProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def PaperComponentFunctionComponent(value: ReactComponentClass[PaperProps]): this.type = set("PaperComponent", value.asInstanceOf[js.Any])
+    def PaperComponent(value: ReactComponentClass[PaperProps]): this.type = set("PaperComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def PaperComponentComponentClass(value: ReactComponentClass[PaperProps]): this.type = set("PaperComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def PaperComponent(value: ReactComponentClass[PaperProps]): this.type = set("PaperComponent", value.asInstanceOf[js.Any])
+    def PaperComponentFunctionComponent(value: ReactComponentClass[PaperProps]): this.type = set("PaperComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def PaperProps(value: PartialPaperProps): this.type = set("PaperProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TransitionComponentFunctionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
+    def TransitionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def TransitionComponentComponentClass(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TransitionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
+    def TransitionComponentFunctionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def TransitionProps(value: typingsSlinky.materialUiCore.transitionMod.TransitionProps): this.type = set("TransitionProps", value.asInstanceOf[js.Any])
@@ -318,16 +325,16 @@ object Dialog {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElement(value: Element): this.type = set("container", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def containerFunction0(value: () => ReactInstance): this.type = set("container", js.Any.fromFunction0(value))
+    def container(value: ReactInstance | js.Function0[ReactInstance]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerComponent(value: ReactComponentClass[js.Any]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def container(value: ReactInstance | js.Function0[ReactInstance]): this.type = set("container", value.asInstanceOf[js.Any])
+    def containerElement(value: Element): this.type = set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def containerFunction0(value: () => ReactInstance): this.type = set("container", js.Any.fromFunction0(value))
     
     @scala.inline
     def containerNull: this.type = set("container", null)
@@ -348,10 +355,10 @@ object Dialog {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -396,16 +403,16 @@ object Dialog {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -775,10 +782,4 @@ object Dialog {
   }
   
   def withProps(p: DialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(open: Boolean): Builder = {
-    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DialogProps]))
-  }
 }

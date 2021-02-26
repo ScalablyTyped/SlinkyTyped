@@ -2,13 +2,14 @@ package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndicatorStyleProps
 import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndicatorStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/ProgressIndicator/ProgressIndicator.styles", JSImport.Namespace)
-@js.native
-object progressIndicatorStylesMod extends js.Object {
+object progressIndicatorStylesMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/ProgressIndicator/ProgressIndicator.styles", "getStyles")
+  @js.native
   def getStyles(props: IProgressIndicatorStyleProps): IProgressIndicatorStyles = js.native
 }

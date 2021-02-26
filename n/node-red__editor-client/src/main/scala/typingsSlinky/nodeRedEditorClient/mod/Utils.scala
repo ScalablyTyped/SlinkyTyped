@@ -5,12 +5,13 @@ import typingsSlinky.nodeRedEditorClient.anon.File
 import typingsSlinky.nodeRedEditorClient.anon.Key
 import typingsSlinky.nodeRedEditorClient.anon.NodeInstanceNodePropertie
 import typingsSlinky.nodeRedEditorClient.mod.global.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Utils extends js.Object {
+trait Utils extends StObject {
   
   def addSpinnerOverlay(container: JQuery[HTMLElement]): JQuery[HTMLElement] = js.native
   def addSpinnerOverlay(container: JQuery[HTMLElement], contain: Boolean): JQuery[HTMLElement] = js.native

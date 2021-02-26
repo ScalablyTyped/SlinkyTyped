@@ -10,9 +10,9 @@ Seamless integration between Rollup and TypeScript. Now with errors.
 | ------------------ | :-------------: |
 | Full name          | rollup-plugin-typescript2 |
 | Keywords           | rollup-plugin-typescript2, rollup-plugin-typescript, rollup-plugin, typescript, es2015, rollup, npm |
-| # releases         | 36 |
-| # dependents       | 204 |
-| # downloads        | 2863238 |
+| # releases         | 24 |
+| # dependents       | 416 |
+| # downloads        | 13861831 |
 | # stars            | 1 |
 
 ## Links

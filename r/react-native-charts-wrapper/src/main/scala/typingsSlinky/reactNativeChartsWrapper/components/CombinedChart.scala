@@ -47,6 +47,7 @@ import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.BU
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.CANDLE
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.LINE
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.SCATTER
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -55,7 +56,7 @@ object CombinedChart {
   
   @JSImport("react-native-charts-wrapper", "CombinedChart")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -63,10 +64,10 @@ object CombinedChart {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeChartsWrapper.mod.CombinedChart] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -93,10 +94,10 @@ object CombinedChart {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -153,10 +154,10 @@ object CombinedChart {
     def drawGridBackground(value: Boolean): this.type = set("drawGridBackground", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def drawOrderVarargs(value: (BAR | BUBBLE | LINE | CANDLE | SCATTER)*): this.type = set("drawOrder", js.Array(value :_*))
+    def drawOrder(value: js.Array[BAR | BUBBLE | LINE | CANDLE | SCATTER]): this.type = set("drawOrder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def drawOrder(value: js.Array[BAR | BUBBLE | LINE | CANDLE | SCATTER]): this.type = set("drawOrder", value.asInstanceOf[js.Any])
+    def drawOrderVarargs(value: (BAR | BUBBLE | LINE | CANDLE | SCATTER)*): this.type = set("drawOrder", js.Array(value :_*))
     
     @scala.inline
     def drawValueAboveBar(value: Boolean): this.type = set("drawValueAboveBar", value.asInstanceOf[js.Any])
@@ -186,10 +187,10 @@ object CombinedChart {
     def highlightPerTapEnabled(value: Boolean): this.type = set("highlightPerTapEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def highlightsVarargs(value: DataIndex*): this.type = set("highlights", js.Array(value :_*))
+    def highlights(value: js.Array[DataIndex]): this.type = set("highlights", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def highlights(value: js.Array[DataIndex]): this.type = set("highlights", value.asInstanceOf[js.Any])
+    def highlightsVarargs(value: DataIndex*): this.type = set("highlights", js.Array(value :_*))
     
     @scala.inline
     def hitSlop(value: Insets): this.type = set("hitSlop", value.asInstanceOf[js.Any])
@@ -378,7 +379,7 @@ object CombinedChart {
     def zoom(value: AxisDependency): this.type = set("zoom", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CombinedChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: CombinedChart.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CombinedChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

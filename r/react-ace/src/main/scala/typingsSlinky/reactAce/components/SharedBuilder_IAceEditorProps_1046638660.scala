@@ -10,6 +10,7 @@ import typingsSlinky.reactAce.typesMod.IAceOptions
 import typingsSlinky.reactAce.typesMod.ICommand
 import typingsSlinky.reactAce.typesMod.IEditorProps
 import typingsSlinky.reactAce.typesMod.IMarker
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,19 +21,19 @@ class SharedBuilder_IAceEditorProps_1046638660[R <: js.Object] (val args: js.Arr
      with StBuildingComponent[tag.type, R] {
   
   @scala.inline
-  def annotationsVarargs(value: Annotation*): this.type = set("annotations", js.Array(value :_*))
+  def annotations(value: js.Array[Annotation]): this.type = set("annotations", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def annotations(value: js.Array[Annotation]): this.type = set("annotations", value.asInstanceOf[js.Any])
+  def annotationsVarargs(value: Annotation*): this.type = set("annotations", js.Array(value :_*))
   
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def commandsVarargs(value: ICommand*): this.type = set("commands", js.Array(value :_*))
+  def commands(value: js.Array[ICommand]): this.type = set("commands", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def commands(value: js.Array[ICommand]): this.type = set("commands", value.asInstanceOf[js.Any])
+  def commandsVarargs(value: ICommand*): this.type = set("commands", js.Array(value :_*))
   
   @scala.inline
   def cursorStart(value: Double): this.type = set("cursorStart", value.asInstanceOf[js.Any])
@@ -47,16 +48,16 @@ class SharedBuilder_IAceEditorProps_1046638660[R <: js.Object] (val args: js.Arr
   def editorProps(value: IEditorProps): this.type = set("editorProps", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def enableBasicAutocompletionVarargs(value: String*): this.type = set("enableBasicAutocompletion", js.Array(value :_*))
-  
-  @scala.inline
   def enableBasicAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableBasicAutocompletion", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def enableLiveAutocompletionVarargs(value: String*): this.type = set("enableLiveAutocompletion", js.Array(value :_*))
+  def enableBasicAutocompletionVarargs(value: String*): this.type = set("enableBasicAutocompletion", js.Array(value :_*))
   
   @scala.inline
   def enableLiveAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableLiveAutocompletion", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def enableLiveAutocompletionVarargs(value: String*): this.type = set("enableLiveAutocompletion", js.Array(value :_*))
   
   @scala.inline
   def enableSnippets(value: Boolean): this.type = set("enableSnippets", value.asInstanceOf[js.Any])
@@ -77,10 +78,10 @@ class SharedBuilder_IAceEditorProps_1046638660[R <: js.Object] (val args: js.Arr
   def keyboardHandler(value: String): this.type = set("keyboardHandler", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def markersVarargs(value: IMarker*): this.type = set("markers", js.Array(value :_*))
+  def markers(value: js.Array[IMarker]): this.type = set("markers", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def markers(value: js.Array[IMarker]): this.type = set("markers", value.asInstanceOf[js.Any])
+  def markersVarargs(value: IMarker*): this.type = set("markers", js.Array(value :_*))
   
   @scala.inline
   def maxLines(value: Double): this.type = set("maxLines", value.asInstanceOf[js.Any])
@@ -143,10 +144,10 @@ class SharedBuilder_IAceEditorProps_1046638660[R <: js.Object] (val args: js.Arr
   def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def scrollMarginVarargs(value: Double*): this.type = set("scrollMargin", js.Array(value :_*))
+  def scrollMargin(value: js.Array[Double]): this.type = set("scrollMargin", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def scrollMargin(value: js.Array[Double]): this.type = set("scrollMargin", value.asInstanceOf[js.Any])
+  def scrollMarginVarargs(value: Double*): this.type = set("scrollMargin", js.Array(value :_*))
   
   @scala.inline
   def setOptions(value: IAceOptions): this.type = set("setOptions", value.asInstanceOf[js.Any])

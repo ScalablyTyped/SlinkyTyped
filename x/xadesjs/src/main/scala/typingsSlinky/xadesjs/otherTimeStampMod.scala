@@ -3,17 +3,18 @@ package typingsSlinky.xadesjs
 import typingsSlinky.xadesjs.genericTimeStampMod.EncapsulatedTimeStampCollection
 import typingsSlinky.xadesjs.genericTimeStampMod.ReferenceInfos
 import typingsSlinky.xadesjs.genericTimeStampMod.XMLTimeStampCollection
-import typingsSlinky.xmlCore.mod.XmlObject
+import typingsSlinky.xadesjs.xmlBaseMod.XadesObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xadesjs/build/types/xml/other_time_stamp", JSImport.Namespace)
-@js.native
-object otherTimeStampMod extends js.Object {
+object otherTimeStampMod {
   
+  @JSImport("xadesjs/build/types/xml/other_time_stamp", "OtherTimeStamp")
   @js.native
-  class OtherTimeStamp () extends XmlObject {
+  class OtherTimeStamp () extends XadesObject {
+    def this(properties: js.Object) = this()
     
     var CanonicalizationMethod: typingsSlinky.xmldsigjs.mod.CanonicalizationMethod = js.native
     

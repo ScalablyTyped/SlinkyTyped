@@ -10,9 +10,9 @@ React component to wrap content in Collapsible element with trigger to open and 
 | ------------------ | :-------------: |
 | Full name          | react-collapsible |
 | Keywords           | react-component, react, collapse, collapsible, accordion |
-| # releases         | 12 |
-| # dependents       | 34 |
-| # downloads        | 1639226 |
+| # releases         | 8 |
+| # dependents       | 43 |
+| # downloads        | 2573516 |
 | # stars            | 0 |
 
 ## Links

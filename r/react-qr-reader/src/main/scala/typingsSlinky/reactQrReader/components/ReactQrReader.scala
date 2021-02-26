@@ -10,15 +10,22 @@ import typingsSlinky.reactQrReader.mod.props
 import typingsSlinky.reactQrReader.reactQrReaderBooleans.`false`
 import typingsSlinky.reactQrReader.reactQrReaderStrings.environment
 import typingsSlinky.reactQrReader.reactQrReaderStrings.user
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactQrReader {
   
+  @scala.inline
+  def apply(onError: js.Any => Unit, onScan: js.UndefOr[String] => Unit): Builder = {
+    val __props = js.Dynamic.literal(onError = js.Any.fromFunction1(onError), onScan = js.Any.fromFunction1(onScan))
+    new Builder(js.Array(this.component, __props.asInstanceOf[props]))
+  }
+  
   @JSImport("react-qr-reader", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +61,4 @@ object ReactQrReader {
   }
   
   def withProps(p: props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onError: js.Any => Unit, onScan: js.UndefOr[String] => Unit): Builder = {
-    val __props = js.Dynamic.literal(onError = js.Any.fromFunction1(onError), onScan = js.Any.fromFunction1(onScan))
-    new Builder(js.Array(this.component, __props.asInstanceOf[props]))
-  }
 }

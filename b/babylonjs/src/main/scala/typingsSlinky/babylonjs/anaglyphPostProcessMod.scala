@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/PostProcesses/anaglyphPostProcess", JSImport.Namespace)
-@js.native
-object anaglyphPostProcessMod extends js.Object {
+object anaglyphPostProcessMod {
   
+  @JSImport("babylonjs/PostProcesses/anaglyphPostProcess", "AnaglyphPostProcess")
   @js.native
   class AnaglyphPostProcess protected () extends PostProcess {
     /**

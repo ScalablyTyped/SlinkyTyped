@@ -2,13 +2,12 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.externalSystemArrayMod.ExternalSystemArray
 import typingsSlinky.samchon.iexternalserverMod.IExternalServer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/external/interfaces/IExternalServerArray", JSImport.Namespace)
-@js.native
-object iexternalserverarrayMod extends js.Object {
+object iexternalserverarrayMod {
   
   @js.native
   trait IExternalServerArray[System /* <: IExternalServer */] extends ExternalSystemArray[System] {

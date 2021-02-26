@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -50,9 +51,7 @@ class PostProcess protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/PostProcesses/index", "PostProcess")
-@js.native
-object PostProcess extends js.Object {
+object PostProcess {
   
   /**
     * Creates a material from parsed material data
@@ -61,5 +60,7 @@ object PostProcess extends js.Object {
     * @param rootUrl defines the root URL to use to load textures
     * @returns a new post process
     */
+  @JSImport("babylonjs/PostProcesses/index", "PostProcess.Parse")
+  @js.native
   def Parse(parsedPostProcess: js.Any, scene: Scene, rootUrl: String): Nullable[typingsSlinky.babylonjs.postProcessMod.PostProcess] = js.native
 }

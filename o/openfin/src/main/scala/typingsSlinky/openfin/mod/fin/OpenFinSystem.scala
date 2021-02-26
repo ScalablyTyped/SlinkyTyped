@@ -9,6 +9,7 @@ import typingsSlinky.openfin.openfinStrings.debug
 import typingsSlinky.openfin.openfinStrings.error
 import typingsSlinky.openfin.openfinStrings.info
 import typingsSlinky.openfin.openfinStrings.warn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Allows the developer to perform system-level actions, such as accessing logs, viewing processes, clearing the cache and exiting the runtime.
   */
 @js.native
-trait OpenFinSystem extends js.Object {
+trait OpenFinSystem extends StObject {
   
   var Clipboard: OpenFinClipboard = js.native
   

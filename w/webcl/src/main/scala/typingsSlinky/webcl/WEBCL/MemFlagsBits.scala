@@ -3,6 +3,7 @@ package typingsSlinky.webcl.WEBCL
 import typingsSlinky.webcl.webclNumbers.`0x1`
 import typingsSlinky.webcl.webclNumbers.`0x2`
 import typingsSlinky.webcl.webclNumbers.`0x4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webcl.webclNumbers.`0x2`
   - typingsSlinky.webcl.webclNumbers.`0x4`
 */
-trait MemFlagsBits extends js.Object
+trait MemFlagsBits extends StObject
 object MemFlagsBits {
   
   @scala.inline

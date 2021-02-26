@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialC
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
 import typingsSlinky.babylonjs.textureMod.Texture
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Dual/textureBlock", JSImport.Namespace)
-@js.native
-object textureBlockMod extends js.Object {
+object textureBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Dual/textureBlock", "TextureBlock")
   @js.native
   class TextureBlock protected () extends NodeMaterialBlock {
     /**

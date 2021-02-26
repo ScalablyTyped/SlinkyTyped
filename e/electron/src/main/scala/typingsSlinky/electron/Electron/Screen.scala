@@ -4,6 +4,7 @@ import typingsSlinky.electron.electronStrings.`display-added`
 import typingsSlinky.electron.electronStrings.`display-metrics-changed`
 import typingsSlinky.electron.electronStrings.`display-removed`
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

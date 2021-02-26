@@ -27,15 +27,22 @@ import typingsSlinky.grommet.utilsMod.GapType
 import typingsSlinky.grommet.utilsMod.GridAreaType
 import typingsSlinky.grommet.utilsMod.MarginType
 import typingsSlinky.grommet.utilsMod.PolymorphicType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RoutedButton {
   
-  @JSImport("grommet/es6", "RoutedButton")
+  @scala.inline
+  def apply(path: String): Builder = {
+    val __props = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RoutedButtonProps with ButtonProps]))
+  }
+  
+  @JSImport("grommet", "RoutedButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,13 +59,13 @@ object RoutedButton {
     def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def asComponentClass(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
+    def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def color(value: ColorType): this.type = set("color", value.asInstanceOf[js.Any])
@@ -88,10 +95,10 @@ object RoutedButton {
     def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def margin(value: MarginType): this.type = set("margin", value.asInstanceOf[js.Any])
@@ -122,10 +129,4 @@ object RoutedButton {
   }
   
   def withProps(p: RoutedButtonProps with ButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(path: String): Builder = {
-    val __props = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RoutedButtonProps with ButtonProps]))
-  }
 }

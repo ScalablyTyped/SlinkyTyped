@@ -1,5 +1,6 @@
 package typingsSlinky.stripeV3.stripe
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.stripeV3.stripeV3Strings.verification_failed
   - typingsSlinky.stripeV3.stripeV3Strings.errored
 */
-trait statusType extends js.Object
+trait statusType extends StObject
 object statusType {
   
   @scala.inline

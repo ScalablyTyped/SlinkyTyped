@@ -71,22 +71,50 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.reactBootstrap.carouselCaptionMod.CarouselCaptionProps
+import typingsSlinky.reactBootstrap.carouselItemMod.CarouselItemProps
 import typingsSlinky.reactBootstrap.carouselMod.CarouselProps
 import typingsSlinky.reactBootstrap.mod.Sizes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Carousel {
   
+  object Caption {
+    
+    @JSImport("react-bootstrap", "Carousel.Caption")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Caption.type): SharedBuilder_CarouselCaptionProps_1498264662[typingsSlinky.reactBootstrap.mod.Carousel.Caption] = new SharedBuilder_CarouselCaptionProps_1498264662[typingsSlinky.reactBootstrap.mod.Carousel.Caption](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: CarouselCaptionProps): SharedBuilder_CarouselCaptionProps_1498264662[typingsSlinky.reactBootstrap.mod.Carousel.Caption] = new SharedBuilder_CarouselCaptionProps_1498264662[typingsSlinky.reactBootstrap.mod.Carousel.Caption](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Item {
+    
+    @JSImport("react-bootstrap", "Carousel.Item")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Item.type): SharedBuilder_CarouselItemProps_935949535[typingsSlinky.reactBootstrap.mod.Carousel.Item] = new SharedBuilder_CarouselItemProps_935949535[typingsSlinky.reactBootstrap.mod.Carousel.Item](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: CarouselItemProps): SharedBuilder_CarouselItemProps_935949535[typingsSlinky.reactBootstrap.mod.Carousel.Item] = new SharedBuilder_CarouselItemProps_935949535[typingsSlinky.reactBootstrap.mod.Carousel.Item](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("react-bootstrap", "Carousel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Carousel] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -358,19 +386,16 @@ object Carousel {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultActiveIndex(value: Double): this.type = set("defaultActiveIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -541,10 +566,10 @@ object Carousel {
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    def nextIcon(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextIcon(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def noValidate(value: Boolean): this.type = set("noValidate", value.asInstanceOf[js.Any])
@@ -832,10 +857,10 @@ object Carousel {
     def preload(value: String): this.type = set("preload", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    def prevIcon(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prevIcon(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -967,10 +992,10 @@ object Carousel {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -985,7 +1010,7 @@ object Carousel {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Carousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

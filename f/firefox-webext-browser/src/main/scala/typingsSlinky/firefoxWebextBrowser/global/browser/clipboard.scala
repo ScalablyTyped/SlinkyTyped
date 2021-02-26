@@ -1,6 +1,7 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.browser.clipboard.SetImageDataImageType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,9 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Not allowed in: Content scripts, Devtools pages
   */
-@JSGlobal("browser.clipboard")
-@js.native
-object clipboard extends js.Object {
+object clipboard {
   
   /* clipboard functions */
   /**
@@ -22,5 +21,7 @@ object clipboard extends js.Object {
     * @param imageData The image data to be copied.
     * @param imageType The type of imageData.
     */
+  @JSGlobal("browser.clipboard.setImageData")
+  @js.native
   def setImageData(imageData: js.typedarray.ArrayBuffer, imageType: SetImageDataImageType): js.Promise[Unit] = js.native
 }

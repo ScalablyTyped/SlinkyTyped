@@ -79,6 +79,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -87,7 +88,7 @@ object DrawerChild {
   
   @JSImport("rc-drawer/es/DrawerChild", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -283,10 +284,10 @@ object DrawerChild {
     def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -307,13 +308,13 @@ object DrawerChild {
     def getOpenCount(value: () => Double): this.type = set("getOpenCount", js.Any.fromFunction0(value))
     
     @scala.inline
-    def handlerReactElement(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def handler(value: ReactElement | `false`): this.type = set("handler", value.asInstanceOf[js.Any])
     
     @scala.inline
     def handlerNull: this.type = set("handler", null)
+    
+    @scala.inline
+    def handlerReactElement(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
     
     @scala.inline
     def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
@@ -355,19 +356,19 @@ object DrawerChild {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def levelVarargs(value: String*): this.type = set("level", js.Array(value :_*))
-    
-    @scala.inline
     def level(value: String | js.Array[String]): this.type = set("level", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def levelNull: this.type = set("level", null)
+    def levelMove(value: ILevelMove | (js.Function1[/* e */ Target, ILevelMove])): this.type = set("levelMove", value.asInstanceOf[js.Any])
     
     @scala.inline
     def levelMoveFunction1(value: /* e */ Target => ILevelMove): this.type = set("levelMove", js.Any.fromFunction1(value))
     
     @scala.inline
-    def levelMove(value: ILevelMove | (js.Function1[/* e */ Target, ILevelMove])): this.type = set("levelMove", value.asInstanceOf[js.Any])
+    def levelNull: this.type = set("level", null)
+    
+    @scala.inline
+    def levelVarargs(value: String*): this.type = set("level", js.Array(value :_*))
     
     @scala.inline
     def maskClosable(value: Boolean): this.type = set("maskClosable", value.asInstanceOf[js.Any])
@@ -694,7 +695,7 @@ object DrawerChild {
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IDrawerChildProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DrawerChild.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IDrawerChildProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

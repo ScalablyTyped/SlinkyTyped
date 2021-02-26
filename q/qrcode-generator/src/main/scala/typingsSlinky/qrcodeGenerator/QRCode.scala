@@ -2,12 +2,13 @@ package typingsSlinky.qrcodeGenerator
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import typingsSlinky.qrcodeGenerator.anon.CellSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait QRCode extends js.Object {
+trait QRCode extends StObject {
   
   def addData(data: String): Unit = js.native
   def addData(data: String, mode: Mode): Unit = js.native

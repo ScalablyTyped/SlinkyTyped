@@ -1,6 +1,8 @@
 package typingsSlinky.twilioVideo.mod
 
+import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.twilioVideo.mod.Track.Kind
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("twilio-video", "RemoteTrackPublication")
 @js.native
 class RemoteTrackPublication () extends TrackPublication {
+  def this(options: EventEmitterOptions) = this()
   
   var isSubscribed: Boolean = js.native
   

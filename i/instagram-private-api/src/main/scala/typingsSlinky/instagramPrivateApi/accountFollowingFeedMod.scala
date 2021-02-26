@@ -1,21 +1,23 @@
 package typingsSlinky.instagramPrivateApi
 
 import typingsSlinky.instagramPrivateApi.accountFollowingFeedResponseMod.AccountFollowingFeedResponse
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.date_followed_earliest
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.date_followed_latest
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.default
 import typingsSlinky.instagramPrivateApi.responsesMod.AccountFollowingFeedResponseUsersItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/account-following.feed", JSImport.Namespace)
-@js.native
-object accountFollowingFeedMod extends js.Object {
+object accountFollowingFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/account-following.feed", "AccountFollowingFeed")
   @js.native
-  class AccountFollowingFeed () extends Feed[AccountFollowingFeedResponse, AccountFollowingFeedResponseUsersItem] {
+  class AccountFollowingFeed protected () extends Feed[AccountFollowingFeedResponse, AccountFollowingFeedResponseUsersItem] {
+    def this(client: IgApiClient) = this()
     
     var enableGroups: Boolean = js.native
     

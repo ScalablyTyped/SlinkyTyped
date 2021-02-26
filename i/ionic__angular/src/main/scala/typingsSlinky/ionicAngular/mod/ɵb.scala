@@ -3,6 +3,7 @@ package typingsSlinky.ionicAngular.mod
 import typingsSlinky.angularCore.mod.ElementRef
 import typingsSlinky.angularCore.mod.Injector
 import typingsSlinky.ionicAngular.valueAccessorMod.ValueAccessor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

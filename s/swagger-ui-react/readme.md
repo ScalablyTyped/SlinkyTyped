@@ -10,9 +10,9 @@ Typings are for version 3.35
 | ------------------ | :-------------: |
 | Full name          | swagger-ui-react |
 | Keywords           | - |
-| # releases         | 32 |
-| # dependents       | 3 |
-| # downloads        | 211490 |
+| # releases         | 63 |
+| # dependents       | 9 |
+| # downloads        | 983736 |
 | # stars            | 0 |
 
 ## Links

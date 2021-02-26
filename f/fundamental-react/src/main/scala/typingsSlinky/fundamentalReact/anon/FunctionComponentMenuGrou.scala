@@ -5,13 +5,14 @@ import typingsSlinky.fundamentalReact.fundamentalReactStrings.MenuDotGroup
 import typingsSlinky.fundamentalReact.menuMod.MenuGroupProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined react.react.FunctionComponent<fundamental-react.fundamental-react/lib/Menu/Menu.MenuGroupProps> & {  displayName :'Menu.Group'} */
 @js.native
-trait FunctionComponentMenuGrou extends js.Object {
+trait FunctionComponentMenuGrou extends StObject {
   
   def apply(props: PropsWithChildren[MenuGroupProps]): ReactElement | Null = js.native
   def apply(props: PropsWithChildren[MenuGroupProps], context: js.Any): ReactElement | Null = js.native

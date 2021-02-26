@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientContent.anon.CallbackCssDomainId
 import typingsSlinky.maximMazurokGapiClientContent.anon.CssDomainId
 import typingsSlinky.maximMazurokGapiClientContent.anon.CssGroupId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CssesResource extends js.Object {
+trait CssesResource extends StObject {
   
   /** Retrieves a single CSS domain by ID. */
   def get(): Request[Css] = js.native

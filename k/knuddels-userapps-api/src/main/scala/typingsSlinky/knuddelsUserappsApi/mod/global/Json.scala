@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.knuddelsUserappsApi.mod.JsonData
 import typingsSlinky.knuddelsUserappsApi.mod._JsonData
 import typingsSlinky.knuddelsUserappsApi.mod._KnuddelsEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

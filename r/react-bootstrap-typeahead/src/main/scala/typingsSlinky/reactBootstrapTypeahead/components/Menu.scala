@@ -16,7 +16,7 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
-import slinky.web.html.ul.tag
+import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.react.anon.Html
@@ -77,50 +77,12 @@ import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.tree
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.url
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.vertical
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Menu {
-  
-  @JSImport("react-bootstrap-typeahead", "Menu")
-  @js.native
-  object component extends js.Object
-  
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.Menu] {
-    
-    @scala.inline
-    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def emptyLabel(value: String): this.type = set("emptyLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def innerRefRefObject(value: ReactRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def innerRefFunction1(value: /* instance */ HTMLUListElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def innerRef(value: LegacyRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
-    
-    @scala.inline
-    def maxHeight(value: String): this.type = set("maxHeight", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: MenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(id: String): Builder = {
@@ -132,23 +94,26 @@ object Menu {
     
     @JSImport("react-bootstrap-typeahead", "Menu.Divider")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
-    def withProps(p: js.Object): Default[slinky.web.html.`*`.tag.type, js.Object] = new Default[slinky.web.html.`*`.tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Divider.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
     
-    implicit def make(companion: Divider.type): Default[slinky.web.html.`*`.tag.type, js.Object] = new Default[slinky.web.html.`*`.tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+    def withProps(p: js.Object): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object Header {
     
     @JSImport("react-bootstrap-typeahead", "Menu.Header")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[slinky.web.html.`*`.tag.type, li] {
+         with StBuildingComponent[tag.type, li] {
+      
+      @scala.inline
+      def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
       
       @scala.inline
       def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -408,16 +373,13 @@ object Menu {
       def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -969,10 +931,10 @@ object Menu {
       def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+      def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+      def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
       
       @scala.inline
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -987,8 +949,47 @@ object Menu {
       def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: MenuHeaderProps): typingsSlinky.reactBootstrapTypeahead.components.Menu.Header.Builder = new typingsSlinky.reactBootstrapTypeahead.components.Menu.Header.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: Header.type): typingsSlinky.reactBootstrapTypeahead.components.Menu.Header.Builder = new typingsSlinky.reactBootstrapTypeahead.components.Menu.Header.Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: MenuHeaderProps): typingsSlinky.reactBootstrapTypeahead.components.Menu.Header.Builder = new typingsSlinky.reactBootstrapTypeahead.components.Menu.Header.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
+  
+  @JSImport("react-bootstrap-typeahead", "Menu")
+  @js.native
+  val component: js.Object = js.native
+  
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[slinky.web.html.ul.tag.type, typingsSlinky.reactBootstrapTypeahead.mod.Menu] {
+    
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def emptyLabel(value: String): this.type = set("emptyLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRef(value: LegacyRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ HTMLUListElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
+    
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maxHeight(value: String): this.type = set("maxHeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: MenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

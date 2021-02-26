@@ -10,9 +10,9 @@ A flushable timeout function
 | ------------------ | :-------------: |
 | Full name          | flushable |
 | Keywords           | - |
-| # releases         | 3 |
-| # dependents       | 7 |
-| # downloads        | 1470250 |
+| # releases         | 0 |
+| # dependents       | 9 |
+| # downloads        | 1639605 |
 | # stars            | 0 |
 
 ## Links

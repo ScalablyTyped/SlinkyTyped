@@ -13,15 +13,22 @@ import typingsSlinky.reactImageCrop.mod.ReactCropProps
 import typingsSlinky.reactImageCrop.mod.^
 import typingsSlinky.reactImageCrop.reactImageCropStrings.`use-credentials`
 import typingsSlinky.reactImageCrop.reactImageCropStrings.anonymous
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactImageCrop {
   
+  @scala.inline
+  def apply(onChange: (Crop, PercentCrop) => Unit, src: String): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange), src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactCropProps]))
+  }
+  
   @JSImport("react-image-crop", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -83,10 +90,10 @@ object ReactImageCrop {
     def onImageLoaded(value: /* target */ HTMLImageElement => Unit): this.type = set("onImageLoaded", js.Any.fromFunction1(value))
     
     @scala.inline
-    def renderComponentReactElement(value: ReactElement): this.type = set("renderComponent", value.asInstanceOf[js.Any])
+    def renderComponent(value: ReactElement): this.type = set("renderComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderComponent(value: ReactElement): this.type = set("renderComponent", value.asInstanceOf[js.Any])
+    def renderComponentReactElement(value: ReactElement): this.type = set("renderComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def renderSelectionAddon(value: /* state */ js.Any => ReactElement): this.type = set("renderSelectionAddon", js.Any.fromFunction1(value))
@@ -99,10 +106,4 @@ object ReactImageCrop {
   }
   
   def withProps(p: ReactCropProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onChange: (Crop, PercentCrop) => Unit, src: String): Builder = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange), src = src.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactCropProps]))
-  }
 }

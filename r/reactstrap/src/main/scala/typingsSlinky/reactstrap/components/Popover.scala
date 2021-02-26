@@ -80,15 +80,22 @@ import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.popoverMod.PopoverChildren
 import typingsSlinky.reactstrap.popoverMod.PopoverChildrenRenderProps
 import typingsSlinky.reactstrap.popoverMod.PopoverProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Popover {
   
-  @JSImport("reactstrap/es", "Popover")
+  @scala.inline
+  def apply(target: String | HTMLElement | ReactRef[HTMLElement]): Builder = {
+    val __props = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PopoverProps]))
+  }
+  
+  @JSImport("reactstrap/lib", "Popover")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -257,21 +264,21 @@ object Popover {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def boundariesElementElement(value: Element): this.type = set("boundariesElement", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def boundariesElement(
       value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Boundary */ js.Any) | Element
     ): this.type = set("boundariesElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    def boundariesElementElement(value: Element): this.type = set("boundariesElement", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def children(value: PopoverChildren): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenFunction1(value: /* props */ PopoverChildrenRenderProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def children(value: PopoverChildren): this.type = set("children", value.asInstanceOf[js.Any])
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -280,13 +287,13 @@ object Popover {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerRefObject(value: ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    def container(value: String | HTMLElement | ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerHTMLElement(value: HTMLElement): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def container(value: String | HTMLElement | ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    def containerRefObject(value: ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -307,10 +314,10 @@ object Popover {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def delay(value: Double | Hide): this.type = set("delay", value.asInstanceOf[js.Any])
@@ -671,13 +678,13 @@ object Popover {
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def toggleFunction1(value: SyntheticMouseEvent[_] => Unit): this.type = set("toggle", js.Any.fromFunction1(value))
+    def toggle(value: MouseEventHandler[_] | js.Function0[Unit]): this.type = set("toggle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def toggleFunction0(value: () => Unit): this.type = set("toggle", js.Any.fromFunction0(value))
     
     @scala.inline
-    def toggle(value: MouseEventHandler[_] | js.Function0[Unit]): this.type = set("toggle", value.asInstanceOf[js.Any])
+    def toggleFunction1(value: SyntheticMouseEvent[_] => Unit): this.type = set("toggle", js.Any.fromFunction1(value))
     
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
@@ -693,10 +700,4 @@ object Popover {
   }
   
   def withProps(p: PopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(target: String | HTMLElement | ReactRef[HTMLElement]): Builder = {
-    val __props = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PopoverProps]))
-  }
 }

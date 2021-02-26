@@ -14,74 +14,153 @@ import typingsSlinky.nodeVagrant.nodeVagrantStrings.`up-progress`
 import typingsSlinky.nodeVagrant.nodeVagrantStrings.progress
 import typingsSlinky.nodeVagrant.nodeVagrantStrings.stderr
 import typingsSlinky.nodeVagrant.nodeVagrantStrings.stdout
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("node-vagrant", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("node-vagrant", "boxAdd")
+  @js.native
   def boxAdd(box: String): ProgressEmitter = js.native
+  @JSImport("node-vagrant", "boxAdd")
+  @js.native
   def boxAdd(box: String, args: js.UndefOr[scala.Nothing], cb: Callback): ProgressEmitter = js.native
+  @JSImport("node-vagrant", "boxAdd")
+  @js.native
   def boxAdd(box: String, args: String): ProgressEmitter = js.native
+  @JSImport("node-vagrant", "boxAdd")
+  @js.native
   def boxAdd(box: String, args: String, cb: Callback): ProgressEmitter = js.native
+  @JSImport("node-vagrant", "boxAdd")
+  @js.native
   def boxAdd(box: String, args: js.Array[String]): ProgressEmitter = js.native
+  @JSImport("node-vagrant", "boxAdd")
+  @js.native
   def boxAdd(box: String, args: js.Array[String], cb: Callback): ProgressEmitter = js.native
+  @JSImport("node-vagrant", "boxAdd")
+  @js.native
   def boxAdd(box: String, cb: Callback): ProgressEmitter = js.native
   
+  @JSImport("node-vagrant", "boxList")
+  @js.native
   def boxList(args: String, cb: js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[js.Array[Name]], Unit]): Unit = js.native
+  @JSImport("node-vagrant", "boxList")
+  @js.native
   def boxList(
     args: js.Array[String],
     cb: js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[js.Array[Name]], Unit]
   ): Unit = js.native
+  @JSImport("node-vagrant", "boxList")
+  @js.native
   def boxList(cb: js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[js.Array[Name]], Unit]): Unit = js.native
   
+  @JSImport("node-vagrant", "boxOutdated")
+  @js.native
   def boxOutdated(
     args: String,
     cb: js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[js.Array[CurrentVersion]], Unit]
   ): Unit = js.native
+  @JSImport("node-vagrant", "boxOutdated")
+  @js.native
   def boxOutdated(
     args: js.Array[String],
     cb: js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[js.Array[CurrentVersion]], Unit]
   ): Unit = js.native
+  @JSImport("node-vagrant", "boxOutdated")
+  @js.native
   def boxOutdated(cb: js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[js.Array[CurrentVersion]], Unit]): Unit = js.native
   
+  @JSImport("node-vagrant", "boxPrune")
+  @js.native
   def boxPrune(): Unit = js.native
+  @JSImport("node-vagrant", "boxPrune")
+  @js.native
   def boxPrune(args: String): Unit = js.native
+  @JSImport("node-vagrant", "boxPrune")
+  @js.native
   def boxPrune(args: String, cb: Callback): Unit = js.native
+  @JSImport("node-vagrant", "boxPrune")
+  @js.native
   def boxPrune(args: js.Array[String]): Unit = js.native
+  @JSImport("node-vagrant", "boxPrune")
+  @js.native
   def boxPrune(args: js.Array[String], cb: Callback): Unit = js.native
+  @JSImport("node-vagrant", "boxPrune")
+  @js.native
   def boxPrune(cb: Callback): Unit = js.native
   
+  @JSImport("node-vagrant", "boxRemove")
+  @js.native
   def boxRemove(name: String): Unit = js.native
+  @JSImport("node-vagrant", "boxRemove")
+  @js.native
   def boxRemove(name: String, args: String): Unit = js.native
+  @JSImport("node-vagrant", "boxRemove")
+  @js.native
   def boxRemove(name: String, args: String, cb: Callback): Unit = js.native
+  @JSImport("node-vagrant", "boxRemove")
+  @js.native
   def boxRemove(name: String, args: js.Array[String]): Unit = js.native
+  @JSImport("node-vagrant", "boxRemove")
+  @js.native
   def boxRemove(name: String, args: js.Array[String], cb: Callback): Unit = js.native
+  @JSImport("node-vagrant", "boxRemove")
+  @js.native
   def boxRemove(name: String, cb: Callback): Unit = js.native
   
+  @JSImport("node-vagrant", "boxUpdate")
+  @js.native
   def boxUpdate(box: String): ProgressEmitter = js.native
+  @JSImport("node-vagrant", "boxUpdate")
+  @js.native
   def boxUpdate(box: String, provider: String): ProgressEmitter = js.native
+  @JSImport("node-vagrant", "boxUpdate")
+  @js.native
   def boxUpdate(box: String, provider: String, cb: Callback): ProgressEmitter = js.native
+  @JSImport("node-vagrant", "boxUpdate")
+  @js.native
   def boxUpdate(box: String, provider: Null, cb: Callback): ProgressEmitter = js.native
   
+  @JSImport("node-vagrant", "create")
+  @js.native
   def create(): Machine = js.native
+  @JSImport("node-vagrant", "create")
+  @js.native
   def create(opts: Env): Machine = js.native
   
+  @JSImport("node-vagrant", "globalStatus")
+  @js.native
   def globalStatus(args: String, cb: js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[js.Array[Id]], Unit]): Unit = js.native
+  @JSImport("node-vagrant", "globalStatus")
+  @js.native
   def globalStatus(
     args: js.Array[String],
     cb: js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[js.Array[Id]], Unit]
   ): Unit = js.native
+  @JSImport("node-vagrant", "globalStatus")
+  @js.native
   def globalStatus(cb: js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[js.Array[Id]], Unit]): Unit = js.native
   
+  @JSImport("node-vagrant", "promisify")
+  @js.native
   def promisify(): Unit = js.native
   
+  @JSImport("node-vagrant", "version")
+  @js.native
   def version(): Unit = js.native
+  @JSImport("node-vagrant", "version")
+  @js.native
   def version(cb: Callback): Unit = js.native
   
+  @JSImport("node-vagrant", "versionStatus")
+  @js.native
   def versionStatus(cb: js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[Major], Unit]): Unit = js.native
+  
+  type Callback = js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[String], Unit]
+  
+  type ErrorArg = js.Error | String | Null
   
   @js.native
   trait Machine extends MachineEmitter {
@@ -177,7 +256,7 @@ object mod extends js.Object {
   }
   
   @js.native
-  trait Plugin extends js.Object {
+  trait Plugin extends StObject {
     
     def expunge(): Unit = js.native
     def expunge(args: js.UndefOr[scala.Nothing], cb: Callback): Unit = js.native
@@ -239,7 +318,7 @@ object mod extends js.Object {
   }
   
   @js.native
-  trait Snapshots extends js.Object {
+  trait Snapshots extends StObject {
     
     def delete(args: String): Unit = js.native
     def delete(args: String, cb: Callback): Unit = js.native
@@ -269,8 +348,4 @@ object mod extends js.Object {
     def save(args: js.Array[String]): Unit = js.native
     def save(args: js.Array[String], cb: Callback): Unit = js.native
   }
-  
-  type Callback = js.Function2[/* err */ ErrorArg, /* out */ js.UndefOr[String], Unit]
-  
-  type ErrorArg = js.Error | String | Null
 }

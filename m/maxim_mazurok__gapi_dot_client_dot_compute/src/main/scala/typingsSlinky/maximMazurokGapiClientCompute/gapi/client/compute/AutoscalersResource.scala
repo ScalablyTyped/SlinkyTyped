@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RequestId
 import typingsSlinky.maximMazurokGapiClientCompute.anon.Resource
 import typingsSlinky.maximMazurokGapiClientCompute.anon.UserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AutoscalersResource extends js.Object {
+trait AutoscalersResource extends StObject {
   
   /** Retrieves an aggregated list of autoscalers. */
   def aggregatedList(): Request[AutoscalerAggregatedList] = js.native

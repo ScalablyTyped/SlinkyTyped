@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import typingsSlinky.babylonjs.anon.Pattern
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,9 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class TiledBoxBuilder ()
   extends typingsSlinky.babylonjs.legacyMod.TiledBoxBuilder
 /* static members */
-@JSImport("babylonjs", "TiledBoxBuilder")
-@js.native
-object TiledBoxBuilder extends js.Object {
+object TiledBoxBuilder {
   
   /**
     * Creates a box mesh
@@ -27,6 +26,10 @@ object TiledBoxBuilder extends js.Object {
     * @param scene defines the hosting scene
     * @returns the box mesh
     */
+  @JSImport("babylonjs", "TiledBoxBuilder.CreateTiledBox")
+  @js.native
   def CreateTiledBox(name: String, options: Pattern): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  @JSImport("babylonjs", "TiledBoxBuilder.CreateTiledBox")
+  @js.native
   def CreateTiledBox(name: String, options: Pattern, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }

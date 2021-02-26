@@ -11,8 +11,8 @@ boolean converts lots of things to boolean.
 | Full name          | boolean |
 | Keywords           | boolean, parser |
 | # releases         | 8 |
-| # dependents       | 82 |
-| # downloads        | 10837165 |
+| # dependents       | 91 |
+| # downloads        | 23184475 |
 | # stars            | 0 |
 
 ## Links

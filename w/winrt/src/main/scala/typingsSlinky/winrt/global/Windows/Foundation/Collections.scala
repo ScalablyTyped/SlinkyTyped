@@ -1,15 +1,15 @@
 package typingsSlinky.winrt.global.Windows.Foundation
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Windows.Foundation.Collections")
-@js.native
-object Collections extends js.Object {
+object Collections {
   
+  @JSGlobal("Windows.Foundation.Collections.CollectionChange")
   @js.native
-  object CollectionChange extends js.Object {
+  object CollectionChange extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Foundation.Collections.CollectionChange with Double] = js.native
@@ -23,10 +23,12 @@ object Collections extends js.Object {
     /* 0 */ val reset: typingsSlinky.winrt.Windows.Foundation.Collections.CollectionChange.reset with Double = js.native
   }
   
+  @JSGlobal("Windows.Foundation.Collections.PropertySet")
   @js.native
   class PropertySet ()
     extends typingsSlinky.winrt.Windows.Foundation.Collections.PropertySet
   
+  @JSGlobal("Windows.Foundation.Collections.ValueSet")
   @js.native
   class ValueSet ()
     extends typingsSlinky.winrt.Windows.Foundation.Collections.ValueSet

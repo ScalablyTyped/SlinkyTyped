@@ -4,14 +4,14 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.mod.Side
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/item-options/item-options", JSImport.Namespace)
-@js.native
-object itemOptionsMod extends js.Object {
+object itemOptionsMod {
   
+  @JSImport("@ionic/core/dist/types/components/item-options/item-options", "ItemOptions")
   @js.native
   class ItemOptions () extends ComponentInterface {
     

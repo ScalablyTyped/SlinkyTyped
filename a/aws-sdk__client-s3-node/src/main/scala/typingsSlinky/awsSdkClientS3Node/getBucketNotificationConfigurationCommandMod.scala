@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesGetBucketNotificationConfigurationI
 import typingsSlinky.awsSdkClientS3Node.typesGetBucketNotificationConfigurationOutputMod.GetBucketNotificationConfigurationOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/GetBucketNotificationConfigurationCommand", JSImport.Namespace)
-@js.native
-object getBucketNotificationConfigurationCommandMod extends js.Object {
+object getBucketNotificationConfigurationCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/GetBucketNotificationConfigurationCommand", "GetBucketNotificationConfigurationCommand")
   @js.native
   class GetBucketNotificationConfigurationCommand protected () extends Command[
           InputTypesUnion, 

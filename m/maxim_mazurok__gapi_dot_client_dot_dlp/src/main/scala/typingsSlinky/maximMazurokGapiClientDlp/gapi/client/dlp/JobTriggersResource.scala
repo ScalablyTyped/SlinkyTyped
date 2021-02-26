@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientDlp.anon.KeyOauthtoken
 import typingsSlinky.maximMazurokGapiClientDlp.anon.NameOauthtoken
 import typingsSlinky.maximMazurokGapiClientDlp.anon.OauthtokenPrettyPrint
 import typingsSlinky.maximMazurokGapiClientDlp.anon.OrderBy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JobTriggersResource extends js.Object {
+trait JobTriggersResource extends StObject {
   
   /** Activate a job trigger. Causes the immediate execute of a trigger instead of waiting on the trigger event to occur. */
   def activate(request: KeyName): Request[GooglePrivacyDlpV2DlpJob] = js.native

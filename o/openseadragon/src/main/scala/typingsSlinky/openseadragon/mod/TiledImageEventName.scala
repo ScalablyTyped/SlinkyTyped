@@ -1,5 +1,6 @@
 package typingsSlinky.openseadragon.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.openseadragon.openseadragonStrings.`fully-loaded-change`
   - typingsSlinky.openseadragon.openseadragonStrings.`opacity-change`
 */
-trait TiledImageEventName extends js.Object
+trait TiledImageEventName extends StObject
 object TiledImageEventName {
   
   @scala.inline

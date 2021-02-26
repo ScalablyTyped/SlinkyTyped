@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.PointerEvent
 import org.scalajs.dom.raw.Touch
 import org.scalajs.dom.raw.TouchEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @memberof PIXI
   */
 @js.native
-trait InteractionData extends js.Object {
+trait InteractionData extends StObject {
   
   /**
     * Indicates which button was pressed on the mouse or pointer device to trigger the event.

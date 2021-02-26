@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/notification/wifi", JSImport.Namespace)
-@js.native
-object wifiMod extends js.Object {
+object wifiMod {
   
+  @JSImport("material-ui/svg-icons/notification/wifi", JSImport.Default)
+  @js.native
+  class default () extends NotificationWifi
+  
+  @JSImport("material-ui/svg-icons/notification/wifi", "NotificationWifi")
   @js.native
   class NotificationWifi ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

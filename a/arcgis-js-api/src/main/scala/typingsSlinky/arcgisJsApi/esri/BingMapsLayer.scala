@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bing-maps`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.aerial
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.hybrid
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.road
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

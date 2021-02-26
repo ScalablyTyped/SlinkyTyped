@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,19 +33,27 @@ class SourcesOrder () extends ISourcesOrder {
   @JSName("type")
   var type_SourcesOrder: SourcesOrderType = js.native
 }
-/* static members */
-@JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder")
-@js.native
-object SourcesOrder extends js.Object {
+object SourcesOrder {
   
   /**
     * Creates a new SourcesOrder instance using the specified properties.
     * @param [properties] Properties to set
     * @returns SourcesOrder instance
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.create")
+  @js.native
   def create(): SourcesOrder = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.create")
+  @js.native
   def create(properties: ISourcesOrder): SourcesOrder = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): SourcesOrder = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): SourcesOrder = js.native
   /**
     * Decodes a SourcesOrder message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -53,11 +62,17 @@ object SourcesOrder extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.decode")
+  @js.native
   def decode(reader: Reader): SourcesOrder = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.decode")
+  @js.native
   def decode(reader: Reader, length: Double): SourcesOrder = js.native
-  def decode(reader: js.typedarray.Uint8Array): SourcesOrder = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): SourcesOrder = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): SourcesOrder = js.native
   /**
     * Decodes a SourcesOrder message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -65,8 +80,10 @@ object SourcesOrder extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): SourcesOrder = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): SourcesOrder = js.native
   
   /**
     * Encodes the specified SourcesOrder message. Does not implicitly {@link io.cucumber.messages.SourcesOrder.verify|verify} messages.
@@ -74,7 +91,12 @@ object SourcesOrder extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.encode")
+  @js.native
   def encode(message: ISourcesOrder): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.encode")
+  @js.native
   def encode(message: ISourcesOrder, writer: Writer): Writer = js.native
   
   /**
@@ -83,7 +105,12 @@ object SourcesOrder extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ISourcesOrder): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.encodeDelimited")
+  @js.native
   def encodeDelimited(message: ISourcesOrder, writer: Writer): Writer = js.native
   
   /**
@@ -91,6 +118,9 @@ object SourcesOrder extends js.Object {
     * @param object Plain object
     * @returns SourcesOrder
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): SourcesOrder = js.native
   
   /**
@@ -99,7 +129,12 @@ object SourcesOrder extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.toObject")
+  @js.native
   def toObject(message: SourcesOrder): StringDictionary[js.Any] = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.toObject")
+  @js.native
   def toObject(message: SourcesOrder, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -107,5 +142,8 @@ object SourcesOrder extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.SourcesOrder.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

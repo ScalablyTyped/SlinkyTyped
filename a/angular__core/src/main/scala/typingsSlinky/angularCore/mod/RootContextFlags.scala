@@ -3,6 +3,7 @@ package typingsSlinky.angularCore.mod
 import typingsSlinky.angularCore.angularCoreNumbers.`0`
 import typingsSlinky.angularCore.angularCoreNumbers.`1`
 import typingsSlinky.angularCore.angularCoreNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCore.angularCoreNumbers.`1`
   - typingsSlinky.angularCore.angularCoreNumbers.`2`
 */
-trait RootContextFlags extends js.Object
+trait RootContextFlags extends StObject
 object RootContextFlags {
   
   @scala.inline

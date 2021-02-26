@@ -100,15 +100,22 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Autocomplete {
   
+  @scala.inline
+  def apply[T, Multiple /* <: js.UndefOr[Boolean] */, DisableClearable /* <: js.UndefOr[Boolean] */, FreeSolo /* <: js.UndefOr[Boolean] */](options: js.Array[T], renderInput: AutocompleteRenderInputParams => ReactElement): Builder[T, Multiple, DisableClearable, FreeSolo] = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any], renderInput = js.Any.fromFunction1(renderInput))
+    new Builder[T, Multiple, DisableClearable, FreeSolo](js.Array(this.component, __props.asInstanceOf[AutocompleteProps[T, Multiple, DisableClearable, FreeSolo]]))
+  }
+  
   @JSImport("@material-ui/lab", "Autocomplete")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T, Multiple /* <: js.UndefOr[Boolean] */, DisableClearable /* <: js.UndefOr[Boolean] */, FreeSolo /* <: js.UndefOr[Boolean] */] (val args: js.Array[js.Any])
@@ -119,34 +126,34 @@ object Autocomplete {
     def ChipProps(value: js.Object): this.type = set("ChipProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ListboxComponentFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("ListboxComponent", value.asInstanceOf[js.Any])
+    def ListboxComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("ListboxComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListboxComponentComponentClass(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("ListboxComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ListboxComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("ListboxComponent", value.asInstanceOf[js.Any])
+    def ListboxComponentFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("ListboxComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListboxProps(value: js.Object): this.type = set("ListboxProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def PaperComponentFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("PaperComponent", value.asInstanceOf[js.Any])
+    def PaperComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("PaperComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def PaperComponentComponentClass(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("PaperComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def PaperComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("PaperComponent", value.asInstanceOf[js.Any])
+    def PaperComponentFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): this.type = set("PaperComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def PopperComponentFunctionComponent(value: ReactComponentClass[PopperProps]): this.type = set("PopperComponent", value.asInstanceOf[js.Any])
+    def PopperComponent(value: ReactComponentClass[PopperProps]): this.type = set("PopperComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def PopperComponentComponentClass(value: ReactComponentClass[PopperProps]): this.type = set("PopperComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def PopperComponent(value: ReactComponentClass[PopperProps]): this.type = set("PopperComponent", value.asInstanceOf[js.Any])
+    def PopperComponentFunctionComponent(value: ReactComponentClass[PopperProps]): this.type = set("PopperComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -337,10 +344,10 @@ object Autocomplete {
     def clearText(value: String): this.type = set("clearText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def closeText(value: String): this.type = set("closeText", value.asInstanceOf[js.Any])
@@ -370,13 +377,13 @@ object Autocomplete {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: (T | AutocompleteFreeSoloValueMapping[FreeSolo])*): this.type = set("defaultValue", js.Array(value :_*))
-    
-    @scala.inline
     def defaultValue(value: Value[T, Multiple, DisableClearable, FreeSolo]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultValueNull: this.type = set("defaultValue", null)
+    
+    @scala.inline
+    def defaultValueVarargs(value: (T | AutocompleteFreeSoloValueMapping[FreeSolo])*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -448,16 +455,16 @@ object Autocomplete {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -493,19 +500,19 @@ object Autocomplete {
     def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingTextReactElement(value: ReactElement): this.type = set("loadingText", value.asInstanceOf[js.Any])
+    def loadingText(value: ReactElement): this.type = set("loadingText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingText(value: ReactElement): this.type = set("loadingText", value.asInstanceOf[js.Any])
+    def loadingTextReactElement(value: ReactElement): this.type = set("loadingText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def multiple(value: Multiple): this.type = set("multiple", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noOptionsTextReactElement(value: ReactElement): this.type = set("noOptionsText", value.asInstanceOf[js.Any])
+    def noOptionsText(value: ReactElement): this.type = set("noOptionsText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noOptionsText(value: ReactElement): this.type = set("noOptionsText", value.asInstanceOf[js.Any])
+    def noOptionsTextReactElement(value: ReactElement): this.type = set("noOptionsText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -775,10 +782,10 @@ object Autocomplete {
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def popupIconReactElement(value: ReactElement): this.type = set("popupIcon", value.asInstanceOf[js.Any])
+    def popupIcon(value: ReactElement): this.type = set("popupIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def popupIcon(value: ReactElement): this.type = set("popupIcon", value.asInstanceOf[js.Any])
+    def popupIconReactElement(value: ReactElement): this.type = set("popupIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
@@ -847,23 +854,17 @@ object Autocomplete {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: (T | AutocompleteFreeSoloValueMapping[FreeSolo])*): this.type = set("value", js.Array(value :_*))
-    
-    @scala.inline
     def value(value: Value[T, Multiple, DisableClearable, FreeSolo]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def valueNull: this.type = set("value", null)
     
     @scala.inline
+    def valueVarargs(value: (T | AutocompleteFreeSoloValueMapping[FreeSolo])*): this.type = set("value", js.Array(value :_*))
+    
+    @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
   def withProps[T, Multiple /* <: js.UndefOr[Boolean] */, DisableClearable /* <: js.UndefOr[Boolean] */, FreeSolo /* <: js.UndefOr[Boolean] */](p: AutocompleteProps[T, Multiple, DisableClearable, FreeSolo]): Builder[T, Multiple, DisableClearable, FreeSolo] = new Builder[T, Multiple, DisableClearable, FreeSolo](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T, Multiple /* <: js.UndefOr[Boolean] */, DisableClearable /* <: js.UndefOr[Boolean] */, FreeSolo /* <: js.UndefOr[Boolean] */](options: js.Array[T], renderInput: AutocompleteRenderInputParams => ReactElement): Builder[T, Multiple, DisableClearable, FreeSolo] = {
-    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any], renderInput = js.Any.fromFunction1(renderInput))
-    new Builder[T, Multiple, DisableClearable, FreeSolo](js.Array(this.component, __props.asInstanceOf[AutocompleteProps[T, Multiple, DisableClearable, FreeSolo]]))
-  }
 }

@@ -19,15 +19,25 @@ import typingsSlinky.uifabricMergeStyles.istylesetMod.IProcessedStyleSet
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object GroupedListSection {
   
+  @scala.inline
+  def apply(
+    items: js.Array[_],
+    onRenderCell: (js.UndefOr[Double], js.UndefOr[js.Any], js.UndefOr[Double]) => ReactElement
+  ): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], onRenderCell = js.Any.fromFunction3(onRenderCell))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IGroupedListSectionProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "GroupedListSection")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -47,10 +57,10 @@ object GroupedListSection {
     def dragDropHelper(value: IDragDropHelper): this.type = set("dragDropHelper", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventsToRegisterVarargs(value: Callback*): this.type = set("eventsToRegister", js.Array(value :_*))
+    def eventsToRegister(value: js.Array[Callback]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventsToRegister(value: js.Array[Callback]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
+    def eventsToRegisterVarargs(value: Callback*): this.type = set("eventsToRegister", js.Array(value :_*))
     
     @scala.inline
     def footerProps(value: IGroupFooterProps): this.type = set("footerProps", value.asInstanceOf[js.Any])
@@ -74,10 +84,10 @@ object GroupedListSection {
     def groupedListClassNames(value: IProcessedStyleSet[IGroupedListStyles]): this.type = set("groupedListClassNames", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
+    def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
+    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
     
     @scala.inline
     def headerProps(value: IGroupHeaderProps): this.type = set("headerProps", value.asInstanceOf[js.Any])
@@ -117,13 +127,4 @@ object GroupedListSection {
   }
   
   def withProps(p: IGroupedListSectionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    items: js.Array[_],
-    onRenderCell: (js.UndefOr[Double], js.UndefOr[js.Any], js.UndefOr[Double]) => ReactElement
-  ): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], onRenderCell = js.Any.fromFunction3(onRenderCell))
-    new Builder(js.Array(this.component, __props.asInstanceOf[IGroupedListSectionProps]))
-  }
 }

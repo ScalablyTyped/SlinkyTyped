@@ -20,6 +20,7 @@ import typingsSlinky.jupyterlabUiComponents.blueprintMod.CommonProps
 import typingsSlinky.jupyterlabUiComponents.blueprintMod.IInputGroupProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ object InputGroup {
   
   @JSImport("@jupyterlab/ui-components", "InputGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -281,7 +282,7 @@ object InputGroup {
     ): this.type = set("rightIcon", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IInputGroupProps with CommonProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: InputGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IInputGroupProps with CommonProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

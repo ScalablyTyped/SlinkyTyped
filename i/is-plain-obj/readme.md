@@ -10,9 +10,9 @@ Check if a value is a plain object
 | ------------------ | :-------------: |
 | Full name          | is-plain-obj |
 | Keywords           | object, is, check, test, type, plain, vanilla, pure, simple |
-| # releases         | 2 |
-| # dependents       | 219 |
-| # downloads        | 272725028 |
+| # releases         | 3 |
+| # dependents       | 270 |
+| # downloads        | 454366930 |
 | # stars            | 3 |
 
 ## Links

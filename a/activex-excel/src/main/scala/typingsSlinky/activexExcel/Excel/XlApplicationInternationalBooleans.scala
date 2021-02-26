@@ -13,6 +13,7 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`42`
 import typingsSlinky.activexExcel.activexExcelNumbers.`43`
 import typingsSlinky.activexExcel.activexExcelNumbers.`44`
 import typingsSlinky.activexExcel.activexExcelNumbers.`45`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

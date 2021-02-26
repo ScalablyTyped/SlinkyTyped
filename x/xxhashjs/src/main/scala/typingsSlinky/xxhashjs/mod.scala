@@ -1,42 +1,45 @@
 package typingsSlinky.xxhashjs
 
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xxhashjs", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("xxhashjs", "h32")
+  @js.native
   val h32: HashInterface = js.native
   
+  @JSImport("xxhashjs", "h64")
+  @js.native
   val h64: HashInterface = js.native
   
   @js.native
-  trait HashInterface extends js.Object {
+  trait HashInterface extends StObject {
     
     def apply(): HashObject = js.native
     def apply(data: String, seed: Double): UINT = js.native
-    def apply(data: Buffer, seed: Double): UINT = js.native
     def apply(data: js.typedarray.ArrayBuffer, seed: Double): UINT = js.native
+    def apply(data: Buffer, seed: Double): UINT = js.native
     def apply(seed: Double): HashObject = js.native
   }
   
   @js.native
-  trait HashObject extends js.Object {
+  trait HashObject extends StObject {
     
     def digest(): UINT = js.native
     
     def init(seed: Double): this.type = js.native
     
     def update(data: String): this.type = js.native
-    def update(data: Buffer): this.type = js.native
     def update(data: js.typedarray.ArrayBuffer): this.type = js.native
+    def update(data: Buffer): this.type = js.native
   }
   
   @js.native
-  trait UINT extends js.Object {
+  trait UINT extends StObject {
     
     def toNumber(): Double = js.native
     

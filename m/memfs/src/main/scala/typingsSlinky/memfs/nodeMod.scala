@@ -7,18 +7,16 @@ import typingsSlinky.memfs.statsMod.default
 import typingsSlinky.memfs.volumeMod.Volume
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("memfs/lib/node", JSImport.Namespace)
-@js.native
-object nodeMod extends js.Object {
+object nodeMod {
   
-  val SEP: /* "/" */ String = js.native
-  
+  @JSImport("memfs/lib/node", "File")
   @js.native
-  class File protected () extends js.Object {
+  class File protected () extends StObject {
     /**
       * Open a Link-Node pair. `node` is provided separately as that might be a different node
       * rather the one `link` points to, because it might be a symlink.
@@ -62,19 +60,6 @@ object nodeMod extends js.Object {
       */
     var position: Double = js.native
     
-    def read(buf: Buffer): Double = js.native
-    def read(
-      buf: Buffer,
-      offset: js.UndefOr[scala.Nothing],
-      length: js.UndefOr[scala.Nothing],
-      position: Double
-    ): Double = js.native
-    def read(buf: Buffer, offset: js.UndefOr[scala.Nothing], length: Double): Double = js.native
-    def read(buf: Buffer, offset: js.UndefOr[scala.Nothing], length: Double, position: Double): Double = js.native
-    def read(buf: Buffer, offset: Double): Double = js.native
-    def read(buf: Buffer, offset: Double, length: js.UndefOr[scala.Nothing], position: Double): Double = js.native
-    def read(buf: Buffer, offset: Double, length: Double): Double = js.native
-    def read(buf: Buffer, offset: Double, length: Double, position: Double): Double = js.native
     def read(buf: js.typedarray.Uint8Array): Double = js.native
     def read(
       buf: js.typedarray.Uint8Array,
@@ -88,6 +73,19 @@ object nodeMod extends js.Object {
     def read(buf: js.typedarray.Uint8Array, offset: Double, length: js.UndefOr[scala.Nothing], position: Double): Double = js.native
     def read(buf: js.typedarray.Uint8Array, offset: Double, length: Double): Double = js.native
     def read(buf: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): Double = js.native
+    def read(buf: Buffer): Double = js.native
+    def read(
+      buf: Buffer,
+      offset: js.UndefOr[scala.Nothing],
+      length: js.UndefOr[scala.Nothing],
+      position: Double
+    ): Double = js.native
+    def read(buf: Buffer, offset: js.UndefOr[scala.Nothing], length: Double): Double = js.native
+    def read(buf: Buffer, offset: js.UndefOr[scala.Nothing], length: Double, position: Double): Double = js.native
+    def read(buf: Buffer, offset: Double): Double = js.native
+    def read(buf: Buffer, offset: Double, length: js.UndefOr[scala.Nothing], position: Double): Double = js.native
+    def read(buf: Buffer, offset: Double, length: Double): Double = js.native
+    def read(buf: Buffer, offset: Double, length: Double, position: Double): Double = js.native
     
     def seekTo(position: Double): Unit = js.native
     
@@ -115,6 +113,7 @@ object nodeMod extends js.Object {
     def write(buf: Buffer, offset: Double, length: Double, position: Double): Double = js.native
   }
   
+  @JSImport("memfs/lib/node", "Link")
   @js.native
   class Link protected () extends EventEmitter {
     def this(vol: Volume, parent: Link, name: String) = this()
@@ -167,6 +166,7 @@ object nodeMod extends js.Object {
     def walk(steps: js.Array[String], stop: Double, i: Double): Link | Null = js.native
   }
   
+  @JSImport("memfs/lib/node", "Node")
   @js.native
   class Node protected () extends EventEmitter {
     def this(ino: Double) = this()
@@ -221,14 +221,6 @@ object nodeMod extends js.Object {
     
     var perm: Double = js.native
     
-    def read(buf: Buffer): Double = js.native
-    def read(buf: Buffer, off: js.UndefOr[scala.Nothing], len: js.UndefOr[scala.Nothing], pos: Double): Double = js.native
-    def read(buf: Buffer, off: js.UndefOr[scala.Nothing], len: Double): Double = js.native
-    def read(buf: Buffer, off: js.UndefOr[scala.Nothing], len: Double, pos: Double): Double = js.native
-    def read(buf: Buffer, off: Double): Double = js.native
-    def read(buf: Buffer, off: Double, len: js.UndefOr[scala.Nothing], pos: Double): Double = js.native
-    def read(buf: Buffer, off: Double, len: Double): Double = js.native
-    def read(buf: Buffer, off: Double, len: Double, pos: Double): Double = js.native
     def read(buf: js.typedarray.Uint8Array): Double = js.native
     def read(
       buf: js.typedarray.Uint8Array,
@@ -242,6 +234,14 @@ object nodeMod extends js.Object {
     def read(buf: js.typedarray.Uint8Array, off: Double, len: js.UndefOr[scala.Nothing], pos: Double): Double = js.native
     def read(buf: js.typedarray.Uint8Array, off: Double, len: Double): Double = js.native
     def read(buf: js.typedarray.Uint8Array, off: Double, len: Double, pos: Double): Double = js.native
+    def read(buf: Buffer): Double = js.native
+    def read(buf: Buffer, off: js.UndefOr[scala.Nothing], len: js.UndefOr[scala.Nothing], pos: Double): Double = js.native
+    def read(buf: Buffer, off: js.UndefOr[scala.Nothing], len: Double): Double = js.native
+    def read(buf: Buffer, off: js.UndefOr[scala.Nothing], len: Double, pos: Double): Double = js.native
+    def read(buf: Buffer, off: Double): Double = js.native
+    def read(buf: Buffer, off: Double, len: js.UndefOr[scala.Nothing], pos: Double): Double = js.native
+    def read(buf: Buffer, off: Double, len: Double): Double = js.native
+    def read(buf: Buffer, off: Double, len: Double, pos: Double): Double = js.native
     
     def setBuffer(buf: Buffer): Unit = js.native
     
@@ -275,4 +275,8 @@ object nodeMod extends js.Object {
     def write(buf: Buffer, off: Double, len: Double): Double = js.native
     def write(buf: Buffer, off: Double, len: Double, pos: Double): Double = js.native
   }
+  
+  @JSImport("memfs/lib/node", "SEP")
+  @js.native
+  val SEP: /* "/" */ String = js.native
 }

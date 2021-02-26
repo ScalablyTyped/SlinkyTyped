@@ -1,5 +1,6 @@
 package typingsSlinky.stripe.mod.paymentMethods
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.stripe.stripeStrings.google_pay
   - typingsSlinky.stripe.stripeStrings.amex_express_checkout
 */
-trait CardWalletType extends js.Object
+trait CardWalletType extends StObject
 object CardWalletType {
   
   @scala.inline

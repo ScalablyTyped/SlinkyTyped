@@ -3,6 +3,7 @@ package typingsSlinky.winrt.Windows.UI.Input.Inking
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrt.Windows.Foundation.Point
 import typingsSlinky.winrt.Windows.UI.Input.PointerPoint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

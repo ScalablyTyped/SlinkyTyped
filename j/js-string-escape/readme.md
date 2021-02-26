@@ -10,9 +10,9 @@ Escape strings for use as JavaScript string literals
 | ------------------ | :-------------: |
 | Full name          | js-string-escape |
 | Keywords           | string, escape, backslash, javascript, ecmascript |
-| # releases         | 1 |
-| # dependents       | 219 |
-| # downloads        | 31323751 |
+| # releases         | 0 |
+| # dependents       | 241 |
+| # downloads        | 71969968 |
 | # stars            | 9 |
 
 ## Links

@@ -10,9 +10,9 @@ Fast Javascript text diff
 | ------------------ | :-------------: |
 | Full name          | fast-diff |
 | Keywords           | diff |
-| # releases         | 2 |
-| # dependents       | 52 |
-| # downloads        | 93408288 |
+| # releases         | 0 |
+| # dependents       | 87 |
+| # downloads        | 215410093 |
 | # stars            | 6 |
 
 ## Links

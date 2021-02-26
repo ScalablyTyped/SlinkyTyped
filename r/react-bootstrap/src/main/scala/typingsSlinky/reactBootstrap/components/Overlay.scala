@@ -7,6 +7,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.reactBootstrap.overlayMod.OverlayProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object Overlay {
   
   @JSImport("react-bootstrap", "Overlay")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -65,16 +66,16 @@ object Overlay {
     def show(value: Boolean): this.type = set("show", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def targetElement(value: Element): this.type = set("target", value.asInstanceOf[js.Any])
+    def target(value: js.Function | ReactInstance): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetComponent(value: ReactComponentClass[js.Any]): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def target(value: js.Function | ReactInstance): this.type = set("target", value.asInstanceOf[js.Any])
+    def targetElement(value: Element): this.type = set("target", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: OverlayProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Overlay.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: OverlayProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

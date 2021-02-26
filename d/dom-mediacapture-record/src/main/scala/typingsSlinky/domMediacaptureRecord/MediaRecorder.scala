@@ -12,6 +12,7 @@ import typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.stop
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.EventListener
 import typingsSlinky.std.EventTarget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -133,13 +134,13 @@ trait MediaRecorder extends EventTarget {
   def removeEventListener_dataavailable(
     `type`: dataavailable,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ BlobEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dataavailable(
     `type`: dataavailable,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ BlobEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
@@ -150,13 +151,13 @@ trait MediaRecorder extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MediaRecorderErrorEvent, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MediaRecorderErrorEvent, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -164,13 +165,13 @@ trait MediaRecorder extends EventTarget {
   def removeEventListener_pause(
     `type`: pause,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(
     `type`: pause,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_resume(`type`: resume, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -178,13 +179,13 @@ trait MediaRecorder extends EventTarget {
   def removeEventListener_resume(
     `type`: resume,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_resume(
     `type`: resume,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_start(`type`: start, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -192,13 +193,13 @@ trait MediaRecorder extends EventTarget {
   def removeEventListener_start(
     `type`: start,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_start(
     `type`: start,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_stop(`type`: stop, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
@@ -206,13 +207,13 @@ trait MediaRecorder extends EventTarget {
   def removeEventListener_stop(
     `type`: stop,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: Boolean
+    options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_stop(
     `type`: stop,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
-    options: EventListenerOptions
+    options: Boolean
   ): Unit = js.native
   
   def requestData(): Unit = js.native

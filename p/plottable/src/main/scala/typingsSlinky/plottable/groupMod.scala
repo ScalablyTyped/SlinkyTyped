@@ -2,14 +2,14 @@ package typingsSlinky.plottable
 
 import typingsSlinky.plottable.componentContainerMod.ComponentContainer
 import typingsSlinky.plottable.componentMod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("plottable/build/src/components/group", JSImport.Namespace)
-@js.native
-object groupMod extends js.Object {
+object groupMod {
   
+  @JSImport("plottable/build/src/components/group", "Group")
   @js.native
   /**
     * Constructs a Group.

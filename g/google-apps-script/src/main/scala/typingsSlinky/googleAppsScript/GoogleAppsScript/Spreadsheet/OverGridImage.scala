@@ -2,6 +2,7 @@ package typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet
 
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.BlobSource
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Represents an image over the grid in a spreadsheet.
   */
 @js.native
-trait OverGridImage extends js.Object {
+trait OverGridImage extends StObject {
   
   def assignScript(functionName: String): OverGridImage = js.native
   

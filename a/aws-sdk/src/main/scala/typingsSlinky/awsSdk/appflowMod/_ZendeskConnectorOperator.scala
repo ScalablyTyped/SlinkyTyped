@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.appflowMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _ZendeskConnectorOperator extends js.Object
+trait _ZendeskConnectorOperator extends StObject

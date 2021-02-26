@@ -2,12 +2,13 @@ package typingsSlinky.reactTable.mod
 
 import typingsSlinky.reactTable.anon.PartialTableToggleHideAll
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UseTableInstanceProps[D /* <: js.Object */] extends js.Object {
+trait UseTableInstanceProps[D /* <: js.Object */] extends StObject {
   
   var allColumns: js.Array[ColumnInstance[D]] = js.native
   

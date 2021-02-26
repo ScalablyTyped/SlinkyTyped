@@ -10,15 +10,15 @@ string representations of objects in node and the browser
 | ------------------ | :-------------: |
 | Full name          | object-inspect |
 | Keywords           | inspect, util.inspect, object, stringify, pretty |
-| # releases         | 3 |
-| # dependents       | 65 |
-| # downloads        | 190948737 |
+| # releases         | 4 |
+| # dependents       | 124 |
+| # downloads        | 717877252 |
 | # stars            | 2 |
 
 ## Links
-- [Homepage](https://github.com/substack/object-inspect)
-- [Bugs](https://github.com/substack/object-inspect/issues)
-- [Repository](https://github.com/substack/object-inspect)
+- [Homepage](https://github.com/inspect-js/object-inspect)
+- [Bugs](https://github.com/inspect-js/object-inspect/issues)
+- [Repository](https://github.com/inspect-js/object-inspect)
 - [Npm](https://www.npmjs.com/package/object-inspect)
     
 

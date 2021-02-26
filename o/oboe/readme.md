@@ -10,9 +10,9 @@ Oboe.js reads json, giving you the objects as they are found without waiting for
 | ------------------ | :-------------: |
 | Full name          | oboe |
 | Keywords           | json, parser, stream, progressive, http, sax, event, emitter, async, browser |
-| # releases         | 2 |
-| # dependents       | 82 |
-| # downloads        | 3531306 |
+| # releases         | 1 |
+| # dependents       | 103 |
+| # downloads        | 5290678 |
 | # stars            | 14 |
 
 ## Links

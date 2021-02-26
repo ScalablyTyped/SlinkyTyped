@@ -2,6 +2,7 @@ package typingsSlinky.uirouterAngularjs.mod
 
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlRuleHandlerFn
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlRuleMatchFn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

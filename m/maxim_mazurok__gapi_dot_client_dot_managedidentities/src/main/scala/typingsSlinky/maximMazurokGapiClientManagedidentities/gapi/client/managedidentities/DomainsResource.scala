@@ -14,12 +14,13 @@ import typingsSlinky.maximMazurokGapiClientManagedidentities.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientManagedidentities.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientManagedidentities.anon.Resource
 import typingsSlinky.maximMazurokGapiClientManagedidentities.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DomainsResource extends js.Object {
+trait DomainsResource extends StObject {
   
   /** Adds an AD trust to a domain. */
   def attachTrust(request: Accesstoken): Request[Operation] = js.native

@@ -3,16 +3,16 @@ package typingsSlinky.sipJs
 import typingsSlinky.sipJs.coreMod.IncomingRequestMessage
 import typingsSlinky.sipJs.methodsByeMod.IncomingByeRequest
 import typingsSlinky.sipJs.outgoingResponseMod.ResponseOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/api/bye", JSImport.Namespace)
-@js.native
-object byeMod extends js.Object {
+object byeMod {
   
+  @JSImport("sip.js/lib/api/bye", "Bye")
   @js.native
-  class Bye protected () extends js.Object {
+  class Bye protected () extends StObject {
     /** @internal */
     def this(incomingByeRequest: IncomingByeRequest) = this()
     

@@ -6,15 +6,22 @@ import typingsSlinky.reactabularTable.anon.PartialCSSStyleDeclaratio
 import typingsSlinky.reactabularTable.mod.Column
 import typingsSlinky.reactabularTable.mod.ProviderProps
 import typingsSlinky.reactabularTable.mod.Renderers
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Provider {
   
+  @scala.inline
+  def apply(columns: js.Array[Column]): Builder = {
+    val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ProviderProps]))
+  }
+  
   @JSImport("reactabular-table", "Provider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +39,4 @@ object Provider {
   }
   
   def withProps(p: ProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(columns: js.Array[Column]): Builder = {
-    val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ProviderProps]))
-  }
 }

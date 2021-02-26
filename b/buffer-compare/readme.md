@@ -10,8 +10,8 @@ Lexicographically compare two buffers.
 | Full name          | buffer-compare |
 | Keywords           | sort, buffer, lexiographic |
 | # releases         | 0 |
-| # dependents       | 224 |
-| # downloads        | 1008803 |
+| # dependents       | 256 |
+| # downloads        | 971607 |
 | # stars            | 1 |
 
 ## Links

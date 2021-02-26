@@ -1,6 +1,7 @@
 package typingsSlinky.mongodb.mod
 
 import typingsSlinky.std.Error
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,8 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class MongoError protected () extends Error {
   def this(message: String) = this()
-  def this(message: js.Object) = this()
   def this(message: js.Error) = this()
+  def this(message: js.Object) = this()
   
   var code: js.UndefOr[scala.Double | String] = js.native
   
@@ -39,14 +40,18 @@ class MongoError protected () extends Error {
   def hasErrorLabel(label: String): Boolean = js.native
 }
 /* static members */
-@JSImport("mongodb", "MongoError")
-@js.native
-object MongoError extends js.Object {
+object MongoError {
   
   /**
     * @deprecated
     */
+  @JSImport("mongodb", "MongoError.create")
+  @js.native
   def create(options: String): MongoError = js.native
-  def create(options: js.Object): MongoError = js.native
+  @JSImport("mongodb", "MongoError.create")
+  @js.native
   def create(options: js.Error): MongoError = js.native
+  @JSImport("mongodb", "MongoError.create")
+  @js.native
+  def create(options: js.Object): MongoError = js.native
 }

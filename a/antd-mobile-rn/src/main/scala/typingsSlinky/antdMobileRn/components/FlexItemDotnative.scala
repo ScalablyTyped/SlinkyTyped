@@ -6,6 +6,7 @@ import typingsSlinky.antdMobileRn.flexItemNativeMod.FlexItemProps
 import typingsSlinky.antdMobileRn.flexItemNativeMod.default
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object FlexItemDotnative {
   
   @JSImport("antd-mobile-rn/lib/flex/FlexItem.native", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -46,7 +47,7 @@ object FlexItemDotnative {
     def styleNull: this.type = set("style", null)
   }
   
-  def withProps(p: FlexItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FlexItemDotnative.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FlexItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

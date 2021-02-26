@@ -5,16 +5,16 @@ import typingsSlinky.ionicAngular.configMod.Config
 import typingsSlinky.ionicAngular.ionRouterOutletMod.IonRouterOutlet
 import typingsSlinky.ionicAngular.navControllerMod.NavController
 import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/angular/directives/navigation/ion-back-button", JSImport.Namespace)
-@js.native
-object ionBackButtonMod extends js.Object {
+object ionBackButtonMod {
   
+  @JSImport("@ionic/angular/directives/navigation/ion-back-button", "IonBackButtonDelegate")
   @js.native
-  class IonBackButtonDelegate protected () extends js.Object {
+  class IonBackButtonDelegate protected () extends StObject {
     def this(routerOutlet: IonRouterOutlet, navCtrl: NavController, config: Config) = this()
     
     var config: js.Any = js.native

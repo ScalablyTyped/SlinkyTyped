@@ -4,6 +4,7 @@ import typingsSlinky.pulumiKubernetes.nodeMod.NodeArgs
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,9 +26,7 @@ class Node protected ()
   def this(name: String, args: NodeArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/kubernetes/core/v1", "Node")
-@js.native
-object Node extends js.Object {
+object Node {
   
   /**
     * Get an existing Node resource's state with the given name, ID, and optional extra
@@ -37,12 +36,18 @@ object Node extends js.Object {
     * @param id The _unique_ provider ID of the resource to lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/kubernetes/core/v1", "Node.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.nodeMod.Node = js.native
+  @JSImport("@pulumi/kubernetes/core/v1", "Node.get")
+  @js.native
   def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.nodeMod.Node = js.native
   
   /**
     * Returns true if the given object is an instance of Node.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/kubernetes/core/v1", "Node.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/core/v1/node.Node */ Boolean = js.native
 }

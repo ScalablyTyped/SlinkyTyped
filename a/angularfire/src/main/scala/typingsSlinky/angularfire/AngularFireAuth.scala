@@ -1,12 +1,13 @@
 package typingsSlinky.angularfire
 
 import typingsSlinky.angular.mod.IPromise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AngularFireAuth extends js.Object {
+trait AngularFireAuth extends StObject {
   
   /**
     * Authenticates the Firebase reference anonymously.

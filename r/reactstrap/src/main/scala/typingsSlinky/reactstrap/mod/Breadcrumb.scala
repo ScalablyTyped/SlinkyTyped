@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.breadcrumbMod.BreadcrumbProps
+import typingsSlinky.reactstrap.breadcrumbMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "Breadcrumb")
+@JSImport("reactstrap/lib", "Breadcrumb")
 @js.native
-class Breadcrumb ()
-  extends Component[BreadcrumbProps, js.Object, js.Any]
+class Breadcrumb () extends default

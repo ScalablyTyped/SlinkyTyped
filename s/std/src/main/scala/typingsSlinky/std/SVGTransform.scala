@@ -1,12 +1,13 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** SVGTransform is the interface for one of the component transformations within an SVGTransformList; thus, an SVGTransform object corresponds to a single component (e.g., scale(…) or matrix(…)) within a transform attribute. */
 @js.native
-trait SVGTransform extends js.Object {
+trait SVGTransform extends StObject {
   
   val SVG_TRANSFORM_MATRIX: Double = js.native
   
@@ -60,73 +61,61 @@ object SVGTransform {
     setSkewY: Double => Unit,
     setTranslate: (Double, Double) => Unit,
     `type`: Double
-  ): SVGTransform = {
+  ): org.scalajs.dom.raw.SVGTransform = {
     val __obj = js.Dynamic.literal(SVG_TRANSFORM_MATRIX = SVG_TRANSFORM_MATRIX.asInstanceOf[js.Any], SVG_TRANSFORM_ROTATE = SVG_TRANSFORM_ROTATE.asInstanceOf[js.Any], SVG_TRANSFORM_SCALE = SVG_TRANSFORM_SCALE.asInstanceOf[js.Any], SVG_TRANSFORM_SKEWX = SVG_TRANSFORM_SKEWX.asInstanceOf[js.Any], SVG_TRANSFORM_SKEWY = SVG_TRANSFORM_SKEWY.asInstanceOf[js.Any], SVG_TRANSFORM_TRANSLATE = SVG_TRANSFORM_TRANSLATE.asInstanceOf[js.Any], SVG_TRANSFORM_UNKNOWN = SVG_TRANSFORM_UNKNOWN.asInstanceOf[js.Any], angle = angle.asInstanceOf[js.Any], matrix = matrix.asInstanceOf[js.Any], setMatrix = js.Any.fromFunction1(setMatrix), setRotate = js.Any.fromFunction3(setRotate), setScale = js.Any.fromFunction2(setScale), setSkewX = js.Any.fromFunction1(setSkewX), setSkewY = js.Any.fromFunction1(setSkewY), setTranslate = js.Any.fromFunction2(setTranslate))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SVGTransform]
+    __obj.asInstanceOf[org.scalajs.dom.raw.SVGTransform]
   }
   
   @scala.inline
-  implicit class SVGTransformOps[Self <: org.scalajs.dom.raw.SVGTransform] (val x: Self) extends AnyVal {
+  implicit class SVGTransformMutableBuilder[Self <: org.scalajs.dom.raw.SVGTransform] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAngle(value: Double): Self = StObject.set(x, "angle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setMatrix(value: org.scalajs.dom.raw.SVGMatrix): Self = StObject.set(x, "matrix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setSVG_TRANSFORM_MATRIX(value: Double): Self = StObject.set(x, "SVG_TRANSFORM_MATRIX", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSVG_TRANSFORM_MATRIX(value: Double): Self = this.set("SVG_TRANSFORM_MATRIX", value.asInstanceOf[js.Any])
+    def setSVG_TRANSFORM_ROTATE(value: Double): Self = StObject.set(x, "SVG_TRANSFORM_ROTATE", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSVG_TRANSFORM_ROTATE(value: Double): Self = this.set("SVG_TRANSFORM_ROTATE", value.asInstanceOf[js.Any])
+    def setSVG_TRANSFORM_SCALE(value: Double): Self = StObject.set(x, "SVG_TRANSFORM_SCALE", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSVG_TRANSFORM_SCALE(value: Double): Self = this.set("SVG_TRANSFORM_SCALE", value.asInstanceOf[js.Any])
+    def setSVG_TRANSFORM_SKEWX(value: Double): Self = StObject.set(x, "SVG_TRANSFORM_SKEWX", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSVG_TRANSFORM_SKEWX(value: Double): Self = this.set("SVG_TRANSFORM_SKEWX", value.asInstanceOf[js.Any])
+    def setSVG_TRANSFORM_SKEWY(value: Double): Self = StObject.set(x, "SVG_TRANSFORM_SKEWY", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSVG_TRANSFORM_SKEWY(value: Double): Self = this.set("SVG_TRANSFORM_SKEWY", value.asInstanceOf[js.Any])
+    def setSVG_TRANSFORM_TRANSLATE(value: Double): Self = StObject.set(x, "SVG_TRANSFORM_TRANSLATE", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSVG_TRANSFORM_TRANSLATE(value: Double): Self = this.set("SVG_TRANSFORM_TRANSLATE", value.asInstanceOf[js.Any])
+    def setSVG_TRANSFORM_UNKNOWN(value: Double): Self = StObject.set(x, "SVG_TRANSFORM_UNKNOWN", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSVG_TRANSFORM_UNKNOWN(value: Double): Self = this.set("SVG_TRANSFORM_UNKNOWN", value.asInstanceOf[js.Any])
+    def setSetMatrix(value: org.scalajs.dom.raw.SVGMatrix => Unit): Self = StObject.set(x, "setMatrix", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setAngle(value: Double): Self = this.set("angle", value.asInstanceOf[js.Any])
+    def setSetRotate(value: (Double, Double, Double) => Unit): Self = StObject.set(x, "setRotate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setMatrix(value: org.scalajs.dom.raw.SVGMatrix): Self = this.set("matrix", value.asInstanceOf[js.Any])
+    def setSetScale(value: (Double, Double) => Unit): Self = StObject.set(x, "setScale", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setSetMatrix(value: org.scalajs.dom.raw.SVGMatrix => Unit): Self = this.set("setMatrix", js.Any.fromFunction1(value))
+    def setSetSkewX(value: Double => Unit): Self = StObject.set(x, "setSkewX", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setSetRotate(value: (Double, Double, Double) => Unit): Self = this.set("setRotate", js.Any.fromFunction3(value))
+    def setSetSkewY(value: Double => Unit): Self = StObject.set(x, "setSkewY", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setSetScale(value: (Double, Double) => Unit): Self = this.set("setScale", js.Any.fromFunction2(value))
+    def setSetTranslate(value: (Double, Double) => Unit): Self = StObject.set(x, "setTranslate", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setSetSkewX(value: Double => Unit): Self = this.set("setSkewX", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setSetSkewY(value: Double => Unit): Self = this.set("setSkewY", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setSetTranslate(value: (Double, Double) => Unit): Self = this.set("setTranslate", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def setType(value: Double): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: Double): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
   }
 }

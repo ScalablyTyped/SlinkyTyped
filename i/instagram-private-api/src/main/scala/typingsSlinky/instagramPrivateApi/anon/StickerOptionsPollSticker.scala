@@ -2,13 +2,14 @@ package typingsSlinky.instagramPrivateApi.anon
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.instagramPrivateApi.pollStickerMod.Tallies
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined instagram-private-api.instagram-private-api/dist/sticker-builder/sticker-builder.StickerOptions<instagram-private-api.instagram-private-api/dist/sticker-builder/stickers.PollSticker> */
 @js.native
-trait StickerOptionsPollSticker extends js.Object {
+trait StickerOptionsPollSticker extends StObject {
   
   var _tallies: js.Any = js.native
   

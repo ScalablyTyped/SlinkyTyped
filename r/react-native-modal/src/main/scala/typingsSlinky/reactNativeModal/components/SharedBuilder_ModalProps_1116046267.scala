@@ -33,6 +33,7 @@ import typingsSlinky.reactNativeModal.modalMod.OnSwipeCompleteParams
 import typingsSlinky.reactNativeModal.typesMod.Direction
 import typingsSlinky.reactNativeModal.typesMod.Orientation
 import typingsSlinky.reactNativeModal.typesMod.PresentationStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -43,10 +44,10 @@ class SharedBuilder_ModalProps_1116046267[R <: js.Object] (val args: js.Array[js
      with StBuildingComponent[tag.type, R] {
   
   @scala.inline
-  def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+  def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+  def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
   
   @scala.inline
   def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -73,10 +74,10 @@ class SharedBuilder_ModalProps_1116046267[R <: js.Object] (val args: js.Array[js
   def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+  def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+  def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
   
   @scala.inline
   def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -232,16 +233,16 @@ class SharedBuilder_ModalProps_1116046267[R <: js.Object] (val args: js.Array[js
   def styleNull: this.type = set("style", null)
   
   @scala.inline
-  def supportedOrientationsVarargs(value: Orientation*): this.type = set("supportedOrientations", js.Array(value :_*))
-  
-  @scala.inline
   def supportedOrientations(value: js.Array[Orientation]): this.type = set("supportedOrientations", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def swipeDirectionVarargs(value: Direction*): this.type = set("swipeDirection", js.Array(value :_*))
+  def supportedOrientationsVarargs(value: Orientation*): this.type = set("supportedOrientations", js.Array(value :_*))
   
   @scala.inline
   def swipeDirection(value: Direction | js.Array[Direction]): this.type = set("swipeDirection", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def swipeDirectionVarargs(value: Direction*): this.type = set("swipeDirection", js.Array(value :_*))
   
   @scala.inline
   def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])

@@ -10,9 +10,9 @@ Typings are for version 2.3.4
 | ------------------ | :-------------: |
 | Full name          | antd-mobile |
 | Keywords           | ant, design, react, react-component, component, components, ui, framework, frontend, mobile |
-| # releases         | 31 |
-| # dependents       | 241 |
-| # downloads        | 787716 |
+| # releases         | 14 |
+| # dependents       | 339 |
+| # downloads        | 1177582 |
 | # stars            | 6 |
 
 ## Links

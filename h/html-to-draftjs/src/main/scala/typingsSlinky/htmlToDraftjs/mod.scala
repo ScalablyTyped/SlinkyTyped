@@ -4,15 +4,18 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.draftJs.mod.Draft.Model.Encoding.RawDraftEntity
 import typingsSlinky.htmlToDraftjs.anon.ContentBlocks
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("html-to-draftjs", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("html-to-draftjs", JSImport.Default)
+  @js.native
   def default(text: String): ContentBlocks = js.native
+  @JSImport("html-to-draftjs", JSImport.Default)
+  @js.native
   def default(
     text: String,
     customChunkRenderer: js.Function2[

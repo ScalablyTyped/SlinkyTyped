@@ -1,19 +1,25 @@
 package typingsSlinky.antvScale
 
-import typingsSlinky.antvScale.continuousBaseMod.Continuous
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/scale/lib/continuous/log", JSImport.Namespace)
-@js.native
-object logMod extends js.Object {
+object logMod {
+  
+  /**
+    * Log 度量，处理非均匀分布
+    */
+  @JSImport("@antv/scale/lib/continuous/log", JSImport.Default)
+  @js.native
+  class default () extends Log
   
   /**
     * Log 度量，处理非均匀分布
     */
   @js.native
-  trait Log extends Continuous {
+  trait Log
+    extends typingsSlinky.antvScale.continuousBaseMod.default {
     
     var base: Double = js.native
     
@@ -21,10 +27,4 @@ object logMod extends js.Object {
     
     var positiveMin: js.Any = js.native
   }
-  
-  /**
-    * Log 度量，处理非均匀分布
-    */
-  @js.native
-  class default () extends Log
 }

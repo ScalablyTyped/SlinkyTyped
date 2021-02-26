@@ -1,8 +1,8 @@
 package typingsSlinky.antDesignReactNative.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignReactNative.anon.TypeofPortalHost
 import typingsSlinky.antDesignReactNative.portalMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,14 +32,42 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@ant-design/react-native", "Portal")
 @js.native
 class Portal () extends default
-/* static members */
-@JSImport("@ant-design/react-native", "Portal")
-@js.native
-object Portal extends js.Object {
+object Portal {
   
-  var Host: TypeofPortalHost = js.native
+  @JSImport("@ant-design/react-native", "Portal")
+  @js.native
+  val ^ : js.Any = js.native
   
-  def add(e: ReactElement): Double = js.native
+  /* was `typeof PortalHost` */
+  @JSImport("@ant-design/react-native", "Portal.Host")
+  @js.native
+  class Host ()
+    extends typingsSlinky.antDesignReactNative.portalMod.default.Host
+  /* static members */
+  object Host {
+    
+    @JSImport("@ant-design/react-native", "Portal.Host")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("@ant-design/react-native", "Portal.Host.displayName")
+    @js.native
+    def displayName: String = js.native
+    @scala.inline
+    def displayName_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("displayName")(x.asInstanceOf[js.Any])
+  }
   
-  def remove(key: Double): Unit = js.native
+  /* static member */
+  @JSImport("@ant-design/react-native", "Portal.add")
+  @js.native
+  def add: js.Function1[/* e */ ReactElement, Double] = js.native
+  @scala.inline
+  def add_=(x: js.Function1[/* e */ ReactElement, Double]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("add")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("@ant-design/react-native", "Portal.remove")
+  @js.native
+  def remove: js.Function1[/* key */ Double, Unit] = js.native
+  @scala.inline
+  def remove_=(x: js.Function1[/* key */ Double, Unit]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("remove")(x.asInstanceOf[js.Any])
 }

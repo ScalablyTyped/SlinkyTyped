@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.formGroupMod.FormGroupProps
+import typingsSlinky.reactstrap.formGroupMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "FormGroup")
+@JSImport("reactstrap/lib", "FormGroup")
 @js.native
-class FormGroup ()
-  extends Component[FormGroupProps, js.Object, js.Any]
+class FormGroup () extends default

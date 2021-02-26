@@ -11,11 +11,14 @@ HTML pretty printer CLI utility (based on jsbeautifier)
 | Full name          | html |
 | Keywords           | html, tabifier, beautifier, prettyprinter, prettifier, pretty, command, shell |
 | # releases         | 0 |
-| # dependents       | 136 |
-| # downloads        | 6866372 |
+| # dependents       | 153 |
+| # downloads        | 6805752 |
 | # stars            | 11 |
 
 ## Links
+- [Homepage](https://github.com/maxogden/commonjs-html-prettyprinter)
+- [Bugs](https://github.com/maxogden/commonjs-html-prettyprinter/issues)
+- [Repository](https://github.com/maxogden/commonjs-html-prettyprinter)
 - [Npm](https://www.npmjs.com/package/html)
     
 

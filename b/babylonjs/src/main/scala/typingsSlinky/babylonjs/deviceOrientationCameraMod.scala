@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.freeCameraMod.FreeCamera
 import typingsSlinky.babylonjs.mathAxisMod.Axis
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/deviceOrientationCamera", JSImport.Namespace)
-@js.native
-object deviceOrientationCameraMod extends js.Object {
+object deviceOrientationCameraMod {
   
+  @JSImport("babylonjs/Cameras/deviceOrientationCamera", "DeviceOrientationCamera")
   @js.native
   class DeviceOrientationCamera protected () extends FreeCamera {
     /**

@@ -5,6 +5,7 @@ import typingsSlinky.ts3NodejsLibrary.commandMod.Command
 import typingsSlinky.ts3NodejsLibrary.commandMod.Command.Parsers
 import typingsSlinky.ts3NodejsLibrary.responseTypesMod.Version
 import typingsSlinky.ts3NodejsLibrary.teamSpeakQueryMod.TeamSpeakQuery.Response
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

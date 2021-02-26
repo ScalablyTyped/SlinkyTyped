@@ -3,13 +3,14 @@ package typingsSlinky.reactAsync.mod
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent std.Omit<react-async.react-async.AbstractState<T>, 'run'> */
 @js.native
-trait FetchRun[T] extends js.Object {
+trait FetchRun[T] extends StObject {
   
   var cancel: js.Function0[Unit] = js.native
   
@@ -22,8 +23,8 @@ trait FetchRun[T] extends js.Object {
   var reload: js.Function0[Unit] = js.native
   
   def run(): Unit = js.native
-  def run(ignoredEvent: SyntheticEvent[Event, Element]): Unit = js.native
   def run(ignoredEvent: Event): Unit = js.native
+  def run(ignoredEvent: SyntheticEvent[Event, Element]): Unit = js.native
   def run(overrideParams: js.Function1[/* params */ js.UndefOr[OverrideParams], OverrideParams]): Unit = js.native
   def run(overrideParams: OverrideParams): Unit = js.native
   

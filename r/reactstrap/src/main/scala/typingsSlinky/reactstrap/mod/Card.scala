@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.cardMod.CardProps
+import typingsSlinky.reactstrap.cardMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "Card")
+@JSImport("reactstrap/lib", "Card")
 @js.native
-class Card ()
-  extends Component[CardProps, js.Object, js.Any]
+class Card () extends default

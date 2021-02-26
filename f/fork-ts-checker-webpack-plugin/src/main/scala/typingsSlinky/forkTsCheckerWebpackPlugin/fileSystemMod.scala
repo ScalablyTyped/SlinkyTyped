@@ -2,19 +2,18 @@ package typingsSlinky.forkTsCheckerWebpackPlugin
 
 import typingsSlinky.node.fsMod.Dirent
 import typingsSlinky.node.fsMod.Stats
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("fork-ts-checker-webpack-plugin/lib/typescript-reporter/file-system/FileSystem", JSImport.Namespace)
-@js.native
-object fileSystemMod extends js.Object {
+object fileSystemMod {
   
   /**
     * Interface to abstract file system implementation details.
     */
   @js.native
-  trait FileSystem extends js.Object {
+  trait FileSystem extends StObject {
     
     def clearCache(): Unit = js.native
     

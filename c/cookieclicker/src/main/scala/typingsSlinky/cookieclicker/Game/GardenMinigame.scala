@@ -5,6 +5,7 @@ import typingsSlinky.cookieclicker.cookieclickerBooleans.`true`
 import typingsSlinky.cookieclicker.cookieclickerNumbers.`40`
 import typingsSlinky.cookieclicker.cookieclickerStrings.Garden
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

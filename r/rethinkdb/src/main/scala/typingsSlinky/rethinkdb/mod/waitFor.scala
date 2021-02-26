@@ -1,5 +1,6 @@
 package typingsSlinky.rethinkdb.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.rethinkdb.rethinkdbStrings.ready_for_reads
   - typingsSlinky.rethinkdb.rethinkdbStrings.ready_for_writes
 */
-trait waitFor extends js.Object
+trait waitFor extends StObject
 object waitFor {
   
   @scala.inline

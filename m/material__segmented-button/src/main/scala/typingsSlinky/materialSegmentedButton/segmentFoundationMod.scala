@@ -4,14 +4,14 @@ import org.scalajs.dom.raw.ClientRect
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialSegmentedButton.anon.PartialMDCSegmentedButtonAddClass
 import typingsSlinky.materialSegmentedButton.segmentAdapterMod.MDCSegmentedButtonSegmentAdapter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/segmented-button/segment/foundation", JSImport.Namespace)
-@js.native
-object segmentFoundationMod extends js.Object {
+object segmentFoundationMod {
   
+  @JSImport("@material/segmented-button/segment/foundation", "MDCSegmentedButtonSegmentFoundation")
   @js.native
   class MDCSegmentedButtonSegmentFoundation () extends MDCFoundation[MDCSegmentedButtonSegmentAdapter] {
     def this(adapter: PartialMDCSegmentedButtonAddClass) = this()
@@ -64,11 +64,5 @@ object segmentFoundationMod extends js.Object {
       * Sets segment from not selected to selected, or selected to not selected
       */
     var toggleSelection: js.Any = js.native
-  }
-  /* static members */
-  @js.native
-  object MDCSegmentedButtonSegmentFoundation extends js.Object {
-    
-    def defaultAdapter: MDCSegmentedButtonSegmentAdapter = js.native
   }
 }

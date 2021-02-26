@@ -16,13 +16,14 @@ import typingsSlinky.ipp.ippStrings.`Resume-Printer`
 import typingsSlinky.ipp.ippStrings.`Send-Document`
 import typingsSlinky.ipp.ippStrings.`Send-URI`
 import typingsSlinky.ipp.ippStrings.`Validate-Job`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ipp", "Printer")
 @js.native
-class Printer protected () extends js.Object {
+class Printer protected () extends StObject {
   def this(url: String) = this()
   def this(url: String, options: PrinterOptions) = this()
   

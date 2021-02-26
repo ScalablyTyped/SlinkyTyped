@@ -9,6 +9,7 @@ import typingsSlinky.kafkaNode.kafkaNodeStrings.reconnect
 import typingsSlinky.kafkaNode.kafkaNodeStrings.socket_error
 import typingsSlinky.kafkaNode.kafkaNodeStrings.zkReconnect
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -2,6 +2,7 @@ package typingsSlinky.titanium.Titanium.Media
 
 import typingsSlinky.titanium.Titanium.Filesystem.File
 import typingsSlinky.titanium.Titanium.Proxy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

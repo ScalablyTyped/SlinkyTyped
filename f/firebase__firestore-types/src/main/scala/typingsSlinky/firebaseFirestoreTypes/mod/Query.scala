@@ -1,13 +1,14 @@
 package typingsSlinky.firebaseFirestoreTypes.mod
 
 import typingsSlinky.firebaseFirestoreTypes.anon.Next
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@firebase/firestore-types", "Query")
 @js.native
-class Query[T] protected () extends js.Object {
+class Query[T] protected () extends StObject {
   
   def endAt(fieldValues: js.Any*): Query[T] = js.native
   def endAt(snapshot: DocumentSnapshot[_]): Query[T] = js.native

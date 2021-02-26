@@ -4,6 +4,7 @@ import typingsSlinky.googleCloudCommon.googleCloudCommonBooleans.`false`
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

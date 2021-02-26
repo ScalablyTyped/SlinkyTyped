@@ -7,14 +7,14 @@ import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.lineMod.Line
 import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.object3DMod.Object3D
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/helpers/DirectionalLightHelper", JSImport.Namespace)
-@js.native
-object directionalLightHelperMod extends js.Object {
+object directionalLightHelperMod {
   
+  @JSImport("three/src/helpers/DirectionalLightHelper", "DirectionalLightHelper")
   @js.native
   class DirectionalLightHelper protected () extends Object3D {
     /**

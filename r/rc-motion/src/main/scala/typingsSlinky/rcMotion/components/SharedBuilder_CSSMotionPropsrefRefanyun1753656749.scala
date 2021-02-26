@@ -10,6 +10,7 @@ import typingsSlinky.rcMotion.cssmotionMod.MotionName
 import typingsSlinky.rcMotion.interfaceMod.MotionEvent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,16 +30,16 @@ class SharedBuilder_CSSMotionPropsrefRefanyun1753656749[R <: js.Object] (val arg
   def forceRender(value: Boolean): this.type = set("forceRender", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def internalRefRefObject(value: ReactRef[_]): this.type = set("internalRef", value.asInstanceOf[js.Any])
+  def internalRef(value: Ref[_]): this.type = set("internalRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def internalRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("internalRef", js.Any.fromFunction1(value))
   
   @scala.inline
-  def internalRef(value: Ref[_]): this.type = set("internalRef", value.asInstanceOf[js.Any])
+  def internalRefNull: this.type = set("internalRef", null)
   
   @scala.inline
-  def internalRefNull: this.type = set("internalRef", null)
+  def internalRefRefObject(value: ReactRef[_]): this.type = set("internalRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def leavedClassName(value: String): this.type = set("leavedClassName", value.asInstanceOf[js.Any])

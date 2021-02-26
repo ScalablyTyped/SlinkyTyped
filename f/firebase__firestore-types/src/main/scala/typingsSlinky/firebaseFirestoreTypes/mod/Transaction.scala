@@ -1,13 +1,14 @@
 package typingsSlinky.firebaseFirestoreTypes.mod
 
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@firebase/firestore-types", "Transaction")
 @js.native
-class Transaction protected () extends js.Object {
+class Transaction protected () extends StObject {
   
   def delete(documentRef: DocumentReference[_]): Transaction = js.native
   

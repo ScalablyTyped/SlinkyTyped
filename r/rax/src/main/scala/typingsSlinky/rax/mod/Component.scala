@@ -2,6 +2,7 @@ package typingsSlinky.rax.mod
 
 import typingsSlinky.rax.anon.ReadonlychildrenRaxNodeun
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

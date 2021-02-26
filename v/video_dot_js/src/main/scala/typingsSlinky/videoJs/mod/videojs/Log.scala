@@ -2,6 +2,7 @@ package typingsSlinky.videoJs.mod.videojs
 
 import typingsSlinky.videoJs.anon.All
 import typingsSlinky.videoJs.anon.Call
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @file log.js
   */
 @js.native
-trait Log extends js.Object {
+trait Log extends StObject {
   
   /**
     * Logs plain debug messages. Similar to `console.log`.

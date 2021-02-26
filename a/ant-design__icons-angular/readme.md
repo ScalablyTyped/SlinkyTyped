@@ -10,9 +10,9 @@ Typings are for version 10.2.0
 | ------------------ | :-------------: |
 | Full name          | @ant-design/icons-angular |
 | Keywords           | - |
-| # releases         | 29 |
-| # dependents       | 23 |
-| # downloads        | 651327 |
+| # releases         | 28 |
+| # dependents       | 35 |
+| # downloads        | 1242376 |
 | # stars            | 0 |
 
 ## Links

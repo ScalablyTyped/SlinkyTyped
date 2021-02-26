@@ -52,8 +52,9 @@ import typingsSlinky.ddTrace.mod.plugins.limitdClient
 import typingsSlinky.ddTrace.mod.plugins.microgatewayCore
 import typingsSlinky.ddTrace.mod.plugins.mongodbCore
 import typingsSlinky.ddTrace.mod.plugins.promiseJs
+import typingsSlinky.opentracing.mod.Tracer
 import typingsSlinky.opentracing.tracerMod.SpanOptions
-import typingsSlinky.opentracing.tracerMod.Tracer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

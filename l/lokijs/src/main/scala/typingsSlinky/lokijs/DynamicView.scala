@@ -7,6 +7,7 @@ import typingsSlinky.lokijs.anon.Persistent
 import typingsSlinky.lokijs.anon.QueueSortPhase
 import typingsSlinky.lokijs.anon.RemoveWhereFilters
 import typingsSlinky.lokijs.anon.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

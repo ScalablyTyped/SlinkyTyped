@@ -1,5 +1,6 @@
 package typingsSlinky.pixiJs.PIXI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pixiJs.pixiJsStrings.pointerover
   - typingsSlinky.pixiJs.pixiJsStrings.pointerout
 */
-trait InteractionPointerEvents extends js.Object
+trait InteractionPointerEvents extends StObject
 object InteractionPointerEvents {
   
   @scala.inline

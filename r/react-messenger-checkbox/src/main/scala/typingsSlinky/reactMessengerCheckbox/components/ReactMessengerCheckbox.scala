@@ -11,15 +11,22 @@ import typingsSlinky.reactMessengerCheckbox.reactMessengerCheckboxStrings.medium
 import typingsSlinky.reactMessengerCheckbox.reactMessengerCheckboxStrings.small
 import typingsSlinky.reactMessengerCheckbox.reactMessengerCheckboxStrings.standard
 import typingsSlinky.reactMessengerCheckbox.reactMessengerCheckboxStrings.xlarge
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactMessengerCheckbox {
   
+  @scala.inline
+  def apply(appId: String, origin: String, pageId: String, userRef: String): Builder = {
+    val __props = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], pageId = pageId.asInstanceOf[js.Any], userRef = userRef.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactMessengerProps]))
+  }
+  
   @JSImport("react-messenger-checkbox", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,10 +68,4 @@ object ReactMessengerCheckbox {
   }
   
   def withProps(p: ReactMessengerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(appId: String, origin: String, pageId: String, userRef: String): Builder = {
-    val __props = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], pageId = pageId.asInstanceOf[js.Any], userRef = userRef.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactMessengerProps]))
-  }
 }

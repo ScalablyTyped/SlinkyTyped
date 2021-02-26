@@ -3,12 +3,13 @@ package typingsSlinky.sharepoint.Srch
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLCollection
 import typingsSlinky.sharepoint.anon.ContextTitle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ScriptApplicationManager extends js.Object {
+trait ScriptApplicationManager extends StObject {
   
   /** Adds handler for the load event */
   def add_load(handlerFunction: js.Function2[/* instance */ js.Any, /* eventArgs */ js.Any, Unit]): Unit = js.native

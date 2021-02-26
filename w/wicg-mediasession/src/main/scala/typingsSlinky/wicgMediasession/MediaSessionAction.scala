@@ -1,5 +1,6 @@
 package typingsSlinky.wicgMediasession
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.wicgMediasession.wicgMediasessionStrings.skipad
   - typingsSlinky.wicgMediasession.wicgMediasessionStrings.stop
 */
-trait MediaSessionAction extends js.Object
+trait MediaSessionAction extends StObject
 object MediaSessionAction {
   
   @scala.inline

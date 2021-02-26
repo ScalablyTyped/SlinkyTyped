@@ -6,6 +6,7 @@ import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.EXACTLY
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.EXISTS
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.FULLSTRING
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.STARTSWITH
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

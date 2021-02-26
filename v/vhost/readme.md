@@ -11,11 +11,14 @@ virtual domain hosting
 | Full name          | vhost |
 | Keywords           | - |
 | # releases         | 1 |
-| # dependents       | 141 |
-| # downloads        | 7056733 |
+| # dependents       | 150 |
+| # downloads        | 6836365 |
 | # stars            | 54 |
 
 ## Links
+- [Homepage](https://github.com/expressjs/vhost)
+- [Bugs](https://github.com/expressjs/vhost/issues)
+- [Repository](https://github.com/expressjs/vhost)
 - [Npm](https://www.npmjs.com/package/vhost)
     
 

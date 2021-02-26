@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.cameraInputsManagerMod.ICameraInput
 import typingsSlinky.babylonjs.flyCameraMod.FlyCamera
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/Inputs/flyCameraMouseInput", JSImport.Namespace)
-@js.native
-object flyCameraMouseInputMod extends js.Object {
+object flyCameraMouseInputMod {
   
+  @JSImport("babylonjs/Cameras/Inputs/flyCameraMouseInput", "FlyCameraMouseInput")
   @js.native
   /**
     * Listen to mouse events to control the camera.

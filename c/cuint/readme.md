@@ -12,7 +12,7 @@ Unsigned integers for Javascript
 | Keywords           | C, unsigned, integer, 32bits, 64bits |
 | # releases         | 0 |
 | # dependents       | 43 |
-| # downloads        | 30144348 |
+| # downloads        | 47587946 |
 | # stars            | 1 |
 
 ## Links

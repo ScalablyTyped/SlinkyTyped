@@ -2,13 +2,14 @@ package typingsSlinky.angularCompiler.compileMetadataMod
 
 import typingsSlinky.angularCompiler.anon.BootstrapComponents
 import typingsSlinky.angularCompiler.coreMod.SchemaMetadata
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/compile_metadata", "CompileNgModuleMetadata")
 @js.native
-class CompileNgModuleMetadata protected () extends js.Object {
+class CompileNgModuleMetadata protected () extends StObject {
   def this(hasTypeProvidersDeclaredDirectivesExportedDirectivesDeclaredPipesExportedPipesEntryComponentsBootstrapComponentsImportedModulesExportedModulesSchemasTransitiveModuleId: BootstrapComponents) = this()
   
   var bootstrapComponents: js.Array[CompileIdentifierMetadata] = js.native

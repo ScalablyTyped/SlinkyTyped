@@ -10,9 +10,9 @@ Default Jimp jpeg encoder/decoder.
 | ------------------ | :-------------: |
 | Full name          | @jimp/jpeg |
 | Keywords           | - |
-| # releases         | 69 |
-| # dependents       | 3 |
-| # downloads        | 14439529 |
+| # releases         | 102 |
+| # dependents       | 5 |
+| # downloads        | 43239715 |
 | # stars            | 0 |
 
 ## Links

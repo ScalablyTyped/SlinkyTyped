@@ -27,17 +27,18 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TouchableWithoutFeedback {
   
-  object TouchableWithoutFeedbackProps {
+  object ContainedTouchableProperties {
     
     @JSImport("react-native-gesture-handler", "TouchableWithoutFeedback")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -45,10 +46,33 @@ object TouchableWithoutFeedback {
          with StBuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.TouchableWithoutFeedback] {
       
       @scala.inline
-      def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+      def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def containerStyleNull: this.type = set("containerStyle", null)
+    }
+    
+    implicit def make(companion: ContainedTouchableProperties.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: typingsSlinky.reactNativeGestureHandler.mod.ContainedTouchableProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object TouchableWithoutFeedbackProps {
+    
+    @JSImport("react-native-gesture-handler", "TouchableWithoutFeedback")
+    @js.native
+    val component: js.Object = js.native
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.TouchableWithoutFeedback] {
       
       @scala.inline
       def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
       
       @scala.inline
       def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -75,10 +99,10 @@ object TouchableWithoutFeedback {
       def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+      def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+      def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
       
       @scala.inline
       def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -168,31 +192,8 @@ object TouchableWithoutFeedback {
       def tvParallaxProperties(value: TVParallaxProperties): this.type = set("tvParallaxProperties", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactNative.mod.TouchableWithoutFeedbackProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: TouchableWithoutFeedbackProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object ContainedTouchableProperties {
     
-    @JSImport("react-native-gesture-handler", "TouchableWithoutFeedback")
-    @js.native
-    object component extends js.Object
-    
-    @scala.inline
-    class Builder (val args: js.Array[js.Any])
-      extends AnyVal
-         with StBuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.TouchableWithoutFeedback] {
-      
-      @scala.inline
-      def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def containerStyleNull: this.type = set("containerStyle", null)
-    }
-    
-    def withProps(p: typingsSlinky.reactNativeGestureHandler.mod.ContainedTouchableProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: ContainedTouchableProperties.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    def withProps(p: typingsSlinky.reactNative.mod.TouchableWithoutFeedbackProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
 }

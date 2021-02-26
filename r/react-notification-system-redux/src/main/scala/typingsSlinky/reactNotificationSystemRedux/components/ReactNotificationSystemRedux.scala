@@ -6,6 +6,7 @@ import typingsSlinky.reactNotificationSystem.mod.Notification
 import typingsSlinky.reactNotificationSystem.mod.Style
 import typingsSlinky.reactNotificationSystemRedux.mod.NotificationsProps
 import typingsSlinky.reactNotificationSystemRedux.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ReactNotificationSystemRedux {
   
   @JSImport("react-notification-system-redux", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -28,16 +29,16 @@ object ReactNotificationSystemRedux {
     def noAnimation(value: Boolean): this.type = set("noAnimation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def notificationsVarargs(value: Notification*): this.type = set("notifications", js.Array(value :_*))
+    def notifications(value: js.Array[Notification]): this.type = set("notifications", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def notifications(value: js.Array[Notification]): this.type = set("notifications", value.asInstanceOf[js.Any])
+    def notificationsVarargs(value: Notification*): this.type = set("notifications", js.Array(value :_*))
     
     @scala.inline
     def style(value: Style | Boolean): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: NotificationsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNotificationSystemRedux.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: NotificationsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

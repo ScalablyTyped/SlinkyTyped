@@ -4,14 +4,14 @@ import typingsSlinky.strtok3.typesMod.IFileInfo
 import typingsSlinky.strtok3.typesMod.IReadChunkOptions
 import typingsSlinky.strtok3.typesMod.ITokenizer
 import typingsSlinky.tokenizerToken.mod.IToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("strtok3/lib/AbstractTokenizer", JSImport.Namespace)
-@js.native
-object abstractTokenizerMod extends js.Object {
+object abstractTokenizerMod {
   
+  @JSImport("strtok3/lib/AbstractTokenizer", "AbstractTokenizer")
   @js.native
   abstract class AbstractTokenizer protected () extends ITokenizer {
     protected def this(fileInfo: IFileInfo) = this()

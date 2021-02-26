@@ -1,5 +1,6 @@
 package typingsSlinky.pixiJs.PIXI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @memberof PIXI
   */
 @js.native
-trait MeshBatchUvs extends js.Object {
+trait MeshBatchUvs extends StObject {
   
   /**
     * UV Buffer data

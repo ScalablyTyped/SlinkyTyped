@@ -5,14 +5,14 @@ import typingsSlinky.workboxCacheableResponse.cacheableResponseMod.CacheableResp
 import typingsSlinky.workboxCore.workboxPluginMod.CacheWillUpdateCallback
 import typingsSlinky.workboxCore.workboxPluginMod.CacheWillUpdateCallbackParamParam
 import typingsSlinky.workboxCore.workboxPluginMod.WorkboxPlugin
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("workbox-cacheable-response/Plugin", JSImport.Namespace)
-@js.native
-object pluginMod extends js.Object {
+object pluginMod {
   
+  @JSImport("workbox-cacheable-response/Plugin", "Plugin")
   @js.native
   class Plugin () extends WorkboxPlugin {
     def this(config: CacheableResponseConfig) = this()

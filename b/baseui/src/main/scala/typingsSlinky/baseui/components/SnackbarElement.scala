@@ -8,15 +8,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.anon.Size
 import typingsSlinky.baseui.snackbarMod.SnackbarElementOverridesT
 import typingsSlinky.baseui.snackbarMod.SnackbarElementPropsT
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SnackbarElement {
   
+  @scala.inline
+  def apply(message: String): Builder = {
+    val __props = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SnackbarElementPropsT]))
+  }
+  
   @JSImport("baseui/snackbar", "SnackbarElement")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,10 +50,4 @@ object SnackbarElement {
   }
   
   def withProps(p: SnackbarElementPropsT): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(message: String): Builder = {
-    val __props = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SnackbarElementPropsT]))
-  }
 }

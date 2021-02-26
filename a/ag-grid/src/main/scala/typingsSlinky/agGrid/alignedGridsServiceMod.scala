@@ -4,16 +4,16 @@ import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.eventsMod.AgEvent
 import typingsSlinky.agGrid.eventsMod.ColumnEvent
 import typingsSlinky.agGrid.gridPanelMod.GridPanel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/alignedGridsService", JSImport.Namespace)
-@js.native
-object alignedGridsServiceMod extends js.Object {
+object alignedGridsServiceMod {
   
+  @JSImport("ag-grid/dist/lib/alignedGridsService", "AlignedGridsService")
   @js.native
-  class AlignedGridsService () extends js.Object {
+  class AlignedGridsService () extends StObject {
     
     var columnController: js.Any = js.native
     

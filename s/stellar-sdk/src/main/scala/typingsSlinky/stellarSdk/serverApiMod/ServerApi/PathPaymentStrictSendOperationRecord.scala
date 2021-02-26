@@ -3,6 +3,7 @@ package typingsSlinky.stellarSdk.serverApiMod.ServerApi
 import typingsSlinky.stellarBase.mod.AssetType
 import typingsSlinky.stellarSdk.anon.Assetcode
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.pathPaymentStrictSend
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

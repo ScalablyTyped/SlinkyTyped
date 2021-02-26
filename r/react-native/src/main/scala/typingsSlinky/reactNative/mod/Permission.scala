@@ -1,5 +1,6 @@
 package typingsSlinky.reactNative.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNative.reactNativeStrings.androidDotpermissionDotREAD_EXTERNAL_STORAGE
   - typingsSlinky.reactNative.reactNativeStrings.androidDotpermissionDotWRITE_EXTERNAL_STORAGE
 */
-trait Permission extends js.Object
+trait Permission extends StObject
 object Permission {
   
   @scala.inline

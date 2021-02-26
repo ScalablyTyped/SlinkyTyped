@@ -7,6 +7,7 @@ import typingsSlinky.officeJsPreview.Word.Interfaces.DocumentData
 import typingsSlinky.officeJsPreview.Word.Interfaces.DocumentLoadOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.DocumentUpdateData
 import typingsSlinky.officeJsPreview.anon.Expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

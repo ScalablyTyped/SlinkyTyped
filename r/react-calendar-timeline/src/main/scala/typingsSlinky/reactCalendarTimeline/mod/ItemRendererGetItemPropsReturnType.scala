@@ -11,12 +11,13 @@ import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.ReactEventHandler
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.TouchEventHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ItemRendererGetItemPropsReturnType extends js.Object {
+trait ItemRendererGetItemPropsReturnType extends StObject {
   
   var className: String = js.native
   
@@ -57,57 +58,45 @@ object ItemRendererGetItemPropsReturnType {
   }
   
   @scala.inline
-  implicit class ItemRendererGetItemPropsReturnTypeOps[Self <: ItemRendererGetItemPropsReturnType] (val x: Self) extends AnyVal {
+  implicit class ItemRendererGetItemPropsReturnTypeMutableBuilder[Self <: ItemRendererGetItemPropsReturnType] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setKey(value: Id): Self = StObject.set(x, "key", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setOnContextMenu(value: SyntheticEvent[Event, Element] => scala.Unit): Self = StObject.set(x, "onContextMenu", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    def setOnDoubleClick(value: SyntheticMouseEvent[Element] => scala.Unit): Self = StObject.set(x, "onDoubleClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setKey(value: Id): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setOnMouseDown(value: SyntheticMouseEvent[Element] => scala.Unit): Self = StObject.set(x, "onMouseDown", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnContextMenu(value: SyntheticEvent[Event, Element] => scala.Unit): Self = this.set("onContextMenu", js.Any.fromFunction1(value))
+    def setOnMouseUp(value: SyntheticMouseEvent[Element] => scala.Unit): Self = StObject.set(x, "onMouseUp", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnDoubleClick(value: SyntheticMouseEvent[Element] => scala.Unit): Self = this.set("onDoubleClick", js.Any.fromFunction1(value))
+    def setOnTouchEnd(value: SyntheticTouchEvent[Element] => scala.Unit): Self = StObject.set(x, "onTouchEnd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnMouseDown(value: SyntheticMouseEvent[Element] => scala.Unit): Self = this.set("onMouseDown", js.Any.fromFunction1(value))
+    def setOnTouchStart(value: SyntheticTouchEvent[Element] => scala.Unit): Self = StObject.set(x, "onTouchStart", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnMouseUp(value: SyntheticMouseEvent[Element] => scala.Unit): Self = this.set("onMouseUp", js.Any.fromFunction1(value))
+    def setRef(value: Ref[_]): Self = StObject.set(x, "ref", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnTouchEnd(value: SyntheticTouchEvent[Element] => scala.Unit): Self = this.set("onTouchEnd", js.Any.fromFunction1(value))
+    def setRefFunction1(value: /* instance */ _ | Null => scala.Unit): Self = StObject.set(x, "ref", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnTouchStart(value: SyntheticTouchEvent[Element] => scala.Unit): Self = this.set("onTouchStart", js.Any.fromFunction1(value))
+    def setRefNull: Self = StObject.set(x, "ref", null)
     
     @scala.inline
-    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    def setRefRefObject(value: ReactRef[_]): Self = StObject.set(x, "ref", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRefRefObject(value: ReactRef[_]): Self = this.set("ref", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRefFunction1(value: /* instance */ _ | Null => scala.Unit): Self = this.set("ref", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setRef(value: Ref[_]): Self = this.set("ref", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRefNull: Self = this.set("ref", null)
+    def setStyle(value: CSSProperties): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
   }
 }

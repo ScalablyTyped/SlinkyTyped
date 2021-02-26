@@ -3,12 +3,13 @@ package typingsSlinky.nodePgMigrate.anon
 import typingsSlinky.nodePgMigrate.generalTypesMod.DropOptions
 import typingsSlinky.nodePgMigrate.viewsTypesMod.CreateViewFn
 import typingsSlinky.nodePgMigrate.viewsTypesMod.CreateViewOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReverseCreateViewFn extends js.Object {
+trait ReverseCreateViewFn extends StObject {
   
   def reverse(
     viewName: typingsSlinky.nodePgMigrate.generalTypesMod.Name,

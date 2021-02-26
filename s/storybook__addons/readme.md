@@ -10,9 +10,9 @@ Storybook addons store
 | ------------------ | :-------------: |
 | Full name          | @storybook/addons |
 | Keywords           | storybook |
-| # releases         | 425 |
-| # dependents       | 245 |
-| # downloads        | 53356330 |
+| # releases         | 557 |
+| # dependents       | 393 |
+| # downloads        | 126026624 |
 | # stars            | 0 |
 
 ## Links

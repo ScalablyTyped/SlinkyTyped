@@ -14,12 +14,13 @@ import typingsSlinky.jqueryBootstrapWizard.jqueryBootstrapWizardStrings.next
 import typingsSlinky.jqueryBootstrapWizard.jqueryBootstrapWizardStrings.previous
 import typingsSlinky.jqueryBootstrapWizard.jqueryBootstrapWizardStrings.remove
 import typingsSlinky.jqueryBootstrapWizard.jqueryBootstrapWizardStrings.show
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def bootstrapWizard(): Wizard = js.native
   def bootstrapWizard(options: WizardOptions): Wizard = js.native

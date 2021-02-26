@@ -4,15 +4,22 @@ import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactChatWidget.anon.Autofocus
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Widget {
   
+  @scala.inline
+  def apply(handleNewUserMessage: String => Unit): Builder = {
+    val __props = js.Dynamic.literal(handleNewUserMessage = js.Any.fromFunction1(handleNewUserMessage))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Autofocus]))
+  }
+  
   @JSImport("react-chat-widget", "Widget")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -26,13 +33,13 @@ object Widget {
     def badge(value: Double): this.type = set("badge", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customLauncherFunctionComponent(value: ReactComponentClass[js.Function0[Unit]]): this.type = set("customLauncher", value.asInstanceOf[js.Any])
+    def customLauncher(value: ReactComponentClass[js.Function0[Unit]]): this.type = set("customLauncher", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customLauncherComponentClass(value: ReactComponentClass[js.Function0[Unit]]): this.type = set("customLauncher", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customLauncher(value: ReactComponentClass[js.Function0[Unit]]): this.type = set("customLauncher", value.asInstanceOf[js.Any])
+    def customLauncherFunctionComponent(value: ReactComponentClass[js.Function0[Unit]]): this.type = set("customLauncher", value.asInstanceOf[js.Any])
     
     @scala.inline
     def fullScreenMode(value: Boolean): this.type = set("fullScreenMode", value.asInstanceOf[js.Any])
@@ -60,10 +67,4 @@ object Widget {
   }
   
   def withProps(p: Autofocus): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(handleNewUserMessage: String => Unit): Builder = {
-    val __props = js.Dynamic.literal(handleNewUserMessage = js.Any.fromFunction1(handleNewUserMessage))
-    new Builder(js.Array(this.component, __props.asInstanceOf[Autofocus]))
-  }
 }

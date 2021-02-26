@@ -10,9 +10,9 @@ Ultimate calendar for your React app.
 | ------------------ | :-------------: |
 | Full name          | react-calendar |
 | Keywords           | calendar, date, date-picker, month-picker, react |
-| # releases         | 25 |
-| # dependents       | 53 |
-| # downloads        | 3117899 |
+| # releases         | 16 |
+| # dependents       | 92 |
+| # downloads        | 6082828 |
 | # stars            | 3 |
 
 ## Links

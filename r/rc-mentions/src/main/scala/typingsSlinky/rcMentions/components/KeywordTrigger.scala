@@ -8,15 +8,22 @@ import typingsSlinky.rcMentions.keywordTriggerMod.default
 import typingsSlinky.rcMentions.mentionsMod.Direction
 import typingsSlinky.rcMentions.mentionsMod.Placement
 import typingsSlinky.rcMentions.optionMod.OptionProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object KeywordTrigger {
   
+  @scala.inline
+  def apply(options: js.Array[OptionProps]): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[KeywordTriggerProps]))
+  }
+  
   @JSImport("rc-mentions/es/KeywordTrigger", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -46,10 +53,4 @@ object KeywordTrigger {
   }
   
   def withProps(p: KeywordTriggerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(options: js.Array[OptionProps]): Builder = {
-    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[KeywordTriggerProps]))
-  }
 }

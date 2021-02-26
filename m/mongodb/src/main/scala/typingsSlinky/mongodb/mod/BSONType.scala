@@ -1,145 +1,103 @@
 package typingsSlinky.mongodb.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait BSONType extends js.Object
+sealed trait BSONType extends StObject
 @JSImport("mongodb", "BSONType")
 @js.native
-object BSONType extends js.Object {
+object BSONType extends StObject {
   
   @JSBracketAccess
   def apply(value: scala.Double): js.UndefOr[BSONType with scala.Double] = js.native
   
   @js.native
   sealed trait Array extends BSONType
-  /* 2 */ @js.native
-  object Array
-    extends TopLevel[Array with scala.Double]
+  /* 2 */ val Array: typingsSlinky.mongodb.mod.BSONType.Array with scala.Double = js.native
   
   @js.native
   sealed trait BinData extends BSONType
-  /* 3 */ @js.native
-  object BinData
-    extends TopLevel[BinData with scala.Double]
+  /* 3 */ val BinData: typingsSlinky.mongodb.mod.BSONType.BinData with scala.Double = js.native
   
   @js.native
   sealed trait Boolean extends BSONType
-  /* 6 */ @js.native
-  object Boolean
-    extends TopLevel[Boolean with scala.Double]
+  /* 6 */ val Boolean: typingsSlinky.mongodb.mod.BSONType.Boolean with scala.Double = js.native
   
   /** @deprecated */
   @js.native
   sealed trait DBPointer extends BSONType
-  /* 10 */ @js.native
-  object DBPointer
-    extends TopLevel[DBPointer with scala.Double]
+  /* 10 */ val DBPointer: typingsSlinky.mongodb.mod.BSONType.DBPointer with scala.Double = js.native
   
   @js.native
   sealed trait Date extends BSONType
-  /* 7 */ @js.native
-  object Date
-    extends TopLevel[Date with scala.Double]
+  /* 7 */ val Date: typingsSlinky.mongodb.mod.BSONType.Date with scala.Double = js.native
   
   @js.native
   sealed trait Decimal extends BSONType
-  /* 17 */ @js.native
-  object Decimal
-    extends TopLevel[Decimal with scala.Double]
+  /* 17 */ val Decimal: typingsSlinky.mongodb.mod.BSONType.Decimal with scala.Double = js.native
   
   @js.native
   sealed trait Double extends BSONType
-  /* 1 */ @js.native
-  object Double
-    extends TopLevel[typingsSlinky.mongodb.mod.BSONType.Double with scala.Double]
+  /* 1 */ val Double: typingsSlinky.mongodb.mod.BSONType.Double with scala.Double = js.native
   
   @js.native
   sealed trait Int extends BSONType
-  /* 14 */ @js.native
-  object Int
-    extends TopLevel[Int with scala.Double]
+  /* 14 */ val Int: typingsSlinky.mongodb.mod.BSONType.Int with scala.Double = js.native
   
   @js.native
   sealed trait JavaScript extends BSONType
-  /* 11 */ @js.native
-  object JavaScript
-    extends TopLevel[JavaScript with scala.Double]
+  /* 11 */ val JavaScript: typingsSlinky.mongodb.mod.BSONType.JavaScript with scala.Double = js.native
   
   @js.native
   sealed trait JavaScriptWithScope extends BSONType
-  /* 13 */ @js.native
-  object JavaScriptWithScope
-    extends TopLevel[JavaScriptWithScope with scala.Double]
+  /* 13 */ val JavaScriptWithScope: typingsSlinky.mongodb.mod.BSONType.JavaScriptWithScope with scala.Double = js.native
   
   @js.native
   sealed trait Long extends BSONType
-  /* 16 */ @js.native
-  object Long
-    extends TopLevel[typingsSlinky.mongodb.mod.BSONType.Long with scala.Double]
+  /* 16 */ val Long: typingsSlinky.mongodb.mod.BSONType.Long with scala.Double = js.native
   
   @js.native
   sealed trait MaxKey extends BSONType
-  /* 127 */ @js.native
-  object MaxKey
-    extends TopLevel[typingsSlinky.mongodb.mod.BSONType.MaxKey with scala.Double]
+  /* 127 */ val MaxKey: typingsSlinky.mongodb.mod.BSONType.MaxKey with scala.Double = js.native
   
   @js.native
   sealed trait MinKey extends BSONType
-  /* -1 */ @js.native
-  object MinKey
-    extends TopLevel[typingsSlinky.mongodb.mod.BSONType.MinKey with scala.Double]
+  /* -1 */ val MinKey: typingsSlinky.mongodb.mod.BSONType.MinKey with scala.Double = js.native
   
   @js.native
   sealed trait Null extends BSONType
-  /* 8 */ @js.native
-  object Null
-    extends TopLevel[Null with scala.Double]
+  /* 8 */ val Null: typingsSlinky.mongodb.mod.BSONType.Null with scala.Double = js.native
   
   @js.native
   sealed trait Object extends BSONType
-  /* 1 */ @js.native
-  object Object
-    extends TopLevel[Object with scala.Double]
+  /* 1 */ val Object: typingsSlinky.mongodb.mod.BSONType.Object with scala.Double = js.native
   
   @js.native
   sealed trait ObjectId extends BSONType
-  /* 5 */ @js.native
-  object ObjectId
-    extends TopLevel[typingsSlinky.mongodb.mod.BSONType.ObjectId with scala.Double]
+  /* 5 */ val ObjectId: typingsSlinky.mongodb.mod.BSONType.ObjectId with scala.Double = js.native
   
   @js.native
   sealed trait Regex extends BSONType
-  /* 9 */ @js.native
-  object Regex
-    extends TopLevel[Regex with scala.Double]
+  /* 9 */ val Regex: typingsSlinky.mongodb.mod.BSONType.Regex with scala.Double = js.native
   
   @js.native
   sealed trait String extends BSONType
-  /* 0 */ @js.native
-  object String
-    extends TopLevel[String with scala.Double]
+  /* 0 */ val String: typingsSlinky.mongodb.mod.BSONType.String with scala.Double = js.native
   
   /** @deprecated */
   @js.native
   sealed trait Symbol extends BSONType
-  /* 12 */ @js.native
-  object Symbol
-    extends TopLevel[Symbol with scala.Double]
+  /* 12 */ val Symbol: typingsSlinky.mongodb.mod.BSONType.Symbol with scala.Double = js.native
   
   @js.native
   sealed trait Timestamp extends BSONType
-  /* 15 */ @js.native
-  object Timestamp
-    extends TopLevel[typingsSlinky.mongodb.mod.BSONType.Timestamp with scala.Double]
+  /* 15 */ val Timestamp: typingsSlinky.mongodb.mod.BSONType.Timestamp with scala.Double = js.native
   
   /** @deprecated */
   @js.native
   sealed trait Undefined extends BSONType
-  /* 4 */ @js.native
-  object Undefined
-    extends TopLevel[Undefined with scala.Double]
+  /* 4 */ val Undefined: typingsSlinky.mongodb.mod.BSONType.Undefined with scala.Double = js.native
 }

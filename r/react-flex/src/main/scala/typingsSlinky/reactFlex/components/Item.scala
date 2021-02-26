@@ -10,6 +10,7 @@ import typingsSlinky.reactFlex.reactFlexStrings.auto
 import typingsSlinky.reactFlex.reactFlexStrings.content
 import typingsSlinky.reactFlex.reactFlexStrings.fit
 import typingsSlinky.reactFlex.reactFlexStrings.none
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object Item {
   
   @JSImport("react-flex", "Item")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -68,7 +69,7 @@ object Item {
     def wrap(value: Boolean): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Item.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

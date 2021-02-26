@@ -1,5 +1,6 @@
 package typingsSlinky.csstype.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -117,7 +118,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.Colonvalid
   - typingsSlinky.csstype.csstypeStrings.Colonvisited
 */
-trait Pseudos extends js.Object
+trait Pseudos extends StObject
 object Pseudos {
   
   @scala.inline

@@ -1,12 +1,13 @@
 package typingsSlinky.tableau.global.tableau
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("tableau.FieldAggregationType")
 @js.native
-object FieldAggregationType extends js.Object {
+object FieldAggregationType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.tableau.tableau.FieldAggregationType with Double] = js.native

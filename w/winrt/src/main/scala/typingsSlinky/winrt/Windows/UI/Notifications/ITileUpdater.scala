@@ -3,12 +3,13 @@ package typingsSlinky.winrt.Windows.UI.Notifications
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Foundation.Uri
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ITileUpdater extends js.Object {
+trait ITileUpdater extends StObject {
   
   def addToSchedule(scheduledTile: ScheduledTileNotification): Unit = js.native
   

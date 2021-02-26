@@ -10,9 +10,9 @@ Simple HTML5 charts using the canvas element.
 | ------------------ | :-------------: |
 | Full name          | chart.js |
 | Keywords           | canvas, charts, data, graphs, html5, responsive |
-| # releases         | 9 |
-| # dependents       | 779 |
-| # downloads        | 31415673 |
+| # releases         | 19 |
+| # dependents       | 1179 |
+| # downloads        | 57451629 |
 | # stars            | 60 |
 
 ## Links

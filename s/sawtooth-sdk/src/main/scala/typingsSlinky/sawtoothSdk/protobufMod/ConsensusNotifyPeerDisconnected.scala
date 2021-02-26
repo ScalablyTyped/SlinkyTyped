@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,18 +29,26 @@ class ConsensusNotifyPeerDisconnected () extends IConsensusNotifyPeerDisconnecte
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected")
-@js.native
-object ConsensusNotifyPeerDisconnected extends js.Object {
+object ConsensusNotifyPeerDisconnected {
   
   /**
     * Creates a new ConsensusNotifyPeerDisconnected instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ConsensusNotifyPeerDisconnected instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.create")
+  @js.native
   def create(): ConsensusNotifyPeerDisconnected = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.create")
+  @js.native
   def create(properties: IConsensusNotifyPeerDisconnected): ConsensusNotifyPeerDisconnected = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): ConsensusNotifyPeerDisconnected = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusNotifyPeerDisconnected = js.native
   /**
     * Decodes a ConsensusNotifyPeerDisconnected message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -48,11 +57,16 @@ object ConsensusNotifyPeerDisconnected extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.decode")
+  @js.native
   def decode(reader: Reader): ConsensusNotifyPeerDisconnected = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.decode")
+  @js.native
   def decode(reader: Reader, length: Double): ConsensusNotifyPeerDisconnected = js.native
-  def decode(reader: js.typedarray.Uint8Array): ConsensusNotifyPeerDisconnected = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusNotifyPeerDisconnected = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusNotifyPeerDisconnected = js.native
   /**
     * Decodes a ConsensusNotifyPeerDisconnected message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -60,8 +74,9 @@ object ConsensusNotifyPeerDisconnected extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): ConsensusNotifyPeerDisconnected = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusNotifyPeerDisconnected = js.native
   
   /**
     * Encodes the specified ConsensusNotifyPeerDisconnected message. Does not implicitly {@link ConsensusNotifyPeerDisconnected.verify|verify} messages.
@@ -69,7 +84,11 @@ object ConsensusNotifyPeerDisconnected extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.encode")
+  @js.native
   def encode(message: IConsensusNotifyPeerDisconnected): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.encode")
+  @js.native
   def encode(message: IConsensusNotifyPeerDisconnected, writer: Writer): Writer = js.native
   
   /**
@@ -78,7 +97,11 @@ object ConsensusNotifyPeerDisconnected extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusNotifyPeerDisconnected): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusNotifyPeerDisconnected, writer: Writer): Writer = js.native
   
   /**
@@ -86,6 +109,8 @@ object ConsensusNotifyPeerDisconnected extends js.Object {
     * @param object Plain object
     * @returns ConsensusNotifyPeerDisconnected
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusNotifyPeerDisconnected = js.native
   
   /**
@@ -94,7 +119,11 @@ object ConsensusNotifyPeerDisconnected extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.toObject")
+  @js.native
   def toObject(message: ConsensusNotifyPeerDisconnected): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.toObject")
+  @js.native
   def toObject(message: ConsensusNotifyPeerDisconnected, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -102,5 +131,7 @@ object ConsensusNotifyPeerDisconnected extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyPeerDisconnected.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

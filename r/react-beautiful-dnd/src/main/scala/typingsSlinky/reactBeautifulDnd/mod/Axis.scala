@@ -10,6 +10,7 @@ import typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.vertical
 import typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.width
 import typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.x
 import typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.y
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,24 +19,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBeautifulDnd.mod.VerticalAxis
   - typingsSlinky.reactBeautifulDnd.mod.HorizontalAxis
 */
-trait Axis extends js.Object
+trait Axis extends StObject
 object Axis {
-  
-  @scala.inline
-  def VerticalAxis(
-    crossAxisEnd: right,
-    crossAxisLine: x,
-    crossAxisSize: width,
-    crossAxisStart: left,
-    direction: vertical,
-    end: bottom,
-    line: y,
-    size: height,
-    start: top
-  ): Axis = {
-    val __obj = js.Dynamic.literal(crossAxisEnd = crossAxisEnd.asInstanceOf[js.Any], crossAxisLine = crossAxisLine.asInstanceOf[js.Any], crossAxisSize = crossAxisSize.asInstanceOf[js.Any], crossAxisStart = crossAxisStart.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Axis]
-  }
   
   @scala.inline
   def HorizontalAxis(
@@ -48,8 +33,24 @@ object Axis {
     line: x,
     size: width,
     start: left
-  ): Axis = {
+  ): typingsSlinky.reactBeautifulDnd.mod.HorizontalAxis = {
     val __obj = js.Dynamic.literal(crossAxisEnd = crossAxisEnd.asInstanceOf[js.Any], crossAxisLine = crossAxisLine.asInstanceOf[js.Any], crossAxisSize = crossAxisSize.asInstanceOf[js.Any], crossAxisStart = crossAxisStart.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Axis]
+    __obj.asInstanceOf[typingsSlinky.reactBeautifulDnd.mod.HorizontalAxis]
+  }
+  
+  @scala.inline
+  def VerticalAxis(
+    crossAxisEnd: right,
+    crossAxisLine: x,
+    crossAxisSize: width,
+    crossAxisStart: left,
+    direction: vertical,
+    end: bottom,
+    line: y,
+    size: height,
+    start: top
+  ): typingsSlinky.reactBeautifulDnd.mod.VerticalAxis = {
+    val __obj = js.Dynamic.literal(crossAxisEnd = crossAxisEnd.asInstanceOf[js.Any], crossAxisLine = crossAxisLine.asInstanceOf[js.Any], crossAxisSize = crossAxisSize.asInstanceOf[js.Any], crossAxisStart = crossAxisStart.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.reactBeautifulDnd.mod.VerticalAxis]
   }
 }

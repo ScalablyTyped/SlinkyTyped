@@ -1,5 +1,6 @@
 package typingsSlinky.gsap.gsap
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gsap.gsap.TimelineLite
   - typingsSlinky.gsap.gsap.TimelineMax
 */
-trait Timeline extends js.Object
+trait Timeline extends StObject

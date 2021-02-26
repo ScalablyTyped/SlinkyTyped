@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,18 +29,26 @@ class ConsensusNotifyBlockValid () extends IConsensusNotifyBlockValid {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid")
-@js.native
-object ConsensusNotifyBlockValid extends js.Object {
+object ConsensusNotifyBlockValid {
   
   /**
     * Creates a new ConsensusNotifyBlockValid instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ConsensusNotifyBlockValid instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.create")
+  @js.native
   def create(): ConsensusNotifyBlockValid = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.create")
+  @js.native
   def create(properties: IConsensusNotifyBlockValid): ConsensusNotifyBlockValid = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): ConsensusNotifyBlockValid = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusNotifyBlockValid = js.native
   /**
     * Decodes a ConsensusNotifyBlockValid message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -48,11 +57,16 @@ object ConsensusNotifyBlockValid extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.decode")
+  @js.native
   def decode(reader: Reader): ConsensusNotifyBlockValid = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.decode")
+  @js.native
   def decode(reader: Reader, length: Double): ConsensusNotifyBlockValid = js.native
-  def decode(reader: js.typedarray.Uint8Array): ConsensusNotifyBlockValid = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusNotifyBlockValid = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusNotifyBlockValid = js.native
   /**
     * Decodes a ConsensusNotifyBlockValid message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -60,8 +74,9 @@ object ConsensusNotifyBlockValid extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): ConsensusNotifyBlockValid = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusNotifyBlockValid = js.native
   
   /**
     * Encodes the specified ConsensusNotifyBlockValid message. Does not implicitly {@link ConsensusNotifyBlockValid.verify|verify} messages.
@@ -69,7 +84,11 @@ object ConsensusNotifyBlockValid extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.encode")
+  @js.native
   def encode(message: IConsensusNotifyBlockValid): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.encode")
+  @js.native
   def encode(message: IConsensusNotifyBlockValid, writer: Writer): Writer = js.native
   
   /**
@@ -78,7 +97,11 @@ object ConsensusNotifyBlockValid extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusNotifyBlockValid): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IConsensusNotifyBlockValid, writer: Writer): Writer = js.native
   
   /**
@@ -86,6 +109,8 @@ object ConsensusNotifyBlockValid extends js.Object {
     * @param object Plain object
     * @returns ConsensusNotifyBlockValid
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusNotifyBlockValid = js.native
   
   /**
@@ -94,7 +119,11 @@ object ConsensusNotifyBlockValid extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.toObject")
+  @js.native
   def toObject(message: ConsensusNotifyBlockValid): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.toObject")
+  @js.native
   def toObject(message: ConsensusNotifyBlockValid, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -102,5 +131,7 @@ object ConsensusNotifyBlockValid extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockValid.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

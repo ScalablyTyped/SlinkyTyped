@@ -7,14 +7,14 @@ import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModelListener
 import typingsSlinky.stormReactDiagrams.linkModelMod.LinkModel
 import typingsSlinky.stormReactDiagrams.linkModelMod.LinkModelListener
 import typingsSlinky.stormReactDiagrams.nodeModelMod.NodeModel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("storm-react-diagrams/dist/src/models/PortModel", JSImport.Namespace)
-@js.native
-object portModelMod extends js.Object {
+object portModelMod {
   
+  @JSImport("storm-react-diagrams/dist/src/models/PortModel", "PortModel")
   @js.native
   class PortModel protected () extends BaseModel[NodeModel, BaseModelListener] {
     def this(name: String) = this()

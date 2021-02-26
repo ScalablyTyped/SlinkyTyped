@@ -76,15 +76,22 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactMdAlert.snackbarMod.SnackbarPosition
 import typingsSlinky.reactMdAlert.snackbarMod.SnackbarProps
 import typingsSlinky.reactMdPortal.getContainerMod.PortalInto
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Snackbar {
   
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SnackbarProps with RefAttributes[HTMLDivElement]]))
+  }
+  
   @JSImport("@react-md/alert", "Snackbar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -274,10 +281,10 @@ object Snackbar {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -559,19 +566,19 @@ object Snackbar {
     def portal(value: Boolean): this.type = set("portal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
+    def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portalIntoFunction0(value: () => HTMLElement | Null): this.type = set("portalInto", js.Any.fromFunction0(value))
     
     @scala.inline
-    def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def portalIntoNull: this.type = set("portalInto", null)
+    def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portalIntoId(value: String): this.type = set("portalIntoId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def portalIntoNull: this.type = set("portalInto", null)
     
     @scala.inline
     def position(value: SnackbarPosition): this.type = set("position", value.asInstanceOf[js.Any])
@@ -632,10 +639,4 @@ object Snackbar {
   }
   
   def withProps(p: SnackbarProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SnackbarProps with RefAttributes[HTMLDivElement]]))
-  }
 }

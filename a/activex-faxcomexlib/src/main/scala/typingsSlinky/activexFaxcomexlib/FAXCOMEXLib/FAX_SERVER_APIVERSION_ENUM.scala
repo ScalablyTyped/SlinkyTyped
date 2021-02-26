@@ -4,6 +4,7 @@ import typingsSlinky.activexFaxcomexlib.activexFaxcomexlibNumbers.`0`
 import typingsSlinky.activexFaxcomexlib.activexFaxcomexlibNumbers.`131072`
 import typingsSlinky.activexFaxcomexlib.activexFaxcomexlibNumbers.`196608`
 import typingsSlinky.activexFaxcomexlib.activexFaxcomexlibNumbers.`65536`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexFaxcomexlib.activexFaxcomexlibNumbers.`131072`
   - typingsSlinky.activexFaxcomexlib.activexFaxcomexlibNumbers.`196608`
 */
-trait FAX_SERVER_APIVERSION_ENUM extends js.Object
+trait FAX_SERVER_APIVERSION_ENUM extends StObject
 object FAX_SERVER_APIVERSION_ENUM {
   
   @scala.inline

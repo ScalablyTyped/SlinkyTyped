@@ -1,13 +1,14 @@
 package typingsSlinky.bitwise
 
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("bitwise/buffer/not", JSImport.Namespace)
-@js.native
-object bufferNotMod extends js.Object {
+object bufferNotMod {
   
+  @JSImport("bitwise/buffer/not", JSImport.Default)
+  @js.native
   def default(buffer: Buffer): Buffer = js.native
 }

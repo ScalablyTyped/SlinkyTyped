@@ -11,12 +11,12 @@ Javascript identicon generator
 | Full name          | jdenticon |
 | Keywords           | javascript, identicon, jdenticon, avatar |
 | # releases         | 5 |
-| # dependents       | 21 |
-| # downloads        | 152005 |
+| # dependents       | 26 |
+| # downloads        | 333852 |
 | # stars            | 2 |
 
 ## Links
-- [Homepage](https://github.com/dmester/jdenticon)
+- [Homepage](https://jdenticon.com/)
 - [Bugs](https://github.com/dmester/jdenticon/issues)
 - [Repository](https://github.com/dmester/jdenticon)
 - [Npm](https://www.npmjs.com/package/jdenticon)

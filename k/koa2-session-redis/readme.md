@@ -10,9 +10,9 @@ A simple redis store of koa-session
 | ------------------ | :-------------: |
 | Full name          | koa2-session-redis |
 | Keywords           | koa, koa2, session, redis |
-| # releases         | 2 |
+| # releases         | 0 |
 | # dependents       | 1 |
-| # downloads        | 3250 |
+| # downloads        | 3279 |
 | # stars            | 0 |
 
 ## Links

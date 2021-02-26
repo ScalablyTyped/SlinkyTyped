@@ -10,9 +10,9 @@ Enforces HTTPS for node.js koa projects
 | ------------------ | :-------------: |
 | Full name          | koa-sslify |
 | Keywords           | koa, koa.js, middleware, https, ssl, sslify, redirect, node, node.js |
-| # releases         | 7 |
-| # dependents       | 34 |
-| # downloads        | 363578 |
+| # releases         | 0 |
+| # dependents       | 39 |
+| # downloads        | 420771 |
 | # stars            | 3 |
 
 ## Links

@@ -15,6 +15,7 @@ import typingsSlinky.ssh2Streams.mod.ReadStreamOptions
 import typingsSlinky.ssh2Streams.mod.Stats
 import typingsSlinky.ssh2Streams.mod.TransferOptions
 import typingsSlinky.ssh2Streams.mod.WriteStreamOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -179,6 +180,9 @@ trait SFTPWrapper extends EventEmitter {
     */
   def fstat(handle: Buffer, callback: js.Function2[/* err */ js.Any, /* stats */ Stats, Unit]): Boolean = js.native
   
+  def futimes(handle: Buffer, atime: js.Date, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
+  def futimes(handle: Buffer, atime: js.Date, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
+  def futimes(handle: Buffer, atime: Double, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
   /**
     * (Client-only)
     * Sets the access time and modified time for the resource associated with `handle`.
@@ -186,9 +190,6 @@ trait SFTPWrapper extends EventEmitter {
     * Returns `false` if you should wait for the `continue` event before sending any more traffic.
     */
   def futimes(handle: Buffer, atime: Double, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def futimes(handle: Buffer, atime: Double, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def futimes(handle: Buffer, atime: js.Date, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def futimes(handle: Buffer, atime: js.Date, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
   
   /**
     * (Client-only)
@@ -388,6 +389,9 @@ trait SFTPWrapper extends EventEmitter {
     */
   def unlink(path: String, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
   
+  def utimes(path: String, atime: js.Date, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
+  def utimes(path: String, atime: js.Date, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
+  def utimes(path: String, atime: Double, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
   /**
     * (Client-only)
     * Sets the access time and modified time for `path`.
@@ -395,9 +399,6 @@ trait SFTPWrapper extends EventEmitter {
     * Returns `false` if you should wait for the `continue` event before sending any more traffic.
     */
   def utimes(path: String, atime: Double, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def utimes(path: String, atime: Double, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def utimes(path: String, atime: js.Date, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def utimes(path: String, atime: js.Date, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
   
   /**
     * (Client-only)

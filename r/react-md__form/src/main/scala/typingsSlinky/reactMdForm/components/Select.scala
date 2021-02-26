@@ -82,15 +82,27 @@ import typingsSlinky.reactMdForm.utilsMod.ListboxOption
 import typingsSlinky.reactMdPortal.getContainerMod.PortalInto
 import typingsSlinky.reactMdUtils.typesMod.PositionAnchor
 import typingsSlinky.reactMdUtils.typesMod.PositionWidth
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Select {
   
+  @scala.inline
+  def apply(
+    id: String,
+    onChange: (/* nextValue */ String, /* option */ ListboxOption, /* listbox */ ListboxChangeEventData) => Unit,
+    options: js.Array[ListboxOption],
+    value: String
+  ): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction3(onChange), options = options.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SelectProps with RefAttributes[HTMLDivElement]]))
+  }
+  
   @JSImport("@react-md/form", "Select")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -369,9 +381,6 @@ object Select {
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -381,16 +390,19 @@ object Select {
     def labelKey(value: String): this.type = set("labelKey", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def labelStyle(value: CSSProperties): this.type = set("labelStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftChildrenReactElement(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
+    def leftChildren(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftChildren(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
+    def leftChildrenReactElement(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def listboxClassName(value: String): this.type = set("listboxClassName", value.asInstanceOf[js.Any])
@@ -639,28 +651,28 @@ object Select {
     def onWheel(value: SyntheticWheelEvent[HTMLDivElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portal(value: Boolean): this.type = set("portal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
+    def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portalIntoFunction0(value: () => HTMLElement | Null): this.type = set("portalInto", js.Any.fromFunction0(value))
     
     @scala.inline
-    def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def portalIntoNull: this.type = set("portalInto", null)
+    def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portalIntoId(value: String): this.type = set("portalIntoId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def portalIntoNull: this.type = set("portalInto", null)
     
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
@@ -681,10 +693,10 @@ object Select {
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightChildrenReactElement(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
+    def rightChildren(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightChildren(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
+    def rightChildrenReactElement(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
@@ -736,15 +748,4 @@ object Select {
   }
   
   def withProps(p: SelectProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    id: String,
-    onChange: (/* nextValue */ String, /* option */ ListboxOption, /* listbox */ ListboxChangeEventData) => Unit,
-    options: js.Array[ListboxOption],
-    value: String
-  ): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction3(onChange), options = options.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SelectProps with RefAttributes[HTMLDivElement]]))
-  }
 }

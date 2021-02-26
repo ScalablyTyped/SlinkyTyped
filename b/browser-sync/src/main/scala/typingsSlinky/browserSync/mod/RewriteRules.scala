@@ -2,12 +2,13 @@ package typingsSlinky.browserSync.mod
 
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RewriteRules extends js.Object {
+trait RewriteRules extends StObject {
   
   var fn: js.UndefOr[
     js.Function3[/* req */ IncomingMessage, /* res */ ServerResponse, /* match */ String, String]
@@ -27,33 +28,21 @@ object RewriteRules {
   }
   
   @scala.inline
-  implicit class RewriteRulesOps[Self <: RewriteRules] (val x: Self) extends AnyVal {
+  implicit class RewriteRulesMutableBuilder[Self <: RewriteRules] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setFn(value: (/* req */ IncomingMessage, /* res */ ServerResponse, /* match */ String) => String): Self = StObject.set(x, "fn", js.Any.fromFunction3(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setFnUndefined: Self = StObject.set(x, "fn", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setMatch(value: js.RegExp): Self = StObject.set(x, "match", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMatch(value: js.RegExp): Self = this.set("match", value.asInstanceOf[js.Any])
+    def setReplace(value: String): Self = StObject.set(x, "replace", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFn(value: (/* req */ IncomingMessage, /* res */ ServerResponse, /* match */ String) => String): Self = this.set("fn", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def deleteFn: Self = this.set("fn", js.undefined)
-    
-    @scala.inline
-    def setReplace(value: String): Self = this.set("replace", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteReplace: Self = this.set("replace", js.undefined)
+    def setReplaceUndefined: Self = StObject.set(x, "replace", js.undefined)
   }
 }

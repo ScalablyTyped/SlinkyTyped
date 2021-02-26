@@ -12,6 +12,7 @@ import typingsSlinky.activexAccess.activexAccessStrings.`PDF Format Leftparenthe
 import typingsSlinky.activexAccess.activexAccessStrings.`Rich Text Format LeftparenthesisAsteriskDotrtfRightparenthesis`
 import typingsSlinky.activexAccess.activexAccessStrings.`Snapshot Format LeftparenthesisAsteriskDotsnpRightparenthesis`
 import typingsSlinky.activexAccess.activexAccessStrings.`XPS Format LeftparenthesisAsteriskDotxpsRightparenthesis`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAccess.activexAccessStrings.`Microsoft Excel Workbook LeftparenthesisAsteriskDotxlsxRightparenthesis`
   - typingsSlinky.activexAccess.activexAccessStrings.`XPS Format LeftparenthesisAsteriskDotxpsRightparenthesis`
 */
-trait AcOutputFormat extends js.Object
+trait AcOutputFormat extends StObject
 object AcOutputFormat {
   
   @scala.inline

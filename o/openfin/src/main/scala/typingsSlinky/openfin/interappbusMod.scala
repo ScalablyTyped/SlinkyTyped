@@ -5,16 +5,22 @@ import typingsSlinky.openfin.anon.SubscriberAdded
 import typingsSlinky.openfin.baseMod.Base
 import typingsSlinky.openfin.identityMod.Identity
 import typingsSlinky.openfin.transportMod.Message
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("openfin/_v2/api/interappbus/interappbus", JSImport.Namespace)
-@js.native
-object interappbusMod extends js.Object {
+object interappbusMod {
   
+  @JSImport("openfin/_v2/api/interappbus/interappbus", JSImport.Default)
   @js.native
-  class InterAppPayload () extends js.Object {
+  class default protected () extends InterApplicationBus {
+    def this(wire: typingsSlinky.openfin.transportMod.default) = this()
+  }
+  
+  @JSImport("openfin/_v2/api/interappbus/interappbus", "InterAppPayload")
+  @js.native
+  class InterAppPayload () extends StObject {
     
     var destinationUuid: js.UndefOr[String] = js.native
     
@@ -100,10 +106,5 @@ object interappbusMod extends js.Object {
       * @tutorial InterApplicationBus.unsubscribe
       */
     def unsubscribe(source: Identity, topic: String, listener: js.Any): js.Promise[Unit] = js.native
-  }
-  
-  @js.native
-  class default protected () extends InterApplicationBus {
-    def this(wire: typingsSlinky.openfin.transportMod.default) = this()
   }
 }

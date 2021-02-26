@@ -9,15 +9,22 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.tuyaPanelKit.anon.ActiveSize
 import typingsSlinky.tuyaPanelKit.anon.Margin
 import typingsSlinky.tuyaPanelKit.mod.SwitchButtonProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SwitchButton {
   
+  @scala.inline
+  def apply(onValueChange: Boolean => Unit): Builder = {
+    val __props = js.Dynamic.literal(onValueChange = js.Any.fromFunction1(onValueChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[SwitchButtonProps]))
+  }
+  
   @JSImport("tuya-panel-kit", "SwitchButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -92,10 +99,4 @@ object SwitchButton {
   }
   
   def withProps(p: SwitchButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onValueChange: Boolean => Unit): Builder = {
-    val __props = js.Dynamic.literal(onValueChange = js.Any.fromFunction1(onValueChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[SwitchButtonProps]))
-  }
 }

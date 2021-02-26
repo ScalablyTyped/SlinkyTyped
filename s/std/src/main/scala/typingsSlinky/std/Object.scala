@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Object extends js.Object {
+trait Object extends StObject {
   
   /** The initial value of Object.prototype.constructor is the standard built-in Object constructor. */
   var constructor: js.Function = js.native
@@ -29,33 +30,21 @@ object Object {
     constructor: js.Function,
     hasOwnProperty: PropertyKey => scala.Boolean,
     propertyIsEnumerable: PropertyKey => scala.Boolean
-  ): Object = {
+  ): js.Object = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    __obj.asInstanceOf[Object]
+    __obj.asInstanceOf[js.Object]
   }
   
   @scala.inline
-  implicit class ObjectOps[Self <: js.Object] (val x: Self) extends AnyVal {
+  implicit class ObjectMutableBuilder[Self <: js.Object] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setConstructor(value: js.Function): Self = StObject.set(x, "constructor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setHasOwnProperty(value: PropertyKey => scala.Boolean): Self = StObject.set(x, "hasOwnProperty", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setConstructor(value: js.Function): Self = this.set("constructor", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHasOwnProperty(value: PropertyKey => scala.Boolean): Self = this.set("hasOwnProperty", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setPropertyIsEnumerable(value: PropertyKey => scala.Boolean): Self = this.set("propertyIsEnumerable", js.Any.fromFunction1(value))
+    def setPropertyIsEnumerable(value: PropertyKey => scala.Boolean): Self = StObject.set(x, "propertyIsEnumerable", js.Any.fromFunction1(value))
   }
 }

@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientSlides.gapi.client.slides
 
 import typingsSlinky.maximMazurokGapiClientSlides.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientSlides.anon.Alt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PagesResource extends js.Object {
+trait PagesResource extends StObject {
   
   /** Gets the latest version of the specified page in the presentation. */
   def get(): typingsSlinky.gapiClient.gapi.client.Request[Page] = js.native

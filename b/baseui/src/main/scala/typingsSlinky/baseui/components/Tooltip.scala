@@ -26,15 +26,22 @@ import typingsSlinky.baseui.baseuiStrings.topLeft
 import typingsSlinky.baseui.baseuiStrings.topRight
 import typingsSlinky.baseui.popoverMod.PopoverOverrides
 import typingsSlinky.baseui.tooltipMod.TooltipProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tooltip {
   
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
+  }
+  
   @JSImport("baseui/tooltip", "Tooltip")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,13 +58,13 @@ object Tooltip {
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement | js.Function0[ReactElement]): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentFunction0(value: () => ReactElement): this.type = set("content", js.Any.fromFunction0(value))
     
     @scala.inline
-    def content(value: ReactElement | js.Function0[ReactElement]): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `data-baseweb`(value: String): this.type = set("data-baseweb", value.asInstanceOf[js.Any])
@@ -129,10 +136,4 @@ object Tooltip {
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(isOpen: Boolean): Builder = {
-    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
-  }
 }

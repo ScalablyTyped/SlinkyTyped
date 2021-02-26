@@ -16,6 +16,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.JSXText
 import typingsSlinky.babelTypes.babelTypesStrings.NullLiteral
 import typingsSlinky.babelTypes.babelTypesStrings.NumericLiteral
 import typingsSlinky.babelTypes.babelTypesStrings.StringLiteral
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,80 +43,45 @@ trait Immutable extends _Node
 object Immutable {
   
   @scala.inline
-  def JSXFragment_(
-    children: js.Array[
-      JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | typingsSlinky.babelTypes.indexTs37Mod.JSXFragment_
-    ],
-    closingFragment: JSXClosingFragment_,
-    openingFragment: JSXOpeningFragment_,
-    `type`: JSXFragment
-  ): Immutable = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], closingFragment = closingFragment.asInstanceOf[js.Any], openingFragment = openingFragment.asInstanceOf[js.Any])
+  def BigIntLiteral_(`type`: BigIntLiteral, value: String): typingsSlinky.babelTypes.indexTs37Mod.BigIntLiteral_ = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.BigIntLiteral_]
   }
   
   @scala.inline
-  def JSXClosingElement_(name: JSXIdentifier_ | JSXMemberExpression_ | JSXNamespacedName_, `type`: JSXClosingElement): Immutable = {
+  def BooleanLiteral_(`type`: BooleanLiteral, value: Boolean): typingsSlinky.babelTypes.indexTs37Mod.BooleanLiteral_ = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.BooleanLiteral_]
+  }
+  
+  @scala.inline
+  def DecimalLiteral_(`type`: DecimalLiteral, value: String): typingsSlinky.babelTypes.indexTs37Mod.DecimalLiteral_ = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.DecimalLiteral_]
+  }
+  
+  @scala.inline
+  def JSXAttribute_(name: JSXIdentifier_ | JSXNamespacedName_, `type`: JSXAttribute): typingsSlinky.babelTypes.indexTs37Mod.JSXAttribute_ = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXAttribute_]
   }
   
   @scala.inline
-  def NumericLiteral_(`type`: NumericLiteral, value: Double): Immutable = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
-  }
-  
-  @scala.inline
-  def StringLiteral_(`type`: StringLiteral, value: String): Immutable = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
-  }
-  
-  @scala.inline
-  def NullLiteral_(`type`: NullLiteral): Immutable = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
-  }
-  
-  @scala.inline
-  def JSXClosingFragment_(`type`: JSXClosingFragment): Immutable = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
-  }
-  
-  @scala.inline
-  def JSXOpeningFragment_(`type`: JSXOpeningFragment): Immutable = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
-  }
-  
-  @scala.inline
-  def BooleanLiteral_(`type`: BooleanLiteral, value: Boolean): Immutable = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
-  }
-  
-  @scala.inline
-  def JSXText_(`type`: JSXText, value: String): Immutable = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
-  }
-  
-  @scala.inline
-  def JSXAttribute_(name: JSXIdentifier_ | JSXNamespacedName_, `type`: JSXAttribute): Immutable = {
+  def JSXClosingElement_(name: JSXIdentifier_ | JSXMemberExpression_ | JSXNamespacedName_, `type`: JSXClosingElement): typingsSlinky.babelTypes.indexTs37Mod.JSXClosingElement_ = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXClosingElement_]
+  }
+  
+  @scala.inline
+  def JSXClosingFragment_(`type`: JSXClosingFragment): typingsSlinky.babelTypes.indexTs37Mod.JSXClosingFragment_ = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXClosingFragment_]
   }
   
   @scala.inline
@@ -125,10 +91,31 @@ object Immutable {
     ],
     openingElement: JSXOpeningElement_,
     `type`: JSXElement
-  ): Immutable = {
+  ): typingsSlinky.babelTypes.indexTs37Mod.JSXElement_ = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], openingElement = openingElement.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXElement_]
+  }
+  
+  @scala.inline
+  def JSXExpressionContainer_(expression: Expression | JSXEmptyExpression_, `type`: JSXExpressionContainer): typingsSlinky.babelTypes.indexTs37Mod.JSXExpressionContainer_ = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXExpressionContainer_]
+  }
+  
+  @scala.inline
+  def JSXFragment_(
+    children: js.Array[
+      JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | typingsSlinky.babelTypes.indexTs37Mod.JSXFragment_
+    ],
+    closingFragment: JSXClosingFragment_,
+    openingFragment: JSXOpeningFragment_,
+    `type`: JSXFragment
+  ): typingsSlinky.babelTypes.indexTs37Mod.JSXFragment_ = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], closingFragment = closingFragment.asInstanceOf[js.Any], openingFragment = openingFragment.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXFragment_]
   }
   
   @scala.inline
@@ -137,37 +124,51 @@ object Immutable {
     name: JSXIdentifier_ | JSXMemberExpression_ | JSXNamespacedName_,
     selfClosing: Boolean,
     `type`: JSXOpeningElement
-  ): Immutable = {
+  ): typingsSlinky.babelTypes.indexTs37Mod.JSXOpeningElement_ = {
     val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selfClosing = selfClosing.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXOpeningElement_]
   }
   
   @scala.inline
-  def DecimalLiteral_(`type`: DecimalLiteral, value: String): Immutable = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+  def JSXOpeningFragment_(`type`: JSXOpeningFragment): typingsSlinky.babelTypes.indexTs37Mod.JSXOpeningFragment_ = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXOpeningFragment_]
   }
   
   @scala.inline
-  def JSXSpreadChild_(expression: Expression, `type`: JSXSpreadChild): Immutable = {
+  def JSXSpreadChild_(expression: Expression, `type`: JSXSpreadChild): typingsSlinky.babelTypes.indexTs37Mod.JSXSpreadChild_ = {
     val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXSpreadChild_]
   }
   
   @scala.inline
-  def JSXExpressionContainer_(expression: Expression | JSXEmptyExpression_, `type`: JSXExpressionContainer): Immutable = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
-  }
-  
-  @scala.inline
-  def BigIntLiteral_(`type`: BigIntLiteral, value: String): Immutable = {
+  def JSXText_(`type`: JSXText, value: String): typingsSlinky.babelTypes.indexTs37Mod.JSXText_ = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Immutable]
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.JSXText_]
+  }
+  
+  @scala.inline
+  def NullLiteral_(`type`: NullLiteral): typingsSlinky.babelTypes.indexTs37Mod.NullLiteral_ = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.NullLiteral_]
+  }
+  
+  @scala.inline
+  def NumericLiteral_(`type`: NumericLiteral, value: Double): typingsSlinky.babelTypes.indexTs37Mod.NumericLiteral_ = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.NumericLiteral_]
+  }
+  
+  @scala.inline
+  def StringLiteral_(`type`: StringLiteral, value: String): typingsSlinky.babelTypes.indexTs37Mod.StringLiteral_ = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.babelTypes.indexTs37Mod.StringLiteral_]
   }
 }

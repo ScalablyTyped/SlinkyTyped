@@ -9,6 +9,7 @@ import typingsSlinky.reactImgix.mod.AttributeConfig
 import typingsSlinky.reactImgix.mod.ImgixHTMLAttributes
 import typingsSlinky.reactImgix.mod.ImigixParams
 import typingsSlinky.std.HTMLPictureElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

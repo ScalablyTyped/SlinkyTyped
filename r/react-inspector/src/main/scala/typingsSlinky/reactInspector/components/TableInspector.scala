@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactInspector.mod.InspectorTheme
 import typingsSlinky.reactInspector.mod.TableInspectorProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object TableInspector {
   
   @JSImport("react-inspector", "TableInspector")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -20,10 +21,10 @@ object TableInspector {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def columnsVarargs(value: String*): this.type = set("columns", js.Array(value :_*))
+    def columns(value: js.Array[String]): this.type = set("columns", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def columns(value: js.Array[String]): this.type = set("columns", value.asInstanceOf[js.Any])
+    def columnsVarargs(value: String*): this.type = set("columns", js.Array(value :_*))
     
     @scala.inline
     def data(value: js.Any): this.type = set("data", value.asInstanceOf[js.Any])
@@ -32,7 +33,7 @@ object TableInspector {
     def theme(value: InspectorTheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TableInspectorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TableInspector.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TableInspectorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

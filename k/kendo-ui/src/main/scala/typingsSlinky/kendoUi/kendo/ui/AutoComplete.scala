@@ -3,6 +3,7 @@ package typingsSlinky.kendoUi.kendo.ui
 import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.data.DataSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,9 +13,9 @@ trait AutoComplete extends Widget {
   
   def close(): Unit = js.native
   
+  def dataItem(index: Element): js.Any = js.native
   def dataItem(index: Double): js.Any = js.native
   def dataItem(index: JQuery): js.Any = js.native
-  def dataItem(index: Element): js.Any = js.native
   
   var dataSource: DataSource = js.native
   
@@ -38,8 +39,8 @@ trait AutoComplete extends Widget {
   def search(word: String): Unit = js.native
   
   def select(item: String): Unit = js.native
-  def select(item: JQuery): Unit = js.native
   def select(item: Element): Unit = js.native
+  def select(item: JQuery): Unit = js.native
   
   def setDataSource(dataSource: DataSource): Unit = js.native
   

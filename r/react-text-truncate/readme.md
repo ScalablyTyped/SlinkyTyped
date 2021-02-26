@@ -11,8 +11,8 @@ Truncate text for React.js
 | Full name          | react-text-truncate |
 | Keywords           | react, react-component, text, truncate |
 | # releases         | 5 |
-| # dependents       | 20 |
-| # downloads        | 976632 |
+| # dependents       | 28 |
+| # downloads        | 1335236 |
 | # stars            | 2 |
 
 ## Links

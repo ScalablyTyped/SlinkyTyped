@@ -2,6 +2,7 @@ package typingsSlinky.isMyJsonValid.mod
 
 import typingsSlinky.isMyJsonValid.isMyJsonValidStrings.`object`
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

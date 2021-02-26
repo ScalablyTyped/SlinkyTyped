@@ -7,37 +7,14 @@ import typingsSlinky.builderUtil.archMod.Arch
 import typingsSlinky.electronBuilder.builderMod.CliOptions
 import typingsSlinky.electronPublish.mod.PublishOptions
 import typingsSlinky.std.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("electron-builder", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  val DEFAULT_TARGET: /* "default" */ String = js.native
-  
-  val DIR_TARGET: /* "dir" */ String = js.native
-  
-  def archFromString(name: String): Arch = js.native
-  
-  def build(): js.Promise[js.Array[String]] = js.native
-  def build(rawOptions: CliOptions): js.Promise[js.Array[String]] = js.native
-  
-  def buildForge(forgeOptions: ForgeOptions, options: PackagerOptions): js.Promise[js.Array[String]] = js.native
-  
-  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform]): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
-  def createTargets(
-    platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform],
-    `type`: js.UndefOr[scala.Nothing],
-    arch: String
-  ): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
-  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
-  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: String, arch: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
-  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: Null, arch: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
-  
-  def getArchSuffix(arch: Arch): String = js.native
-  
+  @JSImport("electron-builder", "AppInfo")
   @js.native
   class AppInfo protected ()
     extends typingsSlinky.appBuilderLib.mod.AppInfo {
@@ -60,8 +37,9 @@ object mod extends js.Object {
     ) = this()
   }
   
+  @JSImport("electron-builder", "Arch")
   @js.native
-  object Arch extends js.Object {
+  object Arch extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.builderUtil.archMod.Arch with Double] = js.native
@@ -75,12 +53,22 @@ object mod extends js.Object {
     /* 1 */ val x64: typingsSlinky.builderUtil.archMod.Arch.x64 with Double = js.native
   }
   
+  @JSImport("electron-builder", "CancellationToken")
   @js.native
   class CancellationToken ()
     extends typingsSlinky.builderUtilRuntime.mod.CancellationToken {
     def this(parent: typingsSlinky.builderUtilRuntime.cancellationTokenMod.CancellationToken) = this()
   }
   
+  @JSImport("electron-builder", "DEFAULT_TARGET")
+  @js.native
+  val DEFAULT_TARGET: /* "default" */ String = js.native
+  
+  @JSImport("electron-builder", "DIR_TARGET")
+  @js.native
+  val DIR_TARGET: /* "dir" */ String = js.native
+  
+  @JSImport("electron-builder", "Packager")
   @js.native
   class Packager protected ()
     extends typingsSlinky.appBuilderLib.mod.Packager {
@@ -91,6 +79,7 @@ object mod extends js.Object {
     ) = this()
   }
   
+  @JSImport("electron-builder", "Platform")
   @js.native
   class Platform protected ()
     extends typingsSlinky.appBuilderLib.mod.Platform {
@@ -101,20 +90,40 @@ object mod extends js.Object {
     ) = this()
   }
   /* static members */
-  @js.native
-  object Platform extends js.Object {
+  object Platform {
     
-    var LINUX: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    @JSImport("electron-builder", "Platform")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var MAC: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    @JSImport("electron-builder", "Platform.LINUX")
+    @js.native
+    def LINUX: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    @scala.inline
+    def LINUX_=(x: typingsSlinky.appBuilderLib.coreMod.Platform): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("LINUX")(x.asInstanceOf[js.Any])
     
-    var WINDOWS: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    @JSImport("electron-builder", "Platform.MAC")
+    @js.native
+    def MAC: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    @scala.inline
+    def MAC_=(x: typingsSlinky.appBuilderLib.coreMod.Platform): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAC")(x.asInstanceOf[js.Any])
     
+    @JSImport("electron-builder", "Platform.WINDOWS")
+    @js.native
+    def WINDOWS: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    @scala.inline
+    def WINDOWS_=(x: typingsSlinky.appBuilderLib.coreMod.Platform): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("WINDOWS")(x.asInstanceOf[js.Any])
+    
+    @JSImport("electron-builder", "Platform.current")
+    @js.native
     def current(): typingsSlinky.appBuilderLib.coreMod.Platform = js.native
     
+    @JSImport("electron-builder", "Platform.fromString")
+    @js.native
     def fromString(name: String): typingsSlinky.appBuilderLib.coreMod.Platform = js.native
   }
   
+  @JSImport("electron-builder", "PublishManager")
   @js.native
   class PublishManager protected ()
     extends typingsSlinky.appBuilderLib.mod.PublishManager {
@@ -126,10 +135,50 @@ object mod extends js.Object {
     ) = this()
   }
   
+  @JSImport("electron-builder", "Target")
   @js.native
   abstract class Target protected ()
     extends typingsSlinky.appBuilderLib.mod.Target {
     protected def this(name: String) = this()
     protected def this(name: String, isAsyncSupported: Boolean) = this()
   }
+  
+  @JSImport("electron-builder", "archFromString")
+  @js.native
+  def archFromString(name: String): Arch = js.native
+  
+  @JSImport("electron-builder", "build")
+  @js.native
+  def build(): js.Promise[js.Array[String]] = js.native
+  @JSImport("electron-builder", "build")
+  @js.native
+  def build(rawOptions: CliOptions): js.Promise[js.Array[String]] = js.native
+  
+  @JSImport("electron-builder", "buildForge")
+  @js.native
+  def buildForge(forgeOptions: ForgeOptions, options: PackagerOptions): js.Promise[js.Array[String]] = js.native
+  
+  @JSImport("electron-builder", "createTargets")
+  @js.native
+  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform]): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  @JSImport("electron-builder", "createTargets")
+  @js.native
+  def createTargets(
+    platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform],
+    `type`: js.UndefOr[scala.Nothing],
+    arch: String
+  ): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  @JSImport("electron-builder", "createTargets")
+  @js.native
+  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  @JSImport("electron-builder", "createTargets")
+  @js.native
+  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: String, arch: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  @JSImport("electron-builder", "createTargets")
+  @js.native
+  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: Null, arch: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  
+  @JSImport("electron-builder", "getArchSuffix")
+  @js.native
+  def getArchSuffix(arch: Arch): String = js.native
 }

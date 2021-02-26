@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesPutEventsInputMod.PutEvent
 import typingsSlinky.awsSdkClientPinpointBrowser.typesPutEventsOutputMod.PutEventsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/PutEventsCommand", JSImport.Namespace)
-@js.native
-object putEventsCommandMod extends js.Object {
+object putEventsCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/PutEventsCommand", "PutEventsCommand")
   @js.native
   class PutEventsCommand protected () extends Command[
           InputTypesUnion, 

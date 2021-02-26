@@ -10,9 +10,9 @@ Extract user, repo, and other interesting properties from GitHub URLs
 | ------------------ | :-------------: |
 | Full name          | github-url-to-object |
 | Keywords           | github, url, repo |
-| # releases         | 2 |
-| # dependents       | 65 |
-| # downloads        | 835775 |
+| # releases         | 0 |
+| # dependents       | 71 |
+| # downloads        | 1314231 |
 | # stars            | 6 |
 
 ## Links

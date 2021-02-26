@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientContent.anon.AccesstokenAlt
 import typingsSlinky.maximMazurokGapiClientContent.anon.Destinations
 import typingsSlinky.maximMazurokGapiClientContent.anon.Key
 import typingsSlinky.maximMazurokGapiClientContent.anon.PageToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AccountstatusesResource extends js.Object {
+trait AccountstatusesResource extends StObject {
   
   /** Retrieves multiple Merchant Center account statuses in a single request. */
   def custombatch(request: AccesstokenAlt): Request[AccountstatusesCustomBatchResponse] = js.native

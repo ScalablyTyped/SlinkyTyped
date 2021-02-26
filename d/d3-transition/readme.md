@@ -10,9 +10,9 @@ Animated transitions for D3 selections.
 | ------------------ | :-------------: |
 | Full name          | d3-transition |
 | Keywords           | d3, d3-module, dom, transition, animation |
-| # releases         | 8 |
-| # dependents       | 201 |
-| # downloads        | 26204229 |
+| # releases         | 13 |
+| # dependents       | 287 |
+| # downloads        | 49474065 |
 | # stars            | 2 |
 
 ## Links

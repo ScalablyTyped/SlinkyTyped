@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientGlacierNode.typesDescribeJobInputMod.DescribeJo
 import typingsSlinky.awsSdkClientGlacierNode.typesDescribeJobOutputMod.DescribeJobOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/commands/DescribeJobCommand", JSImport.Namespace)
-@js.native
-object describeJobCommandMod extends js.Object {
+object describeJobCommandMod {
   
+  @JSImport("@aws-sdk/client-glacier-node/commands/DescribeJobCommand", "DescribeJobCommand")
   @js.native
   class DescribeJobCommand protected () extends Command[
           InputTypesUnion, 

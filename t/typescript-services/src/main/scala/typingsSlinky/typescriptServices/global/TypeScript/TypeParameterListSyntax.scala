@@ -2,6 +2,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 
 import typingsSlinky.typescriptServices.TypeScript.ISeparatedSyntaxList
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,12 +18,15 @@ class TypeParameterListSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSGlobal("TypeScript.TypeParameterListSyntax")
-@js.native
-object TypeParameterListSyntax extends js.Object {
+object TypeParameterListSyntax {
   
+  /* static member */
+  @JSGlobal("TypeScript.TypeParameterListSyntax.create")
+  @js.native
   def create(lessThanToken: ISyntaxToken, greaterThanToken: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.TypeParameterListSyntax = js.native
   
+  /* static member */
+  @JSGlobal("TypeScript.TypeParameterListSyntax.create1")
+  @js.native
   def create1(): typingsSlinky.typescriptServices.TypeScript.TypeParameterListSyntax = js.native
 }

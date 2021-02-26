@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTable.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.start
   - typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.end
 */
-trait DataAlignType extends js.Object
+trait DataAlignType extends StObject
 object DataAlignType {
   
   @scala.inline

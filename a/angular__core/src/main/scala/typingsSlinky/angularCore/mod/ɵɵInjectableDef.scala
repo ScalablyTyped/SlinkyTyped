@@ -3,18 +3,19 @@ package typingsSlinky.angularCore.mod
 import typingsSlinky.angularCore.angularCoreStrings.any
 import typingsSlinky.angularCore.angularCoreStrings.platform
 import typingsSlinky.angularCore.angularCoreStrings.root
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ɵɵInjectableDef[T] extends js.Object {
+trait ɵɵInjectableDef[T] extends StObject {
   
   /**
     * Factory method to execute to create an instance of the injectable.
     */
   def factory(): T = js.native
-  def factory(t: Type[_]): T = js.native
+  def factory(t: typingsSlinky.angularCore.mod.Type[_]): T = js.native
   
   /**
     * Specifies that the given type belongs to a particular injector:

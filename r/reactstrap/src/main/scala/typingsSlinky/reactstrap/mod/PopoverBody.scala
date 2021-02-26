@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.popoverBodyMod.PopoverBodyProps
+import typingsSlinky.reactstrap.popoverBodyMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "PopoverBody")
+@JSImport("reactstrap/lib", "PopoverBody")
 @js.native
-class PopoverBody ()
-  extends Component[PopoverBodyProps, js.Object, js.Any]
+class PopoverBody () extends default

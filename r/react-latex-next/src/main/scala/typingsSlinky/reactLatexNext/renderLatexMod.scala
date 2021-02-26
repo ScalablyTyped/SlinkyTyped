@@ -1,13 +1,14 @@
 package typingsSlinky.reactLatexNext
 
 import typingsSlinky.reactLatexNext.typesMod.Delimiter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-latex-next/dist/renderLatex", JSImport.Namespace)
-@js.native
-object renderLatexMod extends js.Object {
+object renderLatexMod {
   
+  @JSImport("react-latex-next/dist/renderLatex", JSImport.Default)
+  @js.native
   def default(text: String, delimiters: js.Array[Delimiter], strict: Boolean): String = js.native
 }

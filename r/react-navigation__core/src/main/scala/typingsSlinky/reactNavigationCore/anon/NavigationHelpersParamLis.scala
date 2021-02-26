@@ -14,13 +14,14 @@ import typingsSlinky.reactNavigationRouters.typesMod.ParamListBase
 import typingsSlinky.reactNavigationRouters.typesMod.PartialState
 import typingsSlinky.std.Extract
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined @react-navigation/core.@react-navigation/core/lib/typescript/src/types.NavigationHelpers<@react-navigation/routers.@react-navigation/routers.ParamListBase, {}> & std.Partial<@react-navigation/core.@react-navigation/core/lib/typescript/src/types.NavigationProp<@react-navigation/routers.@react-navigation/routers.ParamListBase, string, any, any, any>> */
 @js.native
-trait NavigationHelpersParamLis extends js.Object {
+trait NavigationHelpersParamLis extends StObject {
   
   /**
     * UGLY HACK! DO NOT USE THE TYPE!!!

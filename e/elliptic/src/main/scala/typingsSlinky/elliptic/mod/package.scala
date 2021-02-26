@@ -1,5 +1,6 @@
 package typingsSlinky.elliptic
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,12 @@ package object mod {
   */
   type SignatureInput = typingsSlinky.elliptic.mod._SignatureInput | js.Array[scala.Double] | js.typedarray.Uint8Array | java.lang.String
   
-  type ec = typingsSlinky.elliptic.mod.ec_
+  @scala.inline
+  def rand: js.Any = typingsSlinky.elliptic.mod.^.asInstanceOf[js.Dynamic].selectDynamic("rand").asInstanceOf[js.Any]
   
-  type eddsa = typingsSlinky.elliptic.mod.eddsa_
+  @scala.inline
+  def utils: js.Any = typingsSlinky.elliptic.mod.^.asInstanceOf[js.Dynamic].selectDynamic("utils").asInstanceOf[js.Any]
+  
+  @scala.inline
+  def version: scala.Double = typingsSlinky.elliptic.mod.^.asInstanceOf[js.Dynamic].selectDynamic("version").asInstanceOf[scala.Double]
 }

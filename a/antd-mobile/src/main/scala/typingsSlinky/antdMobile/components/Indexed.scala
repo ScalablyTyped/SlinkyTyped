@@ -7,15 +7,25 @@ import typingsSlinky.antdMobile.anon.Label
 import typingsSlinky.antdMobile.indexedMod.MIndexedListProps
 import typingsSlinky.antdMobile.indexedMod.default
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Indexed {
   
+  @scala.inline
+  def apply(
+    dataSource: js.Any,
+    renderRow: (js.Any, Double | String, Double | String, js.UndefOr[Boolean]) => ReactElement
+  ): Builder = {
+    val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], renderRow = js.Any.fromFunction4(renderRow))
+    new Builder(js.Array(this.component, __props.asInstanceOf[MIndexedListProps]))
+  }
+  
   @JSImport("antd-mobile/lib/list-view/Indexed", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,10 +39,10 @@ object Indexed {
     def contentContainerStyle(value: CSSProperties): this.type = set("contentContainerStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def delayActivityIndicatorReactElement(value: ReactElement): this.type = set("delayActivityIndicator", value.asInstanceOf[js.Any])
+    def delayActivityIndicator(value: ReactElement): this.type = set("delayActivityIndicator", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def delayActivityIndicator(value: ReactElement): this.type = set("delayActivityIndicator", value.asInstanceOf[js.Any])
+    def delayActivityIndicatorReactElement(value: ReactElement): this.type = set("delayActivityIndicator", value.asInstanceOf[js.Any])
     
     @scala.inline
     def delayTime(value: Double): this.type = set("delayTime", value.asInstanceOf[js.Any])
@@ -74,10 +84,10 @@ object Indexed {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pullToRefreshReactElement(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
+    def pullToRefresh(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pullToRefresh(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
+    def pullToRefreshReactElement(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
     
     @scala.inline
     def quickSearchBarStyle(value: CSSProperties): this.type = set("quickSearchBarStyle", value.asInstanceOf[js.Any])
@@ -128,13 +138,4 @@ object Indexed {
   }
   
   def withProps(p: MIndexedListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    dataSource: js.Any,
-    renderRow: (js.Any, Double | String, Double | String, js.UndefOr[Boolean]) => ReactElement
-  ): Builder = {
-    val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], renderRow = js.Any.fromFunction4(renderRow))
-    new Builder(js.Array(this.component, __props.asInstanceOf[MIndexedListProps]))
-  }
 }

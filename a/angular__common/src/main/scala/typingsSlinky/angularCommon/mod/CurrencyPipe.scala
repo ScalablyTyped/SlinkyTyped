@@ -4,6 +4,7 @@ import typingsSlinky.angularCommon.angularCommonStrings.`symbol-narrow`
 import typingsSlinky.angularCommon.angularCommonStrings.code
 import typingsSlinky.angularCommon.angularCommonStrings.symbol
 import typingsSlinky.angularCore.mod.PipeTransform
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

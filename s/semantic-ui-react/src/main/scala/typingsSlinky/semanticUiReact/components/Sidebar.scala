@@ -26,20 +26,43 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.wide
 import typingsSlinky.semanticUiReact.sidebarPushableMod.SidebarPushableProps
 import typingsSlinky.semanticUiReact.sidebarPusherMod.SidebarPusherProps
 import typingsSlinky.semanticUiReact.sidebarSidebarMod.SidebarProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Sidebar {
   
+  object Pushable {
+    
+    @JSImport("semantic-ui-react", "Sidebar.Pushable")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Pushable.type): SharedBuilder_SidebarPushableProps_269623663 = new SharedBuilder_SidebarPushableProps_269623663(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: SidebarPushableProps): SharedBuilder_SidebarPushableProps_269623663 = new SharedBuilder_SidebarPushableProps_269623663(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Pusher {
+    
+    @JSImport("semantic-ui-react", "Sidebar.Pusher")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Pusher.type): SharedBuilder_SidebarPusherProps_1793364942 = new SharedBuilder_SidebarPusherProps_1793364942(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: SidebarPusherProps): SharedBuilder_SidebarPusherProps_1793364942 = new SharedBuilder_SidebarPusherProps_1793364942(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Sidebar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Sidebar] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
     def animation(value: overlay | push | (`scale down`) | uncover | (`slide out`) | (`slide along`)): this.type = set("animation", value.asInstanceOf[js.Any])
@@ -51,10 +74,10 @@ object Sidebar {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def direction(value: top | right | bottom | left): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -72,19 +95,19 @@ object Sidebar {
     def onVisible(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit): this.type = set("onVisible", js.Any.fromFunction2(value))
     
     @scala.inline
-    def targetWindow(value: Window): this.type = set("target", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def target(value: Document | Window | HTMLElement | ReactRef[HTMLElement]): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetDocument(value: Document): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def targetRefObject(value: ReactRef[HTMLElement]): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+    def targetWindow(value: Window): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
@@ -93,29 +116,7 @@ object Sidebar {
     def width(value: (`very thin`) | thin | wide | (`very wide`)): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SidebarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Sidebar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Pushable {
-    
-    @JSImport("semantic-ui-react", "Sidebar.Pushable")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: SidebarPushableProps): SharedBuilder_SidebarPushableProps_269623663 = new SharedBuilder_SidebarPushableProps_269623663(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Pushable.type): SharedBuilder_SidebarPushableProps_269623663 = new SharedBuilder_SidebarPushableProps_269623663(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Pusher {
-    
-    @JSImport("semantic-ui-react", "Sidebar.Pusher")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: SidebarPusherProps): SharedBuilder_SidebarPusherProps_1793364942 = new SharedBuilder_SidebarPusherProps_1793364942(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Pusher.type): SharedBuilder_SidebarPusherProps_1793364942 = new SharedBuilder_SidebarPusherProps_1793364942(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: SidebarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

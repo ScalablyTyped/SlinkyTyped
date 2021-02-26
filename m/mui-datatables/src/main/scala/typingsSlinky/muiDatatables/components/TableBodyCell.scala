@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableBodyCell
 import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object TableBodyCell {
   
   @JSImport("mui-datatables", "TableBodyCell")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -47,7 +48,7 @@ object TableBodyCell {
     def rowIndex(value: Double): this.type = set("rowIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MUIDataTableBodyCell): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TableBodyCell.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MUIDataTableBodyCell): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

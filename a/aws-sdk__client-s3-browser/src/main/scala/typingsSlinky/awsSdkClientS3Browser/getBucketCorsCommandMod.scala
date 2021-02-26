@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesGetBucketCorsInputMod.GetBucketC
 import typingsSlinky.awsSdkClientS3Browser.typesGetBucketCorsOutputMod.GetBucketCorsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/GetBucketCorsCommand", JSImport.Namespace)
-@js.native
-object getBucketCorsCommandMod extends js.Object {
+object getBucketCorsCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/GetBucketCorsCommand", "GetBucketCorsCommand")
   @js.native
   class GetBucketCorsCommand protected () extends Command[
           InputTypesUnion, 

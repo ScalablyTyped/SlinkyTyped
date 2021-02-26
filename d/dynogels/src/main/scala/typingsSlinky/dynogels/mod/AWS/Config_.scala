@@ -2,6 +2,7 @@ package typingsSlinky.dynogels.mod.AWS
 
 import typingsSlinky.awsSdk.configMod.APIVersions
 import typingsSlinky.awsSdk.configServicePlaceholdersMod.ConfigurationServicePlaceholders
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

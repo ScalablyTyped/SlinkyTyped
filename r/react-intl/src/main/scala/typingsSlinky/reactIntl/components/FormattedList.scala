@@ -12,15 +12,22 @@ import typingsSlinky.reactIntl.reactIntlStrings.lookup
 import typingsSlinky.reactIntl.reactIntlStrings.narrow
 import typingsSlinky.reactIntl.reactIntlStrings.short
 import typingsSlinky.reactIntl.reactIntlStrings.unit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FormattedList {
   
+  @scala.inline
+  def apply(value: js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IntlListFormatOptionsvalu]))
+  }
+  
   @JSImport("react-intl", "FormattedList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +45,4 @@ object FormattedList {
   }
   
   def withProps(p: IntlListFormatOptionsvalu): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(value: js.Array[ReactElement]): Builder = {
-    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IntlListFormatOptionsvalu]))
-  }
 }

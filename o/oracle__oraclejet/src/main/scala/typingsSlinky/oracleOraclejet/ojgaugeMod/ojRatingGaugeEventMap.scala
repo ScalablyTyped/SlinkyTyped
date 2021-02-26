@@ -17,6 +17,7 @@ import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -176,66 +177,54 @@ object ojRatingGaugeEventMap {
   }
   
   @scala.inline
-  implicit class ojRatingGaugeEventMapOps[Self <: ojRatingGaugeEventMap] (val x: Self) extends AnyVal {
+  implicit class ojRatingGaugeEventMapMutableBuilder[Self <: ojRatingGaugeEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChangedChanged(value: CustomEvent): Self = StObject.set(x, "changedChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChangedStateChanged(value: CustomEvent): Self = StObject.set(x, "changedStateChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setHoverStateChanged(value: CustomEvent): Self = StObject.set(x, "hoverStateChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChangedChanged(value: CustomEvent): Self = this.set("changedChanged", value.asInstanceOf[js.Any])
+    def setMaxChanged(value: CustomEvent): Self = StObject.set(x, "maxChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChangedStateChanged(value: CustomEvent): Self = this.set("changedStateChanged", value.asInstanceOf[js.Any])
+    def setMinChanged(value: CustomEvent): Self = StObject.set(x, "minChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHoverStateChanged(value: CustomEvent): Self = this.set("hoverStateChanged", value.asInstanceOf[js.Any])
+    def setOrientationChanged(value: CustomEvent): Self = StObject.set(x, "orientationChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMaxChanged(value: CustomEvent): Self = this.set("maxChanged", value.asInstanceOf[js.Any])
+    def setPreserveAspectRatioChanged(value: CustomEvent): Self = StObject.set(x, "preserveAspectRatioChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMinChanged(value: CustomEvent): Self = this.set("minChanged", value.asInstanceOf[js.Any])
+    def setReadonlyChanged(value: CustomEvent): Self = StObject.set(x, "readonlyChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOrientationChanged(value: CustomEvent): Self = this.set("orientationChanged", value.asInstanceOf[js.Any])
+    def setSelectedStateChanged(value: CustomEvent): Self = StObject.set(x, "selectedStateChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPreserveAspectRatioChanged(value: CustomEvent): Self = this.set("preserveAspectRatioChanged", value.asInstanceOf[js.Any])
+    def setStepChanged(value: CustomEvent): Self = StObject.set(x, "stepChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setReadonlyChanged(value: CustomEvent): Self = this.set("readonlyChanged", value.asInstanceOf[js.Any])
+    def setThresholdsChanged(value: CustomEvent): Self = StObject.set(x, "thresholdsChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSelectedStateChanged(value: CustomEvent): Self = this.set("selectedStateChanged", value.asInstanceOf[js.Any])
+    def setTooltipChanged(value: CustomEvent): Self = StObject.set(x, "tooltipChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStepChanged(value: CustomEvent): Self = this.set("stepChanged", value.asInstanceOf[js.Any])
+    def setTransientValueChanged(value: CustomEvent): Self = StObject.set(x, "transientValueChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setThresholdsChanged(value: CustomEvent): Self = this.set("thresholdsChanged", value.asInstanceOf[js.Any])
+    def setUnselectedStateChanged(value: CustomEvent): Self = StObject.set(x, "unselectedStateChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTooltipChanged(value: CustomEvent): Self = this.set("tooltipChanged", value.asInstanceOf[js.Any])
+    def setValueChanged(value: CustomEvent): Self = StObject.set(x, "valueChanged", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTransientValueChanged(value: CustomEvent): Self = this.set("transientValueChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUnselectedStateChanged(value: CustomEvent): Self = this.set("unselectedStateChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValueChanged(value: CustomEvent): Self = this.set("valueChanged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVisualEffectsChanged(value: CustomEvent): Self = this.set("visualEffectsChanged", value.asInstanceOf[js.Any])
+    def setVisualEffectsChanged(value: CustomEvent): Self = StObject.set(x, "visualEffectsChanged", value.asInstanceOf[js.Any])
   }
 }

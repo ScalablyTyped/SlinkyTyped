@@ -10,9 +10,9 @@ Koa web app framework
 | ------------------ | :-------------: |
 | Full name          | koa |
 | Keywords           | web, app, http, application, framework, middleware, rack |
-| # releases         | 22 |
-| # dependents       | 3038 |
-| # downloads        | 16575449 |
+| # releases         | 13 |
+| # dependents       | 3979 |
+| # downloads        | 27601084 |
 | # stars            | 262 |
 
 ## Links

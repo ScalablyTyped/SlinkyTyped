@@ -4,13 +4,14 @@ import typingsSlinky.std.Intl.DateTimeFormatOptions
 import typingsSlinky.std.stdStrings.default
 import typingsSlinky.std.stdStrings.number
 import typingsSlinky.std.stdStrings.string
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Enables basic storage and retrieval of dates and times. */
 @js.native
-trait Date extends js.Object {
+trait Date extends StObject {
   
   /** Gets the day-of-the-month, using local time. */
   def getDate(): Double = js.native

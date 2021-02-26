@@ -7,12 +7,13 @@ import typingsSlinky.sparkpost.mod.ResultsPromise
 import typingsSlinky.sparkpost.mod.UpdateWebhook
 import typingsSlinky.sparkpost.mod.Webhook
 import typingsSlinky.sparkpost.mod.WebhookLinks
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GetBatchStatus extends js.Object {
+trait GetBatchStatus extends StObject {
   
   /**
     * Create a new webhook

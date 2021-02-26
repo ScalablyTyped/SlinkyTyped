@@ -2,12 +2,13 @@ package typingsSlinky.activexPowerpoint.PowerPoint
 
 import typingsSlinky.activexOffice.Office.MsoChartElementType
 import typingsSlinky.activexOffice.Office.XlChartType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Chart extends js.Object {
+trait Chart extends StObject {
   
   var AlternativeText: String = js.native
   

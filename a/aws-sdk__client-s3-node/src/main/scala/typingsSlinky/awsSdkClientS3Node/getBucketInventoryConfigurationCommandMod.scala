@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesGetBucketInventoryConfigurationInpu
 import typingsSlinky.awsSdkClientS3Node.typesGetBucketInventoryConfigurationOutputMod.GetBucketInventoryConfigurationOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/GetBucketInventoryConfigurationCommand", JSImport.Namespace)
-@js.native
-object getBucketInventoryConfigurationCommandMod extends js.Object {
+object getBucketInventoryConfigurationCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/GetBucketInventoryConfigurationCommand", "GetBucketInventoryConfigurationCommand")
   @js.native
   class GetBucketInventoryConfigurationCommand protected () extends Command[
           InputTypesUnion, 

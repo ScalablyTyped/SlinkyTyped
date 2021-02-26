@@ -19,38 +19,59 @@ import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.node.httpMod.IncomingHttpHeaders
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.ReadableOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("microrouter", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("microrouter", "del")
+  @js.native
   val del: RouteHandler = js.native
   
+  @JSImport("microrouter", "get")
+  @js.native
   val get: RouteHandler = js.native
   
+  @JSImport("microrouter", "head")
+  @js.native
   val head: RouteHandler = js.native
   
+  @JSImport("microrouter", "options")
+  @js.native
   val options: RouteHandler = js.native
   
+  @JSImport("microrouter", "patch")
+  @js.native
   val patch: RouteHandler = js.native
   
+  @JSImport("microrouter", "post")
+  @js.native
   val post: RouteHandler = js.native
   
+  @JSImport("microrouter", "put")
+  @js.native
   val put: RouteHandler = js.native
   
+  @JSImport("microrouter", "router")
+  @js.native
   def router(routes: RequestHandler*): RequestHandler = js.native
   
+  @JSImport("microrouter", "withNamespace")
+  @js.native
   def withNamespace(namespace: String): js.Function1[/* repeated */ RequestHandler, RequestHandler] = js.native
+  
+  type AugmentedRequestHandler = js.Function2[/* req */ ServerRequest, /* res */ ServerResponse, js.Any]
+  
+  type RouteHandler = js.Function2[/* path */ String, /* handler */ AugmentedRequestHandler, RequestHandler]
   
   /* Inlined node.http.IncomingMessage & {  params :{[key: string] : string},   query :{[key: string] : string}} */
   @js.native
-  trait ServerRequest extends js.Object {
+  trait ServerRequest extends StObject {
     
-    def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     def _destroy(error: js.Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+    def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
     
     def _read(size: Double): Unit = js.native
     
@@ -310,10 +331,6 @@ object mod extends js.Object {
     
     def wrap(oldStream: ReadableStream): this.type = js.native
   }
-  
-  type AugmentedRequestHandler = js.Function2[/* req */ ServerRequest, /* res */ ServerResponse, js.Any]
-  
-  type RouteHandler = js.Function2[/* path */ String, /* handler */ AugmentedRequestHandler, RequestHandler]
   
   type ServerResponse = typingsSlinky.node.httpMod.ServerResponse
 }

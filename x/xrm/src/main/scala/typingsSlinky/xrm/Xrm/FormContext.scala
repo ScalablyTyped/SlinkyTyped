@@ -3,6 +3,7 @@ package typingsSlinky.xrm.Xrm
 import typingsSlinky.xrm.Xrm.Attributes.Attribute
 import typingsSlinky.xrm.Xrm.Collection.MatchingDelegate
 import typingsSlinky.xrm.Xrm.Controls.Control
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @see {@link https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/executioncontext/getformcontext External Link: getFormContext (Client API reference)}
   */
 @js.native
-trait FormContext extends js.Object {
+trait FormContext extends StObject {
   
   /**
     * Provides methods to work with the form.

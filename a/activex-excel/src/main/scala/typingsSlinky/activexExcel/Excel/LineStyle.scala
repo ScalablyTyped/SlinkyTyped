@@ -1,5 +1,6 @@
 package typingsSlinky.activexExcel.Excel
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,4 +12,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4126`
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4105`
 */
-trait LineStyle extends js.Object
+trait LineStyle extends StObject

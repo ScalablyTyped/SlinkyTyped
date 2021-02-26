@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientDynamodbBrowser.typesRestoreTableFromBackupInpu
 import typingsSlinky.awsSdkClientDynamodbBrowser.typesRestoreTableFromBackupOutputMod.RestoreTableFromBackupOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-browser/commands/RestoreTableFromBackupCommand", JSImport.Namespace)
-@js.native
-object restoreTableFromBackupCommandMod extends js.Object {
+object restoreTableFromBackupCommandMod {
   
+  @JSImport("@aws-sdk/client-dynamodb-browser/commands/RestoreTableFromBackupCommand", "RestoreTableFromBackupCommand")
   @js.native
   class RestoreTableFromBackupCommand protected () extends Command[
           InputTypesUnion, 

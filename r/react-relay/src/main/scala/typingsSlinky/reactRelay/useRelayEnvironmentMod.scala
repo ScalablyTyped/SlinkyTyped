@@ -1,13 +1,14 @@
 package typingsSlinky.reactRelay
 
 import typingsSlinky.relayRuntime.mod.Environment
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-relay/lib/relay-experimental/useRelayEnvironment", JSImport.Namespace)
-@js.native
-object useRelayEnvironmentMod extends js.Object {
+object useRelayEnvironmentMod {
   
+  @JSImport("react-relay/lib/relay-experimental/useRelayEnvironment", "useRelayEnvironment")
+  @js.native
   def useRelayEnvironment(): Environment = js.native
 }

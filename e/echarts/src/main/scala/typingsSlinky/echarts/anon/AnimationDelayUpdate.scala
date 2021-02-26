@@ -1,11 +1,12 @@
 package typingsSlinky.echarts.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AnimationDelayUpdate extends js.Object {
+trait AnimationDelayUpdate extends StObject {
   
   /**
     * Whether to enable animation.
@@ -196,90 +197,78 @@ object AnimationDelayUpdate {
   }
   
   @scala.inline
-  implicit class AnimationDelayUpdateOps[Self <: AnimationDelayUpdate] (val x: Self) extends AnyVal {
+  implicit class AnimationDelayUpdateMutableBuilder[Self <: AnimationDelayUpdate] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAnimation(value: Boolean): Self = StObject.set(x, "animation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAnimationDelay(value: js.Function | Double): Self = StObject.set(x, "animationDelay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setAnimationDelayUndefined: Self = StObject.set(x, "animationDelay", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimationDelayUpdate(value: js.Function | Double): Self = StObject.set(x, "animationDelayUpdate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAnimation: Self = this.set("animation", js.undefined)
+    def setAnimationDelayUpdateUndefined: Self = StObject.set(x, "animationDelayUpdate", js.undefined)
     
     @scala.inline
-    def setAnimationDelay(value: js.Function | Double): Self = this.set("animationDelay", value.asInstanceOf[js.Any])
+    def setAnimationDuration(value: js.Function | Double): Self = StObject.set(x, "animationDuration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAnimationDelay: Self = this.set("animationDelay", js.undefined)
+    def setAnimationDurationUndefined: Self = StObject.set(x, "animationDuration", js.undefined)
     
     @scala.inline
-    def setAnimationDelayUpdate(value: js.Function | Double): Self = this.set("animationDelayUpdate", value.asInstanceOf[js.Any])
+    def setAnimationDurationUpdate(value: js.Function | Double): Self = StObject.set(x, "animationDurationUpdate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAnimationDelayUpdate: Self = this.set("animationDelayUpdate", js.undefined)
+    def setAnimationDurationUpdateUndefined: Self = StObject.set(x, "animationDurationUpdate", js.undefined)
     
     @scala.inline
-    def setAnimationDuration(value: js.Function | Double): Self = this.set("animationDuration", value.asInstanceOf[js.Any])
+    def setAnimationEasing(value: String): Self = StObject.set(x, "animationEasing", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAnimationDuration: Self = this.set("animationDuration", js.undefined)
+    def setAnimationEasingUndefined: Self = StObject.set(x, "animationEasing", js.undefined)
     
     @scala.inline
-    def setAnimationDurationUpdate(value: js.Function | Double): Self = this.set("animationDurationUpdate", value.asInstanceOf[js.Any])
+    def setAnimationEasingUpdate(value: String): Self = StObject.set(x, "animationEasingUpdate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAnimationDurationUpdate: Self = this.set("animationDurationUpdate", js.undefined)
+    def setAnimationEasingUpdateUndefined: Self = StObject.set(x, "animationEasingUpdate", js.undefined)
     
     @scala.inline
-    def setAnimationEasing(value: String): Self = this.set("animationEasing", value.asInstanceOf[js.Any])
+    def setAnimationThreshold(value: Double): Self = StObject.set(x, "animationThreshold", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAnimationEasing: Self = this.set("animationEasing", js.undefined)
+    def setAnimationThresholdUndefined: Self = StObject.set(x, "animationThreshold", js.undefined)
     
     @scala.inline
-    def setAnimationEasingUpdate(value: String): Self = this.set("animationEasingUpdate", value.asInstanceOf[js.Any])
+    def setAnimationUndefined: Self = StObject.set(x, "animation", js.undefined)
     
     @scala.inline
-    def deleteAnimationEasingUpdate: Self = this.set("animationEasingUpdate", js.undefined)
+    def setData(value: `1`): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAnimationThreshold(value: Double): Self = this.set("animationThreshold", value.asInstanceOf[js.Any])
+    def setDataUndefined: Self = StObject.set(x, "data", js.undefined)
     
     @scala.inline
-    def deleteAnimationThreshold: Self = this.set("animationThreshold", js.undefined)
+    def setItemStyle(value: Emphasis): Self = StObject.set(x, "itemStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setData(value: `1`): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setItemStyleUndefined: Self = StObject.set(x, "itemStyle", js.undefined)
     
     @scala.inline
-    def deleteData: Self = this.set("data", js.undefined)
+    def setLabel(value: FontFamily): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setItemStyle(value: Emphasis): Self = this.set("itemStyle", value.asInstanceOf[js.Any])
+    def setLabelUndefined: Self = StObject.set(x, "label", js.undefined)
     
     @scala.inline
-    def deleteItemStyle: Self = this.set("itemStyle", js.undefined)
+    def setSilent(value: Boolean): Self = StObject.set(x, "silent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLabel(value: FontFamily): Self = this.set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLabel: Self = this.set("label", js.undefined)
-    
-    @scala.inline
-    def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSilent: Self = this.set("silent", js.undefined)
+    def setSilentUndefined: Self = StObject.set(x, "silent", js.undefined)
   }
 }

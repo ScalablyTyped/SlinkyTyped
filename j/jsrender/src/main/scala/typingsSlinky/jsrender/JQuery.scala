@@ -2,12 +2,13 @@ package typingsSlinky.jsrender
 
 import typingsSlinky.jsrender.JsViews.Hash
 import typingsSlinky.jsrender.JsViews.TemplateRender
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
   	 * Template render method: render the template as a string, using the specified data and helpers/context

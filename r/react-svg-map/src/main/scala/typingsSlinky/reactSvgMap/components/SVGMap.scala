@@ -5,15 +5,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSvgMap.mod.Map
 import typingsSlinky.reactSvgMap.mod.SVGMapProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SVGMap {
   
+  @scala.inline
+  def apply(map: Map): Builder = {
+    val __props = js.Dynamic.literal(map = map.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SVGMapProps]))
+  }
+  
   @JSImport("react-svg-map", "SVGMap")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,19 +40,19 @@ object SVGMap {
     def isLocationSelected(value: /* repeated */ js.Any => _): this.type = set("isLocationSelected", js.Any.fromFunction1(value))
     
     @scala.inline
-    def locationClassNameFunction1(value: /* repeated */ js.Any => _): this.type = set("locationClassName", js.Any.fromFunction1(value))
+    def locationClassName(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("locationClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def locationClassName(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("locationClassName", value.asInstanceOf[js.Any])
+    def locationClassNameFunction1(value: /* repeated */ js.Any => _): this.type = set("locationClassName", js.Any.fromFunction1(value))
     
     @scala.inline
     def locationRole(value: String): this.type = set("locationRole", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def locationTabIndexFunction1(value: /* repeated */ js.Any => _): this.type = set("locationTabIndex", js.Any.fromFunction1(value))
+    def locationTabIndex(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("locationTabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def locationTabIndex(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("locationTabIndex", value.asInstanceOf[js.Any])
+    def locationTabIndexFunction1(value: /* repeated */ js.Any => _): this.type = set("locationTabIndex", js.Any.fromFunction1(value))
     
     @scala.inline
     def onLocationBlur(value: /* repeated */ js.Any => _): this.type = set("onLocationBlur", js.Any.fromFunction1(value))
@@ -73,10 +80,4 @@ object SVGMap {
   }
   
   def withProps(p: SVGMapProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(map: Map): Builder = {
-    val __props = js.Dynamic.literal(map = map.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SVGMapProps]))
-  }
 }

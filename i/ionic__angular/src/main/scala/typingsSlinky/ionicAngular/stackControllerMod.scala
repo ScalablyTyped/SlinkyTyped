@@ -9,16 +9,16 @@ import typingsSlinky.ionicAngular.navControllerMod.NavController
 import typingsSlinky.ionicAngular.stackUtilsMod.RouteView
 import typingsSlinky.ionicAngular.stackUtilsMod.StackEvent
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonRouterOutletElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/angular/directives/navigation/stack-controller", JSImport.Namespace)
-@js.native
-object stackControllerMod extends js.Object {
+object stackControllerMod {
   
+  @JSImport("@ionic/angular/directives/navigation/stack-controller", "StackController")
   @js.native
-  class StackController protected () extends js.Object {
+  class StackController protected () extends StObject {
     def this(
       tabsPrefix: js.UndefOr[scala.Nothing],
       containerEl: HTMLIonRouterOutletElement,

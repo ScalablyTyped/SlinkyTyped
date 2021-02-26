@@ -10,6 +10,7 @@ import typingsSlinky.spectacle.spectacleStrings.space
 import typingsSlinky.styledSystem.mod.RequiredTheme
 import typingsSlinky.styledSystem.mod.ResponsiveValue
 import typingsSlinky.styledSystem.mod.ThemeValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,15 +19,12 @@ object Box {
   
   @JSImport("spectacle", "Box")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
-    
-    @scala.inline
-    def backgroundColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("backgroundColor", js.Array(value :_*))
     
     @scala.inline
     def backgroundColor(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
@@ -35,7 +33,7 @@ object Box {
     def backgroundColorNull: this.type = set("backgroundColor", null)
     
     @scala.inline
-    def bgVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("bg", js.Array(value :_*))
+    def backgroundColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("backgroundColor", js.Array(value :_*))
     
     @scala.inline
     def bg(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("bg", value.asInstanceOf[js.Any])
@@ -44,7 +42,7 @@ object Box {
     def bgNull: this.type = set("bg", null)
     
     @scala.inline
-    def borderVarargs(value: (js.Any | Null)*): this.type = set("border", js.Array(value :_*))
+    def bgVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("bg", js.Array(value :_*))
     
     @scala.inline
     def border(
@@ -55,12 +53,6 @@ object Box {
     ): this.type = set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderNull: this.type = set("border", null)
-    
-    @scala.inline
-    def borderBottomVarargs(value: (js.Any | Null)*): this.type = set("borderBottom", js.Array(value :_*))
-    
-    @scala.inline
     def borderBottom(
       value: ResponsiveValue[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderBottom<TLengthStyledSystem> */ _, 
@@ -69,19 +61,13 @@ object Box {
     ): this.type = set("borderBottom", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderBottomNull: this.type = set("borderBottom", null)
-    
-    @scala.inline
-    def borderBottomColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("borderBottomColor", js.Array(value :_*))
-    
-    @scala.inline
     def borderBottomColor(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("borderBottomColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def borderBottomColorNull: this.type = set("borderBottomColor", null)
     
     @scala.inline
-    def borderBottomLeftRadiusVarargs(value: ((ThemeValue[radii, RequiredTheme, js.Any]) | Null)*): this.type = set("borderBottomLeftRadius", js.Array(value :_*))
+    def borderBottomColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("borderBottomColor", js.Array(value :_*))
     
     @scala.inline
     def borderBottomLeftRadius(value: ResponsiveValue[ThemeValue[radii, RequiredTheme, _], RequiredTheme]): this.type = set("borderBottomLeftRadius", value.asInstanceOf[js.Any])
@@ -90,7 +76,10 @@ object Box {
     def borderBottomLeftRadiusNull: this.type = set("borderBottomLeftRadius", null)
     
     @scala.inline
-    def borderBottomRightRadiusVarargs(value: ((ThemeValue[radii, RequiredTheme, js.Any]) | Null)*): this.type = set("borderBottomRightRadius", js.Array(value :_*))
+    def borderBottomLeftRadiusVarargs(value: ((ThemeValue[radii, RequiredTheme, js.Any]) | Null)*): this.type = set("borderBottomLeftRadius", js.Array(value :_*))
+    
+    @scala.inline
+    def borderBottomNull: this.type = set("borderBottom", null)
     
     @scala.inline
     def borderBottomRightRadius(value: ResponsiveValue[ThemeValue[radii, RequiredTheme, _], RequiredTheme]): this.type = set("borderBottomRightRadius", value.asInstanceOf[js.Any])
@@ -99,7 +88,7 @@ object Box {
     def borderBottomRightRadiusNull: this.type = set("borderBottomRightRadius", null)
     
     @scala.inline
-    def borderBottomStyleVarargs(value: (js.Any | Null)*): this.type = set("borderBottomStyle", js.Array(value :_*))
+    def borderBottomRightRadiusVarargs(value: ((ThemeValue[radii, RequiredTheme, js.Any]) | Null)*): this.type = set("borderBottomRightRadius", js.Array(value :_*))
     
     @scala.inline
     def borderBottomStyle(
@@ -113,7 +102,10 @@ object Box {
     def borderBottomStyleNull: this.type = set("borderBottomStyle", null)
     
     @scala.inline
-    def borderBottomWidthVarargs(value: ((ThemeValue[borderWidths, RequiredTheme, js.Any]) | Null)*): this.type = set("borderBottomWidth", js.Array(value :_*))
+    def borderBottomStyleVarargs(value: (js.Any | Null)*): this.type = set("borderBottomStyle", js.Array(value :_*))
+    
+    @scala.inline
+    def borderBottomVarargs(value: (js.Any | Null)*): this.type = set("borderBottom", js.Array(value :_*))
     
     @scala.inline
     def borderBottomWidth(value: ResponsiveValue[ThemeValue[borderWidths, RequiredTheme, _], RequiredTheme]): this.type = set("borderBottomWidth", value.asInstanceOf[js.Any])
@@ -122,7 +114,7 @@ object Box {
     def borderBottomWidthNull: this.type = set("borderBottomWidth", null)
     
     @scala.inline
-    def borderColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("borderColor", js.Array(value :_*))
+    def borderBottomWidthVarargs(value: ((ThemeValue[borderWidths, RequiredTheme, js.Any]) | Null)*): this.type = set("borderBottomWidth", js.Array(value :_*))
     
     @scala.inline
     def borderColor(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("borderColor", value.asInstanceOf[js.Any])
@@ -131,7 +123,7 @@ object Box {
     def borderColorNull: this.type = set("borderColor", null)
     
     @scala.inline
-    def borderLeftVarargs(value: (js.Any | Null)*): this.type = set("borderLeft", js.Array(value :_*))
+    def borderColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("borderColor", js.Array(value :_*))
     
     @scala.inline
     def borderLeft(
@@ -142,19 +134,16 @@ object Box {
     ): this.type = set("borderLeft", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderLeftNull: this.type = set("borderLeft", null)
-    
-    @scala.inline
-    def borderLeftColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("borderLeftColor", js.Array(value :_*))
-    
-    @scala.inline
     def borderLeftColor(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("borderLeftColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def borderLeftColorNull: this.type = set("borderLeftColor", null)
     
     @scala.inline
-    def borderLeftStyleVarargs(value: (js.Any | Null)*): this.type = set("borderLeftStyle", js.Array(value :_*))
+    def borderLeftColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("borderLeftColor", js.Array(value :_*))
+    
+    @scala.inline
+    def borderLeftNull: this.type = set("borderLeft", null)
     
     @scala.inline
     def borderLeftStyle(
@@ -168,7 +157,10 @@ object Box {
     def borderLeftStyleNull: this.type = set("borderLeftStyle", null)
     
     @scala.inline
-    def borderLeftWidthVarargs(value: ((ThemeValue[borderWidths, RequiredTheme, js.Any]) | Null)*): this.type = set("borderLeftWidth", js.Array(value :_*))
+    def borderLeftStyleVarargs(value: (js.Any | Null)*): this.type = set("borderLeftStyle", js.Array(value :_*))
+    
+    @scala.inline
+    def borderLeftVarargs(value: (js.Any | Null)*): this.type = set("borderLeft", js.Array(value :_*))
     
     @scala.inline
     def borderLeftWidth(value: ResponsiveValue[ThemeValue[borderWidths, RequiredTheme, _], RequiredTheme]): this.type = set("borderLeftWidth", value.asInstanceOf[js.Any])
@@ -177,7 +169,10 @@ object Box {
     def borderLeftWidthNull: this.type = set("borderLeftWidth", null)
     
     @scala.inline
-    def borderRadiusVarargs(value: ((ThemeValue[radii, RequiredTheme, js.Any]) | Null)*): this.type = set("borderRadius", js.Array(value :_*))
+    def borderLeftWidthVarargs(value: ((ThemeValue[borderWidths, RequiredTheme, js.Any]) | Null)*): this.type = set("borderLeftWidth", js.Array(value :_*))
+    
+    @scala.inline
+    def borderNull: this.type = set("border", null)
     
     @scala.inline
     def borderRadius(value: ResponsiveValue[ThemeValue[radii, RequiredTheme, _], RequiredTheme]): this.type = set("borderRadius", value.asInstanceOf[js.Any])
@@ -186,7 +181,7 @@ object Box {
     def borderRadiusNull: this.type = set("borderRadius", null)
     
     @scala.inline
-    def borderRightVarargs(value: (js.Any | Null)*): this.type = set("borderRight", js.Array(value :_*))
+    def borderRadiusVarargs(value: ((ThemeValue[radii, RequiredTheme, js.Any]) | Null)*): this.type = set("borderRadius", js.Array(value :_*))
     
     @scala.inline
     def borderRight(
@@ -197,19 +192,16 @@ object Box {
     ): this.type = set("borderRight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderRightNull: this.type = set("borderRight", null)
-    
-    @scala.inline
-    def borderRightColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("borderRightColor", js.Array(value :_*))
-    
-    @scala.inline
     def borderRightColor(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("borderRightColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def borderRightColorNull: this.type = set("borderRightColor", null)
     
     @scala.inline
-    def borderRightStyleVarargs(value: (js.Any | Null)*): this.type = set("borderRightStyle", js.Array(value :_*))
+    def borderRightColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("borderRightColor", js.Array(value :_*))
+    
+    @scala.inline
+    def borderRightNull: this.type = set("borderRight", null)
     
     @scala.inline
     def borderRightStyle(
@@ -223,7 +215,10 @@ object Box {
     def borderRightStyleNull: this.type = set("borderRightStyle", null)
     
     @scala.inline
-    def borderRightWidthVarargs(value: ((ThemeValue[borderWidths, RequiredTheme, js.Any]) | Null)*): this.type = set("borderRightWidth", js.Array(value :_*))
+    def borderRightStyleVarargs(value: (js.Any | Null)*): this.type = set("borderRightStyle", js.Array(value :_*))
+    
+    @scala.inline
+    def borderRightVarargs(value: (js.Any | Null)*): this.type = set("borderRight", js.Array(value :_*))
     
     @scala.inline
     def borderRightWidth(value: ResponsiveValue[ThemeValue[borderWidths, RequiredTheme, _], RequiredTheme]): this.type = set("borderRightWidth", value.asInstanceOf[js.Any])
@@ -232,7 +227,7 @@ object Box {
     def borderRightWidthNull: this.type = set("borderRightWidth", null)
     
     @scala.inline
-    def borderStyleVarargs(value: (js.Any | Null)*): this.type = set("borderStyle", js.Array(value :_*))
+    def borderRightWidthVarargs(value: ((ThemeValue[borderWidths, RequiredTheme, js.Any]) | Null)*): this.type = set("borderRightWidth", js.Array(value :_*))
     
     @scala.inline
     def borderStyle(
@@ -246,7 +241,7 @@ object Box {
     def borderStyleNull: this.type = set("borderStyle", null)
     
     @scala.inline
-    def borderTopVarargs(value: (js.Any | Null)*): this.type = set("borderTop", js.Array(value :_*))
+    def borderStyleVarargs(value: (js.Any | Null)*): this.type = set("borderStyle", js.Array(value :_*))
     
     @scala.inline
     def borderTop(
@@ -257,19 +252,13 @@ object Box {
     ): this.type = set("borderTop", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderTopNull: this.type = set("borderTop", null)
-    
-    @scala.inline
-    def borderTopColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("borderTopColor", js.Array(value :_*))
-    
-    @scala.inline
     def borderTopColor(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("borderTopColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def borderTopColorNull: this.type = set("borderTopColor", null)
     
     @scala.inline
-    def borderTopLeftRadiusVarargs(value: ((ThemeValue[radii, RequiredTheme, js.Any]) | Null)*): this.type = set("borderTopLeftRadius", js.Array(value :_*))
+    def borderTopColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("borderTopColor", js.Array(value :_*))
     
     @scala.inline
     def borderTopLeftRadius(value: ResponsiveValue[ThemeValue[radii, RequiredTheme, _], RequiredTheme]): this.type = set("borderTopLeftRadius", value.asInstanceOf[js.Any])
@@ -278,7 +267,10 @@ object Box {
     def borderTopLeftRadiusNull: this.type = set("borderTopLeftRadius", null)
     
     @scala.inline
-    def borderTopRightRadiusVarargs(value: ((ThemeValue[radii, RequiredTheme, js.Any]) | Null)*): this.type = set("borderTopRightRadius", js.Array(value :_*))
+    def borderTopLeftRadiusVarargs(value: ((ThemeValue[radii, RequiredTheme, js.Any]) | Null)*): this.type = set("borderTopLeftRadius", js.Array(value :_*))
+    
+    @scala.inline
+    def borderTopNull: this.type = set("borderTop", null)
     
     @scala.inline
     def borderTopRightRadius(value: ResponsiveValue[ThemeValue[radii, RequiredTheme, _], RequiredTheme]): this.type = set("borderTopRightRadius", value.asInstanceOf[js.Any])
@@ -287,7 +279,7 @@ object Box {
     def borderTopRightRadiusNull: this.type = set("borderTopRightRadius", null)
     
     @scala.inline
-    def borderTopStyleVarargs(value: (js.Any | Null)*): this.type = set("borderTopStyle", js.Array(value :_*))
+    def borderTopRightRadiusVarargs(value: ((ThemeValue[radii, RequiredTheme, js.Any]) | Null)*): this.type = set("borderTopRightRadius", js.Array(value :_*))
     
     @scala.inline
     def borderTopStyle(
@@ -301,7 +293,10 @@ object Box {
     def borderTopStyleNull: this.type = set("borderTopStyle", null)
     
     @scala.inline
-    def borderTopWidthVarargs(value: ((ThemeValue[borderWidths, RequiredTheme, js.Any]) | Null)*): this.type = set("borderTopWidth", js.Array(value :_*))
+    def borderTopStyleVarargs(value: (js.Any | Null)*): this.type = set("borderTopStyle", js.Array(value :_*))
+    
+    @scala.inline
+    def borderTopVarargs(value: (js.Any | Null)*): this.type = set("borderTop", js.Array(value :_*))
     
     @scala.inline
     def borderTopWidth(value: ResponsiveValue[ThemeValue[borderWidths, RequiredTheme, _], RequiredTheme]): this.type = set("borderTopWidth", value.asInstanceOf[js.Any])
@@ -310,7 +305,10 @@ object Box {
     def borderTopWidthNull: this.type = set("borderTopWidth", null)
     
     @scala.inline
-    def borderWidthVarargs(value: ((ThemeValue[borderWidths, RequiredTheme, js.Any]) | Null)*): this.type = set("borderWidth", js.Array(value :_*))
+    def borderTopWidthVarargs(value: ((ThemeValue[borderWidths, RequiredTheme, js.Any]) | Null)*): this.type = set("borderTopWidth", js.Array(value :_*))
+    
+    @scala.inline
+    def borderVarargs(value: (js.Any | Null)*): this.type = set("border", js.Array(value :_*))
     
     @scala.inline
     def borderWidth(value: ResponsiveValue[ThemeValue[borderWidths, RequiredTheme, _], RequiredTheme]): this.type = set("borderWidth", value.asInstanceOf[js.Any])
@@ -319,7 +317,7 @@ object Box {
     def borderWidthNull: this.type = set("borderWidth", null)
     
     @scala.inline
-    def borderXVarargs(value: (js.Any | Null)*): this.type = set("borderX", js.Array(value :_*))
+    def borderWidthVarargs(value: ((ThemeValue[borderWidths, RequiredTheme, js.Any]) | Null)*): this.type = set("borderWidth", js.Array(value :_*))
     
     @scala.inline
     def borderX(
@@ -333,7 +331,7 @@ object Box {
     def borderXNull: this.type = set("borderX", null)
     
     @scala.inline
-    def borderYVarargs(value: (js.Any | Null)*): this.type = set("borderY", js.Array(value :_*))
+    def borderXVarargs(value: (js.Any | Null)*): this.type = set("borderX", js.Array(value :_*))
     
     @scala.inline
     def borderY(
@@ -347,7 +345,7 @@ object Box {
     def borderYNull: this.type = set("borderY", null)
     
     @scala.inline
-    def bottomVarargs(value: (js.Any | Null)*): this.type = set("bottom", js.Array(value :_*))
+    def borderYVarargs(value: (js.Any | Null)*): this.type = set("borderY", js.Array(value :_*))
     
     @scala.inline
     def bottom(
@@ -361,7 +359,7 @@ object Box {
     def bottomNull: this.type = set("bottom", null)
     
     @scala.inline
-    def colorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("color", js.Array(value :_*))
+    def bottomVarargs(value: (js.Any | Null)*): this.type = set("bottom", js.Array(value :_*))
     
     @scala.inline
     def color(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("color", value.asInstanceOf[js.Any])
@@ -370,7 +368,7 @@ object Box {
     def colorNull: this.type = set("color", null)
     
     @scala.inline
-    def displayVarargs(value: (js.Any | Null)*): this.type = set("display", js.Array(value :_*))
+    def colorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("color", js.Array(value :_*))
     
     @scala.inline
     def display(
@@ -384,7 +382,7 @@ object Box {
     def displayNull: this.type = set("display", null)
     
     @scala.inline
-    def heightVarargs(value: (js.Any | Null)*): this.type = set("height", js.Array(value :_*))
+    def displayVarargs(value: (js.Any | Null)*): this.type = set("display", js.Array(value :_*))
     
     @scala.inline
     def height(
@@ -398,7 +396,7 @@ object Box {
     def heightNull: this.type = set("height", null)
     
     @scala.inline
-    def leftVarargs(value: (js.Any | Null)*): this.type = set("left", js.Array(value :_*))
+    def heightVarargs(value: (js.Any | Null)*): this.type = set("height", js.Array(value :_*))
     
     @scala.inline
     def left(
@@ -412,7 +410,7 @@ object Box {
     def leftNull: this.type = set("left", null)
     
     @scala.inline
-    def mVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("m", js.Array(value :_*))
+    def leftVarargs(value: (js.Any | Null)*): this.type = set("left", js.Array(value :_*))
     
     @scala.inline
     def m(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("m", value.asInstanceOf[js.Any])
@@ -421,16 +419,10 @@ object Box {
     def mNull: this.type = set("m", null)
     
     @scala.inline
-    def marginVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("margin", js.Array(value :_*))
+    def mVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("m", js.Array(value :_*))
     
     @scala.inline
     def margin(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("margin", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def marginNull: this.type = set("margin", null)
-    
-    @scala.inline
-    def marginBottomVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginBottom", js.Array(value :_*))
     
     @scala.inline
     def marginBottom(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginBottom", value.asInstanceOf[js.Any])
@@ -439,7 +431,7 @@ object Box {
     def marginBottomNull: this.type = set("marginBottom", null)
     
     @scala.inline
-    def marginLeftVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginLeft", js.Array(value :_*))
+    def marginBottomVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginBottom", js.Array(value :_*))
     
     @scala.inline
     def marginLeft(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginLeft", value.asInstanceOf[js.Any])
@@ -448,7 +440,10 @@ object Box {
     def marginLeftNull: this.type = set("marginLeft", null)
     
     @scala.inline
-    def marginRightVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginRight", js.Array(value :_*))
+    def marginLeftVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginLeft", js.Array(value :_*))
+    
+    @scala.inline
+    def marginNull: this.type = set("margin", null)
     
     @scala.inline
     def marginRight(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginRight", value.asInstanceOf[js.Any])
@@ -457,7 +452,7 @@ object Box {
     def marginRightNull: this.type = set("marginRight", null)
     
     @scala.inline
-    def marginTopVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginTop", js.Array(value :_*))
+    def marginRightVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginRight", js.Array(value :_*))
     
     @scala.inline
     def marginTop(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginTop", value.asInstanceOf[js.Any])
@@ -466,7 +461,10 @@ object Box {
     def marginTopNull: this.type = set("marginTop", null)
     
     @scala.inline
-    def marginXVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginX", js.Array(value :_*))
+    def marginTopVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginTop", js.Array(value :_*))
+    
+    @scala.inline
+    def marginVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("margin", js.Array(value :_*))
     
     @scala.inline
     def marginX(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginX", value.asInstanceOf[js.Any])
@@ -475,7 +473,7 @@ object Box {
     def marginXNull: this.type = set("marginX", null)
     
     @scala.inline
-    def marginYVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginY", js.Array(value :_*))
+    def marginXVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginX", js.Array(value :_*))
     
     @scala.inline
     def marginY(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginY", value.asInstanceOf[js.Any])
@@ -484,7 +482,7 @@ object Box {
     def marginYNull: this.type = set("marginY", null)
     
     @scala.inline
-    def maxHeightVarargs(value: (js.Any | Null)*): this.type = set("maxHeight", js.Array(value :_*))
+    def marginYVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginY", js.Array(value :_*))
     
     @scala.inline
     def maxHeight(
@@ -498,7 +496,7 @@ object Box {
     def maxHeightNull: this.type = set("maxHeight", null)
     
     @scala.inline
-    def maxWidthVarargs(value: (js.Any | Null)*): this.type = set("maxWidth", js.Array(value :_*))
+    def maxHeightVarargs(value: (js.Any | Null)*): this.type = set("maxHeight", js.Array(value :_*))
     
     @scala.inline
     def maxWidth(
@@ -512,7 +510,7 @@ object Box {
     def maxWidthNull: this.type = set("maxWidth", null)
     
     @scala.inline
-    def mbVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mb", js.Array(value :_*))
+    def maxWidthVarargs(value: (js.Any | Null)*): this.type = set("maxWidth", js.Array(value :_*))
     
     @scala.inline
     def mb(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mb", value.asInstanceOf[js.Any])
@@ -521,7 +519,7 @@ object Box {
     def mbNull: this.type = set("mb", null)
     
     @scala.inline
-    def minHeightVarargs(value: (js.Any | Null)*): this.type = set("minHeight", js.Array(value :_*))
+    def mbVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mb", js.Array(value :_*))
     
     @scala.inline
     def minHeight(
@@ -535,7 +533,7 @@ object Box {
     def minHeightNull: this.type = set("minHeight", null)
     
     @scala.inline
-    def minWidthVarargs(value: (js.Any | Null)*): this.type = set("minWidth", js.Array(value :_*))
+    def minHeightVarargs(value: (js.Any | Null)*): this.type = set("minHeight", js.Array(value :_*))
     
     @scala.inline
     def minWidth(
@@ -549,7 +547,7 @@ object Box {
     def minWidthNull: this.type = set("minWidth", null)
     
     @scala.inline
-    def mlVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("ml", js.Array(value :_*))
+    def minWidthVarargs(value: (js.Any | Null)*): this.type = set("minWidth", js.Array(value :_*))
     
     @scala.inline
     def ml(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("ml", value.asInstanceOf[js.Any])
@@ -558,7 +556,7 @@ object Box {
     def mlNull: this.type = set("ml", null)
     
     @scala.inline
-    def mrVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mr", js.Array(value :_*))
+    def mlVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("ml", js.Array(value :_*))
     
     @scala.inline
     def mr(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mr", value.asInstanceOf[js.Any])
@@ -567,7 +565,7 @@ object Box {
     def mrNull: this.type = set("mr", null)
     
     @scala.inline
-    def mtVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mt", js.Array(value :_*))
+    def mrVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mr", js.Array(value :_*))
     
     @scala.inline
     def mt(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mt", value.asInstanceOf[js.Any])
@@ -576,7 +574,7 @@ object Box {
     def mtNull: this.type = set("mt", null)
     
     @scala.inline
-    def mxVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mx", js.Array(value :_*))
+    def mtVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mt", js.Array(value :_*))
     
     @scala.inline
     def mx(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mx", value.asInstanceOf[js.Any])
@@ -585,7 +583,7 @@ object Box {
     def mxNull: this.type = set("mx", null)
     
     @scala.inline
-    def myVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("my", js.Array(value :_*))
+    def mxVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mx", js.Array(value :_*))
     
     @scala.inline
     def my(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("my", value.asInstanceOf[js.Any])
@@ -594,7 +592,7 @@ object Box {
     def myNull: this.type = set("my", null)
     
     @scala.inline
-    def opacityVarargs(value: (js.Any | Null)*): this.type = set("opacity", js.Array(value :_*))
+    def myVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("my", js.Array(value :_*))
     
     @scala.inline
     def opacity(
@@ -608,7 +606,7 @@ object Box {
     def opacityNull: this.type = set("opacity", null)
     
     @scala.inline
-    def overflowVarargs(value: (js.Any | Null)*): this.type = set("overflow", js.Array(value :_*))
+    def opacityVarargs(value: (js.Any | Null)*): this.type = set("opacity", js.Array(value :_*))
     
     @scala.inline
     def overflow(
@@ -622,7 +620,7 @@ object Box {
     def overflowNull: this.type = set("overflow", null)
     
     @scala.inline
-    def overflowXVarargs(value: (js.Any | Null)*): this.type = set("overflowX", js.Array(value :_*))
+    def overflowVarargs(value: (js.Any | Null)*): this.type = set("overflow", js.Array(value :_*))
     
     @scala.inline
     def overflowX(
@@ -636,7 +634,7 @@ object Box {
     def overflowXNull: this.type = set("overflowX", null)
     
     @scala.inline
-    def overflowYVarargs(value: (js.Any | Null)*): this.type = set("overflowY", js.Array(value :_*))
+    def overflowXVarargs(value: (js.Any | Null)*): this.type = set("overflowX", js.Array(value :_*))
     
     @scala.inline
     def overflowY(
@@ -650,7 +648,7 @@ object Box {
     def overflowYNull: this.type = set("overflowY", null)
     
     @scala.inline
-    def pVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("p", js.Array(value :_*))
+    def overflowYVarargs(value: (js.Any | Null)*): this.type = set("overflowY", js.Array(value :_*))
     
     @scala.inline
     def p(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("p", value.asInstanceOf[js.Any])
@@ -659,16 +657,10 @@ object Box {
     def pNull: this.type = set("p", null)
     
     @scala.inline
-    def paddingVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("padding", js.Array(value :_*))
+    def pVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("p", js.Array(value :_*))
     
     @scala.inline
     def padding(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("padding", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def paddingNull: this.type = set("padding", null)
-    
-    @scala.inline
-    def paddingBottomVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingBottom", js.Array(value :_*))
     
     @scala.inline
     def paddingBottom(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingBottom", value.asInstanceOf[js.Any])
@@ -677,7 +669,7 @@ object Box {
     def paddingBottomNull: this.type = set("paddingBottom", null)
     
     @scala.inline
-    def paddingLeftVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingLeft", js.Array(value :_*))
+    def paddingBottomVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingBottom", js.Array(value :_*))
     
     @scala.inline
     def paddingLeft(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingLeft", value.asInstanceOf[js.Any])
@@ -686,7 +678,10 @@ object Box {
     def paddingLeftNull: this.type = set("paddingLeft", null)
     
     @scala.inline
-    def paddingRightVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingRight", js.Array(value :_*))
+    def paddingLeftVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingLeft", js.Array(value :_*))
+    
+    @scala.inline
+    def paddingNull: this.type = set("padding", null)
     
     @scala.inline
     def paddingRight(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingRight", value.asInstanceOf[js.Any])
@@ -695,7 +690,7 @@ object Box {
     def paddingRightNull: this.type = set("paddingRight", null)
     
     @scala.inline
-    def paddingTopVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingTop", js.Array(value :_*))
+    def paddingRightVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingRight", js.Array(value :_*))
     
     @scala.inline
     def paddingTop(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingTop", value.asInstanceOf[js.Any])
@@ -704,7 +699,10 @@ object Box {
     def paddingTopNull: this.type = set("paddingTop", null)
     
     @scala.inline
-    def paddingXVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingX", js.Array(value :_*))
+    def paddingTopVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingTop", js.Array(value :_*))
+    
+    @scala.inline
+    def paddingVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("padding", js.Array(value :_*))
     
     @scala.inline
     def paddingX(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingX", value.asInstanceOf[js.Any])
@@ -713,7 +711,7 @@ object Box {
     def paddingXNull: this.type = set("paddingX", null)
     
     @scala.inline
-    def paddingYVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingY", js.Array(value :_*))
+    def paddingXVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingX", js.Array(value :_*))
     
     @scala.inline
     def paddingY(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingY", value.asInstanceOf[js.Any])
@@ -722,7 +720,7 @@ object Box {
     def paddingYNull: this.type = set("paddingY", null)
     
     @scala.inline
-    def pbVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pb", js.Array(value :_*))
+    def paddingYVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingY", js.Array(value :_*))
     
     @scala.inline
     def pb(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pb", value.asInstanceOf[js.Any])
@@ -731,7 +729,7 @@ object Box {
     def pbNull: this.type = set("pb", null)
     
     @scala.inline
-    def plVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pl", js.Array(value :_*))
+    def pbVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pb", js.Array(value :_*))
     
     @scala.inline
     def pl(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pl", value.asInstanceOf[js.Any])
@@ -740,7 +738,7 @@ object Box {
     def plNull: this.type = set("pl", null)
     
     @scala.inline
-    def positionVarargs(value: (js.Any | Null)*): this.type = set("position", js.Array(value :_*))
+    def plVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pl", js.Array(value :_*))
     
     @scala.inline
     def position(
@@ -754,7 +752,7 @@ object Box {
     def positionNull: this.type = set("position", null)
     
     @scala.inline
-    def prVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pr", js.Array(value :_*))
+    def positionVarargs(value: (js.Any | Null)*): this.type = set("position", js.Array(value :_*))
     
     @scala.inline
     def pr(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pr", value.asInstanceOf[js.Any])
@@ -763,7 +761,7 @@ object Box {
     def prNull: this.type = set("pr", null)
     
     @scala.inline
-    def ptVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pt", js.Array(value :_*))
+    def prVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pr", js.Array(value :_*))
     
     @scala.inline
     def pt(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pt", value.asInstanceOf[js.Any])
@@ -772,7 +770,7 @@ object Box {
     def ptNull: this.type = set("pt", null)
     
     @scala.inline
-    def pxVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("px", js.Array(value :_*))
+    def ptVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pt", js.Array(value :_*))
     
     @scala.inline
     def px(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("px", value.asInstanceOf[js.Any])
@@ -781,7 +779,7 @@ object Box {
     def pxNull: this.type = set("px", null)
     
     @scala.inline
-    def pyVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("py", js.Array(value :_*))
+    def pxVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("px", js.Array(value :_*))
     
     @scala.inline
     def py(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("py", value.asInstanceOf[js.Any])
@@ -790,7 +788,7 @@ object Box {
     def pyNull: this.type = set("py", null)
     
     @scala.inline
-    def rightVarargs(value: (js.Any | Null)*): this.type = set("right", js.Array(value :_*))
+    def pyVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("py", js.Array(value :_*))
     
     @scala.inline
     def right(
@@ -804,7 +802,7 @@ object Box {
     def rightNull: this.type = set("right", null)
     
     @scala.inline
-    def sizeVarargs(value: (js.Any | Null)*): this.type = set("size", js.Array(value :_*))
+    def rightVarargs(value: (js.Any | Null)*): this.type = set("right", js.Array(value :_*))
     
     @scala.inline
     def size(
@@ -818,7 +816,7 @@ object Box {
     def sizeNull: this.type = set("size", null)
     
     @scala.inline
-    def topVarargs(value: (js.Any | Null)*): this.type = set("top", js.Array(value :_*))
+    def sizeVarargs(value: (js.Any | Null)*): this.type = set("size", js.Array(value :_*))
     
     @scala.inline
     def top(
@@ -832,7 +830,7 @@ object Box {
     def topNull: this.type = set("top", null)
     
     @scala.inline
-    def verticalAlignVarargs(value: (js.Any | Null)*): this.type = set("verticalAlign", js.Array(value :_*))
+    def topVarargs(value: (js.Any | Null)*): this.type = set("top", js.Array(value :_*))
     
     @scala.inline
     def verticalAlign(
@@ -846,7 +844,7 @@ object Box {
     def verticalAlignNull: this.type = set("verticalAlign", null)
     
     @scala.inline
-    def widthVarargs(value: (js.Any | Null)*): this.type = set("width", js.Array(value :_*))
+    def verticalAlignVarargs(value: (js.Any | Null)*): this.type = set("verticalAlign", js.Array(value :_*))
     
     @scala.inline
     def width(
@@ -860,7 +858,7 @@ object Box {
     def widthNull: this.type = set("width", null)
     
     @scala.inline
-    def zIndexVarargs(value: (js.Any | Null)*): this.type = set("zIndex", js.Array(value :_*))
+    def widthVarargs(value: (js.Any | Null)*): this.type = set("width", js.Array(value :_*))
     
     @scala.inline
     def zIndex(
@@ -872,9 +870,12 @@ object Box {
     
     @scala.inline
     def zIndexNull: this.type = set("zIndex", null)
+    
+    @scala.inline
+    def zIndexVarargs(value: (js.Any | Null)*): this.type = set("zIndex", js.Array(value :_*))
   }
   
-  def withProps(p: BoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Box.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: BoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

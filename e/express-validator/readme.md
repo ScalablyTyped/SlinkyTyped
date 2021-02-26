@@ -10,9 +10,9 @@ Express middleware for the validator module.
 | ------------------ | :-------------: |
 | Full name          | express-validator |
 | Keywords           | express, validator, validation, validate, sanitize, sanitization, xss |
-| # releases         | 18 |
-| # dependents       | 310 |
-| # downloads        | 5819541 |
+| # releases         | 19 |
+| # dependents       | 3029 |
+| # downloads        | 11782225 |
 | # stars            | 113 |
 
 ## Links

@@ -1,12 +1,13 @@
 package typingsSlinky.tableau.global.tableau
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("tableau.DateRangeType")
 @js.native
-object DateRangeType extends js.Object {
+object DateRangeType extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.tableau.tableau.DateRangeType with String] = js.native

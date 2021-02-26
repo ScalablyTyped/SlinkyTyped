@@ -3,6 +3,7 @@ package typingsSlinky.reactSvgMap.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,10 +23,10 @@ class SharedBuilder_OnChangeMapProps1193081495[R <: js.Object] (val args: js.Arr
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def locationClassNameFunction1(value: /* repeated */ js.Any => _): this.type = set("locationClassName", js.Any.fromFunction1(value))
+  def locationClassName(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("locationClassName", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def locationClassName(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("locationClassName", value.asInstanceOf[js.Any])
+  def locationClassNameFunction1(value: /* repeated */ js.Any => _): this.type = set("locationClassName", js.Any.fromFunction1(value))
   
   @scala.inline
   def onChange(value: /* repeated */ js.Any => _): this.type = set("onChange", js.Any.fromFunction1(value))

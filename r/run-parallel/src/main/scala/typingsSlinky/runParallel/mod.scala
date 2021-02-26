@@ -1,17 +1,24 @@
 package typingsSlinky.runParallel
 
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("run-parallel", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("run-parallel", JSImport.Namespace)
+  @js.native
   def apply[T](tasks: js.Array[Task[T]]): js.Array[T] = js.native
+  @JSImport("run-parallel", JSImport.Namespace)
+  @js.native
   def apply[T](tasks: js.Array[Task[T]], callback: Callback[js.Array[T]]): Unit = js.native
+  @JSImport("run-parallel", JSImport.Namespace)
+  @js.native
   def apply[T](tasks: TaskObj[T]): Record[String, T] = js.native
+  @JSImport("run-parallel", JSImport.Namespace)
+  @js.native
   def apply[T](tasks: TaskObj[T], callback: Callback[Record[String, T]]): Unit = js.native
   
   type Callback[T] = js.Function2[/* err */ js.Error, /* results */ T, Unit]

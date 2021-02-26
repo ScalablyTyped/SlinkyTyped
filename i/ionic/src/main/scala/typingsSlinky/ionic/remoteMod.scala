@@ -1,14 +1,17 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.ionic.commandMod.Command
+import typingsSlinky.ionic.definitionsMod.INamespace
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ionic/commands/git/remote", JSImport.Namespace)
-@js.native
-object remoteMod extends js.Object {
+object remoteMod {
   
+  @JSImport("ionic/commands/git/remote", "GitRemoteCommand")
   @js.native
-  class GitRemoteCommand () extends Command
+  class GitRemoteCommand protected () extends Command {
+    def this(namespace: INamespace) = this()
+  }
 }

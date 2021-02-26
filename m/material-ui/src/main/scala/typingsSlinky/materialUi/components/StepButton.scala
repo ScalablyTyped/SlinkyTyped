@@ -9,6 +9,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Stepper.StepButtonProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object StepButton {
   
   @JSImport("material-ui", "StepButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,10 +35,10 @@ object StepButton {
     def completed(value: Boolean): this.type = set("completed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disableFocusRipple(value: Boolean): this.type = set("disableFocusRipple", value.asInstanceOf[js.Any])
@@ -61,10 +62,10 @@ object StepButton {
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement | String | Double): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def icon(value: ReactElement | String | Double): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def keyboardFocused(value: Boolean): this.type = set("keyboardFocused", value.asInstanceOf[js.Any])
@@ -115,7 +116,7 @@ object StepButton {
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StepButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StepButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StepButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

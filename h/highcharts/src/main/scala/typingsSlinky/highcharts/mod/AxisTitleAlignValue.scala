@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.low
   - typingsSlinky.highcharts.highchartsStrings.middle
 */
-trait AxisTitleAlignValue extends js.Object
+trait AxisTitleAlignValue extends StObject
 object AxisTitleAlignValue {
   
   @scala.inline

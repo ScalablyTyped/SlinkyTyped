@@ -1,27 +1,50 @@
 package typingsSlinky.dialogflow.mod.google.cloud.dialogflow.v2
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Properties of an ExportAgentResponse. */
-trait IExportAgentResponse extends js.Object {
+@js.native
+trait IExportAgentResponse extends StObject {
+  
   /** ExportAgentResponse agentContent */
-  var agentContent: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
+  var agentContent: js.UndefOr[js.typedarray.Uint8Array | String | Null] = js.native
+  
   /** ExportAgentResponse agentUri */
-  var agentUri: js.UndefOr[String | Null] = js.undefined
+  var agentUri: js.UndefOr[String | Null] = js.native
 }
-
 object IExportAgentResponse {
+  
   @scala.inline
-  def apply(
-    agentContent: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined,
-    agentUri: js.UndefOr[Null | String] = js.undefined
-  ): IExportAgentResponse = {
+  def apply(): IExportAgentResponse = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(agentContent)) __obj.updateDynamic("agentContent")(agentContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(agentUri)) __obj.updateDynamic("agentUri")(agentUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExportAgentResponse]
   }
+  
+  @scala.inline
+  implicit class IExportAgentResponseMutableBuilder[Self <: IExportAgentResponse] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setAgentContent(value: js.typedarray.Uint8Array | String): Self = StObject.set(x, "agentContent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAgentContentNull: Self = StObject.set(x, "agentContent", null)
+    
+    @scala.inline
+    def setAgentContentUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "agentContent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAgentContentUndefined: Self = StObject.set(x, "agentContent", js.undefined)
+    
+    @scala.inline
+    def setAgentUri(value: String): Self = StObject.set(x, "agentUri", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAgentUriNull: Self = StObject.set(x, "agentUri", null)
+    
+    @scala.inline
+    def setAgentUriUndefined: Self = StObject.set(x, "agentUri", js.undefined)
+  }
 }
-

@@ -1,5 +1,6 @@
 package typingsSlinky.babelTypes.ts36Mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,9 +13,16 @@ trait TSThisType
   @JSName("type")
   var type_TSThisType: typingsSlinky.babelTypes.babelTypesStrings.TSThisType = js.native
 }
-@JSImport("babel-types/ts3.6", "TSThisType")
-@js.native
-object TSThisType extends js.Object {
+object TSThisType {
   
+  @JSImport("babel-types/ts3.6", "TSThisType")
+  @js.native
   def apply(): TSThisType = js.native
+  
+  @scala.inline
+  implicit class TSThisTypeMutableBuilder[Self <: TSThisType] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setType(value: typingsSlinky.babelTypes.babelTypesStrings.TSThisType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+  }
 }

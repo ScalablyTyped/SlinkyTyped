@@ -1,12 +1,21 @@
 package typingsSlinky.wordpressBlockEditor.componentsMod
 
-import org.scalablytyped.runtime.TopLevel
-import slinky.core.ReactComponentClass
+import org.scalablytyped.runtime.Shortcut
+import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.wordpressBlockEditor.blockMoverMod.BlockMover.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@wordpress/block-editor/components", "BlockMover")
-@js.native
-object BlockMover extends TopLevel[ReactComponentClass[Props]]
+object BlockMover extends Shortcut {
+  
+  @JSImport("@wordpress/block-editor/components", "BlockMover")
+  @js.native
+  val ^ : ComponentType[Props] = js.native
+  
+  type _To = ComponentType[Props]
+  
+  /* This means you don't have to write `^`, but can instead just say `BlockMover.foo` */
+  override def _to: ComponentType[Props] = ^
+}

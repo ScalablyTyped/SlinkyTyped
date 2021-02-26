@@ -5,16 +5,19 @@ import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestTyp
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.SignatureHelpParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.SignatureHelpRegistrationOptions
 import typingsSlinky.vscodeLanguageserverTypes.mod.SignatureHelp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageclient", "SignatureHelpRequest")
-@js.native
-object SignatureHelpRequest extends js.Object {
+object SignatureHelpRequest {
   
+  @JSImport("vscode-languageclient", "SignatureHelpRequest.method")
+  @js.native
   val method: textDocumentSlashsignatureHelp = js.native
   
+  @JSImport("vscode-languageclient", "SignatureHelpRequest.type")
+  @js.native
   val `type`: ProtocolRequestType[
     SignatureHelpParams, 
     SignatureHelp | Null, 

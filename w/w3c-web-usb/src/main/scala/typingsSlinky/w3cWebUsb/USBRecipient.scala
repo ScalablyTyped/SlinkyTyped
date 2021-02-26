@@ -1,5 +1,6 @@
 package typingsSlinky.w3cWebUsb
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.w3cWebUsb.w3cWebUsbStrings.endpoint
   - typingsSlinky.w3cWebUsb.w3cWebUsbStrings.other
 */
-trait USBRecipient extends js.Object
+trait USBRecipient extends StObject
 object USBRecipient {
   
   @scala.inline

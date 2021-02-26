@@ -98,6 +98,7 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactSimpleMaps.mod.GeographiesChildrenArgument
 import typingsSlinky.reactSimpleMaps.mod.GeographiesProps
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -106,7 +107,7 @@ object Geographies {
   
   @JSImport("react-simple-maps", "Geographies")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -499,10 +500,10 @@ object Geographies {
     def g2(value: Double | String): this.type = set("g2", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def geographyVarargs(value: String*): this.type = set("geography", js.Array(value :_*))
+    def geography(value: String | (Record[String, _]) | js.Array[String]): this.type = set("geography", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def geography(value: String | (Record[String, _]) | js.Array[String]): this.type = set("geography", value.asInstanceOf[js.Any])
+    def geographyVarargs(value: String*): this.type = set("geography", js.Array(value :_*))
     
     @scala.inline
     def glyphName(value: Double | String): this.type = set("glyphName", value.asInstanceOf[js.Any])
@@ -1288,7 +1289,7 @@ object Geographies {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GeographiesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Geographies.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GeographiesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

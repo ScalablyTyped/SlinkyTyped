@@ -4,14 +4,14 @@ import typingsSlinky.jupyterlabServices.terminalTerminalMod.ITerminalConnection
 import typingsSlinky.jupyterlabTerminal.anon.PartialIOptions
 import typingsSlinky.jupyterlabTerminal.tokensMod.ITerminal.ITerminal
 import typingsSlinky.luminoWidgets.mod.Widget.ResizeMessage
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/terminal/lib/widget", JSImport.Namespace)
-@js.native
-object widgetMod extends js.Object {
+object widgetMod {
   
+  @JSImport("@jupyterlab/terminal/lib/widget", "Terminal")
   @js.native
   class Terminal protected () extends ITerminal {
     /**

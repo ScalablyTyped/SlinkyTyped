@@ -2,14 +2,14 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.entityMod.Entity
 import typingsSlinky.samchon.invokeMod.Invoke
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/slave/InvokeHistory", JSImport.Namespace)
-@js.native
-object invokeHistoryMod extends js.Object {
+object invokeHistoryMod {
   
+  @JSImport("samchon/templates/slave/InvokeHistory", "InvokeHistory")
   @js.native
   /**
     * Default Constructor.

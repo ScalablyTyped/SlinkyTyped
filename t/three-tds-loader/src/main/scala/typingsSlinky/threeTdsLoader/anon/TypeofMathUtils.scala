@@ -1,12 +1,13 @@
 package typingsSlinky.threeTdsLoader.anon
 
 import typingsSlinky.three.quaternionMod.Quaternion
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofMathUtils extends js.Object {
+trait TypeofMathUtils extends StObject {
   
   val DEG2RAD: Double = js.native
   

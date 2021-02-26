@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.lightMod.Light
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/PBR/pbrMetallicRoughnessBlock", JSImport.Namespace)
-@js.native
-object pbrMetallicRoughnessBlockMod extends js.Object {
+object pbrMetallicRoughnessBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/PBR/pbrMetallicRoughnessBlock", "PBRMetallicRoughnessBlock")
   @js.native
   class PBRMetallicRoughnessBlock protected () extends NodeMaterialBlock {
     /**

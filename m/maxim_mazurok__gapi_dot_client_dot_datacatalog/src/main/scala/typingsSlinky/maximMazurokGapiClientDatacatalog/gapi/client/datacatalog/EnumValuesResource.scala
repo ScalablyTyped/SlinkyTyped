@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDatacatalog.gapi.client.datacatalog
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.Key
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EnumValuesResource extends js.Object {
+trait EnumValuesResource extends StObject {
   
   def rename(request: Key, body: GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest): Request[GoogleCloudDatacatalogV1beta1TagTemplateField] = js.native
   /**

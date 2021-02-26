@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.AltCallback
 import typingsSlinky.maximMazurokGapiClientDialogflow.anon.Session
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SessionsResource extends js.Object {
+trait SessionsResource extends StObject {
   
   var contexts: ContextsResource = js.native
   

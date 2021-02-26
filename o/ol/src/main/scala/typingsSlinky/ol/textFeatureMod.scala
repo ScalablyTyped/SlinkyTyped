@@ -2,13 +2,16 @@ package typingsSlinky.ol
 
 import typingsSlinky.ol.featureMod.ReadOptions
 import typingsSlinky.ol.featureMod.WriteOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/format/TextFeature", JSImport.Namespace)
-@js.native
-object textFeatureMod extends js.Object {
+object textFeatureMod {
+  
+  @JSImport("ol/format/TextFeature", JSImport.Default)
+  @js.native
+  abstract class default () extends TextFeature
   
   @js.native
   trait TextFeature
@@ -40,7 +43,4 @@ object textFeatureMod extends js.Object {
     /* protected */ def writeGeometryText(geometry: typingsSlinky.ol.geometryMod.default): String = js.native
     /* protected */ def writeGeometryText(geometry: typingsSlinky.ol.geometryMod.default, opt_options: WriteOptions): String = js.native
   }
-  
-  @js.native
-  abstract class default () extends TextFeature
 }

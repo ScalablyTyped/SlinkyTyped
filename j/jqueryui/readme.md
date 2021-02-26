@@ -11,8 +11,8 @@ A curated set of user interface interactions, effects, widgets, and themes built
 | Full name          | jqueryui |
 | Keywords           | - |
 | # releases         | 0 |
-| # dependents       | 27 |
-| # downloads        | 333109 |
+| # dependents       | 34 |
+| # downloads        | 406689 |
 | # stars            | 0 |
 
 ## Links

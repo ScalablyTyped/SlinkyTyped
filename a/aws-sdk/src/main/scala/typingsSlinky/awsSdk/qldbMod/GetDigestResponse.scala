@@ -1,11 +1,12 @@
 package typingsSlinky.awsSdk.qldbMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GetDigestResponse extends js.Object {
+trait GetDigestResponse extends StObject {
   
   /**
     * The 256-bit hash value representing the digest returned by a GetDigest request.
@@ -26,27 +27,15 @@ object GetDigestResponse {
   }
   
   @scala.inline
-  implicit class GetDigestResponseOps[Self <: GetDigestResponse] (val x: Self) extends AnyVal {
+  implicit class GetDigestResponseMutableBuilder[Self <: GetDigestResponse] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDigest(value: Digest): Self = StObject.set(x, "Digest", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDigestTipAddress(value: ValueHolder): Self = StObject.set(x, "DigestTipAddress", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setDigestUint8Array(value: js.typedarray.Uint8Array): Self = this.set("Digest", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDigest(value: Digest): Self = this.set("Digest", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDigestTipAddress(value: ValueHolder): Self = this.set("DigestTipAddress", value.asInstanceOf[js.Any])
+    def setDigestUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "Digest", value.asInstanceOf[js.Any])
   }
 }

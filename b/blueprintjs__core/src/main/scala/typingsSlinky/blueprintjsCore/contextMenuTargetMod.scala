@@ -6,14 +6,15 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.blueprintjsCore.anon.Instantiable
 import typingsSlinky.blueprintjsCore.constructorMod.IConstructor
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@blueprintjs/core/lib/esm/components/context-menu/contextMenuTarget", JSImport.Namespace)
-@js.native
-object contextMenuTargetMod extends js.Object {
+object contextMenuTargetMod {
   
+  @JSImport("@blueprintjs/core/lib/esm/components/context-menu/contextMenuTarget", "ContextMenuTarget")
+  @js.native
   def ContextMenuTarget[T /* <: IConstructor[IContextMenuTargetComponent] */](WrappedComponent: T): Instantiable with T = js.native
   
   @js.native

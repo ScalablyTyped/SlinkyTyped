@@ -5,14 +5,14 @@ import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.three.dataTextureMod.DataTexture
 import typingsSlinky.three.loaderMod.Loader
 import typingsSlinky.three.loadingManagerMod.LoadingManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/loaders/DataTextureLoader", JSImport.Namespace)
-@js.native
-object dataTextureLoaderMod extends js.Object {
+object dataTextureLoaderMod {
   
+  @JSImport("three/src/loaders/DataTextureLoader", "DataTextureLoader")
   @js.native
   class DataTextureLoader () extends Loader {
     def this(manager: LoadingManager) = this()

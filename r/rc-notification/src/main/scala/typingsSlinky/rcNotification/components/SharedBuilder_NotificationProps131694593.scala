@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,10 +21,10 @@ class SharedBuilder_NotificationProps131694593[R <: js.Object] (val args: js.Arr
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+  def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+  def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def maxCount(value: Double): this.type = set("maxCount", value.asInstanceOf[js.Any])

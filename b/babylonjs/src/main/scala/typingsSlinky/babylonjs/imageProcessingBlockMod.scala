@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Fragment/imageProcessingBlock", JSImport.Namespace)
-@js.native
-object imageProcessingBlockMod extends js.Object {
+object imageProcessingBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Fragment/imageProcessingBlock", "ImageProcessingBlock")
   @js.native
   class ImageProcessingBlock protected () extends NodeMaterialBlock {
     /**

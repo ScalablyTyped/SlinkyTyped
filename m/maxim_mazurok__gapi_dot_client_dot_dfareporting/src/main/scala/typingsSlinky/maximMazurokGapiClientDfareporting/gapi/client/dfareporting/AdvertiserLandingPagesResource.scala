@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Uploadprotocol
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AdvertiserLandingPagesResource extends js.Object {
+trait AdvertiserLandingPagesResource extends StObject {
   
   /** Gets one landing page by ID. */
   def get(): Request[LandingPage] = js.native

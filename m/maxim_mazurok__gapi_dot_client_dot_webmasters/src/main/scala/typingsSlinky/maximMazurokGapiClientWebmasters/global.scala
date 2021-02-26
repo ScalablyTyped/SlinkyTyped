@@ -5,31 +5,37 @@ import typingsSlinky.maximMazurokGapiClientWebmasters.gapi.client.webmasters.Sit
 import typingsSlinky.maximMazurokGapiClientWebmasters.gapi.client.webmasters.SitesResource
 import typingsSlinky.maximMazurokGapiClientWebmasters.maximMazurokGapiClientWebmastersStrings.v3
 import typingsSlinky.maximMazurokGapiClientWebmasters.maximMazurokGapiClientWebmastersStrings.webmasters
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
-  @js.native
-  object gapi extends js.Object {
+  object gapi {
     
-    @js.native
-    object client extends js.Object {
+    object client {
       
       /** Load Search Console API v3 */
+      @JSGlobal("gapi.client.load")
+      @js.native
       def load(name: webmasters, version: v3): js.Thenable[Unit] = js.native
+      @JSGlobal("gapi.client.load")
+      @js.native
       def load(name: webmasters, version: v3, callback: js.Function0[_]): Unit = js.native
       
-      @js.native
-      object webmasters extends js.Object {
+      object webmasters {
         
+        @JSGlobal("gapi.client.webmasters.searchanalytics")
+        @js.native
         val searchanalytics: SearchanalyticsResource = js.native
         
+        @JSGlobal("gapi.client.webmasters.sitemaps")
+        @js.native
         val sitemaps: SitemapsResource = js.native
         
+        @JSGlobal("gapi.client.webmasters.sites")
+        @js.native
         val sites: SitesResource = js.native
       }
     }

@@ -1,5 +1,6 @@
 package typingsSlinky.arangodb.ArangoDB
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arangodb.arangodbStrings.count
   - typingsSlinky.arangodb.arangodbStrings.fill
 */
-trait ArangoSearchViewConsolidationType extends js.Object
+trait ArangoSearchViewConsolidationType extends StObject
 object ArangoSearchViewConsolidationType {
   
   @scala.inline

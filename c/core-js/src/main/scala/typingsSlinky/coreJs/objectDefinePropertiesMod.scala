@@ -1,12 +1,15 @@
 package typingsSlinky.coreJs
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.PropertyDescriptorMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("core-js/library/fn/object/define-properties", JSImport.Namespace)
-@js.native
-object objectDefinePropertiesMod
-  extends TopLevel[js.Function2[/* o */ js.Any, /* properties */ PropertyDescriptorMap, js.Any]]
+object objectDefinePropertiesMod {
+  
+  /* was `typeof core.Object.defineProperties` */
+  @JSImport("core-js/library/fn/object/define-properties", JSImport.Namespace)
+  @js.native
+  def apply(o: js.Any, properties: PropertyDescriptorMap): js.Any = js.native
+}

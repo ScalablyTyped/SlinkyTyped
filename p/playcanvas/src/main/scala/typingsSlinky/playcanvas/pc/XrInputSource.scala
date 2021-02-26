@@ -2,6 +2,7 @@ package typingsSlinky.playcanvas.pc
 
 import org.scalajs.dom.experimental.gamepad.Gamepad
 import typingsSlinky.playcanvas.anon.OffsetRay
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

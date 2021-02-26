@@ -1,5 +1,6 @@
 package typingsSlinky.rollup.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.rollup.rollupStrings.renderStart
   - typingsSlinky.rollup.rollupStrings.writeBundle
 */
-trait ParallelPluginHooks extends js.Object
+trait ParallelPluginHooks extends StObject
 object ParallelPluginHooks {
   
   @scala.inline

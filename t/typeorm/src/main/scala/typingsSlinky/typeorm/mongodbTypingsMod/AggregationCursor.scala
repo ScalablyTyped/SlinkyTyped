@@ -2,6 +2,7 @@ package typingsSlinky.typeorm.mongodbTypingsMod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.typeorm.platformPlatformToolsMod.Readable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

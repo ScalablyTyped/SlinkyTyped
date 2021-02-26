@@ -1,20 +1,35 @@
 package typingsSlinky.kendoUi.anon
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.ui.DropDownTree
-import typingsSlinky.kendoUi.kendo.ui.DropDownTreeOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofDropDownTree
-  extends Instantiable1[/* element */ Element, DropDownTree]
-     with Instantiable2[/* element */ Element, /* options */ DropDownTreeOptions, DropDownTree] {
+trait TypeofDropDownTree extends StObject {
   
+  /* static member */
   def extend(proto: js.Object): DropDownTree = js.native
   
+  /* static member */
   var fn: DropDownTree = js.native
+}
+object TypeofDropDownTree {
+  
+  @scala.inline
+  def apply(extend: js.Object => DropDownTree, fn: DropDownTree): TypeofDropDownTree = {
+    val __obj = js.Dynamic.literal(extend = js.Any.fromFunction1(extend), fn = fn.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeofDropDownTree]
+  }
+  
+  @scala.inline
+  implicit class TypeofDropDownTreeMutableBuilder[Self <: TypeofDropDownTree] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setExtend(value: js.Object => DropDownTree): Self = StObject.set(x, "extend", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setFn(value: DropDownTree): Self = StObject.set(x, "fn", value.asInstanceOf[js.Any])
+  }
 }

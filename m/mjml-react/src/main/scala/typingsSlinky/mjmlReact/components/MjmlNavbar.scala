@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.csstype.mod.ColorProperty
 import typingsSlinky.mjmlReact.mod.MjmlNavbarProps
 import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object MjmlNavbar {
   
   @JSImport("mjml-react", "MjmlNavbar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -69,7 +70,7 @@ object MjmlNavbar {
     def icoTextTransform(value: String): this.type = set("icoTextTransform", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MjmlNavbarProps with RequiredChildrenProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MjmlNavbar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MjmlNavbarProps with RequiredChildrenProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

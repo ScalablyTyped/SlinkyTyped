@@ -9,12 +9,13 @@ import typingsSlinky.chocolatechipjs.anon.CallbackName
 import typingsSlinky.chocolatechipjs.anon.Data
 import typingsSlinky.chocolatechipjs.anon.Extend
 import typingsSlinky.std.JSON
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ChocolateChipStatic extends js.Object {
+trait ChocolateChipStatic extends StObject {
   
   /**
     * If no argument is provided, return the document as a ChocolateChipElementArray.
@@ -45,18 +46,18 @@ trait ChocolateChipStatic extends js.Object {
     * @param context A DOM HTMLElement to use as context
     */
   def apply(selector: String): ChocolateChipElementArray = js.native
-  def apply(selector: String, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   def apply(selector: String, context: HTMLElement): ChocolateChipElementArray = js.native
-  def apply(selector: Document, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
+  def apply(selector: String, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   def apply(selector: Document, context: HTMLElement): ChocolateChipElementArray = js.native
+  def apply(selector: Document, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     *
     * @param element A DOM element to wrap in an array.
     */
   def apply(selector: HTMLElement): ChocolateChipElementArray = js.native
-  def apply(selector: HTMLElement, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   def apply(selector: HTMLElement, context: HTMLElement): ChocolateChipElementArray = js.native
+  def apply(selector: HTMLElement, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   
   /**
     * A cache to hold callbacks execute by the response from a JSONP request.
@@ -417,11 +418,11 @@ trait ChocolateChipStatic extends js.Object {
     * @return An encode string form element names and values.
     */
   def serialize(element: js.Any): String = js.native
-  def serialize(form: ChocolateChipElementArray): String = js.native
   /**
     * Serialize
     */
   def serialize(form: HTMLFormElement): String = js.native
+  def serialize(form: ChocolateChipElementArray): String = js.native
   
   /**
     * Subscribe to a publication. You provide the topic you want to subscribe to, as well as a callback to execute when a publication occurs.

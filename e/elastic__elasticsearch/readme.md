@@ -10,9 +10,9 @@ The official Elasticsearch client for Node.js
 | ------------------ | :-------------: |
 | Full name          | @elastic/elasticsearch |
 | Keywords           | elasticsearch, elastic, kibana, mapping, REST, search, client, index |
-| # releases         | 40 |
-| # dependents       | 85 |
-| # downloads        | 1968281 |
+| # releases         | 53 |
+| # dependents       | 224 |
+| # downloads        | 12322763 |
 | # stars            | 0 |
 
 ## Links

@@ -4,12 +4,13 @@ import typingsSlinky.mailgunJs.mod.messages.BatchData
 import typingsSlinky.mailgunJs.mod.messages.SendData
 import typingsSlinky.mailgunJs.mod.messages.SendResponse
 import typingsSlinky.mailgunJs.mod.messages.SendTemplateData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Messages_ extends js.Object {
+trait Messages_ extends StObject {
   
   def send(data: BatchData): js.Promise[SendResponse] = js.native
   def send(data: BatchData, callback: js.Function2[/* error */ Error, /* body */ SendResponse, Unit]): js.Promise[SendResponse] = js.native

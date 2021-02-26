@@ -1,12 +1,15 @@
 package typingsSlinky.node.tlsMod
 
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.anon.AllowHalfOpen
+import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.nodeStrings.OCSPRequest
 import typingsSlinky.node.nodeStrings.keylog
 import typingsSlinky.node.nodeStrings.newSession
 import typingsSlinky.node.nodeStrings.resumeSession
 import typingsSlinky.node.nodeStrings.secureConnection
 import typingsSlinky.node.nodeStrings.tlsClientError
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,6 +18,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Server ()
   extends typingsSlinky.node.netMod.Server {
+  def this(connectionListener: js.Function1[/* socket */ Socket, Unit]) = this()
+  def this(options: AllowHalfOpen) = this()
+  def this(options: js.UndefOr[scala.Nothing], connectionListener: js.Function1[/* socket */ Socket, Unit]) = this()
+  def this(options: AllowHalfOpen, connectionListener: js.Function1[/* socket */ Socket, Unit]) = this()
   
   /**
     * The server.addContext() method adds a secure context that will be

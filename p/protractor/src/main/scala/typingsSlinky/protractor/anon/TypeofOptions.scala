@@ -3,6 +3,7 @@ package typingsSlinky.protractor.anon
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.seleniumWebdriver.chromeMod.Options
 import typingsSlinky.seleniumWebdriver.mod.Capabilities
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

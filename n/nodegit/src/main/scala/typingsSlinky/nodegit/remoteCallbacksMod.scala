@@ -1,15 +1,15 @@
 package typingsSlinky.nodegit
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("nodegit/remote-callbacks", JSImport.Namespace)
-@js.native
-object remoteCallbacksMod extends js.Object {
+object remoteCallbacksMod {
   
+  @JSImport("nodegit/remote-callbacks", "RemoteCallbacks")
   @js.native
-  class RemoteCallbacks () extends js.Object {
+  class RemoteCallbacks () extends StObject {
     
     var certificateCheck: js.UndefOr[js.Function] = js.native
     

@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactPowerTooltip.toolTipMod.AnimationType
 import typingsSlinky.reactPowerTooltip.toolTipMod.ArrowAlignType
 import typingsSlinky.reactPowerTooltip.toolTipMod.PositionType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,5 +1,6 @@
 package typingsSlinky.karma.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.karma.karmaStrings.module
   - typingsSlinky.karma.karmaStrings.dom
 */
-trait FilePatternTypes extends js.Object
+trait FilePatternTypes extends StObject
 object FilePatternTypes {
   
   @scala.inline

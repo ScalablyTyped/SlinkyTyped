@@ -10,9 +10,9 @@ switch ui component for react
 | ------------------ | :-------------: |
 | Full name          | rc-switch |
 | Keywords           | react, react-component, react-switch, switch |
-| # releases         | 4 |
-| # dependents       | 203 |
-| # downloads        | 10031770 |
+| # releases         | 12 |
+| # dependents       | 251 |
+| # downloads        | 18357516 |
 | # stars            | 2 |
 
 ## Links

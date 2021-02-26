@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.HTMLVideoElement
 import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.pixiJs.PIXI.resources.Resource
 import typingsSlinky.pixiJs.anon.AlphaMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,29 +42,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class BaseTexture ()
   extends typingsSlinky.pixiJs.PIXI.BaseTexture {
   def this(resource: String) = this()
-  def this(resource: Resource) = this()
   def this(resource: HTMLCanvasElement) = this()
   def this(resource: HTMLImageElement) = this()
   def this(resource: HTMLVideoElement) = this()
+  def this(resource: Resource) = this()
   def this(resource: js.UndefOr[scala.Nothing], options: AlphaMode) = this()
   def this(resource: String, options: AlphaMode) = this()
-  def this(resource: Resource, options: AlphaMode) = this()
   def this(resource: HTMLCanvasElement, options: AlphaMode) = this()
   def this(resource: HTMLImageElement, options: AlphaMode) = this()
   def this(resource: HTMLVideoElement, options: AlphaMode) = this()
+  def this(resource: Resource, options: AlphaMode) = this()
 }
-/* static members */
-@JSImport("pixi.js", "BaseTexture")
-@js.native
-object BaseTexture extends js.Object {
+object BaseTexture {
   
-  /**
-    * Global number of the texture batch, used by multi-texture renderers
-    *
-    * @static
-    * @member {number}
-    */
-  var _globalBatch: Double = js.native
+  @JSImport("pixi.js", "BaseTexture")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Adds a BaseTexture to the global BaseTextureCache. This cache is shared across the whole PIXI object.
@@ -72,6 +66,9 @@ object BaseTexture extends js.Object {
     * @param {PIXI.BaseTexture} baseTexture - The BaseTexture to add to the cache.
     * @param {string} id - The id that the BaseTexture will be stored against.
     */
+  /* static member */
+  @JSImport("pixi.js", "BaseTexture.addToCache")
+  @js.native
   def addToCache(baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture, id: String): Unit = js.native
   
   /**
@@ -87,25 +84,66 @@ object BaseTexture extends js.Object {
     * @param {boolean} [strict] - Enforce strict-mode, see {@link PIXI.settings.STRICT_TEXTURE_CACHE}.
     * @returns {PIXI.BaseTexture} The new base texture.
     */
+  /* static member */
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: String): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: String, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: String, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: String, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLCanvasElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLCanvasElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLCanvasElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLCanvasElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLImageElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLImageElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLImageElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLImageElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLVideoElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLVideoElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLVideoElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: HTMLVideoElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: SVGElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: SVGElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: SVGElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.from")
+  @js.native
   def from(source: SVGElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   
   /**
@@ -119,10 +157,33 @@ object BaseTexture extends js.Object {
     * @param {object} [options] See {@link PIXI.BaseTexture}'s constructor for options.
     * @return {PIXI.BaseTexture} The resulting new BaseTexture
     */
+  /* static member */
+  @JSImport("pixi.js", "BaseTexture.fromBuffer")
+  @js.native
   def fromBuffer(buffer: js.typedarray.Float32Array, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.fromBuffer")
+  @js.native
   def fromBuffer(buffer: js.typedarray.Float32Array, width: Double, height: Double, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.fromBuffer")
+  @js.native
   def fromBuffer(buffer: js.typedarray.Uint8Array, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  @JSImport("pixi.js", "BaseTexture.fromBuffer")
+  @js.native
   def fromBuffer(buffer: js.typedarray.Uint8Array, width: Double, height: Double, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  
+  /**
+    * Global number of the texture batch, used by multi-texture renderers
+    *
+    * @static
+    * @member {number}
+    */
+  /* static member */
+  @JSImport("pixi.js", "BaseTexture._globalBatch")
+  @js.native
+  def globalBatch: Double = js.native
+  
+  @scala.inline
+  def globalBatch_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_globalBatch")(x.asInstanceOf[js.Any])
   
   /**
     * Remove a BaseTexture from the global BaseTextureCache.
@@ -131,6 +192,11 @@ object BaseTexture extends js.Object {
     * @param {string|PIXI.BaseTexture} baseTexture - id of a BaseTexture to be removed, or a BaseTexture instance itself.
     * @return {PIXI.BaseTexture|null} The BaseTexture that was removed.
     */
+  /* static member */
+  @JSImport("pixi.js", "BaseTexture.removeFromCache")
+  @js.native
   def removeFromCache(baseTexture: String): typingsSlinky.pixiJs.PIXI.BaseTexture | Null = js.native
+  @JSImport("pixi.js", "BaseTexture.removeFromCache")
+  @js.native
   def removeFromCache(baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture): typingsSlinky.pixiJs.PIXI.BaseTexture | Null = js.native
 }

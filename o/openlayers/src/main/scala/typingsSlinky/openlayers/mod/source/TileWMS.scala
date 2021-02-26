@@ -4,6 +4,7 @@ import typingsSlinky.openlayers.mod.Coordinate_
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.ProjectionLike
 import typingsSlinky.openlayers.mod.olx.source.TileWMSOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

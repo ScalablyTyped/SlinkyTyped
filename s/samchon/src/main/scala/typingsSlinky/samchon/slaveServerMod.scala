@@ -2,26 +2,19 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.iserverMod.IServer
 import typingsSlinky.samchon.slaveSystemMod.SlaveSystem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/slave/SlaveServer", JSImport.Namespace)
-@js.native
-object slaveServerMod extends js.Object {
+object slaveServerMod {
   
-  @js.native
-  trait ISlaveServer
-    extends SlaveSystem
-       with IServer
-  
+  @JSImport("samchon/templates/slave/SlaveServer", "SlaveServer")
   @js.native
   /**
     * Default Constructor.
     */
-  abstract class SlaveServer ()
-    extends SlaveSystem
-       with IServer {
+  abstract class SlaveServer () extends ISlaveServer {
     
     /**
       * @inheritdoc
@@ -33,4 +26,9 @@ object slaveServerMod extends js.Object {
       */
     var server_base_ : js.Any = js.native
   }
+  
+  @js.native
+  trait ISlaveServer
+    extends SlaveSystem
+       with IServer
 }

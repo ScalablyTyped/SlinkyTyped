@@ -1,13 +1,14 @@
 package typingsSlinky.openseadragon.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openseadragon", "Overlay")
 @js.native
-class Overlay protected () extends js.Object {
+class Overlay protected () extends StObject {
   def this(options: OverlayOptions) = this()
   
   def adjust(position: Point, size: Point): Unit = js.native

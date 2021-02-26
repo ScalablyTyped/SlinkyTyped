@@ -1,12 +1,12 @@
 package typingsSlinky.codemirror.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait StringStream extends js.Object {
+trait StringStream extends StObject {
   
   /**
     * Backs up the stream n characters. Backing it up further than the start of the current token will cause things to
@@ -122,6 +122,3 @@ trait StringStream extends js.Object {
     */
   var tabSize: Double = js.native
 }
-@JSImport("codemirror", "StringStream")
-@js.native
-object StringStream extends TopLevel[StringStreamConstructor]

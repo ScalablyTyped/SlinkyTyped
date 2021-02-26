@@ -10,9 +10,9 @@ Typings are for version 0.1
 | ------------------ | :-------------: |
 | Full name          | react-native-referrer |
 | Keywords           | react-native, referrer, play store |
-| # releases         | 5 |
+| # releases         | 0 |
 | # dependents       | 0 |
-| # downloads        | 29616 |
+| # downloads        | 13380 |
 | # stars            | 0 |
 
 ## Links

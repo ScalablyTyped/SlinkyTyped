@@ -4,12 +4,13 @@ import typingsSlinky.mfiles.MFiles.MFFileFormat
 import typingsSlinky.mfiles.MFiles.MFFileOpenMethod
 import typingsSlinky.mfiles.MFiles.MFLatestSpecificBehavior
 import typingsSlinky.mfiles.MFiles.MFOCRZoneRecognitionMode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultObjectFileOperationsAsync extends js.Object {
+trait IVaultObjectFileOperationsAsync extends StObject {
   
   def AddEmptyFile(ObjVer: IObjVer, Title: String, Extension: String): Unit = js.native
   def AddEmptyFile(

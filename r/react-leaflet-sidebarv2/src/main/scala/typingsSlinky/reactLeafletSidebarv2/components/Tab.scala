@@ -7,15 +7,22 @@ import typingsSlinky.reactLeafletSidebarv2.mod.Anchor
 import typingsSlinky.reactLeafletSidebarv2.mod.Icon
 import typingsSlinky.reactLeafletSidebarv2.mod.Position
 import typingsSlinky.reactLeafletSidebarv2.mod.TabProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tab {
   
+  @scala.inline
+  def apply(header: String, icon: Icon, id: String): Builder = {
+    val __props = js.Dynamic.literal(header = header.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabProps]))
+  }
+  
   @JSImport("react-leaflet-sidebarv2", "Tab")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,10 +36,10 @@ object Tab {
     def anchor(value: Anchor): this.type = set("anchor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIcon(value: Icon): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIcon(value: Icon): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -45,10 +52,4 @@ object Tab {
   }
   
   def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(header: String, icon: Icon, id: String): Builder = {
-    val __props = js.Dynamic.literal(header = header.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TabProps]))
-  }
 }

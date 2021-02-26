@@ -16,15 +16,22 @@ import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.PrivateSiderMenuPr
 import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.SiderMenuProps
 import typingsSlinky.antDesignProLayout.typingsMod.WithFalse
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SiderMenu {
   
+  @scala.inline
+  def apply(matchMenuKeys: js.Array[String]): Builder = {
+    val __props = js.Dynamic.literal(matchMenuKeys = matchMenuKeys.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SiderMenuProps with PrivateSiderMenuProps]))
+  }
+  
   @JSImport("@ant-design/pro-layout/lib/SiderMenu", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +45,10 @@ object SiderMenu {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def collapsedButtonRenderFunction1(value: /* collapsed */ js.UndefOr[Boolean] => ReactElement): this.type = set("collapsedButtonRender", js.Any.fromFunction1(value))
+    def collapsedButtonRender(value: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], ReactElement]]): this.type = set("collapsedButtonRender", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def collapsedButtonRender(value: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], ReactElement]]): this.type = set("collapsedButtonRender", value.asInstanceOf[js.Any])
+    def collapsedButtonRenderFunction1(value: /* collapsed */ js.UndefOr[Boolean] => ReactElement): this.type = set("collapsedButtonRender", js.Any.fromFunction1(value))
     
     @scala.inline
     def getContainer(value: `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
@@ -50,39 +57,34 @@ object SiderMenu {
     def hide(value: Boolean): this.type = set("hide", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def linksVarargs(value: ReactElement*): this.type = set("links", js.Array(value :_*))
-    
-    @scala.inline
     def links(value: js.Array[ReactElement]): this.type = set("links", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def logoReactElement(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
+    def linksVarargs(value: ReactElement*): this.type = set("links", js.Array(value :_*))
     
     @scala.inline
     def logo(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuContentRenderFunction2(value: (SiderMenuProps, /* defaultDom */ ReactElement) => ReactElement): this.type = set("menuContentRender", js.Any.fromFunction2(value))
+    def logoReactElement(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
     
     @scala.inline
     def menuContentRender(value: WithFalse[js.Function2[SiderMenuProps, /* defaultDom */ ReactElement, ReactElement]]): this.type = set("menuContentRender", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuExtraRenderFunction1(value: SiderMenuProps => ReactElement): this.type = set("menuExtraRender", js.Any.fromFunction1(value))
+    def menuContentRenderFunction2(value: (SiderMenuProps, /* defaultDom */ ReactElement) => ReactElement): this.type = set("menuContentRender", js.Any.fromFunction2(value))
     
     @scala.inline
     def menuExtraRender(value: WithFalse[js.Function1[SiderMenuProps, ReactElement]]): this.type = set("menuExtraRender", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuFooterRenderFunction1(value: /* props */ js.UndefOr[SiderMenuProps] => ReactElement): this.type = set("menuFooterRender", js.Any.fromFunction1(value))
+    def menuExtraRenderFunction1(value: SiderMenuProps => ReactElement): this.type = set("menuExtraRender", js.Any.fromFunction1(value))
     
     @scala.inline
     def menuFooterRender(value: WithFalse[js.Function1[/* props */ js.UndefOr[SiderMenuProps], ReactElement]]): this.type = set("menuFooterRender", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuHeaderRenderFunction3(
-      value: (/* logo */ ReactElement, /* title */ ReactElement, /* props */ js.UndefOr[SiderMenuProps]) => ReactElement
-    ): this.type = set("menuHeaderRender", js.Any.fromFunction3(value))
+    def menuFooterRenderFunction1(value: /* props */ js.UndefOr[SiderMenuProps] => ReactElement): this.type = set("menuFooterRender", js.Any.fromFunction1(value))
     
     @scala.inline
     def menuHeaderRender(
@@ -95,6 +97,11 @@ object SiderMenu {
           ]
         ]
     ): this.type = set("menuHeaderRender", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def menuHeaderRenderFunction3(
+      value: (/* logo */ ReactElement, /* title */ ReactElement, /* props */ js.UndefOr[SiderMenuProps]) => ReactElement
+    ): this.type = set("menuHeaderRender", js.Any.fromFunction3(value))
     
     @scala.inline
     def onMenuHeaderClick(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onMenuHeaderClick", js.Any.fromFunction1(value))
@@ -110,10 +117,4 @@ object SiderMenu {
   }
   
   def withProps(p: SiderMenuProps with PrivateSiderMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(matchMenuKeys: js.Array[String]): Builder = {
-    val __props = js.Dynamic.literal(matchMenuKeys = matchMenuKeys.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SiderMenuProps with PrivateSiderMenuProps]))
-  }
 }

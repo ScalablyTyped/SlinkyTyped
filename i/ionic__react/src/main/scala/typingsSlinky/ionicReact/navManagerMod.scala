@@ -8,18 +8,18 @@ import typingsSlinky.ionicReact.navContextMod.NavContextState
 import typingsSlinky.ionicReact.routeActionMod.RouteAction
 import typingsSlinky.ionicReact.routeInfoMod.RouteInfo
 import typingsSlinky.ionicReact.routerDirectionMod.RouterDirection
-import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.PureComponent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/react/dist/types/routing/NavManager", JSImport.Namespace)
-@js.native
-object navManagerMod extends js.Object {
+object navManagerMod {
   
+  @JSImport("@ionic/react/dist/types/routing/NavManager", "NavManager")
   @js.native
   class NavManager protected ()
-    extends Component[NavManagerProps, NavContextState, js.Any] {
+    extends PureComponent[NavManagerProps, NavContextState, js.Any] {
     def this(props: NavManagerProps) = this()
     
     def getIonRedirect(): js.Any = js.native
@@ -249,7 +249,7 @@ object navManagerMod extends js.Object {
   }
   
   @js.native
-  trait NavManagerProps extends js.Object {
+  trait NavManagerProps extends StObject {
     
     var ionRedirect: js.Any = js.native
     

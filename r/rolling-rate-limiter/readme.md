@@ -4,15 +4,15 @@
 Typings are for version 0.1
 
 ## Library description:
-Rate limiter that supports a rolling window, either in-memory or backed by redis
+Rate limiter that supports a rolling window, either in-memory or backed by Redis
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | rolling-rate-limiter |
 | Keywords           | rate, limiter, ratelimiter, redis, rolling, window |
-| # releases         | 2 |
-| # dependents       | 9 |
-| # downloads        | 145529 |
+| # releases         | 9 |
+| # dependents       | 11 |
+| # downloads        | 226100 |
 | # stars            | 3 |
 
 ## Links

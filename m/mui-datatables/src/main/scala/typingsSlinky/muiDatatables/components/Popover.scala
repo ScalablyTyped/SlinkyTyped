@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTablePopover
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object Popover {
   
   @JSImport("mui-datatables", "Popover")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -23,10 +24,10 @@ object Popover {
     def action(value: /* args */ js.Any => _): this.type = set("action", js.Any.fromFunction1(value))
     
     @scala.inline
-    def anchorElReactElement(value: ReactElement): this.type = set("anchorEl", value.asInstanceOf[js.Any])
+    def anchorEl(value: ReactElement): this.type = set("anchorEl", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def anchorEl(value: ReactElement): this.type = set("anchorEl", value.asInstanceOf[js.Any])
+    def anchorElReactElement(value: ReactElement): this.type = set("anchorEl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def anchorOrigin(value: js.Any): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
@@ -50,7 +51,7 @@ object Popover {
     def transformOrigin(value: js.Any): this.type = set("transformOrigin", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MUIDataTablePopover): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Popover.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MUIDataTablePopover): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -5,13 +5,14 @@ import typingsSlinky.fundamentalReact.fundamentalReactStrings.ListDotSelection
 import typingsSlinky.fundamentalReact.listMod.ListSelectionProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined react.react.FunctionComponent<fundamental-react.fundamental-react/lib/List/List.ListSelectionProps> & {  displayName :'List.Selection'} */
 @js.native
-trait FunctionComponentListSele extends js.Object {
+trait FunctionComponentListSele extends StObject {
   
   def apply(props: PropsWithChildren[ListSelectionProps]): ReactElement | Null = js.native
   def apply(props: PropsWithChildren[ListSelectionProps], context: js.Any): ReactElement | Null = js.native

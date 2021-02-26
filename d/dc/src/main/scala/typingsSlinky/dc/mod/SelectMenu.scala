@@ -1,6 +1,7 @@
 package typingsSlinky.dc.mod
 
 import typingsSlinky.dc.anon.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

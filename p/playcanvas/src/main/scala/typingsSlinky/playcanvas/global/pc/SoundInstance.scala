@@ -1,6 +1,7 @@
 package typingsSlinky.playcanvas.global.pc
 
 import typingsSlinky.playcanvas.anon.Duration
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

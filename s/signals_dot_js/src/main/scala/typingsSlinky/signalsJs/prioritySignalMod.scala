@@ -2,18 +2,18 @@ package typingsSlinky.signalsJs
 
 import typingsSlinky.signalsJs.islotMod.ISlot
 import typingsSlinky.signalsJs.signalMod.Signal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("signals.js/lib/org/osflash/signals/PrioritySignal", JSImport.Namespace)
-@js.native
-object prioritySignalMod extends js.Object {
+object prioritySignalMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.signalsJs.ioncesignalMod.IOnceSignal because Already inherited
   - typingsSlinky.signalsJs.isignalMod.ISignal because Already inherited
-  - typingsSlinky.signalsJs.iprioritysignalMod.IPrioritySignal because var conflicts: numListeners, valueClasses. Inlined addWithPriority, addOnceWithPriority */ @js.native
+  - typingsSlinky.signalsJs.iprioritysignalMod.IPrioritySignal because var conflicts: numListeners, valueClasses. Inlined addWithPriority, addOnceWithPriority */ @JSImport("signals.js/lib/org/osflash/signals/PrioritySignal", "PrioritySignal")
+  @js.native
   class PrioritySignal protected () extends Signal {
     def this(valueClasses: js.Any*) = this()
     

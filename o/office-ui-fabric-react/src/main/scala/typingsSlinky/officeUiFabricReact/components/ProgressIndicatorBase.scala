@@ -9,6 +9,7 @@ import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndi
 import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndicatorStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object ProgressIndicatorBase {
   
   @JSImport("office-ui-fabric-react", "ProgressIndicatorBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,16 +35,16 @@ object ProgressIndicatorBase {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def description(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onRenderProgress(
@@ -59,10 +60,10 @@ object ProgressIndicatorBase {
     def progressHidden(value: Boolean): this.type = set("progressHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IProgressIndicatorStyleProps => DeepPartial[IProgressIndicatorStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IProgressIndicatorStyleProps, IProgressIndicatorStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IProgressIndicatorStyleProps, IProgressIndicatorStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IProgressIndicatorStyleProps => DeepPartial[IProgressIndicatorStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -71,7 +72,7 @@ object ProgressIndicatorBase {
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IProgressIndicatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ProgressIndicatorBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IProgressIndicatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

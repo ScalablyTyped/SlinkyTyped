@@ -80,15 +80,22 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Popper {
   
+  @scala.inline
+  def apply(open: Boolean): Builder = {
+    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PopperProps]))
+  }
+  
   @JSImport("@material-ui/core", "Popper")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -102,13 +109,13 @@ object Popper {
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def anchorEl(value: HTMLElement | ReferenceObject | (js.Function1[/* element */ HTMLElement, HTMLElement])): this.type = set("anchorEl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def anchorElFunction1(value: /* element */ HTMLElement => HTMLElement): this.type = set("anchorEl", js.Any.fromFunction1(value))
     
     @scala.inline
     def anchorElHTMLElement(value: HTMLElement): this.type = set("anchorEl", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def anchorEl(value: HTMLElement | ReferenceObject | (js.Function1[/* element */ HTMLElement, HTMLElement])): this.type = set("anchorEl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def anchorElNull: this.type = set("anchorEl", null)
@@ -269,13 +276,13 @@ object Popper {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    def children(value: ReactElement | (js.Function1[/* props */ Placement, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenFunction1(value: /* props */ Placement => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def children(value: ReactElement | (js.Function1[/* props */ Placement, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -284,16 +291,16 @@ object Popper {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElement(value: Element): this.type = set("container", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def containerFunction0(value: () => ReactInstance): this.type = set("container", js.Any.fromFunction0(value))
+    def container(value: ReactInstance | js.Function0[ReactInstance]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerComponent(value: ReactComponentClass[js.Any]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def container(value: ReactInstance | js.Function0[ReactInstance]): this.type = set("container", value.asInstanceOf[js.Any])
+    def containerElement(value: Element): this.type = set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def containerFunction0(value: () => ReactInstance): this.type = set("container", js.Any.fromFunction0(value))
     
     @scala.inline
     def containerNull: this.type = set("container", null)
@@ -314,10 +321,10 @@ object Popper {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -672,10 +679,4 @@ object Popper {
   }
   
   def withProps(p: PopperProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(open: Boolean): Builder = {
-    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PopperProps]))
-  }
 }

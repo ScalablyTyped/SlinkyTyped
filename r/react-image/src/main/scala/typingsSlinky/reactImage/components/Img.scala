@@ -82,15 +82,22 @@ import typingsSlinky.reactImage.reactImageStrings.tree
 import typingsSlinky.reactImage.reactImageStrings.url
 import typingsSlinky.reactImage.reactImageStrings.vertical
 import typingsSlinky.reactImage.reactImageStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Img {
   
+  @scala.inline
+  def apply(src: String | js.Array[String]): Builder = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ImgProps]))
+  }
+  
   @JSImport("react-image", "Img")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -295,10 +302,10 @@ object Img {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -349,10 +356,10 @@ object Img {
     def loader(value: ReactElement): this.type = set("loader", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loaderNull: this.type = set("loader", null)
+    def loaderContainer(value: /* children */ ReactElement => ReactElement): this.type = set("loaderContainer", js.Any.fromFunction1(value))
     
     @scala.inline
-    def loaderContainer(value: /* children */ ReactElement => ReactElement): this.type = set("loaderContainer", js.Any.fromFunction1(value))
+    def loaderNull: this.type = set("loader", null)
     
     @scala.inline
     def loading(value: eager | `lazy`): this.type = set("loading", value.asInstanceOf[js.Any])
@@ -658,10 +665,10 @@ object Img {
     def unloader(value: ReactElement): this.type = set("unloader", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def unloaderNull: this.type = set("unloader", null)
+    def unloaderContainer(value: /* children */ ReactElement => ReactElement): this.type = set("unloaderContainer", js.Any.fromFunction1(value))
     
     @scala.inline
-    def unloaderContainer(value: /* children */ ReactElement => ReactElement): this.type = set("unloaderContainer", js.Any.fromFunction1(value))
+    def unloaderNull: this.type = set("unloader", null)
     
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
@@ -680,10 +687,4 @@ object Img {
   }
   
   def withProps(p: ImgProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(src: String | js.Array[String]): Builder = {
-    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ImgProps]))
-  }
 }

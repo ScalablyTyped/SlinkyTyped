@@ -2,6 +2,7 @@ package typingsSlinky.nodeRedEditorClient.mod
 
 import typingsSlinky.nodeRedEditorClient.anon.ApiRootUrl
 import typingsSlinky.nodeRedRuntime.mod.LocalSettings
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

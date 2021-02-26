@@ -10,14 +10,14 @@ import typingsSlinky.typeorm.typeormStrings.migration
 import typingsSlinky.typeorm.typeormStrings.query
 import typingsSlinky.typeorm.typeormStrings.schema
 import typingsSlinky.typeorm.typeormStrings.warn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/logger/FileLogger", JSImport.Namespace)
-@js.native
-object fileLoggerMod extends js.Object {
+object fileLoggerMod {
   
+  @JSImport("typeorm/browser/logger/FileLogger", "FileLogger")
   @js.native
   class FileLogger () extends Logger {
     def this(options: js.Array[error | log | info | warn | query | schema | migration]) = this()

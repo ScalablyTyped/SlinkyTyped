@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisRestApi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSMSX
   - typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSMSTriangle
 */
-trait SimpleMarkerSymbolStyle extends js.Object
+trait SimpleMarkerSymbolStyle extends StObject
 object SimpleMarkerSymbolStyle {
   
   @scala.inline

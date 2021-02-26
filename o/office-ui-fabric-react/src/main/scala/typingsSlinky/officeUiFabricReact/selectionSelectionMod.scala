@@ -2,14 +2,14 @@ package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptions
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptionsWithRequiredGetKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/utilities/selection/Selection", JSImport.Namespace)
-@js.native
-object selectionSelectionMod extends js.Object {
+object selectionSelectionMod {
   
+  @JSImport("office-ui-fabric-react/lib/utilities/selection/Selection", "Selection")
   @js.native
   class Selection[TItem] protected ()
     extends typingsSlinky.uifabricUtilities.mod.Selection[TItem] {

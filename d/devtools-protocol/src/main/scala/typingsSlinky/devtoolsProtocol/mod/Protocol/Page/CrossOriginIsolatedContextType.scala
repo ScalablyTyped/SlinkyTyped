@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Page
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.NotIsolated
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.NotIsolatedFeatureDisabled
 */
-trait CrossOriginIsolatedContextType extends js.Object
+trait CrossOriginIsolatedContextType extends StObject
 object CrossOriginIsolatedContextType {
   
   @scala.inline

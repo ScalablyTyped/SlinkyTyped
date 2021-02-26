@@ -14,15 +14,25 @@ import typingsSlinky.officeUiFabricReact.overflowSetTypesMod.IOverflowSetStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OverflowSet {
   
+  @scala.inline
+  def apply(
+    onRenderItem: IOverflowSetItemProps => js.Any,
+    onRenderOverflowButton: (/* props */ js.UndefOr[js.Array[_]], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[js.Array[_]], ReactElement | Null]]) => ReactElement | Null
+  ): Builder = {
+    val __props = js.Dynamic.literal(onRenderItem = js.Any.fromFunction1(onRenderItem), onRenderOverflowButton = js.Any.fromFunction2(onRenderOverflowButton))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IOverflowSetProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "OverflowSet")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,13 +43,13 @@ object OverflowSet {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IOverflowSet]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IOverflowSet | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IOverflowSet]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IOverflowSet]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def doNotContainWithinFocusZone(value: Boolean): this.type = set("doNotContainWithinFocusZone", value.asInstanceOf[js.Any])
@@ -51,22 +61,22 @@ object OverflowSet {
     def itemSubMenuProvider(value: /* item */ IOverflowSetItemProps => js.UndefOr[js.Array[_]]): this.type = set("itemSubMenuProvider", js.Any.fromFunction1(value))
     
     @scala.inline
-    def itemsVarargs(value: IOverflowSetItemProps*): this.type = set("items", js.Array(value :_*))
-    
-    @scala.inline
     def items(value: js.Array[IOverflowSetItemProps]): this.type = set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def keytipSequencesVarargs(value: String*): this.type = set("keytipSequences", js.Array(value :_*))
+    def itemsVarargs(value: IOverflowSetItemProps*): this.type = set("items", js.Array(value :_*))
     
     @scala.inline
     def keytipSequences(value: js.Array[String]): this.type = set("keytipSequences", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overflowItemsVarargs(value: IOverflowSetItemProps*): this.type = set("overflowItems", js.Array(value :_*))
+    def keytipSequencesVarargs(value: String*): this.type = set("keytipSequences", js.Array(value :_*))
     
     @scala.inline
     def overflowItems(value: js.Array[IOverflowSetItemProps]): this.type = set("overflowItems", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def overflowItemsVarargs(value: IOverflowSetItemProps*): this.type = set("overflowItems", js.Array(value :_*))
     
     @scala.inline
     def overflowSide(value: start | end): this.type = set("overflowSide", value.asInstanceOf[js.Any])
@@ -75,23 +85,14 @@ object OverflowSet {
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IOverflowSetProps => DeepPartial[IOverflowSetStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IOverflowSetProps, IOverflowSetStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IOverflowSetProps, IOverflowSetStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IOverflowSetProps => DeepPartial[IOverflowSetStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IOverflowSetProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    onRenderItem: IOverflowSetItemProps => js.Any,
-    onRenderOverflowButton: (/* props */ js.UndefOr[js.Array[_]], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[js.Array[_]], ReactElement | Null]]) => ReactElement | Null
-  ): Builder = {
-    val __props = js.Dynamic.literal(onRenderItem = js.Any.fromFunction1(onRenderItem), onRenderOverflowButton = js.Any.fromFunction2(onRenderOverflowButton))
-    new Builder(js.Array(this.component, __props.asInstanceOf[IOverflowSetProps]))
-  }
 }

@@ -135,15 +135,22 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CheckBoxGroup {
   
-  @JSImport("grommet/es6", "CheckBoxGroup")
+  @scala.inline
+  def apply(options: js.Array[CheckBoxType]): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CheckBoxGroupProps with BoxProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])]))
+  }
+  
+  @JSImport("grommet", "CheckBoxGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -169,16 +176,16 @@ object CheckBoxGroup {
     def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def animationVarargs(
-      value: (fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay)*
-    ): this.type = set("animation", js.Array(value :_*))
-    
-    @scala.inline
     def animation(
       value: fadeIn | fadeOut | jiggle | pulse | rotateLeft | rotateRight | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay | (js.Array[
           fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay
         ])
     ): this.type = set("animation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def animationVarargs(
+      value: (fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay)*
+    ): this.type = set("animation", js.Array(value :_*))
     
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
@@ -327,13 +334,13 @@ object CheckBoxGroup {
     def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def asComponentClass(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
+    def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
     
     @scala.inline
     def autoCapitalize(value: String): this.type = set("autoCapitalize", value.asInstanceOf[js.Any])
@@ -351,10 +358,10 @@ object CheckBoxGroup {
     def basis(value: BasisType): this.type = set("basis", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderVarargs(value: Error*): this.type = set("border", js.Array(value :_*))
+    def border(value: BorderType): this.type = set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def border(value: BorderType): this.type = set("border", value.asInstanceOf[js.Any])
+    def borderVarargs(value: Error*): this.type = set("border", js.Array(value :_*))
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -378,10 +385,10 @@ object CheckBoxGroup {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -756,13 +763,13 @@ object CheckBoxGroup {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tagFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: PolymorphicType): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tagComponentClass(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tag(value: PolymorphicType): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tagFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -777,13 +784,13 @@ object CheckBoxGroup {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: (Double | String)*): this.type = set("value", js.Array(value :_*))
-    
-    @scala.inline
     def value(value: js.Array[Double | String]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def valueKey(value: String): this.type = set("valueKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def valueVarargs(value: (Double | String)*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -798,10 +805,4 @@ object CheckBoxGroup {
   def withProps(
     p: CheckBoxGroupProps with BoxProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(options: js.Array[CheckBoxType]): Builder = {
-    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CheckBoxGroupProps with BoxProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])]))
-  }
 }

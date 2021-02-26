@@ -1,5 +1,6 @@
 package typingsSlinky.cordovaPluginContacts
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,7 +35,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.title
   - typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.urls
 */
-trait ContactFieldType extends js.Object
+trait ContactFieldType extends StObject
 object ContactFieldType {
   
   @scala.inline

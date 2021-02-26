@@ -2,6 +2,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.configuration.backend
 
 import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

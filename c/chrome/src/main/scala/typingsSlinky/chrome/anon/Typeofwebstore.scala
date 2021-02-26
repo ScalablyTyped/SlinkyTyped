@@ -2,12 +2,13 @@ package typingsSlinky.chrome.anon
 
 import typingsSlinky.chrome.chrome.webstore.DownloadProgressEvent
 import typingsSlinky.chrome.chrome.webstore.InstallationStageEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofwebstore extends js.Object {
+trait Typeofwebstore extends StObject {
   
   def install(): Unit = js.native
   def install(failureCallback: js.Function2[/* error */ String, /* errorCode */ js.UndefOr[String], Unit]): Unit = js.native

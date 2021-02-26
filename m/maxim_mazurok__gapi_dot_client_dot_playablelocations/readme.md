@@ -1,7 +1,7 @@
 
 # Scala.js typings for maxim_mazurok__gapi_dot_client_dot_playablelocations
 
-Typings are for version 3.0.20201119
+Typings are for version 3.0.20201121
 
 ## Library description:
 TypeScript typings for Playable Locations API v3
@@ -10,9 +10,9 @@ TypeScript typings for Playable Locations API v3
 | ------------------ | :-------------: |
 | Full name          | @maxim_mazurok/gapi.client.playablelocations |
 | Keywords           | - |
-| # releases         | 4 |
+| # releases         | 46 |
 | # dependents       | 1 |
-| # downloads        | 115 |
+| # downloads        | 3169 |
 | # stars            | 0 |
 
 ## Links

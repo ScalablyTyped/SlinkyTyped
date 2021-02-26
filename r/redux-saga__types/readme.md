@@ -10,9 +10,9 @@ Shared types used by `redux-saga` packages.
 | ------------------ | :-------------: |
 | Full name          | @redux-saga/types |
 | Keywords           | - |
-| # releases         | 6 |
+| # releases         | 3 |
 | # dependents       | 7 |
-| # downloads        | 8977071 |
+| # downloads        | 25046435 |
 | # stars            | 0 |
 
 ## Links

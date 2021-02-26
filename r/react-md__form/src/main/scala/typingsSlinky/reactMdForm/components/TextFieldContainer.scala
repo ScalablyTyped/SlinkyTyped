@@ -76,6 +76,7 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactMdForm.formThemeProviderMod.FormTheme
 import typingsSlinky.reactMdForm.formThemeProviderMod.FormUnderlineDirection
 import typingsSlinky.reactMdForm.textFieldContainerMod.TextFieldContainerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -84,7 +85,7 @@ object TextFieldContainer {
   
   @JSImport("@react-md/form", "TextFieldContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -277,10 +278,10 @@ object TextFieldContainer {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dense(value: Boolean): this.type = set("dense", value.asInstanceOf[js.Any])
@@ -343,10 +344,10 @@ object TextFieldContainer {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftChildrenReactElement(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
+    def leftChildren(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftChildren(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
+    def leftChildrenReactElement(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -604,10 +605,10 @@ object TextFieldContainer {
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightChildrenReactElement(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
+    def rightChildren(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightChildren(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
+    def rightChildrenReactElement(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
@@ -655,7 +656,7 @@ object TextFieldContainer {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TextFieldContainerProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TextFieldContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TextFieldContainerProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

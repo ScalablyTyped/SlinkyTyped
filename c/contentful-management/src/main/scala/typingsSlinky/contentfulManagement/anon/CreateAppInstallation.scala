@@ -21,12 +21,13 @@ import typingsSlinky.contentfulManagement.tagMod.Tag
 import typingsSlinky.contentfulManagement.tagMod.TagProps
 import typingsSlinky.contentfulManagement.uiExtensionMod.UIExtension
 import typingsSlinky.contentfulManagement.uiExtensionMod.UIExtensionProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CreateAppInstallation extends js.Object {
+trait CreateAppInstallation extends StObject {
   
   /**
     * Gets an App Installation

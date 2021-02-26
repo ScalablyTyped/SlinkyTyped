@@ -1,12 +1,13 @@
 package typingsSlinky.kdbxweb.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("kdbxweb", "KdbxUuid")
 @js.native
-class KdbxUuid protected () extends js.Object {
+class KdbxUuid protected () extends StObject {
   def this(ab: String) = this()
   def this(ab: js.typedarray.ArrayBuffer) = this()
   
@@ -19,9 +20,9 @@ class KdbxUuid protected () extends js.Object {
   def toBytes(): js.UndefOr[js.typedarray.Uint8Array] = js.native
 }
 /* static members */
-@JSImport("kdbxweb", "KdbxUuid")
-@js.native
-object KdbxUuid extends js.Object {
+object KdbxUuid {
   
+  @JSImport("kdbxweb", "KdbxUuid.random")
+  @js.native
   def random(): KdbxUuid = js.native
 }

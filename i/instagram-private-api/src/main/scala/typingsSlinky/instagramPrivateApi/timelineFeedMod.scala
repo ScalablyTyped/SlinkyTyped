@@ -1,20 +1,22 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.timelineFeedResponseMod.TimelineFeedResponse
 import typingsSlinky.instagramPrivateApi.timelineFeedResponseMod.TimelineFeedResponseMediaOrAd
 import typingsSlinky.instagramPrivateApi.timelineFeedTypesMod.TimelineFeedReason
 import typingsSlinky.instagramPrivateApi.timelineFeedTypesMod.TimelineFeedsOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/timeline.feed", JSImport.Namespace)
-@js.native
-object timelineFeedMod extends js.Object {
+object timelineFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/timeline.feed", "TimelineFeed")
   @js.native
-  class TimelineFeed () extends Feed[TimelineFeedResponse, TimelineFeedResponseMediaOrAd] {
+  class TimelineFeed protected () extends Feed[TimelineFeedResponse, TimelineFeedResponseMediaOrAd] {
+    def this(client: IgApiClient) = this()
     
     var nextMaxId: js.Any = js.native
     

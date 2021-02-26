@@ -1,19 +1,21 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.commonTypesMod.IgAppModule
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.musicGenreFeedResponseMod.MusicGenreFeedResponseItemsItem
 import typingsSlinky.instagramPrivateApi.musicGenreFeedResponseMod.MusicGenreFeedResponseRootObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/music-genre.feed", JSImport.Namespace)
-@js.native
-object musicGenreFeedMod extends js.Object {
+object musicGenreFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/music-genre.feed", "MusicGenreFeed")
   @js.native
-  class MusicGenreFeed () extends Feed[MusicGenreFeedResponseRootObject, MusicGenreFeedResponseItemsItem] {
+  class MusicGenreFeed protected () extends Feed[MusicGenreFeedResponseRootObject, MusicGenreFeedResponseItemsItem] {
+    def this(client: IgApiClient) = this()
     
     var id: Double | String = js.native
     

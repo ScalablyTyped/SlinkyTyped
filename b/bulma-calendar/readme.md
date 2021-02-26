@@ -10,9 +10,9 @@ Display a calendar for date/time selection, in different colors and sizes
 | ------------------ | :-------------: |
 | Full name          | bulma-calendar |
 | Keywords           | Bulma, bulma, bulma.io, extensions, extension, calendar, datepicker, date picker |
-| # releases         | 42 |
-| # dependents       | 5 |
-| # downloads        | 114848 |
+| # releases         | 21 |
+| # dependents       | 6 |
+| # downloads        | 146267 |
 | # stars            | 1 |
 
 ## Links

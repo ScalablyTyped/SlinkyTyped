@@ -1,6 +1,7 @@
 package typingsSlinky.typescriptServices.global.TypeScript
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,12 +17,15 @@ class PropertySignatureSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSGlobal("TypeScript.PropertySignatureSyntax")
-@js.native
-object PropertySignatureSyntax extends js.Object {
+object PropertySignatureSyntax {
   
+  /* static member */
+  @JSGlobal("TypeScript.PropertySignatureSyntax.create")
+  @js.native
   def create(propertyName: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.PropertySignatureSyntax = js.native
   
+  /* static member */
+  @JSGlobal("TypeScript.PropertySignatureSyntax.create1")
+  @js.native
   def create1(propertyName: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.PropertySignatureSyntax = js.native
 }

@@ -11,8 +11,8 @@ Template tag that takes out unwanted newlines
 | Full name          | deline |
 | Keywords           | deline, tag, es6, multi-line, string |
 | # releases         | 1 |
-| # dependents       | 15 |
-| # downloads        | 355525 |
+| # dependents       | 14 |
+| # downloads        | 614287 |
 | # stars            | 2 |
 
 ## Links

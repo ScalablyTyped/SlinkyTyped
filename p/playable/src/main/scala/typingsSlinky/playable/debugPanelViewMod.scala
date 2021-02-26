@@ -3,17 +3,22 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.debugPanelTypesMod.IDebugPanelViewConfig
 import typingsSlinky.playable.debugPanelTypesMod.IDebugPanelViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/debug-panel/debug-panel.view", JSImport.Namespace)
-@js.native
-object debugPanelViewMod extends js.Object {
+object debugPanelViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/debug-panel/debug-panel.view", JSImport.Default)
+  @js.native
+  class default protected () extends DebugPanelView {
+    def this(config: IDebugPanelViewConfig) = this()
+  }
   
   @js.native
   trait DebugPanelView
-    extends typingsSlinky.playable.stylableMod.default[IDebugPanelViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[IDebugPanelViewStyles] {
     
     @JSName("_$closeButton")
     var _$closeButton: js.Any = js.native
@@ -41,10 +46,5 @@ object debugPanelViewMod extends js.Object {
     def setInfo(info: js.Any): Unit = js.native
     
     def show(): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends DebugPanelView {
-    def this(config: IDebugPanelViewConfig) = this()
   }
 }

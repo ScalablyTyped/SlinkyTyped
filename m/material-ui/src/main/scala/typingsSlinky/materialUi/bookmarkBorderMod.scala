@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/action/bookmark-border", JSImport.Namespace)
-@js.native
-object bookmarkBorderMod extends js.Object {
+object bookmarkBorderMod {
   
+  @JSImport("material-ui/svg-icons/action/bookmark-border", JSImport.Default)
+  @js.native
+  class default () extends ActionBookmarkBorder
+  
+  @JSImport("material-ui/svg-icons/action/bookmark-border", "ActionBookmarkBorder")
   @js.native
   class ActionBookmarkBorder ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

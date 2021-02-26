@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientLambdaNode.typesGetAccountSettingsInputMod.GetA
 import typingsSlinky.awsSdkClientLambdaNode.typesGetAccountSettingsOutputMod.GetAccountSettingsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-lambda-node/commands/GetAccountSettingsCommand", JSImport.Namespace)
-@js.native
-object getAccountSettingsCommandMod extends js.Object {
+object getAccountSettingsCommandMod {
   
+  @JSImport("@aws-sdk/client-lambda-node/commands/GetAccountSettingsCommand", "GetAccountSettingsCommand")
   @js.native
   class GetAccountSettingsCommand protected () extends Command[
           InputTypesUnion, 

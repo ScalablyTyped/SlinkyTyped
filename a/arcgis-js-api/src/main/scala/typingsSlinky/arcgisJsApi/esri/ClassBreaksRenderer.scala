@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`class-breaks`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`percent-of-total`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.field
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.log
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

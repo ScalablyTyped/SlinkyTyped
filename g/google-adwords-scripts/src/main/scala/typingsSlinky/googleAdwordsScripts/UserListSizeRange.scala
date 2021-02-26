@@ -1,5 +1,6 @@
 package typingsSlinky.googleAdwordsScripts
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.THIRTY_MILLION_TO_FIFTY_MILLION
   - typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.OVER_FIFTY_MILLION
 */
-trait UserListSizeRange extends js.Object
+trait UserListSizeRange extends StObject
 object UserListSizeRange {
   
   @scala.inline

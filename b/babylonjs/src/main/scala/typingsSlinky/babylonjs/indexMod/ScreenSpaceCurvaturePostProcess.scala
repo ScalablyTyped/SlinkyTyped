@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,16 +36,11 @@ class ScreenSpaceCurvaturePostProcess protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/index", "ScreenSpaceCurvaturePostProcess")
-@js.native
-object ScreenSpaceCurvaturePostProcess extends js.Object {
-  
-  /**
-    * Support test.
-    */
-  def IsSupported: Boolean = js.native
+object ScreenSpaceCurvaturePostProcess {
   
   /** @hidden */
+  @JSImport("babylonjs/index", "ScreenSpaceCurvaturePostProcess._Parse")
+  @js.native
   def _Parse(
     parsedPostProcess: js.Any,
     targetCamera: typingsSlinky.babylonjs.cameraMod.Camera,

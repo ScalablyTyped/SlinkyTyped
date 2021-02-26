@@ -1,6 +1,7 @@
 package typingsSlinky.microsoftGraph.mod
 
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.unknown_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.notRegisteredPendingEnrollment
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknown_
 */
-trait DeviceRegistrationState extends js.Object
+trait DeviceRegistrationState extends StObject
 object DeviceRegistrationState {
   
   @scala.inline

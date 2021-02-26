@@ -8,15 +8,22 @@ import typingsSlinky.reactNative.mod.ImageRequireSource
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.StyleProp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TabBarItemDotnative {
   
+  @scala.inline
+  def apply(title: String): Builder = {
+    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabBarItemProps]))
+  }
+  
   @JSImport("antd-mobile-rn/lib/tab-bar/TabBarItem.native", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,9 +32,6 @@ object TabBarItemDotnative {
     
     @scala.inline
     def badge(value: String | Double): this.type = set("badge", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def iconVarargs(value: ImageURISource*): this.type = set("icon", js.Array(value :_*))
     
     @scala.inline
     def icon(value: ImageURISource | js.Array[ImageURISource] | ImageRequireSource): this.type = set("icon", value.asInstanceOf[js.Any])
@@ -39,6 +43,9 @@ object TabBarItemDotnative {
     def iconStyleNull: this.type = set("iconStyle", null)
     
     @scala.inline
+    def iconVarargs(value: ImageURISource*): this.type = set("icon", js.Array(value :_*))
+    
+    @scala.inline
     def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -48,10 +55,10 @@ object TabBarItemDotnative {
     def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedIconVarargs(value: ImageURISource*): this.type = set("selectedIcon", js.Array(value :_*))
+    def selectedIcon(value: ImageURISource | js.Array[ImageURISource] | ImageRequireSource): this.type = set("selectedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedIcon(value: ImageURISource | js.Array[ImageURISource] | ImageRequireSource): this.type = set("selectedIcon", value.asInstanceOf[js.Any])
+    def selectedIconVarargs(value: ImageURISource*): this.type = set("selectedIcon", js.Array(value :_*))
     
     @scala.inline
     def styles(value: js.Any): this.type = set("styles", value.asInstanceOf[js.Any])
@@ -64,10 +71,4 @@ object TabBarItemDotnative {
   }
   
   def withProps(p: TabBarItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(title: String): Builder = {
-    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TabBarItemProps]))
-  }
 }

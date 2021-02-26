@@ -10,9 +10,9 @@ An implementation of the DOMException class from browsers
 | ------------------ | :-------------: |
 | Full name          | domexception |
 | Keywords           | dom, webidl, web idl, domexception, error, exception |
-| # releases         | 4 |
-| # dependents       | 46 |
-| # downloads        | 190838894 |
+| # releases         | 3 |
+| # dependents       | 101 |
+| # downloads        | 430263332 |
 | # stars            | 0 |
 
 ## Links

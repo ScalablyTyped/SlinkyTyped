@@ -10,6 +10,7 @@ import typingsSlinky.officeJs.officeJsStrings.Default
 import typingsSlinky.officeJs.officeJsStrings.FirstAndDefault
 import typingsSlinky.officeJs.officeJsStrings.FirstOddAndEven
 import typingsSlinky.officeJs.officeJsStrings.OddAndEven
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

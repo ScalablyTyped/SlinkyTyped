@@ -2,7 +2,7 @@ package typingsSlinky.rcEasyui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.rcEasyui.mod.Panel_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,11 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from js.Any because couldn't resolve ClassTree. */
 object Panel {
   
+  def apply(p: js.Any): Default[tag.type, typingsSlinky.rcEasyui.mod.Panel] = new Default[tag.type, typingsSlinky.rcEasyui.mod.Panel](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @JSImport("rc-easyui", "Panel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
-  def apply(p: js.Any): Default[tag.type, Panel_] = new Default[tag.type, Panel_](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: Panel.type): Default[tag.type, Panel_] = new Default[tag.type, Panel_](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: Panel.type): Default[tag.type, typingsSlinky.rcEasyui.mod.Panel] = new Default[tag.type, typingsSlinky.rcEasyui.mod.Panel](js.Array(this.component, js.Dictionary.empty))()
 }

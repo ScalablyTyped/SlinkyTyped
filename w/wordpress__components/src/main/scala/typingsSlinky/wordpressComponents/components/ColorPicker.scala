@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.colorPickerMod.ColorPicker.OnChangeCompleteValue
 import typingsSlinky.wordpressComponents.colorPickerMod.ColorPicker.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ColorPicker {
   
+  @scala.inline
+  def apply(onChangeComplete: OnChangeCompleteValue => Unit): Builder = {
+    val __props = js.Dynamic.literal(onChangeComplete = js.Any.fromFunction1(onChangeComplete))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@wordpress/components", "ColorPicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +37,4 @@ object ColorPicker {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onChangeComplete: OnChangeCompleteValue => Unit): Builder = {
-    val __props = js.Dynamic.literal(onChangeComplete = js.Any.fromFunction1(onChangeComplete))
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

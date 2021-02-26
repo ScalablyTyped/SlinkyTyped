@@ -19,12 +19,13 @@ import typingsSlinky.ariClient.anon.Reason
 import typingsSlinky.ariClient.anon.Skipms
 import typingsSlinky.ariClient.anon.SnoopId
 import typingsSlinky.ariClient.anon.Spy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Channels extends js.Object {
+trait Channels extends StObject {
   
   /**
     * Answer a channel.

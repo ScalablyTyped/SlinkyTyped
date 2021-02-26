@@ -11,12 +11,13 @@ import typingsSlinky.activexOffice.Office.MsoTextOrientation
 import typingsSlinky.activexOffice.Office.MsoTriState
 import typingsSlinky.activexOffice.Office.SmartArtLayout
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Shapes extends js.Object {
+trait Shapes extends StObject {
   
   def apply(Index: String): Shape = js.native
   def apply(Index: Double): Shape = js.native

@@ -1,12 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.ApplicationModel.Calls
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Controls the removal of an app from the lock screen. */
 @js.native
-trait LockScreenCallEndRequestedEventArgs extends js.Object {
+trait LockScreenCallEndRequestedEventArgs extends StObject {
   
   /** Gets the deadline by which the app must complete the deferral. */
   var deadline: js.Date = js.native
@@ -26,24 +27,12 @@ object LockScreenCallEndRequestedEventArgs {
   }
   
   @scala.inline
-  implicit class LockScreenCallEndRequestedEventArgsOps[Self <: LockScreenCallEndRequestedEventArgs] (val x: Self) extends AnyVal {
+  implicit class LockScreenCallEndRequestedEventArgsMutableBuilder[Self <: LockScreenCallEndRequestedEventArgs] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDeadline(value: js.Date): Self = StObject.set(x, "deadline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setDeadline(value: js.Date): Self = this.set("deadline", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setGetDeferral(value: () => LockScreenCallEndCallDeferral): Self = this.set("getDeferral", js.Any.fromFunction0(value))
+    def setGetDeferral(value: () => LockScreenCallEndCallDeferral): Self = StObject.set(x, "getDeferral", js.Any.fromFunction0(value))
   }
 }

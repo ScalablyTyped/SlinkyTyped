@@ -37,12 +37,13 @@ import typingsSlinky.contentfulManagement.userMod.User
 import typingsSlinky.contentfulManagement.userMod.UserProps
 import typingsSlinky.contentfulManagement.webhookMod.WebHooks
 import typingsSlinky.contentfulManagement.webhookMod.WebhookProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CreateApiKey extends js.Object {
+trait CreateApiKey extends StObject {
   
   /**
     * Creates a Api Key

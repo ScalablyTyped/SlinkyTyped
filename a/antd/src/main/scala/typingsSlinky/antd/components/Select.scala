@@ -1,5 +1,6 @@
 package typingsSlinky.antd.components
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
@@ -9,7 +10,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticUIEvent
-import slinky.web.html.div.tag
+import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.Ref
 import typingsSlinky.antd.antdStrings.`additions removals`
@@ -73,20 +74,71 @@ import typingsSlinky.rcSelect.interfaceMod.RenderNode
 import typingsSlinky.rcSelect.optGroupMod.OptGroupProps
 import typingsSlinky.rcSelect.optionMod.OptionProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Select {
   
+  @scala.inline
+  def apply[VT /* <: SelectValue */](): Builder[VT] = {
+    val __props = js.Dynamic.literal()
+    new Builder[VT](js.Array(this.component, __props.asInstanceOf[SelectProps[VT] with Ref]))
+  }
+  
+  object OptGroup {
+    
+    @JSImport("antd", "Select.OptGroup")
+    @js.native
+    val component: js.Object = js.native
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    }
+    
+    implicit def make(companion: OptGroup.type): typingsSlinky.antd.components.Select.OptGroup.Builder = new typingsSlinky.antd.components.Select.OptGroup.Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: OptGroupProps): typingsSlinky.antd.components.Select.OptGroup.Builder = new typingsSlinky.antd.components.Select.OptGroup.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Option {
+    
+    @scala.inline
+    def apply(value: Key): SharedBuilder_OptionProps961284514 = {
+      val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+      new SharedBuilder_OptionProps961284514(js.Array(this.component, __props.asInstanceOf[OptionProps]))
+    }
+    
+    @JSImport("antd", "Select.Option")
+    @js.native
+    val component: js.Object = js.native
+    
+    def withProps(p: OptionProps): SharedBuilder_OptionProps961284514 = new SharedBuilder_OptionProps961284514(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd", "Select")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[VT /* <: SelectValue */] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
+       with StBuildingComponent[slinky.web.html.div.tag.type, js.Object] {
     
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
@@ -256,10 +308,10 @@ object Select {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultActiveFirstOption(value: Boolean): this.type = set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
@@ -292,18 +344,18 @@ object Select {
     def dropdownStyle(value: CSSProperties): this.type = set("dropdownStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filterOptionFunction2(
-      value: (/* inputValue */ String, /* option */ js.UndefOr[
-          /* import warning: importer.ImportType#apply Failed type conversion: rc-select.rc-select/lib/interface.OptionsType[number] */ js.Any
-        ]) => Boolean
-    ): this.type = set("filterOption", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def filterOption(
       value: Boolean | (FilterFunc[
           /* import warning: importer.ImportType#apply Failed type conversion: rc-select.rc-select/lib/interface.OptionsType[number] */ js.Any
         ])
     ): this.type = set("filterOption", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def filterOptionFunction2(
+      value: (/* inputValue */ String, /* option */ js.UndefOr[
+          /* import warning: importer.ImportType#apply Failed type conversion: rc-select.rc-select/lib/interface.OptionsType[number] */ js.Any
+        ]) => Boolean
+    ): this.type = set("filterOption", js.Any.fromFunction2(value))
     
     @scala.inline
     def getPopupContainer(value: /* props */ js.Any => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
@@ -333,34 +385,34 @@ object Select {
     def maxTagCount(value: Double): this.type = set("maxTagCount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maxTagPlaceholderReactElement(value: ReactElement): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
+    def maxTagPlaceholder(value: ReactElement | (js.Function1[/* omittedValues */ js.Array[LabelValueType], ReactElement])): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maxTagPlaceholderFunction1(value: /* omittedValues */ js.Array[LabelValueType] => ReactElement): this.type = set("maxTagPlaceholder", js.Any.fromFunction1(value))
     
     @scala.inline
-    def maxTagPlaceholder(value: ReactElement | (js.Function1[/* omittedValues */ js.Array[LabelValueType], ReactElement])): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
+    def maxTagPlaceholderReactElement(value: ReactElement): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maxTagTextLength(value: Double): this.type = set("maxTagTextLength", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuItemSelectedIconReactElement(value: ReactElement): this.type = set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
+    def menuItemSelectedIcon(value: RenderNode): this.type = set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def menuItemSelectedIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("menuItemSelectedIcon", js.Any.fromFunction1(value))
     
     @scala.inline
-    def menuItemSelectedIcon(value: RenderNode): this.type = set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
+    def menuItemSelectedIconReactElement(value: ReactElement): this.type = set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def mode(value: multiple | tags): this.type = set("mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[HTMLElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
@@ -374,7 +426,7 @@ object Select {
     def onClear(value: () => Unit): this.type = set("onClear", js.Any.fromFunction0(value))
     
     @scala.inline
-    def onClick(value: SyntheticMouseEvent[org.scalajs.dom.raw.Element] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: SyntheticMouseEvent[Element] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def onDeselect(
@@ -426,46 +478,46 @@ object Select {
     def optionLabelProp(value: String): this.type = set("optionLabelProp", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def optionsVarargs(value: (OptionData | OptionGroupData)*): this.type = set("options", js.Array(value :_*))
-    
-    @scala.inline
     def options(value: OptionsType): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: (OptionData | OptionGroupData)*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def refRefObject(value: ReactRef[RefSelectProps]): this.type = set("ref", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def refFunction1(value: /* instance */ RefSelectProps | Null => Unit): this.type = set("ref", js.Any.fromFunction1(value))
     
     @scala.inline
     def ref(value: (js.Function1[/* instance */ RefSelectProps | Null, Unit]) | ReactRef[RefSelectProps]): this.type = set("ref", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def refFunction1(value: /* instance */ RefSelectProps | Null => Unit): this.type = set("ref", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def refNull: this.type = set("ref", null)
     
     @scala.inline
-    def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    def refRefObject(value: ReactRef[RefSelectProps]): this.type = set("ref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def removeIcon(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def searchValue(value: String): this.type = set("searchValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def showActionVarargs(value: (focus | click)*): this.type = set("showAction", js.Array(value :_*))
+    def showAction(value: js.Array[focus | click]): this.type = set("showAction", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def showAction(value: js.Array[focus | click]): this.type = set("showAction", value.asInstanceOf[js.Any])
+    def showActionVarargs(value: (focus | click)*): this.type = set("showAction", js.Array(value :_*))
     
     @scala.inline
     def showArrow(value: Boolean): this.type = set("showArrow", value.asInstanceOf[js.Any])
@@ -480,10 +532,10 @@ object Select {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+    def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+    def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
@@ -492,10 +544,10 @@ object Select {
     def tagRender(value: /* props */ CustomTagProps => ReactElement): this.type = set("tagRender", js.Any.fromFunction1(value))
     
     @scala.inline
-    def tokenSeparatorsVarargs(value: String*): this.type = set("tokenSeparators", js.Array(value :_*))
+    def tokenSeparators(value: js.Array[String]): this.type = set("tokenSeparators", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tokenSeparators(value: js.Array[String]): this.type = set("tokenSeparators", value.asInstanceOf[js.Any])
+    def tokenSeparatorsVarargs(value: String*): this.type = set("tokenSeparators", js.Array(value :_*))
     
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
@@ -507,57 +559,7 @@ object Select {
     def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }
   
-  def withProps[VT /* <: SelectValue */](p: SelectProps[VT] with Ref): Builder[VT] = new Builder[VT](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[VT /* <: SelectValue */](): Builder[VT] = {
-    val __props = js.Dynamic.literal()
-    new Builder[VT](js.Array(this.component, __props.asInstanceOf[SelectProps[VT] with Ref]))
-  }
-  
   implicit def make[VT /* <: SelectValue */](companion: Select.type): Builder[VT] = new Builder[VT](js.Array(this.component, js.Dictionary.empty))()
   
-  object OptGroup {
-    
-    @JSImport("antd", "Select.OptGroup")
-    @js.native
-    object component extends js.Object
-    
-    @scala.inline
-    class Builder (val args: js.Array[js.Any])
-      extends AnyVal
-         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
-      
-      @scala.inline
-      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
-    }
-    
-    def withProps(p: OptGroupProps): typingsSlinky.antd.components.Select.OptGroup.Builder = new typingsSlinky.antd.components.Select.OptGroup.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: OptGroup.type): typingsSlinky.antd.components.Select.OptGroup.Builder = new typingsSlinky.antd.components.Select.OptGroup.Builder(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Option {
-    
-    @JSImport("antd", "Select.Option")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: OptionProps): SharedBuilder_OptionProps961284514 = new SharedBuilder_OptionProps961284514(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(value: Key): SharedBuilder_OptionProps961284514 = {
-      val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-      new SharedBuilder_OptionProps961284514(js.Array(this.component, __props.asInstanceOf[OptionProps]))
-    }
-  }
+  def withProps[VT /* <: SelectValue */](p: SelectProps[VT] with Ref): Builder[VT] = new Builder[VT](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

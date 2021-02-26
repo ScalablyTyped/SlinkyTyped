@@ -2,14 +2,14 @@ package typingsSlinky.buffer
 
 import typingsSlinky.buffer.anon.Data
 import typingsSlinky.std.Uint8Array
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("buffer", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("buffer", "Buffer")
   @js.native
   class Buffer protected () extends Uint8Array {
     /**
@@ -53,80 +53,80 @@ object mod extends js.Object {
     def this(str: String) = this()
     def this(str: String, encoding: String) = this()
     
-    def compare(otherBuffer: Buffer): Double = js.native
+    def compare(otherBuffer: js.typedarray.Uint8Array): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: js.UndefOr[scala.Nothing],
       targetEnd: js.UndefOr[scala.Nothing],
       sourceStart: js.UndefOr[scala.Nothing],
       sourceEnd: Double
     ): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: js.UndefOr[scala.Nothing],
       targetEnd: js.UndefOr[scala.Nothing],
       sourceStart: Double
     ): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: js.UndefOr[scala.Nothing],
       targetEnd: js.UndefOr[scala.Nothing],
       sourceStart: Double,
       sourceEnd: Double
     ): Double = js.native
-    def compare(otherBuffer: Buffer, targetStart: js.UndefOr[scala.Nothing], targetEnd: Double): Double = js.native
+    def compare(otherBuffer: js.typedarray.Uint8Array, targetStart: js.UndefOr[scala.Nothing], targetEnd: Double): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: js.UndefOr[scala.Nothing],
       targetEnd: Double,
       sourceStart: js.UndefOr[scala.Nothing],
       sourceEnd: Double
     ): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: js.UndefOr[scala.Nothing],
       targetEnd: Double,
       sourceStart: Double
     ): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: js.UndefOr[scala.Nothing],
       targetEnd: Double,
       sourceStart: Double,
       sourceEnd: Double
     ): Double = js.native
-    def compare(otherBuffer: Buffer, targetStart: Double): Double = js.native
+    def compare(otherBuffer: js.typedarray.Uint8Array, targetStart: Double): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: Double,
       targetEnd: js.UndefOr[scala.Nothing],
       sourceStart: js.UndefOr[scala.Nothing],
       sourceEnd: Double
     ): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: Double,
       targetEnd: js.UndefOr[scala.Nothing],
       sourceStart: Double
     ): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: Double,
       targetEnd: js.UndefOr[scala.Nothing],
       sourceStart: Double,
       sourceEnd: Double
     ): Double = js.native
-    def compare(otherBuffer: Buffer, targetStart: Double, targetEnd: Double): Double = js.native
+    def compare(otherBuffer: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: Double,
       targetEnd: Double,
       sourceStart: js.UndefOr[scala.Nothing],
       sourceEnd: Double
     ): Double = js.native
-    def compare(otherBuffer: Buffer, targetStart: Double, targetEnd: Double, sourceStart: Double): Double = js.native
+    def compare(otherBuffer: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double, sourceStart: Double): Double = js.native
     def compare(
-      otherBuffer: Buffer,
+      otherBuffer: js.typedarray.Uint8Array,
       targetStart: Double,
       targetEnd: Double,
       sourceStart: Double,
@@ -352,8 +352,7 @@ object mod extends js.Object {
     def writeUIntLE(value: Double, offset: Double, byteLength: Double, noAssert: Boolean): Double = js.native
   }
   /* static members */
-  @js.native
-  object Buffer extends js.Object {
+  object Buffer {
     
     /**
       * Allocates a new buffer of {size} octets.
@@ -363,13 +362,29 @@ object mod extends js.Object {
       *    If parameter is omitted, buffer will be filled with zeros.
       * @param encoding encoding used for call to buf.fill while initializing
       */
+    @JSImport("buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double): Buffer = js.native
+    @JSImport("buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: js.UndefOr[scala.Nothing], encoding: String): Buffer = js.native
+    @JSImport("buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: String): Buffer = js.native
+    @JSImport("buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: String, encoding: String): Buffer = js.native
+    @JSImport("buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: Double): Buffer = js.native
+    @JSImport("buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: Double, encoding: String): Buffer = js.native
+    @JSImport("buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: Buffer): Buffer = js.native
+    @JSImport("buffer", "Buffer.alloc")
+    @js.native
     def alloc(size: Double, fill: Buffer, encoding: String): Buffer = js.native
     
     /**
@@ -378,6 +393,8 @@ object mod extends js.Object {
       *
       * @param size count of octets to allocate
       */
+    @JSImport("buffer", "Buffer.allocUnsafe")
+    @js.native
     def allocUnsafe(size: Double): Buffer = js.native
     
     /**
@@ -386,6 +403,8 @@ object mod extends js.Object {
       *
       * @param size count of octets to allocate
       */
+    @JSImport("buffer", "Buffer.allocUnsafeSlow")
+    @js.native
     def allocUnsafeSlow(size: Double): Buffer = js.native
     
     /**
@@ -395,13 +414,19 @@ object mod extends js.Object {
       * @param string string to test.
       * @param encoding encoding used to evaluate (defaults to 'utf8')
       */
+    @JSImport("buffer", "Buffer.byteLength")
+    @js.native
     def byteLength(string: String): Double = js.native
+    @JSImport("buffer", "Buffer.byteLength")
+    @js.native
     def byteLength(string: String, encoding: String): Double = js.native
     
     /**
       * The same as buf1.compare(buf2).
       */
-    def compare(buf1: Buffer, buf2: Buffer): Double = js.native
+    @JSImport("buffer", "Buffer.compare")
+    @js.native
+    def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = js.native
     
     /**
       * Returns a buffer which is the result of concatenating all the buffers in the list together.
@@ -414,8 +439,12 @@ object mod extends js.Object {
       * @param totalLength Total length of the buffers when concatenated.
       *   If totalLength is not provided, it is read from the buffers in the list. However, this adds an additional loop to the function, so it is faster to provide the length explicitly.
       */
-    def concat(list: js.Array[Buffer]): Buffer = js.native
-    def concat(list: js.Array[Buffer], totalLength: Double): Buffer = js.native
+    @JSImport("buffer", "Buffer.concat")
+    @js.native
+    def concat(list: js.Array[js.typedarray.Uint8Array]): Buffer = js.native
+    @JSImport("buffer", "Buffer.concat")
+    @js.native
+    def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): Buffer = js.native
     
     /**
       * When passed a reference to the .buffer property of a TypedArray instance,
@@ -427,23 +456,37 @@ object mod extends js.Object {
       * @param byteOffset
       * @param length
       */
+    @JSImport("buffer", "Buffer.from")
+    @js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer): Buffer = js.native
+    @JSImport("buffer", "Buffer.from")
+    @js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): Buffer = js.native
+    @JSImport("buffer", "Buffer.from")
+    @js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): Buffer = js.native
+    @JSImport("buffer", "Buffer.from")
+    @js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
     /**
       * Allocates a new Buffer using an {array} of octets.
       *
       * @param array
       */
+    @JSImport("buffer", "Buffer.from")
+    @js.native
     def from(array: js.Array[_]): Buffer = js.native
+    @JSImport("buffer", "Buffer.from")
+    @js.native
+    def from(buffer: js.typedarray.Uint8Array): Buffer = js.native
     /**
       * Copies the passed {buffer} data onto a new Buffer instance.
       *
       * @param buffer
       */
+    @JSImport("buffer", "Buffer.from")
+    @js.native
     def from(buffer: Buffer): Buffer = js.native
-    def from(buffer: js.typedarray.Uint8Array): Buffer = js.native
     /**
       * Creates a new Buffer containing the given JavaScript string {str}.
       * If provided, the {encoding} parameter identifies the character encoding.
@@ -451,7 +494,11 @@ object mod extends js.Object {
       *
       * @param str
       */
+    @JSImport("buffer", "Buffer.from")
+    @js.native
     def from(str: String): Buffer = js.native
+    @JSImport("buffer", "Buffer.from")
+    @js.native
     def from(str: String, encoding: String): Buffer = js.native
     
     /**
@@ -459,6 +506,8 @@ object mod extends js.Object {
       *
       * @param obj object to test.
       */
+    @JSImport("buffer", "Buffer.isBuffer")
+    @js.native
     def isBuffer(obj: js.Any): /* is buffer.buffer.Buffer */ Boolean = js.native
     
     /**
@@ -467,6 +516,8 @@ object mod extends js.Object {
       *
       * @param encoding string to test.
       */
+    @JSImport("buffer", "Buffer.isEncoding")
+    @js.native
     def isEncoding(encoding: String): Boolean = js.native
   }
 }

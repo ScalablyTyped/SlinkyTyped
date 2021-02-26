@@ -6,6 +6,7 @@ import typingsSlinky.officeJsPreview.Visio.Interfaces.CommentData
 import typingsSlinky.officeJsPreview.Visio.Interfaces.CommentLoadOptions
 import typingsSlinky.officeJsPreview.Visio.Interfaces.CommentUpdateData
 import typingsSlinky.officeJsPreview.anon.Expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,5 +1,6 @@
 package typingsSlinky.bizcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.bizcharts.bizchartsStrings.mirror
   - typingsSlinky.bizcharts.bizchartsStrings.matrix
 */
-trait FacetType extends js.Object
+trait FacetType extends StObject
 object FacetType {
   
   @scala.inline

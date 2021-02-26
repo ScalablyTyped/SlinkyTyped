@@ -6,15 +6,22 @@ import typingsSlinky.baseui.anon.ItemAny
 import typingsSlinky.baseui.sideNavigationMod.Item
 import typingsSlinky.baseui.sideNavigationMod.NavItemOverrides
 import typingsSlinky.baseui.sideNavigationMod.NavItemProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object NavItem {
   
+  @scala.inline
+  def apply(item: Item): Builder = {
+    val __props = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[NavItemProps]))
+  }
+  
   @JSImport("baseui/side-navigation", "NavItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,10 +45,4 @@ object NavItem {
   }
   
   def withProps(p: NavItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(item: Item): Builder = {
-    val __props = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[NavItemProps]))
-  }
 }

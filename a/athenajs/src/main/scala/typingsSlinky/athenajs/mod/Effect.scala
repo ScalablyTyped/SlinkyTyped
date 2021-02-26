@@ -1,13 +1,14 @@
 package typingsSlinky.athenajs.mod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("athenajs", "Effect")
 @js.native
-class Effect protected () extends js.Object {
+class Effect protected () extends StObject {
   /**
     * This the class constructor. Default options are:
     *

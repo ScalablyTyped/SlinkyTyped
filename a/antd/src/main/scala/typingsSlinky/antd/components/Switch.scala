@@ -9,6 +9,7 @@ import typingsSlinky.antd.switchMod.SwitchProps
 import typingsSlinky.antd.switchMod.SwitchSize
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object Switch {
   
   @JSImport("antd", "Switch")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,10 +32,10 @@ object Switch {
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def checkedChildrenReactElement(value: ReactElement): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
+    def checkedChildren(value: ReactElement): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def checkedChildren(value: ReactElement): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
+    def checkedChildrenReactElement(value: ReactElement): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -67,13 +68,13 @@ object Switch {
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def unCheckedChildrenReactElement(value: ReactElement): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
+    def unCheckedChildren(value: ReactElement): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def unCheckedChildren(value: ReactElement): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
+    def unCheckedChildrenReactElement(value: ReactElement): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SwitchProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Switch.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SwitchProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

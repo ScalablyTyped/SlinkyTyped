@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientMonitoring.anon.AncestorsOfGroup
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GroupsResource extends js.Object {
+trait GroupsResource extends StObject {
   
   /** Creates a new group. */
   def create(request: Oauthtoken): Request[Group] = js.native

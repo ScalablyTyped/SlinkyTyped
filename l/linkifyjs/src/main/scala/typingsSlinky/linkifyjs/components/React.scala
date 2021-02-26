@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.linkifyjs.mod.Options
 import typingsSlinky.linkifyjs.reactMod.LinkifyProps
 import typingsSlinky.linkifyjs.reactMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object React {
   
   @JSImport("linkifyjs/react", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,7 +28,7 @@ object React {
     def tagName(value: String): this.type = set("tagName", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: LinkifyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: React.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: LinkifyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

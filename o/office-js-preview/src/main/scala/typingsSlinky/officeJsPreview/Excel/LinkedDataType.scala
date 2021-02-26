@@ -8,6 +8,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Manual
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.OnLoad
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Periodic
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Unknown_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

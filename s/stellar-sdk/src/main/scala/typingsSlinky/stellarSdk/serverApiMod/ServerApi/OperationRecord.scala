@@ -1,5 +1,6 @@
 package typingsSlinky.stellarSdk.serverApiMod.ServerApi
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,4 +25,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.stellarSdk.serverApiMod.ServerApi.EndSponsoringFutureReservesOperationRecord
   - typingsSlinky.stellarSdk.serverApiMod.ServerApi.RevokeSponsorshipOperationRecord
 */
-trait OperationRecord extends js.Object
+trait OperationRecord extends StObject

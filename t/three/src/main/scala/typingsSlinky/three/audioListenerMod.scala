@@ -3,14 +3,14 @@ package typingsSlinky.three
 import org.scalajs.dom.raw.AudioContext
 import org.scalajs.dom.raw.GainNode
 import typingsSlinky.three.object3DMod.Object3D
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/audio/AudioListener", JSImport.Namespace)
-@js.native
-object audioListenerMod extends js.Object {
+object audioListenerMod {
   
+  @JSImport("three/src/audio/AudioListener", "AudioListener")
   @js.native
   class AudioListener () extends Object3D {
     

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesGetBucketLocationInputMod.GetBucket
 import typingsSlinky.awsSdkClientS3Node.typesGetBucketLocationOutputMod.GetBucketLocationOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/GetBucketLocationCommand", JSImport.Namespace)
-@js.native
-object getBucketLocationCommandMod extends js.Object {
+object getBucketLocationCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/GetBucketLocationCommand", "GetBucketLocationCommand")
   @js.native
   class GetBucketLocationCommand protected () extends Command[
           InputTypesUnion, 

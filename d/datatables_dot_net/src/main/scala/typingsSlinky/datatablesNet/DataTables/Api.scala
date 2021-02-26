@@ -3,6 +3,7 @@ package typingsSlinky.datatablesNet.DataTables
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.Node
 import typingsSlinky.datatablesNet.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,8 +23,8 @@ trait Api
     */
   def apply(selector: String): Api = js.native
   def apply(selector: js.Array[Node]): Api = js.native
-  def apply(selector: JQuery): Api = js.native
   def apply(selector: Node): Api = js.native
+  def apply(selector: JQuery): Api = js.native
   
   //#region "Cell/Cells"
   /**

@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.miscIndexMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,16 +10,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class StringTools ()
   extends typingsSlinky.babylonjs.stringToolsMod.StringTools
 /* static members */
-@JSImport("babylonjs/Misc/index", "StringTools")
-@js.native
-object StringTools extends js.Object {
+object StringTools {
   
+  @JSImport("babylonjs/Misc/index", "StringTools.Decode")
+  @js.native
   def Decode(buffer: js.typedarray.Uint16Array): String = js.native
   /**
     * Decodes a buffer into a string
     * @param buffer The buffer to decode
     * @returns The decoded string
     */
+  @JSImport("babylonjs/Misc/index", "StringTools.Decode")
+  @js.native
   def Decode(buffer: js.typedarray.Uint8Array): String = js.native
   
   /**
@@ -26,7 +29,11 @@ object StringTools extends js.Object {
     * @param buffer defines the buffer to encode
     * @returns the encoded string
     */
+  @JSImport("babylonjs/Misc/index", "StringTools.EncodeArrayBufferToBase64")
+  @js.native
   def EncodeArrayBufferToBase64(buffer: js.typedarray.ArrayBuffer): String = js.native
+  @JSImport("babylonjs/Misc/index", "StringTools.EncodeArrayBufferToBase64")
+  @js.native
   def EncodeArrayBufferToBase64(buffer: js.typedarray.ArrayBufferView): String = js.native
   
   /**
@@ -35,6 +42,8 @@ object StringTools extends js.Object {
     * @param suffix Suffix to search for in the source string
     * @returns Boolean indicating whether the suffix was found (true) or not (false)
     */
+  @JSImport("babylonjs/Misc/index", "StringTools.EndsWith")
+  @js.native
   def EndsWith(str: String, suffix: String): Boolean = js.native
   
   /**
@@ -43,6 +52,8 @@ object StringTools extends js.Object {
     * @param length the expected length of the string
     * @returns the padded string
     */
+  @JSImport("babylonjs/Misc/index", "StringTools.PadNumber")
+  @js.native
   def PadNumber(num: Double, length: Double): String = js.native
   
   /**
@@ -51,5 +62,7 @@ object StringTools extends js.Object {
     * @param suffix Suffix to search for in the source string
     * @returns Boolean indicating whether the suffix was found (true) or not (false)
     */
+  @JSImport("babylonjs/Misc/index", "StringTools.StartsWith")
+  @js.native
   def StartsWith(str: String, suffix: String): Boolean = js.native
 }

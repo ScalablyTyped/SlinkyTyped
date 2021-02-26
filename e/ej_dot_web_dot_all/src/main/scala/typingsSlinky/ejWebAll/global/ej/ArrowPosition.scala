@@ -1,12 +1,13 @@
 package typingsSlinky.ejWebAll.global.ej
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ej.ArrowPosition")
 @js.native
-object ArrowPosition extends js.Object {
+object ArrowPosition extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.ArrowPosition with Double] = js.native

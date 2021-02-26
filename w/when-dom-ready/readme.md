@@ -11,8 +11,8 @@ $(document).ready() for the 21st century
 | Full name          | when-dom-ready |
 | Keywords           | check, dom, loaded, ready, promise, async, asynchronous, pure |
 | # releases         | 0 |
-| # dependents       | 12 |
-| # downloads        | 86689 |
+| # dependents       | 15 |
+| # downloads        | 385618 |
 | # stars            | 0 |
 
 ## Links

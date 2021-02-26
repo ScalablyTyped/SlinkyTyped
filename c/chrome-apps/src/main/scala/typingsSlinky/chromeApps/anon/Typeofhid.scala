@@ -5,12 +5,13 @@ import typingsSlinky.chromeApps.chrome.hid.DeviceOptions
 import typingsSlinky.chromeApps.chrome.hid.HidDeviceInfo
 import typingsSlinky.chromeApps.chrome.hid.UserSelectedDevicePickerOptions
 import typingsSlinky.chromeApps.chrome.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofhid extends js.Object {
+trait Typeofhid extends StObject {
   
   /**
     * Open a connection to an HID device for communication.

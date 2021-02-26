@@ -7,6 +7,7 @@ import typingsSlinky.tinySliderReact.mod.TinySliderInfo
 import typingsSlinky.tinySliderReact.mod.TinySliderProps
 import typingsSlinky.tinySliderReact.mod.TinySliderSettings
 import typingsSlinky.tinySliderReact.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object TinySliderReact {
   
   @JSImport("tiny-slider-react", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -50,7 +51,7 @@ object TinySliderReact {
     def startIndex(value: Double): this.type = set("startIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TinySliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TinySliderReact.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TinySliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

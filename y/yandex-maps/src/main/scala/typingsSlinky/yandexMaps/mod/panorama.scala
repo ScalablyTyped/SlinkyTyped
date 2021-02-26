@@ -3,14 +3,14 @@ package typingsSlinky.yandexMaps.mod
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.yandexMaps.anon.AutoFitToViewport
 import typingsSlinky.yandexMaps.anon.Direction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("yandex-maps", "panorama")
-@js.native
-object panorama extends js.Object {
+object panorama {
   
+  @JSImport("yandex-maps", "panorama.Manager")
   @js.native
   class Manager () extends IEventEmitter {
     
@@ -28,6 +28,7 @@ object panorama extends js.Object {
     def openPlayer(panorama: Double): js.Promise[Unit] = js.native
   }
   
+  @JSImport("yandex-maps", "panorama.Player")
   @js.native
   class Player protected () extends IEventEmitter {
     def this(element: String, panorama: IPanorama) = this()

@@ -2,6 +2,7 @@ package typingsSlinky.hashJs
 
 import typingsSlinky.hashJs.hashJsNumbers.`160`
 import typingsSlinky.hashJs.hashJsNumbers.`512`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,12 +1,13 @@
 package typingsSlinky.sawtoothSdk.protobufMod
 
 import typingsSlinky.sawtoothSdk.protobufMod.TpProcessResponse.Status
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ITpProcessResponse extends js.Object {
+trait ITpProcessResponse extends StObject {
   
   /** TpProcessResponse extendedData */
   var extendedData: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
@@ -26,45 +27,33 @@ object ITpProcessResponse {
   }
   
   @scala.inline
-  implicit class ITpProcessResponseOps[Self <: ITpProcessResponse] (val x: Self) extends AnyVal {
+  implicit class ITpProcessResponseMutableBuilder[Self <: ITpProcessResponse] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setExtendedData(value: js.typedarray.Uint8Array): Self = StObject.set(x, "extendedData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setExtendedDataNull: Self = StObject.set(x, "extendedData", null)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setExtendedDataUndefined: Self = StObject.set(x, "extendedData", js.undefined)
     
     @scala.inline
-    def setExtendedData(value: js.typedarray.Uint8Array): Self = this.set("extendedData", value.asInstanceOf[js.Any])
+    def setMessage(value: String): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteExtendedData: Self = this.set("extendedData", js.undefined)
+    def setMessageNull: Self = StObject.set(x, "message", null)
     
     @scala.inline
-    def setExtendedDataNull: Self = this.set("extendedData", null)
+    def setMessageUndefined: Self = StObject.set(x, "message", js.undefined)
     
     @scala.inline
-    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setStatus(value: Status): Self = StObject.set(x, "status", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteMessage: Self = this.set("message", js.undefined)
+    def setStatusNull: Self = StObject.set(x, "status", null)
     
     @scala.inline
-    def setMessageNull: Self = this.set("message", null)
-    
-    @scala.inline
-    def setStatus(value: Status): Self = this.set("status", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStatus: Self = this.set("status", js.undefined)
-    
-    @scala.inline
-    def setStatusNull: Self = this.set("status", null)
+    def setStatusUndefined: Self = StObject.set(x, "status", js.undefined)
   }
 }

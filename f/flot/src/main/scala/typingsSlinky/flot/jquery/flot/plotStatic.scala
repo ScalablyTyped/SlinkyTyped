@@ -2,12 +2,13 @@ package typingsSlinky.flot.jquery.flot
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait plotStatic extends js.Object {
+trait plotStatic extends StObject {
   
   def apply(placeholder: JQuery[HTMLElement], data: js.Array[_ | dataSeries]): plot = js.native
   def apply(placeholder: JQuery[HTMLElement], data: js.Array[_ | dataSeries], options: plotOptions): plot = js.native

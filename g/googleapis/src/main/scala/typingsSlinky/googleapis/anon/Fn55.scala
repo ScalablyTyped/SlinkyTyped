@@ -5,12 +5,13 @@ import typingsSlinky.googleapis.googleapisStrings.v3Dot2
 import typingsSlinky.googleapis.googleapisStrings.v3Dot3
 import typingsSlinky.googleapis.v31Mod.dfareportingV31.Dfareporting
 import typingsSlinky.googleapis.v31Mod.dfareportingV31.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Fn55 extends js.Object {
+trait Fn55 extends StObject {
   
   def apply(options: Options): Dfareporting = js.native
   def apply(options: typingsSlinky.googleapis.v32Mod.dfareportingV32.Options): typingsSlinky.googleapis.v32Mod.dfareportingV32.Dfareporting = js.native

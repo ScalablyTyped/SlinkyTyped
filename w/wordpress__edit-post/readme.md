@@ -9,14 +9,14 @@ Edit Post module for WordPress.
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @wordpress/edit-post |
-| Keywords           | wordpress, editor |
-| # releases         | 65 |
-| # dependents       | 2 |
-| # downloads        | 120360 |
+| Keywords           | wordpress, gutenberg, editor, post |
+| # releases         | 82 |
+| # dependents       | 4 |
+| # downloads        | 300394 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/WordPress/gutenberg/tree/master/packages/edit-post/README.md)
+- [Homepage](https://github.com/WordPress/gutenberg/tree/HEAD/packages/edit-post/README.md)
 - [Bugs](https://github.com/WordPress/gutenberg/issues)
 - [Repository](https://github.com/WordPress/gutenberg)
 - [Npm](https://www.npmjs.com/package/%40wordpress%2Fedit-post)

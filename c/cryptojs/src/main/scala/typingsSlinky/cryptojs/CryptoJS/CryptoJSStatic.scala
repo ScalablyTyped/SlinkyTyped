@@ -18,12 +18,13 @@ import typingsSlinky.cryptojs.CryptoJS.lib.WordArray
 import typingsSlinky.cryptojs.CryptoJS.mode.ModeStatic
 import typingsSlinky.cryptojs.CryptoJS.pad.PadStatic
 import typingsSlinky.cryptojs.CryptoJS.x64.X64Static
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CryptoJSStatic extends js.Object {
+trait CryptoJSStatic extends StObject {
   
   var AES: ICipherHelper[IBlockCipherCfg] = js.native
   

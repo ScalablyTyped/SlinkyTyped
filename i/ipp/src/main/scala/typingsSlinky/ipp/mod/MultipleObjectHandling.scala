@@ -1,5 +1,6 @@
 package typingsSlinky.ipp.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ipp.ippStrings.`best-speed`
   - typingsSlinky.ipp.ippStrings.`one-at-a-time`
 */
-trait MultipleObjectHandling extends js.Object
+trait MultipleObjectHandling extends StObject
 object MultipleObjectHandling {
   
   @scala.inline

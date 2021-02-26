@@ -1,12 +1,11 @@
 package typingsSlinky.reactNativeFirebase
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-firebase/links", JSImport.Namespace)
-@js.native
-object linksMod extends js.Object {
+object linksMod {
   
   type AnalyticsParameters = typingsSlinky.reactNativeFirebase.mod.RNFirebase.links.AnalyticsParameters
   

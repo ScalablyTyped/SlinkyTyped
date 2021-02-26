@@ -193,12 +193,13 @@ import typingsSlinky.activexExcel.anon.TargetWb
 import typingsSlinky.activexExcel.anon.WnWindow
 import typingsSlinky.activexExcel.anon.`0`
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ActiveXObject extends js.Object {
+trait ActiveXObject extends StObject {
   
   def on(
     obj: Application,

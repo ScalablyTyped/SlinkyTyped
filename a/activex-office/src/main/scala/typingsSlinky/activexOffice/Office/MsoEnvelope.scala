@@ -1,12 +1,13 @@
 package typingsSlinky.activexOffice.Office
 
 import typingsSlinky.activexOutlook.Outlook.MailItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MsoEnvelope extends js.Object {
+trait MsoEnvelope extends StObject {
   
   def CommandBars(Index: String): CommandBar = js.native
   def CommandBars(Index: Double): CommandBar = js.native

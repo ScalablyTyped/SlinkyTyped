@@ -1,27 +1,28 @@
 package typingsSlinky.googleLibphonenumber
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("google-libphonenumber", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("google-libphonenumber", "AsYouTypeFormatter")
   @js.native
   class AsYouTypeFormatter protected ()
     extends typingsSlinky.googleLibphonenumber.libphonenumber.AsYouTypeFormatter {
     def this(region: String) = this()
   }
   
+  @JSImport("google-libphonenumber", "PhoneNumber")
   @js.native
   class PhoneNumber ()
     extends typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumber
-  @js.native
-  object PhoneNumber extends js.Object {
+  object PhoneNumber {
     
+    @JSImport("google-libphonenumber", "PhoneNumber.CountryCodeSource")
     @js.native
-    object CountryCodeSource extends js.Object {
+    object CountryCodeSource extends StObject {
       
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[
@@ -38,8 +39,9 @@ object mod extends js.Object {
     }
   }
   
+  @JSImport("google-libphonenumber", "PhoneNumberFormat")
   @js.native
-  object PhoneNumberFormat extends js.Object {
+  object PhoneNumberFormat extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumberFormat with Double] = js.native
@@ -53,8 +55,9 @@ object mod extends js.Object {
     /* 3 */ val RFC3966: typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumberFormat.RFC3966 with Double = js.native
   }
   
+  @JSImport("google-libphonenumber", "PhoneNumberType")
   @js.native
-  object PhoneNumberType extends js.Object {
+  object PhoneNumberType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumberType with Double] = js.native
@@ -84,17 +87,16 @@ object mod extends js.Object {
     /* 6 */ val VOIP: typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumberType.VOIP with Double = js.native
   }
   
+  @JSImport("google-libphonenumber", "PhoneNumberUtil")
   @js.native
   class PhoneNumberUtil ()
     extends typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumberUtil
   /* static members */
-  @js.native
-  object PhoneNumberUtil extends js.Object {
+  object PhoneNumberUtil {
     
-    def getInstance(): typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumberUtil = js.native
-    
+    @JSImport("google-libphonenumber", "PhoneNumberUtil.MatchType")
     @js.native
-    object MatchType extends js.Object {
+    object MatchType extends StObject {
       
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[
@@ -112,8 +114,9 @@ object mod extends js.Object {
       /* 4 */ val SHORT_NSN_MATCH: typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumberUtil.MatchType.SHORT_NSN_MATCH with Double = js.native
     }
     
+    @JSImport("google-libphonenumber", "PhoneNumberUtil.ValidationResult")
     @js.native
-    object ValidationResult extends js.Object {
+    object ValidationResult extends StObject {
       
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[
@@ -128,8 +131,13 @@ object mod extends js.Object {
       
       /* 2 */ val TOO_SHORT: typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumberUtil.ValidationResult.TOO_SHORT with Double = js.native
     }
+    
+    @JSImport("google-libphonenumber", "PhoneNumberUtil.getInstance")
+    @js.native
+    def getInstance(): typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumberUtil = js.native
   }
   
+  @JSImport("google-libphonenumber", "StringBuffer")
   @js.native
   class StringBuffer protected ()
     extends typingsSlinky.googleLibphonenumber.libphonenumber.StringBuffer {

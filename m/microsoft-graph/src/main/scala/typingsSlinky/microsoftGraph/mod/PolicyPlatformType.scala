@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.androidWorkProfile
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.all
 */
-trait PolicyPlatformType extends js.Object
+trait PolicyPlatformType extends StObject
 object PolicyPlatformType {
   
   @scala.inline

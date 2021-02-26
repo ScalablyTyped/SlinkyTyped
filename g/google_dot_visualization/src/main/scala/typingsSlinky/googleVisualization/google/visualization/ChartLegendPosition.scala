@@ -1,5 +1,6 @@
 package typingsSlinky.googleVisualization.google.visualization
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleVisualization.googleVisualizationStrings.right
   - typingsSlinky.googleVisualization.googleVisualizationStrings.top
 */
-trait ChartLegendPosition extends js.Object
+trait ChartLegendPosition extends StObject
 object ChartLegendPosition {
   
   @scala.inline

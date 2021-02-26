@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.emotionReact.emotionReactMod.GlobalProps
 import typingsSlinky.emotionReact.emotionReactMod.Theme
 import typingsSlinky.emotionSerialize.mod.Interpolation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object Global {
   
   @JSImport("@emotion/react", "Global")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,7 +28,7 @@ object Global {
     def stylesNull: this.type = set("styles", null)
   }
   
-  def withProps(p: GlobalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Global.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GlobalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

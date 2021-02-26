@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMapGl.mod.NavigationControlProps
 import typingsSlinky.reactMapGl.mod.ViewStateChangeInfo
 import typingsSlinky.reactMapGl.mod.ViewportProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object NavigationControl {
   
   @JSImport("react-map-gl", "NavigationControl")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -57,7 +58,7 @@ object NavigationControl {
     def zoomOutLabel(value: String): this.type = set("zoomOutLabel", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: NavigationControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: NavigationControl.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: NavigationControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

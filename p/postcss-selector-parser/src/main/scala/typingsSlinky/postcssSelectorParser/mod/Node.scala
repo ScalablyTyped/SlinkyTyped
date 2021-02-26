@@ -1,5 +1,6 @@
 package typingsSlinky.postcssSelectorParser.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.postcssSelectorParser.postcssSelectorParserStrings.qualifiedAttribute
   - typingsSlinky.postcssSelectorParser.postcssSelectorParserStrings.quoted
 */
-trait Node extends js.Object
+trait Node extends StObject
 object Node {
   
   @scala.inline

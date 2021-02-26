@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.codecommitMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _ApprovalState extends js.Object
+trait _ApprovalState extends StObject

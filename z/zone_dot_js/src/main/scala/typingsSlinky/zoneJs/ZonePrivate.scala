@@ -4,6 +4,7 @@ import typingsSlinky.std.PropertyDescriptorMap
 import typingsSlinky.std.PropertyKey
 import typingsSlinky.std.ThisType
 import typingsSlinky.zoneJs.anon.ADDEVENTLISTENERSTR
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * their own monkey patch module.
   */
 @js.native
-trait ZonePrivate extends js.Object {
+trait ZonePrivate extends StObject {
   
   def ArraySlice(): js.Array[_] = js.native
   def ArraySlice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[_] = js.native

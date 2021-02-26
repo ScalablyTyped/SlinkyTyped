@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientBigquery.anon.ReadMask
 import typingsSlinky.maximMazurokGapiClientBigquery.anon.Resource
 import typingsSlinky.maximMazurokGapiClientBigquery.anon.RoutineId
 import typingsSlinky.maximMazurokGapiClientBigquery.anon.UserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RoutinesResource extends js.Object {
+trait RoutinesResource extends StObject {
   
   /** Deletes the routine specified by routineId from the dataset. */
   def delete(): Request[Unit] = js.native

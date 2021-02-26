@@ -1,5 +1,6 @@
 package typingsSlinky.breeze.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,9 +13,9 @@ class EntityKey protected ()
   def this(entityType: typingsSlinky.breeze.breeze.EntityType, keyValues: js.Array[_]) = this()
 }
 /* static members */
-@JSImport("breeze", "EntityKey")
-@js.native
-object EntityKey extends js.Object {
+object EntityKey {
   
+  @JSImport("breeze", "EntityKey.equals")
+  @js.native
   def equals(k1: typingsSlinky.breeze.breeze.EntityKey, k2: typingsSlinky.breeze.breeze.EntityKey): Boolean = js.native
 }

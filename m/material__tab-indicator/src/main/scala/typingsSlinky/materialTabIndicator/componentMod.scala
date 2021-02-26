@@ -4,16 +4,18 @@ import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialTabIndicator.foundationMod.MDCTabIndicatorFoundation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/tab-indicator/component", JSImport.Namespace)
-@js.native
-object componentMod extends js.Object {
+object componentMod {
   
+  @JSImport("@material/tab-indicator/component", "MDCTabIndicator")
   @js.native
-  class MDCTabIndicator () extends MDCComponent[MDCTabIndicatorFoundation] {
+  class MDCTabIndicator protected () extends MDCComponent[MDCTabIndicatorFoundation] {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(root: Element, foundation: MDCTabIndicatorFoundation, args: js.Any*) = this()
     
     def activate(): Unit = js.native
     def activate(previousIndicatorClientRect: ClientRect): Unit = js.native
@@ -25,9 +27,10 @@ object componentMod extends js.Object {
     def initialize(): Unit = js.native
   }
   /* static members */
-  @js.native
-  object MDCTabIndicator extends js.Object {
+  object MDCTabIndicator {
     
+    @JSImport("@material/tab-indicator/component", "MDCTabIndicator.attachTo")
+    @js.native
     def attachTo(root: Element): MDCTabIndicator = js.native
   }
   

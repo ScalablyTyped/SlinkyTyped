@@ -4,13 +4,19 @@ import typingsSlinky.jestConsole.typesMod.LogMessage
 import typingsSlinky.jestConsole.typesMod.LogType
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.std.Console
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/console/build/CustomConsole", JSImport.Namespace)
-@js.native
-object customConsoleMod extends js.Object {
+object customConsoleMod {
+  
+  @JSImport("@jest/console/build/CustomConsole", JSImport.Default)
+  @js.native
+  class default protected () extends CustomConsole {
+    def this(stdout: WritableStream, stderr: WritableStream) = this()
+    def this(stdout: WritableStream, stderr: WritableStream, formatBuffer: Formatter) = this()
+  }
   
   @js.native
   trait CustomConsole extends Console {
@@ -56,12 +62,6 @@ object customConsoleMod extends js.Object {
     def log(firstArg: js.Any, args: js.Any*): Unit = js.native
     
     def warn(firstArg: js.Any, args: js.Any*): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends CustomConsole {
-    def this(stdout: WritableStream, stderr: WritableStream) = this()
-    def this(stdout: WritableStream, stderr: WritableStream, formatBuffer: Formatter) = this()
   }
   
   type Formatter = js.Function2[/* type */ LogType, /* message */ LogMessage, String]

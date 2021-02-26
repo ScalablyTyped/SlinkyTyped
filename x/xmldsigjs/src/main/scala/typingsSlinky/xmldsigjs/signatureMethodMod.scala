@@ -1,17 +1,19 @@
 package typingsSlinky.xmldsigjs
 
-import typingsSlinky.xmlCore.mod.XmlCollection
 import typingsSlinky.xmlCore.mod.XmlObject
+import typingsSlinky.xmldsigjs.xmlObjectMod.XmlSignatureCollection
+import typingsSlinky.xmldsigjs.xmlObjectMod.XmlSignatureObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xmldsigjs/build/types/xml/signature_method", JSImport.Namespace)
-@js.native
-object signatureMethodMod extends js.Object {
+object signatureMethodMod {
   
+  @JSImport("xmldsigjs/build/types/xml/signature_method", "SignatureMethod")
   @js.native
-  class SignatureMethod () extends XmlObject {
+  class SignatureMethod () extends XmlSignatureObject {
+    def this(properties: js.Object) = this()
     
     var Algorithm: String = js.native
     
@@ -27,6 +29,9 @@ object signatureMethodMod extends js.Object {
     var HMACOutputLength: Double = js.native
   }
   
+  @JSImport("xmldsigjs/build/types/xml/signature_method", "SignatureMethodOther")
   @js.native
-  class SignatureMethodOther () extends XmlCollection[XmlObject]
+  class SignatureMethodOther () extends XmlSignatureCollection[XmlObject] {
+    def this(properties: js.Object) = this()
+  }
 }

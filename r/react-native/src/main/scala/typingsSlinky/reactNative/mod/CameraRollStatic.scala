@@ -2,14 +2,15 @@ package typingsSlinky.reactNative.mod
 
 import typingsSlinky.reactNative.reactNativeStrings.photo
 import typingsSlinky.reactNative.reactNativeStrings.video
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CameraRollStatic extends js.Object {
+trait CameraRollStatic extends StObject {
   
-   //'Album','All','Event','Faces','Library','PhotoStream','SavedPhotos'
+  //'Album','All','Event','Faces','Library','PhotoStream','SavedPhotos'
   var AssetTypeOptions: js.Array[CameraRollAssetType] = js.native
   
   var GroupTypesOptions: js.Array[CameraRollGroupType] = js.native
@@ -21,7 +22,7 @@ trait CameraRollStatic extends js.Object {
     */
   def getPhotos(params: GetPhotosParamType): js.Promise[GetPhotosReturnType] = js.native
   
-   // "All", "Videos", "Photos"
+  // "All", "Videos", "Photos"
   /**
     * Saves the image to the camera roll / gallery.
     *

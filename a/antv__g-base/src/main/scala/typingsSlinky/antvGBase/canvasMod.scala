@@ -4,18 +4,22 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.antvGBase.anon.X
-import typingsSlinky.antvGBase.containerMod.Container
 import typingsSlinky.antvGBase.typesMod.CanvasCfg
 import typingsSlinky.antvGBase.typesMod.Cursor
 import typingsSlinky.antvGBase.typesMod.Point
 import typingsSlinky.antvGBase.typesMod.Renderer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/g-base/lib/abstract/canvas", JSImport.Namespace)
-@js.native
-object canvasMod extends js.Object {
+object canvasMod {
+  
+  @JSImport("@antv/g-base/lib/abstract/canvas", JSImport.Default)
+  @js.native
+  abstract class default protected () extends Canvas {
+    def this(cfg: CanvasCfg) = this()
+  }
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.antvGBase.interfacesMod.IObservable because Already inherited
@@ -23,7 +27,8 @@ object canvasMod extends js.Object {
   - typingsSlinky.antvGBase.interfacesMod.IElement because Already inherited
   - typingsSlinky.antvGBase.interfacesMod.IContainer because Already inherited
   - typingsSlinky.antvGBase.interfacesMod.ICanvas because var conflicts: cfg, destroyed. Inlined getRenderer, getCursor, setCursor, changeSize, getPointByEvent, getClientByEvent, getPointByClient, getClientByPoint, draw */ @js.native
-  trait Canvas extends Container {
+  trait Canvas
+    extends typingsSlinky.antvGBase.containerMod.default {
     
     /**
       * 改变画布大小
@@ -146,10 +151,5 @@ object canvasMod extends js.Object {
       * @param {number} height 高度
       */
     def setDOMSize(width: Double, height: Double): Unit = js.native
-  }
-  
-  @js.native
-  abstract class default protected () extends Canvas {
-    def this(cfg: CanvasCfg) = this()
   }
 }

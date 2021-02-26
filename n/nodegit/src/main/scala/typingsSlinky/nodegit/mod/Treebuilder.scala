@@ -1,5 +1,6 @@
 package typingsSlinky.nodegit.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,10 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Treebuilder ()
   extends typingsSlinky.nodegit.treeBuilderMod.Treebuilder
 /* static members */
-@JSImport("nodegit", "Treebuilder")
-@js.native
-object Treebuilder extends js.Object {
+object Treebuilder {
   
+  @JSImport("nodegit", "Treebuilder.create")
+  @js.native
   def create(repo: typingsSlinky.nodegit.repositoryMod.Repository): js.Promise[typingsSlinky.nodegit.treeBuilderMod.Treebuilder] = js.native
+  @JSImport("nodegit", "Treebuilder.create")
+  @js.native
   def create(repo: typingsSlinky.nodegit.repositoryMod.Repository, source: typingsSlinky.nodegit.treeMod.Tree): js.Promise[typingsSlinky.nodegit.treeBuilderMod.Treebuilder] = js.native
 }

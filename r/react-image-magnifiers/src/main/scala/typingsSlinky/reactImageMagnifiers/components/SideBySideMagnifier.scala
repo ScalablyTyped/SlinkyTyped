@@ -8,15 +8,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactImageMagnifiers.mod.SideBySideMagnifierProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SideBySideMagnifier {
   
+  @scala.inline
+  def apply(imageSrc: String): Builder = {
+    val __props = js.Dynamic.literal(imageSrc = imageSrc.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SideBySideMagnifierProps]))
+  }
+  
   @JSImport("react-image-magnifiers", "SideBySideMagnifier")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -112,10 +119,4 @@ object SideBySideMagnifier {
   }
   
   def withProps(p: SideBySideMagnifierProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(imageSrc: String): Builder = {
-    val __props = js.Dynamic.literal(imageSrc = imageSrc.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SideBySideMagnifierProps]))
-  }
 }

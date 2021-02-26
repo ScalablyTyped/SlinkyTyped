@@ -3,6 +3,7 @@ package typingsSlinky.winrt.Windows.Web.Syndication
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperationWithProgress
 import typingsSlinky.winrt.Windows.Foundation.Uri
 import typingsSlinky.winrt.Windows.Security.Credentials.PasswordCredential
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

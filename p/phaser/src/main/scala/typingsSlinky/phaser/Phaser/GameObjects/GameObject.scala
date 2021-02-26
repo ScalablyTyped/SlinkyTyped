@@ -14,6 +14,7 @@ import typingsSlinky.phaser.Phaser.Types.Input.InteractiveObject
 import typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterBody
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

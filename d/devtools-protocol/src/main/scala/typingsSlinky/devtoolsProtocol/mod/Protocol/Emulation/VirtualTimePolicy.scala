@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.pause
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.pauseIfNetworkFetchesPending
 */
-trait VirtualTimePolicy extends js.Object
+trait VirtualTimePolicy extends StObject
 object VirtualTimePolicy {
   
   @scala.inline

@@ -3,14 +3,14 @@ package typingsSlinky.signalsJs
 import typingsSlinky.signalsJs.isignalMod.ISignal
 import typingsSlinky.signalsJs.islotMod.ISlot
 import typingsSlinky.signalsJs.slotMod.Slot
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("signals.js/lib/org/osflash/signals/MonoSignal", JSImport.Namespace)
-@js.native
-object monoSignalMod extends js.Object {
+object monoSignalMod {
   
+  @JSImport("signals.js/lib/org/osflash/signals/MonoSignal", "MonoSignal")
   @js.native
   class MonoSignal protected () extends ISignal {
     /**

@@ -3,6 +3,7 @@ package typingsSlinky.activexInfopath.InfoPath
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`1`
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`3`
 import typingsSlinky.activexInfopath.activexInfopathNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexInfopath.activexInfopathNumbers.`4`
   - typingsSlinky.activexInfopath.activexInfopathNumbers.`3`
 */
-trait XdConfirmButtons extends js.Object
+trait XdConfirmButtons extends StObject
 object XdConfirmButtons {
   
   @scala.inline

@@ -9,10 +9,10 @@ Redux middleware for generator coroutines.
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @wordpress/redux-routine |
-| Keywords           | wordpress, redux, middleware, coroutine |
-| # releases         | 16 |
-| # dependents       | 2 |
-| # downloads        | 190133 |
+| Keywords           | wordpress, gutenberg, redux, middleware, coroutine |
+| # releases         | 18 |
+| # dependents       | 3 |
+| # downloads        | 876504 |
 | # stars            | 0 |
 
 ## Links

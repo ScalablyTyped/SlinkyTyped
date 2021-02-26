@@ -3,12 +3,13 @@ package typingsSlinky.uiGrid.mod
 import typingsSlinky.angular.mod.IAngularEvent
 import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.angular.mod.IScope
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IGridInstanceOf[TEntity] extends js.Object {
+trait IGridInstanceOf[TEntity] extends StObject {
   
   /**
     * adds a row header column to the grid

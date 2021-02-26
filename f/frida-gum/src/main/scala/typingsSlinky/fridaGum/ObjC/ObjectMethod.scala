@@ -4,6 +4,7 @@ import typingsSlinky.fridaGum.AnyFunction
 import typingsSlinky.fridaGum.NativeFunctionOptions
 import typingsSlinky.fridaGum.NativePointer
 import typingsSlinky.fridaGum.ObjectWrapper
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

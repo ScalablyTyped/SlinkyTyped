@@ -4,6 +4,7 @@ import typingsSlinky.activexLibreoffice.LibreOffice.SeqEquiv
 import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.PropertyValues
 import typingsSlinky.activexLibreoffice.sequence
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,9 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** merges the functions of {@link XTextAppend} , {@link XTextContentAppend} and {@link XTextConvert} . */
 @js.native
 trait XTextAppendAndConvert
-  extends XText
-     with XParagraphAppend
-     with XTextPortionAppend
+  extends XTextAppend
      with XTextContentAppend
      with XTextConvert
 object XTextAppendAndConvert {

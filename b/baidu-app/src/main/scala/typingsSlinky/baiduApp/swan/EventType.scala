@@ -1,5 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.baiduApp.baiduAppStrings.animationiteration
   - typingsSlinky.baiduApp.baiduAppStrings.animationend
 */
-trait EventType extends js.Object
+trait EventType extends StObject
 object EventType {
   
   @scala.inline

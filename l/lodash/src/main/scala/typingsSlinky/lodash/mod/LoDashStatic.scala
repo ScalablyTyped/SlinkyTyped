@@ -15,6 +15,7 @@ import typingsSlinky.std.Exclude
 import typingsSlinky.std.NonNullable
 import typingsSlinky.std.Parameters
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,7 +32,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 // stubTrue
 // stubFalse
 @js.native
-trait LoDashStatic extends js.Object {
+trait LoDashStatic extends StObject {
   
   def apply(): String = js.native
   def apply(value: java.lang.String): String = js.native

@@ -13,6 +13,7 @@ import typingsSlinky.std.RTCPeerConnectionErrorCallback
 import typingsSlinky.std.RTCPeerConnectionState
 import typingsSlinky.std.RTCSessionDescriptionCallback
 import typingsSlinky.std.RTCStatsCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

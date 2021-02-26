@@ -10,6 +10,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.DoubleAccountant
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.None
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Single
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.SingleAccountant
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

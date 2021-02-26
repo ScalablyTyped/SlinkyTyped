@@ -60,6 +60,7 @@ import typingsSlinky.grommet.utilsMod.MarginType
 import typingsSlinky.grommet.utilsMod.PadType
 import typingsSlinky.grommet.utilsMod.PolymorphicType
 import typingsSlinky.grommet.utilsMod.RoundType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -82,11 +83,6 @@ class SharedBuilder_BoxProps_991765222 (val args: js.Array[js.Any])
   def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def animationVarargs(
-    value: (fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay)*
-  ): this.type = set("animation", js.Array(value :_*))
-  
-  @scala.inline
   def animation(
     value: fadeIn | fadeOut | jiggle | pulse | rotateLeft | rotateRight | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay | (js.Array[
       fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay
@@ -94,13 +90,18 @@ class SharedBuilder_BoxProps_991765222 (val args: js.Array[js.Any])
   ): this.type = set("animation", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
+  def animationVarargs(
+    value: (fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay)*
+  ): this.type = set("animation", js.Array(value :_*))
+  
+  @scala.inline
+  def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
   
   @scala.inline
   def asComponentClass(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
+  def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
   
   @scala.inline
   def background(value: BackgroundType): this.type = set("background", value.asInstanceOf[js.Any])
@@ -109,10 +110,10 @@ class SharedBuilder_BoxProps_991765222 (val args: js.Array[js.Any])
   def basis(value: BasisType): this.type = set("basis", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def borderVarargs(value: Error*): this.type = set("border", js.Array(value :_*))
+  def border(value: BorderType): this.type = set("border", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def border(value: BorderType): this.type = set("border", value.asInstanceOf[js.Any])
+  def borderVarargs(value: Error*): this.type = set("border", js.Array(value :_*))
   
   @scala.inline
   def direction(value: row | column | `row-responsive` | `row-reverse` | `column-reverse`): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -163,13 +164,13 @@ class SharedBuilder_BoxProps_991765222 (val args: js.Array[js.Any])
   def round(value: RoundType): this.type = set("round", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def tagFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
+  def tag(value: PolymorphicType): this.type = set("tag", value.asInstanceOf[js.Any])
   
   @scala.inline
   def tagComponentClass(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def tag(value: PolymorphicType): this.type = set("tag", value.asInstanceOf[js.Any])
+  def tagFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("tag", value.asInstanceOf[js.Any])
   
   @scala.inline
   def width(value: xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | Max): this.type = set("width", value.asInstanceOf[js.Any])

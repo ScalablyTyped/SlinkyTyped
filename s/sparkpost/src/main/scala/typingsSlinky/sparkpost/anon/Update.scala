@@ -6,12 +6,13 @@ import typingsSlinky.sparkpost.mod.ResultsCallback
 import typingsSlinky.sparkpost.mod.ResultsPromise
 import typingsSlinky.sparkpost.mod.SubaccountInformation
 import typingsSlinky.sparkpost.mod.UpdateSubaccount
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Update extends js.Object {
+trait Update extends StObject {
   
   /**
     * Provisions a new subaccount and an initial subaccount API key.

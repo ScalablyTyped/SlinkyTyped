@@ -3,15 +3,22 @@ package typingsSlinky.wordpressComponents.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.listMod.NoticeList.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SnackbarList {
   
+  @scala.inline
+  def apply(notices: js.Array[typingsSlinky.wordpressComponents.listMod.NoticeList.Notice]): Builder = {
+    val __props = js.Dynamic.literal(notices = notices.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@wordpress/components", "SnackbarList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -26,10 +33,4 @@ object SnackbarList {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(notices: js.Array[typingsSlinky.wordpressComponents.listMod.NoticeList.Notice]): Builder = {
-    val __props = js.Dynamic.literal(notices = notices.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

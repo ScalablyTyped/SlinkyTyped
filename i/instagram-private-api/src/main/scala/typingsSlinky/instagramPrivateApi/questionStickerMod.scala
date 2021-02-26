@@ -3,14 +3,14 @@ package typingsSlinky.instagramPrivateApi
 import typingsSlinky.instagramPrivateApi.instaStickerMod.InstaSticker
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.music
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.text_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/sticker-builder/stickers/question.sticker", JSImport.Namespace)
-@js.native
-object questionStickerMod extends js.Object {
+object questionStickerMod {
   
+  @JSImport("instagram-private-api/dist/sticker-builder/stickers/question.sticker", "QuestionSticker")
   @js.native
   class QuestionSticker () extends InstaSticker {
     

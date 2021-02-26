@@ -10,9 +10,9 @@ A Node.js wrapper of AWS DynamoDB Local and utilities
 | ------------------ | :-------------: |
 | Full name          | local-dynamo |
 | Keywords           | dynamo, dynamodb, dynamodb local |
-| # releases         | 1 |
+| # releases         | 2 |
 | # dependents       | 7 |
-| # downloads        | 124753 |
+| # downloads        | 109824 |
 | # stars            | 1 |
 
 ## Links

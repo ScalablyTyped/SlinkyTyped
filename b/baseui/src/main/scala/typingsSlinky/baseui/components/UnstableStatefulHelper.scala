@@ -28,15 +28,16 @@ import typingsSlinky.baseui.baseuiStrings.topRight
 import typingsSlinky.baseui.helperMod.StatefulPropsT
 import typingsSlinky.baseui.popoverMod.PopoverOverrides
 import typingsSlinky.baseui.popoverMod.State
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object UnstableStatefulHelper {
   
-  @JSImport("baseui/helper", "Unstable_StatefulHelper")
+  @JSImport("baseui/helper", "UnstableStatefulHelper")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -53,13 +54,13 @@ object UnstableStatefulHelper {
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement | (js.Function1[/* args */ Close, ReactElement])): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentFunction1(value: /* args */ Close => ReactElement): this.type = set("content", js.Any.fromFunction1(value))
     
     @scala.inline
-    def content(value: ReactElement | (js.Function1[/* args */ Close, ReactElement])): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `data-baseweb`(value: String): this.type = set("data-baseweb", value.asInstanceOf[js.Any])
@@ -129,7 +130,7 @@ object UnstableStatefulHelper {
     def triggerType(value: click | hover): this.type = set("triggerType", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StatefulPropsT): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: UnstableStatefulHelper.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatefulPropsT): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

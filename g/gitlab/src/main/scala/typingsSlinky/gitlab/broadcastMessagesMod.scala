@@ -1,19 +1,21 @@
 package typingsSlinky.gitlab
 
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.PaginatedRequestOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gitlab/dist/types/core/services/BroadcastMessages", JSImport.Namespace)
-@js.native
-object broadcastMessagesMod extends js.Object {
+object broadcastMessagesMod {
   
+  @JSImport("gitlab/dist/types/core/services/BroadcastMessages", "BroadcastMessages")
   @js.native
   class BroadcastMessages () extends BaseService {
+    def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
     
     def all(): js.Promise[GetResponse] = js.native
     def all(options: PaginatedRequestOptions): js.Promise[GetResponse] = js.native

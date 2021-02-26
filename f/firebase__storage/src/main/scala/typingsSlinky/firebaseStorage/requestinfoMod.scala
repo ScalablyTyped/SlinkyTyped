@@ -5,16 +5,16 @@ import org.scalajs.dom.raw.Blob
 import typingsSlinky.firebaseStorage.errorMod.FirebaseStorageError
 import typingsSlinky.firebaseStorage.xhrioMod.Headers
 import typingsSlinky.firebaseStorage.xhrioMod.XhrIo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/storage/dist/src/implementation/requestinfo", JSImport.Namespace)
-@js.native
-object requestinfoMod extends js.Object {
+object requestinfoMod {
   
+  @JSImport("@firebase/storage/dist/src/implementation/requestinfo", "RequestInfo")
   @js.native
-  class RequestInfo[T] protected () extends js.Object {
+  class RequestInfo[T] protected () extends StObject {
     def this(
       url: String,
       method: String,

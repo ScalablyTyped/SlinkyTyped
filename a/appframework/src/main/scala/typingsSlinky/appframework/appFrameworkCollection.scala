@@ -3,12 +3,13 @@ package typingsSlinky.appframework
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.appframework.anon.Bottom
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait appFrameworkCollection extends js.Object {
+trait appFrameworkCollection extends StObject {
   
   /**
     * Adds a css class to elements.
@@ -610,9 +611,9 @@ trait appFrameworkCollection extends js.Object {
     * @title $().remove(selector)
     */
   def remove(): appFrameworkCollection = js.native
+  def remove(element: HTMLElement): appFrameworkCollection = js.native
   def remove(elements: js.Array[_]): appFrameworkCollection = js.native
   def remove(elements: appFrameworkCollection): appFrameworkCollection = js.native
-  def remove(element: HTMLElement): appFrameworkCollection = js.native
   def remove(selector: String): appFrameworkCollection = js.native
   
   /**

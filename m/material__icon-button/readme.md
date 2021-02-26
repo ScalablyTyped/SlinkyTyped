@@ -10,9 +10,9 @@ The Material Components for the web icon button component
 | ------------------ | :-------------: |
 | Full name          | @material/icon-button |
 | Keywords           | material components, material design, button, icon button, icon toggle |
-| # releases         | 159 |
-| # dependents       | 43 |
-| # downloads        | 1167309 |
+| # releases         | 750 |
+| # dependents       | 59 |
+| # downloads        | 2295836 |
 | # stars            | 0 |
 
 ## Links

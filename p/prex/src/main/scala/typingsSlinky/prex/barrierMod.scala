@@ -2,16 +2,16 @@ package typingsSlinky.prex
 
 import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.prex.cancellationMod.CancellationToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("prex/out/lib/barrier", JSImport.Namespace)
-@js.native
-object barrierMod extends js.Object {
+object barrierMod {
   
+  @JSImport("prex/out/lib/barrier", "Barrier")
   @js.native
-  class Barrier protected () extends js.Object {
+  class Barrier protected () extends StObject {
     /**
       * Initializes a new instance of the Barrier class.
       *

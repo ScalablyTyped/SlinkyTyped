@@ -9,15 +9,22 @@ import typingsSlinky.rmcDialog.rmcDialogStrings.`slide-down`
 import typingsSlinky.rmcDialog.rmcDialogStrings.`slide-up`
 import typingsSlinky.rmcDialog.rmcDialogStrings.fade
 import typingsSlinky.rmcDialog.rmcDialogStrings.none
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Modal {
   
+  @scala.inline
+  def apply(animationType: none | fade | `slide-up` | `slide-down`, visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(animationType = animationType.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IModalPropTypes]))
+  }
+  
   @JSImport("rmc-dialog/lib/Modal", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -50,10 +57,4 @@ object Modal {
   }
   
   def withProps(p: IModalPropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(animationType: none | fade | `slide-up` | `slide-down`, visible: Boolean): Builder = {
-    val __props = js.Dynamic.literal(animationType = animationType.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IModalPropTypes]))
-  }
 }

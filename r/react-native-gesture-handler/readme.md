@@ -10,9 +10,9 @@ Experimental implementation of a new declarative API for gesture handling in rea
 | ------------------ | :-------------: |
 | Full name          | react-native-gesture-handler |
 | Keywords           | - |
-| # releases         | 39 |
-| # dependents       | 113 |
-| # downloads        | 8551549 |
+| # releases         | 25 |
+| # dependents       | 414 |
+| # downloads        | 16494334 |
 | # stars            | 4 |
 
 ## Links

@@ -12,6 +12,7 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`6`
 import typingsSlinky.activexExcel.activexExcelNumbers.`7`
 import typingsSlinky.activexExcel.activexExcelNumbers.`8`
 import typingsSlinky.activexExcel.activexExcelNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`2`
   - typingsSlinky.activexExcel.activexExcelNumbers.`4`
 */
-trait XlThemeColor extends js.Object
+trait XlThemeColor extends StObject
 object XlThemeColor {
   
   @scala.inline

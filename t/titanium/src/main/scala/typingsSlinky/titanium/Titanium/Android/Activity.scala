@@ -9,6 +9,7 @@ import typingsSlinky.titanium.titaniumStrings.newintent
 import typingsSlinky.titanium.titaniumStrings.onIntent
 import typingsSlinky.titanium.titaniumStrings.userinteraction
 import typingsSlinky.titanium.titaniumStrings.userleavehint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

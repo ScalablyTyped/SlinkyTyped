@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsDatetime.datePickerMod.IDatePickerProps
 import typingsSlinky.blueprintjsDatetime.dateTimePickerMod.IDateTimePickerProps
 import typingsSlinky.blueprintjsDatetime.timePickerMod.ITimePickerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object DateTimePicker {
   
   @JSImport("@blueprintjs/datetime", "DateTimePicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,7 +46,7 @@ object DateTimePicker {
     def valueNull: this.type = set("value", null)
   }
   
-  def withProps(p: IDateTimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DateTimePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IDateTimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

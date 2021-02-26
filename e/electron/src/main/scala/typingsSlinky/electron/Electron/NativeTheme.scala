@@ -5,6 +5,7 @@ import typingsSlinky.electron.electronStrings.light
 import typingsSlinky.electron.electronStrings.system
 import typingsSlinky.electron.electronStrings.updated
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

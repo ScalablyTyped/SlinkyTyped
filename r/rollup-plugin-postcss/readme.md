@@ -10,9 +10,9 @@ Seamless integration between Rollup and PostCSS
 | ------------------ | :-------------: |
 | Full name          | rollup-plugin-postcss |
 | Keywords           | postcss, rollup |
-| # releases         | 26 |
-| # dependents       | 170 |
-| # downloads        | 1890693 |
+| # releases         | 31 |
+| # dependents       | 353 |
+| # downloads        | 6701069 |
 | # stars            | 5 |
 
 ## Links

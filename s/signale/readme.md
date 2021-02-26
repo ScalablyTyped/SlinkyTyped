@@ -10,9 +10,9 @@ Typings are for version 1.4
 | ------------------ | :-------------: |
 | Full name          | signale |
 | Keywords           | hackable, colorful, console, logger |
-| # releases         | 10 |
-| # dependents       | 439 |
-| # downloads        | 8331676 |
+| # releases         | 2 |
+| # dependents       | 600 |
+| # downloads        | 21627908 |
 | # stars            | 0 |
 
 ## Links

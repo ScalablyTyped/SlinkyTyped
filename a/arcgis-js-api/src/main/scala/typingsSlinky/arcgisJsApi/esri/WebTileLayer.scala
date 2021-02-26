@@ -3,6 +3,7 @@ package typingsSlinky.arcgisJsApi.esri
 import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`open-street-map`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`web-tile`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

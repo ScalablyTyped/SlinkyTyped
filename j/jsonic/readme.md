@@ -11,8 +11,8 @@ A JSON parser that isn't strict.
 | Full name          | jsonic |
 | Keywords           | json, parser |
 | # releases         | 2 |
-| # dependents       | 125 |
-| # downloads        | 787390 |
+| # dependents       | 131 |
+| # downloads        | 828876 |
 | # stars            | 4 |
 
 ## Links

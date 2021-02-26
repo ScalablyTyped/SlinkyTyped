@@ -4,6 +4,7 @@ import typingsSlinky.handsontable.mod.Handsontable
 import typingsSlinky.handsontable.mod.Handsontable.CellProperties
 import typingsSlinky.handsontable.mod.Handsontable.search.SearchCallback
 import typingsSlinky.handsontable.mod.Handsontable.search.SearchQueryMethod
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

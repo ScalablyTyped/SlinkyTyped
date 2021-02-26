@@ -2,6 +2,7 @@ package typingsSlinky.reactNativeFetchBlob.mod
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.std.EventTarget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,13 +39,17 @@ trait PolyfillFileReader extends EventTarget {
   
   var result: Double = js.native
 }
-@JSImport("react-native-fetch-blob", "PolyfillFileReader")
-@js.native
-object PolyfillFileReader extends js.Object {
+object PolyfillFileReader {
   
+  @JSImport("react-native-fetch-blob", "PolyfillFileReader.DONE")
+  @js.native
   val DONE: Double = js.native
   
+  @JSImport("react-native-fetch-blob", "PolyfillFileReader.EMPTY")
+  @js.native
   val EMPTY: Double = js.native
   
+  @JSImport("react-native-fetch-blob", "PolyfillFileReader.LOADING")
+  @js.native
   val LOADING: Double = js.native
 }

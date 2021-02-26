@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.navbarTogglerMod.NavbarTogglerProps
+import typingsSlinky.reactstrap.navbarTogglerMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "NavbarToggler")
+@JSImport("reactstrap/lib", "NavbarToggler")
 @js.native
-class NavbarToggler ()
-  extends Component[NavbarTogglerProps, js.Object, js.Any]
+class NavbarToggler () extends default

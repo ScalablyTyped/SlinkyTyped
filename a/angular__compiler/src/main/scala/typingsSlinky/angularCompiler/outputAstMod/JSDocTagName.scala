@@ -3,6 +3,7 @@ package typingsSlinky.angularCompiler.outputAstMod
 import typingsSlinky.angularCompiler.angularCompilerStrings.desc
 import typingsSlinky.angularCompiler.angularCompilerStrings.id
 import typingsSlinky.angularCompiler.angularCompilerStrings.meaning
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.angularCompiler.angularCompilerStrings.id
   - typingsSlinky.angularCompiler.angularCompilerStrings.meaning
 */
-trait JSDocTagName extends js.Object
+trait JSDocTagName extends StObject
 object JSDocTagName {
   
   @scala.inline

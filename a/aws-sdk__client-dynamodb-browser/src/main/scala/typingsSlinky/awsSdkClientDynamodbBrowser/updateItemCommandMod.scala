@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientDynamodbBrowser.typesUpdateItemInputMod.UpdateI
 import typingsSlinky.awsSdkClientDynamodbBrowser.typesUpdateItemOutputMod.UpdateItemOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-browser/commands/UpdateItemCommand", JSImport.Namespace)
-@js.native
-object updateItemCommandMod extends js.Object {
+object updateItemCommandMod {
   
+  @JSImport("@aws-sdk/client-dynamodb-browser/commands/UpdateItemCommand", "UpdateItemCommand")
   @js.native
   class UpdateItemCommand protected () extends Command[
           InputTypesUnion, 

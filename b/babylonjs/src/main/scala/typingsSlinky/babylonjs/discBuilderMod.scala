@@ -4,19 +4,18 @@ import typingsSlinky.babylonjs.anon.Tessellation
 import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Meshes/Builders/discBuilder", JSImport.Namespace)
-@js.native
-object discBuilderMod extends js.Object {
+object discBuilderMod {
   
+  @JSImport("babylonjs/Meshes/Builders/discBuilder", "DiscBuilder")
   @js.native
-  class DiscBuilder () extends js.Object
+  class DiscBuilder () extends StObject
   /* static members */
-  @js.native
-  object DiscBuilder extends js.Object {
+  object DiscBuilder {
     
     /**
       * Creates a plane polygonal mesh.  By default, this is a disc
@@ -32,7 +31,11 @@ object discBuilderMod extends js.Object {
       * @returns the plane polygonal mesh
       * @see https://doc.babylonjs.com/how_to/set_shapes#disc-or-regular-polygon
       */
+    @JSImport("babylonjs/Meshes/Builders/discBuilder", "DiscBuilder.CreateDisc")
+    @js.native
     def CreateDisc(name: String, options: Tessellation): Mesh = js.native
+    @JSImport("babylonjs/Meshes/Builders/discBuilder", "DiscBuilder.CreateDisc")
+    @js.native
     def CreateDisc(name: String, options: Tessellation, scene: Nullable[Scene]): Mesh = js.native
   }
 }

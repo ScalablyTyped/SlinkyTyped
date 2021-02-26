@@ -1,21 +1,22 @@
 package typingsSlinky.winrt.global.Windows.Graphics.Printing
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Windows.Graphics.Printing.PrintMediaSize")
 @js.native
-object PrintMediaSize extends js.Object {
+object PrintMediaSize extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Graphics.Printing.PrintMediaSize with Double] = js.native
   
+  /* 0 */ val default: typingsSlinky.winrt.Windows.Graphics.Printing.PrintMediaSize.default with Double = js.native
+  
   /* 3 */ val businessCard: typingsSlinky.winrt.Windows.Graphics.Printing.PrintMediaSize.businessCard with Double = js.native
   
   /* 4 */ val creditCard: typingsSlinky.winrt.Windows.Graphics.Printing.PrintMediaSize.creditCard with Double = js.native
-  
-  /* 0 */ val default: typingsSlinky.winrt.Windows.Graphics.Printing.PrintMediaSize.default with Double = js.native
   
   /* 5 */ val isoA0: typingsSlinky.winrt.Windows.Graphics.Printing.PrintMediaSize.isoA0 with Double = js.native
   

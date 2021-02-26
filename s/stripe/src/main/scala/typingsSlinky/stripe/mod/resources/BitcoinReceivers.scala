@@ -5,17 +5,20 @@ import typingsSlinky.stripe.mod.IDataOptions
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.bitcoinReceivers.IBitcoinReceiver
 import typingsSlinky.stripe.mod.bitcoinReceivers.IBitcoinReceiverCreationOptions
 import typingsSlinky.stripe.mod.bitcoinReceivers.IBitcoinReceiverListOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.BitcoinReceivers")
 @js.native
-class BitcoinReceivers () extends StripeResource {
+class BitcoinReceivers protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(data: IBitcoinReceiverCreationOptions): js.Promise[IBitcoinReceiver] = js.native
   /**
@@ -30,7 +33,7 @@ class BitcoinReceivers () extends StripeResource {
   ): js.Promise[IBitcoinReceiver] = js.native
   def create(data: IBitcoinReceiverCreationOptions, response: IResponseFn[IBitcoinReceiver]): js.Promise[IBitcoinReceiver] = js.native
   
-   // TODO: Implement placeholder method
+  // TODO: Implement placeholder method
   def getMetadata(): Unit = js.native
   
   def list(data: IBitcoinReceiverListOptions): IListPromise[IBitcoinReceiver] = js.native

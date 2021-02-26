@@ -4,12 +4,13 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLCollection
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.NodeList
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BlazyInstance extends js.Object {
+trait BlazyInstance extends StObject {
   
   /**
     * Unbind events and resets image array.

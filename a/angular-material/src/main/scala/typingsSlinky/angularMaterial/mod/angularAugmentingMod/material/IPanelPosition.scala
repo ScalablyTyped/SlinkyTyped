@@ -2,45 +2,46 @@ package typingsSlinky.angularMaterial.mod.angularAugmentingMod.material
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.angular.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IPanelPosition extends js.Object {
+trait IPanelPosition extends StObject {
   
   def absolute(): IPanelPosition = js.native
   
   def addPanelPosition(xPosition: String, yPosition: String): IPanelPosition = js.native
   
-   // default: '0'
+  // default: '0'
   def bottom(): IPanelPosition = js.native
   def bottom(bottom: String): IPanelPosition = js.native
   
   def center(): IPanelPosition = js.native
   
-   // default: '0'
+  // default: '0'
   def centerHorizontally(): IPanelPosition = js.native
   
   def centerVertically(): IPanelPosition = js.native
   
-   // default: '0'
+  // default: '0'
   def end(): IPanelPosition = js.native
   def end(end: String): IPanelPosition = js.native
   
-   // default: '0'
+  // default: '0'
   def left(): IPanelPosition = js.native
   def left(left: String): IPanelPosition = js.native
   
   def relativeTo(someElement: String): IPanelPosition = js.native
-  def relativeTo(someElement: JQuery): IPanelPosition = js.native
   def relativeTo(someElement: Element): IPanelPosition = js.native
+  def relativeTo(someElement: JQuery): IPanelPosition = js.native
   
-   // default: '0'
+  // default: '0'
   def right(): IPanelPosition = js.native
   def right(right: String): IPanelPosition = js.native
   
-   // default: '0'
+  // default: '0'
   def start(): IPanelPosition = js.native
   def start(start: String): IPanelPosition = js.native
   

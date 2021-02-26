@@ -1,5 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.webRequest
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.any_strict_tracking
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.any_social_tracking
 */
-trait UrlClassificationFlags extends js.Object
+trait UrlClassificationFlags extends StObject
 object UrlClassificationFlags {
   
   @scala.inline

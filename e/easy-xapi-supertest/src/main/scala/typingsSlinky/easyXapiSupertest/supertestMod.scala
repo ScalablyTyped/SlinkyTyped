@@ -2,18 +2,29 @@ package typingsSlinky.easyXapiSupertest
 
 import typingsSlinky.easyXapiSupertest.superagentMod.Request
 import typingsSlinky.easyXapiSupertest.superagentMod.SuperAgent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("supertest", JSImport.Namespace)
-@js.native
-object supertestMod extends js.Object {
+object supertestMod {
   
+  @JSImport("supertest", JSImport.Namespace)
+  @js.native
   def apply(app: js.Any): SuperTest = js.native
   
+  @JSImport("supertest", "agent")
+  @js.native
   def agent(): SuperTest = js.native
+  @JSImport("supertest", "agent")
+  @js.native
   def agent(app: js.Any): SuperTest = js.native
+  
+  type CallbackHandler = (js.Function2[/* err */ js.Any, /* res */ Response, Unit]) | (js.Function1[/* res */ Response, Unit])
+  
+  type Response = typingsSlinky.easyXapiSupertest.superagentMod.Response
+  
+  type SuperTest = SuperAgent[Test]
   
   @js.native
   trait Test extends Request[Test] {
@@ -38,10 +49,4 @@ object supertestMod extends js.Object {
     
     var url: String = js.native
   }
-  
-  type CallbackHandler = (js.Function2[/* err */ js.Any, /* res */ Response, Unit]) | (js.Function1[/* res */ Response, Unit])
-  
-  type Response = typingsSlinky.easyXapiSupertest.superagentMod.Response
-  
-  type SuperTest = SuperAgent[Test]
 }

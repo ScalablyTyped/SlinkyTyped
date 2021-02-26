@@ -3,14 +3,14 @@ package typingsSlinky.samchon
 import typingsSlinky.samchon.externalSystemArrayMod.ExternalSystemArray
 import typingsSlinky.samchon.iexternalserverMod.IExternalServer
 import typingsSlinky.samchon.iserverconnectorMod.IServerConnector
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/external/derived/ExternalServer", JSImport.Namespace)
-@js.native
-object externalServerMod extends js.Object {
+object externalServerMod {
   
+  @JSImport("samchon/templates/external/derived/ExternalServer", "ExternalServer")
   @js.native
   abstract class ExternalServer protected () extends IExternalServer {
     /**

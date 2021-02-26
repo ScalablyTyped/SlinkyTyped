@@ -10,9 +10,9 @@ Node.js RSA library
 | ------------------ | :-------------: |
 | Full name          | node-rsa |
 | Keywords           | node, rsa, crypto, assymetric, encryption, decryption, sign, verify, pkcs1, oaep, pss |
-| # releases         | 9 |
-| # dependents       | 350 |
-| # downloads        | 4296630 |
+| # releases         | 8 |
+| # dependents       | 480 |
+| # downloads        | 7369931 |
 | # stars            | 29 |
 
 ## Links

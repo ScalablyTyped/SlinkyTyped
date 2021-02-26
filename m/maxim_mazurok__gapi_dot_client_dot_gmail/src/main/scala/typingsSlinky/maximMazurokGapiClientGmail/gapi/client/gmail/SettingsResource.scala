@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientGmail.anon.QuotaUserResource
 import typingsSlinky.maximMazurokGapiClientGmail.anon.ResourceUploadType
 import typingsSlinky.maximMazurokGapiClientGmail.anon.UploadTypeUploadprotocol
 import typingsSlinky.maximMazurokGapiClientGmail.anon.UploadprotocolUserId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SettingsResource extends js.Object {
+trait SettingsResource extends StObject {
   
   var delegates: DelegatesResource = js.native
   

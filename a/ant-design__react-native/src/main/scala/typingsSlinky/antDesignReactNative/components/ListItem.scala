@@ -22,6 +22,7 @@ import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ object ListItem {
   
   @JSImport("@ant-design/react-native/lib/list/ListItem", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,10 +60,10 @@ object ListItem {
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
     def multipleLine(value: Boolean): this.type = set("multipleLine", value.asInstanceOf[js.Any])
@@ -92,19 +93,19 @@ object ListItem {
     def styles(value: Partial[ListStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def thumbReactElement(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def thumb(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
     
     @scala.inline
     def thumbNull: this.type = set("thumb", null)
     
     @scala.inline
+    def thumbReactElement(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def wrap(value: Boolean): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ListItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ListItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ListItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

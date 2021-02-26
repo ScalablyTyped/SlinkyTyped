@@ -1,5 +1,6 @@
 package typingsSlinky.mmdbLib.responseMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,31 +14,43 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mmdbLib.responseMod.DomainResponse
   - typingsSlinky.mmdbLib.responseMod.IspResponse
 */
-trait Response extends js.Object
+trait Response extends StObject
 object Response {
   
   @scala.inline
-  def AsnResponse(autonomous_system_number: Double, autonomous_system_organization: String): Response = {
+  def AnonymousIPResponse(): typingsSlinky.mmdbLib.responseMod.AnonymousIPResponse = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[typingsSlinky.mmdbLib.responseMod.AnonymousIPResponse]
+  }
+  
+  @scala.inline
+  def AsnResponse(autonomous_system_number: Double, autonomous_system_organization: String): typingsSlinky.mmdbLib.responseMod.AsnResponse = {
     val __obj = js.Dynamic.literal(autonomous_system_number = autonomous_system_number.asInstanceOf[js.Any], autonomous_system_organization = autonomous_system_organization.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Response]
+    __obj.asInstanceOf[typingsSlinky.mmdbLib.responseMod.AsnResponse]
   }
   
   @scala.inline
-  def ConnectionTypeResponse(connection_type: String): Response = {
+  def CityResponse(): typingsSlinky.mmdbLib.responseMod.CityResponse = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[typingsSlinky.mmdbLib.responseMod.CityResponse]
+  }
+  
+  @scala.inline
+  def ConnectionTypeResponse(connection_type: String): typingsSlinky.mmdbLib.responseMod.ConnectionTypeResponse = {
     val __obj = js.Dynamic.literal(connection_type = connection_type.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Response]
+    __obj.asInstanceOf[typingsSlinky.mmdbLib.responseMod.ConnectionTypeResponse]
   }
   
   @scala.inline
-  def CityResponse(): Response = {
+  def CountryResponse(): typingsSlinky.mmdbLib.responseMod.CountryResponse = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Response]
+    __obj.asInstanceOf[typingsSlinky.mmdbLib.responseMod.CountryResponse]
   }
   
   @scala.inline
-  def AnonymousIPResponse(): Response = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Response]
+  def DomainResponse(domain: String): typingsSlinky.mmdbLib.responseMod.DomainResponse = {
+    val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.mmdbLib.responseMod.DomainResponse]
   }
   
   @scala.inline
@@ -46,20 +59,8 @@ object Response {
     autonomous_system_organization: String,
     isp: String,
     organization: String
-  ): Response = {
+  ): typingsSlinky.mmdbLib.responseMod.IspResponse = {
     val __obj = js.Dynamic.literal(autonomous_system_number = autonomous_system_number.asInstanceOf[js.Any], autonomous_system_organization = autonomous_system_organization.asInstanceOf[js.Any], isp = isp.asInstanceOf[js.Any], organization = organization.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Response]
-  }
-  
-  @scala.inline
-  def CountryResponse(): Response = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Response]
-  }
-  
-  @scala.inline
-  def DomainResponse(domain: String): Response = {
-    val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Response]
+    __obj.asInstanceOf[typingsSlinky.mmdbLib.responseMod.IspResponse]
   }
 }

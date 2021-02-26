@@ -1,16 +1,16 @@
 package typingsSlinky.prex
 
 import typingsSlinky.std.Generator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("prex/out/lib/list", JSImport.Namespace)
-@js.native
-object listMod extends js.Object {
+object listMod {
   
+  @JSImport("prex/out/lib/list", "LinkedList")
   @js.native
-  class LinkedList[T] () extends js.Object {
+  class LinkedList[T] () extends StObject {
     def this(iterable: js.Iterable[T]) = this()
     
     var _deleteNode: js.Any = js.native
@@ -92,8 +92,9 @@ object listMod extends js.Object {
     def values(): Generator[js.UndefOr[T], Unit, _] = js.native
   }
   
+  @JSImport("prex/out/lib/list", "LinkedListNode")
   @js.native
-  class LinkedListNode[T] () extends js.Object {
+  class LinkedListNode[T] () extends StObject {
     def this(value: T) = this()
     
     def list: js.UndefOr[LinkedList[T]] = js.native

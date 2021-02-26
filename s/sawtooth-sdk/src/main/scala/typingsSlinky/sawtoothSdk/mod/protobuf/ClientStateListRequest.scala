@@ -5,6 +5,7 @@ import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IClientStateListRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,18 +21,26 @@ class ClientStateListRequest ()
   def this(properties: IClientStateListRequest) = this()
 }
 /* static members */
-@JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest")
-@js.native
-object ClientStateListRequest extends js.Object {
+object ClientStateListRequest {
   
   /**
     * Creates a new ClientStateListRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns ClientStateListRequest instance
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.create")
+  @js.native
   def create(): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.create")
+  @js.native
   def create(properties: IClientStateListRequest): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
   /**
     * Decodes a ClientStateListRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -40,11 +49,16 @@ object ClientStateListRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
   
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
   /**
     * Decodes a ClientStateListRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,8 +66,9 @@ object ClientStateListRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
   
   /**
     * Encodes the specified ClientStateListRequest message. Does not implicitly {@link ClientStateListRequest.verify|verify} messages.
@@ -61,7 +76,11 @@ object ClientStateListRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.encode")
+  @js.native
   def encode(message: IClientStateListRequest): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.encode")
+  @js.native
   def encode(message: IClientStateListRequest, writer: Writer): Writer = js.native
   
   /**
@@ -70,7 +89,11 @@ object ClientStateListRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientStateListRequest): Writer = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IClientStateListRequest, writer: Writer): Writer = js.native
   
   /**
@@ -78,6 +101,8 @@ object ClientStateListRequest extends js.Object {
     * @param object Plain object
     * @returns ClientStateListRequest
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest = js.native
   
   /**
@@ -86,7 +111,11 @@ object ClientStateListRequest extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.toObject")
+  @js.native
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.toObject")
+  @js.native
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.ClientStateListRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -94,5 +123,7 @@ object ClientStateListRequest extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk", "protobuf.ClientStateListRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

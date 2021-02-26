@@ -78,6 +78,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -276,10 +277,10 @@ class SharedBuilder_IDrawerProps1544561710[R <: js.Object] (val args: js.Array[j
   def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -297,25 +298,25 @@ class SharedBuilder_IDrawerProps1544561710[R <: js.Object] (val args: js.Array[j
   def forceRender(value: Boolean): this.type = set("forceRender", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
+  def getContainer(value: IStringOrHtmlElement | js.Function0[IStringOrHtmlElement] | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def getContainerFunction0(value: () => IStringOrHtmlElement): this.type = set("getContainer", js.Any.fromFunction0(value))
   
   @scala.inline
-  def getContainer(value: IStringOrHtmlElement | js.Function0[IStringOrHtmlElement] | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
+  def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
   
   @scala.inline
   def getContainerNull: this.type = set("getContainer", null)
-  
-  @scala.inline
-  def handlerReactElement(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
   
   @scala.inline
   def handler(value: ReactElement | `false`): this.type = set("handler", value.asInstanceOf[js.Any])
   
   @scala.inline
   def handlerNull: this.type = set("handler", null)
+  
+  @scala.inline
+  def handlerReactElement(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
   
   @scala.inline
   def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
@@ -357,19 +358,19 @@ class SharedBuilder_IDrawerProps1544561710[R <: js.Object] (val args: js.Array[j
   def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def levelVarargs(value: String*): this.type = set("level", js.Array(value :_*))
-  
-  @scala.inline
   def level(value: String | js.Array[String]): this.type = set("level", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def levelNull: this.type = set("level", null)
+  def levelMove(value: ILevelMove | (js.Function1[/* e */ Target, ILevelMove])): this.type = set("levelMove", value.asInstanceOf[js.Any])
   
   @scala.inline
   def levelMoveFunction1(value: /* e */ Target => ILevelMove): this.type = set("levelMove", js.Any.fromFunction1(value))
   
   @scala.inline
-  def levelMove(value: ILevelMove | (js.Function1[/* e */ Target, ILevelMove])): this.type = set("levelMove", value.asInstanceOf[js.Any])
+  def levelNull: this.type = set("level", null)
+  
+  @scala.inline
+  def levelVarargs(value: String*): this.type = set("level", js.Array(value :_*))
   
   @scala.inline
   def maskClosable(value: Boolean): this.type = set("maskClosable", value.asInstanceOf[js.Any])

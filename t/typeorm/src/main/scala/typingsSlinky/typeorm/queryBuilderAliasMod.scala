@@ -5,16 +5,16 @@ import typingsSlinky.typeorm.typeormStrings.from
 import typingsSlinky.typeorm.typeormStrings.join
 import typingsSlinky.typeorm.typeormStrings.other
 import typingsSlinky.typeorm.typeormStrings.select
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/query-builder/Alias", JSImport.Namespace)
-@js.native
-object queryBuilderAliasMod extends js.Object {
+object queryBuilderAliasMod {
   
+  @JSImport("typeorm/query-builder/Alias", "Alias")
   @js.native
-  class Alias () extends js.Object {
+  class Alias () extends StObject {
     def this(alias: Alias) = this()
     
     var _metadata: js.Any = js.native

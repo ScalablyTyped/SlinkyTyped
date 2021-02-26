@@ -10,6 +10,7 @@ import typingsSlinky.loopback.loopbackStrings.DENY
 import typingsSlinky.loopback.loopbackStrings.EXECUTE
 import typingsSlinky.loopback.loopbackStrings.READ
 import typingsSlinky.loopback.loopbackStrings.WRITE
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,7 +43,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("loopback", "ACL")
 @js.native
-class ACL () extends PersistedModel {
+class ACL protected () extends PersistedModel {
+  def this(data: js.Any) = this()
   
   /** accessType Type of access being granted: one of READ, WRITE, or EXECUTE. */
   var accesType: READ | WRITE | EXECUTE = js.native
@@ -78,10 +80,7 @@ class ACL () extends PersistedModel {
   @JSName("settings")
   var settings_ACL: Acls = js.native
 }
-/* static members */
-@JSImport("loopback", "ACL")
-@js.native
-object ACL extends js.Object {
+object ACL {
   
   /**
     * Check if the request has the permission to access.
@@ -94,6 +93,9 @@ object ACL extends js.Object {
     *   READ, REPLICATE, WRITE, or EXECUTE.
     * @param {() => void} callback Callback functio
     */
+  /* static member */
+  @JSImport("loopback", "ACL.checkAccessForContext")
+  @js.native
   def checkAccessForContext(context: AccessType, callback: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -106,6 +108,9 @@ object ACL extends js.Object {
     * @param {string|Error} err The error object
     * @param {boolean} allowed is the request allow
     */
+  /* static member */
+  @JSImport("loopback", "ACL.checkAccessForToken")
+  @js.native
   def checkAccessForToken(
     token: AccessToken,
     model: String,
@@ -125,6 +130,9 @@ object ACL extends js.Object {
     * @param {string|Error} err The error object
     * @param {AccessRequest} result The access permissio
     */
+  /* static member */
+  @JSImport("loopback", "ACL.checkPermission")
+  @js.native
   def checkPermission(
     principalType: String,
     principalId: String,
@@ -140,6 +148,9 @@ object ACL extends js.Object {
     * @param {AccessRequest} req The request
     * @returns {number}
     */
+  /* static member */
+  @JSImport("loopback", "ACL.getMatchingScore")
+  @js.native
   def getMatchingScore(rule: ACL, req: AccessRequest): Double = js.native
   
   /**
@@ -149,9 +160,18 @@ object ACL extends js.Object {
     * @param {string|*} role Role id/name
     * @param {() => void} cb Callback functio
     */
+  /* static member */
+  @JSImport("loopback", "ACL.isMappedToRole")
+  @js.native
   def isMappedToRole(principalType: String, principalId: String, role: String, cb: js.Function0[Unit]): Unit = js.native
+  @JSImport("loopback", "ACL.isMappedToRole")
+  @js.native
   def isMappedToRole(principalType: String, principalId: String, role: js.Any, cb: js.Function0[Unit]): Unit = js.native
+  @JSImport("loopback", "ACL.isMappedToRole")
+  @js.native
   def isMappedToRole(principalType: String, principalId: js.Any, role: String, cb: js.Function0[Unit]): Unit = js.native
+  @JSImport("loopback", "ACL.isMappedToRole")
+  @js.native
   def isMappedToRole(principalType: String, principalId: js.Any, role: js.Any, cb: js.Function0[Unit]): Unit = js.native
   
   /**
@@ -160,6 +180,11 @@ object ACL extends js.Object {
     * @param {string|number} id Principal id or name
     * @param {() => void} cb Callback function
     */
+  /* static member */
+  @JSImport("loopback", "ACL.resolvePrincipal")
+  @js.native
   def resolvePrincipal(`type`: String, id: String, cb: js.Function0[Unit]): Unit = js.native
+  @JSImport("loopback", "ACL.resolvePrincipal")
+  @js.native
   def resolvePrincipal(`type`: String, id: Double, cb: js.Function0[Unit]): Unit = js.native
 }

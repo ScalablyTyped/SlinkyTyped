@@ -35,15 +35,22 @@ import typingsSlinky.recharts.rechartsStrings.normal
 import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Line {
   
+  @scala.inline
+  def apply(dataKey: DataKey): Builder = {
+    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LineProps]))
+  }
+  
   @JSImport("recharts", "Line")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,13 +58,13 @@ object Line {
        with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.Line] {
     
     @scala.inline
-    def activeDotReactElement(value: ReactElement): this.type = set("activeDot", value.asInstanceOf[js.Any])
+    def activeDot(value: js.Object | ReactElement | ContentRenderer[_] | Boolean): this.type = set("activeDot", value.asInstanceOf[js.Any])
     
     @scala.inline
     def activeDotFunction1(value: _ => ReactElement): this.type = set("activeDot", js.Any.fromFunction1(value))
     
     @scala.inline
-    def activeDot(value: js.Object | ReactElement | ContentRenderer[_] | Boolean): this.type = set("activeDot", value.asInstanceOf[js.Any])
+    def activeDotReactElement(value: ReactElement): this.type = set("activeDot", value.asInstanceOf[js.Any])
     
     @scala.inline
     def alignmentBaseline(value: String): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
@@ -114,10 +121,10 @@ object Line {
     def cursor(value: String): this.type = set("cursor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataVarargs(value: js.Object*): this.type = set("data", js.Array(value :_*))
+    def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: js.Object*): this.type = set("data", js.Array(value :_*))
     
     @scala.inline
     def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -129,13 +136,13 @@ object Line {
     def dominantBaseline(value: String): this.type = set("dominantBaseline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dotReactElement(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
+    def dot(value: js.Object | ReactElement | ContentRenderer[DotPropspayloadany] | Boolean): this.type = set("dot", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dotFunction1(value: DotPropspayloadany => ReactElement): this.type = set("dot", js.Any.fromFunction1(value))
     
     @scala.inline
-    def dot(value: js.Object | ReactElement | ContentRenderer[DotPropspayloadany] | Boolean): this.type = set("dot", value.asInstanceOf[js.Any])
+    def dotReactElement(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dx(value: Double): this.type = set("dx", value.asInstanceOf[js.Any])
@@ -212,13 +219,13 @@ object Line {
     def kerning(value: Double | String): this.type = set("kerning", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: Boolean | js.Object | ReactElement | ContentRenderer[_]): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelFunction1(value: _ => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
     
     @scala.inline
-    def label(value: Boolean | js.Object | ReactElement | ContentRenderer[_]): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def layout(value: LayoutType): this.type = set("layout", value.asInstanceOf[js.Any])
@@ -302,10 +309,10 @@ object Line {
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pointsVarargs(value: Point*): this.type = set("points", js.Array(value :_*))
+    def points(value: js.Array[Point]): this.type = set("points", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def points(value: js.Array[Point]): this.type = set("points", value.asInstanceOf[js.Any])
+    def pointsVarargs(value: Point*): this.type = set("points", js.Array(value :_*))
     
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
@@ -362,10 +369,10 @@ object Line {
     def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def typeFunction1(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("type", js.Any.fromFunction1(value))
+    def `type`(value: LineType): this.type = set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `type`(value: LineType): this.type = set("type", value.asInstanceOf[js.Any])
+    def typeFunction1(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("type", js.Any.fromFunction1(value))
     
     @scala.inline
     def unicodeBidi(value: String): this.type = set("unicodeBidi", value.asInstanceOf[js.Any])
@@ -405,10 +412,4 @@ object Line {
   }
   
   def withProps(p: LineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(dataKey: DataKey): Builder = {
-    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[LineProps]))
-  }
 }

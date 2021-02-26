@@ -1,13 +1,14 @@
 package typingsSlinky.astTypes
 
 import typingsSlinky.astTypes.astTypesMod.Fork
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ast-types/def/core", JSImport.Namespace)
-@js.native
-object coreMod extends js.Object {
+object coreMod {
   
+  @JSImport("ast-types/def/core", JSImport.Default)
+  @js.native
   def default(fork: Fork): Unit = js.native
 }

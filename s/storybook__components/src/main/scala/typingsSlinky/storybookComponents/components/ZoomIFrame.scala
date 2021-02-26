@@ -5,15 +5,22 @@ import slinky.web.html.iframe.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.MutableRefObject
 import typingsSlinky.storybookComponents.zoomIFrameMod.IZoomIFrameProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ZoomIFrame {
   
+  @scala.inline
+  def apply(iFrameRef: MutableRefObject[HTMLIFrameElement], scale: Double): Builder = {
+    val __props = js.Dynamic.literal(iFrameRef = iFrameRef.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IZoomIFrameProps]))
+  }
+  
   @JSImport("@storybook/components/dist/Zoom/ZoomIFrame", "ZoomIFrame")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,10 +32,4 @@ object ZoomIFrame {
   }
   
   def withProps(p: IZoomIFrameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(iFrameRef: MutableRefObject[HTMLIFrameElement], scale: Double): Builder = {
-    val __props = js.Dynamic.literal(iFrameRef = iFrameRef.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IZoomIFrameProps]))
-  }
 }

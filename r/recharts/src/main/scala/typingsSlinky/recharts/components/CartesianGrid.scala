@@ -31,6 +31,7 @@ import typingsSlinky.recharts.rechartsStrings.normal
 import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
 import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -39,7 +40,7 @@ object CartesianGrid {
   
   @JSImport("recharts", "CartesianGrid")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -154,28 +155,28 @@ object CartesianGrid {
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def horizontalReactElement(value: ReactElement): this.type = set("horizontal", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def horizontalFunction1(value: LineProps with CartesianGridProps => ReactElement): this.type = set("horizontal", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def horizontal(value: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def horizontalCoordinatesGenerator(value: /* arg */ Height => js.Array[Double]): this.type = set("horizontalCoordinatesGenerator", js.Any.fromFunction1(value))
     
     @scala.inline
+    def horizontalFill(value: js.Array[String]): this.type = set("horizontalFill", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def horizontalFillVarargs(value: String*): this.type = set("horizontalFill", js.Array(value :_*))
     
     @scala.inline
-    def horizontalFill(value: js.Array[String]): this.type = set("horizontalFill", value.asInstanceOf[js.Any])
+    def horizontalFunction1(value: LineProps with CartesianGridProps => ReactElement): this.type = set("horizontal", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def horizontalPoints(value: js.Array[Double]): this.type = set("horizontalPoints", value.asInstanceOf[js.Any])
     
     @scala.inline
     def horizontalPointsVarargs(value: Double*): this.type = set("horizontalPoints", js.Array(value :_*))
     
     @scala.inline
-    def horizontalPoints(value: js.Array[Double]): this.type = set("horizontalPoints", value.asInstanceOf[js.Any])
+    def horizontalReactElement(value: ReactElement): this.type = set("horizontal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def imageRendering(value: auto | optimizeSpeed | optimizeQuality | inherit): this.type = set("imageRendering", value.asInstanceOf[js.Any])
@@ -268,28 +269,28 @@ object CartesianGrid {
     def unicodeBidi(value: String): this.type = set("unicodeBidi", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def verticalReactElement(value: ReactElement): this.type = set("vertical", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def verticalFunction1(value: LineProps with CartesianGridProps => ReactElement): this.type = set("vertical", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def vertical(value: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
     
     @scala.inline
     def verticalCoordinatesGenerator(value: /* arg */ Offset => js.Array[Double]): this.type = set("verticalCoordinatesGenerator", js.Any.fromFunction1(value))
     
     @scala.inline
+    def verticalFill(value: js.Array[String]): this.type = set("verticalFill", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def verticalFillVarargs(value: String*): this.type = set("verticalFill", js.Array(value :_*))
     
     @scala.inline
-    def verticalFill(value: js.Array[String]): this.type = set("verticalFill", value.asInstanceOf[js.Any])
+    def verticalFunction1(value: LineProps with CartesianGridProps => ReactElement): this.type = set("vertical", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def verticalPoints(value: js.Array[Double]): this.type = set("verticalPoints", value.asInstanceOf[js.Any])
     
     @scala.inline
     def verticalPointsVarargs(value: Double*): this.type = set("verticalPoints", js.Array(value :_*))
     
     @scala.inline
-    def verticalPoints(value: js.Array[Double]): this.type = set("verticalPoints", value.asInstanceOf[js.Any])
+    def verticalReactElement(value: ReactElement): this.type = set("vertical", value.asInstanceOf[js.Any])
     
     @scala.inline
     def visibility(value: String): this.type = set("visibility", value.asInstanceOf[js.Any])
@@ -316,7 +317,7 @@ object CartesianGrid {
     def yAxis(value: YAxisProps): this.type = set("yAxis", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CartesianGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: CartesianGrid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CartesianGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

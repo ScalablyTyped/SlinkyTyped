@@ -20,6 +20,7 @@ import typingsSlinky.phaser.Phaser.Sound.HTML5AudioSoundManager
 import typingsSlinky.phaser.Phaser.Sound.NoAudioSoundManager
 import typingsSlinky.phaser.Phaser.Sound.WebAudioSoundManager
 import typingsSlinky.phaser.Phaser.Textures.TextureManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,7 +35,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * made available to you via the Phaser.Scene Systems class instead.
   */
 @js.native
-trait Game extends js.Object {
+trait Game extends StObject {
   
   /**
     * An instance of the Animation Manager.

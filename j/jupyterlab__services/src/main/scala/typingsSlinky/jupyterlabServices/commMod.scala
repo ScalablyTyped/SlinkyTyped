@@ -11,14 +11,14 @@ import typingsSlinky.jupyterlabServices.messagesMod.IShellMessage
 import typingsSlinky.jupyterlabServices.messagesMod.ShellMessageType
 import typingsSlinky.luminoCoreutils.jsonMod.JSONObject
 import typingsSlinky.luminoDisposable.mod.DisposableDelegate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/services/lib/kernel/comm", JSImport.Namespace)
-@js.native
-object commMod extends js.Object {
+object commMod {
   
+  @JSImport("@jupyterlab/services/lib/kernel/comm", "CommHandler")
   @js.native
   class CommHandler protected ()
     extends DisposableDelegate

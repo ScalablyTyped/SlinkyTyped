@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.protonNative.anon.BackgroundColor
 import typingsSlinky.protonNative.mod.StyledTextProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object StyledText {
   
   @JSImport("proton-native", "StyledText")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,7 +30,7 @@ object StyledText {
     def y(value: Double | String): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StyledTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StyledText.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StyledTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

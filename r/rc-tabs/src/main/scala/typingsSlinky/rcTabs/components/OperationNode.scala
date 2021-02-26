@@ -14,15 +14,30 @@ import typingsSlinky.rcTabs.operationNodeMod.OperationNodeProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OperationNode {
   
+  @scala.inline
+  def apply(
+    activeKey: String,
+    id: String,
+    mobile: Boolean,
+    onTabClick: (Key, SyntheticKeyboardEvent[Element] | SyntheticMouseEvent[Element]) => Unit,
+    prefixCls: String,
+    rtl: Boolean,
+    tabs: js.Array[Tab]
+  ): Builder = {
+    val __props = js.Dynamic.literal(activeKey = activeKey.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], mobile = mobile.asInstanceOf[js.Any], onTabClick = js.Any.fromFunction2(onTabClick), prefixCls = prefixCls.asInstanceOf[js.Any], rtl = rtl.asInstanceOf[js.Any], tabs = tabs.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OperationNodeProps with RefAttributes[HTMLDivElement]]))
+  }
+  
   @JSImport("rc-tabs/es/TabNavList/OperationNode", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,10 +54,10 @@ object OperationNode {
     def locale(value: TabsLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def moreIconReactElement(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
+    def moreIcon(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def moreIcon(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
+    def moreIconReactElement(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def moreTransitionName(value: String): this.type = set("moreTransitionName", value.asInstanceOf[js.Any])
@@ -55,18 +70,4 @@ object OperationNode {
   }
   
   def withProps(p: OperationNodeProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    activeKey: String,
-    id: String,
-    mobile: Boolean,
-    onTabClick: (Key, SyntheticKeyboardEvent[Element] | SyntheticMouseEvent[Element]) => Unit,
-    prefixCls: String,
-    rtl: Boolean,
-    tabs: js.Array[Tab]
-  ): Builder = {
-    val __props = js.Dynamic.literal(activeKey = activeKey.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], mobile = mobile.asInstanceOf[js.Any], onTabClick = js.Any.fromFunction2(onTabClick), prefixCls = prefixCls.asInstanceOf[js.Any], rtl = rtl.asInstanceOf[js.Any], tabs = tabs.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[OperationNodeProps with RefAttributes[HTMLDivElement]]))
-  }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTypeahead.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.options
   - typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.renderMenuItemChildren
 */
-trait TypeaheadMenuPropsPick extends js.Object
+trait TypeaheadMenuPropsPick extends StObject
 object TypeaheadMenuPropsPick {
   
   @scala.inline

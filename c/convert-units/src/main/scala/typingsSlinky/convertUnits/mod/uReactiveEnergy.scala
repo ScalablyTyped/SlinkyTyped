@@ -1,10 +1,12 @@
 package typingsSlinky.convertUnits.mod
 
 import typingsSlinky.convertUnits.convertUnitsStrings.mVARh_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// Energy
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.convertUnits.convertUnitsStrings.VARh
   - typingsSlinky.convertUnits.convertUnitsStrings.mVARh_
@@ -12,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.convertUnits.convertUnitsStrings.MVARh
   - typingsSlinky.convertUnits.convertUnitsStrings.GVARH
 */
-trait uReactiveEnergy extends js.Object
+trait uReactiveEnergy extends StObject
 object uReactiveEnergy {
   
   @scala.inline

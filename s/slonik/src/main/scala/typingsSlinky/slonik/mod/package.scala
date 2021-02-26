@@ -1,5 +1,6 @@
 package typingsSlinky.slonik
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -122,4 +123,46 @@ package object mod {
   ]
   
   type ValueExpressionType = typingsSlinky.slonik.mod.SqlTokenType | typingsSlinky.slonik.mod.PrimitiveValueExpressionType
+  
+  @scala.inline
+  def createBenchmarkingInterceptor(): typingsSlinky.slonik.mod.InterceptorType = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createBenchmarkingInterceptor")().asInstanceOf[typingsSlinky.slonik.mod.InterceptorType]
+  
+  @scala.inline
+  def createBigintTypeParser(): typingsSlinky.slonik.mod.TypeParserType[scala.Double] = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createBigintTypeParser")().asInstanceOf[typingsSlinky.slonik.mod.TypeParserType[scala.Double]]
+  
+  @scala.inline
+  def createFieldNameTransformationInterceptor(configuration: typingsSlinky.slonik.anon.Format): typingsSlinky.slonik.mod.InterceptorType = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createFieldNameTransformationInterceptor")(configuration.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.slonik.mod.InterceptorType]
+  
+  @scala.inline
+  def createInterceptorPreset(): js.Array[typingsSlinky.slonik.mod.InterceptorType] = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createInterceptorPreset")().asInstanceOf[js.Array[typingsSlinky.slonik.mod.InterceptorType]]
+  
+  @scala.inline
+  def createPool(connectionUri: java.lang.String): typingsSlinky.slonik.mod.DatabasePoolType = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createPool")(connectionUri.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.slonik.mod.DatabasePoolType]
+  @scala.inline
+  def createPool(
+    connectionUri: java.lang.String,
+    clientUserConfiguration: typingsSlinky.slonik.mod.ClientConfigurationInputType
+  ): typingsSlinky.slonik.mod.DatabasePoolType = (typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createPool")(connectionUri.asInstanceOf[js.Any], clientUserConfiguration.asInstanceOf[js.Any])).asInstanceOf[typingsSlinky.slonik.mod.DatabasePoolType]
+  
+  @scala.inline
+  def createQueryNormalizationInterceptor(): typingsSlinky.slonik.mod.InterceptorType = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createQueryNormalizationInterceptor")().asInstanceOf[typingsSlinky.slonik.mod.InterceptorType]
+  @scala.inline
+  def createQueryNormalizationInterceptor(configuration: typingsSlinky.slonik.anon.StripComments): typingsSlinky.slonik.mod.InterceptorType = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createQueryNormalizationInterceptor")(configuration.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.slonik.mod.InterceptorType]
+  
+  @scala.inline
+  def createSqlTag(): typingsSlinky.slonik.mod.SqlTaggedTemplateType = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createSqlTag")().asInstanceOf[typingsSlinky.slonik.mod.SqlTaggedTemplateType]
+  @scala.inline
+  def createSqlTag(configuration: typingsSlinky.slonik.mod.SqlTagConfigurationType): typingsSlinky.slonik.mod.SqlTaggedTemplateType = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createSqlTag")(configuration.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.slonik.mod.SqlTaggedTemplateType]
+  
+  @scala.inline
+  def createTimestampTypeParser(): typingsSlinky.slonik.mod.TypeParserType[scala.Double | scala.Null] = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createTimestampTypeParser")().asInstanceOf[typingsSlinky.slonik.mod.TypeParserType[scala.Double | scala.Null]]
+  
+  @scala.inline
+  def createTimestampWithTimeZoneTypeParser(): typingsSlinky.slonik.mod.TypeParserType[scala.Double | scala.Null] = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createTimestampWithTimeZoneTypeParser")().asInstanceOf[typingsSlinky.slonik.mod.TypeParserType[scala.Double | scala.Null]]
+  
+  @scala.inline
+  def createTypeParserPreset(): js.Array[typingsSlinky.slonik.mod.TypeParserType[_]] = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createTypeParserPreset")().asInstanceOf[js.Array[typingsSlinky.slonik.mod.TypeParserType[_]]]
+  
+  @scala.inline
+  def sql: typingsSlinky.slonik.mod.SqlTaggedTemplateType = typingsSlinky.slonik.mod.^.asInstanceOf[js.Dynamic].selectDynamic("sql").asInstanceOf[typingsSlinky.slonik.mod.SqlTaggedTemplateType]
 }

@@ -77,6 +77,7 @@ import typingsSlinky.wordpressComponents.wordpressComponentsStrings.tree
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.url
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.vertical
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -85,14 +86,23 @@ object FormFileUpload {
   
   object IconButtonProps {
     
+    @scala.inline
+    def apply(onChange: ChangeEvent[HTMLInputElement] => Unit): Builder = {
+      val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.wordpressComponents.formFileUploadMod.FormFileUpload.IconButtonProps]))
+    }
+    
     @JSImport("@wordpress/components", "FormFileUpload")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
          with StBuildingComponent[tag.type, HTMLButtonElement] {
+      
+      @scala.inline
+      def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
       
       @scala.inline
       def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -355,16 +365,13 @@ object FormFileUpload {
       def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -427,10 +434,10 @@ object FormFileUpload {
       def httpEquiv(value: String): this.type = set("httpEquiv", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+      def icon(value: typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def icon(value: typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+      def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -955,10 +962,10 @@ object FormFileUpload {
       def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+      def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+      def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
       
       @scala.inline
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -974,19 +981,19 @@ object FormFileUpload {
     }
     
     def withProps(p: typingsSlinky.wordpressComponents.formFileUploadMod.FormFileUpload.IconButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(onChange: ChangeEvent[HTMLInputElement] => Unit): Builder = {
-      val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.wordpressComponents.formFileUploadMod.FormFileUpload.IconButtonProps]))
-    }
   }
   
   object RenderProps {
     
+    @scala.inline
+    def apply(onChange: ChangeEvent[HTMLInputElement] => Unit, render: OpenFileDialog => ReactElement): Builder = {
+      val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), render = js.Any.fromFunction1(render))
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.wordpressComponents.formFileUploadMod.FormFileUpload.RenderProps]))
+    }
+    
     @JSImport("@wordpress/components", "FormFileUpload")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -1001,11 +1008,5 @@ object FormFileUpload {
     }
     
     def withProps(p: typingsSlinky.wordpressComponents.formFileUploadMod.FormFileUpload.RenderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(onChange: ChangeEvent[HTMLInputElement] => Unit, render: OpenFileDialog => ReactElement): Builder = {
-      val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), render = js.Any.fromFunction1(render))
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.wordpressComponents.formFileUploadMod.FormFileUpload.RenderProps]))
-    }
   }
 }

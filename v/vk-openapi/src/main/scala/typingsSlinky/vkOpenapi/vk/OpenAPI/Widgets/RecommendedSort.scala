@@ -1,5 +1,6 @@
 package typingsSlinky.vkOpenapi.vk.OpenAPI.Widgets
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vkOpenapi.vkOpenapiStrings.friend_likes
   - typingsSlinky.vkOpenapi.vkOpenapiStrings.likes
 */
-trait RecommendedSort extends js.Object
+trait RecommendedSort extends StObject
 object RecommendedSort {
   
   @scala.inline

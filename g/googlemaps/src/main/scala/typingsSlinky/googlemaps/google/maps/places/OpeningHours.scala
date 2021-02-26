@@ -1,12 +1,13 @@
 package typingsSlinky.googlemaps.google.maps.places
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // TODO rename to PlaceOpeningHours https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceOpeningHours
 @js.native
-trait OpeningHours extends js.Object {
+trait OpeningHours extends StObject {
   
   def isOpen(): Boolean = js.native
   def isOpen(date: js.Date): Boolean = js.native

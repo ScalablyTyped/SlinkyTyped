@@ -22,8 +22,13 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -68,15 +73,22 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.wordpressEditor.postPublishPanelMod.PostPublishPanel.Props
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PostPublishPanel {
   
+  @scala.inline
+  def apply(onClose: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(onClose = js.Any.fromFunction0(onClose))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@wordpress/editor", "PostPublishPanel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -84,22 +96,25 @@ object PostPublishPanel {
        with StBuildingComponent[tag.type, HTMLDivElement] {
     
     @scala.inline
-    def PostPublishExtensionFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("PostPublishExtension", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def PostPublishExtensionComponentClass(value: ReactComponentClass[js.Object]): this.type = set("PostPublishExtension", value.asInstanceOf[js.Any])
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def PostPublishExtension(value: ReactComponentClass[js.Object]): this.type = set("PostPublishExtension", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def PrePublishExtensionFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("PrePublishExtension", value.asInstanceOf[js.Any])
+    def PostPublishExtensionComponentClass(value: ReactComponentClass[js.Object]): this.type = set("PostPublishExtension", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def PostPublishExtensionFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("PostPublishExtension", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def PrePublishExtension(value: ReactComponentClass[js.Object]): this.type = set("PrePublishExtension", value.asInstanceOf[js.Any])
     
     @scala.inline
     def PrePublishExtensionComponentClass(value: ReactComponentClass[js.Object]): this.type = set("PrePublishExtension", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def PrePublishExtension(value: ReactComponentClass[js.Object]): this.type = set("PrePublishExtension", value.asInstanceOf[js.Any])
+    def PrePublishExtensionFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("PrePublishExtension", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -231,7 +246,9 @@ object PostPublishPanel {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -360,16 +377,13 @@ object PostPublishPanel {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -927,10 +941,10 @@ object PostPublishPanel {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -946,10 +960,4 @@ object PostPublishPanel {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onClose: () => Unit): Builder = {
-    val __props = js.Dynamic.literal(onClose = js.Any.fromFunction0(onClose))
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

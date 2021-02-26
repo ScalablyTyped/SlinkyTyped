@@ -7,15 +7,22 @@ import typingsSlinky.cathoQuantum.anon.`1`
 import typingsSlinky.cathoQuantum.socialsMod.NonEmptyArray
 import typingsSlinky.cathoQuantum.socialsMod.SocialsProps
 import typingsSlinky.cathoQuantum.socialsMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Socials {
   
+  @scala.inline
+  def apply(items: NonEmptyArray[Name]): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SocialsProps]))
+  }
+  
   @JSImport("@catho/quantum/Socials", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,10 +40,4 @@ object Socials {
   }
   
   def withProps(p: SocialsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(items: NonEmptyArray[Name]): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[SocialsProps]))
-  }
 }

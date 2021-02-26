@@ -2,6 +2,7 @@ package typingsSlinky.browserfs.anon
 
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.buffer.mod.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -55,7 +56,7 @@ trait TypeofBuffer_ extends Instantiable1[/* str */ String, Buffer] {
   /**
     * The same as buf1.compare(buf2).
     */
-  def compare(buf1: Buffer, buf2: Buffer): Double = js.native
+  def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = js.native
   
   /**
     * Returns a buffer which is the result of concatenating all the buffers in the list together.
@@ -68,8 +69,8 @@ trait TypeofBuffer_ extends Instantiable1[/* str */ String, Buffer] {
     * @param totalLength Total length of the buffers when concatenated.
     *   If totalLength is not provided, it is read from the buffers in the list. However, this adds an additional loop to the function, so it is faster to provide the length explicitly.
     */
-  def concat(list: js.Array[Buffer]): Buffer = js.native
-  def concat(list: js.Array[Buffer], totalLength: Double): Buffer = js.native
+  def concat(list: js.Array[js.typedarray.Uint8Array]): Buffer = js.native
+  def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): Buffer = js.native
   
   /**
     * When passed a reference to the .buffer property of a TypedArray instance,
@@ -91,13 +92,13 @@ trait TypeofBuffer_ extends Instantiable1[/* str */ String, Buffer] {
     * @param array
     */
   def from(array: js.Array[_]): Buffer = js.native
+  def from(buffer: js.typedarray.Uint8Array): Buffer = js.native
   /**
     * Copies the passed {buffer} data onto a new Buffer instance.
     *
     * @param buffer
     */
   def from(buffer: Buffer): Buffer = js.native
-  def from(buffer: js.typedarray.Uint8Array): Buffer = js.native
   /**
     * Creates a new Buffer containing the given JavaScript string {str}.
     * If provided, the {encoding} parameter identifies the character encoding.

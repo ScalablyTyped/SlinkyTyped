@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.typesBatchGetRepositoriesInputMo
 import typingsSlinky.awsSdkClientCodecommitNode.typesBatchGetRepositoriesOutputMod.BatchGetRepositoriesOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-codecommit-node/commands/BatchGetRepositoriesCommand", JSImport.Namespace)
-@js.native
-object batchGetRepositoriesCommandMod extends js.Object {
+object batchGetRepositoriesCommandMod {
   
+  @JSImport("@aws-sdk/client-codecommit-node/commands/BatchGetRepositoriesCommand", "BatchGetRepositoriesCommand")
   @js.native
   class BatchGetRepositoriesCommand protected () extends Command[
           InputTypesUnion, 

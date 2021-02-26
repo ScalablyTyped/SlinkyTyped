@@ -1,6 +1,7 @@
 package typingsSlinky.winrt.Windows.Media.Protection
 
 import typingsSlinky.winrt.Windows.Foundation.Collections.IPropertySet
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

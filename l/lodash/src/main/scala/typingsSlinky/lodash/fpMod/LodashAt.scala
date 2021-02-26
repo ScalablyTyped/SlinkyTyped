@@ -5,12 +5,13 @@ import typingsSlinky.lodash.mod.Many
 import typingsSlinky.lodash.mod.NumericDictionary
 import typingsSlinky.lodash.mod.PropertyPath
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashAt extends js.Object {
+trait LodashAt extends StObject {
   
   def apply(props: PropertyPath): LodashAt1x1 = js.native
   def apply[T /* <: js.Object */](props: Many[/* keyof T */ String], `object`: T): js.Array[

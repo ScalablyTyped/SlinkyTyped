@@ -4,14 +4,14 @@ import typingsSlinky.angularHttp.baseResponseOptionsMod.ResponseOptions
 import typingsSlinky.angularHttp.bodyMod.Body
 import typingsSlinky.angularHttp.enumsMod.ResponseType
 import typingsSlinky.angularHttp.headersMod.Headers
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/http/src/static_response", JSImport.Namespace)
-@js.native
-object staticResponseMod extends js.Object {
+object staticResponseMod {
   
+  @JSImport("@angular/http/src/static_response", "Response")
   @js.native
   class Response protected () extends Body {
     def this(responseOptions: ResponseOptions) = this()

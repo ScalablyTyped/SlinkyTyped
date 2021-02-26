@@ -10,9 +10,9 @@ Promise based multipart form parser
 | ------------------ | :-------------: |
 | Full name          | async-busboy |
 | Keywords           | koa, multipart, form, file-upload |
-| # releases         | 2 |
+| # releases         | 3 |
 | # dependents       | 32 |
-| # downloads        | 220925 |
+| # downloads        | 303208 |
 | # stars            | 3 |
 
 ## Links

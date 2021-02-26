@@ -19,6 +19,7 @@ import typingsSlinky.baseui.baseuiStrings.top
 import typingsSlinky.baseui.checkboxMod.CheckboxOverrides
 import typingsSlinky.baseui.checkboxMod.StatefulCheckboxProps
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +28,7 @@ object StatefulCheckbox {
   
   @JSImport("baseui/checkbox", "StatefulCheckbox")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -50,16 +51,16 @@ object StatefulCheckbox {
     def initialState(value: typingsSlinky.baseui.checkboxMod.initialState): this.type = set("initialState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRef(value: Ref[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def inputRef(value: Ref[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRefNull: this.type = set("inputRef", null)
     
     @scala.inline
-    def inputRefNull: this.type = set("inputRef", null)
+    def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def isError(value: Boolean): this.type = set("isError", value.asInstanceOf[js.Any])
@@ -89,7 +90,7 @@ object StatefulCheckbox {
     def overrides(value: CheckboxOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: StatefulCheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatefulCheckbox.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatefulCheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

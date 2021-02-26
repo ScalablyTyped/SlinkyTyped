@@ -2,12 +2,13 @@ package typingsSlinky.activexAccess.Access
 
 import typingsSlinky.activexAccess.activexAccessNumbers.`0`
 import typingsSlinky.activexAccess.activexAccessNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FormatCondition extends js.Object {
+trait FormatCondition extends StObject {
   
   @JSName("Access.FormatCondition_typekey")
   var AccessDotFormatCondition_typekey: FormatCondition = js.native

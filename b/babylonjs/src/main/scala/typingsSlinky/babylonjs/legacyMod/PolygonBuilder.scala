@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import typingsSlinky.babylonjs.anon.Holes
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,9 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class PolygonBuilder ()
   extends typingsSlinky.babylonjs.indexMod.PolygonBuilder
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "PolygonBuilder")
-@js.native
-object PolygonBuilder extends js.Object {
+object PolygonBuilder {
   
   /**
     * Creates a polygon mesh
@@ -29,13 +28,19 @@ object PolygonBuilder extends js.Object {
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns the polygon mesh
     */
+  @JSImport("babylonjs/Legacy/legacy", "PolygonBuilder.CreatePolygon")
+  @js.native
   def CreatePolygon(name: String, options: Holes): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  @JSImport("babylonjs/Legacy/legacy", "PolygonBuilder.CreatePolygon")
+  @js.native
   def CreatePolygon(
     name: String,
     options: Holes,
     scene: js.UndefOr[Nullable[typingsSlinky.babylonjs.sceneMod.Scene]],
     earcutInjection: js.Any
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  @JSImport("babylonjs/Legacy/legacy", "PolygonBuilder.CreatePolygon")
+  @js.native
   def CreatePolygon(name: String, options: Holes, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   
   /**
@@ -48,12 +53,18 @@ object PolygonBuilder extends js.Object {
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns the polygon mesh
     */
+  @JSImport("babylonjs/Legacy/legacy", "PolygonBuilder.ExtrudePolygon")
+  @js.native
   def ExtrudePolygon(name: String, options: Holes): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  @JSImport("babylonjs/Legacy/legacy", "PolygonBuilder.ExtrudePolygon")
+  @js.native
   def ExtrudePolygon(
     name: String,
     options: Holes,
     scene: js.UndefOr[Nullable[typingsSlinky.babylonjs.sceneMod.Scene]],
     earcutInjection: js.Any
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  @JSImport("babylonjs/Legacy/legacy", "PolygonBuilder.ExtrudePolygon")
+  @js.native
   def ExtrudePolygon(name: String, options: Holes, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }

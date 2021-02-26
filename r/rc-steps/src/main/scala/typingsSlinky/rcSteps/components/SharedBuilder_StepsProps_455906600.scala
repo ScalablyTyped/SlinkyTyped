@@ -14,6 +14,7 @@ import typingsSlinky.rcSteps.rcStepsStrings.small
 import typingsSlinky.rcSteps.rcStepsStrings.vertical
 import typingsSlinky.rcSteps.stepsMod.ProgressDotRender
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -51,10 +52,10 @@ class SharedBuilder_StepsProps_455906600[R <: js.Object] (val args: js.Array[js.
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def progressDotFunction2(value: (/* iconDot */ js.Any, /* info */ Index) => ReactElement): this.type = set("progressDot", js.Any.fromFunction2(value))
+  def progressDot(value: ProgressDotRender | Boolean): this.type = set("progressDot", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def progressDot(value: ProgressDotRender | Boolean): this.type = set("progressDot", value.asInstanceOf[js.Any])
+  def progressDotFunction2(value: (/* iconDot */ js.Any, /* info */ Index) => ReactElement): this.type = set("progressDot", js.Any.fromFunction2(value))
   
   @scala.inline
   def size(value: default | small): this.type = set("size", value.asInstanceOf[js.Any])

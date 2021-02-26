@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.transformMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.vegaTypingsStrings.diagonal
   - typingsSlinky.vegaTypings.vegaTypingsStrings.orthogonal
 */
-trait LinkPathShape extends js.Object
+trait LinkPathShape extends StObject
 object LinkPathShape {
   
   @scala.inline

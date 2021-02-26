@@ -1,6 +1,5 @@
 package typingsSlinky.babylonjs
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.depthOfFieldBlurPostProcessMod.DepthOfFieldBlurPostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
@@ -8,14 +7,14 @@ import typingsSlinky.babylonjs.postProcessRenderEffectMod.PostProcessRenderEffec
 import typingsSlinky.babylonjs.renderTargetTextureMod.RenderTargetTexture
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/PostProcesses/depthOfFieldEffect", JSImport.Namespace)
-@js.native
-object depthOfFieldEffectMod extends js.Object {
+object depthOfFieldEffectMod {
   
+  @JSImport("babylonjs/PostProcesses/depthOfFieldEffect", "DepthOfFieldEffect")
   @js.native
   class DepthOfFieldEffect protected () extends PostProcessRenderEffect {
     /**
@@ -139,9 +138,10 @@ object depthOfFieldEffectMod extends js.Object {
   }
   
   @js.native
-  sealed trait DepthOfFieldEffectBlurLevel extends js.Object
+  sealed trait DepthOfFieldEffectBlurLevel extends StObject
+  @JSImport("babylonjs/PostProcesses/depthOfFieldEffect", "DepthOfFieldEffectBlurLevel")
   @js.native
-  object DepthOfFieldEffectBlurLevel extends js.Object {
+  object DepthOfFieldEffectBlurLevel extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[DepthOfFieldEffectBlurLevel with Double] = js.native
@@ -151,23 +151,20 @@ object depthOfFieldEffectMod extends js.Object {
       */
     @js.native
     sealed trait High extends DepthOfFieldEffectBlurLevel
-    /* 2 */ @js.native
-    object High extends TopLevel[High with Double]
+    /* 2 */ val High: typingsSlinky.babylonjs.depthOfFieldEffectMod.DepthOfFieldEffectBlurLevel.High with Double = js.native
     
     /**
       * Subtle blur
       */
     @js.native
     sealed trait Low extends DepthOfFieldEffectBlurLevel
-    /* 0 */ @js.native
-    object Low extends TopLevel[Low with Double]
+    /* 0 */ val Low: typingsSlinky.babylonjs.depthOfFieldEffectMod.DepthOfFieldEffectBlurLevel.Low with Double = js.native
     
     /**
       * Medium blur
       */
     @js.native
     sealed trait Medium extends DepthOfFieldEffectBlurLevel
-    /* 1 */ @js.native
-    object Medium extends TopLevel[Medium with Double]
+    /* 1 */ val Medium: typingsSlinky.babylonjs.depthOfFieldEffectMod.DepthOfFieldEffectBlurLevel.Medium with Double = js.native
   }
 }

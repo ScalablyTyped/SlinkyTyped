@@ -1,5 +1,6 @@
 package typingsSlinky.gm.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,8 +14,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gm.gmStrings.DirectColor
   - typingsSlinky.gm.gmStrings.default
 */
-trait VisualType extends js.Object
+trait VisualType extends StObject
 object VisualType {
+  
+  @scala.inline
+  def default: typingsSlinky.gm.gmStrings.default = "default".asInstanceOf[typingsSlinky.gm.gmStrings.default]
   
   @scala.inline
   def DirectColor: typingsSlinky.gm.gmStrings.DirectColor = "DirectColor".asInstanceOf[typingsSlinky.gm.gmStrings.DirectColor]
@@ -33,7 +37,4 @@ object VisualType {
   
   @scala.inline
   def TrueColor: typingsSlinky.gm.gmStrings.TrueColor = "TrueColor".asInstanceOf[typingsSlinky.gm.gmStrings.TrueColor]
-  
-  @scala.inline
-  def default: typingsSlinky.gm.gmStrings.default = "default".asInstanceOf[typingsSlinky.gm.gmStrings.default]
 }

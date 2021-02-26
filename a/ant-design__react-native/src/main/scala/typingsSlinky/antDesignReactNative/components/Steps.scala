@@ -8,15 +8,22 @@ import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.vertical
 import typingsSlinky.antDesignReactNative.stepsMod.StepsProps
 import typingsSlinky.antDesignReactNative.stepsStyleMod.StepsStyle
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Steps {
   
+  @scala.inline
+  def apply(children: js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StepsProps]))
+  }
+  
   @JSImport("@ant-design/react-native", "Steps")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +47,4 @@ object Steps {
   }
   
   def withProps(p: StepsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: js.Array[ReactElement]): Builder = {
-    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StepsProps]))
-  }
 }

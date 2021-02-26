@@ -21,6 +21,7 @@ import typingsSlinky.activexMshtml.activexMshtmlNumbers.`6`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`7`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`8`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -48,7 +49,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`0`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
 */
-trait svgPathSegType extends js.Object
+trait svgPathSegType extends StObject
 object svgPathSegType {
   
   @scala.inline

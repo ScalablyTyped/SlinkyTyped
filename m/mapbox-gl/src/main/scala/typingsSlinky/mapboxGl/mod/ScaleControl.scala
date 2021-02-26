@@ -4,6 +4,7 @@ import typingsSlinky.mapboxGl.anon.MaxWidth
 import typingsSlinky.mapboxGl.mapboxGlStrings.imperial
 import typingsSlinky.mapboxGl.mapboxGlStrings.metric
 import typingsSlinky.mapboxGl.mapboxGlStrings.nautical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

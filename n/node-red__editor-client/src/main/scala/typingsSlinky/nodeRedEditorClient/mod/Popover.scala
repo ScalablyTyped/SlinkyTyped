@@ -6,12 +6,13 @@ import typingsSlinky.nodeRedEditorClient.anon.ContainerHide
 import typingsSlinky.nodeRedEditorClient.anon.DisposeOnClose
 import typingsSlinky.nodeRedEditorClient.anon.Show
 import typingsSlinky.nodeRedEditorClient.mod.global.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Popover extends js.Object {
+trait Popover extends StObject {
   
   def create(options: AutoClose): PopoverInstance = js.native
   

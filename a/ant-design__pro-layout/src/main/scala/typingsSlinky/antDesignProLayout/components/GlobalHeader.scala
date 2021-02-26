@@ -19,15 +19,22 @@ import typingsSlinky.antDesignProLayout.typingsMod.MenuDataItem
 import typingsSlinky.antDesignProLayout.typingsMod.WithFalse
 import typingsSlinky.antd.menuContextMod.MenuTheme
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object GlobalHeader {
   
+  @scala.inline
+  def apply(matchMenuKeys: js.Array[String]): Builder = {
+    val __props = js.Dynamic.literal(matchMenuKeys = matchMenuKeys.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[GlobalHeaderProps with PrivateSiderMenuProps]))
+  }
+  
   @JSImport("@ant-design/pro-layout/lib/GlobalHeader", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,10 +48,10 @@ object GlobalHeader {
     def collapsed(value: Boolean): this.type = set("collapsed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def collapsedButtonRenderFunction1(value: /* collapsed */ js.UndefOr[Boolean] => ReactElement): this.type = set("collapsedButtonRender", js.Any.fromFunction1(value))
+    def collapsedButtonRender(value: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], ReactElement]]): this.type = set("collapsedButtonRender", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def collapsedButtonRender(value: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], ReactElement]]): this.type = set("collapsedButtonRender", value.asInstanceOf[js.Any])
+    def collapsedButtonRenderFunction1(value: /* collapsed */ js.UndefOr[Boolean] => ReactElement): this.type = set("collapsedButtonRender", js.Any.fromFunction1(value))
     
     @scala.inline
     def colorWeak(value: Boolean): this.type = set("colorWeak", value.asInstanceOf[js.Any])
@@ -74,24 +81,19 @@ object GlobalHeader {
     def layout(value: side | top | mix): this.type = set("layout", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def logoReactElement(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
+    def logo(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def logo(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
+    def logoReactElement(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
     
     @scala.inline
     def menu(value: DefaultOpenAll): this.type = set("menu", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuDataVarargs(value: MenuDataItem*): this.type = set("menuData", js.Array(value :_*))
-    
-    @scala.inline
     def menuData(value: js.Array[MenuDataItem]): this.type = set("menuData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuHeaderRenderFunction3(
-      value: (/* logo */ ReactElement, /* title */ ReactElement, /* props */ js.UndefOr[GlobalHeaderProps]) => ReactElement
-    ): this.type = set("menuHeaderRender", js.Any.fromFunction3(value))
+    def menuDataVarargs(value: MenuDataItem*): this.type = set("menuData", js.Array(value :_*))
     
     @scala.inline
     def menuHeaderRender(
@@ -106,7 +108,9 @@ object GlobalHeader {
     ): this.type = set("menuHeaderRender", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuRenderFunction2(value: (/* props */ HeaderViewProps, /* defaultDom */ ReactElement) => ReactElement): this.type = set("menuRender", js.Any.fromFunction2(value))
+    def menuHeaderRenderFunction3(
+      value: (/* logo */ ReactElement, /* title */ ReactElement, /* props */ js.UndefOr[GlobalHeaderProps]) => ReactElement
+    ): this.type = set("menuHeaderRender", js.Any.fromFunction3(value))
     
     @scala.inline
     def menuRender(
@@ -114,6 +118,9 @@ object GlobalHeader {
           js.Function2[/* props */ HeaderViewProps, /* defaultDom */ ReactElement, ReactElement]
         ]
     ): this.type = set("menuRender", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def menuRenderFunction2(value: (/* props */ HeaderViewProps, /* defaultDom */ ReactElement) => ReactElement): this.type = set("menuRender", js.Any.fromFunction2(value))
     
     @scala.inline
     def navTheme(value: MenuTheme | realDark): this.type = set("navTheme", value.asInstanceOf[js.Any])
@@ -131,10 +138,10 @@ object GlobalHeader {
     def primaryColor(value: String): this.type = set("primaryColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightContentRenderFunction1(value: /* props */ HeaderViewProps => ReactElement): this.type = set("rightContentRender", js.Any.fromFunction1(value))
+    def rightContentRender(value: WithFalse[js.Function1[/* props */ HeaderViewProps, ReactElement]]): this.type = set("rightContentRender", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightContentRender(value: WithFalse[js.Function1[/* props */ HeaderViewProps, ReactElement]]): this.type = set("rightContentRender", value.asInstanceOf[js.Any])
+    def rightContentRenderFunction1(value: /* props */ HeaderViewProps => ReactElement): this.type = set("rightContentRender", js.Any.fromFunction1(value))
     
     @scala.inline
     def splitMenus(value: Boolean): this.type = set("splitMenus", value.asInstanceOf[js.Any])
@@ -147,10 +154,4 @@ object GlobalHeader {
   }
   
   def withProps(p: GlobalHeaderProps with PrivateSiderMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(matchMenuKeys: js.Array[String]): Builder = {
-    val __props = js.Dynamic.literal(matchMenuKeys = matchMenuKeys.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[GlobalHeaderProps with PrivateSiderMenuProps]))
-  }
 }

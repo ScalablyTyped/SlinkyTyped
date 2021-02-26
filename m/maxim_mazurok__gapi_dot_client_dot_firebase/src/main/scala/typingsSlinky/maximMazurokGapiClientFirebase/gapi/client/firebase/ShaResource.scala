@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.Alt
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.Callback
 import typingsSlinky.maximMazurokGapiClientFirebase.anon.Fields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ShaResource extends js.Object {
+trait ShaResource extends StObject {
   
   /** Adds a ShaCertificate to the specified AndroidApp. */
   def create(request: Callback): Request[ShaCertificate] = js.native

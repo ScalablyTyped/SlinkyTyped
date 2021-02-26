@@ -4,17 +4,16 @@ import typingsSlinky.chai.Chai.Equal
 import typingsSlinky.chai.Chai.LanguageChains
 import typingsSlinky.chai.Chai.NumericComparison
 import typingsSlinky.chai.Chai.TypeComparison
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Chai")
-@js.native
-object Chai extends js.Object {
+object Chai {
   
   // For Assert APIs
   @js.native
-  trait Assert extends js.Object {
+  trait Assert extends StObject {
     
     def oeq(act: js.Any, exp: js.Any): Equal = js.native
     def oeq(act: js.Any, exp: js.Any, method: String): Equal = js.native

@@ -10,9 +10,9 @@ Select input component for Ink
 | ------------------ | :-------------: |
 | Full name          | ink-select-input |
 | Keywords           | ink, ink-component |
-| # releases         | 9 |
-| # dependents       | 170 |
-| # downloads        | 165636 |
+| # releases         | 10 |
+| # dependents       | 223 |
+| # downloads        | 5806803 |
 | # stars            | 0 |
 
 ## Links

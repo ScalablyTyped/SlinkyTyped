@@ -12,6 +12,7 @@ import typingsSlinky.bizcharts.mod.LegendPositionType
 import typingsSlinky.bizcharts.mod.LegendProps
 import typingsSlinky.bizcharts.mod.MarkerType
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object Legend {
   
   @JSImport("ant-design-pro/lib/Charts/bizcharts", "Legend")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -76,11 +77,6 @@ object Legend {
     def itemMarginBottom(value: Double): this.type = set("itemMarginBottom", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemTplFunction4(
-      value: (/* value */ js.UndefOr[String], /* color */ js.UndefOr[String], /* checked */ js.UndefOr[Boolean], /* index */ js.UndefOr[Double]) => String
-    ): this.type = set("itemTpl", js.Any.fromFunction4(value))
-    
-    @scala.inline
     def itemTpl(
       value: String | (js.Function4[
           /* value */ js.UndefOr[String], 
@@ -92,21 +88,21 @@ object Legend {
     ): this.type = set("itemTpl", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemWidth(value: Double): this.type = set("itemWidth", value.asInstanceOf[js.Any])
+    def itemTplFunction4(
+      value: (/* value */ js.UndefOr[String], /* color */ js.UndefOr[String], /* checked */ js.UndefOr[Boolean], /* index */ js.UndefOr[Double]) => String
+    ): this.type = set("itemTpl", js.Any.fromFunction4(value))
     
     @scala.inline
-    def itemsVarargs(value: js.Any*): this.type = set("items", js.Array(value :_*))
+    def itemWidth(value: Double): this.type = set("itemWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def items(value: js.Array[_]): this.type = set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def layout(value: LegendLayoutType): this.type = set("layout", value.asInstanceOf[js.Any])
+    def itemsVarargs(value: js.Any*): this.type = set("items", js.Array(value :_*))
     
     @scala.inline
-    def markerFunction4(
-      value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* r */ js.UndefOr[Double], /* ctx */ js.UndefOr[CanvasRenderingContext2D]) => Unit
-    ): this.type = set("marker", js.Any.fromFunction4(value))
+    def layout(value: LegendLayoutType): this.type = set("layout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def marker(
@@ -118,6 +114,11 @@ object Legend {
           Unit
         ])
     ): this.type = set("marker", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def markerFunction4(
+      value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* r */ js.UndefOr[Double], /* ctx */ js.UndefOr[CanvasRenderingContext2D]) => Unit
+    ): this.type = set("marker", js.Any.fromFunction4(value))
     
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
@@ -165,7 +166,7 @@ object Legend {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: LegendProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Legend.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: LegendProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

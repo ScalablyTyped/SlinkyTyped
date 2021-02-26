@@ -1,5 +1,6 @@
 package typingsSlinky.fsJetpack.typesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fsJetpack.fsJetpackStrings.file
   - typingsSlinky.fsJetpack.fsJetpackStrings.other
 */
-trait ExistsResult extends js.Object
+trait ExistsResult extends StObject
 object ExistsResult {
   
   @scala.inline

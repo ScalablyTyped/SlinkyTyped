@@ -1,13 +1,14 @@
 package typingsSlinky.opentelemetryCore
 
 import org.scalajs.dom.raw.Performance
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@opentelemetry/core/build/src/platform/browser/performance", JSImport.Namespace)
-@js.native
-object performanceMod extends js.Object {
+object performanceMod {
   
+  @JSImport("@opentelemetry/core/build/src/platform/browser/performance", "otperformance")
+  @js.native
   val otperformance: Performance = js.native
 }

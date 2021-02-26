@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.ssmMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _AssociationComplianceSeverity extends js.Object
+trait _AssociationComplianceSeverity extends StObject

@@ -2,13 +2,14 @@ package typingsSlinky.squareConnect.mod
 
 import typingsSlinky.squareConnect.squareConnectStrings.ASAP
 import typingsSlinky.squareConnect.squareConnectStrings.SCHEDULED
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "OrderFulfillmentPickupDetails")
 @js.native
-class OrderFulfillmentPickupDetails () extends js.Object {
+class OrderFulfillmentPickupDetails () extends StObject {
   
   /**
     * The [timestamp](#workingwithdates) indicating when the fulfillment was accepted.

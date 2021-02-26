@@ -7,6 +7,7 @@ import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionEventData
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionProps
 import typingsSlinky.semanticUiReact.transitionablePortalTransitionablePortalMod.TransitionablePortalProps
 import typingsSlinky.semanticUiReact.transitionablePortalTransitionablePortalMod.TransitionablePortalState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object TransitionablePortal {
   
   @JSImport("semantic-ui-react", "TransitionablePortal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,7 +42,7 @@ object TransitionablePortal {
     def transition(value: TransitionProps): this.type = set("transition", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TransitionablePortalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TransitionablePortal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TransitionablePortalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

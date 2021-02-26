@@ -1,12 +1,13 @@
 package typingsSlinky.storybookAddons.typesMod
 
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Annotations[Args, StoryFnReturnType] extends js.Object {
+trait Annotations[Args, StoryFnReturnType] extends StObject {
   
   /**
     * ArgTypes encode basic metadata for args, such as `name`, `description`, `defaultValue` for an arg. These get automatically filled in by Storybook Docs.
@@ -63,31 +64,25 @@ object Annotations {
   }
   
   @scala.inline
-  implicit class AnnotationsOps[Self <: Annotations[_, _], Args, StoryFnReturnType] (val x: Self with (Annotations[Args, StoryFnReturnType])) extends AnyVal {
+  implicit class AnnotationsMutableBuilder[Self <: Annotations[_, _], Args, StoryFnReturnType] (val x: Self with (Annotations[Args, StoryFnReturnType])) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setArgTypes(value: ArgTypes): Self = StObject.set(x, "argTypes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setArgTypesUndefined: Self = StObject.set(x, "argTypes", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setArgs(value: Partial[Args]): Self = StObject.set(x, "args", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setArgTypes(value: ArgTypes): Self = this.set("argTypes", value.asInstanceOf[js.Any])
+    def setArgsUndefined: Self = StObject.set(x, "args", js.undefined)
     
     @scala.inline
-    def deleteArgTypes: Self = this.set("argTypes", js.undefined)
+    def setDecorators(value: BaseDecorators[StoryFnReturnType]): Self = StObject.set(x, "decorators", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setArgs(value: Partial[Args]): Self = this.set("args", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteArgs: Self = this.set("args", js.undefined)
+    def setDecoratorsUndefined: Self = StObject.set(x, "decorators", js.undefined)
     
     @scala.inline
     def setDecoratorsVarargs(
@@ -96,42 +91,36 @@ object Annotations {
           /* context */ StoryContext, 
           StoryFnReturnType
         ])*
-    ): Self = this.set("decorators", js.Array(value :_*))
+    ): Self = StObject.set(x, "decorators", js.Array(value :_*))
     
     @scala.inline
-    def setDecorators(value: BaseDecorators[StoryFnReturnType]): Self = this.set("decorators", value.asInstanceOf[js.Any])
+    def setExcludeStories(value: js.Array[String] | js.RegExp): Self = StObject.set(x, "excludeStories", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDecorators: Self = this.set("decorators", js.undefined)
+    def setExcludeStoriesRegExp(value: js.RegExp): Self = StObject.set(x, "excludeStories", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExcludeStoriesVarargs(value: String*): Self = this.set("excludeStories", js.Array(value :_*))
+    def setExcludeStoriesUndefined: Self = StObject.set(x, "excludeStories", js.undefined)
     
     @scala.inline
-    def setExcludeStoriesRegExp(value: js.RegExp): Self = this.set("excludeStories", value.asInstanceOf[js.Any])
+    def setExcludeStoriesVarargs(value: String*): Self = StObject.set(x, "excludeStories", js.Array(value :_*))
     
     @scala.inline
-    def setExcludeStories(value: js.Array[String] | js.RegExp): Self = this.set("excludeStories", value.asInstanceOf[js.Any])
+    def setIncludeStories(value: js.Array[String] | js.RegExp): Self = StObject.set(x, "includeStories", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteExcludeStories: Self = this.set("excludeStories", js.undefined)
+    def setIncludeStoriesRegExp(value: js.RegExp): Self = StObject.set(x, "includeStories", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIncludeStoriesVarargs(value: String*): Self = this.set("includeStories", js.Array(value :_*))
+    def setIncludeStoriesUndefined: Self = StObject.set(x, "includeStories", js.undefined)
     
     @scala.inline
-    def setIncludeStoriesRegExp(value: js.RegExp): Self = this.set("includeStories", value.asInstanceOf[js.Any])
+    def setIncludeStoriesVarargs(value: String*): Self = StObject.set(x, "includeStories", js.Array(value :_*))
     
     @scala.inline
-    def setIncludeStories(value: js.Array[String] | js.RegExp): Self = this.set("includeStories", value.asInstanceOf[js.Any])
+    def setParameters(value: Parameters): Self = StObject.set(x, "parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteIncludeStories: Self = this.set("includeStories", js.undefined)
-    
-    @scala.inline
-    def setParameters(value: Parameters): Self = this.set("parameters", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteParameters: Self = this.set("parameters", js.undefined)
+    def setParametersUndefined: Self = StObject.set(x, "parameters", js.undefined)
   }
 }

@@ -6,16 +6,16 @@ import typingsSlinky.typeorm.queryBuilderQueryExpressionMapMod.QueryExpressionMa
 import typingsSlinky.typeorm.queryRunnerQueryRunnerMod.QueryRunner
 import typingsSlinky.typeorm.resultInsertResultMod.InsertResult
 import typingsSlinky.typeorm.resultUpdateResultMod.UpdateResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/query-builder/ReturningResultsEntityUpdator", JSImport.Namespace)
-@js.native
-object queryBuilderReturningResultsEntityUpdatorMod extends js.Object {
+object queryBuilderReturningResultsEntityUpdatorMod {
   
+  @JSImport("typeorm/query-builder/ReturningResultsEntityUpdator", "ReturningResultsEntityUpdator")
   @js.native
-  class ReturningResultsEntityUpdator protected () extends js.Object {
+  class ReturningResultsEntityUpdator protected () extends StObject {
     def this(queryRunner: QueryRunner, expressionMap: QueryExpressionMap) = this()
     
     var expressionMap: QueryExpressionMap = js.native

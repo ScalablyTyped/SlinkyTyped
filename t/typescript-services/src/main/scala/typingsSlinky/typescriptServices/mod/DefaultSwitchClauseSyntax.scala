@@ -2,6 +2,7 @@ package typingsSlinky.typescriptServices.mod
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxList
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,12 +18,15 @@ class DefaultSwitchClauseSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-/* static members */
-@JSImport("typescript-services", "DefaultSwitchClauseSyntax")
-@js.native
-object DefaultSwitchClauseSyntax extends js.Object {
+object DefaultSwitchClauseSyntax {
   
+  /* static member */
+  @JSImport("typescript-services", "DefaultSwitchClauseSyntax.create")
+  @js.native
   def create(defaultKeyword: ISyntaxToken, colonToken: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.DefaultSwitchClauseSyntax = js.native
   
+  /* static member */
+  @JSImport("typescript-services", "DefaultSwitchClauseSyntax.create1")
+  @js.native
   def create1(): typingsSlinky.typescriptServices.TypeScript.DefaultSwitchClauseSyntax = js.native
 }

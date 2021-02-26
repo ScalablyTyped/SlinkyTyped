@@ -1,6 +1,7 @@
 package typingsSlinky.typescriptServices.mod
 
 import typingsSlinky.typescriptServices.TypeScript.IScriptSnapshot
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,11 +23,11 @@ class Document protected ()
     _topLevelDecl: typingsSlinky.typescriptServices.TypeScript.PullDecl
   ) = this()
 }
-/* static members */
-@JSImport("typescript-services", "Document")
-@js.native
-object Document extends js.Object {
+object Document {
   
+  /* static member */
+  @JSImport("typescript-services", "Document.create")
+  @js.native
   def create(
     compiler: typingsSlinky.typescriptServices.TypeScript.TypeScriptCompiler,
     semanticInfoChain: typingsSlinky.typescriptServices.TypeScript.SemanticInfoChain,

@@ -3,7 +3,7 @@ package typingsSlinky.blueprintjsDatetime.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
-import typingsSlinky.blueprintjsDatetime.anon.FormatDate
+import typingsSlinky.blueprintjsDatetime.anon.TypeofLocaleUtils
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerModifiers
 import typingsSlinky.blueprintjsDatetime.dateRangeMod.DateRange
 import typingsSlinky.blueprintjsDatetime.dateRangePickerMod.IDateRangePickerProps
@@ -11,6 +11,7 @@ import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDateRangeShortcut
 import typingsSlinky.blueprintjsDatetime.timePickerMod.ITimePickerProps
 import typingsSlinky.blueprintjsDatetime.timePickerMod.TimePrecision
 import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object DateRangePicker {
   
   @JSImport("@blueprintjs/datetime", "DateRangePicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,7 +55,7 @@ object DateRangePicker {
     def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def localeUtils(value: FormatDate): this.type = set("localeUtils", value.asInstanceOf[js.Any])
+    def localeUtils(value: TypeofLocaleUtils): this.type = set("localeUtils", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
@@ -83,10 +84,10 @@ object DateRangePicker {
     def selectedShortcutIndex(value: Double): this.type = set("selectedShortcutIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shortcutsVarargs(value: IDateRangeShortcut*): this.type = set("shortcuts", js.Array(value :_*))
+    def shortcuts(value: Boolean | js.Array[IDateRangeShortcut]): this.type = set("shortcuts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shortcuts(value: Boolean | js.Array[IDateRangeShortcut]): this.type = set("shortcuts", value.asInstanceOf[js.Any])
+    def shortcutsVarargs(value: IDateRangeShortcut*): this.type = set("shortcuts", js.Array(value :_*))
     
     @scala.inline
     def singleMonthOnly(value: Boolean): this.type = set("singleMonthOnly", value.asInstanceOf[js.Any])
@@ -101,7 +102,7 @@ object DateRangePicker {
     def value(value: DateRange): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IDateRangePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DateRangePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IDateRangePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

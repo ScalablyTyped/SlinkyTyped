@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.spinnerMod.SpinnerDeterminateOverrides
 import typingsSlinky.baseui.spinnerMod.SpinnerDeterminateProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object SpinnerDeterminate {
   
   @JSImport("baseui/spinner", "SpinnerDeterminate")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,7 +38,7 @@ object SpinnerDeterminate {
     ): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SpinnerDeterminateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SpinnerDeterminate.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SpinnerDeterminateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

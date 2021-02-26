@@ -11,16 +11,16 @@ import typingsSlinky.three.constantsMod.Usage
 import typingsSlinky.three.matrix3Mod.Matrix3
 import typingsSlinky.three.matrix4Mod.Matrix4
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/core/BufferAttribute", JSImport.Namespace)
-@js.native
-object bufferAttributeMod extends js.Object {
+object bufferAttributeMod {
   
+  @JSImport("three/src/core/BufferAttribute", "BufferAttribute")
   @js.native
-  class BufferAttribute protected () extends js.Object {
+  class BufferAttribute protected () extends StObject {
     def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
     
@@ -63,7 +63,7 @@ object bufferAttributeMod extends js.Object {
     
     var itemSize: Double = js.native
     
-     // array parameter should be TypedArray.
+    // array parameter should be TypedArray.
     /**
     	 * @default ''
     	 */
@@ -121,156 +121,174 @@ object bufferAttributeMod extends js.Object {
     var version: Double = js.native
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Float32Attribute")
   @js.native
   class Float32Attribute protected () extends BufferAttribute {
     def this(array: js.Any, itemSize: Double) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Float32BufferAttribute")
   @js.native
   class Float32BufferAttribute protected () extends BufferAttribute {
-    def this(array: Double, itemSize: Double) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
-    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
-    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: Double, itemSize: Double) = this()
+    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
+    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Float64Attribute")
   @js.native
   class Float64Attribute protected () extends BufferAttribute {
     def this(array: js.Any, itemSize: Double) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Float64BufferAttribute")
   @js.native
   class Float64BufferAttribute protected () extends BufferAttribute {
-    def this(array: Double, itemSize: Double) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
-    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
-    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: Double, itemSize: Double) = this()
+    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
+    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Int16Attribute")
   @js.native
   class Int16Attribute protected () extends BufferAttribute {
     def this(array: js.Any, itemSize: Double) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Int16BufferAttribute")
   @js.native
   class Int16BufferAttribute protected () extends BufferAttribute {
-    def this(array: Double, itemSize: Double) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
-    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
-    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: Double, itemSize: Double) = this()
+    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
+    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Int32Attribute")
   @js.native
   class Int32Attribute protected () extends BufferAttribute {
     def this(array: js.Any, itemSize: Double) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Int32BufferAttribute")
   @js.native
   class Int32BufferAttribute protected () extends BufferAttribute {
-    def this(array: Double, itemSize: Double) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
-    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
-    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: Double, itemSize: Double) = this()
+    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
+    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Int8Attribute")
   @js.native
   class Int8Attribute protected () extends BufferAttribute {
     def this(array: js.Any, itemSize: Double) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Int8BufferAttribute")
   @js.native
   class Int8BufferAttribute protected () extends BufferAttribute {
-    def this(array: Double, itemSize: Double) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
-    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
-    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: Double, itemSize: Double) = this()
+    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
+    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Uint16Attribute")
   @js.native
   class Uint16Attribute protected () extends BufferAttribute {
     def this(array: js.Any, itemSize: Double) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Uint16BufferAttribute")
   @js.native
   class Uint16BufferAttribute protected () extends BufferAttribute {
-    def this(array: Double, itemSize: Double) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
-    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
-    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: Double, itemSize: Double) = this()
+    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
+    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Uint32Attribute")
   @js.native
   class Uint32Attribute protected () extends BufferAttribute {
     def this(array: js.Any, itemSize: Double) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Uint32BufferAttribute")
   @js.native
   class Uint32BufferAttribute protected () extends BufferAttribute {
-    def this(array: Double, itemSize: Double) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
-    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
-    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: Double, itemSize: Double) = this()
+    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
+    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Uint8Attribute")
   @js.native
   class Uint8Attribute protected () extends BufferAttribute {
     def this(array: js.Any, itemSize: Double) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Uint8BufferAttribute")
   @js.native
   class Uint8BufferAttribute protected () extends BufferAttribute {
-    def this(array: Double, itemSize: Double) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
-    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
-    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: Double, itemSize: Double) = this()
+    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
+    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Uint8ClampedAttribute")
   @js.native
   class Uint8ClampedAttribute protected () extends BufferAttribute {
     def this(array: js.Any, itemSize: Double) = this()
   }
   
+  @JSImport("three/src/core/BufferAttribute", "Uint8ClampedBufferAttribute")
   @js.native
   class Uint8ClampedBufferAttribute protected () extends BufferAttribute {
-    def this(array: Double, itemSize: Double) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
-    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
-    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
-    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: Double, itemSize: Double) = this()
+    def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: Double, itemSize: Double, normalized: Boolean) = this()
+    def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
   }
 }

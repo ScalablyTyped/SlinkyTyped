@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +10,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ParticleSystemSet ()
   extends typingsSlinky.babylonjs.BABYLON.ParticleSystemSet
 /* static members */
-@JSGlobal("BABYLON.ParticleSystemSet")
-@js.native
-object ParticleSystemSet extends js.Object {
+object ParticleSystemSet {
+  
+  @JSGlobal("BABYLON.ParticleSystemSet")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * Gets or sets base Assets URL
     */
-  var BaseAssetsUrl: String = js.native
+  @JSGlobal("BABYLON.ParticleSystemSet.BaseAssetsUrl")
+  @js.native
+  def BaseAssetsUrl: String = js.native
+  @scala.inline
+  def BaseAssetsUrl_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("BaseAssetsUrl")(x.asInstanceOf[js.Any])
   
   /**
     * Parse a new ParticleSystemSet from a serialized source
@@ -25,6 +32,10 @@ object ParticleSystemSet extends js.Object {
     * @param gpu defines if we want GPU particles or CPU particles
     * @returns a new ParticleSystemSet
     */
+  @JSGlobal("BABYLON.ParticleSystemSet.Parse")
+  @js.native
   def Parse(data: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.ParticleSystemSet = js.native
+  @JSGlobal("BABYLON.ParticleSystemSet.Parse")
+  @js.native
   def Parse(data: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene, gpu: Boolean): typingsSlinky.babylonjs.BABYLON.ParticleSystemSet = js.native
 }

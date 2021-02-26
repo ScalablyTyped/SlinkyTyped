@@ -1,5 +1,6 @@
 package typingsSlinky.grpc
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -56,12 +57,18 @@ package object mod {
   
   type UntypedServiceImplementation = org.scalablytyped.runtime.StringDictionary[typingsSlinky.grpc.mod.handleCall[js.Any, js.Any]]
   
+  @scala.inline
+  def closeClient(clientObj: typingsSlinky.grpc.mod.Client): scala.Unit = typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("closeClient")(clientObj.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
+  
   /**
     * A deserialization function
     * @param data The byte sequence to deserialize
     * @return The data deserialized as a value
     */
   type deserialize[T] = js.Function1[/* data */ typingsSlinky.node.Buffer, T]
+  
+  @scala.inline
+  def getClientChannel(client: typingsSlinky.grpc.mod.Client): typingsSlinky.grpc.mod.Channel = typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("getClientChannel")(client.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.grpc.mod.Channel]
   
   /**
     * User provided method to handle bidirectional streaming calls on the server.
@@ -99,6 +106,58 @@ package object mod {
     scala.Unit
   ]
   
+  @scala.inline
+  def load[T](filename: typingsSlinky.grpc.mod.Filename): T = typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("load")(filename.asInstanceOf[js.Any]).asInstanceOf[T]
+  @scala.inline
+  def load[T](
+    filename: typingsSlinky.grpc.mod.Filename,
+    format: js.UndefOr[scala.Nothing],
+    options: typingsSlinky.grpc.mod.LoadOptions
+  ): T = (typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("load")(filename.asInstanceOf[js.Any], format.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[T]
+  
+  @scala.inline
+  def loadObject[T](value: js.Object): T = typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("loadObject")(value.asInstanceOf[js.Any]).asInstanceOf[T]
+  @scala.inline
+  def loadObject[T](value: js.Object, options: typingsSlinky.grpc.mod.LoadObjectOptions): T = (typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("loadObject")(value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[T]
+  
+  @scala.inline
+  def loadPackageDefinition(packageDefinition: typingsSlinky.grpc.mod.PackageDefinition): typingsSlinky.grpc.mod.GrpcObject = typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("loadPackageDefinition")(packageDefinition.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.grpc.mod.GrpcObject]
+  
+  @scala.inline
+  def load_json[T](filename: typingsSlinky.grpc.mod.Filename, format: typingsSlinky.grpc.grpcStrings.json): T = (typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("load")(filename.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[T]
+  @scala.inline
+  def load_json[T](
+    filename: typingsSlinky.grpc.mod.Filename,
+    format: typingsSlinky.grpc.grpcStrings.json,
+    options: typingsSlinky.grpc.mod.LoadOptions
+  ): T = (typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("load")(filename.asInstanceOf[js.Any], format.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[T]
+  
+  @scala.inline
+  def load_proto[T](filename: typingsSlinky.grpc.mod.Filename, format: typingsSlinky.grpc.grpcStrings.proto): T = (typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("load")(filename.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[T]
+  @scala.inline
+  def load_proto[T](
+    filename: typingsSlinky.grpc.mod.Filename,
+    format: typingsSlinky.grpc.grpcStrings.proto,
+    options: typingsSlinky.grpc.mod.LoadOptions
+  ): T = (typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("load")(filename.asInstanceOf[js.Any], format.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[T]
+  
+  @scala.inline
+  def makeGenericClientConstructor(
+    methods: typingsSlinky.grpc.mod.ServiceDefinition[_],
+    serviceName: java.lang.String,
+    classOptions: typingsSlinky.grpc.mod.GenericClientOptions
+  ): org.scalablytyped.runtime.Instantiable3[
+    /* address */ java.lang.String, 
+    /* credentials */ typingsSlinky.grpc.mod.ChannelCredentials, 
+    /* options */ js.UndefOr[js.Object], 
+    typingsSlinky.grpc.mod.Client
+  ] = (typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("makeGenericClientConstructor")(methods.asInstanceOf[js.Any], serviceName.asInstanceOf[js.Any], classOptions.asInstanceOf[js.Any])).asInstanceOf[org.scalablytyped.runtime.Instantiable3[
+    /* address */ java.lang.String, 
+    /* credentials */ typingsSlinky.grpc.mod.ChannelCredentials, 
+    /* options */ js.UndefOr[js.Object], 
+    typingsSlinky.grpc.mod.Client
+  ]]
+  
   type metadataGenerator = js.Function2[
     /* params */ typingsSlinky.grpc.anon.Serviceurl, 
     /* callback */ js.Function2[
@@ -133,4 +192,17 @@ package object mod {
     * @return The value serialized as a byte sequence
     */
   type serialize[T] = js.Function1[/* value */ T, typingsSlinky.node.Buffer]
+  
+  @scala.inline
+  def setLogVerbosity(verbosity: typingsSlinky.grpc.mod.logVerbosity): scala.Unit = typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("setLogVerbosity")(verbosity.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def setLogger(logger: org.scalajs.dom.raw.Console): scala.Unit = typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("setLogger")(logger.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def waitForClientReady(
+    client: typingsSlinky.grpc.mod.Client,
+    deadline: typingsSlinky.grpc.mod.Deadline,
+    callback: js.Function1[/* error */ js.Error | scala.Null, scala.Unit]
+  ): scala.Unit = (typingsSlinky.grpc.mod.^.asInstanceOf[js.Dynamic].applyDynamic("waitForClientReady")(client.asInstanceOf[js.Any], deadline.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
 }

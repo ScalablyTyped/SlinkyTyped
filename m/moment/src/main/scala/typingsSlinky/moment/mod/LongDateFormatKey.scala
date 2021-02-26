@@ -6,6 +6,7 @@ import typingsSlinky.moment.momentStrings.lll_
 import typingsSlinky.moment.momentStrings.llll_
 import typingsSlinky.moment.momentStrings.lt_
 import typingsSlinky.moment.momentStrings.lts_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.moment.momentStrings.lll_
   - typingsSlinky.moment.momentStrings.llll_
 */
-trait LongDateFormatKey extends js.Object
+trait LongDateFormatKey extends StObject
 object LongDateFormatKey {
   
   @scala.inline

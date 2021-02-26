@@ -1,12 +1,14 @@
 package typingsSlinky.officeUiFabricReact.mod
 
 import typingsSlinky.officeUiFabricReact.floatingPeoplePickerMod.IPeopleFloatingPickerProps
-import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react", "BaseFloatingPeoplePicker")
 @js.native
-class BaseFloatingPeoplePicker ()
-  extends typingsSlinky.officeUiFabricReact.baseFloatingPickerMod.BaseFloatingPicker[IPersonaProps, IPeopleFloatingPickerProps]
+class BaseFloatingPeoplePicker protected ()
+  extends typingsSlinky.officeUiFabricReact.libFloatingPickerMod.BaseFloatingPeoplePicker {
+  def this(basePickerProps: IPeopleFloatingPickerProps) = this()
+}

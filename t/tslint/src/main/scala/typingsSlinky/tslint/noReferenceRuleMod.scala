@@ -1,23 +1,37 @@
 package typingsSlinky.tslint
 
 import typingsSlinky.tslint.mod.Rules.AbstractRule
+import typingsSlinky.tslint.ruleMod.IOptions
 import typingsSlinky.tslint.ruleMod.IRuleMetadata
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tslint/lib/rules/noReferenceRule", JSImport.Namespace)
-@js.native
-object noReferenceRuleMod extends js.Object {
+object noReferenceRuleMod {
   
+  @JSImport("tslint/lib/rules/noReferenceRule", "Rule")
   @js.native
-  class Rule () extends AbstractRule
+  class Rule protected () extends AbstractRule {
+    def this(options: IOptions) = this()
+  }
   /* static members */
-  @js.native
-  object Rule extends js.Object {
+  object Rule {
     
-    var FAILURE_STRING: String = js.native
+    @JSImport("tslint/lib/rules/noReferenceRule", "Rule")
+    @js.native
+    val ^ : js.Any = js.native
     
-    var metadata: IRuleMetadata = js.native
+    @JSImport("tslint/lib/rules/noReferenceRule", "Rule.FAILURE_STRING")
+    @js.native
+    def FAILURE_STRING: String = js.native
+    @scala.inline
+    def FAILURE_STRING_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("FAILURE_STRING")(x.asInstanceOf[js.Any])
+    
+    @JSImport("tslint/lib/rules/noReferenceRule", "Rule.metadata")
+    @js.native
+    def metadata: IRuleMetadata = js.native
+    @scala.inline
+    def metadata_=(x: IRuleMetadata): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("metadata")(x.asInstanceOf[js.Any])
   }
 }

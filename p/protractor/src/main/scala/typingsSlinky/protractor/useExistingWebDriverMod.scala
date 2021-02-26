@@ -2,14 +2,14 @@ package typingsSlinky.protractor
 
 import typingsSlinky.protractor.configMod.Config
 import typingsSlinky.protractor.driverProviderMod.DriverProvider
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("protractor/built/driverProviders/useExistingWebDriver", JSImport.Namespace)
-@js.native
-object useExistingWebDriverMod extends js.Object {
+object useExistingWebDriverMod {
   
+  @JSImport("protractor/built/driverProviders/useExistingWebDriver", "UseExistingWebDriver")
   @js.native
   class UseExistingWebDriver protected () extends DriverProvider {
     def this(config: Config) = this()

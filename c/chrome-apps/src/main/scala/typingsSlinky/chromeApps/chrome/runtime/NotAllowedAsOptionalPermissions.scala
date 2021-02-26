@@ -1,5 +1,6 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.tts
   - typingsSlinky.chromeApps.chromeAppsStrings.wallpaper
 */
-trait NotAllowedAsOptionalPermissions extends js.Object
+trait NotAllowedAsOptionalPermissions extends StObject
 object NotAllowedAsOptionalPermissions {
   
   @scala.inline

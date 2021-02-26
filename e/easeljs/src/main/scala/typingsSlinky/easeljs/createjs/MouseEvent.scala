@@ -3,6 +3,7 @@ package typingsSlinky.easeljs.createjs
 import typingsSlinky.createjsLib.createjs.Event
 import typingsSlinky.easeljs.anon.HandleEvent
 import typingsSlinky.easeljs.anon.`0`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -55,7 +56,7 @@ trait MouseEvent extends Event {
   def off(`type`: String, listener: `0`): Unit = js.native
   def off(`type`: String, listener: `0`, useCapture: Boolean): Unit = js.native
   
-   // It is necessary for "arguments.callee"
+  // It is necessary for "arguments.callee"
   def on(`type`: String, listener: js.Function1[/* eventObj */ js.Object, Boolean | Unit]): js.Function = js.native
   def on(
     `type`: String,

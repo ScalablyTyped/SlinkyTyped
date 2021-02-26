@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientDatamigration.gapi.client.datamigrat
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientDatamigration.anon.Fields
 import typingsSlinky.maximMazurokGapiClientDatamigration.anon.PageSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationsResource extends js.Object {
+trait LocationsResource extends StObject {
   
   var connectionProfiles: ConnectionProfilesResource = js.native
   

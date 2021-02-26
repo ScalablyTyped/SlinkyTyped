@@ -10,9 +10,9 @@ MongoDB Server for testing (auto-download latest version). The server will allow
 | ------------------ | :-------------: |
 | Full name          | mongodb-memory-server |
 | Keywords           | mongodb, mongoose, mock, stub, mockgoose, mongodb-prebuilt, mongomem |
-| # releases         | 83 |
-| # dependents       | 37 |
-| # downloads        | 2616439 |
+| # releases         | 103 |
+| # dependents       | 59 |
+| # downloads        | 7582074 |
 | # stars            | 0 |
 
 ## Links

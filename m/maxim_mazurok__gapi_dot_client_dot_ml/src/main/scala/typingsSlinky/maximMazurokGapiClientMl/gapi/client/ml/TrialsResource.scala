@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientMl.anon.Resource
 import typingsSlinky.maximMazurokGapiClientMl.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientMl.anon.Uploadprotocol
 import typingsSlinky.maximMazurokGapiClientMl.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TrialsResource extends js.Object {
+trait TrialsResource extends StObject {
   
   def addMeasurement(request: Alt, body: GoogleCloudMlV1AddTrialMeasurementRequest): Request[GoogleCloudMlV1Trial] = js.native
   /** Adds a measurement of the objective metrics to a trial. This measurement is assumed to have been taken before the trial is complete. */

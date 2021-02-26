@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientDynamodbNode.typesCreateGlobalTableInputMod.Cre
 import typingsSlinky.awsSdkClientDynamodbNode.typesCreateGlobalTableOutputMod.CreateGlobalTableOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-node/commands/CreateGlobalTableCommand", JSImport.Namespace)
-@js.native
-object createGlobalTableCommandMod extends js.Object {
+object createGlobalTableCommandMod {
   
+  @JSImport("@aws-sdk/client-dynamodb-node/commands/CreateGlobalTableCommand", "CreateGlobalTableCommand")
   @js.native
   class CreateGlobalTableCommand protected () extends Command[
           InputTypesUnion, 

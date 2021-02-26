@@ -1,5 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,7 +50,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @param vertexFormat - A vertex format that defines the layout of vertex data inside the buffer.
   */
 @js.native
-trait VertexIteratorAccessor extends js.Object {
+trait VertexIteratorAccessor extends StObject {
   
   /**
     * Get a attribute component at the iterator's current index.

@@ -2,14 +2,14 @@ package typingsSlinky.awsSdkProtocolQuery
 
 import typingsSlinky.awsSdkTypes.serdeMod.StreamCollector
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/protocol-query", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@aws-sdk/protocol-query", "QueryParser")
   @js.native
   class QueryParser[StreamType] protected ()
     extends typingsSlinky.awsSdkProtocolQuery.queryParserMod.QueryParser[StreamType] {
@@ -21,6 +21,7 @@ object mod extends js.Object {
     ) = this()
   }
   
+  @JSImport("@aws-sdk/protocol-query", "QuerySerializer")
   @js.native
   class QuerySerializer[StreamType] protected ()
     extends typingsSlinky.awsSdkProtocolQuery.querySerializerMod.QuerySerializer[StreamType] {

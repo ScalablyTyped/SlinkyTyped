@@ -4,15 +4,16 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactElemental.mod.SpacingProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Spacing {
   
-  @JSImport("react-elemental", "Spacing")
+  @JSImport("react-elemental", "Spacing_")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -47,7 +48,7 @@ object Spacing {
     def top(value: Boolean): this.type = set("top", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SpacingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Spacing.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SpacingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

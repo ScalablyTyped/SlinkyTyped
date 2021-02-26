@@ -1,12 +1,13 @@
 package typingsSlinky.overlayscrollbars.mod
 
 import typingsSlinky.overlayscrollbars.anon.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OverlayScrollbars extends js.Object {
+trait OverlayScrollbars extends StObject {
   
   def addExt(extensionName: String, options: js.Object): Extension = js.native
   

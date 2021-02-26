@@ -3,6 +3,7 @@ package typingsSlinky.ckeditor.CKEDITOR.plugins
 import typingsSlinky.ckeditor.CKEDITOR.event
 import typingsSlinky.ckeditor.CKEDITOR.plugins.notificationAggregator.task
 import typingsSlinky.ckeditor.anon.Weight
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,9 +28,7 @@ trait notificationAggregator extends event {
   
   def update(): Unit = js.native
 }
-@JSGlobal("CKEDITOR.plugins.notificationAggregator")
-@js.native
-object notificationAggregator extends js.Object {
+object notificationAggregator {
   
   @js.native
   trait task extends event {

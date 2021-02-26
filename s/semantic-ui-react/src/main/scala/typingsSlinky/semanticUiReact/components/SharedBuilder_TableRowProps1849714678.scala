@@ -9,6 +9,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.center
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
 import typingsSlinky.semanticUiReact.tableCellMod.TableCellProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,10 +29,10 @@ class SharedBuilder_TableRowProps1849714678 (val args: js.Array[js.Any])
   def cellAs(value: js.Any): this.type = set("cellAs", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def cellsVarargs(value: SemanticShorthandItem[TableCellProps]*): this.type = set("cells", js.Array(value :_*))
+  def cells(value: SemanticShorthandCollection[TableCellProps]): this.type = set("cells", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def cells(value: SemanticShorthandCollection[TableCellProps]): this.type = set("cells", value.asInstanceOf[js.Any])
+  def cellsVarargs(value: SemanticShorthandItem[TableCellProps]*): this.type = set("cells", js.Array(value :_*))
   
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])

@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.OriginalEventEvent
 import typingsSlinky.primereact.dataViewMod.DataViewLayoutOptionsProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DataViewLayoutOptions {
   
+  @scala.inline
+  def apply(onChange: OriginalEventEvent => Unit): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[DataViewLayoutOptionsProps]))
+  }
+  
   @JSImport("primereact/dataview", "DataViewLayoutOptions")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,10 +40,4 @@ object DataViewLayoutOptions {
   }
   
   def withProps(p: DataViewLayoutOptionsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onChange: OriginalEventEvent => Unit): Builder = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[DataViewLayoutOptionsProps]))
-  }
 }

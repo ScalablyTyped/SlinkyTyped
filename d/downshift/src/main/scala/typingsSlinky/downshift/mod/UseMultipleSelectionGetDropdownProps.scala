@@ -1,5 +1,6 @@
 package typingsSlinky.downshift.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,18 +9,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.downshift.mod.UseMultipleSelectionSelectGetDropdownProps
   - typingsSlinky.downshift.mod.UseMultipleSelectionComboboxGetDropdownProps
 */
-trait UseMultipleSelectionGetDropdownProps extends js.Object
+trait UseMultipleSelectionGetDropdownProps extends StObject
 object UseMultipleSelectionGetDropdownProps {
   
   @scala.inline
-  def UseMultipleSelectionSelectGetDropdownProps(): UseMultipleSelectionGetDropdownProps = {
+  def UseMultipleSelectionComboboxGetDropdownProps(): typingsSlinky.downshift.mod.UseMultipleSelectionComboboxGetDropdownProps = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[UseMultipleSelectionGetDropdownProps]
+    __obj.asInstanceOf[typingsSlinky.downshift.mod.UseMultipleSelectionComboboxGetDropdownProps]
   }
   
   @scala.inline
-  def UseMultipleSelectionComboboxGetDropdownProps(): UseMultipleSelectionGetDropdownProps = {
+  def UseMultipleSelectionSelectGetDropdownProps(): typingsSlinky.downshift.mod.UseMultipleSelectionSelectGetDropdownProps = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[UseMultipleSelectionGetDropdownProps]
+    __obj.asInstanceOf[typingsSlinky.downshift.mod.UseMultipleSelectionSelectGetDropdownProps]
   }
 }

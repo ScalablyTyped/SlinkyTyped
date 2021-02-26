@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pixiJs.PIXI.IBitmapFontOptions
 import typingsSlinky.pixiJs.anon.Chars
 import typingsSlinky.std.XMLDocument
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,10 +29,7 @@ class BitmapFont protected ()
     textures: StringDictionary[typingsSlinky.pixiJs.PIXI.Texture]
   ) = this()
 }
-/* static members */
-@JSGlobal("PIXI.BitmapFont")
-@js.native
-object BitmapFont extends js.Object {
+object BitmapFont {
   
   /**
     * This character set includes all the letters in the alphabet (both lower- and upper- case).
@@ -41,6 +39,9 @@ object BitmapFont extends js.Object {
     * @example
     * BitmapFont.from("ExampleFont", style, { chars: BitmapFont.ALPHA })
     */
+  /* static member */
+  @JSGlobal("PIXI.BitmapFont.ALPHA")
+  @js.native
   val ALPHA: js.Array[js.Array[String]] = js.native
   
   /**
@@ -49,6 +50,9 @@ object BitmapFont extends js.Object {
     * @static
     * @member {string[][]}
     */
+  /* static member */
+  @JSGlobal("PIXI.BitmapFont.ALPHANUMERIC")
+  @js.native
   val ALPHANUMERIC: js.Array[js.Array[String]] = js.native
   
   /**
@@ -58,6 +62,9 @@ object BitmapFont extends js.Object {
     * @member {string[][]}
     * @see http://www.asciitable.com/
     */
+  /* static member */
+  @JSGlobal("PIXI.BitmapFont.ASCII")
+  @js.native
   val ASCII: js.Array[js.Array[String]] = js.native
   
   /**
@@ -68,16 +75,10 @@ object BitmapFont extends js.Object {
     * @example
     * BitmapFont.from("ExampleFont", style, { chars: BitmapFont.NUMERIC })
     */
+  /* static member */
+  @JSGlobal("PIXI.BitmapFont.NUMERIC")
+  @js.native
   val NUMERIC: js.Array[js.Array[String]] = js.native
-  
-  /**
-    * Collection of available/installed fonts.
-    *
-    * @readonly
-    * @static
-    * @member {Object.<string, PIXI.BitmapFont>}
-    */
-  val available: StringDictionary[typingsSlinky.pixiJs.PIXI.BitmapFont] = js.native
   
   /**
     * Collection of default options when using `BitmapFont.from`.
@@ -91,6 +92,9 @@ object BitmapFont extends js.Object {
     * @property {number} padding=4
     * @property {string|string[]|string[][]} chars=PIXI.BitmapFont.ALPHANUMERIC
     */
+  /* static member */
+  @JSGlobal("PIXI.BitmapFont.defaultOptions")
+  @js.native
   val defaultOptions: IBitmapFontOptions = js.native
   
   /**
@@ -137,25 +141,52 @@ object BitmapFont extends js.Object {
     *
     * const title = new PIXI.BitmapText("This is the title", { fontName: "TitleFont" });
     */
+  /* static member */
+  @JSGlobal("PIXI.BitmapFont.from")
+  @js.native
   def from(name: String): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.from")
+  @js.native
   def from(name: String, style: js.UndefOr[scala.Nothing], options: Chars): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.from")
+  @js.native
   def from(name: String, style: js.Any): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.from")
+  @js.native
   def from(name: String, style: js.Any, options: Chars): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.from")
+  @js.native
   def from(name: String, style: typingsSlinky.pixiJs.PIXI.TextStyle): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.from")
+  @js.native
   def from(name: String, style: typingsSlinky.pixiJs.PIXI.TextStyle, options: Chars): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
   
+  @JSGlobal("PIXI.BitmapFont.install")
+  @js.native
   def install(data: String, textures: js.Array[typingsSlinky.pixiJs.PIXI.Texture]): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.install")
+  @js.native
   def install(data: String, textures: StringDictionary[typingsSlinky.pixiJs.PIXI.Texture]): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.install")
+  @js.native
   def install(data: String, textures: typingsSlinky.pixiJs.PIXI.Texture): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.install")
+  @js.native
   def install(
     data: typingsSlinky.pixiJs.PIXI.BitmapFontData,
     textures: js.Array[typingsSlinky.pixiJs.PIXI.Texture]
   ): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.install")
+  @js.native
   def install(
     data: typingsSlinky.pixiJs.PIXI.BitmapFontData,
     textures: StringDictionary[typingsSlinky.pixiJs.PIXI.Texture]
   ): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.install")
+  @js.native
   def install(data: typingsSlinky.pixiJs.PIXI.BitmapFontData, textures: typingsSlinky.pixiJs.PIXI.Texture): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.install")
+  @js.native
   def install(data: XMLDocument, textures: js.Array[typingsSlinky.pixiJs.PIXI.Texture]): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
   /**
     * Register a new bitmap font.
@@ -168,7 +199,12 @@ object BitmapFont extends js.Object {
     * @return {PIXI.BitmapFont} Result font object with font, size, lineHeight
     *         and char fields.
     */
+  /* static member */
+  @JSGlobal("PIXI.BitmapFont.install")
+  @js.native
   def install(data: XMLDocument, textures: StringDictionary[typingsSlinky.pixiJs.PIXI.Texture]): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  @JSGlobal("PIXI.BitmapFont.install")
+  @js.native
   def install(data: XMLDocument, textures: typingsSlinky.pixiJs.PIXI.Texture): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
   
   /**
@@ -177,5 +213,18 @@ object BitmapFont extends js.Object {
     * @static
     * @param {string} name
     */
+  /* static member */
+  @JSGlobal("PIXI.BitmapFont.uninstall")
+  @js.native
   def uninstall(name: String): Unit = js.native
+  
+  /**
+    * Collection of available/installed fonts.
+    *
+    * @readonly
+    * @static
+    * @member {Object.<string, PIXI.BitmapFont>}
+    */
+  /* static member */
+  object available
 }

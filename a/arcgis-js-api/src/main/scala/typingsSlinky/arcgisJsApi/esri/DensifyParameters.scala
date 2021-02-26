@@ -6,6 +6,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.kilometers_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.meters_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.miles_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.yards
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,5 +1,6 @@
 package typingsSlinky.phonon.Phonon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.phonon.phononStrings.JSON_MALFORMED
   - typingsSlinky.phonon.phononStrings.REQUEST_CANCELED
 */
-trait PhononAjaxErrorFlag extends js.Object
+trait PhononAjaxErrorFlag extends StObject
 object PhononAjaxErrorFlag {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.bizcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.bizcharts.bizchartsStrings.middle
   - typingsSlinky.bizcharts.bizchartsStrings.right
 */
-trait AlignXType extends js.Object
+trait AlignXType extends StObject
 object AlignXType {
   
   @scala.inline

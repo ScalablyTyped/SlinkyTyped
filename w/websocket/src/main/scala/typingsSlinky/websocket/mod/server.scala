@@ -6,6 +6,7 @@ import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.websocket.websocketStrings.close
 import typingsSlinky.websocket.websocketStrings.connect
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

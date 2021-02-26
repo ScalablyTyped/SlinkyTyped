@@ -20,12 +20,13 @@ import typingsSlinky.maximMazurokGapiClientIdentitytoolkit.anon.QuotaUserResourc
 import typingsSlinky.maximMazurokGapiClientIdentitytoolkit.anon.Resource
 import typingsSlinky.maximMazurokGapiClientIdentitytoolkit.anon.ResourceUserIp
 import typingsSlinky.maximMazurokGapiClientIdentitytoolkit.anon.UserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RelyingpartyResource extends js.Object {
+trait RelyingpartyResource extends StObject {
   
   /** Creates the URI used by the IdP to authenticate the user. */
   def createAuthUri(request: Alt): Request[CreateAuthUriResponse] = js.native

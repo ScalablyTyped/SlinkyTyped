@@ -10,9 +10,9 @@ Abstract logger TypeScript interface with a dummy logger that does nothing, usef
 | ------------------ | :-------------: |
 | Full name          | ts-log |
 | Keywords           | typescript, abstract, logger, console, dummy |
-| # releases         | 13 |
-| # dependents       | 18 |
-| # downloads        | 6159129 |
+| # releases         | 1 |
+| # dependents       | 24 |
+| # downloads        | 16115763 |
 | # stars            | 0 |
 
 ## Links

@@ -74,6 +74,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -82,7 +83,7 @@ object RcSwitch {
   
   @JSImport("rc-switch", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -254,10 +255,10 @@ object RcSwitch {
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def checkedChildrenReactElement(value: ReactElement): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
+    def checkedChildren(value: ReactElement): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def checkedChildren(value: ReactElement): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
+    def checkedChildrenReactElement(value: ReactElement): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -281,10 +282,10 @@ object RcSwitch {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -329,10 +330,10 @@ object RcSwitch {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingIconReactElement(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
+    def loadingIcon(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def loadingIcon(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
+    def loadingIconReactElement(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLButtonElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -630,10 +631,10 @@ object RcSwitch {
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def unCheckedChildrenReactElement(value: ReactElement): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
+    def unCheckedChildren(value: ReactElement): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def unCheckedChildren(value: ReactElement): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
+    def unCheckedChildrenReactElement(value: ReactElement): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
@@ -642,7 +643,7 @@ object RcSwitch {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SwitchProps with RefAttributes[HTMLButtonElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RcSwitch.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SwitchProps with RefAttributes[HTMLButtonElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
@@ -8,6 +7,7 @@ import typingsSlinky.astTypes.kindsMod.NodeKind
 import typingsSlinky.astTypes.kindsMod.PrintableKind
 import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import typingsSlinky.astTypes.typesMod.Type
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,6 +30,43 @@ trait MetaProperty
   
   var `type`: typingsSlinky.astTypes.astTypesStrings.MetaProperty = js.native
 }
-@JSImport("ast-types/gen/namedTypes", "namedTypes.MetaProperty")
-@js.native
-object MetaProperty extends TopLevel[Type[MetaProperty]]
+object MetaProperty {
+  
+  @JSImport("ast-types/gen/namedTypes", "namedTypes.MetaProperty")
+  @js.native
+  val ^ : Type[MetaProperty] = js.native
+  
+  @scala.inline
+  implicit class MetaPropertyMutableBuilder[Self <: MetaProperty] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setComments(value: js.Array[CommentKind]): Self = StObject.set(x, "comments", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCommentsNull: Self = StObject.set(x, "comments", null)
+    
+    @scala.inline
+    def setCommentsUndefined: Self = StObject.set(x, "comments", js.undefined)
+    
+    @scala.inline
+    def setCommentsVarargs(value: CommentKind*): Self = StObject.set(x, "comments", js.Array(value :_*))
+    
+    @scala.inline
+    def setLoc(value: SourceLocationKind): Self = StObject.set(x, "loc", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLocNull: Self = StObject.set(x, "loc", null)
+    
+    @scala.inline
+    def setLocUndefined: Self = StObject.set(x, "loc", js.undefined)
+    
+    @scala.inline
+    def setMeta(value: IdentifierKind): Self = StObject.set(x, "meta", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setProperty(value: IdentifierKind): Self = StObject.set(x, "property", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setType(value: typingsSlinky.astTypes.astTypesStrings.MetaProperty): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+  }
+}

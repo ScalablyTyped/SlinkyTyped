@@ -1,5 +1,6 @@
 package typingsSlinky.victory.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.victory.victoryStrings.end
   - typingsSlinky.victory.victoryStrings.inherit
 */
-trait TextAnchorType extends js.Object
+trait TextAnchorType extends StObject
 object TextAnchorType {
   
   @scala.inline

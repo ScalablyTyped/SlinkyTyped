@@ -3,14 +3,14 @@ package typingsSlinky.three
 import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.lightMod.Light
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/lights/HemisphereLight", JSImport.Namespace)
-@js.native
-object hemisphereLightMod extends js.Object {
+object hemisphereLightMod {
   
+  @JSImport("three/src/lights/HemisphereLight", "HemisphereLight")
   @js.native
   /**
   	 * @param skyColor

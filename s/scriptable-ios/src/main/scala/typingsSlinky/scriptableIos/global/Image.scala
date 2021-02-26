@@ -1,5 +1,6 @@
 package typingsSlinky.scriptableIos.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,10 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Image ()
   extends typingsSlinky.scriptableIos.Image
-/* static members */
-@JSGlobal("Image")
-@js.native
-object Image extends js.Object {
+object Image {
   
   /**
     * _Creates an image from raw data._
@@ -24,6 +22,9 @@ object Image extends js.Object {
     * @param data - Data to read image from.
     * @see https://docs.scriptable.app/image/#fromdata
     */
+  /* static member */
+  @JSGlobal("Image.fromData")
+  @js.native
   def fromData(data: typingsSlinky.scriptableIos.Data): typingsSlinky.scriptableIos.Image = js.native
   
   /**
@@ -33,5 +34,8 @@ object Image extends js.Object {
     * @param filePath - File path to read image from.
     * @see https://docs.scriptable.app/image/#fromfile
     */
+  /* static member */
+  @JSGlobal("Image.fromFile")
+  @js.native
   def fromFile(filePath: String): typingsSlinky.scriptableIos.Image = js.native
 }

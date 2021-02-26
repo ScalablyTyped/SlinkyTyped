@@ -1,5 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.view
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.elementEnd
   - typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.text
 */
-trait TreeWalkerValueType extends js.Object
+trait TreeWalkerValueType extends StObject
 object TreeWalkerValueType {
   
   @scala.inline

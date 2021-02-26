@@ -3,6 +3,7 @@ package typingsSlinky.ckeditor.CKEDITOR
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
 import typingsSlinky.ckeditor.CKEDITOR.dom.range
 import typingsSlinky.ckeditor.CKEDITOR.dom.text
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

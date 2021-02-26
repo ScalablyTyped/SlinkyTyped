@@ -1,5 +1,6 @@
 package typingsSlinky.antd
 
+import org.scalablytyped.runtime.Shortcut
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Children
@@ -9,14 +10,15 @@ import typingsSlinky.antd.errorListMod.ErrorListProps
 import typingsSlinky.antd.formContextMod.FormProviderProps
 import typingsSlinky.antd.formFormMod.FormProps
 import typingsSlinky.antd.formListMod.FormListProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antd/lib/form", JSImport.Namespace)
-@js.native
-object formMod extends js.Object {
+object formMod extends Shortcut {
   
+  @JSImport("antd/lib/form", JSImport.Default)
+  @js.native
   val default: FormInterface = js.native
   
   @js.native
@@ -37,8 +39,13 @@ object formMod extends js.Object {
   }
   
   @js.native
-  trait InternalFormType extends js.Object {
+  trait InternalFormType extends StObject {
     
     def apply[Values](props: Children[Values] with FormProps[Values]): ReactElement = js.native
   }
+  
+  type _To = FormInterface
+  
+  /* This means you don't have to write `default`, but can instead just say `formMod.foo` */
+  override def _to: FormInterface = default
 }

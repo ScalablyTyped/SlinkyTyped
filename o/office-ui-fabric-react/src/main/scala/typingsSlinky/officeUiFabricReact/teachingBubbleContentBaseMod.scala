@@ -5,14 +5,14 @@ import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.teachingBubbleBaseMod.ITeachingBubbleState
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/components/TeachingBubble/TeachingBubbleContent.base", JSImport.Namespace)
-@js.native
-object teachingBubbleContentBaseMod extends js.Object {
+object teachingBubbleContentBaseMod {
   
+  @JSImport("office-ui-fabric-react/lib/components/TeachingBubble/TeachingBubbleContent.base", "TeachingBubbleContentBase")
   @js.native
   class TeachingBubbleContentBase protected ()
     extends Component[ITeachingBubbleProps, ITeachingBubbleState, js.Any] {

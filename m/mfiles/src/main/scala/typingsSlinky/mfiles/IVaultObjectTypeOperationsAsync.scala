@@ -2,12 +2,13 @@ package typingsSlinky.mfiles
 
 import typingsSlinky.mfiles.MFiles.MFBuiltInObjectType
 import typingsSlinky.mfiles.MFiles.MFExternalDBRefreshType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultObjectTypeOperationsAsync extends js.Object {
+trait IVaultObjectTypeOperationsAsync extends StObject {
   
   def AddObjectTypeAdmin(ObjectType: IObjectTypeAdmin): Unit = js.native
   def AddObjectTypeAdmin(

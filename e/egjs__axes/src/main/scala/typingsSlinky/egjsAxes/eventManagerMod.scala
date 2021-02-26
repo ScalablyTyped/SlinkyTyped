@@ -2,16 +2,16 @@ package typingsSlinky.egjsAxes
 
 import typingsSlinky.egjsAxes.animationManagerMod.AnimationParam
 import typingsSlinky.egjsAxes.axisManagerMod.Axis
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@egjs/axes/EventManager", JSImport.Namespace)
-@js.native
-object eventManagerMod extends js.Object {
+object eventManagerMod {
   
+  @JSImport("@egjs/axes/EventManager", "EventManager")
   @js.native
-  class EventManager protected () extends js.Object {
+  class EventManager protected () extends StObject {
     def this(axes: js.Any, axm: js.Any) = this()
     
     var axes: js.Any = js.native

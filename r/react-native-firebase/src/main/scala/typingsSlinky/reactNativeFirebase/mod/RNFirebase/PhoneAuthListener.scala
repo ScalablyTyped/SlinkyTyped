@@ -1,11 +1,12 @@
 package typingsSlinky.reactNativeFirebase.mod.RNFirebase
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PhoneAuthListener extends js.Object {
+trait PhoneAuthListener extends StObject {
   
   def `catch`(fn: js.Function1[/* error */ js.Error, Unit]): js.Promise[_] = js.native
   

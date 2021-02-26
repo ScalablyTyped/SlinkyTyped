@@ -83,6 +83,7 @@ import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`84`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`85`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`8`
 import typingsSlinky.activexShdocvw.activexShdocvwNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -173,7 +174,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexShdocvw.activexShdocvwNumbers.`65`
   - typingsSlinky.activexShdocvw.activexShdocvwNumbers.`19`
 */
-trait OLECMDID extends js.Object
+trait OLECMDID extends StObject
 object OLECMDID {
   
   @scala.inline

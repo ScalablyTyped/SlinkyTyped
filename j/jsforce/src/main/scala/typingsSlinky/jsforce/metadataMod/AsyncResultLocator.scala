@@ -2,7 +2,9 @@ package typingsSlinky.jsforce.metadataMod
 
 import typingsSlinky.jsforce.connectionMod.Callback
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.std.PromiseLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,6 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class AsyncResultLocator[T] ()
   extends EventEmitter
      with PromiseLike[T] {
+  def this(options: EventEmitterOptions) = this()
   
   def check(): js.Promise[T] = js.native
   def check(callback: Callback[T]): js.Promise[T] = js.native

@@ -9,6 +9,7 @@ import typingsSlinky.antd.generateCalendarMod.CalendarProps
 import typingsSlinky.antd.generatePickerMod.PickerLocale
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object Calendar {
   
   @JSImport("antd", "Calendar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -79,7 +80,7 @@ object Calendar {
     def value(value: Moment): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CalendarProps[Moment]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Calendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CalendarProps[Moment]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

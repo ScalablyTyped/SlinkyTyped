@@ -5,14 +5,14 @@ import typingsSlinky.typedoc.abstractMod.TypeContainer
 import typingsSlinky.typedoc.modelsTypesMod.Type
 import typingsSlinky.typedoc.modelsTypesMod.TypeParameterType
 import typingsSlinky.typedoc.reflectionsDeclarationMod.DeclarationReflection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typedoc/dist/lib/models/reflections/type-parameter", JSImport.Namespace)
-@js.native
-object reflectionsTypeParameterMod extends js.Object {
+object reflectionsTypeParameterMod {
   
+  @JSImport("typedoc/dist/lib/models/reflections/type-parameter", "TypeParameterReflection")
   @js.native
   class TypeParameterReflection protected () extends TypeContainer {
     def this(`type`: TypeParameterType) = this()

@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,18 +45,26 @@ class FieldStat () extends IFieldStat {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat")
-@js.native
-object FieldStat extends js.Object {
+object FieldStat {
   
   /**
     * Creates a new FieldStat instance using the specified properties.
     * @param [properties] Properties to set
     * @returns FieldStat instance
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.create")
+  @js.native
   def create(): FieldStat = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.create")
+  @js.native
   def create(properties: IFieldStat): FieldStat = js.native
   
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): FieldStat = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): FieldStat = js.native
   /**
     * Decodes a FieldStat message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -64,11 +73,16 @@ object FieldStat extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.decode")
+  @js.native
   def decode(reader: Reader): FieldStat = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.decode")
+  @js.native
   def decode(reader: Reader, length: Double): FieldStat = js.native
-  def decode(reader: js.typedarray.Uint8Array): FieldStat = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): FieldStat = js.native
   
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): FieldStat = js.native
   /**
     * Decodes a FieldStat message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -76,8 +90,9 @@ object FieldStat extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): FieldStat = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): FieldStat = js.native
   
   /**
     * Encodes the specified FieldStat message. Does not implicitly {@link FieldStat.verify|verify} messages.
@@ -85,7 +100,11 @@ object FieldStat extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.encode")
+  @js.native
   def encode(message: IFieldStat): Writer = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.encode")
+  @js.native
   def encode(message: IFieldStat, writer: Writer): Writer = js.native
   
   /**
@@ -94,7 +113,11 @@ object FieldStat extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IFieldStat): Writer = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IFieldStat, writer: Writer): Writer = js.native
   
   /**
@@ -102,6 +125,8 @@ object FieldStat extends js.Object {
     * @param object Plain object
     * @returns FieldStat
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): FieldStat = js.native
   
   /**
@@ -110,7 +135,11 @@ object FieldStat extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.toObject")
+  @js.native
   def toObject(message: FieldStat): StringDictionary[js.Any] = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.toObject")
+  @js.native
   def toObject(message: FieldStat, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -118,5 +147,7 @@ object FieldStat extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "FieldStat.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

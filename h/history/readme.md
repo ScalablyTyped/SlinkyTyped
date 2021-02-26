@@ -10,9 +10,9 @@ Manage session history with JavaScript
 | ------------------ | :-------------: |
 | Full name          | history |
 | Keywords           | history, location |
-| # releases         | 10 |
-| # dependents       | 2068 |
-| # downloads        | 136623406 |
+| # releases         | 15 |
+| # dependents       | 2612 |
+| # downloads        | 198130754 |
 | # stars            | 90 |
 
 ## Links

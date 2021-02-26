@@ -15,31 +15,14 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.DataArray
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.std.WebGLVertexArrayObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Engines/nativeEngine", JSImport.Namespace)
-@js.native
-object nativeEngineMod extends js.Object {
+object nativeEngineMod {
   
-  /**
-    * Container for accessors for natively-stored mesh data buffers.
-    */
-  @js.native
-  trait NativeDataBuffer extends DataBuffer {
-    
-    /**
-      * Accessor value used to identify/retrieve a natively-stored index buffer.
-      */
-    var nativeIndexBuffer: js.UndefOr[js.Any] = js.native
-    
-    /**
-      * Accessor value used to identify/retrieve a natively-stored vertex buffer.
-      */
-    var nativeVertexBuffer: js.UndefOr[js.Any] = js.native
-  }
-  
+  @JSImport("babylonjs/Engines/nativeEngine", "NativeEngine")
   @js.native
   class NativeEngine () extends Engine {
     
@@ -281,6 +264,23 @@ object nativeEngineMod extends js.Object {
       premulAlpha: Boolean,
       format: Double
     ): Unit = js.native
+  }
+  
+  /**
+    * Container for accessors for natively-stored mesh data buffers.
+    */
+  @js.native
+  trait NativeDataBuffer extends DataBuffer {
+    
+    /**
+      * Accessor value used to identify/retrieve a natively-stored index buffer.
+      */
+    var nativeIndexBuffer: js.UndefOr[js.Any] = js.native
+    
+    /**
+      * Accessor value used to identify/retrieve a natively-stored vertex buffer.
+      */
+    var nativeVertexBuffer: js.UndefOr[js.Any] = js.native
   }
   
   /** @hidden */

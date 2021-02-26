@@ -10,9 +10,9 @@ Encode a URL to a percent-encoded form, excluding already-encoded sequences
 | ------------------ | :-------------: |
 | Full name          | encodeurl |
 | Keywords           | encode, encodeurl, url |
-| # releases         | 2 |
-| # dependents       | 183 |
-| # downloads        | 434716152 |
+| # releases         | 0 |
+| # dependents       | 262 |
+| # downloads        | 661100056 |
 | # stars            | 4 |
 
 ## Links

@@ -4,16 +4,15 @@ import typingsSlinky.opentelemetryApi.spanMod.Span
 import typingsSlinky.opentelemetryApi.spanOptionsMod.SpanOptions
 import typingsSlinky.opentelemetryContextBase.mod.Context
 import typingsSlinky.std.ReturnType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@opentelemetry/api/build/src/trace/tracer", JSImport.Namespace)
-@js.native
-object tracerMod extends js.Object {
+object tracerMod {
   
   @js.native
-  trait Tracer extends js.Object {
+  trait Tracer extends StObject {
     
     /**
       * Bind a span as the target's context or propagate the current one.

@@ -76,6 +76,7 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactMdUtils.gridListMod.GridListProps
 import typingsSlinky.reactMdUtils.gridListMod.RenderGridListChildren
 import typingsSlinky.reactMdUtils.useGridListMod.GridListSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -84,7 +85,7 @@ object GridList {
   
   @JSImport("@react-md/utils", "GridList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -256,19 +257,19 @@ object GridList {
     def cellMargin(value: String): this.type = set("cellMargin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    def children(value: ReactElement | RenderGridListChildren): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenFunction1(value: /* size */ GridListSize => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def children(value: ReactElement | RenderGridListChildren): this.type = set("children", value.asInstanceOf[js.Any])
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def clone(value: Boolean): this.type = set("clone", value.asInstanceOf[js.Any])
+    def clone_(value: Boolean): this.type = set("clone", value.asInstanceOf[js.Any])
     
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
@@ -292,16 +293,16 @@ object GridList {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultSizeFunction0(value: () => GridListSize): this.type = set("defaultSize", js.Any.fromFunction0(value))
-    
-    @scala.inline
     def defaultSize(value: GridListSize | js.Function0[GridListSize]): this.type = set("defaultSize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultSizeFunction0(value: () => GridListSize): this.type = set("defaultSize", js.Any.fromFunction0(value))
     
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -655,7 +656,7 @@ object GridList {
     def wrapOnly(value: Boolean): this.type = set("wrapOnly", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GridListProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: GridList.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GridListProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

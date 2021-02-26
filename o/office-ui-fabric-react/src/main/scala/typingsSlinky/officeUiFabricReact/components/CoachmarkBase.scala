@@ -15,6 +15,7 @@ import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubble
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ object CoachmarkBase {
   
   @JSImport("office-ui-fabric-react", "CoachmarkBase")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -67,13 +68,13 @@ object CoachmarkBase {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[ICoachmark]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ ICoachmark | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[ICoachmark]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[ICoachmark]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def delayBeforeCoachmarkAnimation(value: Double): this.type = set("delayBeforeCoachmarkAnimation", value.asInstanceOf[js.Any])
@@ -118,16 +119,16 @@ object CoachmarkBase {
     def preventFocusOnMount(value: Boolean): this.type = set("preventFocusOnMount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: ICoachmarkStyleProps => DeepPartial[ICoachmarkStyles]): this.type = set("styles", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def styles(value: IStyleFunctionOrObject[ICoachmarkStyleProps, ICoachmarkStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: ICoachmarkStyleProps => DeepPartial[ICoachmarkStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def target(value: HTMLElement | String): this.type = set("target", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetNull: this.type = set("target", null)
@@ -142,7 +143,7 @@ object CoachmarkBase {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ICoachmarkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: CoachmarkBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ICoachmarkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

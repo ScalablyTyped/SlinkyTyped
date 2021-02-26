@@ -6,6 +6,7 @@ import typingsSlinky.antd.baseMod.BaseType
 import typingsSlinky.antd.baseMod.CopyConfig
 import typingsSlinky.antd.baseMod.EditConfig
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

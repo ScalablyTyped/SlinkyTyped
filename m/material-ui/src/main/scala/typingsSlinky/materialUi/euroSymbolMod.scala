@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/action/euro-symbol", JSImport.Namespace)
-@js.native
-object euroSymbolMod extends js.Object {
+object euroSymbolMod {
   
+  @JSImport("material-ui/svg-icons/action/euro-symbol", JSImport.Default)
+  @js.native
+  class default () extends ActionEuroSymbol
+  
+  @JSImport("material-ui/svg-icons/action/euro-symbol", "ActionEuroSymbol")
   @js.native
   class ActionEuroSymbol ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

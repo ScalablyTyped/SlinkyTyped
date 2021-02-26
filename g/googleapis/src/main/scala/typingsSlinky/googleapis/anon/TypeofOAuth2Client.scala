@@ -2,6 +2,7 @@ package typingsSlinky.googleapis.anon
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.googleAuthLibrary.mod.OAuth2Client
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

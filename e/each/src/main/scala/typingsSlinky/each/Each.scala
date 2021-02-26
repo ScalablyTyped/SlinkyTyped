@@ -4,12 +4,13 @@ import typingsSlinky.each.eachStrings.both
 import typingsSlinky.each.eachStrings.end
 import typingsSlinky.each.eachStrings.error
 import typingsSlinky.each.eachStrings.item
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Each extends js.Object {
+trait Each extends StObject {
   
   var done: Double = js.native
   

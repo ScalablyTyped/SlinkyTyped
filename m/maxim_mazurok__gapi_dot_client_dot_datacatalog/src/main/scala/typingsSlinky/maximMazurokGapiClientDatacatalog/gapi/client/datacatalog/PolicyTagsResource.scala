@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientDatacatalog.anon.QuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PolicyTagsResource extends js.Object {
+trait PolicyTagsResource extends StObject {
   
   /** Creates a policy tag in the specified taxonomy. */
   def create(request: KeyOauthtoken): Request[GoogleCloudDatacatalogV1beta1PolicyTag] = js.native

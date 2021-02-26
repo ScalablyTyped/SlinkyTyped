@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "react-immutable-proptypes"
-version := "2.1-dt-20190819Z-a63b28"
+version := "2.1-dt-20190819Z-72f293"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "immutable" % "4.0.0-rc.12-424740",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ed7fbd",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "immutable" % "4.0.0-rc.12-9141d9",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-931d77",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

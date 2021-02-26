@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientServiceusage.anon.Key
 import typingsSlinky.maximMazurokGapiClientServiceusage.anon.Name
 import typingsSlinky.maximMazurokGapiClientServiceusage.anon.Names
 import typingsSlinky.maximMazurokGapiClientServiceusage.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServicesResource extends js.Object {
+trait ServicesResource extends StObject {
   
   /**
     * Enable multiple services on a project. The operation is atomic: if enabling any service fails, then the entire batch fails, and no state changes occur. To enable a single service,

@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.serviceLinkedRoleMod.ServiceLinkedRoleState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,9 +25,7 @@ class ServiceLinkedRole protected ()
   def this(name: String, args: ServiceLinkedRoleArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/aws", "iam.ServiceLinkedRole")
-@js.native
-object ServiceLinkedRole extends js.Object {
+object ServiceLinkedRole {
   
   /**
     * Get an existing ServiceLinkedRole resource's state with the given name, ID, and optional extra
@@ -37,14 +36,24 @@ object ServiceLinkedRole extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/aws", "iam.ServiceLinkedRole.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.serviceLinkedRoleMod.ServiceLinkedRole = js.native
+  @JSImport("@pulumi/aws", "iam.ServiceLinkedRole.get")
+  @js.native
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.serviceLinkedRoleMod.ServiceLinkedRole = js.native
+  @JSImport("@pulumi/aws", "iam.ServiceLinkedRole.get")
+  @js.native
   def get(name: String, id: Input[ID], state: ServiceLinkedRoleState): typingsSlinky.pulumiAws.serviceLinkedRoleMod.ServiceLinkedRole = js.native
+  @JSImport("@pulumi/aws", "iam.ServiceLinkedRole.get")
+  @js.native
   def get(name: String, id: Input[ID], state: ServiceLinkedRoleState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.serviceLinkedRoleMod.ServiceLinkedRole = js.native
   
   /**
     * Returns true if the given object is an instance of ServiceLinkedRole.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/aws", "iam.ServiceLinkedRole.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/iam/serviceLinkedRole.ServiceLinkedRole */ Boolean = js.native
 }

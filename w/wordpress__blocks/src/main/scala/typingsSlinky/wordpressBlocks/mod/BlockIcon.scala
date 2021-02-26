@@ -1,5 +1,6 @@
 package typingsSlinky.wordpressBlocks.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -309,7 +310,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.wordpressBlocks.wordpressBlocksStrings.`editor-alignright`
   - typingsSlinky.wordpressBlocks.wordpressBlocksStrings.smiley
 */
-trait BlockIcon extends js.Object
+trait BlockIcon extends StObject
 object BlockIcon {
   
   @scala.inline

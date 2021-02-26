@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientCloudsearch.anon.AltCallback
 import typingsSlinky.maximMazurokGapiClientCloudsearch.anon.KeyOauthtoken
 import typingsSlinky.maximMazurokGapiClientCloudsearch.anon.OauthtokenPrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait QueryResource extends js.Object {
+trait QueryResource extends StObject {
   
   def search(request: AltCallback, body: SearchRequest): Request[SearchResponse] = js.native
   /**

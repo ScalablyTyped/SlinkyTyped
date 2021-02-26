@@ -1,11 +1,12 @@
 package typingsSlinky.electron.Electron
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CrashReport extends js.Object {
+trait CrashReport extends StObject {
   
   // Docs: https://electronjs.org/docs/api/structures/crash-report
   var date: js.Date = js.native
@@ -21,24 +22,12 @@ object CrashReport {
   }
   
   @scala.inline
-  implicit class CrashReportOps[Self <: CrashReport] (val x: Self) extends AnyVal {
+  implicit class CrashReportMutableBuilder[Self <: CrashReport] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDate(value: js.Date): Self = StObject.set(x, "date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setDate(value: js.Date): Self = this.set("date", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setId(value: String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
   }
 }

@@ -4,6 +4,7 @@ import typingsSlinky.reactNativeJoi.reactNativeJoiStrings.NFC
 import typingsSlinky.reactNativeJoi.reactNativeJoiStrings.NFD
 import typingsSlinky.reactNativeJoi.reactNativeJoiStrings.NFKC
 import typingsSlinky.reactNativeJoi.reactNativeJoiStrings.NFKD
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

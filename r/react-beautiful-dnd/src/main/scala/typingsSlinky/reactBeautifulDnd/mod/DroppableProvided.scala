@@ -2,12 +2,13 @@ package typingsSlinky.reactBeautifulDnd.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DroppableProvided extends js.Object {
+trait DroppableProvided extends StObject {
   
   var droppableProps: DroppableProvidedProps = js.native
   

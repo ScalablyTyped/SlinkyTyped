@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientServicedirectory.anon.Parent
 import typingsSlinky.maximMazurokGapiClientServicedirectory.anon.PrettyPrint
 import typingsSlinky.maximMazurokGapiClientServicedirectory.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientServicedirectory.anon.Resource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServicesResource extends js.Object {
+trait ServicesResource extends StObject {
   
   /** Creates a service, and returns the new Service. */
   def create(request: Oauthtoken): Request[Service] = js.native

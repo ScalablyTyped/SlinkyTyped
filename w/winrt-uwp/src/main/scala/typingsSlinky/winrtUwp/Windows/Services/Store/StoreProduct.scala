@@ -3,13 +3,14 @@ package typingsSlinky.winrtUwp.Windows.Services.Store
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a product that is available in the Windows Store. */
 @js.native
-trait StoreProduct extends js.Object {
+trait StoreProduct extends StObject {
   
   /** Gets the product description from the Windows Store listing. */
   var description: String = js.native

@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "ListWorkweekConfigsResponse")
 @js.native
-class ListWorkweekConfigsResponse () extends js.Object {
+class ListWorkweekConfigsResponse () extends StObject {
   
   /**
     * Value supplied in the subsequent request to fetch the next page of Employee Wage results.

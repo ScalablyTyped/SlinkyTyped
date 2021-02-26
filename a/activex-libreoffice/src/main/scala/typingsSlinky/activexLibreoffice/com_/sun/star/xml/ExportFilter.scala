@@ -6,6 +6,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.beans.PropertyValue
 import typingsSlinky.activexLibreoffice.com_.sun.star.xml.sax.XAttributeList
 import typingsSlinky.activexLibreoffice.com_.sun.star.xml.sax.XDocumentHandler
 import typingsSlinky.activexLibreoffice.com_.sun.star.xml.sax.XLocator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

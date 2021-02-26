@@ -10,9 +10,9 @@ Click effect insipired by Google Material Design
 | ------------------ | :-------------: |
 | Full name          | node-waves |
 | Keywords           | - |
-| # releases         | 2 |
-| # dependents       | 27 |
-| # downloads        | 256058 |
+| # releases         | 0 |
+| # dependents       | 29 |
+| # downloads        | 282209 |
 | # stars            | 2 |
 
 ## Links

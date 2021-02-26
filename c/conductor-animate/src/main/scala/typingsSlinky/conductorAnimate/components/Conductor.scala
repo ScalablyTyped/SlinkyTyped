@@ -8,29 +8,12 @@ import typingsSlinky.conductorAnimate.mod.Animations
 import typingsSlinky.conductorAnimate.mod.ConductorProps
 import typingsSlinky.conductorAnimate.mod.Config
 import typingsSlinky.react.mod.ReactNodeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Conductor {
-  
-  @JSImport("conductor-animate", "Conductor")
-  @js.native
-  object component extends js.Object
-  
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.conductorAnimate.mod.Conductor] {
-    
-    @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def children(value: ReactElement | ReactNodeArray): this.type = set("children", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: ConductorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -40,4 +23,22 @@ object Conductor {
     val __props = js.Dynamic.literal(animations = animations.asInstanceOf[js.Any], config = config.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ConductorProps]))
   }
+  
+  @JSImport("conductor-animate", "Conductor")
+  @js.native
+  val component: js.Object = js.native
+  
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.conductorAnimate.mod.Conductor] {
+    
+    @scala.inline
+    def children(value: ReactElement | ReactNodeArray): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: ConductorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

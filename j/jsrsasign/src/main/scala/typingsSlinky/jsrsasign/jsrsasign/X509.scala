@@ -7,12 +7,13 @@ import typingsSlinky.jsrsasign.anon.Kid
 import typingsSlinky.jsrsasign.anon.Vidx
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.DSA
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.ECDSA
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait X509 extends js.Object {
+trait X509 extends StObject {
   
   /**
     * get AuthorityInfoAccess extension value in the certificate as associative array

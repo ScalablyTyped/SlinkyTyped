@@ -8,16 +8,19 @@ import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IRenderer
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IRendererOptions
 import typingsSlinky.luminoCoreutils.mod.Token
 import typingsSlinky.nteractTransformVdom.eventToObjectMod.SerializedEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/vdom", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@jupyterlab/vdom", "IVDOMTracker")
+  @js.native
   val IVDOMTracker: Token[typingsSlinky.jupyterlabVdom.mod.IVDOMTracker] = js.native
+  type IVDOMTracker = IWidgetTracker[MimeDocument]
   
+  @JSImport("@jupyterlab/vdom", "RenderedVDOM")
   @js.native
   class RenderedVDOM protected () extends IRenderer {
     /**
@@ -39,6 +42,4 @@ object mod extends js.Object {
       */
     def handleVDOMEvent(targetName: String, event: SerializedEvent[_]): Unit = js.native
   }
-  
-  type IVDOMTracker = IWidgetTracker[MimeDocument]
 }

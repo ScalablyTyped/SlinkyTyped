@@ -12,12 +12,13 @@ import typingsSlinky.node.anon.EmitClose
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.ReadStream
 import typingsSlinky.node.fsMod.WriteStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FSJetpack extends js.Object {
+trait FSJetpack extends StObject {
   
   /**
     * Appends given data to the end of file. If file or any parent directory doesn't exist it will be created.

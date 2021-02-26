@@ -1,12 +1,13 @@
 package typingsSlinky.ejWebAll.global.ej
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ej.Type")
 @js.native
-object Type extends js.Object {
+object Type extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Type with Double] = js.native

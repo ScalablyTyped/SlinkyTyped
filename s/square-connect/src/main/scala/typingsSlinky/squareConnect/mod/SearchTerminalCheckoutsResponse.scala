@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "SearchTerminalCheckoutsResponse")
 @js.native
-class SearchTerminalCheckoutsResponse () extends js.Object {
+class SearchTerminalCheckoutsResponse () extends StObject {
   
   /**
     * The requested search result of `TerminalCheckout`s.

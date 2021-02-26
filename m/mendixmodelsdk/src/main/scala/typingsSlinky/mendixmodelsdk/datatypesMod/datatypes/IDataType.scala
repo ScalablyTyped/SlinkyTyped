@@ -10,6 +10,7 @@ import typingsSlinky.mendixmodelsdk.elementsMod.IElement
 import typingsSlinky.mendixmodelsdk.importmappingsMod.importmappings.IImportMapping
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflowBase
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflowParameterBase
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -4,6 +4,7 @@ import typingsSlinky.styledSystem.styledSystemStrings.fontSizes
 import typingsSlinky.styledSystem.styledSystemStrings.fontWeights
 import typingsSlinky.styledSystem.styledSystemStrings.letterSpacings
 import typingsSlinky.styledSystem.styledSystemStrings.lineHeights
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

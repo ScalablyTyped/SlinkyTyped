@@ -6,6 +6,7 @@ import typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.auto
 import typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.center
 import typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.left
 import typingsSlinky.rmcNukaCarousel.rmcNukaCarouselStrings.right
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,10 +41,10 @@ class SharedBuilder_ICarouselProps_1051988952[R <: js.Object] (val args: js.Arra
   def data(value: () => Unit): this.type = set("data", js.Any.fromFunction0(value))
   
   @scala.inline
-  def decoratorsVarargs(value: js.Any*): this.type = set("decorators", js.Array(value :_*))
+  def decorators(value: js.Array[_]): this.type = set("decorators", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def decorators(value: js.Array[_]): this.type = set("decorators", value.asInstanceOf[js.Any])
+  def decoratorsVarargs(value: js.Any*): this.type = set("decorators", js.Array(value :_*))
   
   @scala.inline
   def dragging(value: Boolean): this.type = set("dragging", value.asInstanceOf[js.Any])

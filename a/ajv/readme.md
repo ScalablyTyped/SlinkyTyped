@@ -10,15 +10,15 @@ Another JSON Schema Validator
 | ------------------ | :-------------: |
 | Full name          | ajv |
 | Keywords           | JSON, schema, validator, validation, jsonschema, json-schema, json-schema-validator, json-schema-validation |
-| # releases         | 25 |
-| # dependents       | 2719 |
-| # downloads        | 1118376387 |
+| # releases         | 36 |
+| # dependents       | 3829 |
+| # downloads        | 1711109236 |
 | # stars            | 101 |
 
 ## Links
-- [Homepage](https://github.com/epoberezkin/ajv)
-- [Bugs](https://github.com/epoberezkin/ajv/issues)
-- [Repository](https://github.com/epoberezkin/ajv)
+- [Homepage](https://github.com/ajv-validator/ajv)
+- [Bugs](https://github.com/ajv-validator/ajv/issues)
+- [Repository](https://github.com/ajv-validator/ajv)
 - [Npm](https://www.npmjs.com/package/ajv)
     
 

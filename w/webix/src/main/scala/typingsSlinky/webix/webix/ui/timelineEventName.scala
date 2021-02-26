@@ -1,5 +1,6 @@
 package typingsSlinky.webix.webix.ui
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,7 +32,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webix.webixStrings.onMouseOut
   - typingsSlinky.webix.webixStrings.onViewShow
 */
-trait timelineEventName extends js.Object
+trait timelineEventName extends StObject
 object timelineEventName {
   
   @scala.inline

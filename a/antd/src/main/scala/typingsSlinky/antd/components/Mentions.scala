@@ -81,15 +81,27 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Mentions {
   
+  object Option {
+    
+    @JSImport("antd", "Mentions.Option")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Option.type): SharedBuilder_OptionProps474254931 = new SharedBuilder_OptionProps474254931(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: OptionProps): SharedBuilder_OptionProps474254931 = new SharedBuilder_OptionProps474254931(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd", "Mentions")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -309,10 +321,10 @@ object Mentions {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filterOptionFunction2(value: (/* input */ String, /* hasValue */ OptionProps) => Boolean): this.type = set("filterOption", js.Any.fromFunction2(value))
+    def filterOption(value: `false` | (js.Function2[/* input */ String, /* hasValue */ OptionProps, Boolean])): this.type = set("filterOption", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filterOption(value: `false` | (js.Function2[/* input */ String, /* hasValue */ OptionProps, Boolean])): this.type = set("filterOption", value.asInstanceOf[js.Any])
+    def filterOptionFunction2(value: (/* input */ String, /* hasValue */ OptionProps) => Boolean): this.type = set("filterOption", js.Any.fromFunction2(value))
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
@@ -366,10 +378,10 @@ object Mentions {
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLTextAreaElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -624,13 +636,13 @@ object Mentions {
     def placement(value: Placement): this.type = set("placement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prefixVarargs(value: String*): this.type = set("prefix", js.Array(value :_*))
-    
-    @scala.inline
     def prefix(value: String | js.Array[String]): this.type = set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def prefixVarargs(value: String*): this.type = set("prefix", js.Array(value :_*))
     
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -708,18 +720,7 @@ object Mentions {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MentionProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Mentions.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Option {
-    
-    @JSImport("antd", "Mentions.Option")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: OptionProps): SharedBuilder_OptionProps474254931 = new SharedBuilder_OptionProps474254931(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Option.type): SharedBuilder_OptionProps474254931 = new SharedBuilder_OptionProps474254931(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: MentionProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

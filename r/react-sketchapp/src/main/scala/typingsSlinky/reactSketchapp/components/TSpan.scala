@@ -31,6 +31,7 @@ import typingsSlinky.reactSketchapp.reactSketchappStrings.nonzero
 import typingsSlinky.reactSketchapp.reactSketchappStrings.round
 import typingsSlinky.reactSketchapp.reactSketchappStrings.square
 import typingsSlinky.reactSketchapp.tspanMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -39,7 +40,7 @@ object TSpan {
   
   @JSImport("react-sketchapp/lib/components/Svg/TSpan", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -50,10 +51,10 @@ object TSpan {
     def alignmentBaseline(value: AlignmentBaseline): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def baselineShiftVarargs(value: NumberProp*): this.type = set("baselineShift", js.Array(value :_*))
+    def baselineShift(value: BaselineShift): this.type = set("baselineShift", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def baselineShift(value: BaselineShift): this.type = set("baselineShift", value.asInstanceOf[js.Any])
+    def baselineShiftVarargs(value: NumberProp*): this.type = set("baselineShift", js.Array(value :_*))
     
     @scala.inline
     def clipPath(value: String): this.type = set("clipPath", value.asInstanceOf[js.Any])
@@ -62,16 +63,16 @@ object TSpan {
     def clipRule(value: evenodd | nonzero): this.type = set("clipRule", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dxVarargs(value: NumberProp*): this.type = set("dx", js.Array(value :_*))
-    
-    @scala.inline
     def dx(value: NumberArrayProp): this.type = set("dx", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dyVarargs(value: NumberProp*): this.type = set("dy", js.Array(value :_*))
+    def dxVarargs(value: NumberProp*): this.type = set("dx", js.Array(value :_*))
     
     @scala.inline
     def dy(value: NumberArrayProp): this.type = set("dy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dyVarargs(value: NumberProp*): this.type = set("dy", js.Array(value :_*))
     
     @scala.inline
     def fill(value: String): this.type = set("fill", value.asInstanceOf[js.Any])
@@ -161,10 +162,10 @@ object TSpan {
     def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
+    def strokeDasharray(value: NumberArrayProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDasharray(value: NumberArrayProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
+    def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
     
     @scala.inline
     def strokeDashoffset(value: NumberProp): this.type = set("strokeDashoffset", value.asInstanceOf[js.Any])
@@ -218,7 +219,7 @@ object TSpan {
     def y(value: NumberProp): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TSpan.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -9,6 +9,7 @@ import typingsSlinky.spectacle.mod.TransitionEffect
 import typingsSlinky.spectacle.spectacleStrings.arrows
 import typingsSlinky.spectacle.spectacleStrings.space
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object Deck {
   
   @JSImport("spectacle", "Deck")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,7 +50,7 @@ object Deck {
     def transitionEffect(value: TransitionEffect): this.type = set("transitionEffect", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnimationsWhenGoingBack): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Deck.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AnimationsWhenGoingBack): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

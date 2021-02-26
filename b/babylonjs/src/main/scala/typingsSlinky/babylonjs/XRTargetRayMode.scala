@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.babylonjs.babylonjsStrings.`tracked-pointer`
   - typingsSlinky.babylonjs.babylonjsStrings.screen
 */
-trait XRTargetRayMode extends js.Object
+trait XRTargetRayMode extends StObject
 object XRTargetRayMode {
   
   @scala.inline

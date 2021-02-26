@@ -5,6 +5,7 @@ import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrt.Windows.Foundation.Collections.ValueSet
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Storage.StorageFile
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

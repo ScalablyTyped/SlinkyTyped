@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,13 +10,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class RGBDTextureTools ()
   extends typingsSlinky.babylonjs.BABYLON.RGBDTextureTools
 /* static members */
-@JSGlobal("BABYLON.RGBDTextureTools")
-@js.native
-object RGBDTextureTools extends js.Object {
+object RGBDTextureTools {
   
   /**
     * Expand the RGBD Texture from RGBD to Half Float if possible.
     * @param texture the texture to expand.
     */
+  @JSGlobal("BABYLON.RGBDTextureTools.ExpandRGBDTexture")
+  @js.native
   def ExpandRGBDTexture(texture: typingsSlinky.babylonjs.BABYLON.Texture): Unit = js.native
 }

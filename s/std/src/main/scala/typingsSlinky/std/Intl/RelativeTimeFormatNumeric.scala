@@ -1,5 +1,6 @@
 package typingsSlinky.std.Intl
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.std.stdStrings.always
   - typingsSlinky.std.stdStrings.auto
 */
-trait RelativeTimeFormatNumeric extends js.Object
+trait RelativeTimeFormatNumeric extends StObject
 object RelativeTimeFormatNumeric {
   
   @scala.inline

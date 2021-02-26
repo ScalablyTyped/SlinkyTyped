@@ -50,12 +50,13 @@ import typingsSlinky.minecraftScriptingTypesServer.minecraftScriptingTypesServer
 import typingsSlinky.minecraftScriptingTypesShared.IComponent
 import typingsSlinky.minecraftScriptingTypesShared.IEntity
 import typingsSlinky.minecraftScriptingTypesShared.IEventData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVanillaServerSystemBase extends js.Object {
+trait IVanillaServerSystemBase extends StObject {
   
   /**
     * 

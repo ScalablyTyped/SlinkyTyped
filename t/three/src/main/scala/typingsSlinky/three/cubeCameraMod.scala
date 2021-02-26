@@ -4,14 +4,14 @@ import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.sceneMod.Scene
 import typingsSlinky.three.webGLCubeRenderTargetMod.WebGLCubeRenderTarget
 import typingsSlinky.three.webGLRendererMod.WebGLRenderer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/cameras/CubeCamera", JSImport.Namespace)
-@js.native
-object cubeCameraMod extends js.Object {
+object cubeCameraMod {
   
+  @JSImport("three/src/cameras/CubeCamera", "CubeCamera")
   @js.native
   class CubeCamera protected () extends Object3D {
     def this(near: Double, far: Double, renderTarget: WebGLCubeRenderTarget) = this()

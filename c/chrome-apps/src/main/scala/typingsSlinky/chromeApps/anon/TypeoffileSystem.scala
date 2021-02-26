@@ -11,12 +11,13 @@ import typingsSlinky.chromeApps.chrome.fileSystem.Volume
 import typingsSlinky.filesystem.DirectoryEntry
 import typingsSlinky.filesystem.FileEntry
 import typingsSlinky.filesystem.FileSystem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeoffileSystem extends js.Object {
+trait TypeoffileSystem extends StObject {
   
   /** @enum */
   val ChildChangeType: CHANGED = js.native

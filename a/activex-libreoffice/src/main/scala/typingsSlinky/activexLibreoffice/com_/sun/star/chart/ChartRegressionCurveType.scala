@@ -6,6 +6,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`2`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`3`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`4`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`4`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`5`
 */
-trait ChartRegressionCurveType extends js.Object
+trait ChartRegressionCurveType extends StObject
 object ChartRegressionCurveType {
   
   /**

@@ -2,14 +2,14 @@ package typingsSlinky.three
 
 import typingsSlinky.three.anon.PhiStart
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/geometries/SphereBufferGeometry", JSImport.Namespace)
-@js.native
-object sphereBufferGeometryMod extends js.Object {
+object sphereBufferGeometryMod {
   
+  @JSImport("three/src/geometries/SphereBufferGeometry", "SphereBufferGeometry")
   @js.native
   class SphereBufferGeometry protected () extends BufferGeometry {
     /**

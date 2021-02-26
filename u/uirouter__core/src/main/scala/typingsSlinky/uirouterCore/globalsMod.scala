@@ -6,14 +6,14 @@ import typingsSlinky.uirouterCore.stateInterfaceMod.StateDeclaration
 import typingsSlinky.uirouterCore.stateObjectMod.StateObject
 import typingsSlinky.uirouterCore.stateParamsMod.StateParams
 import typingsSlinky.uirouterCore.transitionTransitionMod.Transition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/globals", JSImport.Namespace)
-@js.native
-object globalsMod extends js.Object {
+object globalsMod {
   
+  @JSImport("@uirouter/core/lib/globals", "UIRouterGlobals")
   @js.native
   class UIRouterGlobals () extends Disposable {
     

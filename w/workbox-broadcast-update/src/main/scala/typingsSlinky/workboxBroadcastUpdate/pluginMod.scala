@@ -4,14 +4,14 @@ import typingsSlinky.workboxBroadcastUpdate.broadcastCacheUpdateMod.BroadcastCac
 import typingsSlinky.workboxCore.workboxPluginMod.CacheDidUpdateCallback
 import typingsSlinky.workboxCore.workboxPluginMod.CacheDidUpdateCallbackParam
 import typingsSlinky.workboxCore.workboxPluginMod.WorkboxPlugin
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("workbox-broadcast-update/Plugin", JSImport.Namespace)
-@js.native
-object pluginMod extends js.Object {
+object pluginMod {
   
+  @JSImport("workbox-broadcast-update/Plugin", "Plugin")
   @js.native
   class Plugin () extends WorkboxPlugin {
     def this(options: BroadcastCacheUpdateOptions) = this()

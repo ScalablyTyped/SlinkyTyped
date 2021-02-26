@@ -1,6 +1,7 @@
 package typingsSlinky.dynogels.mod.AWS
 
 import typingsSlinky.awsSdk.cognitoIdentityCredentialsMod.CognitoIdentityCredentials.CognitoIdentityOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,6 +23,4 @@ class CognitoIdentityCredentials ()
   ) = this()
 }
 // Needed to expose interfaces on the class
-@JSImport("dynogels", "AWS.CognitoIdentityCredentials")
-@js.native
-object CognitoIdentityCredentials extends js.Object
+object CognitoIdentityCredentials

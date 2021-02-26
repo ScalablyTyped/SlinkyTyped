@@ -1,10 +1,16 @@
 package typingsSlinky.nano
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
+  @scala.inline
+  def apply(config: java.lang.String): typingsSlinky.nano.mod.ServerScope = typingsSlinky.nano.mod.^.asInstanceOf[js.Dynamic].apply(config.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.nano.mod.ServerScope]
+  @scala.inline
+  def apply(config: typingsSlinky.nano.mod.Configuration): typingsSlinky.nano.mod.ServerScope = typingsSlinky.nano.mod.^.asInstanceOf[js.Dynamic].apply(config.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.nano.mod.ServerScope]
   
   type Callback[R] = js.Function3[/* error */ js.Any, /* response */ R, /* headers */ js.UndefOr[js.Any], scala.Unit]
   

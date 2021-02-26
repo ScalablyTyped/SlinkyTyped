@@ -46,12 +46,13 @@ import typingsSlinky.semanticUiEmbed.semanticUiEmbedStrings.source
 import typingsSlinky.semanticUiEmbed.semanticUiEmbedStrings.templates
 import typingsSlinky.semanticUiEmbed.semanticUiEmbedStrings.url
 import typingsSlinky.semanticUiEmbed.semanticUiEmbedStrings.verbose
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def embed(): JQuery = js.native
   def embed(behavior: setting, name: autoplay, value: js.UndefOr[scala.Nothing]): auto | Boolean = js.native

@@ -3,15 +3,22 @@ package typingsSlinky.storybookComponents.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookComponents.iframeMod.IFrameProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IFrame {
   
+  @scala.inline
+  def apply(allowFullScreen: Boolean, id: String, scale: Double, src: String, title: String): Builder = {
+    val __props = js.Dynamic.literal(allowFullScreen = allowFullScreen.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IFrameProps]))
+  }
+  
   @JSImport("@storybook/components", "IFrame")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -23,10 +30,4 @@ object IFrame {
   }
   
   def withProps(p: IFrameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(allowFullScreen: Boolean, id: String, scale: Double, src: String, title: String): Builder = {
-    val __props = js.Dynamic.literal(allowFullScreen = allowFullScreen.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IFrameProps]))
-  }
 }

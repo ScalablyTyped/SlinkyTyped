@@ -2,13 +2,14 @@ package typingsSlinky.amapJsApi.anon
 
 import typingsSlinky.amapJsApi.AMap.LngLat
 import typingsSlinky.amapJsApi.AMap.LocationValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined amap-js-api.AMap.Omit<amap-js-api.AMap.Ellipse<any>, keyof amap-js-api.AMap.Polygon<any>> */
 @js.native
-trait OmitEllipseanykeyofPolygo extends js.Object {
+trait OmitEllipseanykeyofPolygo extends StObject {
   
   def getCenter(): js.UndefOr[LngLat] = js.native
   @JSName("getCenter")

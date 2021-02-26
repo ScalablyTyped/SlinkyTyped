@@ -1,5 +1,6 @@
 package typingsSlinky.ndnJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,10 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class DelegationSet ()
   extends typingsSlinky.ndnJs.interestMod.DelegationSet
-@JSImport("ndn-js", "DelegationSet")
-@js.native
-object DelegationSet extends js.Object {
+object DelegationSet {
   
+  @JSImport("ndn-js", "DelegationSet.Delegation")
   @js.native
   class Delegation ()
     extends typingsSlinky.ndnJs.interestMod.DelegationSet.Delegation

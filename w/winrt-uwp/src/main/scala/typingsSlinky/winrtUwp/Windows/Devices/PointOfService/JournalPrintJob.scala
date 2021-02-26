@@ -1,13 +1,14 @@
 package typingsSlinky.winrtUwp.Windows.Devices.PointOfService
 
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a set of printing instructions that you want to run on the journal printer station. */
 @js.native
-trait JournalPrintJob extends js.Object {
+trait JournalPrintJob extends StObject {
   
   /**
     * Runs the print job on the journal printer station asynchronously.

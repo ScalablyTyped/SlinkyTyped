@@ -1,6 +1,7 @@
 package typingsSlinky.gm.mod
 
 import typingsSlinky.gm.gmStrings.Gray_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gm.gmStrings.Black
   - typingsSlinky.gm.gmStrings.Gray_
 */
-trait NamedColor extends js.Object
+trait NamedColor extends StObject
 object NamedColor {
   
   @scala.inline

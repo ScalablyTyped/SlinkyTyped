@@ -258,6 +258,7 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`95`
 import typingsSlinky.activexExcel.activexExcelNumbers.`977`
 import typingsSlinky.activexExcel.activexExcelNumbers.`978`
 import typingsSlinky.activexExcel.activexExcelNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -522,7 +523,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`95`
   - typingsSlinky.activexExcel.activexExcelNumbers.`256`
 */
-trait XlBuiltInDialog extends js.Object
+trait XlBuiltInDialog extends StObject
 object XlBuiltInDialog {
   
   @scala.inline

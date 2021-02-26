@@ -1,5 +1,6 @@
 package typingsSlinky.webxr.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webxr.webxrStrings.`immersive-vr`
   - typingsSlinky.webxr.webxrStrings.`immersive-ar`
 */
-trait XRSessionMode extends js.Object
+trait XRSessionMode extends StObject
 object XRSessionMode {
   
   @scala.inline

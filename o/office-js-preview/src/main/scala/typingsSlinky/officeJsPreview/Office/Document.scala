@@ -2,6 +2,7 @@ package typingsSlinky.officeJsPreview.Office
 
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.edit
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.read
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * **Hosts**: Excel, PowerPoint, Project, Word
   */
 @js.native
-trait Document extends js.Object {
+trait Document extends StObject {
   
   /**
     * Adds an event handler for a Document object event.

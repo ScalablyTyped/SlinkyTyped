@@ -4,14 +4,14 @@ import typingsSlinky.luminoAlgorithm.iterMod.IIterable
 import typingsSlinky.luminoAlgorithm.iterMod.IIterator
 import typingsSlinky.luminoAlgorithm.iterMod.IterableOrArrayLike
 import typingsSlinky.luminoAlgorithm.retroMod.IRetroable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@lumino/collections/types/bplustree", JSImport.Namespace)
-@js.native
-object bplustreeMod extends js.Object {
+object bplustreeMod {
   
+  @JSImport("@lumino/collections/types/bplustree", "BPlusTree")
   @js.native
   class BPlusTree[T] protected ()
     extends IIterable[T]
@@ -242,8 +242,7 @@ object bplustreeMod extends js.Object {
       */
     def update(items: IterableOrArrayLike[T]): Unit = js.native
   }
-  @js.native
-  object BPlusTree extends js.Object {
+  object BPlusTree {
     
     /**
       * Create a new B+ tree populated with the given items.
@@ -257,6 +256,8 @@ object bplustreeMod extends js.Object {
       * #### Complexity
       * `O(n log32 n)`
       */
+    @JSImport("@lumino/collections/types/bplustree", "BPlusTree.from")
+    @js.native
     def from[T](items: IterableOrArrayLike[T], cmp: js.Function2[/* a */ T, /* b */ T, Double]): BPlusTree[T] = js.native
   }
 }

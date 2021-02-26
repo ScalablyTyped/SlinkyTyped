@@ -15,6 +15,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.northwest
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.seamline
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.sum
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.viewpoint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

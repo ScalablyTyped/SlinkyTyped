@@ -1,12 +1,13 @@
 package typingsSlinky.mfiles
 
 import typingsSlinky.mfiles.MFiles.MFBuiltInObjectType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IObjectCreationInfo extends js.Object {
+trait IObjectCreationInfo extends StObject {
   
   var DisallowTemplateSelection: Boolean = js.native
   

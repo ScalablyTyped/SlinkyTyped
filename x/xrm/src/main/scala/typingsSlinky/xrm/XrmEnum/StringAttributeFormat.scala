@@ -6,6 +6,7 @@ import typingsSlinky.xrm.xrmStrings.text
 import typingsSlinky.xrm.xrmStrings.textarea
 import typingsSlinky.xrm.xrmStrings.tickersymbol
 import typingsSlinky.xrm.xrmStrings.url
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.tickersymbol
   - typingsSlinky.xrm.xrmStrings.url
 */
-trait StringAttributeFormat extends js.Object
+trait StringAttributeFormat extends StObject
 object StringAttributeFormat {
   
   @scala.inline

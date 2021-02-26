@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientCloudscheduler.gapi.client.cloudsche
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientCloudscheduler.anon.Callback
 import typingsSlinky.maximMazurokGapiClientCloudscheduler.anon.Filter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationsResource extends js.Object {
+trait LocationsResource extends StObject {
   
   /** Gets information about a location. */
   def get(): Request[Location] = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.vsoNodeApi.buildInterfacesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -39,27 +40,15 @@ object BuildLog {
   }
   
   @scala.inline
-  implicit class BuildLogOps[Self <: BuildLog] (val x: Self) extends AnyVal {
+  implicit class BuildLogMutableBuilder[Self <: BuildLog] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCreatedOn(value: js.Date): Self = StObject.set(x, "createdOn", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setLastChangedOn(value: js.Date): Self = StObject.set(x, "lastChangedOn", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setCreatedOn(value: js.Date): Self = this.set("createdOn", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setLastChangedOn(value: js.Date): Self = this.set("lastChangedOn", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setLineCount(value: Double): Self = this.set("lineCount", value.asInstanceOf[js.Any])
+    def setLineCount(value: Double): Self = StObject.set(x, "lineCount", value.asInstanceOf[js.Any])
   }
 }

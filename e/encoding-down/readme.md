@@ -10,9 +10,9 @@ LevelDOWN wrapper supporting levelup@1 encodings
 | ------------------ | :-------------: |
 | Full name          | encoding-down |
 | Keywords           | level |
-| # releases         | 14 |
-| # dependents       | 54 |
-| # downloads        | 3336266 |
+| # releases         | 5 |
+| # dependents       | 74 |
+| # downloads        | 6880575 |
 | # stars            | 0 |
 
 ## Links

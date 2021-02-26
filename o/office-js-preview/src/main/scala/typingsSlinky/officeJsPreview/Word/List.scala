@@ -29,6 +29,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Start
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Unknown_
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.UpperLetter
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.UpperRoman
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

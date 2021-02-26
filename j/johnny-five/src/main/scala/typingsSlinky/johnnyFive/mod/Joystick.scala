@@ -3,13 +3,14 @@ package typingsSlinky.johnnyFive.mod
 import typingsSlinky.johnnyFive.johnnyFiveStrings.axismove
 import typingsSlinky.johnnyFive.johnnyFiveStrings.change
 import typingsSlinky.johnnyFive.johnnyFiveStrings.data
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("johnny-five", "Joystick")
 @js.native
-class Joystick protected () extends js.Object {
+class Joystick protected () extends StObject {
   def this(option: JoystickOption) = this()
   
   var axis: js.Array[Double] = js.native

@@ -1,12 +1,13 @@
 package typingsSlinky.officeUiFabricReact.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react", "HoverCardType")
 @js.native
-object HoverCardType extends js.Object {
+object HoverCardType extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeUiFabricReact.hoverCardTypesMod.HoverCardType with String] = js.native

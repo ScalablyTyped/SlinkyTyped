@@ -151,6 +151,7 @@ import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`97`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`98`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`99`
 import typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -308,7 +309,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`46`
   - typingsSlinky.activexPowerpoint.activexPowerpointNumbers.`23`
 */
-trait MsoAnimEffect extends js.Object
+trait MsoAnimEffect extends StObject
 object MsoAnimEffect {
   
   @scala.inline

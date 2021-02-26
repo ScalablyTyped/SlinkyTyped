@@ -2,18 +2,18 @@ package typingsSlinky.antlr4
 
 import typingsSlinky.antlr4.intervalSetMod.Interval
 import typingsSlinky.antlr4.parserRuleContextMod.ParserRuleContext
-import typingsSlinky.antlr4.treeMod.ParseTree
 import typingsSlinky.antlr4.treeMod.ParseTreeVisitor
+import typingsSlinky.antlr4.treeMod.RuleNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antlr4/RuleContext", JSImport.Namespace)
-@js.native
-object ruleContextMod extends js.Object {
+object ruleContextMod {
   
+  @JSImport("antlr4/RuleContext", "RuleContext")
   @js.native
-  class RuleContext protected () extends ParseTree {
+  class RuleContext protected () extends RuleNode {
     def this(parent: js.Any, invokingState: Double) = this()
     
     def accept(visitor: ParseTreeVisitor): Unit = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.fflate.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Creates a Zlib decompression stream
   * @param cb The callback to call whenever data is inflated
   */
-class Unzlib_ () extends js.Object {
+class Unzlib_ () extends StObject {
   def this(cb: FlateStreamHandler) = this()
   
   /**

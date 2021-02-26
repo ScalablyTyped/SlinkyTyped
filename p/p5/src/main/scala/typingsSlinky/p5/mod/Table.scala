@@ -1,11 +1,12 @@
 package typingsSlinky.p5.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Table extends js.Object {
+trait Table extends StObject {
   
   /**
     *   Use addColumn() to add a new column to a Table

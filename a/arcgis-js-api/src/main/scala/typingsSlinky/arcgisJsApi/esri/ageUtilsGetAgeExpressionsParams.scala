@@ -8,6 +8,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.seconds
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.years
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -59,39 +60,27 @@ object ageUtilsGetAgeExpressionsParams {
   }
   
   @scala.inline
-  implicit class ageUtilsGetAgeExpressionsParamsOps[Self <: ageUtilsGetAgeExpressionsParams] (val x: Self) extends AnyVal {
+  implicit class ageUtilsGetAgeExpressionsParamsMutableBuilder[Self <: ageUtilsGetAgeExpressionsParams] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setEndTime(value: js.Date | String | Double): Self = StObject.set(x, "endTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setEndTimeDate(value: js.Date): Self = StObject.set(x, "endTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setLayer(value: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer): Self = StObject.set(x, "layer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEndTimeDate(value: js.Date): Self = this.set("endTime", value.asInstanceOf[js.Any])
+    def setStartTime(value: js.Date | String | Double): Self = StObject.set(x, "startTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEndTime(value: js.Date | String | Double): Self = this.set("endTime", value.asInstanceOf[js.Any])
+    def setStartTimeDate(value: js.Date): Self = StObject.set(x, "startTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLayer(value: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer): Self = this.set("layer", value.asInstanceOf[js.Any])
+    def setUnit(value: years | months | days | hours | minutes | seconds): Self = StObject.set(x, "unit", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStartTimeDate(value: js.Date): Self = this.set("startTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStartTime(value: js.Date | String | Double): Self = this.set("startTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUnit(value: years | months | days | hours | minutes | seconds): Self = this.set("unit", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUnit: Self = this.set("unit", js.undefined)
+    def setUnitUndefined: Self = StObject.set(x, "unit", js.undefined)
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.browserSync.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.browserSync.browserSyncStrings.`ui-external`
   - typingsSlinky.browserSync.browserSyncStrings.tunnel
 */
-trait OpenOptions extends js.Object
+trait OpenOptions extends StObject
 object OpenOptions {
   
   @scala.inline

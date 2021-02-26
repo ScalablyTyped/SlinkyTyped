@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.encodeMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.vegaTypingsStrings.center
   - typingsSlinky.vegaTypings.vegaTypingsStrings.right
 */
-trait Align extends js.Object
+trait Align extends StObject
 object Align {
   
   @scala.inline

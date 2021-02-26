@@ -1,5 +1,6 @@
 package typingsSlinky.siesta.Siesta.Test
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @mixin
   */
 @js.native
-trait IMore extends js.Object {
+trait IMore extends StObject {
   
   def chain(step: IAction*): Unit = js.native
   def chain(steps: js.Array[IAction]): Unit = js.native

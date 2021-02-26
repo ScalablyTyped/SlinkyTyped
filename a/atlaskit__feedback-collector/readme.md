@@ -10,14 +10,14 @@ A component that collects feedback across Atlassian products.
 | ------------------ | :-------------: |
 | Full name          | @atlaskit/feedback-collector |
 | Keywords           | atlaskit, react, ui |
-| # releases         | 54 |
+| # releases         | 50 |
 | # dependents       | 1 |
-| # downloads        | 31613 |
+| # downloads        | 90241 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://bitbucket.org/atlassian/atlaskit-mk-2#readme)
-- [Repository](https://bitbucket.org/atlassian/atlaskit-mk-2)
+- [Homepage](https://bitbucket.org/atlassian/atlassian-frontend#readme)
+- [Repository](https://bitbucket.org/atlassian/atlassian-frontend)
 - [Npm](https://www.npmjs.com/package/%40atlaskit%2Ffeedback-collector)
     
 

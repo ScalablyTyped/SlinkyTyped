@@ -30,15 +30,22 @@ import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObjec
 import typingsSlinky.uifabricReactHooks.useTargetMod.Target
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ContextualMenu {
   
+  @scala.inline
+  def apply(items: js.Array[IContextualMenuItem]): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IContextualMenuProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "ContextualMenu")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -55,11 +62,6 @@ object ContextualMenu {
     def beakWidth(value: Double): this.type = set("beakWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def boundsFunction2(
-      value: (/* target */ js.UndefOr[Target], /* targetWindow */ js.UndefOr[Window]) => js.UndefOr[IRectangle]
-    ): this.type = set("bounds", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def bounds(
       value: IRectangle | (js.Function2[
           /* target */ js.UndefOr[Target], 
@@ -69,10 +71,18 @@ object ContextualMenu {
     ): this.type = set("bounds", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def boundsFunction2(
+      value: (/* target */ js.UndefOr[Target], /* targetWindow */ js.UndefOr[Window]) => js.UndefOr[IRectangle]
+    ): this.type = set("bounds", js.Any.fromFunction2(value))
+    
+    @scala.inline
     def calloutProps(value: ICalloutProps): this.type = set("calloutProps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def componentRef(value: IRefObject[IContextualMenu]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def componentRefFunction1(value: /* ref */ IContextualMenu | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
@@ -81,16 +91,13 @@ object ContextualMenu {
     def componentRefRefObject(value: ReactRef[IContextualMenu]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def componentRef(value: IRefObject[IContextualMenu]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def contextualMenuItemAsFunctionComponent(value: ReactComponentClass[IContextualMenuItemProps]): this.type = set("contextualMenuItemAs", value.asInstanceOf[js.Any])
+    def contextualMenuItemAs(value: ReactComponentClass[IContextualMenuItemProps]): this.type = set("contextualMenuItemAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contextualMenuItemAsComponentClass(value: ReactComponentClass[IContextualMenuItemProps]): this.type = set("contextualMenuItemAs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contextualMenuItemAs(value: ReactComponentClass[IContextualMenuItemProps]): this.type = set("contextualMenuItemAs", value.asInstanceOf[js.Any])
+    def contextualMenuItemAsFunctionComponent(value: ReactComponentClass[IContextualMenuItemProps]): this.type = set("contextualMenuItemAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def coverTarget(value: Boolean): this.type = set("coverTarget", value.asInstanceOf[js.Any])
@@ -178,16 +185,16 @@ object ContextualMenu {
     def shouldUpdateWhenHidden(value: Boolean): this.type = set("shouldUpdateWhenHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IContextualMenuStyleProps => DeepPartial[IContextualMenuStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[IContextualMenuStyleProps, IContextualMenuStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[IContextualMenuStyleProps, IContextualMenuStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: IContextualMenuStyleProps => DeepPartial[IContextualMenuStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def subMenuHoverDelay(value: Double): this.type = set("subMenuHoverDelay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def targetRefObject(value: ReactRef[Element]): this.type = set("target", value.asInstanceOf[js.Any])
+    def target(value: Target): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetElement(value: Element): this.type = set("target", value.asInstanceOf[js.Any])
@@ -196,10 +203,10 @@ object ContextualMenu {
     def targetMouseEvent(value: MouseEvent): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def target(value: Target): this.type = set("target", value.asInstanceOf[js.Any])
+    def targetNull: this.type = set("target", null)
     
     @scala.inline
-    def targetNull: this.type = set("target", null)
+    def targetRefObject(value: ReactRef[Element]): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -215,10 +222,4 @@ object ContextualMenu {
   }
   
   def withProps(p: IContextualMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(items: js.Array[IContextualMenuItem]): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IContextualMenuProps]))
-  }
 }

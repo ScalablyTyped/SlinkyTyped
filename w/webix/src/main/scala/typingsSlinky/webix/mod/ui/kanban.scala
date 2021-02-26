@@ -4,6 +4,7 @@ import typingsSlinky.webix.mod.DataCollection
 import typingsSlinky.webix.mod.DataStore
 import typingsSlinky.webix.mod.WebixCallback
 import typingsSlinky.webix.mod.WebixTemplate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

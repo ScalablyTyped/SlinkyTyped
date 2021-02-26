@@ -2,13 +2,14 @@ package typingsSlinky.jest.mod.jest
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined jest.jest.jest.JestMatchersShape<jest.jest.jest.Matchers<void, T>, jest.jest.jest.Matchers<std.Promise<void>, T>> */
 @js.native
-trait JestMatchers[T] extends js.Object {
+trait JestMatchers[T] extends StObject {
   
   /**
     * Ensures the last call to a mock function was provided specific args.
@@ -416,18 +417,18 @@ trait JestMatchers[T] extends js.Object {
     */
   def toThrow(): Unit = js.native
   def toThrow(error: String): Unit = js.native
-  def toThrow(error: Constructable): Unit = js.native
   def toThrow(error: js.Error): Unit = js.native
   def toThrow(error: js.RegExp): Unit = js.native
+  def toThrow(error: Constructable): Unit = js.native
   
   /**
     * If you want to test that a specific error is thrown inside a function.
     */
   def toThrowError(): Unit = js.native
   def toThrowError(error: String): Unit = js.native
-  def toThrowError(error: Constructable): Unit = js.native
   def toThrowError(error: js.Error): Unit = js.native
   def toThrowError(error: js.RegExp): Unit = js.native
+  def toThrowError(error: Constructable): Unit = js.native
   
   /**
     * Used to test that a function throws a error matching the most recent snapshot when it is called.

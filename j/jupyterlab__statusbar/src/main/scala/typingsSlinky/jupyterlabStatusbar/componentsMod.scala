@@ -6,22 +6,21 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.jupyterlabStatusbar.groupMod.GroupItem.IProps
 import typingsSlinky.jupyterlabStatusbar.hoverMod.Popup.IOptions
 import typingsSlinky.react.mod.HTMLAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/statusbar/lib/components", JSImport.Namespace)
-@js.native
-object componentsMod extends js.Object {
+object componentsMod {
   
-  def showPopup(options: IOptions): typingsSlinky.jupyterlabStatusbar.hoverMod.Popup = js.native
-  
-  @js.native
-  object GroupItem extends js.Object {
+  object GroupItem {
     
+    @JSImport("@jupyterlab/statusbar/lib/components", "GroupItem")
+    @js.native
     def apply(props: IProps with HTMLAttributes[HTMLDivElement]): ReactElement = js.native
   }
   
+  @JSImport("@jupyterlab/statusbar/lib/components", "Popup")
   @js.native
   class Popup protected ()
     extends typingsSlinky.jupyterlabStatusbar.hoverMod.Popup {
@@ -31,17 +30,23 @@ object componentsMod extends js.Object {
     def this(options: IOptions) = this()
   }
   
-  @js.native
-  object ProgressBar extends js.Object {
+  object ProgressBar {
     
+    @JSImport("@jupyterlab/statusbar/lib/components", "ProgressBar")
+    @js.native
     def apply(props: typingsSlinky.jupyterlabStatusbar.progressBarMod.ProgressBar.IProps): ReactElement = js.native
   }
   
-  @js.native
-  object TextItem extends js.Object {
+  object TextItem {
     
+    @JSImport("@jupyterlab/statusbar/lib/components", "TextItem")
+    @js.native
     def apply(
       props: typingsSlinky.jupyterlabStatusbar.textMod.TextItem.IProps with HTMLAttributes[HTMLSpanElement]
     ): ReactElement = js.native
   }
+  
+  @JSImport("@jupyterlab/statusbar/lib/components", "showPopup")
+  @js.native
+  def showPopup(options: IOptions): typingsSlinky.jupyterlabStatusbar.hoverMod.Popup = js.native
 }

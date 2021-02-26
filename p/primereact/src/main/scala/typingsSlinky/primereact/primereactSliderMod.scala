@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.sliderMod.SliderProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/slider", JSImport.Namespace)
-@js.native
-object primereactSliderMod extends js.Object {
+object primereactSliderMod {
   
+  @JSImport("primereact/slider", "Slider")
   @js.native
-  class Slider ()
-    extends Component[SliderProps, js.Any, js.Any]
+  class Slider protected ()
+    extends typingsSlinky.primereact.sliderMod.Slider {
+    def this(props: SliderProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: SliderProps, context: js.Any) = this()
+  }
 }

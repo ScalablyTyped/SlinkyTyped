@@ -12,7 +12,7 @@ Spawns and interacts with child processes using spawn / expect commands
 | Keywords           | nexpect, spawn, child process, terminal |
 | # releases         | 2 |
 | # dependents       | 8 |
-| # downloads        | 17532 |
+| # downloads        | 21240 |
 | # stars            | 5 |
 
 ## Links

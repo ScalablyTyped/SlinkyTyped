@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.protonNative.anon.W
 import typingsSlinky.protonNative.anon.Y
 import typingsSlinky.protonNative.mod.WindowProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Window {
   
   @JSImport("proton-native", "Window")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -55,7 +56,7 @@ object Window {
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: WindowProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Window.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: WindowProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

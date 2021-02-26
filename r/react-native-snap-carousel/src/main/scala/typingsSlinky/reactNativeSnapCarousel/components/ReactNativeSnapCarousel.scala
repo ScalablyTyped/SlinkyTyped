@@ -9,7 +9,6 @@ import typingsSlinky.reactNative.anon.AutoscrollToTopThreshold
 import typingsSlinky.reactNative.anon.AverageItemLength
 import typingsSlinky.reactNative.anon.Changed
 import typingsSlinky.reactNative.anon.DistanceFromEnd
-import typingsSlinky.reactNative.anon.Index
 import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
@@ -56,6 +55,7 @@ import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.scrollableAxes
 import typingsSlinky.reactNative.reactNativeStrings.white
 import typingsSlinky.reactNative.reactNativeStrings.yes
+import typingsSlinky.reactNativeSnapCarousel.anon.Index
 import typingsSlinky.reactNativeSnapCarousel.anon.InputRange
 import typingsSlinky.reactNativeSnapCarousel.mod.AdditionalParallaxProps
 import typingsSlinky.reactNativeSnapCarousel.mod.CarouselProperties
@@ -69,15 +69,22 @@ import typingsSlinky.reactNativeSnapCarousel.reactNativeSnapCarouselStrings.stac
 import typingsSlinky.reactNativeSnapCarousel.reactNativeSnapCarouselStrings.start
 import typingsSlinky.reactNativeSnapCarousel.reactNativeSnapCarouselStrings.timing
 import typingsSlinky.reactNativeSnapCarousel.reactNativeSnapCarouselStrings.tinder
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeSnapCarousel {
   
+  @scala.inline
+  def apply[T](data: js.Array[T], renderItem: (Index[T], js.UndefOr[AdditionalParallaxProps]) => ReactElement): Builder[T] = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderItem = js.Any.fromFunction2(renderItem))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[CarouselProperties[T]]))
+  }
+  
   @JSImport("react-native-snap-carousel", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -85,55 +92,55 @@ object ReactNativeSnapCarousel {
        with StBuildingComponent[tag.type, default[T]] {
     
     @scala.inline
-    def CellRendererComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
+    def CellRendererComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def CellRendererComponentComponentClass(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def CellRendererComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ItemSeparatorComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ItemSeparatorComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
+    def CellRendererComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ItemSeparatorComponent(value: ReactComponentClass[_]): this.type = set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def ItemSeparatorComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def ItemSeparatorComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def ItemSeparatorComponentNull: this.type = set("ItemSeparatorComponent", null)
-    
-    @scala.inline
-    def ListEmptyComponentReactElement(value: ReactElement): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListEmptyComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListEmptyComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListEmptyComponent(value: ReactComponentClass[_] | ReactElement): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def ListEmptyComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def ListEmptyComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def ListEmptyComponentNull: this.type = set("ListEmptyComponent", null)
     
     @scala.inline
-    def ListFooterComponentReactElement(value: ReactElement): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListFooterComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListFooterComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
+    def ListEmptyComponentReactElement(value: ReactElement): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListFooterComponent(value: ReactComponentClass[_] | ReactElement): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def ListFooterComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def ListFooterComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def ListFooterComponentNull: this.type = set("ListFooterComponent", null)
+    
+    @scala.inline
+    def ListFooterComponentReactElement(value: ReactElement): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListFooterComponentStyle(value: ViewStyle): this.type = set("ListFooterComponentStyle", value.asInstanceOf[js.Any])
@@ -142,19 +149,19 @@ object ReactNativeSnapCarousel {
     def ListFooterComponentStyleNull: this.type = set("ListFooterComponentStyle", null)
     
     @scala.inline
-    def ListHeaderComponentReactElement(value: ReactElement): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def ListHeaderComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
+    def ListHeaderComponent(value: ReactComponentClass[_] | ReactElement): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListHeaderComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ListHeaderComponent(value: ReactComponentClass[_] | ReactElement): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
+    def ListHeaderComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListHeaderComponentNull: this.type = set("ListHeaderComponent", null)
+    
+    @scala.inline
+    def ListHeaderComponentReactElement(value: ReactElement): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ListHeaderComponentStyle(value: ViewStyle): this.type = set("ListHeaderComponentStyle", value.asInstanceOf[js.Any])
@@ -163,10 +170,10 @@ object ReactNativeSnapCarousel {
     def ListHeaderComponentStyleNull: this.type = set("ListHeaderComponentStyle", null)
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -193,10 +200,10 @@ object ReactNativeSnapCarousel {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -337,7 +344,9 @@ object ReactNativeSnapCarousel {
     def getItemCount(value: /* data */ js.Any => Double): this.type = set("getItemCount", js.Any.fromFunction1(value))
     
     @scala.inline
-    def getItemLayout(value: (/* data */ js.UndefOr[js.Array[T] | Null], /* index */ Double) => Index): this.type = set("getItemLayout", js.Any.fromFunction2(value))
+    def getItemLayout(
+      value: (/* data */ js.UndefOr[js.Array[T] | Null], /* index */ Double) => typingsSlinky.reactNative.anon.Index
+    ): this.type = set("getItemLayout", js.Any.fromFunction2(value))
     
     @scala.inline
     def hasParallaxImages(value: Boolean): this.type = set("hasParallaxImages", value.asInstanceOf[js.Any])
@@ -682,19 +691,19 @@ object ReactNativeSnapCarousel {
     def snapToInterval(value: Double): this.type = set("snapToInterval", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def snapToOffsetsVarargs(value: Double*): this.type = set("snapToOffsets", js.Array(value :_*))
+    def snapToOffsets(value: js.Array[Double]): this.type = set("snapToOffsets", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def snapToOffsets(value: js.Array[Double]): this.type = set("snapToOffsets", value.asInstanceOf[js.Any])
+    def snapToOffsetsVarargs(value: Double*): this.type = set("snapToOffsets", js.Array(value :_*))
     
     @scala.inline
     def snapToStart(value: Boolean): this.type = set("snapToStart", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stickyHeaderIndicesVarargs(value: Double*): this.type = set("stickyHeaderIndices", js.Array(value :_*))
+    def stickyHeaderIndices(value: js.Array[Double]): this.type = set("stickyHeaderIndices", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stickyHeaderIndices(value: js.Array[Double]): this.type = set("stickyHeaderIndices", value.asInstanceOf[js.Any])
+    def stickyHeaderIndicesVarargs(value: Double*): this.type = set("stickyHeaderIndices", js.Array(value :_*))
     
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
@@ -736,10 +745,10 @@ object ReactNativeSnapCarousel {
     def viewabilityConfig(value: js.Any): this.type = set("viewabilityConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def viewabilityConfigCallbackPairsVarargs(value: ViewabilityConfigCallbackPair*): this.type = set("viewabilityConfigCallbackPairs", js.Array(value :_*))
+    def viewabilityConfigCallbackPairs(value: ViewabilityConfigCallbackPairs): this.type = set("viewabilityConfigCallbackPairs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def viewabilityConfigCallbackPairs(value: ViewabilityConfigCallbackPairs): this.type = set("viewabilityConfigCallbackPairs", value.asInstanceOf[js.Any])
+    def viewabilityConfigCallbackPairsVarargs(value: ViewabilityConfigCallbackPair*): this.type = set("viewabilityConfigCallbackPairs", js.Array(value :_*))
     
     @scala.inline
     def windowSize(value: Double): this.type = set("windowSize", value.asInstanceOf[js.Any])
@@ -749,13 +758,4 @@ object ReactNativeSnapCarousel {
   }
   
   def withProps[T](p: CarouselProperties[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](
-    data: js.Array[T],
-    renderItem: (typingsSlinky.reactNativeSnapCarousel.anon.Index[T], js.UndefOr[AdditionalParallaxProps]) => ReactElement
-  ): Builder[T] = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderItem = js.Any.fromFunction2(renderItem))
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[CarouselProperties[T]]))
-  }
 }

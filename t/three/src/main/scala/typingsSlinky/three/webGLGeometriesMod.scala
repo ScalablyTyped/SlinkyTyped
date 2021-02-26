@@ -7,16 +7,16 @@ import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.webGLAttributesMod.WebGLAttributes
 import typingsSlinky.three.webGLInfoMod.WebGLInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/renderers/webgl/WebGLGeometries", JSImport.Namespace)
-@js.native
-object webGLGeometriesMod extends js.Object {
+object webGLGeometriesMod {
   
+  @JSImport("three/src/renderers/webgl/WebGLGeometries", "WebGLGeometries")
   @js.native
-  class WebGLGeometries protected () extends js.Object {
+  class WebGLGeometries protected () extends StObject {
     def this(gl: WebGLRenderingContext, attributes: WebGLAttributes, info: WebGLInfo) = this()
     
     def get(`object`: Object3D, geometry: BufferGeometry): BufferGeometry = js.native

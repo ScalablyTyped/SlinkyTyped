@@ -3,14 +3,14 @@ package typingsSlinky.firebaseComponent
 import typingsSlinky.firebaseComponent.typesMod.ComponentType
 import typingsSlinky.firebaseComponent.typesMod.InstanceFactory
 import typingsSlinky.firebaseComponent.typesMod.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/component", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@firebase/component", "Component")
   @js.native
   class Component[T /* <: Name */] protected ()
     extends typingsSlinky.firebaseComponent.componentMod.Component[T] {
@@ -23,12 +23,14 @@ object mod extends js.Object {
     def this(name: T, instanceFactory: InstanceFactory[T], `type`: ComponentType) = this()
   }
   
+  @JSImport("@firebase/component", "ComponentContainer")
   @js.native
   class ComponentContainer protected ()
     extends typingsSlinky.firebaseComponent.componentContainerMod.ComponentContainer {
     def this(name: String) = this()
   }
   
+  @JSImport("@firebase/component", "Provider")
   @js.native
   class Provider[T /* <: Name */] protected ()
     extends typingsSlinky.firebaseComponent.providerMod.Provider[T] {

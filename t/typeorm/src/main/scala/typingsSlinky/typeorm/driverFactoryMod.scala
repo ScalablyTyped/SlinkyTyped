@@ -2,16 +2,16 @@ package typingsSlinky.typeorm
 
 import typingsSlinky.typeorm.connectionMod.Connection
 import typingsSlinky.typeorm.driverMod.Driver
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/driver/DriverFactory", JSImport.Namespace)
-@js.native
-object driverFactoryMod extends js.Object {
+object driverFactoryMod {
   
+  @JSImport("typeorm/browser/driver/DriverFactory", "DriverFactory")
   @js.native
-  class DriverFactory () extends js.Object {
+  class DriverFactory () extends StObject {
     
     /**
       * Creates a new driver depend on a given connection's driver type.

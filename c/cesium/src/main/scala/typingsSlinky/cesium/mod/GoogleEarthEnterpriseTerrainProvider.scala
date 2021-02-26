@@ -2,13 +2,14 @@ package typingsSlinky.cesium.mod
 
 import org.scalajs.dom.experimental.Request
 import typingsSlinky.cesium.anon.Url
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "GoogleEarthEnterpriseTerrainProvider")
 @js.native
-class GoogleEarthEnterpriseTerrainProvider protected () extends js.Object {
+class GoogleEarthEnterpriseTerrainProvider protected () extends StObject {
   def this(options: Url) = this()
   
   var availability: TileAvailability = js.native
@@ -34,14 +35,26 @@ class GoogleEarthEnterpriseTerrainProvider protected () extends js.Object {
   
   var tilingScheme: TilingScheme = js.native
 }
-/* static members */
-@JSImport("cesium", "GoogleEarthEnterpriseTerrainProvider")
-@js.native
-object GoogleEarthEnterpriseTerrainProvider extends js.Object {
+object GoogleEarthEnterpriseTerrainProvider {
   
+  @JSImport("cesium", "GoogleEarthEnterpriseTerrainProvider")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  /* static member */
+  @JSImport("cesium", "GoogleEarthEnterpriseTerrainProvider.getEstimatedLevelZeroGeometricErrorForAHeightmap")
+  @js.native
   def getEstimatedLevelZeroGeometricErrorForAHeightmap(ellipsoid: Ellipsoid, tileImageWidth: Double, numberOfTilesAtLevelZero: Double): Double = js.native
   
+  /* static member */
+  @JSImport("cesium", "GoogleEarthEnterpriseTerrainProvider.getRegularGridIndices")
+  @js.native
   def getRegularGridIndices(width: Double, height: Double): js.typedarray.Uint16Array = js.native
   
-  var heightmapTerrainQuality: Double = js.native
+  /* static member */
+  @JSImport("cesium", "GoogleEarthEnterpriseTerrainProvider.heightmapTerrainQuality")
+  @js.native
+  def heightmapTerrainQuality: Double = js.native
+  @scala.inline
+  def heightmapTerrainQuality_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("heightmapTerrainQuality")(x.asInstanceOf[js.Any])
 }

@@ -2,12 +2,13 @@ package typingsSlinky.gatsbyPluginUtils.pluginOptionsSchemaJoiTypeMod
 
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.gatsbyPluginUtils.anon.Alternatives
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PluginOptionsSchemaJoi extends js.Object {
+trait PluginOptionsSchemaJoi extends StObject {
   
   var ValidationError: Instantiable3[
     /* message */ String, 

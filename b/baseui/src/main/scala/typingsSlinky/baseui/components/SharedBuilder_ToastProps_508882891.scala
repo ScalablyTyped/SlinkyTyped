@@ -12,6 +12,7 @@ import typingsSlinky.baseui.baseuiStrings.positive
 import typingsSlinky.baseui.baseuiStrings.toast
 import typingsSlinky.baseui.baseuiStrings.warning
 import typingsSlinky.baseui.toastMod.ToastOverrides
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,13 +29,13 @@ class SharedBuilder_ToastProps_508882891[R <: js.Object] (val args: js.Array[js.
   def autoHideDuration(value: Double): this.type = set("autoHideDuration", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+  def children(value: (js.Function1[/* args */ Dismiss, ReactElement]) | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
   
   @scala.inline
   def childrenFunction1(value: /* args */ Dismiss => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
   
   @scala.inline
-  def children(value: (js.Function1[/* args */ Dismiss, ReactElement]) | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+  def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
   
   @scala.inline
   def closeable(value: Boolean): this.type = set("closeable", value.asInstanceOf[js.Any])

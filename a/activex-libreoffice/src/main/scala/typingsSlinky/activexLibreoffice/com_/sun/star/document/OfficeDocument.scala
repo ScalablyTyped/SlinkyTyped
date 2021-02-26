@@ -7,6 +7,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.util.XModifiable
 import typingsSlinky.activexLibreoffice.com_.sun.star.view.XPrintJobBroadcaster
 import typingsSlinky.activexLibreoffice.com_.sun.star.view.XPrintable
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

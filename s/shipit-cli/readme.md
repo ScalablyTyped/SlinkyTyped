@@ -10,9 +10,9 @@ Universal automation and deployment tool written in JavaScript.
 | ------------------ | :-------------: |
 | Full name          | shipit-cli |
 | Keywords           | shipit, automation, deployment, deploy, ssh |
-| # releases         | 10 |
-| # dependents       | 10 |
-| # downloads        | 312139 |
+| # releases         | 6 |
+| # dependents       | 11 |
+| # downloads        | 270302 |
 | # stars            | 13 |
 
 ## Links

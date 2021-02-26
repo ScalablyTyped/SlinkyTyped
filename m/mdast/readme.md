@@ -10,9 +10,9 @@ Markdown Abstract Syntax Tree format
 | ------------------ | :-------------: |
 | Full name          | mdast |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 28 |
-| # downloads        | 28932 |
+| # releases         | 0 |
+| # dependents       | 43 |
+| # downloads        | 74564 |
 | # stars            | 2 |
 
 ## Links

@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Alt
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.Callback
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.CallbackFieldsId
 import typingsSlinky.maximMazurokGapiClientDfareporting.anon.KeyOauthtokenPrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EventTagsResource extends js.Object {
+trait EventTagsResource extends StObject {
   
   /** Deletes an existing event tag. */
   def delete(): Request[Unit] = js.native

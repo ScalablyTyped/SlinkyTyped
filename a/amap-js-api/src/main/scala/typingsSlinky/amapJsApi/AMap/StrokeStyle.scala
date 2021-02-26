@@ -1,5 +1,6 @@
 package typingsSlinky.amapJsApi.AMap
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.amapJsApi.amapJsApiStrings.dashed
   - typingsSlinky.amapJsApi.amapJsApiStrings.solid
 */
-trait StrokeStyle extends js.Object
+trait StrokeStyle extends StObject
 object StrokeStyle {
   
   @scala.inline

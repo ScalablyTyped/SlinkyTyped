@@ -2,12 +2,13 @@ package typingsSlinky.maximMazurokGapiClientRemotebuildexecution.gapi.client.rem
 
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientRemotebuildexecution.anon.InstanceName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait V2Resource extends js.Object {
+trait V2Resource extends StObject {
   
   /**
     * GetCapabilities returns the server capabilities configuration of the remote endpoint. Only the capabilities of the services supported by the endpoint will be returned: * Execution +

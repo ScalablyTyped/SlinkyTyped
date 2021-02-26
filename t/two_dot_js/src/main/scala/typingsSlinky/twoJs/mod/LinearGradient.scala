@@ -1,6 +1,7 @@
 package typingsSlinky.twoJs.mod
 
 import typingsSlinky.twoJs.mod.Utils.Collection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

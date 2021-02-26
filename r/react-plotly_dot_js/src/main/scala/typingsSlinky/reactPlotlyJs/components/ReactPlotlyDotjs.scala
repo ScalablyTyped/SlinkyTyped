@@ -23,15 +23,22 @@ import typingsSlinky.reactPlotlyJs.anon.ReadonlySliderEndEvent
 import typingsSlinky.reactPlotlyJs.anon.ReadonlySliderStartEvent
 import typingsSlinky.reactPlotlyJs.mod.PlotParams
 import typingsSlinky.reactPlotlyJs.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactPlotlyDotjs {
   
+  @scala.inline
+  def apply(data: js.Array[Data], layout: PartialLayout): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PlotParams]))
+  }
+  
   @JSImport("react-plotly.js", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,10 +58,10 @@ object ReactPlotlyDotjs {
     def divId(value: String): this.type = set("divId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def framesVarargs(value: Frame*): this.type = set("frames", js.Array(value :_*))
+    def frames(value: js.Array[Frame]): this.type = set("frames", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def frames(value: js.Array[Frame]): this.type = set("frames", value.asInstanceOf[js.Any])
+    def framesVarargs(value: Frame*): this.type = set("frames", js.Array(value :_*))
     
     @scala.inline
     def onAfterExport(value: () => Unit): this.type = set("onAfterExport", js.Any.fromFunction0(value))
@@ -160,10 +167,4 @@ object ReactPlotlyDotjs {
   }
   
   def withProps(p: PlotParams): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[Data], layout: PartialLayout): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PlotParams]))
-  }
 }

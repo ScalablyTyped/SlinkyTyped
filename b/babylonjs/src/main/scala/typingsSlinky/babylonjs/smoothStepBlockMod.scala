@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/smoothStepBlock", JSImport.Namespace)
-@js.native
-object smoothStepBlockMod extends js.Object {
+object smoothStepBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/smoothStepBlock", "SmoothStepBlock")
   @js.native
   class SmoothStepBlock protected () extends NodeMaterialBlock {
     /**

@@ -1,56 +1,48 @@
 package typingsSlinky.steamClient.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait EPersonaState extends js.Object
+sealed trait EPersonaState extends StObject
 @JSImport("steam-client", "EPersonaState")
 @js.native
-object EPersonaState extends js.Object {
+object EPersonaState extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EPersonaState with Double] = js.native
   
   @js.native
   sealed trait Away extends EPersonaState
-  /* 3 */ @js.native
-  object Away extends TopLevel[Away with Double]
+  /* 3 */ val Away: typingsSlinky.steamClient.mod.EPersonaState.Away with Double = js.native
   
   @js.native
   sealed trait Busy extends EPersonaState
-  /* 2 */ @js.native
-  object Busy extends TopLevel[Busy with Double]
+  /* 2 */ val Busy: typingsSlinky.steamClient.mod.EPersonaState.Busy with Double = js.native
   
   @js.native
   sealed trait LookingToPlay extends EPersonaState
-  /* 6 */ @js.native
-  object LookingToPlay extends TopLevel[LookingToPlay with Double]
+  /* 6 */ val LookingToPlay: typingsSlinky.steamClient.mod.EPersonaState.LookingToPlay with Double = js.native
   
   @js.native
   sealed trait LookingToTrade extends EPersonaState
-  /* 5 */ @js.native
-  object LookingToTrade extends TopLevel[LookingToTrade with Double]
+  /* 5 */ val LookingToTrade: typingsSlinky.steamClient.mod.EPersonaState.LookingToTrade with Double = js.native
   
   @js.native
   sealed trait Max extends EPersonaState
-  /* 7 */ @js.native
-  object Max extends TopLevel[Max with Double]
+  /* 7 */ val Max: typingsSlinky.steamClient.mod.EPersonaState.Max with Double = js.native
   
   @js.native
   sealed trait Offline extends EPersonaState
-  /* 0 */ @js.native
-  object Offline extends TopLevel[Offline with Double]
+  /* 0 */ val Offline: typingsSlinky.steamClient.mod.EPersonaState.Offline with Double = js.native
   
   @js.native
   sealed trait Online extends EPersonaState
-  /* 1 */ @js.native
-  object Online extends TopLevel[Online with Double]
+  /* 1 */ val Online: typingsSlinky.steamClient.mod.EPersonaState.Online with Double = js.native
   
   @js.native
   sealed trait Snooze extends EPersonaState
-  /* 4 */ @js.native
-  object Snooze extends TopLevel[Snooze with Double]
+  /* 4 */ val Snooze: typingsSlinky.steamClient.mod.EPersonaState.Snooze with Double = js.native
 }

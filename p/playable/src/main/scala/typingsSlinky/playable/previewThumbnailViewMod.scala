@@ -3,17 +3,20 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.previewServiceTypesMod.INormalizedFramesQuality
 import typingsSlinky.playable.previewThumbnailTypesMod.IPreviewThumbnailViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/preview-thumbnail/preview-thumbnail.view", JSImport.Namespace)
-@js.native
-object previewThumbnailViewMod extends js.Object {
+object previewThumbnailViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/preview-thumbnail/preview-thumbnail.view", JSImport.Default)
+  @js.native
+  class default () extends PreviewThumbnailView
   
   @js.native
   trait PreviewThumbnailView
-    extends typingsSlinky.playable.stylableMod.default[IPreviewThumbnailViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[IPreviewThumbnailViewStyles] {
     
     @JSName("_$highQualityThumb")
     var _$highQualityThumb: js.Any = js.native
@@ -49,7 +52,4 @@ object previewThumbnailViewMod extends js.Object {
     
     def showWithPreview(): Unit = js.native
   }
-  
-  @js.native
-  class default () extends PreviewThumbnailView
 }

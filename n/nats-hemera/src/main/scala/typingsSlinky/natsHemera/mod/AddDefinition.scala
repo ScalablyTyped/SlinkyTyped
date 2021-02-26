@@ -1,12 +1,13 @@
 package typingsSlinky.natsHemera.mod
 
 import typingsSlinky.natsHemera.anon.MaxMessages
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AddDefinition extends js.Object {
+trait AddDefinition extends StObject {
   
   var action: js.Function = js.native
   

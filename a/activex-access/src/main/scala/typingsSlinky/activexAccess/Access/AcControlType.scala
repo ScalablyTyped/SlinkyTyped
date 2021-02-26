@@ -24,6 +24,7 @@ import typingsSlinky.activexAccess.activexAccessNumbers.`127`
 import typingsSlinky.activexAccess.activexAccessNumbers.`128`
 import typingsSlinky.activexAccess.activexAccessNumbers.`129`
 import typingsSlinky.activexAccess.activexAccessNumbers.`130`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -54,7 +55,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAccess.activexAccessNumbers.`122`
   - typingsSlinky.activexAccess.activexAccessNumbers.`128`
 */
-trait AcControlType extends js.Object
+trait AcControlType extends StObject
 object AcControlType {
   
   @scala.inline

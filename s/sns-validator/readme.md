@@ -10,9 +10,9 @@ A standalone validator for inbound SNS HTTP messages. No dependency on the AWS S
 | ------------------ | :-------------: |
 | Full name          | sns-validator |
 | Keywords           | AWS, SNS |
-| # releases         | 4 |
-| # dependents       | 8 |
-| # downloads        | 328588 |
+| # releases         | 1 |
+| # dependents       | 9 |
+| # downloads        | 810238 |
 | # stars            | 2 |
 
 ## Links

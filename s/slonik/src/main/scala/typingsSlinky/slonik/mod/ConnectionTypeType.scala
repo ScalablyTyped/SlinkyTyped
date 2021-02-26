@@ -1,5 +1,6 @@
 package typingsSlinky.slonik.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.slonik.slonikStrings.IMPLICIT_QUERY
   - typingsSlinky.slonik.slonikStrings.IMPLICIT_TRANSACTION
 */
-trait ConnectionTypeType extends js.Object
+trait ConnectionTypeType extends StObject
 object ConnectionTypeType {
   
   @scala.inline

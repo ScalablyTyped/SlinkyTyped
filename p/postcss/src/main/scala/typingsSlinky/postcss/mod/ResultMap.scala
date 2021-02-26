@@ -3,12 +3,13 @@ package typingsSlinky.postcss.mod
 import typingsSlinky.sourceMap.mod.Mapping
 import typingsSlinky.sourceMap.mod.RawSourceMap
 import typingsSlinky.sourceMap.mod.SourceMapConsumer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ResultMap extends js.Object {
+trait ResultMap extends StObject {
   
   /**
     * Add a single mapping from original source line and column to the generated

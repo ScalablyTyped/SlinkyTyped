@@ -3,12 +3,13 @@ package typingsSlinky.astTypes.buildersMod
 import typingsSlinky.astTypes.anon.Constraint
 import typingsSlinky.astTypes.kindsMod.TSTypeKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeParameter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TSTypeParameterBuilder extends js.Object {
+trait TSTypeParameterBuilder extends StObject {
   
   def apply(name: String): TSTypeParameter = js.native
   def apply(name: String, constraint: js.UndefOr[scala.Nothing], defaultParam: TSTypeKind): TSTypeParameter = js.native

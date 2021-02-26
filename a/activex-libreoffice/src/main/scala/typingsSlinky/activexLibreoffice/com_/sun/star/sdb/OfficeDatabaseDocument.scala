@@ -4,6 +4,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.document.OfficeDocument
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XLoadable
 import typingsSlinky.activexLibreoffice.com_.sun.star.script.provider.XScriptProviderSupplier
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XCloseable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

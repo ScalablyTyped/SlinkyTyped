@@ -34,15 +34,30 @@ import typingsSlinky.reactPlaidLink.reactPlaidLinkStrings.production
 import typingsSlinky.reactPlaidLink.reactPlaidLinkStrings.sandbox
 import typingsSlinky.reactPlaidLink.reactPlaidLinkStrings.tartan
 import typingsSlinky.reactPlaidLink.reactPlaidLinkStrings.transactions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactPlaidLink {
   
+  @scala.inline
+  def apply(
+    clientName: String,
+    env: tartan | sandbox | development | production,
+    onSuccess: (String, Accounts) => Unit,
+    product: js.Array[
+      connect | info | auth | identity | income | transactions | assets | liabilities | investments | payment_initiation
+    ],
+    publicKey: String
+  ): Builder = {
+    val __props = js.Dynamic.literal(clientName = clientName.asInstanceOf[js.Any], env = env.asInstanceOf[js.Any], onSuccess = js.Any.fromFunction2(onSuccess), product = product.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PlaidLinkProps]))
+  }
+  
   @JSImport("react-plaid-link", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -86,18 +101,4 @@ object ReactPlaidLink {
   }
   
   def withProps(p: PlaidLinkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    clientName: String,
-    env: tartan | sandbox | development | production,
-    onSuccess: (String, Accounts) => Unit,
-    product: js.Array[
-      connect | info | auth | identity | income | transactions | assets | liabilities | investments | payment_initiation
-    ],
-    publicKey: String
-  ): Builder = {
-    val __props = js.Dynamic.literal(clientName = clientName.asInstanceOf[js.Any], env = env.asInstanceOf[js.Any], onSuccess = js.Any.fromFunction2(onSuccess), product = product.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PlaidLinkProps]))
-  }
 }

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesGetEmailChannelInputMod.Ge
 import typingsSlinky.awsSdkClientPinpointBrowser.typesGetEmailChannelOutputMod.GetEmailChannelOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/GetEmailChannelCommand", JSImport.Namespace)
-@js.native
-object getEmailChannelCommandMod extends js.Object {
+object getEmailChannelCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/GetEmailChannelCommand", "GetEmailChannelCommand")
   @js.native
   class GetEmailChannelCommand protected () extends Command[
           InputTypesUnion, 

@@ -8,6 +8,7 @@ import typingsSlinky.cookieclicker.cookieclickerNumbers.`1`
 import typingsSlinky.cookieclicker.cookieclickerNumbers.`2`
 import typingsSlinky.cookieclicker.cookieclickerStrings.Pantheon
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

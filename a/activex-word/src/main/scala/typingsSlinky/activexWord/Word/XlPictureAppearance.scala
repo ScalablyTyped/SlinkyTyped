@@ -2,6 +2,7 @@ package typingsSlinky.activexWord.Word
 
 import typingsSlinky.activexWord.activexWordNumbers.`1`
 import typingsSlinky.activexWord.activexWordNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWord.activexWordNumbers.`2`
   - typingsSlinky.activexWord.activexWordNumbers.`1`
 */
-trait XlPictureAppearance extends js.Object
+trait XlPictureAppearance extends StObject
 object XlPictureAppearance {
   
   @scala.inline

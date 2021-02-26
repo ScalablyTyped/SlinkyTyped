@@ -1,6 +1,5 @@
 package typingsSlinky.ionicCore.componentsMod.global
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import typingsSlinky.ionicCore.ionicCoreStrings.decimal
 import typingsSlinky.ionicCore.ionicCoreStrings.done
@@ -23,6 +22,7 @@ import typingsSlinky.ionicCore.ionicCoreStrings.text
 import typingsSlinky.ionicCore.ionicCoreStrings.url
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.HTMLStencilElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -141,6 +141,3 @@ trait HTMLIonTextareaElement extends HTMLStencilElement {
     */
   var wrap: js.UndefOr[hard | soft | off] = js.native
 }
-@JSGlobal("HTMLIonTextareaElement")
-@js.native
-object HTMLIonTextareaElement extends Instantiable0[HTMLIonTextareaElement]

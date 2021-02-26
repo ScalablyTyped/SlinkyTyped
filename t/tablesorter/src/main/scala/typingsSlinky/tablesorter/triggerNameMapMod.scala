@@ -5,16 +5,15 @@ import typingsSlinky.tablesorter.mod.global.JQuery
 import typingsSlinky.tablesorter.relativeSortDefinitionMod.RelativeSortDefinition
 import typingsSlinky.tablesorter.sortDefinitionMod.SortDefinition
 import typingsSlinky.tablesorter.triggerCallbackHandlerMod.TriggerCallbackHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tablesorter/System/TriggerNameMap", JSImport.Namespace)
-@js.native
-object triggerNameMapMod extends js.Object {
+object triggerNameMapMod {
   
   @js.native
-  trait TriggerNameMap[TElement] extends js.Object {
+  trait TriggerNameMap[TElement] extends StObject {
     
     /**
       * Adds rows to the table.

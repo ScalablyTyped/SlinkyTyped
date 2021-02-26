@@ -16,6 +16,7 @@ import typingsSlinky.reactNativeScrollableTabView.reactNativeScrollableTabViewSt
 import typingsSlinky.reactNativeScrollableTabView.reactNativeScrollableTabViewStrings.overlayBottom
 import typingsSlinky.reactNativeScrollableTabView.reactNativeScrollableTabViewStrings.overlayTop
 import typingsSlinky.reactNativeScrollableTabView.reactNativeScrollableTabViewStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ object ReactNativeScrollableTabView {
   
   @JSImport("react-native-scrollable-tab-view", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -53,10 +54,10 @@ object ReactNativeScrollableTabView {
     def prerenderingSiblingsNumber(value: Double): this.type = set("prerenderingSiblingsNumber", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderTabBarFunction1(value: /* props */ TabBarProps => ReactElement): this.type = set("renderTabBar", js.Any.fromFunction1(value))
+    def renderTabBar(value: (js.Function1[/* props */ TabBarProps, ReactElement]) | `false`): this.type = set("renderTabBar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderTabBar(value: (js.Function1[/* props */ TabBarProps, ReactElement]) | `false`): this.type = set("renderTabBar", value.asInstanceOf[js.Any])
+    def renderTabBarFunction1(value: /* props */ TabBarProps => ReactElement): this.type = set("renderTabBar", js.Any.fromFunction1(value))
     
     @scala.inline
     def scrollWithoutAnimation(value: Boolean): this.type = set("scrollWithoutAnimation", value.asInstanceOf[js.Any])
@@ -92,7 +93,7 @@ object ReactNativeScrollableTabView {
     def tabBarUnderlineStyleNull: this.type = set("tabBarUnderlineStyle", null)
   }
   
-  def withProps(p: ScrollableTabViewProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeScrollableTabView.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ScrollableTabViewProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

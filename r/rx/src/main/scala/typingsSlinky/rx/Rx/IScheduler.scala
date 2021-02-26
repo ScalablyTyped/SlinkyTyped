@@ -1,11 +1,12 @@
 package typingsSlinky.rx.Rx
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IScheduler extends js.Object {
+trait IScheduler extends StObject {
   
   /**
     * Returns a scheduler that wraps the original scheduler, adding exception handling for scheduled actions.
@@ -25,6 +26,11 @@ trait IScheduler extends js.Object {
     */
   def schedule[TState](state: TState, action: js.Function2[/* scheduler */ this.type, /* state */ TState, IDisposable]): IDisposable = js.native
   
+  def scheduleFuture[TState](
+    state: TState,
+    dueTime: js.Date,
+    action: js.Function2[/* scheduler */ this.type, /* state */ TState, IDisposable]
+  ): IDisposable = js.native
   /**
     * Schedules an action to be executed after dueTime.
     * @param state State passed to the action to be executed.
@@ -35,11 +41,6 @@ trait IScheduler extends js.Object {
   def scheduleFuture[TState](
     state: TState,
     dueTime: Double,
-    action: js.Function2[/* scheduler */ this.type, /* state */ TState, IDisposable]
-  ): IDisposable = js.native
-  def scheduleFuture[TState](
-    state: TState,
-    dueTime: js.Date,
     action: js.Function2[/* scheduler */ this.type, /* state */ TState, IDisposable]
   ): IDisposable = js.native
   
@@ -63,6 +64,15 @@ trait IScheduler extends js.Object {
     action: js.Function2[/* state */ TState, /* action */ js.Function1[/* state */ TState, Unit], Unit]
   ): IDisposable = js.native
   
+  def scheduleRecursiveFuture[TState](
+    state: TState,
+    dueTime: js.Date,
+    action: js.Function2[
+      /* state */ TState, 
+      /* action */ js.Function2[/* state */ TState, /* dueTime */ js.Date, Unit], 
+      Unit
+    ]
+  ): IDisposable = js.native
   /**
     * Schedules an action to be executed recursively after a specified relative due time.
     * @param {Mixed} state State passed to the action to be executed.
@@ -76,15 +86,6 @@ trait IScheduler extends js.Object {
     action: js.Function2[
       /* state */ TState, 
       /* action */ js.Function2[/* state */ TState, /* dueTime */ Double, Unit], 
-      Unit
-    ]
-  ): IDisposable = js.native
-  def scheduleRecursiveFuture[TState](
-    state: TState,
-    dueTime: js.Date,
-    action: js.Function2[
-      /* state */ TState, 
-      /* action */ js.Function2[/* state */ TState, /* dueTime */ js.Date, Unit], 
       Unit
     ]
   ): IDisposable = js.native

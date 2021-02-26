@@ -1,20 +1,35 @@
 package typingsSlinky.kendoUi.anon
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.ui.Loader
-import typingsSlinky.kendoUi.kendo.ui.LoaderOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofLoader
-  extends Instantiable1[/* element */ Element, Loader]
-     with Instantiable2[/* element */ Element, /* options */ LoaderOptions, Loader] {
+trait TypeofLoader extends StObject {
   
+  /* static member */
   def extend(proto: js.Object): Loader = js.native
   
+  /* static member */
   var fn: Loader = js.native
+}
+object TypeofLoader {
+  
+  @scala.inline
+  def apply(extend: js.Object => Loader, fn: Loader): TypeofLoader = {
+    val __obj = js.Dynamic.literal(extend = js.Any.fromFunction1(extend), fn = fn.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeofLoader]
+  }
+  
+  @scala.inline
+  implicit class TypeofLoaderMutableBuilder[Self <: TypeofLoader] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setExtend(value: js.Object => Loader): Self = StObject.set(x, "extend", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setFn(value: Loader): Self = StObject.set(x, "fn", value.asInstanceOf[js.Any])
+  }
 }

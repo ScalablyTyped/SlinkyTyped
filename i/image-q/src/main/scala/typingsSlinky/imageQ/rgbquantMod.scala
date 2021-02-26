@@ -2,14 +2,14 @@ package typingsSlinky.imageQ
 
 import typingsSlinky.imageQ.abstractDistanceCalculatorMod.AbstractDistanceCalculator
 import typingsSlinky.imageQ.paletteCommonMod.IPaletteQuantizer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("image-q/dist/palette/rgbquant/rgbquant", JSImport.Namespace)
-@js.native
-object rgbquantMod extends js.Object {
+object rgbquantMod {
   
+  @JSImport("image-q/dist/palette/rgbquant/rgbquant", "RGBQuant")
   @js.native
   class RGBQuant protected () extends IPaletteQuantizer {
     def this(colorDistanceCalculator: AbstractDistanceCalculator) = this()

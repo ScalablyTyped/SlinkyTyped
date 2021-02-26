@@ -1,5 +1,6 @@
 package typingsSlinky.dplayer.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.dplayer.dplayerStrings.webtorrent
   - typingsSlinky.dplayer.dplayerStrings.normal
 */
-trait VideoType extends js.Object
+trait VideoType extends StObject
 object VideoType {
   
   @scala.inline

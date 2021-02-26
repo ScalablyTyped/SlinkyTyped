@@ -7,6 +7,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactLazyLoadImageComponent.mod.DelayMethod
 import typingsSlinky.reactLazyLoadImageComponent.mod.LazyLoadComponentProps
 import typingsSlinky.reactLazyLoadImageComponent.mod.ScrollPosition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object LazyLoadComponent {
   
   @JSImport("react-lazy-load-image-component", "LazyLoadComponent")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -56,7 +57,7 @@ object LazyLoadComponent {
     def visibleByDefault(value: Boolean): this.type = set("visibleByDefault", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: LazyLoadComponentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: LazyLoadComponent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: LazyLoadComponentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

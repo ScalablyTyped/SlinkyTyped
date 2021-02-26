@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeFetchBlob.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.ascii
   - typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.base64
 */
-trait Encoding extends js.Object
+trait Encoding extends StObject
 object Encoding {
   
   @scala.inline

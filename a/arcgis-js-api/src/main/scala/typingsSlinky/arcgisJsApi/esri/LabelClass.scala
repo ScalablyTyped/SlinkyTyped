@@ -27,6 +27,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`center-right`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`center-start`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.none
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.static
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

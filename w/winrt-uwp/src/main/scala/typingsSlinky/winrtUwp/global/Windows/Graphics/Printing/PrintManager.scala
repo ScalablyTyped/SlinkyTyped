@@ -1,6 +1,7 @@
 package typingsSlinky.winrtUwp.global.Windows.Graphics.Printing
 
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,20 +11,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 abstract class PrintManager ()
   extends typingsSlinky.winrtUwp.Windows.Graphics.Printing.PrintManager
-/* static members */
-@JSGlobal("Windows.Graphics.Printing.PrintManager")
-@js.native
-object PrintManager extends js.Object {
+object PrintManager {
   
   /**
     * Retrieves the PrintManager object associated with the current window.
     * @return The PrintManager object.
     */
+  /* static member */
+  @JSGlobal("Windows.Graphics.Printing.PrintManager.getForCurrentView")
+  @js.native
   def getForCurrentView(): typingsSlinky.winrtUwp.Windows.Graphics.Printing.PrintManager = js.native
   
   /**
     * Programmatically initiates the user interface for printing content.
     * @return A Boolean value to indicate a TRUE for success or a FALSE for a failure.
     */
+  /* static member */
+  @JSGlobal("Windows.Graphics.Printing.PrintManager.showPrintUIAsync")
+  @js.native
   def showPrintUIAsync(): IPromiseWithIAsyncOperation[Boolean] = js.native
 }

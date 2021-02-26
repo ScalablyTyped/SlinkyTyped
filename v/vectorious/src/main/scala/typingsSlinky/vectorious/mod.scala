@@ -1,18 +1,19 @@
 package typingsSlinky.vectorious
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vectorious", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("vectorious", "BLAS")
   @js.native
-  class BLAS () extends js.Object
+  class BLAS () extends StObject
   
+  @JSImport("vectorious", "Matrix")
   @js.native
-  class Matrix protected () extends js.Object {
+  class Matrix protected () extends StObject {
     /**
       * @method constructor
       * @desc Creates a `Matrix` from the supplied arguments.
@@ -204,8 +205,7 @@ object mod extends js.Object {
     def transpose(): Matrix = js.native
   }
   /* static members */
-  @js.native
-  object Matrix extends js.Object {
+  object Matrix {
     
     /**
       * Static method. Adds two matrices `a` and `b` together.
@@ -213,6 +213,8 @@ object mod extends js.Object {
       * @param {Matrix} b
       * @returns {Matrix} a new matrix containing the sum of `a` and `b`
       **/
+    @JSImport("vectorious", "Matrix.add")
+    @js.native
     def add(a: Matrix, b: Matrix): Matrix = js.native
     
     /**
@@ -222,6 +224,8 @@ object mod extends js.Object {
       * @param {Matrix} b
       * @returns {Matrix} the resultant matrix of `b` augmented to `a`
       **/
+    @JSImport("vectorious", "Matrix.augment")
+    @js.native
     def augment(a: Matrix, b: Matrix): Matrix = js.native
     
     /**
@@ -230,10 +234,16 @@ object mod extends js.Object {
       * @param {Matrix} b
       * @returns {Boolean} `true` if equal, `false` otherwise
       **/
+    @JSImport("vectorious", "Matrix.equals")
+    @js.native
     def equals(a: Matrix, b: Matrix): Boolean = js.native
     
+    @JSImport("vectorious", "Matrix.fromArray")
+    @js.native
     def fromArray(data: js.Array[js.Array[Double]]): Matrix = js.native
     
+    @JSImport("vectorious", "Matrix.fromTypedArray")
+    @js.native
     def fromTypedArray(data: js.Any, shape: js.Array[Double]): Matrix = js.native
     
     /**
@@ -243,7 +253,11 @@ object mod extends js.Object {
       * @param {TypedArray} type
       * @returns {Matrix} an identity matrix of the specified `size` and `type`
       **/
+    @JSImport("vectorious", "Matrix.identity")
+    @js.native
     def identity(size: Double): Matrix = js.native
+    @JSImport("vectorious", "Matrix.identity")
+    @js.native
     def identity(size: Double, `type`: js.Any): Matrix = js.native
     
     /**
@@ -253,7 +267,11 @@ object mod extends js.Object {
       * @param {Number} type
       * @returns {Matrix} a magic square matrix of the specified `size` and `type`
       **/
+    @JSImport("vectorious", "Matrix.magic")
+    @js.native
     def magic(size: Double): Matrix = js.native
+    @JSImport("vectorious", "Matrix.magic")
+    @js.native
     def magic(size: Double, `type`: js.Any): Matrix = js.native
     
     /**
@@ -262,6 +280,8 @@ object mod extends js.Object {
       * @param {Matrix} b
       * @returns {Matrix} a new resultant matrix containing the matrix product of `a` and `b`
       **/
+    @JSImport("vectorious", "Matrix.multiply")
+    @js.native
     def multiply(a: Matrix, b: Matrix): Matrix = js.native
     
     /**
@@ -272,7 +292,11 @@ object mod extends js.Object {
       * @param {TypedArray} type
       * @returns {Matrix} a matrix of the specified dimensions and `type`
       **/
+    @JSImport("vectorious", "Matrix.ones")
+    @js.native
     def ones(i: Double, j: Double): Matrix = js.native
+    @JSImport("vectorious", "Matrix.ones")
+    @js.native
     def ones(i: Double, j: Double, `type`: js.Any): Matrix = js.native
     
     /**
@@ -280,6 +304,8 @@ object mod extends js.Object {
       * @returns {Array} an array with a new instance of the current matrix LU-
       * factorized and the corresponding pivot Int32Array
       **/
+    @JSImport("vectorious", "Matrix.plu")
+    @js.native
     def plu(matrix: Matrix): js.Array[_] = js.native
     
     /**
@@ -288,6 +314,8 @@ object mod extends js.Object {
       * @param {Matrix} b
       * @returns {Matrix} a new matrix containing the hadamard product
       **/
+    @JSImport("vectorious", "Matrix.product")
+    @js.native
     def product(a: Matrix, b: Matrix): Matrix = js.native
     
     /**
@@ -301,7 +329,11 @@ object mod extends js.Object {
       * @param {TypedArray} type
       * @returns {Matrix} a matrix of the specified dimensions and `type`
       **/
+    @JSImport("vectorious", "Matrix.random")
+    @js.native
     def random(i: Double, j: Double): Matrix = js.native
+    @JSImport("vectorious", "Matrix.random")
+    @js.native
     def random(
       i: Double,
       j: Double,
@@ -309,11 +341,23 @@ object mod extends js.Object {
       mean: js.UndefOr[scala.Nothing],
       `type`: js.Any
     ): Matrix = js.native
+    @JSImport("vectorious", "Matrix.random")
+    @js.native
     def random(i: Double, j: Double, deviation: js.UndefOr[scala.Nothing], mean: Double): Matrix = js.native
+    @JSImport("vectorious", "Matrix.random")
+    @js.native
     def random(i: Double, j: Double, deviation: js.UndefOr[scala.Nothing], mean: Double, `type`: js.Any): Matrix = js.native
+    @JSImport("vectorious", "Matrix.random")
+    @js.native
     def random(i: Double, j: Double, deviation: Double): Matrix = js.native
+    @JSImport("vectorious", "Matrix.random")
+    @js.native
     def random(i: Double, j: Double, deviation: Double, mean: js.UndefOr[scala.Nothing], `type`: js.Any): Matrix = js.native
+    @JSImport("vectorious", "Matrix.random")
+    @js.native
     def random(i: Double, j: Double, deviation: Double, mean: Double): Matrix = js.native
+    @JSImport("vectorious", "Matrix.random")
+    @js.native
     def random(i: Double, j: Double, deviation: Double, mean: Double, `type`: js.Any): Matrix = js.native
     
     /**
@@ -321,6 +365,8 @@ object mod extends js.Object {
       * @param {Matrix} matrix
       * @returns {Number} rank
       **/
+    @JSImport("vectorious", "Matrix.rank")
+    @js.native
     def rank(matrix: Matrix): Double = js.native
     
     /**
@@ -329,6 +375,8 @@ object mod extends js.Object {
       * @param {Number} scalar
       * @returns {Matrix} a new scaled matrix
       **/
+    @JSImport("vectorious", "Matrix.scale")
+    @js.native
     def scale(matrix: Matrix, scalar: Double): Matrix = js.native
     
     /**
@@ -337,6 +385,8 @@ object mod extends js.Object {
       * @param {Matrix} b
       * @returns {Matrix} a new matrix containing the difference between `a` and `b`
       **/
+    @JSImport("vectorious", "Matrix.subtract")
+    @js.native
     def subtract(a: Matrix, b: Matrix): Matrix = js.native
     
     /**
@@ -347,12 +397,17 @@ object mod extends js.Object {
       * @param {TypedArray} type
       * @returns {Matrix} a matrix of the specified dimensions and `type`
       **/
+    @JSImport("vectorious", "Matrix.zeros")
+    @js.native
     def zeros(i: Double, j: Double): Matrix = js.native
+    @JSImport("vectorious", "Matrix.zeros")
+    @js.native
     def zeros(i: Double, j: Double, `type`: js.Any): Matrix = js.native
   }
   
+  @JSImport("vectorious", "Vector")
   @js.native
-  class Vector protected () extends js.Object {
+  class Vector protected () extends StObject {
     /**
       * @method constructor
       * @desc Creates a two-dimensional `Vector` from the supplied arguments.
@@ -493,8 +548,7 @@ object mod extends js.Object {
     def toArray(): js.Array[Double] = js.native
   }
   /* static members */
-  @js.native
-  object Vector extends js.Object {
+  object Vector {
     
     /**
       * Static method. Adds two vectors `a` and `b` together.
@@ -502,6 +556,8 @@ object mod extends js.Object {
       * @param {Vector} b
       * @returns {Vector} a vector containing the sum of `a` and `b`
       **/
+    @JSImport("vectorious", "Vector.add")
+    @js.native
     def add(a: Vector, v: Vector): Vector = js.native
     
     /**
@@ -510,6 +566,8 @@ object mod extends js.Object {
       * @param {Vector} b
       * @returns {Number} the angle between the two vectors in radians
       **/
+    @JSImport("vectorious", "Vector.angle")
+    @js.native
     def angle(a: Vector, b: Vector): Double = js.native
     
     /**
@@ -518,6 +576,8 @@ object mod extends js.Object {
       * @param {Vector} b
       * @returns {Vector} `b` appended to vector `a`
       **/
+    @JSImport("vectorious", "Vector.combine")
+    @js.native
     def combine(a: Vector, b: Vector): Vector = js.native
     
     /**
@@ -526,6 +586,8 @@ object mod extends js.Object {
       * @param {Vector} b
       * @returns {Number} the dot product of the two vectors
       **/
+    @JSImport("vectorious", "Vector.dot")
+    @js.native
     def dot(a: Vector, b: Vector): Double = js.native
     
     /**
@@ -534,6 +596,8 @@ object mod extends js.Object {
       * @param {Vector} b
       * @returns {Boolean} `true` if the two vectors are equal, `false` otherwise
       **/
+    @JSImport("vectorious", "Vector.equals")
+    @js.native
     def equals(a: Vector, b: Vector): Boolean = js.native
     
     /**
@@ -541,6 +605,8 @@ object mod extends js.Object {
       * @param {Vector} vector
       * @returns {Vector} a resultant normalized vector
       **/
+    @JSImport("vectorious", "Vector.normalize")
+    @js.native
     def normalize(vector: Vector): Vector = js.native
     
     /**
@@ -550,7 +616,11 @@ object mod extends js.Object {
       * @param {TypedArray} type
       * @returns {Vector} a new vector of the specified size and `type`
       **/
+    @JSImport("vectorious", "Vector.ones")
+    @js.native
     def ones(count: Double): Vector = js.native
+    @JSImport("vectorious", "Vector.ones")
+    @js.native
     def ones(count: Double, `type`: js.Any): Vector = js.native
     
     /**
@@ -560,6 +630,8 @@ object mod extends js.Object {
       * @param {Vector} b
       * @returns {Vector} a new resultant projected vector
       **/
+    @JSImport("vectorious", "Vector.project")
+    @js.native
     def project(a: Vector, b: Vector): Vector = js.native
     
     /**
@@ -572,18 +644,34 @@ object mod extends js.Object {
       * @param {TypedArray} type
       * @returns {Vector} a new vector of the specified size and `type`
       **/
+    @JSImport("vectorious", "Vector.random")
+    @js.native
     def random(count: Double): Vector = js.native
+    @JSImport("vectorious", "Vector.random")
+    @js.native
     def random(
       count: Double,
       deviation: js.UndefOr[scala.Nothing],
       mean: js.UndefOr[scala.Nothing],
       `type`: js.Any
     ): Vector = js.native
+    @JSImport("vectorious", "Vector.random")
+    @js.native
     def random(count: Double, deviation: js.UndefOr[scala.Nothing], mean: Double): Vector = js.native
+    @JSImport("vectorious", "Vector.random")
+    @js.native
     def random(count: Double, deviation: js.UndefOr[scala.Nothing], mean: Double, `type`: js.Any): Vector = js.native
+    @JSImport("vectorious", "Vector.random")
+    @js.native
     def random(count: Double, deviation: Double): Vector = js.native
+    @JSImport("vectorious", "Vector.random")
+    @js.native
     def random(count: Double, deviation: Double, mean: js.UndefOr[scala.Nothing], `type`: js.Any): Vector = js.native
+    @JSImport("vectorious", "Vector.random")
+    @js.native
     def random(count: Double, deviation: Double, mean: Double): Vector = js.native
+    @JSImport("vectorious", "Vector.random")
+    @js.native
     def random(count: Double, deviation: Double, mean: Double, `type`: js.Any): Vector = js.native
     
     /**
@@ -597,7 +685,11 @@ object mod extends js.Object {
       * @param {Number} end
       * @returns {Vector} a new vector containing the specified range of the specified `type`
       **/
+    @JSImport("vectorious", "Vector.range")
+    @js.native
     def range(start: Double, end: Double): Vector = js.native
+    @JSImport("vectorious", "Vector.range")
+    @js.native
     def range(start: Double, step: Double, end: Double): Vector = js.native
     
     /**
@@ -606,6 +698,8 @@ object mod extends js.Object {
       * @param {Number} scalar
       * @returns {Vector} a resultant scaled vector
       **/
+    @JSImport("vectorious", "Vector.scale")
+    @js.native
     def scale(vector: Vector, scalar: Double): Vector = js.native
     
     /**
@@ -614,6 +708,8 @@ object mod extends js.Object {
       * @param {Vector} b
       * @returns {Vector} a vector containing the difference between `a` and `b`
       **/
+    @JSImport("vectorious", "Vector.subtract")
+    @js.native
     def subtract(a: Vector, b: Vector): Vector = js.native
     
     /**
@@ -623,7 +719,11 @@ object mod extends js.Object {
       * @param {TypedArray} type
       * @returns {Vector} a new vector of the specified size and `type`
       **/
+    @JSImport("vectorious", "Vector.zeros")
+    @js.native
     def zeros(count: Double): Vector = js.native
+    @JSImport("vectorious", "Vector.zeros")
+    @js.native
     def zeros(count: Double, `type`: js.Any): Vector = js.native
   }
 }

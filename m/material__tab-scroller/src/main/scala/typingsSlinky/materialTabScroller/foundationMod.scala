@@ -3,18 +3,22 @@ package typingsSlinky.materialTabScroller
 import org.scalajs.dom.raw.Event
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialTabScroller.adapterMod.MDCTabScrollerAdapter
-import typingsSlinky.materialTabScroller.anon.ANIMATING
-import typingsSlinky.materialTabScroller.anon.AREASELECTOR
 import typingsSlinky.materialTabScroller.anon.PartialMDCTabScrollerAdap
 import typingsSlinky.materialTabScroller.rtlScrollerMod.MDCTabScrollerRTL
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/tab-scroller/foundation", JSImport.Namespace)
-@js.native
-object foundationMod extends js.Object {
+object foundationMod {
   
+  @JSImport("@material/tab-scroller/foundation", JSImport.Default)
+  @js.native
+  class default () extends MDCTabScrollerFoundation {
+    def this(adapter: PartialMDCTabScrollerAdap) = this()
+  }
+  
+  @JSImport("@material/tab-scroller/foundation", "MDCTabScrollerFoundation")
   @js.native
   class MDCTabScrollerFoundation () extends MDCFoundation[MDCTabScrollerAdapter] {
     def this(adapter: PartialMDCTabScrollerAdap) = this()
@@ -55,30 +59,5 @@ object foundationMod extends js.Object {
       * Scrolls to the given scrollX value
       */
     def scrollTo(scrollX: Double): Unit = js.native
-  }
-  /* static members */
-  @js.native
-  object MDCTabScrollerFoundation extends js.Object {
-    
-    def cssClasses: ANIMATING = js.native
-    
-    def defaultAdapter: MDCTabScrollerAdapter = js.native
-    
-    def strings: AREASELECTOR = js.native
-  }
-  
-  @js.native
-  class default () extends MDCTabScrollerFoundation {
-    def this(adapter: PartialMDCTabScrollerAdap) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    def cssClasses: ANIMATING = js.native
-    
-    def defaultAdapter: MDCTabScrollerAdapter = js.native
-    
-    def strings: AREASELECTOR = js.native
   }
 }

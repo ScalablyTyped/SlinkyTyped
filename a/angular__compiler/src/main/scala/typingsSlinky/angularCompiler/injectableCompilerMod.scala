@@ -4,16 +4,16 @@ import typingsSlinky.angularCompiler.compileMetadataMod.CompileInjectableMetadat
 import typingsSlinky.angularCompiler.compileReflectorMod.CompileReflector
 import typingsSlinky.angularCompiler.outputAstMod.Expression
 import typingsSlinky.angularCompiler.srcUtilMod.OutputContext
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/compiler/src/injectable_compiler", JSImport.Namespace)
-@js.native
-object injectableCompilerMod extends js.Object {
+object injectableCompilerMod {
   
+  @JSImport("@angular/compiler/src/injectable_compiler", "InjectableCompiler")
   @js.native
-  class InjectableCompiler protected () extends js.Object {
+  class InjectableCompiler protected () extends StObject {
     def this(reflector: CompileReflector, alwaysGenerateDef: Boolean) = this()
     
     var alwaysGenerateDef: js.Any = js.native

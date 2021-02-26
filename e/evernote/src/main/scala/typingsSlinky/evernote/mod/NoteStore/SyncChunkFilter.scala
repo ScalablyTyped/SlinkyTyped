@@ -2,13 +2,14 @@ package typingsSlinky.evernote.mod.NoteStore
 
 import typingsSlinky.evernote.anon.IncludeExpunged
 import typingsSlinky.std.Set
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("evernote", "NoteStore.SyncChunkFilter")
 @js.native
-class SyncChunkFilter () extends js.Object {
+class SyncChunkFilter () extends StObject {
   def this(args: IncludeExpunged) = this()
   
   var includeExpunged: js.UndefOr[Boolean] = js.native

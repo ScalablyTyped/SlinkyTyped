@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.Resource
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AccountsResource extends js.Object {
+trait AccountsResource extends StObject {
   
   /**
     * Marks target Account as soft-deleted (ie: "trashed") and returns it. This API does not have a method to restore soft-deleted accounts. However, they can be restored using the Trash

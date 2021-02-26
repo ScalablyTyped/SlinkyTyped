@@ -1,12 +1,13 @@
 package typingsSlinky.antDesignReactNative.anon
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Cascader extends js.Object {
+trait Cascader extends StObject {
   
   var cascader: ReactElement = js.native
 }
@@ -19,21 +20,9 @@ object Cascader {
   }
   
   @scala.inline
-  implicit class CascaderOps[Self <: Cascader] (val x: Self) extends AnyVal {
+  implicit class CascaderMutableBuilder[Self <: Cascader] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setCascader(value: ReactElement): Self = this.set("cascader", value.asInstanceOf[js.Any])
+    def setCascader(value: ReactElement): Self = StObject.set(x, "cascader", value.asInstanceOf[js.Any])
   }
 }

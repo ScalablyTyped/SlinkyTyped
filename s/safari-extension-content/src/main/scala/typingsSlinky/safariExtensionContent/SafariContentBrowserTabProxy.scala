@@ -1,12 +1,13 @@
 package typingsSlinky.safariExtensionContent
 
 import org.scalajs.dom.raw.MouseEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SafariContentBrowserTabProxy extends js.Object {
+trait SafariContentBrowserTabProxy extends StObject {
   
   def canLoad(event: js.Any, message: js.Any): js.Any = js.native
   

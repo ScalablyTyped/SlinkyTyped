@@ -20,12 +20,13 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.TrackCacheStorageForO
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.TrackIndexedDBForOriginRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.UntrackCacheStorageForOriginRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.UntrackIndexedDBForOriginRequest
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait StorageApi extends js.Object {
+trait StorageApi extends StObject {
   
   /**
     * Clears cookies.

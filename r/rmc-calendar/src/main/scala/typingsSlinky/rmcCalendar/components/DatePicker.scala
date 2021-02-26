@@ -9,6 +9,7 @@ import typingsSlinky.rmcCalendar.rmcCalendarStrings.normal
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.one
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.range
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.xl
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object DatePicker {
   
   @JSImport("rmc-calendar", "DatePicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -70,7 +71,7 @@ object DatePicker {
     def `type`(value: one | range): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DatePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -5,16 +5,16 @@ import typingsSlinky.typeorm.entityMetadataMod.EntityMetadata
 import typingsSlinky.typeorm.queryExpressionMapMod.QueryExpressionMap
 import typingsSlinky.typeorm.relationMetadataMod.RelationMetadata
 import typingsSlinky.typeorm.selectQueryBuilderMod.SelectQueryBuilder
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/query-builder/relation-count/RelationCountAttribute", JSImport.Namespace)
-@js.native
-object relationCountAttributeMod extends js.Object {
+object relationCountAttributeMod {
   
+  @JSImport("typeorm/browser/query-builder/relation-count/RelationCountAttribute", "RelationCountAttribute")
   @js.native
-  class RelationCountAttribute protected () extends js.Object {
+  class RelationCountAttribute protected () extends StObject {
     def this(expressionMap: QueryExpressionMap) = this()
     def this(expressionMap: QueryExpressionMap, relationCountAttribute: PartialRelationCountAttri) = this()
     

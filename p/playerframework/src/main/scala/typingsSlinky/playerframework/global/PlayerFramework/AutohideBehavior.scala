@@ -1,12 +1,13 @@
 package typingsSlinky.playerframework.global.PlayerFramework
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("PlayerFramework.AutohideBehavior")
 @js.native
-object AutohideBehavior extends js.Object {
+object AutohideBehavior extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.playerframework.PlayerFramework.AutohideBehavior with Double] = js.native

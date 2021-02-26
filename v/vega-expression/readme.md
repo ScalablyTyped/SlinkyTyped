@@ -10,9 +10,9 @@ Vega expression parser and code generator.
 | ------------------ | :-------------: |
 | Full name          | vega-expression |
 | Keywords           | vega, expression, parser, codegen |
-| # releases         | 7 |
-| # dependents       | 11 |
-| # downloads        | 1939559 |
+| # releases         | 14 |
+| # dependents       | 13 |
+| # downloads        | 3843844 |
 | # stars            | 1 |
 
 ## Links

@@ -2,13 +2,14 @@ package typingsSlinky.web3Core.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.node.netMod.Socket
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("web3-core", "NetworkBase")
 @js.native
-class NetworkBase () extends js.Object {
+class NetworkBase () extends StObject {
   def this(provider: typingsSlinky.web3Core.mod.provider) = this()
   def this(provider: typingsSlinky.web3Core.mod.provider, net: Socket) = this()
   
@@ -35,11 +36,13 @@ class NetworkBase () extends js.Object {
   def setProvider(provider: typingsSlinky.web3Core.mod.provider): Boolean = js.native
 }
 /* static members */
-@JSImport("web3-core", "NetworkBase")
-@js.native
-object NetworkBase extends js.Object {
+object NetworkBase {
   
+  @JSImport("web3-core", "NetworkBase.givenProvider")
+  @js.native
   val givenProvider: js.Any = js.native
   
+  @JSImport("web3-core", "NetworkBase.providers")
+  @js.native
   val providers: Providers = js.native
 }

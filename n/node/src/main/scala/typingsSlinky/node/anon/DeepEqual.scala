@@ -10,12 +10,13 @@ import typingsSlinky.node.nodeStrings.ok
 import typingsSlinky.node.nodeStrings.strict
 import typingsSlinky.node.nodeStrings.strictEqual
 import typingsSlinky.std.Omit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DeepEqual extends js.Object {
+trait DeepEqual extends StObject {
   
   def apply(value: js.Any): /* asserts value */ Boolean = js.native
   def apply(value: js.Any, message: String): /* asserts value */ Boolean = js.native

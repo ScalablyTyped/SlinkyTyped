@@ -1,5 +1,6 @@
 package typingsSlinky.chromeApps.chrome.networking.onc
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.chromeApps.chromeAppsStrings.None
   - typingsSlinky.chromeApps.chromeAppsStrings.`8021X`
 */
-trait EthernetAuthenticationType extends js.Object
+trait EthernetAuthenticationType extends StObject
 object EthernetAuthenticationType {
   
   @scala.inline

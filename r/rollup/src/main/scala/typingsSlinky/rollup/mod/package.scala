@@ -1,5 +1,6 @@
 package typingsSlinky.rollup
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -188,6 +189,9 @@ package object mod {
     java.lang.String | scala.Null | typingsSlinky.rollup.anon.PartialSourceDescription
   ]
   
+  @scala.inline
+  def VERSION: java.lang.String = typingsSlinky.rollup.mod.^.asInstanceOf[js.Dynamic].selectDynamic("VERSION").asInstanceOf[java.lang.String]
+  
   type WarningHandler = js.Function1[/* warning */ typingsSlinky.rollup.mod.RollupWarning, scala.Unit]
   
   type WarningHandlerWithDefault = js.Function2[
@@ -202,4 +206,12 @@ package object mod {
     /* change */ typingsSlinky.rollup.anon.Event, 
     scala.Unit
   ]
+  
+  @scala.inline
+  def rollup(options: typingsSlinky.rollup.mod.RollupOptions): js.Promise[typingsSlinky.rollup.mod.RollupBuild] = typingsSlinky.rollup.mod.^.asInstanceOf[js.Dynamic].applyDynamic("rollup")(options.asInstanceOf[js.Any]).asInstanceOf[js.Promise[typingsSlinky.rollup.mod.RollupBuild]]
+  
+  @scala.inline
+  def watch(config: js.Array[typingsSlinky.rollup.mod.RollupWatchOptions]): typingsSlinky.rollup.mod.RollupWatcher = typingsSlinky.rollup.mod.^.asInstanceOf[js.Dynamic].applyDynamic("watch")(config.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.rollup.mod.RollupWatcher]
+  @scala.inline
+  def watch(config: typingsSlinky.rollup.mod.RollupWatchOptions): typingsSlinky.rollup.mod.RollupWatcher = typingsSlinky.rollup.mod.^.asInstanceOf[js.Dynamic].applyDynamic("watch")(config.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.rollup.mod.RollupWatcher]
 }

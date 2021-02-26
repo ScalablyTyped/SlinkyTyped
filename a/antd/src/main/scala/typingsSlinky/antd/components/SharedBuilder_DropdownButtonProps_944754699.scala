@@ -15,6 +15,7 @@ import typingsSlinky.antd.dropdownButtonMod.DropdownButtonType
 import typingsSlinky.antd.dropdownDropdownMod.Align
 import typingsSlinky.antd.dropdownDropdownMod.Placement
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -52,10 +53,10 @@ class SharedBuilder_DropdownButtonProps_944754699 (val args: js.Array[js.Any])
   def htmlType(value: ButtonHTMLType): this.type = set("htmlType", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+  def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def mouseEnterDelay(value: Double): this.type = set("mouseEnterDelay", value.asInstanceOf[js.Any])
@@ -97,10 +98,10 @@ class SharedBuilder_DropdownButtonProps_944754699 (val args: js.Array[js.Any])
   def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def triggerVarargs(value: (click | hover | contextMenu)*): this.type = set("trigger", js.Array(value :_*))
+  def trigger(value: js.Array[click | hover | contextMenu]): this.type = set("trigger", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def trigger(value: js.Array[click | hover | contextMenu]): this.type = set("trigger", value.asInstanceOf[js.Any])
+  def triggerVarargs(value: (click | hover | contextMenu)*): this.type = set("trigger", js.Array(value :_*))
   
   @scala.inline
   def `type`(value: DropdownButtonType): this.type = set("type", value.asInstanceOf[js.Any])

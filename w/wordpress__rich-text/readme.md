@@ -9,14 +9,14 @@ Rich text value and manipulation API.
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @wordpress/rich-text |
-| Keywords           | wordpress, rich-text |
-| # releases         | 34 |
-| # dependents       | 8 |
-| # downloads        | 178082 |
+| Keywords           | wordpress, gutenberg, rich-text |
+| # releases         | 45 |
+| # dependents       | 12 |
+| # downloads        | 931576 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/WordPress/gutenberg/tree/master/packages/rich-text/README.md)
+- [Homepage](https://github.com/WordPress/gutenberg/tree/HEAD/packages/rich-text/README.md)
 - [Bugs](https://github.com/WordPress/gutenberg/issues)
 - [Repository](https://github.com/WordPress/gutenberg)
 - [Npm](https://www.npmjs.com/package/%40wordpress%2Frich-text)

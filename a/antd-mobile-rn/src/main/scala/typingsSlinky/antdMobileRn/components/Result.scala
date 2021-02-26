@@ -9,6 +9,7 @@ import typingsSlinky.antdMobileRn.resultIndexNativeMod.ResultNativeProps
 import typingsSlinky.antdMobileRn.resultStyleIndexNativeMod.IResultStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object Result {
   
   @JSImport("antd-mobile-rn", "Result")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,19 +32,19 @@ object Result {
     def buttonType(value: primary | ghost): this.type = set("buttonType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def imgReactElement(value: ReactElement): this.type = set("img", value.asInstanceOf[js.Any])
+    def img(value: ReactElement): this.type = set("img", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def img(value: ReactElement): this.type = set("img", value.asInstanceOf[js.Any])
+    def imgReactElement(value: ReactElement): this.type = set("img", value.asInstanceOf[js.Any])
     
     @scala.inline
     def imgUrl(value: String): this.type = set("imgUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def messageReactElement(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
+    def message(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def message(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
+    def messageReactElement(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onButtonClick(value: () => Unit): this.type = set("onButtonClick", js.Any.fromFunction0(value))
@@ -58,13 +59,13 @@ object Result {
     def styles(value: IResultStyle): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ResultNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Result.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ResultNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

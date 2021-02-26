@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,8 +43,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.highcharts.highchartsStrings.`zoom-in`
   - typingsSlinky.highcharts.highchartsStrings.`zoom-out`
 */
-trait CursorValue extends js.Object
+trait CursorValue extends StObject
 object CursorValue {
+  
+  @scala.inline
+  def default: typingsSlinky.highcharts.highchartsStrings.default = "default".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.default]
   
   @scala.inline
   def alias: typingsSlinky.highcharts.highchartsStrings.alias = "alias".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.alias]
@@ -68,9 +72,6 @@ object CursorValue {
   
   @scala.inline
   def crosshair: typingsSlinky.highcharts.highchartsStrings.crosshair = "crosshair".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.crosshair]
-  
-  @scala.inline
-  def default: typingsSlinky.highcharts.highchartsStrings.default = "default".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.default]
   
   @scala.inline
   def `e-resize`: typingsSlinky.highcharts.highchartsStrings.`e-resize` = "e-resize".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.`e-resize`]

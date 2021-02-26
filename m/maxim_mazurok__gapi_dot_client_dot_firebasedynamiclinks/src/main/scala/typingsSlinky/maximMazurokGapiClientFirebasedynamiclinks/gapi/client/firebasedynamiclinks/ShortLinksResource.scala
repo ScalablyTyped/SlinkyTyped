@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientFirebasedynamiclinks.gapi.client.fir
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientFirebasedynamiclinks.anon.Alt
 import typingsSlinky.maximMazurokGapiClientFirebasedynamiclinks.anon.Callback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ShortLinksResource extends js.Object {
+trait ShortLinksResource extends StObject {
   
   def create(request: Alt, body: CreateShortDynamicLinkRequest): Request[CreateShortDynamicLinkResponse] = js.native
   /**

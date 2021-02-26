@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKinesisBrowser.typesGetShardIteratorInputMod.Ge
 import typingsSlinky.awsSdkClientKinesisBrowser.typesGetShardIteratorOutputMod.GetShardIteratorOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kinesis-browser/commands/GetShardIteratorCommand", JSImport.Namespace)
-@js.native
-object getShardIteratorCommandMod extends js.Object {
+object getShardIteratorCommandMod {
   
+  @JSImport("@aws-sdk/client-kinesis-browser/commands/GetShardIteratorCommand", "GetShardIteratorCommand")
   @js.native
   class GetShardIteratorCommand protected () extends Command[
           InputTypesUnion, 

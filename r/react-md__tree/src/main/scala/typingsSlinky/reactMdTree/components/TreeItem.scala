@@ -81,6 +81,7 @@ import typingsSlinky.reactMdTree.reactMdTreeStrings.vertical
 import typingsSlinky.reactMdTree.reactMdTreeStrings.yes
 import typingsSlinky.reactMdTree.typesMod.TreeItemProps
 import typingsSlinky.reactMdTree.typesMod.TreeItemWithContentComponentProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -89,9 +90,23 @@ object TreeItem {
   
   object TreeItemPropsRefAttributes {
     
+    @scala.inline
+    def apply(
+      depth: Double,
+      expanded: Boolean,
+      focused: Boolean,
+      id: String,
+      itemIndex: Double,
+      listSize: Double,
+      selected: Boolean
+    ): Builder = {
+      val __props = js.Dynamic.literal(depth = depth.asInstanceOf[js.Any], expanded = expanded.asInstanceOf[js.Any], focused = focused.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemIndex = itemIndex.asInstanceOf[js.Any], listSize = listSize.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any])
+      new Builder(js.Array(this.component, __props.asInstanceOf[TreeItemProps with RefAttributes[HTMLLIElement]]))
+    }
+    
     @JSImport("@react-md/tree", "TreeItem")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -266,13 +281,13 @@ object TreeItem {
       def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def contentComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("contentComponent", value.asInstanceOf[js.Any])
+      def contentComponent(value: ReactElement): this.type = set("contentComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contentComponentComponentClass(value: ReactComponentClass[_]): this.type = set("contentComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def contentComponent(value: ReactElement): this.type = set("contentComponent", value.asInstanceOf[js.Any])
+      def contentComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("contentComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -290,10 +305,10 @@ object TreeItem {
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -305,10 +320,10 @@ object TreeItem {
       def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def expanderIconReactElement(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
+      def expanderIcon(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def expanderIcon(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
+      def expanderIconReactElement(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def expanderLeft(value: Boolean): this.type = set("expanderLeft", value.asInstanceOf[js.Any])
@@ -353,13 +368,13 @@ object TreeItem {
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def leftAddonReactElement(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def leftAddon(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def leftAddonPosition(value: ListItemAddonPosition): this.type = set("leftAddonPosition", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def leftAddonReactElement(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def leftAddonType(value: ListItemAddonType): this.type = set("leftAddonType", value.asInstanceOf[js.Any])
@@ -368,16 +383,16 @@ object TreeItem {
       def liClassName(value: String): this.type = set("liClassName", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def liRefRefObject(value: ReactRef[HTMLLIElement]): this.type = set("liRef", value.asInstanceOf[js.Any])
+      def liRef(value: Ref[HTMLLIElement]): this.type = set("liRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def liRefFunction1(value: /* instance */ HTMLLIElement | Null => Unit): this.type = set("liRef", js.Any.fromFunction1(value))
       
       @scala.inline
-      def liRef(value: Ref[HTMLLIElement]): this.type = set("liRef", value.asInstanceOf[js.Any])
+      def liRefNull: this.type = set("liRef", null)
       
       @scala.inline
-      def liRefNull: this.type = set("liRef", null)
+      def liRefRefObject(value: ReactRef[HTMLLIElement]): this.type = set("liRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def liStyle(value: CSSProperties): this.type = set("liStyle", value.asInstanceOf[js.Any])
@@ -626,10 +641,10 @@ object TreeItem {
       def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+      def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+      def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -650,13 +665,13 @@ object TreeItem {
       def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def rightAddonReactElement(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def rightAddon(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def rightAddonPosition(value: ListItemAddonPosition): this.type = set("rightAddonPosition", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def rightAddonReactElement(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def rightAddonType(value: ListItemAddonType): this.type = set("rightAddonType", value.asInstanceOf[js.Any])
@@ -665,13 +680,13 @@ object TreeItem {
       def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def secondaryText(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def secondaryTextClassName(value: String): this.type = set("secondaryTextClassName", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
@@ -720,6 +735,9 @@ object TreeItem {
     }
     
     def withProps(p: TreeItemProps with RefAttributes[HTMLLIElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object TreeItemWithContentComponentPropsRefAttributes {
     
     @scala.inline
     def apply(
@@ -732,15 +750,12 @@ object TreeItem {
       selected: Boolean
     ): Builder = {
       val __props = js.Dynamic.literal(depth = depth.asInstanceOf[js.Any], expanded = expanded.asInstanceOf[js.Any], focused = focused.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemIndex = itemIndex.asInstanceOf[js.Any], listSize = listSize.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[TreeItemProps with RefAttributes[HTMLLIElement]]))
+      new Builder(js.Array(this.component, __props.asInstanceOf[TreeItemWithContentComponentProps with RefAttributes[HTMLLIElement]]))
     }
-  }
-  
-  object TreeItemWithContentComponentPropsRefAttributes {
     
     @JSImport("@react-md/tree", "TreeItem")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -915,13 +930,13 @@ object TreeItem {
       def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def contentComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("contentComponent", value.asInstanceOf[js.Any])
+      def contentComponent(value: ReactElement): this.type = set("contentComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contentComponentComponentClass(value: ReactComponentClass[_]): this.type = set("contentComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def contentComponent(value: ReactElement): this.type = set("contentComponent", value.asInstanceOf[js.Any])
+      def contentComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("contentComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -939,10 +954,10 @@ object TreeItem {
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -954,10 +969,10 @@ object TreeItem {
       def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def expanderIconReactElement(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
+      def expanderIcon(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def expanderIcon(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
+      def expanderIconReactElement(value: ReactElement): this.type = set("expanderIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def expanderLeft(value: Boolean): this.type = set("expanderLeft", value.asInstanceOf[js.Any])
@@ -1002,13 +1017,13 @@ object TreeItem {
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def leftAddonReactElement(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def leftAddon(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def leftAddonPosition(value: ListItemAddonPosition): this.type = set("leftAddonPosition", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def leftAddonReactElement(value: ReactElement): this.type = set("leftAddon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def leftAddonType(value: ListItemAddonType): this.type = set("leftAddonType", value.asInstanceOf[js.Any])
@@ -1017,16 +1032,16 @@ object TreeItem {
       def liClassName(value: String): this.type = set("liClassName", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def liRefRefObject(value: ReactRef[HTMLLIElement]): this.type = set("liRef", value.asInstanceOf[js.Any])
+      def liRef(value: Ref[HTMLLIElement]): this.type = set("liRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def liRefFunction1(value: /* instance */ HTMLLIElement | Null => Unit): this.type = set("liRef", js.Any.fromFunction1(value))
       
       @scala.inline
-      def liRef(value: Ref[HTMLLIElement]): this.type = set("liRef", value.asInstanceOf[js.Any])
+      def liRefNull: this.type = set("liRef", null)
       
       @scala.inline
-      def liRefNull: this.type = set("liRef", null)
+      def liRefRefObject(value: ReactRef[HTMLLIElement]): this.type = set("liRef", value.asInstanceOf[js.Any])
       
       @scala.inline
       def liStyle(value: CSSProperties): this.type = set("liStyle", value.asInstanceOf[js.Any])
@@ -1275,10 +1290,10 @@ object TreeItem {
       def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+      def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+      def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -1299,13 +1314,13 @@ object TreeItem {
       def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def rightAddonReactElement(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def rightAddon(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def rightAddonPosition(value: ListItemAddonPosition): this.type = set("rightAddonPosition", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def rightAddonReactElement(value: ReactElement): this.type = set("rightAddon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def rightAddonType(value: ListItemAddonType): this.type = set("rightAddonType", value.asInstanceOf[js.Any])
@@ -1314,13 +1329,13 @@ object TreeItem {
       def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def secondaryText(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def secondaryTextClassName(value: String): this.type = set("secondaryTextClassName", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
@@ -1369,19 +1384,5 @@ object TreeItem {
     }
     
     def withProps(p: TreeItemWithContentComponentProps with RefAttributes[HTMLLIElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(
-      depth: Double,
-      expanded: Boolean,
-      focused: Boolean,
-      id: String,
-      itemIndex: Double,
-      listSize: Double,
-      selected: Boolean
-    ): Builder = {
-      val __props = js.Dynamic.literal(depth = depth.asInstanceOf[js.Any], expanded = expanded.asInstanceOf[js.Any], focused = focused.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemIndex = itemIndex.asInstanceOf[js.Any], listSize = listSize.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[TreeItemWithContentComponentProps with RefAttributes[HTMLLIElement]]))
-    }
   }
 }

@@ -1,12 +1,13 @@
 package typingsSlinky.fabric.fabricImplMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fabric/fabric-impl", "Point")
 @js.native
-class Point protected () extends js.Object {
+class Point protected () extends StObject {
   def this(x: Double, y: Double) = this()
   
   /**

@@ -10,9 +10,9 @@ A JS implementation of JSONPath with some additional operators
 | ------------------ | :-------------: |
 | Full name          | jsonpath-plus |
 | Keywords           | json, jsonpath |
-| # releases         | 10 |
-| # dependents       | 92 |
-| # downloads        | 8086271 |
+| # releases         | 12 |
+| # dependents       | 187 |
+| # downloads        | 25858799 |
 | # stars            | 11 |
 
 ## Links

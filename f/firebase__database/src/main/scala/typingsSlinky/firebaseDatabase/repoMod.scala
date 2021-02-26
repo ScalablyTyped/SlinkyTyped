@@ -11,16 +11,16 @@ import typingsSlinky.firebaseDatabase.pathMod.Path
 import typingsSlinky.firebaseDatabase.persistentConnectionMod.PersistentConnection
 import typingsSlinky.firebaseDatabase.queryMod.Query
 import typingsSlinky.firebaseDatabase.repoInfoMod.RepoInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/database/dist/src/core/Repo", JSImport.Namespace)
-@js.native
-object repoMod extends js.Object {
+object repoMod {
   
+  @JSImport("@firebase/database/dist/src/core/Repo", "Repo")
   @js.native
-  class Repo protected () extends js.Object {
+  class Repo protected () extends StObject {
     def this(
       repoInfo_ : RepoInfo,
       forceRestClient_ : Boolean,

@@ -3,14 +3,14 @@ package typingsSlinky.stellarSdk
 import typingsSlinky.stellarBase.mod.Asset
 import typingsSlinky.stellarSdk.callBuilderMod.CallBuilder
 import typingsSlinky.stellarSdk.serverApiMod.ServerApi.OrderbookRecord
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("stellar-sdk/lib/orderbook_call_builder", JSImport.Namespace)
-@js.native
-object orderbookCallBuilderMod extends js.Object {
+object orderbookCallBuilderMod {
   
+  @JSImport("stellar-sdk/lib/orderbook_call_builder", "OrderbookCallBuilder")
   @js.native
   class OrderbookCallBuilder protected () extends CallBuilder[OrderbookRecord] {
     def this(

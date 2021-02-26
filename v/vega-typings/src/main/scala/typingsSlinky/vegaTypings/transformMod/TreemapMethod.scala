@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.transformMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.vegaTypingsStrings.slice
   - typingsSlinky.vegaTypings.vegaTypingsStrings.slicedice
 */
-trait TreemapMethod extends js.Object
+trait TreemapMethod extends StObject
 object TreemapMethod {
   
   @scala.inline

@@ -1,31 +1,28 @@
 package typingsSlinky.vsoNodeApi.buildInterfacesMod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait ValidationResult extends js.Object
+sealed trait ValidationResult extends StObject
 @JSImport("vso-node-api/interfaces/BuildInterfaces", "ValidationResult")
 @js.native
-object ValidationResult extends js.Object {
+object ValidationResult extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ValidationResult with Double] = js.native
   
   @js.native
   sealed trait Error extends ValidationResult
-  /* 2 */ @js.native
-  object Error extends TopLevel[Error with Double]
+  /* 2 */ val Error: typingsSlinky.vsoNodeApi.buildInterfacesMod.ValidationResult.Error with Double = js.native
   
   @js.native
   sealed trait OK extends ValidationResult
-  /* 0 */ @js.native
-  object OK extends TopLevel[OK with Double]
+  /* 0 */ val OK: typingsSlinky.vsoNodeApi.buildInterfacesMod.ValidationResult.OK with Double = js.native
   
   @js.native
   sealed trait Warning extends ValidationResult
-  /* 1 */ @js.native
-  object Warning extends TopLevel[Warning with Double]
+  /* 1 */ val Warning: typingsSlinky.vsoNodeApi.buildInterfacesMod.ValidationResult.Warning with Double = js.native
 }

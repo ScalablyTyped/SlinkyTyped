@@ -3,15 +3,15 @@
 
 
 ## Library description:
-Beautiful math in all browsers. MathJax is an open-source JavaScript display engine for LaTeX, MathML, and AsciiMath notation that works in all browsers. This package includes the packaged components (install mathjax-full to get the source code).
+Beautiful and accessible math in all browsers. MathJax is an open-source JavaScript display engine for LaTeX, MathML, and AsciiMath notation that works in all browsers. This package includes the packaged components (install mathjax-full to get the source
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | mathjax |
 | Keywords           | math, svg, mathml, tex, latex, asciimath, browser, node |
-| # releases         | 6 |
-| # dependents       | 43 |
-| # downloads        | 573550 |
+| # releases         | 12 |
+| # dependents       | 67 |
+| # downloads        | 1321953 |
 | # stars            | 10 |
 
 ## Links

@@ -3,16 +3,16 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.mathPathMod.Path2
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.std.Animation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Animations/pathCursor", JSImport.Namespace)
-@js.native
-object pathCursorMod extends js.Object {
+object pathCursorMod {
   
+  @JSImport("babylonjs/Animations/pathCursor", "PathCursor")
   @js.native
-  class PathCursor protected () extends js.Object {
+  class PathCursor protected () extends StObject {
     /**
       * Initializes the path cursor
       * @param path The path to track

@@ -10,9 +10,9 @@ REST persister for @pollyjs
 | ------------------ | :-------------: |
 | Full name          | @pollyjs/persister-rest |
 | Keywords           | polly, pollyjs, record, replay, rest, persister |
-| # releases         | 19 |
-| # dependents       | 2 |
-| # downloads        | 118803 |
+| # releases         | 13 |
+| # dependents       | 3 |
+| # downloads        | 189402 |
 | # stars            | 0 |
 
 ## Links

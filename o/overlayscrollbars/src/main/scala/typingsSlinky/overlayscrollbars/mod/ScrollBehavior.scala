@@ -1,5 +1,6 @@
 package typingsSlinky.overlayscrollbars.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.ifneeded
   - typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.never
 */
-trait ScrollBehavior extends js.Object
+trait ScrollBehavior extends StObject
 object ScrollBehavior {
   
   @scala.inline

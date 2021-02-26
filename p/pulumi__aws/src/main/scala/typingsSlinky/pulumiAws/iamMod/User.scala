@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.userMod.UserState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,9 +27,7 @@ class User protected ()
   def this(name: String, args: UserArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/aws/iam", "User")
-@js.native
-object User extends js.Object {
+object User {
   
   /**
     * Get an existing User resource's state with the given name, ID, and optional extra
@@ -39,14 +38,24 @@ object User extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/aws/iam", "User.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.userMod.User = js.native
+  @JSImport("@pulumi/aws/iam", "User.get")
+  @js.native
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.userMod.User = js.native
+  @JSImport("@pulumi/aws/iam", "User.get")
+  @js.native
   def get(name: String, id: Input[ID], state: UserState): typingsSlinky.pulumiAws.userMod.User = js.native
+  @JSImport("@pulumi/aws/iam", "User.get")
+  @js.native
   def get(name: String, id: Input[ID], state: UserState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.userMod.User = js.native
   
   /**
     * Returns true if the given object is an instance of User.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/aws/iam", "User.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/iam/user.User */ Boolean = js.native
 }

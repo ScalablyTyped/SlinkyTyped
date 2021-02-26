@@ -7,6 +7,7 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`2023`
 import typingsSlinky.activexExcel.activexExcelNumbers.`2029`
 import typingsSlinky.activexExcel.activexExcelNumbers.`2036`
 import typingsSlinky.activexExcel.activexExcelNumbers.`2042`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexExcel.activexExcelNumbers.`2023`
   - typingsSlinky.activexExcel.activexExcelNumbers.`2015`
 */
-trait XlCVError extends js.Object
+trait XlCVError extends StObject
 object XlCVError {
   
   @scala.inline

@@ -10,9 +10,9 @@ Proj4js is a JavaScript library to transform point coordinates from one coordina
 | ------------------ | :-------------: |
 | Full name          | proj4 |
 | Keywords           | - |
-| # releases         | 3 |
-| # dependents       | 222 |
-| # downloads        | 1725045 |
+| # releases         | 6 |
+| # dependents       | 325 |
+| # downloads        | 2792577 |
 | # stars            | 7 |
 
 ## Links

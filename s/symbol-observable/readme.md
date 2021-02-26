@@ -10,9 +10,9 @@ Symbol.observable ponyfill
 | ------------------ | :-------------: |
 | Full name          | symbol-observable |
 | Keywords           | symbol, observable, observables, ponyfill, polyfill, shim |
-| # releases         | 3 |
-| # dependents       | 238 |
-| # downloads        | 331050896 |
+| # releases         | 6 |
+| # dependents       | 311 |
+| # downloads        | 487899039 |
 | # stars            | 2 |
 
 ## Links

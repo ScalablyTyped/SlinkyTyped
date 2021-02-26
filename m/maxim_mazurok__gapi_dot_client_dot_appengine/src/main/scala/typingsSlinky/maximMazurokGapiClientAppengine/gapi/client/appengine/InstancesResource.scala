@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.InstancesId
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.ServicesId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InstancesResource extends js.Object {
+trait InstancesResource extends StObject {
   
   /**
     * Enables debugging on a VM instance. This allows you to use the SSH command to connect to the virtual machine where the instance lives. While in "debug mode", the instance continues

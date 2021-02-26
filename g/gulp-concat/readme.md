@@ -9,9 +9,9 @@ Concatenates files
 | ------------------ | :-------------: |
 | Full name          | gulp-concat |
 | Keywords           | gulpplugin |
-| # releases         | 1 |
-| # dependents       | 1494 |
-| # downloads        | 19781980 |
+| # releases         | 0 |
+| # dependents       | 1563 |
+| # downloads        | 23044826 |
 | # stars            | 451 |
 
 ## Links

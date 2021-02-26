@@ -1,6 +1,7 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.std.PropertyKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arcgisJsApi.esri.ImageSymbolTableElementInfo
   - typingsSlinky.arcgisJsApi.esri.SymbolTableElementInfo
 */
-trait SymbolTableElementType extends js.Object
+trait SymbolTableElementType extends StObject
 object SymbolTableElementType {
   
   @scala.inline
@@ -19,9 +20,9 @@ object SymbolTableElementType {
     opacity: Double,
     propertyIsEnumerable: PropertyKey => Boolean,
     src: String
-  ): SymbolTableElementType = {
+  ): typingsSlinky.arcgisJsApi.esri.ImageSymbolTableElementInfo = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), opacity = opacity.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), src = src.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SymbolTableElementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.ImageSymbolTableElementInfo]
   }
   
   @scala.inline
@@ -31,8 +32,8 @@ object SymbolTableElementType {
     label: String | RampTitle,
     propertyIsEnumerable: PropertyKey => Boolean,
     symbol: Symbol
-  ): SymbolTableElementType = {
+  ): typingsSlinky.arcgisJsApi.esri.SymbolTableElementInfo = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), label = label.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), symbol = symbol.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SymbolTableElementType]
+    __obj.asInstanceOf[typingsSlinky.arcgisJsApi.esri.SymbolTableElementInfo]
   }
 }

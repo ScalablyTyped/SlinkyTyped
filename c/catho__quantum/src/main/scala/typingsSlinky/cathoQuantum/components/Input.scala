@@ -21,6 +21,7 @@ import typingsSlinky.cathoQuantum.inputMod.Mask
 import typingsSlinky.cathoQuantum.inputMod.Validate
 import typingsSlinky.cathoQuantum.inputMod.default
 import typingsSlinky.react.mod.ChangeEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ object Input {
   
   @JSImport("@catho/quantum/Input", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,7 +53,7 @@ object Input {
     def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maskVarargs(value: Mask*): this.type = set("mask", js.Array(value :_*))
+    def mask(value: Mask | js.Array[Mask]): this.type = set("mask", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maskFunction1(value: /* rawValue */ String => js.Array[String]): this.type = set("mask", js.Any.fromFunction1(value))
@@ -61,7 +62,7 @@ object Input {
     def maskRegExp(value: js.RegExp): this.type = set("mask", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def mask(value: Mask | js.Array[Mask]): this.type = set("mask", value.asInstanceOf[js.Any])
+    def maskVarargs(value: Mask*): this.type = set("mask", js.Array(value :_*))
     
     @scala.inline
     def maxLength(value: Double | String): this.type = set("maxLength", value.asInstanceOf[js.Any])
@@ -91,10 +92,7 @@ object Input {
     def `type`(value: email | text | tel | number | password | search): this.type = set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def validateVarargs(value: (Validate | CustomValidate)*): this.type = set("validate", js.Array(value :_*))
-    
-    @scala.inline
-    def validateFunction2(value: (/* params */ Value, /* cpf */ js.UndefOr[String]) => String): this.type = set("validate", js.Any.fromFunction2(value))
+    def validate(value: Validate | CustomValidate | (js.Array[Validate | CustomValidate])): this.type = set("validate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def validateFunction1(
@@ -104,13 +102,16 @@ object Input {
     ): this.type = set("validate", js.Any.fromFunction1(value))
     
     @scala.inline
-    def validate(value: Validate | CustomValidate | (js.Array[Validate | CustomValidate])): this.type = set("validate", value.asInstanceOf[js.Any])
+    def validateFunction2(value: (/* params */ Value, /* cpf */ js.UndefOr[String]) => String): this.type = set("validate", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def validateVarargs(value: (Validate | CustomValidate)*): this.type = set("validate", js.Array(value :_*))
     
     @scala.inline
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Input.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientDrive.anon.PrettyPrintQuotaUser
 import typingsSlinky.maximMazurokGapiClientDrive.anon.QuotaUserResource
 import typingsSlinky.maximMazurokGapiClientDrive.anon.RequestId
 import typingsSlinky.maximMazurokGapiClientDrive.anon.TeamDriveId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TeamdrivesResource extends js.Object {
+trait TeamdrivesResource extends StObject {
   
   /** Deprecated use drives.create instead. */
   def create(request: FieldsKey): Request[TeamDrive] = js.native

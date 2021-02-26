@@ -1,5 +1,6 @@
 package typingsSlinky.mapboxGl.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,4 +14,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mapboxGl.mod.RasterSource
   - typingsSlinky.mapboxGl.mod.RasterDemSource
 */
-trait AnySourceImpl extends js.Object
+trait AnySourceImpl extends StObject

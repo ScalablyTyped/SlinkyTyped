@@ -10,9 +10,9 @@ Markdown-like DSL for defining syntactic grammars for programming languages.
 | ------------------ | :-------------: |
 | Full name          | grammarkdown |
 | Keywords           | grammar, language, syntax, dsl, javascript, typescript, ecmascript |
-| # releases         | 15 |
+| # releases         | 23 |
 | # dependents       | 1 |
-| # downloads        | 7323 |
+| # downloads        | 13649 |
 | # stars            | 1 |
 
 ## Links

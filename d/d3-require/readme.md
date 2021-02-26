@@ -10,9 +10,9 @@ A minimal, promise-based implementation to require asynchronous module definitio
 | ------------------ | :-------------: |
 | Full name          | d3-require |
 | Keywords           | - |
-| # releases         | 19 |
-| # dependents       | 1 |
-| # downloads        | 24026 |
+| # releases         | 3 |
+| # dependents       | 3 |
+| # downloads        | 55780 |
 | # stars            | 0 |
 
 ## Links

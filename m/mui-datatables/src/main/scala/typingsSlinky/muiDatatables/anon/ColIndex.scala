@@ -2,12 +2,13 @@ package typingsSlinky.muiDatatables.anon
 
 import org.scalajs.dom.raw.Element
 import slinky.web.SyntheticMouseEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ColIndex extends js.Object {
+trait ColIndex extends StObject {
   
   var colIndex: Double = js.native
   
@@ -26,30 +27,18 @@ object ColIndex {
   }
   
   @scala.inline
-  implicit class ColIndexOps[Self <: ColIndex] (val x: Self) extends AnyVal {
+  implicit class ColIndexMutableBuilder[Self <: ColIndex] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setColIndex(value: Double): Self = StObject.set(x, "colIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDataIndex(value: Double): Self = StObject.set(x, "dataIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setEvent(value: SyntheticMouseEvent[Element]): Self = StObject.set(x, "event", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColIndex(value: Double): Self = this.set("colIndex", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDataIndex(value: Double): Self = this.set("dataIndex", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setEvent(value: SyntheticMouseEvent[Element]): Self = this.set("event", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRowIndex(value: Double): Self = this.set("rowIndex", value.asInstanceOf[js.Any])
+    def setRowIndex(value: Double): Self = StObject.set(x, "rowIndex", value.asInstanceOf[js.Any])
   }
 }

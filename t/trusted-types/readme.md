@@ -10,9 +10,9 @@ Polyfill for the Trusted Types
 | ------------------ | :-------------: |
 | Full name          | trusted-types |
 | Keywords           | - |
-| # releases         | 11 |
+| # releases         | 6 |
 | # dependents       | 0 |
-| # downloads        | 951 |
+| # downloads        | 7407 |
 | # stars            | 0 |
 
 ## Links

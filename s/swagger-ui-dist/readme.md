@@ -10,9 +10,9 @@ Typings are for version 3.30
 | ------------------ | :-------------: |
 | Full name          | swagger-ui-dist |
 | Keywords           | - |
-| # releases         | 71 |
-| # dependents       | 110 |
-| # downloads        | 8735407 |
+| # releases         | 63 |
+| # dependents       | 175 |
+| # downloads        | 31581171 |
 | # stars            | 7 |
 
 ## Links

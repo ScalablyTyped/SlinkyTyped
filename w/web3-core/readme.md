@@ -4,15 +4,15 @@
 Typings are for version 1.3.0
 
 ## Library description:
-Web3 core tools for sub packages. This is an internal package.
+Web3 core tools for sub-packages. This is an internal package.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | web3-core |
 | Keywords           | - |
-| # releases         | 35 |
-| # dependents       | 73 |
-| # downloads        | 4389055 |
+| # releases         | 42 |
+| # dependents       | 129 |
+| # downloads        | 7400204 |
 | # stars            | 0 |
 
 ## Links

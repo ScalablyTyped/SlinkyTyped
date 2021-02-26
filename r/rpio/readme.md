@@ -3,15 +3,15 @@
 
 
 ## Library description:
-High performance GPIO/i2c/PWM/SPI module for Raspberry Pi
+High performance GPIO/i2c/PWM/SPI module for Raspberry Pi, Orange Pi, Banana Pi
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | rpio |
-| Keywords           | bcm2835, gpio, gpiomem, i2c, mmap, pi, pwm, raspberry, raspberrypi, raspberry pi, rpi, spi |
-| # releases         | 29 |
-| # dependents       | 79 |
-| # downloads        | 47063 |
+| Keywords           | allwinner, bananapi, banana pi, bcm2835, gpio, gpiomem, i2c, mmap, orangepi, orange pi, pi, pwm, raspberry, raspberrypi, raspberry pi, rpi, spi, sunxi |
+| # releases         | 23 |
+| # dependents       | 96 |
+| # downloads        | 50290 |
 | # stars            | 15 |
 
 ## Links

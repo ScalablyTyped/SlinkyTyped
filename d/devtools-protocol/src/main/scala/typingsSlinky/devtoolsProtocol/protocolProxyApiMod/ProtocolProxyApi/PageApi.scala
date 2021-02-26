@@ -95,12 +95,13 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetTouchEmulationEnabled
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetWebLifecycleStateRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.StartScreencastRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.WindowOpenEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PageApi extends js.Object {
+trait PageApi extends StObject {
   
   /**
     * Seeds compilation cache for given url. Compilation cache does not survive

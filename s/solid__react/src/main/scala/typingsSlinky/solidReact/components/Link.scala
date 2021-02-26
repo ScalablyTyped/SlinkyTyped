@@ -72,15 +72,22 @@ import typingsSlinky.solidReact.solidReactStrings.tree
 import typingsSlinky.solidReact.solidReactStrings.url
 import typingsSlinky.solidReact.solidReactStrings.vertical
 import typingsSlinky.solidReact.solidReactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Link {
   
+  @scala.inline
+  def apply(href: String): Builder = {
+    val __props = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[hrefstringHTMLAttributesH]))
+  }
+  
   @JSImport("@solid/react", "Link")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -270,10 +277,10 @@ object Link {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -610,10 +617,4 @@ object Link {
   }
   
   def withProps(p: hrefstringHTMLAttributesH): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(href: String): Builder = {
-    val __props = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[hrefstringHTMLAttributesH]))
-  }
 }

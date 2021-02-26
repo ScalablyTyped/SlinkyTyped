@@ -10,9 +10,9 @@ normalize an image.
 | ------------------ | :-------------: |
 | Full name          | @jimp/plugin-normalize |
 | Keywords           | - |
-| # releases         | 70 |
+| # releases         | 102 |
 | # dependents       | 1 |
-| # downloads        | 14395640 |
+| # downloads        | 42340513 |
 | # stars            | 0 |
 
 ## Links

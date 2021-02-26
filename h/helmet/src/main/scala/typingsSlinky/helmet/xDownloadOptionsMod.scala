@@ -2,14 +2,15 @@ package typingsSlinky.helmet
 
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("helmet/dist/middlewares/x-download-options", JSImport.Namespace)
-@js.native
-object xDownloadOptionsMod extends js.Object {
+object xDownloadOptionsMod {
   
+  @JSImport("helmet/dist/middlewares/x-download-options", JSImport.Default)
+  @js.native
   def default(): js.Function3[
     /* _req */ IncomingMessage, 
     /* res */ ServerResponse, 

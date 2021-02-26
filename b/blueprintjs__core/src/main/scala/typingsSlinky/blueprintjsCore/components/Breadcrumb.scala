@@ -9,6 +9,7 @@ import typingsSlinky.blueprintjsCore.breadcrumbMod.IBreadcrumbProps
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object Breadcrumb {
   
   @JSImport("@blueprintjs/core", "Breadcrumb")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,13 +38,13 @@ object Breadcrumb {
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: IconName | MaybeElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconNull: this.type = set("icon", null)
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
@@ -55,13 +56,13 @@ object Breadcrumb {
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IBreadcrumbProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Breadcrumb.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IBreadcrumbProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

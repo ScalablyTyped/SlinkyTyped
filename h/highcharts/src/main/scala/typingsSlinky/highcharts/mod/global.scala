@@ -3,19 +3,18 @@ package typingsSlinky.highcharts.mod
 import typingsSlinky.highcharts.highchartsStrings.Chart
 import typingsSlinky.highcharts.highchartsStrings.Map
 import typingsSlinky.highcharts.highchartsStrings.StockChart
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
   /**
     * Highcharts-extended JQuery.
     */
   @js.native
-  trait JQuery extends js.Object {
+  trait JQuery extends StObject {
     
     /**
       * Helper function to return the chart of the current JQuery selector

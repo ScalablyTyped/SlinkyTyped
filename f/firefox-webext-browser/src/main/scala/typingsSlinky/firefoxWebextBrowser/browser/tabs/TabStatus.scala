@@ -1,5 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.tabs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.loading
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.complete
 */
-trait TabStatus extends js.Object
+trait TabStatus extends StObject
 object TabStatus {
   
   @scala.inline

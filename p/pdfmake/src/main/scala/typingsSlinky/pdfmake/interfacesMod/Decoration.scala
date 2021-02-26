@@ -1,5 +1,6 @@
 package typingsSlinky.pdfmake.interfacesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pdfmake.pdfmakeStrings.lineThrough
   - typingsSlinky.pdfmake.pdfmakeStrings.overline
 */
-trait Decoration extends js.Object
+trait Decoration extends StObject
 object Decoration {
   
   @scala.inline

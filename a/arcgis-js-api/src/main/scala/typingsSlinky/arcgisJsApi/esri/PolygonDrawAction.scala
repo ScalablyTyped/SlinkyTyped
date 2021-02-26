@@ -10,6 +10,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.freehand
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.hybrid
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.redo
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.undo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -10,9 +10,9 @@ dialog ui component for react
 | ------------------ | :-------------: |
 | Full name          | rc-dialog |
 | Keywords           | react, react-component, react-dialog, dialog, ui |
-| # releases         | 32 |
-| # dependents       | 253 |
-| # downloads        | 10546338 |
+| # releases         | 45 |
+| # dependents       | 309 |
+| # downloads        | 21091287 |
 | # stars            | 4 |
 
 ## Links

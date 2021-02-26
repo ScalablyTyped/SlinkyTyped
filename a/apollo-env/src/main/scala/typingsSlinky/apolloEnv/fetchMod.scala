@@ -8,14 +8,14 @@ import typingsSlinky.nodeFetch.mod.HeadersInit
 import typingsSlinky.nodeFetch.mod.RequestInfo
 import typingsSlinky.nodeFetch.mod.RequestInit
 import typingsSlinky.nodeFetch.mod.ResponseInit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("apollo-env/lib/fetch", JSImport.Namespace)
-@js.native
-object fetchMod extends js.Object {
+object fetchMod {
   
+  @JSImport("apollo-env/lib/fetch", "Body")
   @js.native
   class Body ()
     extends typingsSlinky.apolloEnv.fetchFetchMod.Body {
@@ -24,12 +24,14 @@ object fetchMod extends js.Object {
     def this(body: js.Any, opts: Size) = this()
   }
   
+  @JSImport("apollo-env/lib/fetch", "Headers")
   @js.native
   class Headers ()
     extends typingsSlinky.apolloEnv.fetchFetchMod.Headers {
     def this(init: HeadersInit) = this()
   }
   
+  @JSImport("apollo-env/lib/fetch", "Request")
   @js.native
   class Request protected ()
     extends typingsSlinky.apolloEnv.fetchFetchMod.Request {
@@ -37,6 +39,7 @@ object fetchMod extends js.Object {
     def this(input: RequestInfo, init: RequestInit) = this()
   }
   
+  @JSImport("apollo-env/lib/fetch", "Response")
   @js.native
   class Response ()
     extends typingsSlinky.apolloEnv.fetchFetchMod.Response {
@@ -44,14 +47,18 @@ object fetchMod extends js.Object {
     def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
   }
   /* static members */
-  @js.native
-  object Response extends js.Object {
+  object Response {
     
+    @JSImport("apollo-env/lib/fetch", "Response.error")
+    @js.native
     def error(): typingsSlinky.nodeFetch.mod.Response = js.native
     
+    @JSImport("apollo-env/lib/fetch", "Response.redirect")
+    @js.native
     def redirect(url: String, status: Double): typingsSlinky.nodeFetch.mod.Response = js.native
   }
   
+  @JSImport("apollo-env/lib/fetch", "URL")
   @js.native
   class URL protected ()
     extends typingsSlinky.apolloEnv.urlMod.URL {
@@ -60,22 +67,28 @@ object fetchMod extends js.Object {
     def this(input: String, base: URL_) = this()
   }
   
+  @JSImport("apollo-env/lib/fetch", "URLSearchParams")
   @js.native
   class URLSearchParams ()
     extends typingsSlinky.apolloEnv.urlMod.URLSearchParams {
     def this(init: String) = this()
     def this(init: js.Array[js.Tuple2[String, String]]) = this()
+    def this(init: js.Iterable[js.Tuple2[String, String]]) = this()
     def this(init: Dict[String | js.Array[String]]) = this()
     def this(init: typingsSlinky.node.urlMod.URLSearchParams) = this()
-    def this(init: js.Iterable[js.Tuple2[String, String]]) = this()
   }
   
-  @js.native
-  object fetch extends js.Object {
+  object fetch {
     
+    @JSImport("apollo-env/lib/fetch", "fetch")
+    @js.native
     def apply(url: RequestInfo): js.Promise[typingsSlinky.nodeFetch.mod.Response] = js.native
+    @JSImport("apollo-env/lib/fetch", "fetch")
+    @js.native
     def apply(url: RequestInfo, init: RequestInit): js.Promise[typingsSlinky.nodeFetch.mod.Response] = js.native
     
+    @JSImport("apollo-env/lib/fetch", "fetch.isRedirect")
+    @js.native
     def isRedirect(code: Double): Boolean = js.native
   }
 }

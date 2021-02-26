@@ -1,12 +1,13 @@
 package typingsSlinky.readableStream.mod
 
 import typingsSlinky.node.BufferEncoding
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WritableState extends js.Object {
+trait WritableState extends StObject {
   
   var buffer: js.Array[BufferRequest] = js.native
   

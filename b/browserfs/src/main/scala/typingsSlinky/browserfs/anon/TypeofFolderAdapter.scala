@@ -7,6 +7,7 @@ import typingsSlinky.browserfs.fileSystemMod.FileSystemOptions
 import typingsSlinky.browserfs.folderAdapterMod.FolderAdapter
 import typingsSlinky.browserfs.folderAdapterMod.FolderAdapterOptions
 import typingsSlinky.browserfs.folderAdapterMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -14,6 +14,7 @@ import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`6`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`7`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`8`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`10`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`9`
 */
-trait ClickAction extends js.Object
+trait ClickAction extends StObject
 object ClickAction {
   
   /** The presentation jumps to a bookmark. */

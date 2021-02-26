@@ -1,6 +1,7 @@
 package typingsSlinky.awsSdkClientPinpointBrowser
 
 import typingsSlinky.awsSdkClientPinpointBrowser.pinpointClientMod.PinpointClient
+import typingsSlinky.awsSdkClientPinpointBrowser.pinpointConfigurationMod.PinpointConfiguration
 import typingsSlinky.awsSdkClientPinpointBrowser.typesCreateAppInputMod.CreateAppInput
 import typingsSlinky.awsSdkClientPinpointBrowser.typesCreateAppOutputMod.CreateAppOutput
 import typingsSlinky.awsSdkClientPinpointBrowser.typesCreateCampaignInputMod.CreateCampaignInput
@@ -143,16 +144,17 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateSegmentInputMod.Upda
 import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateSegmentOutputMod.UpdateSegmentOutput
 import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateSmsChannelInputMod.UpdateSmsChannelInput
 import typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateSmsChannelOutputMod.UpdateSmsChannelOutput
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/Pinpoint", JSImport.Namespace)
-@js.native
-object pinpointMod extends js.Object {
+object pinpointMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/Pinpoint", "Pinpoint")
   @js.native
-  class Pinpoint () extends PinpointClient {
+  class Pinpoint protected () extends PinpointClient {
+    def this(configuration: PinpointConfiguration) = this()
     
     /**
       * Creates or updates an app.

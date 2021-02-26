@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.mapboxGl.mapboxGlStrings.boxzoomcancel
 import typingsSlinky.mapboxGl.mapboxGlStrings.boxzoomend
 import typingsSlinky.mapboxGl.mapboxGlStrings.boxzoomstart
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

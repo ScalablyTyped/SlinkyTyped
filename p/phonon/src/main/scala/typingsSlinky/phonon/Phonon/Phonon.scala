@@ -3,13 +3,14 @@ package typingsSlinky.phonon.Phonon
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.awesomplete.mod.Options
 import typingsSlinky.phonon.Element
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /*** Main object ***/
 @js.native
-trait Phonon extends js.Object {
+trait Phonon extends StObject {
   
   def ajax(request: PhononAjaxObject): PhononAjaxReturnObject = js.native
   
@@ -29,10 +30,10 @@ trait Phonon extends js.Object {
   
   def autocomplete(input: String): js.Any = js.native
   def autocomplete(input: String, o: Options): js.Any = js.native
-  def autocomplete(input: Element): js.Any = js.native
-  def autocomplete(input: Element, o: Options): js.Any = js.native
   def autocomplete(input: HTMLElement): js.Any = js.native
   def autocomplete(input: HTMLElement, o: Options): js.Any = js.native
+  def autocomplete(input: Element): js.Any = js.native
+  def autocomplete(input: Element, o: Options): js.Any = js.native
   
   var browser: PhononBrowserObject = js.native
   

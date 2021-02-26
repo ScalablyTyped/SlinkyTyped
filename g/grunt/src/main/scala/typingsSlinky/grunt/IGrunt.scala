@@ -12,6 +12,7 @@ import typingsSlinky.grunt.grunt.task.TaskModule
 import typingsSlinky.grunt.grunt.template.TemplateModule
 import typingsSlinky.grunt.grunt.util.UtilModule
 import typingsSlinky.grunt.node.NodePackage
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

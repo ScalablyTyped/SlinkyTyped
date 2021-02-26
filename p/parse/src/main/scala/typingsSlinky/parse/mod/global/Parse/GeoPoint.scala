@@ -2,6 +2,7 @@ package typingsSlinky.parse.mod.global.Parse
 
 import typingsSlinky.parse.anon.Latitude
 import typingsSlinky.parse.mod.global.Parse.Schema._FieldType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

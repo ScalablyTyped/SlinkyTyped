@@ -9,6 +9,7 @@ import typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.tran
 import typingsSlinky.ckeditorCkeditor5Engine.mod.model.operation.Operation
 import typingsSlinky.ckeditorCkeditor5Utils.mod.Emitter
 import typingsSlinky.ckeditorCkeditor5Utils.mod.Observable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,19 +43,19 @@ class Model () extends Observable {
   def hasContent(rangeOrElement: Range): Boolean = js.native
   
   def insertContent(content: DocumentFragment): Unit = js.native
+  def insertContent(content: DocumentFragment, selectable: js.Iterable[Range]): Unit = js.native
   def insertContent(content: DocumentFragment, selectable: DocumentSelection): Unit = js.native
   def insertContent(content: DocumentFragment, selectable: Element): Unit = js.native
   def insertContent(content: DocumentFragment, selectable: Position): Unit = js.native
   def insertContent(content: DocumentFragment, selectable: Range): Unit = js.native
   def insertContent(content: DocumentFragment, selectable: Selection): Unit = js.native
-  def insertContent(content: DocumentFragment, selectable: js.Iterable[Range]): Unit = js.native
   def insertContent(content: Item): Unit = js.native
+  def insertContent(content: Item, selectable: js.Iterable[Range]): Unit = js.native
   def insertContent(content: Item, selectable: DocumentSelection): Unit = js.native
   def insertContent(content: Item, selectable: Element): Unit = js.native
   def insertContent(content: Item, selectable: Position): Unit = js.native
   def insertContent(content: Item, selectable: Range): Unit = js.native
   def insertContent(content: Item, selectable: Selection): Unit = js.native
-  def insertContent(content: Item, selectable: js.Iterable[Range]): Unit = js.native
   
   def listenTo(emitter: Emitter, event: String, callback: js.Function, options: Priority): Unit = js.native
   

@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientAdsense.gapi.client.adsense
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAdsense.anon.Dimension
 import typingsSlinky.maximMazurokGapiClientAdsense.anon.EndDate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReportsResource extends js.Object {
+trait ReportsResource extends StObject {
   
   /**
     * Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query

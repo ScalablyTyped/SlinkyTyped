@@ -1,12 +1,13 @@
 package typingsSlinky.sipJs.mod.Core
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js", "Core.SignalingState")
 @js.native
-object SignalingState extends js.Object {
+object SignalingState extends StObject {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.sipJs.sessionSessionMod.SignalingState with String] = js.native

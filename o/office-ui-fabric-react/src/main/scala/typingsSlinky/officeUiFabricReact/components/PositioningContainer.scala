@@ -12,6 +12,7 @@ import typingsSlinky.officeUiFabricReact.positioningTypesMod.IPositionedData
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import typingsSlinky.uifabricUtilities.pointMod.Point
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object PositioningContainer {
   
   @JSImport("office-ui-fabric-react/lib/components/Coachmark/PositioningContainer/PositioningContainer", "PositioningContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,13 +50,13 @@ object PositioningContainer {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IPositioningContainer]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IPositioningContainer | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IPositioningContainer]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IPositioningContainer]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def coverTarget(value: Boolean): this.type = set("coverTarget", value.asInstanceOf[js.Any])
@@ -106,13 +107,13 @@ object PositioningContainer {
     def setInitialFocus(value: Boolean): this.type = set("setInitialFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def targetMouseEvent(value: MouseEvent): this.type = set("target", value.asInstanceOf[js.Any])
+    def target(value: HTMLElement | String | MouseEvent | Point): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def target(value: HTMLElement | String | MouseEvent | Point): this.type = set("target", value.asInstanceOf[js.Any])
+    def targetMouseEvent(value: MouseEvent): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def targetNull: this.type = set("target", null)
@@ -124,7 +125,7 @@ object PositioningContainer {
     def useTargetPoint(value: Boolean): this.type = set("useTargetPoint", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IPositioningContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: PositioningContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IPositioningContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientAccesscontextmanager.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientAccesscontextmanager.anon.UpdateMask
 import typingsSlinky.maximMazurokGapiClientAccesscontextmanager.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientAccesscontextmanager.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AccessPoliciesResource extends js.Object {
+trait AccessPoliciesResource extends StObject {
   
   var accessLevels: AccessLevelsResource = js.native
   

@@ -5,13 +5,12 @@ import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Extract
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@emotion/styled-base/types/helper", JSImport.Namespace)
-@js.native
-object helperMod extends js.Object {
+object helperMod {
   
   type Omit[T, U] = Pick[T, Exclude[/* keyof T */ String, U]]
   

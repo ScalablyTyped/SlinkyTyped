@@ -29,15 +29,22 @@ import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNativeWindows.glyphPropsMod.GlyphProps
 import typingsSlinky.reactNativeWindows.glyphPropsMod.GlyphStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Glyph {
   
+  @scala.inline
+  def apply(fontUri: String, glyph: String): Builder = {
+    val __props = js.Dynamic.literal(fontUri = fontUri.asInstanceOf[js.Any], glyph = glyph.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[GlyphProps]))
+  }
+  
   @JSImport("react-native-windows", "Glyph")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,10 +52,10 @@ object Glyph {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeWindows.mod.Glyph] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -75,10 +82,10 @@ object Glyph {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -223,10 +230,4 @@ object Glyph {
   }
   
   def withProps(p: GlyphProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(fontUri: String, glyph: String): Builder = {
-    val __props = js.Dynamic.literal(fontUri = fontUri.asInstanceOf[js.Any], glyph = glyph.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[GlyphProps]))
-  }
 }

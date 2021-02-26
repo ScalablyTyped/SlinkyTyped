@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientYoutube.anon.Alt
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.PartPrettyPrint
 import typingsSlinky.maximMazurokGapiClientYoutube.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LiveChatModeratorsResource extends js.Object {
+trait LiveChatModeratorsResource extends StObject {
   
   /** Deletes a chat moderator. */
   def delete(): Request[Unit] = js.native

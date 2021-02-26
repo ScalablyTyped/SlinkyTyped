@@ -10,9 +10,9 @@ Webpack Virtual Modules
 | ------------------ | :-------------: |
 | Full name          | webpack-virtual-modules |
 | Keywords           | webpack, webpack-plugin, virtual, modules |
-| # releases         | 7 |
-| # dependents       | 34 |
-| # downloads        | 818048 |
+| # releases         | 11 |
+| # dependents       | 78 |
+| # downloads        | 64111117 |
 | # stars            | 0 |
 
 ## Links

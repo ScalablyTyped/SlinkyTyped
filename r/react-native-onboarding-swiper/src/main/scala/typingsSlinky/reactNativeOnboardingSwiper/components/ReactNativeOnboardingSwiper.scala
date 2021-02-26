@@ -15,15 +15,22 @@ import typingsSlinky.reactNativeOnboardingSwiper.mod.Page
 import typingsSlinky.reactNativeOnboardingSwiper.mod.Props
 import typingsSlinky.reactNativeOnboardingSwiper.mod.SkipButtonProps
 import typingsSlinky.reactNativeOnboardingSwiper.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeOnboardingSwiper {
   
+  @scala.inline
+  def apply(pages: js.Array[Page]): Builder = {
+    val __props = js.Dynamic.literal(pages = pages.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("react-native-onboarding-swiper", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -73,10 +80,10 @@ object ReactNativeOnboardingSwiper {
     def imageContainerStylesNull: this.type = set("imageContainerStyles", null)
     
     @scala.inline
-    def nextLabelReactElement(value: ReactElement): this.type = set("nextLabel", value.asInstanceOf[js.Any])
+    def nextLabel(value: String | ReactElement): this.type = set("nextLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextLabel(value: String | ReactElement): this.type = set("nextLabel", value.asInstanceOf[js.Any])
+    def nextLabelReactElement(value: ReactElement): this.type = set("nextLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onDone(value: () => _): this.type = set("onDone", js.Any.fromFunction0(value))
@@ -100,10 +107,10 @@ object ReactNativeOnboardingSwiper {
     def showSkip(value: Boolean): this.type = set("showSkip", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def skipLabelReactElement(value: ReactElement): this.type = set("skipLabel", value.asInstanceOf[js.Any])
+    def skipLabel(value: String | ReactElement): this.type = set("skipLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def skipLabel(value: String | ReactElement): this.type = set("skipLabel", value.asInstanceOf[js.Any])
+    def skipLabelReactElement(value: ReactElement): this.type = set("skipLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def skipToPage(value: Double): this.type = set("skipToPage", value.asInstanceOf[js.Any])
@@ -125,10 +132,4 @@ object ReactNativeOnboardingSwiper {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(pages: js.Array[Page]): Builder = {
-    val __props = js.Dynamic.literal(pages = pages.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

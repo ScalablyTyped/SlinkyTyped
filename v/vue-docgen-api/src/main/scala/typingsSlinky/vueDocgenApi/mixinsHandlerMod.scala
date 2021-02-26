@@ -3,14 +3,15 @@ package typingsSlinky.vueDocgenApi
 import typingsSlinky.astTypes.nodePathMod.NodePath
 import typingsSlinky.babelTypes.mod.File_
 import typingsSlinky.vueDocgenApi.parseMod.ParseOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vue-docgen-api/dist/script-handlers/mixinsHandler", JSImport.Namespace)
-@js.native
-object mixinsHandlerMod extends js.Object {
+object mixinsHandlerMod {
   
+  @JSImport("vue-docgen-api/dist/script-handlers/mixinsHandler", JSImport.Default)
+  @js.native
   def default(
     documentation: typingsSlinky.vueDocgenApi.documentationMod.default,
     componentDefinition: NodePath[_, _],

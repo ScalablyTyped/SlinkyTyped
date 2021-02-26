@@ -12,6 +12,7 @@ import typingsSlinky.antd.modalModalMod.ModalProps
 import typingsSlinky.antd.modalModalMod.getContainerFunc
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.PropsWithChildren
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object Modal {
   
   @JSImport("antd", "Modal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,10 +38,10 @@ object Modal {
     def cancelButtonProps(value: ButtonProps): this.type = set("cancelButtonProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelTextReactElement(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
+    def cancelText(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cancelText(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
+    def cancelTextReactElement(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def centered(value: Boolean): this.type = set("centered", value.asInstanceOf[js.Any])
@@ -52,10 +53,10 @@ object Modal {
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def confirmLoading(value: Boolean): this.type = set("confirmLoading", value.asInstanceOf[js.Any])
@@ -64,22 +65,22 @@ object Modal {
     def destroyOnClose(value: Boolean): this.type = set("destroyOnClose", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def forceRender(value: Boolean): this.type = set("forceRender", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
+    def getContainer(value: String | HTMLElement | getContainerFunc | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def getContainerFunction0(value: () => HTMLElement): this.type = set("getContainer", js.Any.fromFunction0(value))
     
     @scala.inline
-    def getContainer(value: String | HTMLElement | getContainerFunc | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
+    def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def getContainerNull: this.type = set("getContainer", null)
@@ -106,10 +107,10 @@ object Modal {
     def okButtonProps(value: ButtonProps): this.type = set("okButtonProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    def okText(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okText(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def okType(value: LegacyButtonType): this.type = set("okType", value.asInstanceOf[js.Any])
@@ -127,10 +128,10 @@ object Modal {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement | String): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement | String): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
@@ -151,7 +152,7 @@ object Modal {
     def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PropsWithChildren[ModalProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Modal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PropsWithChildren[ModalProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

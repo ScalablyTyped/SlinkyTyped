@@ -10,9 +10,9 @@ A library for determining credit card type
 | ------------------ | :-------------: |
 | Full name          | credit-card-type |
 | Keywords           | - |
-| # releases         | 10 |
-| # dependents       | 35 |
-| # downloads        | 8615885 |
+| # releases         | 7 |
+| # dependents       | 52 |
+| # downloads        | 13777508 |
 | # stars            | 4 |
 
 ## Links

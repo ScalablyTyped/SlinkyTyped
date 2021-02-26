@@ -10,9 +10,9 @@ Private Key Web3 provider
 | ------------------ | :-------------: |
 | Full name          | truffle-privatekey-provider |
 | Keywords           | ethereum, private key, wallet, provider, truffle provider |
-| # releases         | 13 |
-| # dependents       | 16 |
-| # downloads        | 91931 |
+| # releases         | 6 |
+| # dependents       | 26 |
+| # downloads        | 65071 |
 | # stars            | 0 |
 
 ## Links

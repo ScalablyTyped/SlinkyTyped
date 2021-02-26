@@ -9,6 +9,7 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Size
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Texture
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

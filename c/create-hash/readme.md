@@ -10,9 +10,9 @@ create hashes for browserify
 | ------------------ | :-------------: |
 | Full name          | create-hash |
 | Keywords           | crypto |
-| # releases         | 2 |
-| # dependents       | 573 |
-| # downloads        | 286414672 |
+| # releases         | 0 |
+| # dependents       | 742 |
+| # downloads        | 470503859 |
 | # stars            | 2 |
 
 ## Links

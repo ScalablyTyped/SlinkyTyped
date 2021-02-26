@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeSvg.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeSvg.reactNativeSvgStrings.normal
   - typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`small-caps`
 */
-trait FontVariant extends js.Object
+trait FontVariant extends StObject
 object FontVariant {
   
   @scala.inline

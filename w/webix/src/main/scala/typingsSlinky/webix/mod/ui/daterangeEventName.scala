@@ -1,5 +1,6 @@
 package typingsSlinky.webix.mod.ui
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webix.webixStrings.onTodaySet
   - typingsSlinky.webix.webixStrings.onViewShow
 */
-trait daterangeEventName extends js.Object
+trait daterangeEventName extends StObject
 object daterangeEventName {
   
   @scala.inline

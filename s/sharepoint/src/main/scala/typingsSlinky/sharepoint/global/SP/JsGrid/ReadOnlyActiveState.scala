@@ -1,12 +1,13 @@
 package typingsSlinky.sharepoint.global.SP.JsGrid
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("SP.JsGrid.ReadOnlyActiveState")
 @js.native
-object ReadOnlyActiveState extends js.Object {
+object ReadOnlyActiveState extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.sharepoint.SP.JsGrid.ReadOnlyActiveState with Double] = js.native

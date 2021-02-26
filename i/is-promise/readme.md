@@ -10,13 +10,13 @@ Test whether an object looks like a promises-a+ promise
 | ------------------ | :-------------: |
 | Full name          | is-promise |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 440 |
-| # downloads        | 368294558 |
+| # releases         | 6 |
+| # dependents       | 507 |
+| # downloads        | 479882300 |
 | # stars            | 6 |
 
 ## Links
-- [Homepage](https://github.com/then/is-promise)
+- [Homepage](https://github.com/then/is-promise#readme)
 - [Bugs](https://github.com/then/is-promise/issues)
 - [Repository](https://github.com/then/is-promise)
 - [Npm](https://www.npmjs.com/package/is-promise)

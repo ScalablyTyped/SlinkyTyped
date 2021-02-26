@@ -11,8 +11,8 @@ Dummy package for autocompleting k6 scripts.
 | Full name          | k6 |
 | Keywords           | - |
 | # releases         | 0 |
-| # dependents       | 0 |
-| # downloads        | 31493 |
+| # dependents       | 1 |
+| # downloads        | 165639 |
 | # stars            | 0 |
 
 ## Links

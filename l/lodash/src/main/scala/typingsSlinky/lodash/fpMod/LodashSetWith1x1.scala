@@ -2,12 +2,13 @@ package typingsSlinky.lodash.fpMod
 
 import typingsSlinky.lodash.mod.PropertyPath
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashSetWith1x1[T] extends js.Object {
+trait LodashSetWith1x1[T] extends StObject {
   
   def apply(path: PropertyPath): LodashSetWith1x3[T] = js.native
   def apply(path: PropertyPath, value: js.Any): LodashSetWith1x7[T] = js.native

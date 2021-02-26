@@ -5,16 +5,40 @@ import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.geometryTypeMod.GeometryType
 import typingsSlinky.ol.projMod.ProjectionLike
 import typingsSlinky.ol.projMod.TransformFunction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/render/Feature", JSImport.Namespace)
-@js.native
-object renderFeatureMod extends js.Object {
+object renderFeatureMod {
+  
+  @JSImport("ol/render/Feature", JSImport.Default)
+  @js.native
+  class default protected () extends RenderFeature {
+    def this(
+      `type`: GeometryType,
+      flatCoordinates: js.Array[Double],
+      ends: js.Array[js.Array[Double] | Double],
+      properties: StringDictionary[js.Any]
+    ) = this()
+    def this(
+      `type`: GeometryType,
+      flatCoordinates: js.Array[Double],
+      ends: js.Array[js.Array[Double] | Double],
+      properties: StringDictionary[js.Any],
+      id: String
+    ) = this()
+    def this(
+      `type`: GeometryType,
+      flatCoordinates: js.Array[Double],
+      ends: js.Array[js.Array[Double] | Double],
+      properties: StringDictionary[js.Any],
+      id: Double
+    ) = this()
+  }
   
   @js.native
-  trait RenderFeature extends js.Object {
+  trait RenderFeature extends StObject {
     
     /**
       * Get a feature property by its key.
@@ -77,29 +101,5 @@ object renderFeatureMod extends js.Object {
       * The SRS of the source and destination are expected to be the same.
       */
     def transform(source: ProjectionLike, destination: ProjectionLike): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends RenderFeature {
-    def this(
-      `type`: GeometryType,
-      flatCoordinates: js.Array[Double],
-      ends: js.Array[js.Array[Double] | Double],
-      properties: StringDictionary[js.Any]
-    ) = this()
-    def this(
-      `type`: GeometryType,
-      flatCoordinates: js.Array[Double],
-      ends: js.Array[js.Array[Double] | Double],
-      properties: StringDictionary[js.Any],
-      id: String
-    ) = this()
-    def this(
-      `type`: GeometryType,
-      flatCoordinates: js.Array[Double],
-      ends: js.Array[js.Array[Double] | Double],
-      properties: StringDictionary[js.Any],
-      id: Double
-    ) = this()
   }
 }

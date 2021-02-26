@@ -10,16 +10,14 @@ import typingsSlinky.uirouterCore.stateInterfaceMod._StateDeclaration
 import typingsSlinky.uirouterCore.stateRegistryMod.StateRegistryListener
 import typingsSlinky.uirouterCore.transitionInterfaceMod.TransitionOptions
 import typingsSlinky.uirouterCore.urlMatcherFactoryMod.UrlMatcherFactory
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/core/lib/state", JSImport.Namespace)
-@js.native
-object stateMod extends js.Object {
+object stateMod {
   
-  def resolvablesBuilder(state: typingsSlinky.uirouterCore.stateObjectMod.StateObject): js.Array[Resolvable] = js.native
-  
+  @JSImport("@uirouter/core/lib/state", "StateBuilder")
   @js.native
   class StateBuilder protected ()
     extends typingsSlinky.uirouterCore.stateBuilderMod.StateBuilder {
@@ -29,12 +27,14 @@ object stateMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("@uirouter/core/lib/state", "StateMatcher")
   @js.native
   class StateMatcher protected ()
     extends typingsSlinky.uirouterCore.stateMatcherMod.StateMatcher {
     def this(_states: StringDictionary[typingsSlinky.uirouterCore.stateObjectMod.StateObject]) = this()
   }
   
+  @JSImport("@uirouter/core/lib/state", "StateObject")
   @js.native
   /** @deprecated use State.create() */
   class StateObject ()
@@ -42,8 +42,7 @@ object stateMod extends js.Object {
     def this(config: StateDeclaration) = this()
   }
   /* static members */
-  @js.native
-  object StateObject extends js.Object {
+  object StateObject {
     
     /**
       * Create a state object to put the private/internal implementation details onto.
@@ -53,18 +52,27 @@ object stateMod extends js.Object {
       * @param stateDecl the user-supplied State Declaration
       * @returns {StateObject} an internal State object
       */
+    @JSImport("@uirouter/core/lib/state", "StateObject.create")
+    @js.native
     def create(stateDecl: _StateDeclaration): typingsSlinky.uirouterCore.stateObjectMod.StateObject = js.native
     
     /** Predicate which returns true if the object is an internal [[StateObject]] object */
+    @JSImport("@uirouter/core/lib/state", "StateObject.isState")
+    @js.native
     def isState(obj: js.Any): /* is @uirouter/core.@uirouter/core/lib/state/stateObject.StateObject */ Boolean = js.native
     
     /** Predicate which returns true if the object is an class with @State() decorator */
+    @JSImport("@uirouter/core/lib/state", "StateObject.isStateClass")
+    @js.native
     def isStateClass(stateDecl: _StateDeclaration): Boolean = js.native
     
     /** Predicate which returns true if the object is a [[StateDeclaration]] object */
+    @JSImport("@uirouter/core/lib/state", "StateObject.isStateDeclaration")
+    @js.native
     def isStateDeclaration(obj: js.Any): /* is @uirouter/core.@uirouter/core/lib/state/interface.StateDeclaration */ Boolean = js.native
   }
   
+  @JSImport("@uirouter/core/lib/state", "StateQueueManager")
   @js.native
   class StateQueueManager protected ()
     extends typingsSlinky.uirouterCore.stateQueueManagerMod.StateQueueManager {
@@ -76,6 +84,7 @@ object stateMod extends js.Object {
     ) = this()
   }
   
+  @JSImport("@uirouter/core/lib/state", "StateRegistry")
   @js.native
   class StateRegistry protected ()
     extends typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry {
@@ -83,6 +92,7 @@ object stateMod extends js.Object {
     def this(router: UIRouter) = this()
   }
   
+  @JSImport("@uirouter/core/lib/state", "StateService")
   @js.native
   class StateService protected ()
     extends typingsSlinky.uirouterCore.stateServiceMod.StateService {
@@ -90,6 +100,7 @@ object stateMod extends js.Object {
     def this(/** @internal */ router: UIRouter) = this()
   }
   
+  @JSImport("@uirouter/core/lib/state", "TargetState")
   @js.native
   class TargetState protected ()
     extends typingsSlinky.uirouterCore.targetStateMod.TargetState {
@@ -130,10 +141,15 @@ object stateMod extends js.Object {
     ) = this()
   }
   /* static members */
-  @js.native
-  object TargetState extends js.Object {
+  object TargetState {
     
     /** Returns true if the object has a state property that might be a state or state name */
+    @JSImport("@uirouter/core/lib/state", "TargetState.isDef")
+    @js.native
     def isDef(obj: js.Any): /* is @uirouter/core.@uirouter/core/lib/state/interface.TargetStateDef */ Boolean = js.native
   }
+  
+  @JSImport("@uirouter/core/lib/state", "resolvablesBuilder")
+  @js.native
+  def resolvablesBuilder(state: typingsSlinky.uirouterCore.stateObjectMod.StateObject): js.Array[Resolvable] = js.native
 }

@@ -86,15 +86,22 @@ import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.tree
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.url
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.vertical
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactPhoneNumberInput {
   
+  @scala.inline
+  def apply(onChange: String => Unit, value: String): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PhoneInputProps]))
+  }
+  
   @JSImport("react-phone-number-input", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -296,28 +303,28 @@ object ReactPhoneNumberInput {
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def countriesVarargs(value: String*): this.type = set("countries", js.Array(value :_*))
+    def countries(value: js.Array[String]): this.type = set("countries", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def countries(value: js.Array[String]): this.type = set("countries", value.asInstanceOf[js.Any])
+    def countriesVarargs(value: String*): this.type = set("countries", js.Array(value :_*))
     
     @scala.inline
     def country(value: String): this.type = set("country", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def countryOptionsOrderVarargs(value: String*): this.type = set("countryOptionsOrder", js.Array(value :_*))
-    
-    @scala.inline
     def countryOptionsOrder(value: js.Array[String]): this.type = set("countryOptionsOrder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def countrySelectComponentFunctionComponent(value: ReactComponentClass[CountrySelectComponentProps]): this.type = set("countrySelectComponent", value.asInstanceOf[js.Any])
+    def countryOptionsOrderVarargs(value: String*): this.type = set("countryOptionsOrder", js.Array(value :_*))
+    
+    @scala.inline
+    def countrySelectComponent(value: ReactComponentClass[CountrySelectComponentProps]): this.type = set("countrySelectComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def countrySelectComponentComponentClass(value: ReactComponentClass[CountrySelectComponentProps]): this.type = set("countrySelectComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def countrySelectComponent(value: ReactComponentClass[CountrySelectComponentProps]): this.type = set("countrySelectComponent", value.asInstanceOf[js.Any])
+    def countrySelectComponentFunctionComponent(value: ReactComponentClass[CountrySelectComponentProps]): this.type = set("countrySelectComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def countrySelectProps(value: js.Object): this.type = set("countrySelectProps", value.asInstanceOf[js.Any])
@@ -338,10 +345,10 @@ object ReactPhoneNumberInput {
     def defaultCountry(value: String): this.type = set("defaultCountry", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -362,13 +369,13 @@ object ReactPhoneNumberInput {
     def error(value: String): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def flagComponentFunctionComponent(value: ReactComponentClass[Country]): this.type = set("flagComponent", value.asInstanceOf[js.Any])
+    def flagComponent(value: ReactComponentClass[Country]): this.type = set("flagComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def flagComponentComponentClass(value: ReactComponentClass[Country]): this.type = set("flagComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def flagComponent(value: ReactComponentClass[Country]): this.type = set("flagComponent", value.asInstanceOf[js.Any])
+    def flagComponentFunctionComponent(value: ReactComponentClass[Country]): this.type = set("flagComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def flagUrl(value: String): this.type = set("flagUrl", value.asInstanceOf[js.Any])
@@ -419,13 +426,13 @@ object ReactPhoneNumberInput {
     def international(value: Boolean): this.type = set("international", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def internationalIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("internationalIcon", value.asInstanceOf[js.Any])
+    def internationalIcon(value: ReactComponentClass[js.Object]): this.type = set("internationalIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def internationalIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("internationalIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def internationalIcon(value: ReactComponentClass[js.Object]): this.type = set("internationalIcon", value.asInstanceOf[js.Any])
+    def internationalIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("internationalIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -807,10 +814,4 @@ object ReactPhoneNumberInput {
   }
   
   def withProps(p: PhoneInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onChange: String => Unit, value: String): Builder = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PhoneInputProps]))
-  }
 }

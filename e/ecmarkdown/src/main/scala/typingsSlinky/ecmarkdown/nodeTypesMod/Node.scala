@@ -14,6 +14,7 @@ import typingsSlinky.ecmarkdown.ecmarkdownStrings.tick
 import typingsSlinky.ecmarkdown.ecmarkdownStrings.tilde
 import typingsSlinky.ecmarkdown.ecmarkdownStrings.ul
 import typingsSlinky.ecmarkdown.ecmarkdownStrings.underscore
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,49 +35,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ecmarkdown.nodeTypesMod.UnorderedListItemNode
   - typingsSlinky.ecmarkdown.nodeTypesMod.OrderedListItemNode
 */
-trait Node extends js.Object
+trait Node extends StObject
 object Node {
   
   @scala.inline
-  def OpaqueTagNode(contents: String, location: LocationRange, name: opaqueTag): Node = {
+  def AlgorithmNode(contents: OrderedListNode, location: LocationRange, name: algorithm): typingsSlinky.ecmarkdown.nodeTypesMod.AlgorithmNode = {
     val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.AlgorithmNode]
   }
   
   @scala.inline
-  def StarNode(contents: js.Array[FragmentNode], location: LocationRange, name: star): Node = {
+  def CommentNode(contents: String, location: LocationRange, name: comment): typingsSlinky.ecmarkdown.nodeTypesMod.CommentNode = {
     val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.CommentNode]
   }
   
   @scala.inline
-  def OrderedListItemNode(contents: js.Array[FragmentNode], location: LocationRange, name: `ordered-list-item`): Node = {
+  def OpaqueTagNode(contents: String, location: LocationRange, name: opaqueTag): typingsSlinky.ecmarkdown.nodeTypesMod.OpaqueTagNode = {
     val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.OpaqueTagNode]
   }
   
   @scala.inline
-  def TagNode(contents: String, location: LocationRange, name: tag): Node = {
+  def OrderedListItemNode(contents: js.Array[FragmentNode], location: LocationRange, name: `ordered-list-item`): typingsSlinky.ecmarkdown.nodeTypesMod.OrderedListItemNode = {
     val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
-  }
-  
-  @scala.inline
-  def AlgorithmNode(contents: OrderedListNode, location: LocationRange, name: algorithm): Node = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
-  }
-  
-  @scala.inline
-  def TextNode(contents: String, location: LocationRange, name: text): Node = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
-  }
-  
-  @scala.inline
-  def UnorderedListItemNode(contents: js.Array[FragmentNode], location: LocationRange, name: `unordered-list-item`): Node = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.OrderedListItemNode]
   }
   
   @scala.inline
@@ -86,39 +69,9 @@ object Node {
     location: LocationRange,
     name: ol,
     start: Double
-  ): Node = {
+  ): typingsSlinky.ecmarkdown.nodeTypesMod.OrderedListNode = {
     val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], indent = indent.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
-  }
-  
-  @scala.inline
-  def UnorderedListNode(contents: js.Array[UnorderedListItemNode], indent: Double, location: LocationRange, name: ul): Node = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], indent = indent.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
-  }
-  
-  @scala.inline
-  def TickNode(contents: js.Array[FragmentNode], location: LocationRange, name: tick): Node = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
-  }
-  
-  @scala.inline
-  def CommentNode(contents: String, location: LocationRange, name: comment): Node = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
-  }
-  
-  @scala.inline
-  def UnderscoreNode(contents: js.Array[FragmentNode], location: LocationRange, name: underscore): Node = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
-  }
-  
-  @scala.inline
-  def TildeNode(contents: js.Array[FragmentNode], location: LocationRange, name: tilde): Node = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.OrderedListNode]
   }
   
   @scala.inline
@@ -129,8 +82,56 @@ object Node {
     nonTerminal: String,
     optional: Boolean,
     params: String
-  ): Node = {
+  ): typingsSlinky.ecmarkdown.nodeTypesMod.PipeNode = {
     val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nonTerminal = nonTerminal.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.PipeNode]
+  }
+  
+  @scala.inline
+  def StarNode(contents: js.Array[FragmentNode], location: LocationRange, name: star): typingsSlinky.ecmarkdown.nodeTypesMod.StarNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.StarNode]
+  }
+  
+  @scala.inline
+  def TagNode(contents: String, location: LocationRange, name: tag): typingsSlinky.ecmarkdown.nodeTypesMod.TagNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.TagNode]
+  }
+  
+  @scala.inline
+  def TextNode(contents: String, location: LocationRange, name: text): typingsSlinky.ecmarkdown.nodeTypesMod.TextNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.TextNode]
+  }
+  
+  @scala.inline
+  def TickNode(contents: js.Array[FragmentNode], location: LocationRange, name: tick): typingsSlinky.ecmarkdown.nodeTypesMod.TickNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.TickNode]
+  }
+  
+  @scala.inline
+  def TildeNode(contents: js.Array[FragmentNode], location: LocationRange, name: tilde): typingsSlinky.ecmarkdown.nodeTypesMod.TildeNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.TildeNode]
+  }
+  
+  @scala.inline
+  def UnderscoreNode(contents: js.Array[FragmentNode], location: LocationRange, name: underscore): typingsSlinky.ecmarkdown.nodeTypesMod.UnderscoreNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.UnderscoreNode]
+  }
+  
+  @scala.inline
+  def UnorderedListItemNode(contents: js.Array[FragmentNode], location: LocationRange, name: `unordered-list-item`): typingsSlinky.ecmarkdown.nodeTypesMod.UnorderedListItemNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.UnorderedListItemNode]
+  }
+  
+  @scala.inline
+  def UnorderedListNode(contents: js.Array[UnorderedListItemNode], indent: Double, location: LocationRange, name: ul): typingsSlinky.ecmarkdown.nodeTypesMod.UnorderedListNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], indent = indent.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.ecmarkdown.nodeTypesMod.UnorderedListNode]
   }
 }

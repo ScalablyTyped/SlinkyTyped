@@ -1,6 +1,7 @@
 package typingsSlinky.twitterForWeb
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * The interface for Twitter for Websites widgets.
   */
 @js.native
-trait TwitterWidgets extends js.Object {
+trait TwitterWidgets extends StObject {
   
   /**
     * Create a follow button for a user.
@@ -80,11 +81,11 @@ trait TwitterWidgets extends js.Object {
     */
   def load(): Unit = js.native
   /**
-    * Initialize Twitter for Websites widgets contained within children of the elements.
-    */
-  def load(elements: js.Array[HTMLElement]): Unit = js.native
-  /**
     * Initialize Twitter for Websites widgets contained within children of the element.
     */
   def load(element: HTMLElement): Unit = js.native
+  /**
+    * Initialize Twitter for Websites widgets contained within children of the elements.
+    */
+  def load(elements: js.Array[HTMLElement]): Unit = js.native
 }

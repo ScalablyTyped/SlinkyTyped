@@ -10,9 +10,9 @@ A library for efficiently walking a directory recursively
 | ------------------ | :-------------: |
 | Full name          | @nodelib/fs.walk |
 | Keywords           | NodeLib, fs, FileSystem, file system, walk, scanner, crawler |
-| # releases         | 11 |
-| # dependents       | 1 |
-| # downloads        | 27011653 |
+| # releases         | 13 |
+| # dependents       | 10 |
+| # downloads        | 279741242 |
 | # stars            | 0 |
 
 ## Links

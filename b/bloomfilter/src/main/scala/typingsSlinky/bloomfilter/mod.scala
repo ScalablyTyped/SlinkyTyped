@@ -1,16 +1,17 @@
 package typingsSlinky.bloomfilter
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("bloomfilter", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("bloomfilter", "BloomFilter")
   @js.native
-  class BloomFilter protected () extends js.Object {
+  class BloomFilter protected () extends StObject {
     def this(m: js.Array[Double], k: Double) = this()
+    def this(m: js.typedarray.Int32Array, k: Double) = this()
     /**
       * Create a new empty bloom filter of size m with hashes k or
       * provide buckets as a number[] or Int32Array to deserialize a bloom filter
@@ -19,7 +20,6 @@ object mod extends js.Object {
       * @param k number of hashes
       */
     def this(m: Double, k: Double) = this()
-    def this(m: js.typedarray.Int32Array, k: Double) = this()
     
     /**
       * Add a value to a bloom filter

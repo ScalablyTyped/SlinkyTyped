@@ -7,6 +7,7 @@ import typingsSlinky.officeJsPreview.OneNote.Interfaces.ImageData
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.ImageLoadOptions
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.ImageUpdateData
 import typingsSlinky.officeJsPreview.anon.Expand
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

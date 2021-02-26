@@ -10,9 +10,9 @@ Lumino Virtual DOM
 | ------------------ | :-------------: |
 | Full name          | @lumino/virtualdom |
 | Keywords           | - |
-| # releases         | 12 |
-| # dependents       | 7 |
-| # downloads        | 321824 |
+| # releases         | 16 |
+| # dependents       | 18 |
+| # downloads        | 1192671 |
 | # stars            | 0 |
 
 ## Links

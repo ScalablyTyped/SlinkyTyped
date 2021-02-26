@@ -7,12 +7,13 @@ import typingsSlinky.ariClient.anon.LogChannelName
 import typingsSlinky.ariClient.anon.ModuleName
 import typingsSlinky.ariClient.anon.Only
 import typingsSlinky.ariClient.anon.Value
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Asterisk extends js.Object {
+trait Asterisk extends StObject {
   
   /**
     * Adds a log channel.

@@ -4,19 +4,20 @@ import typingsSlinky.d3Selection.mod.BaseType
 import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.d3Slider.d3SliderStrings.slide
 import typingsSlinky.d3Slider.d3SliderStrings.slideend
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
-@JSImport("d3", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("d3", "slider")
+  @js.native
   def slider(): Slider_ = js.native
   
   @js.native
-  trait Slider_ extends js.Object {
+  trait Slider_ extends StObject {
     
     def apply(
       sel: Selection_[

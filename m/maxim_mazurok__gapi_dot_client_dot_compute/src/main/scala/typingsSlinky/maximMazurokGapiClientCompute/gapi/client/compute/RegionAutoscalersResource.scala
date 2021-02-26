@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.AutoscalerFields
 import typingsSlinky.maximMazurokGapiClientCompute.anon.AutoscalerFieldsKey
 import typingsSlinky.maximMazurokGapiClientCompute.anon.Filter
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RegionRequestIdResource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RegionAutoscalersResource extends js.Object {
+trait RegionAutoscalersResource extends StObject {
   
   /** Deletes the specified autoscaler. */
   def delete(): Request[Operation] = js.native

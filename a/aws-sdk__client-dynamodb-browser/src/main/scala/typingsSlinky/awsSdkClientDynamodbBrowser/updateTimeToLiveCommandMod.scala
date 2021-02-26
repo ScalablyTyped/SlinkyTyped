@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientDynamodbBrowser.typesUpdateTimeToLiveInputMod.U
 import typingsSlinky.awsSdkClientDynamodbBrowser.typesUpdateTimeToLiveOutputMod.UpdateTimeToLiveOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-browser/commands/UpdateTimeToLiveCommand", JSImport.Namespace)
-@js.native
-object updateTimeToLiveCommandMod extends js.Object {
+object updateTimeToLiveCommandMod {
   
+  @JSImport("@aws-sdk/client-dynamodb-browser/commands/UpdateTimeToLiveCommand", "UpdateTimeToLiveCommand")
   @js.native
   class UpdateTimeToLiveCommand protected () extends Command[
           InputTypesUnion, 

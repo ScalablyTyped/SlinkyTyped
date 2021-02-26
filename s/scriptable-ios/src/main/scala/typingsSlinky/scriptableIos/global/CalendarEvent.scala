@@ -1,5 +1,6 @@
 package typingsSlinky.scriptableIos.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,10 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 class CalendarEvent ()
   extends typingsSlinky.scriptableIos.CalendarEvent
-/* static members */
-@JSGlobal("CalendarEvent")
-@js.native
-object CalendarEvent extends js.Object {
+object CalendarEvent {
   
   /**
     * _Events that occurs between two dates._
@@ -32,7 +30,12 @@ object CalendarEvent extends js.Object {
     * @param calendars - Calendars to fetch events for. Defaults to all calendars.
     * @see https://docs.scriptable.app/calendarevent/#between
     */
+  /* static member */
+  @JSGlobal("CalendarEvent.between")
+  @js.native
   def between(startDate: js.Date, endDate: js.Date): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
+  @JSGlobal("CalendarEvent.between")
+  @js.native
   def between(startDate: js.Date, endDate: js.Date, calendars: js.Array[typingsSlinky.scriptableIos.Calendar]): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
   
   /**
@@ -40,7 +43,12 @@ object CalendarEvent extends js.Object {
     * @param calendars - Calendars to fetch events for. Defaults to all calendars.
     * @see https://docs.scriptable.app/calendarevent/#lastweek
     */
+  /* static member */
+  @JSGlobal("CalendarEvent.lastWeek")
+  @js.native
   def lastWeek(): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
+  @JSGlobal("CalendarEvent.lastWeek")
+  @js.native
   def lastWeek(calendars: js.Array[typingsSlinky.scriptableIos.Calendar]): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
   
   /**
@@ -48,7 +56,12 @@ object CalendarEvent extends js.Object {
     * @param calendars - Calendars to fetch events for. Defaults to all calendars.
     * @see https://docs.scriptable.app/calendarevent/#nextweek
     */
+  /* static member */
+  @JSGlobal("CalendarEvent.nextWeek")
+  @js.native
   def nextWeek(): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
+  @JSGlobal("CalendarEvent.nextWeek")
+  @js.native
   def nextWeek(calendars: js.Array[typingsSlinky.scriptableIos.Calendar]): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
   
   /**
@@ -57,6 +70,9 @@ object CalendarEvent extends js.Object {
     * The presented view supports editing various attributes of the event, including title, location, dates, recurrence and alerts.
     * @see https://docs.scriptable.app/calendarevent/#presentcreate
     */
+  /* static member */
+  @JSGlobal("CalendarEvent.presentCreate")
+  @js.native
   def presentCreate(): js.Promise[typingsSlinky.scriptableIos.CalendarEvent] = js.native
   
   /**
@@ -64,7 +80,12 @@ object CalendarEvent extends js.Object {
     * @param calendars - Calendars to fetch events for. Defaults to all calendars.
     * @see https://docs.scriptable.app/calendarevent/#thisweek
     */
+  /* static member */
+  @JSGlobal("CalendarEvent.thisWeek")
+  @js.native
   def thisWeek(): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
+  @JSGlobal("CalendarEvent.thisWeek")
+  @js.native
   def thisWeek(calendars: js.Array[typingsSlinky.scriptableIos.Calendar]): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
   
   /**
@@ -72,7 +93,12 @@ object CalendarEvent extends js.Object {
     * @param calendars - Calendars to fetch events for. Defaults to all calendars.
     * @see https://docs.scriptable.app/calendarevent/#today
     */
+  /* static member */
+  @JSGlobal("CalendarEvent.today")
+  @js.native
   def today(): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
+  @JSGlobal("CalendarEvent.today")
+  @js.native
   def today(calendars: js.Array[typingsSlinky.scriptableIos.Calendar]): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
   
   /**
@@ -80,7 +106,12 @@ object CalendarEvent extends js.Object {
     * @param calendars - Calendars to fetch events for. Defaults to all calendars.
     * @see https://docs.scriptable.app/calendarevent/#tomorrow
     */
+  /* static member */
+  @JSGlobal("CalendarEvent.tomorrow")
+  @js.native
   def tomorrow(): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
+  @JSGlobal("CalendarEvent.tomorrow")
+  @js.native
   def tomorrow(calendars: js.Array[typingsSlinky.scriptableIos.Calendar]): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
   
   /**
@@ -88,6 +119,11 @@ object CalendarEvent extends js.Object {
     * @param calendars - Calendars to fetch events for. Defaults to all calendars.
     * @see https://docs.scriptable.app/calendarevent/#yesterday
     */
+  /* static member */
+  @JSGlobal("CalendarEvent.yesterday")
+  @js.native
   def yesterday(): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
+  @JSGlobal("CalendarEvent.yesterday")
+  @js.native
   def yesterday(calendars: js.Array[typingsSlinky.scriptableIos.Calendar]): js.Promise[js.Array[typingsSlinky.scriptableIos.CalendarEvent]] = js.native
 }

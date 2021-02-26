@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.global.SP
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +9,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ClientUtility ()
   extends typingsSlinky.sharepoint.SP.ClientUtility
-/* static members */
-@JSGlobal("SP.ClientUtility")
-@js.native
-object ClientUtility extends js.Object {
+object ClientUtility {
   
+  /* static member */
+  @JSGlobal("SP.ClientUtility.getOrCreateObjectPathForConstructor")
+  @js.native
   def getOrCreateObjectPathForConstructor(context: typingsSlinky.sharepoint.SP.ClientRuntimeContext, typeId: String, args: js.Array[_]): typingsSlinky.sharepoint.SP.ObjectPath = js.native
   
+  /* static member */
+  @JSGlobal("SP.ClientUtility.urlPathEncodeForXmlHttpRequest")
+  @js.native
   def urlPathEncodeForXmlHttpRequest(url: String): String = js.native
 }

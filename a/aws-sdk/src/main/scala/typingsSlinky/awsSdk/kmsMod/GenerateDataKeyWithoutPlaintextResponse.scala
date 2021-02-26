@@ -1,11 +1,12 @@
 package typingsSlinky.awsSdk.kmsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GenerateDataKeyWithoutPlaintextResponse extends js.Object {
+trait GenerateDataKeyWithoutPlaintextResponse extends StObject {
   
   /**
     * The encrypted data key. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
@@ -26,33 +27,21 @@ object GenerateDataKeyWithoutPlaintextResponse {
   }
   
   @scala.inline
-  implicit class GenerateDataKeyWithoutPlaintextResponseOps[Self <: GenerateDataKeyWithoutPlaintextResponse] (val x: Self) extends AnyVal {
+  implicit class GenerateDataKeyWithoutPlaintextResponseMutableBuilder[Self <: GenerateDataKeyWithoutPlaintextResponse] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCiphertextBlob(value: CiphertextType): Self = StObject.set(x, "CiphertextBlob", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setCiphertextBlobUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "CiphertextBlob", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setCiphertextBlobUndefined: Self = StObject.set(x, "CiphertextBlob", js.undefined)
     
     @scala.inline
-    def setCiphertextBlobUint8Array(value: js.typedarray.Uint8Array): Self = this.set("CiphertextBlob", value.asInstanceOf[js.Any])
+    def setKeyId(value: KeyIdType): Self = StObject.set(x, "KeyId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCiphertextBlob(value: CiphertextType): Self = this.set("CiphertextBlob", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCiphertextBlob: Self = this.set("CiphertextBlob", js.undefined)
-    
-    @scala.inline
-    def setKeyId(value: KeyIdType): Self = this.set("KeyId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteKeyId: Self = this.set("KeyId", js.undefined)
+    def setKeyIdUndefined: Self = StObject.set(x, "KeyId", js.undefined)
   }
 }

@@ -9,12 +9,13 @@ import typingsSlinky.maximMazurokGapiClientArtifactregistry.anon.Parent
 import typingsSlinky.maximMazurokGapiClientArtifactregistry.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientArtifactregistry.anon.Resource
 import typingsSlinky.maximMazurokGapiClientArtifactregistry.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RepositoriesResource extends js.Object {
+trait RepositoriesResource extends StObject {
   
   /** Creates a repository. The returned Operation will finish once the repository has been created. Its response will be the created Repository. */
   def create(request: Parent): Request[Operation] = js.native

@@ -9,21 +9,24 @@ import typingsSlinky.reactSelect.typesMod.ClassNamesState
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.ValueType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-select/src/animated/ValueContainer", JSImport.Namespace)
-@js.native
-object valueContainerMod extends js.Object {
+object valueContainerMod {
   
-  def AnimatedValueContainer[OptionType /* <: OptionTypeBase */](WrappedComponent: ReactComponentClass[ValueContainerProps[OptionType]]): ReactComponentClass[AnimatedValueContainerProps[OptionType]] = js.native
-  
+  @JSImport("react-select/src/animated/ValueContainer", JSImport.Default)
+  @js.native
   def default[OptionType /* <: OptionTypeBase */](WrappedComponent: ReactComponentClass[ValueContainerProps[OptionType]]): ReactComponentClass[AnimatedValueContainerProps[OptionType]] = js.native
+  
+  @JSImport("react-select/src/animated/ValueContainer", "AnimatedValueContainer")
+  @js.native
+  def AnimatedValueContainer[OptionType /* <: OptionTypeBase */](WrappedComponent: ReactComponentClass[ValueContainerProps[OptionType]]): ReactComponentClass[AnimatedValueContainerProps[OptionType]] = js.native
   
   /* Inlined react-select.react-select/src/components/containers.ValueContainerProps<OptionType> */
   @js.native
-  trait AnimatedValueContainerProps[OptionType /* <: OptionTypeBase */] extends js.Object {
+  trait AnimatedValueContainerProps[OptionType /* <: OptionTypeBase */] extends StObject {
     
     /** The children to be rendered. */
     var children: ReactElement = js.native

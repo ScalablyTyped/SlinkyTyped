@@ -10,9 +10,9 @@ Switches between unfetch & node-fetch for client & server.
 | ------------------ | :-------------: |
 | Full name          | isomorphic-unfetch |
 | Keywords           | - |
-| # releases         | 4 |
-| # dependents       | 308 |
-| # downloads        | 9337279 |
+| # releases         | 2 |
+| # dependents       | 439 |
+| # downloads        | 14583429 |
 | # stars            | 3 |
 
 ## Links

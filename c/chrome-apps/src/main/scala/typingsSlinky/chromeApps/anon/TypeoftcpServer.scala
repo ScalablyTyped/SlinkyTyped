@@ -7,12 +7,13 @@ import typingsSlinky.chromeApps.chrome.sockets.AcceptEventArgs
 import typingsSlinky.chromeApps.chrome.sockets.CreateInfo
 import typingsSlinky.chromeApps.chrome.sockets.tcpServer.SocketInfo
 import typingsSlinky.chromeApps.chrome.sockets.tcpServer.SocketProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeoftcpServer extends js.Object {
+trait TypeoftcpServer extends StObject {
   
   /**
     * Disconnects and destroys the socket. Each socket created should be closed

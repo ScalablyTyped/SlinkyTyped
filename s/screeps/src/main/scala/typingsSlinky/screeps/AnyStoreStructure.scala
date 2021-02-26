@@ -1,5 +1,6 @@
 package typingsSlinky.screeps
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,4 +18,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.screeps.StructureTower
   - typingsSlinky.screeps.StructureContainer
 */
-trait AnyStoreStructure extends js.Object
+trait AnyStoreStructure extends StObject

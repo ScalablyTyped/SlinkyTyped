@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKinesisBrowser.typesPutRecordInputMod.PutRecord
 import typingsSlinky.awsSdkClientKinesisBrowser.typesPutRecordOutputMod.PutRecordOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kinesis-browser/commands/PutRecordCommand", JSImport.Namespace)
-@js.native
-object putRecordCommandMod extends js.Object {
+object putRecordCommandMod {
   
+  @JSImport("@aws-sdk/client-kinesis-browser/commands/PutRecordCommand", "PutRecordCommand")
   @js.native
   class PutRecordCommand protected () extends Command[
           InputTypesUnion, 

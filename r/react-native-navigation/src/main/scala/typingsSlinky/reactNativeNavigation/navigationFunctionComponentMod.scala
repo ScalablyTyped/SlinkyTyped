@@ -3,13 +3,12 @@ package typingsSlinky.reactNativeNavigation
 import typingsSlinky.react.mod.FunctionComponent
 import typingsSlinky.reactNativeNavigation.navigationComponentPropsMod.NavigationComponentProps
 import typingsSlinky.reactNativeNavigation.optionsMod.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-navigation/lib/dist/interfaces/NavigationFunctionComponent", JSImport.Namespace)
-@js.native
-object navigationFunctionComponentMod extends js.Object {
+object navigationFunctionComponentMod {
   
   @js.native
   trait NavigationFunctionComponent[Props] extends FunctionComponent[Props with NavigationComponentProps] {

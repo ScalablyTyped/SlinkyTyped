@@ -1,5 +1,6 @@
 package typingsSlinky.swiper.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.swiper.swiperStrings.paginationRender
   - typingsSlinky.swiper.swiperStrings.paginationUpdate
 */
-trait PaginationEvent extends js.Object
+trait PaginationEvent extends StObject
 object PaginationEvent {
   
   @scala.inline

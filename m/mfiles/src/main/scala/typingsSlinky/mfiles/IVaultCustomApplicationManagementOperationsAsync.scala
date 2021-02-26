@@ -1,12 +1,13 @@
 package typingsSlinky.mfiles
 
 import typingsSlinky.mfiles.MFiles.MFExtApplicationPlatform
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVaultCustomApplicationManagementOperationsAsync extends js.Object {
+trait IVaultCustomApplicationManagementOperationsAsync extends StObject {
   
   def DownloadCustomApplicationBlock(DownloadID: Double, BlockSize: Double, Offset: Double): Unit = js.native
   def DownloadCustomApplicationBlock(

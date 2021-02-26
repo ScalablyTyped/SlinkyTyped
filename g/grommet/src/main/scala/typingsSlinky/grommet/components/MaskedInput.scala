@@ -98,15 +98,16 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.std.Omit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MaskedInput {
   
-  @JSImport("grommet/es6", "MaskedInput")
+  @JSImport("grommet", "MaskedInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -317,10 +318,10 @@ object MaskedInput {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -395,10 +396,10 @@ object MaskedInput {
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maskVarargs(value: Fixed*): this.type = set("mask", js.Array(value :_*))
+    def mask(value: js.Array[Fixed]): this.type = set("mask", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def mask(value: js.Array[Fixed]): this.type = set("mask", value.asInstanceOf[js.Any])
+    def maskVarargs(value: Fixed*): this.type = set("mask", js.Array(value :_*))
     
     @scala.inline
     def max(value: Double | String): this.type = set("max", value.asInstanceOf[js.Any])
@@ -746,12 +747,12 @@ object MaskedInput {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
+  implicit def make(companion: MaskedInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   def withProps(
     p: MaskedInputProps with (Omit[
       DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
       icon | id | mask | name | onBlur | plain | reverse | size | value
     ])
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: MaskedInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

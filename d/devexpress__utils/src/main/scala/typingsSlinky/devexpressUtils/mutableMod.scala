@@ -1,14 +1,14 @@
 package typingsSlinky.devexpressUtils
 
 import typingsSlinky.devexpressUtils.constMod.ConstInterval
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@devexpress/utils/lib/intervals/mutable", JSImport.Namespace)
-@js.native
-object mutableMod extends js.Object {
+object mutableMod {
   
+  @JSImport("@devexpress/utils/lib/intervals/mutable", "MutableInterval")
   @js.native
   abstract class MutableInterval () extends ConstInterval {
     

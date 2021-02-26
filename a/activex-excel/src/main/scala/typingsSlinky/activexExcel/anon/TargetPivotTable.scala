@@ -3,12 +3,13 @@ package typingsSlinky.activexExcel.anon
 import typingsSlinky.activexExcel.Excel.PivotTable
 import typingsSlinky.activexExcel.Excel.Range
 import typingsSlinky.activexExcel.Excel.Worksheet
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TargetPivotTable extends js.Object {
+trait TargetPivotTable extends StObject {
   
   val Sh: Worksheet = js.native
   

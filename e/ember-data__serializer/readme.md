@@ -10,9 +10,9 @@ The default blueprint for ember-cli addons.
 | ------------------ | :-------------: |
 | Full name          | @ember-data/serializer |
 | Keywords           | ember-addon |
-| # releases         | 49 |
+| # releases         | 103 |
 | # dependents       | 1 |
-| # downloads        | 740124 |
+| # downloads        | 3152978 |
 | # stars            | 0 |
 
 ## Links

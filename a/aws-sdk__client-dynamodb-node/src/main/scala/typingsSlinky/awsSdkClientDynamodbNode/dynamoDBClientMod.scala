@@ -5,16 +5,16 @@ import typingsSlinky.awsSdkClientDynamodbNode.dynamoDBConfigurationMod.DynamoDBR
 import typingsSlinky.awsSdkClientDynamodbNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.commandMod.Command
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-node/DynamoDBClient", JSImport.Namespace)
-@js.native
-object dynamoDBClientMod extends js.Object {
+object dynamoDBClientMod {
   
+  @JSImport("@aws-sdk/client-dynamodb-node/DynamoDBClient", "DynamoDBClient")
   @js.native
-  class DynamoDBClient protected () extends js.Object {
+  class DynamoDBClient protected () extends StObject {
     def this(configuration: DynamoDBConfiguration) = this()
     
     val config: DynamoDBResolvedConfiguration = js.native

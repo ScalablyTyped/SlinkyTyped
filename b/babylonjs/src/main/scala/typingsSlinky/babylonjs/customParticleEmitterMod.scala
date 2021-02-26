@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.iparticleemittertypeMod.IParticleEmitterType
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.particleMod.Particle
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Particles/EmitterTypes/customParticleEmitter", JSImport.Namespace)
-@js.native
-object customParticleEmitterMod extends js.Object {
+object customParticleEmitterMod {
   
+  @JSImport("babylonjs/Particles/EmitterTypes/customParticleEmitter", "CustomParticleEmitter")
   @js.native
   /**
     * Creates a new instance CustomParticleEmitter

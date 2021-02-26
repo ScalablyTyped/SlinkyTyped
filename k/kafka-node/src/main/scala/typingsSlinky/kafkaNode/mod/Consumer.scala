@@ -4,6 +4,7 @@ import typingsSlinky.kafkaNode.kafkaNodeStrings.error
 import typingsSlinky.kafkaNode.kafkaNodeStrings.message
 import typingsSlinky.kafkaNode.kafkaNodeStrings.offsetOutOfRange
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -6,15 +6,22 @@ import typingsSlinky.history.mod.LocationDescriptor
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.reactBreadcrumbs.anon.Title
 import typingsSlinky.reactBreadcrumbs.mod.BreadcrumbProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Breadcrumb {
   
+  @scala.inline
+  def apply(data: LocationDescriptor[LocationState] with Title): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BreadcrumbProps]))
+  }
+  
   @JSImport("react-breadcrumbs", "Breadcrumb")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -26,10 +33,4 @@ object Breadcrumb {
   }
   
   def withProps(p: BreadcrumbProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: LocationDescriptor[LocationState] with Title): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[BreadcrumbProps]))
-  }
 }

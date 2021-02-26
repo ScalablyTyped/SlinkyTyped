@@ -9,12 +9,13 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLIFrameElement
 import org.scalajs.dom.raw.Window
 import typingsSlinky.handsontable.mod.Handsontable.wot.OverlayType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Dom extends js.Object {
+trait Dom extends StObject {
   
   var HTML_CHARACTERS: js.RegExp = js.native
   

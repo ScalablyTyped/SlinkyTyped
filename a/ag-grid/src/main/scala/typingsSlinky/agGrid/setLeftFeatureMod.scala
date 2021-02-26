@@ -5,14 +5,14 @@ import typingsSlinky.agGrid.beanStubMod.BeanStub
 import typingsSlinky.agGrid.beansMod.Beans
 import typingsSlinky.agGrid.columnGroupChildMod.ColumnGroupChild
 import typingsSlinky.agGrid.columnMod.Column
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/rendering/features/setLeftFeature", JSImport.Namespace)
-@js.native
-object setLeftFeatureMod extends js.Object {
+object setLeftFeatureMod {
   
+  @JSImport("ag-grid/dist/lib/rendering/features/setLeftFeature", "SetLeftFeature")
   @js.native
   class SetLeftFeature protected () extends BeanStub {
     def this(columnOrGroup: ColumnGroupChild, eCell: HTMLElement, beans: Beans) = this()

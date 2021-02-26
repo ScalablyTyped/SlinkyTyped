@@ -1,13 +1,14 @@
 package typingsSlinky.winrtUwp.Windows.Security.Cryptography.Core
 
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a symmetric key or an asymmetric key pair. */
 @js.native
-trait CryptographicKey extends js.Object {
+trait CryptographicKey extends StObject {
   
   /**
     * Exports the key pair to a buffer.

@@ -4,12 +4,13 @@ import typingsSlinky.timeago.timeagoStrings.dispose
 import typingsSlinky.timeago.timeagoStrings.init
 import typingsSlinky.timeago.timeagoStrings.update
 import typingsSlinky.timeago.timeagoStrings.updateFromDOM
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def timeago(): this.type = js.native
   @JSName("timeago")

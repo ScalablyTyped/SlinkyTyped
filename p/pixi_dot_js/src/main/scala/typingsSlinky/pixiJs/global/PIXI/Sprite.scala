@@ -2,6 +2,7 @@ package typingsSlinky.pixiJs.global.PIXI
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLVideoElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,10 +39,7 @@ class Sprite ()
   extends typingsSlinky.pixiJs.PIXI.Sprite {
   def this(texture: typingsSlinky.pixiJs.PIXI.Texture) = this()
 }
-/* static members */
-@JSGlobal("PIXI.Sprite")
-@js.native
-object Sprite extends js.Object {
+object Sprite {
   
   /**
     * Helper function that creates a new sprite based on the source you provide.
@@ -52,12 +50,29 @@ object Sprite extends js.Object {
     * @param {object} [options] - See {@link PIXI.BaseTexture}'s constructor for options.
     * @return {PIXI.Sprite} The newly created sprite
     */
+  /* static member */
+  @JSGlobal("PIXI.Sprite.from")
+  @js.native
   def from(source: String): typingsSlinky.pixiJs.PIXI.Sprite = js.native
+  @JSGlobal("PIXI.Sprite.from")
+  @js.native
   def from(source: String, options: js.Any): typingsSlinky.pixiJs.PIXI.Sprite = js.native
-  def from(source: typingsSlinky.pixiJs.PIXI.Texture): typingsSlinky.pixiJs.PIXI.Sprite = js.native
-  def from(source: typingsSlinky.pixiJs.PIXI.Texture, options: js.Any): typingsSlinky.pixiJs.PIXI.Sprite = js.native
+  @JSGlobal("PIXI.Sprite.from")
+  @js.native
   def from(source: HTMLCanvasElement): typingsSlinky.pixiJs.PIXI.Sprite = js.native
+  @JSGlobal("PIXI.Sprite.from")
+  @js.native
   def from(source: HTMLCanvasElement, options: js.Any): typingsSlinky.pixiJs.PIXI.Sprite = js.native
+  @JSGlobal("PIXI.Sprite.from")
+  @js.native
   def from(source: HTMLVideoElement): typingsSlinky.pixiJs.PIXI.Sprite = js.native
+  @JSGlobal("PIXI.Sprite.from")
+  @js.native
   def from(source: HTMLVideoElement, options: js.Any): typingsSlinky.pixiJs.PIXI.Sprite = js.native
+  @JSGlobal("PIXI.Sprite.from")
+  @js.native
+  def from(source: typingsSlinky.pixiJs.PIXI.Texture): typingsSlinky.pixiJs.PIXI.Sprite = js.native
+  @JSGlobal("PIXI.Sprite.from")
+  @js.native
+  def from(source: typingsSlinky.pixiJs.PIXI.Texture, options: js.Any): typingsSlinky.pixiJs.PIXI.Sprite = js.native
 }

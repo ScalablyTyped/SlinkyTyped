@@ -1,5 +1,6 @@
 package typingsSlinky.opentok.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.opentok.opentokStrings.composed
   - typingsSlinky.opentok.opentokStrings.individual
 */
-trait OutputMode extends js.Object
+trait OutputMode extends StObject
 object OutputMode {
   
   @scala.inline

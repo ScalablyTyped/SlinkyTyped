@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,19 +33,27 @@ class Hook () extends IHook {
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-/* static members */
-@JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook")
-@js.native
-object Hook extends js.Object {
+object Hook {
   
   /**
     * Creates a new Hook instance using the specified properties.
     * @param [properties] Properties to set
     * @returns Hook instance
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.create")
+  @js.native
   def create(): Hook = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.create")
+  @js.native
   def create(properties: IHook): Hook = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): Hook = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Hook = js.native
   /**
     * Decodes a Hook message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -53,11 +62,17 @@ object Hook extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.decode")
+  @js.native
   def decode(reader: Reader): Hook = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.decode")
+  @js.native
   def decode(reader: Reader, length: Double): Hook = js.native
-  def decode(reader: js.typedarray.Uint8Array): Hook = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): Hook = js.native
   
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Hook = js.native
   /**
     * Decodes a Hook message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -65,8 +80,10 @@ object Hook extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): Hook = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): Hook = js.native
   
   /**
     * Encodes the specified Hook message. Does not implicitly {@link io.cucumber.messages.Hook.verify|verify} messages.
@@ -74,7 +91,12 @@ object Hook extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.encode")
+  @js.native
   def encode(message: IHook): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.encode")
+  @js.native
   def encode(message: IHook, writer: Writer): Writer = js.native
   
   /**
@@ -83,7 +105,12 @@ object Hook extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IHook): Writer = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IHook, writer: Writer): Writer = js.native
   
   /**
@@ -91,6 +118,9 @@ object Hook extends js.Object {
     * @param object Plain object
     * @returns Hook
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): Hook = js.native
   
   /**
@@ -99,7 +129,12 @@ object Hook extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.toObject")
+  @js.native
   def toObject(message: Hook): StringDictionary[js.Any] = js.native
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.toObject")
+  @js.native
   def toObject(message: Hook, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -107,5 +142,8 @@ object Hook extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  /* static member */
+  @JSImport("cucumber-messages/dist/src/cucumber-messages", "io.cucumber.messages.Hook.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

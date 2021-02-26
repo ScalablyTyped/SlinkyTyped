@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/communication/dialer-sip", JSImport.Namespace)
-@js.native
-object dialerSipMod extends js.Object {
+object dialerSipMod {
   
+  @JSImport("material-ui/svg-icons/communication/dialer-sip", JSImport.Default)
+  @js.native
+  class default () extends CommunicationDialerSip
+  
+  @JSImport("material-ui/svg-icons/communication/dialer-sip", "CommunicationDialerSip")
   @js.native
   class CommunicationDialerSip ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

@@ -61,6 +61,7 @@ import typingsSlinky.electron.electronStrings.userData
 import typingsSlinky.electron.electronStrings.videos
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

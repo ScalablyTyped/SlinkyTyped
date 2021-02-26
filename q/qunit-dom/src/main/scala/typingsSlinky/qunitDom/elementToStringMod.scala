@@ -2,16 +2,23 @@ package typingsSlinky.qunitDom
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.NodeList
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("qunit-dom/dist/helpers/element-to-string", JSImport.Namespace)
-@js.native
-object elementToStringMod extends js.Object {
+object elementToStringMod {
   
+  @JSImport("qunit-dom/dist/helpers/element-to-string", JSImport.Default)
+  @js.native
   def default(): String = js.native
+  @JSImport("qunit-dom/dist/helpers/element-to-string", JSImport.Default)
+  @js.native
   def default(el: String): String = js.native
+  @JSImport("qunit-dom/dist/helpers/element-to-string", JSImport.Default)
+  @js.native
   def default(el: Element): String = js.native
+  @JSImport("qunit-dom/dist/helpers/element-to-string", JSImport.Default)
+  @js.native
   def default(el: NodeList): String = js.native
 }

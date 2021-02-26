@@ -4,12 +4,13 @@ import typingsSlinky.jqueryMaskmoney.jQueryMaskMoney.Options
 import typingsSlinky.jqueryMaskmoney.jqueryMaskmoneyStrings.destroy
 import typingsSlinky.jqueryMaskmoney.jqueryMaskmoneyStrings.mask
 import typingsSlinky.jqueryMaskmoney.jqueryMaskmoneyStrings.unmasked
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Apply mask to input when the argument are options

@@ -2,12 +2,13 @@ package typingsSlinky.colorConvert.anon
 
 import typingsSlinky.colorConvert.conversionsMod.GRAY_
 import typingsSlinky.colorConvert.conversionsMod.XYZ_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `72` extends js.Object {
+trait `72` extends StObject {
   
   def raw(from: XYZ_): GRAY_ = js.native
   @JSName("raw")

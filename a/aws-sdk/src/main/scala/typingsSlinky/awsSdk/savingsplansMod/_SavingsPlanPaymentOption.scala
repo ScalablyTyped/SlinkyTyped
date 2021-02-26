@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.savingsplansMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _SavingsPlanPaymentOption extends js.Object
+trait _SavingsPlanPaymentOption extends StObject

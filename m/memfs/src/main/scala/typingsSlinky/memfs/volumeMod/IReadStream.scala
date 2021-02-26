@@ -5,6 +5,7 @@ import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.anon.End
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.streamMod.Readable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

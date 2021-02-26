@@ -10,9 +10,9 @@ Create menus that auto-position themselves within the viewport and adhere to the
 | ------------------ | :-------------: |
 | Full name          | @react-md/menu |
 | Keywords           | accessibility, a11y, react-md, material design, react, menu, dropdown, component, components |
-| # releases         | 21 |
+| # releases         | 39 |
 | # dependents       | 1 |
-| # downloads        | 3132 |
+| # downloads        | 17515 |
 | # stars            | 0 |
 
 ## Links

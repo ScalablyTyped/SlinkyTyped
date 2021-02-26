@@ -5,6 +5,7 @@ import typingsSlinky.winrt.Windows.ApplicationModel.Activation.ApplicationExecut
 import typingsSlinky.winrt.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs
 import typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen
 import typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

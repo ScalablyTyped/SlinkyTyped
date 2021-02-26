@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.EmbeddedDWARF
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.ExternalDWARF
 */
-trait DebugSymbolsType extends js.Object
+trait DebugSymbolsType extends StObject
 object DebugSymbolsType {
   
   @scala.inline

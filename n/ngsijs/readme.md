@@ -10,9 +10,9 @@ Node JavaScript library for Orion Context Broker
 | ------------------ | :-------------: |
 | Full name          | ngsijs |
 | Keywords           | context broker, fiware, FIWARE, fiware-orion, iot, IoT, NGSI, orion, wirecloud |
-| # releases         | 7 |
+| # releases         | 4 |
 | # dependents       | 0 |
-| # downloads        | 2706 |
+| # downloads        | 4422 |
 | # stars            | 0 |
 
 ## Links

@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.orderListMod.OrderListProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object OrderList {
   
   @JSImport("primereact/orderlist", "OrderList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -48,13 +49,13 @@ object OrderList {
     def tabIndex(value: String): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
   }
   
-  def withProps(p: OrderListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: OrderList.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: OrderListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

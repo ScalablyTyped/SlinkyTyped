@@ -24,6 +24,7 @@ import typingsSlinky.activexDao.activexDaoNumbers.`1060`
 import typingsSlinky.activexDao.activexDaoNumbers.`1081`
 import typingsSlinky.activexDao.activexDaoNumbers.`2052`
 import typingsSlinky.activexDao.activexDaoNumbers.`263185`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -54,7 +55,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexDao.activexDaoNumbers.`1055`
   - typingsSlinky.activexDao.activexDaoNumbers.`-1`
 */
-trait CollatingOrderEnum extends js.Object
+trait CollatingOrderEnum extends StObject
 object CollatingOrderEnum {
   
   @scala.inline

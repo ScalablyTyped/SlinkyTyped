@@ -3,13 +3,14 @@ package typingsSlinky.ldapjs.mod
 import typingsSlinky.ldapjs.ldapjsStrings.base
 import typingsSlinky.ldapjs.ldapjsStrings.one
 import typingsSlinky.ldapjs.ldapjsStrings.sub
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ldapjs", "SearchRequest")
 @js.native
-class SearchRequest () extends js.Object {
+class SearchRequest () extends StObject {
   
   var attributes: js.UndefOr[js.Any] = js.native
   

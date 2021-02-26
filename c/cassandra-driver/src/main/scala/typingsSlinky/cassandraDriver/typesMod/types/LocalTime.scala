@@ -1,13 +1,14 @@
 package typingsSlinky.cassandraDriver.typesMod.types
 
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cassandra-driver/lib/types", "types.LocalTime")
 @js.native
-class LocalTime protected () extends js.Object {
+class LocalTime protected () extends StObject {
   def this(totalNanoseconds: Long) = this()
   
   def compare(other: LocalTime): Boolean = js.native
@@ -30,20 +31,36 @@ class LocalTime protected () extends js.Object {
   
   def toJSON(): String = js.native
 }
-/* static members */
-@JSImport("cassandra-driver/lib/types", "types.LocalTime")
-@js.native
-object LocalTime extends js.Object {
+object LocalTime {
   
+  /* static member */
+  @JSImport("cassandra-driver/lib/types", "types.LocalTime.fromBuffer")
+  @js.native
   def fromBuffer(value: Buffer): LocalTime = js.native
   
+  /* static member */
+  @JSImport("cassandra-driver/lib/types", "types.LocalTime.fromDate")
+  @js.native
   def fromDate(date: js.Date, nanoseconds: Double): LocalTime = js.native
   
+  /* static member */
+  @JSImport("cassandra-driver/lib/types", "types.LocalTime.fromMilliseconds")
+  @js.native
   def fromMilliseconds(milliseconds: Double): LocalTime = js.native
+  @JSImport("cassandra-driver/lib/types", "types.LocalTime.fromMilliseconds")
+  @js.native
   def fromMilliseconds(milliseconds: Double, nanoseconds: Double): LocalTime = js.native
   
+  /* static member */
+  @JSImport("cassandra-driver/lib/types", "types.LocalTime.fromString")
+  @js.native
   def fromString(value: String): LocalTime = js.native
   
+  /* static member */
+  @JSImport("cassandra-driver/lib/types", "types.LocalTime.now")
+  @js.native
   def now(): LocalTime = js.native
+  @JSImport("cassandra-driver/lib/types", "types.LocalTime.now")
+  @js.native
   def now(nanoseconds: Double): LocalTime = js.native
 }

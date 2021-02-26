@@ -11,15 +11,22 @@ import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadLabelKey
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenuProps
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TypeaheadMenu {
   
+  @scala.inline
+  def apply[T /* <: TypeaheadModel */](id: String, options: js.Array[T]): Builder[T] = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[TypeaheadMenuProps[T]]))
+  }
+  
   @JSImport("react-bootstrap-typeahead", "TypeaheadMenu")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T /* <: TypeaheadModel */] (val args: js.Array[js.Any])
@@ -33,22 +40,22 @@ object TypeaheadMenu {
     def emptyLabel(value: String): this.type = set("emptyLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: LegacyRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ HTMLUListElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: LegacyRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def labelKeyFunction1(value: T => String): this.type = set("labelKey", js.Any.fromFunction1(value))
+    def innerRefRefObject(value: ReactRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelKey(value: TypeaheadLabelKey[T]): this.type = set("labelKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelKeyFunction1(value: T => String): this.type = set("labelKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def maxHeight(value: String): this.type = set("maxHeight", value.asInstanceOf[js.Any])
@@ -69,10 +76,4 @@ object TypeaheadMenu {
   }
   
   def withProps[T /* <: TypeaheadModel */](p: TypeaheadMenuProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T /* <: TypeaheadModel */](id: String, options: js.Array[T]): Builder[T] = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[TypeaheadMenuProps[T]]))
-  }
 }

@@ -1,12 +1,13 @@
 package typingsSlinky.webcl.WEBCL
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 //3.4
 @js.native
-trait WebCLContext extends js.Object {
+trait WebCLContext extends StObject {
   
   def createBuffer(memFlags: MemFlagsBits, sizeInBytes: Double): WebCLBuffer = js.native
   def createBuffer(memFlags: MemFlagsBits, sizeInBytes: Double, hostPtr: js.typedarray.ArrayBufferView): WebCLBuffer = js.native

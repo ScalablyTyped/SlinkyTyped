@@ -3,18 +3,13 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.sdb
 import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XChild
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XNameAccess
-import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
-import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XConnection
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XDatabaseMetaData
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XPreparedStatement
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XStatement
-import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XWarningsSupplier
-import typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.XGroupsSupplier
-import typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.XTablesSupplier
-import typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.XUsersSupplier
-import typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.XViewsSupplier
+import typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.DatabaseDefinition
 import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,13 +25,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait DatabaseAccessConnection
-  extends XConnection
-     with XComponent
-     with XWarningsSupplier
-     with XTablesSupplier
-     with XViewsSupplier
-     with XUsersSupplier
-     with XGroupsSupplier
+  extends typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.Connection
+     with DatabaseDefinition
      with XChild
      with XSQLQueryComposerFactory
      with XQueriesSupplier

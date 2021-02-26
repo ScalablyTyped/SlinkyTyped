@@ -1,5 +1,6 @@
 package typingsSlinky.shelljs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.shelljs.shelljsStrings.`-p`
   - typingsSlinky.shelljs.shelljsStrings.`-S`
 */
-trait TestOptions extends js.Object
+trait TestOptions extends StObject
 object TestOptions {
   
   @scala.inline

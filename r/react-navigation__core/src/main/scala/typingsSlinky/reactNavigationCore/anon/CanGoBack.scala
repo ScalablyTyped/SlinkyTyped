@@ -1,12 +1,13 @@
 package typingsSlinky.reactNavigationCore.anon
 
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CanGoBack extends js.Object {
+trait CanGoBack extends StObject {
   
   def canGoBack(): Boolean = js.native
   

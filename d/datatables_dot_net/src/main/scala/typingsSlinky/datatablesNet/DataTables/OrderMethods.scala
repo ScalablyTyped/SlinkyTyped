@@ -2,6 +2,7 @@ package typingsSlinky.datatablesNet.DataTables
 
 import org.scalajs.dom.raw.Node
 import typingsSlinky.datatablesNet.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 //#endregion "ajax-methods"
 //#region "order-methods"
 @js.native
-trait OrderMethods extends js.Object {
+trait OrderMethods extends StObject {
   
   /**
     * Get the ordering applied to the table.
@@ -36,6 +37,6 @@ trait OrderMethods extends js.Object {
     * @param callback Callback function
     */
   def listener(node: String, column: Double, callback: js.Function0[Unit]): Api = js.native
-  def listener(node: JQuery, column: Double, callback: js.Function0[Unit]): Api = js.native
   def listener(node: Node, column: Double, callback: js.Function0[Unit]): Api = js.native
+  def listener(node: JQuery, column: Double, callback: js.Function0[Unit]): Api = js.native
 }

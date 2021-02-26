@@ -4,6 +4,7 @@ import typingsSlinky.activexWord.activexWordNumbers.`-4105`
 import typingsSlinky.activexWord.activexWordNumbers.`-4114`
 import typingsSlinky.activexWord.activexWordNumbers.`2`
 import typingsSlinky.activexWord.activexWordNumbers.`4`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWord.activexWordNumbers.`2`
   - typingsSlinky.activexWord.activexWordNumbers.`4`
 */
-trait XlAxisCrosses extends js.Object
+trait XlAxisCrosses extends StObject
 object XlAxisCrosses {
   
   @scala.inline

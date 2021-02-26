@@ -1,12 +1,13 @@
 package typingsSlinky.stellarBase.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stellar-base", "Asset")
 @js.native
-class Asset protected () extends js.Object {
+class Asset protected () extends StObject {
   def this(code: String) = this()
   def this(code: String, issuer: String) = this()
   
@@ -27,11 +28,13 @@ class Asset protected () extends js.Object {
   def toXDRObject(): typingsSlinky.stellarBase.xdrMod.default.Asset = js.native
 }
 /* static members */
-@JSImport("stellar-base", "Asset")
-@js.native
-object Asset extends js.Object {
+object Asset {
   
+  @JSImport("stellar-base", "Asset.fromOperation")
+  @js.native
   def fromOperation(xdr: typingsSlinky.stellarBase.xdrMod.default.Asset): Asset = js.native
   
+  @JSImport("stellar-base", "Asset.native")
+  @js.native
   def native(): Asset = js.native
 }

@@ -3,14 +3,13 @@ package typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search
 import typingsSlinky.sharepoint.SP.ClientObject
 import typingsSlinky.sharepoint.SP.Guid
 import typingsSlinky.sharepoint.SP.ListItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**Located in sp.search.apps.js*/
-@JSGlobal("Microsoft.SharePoint.Client.Search.Analytics")
-@js.native
-object Analytics extends js.Object {
+object Analytics {
   
   @js.native
   trait AnalyticsItemData extends ClientObject {

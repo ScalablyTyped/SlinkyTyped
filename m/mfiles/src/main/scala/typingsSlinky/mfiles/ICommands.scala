@@ -5,12 +5,13 @@ import typingsSlinky.mfiles.MFiles.CommandLocation
 import typingsSlinky.mfiles.MFiles.CommandState
 import typingsSlinky.mfiles.MFiles.DefaultIcon
 import typingsSlinky.mfiles.MFiles.MenuLocation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ICommands extends js.Object {
+trait ICommands extends StObject {
   
   def AddCustomCommandToMenu(customCommand: Double, location: MenuLocation, orderPriority: Double): Unit = js.native
   

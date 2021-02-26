@@ -10,9 +10,9 @@ This package is for including icons within react-md. There is included support f
 | ------------------ | :-------------: |
 | Full name          | @react-md/portal |
 | Keywords           | react-md, material design, react, icon, font icon, svg icon, component, components |
-| # releases         | 18 |
+| # releases         | 25 |
 | # dependents       | 8 |
-| # downloads        | 4011 |
+| # downloads        | 14679 |
 | # stars            | 0 |
 
 ## Links

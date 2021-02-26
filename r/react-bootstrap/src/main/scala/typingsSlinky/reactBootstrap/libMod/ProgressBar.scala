@@ -1,12 +1,11 @@
 package typingsSlinky.reactBootstrap.libMod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactBootstrap.progressBarMod.ProgressBarProps
+import typingsSlinky.reactBootstrap.progressBarMod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-bootstrap/lib", "ProgressBar")
 @js.native
-class ProgressBar ()
-  extends Component[ProgressBarProps, js.Object, js.Any]
+class ProgressBar () extends ^

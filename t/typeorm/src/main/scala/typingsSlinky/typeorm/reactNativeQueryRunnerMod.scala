@@ -3,14 +3,14 @@ package typingsSlinky.typeorm
 import typingsSlinky.typeorm.abstractSqliteQueryRunnerMod.AbstractSqliteQueryRunner
 import typingsSlinky.typeorm.objectLiteralMod.ObjectLiteral
 import typingsSlinky.typeorm.reactNativeDriverMod.ReactNativeDriver
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/driver/react-native/ReactNativeQueryRunner", JSImport.Namespace)
-@js.native
-object reactNativeQueryRunnerMod extends js.Object {
+object reactNativeQueryRunnerMod {
   
+  @JSImport("typeorm/browser/driver/react-native/ReactNativeQueryRunner", "ReactNativeQueryRunner")
   @js.native
   class ReactNativeQueryRunner protected () extends AbstractSqliteQueryRunner {
     def this(driver: ReactNativeDriver) = this()

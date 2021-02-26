@@ -1,5 +1,6 @@
 package typingsSlinky.senchaTouch.global.Ext
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,18 +10,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Function ()
   extends typingsSlinky.senchaTouch.Ext.Function
 /* static members */
-@JSGlobal("Ext.Function")
-@js.native
-object Function extends js.Object {
+object Function {
   
   /** [Method] Create an alias to the provided method property with name methodName of object
     * @param object Object/Function
     * @param methodName String
     * @returns Function aliasFn
     */
+  @JSGlobal("Ext.Function.alias")
+  @js.native
   def alias(): js.Any = js.native
+  @JSGlobal("Ext.Function.alias")
+  @js.native
   def alias(`object`: js.UndefOr[scala.Nothing], methodName: java.lang.String): js.Any = js.native
+  @JSGlobal("Ext.Function.alias")
+  @js.native
   def alias(`object`: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.alias")
+  @js.native
   def alias(`object`: js.Any, methodName: java.lang.String): js.Any = js.native
   
   /** [Method] Create a new function from the provided fn change this to the provided scope optionally overrides arguments for the
@@ -30,47 +37,81 @@ object Function extends js.Object {
     * @param appendArgs Boolean/Number if true args are appended to call args instead of overriding, if a number the args are inserted at the specified position.
     * @returns Function The new function.
     */
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(
     fn: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(
     fn: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(
     fn: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(fn: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(fn: js.UndefOr[scala.Nothing], scope: js.Any, args: js.UndefOr[scala.Nothing], appendArgs: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(fn: js.UndefOr[scala.Nothing], scope: js.Any, args: typingsSlinky.senchaTouch.Ext.Array): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(
     fn: js.UndefOr[scala.Nothing],
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(fn: js.Any, scope: js.UndefOr[scala.Nothing], args: js.UndefOr[scala.Nothing], appendArgs: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(fn: js.Any, scope: js.UndefOr[scala.Nothing], args: typingsSlinky.senchaTouch.Ext.Array): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(
     fn: js.Any,
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(fn: js.Any, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(fn: js.Any, scope: js.Any, args: js.UndefOr[scala.Nothing], appendArgs: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(fn: js.Any, scope: js.Any, args: typingsSlinky.senchaTouch.Ext.Array): js.Any = js.native
+  @JSGlobal("Ext.Function.bind")
+  @js.native
   def bind(fn: js.Any, scope: js.Any, args: typingsSlinky.senchaTouch.Ext.Array, appendArgs: js.Any): js.Any = js.native
   
+  @JSGlobal("Ext.Function.clone")
+  @js.native
   def clone(method: js.Any): js.Any = js.native
   
   /** [Method] Creates a delegate function optionally with a bound scope which when called buffers the execution of the passed fu
@@ -80,56 +121,88 @@ object Function extends js.Object {
     * @param args Array Override arguments for the call. Defaults to the arguments passed by the caller.
     * @returns Function A function which invokes the passed function after buffering for the specified time.
     */
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(
     fn: js.UndefOr[scala.Nothing],
     buffer: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(fn: js.UndefOr[scala.Nothing], buffer: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(
     fn: js.UndefOr[scala.Nothing],
     buffer: js.UndefOr[scala.Nothing],
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(fn: js.UndefOr[scala.Nothing], buffer: Double): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(
     fn: js.UndefOr[scala.Nothing],
     buffer: Double,
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(fn: js.UndefOr[scala.Nothing], buffer: Double, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(
     fn: js.UndefOr[scala.Nothing],
     buffer: Double,
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(
     fn: js.Any,
     buffer: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(fn: js.Any, buffer: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(
     fn: js.Any,
     buffer: js.UndefOr[scala.Nothing],
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(fn: js.Any, buffer: Double): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(
     fn: js.Any,
     buffer: Double,
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(fn: js.Any, buffer: Double, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createBuffered")
+  @js.native
   def createBuffered(fn: js.Any, buffer: Double, scope: js.Any, args: typingsSlinky.senchaTouch.Ext.Array): js.Any = js.native
   
   /** [Method] Creates a delegate callback which when called executes after a specific delay
@@ -140,7 +213,11 @@ object Function extends js.Object {
     * @param appendArgs Boolean/Number if True args are appended to call args instead of overriding, if a number the args are inserted at the specified position.
     * @returns Function A function which, when called, executes the original function after the specified delay.
     */
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: js.UndefOr[scala.Nothing],
@@ -148,12 +225,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: js.UndefOr[scala.Nothing],
@@ -161,7 +242,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(fn: js.UndefOr[scala.Nothing], delay: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: js.UndefOr[scala.Nothing],
@@ -169,12 +254,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: js.UndefOr[scala.Nothing],
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: js.UndefOr[scala.Nothing],
@@ -182,7 +271,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(fn: js.UndefOr[scala.Nothing], delay: Double): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: Double,
@@ -190,12 +283,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: Double,
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: Double,
@@ -203,7 +300,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(fn: js.UndefOr[scala.Nothing], delay: Double, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: Double,
@@ -211,12 +312,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: Double,
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.UndefOr[scala.Nothing],
     delay: Double,
@@ -224,7 +329,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.Any,
     delay: js.UndefOr[scala.Nothing],
@@ -232,12 +341,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.Any,
     delay: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.Any,
     delay: js.UndefOr[scala.Nothing],
@@ -245,7 +358,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(fn: js.Any, delay: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.Any,
     delay: js.UndefOr[scala.Nothing],
@@ -253,12 +370,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.Any,
     delay: js.UndefOr[scala.Nothing],
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.Any,
     delay: js.UndefOr[scala.Nothing],
@@ -266,7 +387,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(fn: js.Any, delay: Double): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.Any,
     delay: Double,
@@ -274,12 +399,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.Any,
     delay: Double,
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.Any,
     delay: Double,
@@ -287,9 +416,17 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(fn: js.Any, delay: Double, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(fn: js.Any, delay: Double, scope: js.Any, args: js.UndefOr[scala.Nothing], appendArgs: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(fn: js.Any, delay: Double, scope: js.Any, args: typingsSlinky.senchaTouch.Ext.Array): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelayed")
+  @js.native
   def createDelayed(
     fn: js.Any,
     delay: Double,
@@ -305,45 +442,77 @@ object Function extends js.Object {
     * @param appendArgs Boolean/Number if true args are appended to call args instead of overriding, if a number the args are inserted at the specified position.
     * @returns Function The new function.
     */
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(
     fn: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(
     fn: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(
     fn: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(fn: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(fn: js.UndefOr[scala.Nothing], scope: js.Any, args: js.UndefOr[scala.Nothing], appendArgs: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(fn: js.UndefOr[scala.Nothing], scope: js.Any, args: typingsSlinky.senchaTouch.Ext.Array): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(
     fn: js.UndefOr[scala.Nothing],
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(fn: js.Any, scope: js.UndefOr[scala.Nothing], args: js.UndefOr[scala.Nothing], appendArgs: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(fn: js.Any, scope: js.UndefOr[scala.Nothing], args: typingsSlinky.senchaTouch.Ext.Array): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(
     fn: js.Any,
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(fn: js.Any, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(fn: js.Any, scope: js.Any, args: js.UndefOr[scala.Nothing], appendArgs: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(fn: js.Any, scope: js.Any, args: typingsSlinky.senchaTouch.Ext.Array): js.Any = js.native
+  @JSGlobal("Ext.Function.createDelegate")
+  @js.native
   def createDelegate(fn: js.Any, scope: js.Any, args: typingsSlinky.senchaTouch.Ext.Array, appendArgs: js.Any): js.Any = js.native
   
   /** [Method] Creates an interceptor function
@@ -353,41 +522,73 @@ object Function extends js.Object {
     * @param returnValue Object The value to return if the passed function return false.
     * @returns Function The new function.
     */
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(
     origFn: js.UndefOr[scala.Nothing],
     newFn: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     returnValue: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.UndefOr[scala.Nothing], newFn: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(
     origFn: js.UndefOr[scala.Nothing],
     newFn: js.UndefOr[scala.Nothing],
     scope: js.Any,
     returnValue: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.UndefOr[scala.Nothing], newFn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(
     origFn: js.UndefOr[scala.Nothing],
     newFn: js.Any,
     scope: js.UndefOr[scala.Nothing],
     returnValue: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.UndefOr[scala.Nothing], newFn: js.Any, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.UndefOr[scala.Nothing], newFn: js.Any, scope: js.Any, returnValue: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(
     origFn: js.Any,
     newFn: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     returnValue: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.Any, newFn: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.Any, newFn: js.UndefOr[scala.Nothing], scope: js.Any, returnValue: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.Any, newFn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.Any, newFn: js.Any, scope: js.UndefOr[scala.Nothing], returnValue: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.Any, newFn: js.Any, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createInterceptor")
+  @js.native
   def createInterceptor(origFn: js.Any, newFn: js.Any, scope: js.Any, returnValue: js.Any): js.Any = js.native
   
   /** [Method] Create a combined function call sequence of the original function  the passed function
@@ -396,13 +597,29 @@ object Function extends js.Object {
     * @param scope Object The scope (this reference) in which the passed function is executed. If omitted, defaults to the scope in which the original function is called or the browser window.
     * @returns Function The new function.
     */
+  @JSGlobal("Ext.Function.createSequence")
+  @js.native
   def createSequence(): js.Any = js.native
+  @JSGlobal("Ext.Function.createSequence")
+  @js.native
   def createSequence(originalFn: js.UndefOr[scala.Nothing], newFn: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createSequence")
+  @js.native
   def createSequence(originalFn: js.UndefOr[scala.Nothing], newFn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createSequence")
+  @js.native
   def createSequence(originalFn: js.UndefOr[scala.Nothing], newFn: js.Any, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createSequence")
+  @js.native
   def createSequence(originalFn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createSequence")
+  @js.native
   def createSequence(originalFn: js.Any, newFn: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createSequence")
+  @js.native
   def createSequence(originalFn: js.Any, newFn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createSequence")
+  @js.native
   def createSequence(originalFn: js.Any, newFn: js.Any, scope: js.Any): js.Any = js.native
   
   /** [Method] Creates a throttled version of the passed function which when called repeatedly and rapidly invokes the passed func
@@ -411,13 +628,29 @@ object Function extends js.Object {
     * @param scope Object The scope (this reference) in which the passed function is executed. If omitted, defaults to the scope specified by the caller.
     * @returns Function A function which invokes the passed function at the specified interval.
     */
+  @JSGlobal("Ext.Function.createThrottled")
+  @js.native
   def createThrottled(): js.Any = js.native
+  @JSGlobal("Ext.Function.createThrottled")
+  @js.native
   def createThrottled(fn: js.UndefOr[scala.Nothing], interval: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createThrottled")
+  @js.native
   def createThrottled(fn: js.UndefOr[scala.Nothing], interval: Double): js.Any = js.native
+  @JSGlobal("Ext.Function.createThrottled")
+  @js.native
   def createThrottled(fn: js.UndefOr[scala.Nothing], interval: Double, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createThrottled")
+  @js.native
   def createThrottled(fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createThrottled")
+  @js.native
   def createThrottled(fn: js.Any, interval: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.createThrottled")
+  @js.native
   def createThrottled(fn: js.Any, interval: Double): js.Any = js.native
+  @JSGlobal("Ext.Function.createThrottled")
+  @js.native
   def createThrottled(fn: js.Any, interval: Double, scope: js.Any): js.Any = js.native
   
   /** [Method] Calls this function after the number of milliseconds specified optionally in a specific scope
@@ -428,7 +661,11 @@ object Function extends js.Object {
     * @param appendArgs Boolean/Number if true, args are appended to call args instead of overriding, if a number the args are inserted at the specified position.
     * @returns Number The timeout id that can be used with clearTimeout().
     */
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: js.UndefOr[scala.Nothing],
@@ -436,12 +673,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: js.UndefOr[scala.Nothing],
@@ -449,7 +690,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(fn: js.UndefOr[scala.Nothing], millis: js.UndefOr[scala.Nothing], scope: js.Any): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: js.UndefOr[scala.Nothing],
@@ -457,12 +702,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: js.UndefOr[scala.Nothing],
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: js.UndefOr[scala.Nothing],
@@ -470,7 +719,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(fn: js.UndefOr[scala.Nothing], millis: Double): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: Double,
@@ -478,12 +731,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: Double,
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: Double,
@@ -491,7 +748,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(fn: js.UndefOr[scala.Nothing], millis: Double, scope: js.Any): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: Double,
@@ -499,12 +760,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: Double,
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.UndefOr[scala.Nothing],
     millis: Double,
@@ -512,7 +777,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(fn: js.Any): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.Any,
     millis: js.UndefOr[scala.Nothing],
@@ -520,12 +789,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.Any,
     millis: js.UndefOr[scala.Nothing],
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.Any,
     millis: js.UndefOr[scala.Nothing],
@@ -533,7 +806,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(fn: js.Any, millis: js.UndefOr[scala.Nothing], scope: js.Any): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.Any,
     millis: js.UndefOr[scala.Nothing],
@@ -541,12 +818,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.Any,
     millis: js.UndefOr[scala.Nothing],
     scope: js.Any,
     args: typingsSlinky.senchaTouch.Ext.Array
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.Any,
     millis: js.UndefOr[scala.Nothing],
@@ -554,7 +835,11 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(fn: js.Any, millis: Double): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.Any,
     millis: Double,
@@ -562,12 +847,16 @@ object Function extends js.Object {
     args: js.UndefOr[scala.Nothing],
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.Any,
     millis: Double,
     scope: js.UndefOr[scala.Nothing],
     args: typingsSlinky.senchaTouch.Ext.Array
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.Any,
     millis: Double,
@@ -575,9 +864,17 @@ object Function extends js.Object {
     args: typingsSlinky.senchaTouch.Ext.Array,
     appendArgs: js.Any
   ): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(fn: js.Any, millis: Double, scope: js.Any): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(fn: js.Any, millis: Double, scope: js.Any, args: js.UndefOr[scala.Nothing], appendArgs: js.Any): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(fn: js.Any, millis: Double, scope: js.Any, args: typingsSlinky.senchaTouch.Ext.Array): Double = js.native
+  @JSGlobal("Ext.Function.defer")
+  @js.native
   def defer(
     fn: js.Any,
     millis: Double,
@@ -590,7 +887,11 @@ object Function extends js.Object {
     * @param fn Function
     * @returns Function flexSetter
     */
+  @JSGlobal("Ext.Function.flexSetter")
+  @js.native
   def flexSetter(): js.Any = js.native
+  @JSGlobal("Ext.Function.flexSetter")
+  @js.native
   def flexSetter(fn: js.Any): js.Any = js.native
   
   /** [Method] Adds behavior to an existing method that is executed after the original behavior of the function
@@ -600,41 +901,73 @@ object Function extends js.Object {
     * @param scope Object The scope to execute the interceptor function. Defaults to the object.
     * @returns Function The new function just created.
     */
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(
     `object`: js.UndefOr[scala.Nothing],
     methodName: js.UndefOr[scala.Nothing],
     fn: js.UndefOr[scala.Nothing],
     scope: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.UndefOr[scala.Nothing], methodName: js.UndefOr[scala.Nothing], fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(
     `object`: js.UndefOr[scala.Nothing],
     methodName: js.UndefOr[scala.Nothing],
     fn: js.Any,
     scope: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.UndefOr[scala.Nothing], methodName: java.lang.String): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(
     `object`: js.UndefOr[scala.Nothing],
     methodName: java.lang.String,
     fn: js.UndefOr[scala.Nothing],
     scope: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.UndefOr[scala.Nothing], methodName: java.lang.String, fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.UndefOr[scala.Nothing], methodName: java.lang.String, fn: js.Any, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(
     `object`: js.Any,
     methodName: js.UndefOr[scala.Nothing],
     fn: js.UndefOr[scala.Nothing],
     scope: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.Any, methodName: js.UndefOr[scala.Nothing], fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.Any, methodName: js.UndefOr[scala.Nothing], fn: js.Any, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.Any, methodName: java.lang.String): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.Any, methodName: java.lang.String, fn: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.Any, methodName: java.lang.String, fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptAfter")
+  @js.native
   def interceptAfter(`object`: js.Any, methodName: java.lang.String, fn: js.Any, scope: js.Any): js.Any = js.native
   
   /** [Method] Adds behavior to an existing method that is executed before the original behavior of the function
@@ -644,41 +977,73 @@ object Function extends js.Object {
     * @param scope Object The scope to execute the interceptor function. Defaults to the object.
     * @returns Function The new function just created.
     */
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(
     `object`: js.UndefOr[scala.Nothing],
     methodName: js.UndefOr[scala.Nothing],
     fn: js.UndefOr[scala.Nothing],
     scope: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.UndefOr[scala.Nothing], methodName: js.UndefOr[scala.Nothing], fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(
     `object`: js.UndefOr[scala.Nothing],
     methodName: js.UndefOr[scala.Nothing],
     fn: js.Any,
     scope: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.UndefOr[scala.Nothing], methodName: java.lang.String): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(
     `object`: js.UndefOr[scala.Nothing],
     methodName: java.lang.String,
     fn: js.UndefOr[scala.Nothing],
     scope: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.UndefOr[scala.Nothing], methodName: java.lang.String, fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.UndefOr[scala.Nothing], methodName: java.lang.String, fn: js.Any, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(
     `object`: js.Any,
     methodName: js.UndefOr[scala.Nothing],
     fn: js.UndefOr[scala.Nothing],
     scope: js.Any
   ): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.Any, methodName: js.UndefOr[scala.Nothing], fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.Any, methodName: js.UndefOr[scala.Nothing], fn: js.Any, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.Any, methodName: java.lang.String): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.Any, methodName: java.lang.String, fn: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.Any, methodName: java.lang.String, fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.interceptBefore")
+  @js.native
   def interceptBefore(`object`: js.Any, methodName: java.lang.String, fn: js.Any, scope: js.Any): js.Any = js.native
   
   /** [Method] Create a new function from the provided fn the arguments of which are pre set to args
@@ -687,12 +1052,28 @@ object Function extends js.Object {
     * @param scope Object The scope (this reference) in which the function is executed.
     * @returns Function The new callback function.
     */
+  @JSGlobal("Ext.Function.pass")
+  @js.native
   def pass(): js.Any = js.native
+  @JSGlobal("Ext.Function.pass")
+  @js.native
   def pass(fn: js.UndefOr[scala.Nothing], args: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.pass")
+  @js.native
   def pass(fn: js.UndefOr[scala.Nothing], args: typingsSlinky.senchaTouch.Ext.Array): js.Any = js.native
+  @JSGlobal("Ext.Function.pass")
+  @js.native
   def pass(fn: js.UndefOr[scala.Nothing], args: typingsSlinky.senchaTouch.Ext.Array, scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.pass")
+  @js.native
   def pass(fn: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.pass")
+  @js.native
   def pass(fn: js.Any, args: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  @JSGlobal("Ext.Function.pass")
+  @js.native
   def pass(fn: js.Any, args: typingsSlinky.senchaTouch.Ext.Array): js.Any = js.native
+  @JSGlobal("Ext.Function.pass")
+  @js.native
   def pass(fn: js.Any, args: typingsSlinky.senchaTouch.Ext.Array, scope: js.Any): js.Any = js.native
 }

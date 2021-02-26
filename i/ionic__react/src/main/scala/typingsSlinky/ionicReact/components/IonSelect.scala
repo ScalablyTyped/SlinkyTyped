@@ -76,15 +76,22 @@ import typingsSlinky.ionicReact.ionicReactStrings.yes
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IonSelect {
   
+  @scala.inline
+  def apply(placeholder: (js.UndefOr[String | Null]) with js.UndefOr[String]): Builder = {
+    val __props = js.Dynamic.literal(placeholder = placeholder.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IonSelectPickHTMLAttribut]))
+  }
+  
   @JSImport("@ionic/react", "IonSelect")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -265,10 +272,10 @@ object IonSelect {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def compareWithFunction2(value: (/* currentValue */ js.Any, /* compareValue */ js.Any) => Boolean): this.type = set("compareWith", js.Any.fromFunction2(value))
+    def compareWith(value: String | SelectCompareFn): this.type = set("compareWith", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def compareWith(value: String | SelectCompareFn): this.type = set("compareWith", value.asInstanceOf[js.Any])
+    def compareWithFunction2(value: (/* currentValue */ js.Any, /* compareValue */ js.Any) => Boolean): this.type = set("compareWith", js.Any.fromFunction2(value))
     
     @scala.inline
     def compareWithNull: this.type = set("compareWith", null)
@@ -289,10 +296,10 @@ object IonSelect {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -911,10 +918,4 @@ object IonSelect {
   }
   
   def withProps(p: IonSelectPickHTMLAttribut): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(placeholder: (js.UndefOr[String | Null]) with js.UndefOr[String]): Builder = {
-    val __props = js.Dynamic.literal(placeholder = placeholder.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IonSelectPickHTMLAttribut]))
-  }
 }

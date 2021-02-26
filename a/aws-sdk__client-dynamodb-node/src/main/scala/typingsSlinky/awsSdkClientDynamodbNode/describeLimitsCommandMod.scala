@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientDynamodbNode.typesDescribeLimitsInputMod.Descri
 import typingsSlinky.awsSdkClientDynamodbNode.typesDescribeLimitsOutputMod.DescribeLimitsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-dynamodb-node/commands/DescribeLimitsCommand", JSImport.Namespace)
-@js.native
-object describeLimitsCommandMod extends js.Object {
+object describeLimitsCommandMod {
   
+  @JSImport("@aws-sdk/client-dynamodb-node/commands/DescribeLimitsCommand", "DescribeLimitsCommand")
   @js.native
   class DescribeLimitsCommand protected () extends Command[
           InputTypesUnion, 

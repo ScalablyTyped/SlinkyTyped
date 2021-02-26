@@ -2,12 +2,13 @@ package typingsSlinky.dynatable
 
 import typingsSlinky.dynatable.JQueryDynatable.Dynatable
 import typingsSlinky.dynatable.JQueryDynatable.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Initialize Dynatable plugin

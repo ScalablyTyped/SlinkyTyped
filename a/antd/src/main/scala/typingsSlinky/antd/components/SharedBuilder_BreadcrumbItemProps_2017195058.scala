@@ -8,6 +8,7 @@ import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.dropdownDropdownMod.DropDownProps
 import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,20 +28,20 @@ class SharedBuilder_BreadcrumbItemProps_2017195058 (val args: js.Array[js.Any])
   def onClick(value: SyntheticMouseEvent[HTMLAnchorElement | HTMLSpanElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
   
   @scala.inline
-  def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
+  def overlay(value: ReactElement | OverlayFunc): this.type = set("overlay", value.asInstanceOf[js.Any])
   
   @scala.inline
   def overlayFunction0(value: () => ReactElement): this.type = set("overlay", js.Any.fromFunction0(value))
   
   @scala.inline
-  def overlay(value: ReactElement | OverlayFunc): this.type = set("overlay", value.asInstanceOf[js.Any])
+  def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
   
   @scala.inline
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def separatorReactElement(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
+  def separator(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def separator(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
+  def separatorReactElement(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
 }

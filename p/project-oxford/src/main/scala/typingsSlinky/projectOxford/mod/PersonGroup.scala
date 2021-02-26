@@ -2,13 +2,14 @@ package typingsSlinky.projectOxford.mod
 
 import typingsSlinky.bluebird.mod.^
 import typingsSlinky.projectOxford.mod.PersonGroupResponses.TrainingStatus
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("project-oxford", "PersonGroup")
 @js.native
-class PersonGroup () extends js.Object {
+class PersonGroup () extends StObject {
   
   /**
     * Creates a new person group with a user-specified ID.

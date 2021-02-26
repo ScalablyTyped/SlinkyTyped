@@ -11,15 +11,22 @@ import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.blueprintjsTable.copyCellsMenuItemMod.ICopyCellsMenuItemProps
 import typingsSlinky.blueprintjsTable.menuContextMod.IMenuContext
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CopyCellsMenuItem {
   
+  @scala.inline
+  def apply(context: IMenuContext, getCellData: (Double, Double) => js.Any): Builder = {
+    val __props = js.Dynamic.literal(context = context.asInstanceOf[js.Any], getCellData = js.Any.fromFunction2(getCellData))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ICopyCellsMenuItemProps]))
+  }
+  
   @JSImport("@blueprintjs/table", "CopyCellsMenuItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,13 +49,13 @@ object CopyCellsMenuItem {
     def htmlTitle(value: String): this.type = set("htmlTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: IconName | MaybeElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconNull: this.type = set("icon", null)
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
@@ -60,10 +67,10 @@ object CopyCellsMenuItem {
     def labelClassName(value: String): this.type = set("labelClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelElementReactElement(value: ReactElement): this.type = set("labelElement", value.asInstanceOf[js.Any])
+    def labelElement(value: ReactElement): this.type = set("labelElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelElement(value: ReactElement): this.type = set("labelElement", value.asInstanceOf[js.Any])
+    def labelElementReactElement(value: ReactElement): this.type = set("labelElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def multiline(value: Boolean): this.type = set("multiline", value.asInstanceOf[js.Any])
@@ -94,10 +101,4 @@ object CopyCellsMenuItem {
   }
   
   def withProps(p: ICopyCellsMenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(context: IMenuContext, getCellData: (Double, Double) => js.Any): Builder = {
-    val __props = js.Dynamic.literal(context = context.asInstanceOf[js.Any], getCellData = js.Any.fromFunction2(getCellData))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ICopyCellsMenuItemProps]))
-  }
 }

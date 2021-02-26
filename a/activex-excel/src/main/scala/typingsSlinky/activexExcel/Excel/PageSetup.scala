@@ -4,12 +4,13 @@ import typingsSlinky.activexExcel.activexExcelBooleans.`false`
 import typingsSlinky.activexExcel.activexExcelNumbers.`1`
 import typingsSlinky.activexExcel.activexExcelNumbers.`2`
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PageSetup extends js.Object {
+trait PageSetup extends StObject {
   
   var AlignMarginsHeaderFooter: Boolean = js.native
   

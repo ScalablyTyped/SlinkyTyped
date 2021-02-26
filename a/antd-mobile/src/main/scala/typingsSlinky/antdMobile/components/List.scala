@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.listMod.ListProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object List {
   
   @JSImport("antd-mobile", "List")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,22 +28,22 @@ object List {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderFooterReactElement(value: ReactElement): this.type = set("renderFooter", value.asInstanceOf[js.Any])
+    def renderFooter(value: js.Function0[ReactElement] | ReactElement): this.type = set("renderFooter", value.asInstanceOf[js.Any])
     
     @scala.inline
     def renderFooterFunction0(value: () => ReactElement): this.type = set("renderFooter", js.Any.fromFunction0(value))
     
     @scala.inline
-    def renderFooter(value: js.Function0[ReactElement] | ReactElement): this.type = set("renderFooter", value.asInstanceOf[js.Any])
+    def renderFooterReactElement(value: ReactElement): this.type = set("renderFooter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderHeaderReactElement(value: ReactElement): this.type = set("renderHeader", value.asInstanceOf[js.Any])
+    def renderHeader(value: js.Function0[ReactElement] | ReactElement): this.type = set("renderHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
     def renderHeaderFunction0(value: () => ReactElement): this.type = set("renderHeader", js.Any.fromFunction0(value))
     
     @scala.inline
-    def renderHeader(value: js.Function0[ReactElement] | ReactElement): this.type = set("renderHeader", value.asInstanceOf[js.Any])
+    def renderHeaderReactElement(value: ReactElement): this.type = set("renderHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
@@ -51,7 +52,7 @@ object List {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: List.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

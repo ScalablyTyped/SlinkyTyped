@@ -1,12 +1,13 @@
 package typingsSlinky.officeJs.Office
 
 import typingsSlinky.officeJs.officeJsStrings.olkAppointmentTimeChanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AppointmentTimeChangedEventArgs extends js.Object {
+trait AppointmentTimeChangedEventArgs extends StObject {
   
   /** 
     * Gets the appointment end date and time. 
@@ -39,27 +40,15 @@ object AppointmentTimeChangedEventArgs {
   }
   
   @scala.inline
-  implicit class AppointmentTimeChangedEventArgsOps[Self <: AppointmentTimeChangedEventArgs] (val x: Self) extends AnyVal {
+  implicit class AppointmentTimeChangedEventArgsMutableBuilder[Self <: AppointmentTimeChangedEventArgs] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setEnd(value: js.Date): Self = StObject.set(x, "end", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setStart(value: js.Date): Self = StObject.set(x, "start", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setEnd(value: js.Date): Self = this.set("end", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStart(value: js.Date): Self = this.set("start", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setType(value: olkAppointmentTimeChanged): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: olkAppointmentTimeChanged): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
   }
 }

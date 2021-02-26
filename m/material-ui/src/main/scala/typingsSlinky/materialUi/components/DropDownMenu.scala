@@ -9,6 +9,7 @@ import typingsSlinky.materialUi.MaterialUI.Menus.DropDownMenuProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object DropDownMenu {
   
   @JSImport("material-ui", "DropDownMenu")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,10 +41,10 @@ object DropDownMenu {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconButtonReactElement(value: ReactElement): this.type = set("iconButton", value.asInstanceOf[js.Any])
+    def iconButton(value: ReactElement): this.type = set("iconButton", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconButton(value: ReactElement): this.type = set("iconButton", value.asInstanceOf[js.Any])
+    def iconButtonReactElement(value: ReactElement): this.type = set("iconButton", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconStyle(value: CSSProperties): this.type = set("iconStyle", value.asInstanceOf[js.Any])
@@ -96,7 +97,7 @@ object DropDownMenu {
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DropDownMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DropDownMenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DropDownMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

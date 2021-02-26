@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,4 +15,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arcgisJsApi.esri.PathSymbol3DLayer
   - typingsSlinky.arcgisJsApi.esri.TextSymbol3DLayer
 */
-trait symbolsSymbol3DLayer extends js.Object
+trait symbolsSymbol3DLayer extends StObject

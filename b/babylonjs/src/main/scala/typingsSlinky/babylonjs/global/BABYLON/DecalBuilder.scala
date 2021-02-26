@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.anon.Normal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,9 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class DecalBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.DecalBuilder
 /* static members */
-@JSGlobal("BABYLON.DecalBuilder")
-@js.native
-object DecalBuilder extends js.Object {
+object DecalBuilder {
   
   /**
     * Creates a decal mesh.
@@ -28,5 +27,7 @@ object DecalBuilder extends js.Object {
     * @returns the decal mesh
     * @see https://doc.babylonjs.com/how_to/decals
     */
+  @JSGlobal("BABYLON.DecalBuilder.CreateDecal")
+  @js.native
   def CreateDecal(name: String, sourceMesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh, options: Normal): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }

@@ -4,12 +4,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.bevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.miter
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.round
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.square
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait geometryEngineAsync extends js.Object {
+trait geometryEngineAsync extends StObject {
   
   def buffer(geometry: js.Array[Geometry_], distance: js.Array[Double], unit: Double): js.Promise[Polygon | js.Array[Polygon]] = js.native
   def buffer(geometry: js.Array[Geometry_], distance: js.Array[Double], unit: Double, unionResults: Boolean): js.Promise[Polygon | js.Array[Polygon]] = js.native

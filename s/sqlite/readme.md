@@ -4,16 +4,16 @@
 Typings are for version 4.0.17
 
 ## Library description:
-SQLite client for Node.js applications with SQL-based migrations API
+SQLite client for Node.js applications with SQL-based migrations API written in Typescript
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | sqlite |
 | Keywords           | sqlite, db, database, sql, migrate, migration, migrations, migrator, seed, seeds, seeder, node, node5, babel, es6, async, promise, promises, api |
-| # releases         | 8 |
-| # dependents       | 141 |
-| # downloads        | 856017 |
-| # stars            | 23 |
+| # releases         | 31 |
+| # dependents       | 184 |
+| # downloads        | 1492632 |
+| # stars            | 24 |
 
 ## Links
 - [Homepage](https://github.com/kriasoft/node-sqlite#readme)

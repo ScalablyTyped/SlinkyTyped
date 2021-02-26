@@ -10,9 +10,9 @@ Displaying DeepZoom tiles with Leaflet
 | ------------------ | :-------------: |
 | Full name          | leaflet-deepzoom |
 | Keywords           | Leaflet, DeepZoom, tiles |
-| # releases         | 4 |
+| # releases         | 0 |
 | # dependents       | 0 |
-| # downloads        | 232 |
+| # downloads        | 569 |
 | # stars            | 0 |
 
 ## Links

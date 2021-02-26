@@ -6,12 +6,13 @@ import typingsSlinky.chromeApps.chrome.networking.config.NetworkInfo
 import typingsSlinky.chromeApps.chrome.networking.config.NetworkInfoFilterHexSSID
 import typingsSlinky.chromeApps.chrome.networking.config.NetworkInfoFilterSSID
 import typingsSlinky.std.Exclude
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofconfig extends js.Object {
+trait Typeofconfig extends StObject {
   
   /**
     * Argument to finishAuthentication indicating the result of the captive portal authentication attempt.

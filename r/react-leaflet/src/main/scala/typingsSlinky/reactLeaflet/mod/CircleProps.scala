@@ -3,6 +3,7 @@ package typingsSlinky.reactLeaflet.mod
 import slinky.core.facade.ReactElement
 import typingsSlinky.leaflet.mod.CircleMarkerOptions
 import typingsSlinky.leaflet.mod.LatLngExpression
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,42 +33,30 @@ object CircleProps {
   }
   
   @scala.inline
-  implicit class CirclePropsOps[Self <: CircleProps] (val x: Self) extends AnyVal {
+  implicit class CirclePropsMutableBuilder[Self <: CircleProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setCenter(value: LatLngExpression): Self = StObject.set(x, "center", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setChildren(value: Children): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setChildrenReactElement(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCenter(value: LatLngExpression): Self = this.set("center", value.asInstanceOf[js.Any])
+    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
     
     @scala.inline
-    def setRadius(value: Double): Self = this.set("radius", value.asInstanceOf[js.Any])
+    def setChildrenVarargs(value: ReactElement*): Self = StObject.set(x, "children", js.Array(value :_*))
     
     @scala.inline
-    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setLeaflet(value: LeafletContext): Self = StObject.set(x, "leaflet", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenVarargs(value: ReactElement*): Self = this.set("children", js.Array(value :_*))
+    def setLeafletUndefined: Self = StObject.set(x, "leaflet", js.undefined)
     
     @scala.inline
-    def setChildren(value: Children): Self = this.set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
-    
-    @scala.inline
-    def setLeaflet(value: LeafletContext): Self = this.set("leaflet", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLeaflet: Self = this.set("leaflet", js.undefined)
+    def setRadius(value: Double): Self = StObject.set(x, "radius", value.asInstanceOf[js.Any])
   }
 }

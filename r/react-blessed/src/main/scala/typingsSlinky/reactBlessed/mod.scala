@@ -3,17 +3,22 @@ package typingsSlinky.reactBlessed
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.blessed.mod.Widgets.Screen
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-blessed", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("react-blessed", "createBlessedRenderer")
+  @js.native
   def createBlessedRenderer(bls: js.Any): renderer = js.native
   
+  @JSImport("react-blessed", "render")
+  @js.native
   def render(c: ReactElement, s: Screen): ReactComponentClass[_] | Null = js.native
+  @JSImport("react-blessed", "render")
+  @js.native
   def render(c: ReactElement, s: Screen, callback: Callback): ReactComponentClass[_] | Null = js.native
   
   type Callback = js.Function0[js.UndefOr[Unit | Null]]

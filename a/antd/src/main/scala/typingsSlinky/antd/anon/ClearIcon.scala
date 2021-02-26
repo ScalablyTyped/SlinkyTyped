@@ -1,12 +1,13 @@
 package typingsSlinky.antd.anon
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClearIcon extends js.Object {
+trait ClearIcon extends StObject {
   
   var clearIcon: js.UndefOr[ReactElement] = js.native
   
@@ -31,69 +32,57 @@ object ClearIcon {
   }
   
   @scala.inline
-  implicit class ClearIconOps[Self <: ClearIcon] (val x: Self) extends AnyVal {
+  implicit class ClearIconMutableBuilder[Self <: ClearIcon] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setClearIcon(value: ReactElement): Self = StObject.set(x, "clearIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setClearIconReactElement(value: ReactElement): Self = StObject.set(x, "clearIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setClearIconUndefined: Self = StObject.set(x, "clearIcon", js.undefined)
     
     @scala.inline
-    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    def setLoading(value: Boolean): Self = StObject.set(x, "loading", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClearIconReactElement(value: ReactElement): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
+    def setLoadingUndefined: Self = StObject.set(x, "loading", js.undefined)
     
     @scala.inline
-    def setClearIcon(value: ReactElement): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
+    def setMenuItemSelectedIcon(value: ReactElement): Self = StObject.set(x, "menuItemSelectedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteClearIcon: Self = this.set("clearIcon", js.undefined)
+    def setMenuItemSelectedIconReactElement(value: ReactElement): Self = StObject.set(x, "menuItemSelectedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
+    def setMenuItemSelectedIconUndefined: Self = StObject.set(x, "menuItemSelectedIcon", js.undefined)
     
     @scala.inline
-    def deleteLoading: Self = this.set("loading", js.undefined)
+    def setMultiple(value: Boolean): Self = StObject.set(x, "multiple", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMenuItemSelectedIconReactElement(value: ReactElement): Self = this.set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
+    def setMultipleUndefined: Self = StObject.set(x, "multiple", js.undefined)
     
     @scala.inline
-    def setMenuItemSelectedIcon(value: ReactElement): Self = this.set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
+    def setPrefixCls(value: String): Self = StObject.set(x, "prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteMenuItemSelectedIcon: Self = this.set("menuItemSelectedIcon", js.undefined)
+    def setRemoveIcon(value: ReactElement): Self = StObject.set(x, "removeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMultiple(value: Boolean): Self = this.set("multiple", value.asInstanceOf[js.Any])
+    def setRemoveIconReactElement(value: ReactElement): Self = StObject.set(x, "removeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteMultiple: Self = this.set("multiple", js.undefined)
+    def setRemoveIconUndefined: Self = StObject.set(x, "removeIcon", js.undefined)
     
     @scala.inline
-    def setRemoveIconReactElement(value: ReactElement): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
+    def setSuffixIcon(value: ReactElement): Self = StObject.set(x, "suffixIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRemoveIcon(value: ReactElement): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
+    def setSuffixIconReactElement(value: ReactElement): Self = StObject.set(x, "suffixIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRemoveIcon: Self = this.set("removeIcon", js.undefined)
-    
-    @scala.inline
-    def setSuffixIconReactElement(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSuffixIcon(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSuffixIcon: Self = this.set("suffixIcon", js.undefined)
+    def setSuffixIconUndefined: Self = StObject.set(x, "suffixIcon", js.undefined)
   }
 }

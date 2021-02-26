@@ -2,18 +2,19 @@ package typingsSlinky.forkTsCheckerWebpackPlugin
 
 import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.performanceMod.Performance
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("fork-ts-checker-webpack-plugin/lib/typescript-reporter/profile/TypeScriptPerformance", JSImport.Namespace)
-@js.native
-object typeScriptPerformanceMod extends js.Object {
+object typeScriptPerformanceMod {
   
+  @JSImport("fork-ts-checker-webpack-plugin/lib/typescript-reporter/profile/TypeScriptPerformance", "connectTypeScriptPerformance")
+  @js.native
   def connectTypeScriptPerformance(typescript: Typeofts, performance: Performance): Performance = js.native
   
   @js.native
-  trait TypeScriptPerformance extends js.Object {
+  trait TypeScriptPerformance extends StObject {
     
     def disable(): Unit = js.native
     

@@ -10,6 +10,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.repaint
 import typingsSlinky.semanticUiReact.visibilityVisibilityMod.VisibilityEventData
 import typingsSlinky.semanticUiReact.visibilityVisibilityMod.VisibilityOnPassed
 import typingsSlinky.semanticUiReact.visibilityVisibilityMod.VisibilityProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object Visibility {
   
   @JSImport("semantic-ui-react", "Visibility")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,6 +28,9 @@ object Visibility {
     
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def context(value: Document | Window | HTMLElement): this.type = set("context", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contextDocument(value: Document): this.type = set("context", value.asInstanceOf[js.Any])
@@ -38,19 +42,16 @@ object Visibility {
     def contextWindow(value: Window): this.type = set("context", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def context(value: Document | Window | HTMLElement): this.type = set("context", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def continuous(value: Boolean): this.type = set("continuous", value.asInstanceOf[js.Any])
     
     @scala.inline
     def fireOnMount(value: Boolean): this.type = set("fireOnMount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def offsetVarargs(value: (Double | String)*): this.type = set("offset", js.Array(value :_*))
+    def offset(value: Double | String | (js.Array[Double | String])): this.type = set("offset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def offset(value: Double | String | (js.Array[Double | String])): this.type = set("offset", value.asInstanceOf[js.Any])
+    def offsetVarargs(value: (Double | String)*): this.type = set("offset", js.Array(value :_*))
     
     @scala.inline
     def onBottomPassed(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onBottomPassed", js.Any.fromFunction2(value))
@@ -101,7 +102,7 @@ object Visibility {
     def updateOn(value: events | repaint): this.type = set("updateOn", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: VisibilityProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Visibility.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: VisibilityProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

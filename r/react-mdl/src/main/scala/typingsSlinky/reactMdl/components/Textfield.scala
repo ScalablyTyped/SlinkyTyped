@@ -22,20 +22,30 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactMdl.mod.TextfieldProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Textfield {
   
+  @scala.inline
+  def apply(label: String): Builder = {
+    val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TextfieldProps]))
+  }
+  
   @JSImport("react-mdl", "Textfield")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactMdl.mod.Textfield] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -143,16 +153,13 @@ object Textfield {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: Double | String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: Double | String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -173,10 +180,10 @@ object Textfield {
     def encType(value: String): this.type = set("encType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
+    def error(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def error(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
+    def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
     def expandable(value: Boolean): this.type = set("expandable", value.asInstanceOf[js.Any])
@@ -720,10 +727,4 @@ object Textfield {
   }
   
   def withProps(p: TextfieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(label: String): Builder = {
-    val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TextfieldProps]))
-  }
 }

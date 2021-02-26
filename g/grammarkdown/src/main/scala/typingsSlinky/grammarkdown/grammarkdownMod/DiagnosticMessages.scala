@@ -3,13 +3,14 @@ package typingsSlinky.grammarkdown.grammarkdownMod
 import typingsSlinky.grammarkdown.anon.FormatMessage
 import typingsSlinky.grammarkdown.anon.`0`
 import typingsSlinky.std.Generator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown/dist/grammarkdown", "DiagnosticMessages")
 @js.native
-class DiagnosticMessages () extends js.Object {
+class DiagnosticMessages () extends StObject {
   
   var compareDiagnostics: js.Any = js.native
   

@@ -2,13 +2,14 @@ package typingsSlinky.vimeoPlayer.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLIFrameElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@vimeo/player", "Player")
 @js.native
-class Player protected () extends js.Object {
+class Player protected () extends StObject {
   def this(element: String) = this()
   def this(element: HTMLElement) = this()
   def this(element: HTMLIFrameElement) = this()

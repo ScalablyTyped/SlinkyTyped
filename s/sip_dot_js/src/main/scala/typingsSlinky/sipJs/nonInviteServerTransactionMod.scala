@@ -4,14 +4,14 @@ import typingsSlinky.sipJs.coreTransportMod.Transport
 import typingsSlinky.sipJs.messagesMod.IncomingRequestMessage
 import typingsSlinky.sipJs.serverTransactionMod.ServerTransaction
 import typingsSlinky.sipJs.transactionUserMod.ServerTransactionUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/core/transactions/non-invite-server-transaction", JSImport.Namespace)
-@js.native
-object nonInviteServerTransactionMod extends js.Object {
+object nonInviteServerTransactionMod {
   
+  @JSImport("sip.js/lib/core/transactions/non-invite-server-transaction", "NonInviteServerTransaction")
   @js.native
   class NonInviteServerTransaction protected () extends ServerTransaction {
     /**

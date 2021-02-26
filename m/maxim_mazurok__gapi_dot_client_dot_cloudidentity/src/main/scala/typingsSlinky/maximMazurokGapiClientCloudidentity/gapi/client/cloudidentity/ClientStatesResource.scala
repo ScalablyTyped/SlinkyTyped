@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.Alt
 import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.Callback
 import typingsSlinky.maximMazurokGapiClientCloudidentity.anon.Customer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClientStatesResource extends js.Object {
+trait ClientStatesResource extends StObject {
   
   /** Gets the client state for the device user */
   def get(): Request[GoogleAppsCloudidentityDevicesV1ClientState] = js.native

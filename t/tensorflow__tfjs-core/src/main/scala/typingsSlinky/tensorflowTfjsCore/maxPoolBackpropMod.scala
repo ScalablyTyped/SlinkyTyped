@@ -7,14 +7,15 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.floor
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.round
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-core/dist/ops/max_pool_backprop", JSImport.Namespace)
-@js.native
-object maxPoolBackpropMod extends js.Object {
+object maxPoolBackpropMod {
   
+  @JSImport("@tensorflow/tfjs-core/dist/ops/max_pool_backprop", "maxPoolBackprop")
+  @js.native
   val maxPoolBackprop: js.Function7[
     /* dy */ Tensor4D | TensorLike, 
     /* input */ Tensor4D | TensorLike, 

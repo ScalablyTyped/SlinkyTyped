@@ -20,13 +20,14 @@ import typingsSlinky.node.urlMod.URL_
 import typingsSlinky.podium.mod.Events
 import typingsSlinky.podium.mod.Listener
 import typingsSlinky.podium.mod.Podium
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Readonly<hapi.hapi.Request> */
 @js.native
-trait ReadonlyRequest extends js.Object {
+trait ReadonlyRequest extends StObject {
   
   def active(): Boolean = js.native
   

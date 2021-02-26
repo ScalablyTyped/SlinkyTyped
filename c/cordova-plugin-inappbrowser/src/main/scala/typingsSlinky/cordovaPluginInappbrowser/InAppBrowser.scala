@@ -3,6 +3,7 @@ package typingsSlinky.cordovaPluginInappbrowser
 import org.scalajs.dom.raw.Event
 import typingsSlinky.cordovaPluginInappbrowser.anon.Code
 import typingsSlinky.cordovaPluginInappbrowser.anon.File
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * NOTE: The InAppBrowser window behaves like a standard web browser, and can't access Cordova APIs.
   */
 @js.native
-trait InAppBrowser extends js.Object {
+trait InAppBrowser extends StObject {
   
   /**
     * Adds a listener for an event from the InAppBrowser.

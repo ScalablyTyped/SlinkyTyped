@@ -74,6 +74,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -82,7 +83,7 @@ object MenuItem {
   
   @JSImport("material-ui", "MenuItem")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -269,10 +270,10 @@ object MenuItem {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -290,10 +291,10 @@ object MenuItem {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def desktop(value: Boolean): this.type = set("desktop", value.asInstanceOf[js.Any])
@@ -374,10 +375,10 @@ object MenuItem {
     def keyboardFocused(value: Boolean): this.type = set("keyboardFocused", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: String | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def label(value: String | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
@@ -392,16 +393,16 @@ object MenuItem {
     def leftIcon(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def menuItemsReactElement(value: ReactElement): this.type = set("menuItems", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def menuItems(value: ReactElement): this.type = set("menuItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nestedItemsVarargs(value: ReactElement*): this.type = set("nestedItems", js.Array(value :_*))
+    def menuItemsReactElement(value: ReactElement): this.type = set("menuItems", value.asInstanceOf[js.Any])
     
     @scala.inline
     def nestedItems(value: js.Array[ReactElement]): this.type = set("nestedItems", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def nestedItemsVarargs(value: ReactElement*): this.type = set("nestedItems", js.Array(value :_*))
     
     @scala.inline
     def nestedLevel(value: Double): this.type = set("nestedLevel", value.asInstanceOf[js.Any])
@@ -662,10 +663,10 @@ object MenuItem {
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+    def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+    def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def primaryTogglesNestedList(value: Boolean): this.type = set("primaryTogglesNestedList", value.asInstanceOf[js.Any])
@@ -698,13 +699,13 @@ object MenuItem {
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def secondaryText(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def secondaryTextLines(value: Double): this.type = set("secondaryTextLines", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
@@ -758,7 +759,7 @@ object MenuItem {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MenuItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -6,12 +6,13 @@ import typingsSlinky.nightwatch.nightwatchNumbers.`2`
 import typingsSlinky.nightwatch.nightwatchStrings.left
 import typingsSlinky.nightwatch.nightwatchStrings.middle
 import typingsSlinky.nightwatch.nightwatchStrings.right
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebDriverProtocolUserActions extends js.Object {
+trait WebDriverProtocolUserActions extends StObject {
   
   /**
     * Double-clicks at the current mouse coordinates (set by `.moveTo()`).

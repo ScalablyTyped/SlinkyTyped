@@ -1,5 +1,6 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.squareConnect.squareConnectStrings.METRIC_METER
   - typingsSlinky.squareConnect.squareConnectStrings.METRIC_KILOMETER
 */
-trait LengthUnitType extends js.Object
+trait LengthUnitType extends StObject
 object LengthUnitType {
   
   @scala.inline

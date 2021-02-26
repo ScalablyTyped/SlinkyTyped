@@ -1,18 +1,18 @@
 package typingsSlinky.antvComponent
 
-import typingsSlinky.antvComponent.groupComponentMod.GroupComponent
 import typingsSlinky.antvComponent.typesMod.ShapeAnnotationCfg
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@antv/component/lib/annotation/shape", JSImport.Namespace)
-@js.native
-object shapeMod extends js.Object {
+object shapeMod {
   
-  @js.native
-  trait ShapeAnnotation extends GroupComponent[ShapeAnnotationCfg]
-  
+  @JSImport("@antv/component/lib/annotation/shape", JSImport.Default)
   @js.native
   class default () extends ShapeAnnotation
+  
+  @js.native
+  trait ShapeAnnotation
+    extends typingsSlinky.antvComponent.groupComponentMod.default[ShapeAnnotationCfg]
 }

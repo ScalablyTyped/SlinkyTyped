@@ -1,12 +1,13 @@
 package typingsSlinky.chromeApps.anon
 
 import typingsSlinky.chromeApps.chrome.virtualKeyboard.FeatureRestrictions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofvirtualKeyboard extends js.Object {
+trait TypeofvirtualKeyboard extends StObject {
   
   /**
     * Sets restrictions on features provided by the virtual keyboard.

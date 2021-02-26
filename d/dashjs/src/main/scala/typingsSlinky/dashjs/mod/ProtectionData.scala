@@ -2,13 +2,14 @@ package typingsSlinky.dashjs.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.dashjs.anon.PinMediaKeyMessageTypestr
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dashjs", "ProtectionData")
 @js.native
-class ProtectionData () extends js.Object {
+class ProtectionData () extends StObject {
   
   /**
     * Defines a set of clear keys that are available to the key system.

@@ -2,6 +2,7 @@ package typingsSlinky.officeJs.Office
 
 import typingsSlinky.officeJs.Office.MailboxEnums.EntityType
 import typingsSlinky.officeJs.Office.MailboxEnums.ItemType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

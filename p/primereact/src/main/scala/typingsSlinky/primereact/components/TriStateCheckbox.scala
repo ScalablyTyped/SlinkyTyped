@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import typingsSlinky.primereact.triStateCheckboxMod.TriStateCheckboxProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object TriStateCheckbox {
   
   @JSImport("primereact/tristatecheckbox", "TriStateCheckbox")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -57,7 +58,7 @@ object TriStateCheckbox {
     def valueNull: this.type = set("value", null)
   }
   
-  def withProps(p: TriStateCheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TriStateCheckbox.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TriStateCheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

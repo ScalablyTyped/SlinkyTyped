@@ -72,21 +72,97 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactBootstrap.mod.SelectCallback
+import typingsSlinky.reactBootstrap.panelBodyMod.PanelBodyProps
+import typingsSlinky.reactBootstrap.panelCollapseMod.PanelCollapseProps
+import typingsSlinky.reactBootstrap.panelFooterMod.PanelFooterProps
+import typingsSlinky.reactBootstrap.panelHeadingMod.PanelHeadingProps
 import typingsSlinky.reactBootstrap.panelMod.PanelProps
+import typingsSlinky.reactBootstrap.panelTitleMod.PanelTitleProps
+import typingsSlinky.reactBootstrap.panelToggleMod.PanelToggleProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Panel {
   
+  object Body {
+    
+    @JSImport("react-bootstrap", "Panel.Body")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Body.type): SharedBuilder_PanelBodyProps1892722124[typingsSlinky.reactBootstrap.mod.Panel.Body] = new SharedBuilder_PanelBodyProps1892722124[typingsSlinky.reactBootstrap.mod.Panel.Body](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PanelBodyProps): SharedBuilder_PanelBodyProps1892722124[typingsSlinky.reactBootstrap.mod.Panel.Body] = new SharedBuilder_PanelBodyProps1892722124[typingsSlinky.reactBootstrap.mod.Panel.Body](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Collapse {
+    
+    @JSImport("react-bootstrap", "Panel.Collapse")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Collapse.type): SharedBuilder_PanelCollapseProps706182167[typingsSlinky.reactBootstrap.mod.Panel.Collapse] = new SharedBuilder_PanelCollapseProps706182167[typingsSlinky.reactBootstrap.mod.Panel.Collapse](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PanelCollapseProps): SharedBuilder_PanelCollapseProps706182167[typingsSlinky.reactBootstrap.mod.Panel.Collapse] = new SharedBuilder_PanelCollapseProps706182167[typingsSlinky.reactBootstrap.mod.Panel.Collapse](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Footer {
+    
+    @JSImport("react-bootstrap", "Panel.Footer")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Footer.type): SharedBuilder_PanelFooterProps_1947741201[typingsSlinky.reactBootstrap.mod.Panel.Footer] = new SharedBuilder_PanelFooterProps_1947741201[typingsSlinky.reactBootstrap.mod.Panel.Footer](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PanelFooterProps): SharedBuilder_PanelFooterProps_1947741201[typingsSlinky.reactBootstrap.mod.Panel.Footer] = new SharedBuilder_PanelFooterProps_1947741201[typingsSlinky.reactBootstrap.mod.Panel.Footer](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Heading {
+    
+    @JSImport("react-bootstrap", "Panel.Heading")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Heading.type): SharedBuilder_PanelHeadingProps_1976836476[typingsSlinky.reactBootstrap.mod.Panel.Heading] = new SharedBuilder_PanelHeadingProps_1976836476[typingsSlinky.reactBootstrap.mod.Panel.Heading](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PanelHeadingProps): SharedBuilder_PanelHeadingProps_1976836476[typingsSlinky.reactBootstrap.mod.Panel.Heading] = new SharedBuilder_PanelHeadingProps_1976836476[typingsSlinky.reactBootstrap.mod.Panel.Heading](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Title {
+    
+    @JSImport("react-bootstrap", "Panel.Title")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Title.type): SharedBuilder_PanelTitleProps238406717[typingsSlinky.reactBootstrap.mod.Panel.Title] = new SharedBuilder_PanelTitleProps238406717[typingsSlinky.reactBootstrap.mod.Panel.Title](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PanelTitleProps): SharedBuilder_PanelTitleProps238406717[typingsSlinky.reactBootstrap.mod.Panel.Title] = new SharedBuilder_PanelTitleProps238406717[typingsSlinky.reactBootstrap.mod.Panel.Title](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Toggle {
+    
+    @JSImport("react-bootstrap", "Panel.Toggle")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Toggle.type): SharedBuilder_PanelToggleProps1651342863[typingsSlinky.reactBootstrap.mod.Panel.Toggle] = new SharedBuilder_PanelToggleProps1651342863[typingsSlinky.reactBootstrap.mod.Panel.Toggle](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PanelToggleProps): SharedBuilder_PanelToggleProps1651342863[typingsSlinky.reactBootstrap.mod.Panel.Toggle] = new SharedBuilder_PanelToggleProps1651342863[typingsSlinky.reactBootstrap.mod.Panel.Toggle](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("react-bootstrap", "Panel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Panel] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -352,19 +428,16 @@ object Panel {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultExpanded(value: Boolean): this.type = set("defaultExpanded", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -943,10 +1016,10 @@ object Panel {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -961,7 +1034,7 @@ object Panel {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Panel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

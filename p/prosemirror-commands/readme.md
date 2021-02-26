@@ -11,8 +11,8 @@ Editing commands for ProseMirror
 | Full name          | prosemirror-commands |
 | Keywords           | - |
 | # releases         | 8 |
-| # dependents       | 78 |
-| # downloads        | 2367819 |
+| # dependents       | 167 |
+| # downloads        | 6917798 |
 | # stars            | 0 |
 
 ## Links

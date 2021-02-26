@@ -7,17 +7,12 @@ import typingsSlinky.react.mod.SchedulerInteraction
 import typingsSlinky.react.reactStrings.mount
 import typingsSlinky.react.reactStrings.update
 import typingsSlinky.std.Set
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Profiler {
-  
-  @JSImport("react", "Profiler")
-  @js.native
-  object component extends js.Object
-  
-  def withProps(p: ProfilerProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -27,4 +22,10 @@ object Profiler {
     val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onRender = js.Any.fromFunction7(onRender))
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ProfilerProps]))
   }
+  
+  @JSImport("react", "Profiler")
+  @js.native
+  val component: js.Object = js.native
+  
+  def withProps(p: ProfilerProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

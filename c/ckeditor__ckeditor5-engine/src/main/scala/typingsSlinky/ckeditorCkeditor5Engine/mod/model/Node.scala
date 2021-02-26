@@ -8,6 +8,7 @@ import typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.root
 import typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.text
 import typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.textProxy
 import typingsSlinky.std.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

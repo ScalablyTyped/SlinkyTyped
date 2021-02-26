@@ -10,14 +10,14 @@ import typingsSlinky.vsoNodeApi.dashboardInterfacesMod.WidgetScope
 import typingsSlinky.vsoNodeApi.dashboardInterfacesMod.WidgetTypesResponse
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestHandler
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vso-node-api/DashboardApi", JSImport.Namespace)
-@js.native
-object dashboardApiMod extends js.Object {
+object dashboardApiMod {
   
+  @JSImport("vso-node-api/DashboardApi", "DashboardApi")
   @js.native
   class DashboardApi protected () extends IDashboardApi {
     def this(baseUrl: String, handlers: js.Array[IRequestHandler]) = this()

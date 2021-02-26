@@ -1,12 +1,11 @@
 package typingsSlinky.reactNativeFirebase
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-firebase/config", JSImport.Namespace)
-@js.native
-object configMod extends js.Object {
+object configMod {
   
   type Config = typingsSlinky.reactNativeFirebase.mod.RNFirebase.config.Config
   

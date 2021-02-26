@@ -10,14 +10,14 @@ import typingsSlinky.naja.najaStrings.interaction
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import typingsSlinky.std.EventTarget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("naja/src/core/UIHandler", JSImport.Namespace)
-@js.native
-object uihandlerMod extends js.Object {
+object uihandlerMod {
   
+  @JSImport("naja/src/core/UIHandler", "UIHandler")
   @js.native
   class UIHandler () extends EventTarget {
     

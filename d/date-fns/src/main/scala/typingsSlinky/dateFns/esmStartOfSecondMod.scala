@@ -1,17 +1,19 @@
 package typingsSlinky.dateFns
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("date-fns/esm/startOfSecond", JSImport.Namespace)
-@js.native
-object esmStartOfSecondMod extends js.Object {
+object esmStartOfSecondMod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
-    def apply(date: Double): js.Date = js.native
+    @JSImport("date-fns/esm/startOfSecond", JSImport.Default)
+    @js.native
     def apply(date: js.Date): js.Date = js.native
+    @JSImport("date-fns/esm/startOfSecond", JSImport.Default)
+    @js.native
+    def apply(date: Double): js.Date = js.native
   }
 }

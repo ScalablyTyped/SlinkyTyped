@@ -16,15 +16,27 @@ import typingsSlinky.rcTrigger.popupInnerMod.PopupInnerProps
 import typingsSlinky.rcTrigger.popupInnerMod.PopupInnerRef
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PopupInner {
   
+  @scala.inline
+  def apply(
+    animation: AnimationType,
+    motion: CSSMotionProps,
+    prefixCls: String,
+    transitionName: TransitionNameType
+  ): Builder = {
+    val __props = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any], motion = motion.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], transitionName = transitionName.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PopupInnerProps with RefAttributes[PopupInnerRef]]))
+  }
+  
   @JSImport("rc-trigger/es/Popup/PopupInner", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -78,15 +90,4 @@ object PopupInner {
   }
   
   def withProps(p: PopupInnerProps with RefAttributes[PopupInnerRef]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    animation: AnimationType,
-    motion: CSSMotionProps,
-    prefixCls: String,
-    transitionName: TransitionNameType
-  ): Builder = {
-    val __props = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any], motion = motion.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], transitionName = transitionName.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PopupInnerProps with RefAttributes[PopupInnerRef]]))
-  }
 }

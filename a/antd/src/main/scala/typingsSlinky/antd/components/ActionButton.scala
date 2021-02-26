@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.actionButtonMod.ActionButtonProps
 import typingsSlinky.antd.buttonButtonMod.ButtonProps
 import typingsSlinky.antd.buttonButtonMod.LegacyButtonType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ActionButton {
   
+  @scala.inline
+  def apply(closeModal: js.Function, prefixCls: String): Builder = {
+    val __props = js.Dynamic.literal(closeModal = closeModal.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ActionButtonProps]))
+  }
+  
   @JSImport("antd/lib/modal/ActionButton", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,10 +41,4 @@ object ActionButton {
   }
   
   def withProps(p: ActionButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(closeModal: js.Function, prefixCls: String): Builder = {
-    val __props = js.Dynamic.literal(closeModal = closeModal.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ActionButtonProps]))
-  }
 }

@@ -10,9 +10,9 @@ thin wrapper around process.hrtime
 | ------------------ | :-------------: |
 | Full name          | hirestime |
 | Keywords           | hrtime, hirestimer, milliseconds, seconds, nanoseconds, high resolution timer, profiling, profiler, timing, measurement |
-| # releases         | 3 |
-| # dependents       | 18 |
-| # downloads        | 302921 |
+| # releases         | 13 |
+| # dependents       | 19 |
+| # downloads        | 656806 |
 | # stars            | 0 |
 
 ## Links

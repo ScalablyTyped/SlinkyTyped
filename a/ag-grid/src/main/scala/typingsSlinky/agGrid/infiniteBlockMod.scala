@@ -2,14 +2,14 @@ package typingsSlinky.agGrid
 
 import typingsSlinky.agGrid.infiniteCacheMod.InfiniteCacheParams
 import typingsSlinky.agGrid.rowNodeBlockMod.RowNodeBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/rowModels/infinite/infiniteBlock", JSImport.Namespace)
-@js.native
-object infiniteBlockMod extends js.Object {
+object infiniteBlockMod {
   
+  @JSImport("ag-grid/dist/lib/rowModels/infinite/infiniteBlock", "InfiniteBlock")
   @js.native
   class InfiniteBlock protected () extends RowNodeBlock {
     def this(pageNumber: Double, params: InfiniteCacheParams) = this()

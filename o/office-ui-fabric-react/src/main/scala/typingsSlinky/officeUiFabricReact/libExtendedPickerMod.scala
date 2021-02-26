@@ -2,26 +2,31 @@ package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.baseExtendedPickerTypesMod.IBaseExtendedPickerProps
 import typingsSlinky.officeUiFabricReact.extendedPeoplePickerMod.IExtendedPeoplePickerProps
-import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/ExtendedPicker", JSImport.Namespace)
-@js.native
-object libExtendedPickerMod extends js.Object {
+object libExtendedPickerMod {
   
+  @JSImport("office-ui-fabric-react/lib/ExtendedPicker", "BaseExtendedPeoplePicker")
   @js.native
-  class BaseExtendedPeoplePicker ()
-    extends typingsSlinky.officeUiFabricReact.baseExtendedPickerMod.BaseExtendedPicker[IPersonaProps, IExtendedPeoplePickerProps]
+  class BaseExtendedPeoplePicker protected ()
+    extends typingsSlinky.officeUiFabricReact.extendedPickerMod.BaseExtendedPeoplePicker {
+    def this(basePickerProps: IExtendedPeoplePickerProps) = this()
+  }
   
+  @JSImport("office-ui-fabric-react/lib/ExtendedPicker", "BaseExtendedPicker")
   @js.native
   class BaseExtendedPicker[T, P /* <: IBaseExtendedPickerProps[T] */] protected ()
     extends typingsSlinky.officeUiFabricReact.extendedPickerMod.BaseExtendedPicker[T, P] {
     def this(basePickerProps: P) = this()
   }
   
+  @JSImport("office-ui-fabric-react/lib/ExtendedPicker", "ExtendedPeoplePicker")
   @js.native
-  class ExtendedPeoplePicker ()
-    extends typingsSlinky.officeUiFabricReact.baseExtendedPickerMod.BaseExtendedPicker[IPersonaProps, IExtendedPeoplePickerProps]
+  class ExtendedPeoplePicker protected ()
+    extends typingsSlinky.officeUiFabricReact.extendedPickerMod.ExtendedPeoplePicker {
+    def this(basePickerProps: IExtendedPeoplePickerProps) = this()
+  }
 }

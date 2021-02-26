@@ -1,5 +1,6 @@
 package typingsSlinky.csstype.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.revert
   - typingsSlinky.csstype.csstypeStrings.unset
 */
-trait EmptyCellsProperty extends js.Object
+trait EmptyCellsProperty extends StObject
 object EmptyCellsProperty {
   
   @scala.inline

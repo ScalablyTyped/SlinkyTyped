@@ -10,9 +10,9 @@ Convert draftjs blocks to markdown using the marked library, and vice versa.
 | ------------------ | :-------------: |
 | Full name          | markdown-draft-js |
 | Keywords           | - |
-| # releases         | 26 |
-| # dependents       | 10 |
-| # downloads        | 372354 |
+| # releases         | 11 |
+| # dependents       | 15 |
+| # downloads        | 1064300 |
 | # stars            | 0 |
 
 ## Links

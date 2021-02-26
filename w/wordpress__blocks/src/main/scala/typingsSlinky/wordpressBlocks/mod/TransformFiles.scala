@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.FileList
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
 import typingsSlinky.wordpressBlocks.wordpressBlocksStrings.files
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

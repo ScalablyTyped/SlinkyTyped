@@ -76,6 +76,7 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -84,7 +85,7 @@ object FocusTrapZone {
   
   @JSImport("office-ui-fabric-react", "FocusTrapZone")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -262,13 +263,13 @@ object FocusTrapZone {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[IFocusTrapZone]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ IFocusTrapZone | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[IFocusTrapZone]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[IFocusTrapZone]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -286,10 +287,10 @@ object FocusTrapZone {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -310,16 +311,16 @@ object FocusTrapZone {
     def enableAriaHiddenSiblings(value: Boolean): this.type = set("enableAriaHiddenSiblings", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def firstFocusableSelectorFunction0(value: () => String): this.type = set("firstFocusableSelector", js.Any.fromFunction0(value))
-    
-    @scala.inline
     def firstFocusableSelector(value: String | js.Function0[String]): this.type = set("firstFocusableSelector", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def firstFocusableTargetFunction1(value: /* element */ HTMLElement => HTMLElement | Null): this.type = set("firstFocusableTarget", js.Any.fromFunction1(value))
+    def firstFocusableSelectorFunction0(value: () => String): this.type = set("firstFocusableSelector", js.Any.fromFunction0(value))
     
     @scala.inline
     def firstFocusableTarget(value: String | (js.Function1[/* element */ HTMLElement, HTMLElement | Null])): this.type = set("firstFocusableTarget", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def firstFocusableTargetFunction1(value: /* element */ HTMLElement => HTMLElement | Null): this.type = set("firstFocusableTarget", js.Any.fromFunction1(value))
     
     @scala.inline
     def focusPreviouslyFocusedInnerElement(value: Boolean): this.type = set("focusPreviouslyFocusedInnerElement", value.asInstanceOf[js.Any])
@@ -661,7 +662,7 @@ object FocusTrapZone {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IFocusTrapZoneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FocusTrapZone.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IFocusTrapZoneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

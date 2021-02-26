@@ -2,6 +2,7 @@ package typingsSlinky.kurentoClient.mod
 
 import typingsSlinky.kurentoClient.anon.EventEndOfStream
 import typingsSlinky.kurentoClient.kurentoClientStrings.EndOfStream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

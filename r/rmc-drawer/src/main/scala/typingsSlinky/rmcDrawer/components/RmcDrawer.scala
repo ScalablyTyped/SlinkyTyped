@@ -11,6 +11,7 @@ import typingsSlinky.rmcDrawer.rmcDrawerStrings.bottom
 import typingsSlinky.rmcDrawer.rmcDrawerStrings.left
 import typingsSlinky.rmcDrawer.rmcDrawerStrings.right
 import typingsSlinky.rmcDrawer.rmcDrawerStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object RmcDrawer {
   
   @JSImport("rmc-drawer", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -27,13 +28,13 @@ object RmcDrawer {
        with StBuildingComponent[tag.type, ^] {
     
     @scala.inline
+    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
-    
-    @scala.inline
-    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -69,10 +70,10 @@ object RmcDrawer {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sidebarReactElement(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
+    def sidebar(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sidebar(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
+    def sidebarReactElement(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def sidebarStyle(value: CSSProperties): this.type = set("sidebarStyle", value.asInstanceOf[js.Any])
@@ -87,7 +88,7 @@ object RmcDrawer {
     def transitions(value: Boolean): this.type = set("transitions", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PartialDrawerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RmcDrawer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PartialDrawerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

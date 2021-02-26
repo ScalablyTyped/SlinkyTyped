@@ -1,12 +1,13 @@
 package typingsSlinky.sendcloud.mod
 
 import typingsSlinky.nodemailer.mod.SentMessageInfo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Sendcloud extends js.Object {
+trait Sendcloud extends StObject {
   
   val EmailList: typingsSlinky.sendcloud.mod.EmailList = js.native
   

@@ -3,17 +3,22 @@ package typingsSlinky.materialSelect
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
-import typingsSlinky.materialSelect.anon.ICONEVENT
 import typingsSlinky.materialSelect.anon.PartialMDCSelectIconAdapt
 import typingsSlinky.materialSelect.iconAdapterMod.MDCSelectIconAdapter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/select/icon/foundation", JSImport.Namespace)
-@js.native
-object iconFoundationMod extends js.Object {
+object iconFoundationMod {
   
+  @JSImport("@material/select/icon/foundation", JSImport.Default)
+  @js.native
+  class default () extends MDCSelectIconFoundation {
+    def this(adapter: PartialMDCSelectIconAdapt) = this()
+  }
+  
+  @JSImport("@material/select/icon/foundation", "MDCSelectIconFoundation")
   @js.native
   class MDCSelectIconFoundation () extends MDCFoundation[MDCSelectIconAdapter] {
     def this(adapter: PartialMDCSelectIconAdapt) = this()
@@ -26,32 +31,5 @@ object iconFoundationMod extends js.Object {
     def setContent(content: String): Unit = js.native
     
     def setDisabled(disabled: Boolean): Unit = js.native
-  }
-  /* static members */
-  @js.native
-  object MDCSelectIconFoundation extends js.Object {
-    
-    /**
-      * See {@link MDCSelectIconAdapter} for typing information on parameters and return types.
-      */
-    def defaultAdapter: MDCSelectIconAdapter = js.native
-    
-    def strings: ICONEVENT = js.native
-  }
-  
-  @js.native
-  class default () extends MDCSelectIconFoundation {
-    def this(adapter: PartialMDCSelectIconAdapt) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    /**
-      * See {@link MDCSelectIconAdapter} for typing information on parameters and return types.
-      */
-    def defaultAdapter: MDCSelectIconAdapter = js.native
-    
-    def strings: ICONEVENT = js.native
   }
 }

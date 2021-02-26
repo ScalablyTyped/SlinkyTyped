@@ -1,7 +1,7 @@
 package typingsSlinky.instagramPrivateApi
 
-import typingsSlinky.bluebird.mod.^
 import typingsSlinky.instagramPrivateApi.anon.Duration
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.mediaRepositoryConfigureResponseMod.MediaRepositoryConfigureResponseRootObject
 import typingsSlinky.instagramPrivateApi.postingAlbumOptionsMod.PostingAlbumOptions
 import typingsSlinky.instagramPrivateApi.postingIgtvOptionsMod.PostingIgtvOptions
@@ -11,16 +11,17 @@ import typingsSlinky.instagramPrivateApi.postingVideoOptionsMod.PostingStoryVide
 import typingsSlinky.instagramPrivateApi.postingVideoOptionsMod.PostingVideoOptions
 import typingsSlinky.instagramPrivateApi.repositoryMod.Repository
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/services/publish.service", JSImport.Namespace)
-@js.native
-object publishServiceMod extends js.Object {
+object publishServiceMod {
   
+  @JSImport("instagram-private-api/dist/services/publish.service", "PublishService")
   @js.native
-  class PublishService () extends Repository {
+  class PublishService protected () extends Repository {
+    def this(client: IgApiClient) = this()
     
     def album(options: PostingAlbumOptions): js.Promise[_] = js.native
     
@@ -44,21 +45,46 @@ object publishServiceMod extends js.Object {
     def video(options: PostingVideoOptions): js.Promise[MediaRepositoryConfigureResponseRootObject] = js.native
   }
   /* static members */
-  @js.native
-  object PublishService extends js.Object {
+  object PublishService {
     
-    def catchTranscodeError(videoInfo: js.Any, transcodeDelayInMs: Double): js.Function1[/* error */ js.Any, ^[Unit]] = js.native
+    @JSImport("instagram-private-api/dist/services/publish.service", "PublishService")
+    @js.native
+    val ^ : js.Any = js.native
     
+    @JSImport("instagram-private-api/dist/services/publish.service", "PublishService.catchTranscodeError")
+    @js.native
+    def catchTranscodeError(videoInfo: js.Any, transcodeDelayInMs: Double): js.Function1[/* error */ js.Any, typingsSlinky.bluebird.mod.^[Unit]] = js.native
+    
+    @JSImport("instagram-private-api/dist/services/publish.service", "PublishService.getMP4Duration")
+    @js.native
     def getMP4Duration(buffer: Buffer): Double = js.native
     
+    @JSImport("instagram-private-api/dist/services/publish.service", "PublishService.getVideoInfo")
+    @js.native
     def getVideoInfo(buffer: Buffer): Duration = js.native
     
-    var makeLocationOptions: js.Any = js.native
+    @JSImport("instagram-private-api/dist/services/publish.service", "PublishService.makeLocationOptions")
+    @js.native
+    def makeLocationOptions: js.Any = js.native
+    @scala.inline
+    def makeLocationOptions_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("makeLocationOptions")(x.asInstanceOf[js.Any])
     
-    var publishDebug: js.Any = js.native
+    @JSImport("instagram-private-api/dist/services/publish.service", "PublishService.publishDebug")
+    @js.native
+    def publishDebug: js.Any = js.native
+    @scala.inline
+    def publishDebug_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("publishDebug")(x.asInstanceOf[js.Any])
     
-    var read16: js.Any = js.native
+    @JSImport("instagram-private-api/dist/services/publish.service", "PublishService.read16")
+    @js.native
+    def read16: js.Any = js.native
+    @scala.inline
+    def read16_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("read16")(x.asInstanceOf[js.Any])
     
-    var read32: js.Any = js.native
+    @JSImport("instagram-private-api/dist/services/publish.service", "PublishService.read32")
+    @js.native
+    def read32: js.Any = js.native
+    @scala.inline
+    def read32_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("read32")(x.asInstanceOf[js.Any])
   }
 }

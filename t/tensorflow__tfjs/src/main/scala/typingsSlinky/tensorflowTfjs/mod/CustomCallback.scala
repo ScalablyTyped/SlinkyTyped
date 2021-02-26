@@ -2,6 +2,7 @@ package typingsSlinky.tensorflowTfjs.mod
 
 import typingsSlinky.tensorflowTfjsLayers.baseCallbacksMod.CustomCallbackArgs
 import typingsSlinky.tensorflowTfjsLayers.baseCallbacksMod.YieldEveryOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,5 +1,6 @@
 package typingsSlinky.googlepay.google.payments.api
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googlepay.googlepayStrings.SHIPPING_OPTION
   - typingsSlinky.googlepay.googlepayStrings.INITIALIZE
 */
-trait CallbackTrigger extends js.Object
+trait CallbackTrigger extends StObject
 object CallbackTrigger {
   
   @scala.inline

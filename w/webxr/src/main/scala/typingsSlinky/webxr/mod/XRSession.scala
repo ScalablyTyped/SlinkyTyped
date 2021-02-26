@@ -5,12 +5,13 @@ import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.DOMHighResTimeStamp
 import typingsSlinky.webxr.anon.PlaneDetectionState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait XRSession extends js.Object {
+trait XRSession extends StObject {
   
   def addEventListener(`type`: XREventType, listener: XREventHandler): Unit = js.native
   def addEventListener(`type`: XREventType, listener: XREventHandler, options: Boolean): Unit = js.native
@@ -72,8 +73,8 @@ trait XRSession extends js.Object {
   var onvisibilitychange_Original: XREventHandler = js.native
   
   def removeEventListener(`type`: XREventType, listener: XREventHandler): Unit = js.native
-  def removeEventListener(`type`: XREventType, listener: XREventHandler, options: Boolean): Unit = js.native
   def removeEventListener(`type`: XREventType, listener: XREventHandler, options: EventListenerOptions): Unit = js.native
+  def removeEventListener(`type`: XREventType, listener: XREventHandler, options: Boolean): Unit = js.native
   
   /**
     * object which contains options affecting how the imagery is rendered.

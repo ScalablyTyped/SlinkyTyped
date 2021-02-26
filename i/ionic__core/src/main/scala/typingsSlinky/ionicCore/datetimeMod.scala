@@ -6,14 +6,14 @@ import typingsSlinky.ionicCore.datetimeInterfaceMod.DatetimeOptions
 import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/datetime/datetime", JSImport.Namespace)
-@js.native
-object datetimeMod extends js.Object {
+object datetimeMod {
   
+  @JSImport("@ionic/core/dist/types/components/datetime/datetime", "Datetime")
   @js.native
   class Datetime () extends ComponentInterface {
     

@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "ListMerchantsResponse")
 @js.native
-class ListMerchantsResponse () extends js.Object {
+class ListMerchantsResponse () extends StObject {
   
   /**
     * If the  response is truncated, the cursor to use in next request to fetch next set of objects.

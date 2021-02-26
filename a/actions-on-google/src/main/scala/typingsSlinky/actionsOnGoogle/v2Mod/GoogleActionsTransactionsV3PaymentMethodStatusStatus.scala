@@ -1,5 +1,6 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.STATUS_REQUIRE_FIX
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.STATUS_INAPPLICABLE
 */
-trait GoogleActionsTransactionsV3PaymentMethodStatusStatus extends js.Object
+trait GoogleActionsTransactionsV3PaymentMethodStatusStatus extends StObject
 object GoogleActionsTransactionsV3PaymentMethodStatusStatus {
   
   @scala.inline

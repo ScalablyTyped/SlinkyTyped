@@ -7,12 +7,14 @@ import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.reactDates.anon.EndDate
+import typingsSlinky.reactDates.mod.DateRangePickerInputControllerCls
 import typingsSlinky.reactDates.mod.DateRangePickerInputControllerShape
 import typingsSlinky.reactDates.mod.DateRangePickerInputPhrases
 import typingsSlinky.reactDates.mod.DisabledShape
 import typingsSlinky.reactDates.mod.FocusedInputShape
 import typingsSlinky.reactDates.mod.IconPositionShape
 import typingsSlinky.reactDates.mod.OpenDirectionShape
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,54 +23,54 @@ object DateRangePickerInputController {
   
   @JSImport("react-dates", "DateRangePickerInputController")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
+       with StBuildingComponent[tag.type, DateRangePickerInputControllerCls] {
     
     @scala.inline
     def block(value: Boolean): this.type = set("block", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customArrowIconReactElement(value: ReactElement): this.type = set("customArrowIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def customArrowIcon(value: ReactElement): this.type = set("customArrowIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customCloseIconReactElement(value: ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
+    def customArrowIconReactElement(value: ReactElement): this.type = set("customArrowIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customCloseIcon(value: ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def customInputIconReactElement(value: ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
+    def customCloseIconReactElement(value: ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def customInputIcon(value: ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabled(value: DisabledShape): this.type = set("disabled", value.asInstanceOf[js.Any])
+    def customInputIconReactElement(value: ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def displayFormatFunction0(value: () => String): this.type = set("displayFormat", js.Any.fromFunction0(value))
+    def disabled(value: DisabledShape): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def displayFormat(value: String | js.Function0[String]): this.type = set("displayFormat", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def endDate(value: Moment): this.type = set("endDate", value.asInstanceOf[js.Any])
+    def displayFormatFunction0(value: () => String): this.type = set("displayFormat", js.Any.fromFunction0(value))
     
     @scala.inline
-    def endDateNull: this.type = set("endDate", null)
+    def endDate(value: Moment): this.type = set("endDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def endDateAriaLabel(value: String): this.type = set("endDateAriaLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def endDateId(value: String): this.type = set("endDateId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def endDateNull: this.type = set("endDate", null)
     
     @scala.inline
     def endDatePlaceholderText(value: String): this.type = set("endDatePlaceholderText", value.asInstanceOf[js.Any])
@@ -152,13 +154,13 @@ object DateRangePickerInputController {
     def startDate(value: Moment): this.type = set("startDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def startDateNull: this.type = set("startDate", null)
-    
-    @scala.inline
     def startDateAriaLabel(value: String): this.type = set("startDateAriaLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def startDateId(value: String): this.type = set("startDateId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def startDateNull: this.type = set("startDate", null)
     
     @scala.inline
     def startDatePlaceholderText(value: String): this.type = set("startDatePlaceholderText", value.asInstanceOf[js.Any])
@@ -170,7 +172,7 @@ object DateRangePickerInputController {
     def withFullScreenPortal(value: Boolean): this.type = set("withFullScreenPortal", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DateRangePickerInputControllerShape): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DateRangePickerInputController.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DateRangePickerInputControllerShape): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

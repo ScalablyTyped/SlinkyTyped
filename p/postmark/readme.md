@@ -4,15 +4,15 @@
 Typings are for version 2.6.0
 
 ## Library description:
-Official Node.js client library for the Postmark HTTP API - http://www.postmarkapp.com
+Official Node.js client library for the Postmark HTTP API - https://www.postmarkapp.com
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | postmark |
 | Keywords           | - |
-| # releases         | 20 |
-| # dependents       | 41 |
-| # downloads        | 1180249 |
+| # releases         | 23 |
+| # dependents       | 53 |
+| # downloads        | 2240090 |
 | # stars            | 7 |
 
 ## Links

@@ -1,13 +1,14 @@
 package typingsSlinky.web3CoreHelpers.mod
 
 import typingsSlinky.std.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("web3-core-helpers", "WebsocketProviderBase")
 @js.native
-class WebsocketProviderBase protected () extends js.Object {
+class WebsocketProviderBase protected () extends StObject {
   def this(host: String) = this()
   def this(host: String, options: WebsocketProviderOptions) = this()
   

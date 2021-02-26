@@ -1,11 +1,12 @@
 package typingsSlinky.filepond.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FilePondInitialFile extends js.Object {
+trait FilePondInitialFile extends StObject {
   
   var options: typingsSlinky.filepond.anon.File = js.native
   
@@ -21,24 +22,12 @@ object FilePondInitialFile {
   }
   
   @scala.inline
-  implicit class FilePondInitialFileOps[Self <: FilePondInitialFile] (val x: Self) extends AnyVal {
+  implicit class FilePondInitialFileMutableBuilder[Self <: FilePondInitialFile] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setOptions(value: typingsSlinky.filepond.anon.File): Self = StObject.set(x, "options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setOptions(value: typingsSlinky.filepond.anon.File): Self = this.set("options", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSource(value: String): Self = this.set("source", value.asInstanceOf[js.Any])
+    def setSource(value: String): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
   }
 }

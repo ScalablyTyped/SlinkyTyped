@@ -4,14 +4,14 @@ import typingsSlinky.typeorm.anon.Precision
 import typingsSlinky.typeorm.connectionMod.Connection
 import typingsSlinky.typeorm.driverMod.Driver
 import typingsSlinky.typeorm.queryRunnerMod.QueryRunner
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/driver/sqlite-abstract/AbstractSqliteDriver", JSImport.Namespace)
-@js.native
-object abstractSqliteDriverMod extends js.Object {
+object abstractSqliteDriverMod {
   
+  @JSImport("typeorm/browser/driver/sqlite-abstract/AbstractSqliteDriver", "AbstractSqliteDriver")
   @js.native
   abstract class AbstractSqliteDriver protected () extends Driver {
     def this(connection: Connection) = this()

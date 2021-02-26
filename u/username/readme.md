@@ -10,9 +10,9 @@ Get the username of the current user
 | ------------------ | :-------------: |
 | Full name          | username |
 | Keywords           | username, user, login, name, logname, lname, whoami, shell, env, environment, variable |
-| # releases         | 5 |
-| # dependents       | 159 |
-| # downloads        | 4403043 |
+| # releases         | 3 |
+| # dependents       | 171 |
+| # downloads        | 5212307 |
 | # stars            | 5 |
 
 ## Links

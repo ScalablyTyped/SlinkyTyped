@@ -2,17 +2,20 @@ package typingsSlinky.playable
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.loaderTypesMod.ILoaderViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/loader/loader.view", JSImport.Namespace)
-@js.native
-object loaderViewMod extends js.Object {
+object loaderViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/loader/loader.view", JSImport.Default)
+  @js.native
+  class default () extends LoaderView
   
   @js.native
   trait LoaderView
-    extends typingsSlinky.playable.stylableMod.default[ILoaderViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[ILoaderViewStyles] {
     
     @JSName("_$rootElement")
     var _$rootElement: js.Any = js.native
@@ -29,7 +32,4 @@ object loaderViewMod extends js.Object {
     
     def showContent(): Unit = js.native
   }
-  
-  @js.native
-  class default () extends LoaderView
 }

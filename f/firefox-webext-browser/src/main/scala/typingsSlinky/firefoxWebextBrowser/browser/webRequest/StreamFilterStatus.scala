@@ -1,5 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.webRequest
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.disconnected
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.failed
 */
-trait StreamFilterStatus extends js.Object
+trait StreamFilterStatus extends StObject
 object StreamFilterStatus {
   
   @scala.inline

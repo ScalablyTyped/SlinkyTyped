@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientGames.gapi.client.games
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientGames.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientGames.anon.LeaderboardId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LeaderboardsResource extends js.Object {
+trait LeaderboardsResource extends StObject {
   
   /** Retrieves the metadata of the leaderboard with the given ID. */
   def get(): Request[Leaderboard] = js.native

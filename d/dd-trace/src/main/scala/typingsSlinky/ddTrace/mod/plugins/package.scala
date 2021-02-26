@@ -1,10 +1,23 @@
 package typingsSlinky.ddTrace.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object plugins {
+  
+  /**
+    * This plugin automatically instruments the
+    * [amqp10](https://github.com/noodlefrenzy/node-amqp10) module.
+    */
+  type amqp10 = typingsSlinky.ddTrace.mod.plugins.Instrumentation
+  
+  /**
+    * This plugin automatically instruments the
+    * [amqplib](https://github.com/squaremo/amqp.node) module.
+    */
+  type amqplib = typingsSlinky.ddTrace.mod.plugins.Instrumentation
   
   /**
     * This plugin patches the [bluebird](https://github.com/petkaantonov/bluebird)
@@ -22,9 +35,27 @@ package object plugins {
   
   /**
     * This plugin automatically instruments the
+    * [cassandra-driver](https://github.com/datastax/nodejs-driver) module.
+    */
+  type cassandraDriver = typingsSlinky.ddTrace.mod.plugins.Instrumentation
+  
+  /**
+    * This plugin automatically instruments the
     * [connect](https://github.com/senchalabs/connect) module.
     */
   type connect = typingsSlinky.ddTrace.mod.plugins.HttpServer
+  
+  /**
+    * This plugin automatically instruments the
+    * [couchbase](https://www.npmjs.com/package/couchbase) module.
+    */
+  type couchbase = typingsSlinky.ddTrace.mod.plugins.Instrumentation
+  
+  /**
+    * This plugin automatically instruments the
+    * [dns](https://nodejs.org/api/dns.html) module.
+    */
+  type dns = typingsSlinky.ddTrace.mod.plugins.Instrumentation
   
   /**
     * This plugin automatically instruments the
@@ -37,6 +68,12 @@ package object plugins {
     * [fastify](https://www.fastify.io/) module.
     */
   type fastify = typingsSlinky.ddTrace.mod.plugins.HttpServer
+  
+  /**
+    * This plugin automatically instruments the
+    * [fs](https://nodejs.org/api/fs.html) module.
+    */
+  type fs = typingsSlinky.ddTrace.mod.plugins.Instrumentation
   
   /**
     * This plugin patches the [generic-pool](https://github.com/coopernurse/node-pool)
@@ -76,9 +113,45 @@ package object plugins {
   
   /**
     * This plugin automatically instruments the
+    * [memcached](https://github.com/3rd-Eden/memcached) module.
+    */
+  type memcached = typingsSlinky.ddTrace.mod.plugins.Instrumentation
+  
+  /**
+    * This plugin automatically instruments the
     * [microgateway-core](https://github.com/apigee/microgateway-core) module.
     */
   type microgatewayCore = typingsSlinky.ddTrace.mod.plugins.HttpServer
+  
+  /**
+    * This plugin automatically instruments the
+    * [mongodb-core](https://github.com/mongodb-js/mongodb-core) module.
+    */
+  type mongodbCore = typingsSlinky.ddTrace.mod.plugins.Instrumentation
+  
+  /**
+    * This plugin automatically instruments the
+    * [mongoose](https://mongoosejs.com/) module.
+    */
+  type mongoose = typingsSlinky.ddTrace.mod.plugins.Instrumentation
+  
+  /**
+    * This plugin automatically instruments the
+    * [mysql](https://github.com/mysqljs/mysql) module.
+    */
+  type mysql = typingsSlinky.ddTrace.mod.plugins.Instrumentation
+  
+  /**
+    * This plugin automatically instruments the
+    * [mysql2](https://github.com/brianmario/mysql2) module.
+    */
+  type mysql2 = typingsSlinky.ddTrace.mod.plugins.Instrumentation
+  
+  /**
+    * This plugin automatically instruments the
+    * [net](https://nodejs.org/api/net.html) module.
+    */
+  type net = typingsSlinky.ddTrace.mod.plugins.Instrumentation
   
   /**
     * This plugin automatically instruments the
@@ -120,9 +193,21 @@ package object plugins {
   
   /**
     * This plugin automatically instruments the
+    * [rhea](https://github.com/amqp/rhea) module.
+    */
+  type rhea = typingsSlinky.ddTrace.mod.plugins.Instrumentation
+  
+  /**
+    * This plugin automatically instruments the
     * [router](https://github.com/pillarjs/router) module.
     */
   type router = typingsSlinky.ddTrace.mod.plugins.Integration
+  
+  /**
+    * This plugin automatically instruments the
+    * [tedious](https://github.com/tediousjs/tedious/) module.
+    */
+  type tedious = typingsSlinky.ddTrace.mod.plugins.Instrumentation
   
   /**
     * This plugin patches the [when](https://github.com/cujojs/when)

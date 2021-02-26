@@ -1,5 +1,6 @@
 package typingsSlinky.nodeRedRuntime.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nodeRedRuntime.nodeRedRuntimeStrings.contextDotread
   - typingsSlinky.nodeRedRuntime.nodeRedRuntimeStrings.contextDotwrite
 */
-trait Permission extends js.Object
+trait Permission extends StObject
 object Permission {
   
   @scala.inline

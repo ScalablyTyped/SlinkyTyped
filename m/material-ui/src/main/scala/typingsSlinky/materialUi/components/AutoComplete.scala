@@ -79,220 +79,12 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AutoComplete {
-  
-  @JSImport("material-ui", "AutoComplete")
-  @js.native
-  object component extends js.Object
-  
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.AutoComplete] {
-    
-    @scala.inline
-    def anchorOrigin(value: origin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def animation(value: ReactComponentClass[PopoverAnimationProps]): this.type = set("animation", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def dataSourceConfig(value: Text): this.type = set("dataSourceConfig", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def defaultValue(value: String | Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def disableFocusRipple(value: Boolean): this.type = set("disableFocusRipple", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def errorStyle(value: CSSProperties): this.type = set("errorStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def errorText(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def filter(value: (/* searchText */ String, /* key */ String, js.Any) => Boolean): this.type = set("filter", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def floatingLabelFixed(value: Boolean): this.type = set("floatingLabelFixed", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def floatingLabelFocusStyle(value: CSSProperties): this.type = set("floatingLabelFocusStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def floatingLabelShrinkStyle(value: CSSProperties): this.type = set("floatingLabelShrinkStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def floatingLabelStyle(value: CSSProperties): this.type = set("floatingLabelStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def floatingLabelText(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def hintStyle(value: CSSProperties): this.type = set("hintStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def hintText(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def inputStyle(value: CSSProperties): this.type = set("inputStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def listStyle(value: CSSProperties): this.type = set("listStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def maxSearchResults(value: Double): this.type = set("maxSearchResults", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def maxlength(value: String): this.type = set("maxlength", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def menuCloseDelay(value: Double): this.type = set("menuCloseDelay", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def menuProps(value: js.Any): this.type = set("menuProps", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def menuStyle(value: CSSProperties): this.type = set("menuStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def minlength(value: String): this.type = set("minlength", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def multiLine(value: Boolean): this.type = set("multiLine", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def onBlur(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def onChange(
-      value: (SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event], /* newValue */ String) => Unit
-    ): this.type = set("onChange", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def onFocus(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def onKeyDown(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def onKeyPress(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def onKeyUp(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def onNewRequest(value: (js.Any, /* index */ Double) => Unit): this.type = set("onNewRequest", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def onUpdateInput(value: (/* searchText */ String, /* dataSource */ js.Array[js.Any]) => Unit): this.type = set("onUpdateInput", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def openOnFocus(value: Boolean): this.type = set("openOnFocus", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def popoverProps(value: PopoverProps): this.type = set("popoverProps", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def rowsMax(value: Double): this.type = set("rowsMax", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def searchText(value: String): this.type = set("searchText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def targetOrigin(value: origin): this.type = set("targetOrigin", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def textFieldStyle(value: CSSProperties): this.type = set("textFieldStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def textareaStyle(value: CSSProperties): this.type = set("textareaStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def underlineDisabledStyle(value: CSSProperties): this.type = set("underlineDisabledStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def underlineFocusStyle(value: CSSProperties): this.type = set("underlineFocusStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def underlineShow(value: Boolean): this.type = set("underlineShow", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def underlineStyle(value: CSSProperties): this.type = set("underlineStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def value(value: String | Double): this.type = set("value", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: AutoCompleteProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(dataSource: js.Array[js.Any]): Builder = {
@@ -304,7 +96,7 @@ object AutoComplete {
     
     @JSImport("material-ui", "AutoComplete.Divider")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -321,16 +113,16 @@ object AutoComplete {
       def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: DividerProps): typingsSlinky.materialUi.components.AutoComplete.Divider.Builder = new typingsSlinky.materialUi.components.AutoComplete.Divider.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: Divider.type): typingsSlinky.materialUi.components.AutoComplete.Divider.Builder = new typingsSlinky.materialUi.components.AutoComplete.Divider.Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: DividerProps): typingsSlinky.materialUi.components.AutoComplete.Divider.Builder = new typingsSlinky.materialUi.components.AutoComplete.Divider.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object Item {
     
     @JSImport("material-ui", "AutoComplete.Item")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -517,10 +309,10 @@ object AutoComplete {
       def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
+      def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+      def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
       
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -538,10 +330,10 @@ object AutoComplete {
       def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+      def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
       
       @scala.inline
       def desktop(value: Boolean): this.type = set("desktop", value.asInstanceOf[js.Any])
@@ -622,10 +414,10 @@ object AutoComplete {
       def keyboardFocused(value: Boolean): this.type = set("keyboardFocused", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+      def label(value: String | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def label(value: String | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+      def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       
       @scala.inline
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
@@ -640,16 +432,16 @@ object AutoComplete {
       def leftIcon(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def menuItemsReactElement(value: ReactElement): this.type = set("menuItems", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def menuItems(value: ReactElement): this.type = set("menuItems", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def nestedItemsVarargs(value: ReactElement*): this.type = set("nestedItems", js.Array(value :_*))
+      def menuItemsReactElement(value: ReactElement): this.type = set("menuItems", value.asInstanceOf[js.Any])
       
       @scala.inline
       def nestedItems(value: js.Array[ReactElement]): this.type = set("nestedItems", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def nestedItemsVarargs(value: ReactElement*): this.type = set("nestedItems", js.Array(value :_*))
       
       @scala.inline
       def nestedLevel(value: Double): this.type = set("nestedLevel", value.asInstanceOf[js.Any])
@@ -910,10 +702,10 @@ object AutoComplete {
       def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+      def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def primaryText(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
+      def primaryTextReactElement(value: ReactElement): this.type = set("primaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def primaryTogglesNestedList(value: Boolean): this.type = set("primaryTogglesNestedList", value.asInstanceOf[js.Any])
@@ -946,13 +738,13 @@ object AutoComplete {
       def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def secondaryText(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def secondaryTextLines(value: Double): this.type = set("secondaryTextLines", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def secondaryTextReactElement(value: ReactElement): this.type = set("secondaryText", value.asInstanceOf[js.Any])
       
       @scala.inline
       def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
@@ -1006,8 +798,217 @@ object AutoComplete {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: MenuItemProps): typingsSlinky.materialUi.components.AutoComplete.Item.Builder = new typingsSlinky.materialUi.components.AutoComplete.Item.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: Item.type): typingsSlinky.materialUi.components.AutoComplete.Item.Builder = new typingsSlinky.materialUi.components.AutoComplete.Item.Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: MenuItemProps): typingsSlinky.materialUi.components.AutoComplete.Item.Builder = new typingsSlinky.materialUi.components.AutoComplete.Item.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
+  
+  @JSImport("material-ui", "AutoComplete")
+  @js.native
+  val component: js.Object = js.native
+  
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.AutoComplete] {
+    
+    @scala.inline
+    def anchorOrigin(value: origin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def animation(value: ReactComponentClass[PopoverAnimationProps]): this.type = set("animation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dataSourceConfig(value: Text): this.type = set("dataSourceConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def defaultValue(value: String | Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def disableFocusRipple(value: Boolean): this.type = set("disableFocusRipple", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def errorStyle(value: CSSProperties): this.type = set("errorStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def errorText(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def filter(value: (/* searchText */ String, /* key */ String, js.Any) => Boolean): this.type = set("filter", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def floatingLabelFixed(value: Boolean): this.type = set("floatingLabelFixed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def floatingLabelFocusStyle(value: CSSProperties): this.type = set("floatingLabelFocusStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def floatingLabelShrinkStyle(value: CSSProperties): this.type = set("floatingLabelShrinkStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def floatingLabelStyle(value: CSSProperties): this.type = set("floatingLabelStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def floatingLabelText(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def hintStyle(value: CSSProperties): this.type = set("hintStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def hintText(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def inputStyle(value: CSSProperties): this.type = set("inputStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def listStyle(value: CSSProperties): this.type = set("listStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maxSearchResults(value: Double): this.type = set("maxSearchResults", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maxlength(value: String): this.type = set("maxlength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def menuCloseDelay(value: Double): this.type = set("menuCloseDelay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def menuProps(value: js.Any): this.type = set("menuProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def menuStyle(value: CSSProperties): this.type = set("menuStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def minlength(value: String): this.type = set("minlength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def multiLine(value: Boolean): this.type = set("multiLine", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def onBlur(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onChange(
+      value: (SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event], /* newValue */ String) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def onFocus(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onKeyDown(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onKeyPress(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onKeyUp(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onNewRequest(value: (js.Any, /* index */ Double) => Unit): this.type = set("onNewRequest", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def onUpdateInput(value: (/* searchText */ String, /* dataSource */ js.Array[js.Any]) => Unit): this.type = set("onUpdateInput", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def openOnFocus(value: Boolean): this.type = set("openOnFocus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def popoverProps(value: PopoverProps): this.type = set("popoverProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def rowsMax(value: Double): this.type = set("rowsMax", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def searchText(value: String): this.type = set("searchText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def targetOrigin(value: origin): this.type = set("targetOrigin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def textFieldStyle(value: CSSProperties): this.type = set("textFieldStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def textareaStyle(value: CSSProperties): this.type = set("textareaStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def underlineDisabledStyle(value: CSSProperties): this.type = set("underlineDisabledStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def underlineFocusStyle(value: CSSProperties): this.type = set("underlineFocusStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def underlineShow(value: Boolean): this.type = set("underlineShow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def underlineStyle(value: CSSProperties): this.type = set("underlineStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def value(value: String | Double): this.type = set("value", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: AutoCompleteProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

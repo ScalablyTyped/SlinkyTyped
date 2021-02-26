@@ -84,6 +84,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,7 +93,7 @@ object AnchorButton {
   
   @JSImport("@blueprintjs/core", "AnchorButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -288,10 +289,10 @@ object AnchorButton {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -306,10 +307,10 @@ object AnchorButton {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def elementRefFunction1(value: /* ref */ js.Any | Null => js.Any): this.type = set("elementRef", js.Any.fromFunction1(value))
+    def elementRef(value: IRef[js.Any]): this.type = set("elementRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def elementRef(value: IRef[js.Any]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+    def elementRefFunction1(value: /* ref */ js.Any | Null => js.Any): this.type = set("elementRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def fill(value: Boolean): this.type = set("fill", value.asInstanceOf[js.Any])
@@ -324,13 +325,13 @@ object AnchorButton {
     def hrefLang(value: String): this.type = set("hrefLang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: IconName | MaybeElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconNull: this.type = set("icon", null)
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -645,13 +646,13 @@ object AnchorButton {
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def rightIcon(value: IconName | MaybeElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rightIconNull: this.type = set("rightIcon", null)
+    
+    @scala.inline
+    def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
@@ -684,10 +685,10 @@ object AnchorButton {
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -708,7 +709,7 @@ object AnchorButton {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IButtonProps with AnchorHTMLAttributes[HTMLAnchorElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: AnchorButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IButtonProps with AnchorHTMLAttributes[HTMLAnchorElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

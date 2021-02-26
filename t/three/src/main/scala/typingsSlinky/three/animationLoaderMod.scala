@@ -5,14 +5,14 @@ import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.three.animationClipMod.AnimationClip
 import typingsSlinky.three.loaderMod.Loader
 import typingsSlinky.three.loadingManagerMod.LoadingManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/loaders/AnimationLoader", JSImport.Namespace)
-@js.native
-object animationLoaderMod extends js.Object {
+object animationLoaderMod {
   
+  @JSImport("three/src/loaders/AnimationLoader", "AnimationLoader")
   @js.native
   class AnimationLoader () extends Loader {
     def this(manager: LoadingManager) = this()

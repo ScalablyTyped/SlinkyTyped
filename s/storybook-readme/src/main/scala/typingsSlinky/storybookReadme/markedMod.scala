@@ -2,13 +2,14 @@ package typingsSlinky.storybookReadme
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.storybookReadme.anon.Md
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("storybook-readme/components/Marked", JSImport.Namespace)
-@js.native
-object markedMod extends js.Object {
+object markedMod {
   
+  @JSImport("storybook-readme/components/Marked", JSImport.Default)
+  @js.native
   def default(props: Md): ReactElement = js.native
 }

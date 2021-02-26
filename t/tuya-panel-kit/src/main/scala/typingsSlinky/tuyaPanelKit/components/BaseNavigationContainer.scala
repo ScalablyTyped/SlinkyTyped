@@ -9,6 +9,7 @@ import typingsSlinky.tuyaPanelKit.routersTypesMod.NavigationState
 import typingsSlinky.tuyaPanelKit.routersTypesMod.ParamListBase
 import typingsSlinky.tuyaPanelKit.typesMod.NavigationContainerProps
 import typingsSlinky.tuyaPanelKit.typesMod.NavigationContainerRef
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object BaseNavigationContainer {
   
   @JSImport("tuya-panel-kit/@react-navigation/core", "BaseNavigationContainer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,7 +38,7 @@ object BaseNavigationContainer {
     def onUnhandledAction(value: /* action */ NavigationAction => Unit): this.type = set("onUnhandledAction", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: NavigationContainerProps with RefAttributes[NavigationContainerRef]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: BaseNavigationContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: NavigationContainerProps with RefAttributes[NavigationContainerRef]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

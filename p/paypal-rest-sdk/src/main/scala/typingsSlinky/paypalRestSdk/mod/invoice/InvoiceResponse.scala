@@ -1,6 +1,7 @@
 package typingsSlinky.paypalRestSdk.mod.invoice
 
 import typingsSlinky.paypalRestSdk.mod.Response
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -3,16 +3,16 @@ package typingsSlinky.agGrid
 import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.gridCellMod.GridCell
 import typingsSlinky.agGrid.rowNodeMod.RowNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/focusedCellController", JSImport.Namespace)
-@js.native
-object focusedCellControllerMod extends js.Object {
+object focusedCellControllerMod {
   
+  @JSImport("ag-grid/dist/lib/focusedCellController", "FocusedCellController")
   @js.native
-  class FocusedCellController () extends js.Object {
+  class FocusedCellController () extends StObject {
     
     def clearFocusedCell(): Unit = js.native
     

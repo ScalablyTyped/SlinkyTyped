@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientGames.anon.Callback
 import typingsSlinky.maximMazurokGapiClientGames.anon.Fields
 import typingsSlinky.maximMazurokGapiClientGames.anon.Key
 import typingsSlinky.maximMazurokGapiClientGames.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AchievementsResource extends js.Object {
+trait AchievementsResource extends StObject {
   
   /** Increments the steps of the achievement with the given ID for the currently authenticated player. */
   def increment(): Request[AchievementIncrementResponse] = js.native

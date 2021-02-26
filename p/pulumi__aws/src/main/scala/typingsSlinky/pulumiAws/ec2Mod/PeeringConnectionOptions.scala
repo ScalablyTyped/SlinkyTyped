@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.peeringConnectionOptionsMod.PeeringConnectionOpti
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,9 +25,7 @@ class PeeringConnectionOptions protected ()
   def this(name: String, args: PeeringConnectionOptionsArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/aws/ec2", "PeeringConnectionOptions")
-@js.native
-object PeeringConnectionOptions extends js.Object {
+object PeeringConnectionOptions {
   
   /**
     * Get an existing PeeringConnectionOptions resource's state with the given name, ID, and optional extra
@@ -37,14 +36,24 @@ object PeeringConnectionOptions extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/aws/ec2", "PeeringConnectionOptions.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.peeringConnectionOptionsMod.PeeringConnectionOptions = js.native
+  @JSImport("@pulumi/aws/ec2", "PeeringConnectionOptions.get")
+  @js.native
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.peeringConnectionOptionsMod.PeeringConnectionOptions = js.native
+  @JSImport("@pulumi/aws/ec2", "PeeringConnectionOptions.get")
+  @js.native
   def get(name: String, id: Input[ID], state: PeeringConnectionOptionsState): typingsSlinky.pulumiAws.peeringConnectionOptionsMod.PeeringConnectionOptions = js.native
+  @JSImport("@pulumi/aws/ec2", "PeeringConnectionOptions.get")
+  @js.native
   def get(name: String, id: Input[ID], state: PeeringConnectionOptionsState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.peeringConnectionOptionsMod.PeeringConnectionOptions = js.native
   
   /**
     * Returns true if the given object is an instance of PeeringConnectionOptions.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/aws/ec2", "PeeringConnectionOptions.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/ec2/peeringConnectionOptions.PeeringConnectionOptions */ Boolean = js.native
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.microsoftGraph.mod
 
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.none_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.none_
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.utF8
 */
-trait FirewallPreSharedKeyEncodingMethodType extends js.Object
+trait FirewallPreSharedKeyEncodingMethodType extends StObject
 object FirewallPreSharedKeyEncodingMethodType {
   
   @scala.inline

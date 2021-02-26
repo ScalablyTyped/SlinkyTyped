@@ -1,5 +1,8 @@
 package typingsSlinky.esriLeaflet.mod
 
+import typingsSlinky.leaflet.mod.ImageOverlayOptions
+import typingsSlinky.leaflet.mod.LatLngBoundsExpression
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("esri-leaflet", "RasterLayer")
 @js.native
-abstract class RasterLayer ()
-  extends typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.RasterLayer
+abstract class RasterLayer protected ()
+  extends typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.RasterLayer {
+  def this(imageUrl: String, bounds: LatLngBoundsExpression) = this()
+  def this(imageUrl: String, bounds: LatLngBoundsExpression, options: ImageOverlayOptions) = this()
+}

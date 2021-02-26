@@ -4,20 +4,23 @@ import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialMenuSurface.adapterMod.MDCMenuSurfaceAdapter
-import typingsSlinky.materialMenuSurface.anon.ANCHOR
-import typingsSlinky.materialMenuSurface.anon.ANCHORTOMENUSURFACEWIDTHRATIO
-import typingsSlinky.materialMenuSurface.anon.CLOSEDEVENT
 import typingsSlinky.materialMenuSurface.anon.PartialMDCMenuDistance
 import typingsSlinky.materialMenuSurface.anon.PartialMDCMenuSurfaceAdap
 import typingsSlinky.materialMenuSurface.constantsMod.Corner
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/menu-surface/foundation", JSImport.Namespace)
-@js.native
-object foundationMod extends js.Object {
+object foundationMod {
   
+  @JSImport("@material/menu-surface/foundation", JSImport.Default)
+  @js.native
+  class default () extends MDCMenuSurfaceFoundation {
+    def this(adapter: PartialMDCMenuSurfaceAdap) = this()
+  }
+  
+  @JSImport("@material/menu-surface/foundation", "MDCMenuSurfaceFoundation")
   @js.native
   class MDCMenuSurfaceFoundation () extends MDCFoundation[MDCMenuSurfaceAdapter] {
     def this(adapter: PartialMDCMenuSurfaceAdap) = this()
@@ -66,44 +69,5 @@ object foundationMod extends js.Object {
     def setIsHoisted(isHoisted: Boolean): Unit = js.native
     
     def setQuickOpen(quickOpen: Boolean): Unit = js.native
-  }
-  /* static members */
-  @js.native
-  object MDCMenuSurfaceFoundation extends js.Object {
-    
-    def Corner: js.Any = js.native
-    
-    def cssClasses: ANCHOR = js.native
-    
-    /**
-      * @see {@link MDCMenuSurfaceAdapter} for typing information on parameters and return types.
-      */
-    def defaultAdapter: MDCMenuSurfaceAdapter = js.native
-    
-    def numbers: ANCHORTOMENUSURFACEWIDTHRATIO = js.native
-    
-    def strings: CLOSEDEVENT = js.native
-  }
-  
-  @js.native
-  class default () extends MDCMenuSurfaceFoundation {
-    def this(adapter: PartialMDCMenuSurfaceAdap) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    def Corner: js.Any = js.native
-    
-    def cssClasses: ANCHOR = js.native
-    
-    /**
-      * @see {@link MDCMenuSurfaceAdapter} for typing information on parameters and return types.
-      */
-    def defaultAdapter: MDCMenuSurfaceAdapter = js.native
-    
-    def numbers: ANCHORTOMENUSURFACEWIDTHRATIO = js.native
-    
-    def strings: CLOSEDEVENT = js.native
   }
 }

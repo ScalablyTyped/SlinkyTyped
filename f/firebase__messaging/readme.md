@@ -10,9 +10,9 @@ This is the Firebase Cloud Messaging component of the Firebase JS SDK.
 | ------------------ | :-------------: |
 | Full name          | @firebase/messaging |
 | Keywords           | - |
-| # releases         | 970 |
-| # dependents       | 12 |
-| # downloads        | 17348534 |
+| # releases         | 1365 |
+| # dependents       | 18 |
+| # downloads        | 35980941 |
 | # stars            | 0 |
 
 ## Links

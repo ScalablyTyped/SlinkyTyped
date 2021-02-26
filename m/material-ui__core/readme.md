@@ -10,10 +10,10 @@ React components that implement Google's Material Design.
 | ------------------ | :-------------: |
 | Full name          | @material-ui/core |
 | Keywords           | react, react-component, material design, material-ui |
-| # releases         | 89 |
-| # dependents       | 1698 |
-| # downloads        | 35262836 |
-| # stars            | 0 |
+| # releases         | 92 |
+| # dependents       | 3627 |
+| # downloads        | 67270153 |
+| # stars            | 1 |
 
 ## Links
 - [Homepage](https://material-ui.com/)

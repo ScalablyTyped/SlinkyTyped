@@ -8,28 +8,27 @@ import typingsSlinky.react.mod.PropsWithRef
 import typingsSlinky.react.mod.PropsWithoutRef
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.InstanceType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@alloc/types/react", JSImport.Namespace)
-@js.native
-object reactMod extends js.Object {
-  
-  // Function component without children
-  @js.native
-  trait LeafFunctionComponent[P] extends js.Object {
-    
-    def apply(props: P): ReactElement | Null = js.native
-    
-    var displayName: js.UndefOr[String] = js.native
-  }
+object reactMod {
   
   type ComponentPropsWithRef[T /* <: ElementType[_] */] = PropsWithRef[ComponentProps[T]] | (PropsWithoutRef[_] with RefAttributes[InstanceType[T]])
   
   type ComponentType[P] = ReactComponentClass[P] | LeafFunctionComponent[P]
   
   type ElementType[P] = ReactElement | LeafFunctionComponent[P]
+  
+  // Function component without children
+  @js.native
+  trait LeafFunctionComponent[P] extends StObject {
+    
+    def apply(props: P): ReactElement | Null = js.native
+    
+    var displayName: js.UndefOr[String] = js.native
+  }
   
   type RefProp[T] = MutableRefObject[js.UndefOr[T | Null]]
 }

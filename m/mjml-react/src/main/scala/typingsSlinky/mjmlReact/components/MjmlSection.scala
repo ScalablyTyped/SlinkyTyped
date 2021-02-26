@@ -14,6 +14,7 @@ import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.MjmlSectionProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
 import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ object MjmlSection {
   
   @JSImport("mjml-react", "MjmlSection")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -90,9 +91,9 @@ object MjmlSection {
     def verticalAlign(value: VerticalAlignProperty[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
   }
   
+  implicit def make(companion: MjmlSection.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   def withProps(
     p: MjmlSectionProps with RequiredChildrenProps with BorderProps with PaddingProps with ClassNameProps
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: MjmlSection.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

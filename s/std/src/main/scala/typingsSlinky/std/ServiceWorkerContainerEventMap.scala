@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServiceWorkerContainerEventMap extends js.Object {
+trait ServiceWorkerContainerEventMap extends StObject {
   
   var controllerchange: org.scalajs.dom.raw.Event = js.native
   
@@ -26,27 +27,15 @@ object ServiceWorkerContainerEventMap {
   }
   
   @scala.inline
-  implicit class ServiceWorkerContainerEventMapOps[Self <: ServiceWorkerContainerEventMap] (val x: Self) extends AnyVal {
+  implicit class ServiceWorkerContainerEventMapMutableBuilder[Self <: ServiceWorkerContainerEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setControllerchange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "controllerchange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setMessage(value: org.scalajs.dom.raw.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setControllerchange(value: org.scalajs.dom.raw.Event): Self = this.set("controllerchange", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMessage(value: org.scalajs.dom.raw.MessageEvent): Self = this.set("message", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMessageerror(value: org.scalajs.dom.raw.MessageEvent): Self = this.set("messageerror", value.asInstanceOf[js.Any])
+    def setMessageerror(value: org.scalajs.dom.raw.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
   }
 }

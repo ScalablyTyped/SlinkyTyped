@@ -3,21 +3,22 @@ package typingsSlinky.winrtUwp.global.Windows.Storage
 import typingsSlinky.winrtUwp.Windows.Storage.FileProperties.ThumbnailMode
 import typingsSlinky.winrtUwp.Windows.Storage.FileProperties.ThumbnailOptions
 import typingsSlinky.winrtUwp.Windows.Storage.Search.IStorageQueryResultBase
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides classes for searching, accessing, managing, and retrieving information about files and folders in the storage system. */
-@JSGlobal("Windows.Storage.BulkAccess")
-@js.native
-object BulkAccess extends js.Object {
+object BulkAccess {
   
   /** Provides synchronous access to the properties exposed off StorageFile and lets an app perform asynchronous file operations such as copy, delete, move, and rename. */
+  @JSGlobal("Windows.Storage.BulkAccess.FileInformation")
   @js.native
   abstract class FileInformation ()
     extends typingsSlinky.winrtUwp.Windows.Storage.BulkAccess.FileInformation
   
   /** Used to load information about files and folders from the results of a query and to bind these file system items to JavaScript ListView or XAML ListView and GridView controls. After information is loaded, an app can then access that information quickly using synchronous operations. */
+  @JSGlobal("Windows.Storage.BulkAccess.FileInformationFactory")
   @js.native
   class FileInformationFactory protected ()
     extends typingsSlinky.winrtUwp.Windows.Storage.BulkAccess.FileInformationFactory {
@@ -65,6 +66,7 @@ object BulkAccess extends js.Object {
   }
   
   /** Provides synchronous access to the properties exposed off StorageFolder and lets an app perform asynchronous management operations such as copy, delete, move, and rename. */
+  @JSGlobal("Windows.Storage.BulkAccess.FolderInformation")
   @js.native
   abstract class FolderInformation ()
     extends typingsSlinky.winrtUwp.Windows.Storage.BulkAccess.FolderInformation

@@ -10,6 +10,7 @@ import typingsSlinky.reactColor.mod.Color
 import typingsSlinky.reactColor.mod.ColorResult
 import typingsSlinky.reactColor.reactColorStrings.hide
 import typingsSlinky.reactColor.reactColorStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,10 +27,10 @@ class SharedBuilder_BlockPickerProps716103831[R <: js.Object] (val args: js.Arra
   def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+  def colors(value: js.Array[String]): this.type = set("colors", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def colors(value: js.Array[String]): this.type = set("colors", value.asInstanceOf[js.Any])
+  def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
   
   @scala.inline
   def onChange(value: (/* color */ ColorResult, /* event */ ChangeEvent[HTMLInputElement]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))

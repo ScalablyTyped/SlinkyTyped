@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.Name
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.PageSize
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.PrettyPrintQuotaUser
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OperationsResource extends js.Object {
+trait OperationsResource extends StObject {
   
   def cancel(request: Name, body: CancelOperationRequest): Request[js.Object] = js.native
   /**

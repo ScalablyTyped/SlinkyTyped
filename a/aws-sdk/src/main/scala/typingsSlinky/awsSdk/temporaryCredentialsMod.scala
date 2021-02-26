@@ -1,15 +1,17 @@
 package typingsSlinky.awsSdk
 
 import typingsSlinky.awsSdk.credentialsMod.Credentials
+import typingsSlinky.awsSdk.stsMod.arnType
+import typingsSlinky.awsSdk.stsMod.roleSessionNameType
 import typingsSlinky.awsSdk.temporaryCredentialsMod.TemporaryCredentials.TemporaryCredentialsOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("aws-sdk/lib/credentials/temporary_credentials", JSImport.Namespace)
-@js.native
-object temporaryCredentialsMod extends js.Object {
+object temporaryCredentialsMod {
   
+  @JSImport("aws-sdk/lib/credentials/temporary_credentials", "TemporaryCredentials")
   @js.native
   /**
     * Creates a new temporary credentials object.
@@ -30,13 +32,26 @@ object temporaryCredentialsMod extends js.Object {
     var masterCredentials: Credentials = js.native
   }
   // Needed to expose interfaces on the class
-  @js.native
-  object TemporaryCredentials extends js.Object {
+  object TemporaryCredentials {
     
     /* Rewritten from type alias, can be one of: 
       - typingsSlinky.awsSdk.stsMod.AssumeRoleRequest
       - typingsSlinky.awsSdk.stsMod.GetSessionTokenRequest
     */
-    trait TemporaryCredentialsOptions extends js.Object
+    trait TemporaryCredentialsOptions extends StObject
+    object TemporaryCredentialsOptions {
+      
+      @scala.inline
+      def AssumeRoleRequest(RoleArn: arnType, RoleSessionName: roleSessionNameType): typingsSlinky.awsSdk.stsMod.AssumeRoleRequest = {
+        val __obj = js.Dynamic.literal(RoleArn = RoleArn.asInstanceOf[js.Any], RoleSessionName = RoleSessionName.asInstanceOf[js.Any])
+        __obj.asInstanceOf[typingsSlinky.awsSdk.stsMod.AssumeRoleRequest]
+      }
+      
+      @scala.inline
+      def GetSessionTokenRequest(): typingsSlinky.awsSdk.stsMod.GetSessionTokenRequest = {
+        val __obj = js.Dynamic.literal()
+        __obj.asInstanceOf[typingsSlinky.awsSdk.stsMod.GetSessionTokenRequest]
+      }
+    }
   }
 }

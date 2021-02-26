@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.accepts.mod.Accepts
 import typingsSlinky.contentDisposition.mod.Options
 import typingsSlinky.cookies.mod.Cookies
-import typingsSlinky.koa.anon.Call
+import typingsSlinky.koa.anon.FnCall
 import typingsSlinky.koa.mod.Application
 import typingsSlinky.koa.mod.DefaultContext
 import typingsSlinky.koa.mod.DefaultState
@@ -15,17 +15,16 @@ import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.urlMod.URL_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   /* Inlined @koa/router.@koa/router.RouterContext<any, {}> */
   @js.native
-  trait RouterContextany extends js.Object {
+  trait RouterContextany extends StObject {
     
     /**
       * Get WHATWG parsed URL object.
@@ -221,7 +220,7 @@ object anon extends js.Object {
       * See: https://github.com/jshttp/http-assert
       */
     @JSName("assert")
-    var assert_Original: Call = js.native
+    var assert_Original: FnCall = js.native
     
     /**
       * Set Content-Disposition to "attachment" to signal the client to prompt for download.

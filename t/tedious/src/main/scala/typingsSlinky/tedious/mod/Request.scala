@@ -10,6 +10,7 @@ import typingsSlinky.tedious.tediousStrings.prepared
 import typingsSlinky.tedious.tediousStrings.requestCompleted
 import typingsSlinky.tedious.tediousStrings.returnValue
 import typingsSlinky.tedious.tediousStrings.row
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

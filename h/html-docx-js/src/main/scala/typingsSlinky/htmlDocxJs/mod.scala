@@ -3,14 +3,15 @@ package typingsSlinky.htmlDocxJs
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.htmlDocxJs.anon.Margins
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("html-docx-js", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("html-docx-js", "asBlob")
+  @js.native
   def asBlob(
     /**
     * An HTML formatted string. It should be a complete, valid HTML
@@ -20,6 +21,8 @@ object mod extends js.Object {
     */
   html: String
   ): Blob | Buffer = js.native
+  @JSImport("html-docx-js", "asBlob")
+  @js.native
   def asBlob(
     /**
     * An HTML formatted string. It should be a complete, valid HTML

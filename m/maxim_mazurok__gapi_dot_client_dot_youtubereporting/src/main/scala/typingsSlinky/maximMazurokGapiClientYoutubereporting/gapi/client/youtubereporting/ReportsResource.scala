@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientYoutubereporting.gapi.client.youtube
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientYoutubereporting.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientYoutubereporting.anon.Alt
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReportsResource extends js.Object {
+trait ReportsResource extends StObject {
   
   /** Gets the metadata of a specific report. */
   def get(): Request[Report] = js.native

@@ -6,13 +6,14 @@ import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.History
 import org.scalajs.dom.raw.Node
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/common", "\u0275DomAdapter")
 @js.native
-abstract class ɵDomAdapter () extends js.Object {
+abstract class ɵDomAdapter () extends StObject {
   
   def createElement(tagName: js.Any): HTMLElement = js.native
   def createElement(tagName: js.Any, doc: js.Any): HTMLElement = js.native
@@ -21,7 +22,8 @@ abstract class ɵDomAdapter () extends js.Object {
   
   def dispatchEvent(el: js.Any, evt: js.Any): js.Any = js.native
   
-   /** This is the ambient Location definition, NOT Location from @angular/common.  */ def getBaseHref(doc: Document): String | Null = js.native
+  /** This is the ambient Location definition, NOT Location from @angular/common.  */
+  def getBaseHref(doc: Document): String | Null = js.native
   
   def getCookie(name: String): String | Null = js.native
   

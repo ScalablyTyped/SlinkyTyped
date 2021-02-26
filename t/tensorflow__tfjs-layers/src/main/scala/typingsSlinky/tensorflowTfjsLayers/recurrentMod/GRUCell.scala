@@ -7,6 +7,7 @@ import typingsSlinky.tensorflowTfjsLayers.initializersMod.Initializer
 import typingsSlinky.tensorflowTfjsLayers.initializersMod.InitializerIdentifier
 import typingsSlinky.tensorflowTfjsLayers.regularizersMod.Regularizer
 import typingsSlinky.tensorflowTfjsLayers.variablesMod.LayerVariable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -68,10 +69,16 @@ class GRUCell protected () extends RNNCell {
   val useBias: Boolean = js.native
 }
 /* static members */
-@JSImport("@tensorflow/tfjs-layers/dist/layers/recurrent", "GRUCell")
-@js.native
-object GRUCell extends js.Object {
+object GRUCell {
+  
+  @JSImport("@tensorflow/tfjs-layers/dist/layers/recurrent", "GRUCell")
+  @js.native
+  val ^ : js.Any = js.native
   
   /** @nocollapse */
-  var className: String = js.native
+  @JSImport("@tensorflow/tfjs-layers/dist/layers/recurrent", "GRUCell.className")
+  @js.native
+  def className: String = js.native
+  @scala.inline
+  def className_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("className")(x.asInstanceOf[js.Any])
 }

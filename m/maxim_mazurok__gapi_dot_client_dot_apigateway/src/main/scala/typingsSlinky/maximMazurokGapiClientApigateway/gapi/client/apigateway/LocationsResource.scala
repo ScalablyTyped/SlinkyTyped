@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientApigateway.gapi.client.apigateway
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.Callback
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.PageSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationsResource extends js.Object {
+trait LocationsResource extends StObject {
   
   var apis: ApisResource = js.native
   

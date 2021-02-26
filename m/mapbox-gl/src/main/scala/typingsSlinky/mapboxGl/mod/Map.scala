@@ -66,6 +66,7 @@ import typingsSlinky.mapboxGl.mapboxGlStrings.zoom
 import typingsSlinky.mapboxGl.mapboxGlStrings.zoomend
 import typingsSlinky.mapboxGl.mapboxGlStrings.zoomstart
 import typingsSlinky.std.ImageBitmap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -94,16 +95,16 @@ class Map () extends Evented {
   @JSName("addControl")
   def addControl_topright(control: IControl, position: `top-right`): this.type = js.native
   
-  def addImage(name: String, image: Data): this.type = js.native
-  def addImage(name: String, image: Data, options: PixelRatio): this.type = js.native
   def addImage(name: String, image: js.typedarray.ArrayBufferView): this.type = js.native
   def addImage(name: String, image: js.typedarray.ArrayBufferView, options: PixelRatio): this.type = js.native
   def addImage(name: String, image: HTMLImageElement): this.type = js.native
   def addImage(name: String, image: HTMLImageElement, options: PixelRatio): this.type = js.native
-  def addImage(name: String, image: ImageBitmap): this.type = js.native
-  def addImage(name: String, image: ImageBitmap, options: PixelRatio): this.type = js.native
   def addImage(name: String, image: ImageData): this.type = js.native
   def addImage(name: String, image: ImageData, options: PixelRatio): this.type = js.native
+  def addImage(name: String, image: Data): this.type = js.native
+  def addImage(name: String, image: Data, options: PixelRatio): this.type = js.native
+  def addImage(name: String, image: ImageBitmap): this.type = js.native
+  def addImage(name: String, image: ImageBitmap, options: PixelRatio): this.type = js.native
   
   def addLayer(layer: CustomLayerInterface): this.type = js.native
   def addLayer(layer: CustomLayerInterface, before: String): this.type = js.native

@@ -5,10 +5,12 @@ import typingsSlinky.convertUnits.convertUnitsStrings.Kb_
 import typingsSlinky.convertUnits.convertUnitsStrings.Mb_
 import typingsSlinky.convertUnits.convertUnitsStrings.Tb_
 import typingsSlinky.convertUnits.convertUnitsStrings.b_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// Pressure
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.convertUnits.convertUnitsStrings.b_
   - typingsSlinky.convertUnits.convertUnitsStrings.Kb_
@@ -21,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.convertUnits.convertUnitsStrings.GB
   - typingsSlinky.convertUnits.convertUnitsStrings.TB
 */
-trait uDitgital extends js.Object
+trait uDitgital extends StObject
 object uDitgital {
   
   @scala.inline

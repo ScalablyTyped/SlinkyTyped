@@ -10,9 +10,9 @@ Js minify plugin for gulp
 | ------------------ | :-------------: |
 | Full name          | gulp-minify |
 | Keywords           | - |
-| # releases         | 5 |
-| # dependents       | 81 |
-| # downloads        | 968109 |
+| # releases         | 0 |
+| # dependents       | 93 |
+| # downloads        | 1109204 |
 | # stars            | 29 |
 
 ## Links

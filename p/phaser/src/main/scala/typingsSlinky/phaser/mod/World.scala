@@ -4,6 +4,7 @@ import typingsSlinky.phaser.MatterJS.BodyType
 import typingsSlinky.phaser.MatterJS.CompositeType
 import typingsSlinky.phaser.MatterJS.ConstraintType
 import typingsSlinky.phaser.MatterJS.IWorldDefinition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,11 +25,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class World ()
   extends typingsSlinky.phaser.MatterJS.World
-/* static members */
-@JSImport("matter", "World")
-@js.native
-object World extends js.Object {
+object World {
   
+  @JSImport("matter", "World.add")
+  @js.native
   def add(
     world: typingsSlinky.phaser.MatterJS.World,
     body: js.Array[BodyType | CompositeType | ConstraintType]
@@ -39,9 +39,18 @@ object World extends js.Object {
     * @param body
     * @returns world
     */
+  /* static member */
+  @JSImport("matter", "World.add")
+  @js.native
   def add(world: typingsSlinky.phaser.MatterJS.World, body: BodyType): typingsSlinky.phaser.MatterJS.World = js.native
+  @JSImport("matter", "World.add")
+  @js.native
   def add(world: typingsSlinky.phaser.MatterJS.World, body: CompositeType): typingsSlinky.phaser.MatterJS.World = js.native
+  @JSImport("matter", "World.add")
+  @js.native
   def add(world: typingsSlinky.phaser.MatterJS.World, body: ConstraintType): typingsSlinky.phaser.MatterJS.World = js.native
+  @JSImport("matter", "World.add")
+  @js.native
   def add(world: typingsSlinky.phaser.MatterJS.World, body: typingsSlinky.phaser.MatterJS.MouseConstraint): typingsSlinky.phaser.MatterJS.World = js.native
   
   /**
@@ -51,6 +60,9 @@ object World extends js.Object {
     * @param {body} body
     * @return {world} The original world with the body added
     */
+  /* static member */
+  @JSImport("matter", "World.addBody")
+  @js.native
   def addBody(world: typingsSlinky.phaser.MatterJS.World, body: BodyType): typingsSlinky.phaser.MatterJS.World = js.native
   
   /**
@@ -60,6 +72,9 @@ object World extends js.Object {
     * @param {composite} composite
     * @return {world} The original world with the objects from composite added
     */
+  /* static member */
+  @JSImport("matter", "World.addComposite")
+  @js.native
   def addComposite(world: typingsSlinky.phaser.MatterJS.World, composite: CompositeType): typingsSlinky.phaser.MatterJS.World = js.native
   
   /**
@@ -69,6 +84,9 @@ object World extends js.Object {
     * @param {constraint} constraint
     * @return {world} The original world with the constraint added
     */
+  /* static member */
+  @JSImport("matter", "World.addConstraint")
+  @js.native
   def addConstraint(world: typingsSlinky.phaser.MatterJS.World, constraint: ConstraintType): typingsSlinky.phaser.MatterJS.World = js.native
   
   /**
@@ -77,6 +95,9 @@ object World extends js.Object {
     * @param {world} world
     * @param {boolean} keepStatic
     */
+  /* static member */
+  @JSImport("matter", "World.clear")
+  @js.native
   def clear(world: typingsSlinky.phaser.MatterJS.World, keepStatic: Boolean): Unit = js.native
   
   /**
@@ -87,5 +108,8 @@ object World extends js.Object {
     * @param {} options
     * @return {world} A new world
     */
+  /* static member */
+  @JSImport("matter", "World.create")
+  @js.native
   def create(options: IWorldDefinition): typingsSlinky.phaser.MatterJS.World = js.native
 }

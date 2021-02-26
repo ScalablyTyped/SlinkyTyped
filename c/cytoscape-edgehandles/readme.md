@@ -10,9 +10,9 @@ Edge creation UI extension for Cytoscape
 | ------------------ | :-------------: |
 | Full name          | cytoscape-edgehandles |
 | Keywords           | cytoscape, cytoscape-extension |
-| # releases         | 10 |
-| # dependents       | 7 |
-| # downloads        | 64380 |
+| # releases         | 3 |
+| # dependents       | 8 |
+| # downloads        | 88284 |
 | # stars            | 0 |
 
 ## Links

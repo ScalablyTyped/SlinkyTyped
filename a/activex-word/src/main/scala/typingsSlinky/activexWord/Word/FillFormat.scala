@@ -13,12 +13,13 @@ import typingsSlinky.activexOffice.Office.MsoTextureType
 import typingsSlinky.activexOffice.Office.MsoTriState
 import typingsSlinky.activexOffice.Office.PictureEffect
 import typingsSlinky.activexOffice.Office.PictureEffects
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FillFormat extends js.Object {
+trait FillFormat extends StObject {
   
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   

@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.KeyNodeTemplate
 import typingsSlinky.maximMazurokGapiClientCompute.anon.OptionsRequestedPolicyVersionPrettyPrint
 import typingsSlinky.maximMazurokGapiClientCompute.anon.ProjectQuotaUserRegion
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RegionResource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NodeTemplatesResource extends js.Object {
+trait NodeTemplatesResource extends StObject {
   
   /** Retrieves an aggregated list of node templates. */
   def aggregatedList(): Request[NodeTemplateAggregatedList] = js.native

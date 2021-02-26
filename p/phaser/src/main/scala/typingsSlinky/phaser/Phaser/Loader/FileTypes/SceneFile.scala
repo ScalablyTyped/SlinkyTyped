@@ -9,6 +9,7 @@ import typingsSlinky.phaser.Phaser.Loader.MultiFile
 import typingsSlinky.phaser.Phaser.Textures.TextureManager
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

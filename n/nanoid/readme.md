@@ -4,16 +4,16 @@
 Typings are for version 2.1
 
 ## Library description:
-A tiny (137 bytes), secure URL-friendly unique string ID generator
+A tiny (108 bytes), secure URL-friendly unique string ID generator
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | nanoid |
 | Keywords           | uuid, random, id, url |
-| # releases         | 34 |
-| # dependents       | 609 |
-| # downloads        | 52701610 |
-| # stars            | 16 |
+| # releases         | 41 |
+| # dependents       | 1224 |
+| # downloads        | 149351551 |
+| # stars            | 18 |
 
 ## Links
 - [Homepage](https://github.com/ai/nanoid#readme)

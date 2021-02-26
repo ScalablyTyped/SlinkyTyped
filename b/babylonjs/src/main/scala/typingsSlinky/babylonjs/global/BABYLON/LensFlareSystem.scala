@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,9 +28,7 @@ class LensFlareSystem protected ()
   ) = this()
 }
 /* static members */
-@JSGlobal("BABYLON.LensFlareSystem")
-@js.native
-object LensFlareSystem extends js.Object {
+object LensFlareSystem {
   
   /**
     * Parse a lens flare system from a JSON repressentation
@@ -38,8 +37,12 @@ object LensFlareSystem extends js.Object {
     * @param rootUrl Define the rootUrl of the load sequence to easily find a load relative dependencies such as textures
     * @returns the parsed system
     */
+  @JSGlobal("BABYLON.LensFlareSystem.Parse")
+  @js.native
   def Parse(parsedLensFlareSystem: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): typingsSlinky.babylonjs.BABYLON.LensFlareSystem = js.native
   
   /** @hidden */
+  @JSGlobal("BABYLON.LensFlareSystem._SceneComponentInitialization")
+  @js.native
   def _SceneComponentInitialization(scene: typingsSlinky.babylonjs.BABYLON.Scene): Unit = js.native
 }

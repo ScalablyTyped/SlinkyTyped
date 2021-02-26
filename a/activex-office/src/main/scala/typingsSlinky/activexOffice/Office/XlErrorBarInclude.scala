@@ -4,6 +4,7 @@ import typingsSlinky.activexOffice.activexOfficeNumbers.`-4142`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`1`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`2`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`3`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`-4142`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`2`
 */
-trait XlErrorBarInclude extends js.Object
+trait XlErrorBarInclude extends StObject
 object XlErrorBarInclude {
   
   @scala.inline

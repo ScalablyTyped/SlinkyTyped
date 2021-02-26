@@ -14,6 +14,7 @@ import typingsSlinky.reactGridLayout.mod.ResizeHandle
 import typingsSlinky.reactGridLayout.mod.^
 import typingsSlinky.reactGridLayout.reactGridLayoutStrings.horizontal
 import typingsSlinky.reactGridLayout.reactGridLayoutStrings.vertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ object ReactGridLayout {
   
   @JSImport("react-grid-layout", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -69,10 +70,10 @@ object ReactGridLayout {
     def isResizable(value: Boolean): this.type = set("isResizable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def layoutVarargs(value: Layout*): this.type = set("layout", js.Array(value :_*))
+    def layout(value: js.Array[Layout]): this.type = set("layout", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def layout(value: js.Array[Layout]): this.type = set("layout", value.asInstanceOf[js.Any])
+    def layoutVarargs(value: Layout*): this.type = set("layout", js.Array(value :_*))
     
     @scala.inline
     def margin(value: js.Tuple2[Double, Double]): this.type = set("margin", value.asInstanceOf[js.Any])
@@ -120,19 +121,19 @@ object ReactGridLayout {
     def preventCollision(value: Boolean): this.type = set("preventCollision", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def resizeHandleReactElement(value: ReactElement): this.type = set("resizeHandle", value.asInstanceOf[js.Any])
+    def resizeHandle(value: ReactElement | (js.Function1[/* resizeHandle */ ResizeHandle, ReactElement])): this.type = set("resizeHandle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def resizeHandleFunction1(value: /* resizeHandle */ ResizeHandle => ReactElement): this.type = set("resizeHandle", js.Any.fromFunction1(value))
     
     @scala.inline
-    def resizeHandle(value: ReactElement | (js.Function1[/* resizeHandle */ ResizeHandle, ReactElement])): this.type = set("resizeHandle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def resizeHandlesVarargs(value: ResizeHandle*): this.type = set("resizeHandles", js.Array(value :_*))
+    def resizeHandleReactElement(value: ReactElement): this.type = set("resizeHandle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def resizeHandles(value: js.Array[ResizeHandle]): this.type = set("resizeHandles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def resizeHandlesVarargs(value: ResizeHandle*): this.type = set("resizeHandles", js.Array(value :_*))
     
     @scala.inline
     def rowHeight(value: Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
@@ -153,7 +154,7 @@ object ReactGridLayout {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactGridLayoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactGridLayout.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactGridLayoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

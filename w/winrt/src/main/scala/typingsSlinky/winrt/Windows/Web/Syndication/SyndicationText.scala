@@ -3,6 +3,7 @@ package typingsSlinky.winrt.Windows.Web.Syndication
 import typingsSlinky.winrt.Windows.Data.Xml.Dom.XmlDocument
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrt.Windows.Foundation.Uri
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

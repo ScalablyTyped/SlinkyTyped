@@ -1,11 +1,12 @@
 package typingsSlinky.uniApp
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SelectorQuery extends js.Object {
+trait SelectorQuery extends StObject {
   
   /**
     * 执行所有的请求

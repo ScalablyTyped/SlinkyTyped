@@ -5,18 +5,19 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.Text
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("snabbdom/build/package/htmldomapi", JSImport.Namespace)
-@js.native
-object htmldomapiMod extends js.Object {
+object htmldomapiMod {
   
+  @JSImport("snabbdom/build/package/htmldomapi", "htmlDomApi")
+  @js.native
   val htmlDomApi: DOMAPI = js.native
   
   @js.native
-  trait DOMAPI extends js.Object {
+  trait DOMAPI extends StObject {
     
     def appendChild(node: Node, child: Node): Unit = js.native
     

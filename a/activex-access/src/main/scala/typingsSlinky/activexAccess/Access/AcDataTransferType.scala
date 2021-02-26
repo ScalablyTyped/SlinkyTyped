@@ -3,6 +3,7 @@ package typingsSlinky.activexAccess.Access
 import typingsSlinky.activexAccess.activexAccessNumbers.`0`
 import typingsSlinky.activexAccess.activexAccessNumbers.`1`
 import typingsSlinky.activexAccess.activexAccessNumbers.`2`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexAccess.activexAccessNumbers.`0`
   - typingsSlinky.activexAccess.activexAccessNumbers.`2`
 */
-trait AcDataTransferType extends js.Object
+trait AcDataTransferType extends StObject
 object AcDataTransferType {
   
   @scala.inline

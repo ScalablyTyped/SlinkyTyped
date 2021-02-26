@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.Fields
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.Parent
 import typingsSlinky.maximMazurokGapiClientBigqueryreservation.anon.Resource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AssignmentsResource extends js.Object {
+trait AssignmentsResource extends StObject {
   
   def create(request: Oauthtoken, body: Assignment): Request[Assignment] = js.native
   /**

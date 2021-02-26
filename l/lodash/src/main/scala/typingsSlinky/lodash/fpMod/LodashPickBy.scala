@@ -6,12 +6,13 @@ import typingsSlinky.lodash.mod.PartialObject
 import typingsSlinky.lodash.mod.ValueKeyIteratee
 import typingsSlinky.lodash.mod.ValueKeyIterateeTypeGuard
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashPickBy extends js.Object {
+trait LodashPickBy extends StObject {
   
   def apply[T](predicate: ValueKeyIteratee[T]): LodashPickBy3x1[T] = js.native
   def apply[T /* <: js.Object */](

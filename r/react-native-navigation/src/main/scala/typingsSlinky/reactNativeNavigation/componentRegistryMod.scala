@@ -5,16 +5,16 @@ import typingsSlinky.reactNativeNavigation.appRegistryServiceMod.AppRegistryServ
 import typingsSlinky.reactNativeNavigation.componentEventsObserverMod.ComponentEventsObserver
 import typingsSlinky.reactNativeNavigation.componentWrapperMod.ComponentWrapper
 import typingsSlinky.reactNativeNavigation.storeMod.Store
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-navigation/lib/dist/components/ComponentRegistry", JSImport.Namespace)
-@js.native
-object componentRegistryMod extends js.Object {
+object componentRegistryMod {
   
+  @JSImport("react-native-navigation/lib/dist/components/ComponentRegistry", "ComponentRegistry")
   @js.native
-  class ComponentRegistry protected () extends js.Object {
+  class ComponentRegistry protected () extends StObject {
     def this(
       store: Store,
       componentEventsObserver: ComponentEventsObserver,

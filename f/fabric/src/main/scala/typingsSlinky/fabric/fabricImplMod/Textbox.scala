@@ -1,6 +1,7 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalablytyped.runtime.NumberDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -95,9 +96,7 @@ class Textbox protected () extends IText {
   var splitByGrapheme: js.UndefOr[Boolean] = js.native
 }
 /* static members */
-@JSImport("fabric/fabric-impl", "Textbox")
-@js.native
-object Textbox extends js.Object {
+object Textbox {
   
   /**
     * Returns fabric.Textbox instance from an object representation
@@ -106,6 +105,10 @@ object Textbox extends js.Object {
     * @param {Object} object Object to create an instance from
     * @param {Function} [callback] Callback to invoke when an fabric.Textbox instance is created
     */
+  @JSImport("fabric/fabric-impl", "Textbox.fromObject")
+  @js.native
   def fromObject(`object`: js.Any): Textbox = js.native
+  @JSImport("fabric/fabric-impl", "Textbox.fromObject")
+  @js.native
   def fromObject(`object`: js.Any, callback: js.Function): Textbox = js.native
 }

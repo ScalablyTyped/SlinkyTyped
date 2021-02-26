@@ -9,13 +9,14 @@ import typingsSlinky.openpgp.mod.packet.PublicSubkey
 import typingsSlinky.openpgp.mod.packet.SecretKey
 import typingsSlinky.openpgp.mod.packet.SecretSubkey
 import typingsSlinky.openpgp.mod.packet.Signature
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "User")
 @js.native
-class User () extends js.Object {
+class User () extends StObject {
   
   def isRevoked(primaryKey: PublicKey, certificate: Signature, key: PublicKey, date: js.Date): js.Promise[Boolean] = js.native
   def isRevoked(primaryKey: PublicKey, certificate: Signature, key: PublicSubkey, date: js.Date): js.Promise[Boolean] = js.native

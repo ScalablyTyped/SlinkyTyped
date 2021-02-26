@@ -3,12 +3,13 @@ package typingsSlinky.jsoneditor.mod
 import typingsSlinky.jsoneditor.anon.End
 import typingsSlinky.jsoneditor.anon.PathJSONPath
 import typingsSlinky.jsoneditor.anon.Start
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JSONEditor extends js.Object {
+trait JSONEditor extends StObject {
   
   /**
     * Collapse all fields. Only applicable for mode 'tree', 'view', and 'form'.

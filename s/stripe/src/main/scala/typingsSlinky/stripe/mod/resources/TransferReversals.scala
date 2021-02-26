@@ -6,17 +6,20 @@ import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListOptions
 import typingsSlinky.stripe.mod.IListPromise
 import typingsSlinky.stripe.mod.IResponseFn
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
 import typingsSlinky.stripe.mod.transferReversals.IReversal
 import typingsSlinky.stripe.mod.transferReversals.IReversalCreationOptions
 import typingsSlinky.stripe.mod.transferReversals.IReversalUpdateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stripe", "resources.TransferReversals")
 @js.native
-class TransferReversals () extends StripeResource {
+class TransferReversals protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   def create(): js.Promise[IReversal] = js.native
   /**

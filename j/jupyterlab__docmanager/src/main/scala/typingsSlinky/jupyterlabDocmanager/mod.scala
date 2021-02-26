@@ -3,28 +3,14 @@ package typingsSlinky.jupyterlabDocmanager
 import typingsSlinky.jupyterlabDocmanager.managerMod.DocumentManager.IOptions
 import typingsSlinky.jupyterlabServices.contentsMod.Contents.IModel
 import typingsSlinky.luminoCoreutils.mod.Token
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/docmanager", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
-  val IDocumentManager: Token[typingsSlinky.jupyterlabDocmanager.tokensMod.IDocumentManager] = js.native
-  
-  def isValidFileName(name: String): Boolean = js.native
-  
-  def renameDialog(manager: typingsSlinky.jupyterlabDocmanager.tokensMod.IDocumentManager, oldPath: String): js.Promise[IModel | Null] = js.native
-  
-  def renameFile(
-    manager: typingsSlinky.jupyterlabDocmanager.tokensMod.IDocumentManager,
-    oldPath: String,
-    newPath: String
-  ): js.Promise[IModel | Null] = js.native
-  
-  def shouldOverwrite(path: String): js.Promise[Boolean] = js.native
-  
+  @JSImport("@jupyterlab/docmanager", "DocumentManager")
   @js.native
   class DocumentManager protected ()
     extends typingsSlinky.jupyterlabDocmanager.managerMod.DocumentManager {
@@ -34,6 +20,7 @@ object mod extends js.Object {
     def this(options: IOptions) = this()
   }
   
+  @JSImport("@jupyterlab/docmanager", "DocumentWidgetManager")
   @js.native
   class DocumentWidgetManager protected ()
     extends typingsSlinky.jupyterlabDocmanager.widgetmanagerMod.DocumentWidgetManager {
@@ -43,6 +30,11 @@ object mod extends js.Object {
     def this(options: typingsSlinky.jupyterlabDocmanager.widgetmanagerMod.DocumentWidgetManager.IOptions) = this()
   }
   
+  @JSImport("@jupyterlab/docmanager", "IDocumentManager")
+  @js.native
+  val IDocumentManager: Token[typingsSlinky.jupyterlabDocmanager.tokensMod.IDocumentManager] = js.native
+  
+  @JSImport("@jupyterlab/docmanager", "PathStatus")
   @js.native
   class PathStatus protected ()
     extends typingsSlinky.jupyterlabDocmanager.pathstatusMod.PathStatus {
@@ -51,12 +43,12 @@ object mod extends js.Object {
       */
     def this(opts: typingsSlinky.jupyterlabDocmanager.pathstatusMod.PathStatus.IOptions) = this()
   }
-  @js.native
-  object PathStatus extends js.Object {
+  object PathStatus {
     
     /**
       * A VDomModel for rendering the PathStatus status item.
       */
+    @JSImport("@jupyterlab/docmanager", "PathStatus.Model")
     @js.native
     class Model protected ()
       extends typingsSlinky.jupyterlabDocmanager.pathstatusMod.PathStatus.Model {
@@ -70,6 +62,7 @@ object mod extends js.Object {
     }
   }
   
+  @JSImport("@jupyterlab/docmanager", "SaveHandler")
   @js.native
   class SaveHandler protected ()
     extends typingsSlinky.jupyterlabDocmanager.savehandlerMod.SaveHandler {
@@ -79,6 +72,7 @@ object mod extends js.Object {
     def this(options: typingsSlinky.jupyterlabDocmanager.savehandlerMod.SaveHandler.IOptions) = this()
   }
   
+  @JSImport("@jupyterlab/docmanager", "SavingStatus")
   @js.native
   class SavingStatus protected ()
     extends typingsSlinky.jupyterlabDocmanager.savingstatusMod.SavingStatus {
@@ -87,12 +81,12 @@ object mod extends js.Object {
       */
     def this(opts: typingsSlinky.jupyterlabDocmanager.savingstatusMod.SavingStatus.IOptions) = this()
   }
-  @js.native
-  object SavingStatus extends js.Object {
+  object SavingStatus {
     
     /**
       * A VDomModel for the SavingStatus item.
       */
+    @JSImport("@jupyterlab/docmanager", "SavingStatus.Model")
     @js.native
     class Model protected ()
       extends typingsSlinky.jupyterlabDocmanager.savingstatusMod.SavingStatus.Model {
@@ -102,4 +96,24 @@ object mod extends js.Object {
       def this(docManager: typingsSlinky.jupyterlabDocmanager.tokensMod.IDocumentManager) = this()
     }
   }
+  
+  @JSImport("@jupyterlab/docmanager", "isValidFileName")
+  @js.native
+  def isValidFileName(name: String): Boolean = js.native
+  
+  @JSImport("@jupyterlab/docmanager", "renameDialog")
+  @js.native
+  def renameDialog(manager: typingsSlinky.jupyterlabDocmanager.tokensMod.IDocumentManager, oldPath: String): js.Promise[IModel | Null] = js.native
+  
+  @JSImport("@jupyterlab/docmanager", "renameFile")
+  @js.native
+  def renameFile(
+    manager: typingsSlinky.jupyterlabDocmanager.tokensMod.IDocumentManager,
+    oldPath: String,
+    newPath: String
+  ): js.Promise[IModel | Null] = js.native
+  
+  @JSImport("@jupyterlab/docmanager", "shouldOverwrite")
+  @js.native
+  def shouldOverwrite(path: String): js.Promise[Boolean] = js.native
 }

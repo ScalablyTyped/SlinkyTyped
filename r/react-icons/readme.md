@@ -10,9 +10,9 @@ SVG React icons of popular icon packs using ES6 imports
 | ------------------ | :-------------: |
 | Full name          | react-icons |
 | Keywords           | - |
-| # releases         | 26 |
-| # dependents       | 676 |
-| # downloads        | 17716029 |
+| # releases         | 13 |
+| # dependents       | 1200 |
+| # downloads        | 28662932 |
 | # stars            | 28 |
 
 ## Links

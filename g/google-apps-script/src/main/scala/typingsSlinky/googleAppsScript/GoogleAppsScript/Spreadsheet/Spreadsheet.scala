@@ -7,6 +7,7 @@ import typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.HtmlOutput
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
 import typingsSlinky.googleAppsScript.anon.FunctionName
 import typingsSlinky.googleAppsScript.anon.Template
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * collaborators.
   */
 @js.native
-trait Spreadsheet extends js.Object {
+trait Spreadsheet extends StObject {
   
   def addDeveloperMetadata(key: String): typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.Spreadsheet = js.native
   def addDeveloperMetadata(key: String, value: String): typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.Spreadsheet = js.native

@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientAnalytics.anon.AccountIdAltFields
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.KeyMaxresults
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.UnsampledReportId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UnsampledReportsResource extends js.Object {
+trait UnsampledReportsResource extends StObject {
   
   /** Deletes an unsampled report. */
   def delete(): Request[Unit] = js.native

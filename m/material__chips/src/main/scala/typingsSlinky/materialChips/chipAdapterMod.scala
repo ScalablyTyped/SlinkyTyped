@@ -3,16 +3,15 @@ package typingsSlinky.materialChips
 import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.materialChips.chipConstantsMod.EventSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@material/chips/chip/adapter", JSImport.Namespace)
-@js.native
-object chipAdapterMod extends js.Object {
+object chipAdapterMod {
   
   @js.native
-  trait MDCChipAdapter extends js.Object {
+  trait MDCChipAdapter extends StObject {
     
     /**
       * Adds a class to the root element.
@@ -24,11 +23,11 @@ object chipAdapterMod extends js.Object {
       */
     def addClassToLeadingIcon(className: String): Unit = js.native
     
-    def eventTargetHasClass(target: Null, className: String): Boolean = js.native
     /**
       * @return true if target has className, false otherwise.
       */
     def eventTargetHasClass(target: EventTarget, className: String): Boolean = js.native
+    def eventTargetHasClass(target: Null, className: String): Boolean = js.native
     
     /**
       * Gives focus to the primary action.

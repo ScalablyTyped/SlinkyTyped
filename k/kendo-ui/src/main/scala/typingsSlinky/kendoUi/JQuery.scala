@@ -302,12 +302,13 @@ import typingsSlinky.kendoUi.kendoUiStrings.kendoUpload
 import typingsSlinky.kendoUi.kendoUiStrings.kendoValidator
 import typingsSlinky.kendoUi.kendoUiStrings.kendoWindow
 import typingsSlinky.kendoUi.kendoUiStrings.kendoWizard
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def data(key: js.Any): js.Any = js.native
   @JSName("data")

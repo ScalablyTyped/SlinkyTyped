@@ -5,14 +5,14 @@ import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/PostProcesses/bloomMergePostProcess", JSImport.Namespace)
-@js.native
-object bloomMergePostProcessMod extends js.Object {
+object bloomMergePostProcessMod {
   
+  @JSImport("babylonjs/PostProcesses/bloomMergePostProcess", "BloomMergePostProcess")
   @js.native
   class BloomMergePostProcess protected () extends PostProcess {
     /**

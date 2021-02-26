@@ -9,9 +9,9 @@ Jasmine Promise Matchers ================
 | ------------------ | :-------------: |
 | Full name          | jasmine-promise-matchers |
 | Keywords           | - |
-| # releases         | 4 |
+| # releases         | 0 |
 | # dependents       | 2 |
-| # downloads        | 47037 |
+| # downloads        | 110564 |
 | # stars            | 1 |
 
 ## Links

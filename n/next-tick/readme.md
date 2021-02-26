@@ -10,9 +10,9 @@ Environment agnostic nextTick polyfill
 | ------------------ | :-------------: |
 | Full name          | next-tick |
 | Keywords           | nexttick, setImmediate, setTimeout, async |
-| # releases         | 1 |
-| # dependents       | 97 |
-| # downloads        | 207183779 |
+| # releases         | 2 |
+| # dependents       | 119 |
+| # downloads        | 432415872 |
 | # stars            | 6 |
 
 ## Links

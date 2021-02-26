@@ -8,6 +8,7 @@ import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.chipsChipsMod.ChipsProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object Chips {
   
   @JSImport("primereact/chips", "Chips")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -78,13 +79,13 @@ object Chips {
     def tooltipOptions(value: TooltipOptions): this.type = set("tooltipOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
+    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
   }
   
-  def withProps(p: ChipsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Chips.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ChipsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

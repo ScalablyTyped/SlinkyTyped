@@ -11,12 +11,13 @@ import typingsSlinky.lodash.mod.RightCurriedFunction4
 import typingsSlinky.lodash.mod.RightCurriedFunction5
 import typingsSlinky.lodash.mod.String
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashCurryRightN extends js.Object {
+trait LodashCurryRightN extends StObject {
   
   def apply(arity: Double): LodashCurryRightN1x1 = js.native
   def apply(arity: Double, func: js.Function1[/* repeated */ js.Any, _]): js.Function1[/* repeated */ js.Any, _] = js.native

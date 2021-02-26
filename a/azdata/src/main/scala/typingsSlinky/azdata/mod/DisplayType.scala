@@ -1,5 +1,6 @@
 package typingsSlinky.azdata.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.azdata.azdataStrings.inherit
   - typingsSlinky.azdata.azdataStrings._empty
 */
-trait DisplayType extends js.Object
+trait DisplayType extends StObject
 object DisplayType {
   
   @scala.inline

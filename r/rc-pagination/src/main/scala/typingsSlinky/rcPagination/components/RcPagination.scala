@@ -7,6 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcPagination.mod.PaginationProps
 import typingsSlinky.rcPagination.mod.default
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object RcPagination {
   
   @JSImport("rc-pagination", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,43 +42,43 @@ object RcPagination {
     def itemRender(value: (/* page */ Double, /* type */ String, /* element */ ReactElement) => ReactElement): this.type = set("itemRender", js.Any.fromFunction3(value))
     
     @scala.inline
-    def jumpNextIconReactElement(value: ReactElement): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def jumpNextIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
+    def jumpNextIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def jumpNextIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def jumpNextIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
+    def jumpNextIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def jumpPrevIconReactElement(value: ReactElement): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def jumpPrevIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def jumpPrevIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
+    def jumpNextIconReactElement(value: ReactElement): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def jumpPrevIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def jumpPrevIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def jumpPrevIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def jumpPrevIconReactElement(value: ReactElement): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def nextIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    def nextIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def nextIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    def nextIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onChange(value: (/* page */ Double, /* pageSize */ Double) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
@@ -89,34 +90,34 @@ object RcPagination {
     def pageSize(value: Double): this.type = set("pageSize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pageSizeOptionsVarargs(value: String*): this.type = set("pageSizeOptions", js.Array(value :_*))
+    def pageSizeOptions(value: js.Array[String]): this.type = set("pageSizeOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pageSizeOptions(value: js.Array[String]): this.type = set("pageSizeOptions", value.asInstanceOf[js.Any])
+    def pageSizeOptionsVarargs(value: String*): this.type = set("pageSizeOptions", js.Array(value :_*))
     
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def prevIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    def prevIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def prevIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prevIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    def prevIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectComponentClassFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("selectComponentClass", value.asInstanceOf[js.Any])
+    def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def selectComponentClass(value: ReactComponentClass[js.Object]): this.type = set("selectComponentClass", value.asInstanceOf[js.Any])
     
     @scala.inline
     def selectComponentClassComponentClass(value: ReactComponentClass[js.Object]): this.type = set("selectComponentClass", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectComponentClass(value: ReactComponentClass[js.Object]): this.type = set("selectComponentClass", value.asInstanceOf[js.Any])
+    def selectComponentClassFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("selectComponentClass", value.asInstanceOf[js.Any])
     
     @scala.inline
     def selectPrefixCls(value: String): this.type = set("selectPrefixCls", value.asInstanceOf[js.Any])
@@ -149,7 +150,7 @@ object RcPagination {
     def total(value: Double): this.type = set("total", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RcPagination.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

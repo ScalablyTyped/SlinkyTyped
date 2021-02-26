@@ -3,6 +3,7 @@ package typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`return`
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.call
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.debuggerStatement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.call
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`return`
 */
-trait BreakLocationType extends js.Object
+trait BreakLocationType extends StObject
 object BreakLocationType {
   
   @scala.inline

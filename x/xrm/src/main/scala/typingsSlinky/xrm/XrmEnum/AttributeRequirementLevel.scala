@@ -3,6 +3,7 @@ package typingsSlinky.xrm.XrmEnum
 import typingsSlinky.xrm.xrmStrings.none
 import typingsSlinky.xrm.xrmStrings.recommended
 import typingsSlinky.xrm.xrmStrings.required
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.recommended
   - typingsSlinky.xrm.xrmStrings.required
 */
-trait AttributeRequirementLevel extends js.Object
+trait AttributeRequirementLevel extends StObject
 object AttributeRequirementLevel {
   
   @scala.inline

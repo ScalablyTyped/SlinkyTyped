@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.passwordMod.PasswordProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/password", JSImport.Namespace)
-@js.native
-object primereactPasswordMod extends js.Object {
+object primereactPasswordMod {
   
+  @JSImport("primereact/password", "Password")
   @js.native
-  class Password ()
-    extends Component[PasswordProps, js.Any, js.Any]
+  class Password protected ()
+    extends typingsSlinky.primereact.passwordMod.Password {
+    def this(props: PasswordProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: PasswordProps, context: js.Any) = this()
+  }
 }

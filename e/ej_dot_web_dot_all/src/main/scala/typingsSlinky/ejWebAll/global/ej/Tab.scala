@@ -2,6 +2,7 @@ package typingsSlinky.ejWebAll.global.ej
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,22 +11,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Tab protected ()
   extends typingsSlinky.ejWebAll.ej.Tab {
-  def this(element: JQuery) = this()
   def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Tab.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Tab.Model) = this()
+  def this(element: JQuery) = this()
+  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Model) = this()
+  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Model) = this()
 }
-/* static members */
-@JSGlobal("ej.Tab")
-@js.native
-object Tab extends js.Object {
+object Tab {
   
-  var Locale: js.Any = js.native
-  
-  var fn: typingsSlinky.ejWebAll.ej.Tab = js.native
-  
+  @JSGlobal("ej.Tab")
   @js.native
-  object HeightAdjustMode extends js.Object {
+  val ^ : js.Any = js.native
+  
+  @JSGlobal("ej.Tab.HeightAdjustMode")
+  @js.native
+  object HeightAdjustMode extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Tab.HeightAdjustMode with Double] = js.native
@@ -39,8 +38,16 @@ object Tab extends js.Object {
     /* 0 */ val None: typingsSlinky.ejWebAll.ej.Tab.HeightAdjustMode.None with Double = js.native
   }
   
+  /* static member */
+  @JSGlobal("ej.Tab.Locale")
   @js.native
-  object Position extends js.Object {
+  def Locale: js.Any = js.native
+  @scala.inline
+  def Locale_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Locale")(x.asInstanceOf[js.Any])
+  
+  @JSGlobal("ej.Tab.Position")
+  @js.native
+  object Position extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.ejWebAll.ej.Tab.Position with Double] = js.native
@@ -53,4 +60,11 @@ object Tab extends js.Object {
     
     /* 0 */ val Top: typingsSlinky.ejWebAll.ej.Tab.Position.Top with Double = js.native
   }
+  
+  /* static member */
+  @JSGlobal("ej.Tab.fn")
+  @js.native
+  def fn: typingsSlinky.ejWebAll.ej.Tab = js.native
+  @scala.inline
+  def fn_=(x: typingsSlinky.ejWebAll.ej.Tab): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("fn")(x.asInstanceOf[js.Any])
 }

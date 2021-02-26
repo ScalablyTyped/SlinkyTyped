@@ -11,14 +11,14 @@ import typingsSlinky.babylonjs.nodeMaterialSystemValuesMod.NodeMaterialSystemVal
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/Input/inputBlock", JSImport.Namespace)
-@js.native
-object inputBlockMod extends js.Object {
+object inputBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/Input/inputBlock", "InputBlock")
   @js.native
   class InputBlock protected () extends NodeMaterialBlock {
     /**

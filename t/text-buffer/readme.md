@@ -10,9 +10,9 @@ A container for large mutable strings with annotated regions
 | ------------------ | :-------------: |
 | Full name          | text-buffer |
 | Keywords           | - |
-| # releases         | 49 |
+| # releases         | 19 |
 | # dependents       | 8 |
-| # downloads        | 50633 |
+| # downloads        | 52695 |
 | # stars            | 1 |
 
 ## Links

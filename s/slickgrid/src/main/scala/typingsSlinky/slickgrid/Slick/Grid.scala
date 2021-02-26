@@ -5,12 +5,13 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.slickgrid.Slick.Editors.Editor
 import typingsSlinky.slickgrid.anon.CancelCurrentEdit
 import typingsSlinky.slickgrid.anon.ColumnId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Grid[T /* <: SlickData */] extends js.Object {
+trait Grid[T /* <: SlickData */] extends StObject {
   
   // #endregion Columns
   // #region Cells
@@ -31,7 +32,7 @@ trait Grid[T /* <: SlickData */] extends js.Object {
     **/
   def addCellCssStyles(key: String, hash: CellCssStylesHash): Unit = js.native
   
-          // todo: don't know the type of the event data type
+  // todo: don't know the type of the event data type
   // #endregion Core
   // #region Columns
   /**

@@ -16,15 +16,22 @@ import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.shiftAlt
 import typingsSlinky.wordpressComponents.anon.PartialProps
 import typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon
 import typingsSlinky.wordpressComponents.shortcutMod.Shortcut.ShortcutType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RichTextToolbarButton {
   
+  @scala.inline
+  def apply(icon: Icon, onClick: () => Unit, title: String): Builder = {
+    val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any], onClick = js.Any.fromFunction0(onClick), title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("@wordpress/editor", "RichTextToolbarButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -65,10 +72,4 @@ object RichTextToolbarButton {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(icon: Icon, onClick: () => Unit, title: String): Builder = {
-    val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any], onClick = js.Any.fromFunction0(onClick), title = title.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

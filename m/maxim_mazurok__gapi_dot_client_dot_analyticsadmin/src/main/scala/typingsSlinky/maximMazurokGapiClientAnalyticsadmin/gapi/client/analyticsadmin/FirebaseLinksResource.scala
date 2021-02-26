@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.AltCallback
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.CallbackFields
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.Name
 import typingsSlinky.maximMazurokGapiClientAnalyticsadmin.anon.UpdateMask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FirebaseLinksResource extends js.Object {
+trait FirebaseLinksResource extends StObject {
   
   /** Creates a FirebaseLink. Properties can have at most one FirebaseLink. */
   def create(request: AltCallback): Request[GoogleAnalyticsAdminV1alphaFirebaseLink] = js.native

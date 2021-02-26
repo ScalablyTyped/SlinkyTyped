@@ -1,7 +1,8 @@
 package typingsSlinky.awsSdk.cloudformationMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait _ChangeSetType extends js.Object
+trait _ChangeSetType extends StObject

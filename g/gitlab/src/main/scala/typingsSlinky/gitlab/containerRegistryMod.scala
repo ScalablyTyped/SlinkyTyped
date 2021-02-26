@@ -1,20 +1,22 @@
 package typingsSlinky.gitlab
 
 import typingsSlinky.gitlab.anon.SudokeepNstringolderThans
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.PaginatedRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.Sudo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gitlab/dist/types/core/services/ContainerRegistry", JSImport.Namespace)
-@js.native
-object containerRegistryMod extends js.Object {
+object containerRegistryMod {
   
+  @JSImport("gitlab/dist/types/core/services/ContainerRegistry", "ContainerRegistry")
   @js.native
   class ContainerRegistry () extends BaseService {
+    def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
     
     def removeRepository(projectId: String, repositoryId: Double): js.Promise[js.Object] = js.native
     def removeRepository(projectId: String, repositoryId: Double, options: Sudo): js.Promise[js.Object] = js.native

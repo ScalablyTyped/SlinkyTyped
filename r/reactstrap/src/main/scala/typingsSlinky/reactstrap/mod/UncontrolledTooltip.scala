@@ -1,12 +1,19 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
 import typingsSlinky.reactstrap.tooltipMod.UncontrolledTooltipProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "UncontrolledTooltip")
+@JSImport("reactstrap/lib", "UncontrolledTooltip")
 @js.native
-class UncontrolledTooltip ()
-  extends Component[UncontrolledTooltipProps, js.Object, js.Any]
+class UncontrolledTooltip protected ()
+  extends typingsSlinky.reactstrap.uncontrolledMod.UncontrolledTooltip {
+  def this(props: UncontrolledTooltipProps) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: UncontrolledTooltipProps, context: js.Any) = this()
+}

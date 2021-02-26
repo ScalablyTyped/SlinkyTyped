@@ -25,6 +25,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.TwoDotDashLineHeavy
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Wave
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.WaveDouble
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.WaveHeavy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

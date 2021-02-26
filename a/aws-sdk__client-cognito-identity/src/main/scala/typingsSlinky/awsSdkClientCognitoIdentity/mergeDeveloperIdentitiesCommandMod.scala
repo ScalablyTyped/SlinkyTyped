@@ -5,19 +5,19 @@ import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.Servic
 import typingsSlinky.awsSdkClientCognitoIdentity.cognitoIdentityClientMod.ServiceOutputTypes
 import typingsSlinky.awsSdkClientCognitoIdentity.models0Mod.MergeDeveloperIdentitiesInput
 import typingsSlinky.awsSdkClientCognitoIdentity.models0Mod.MergeDeveloperIdentitiesResponse
-import typingsSlinky.awsSdkSmithyClient.commandMod.Command
+import typingsSlinky.awsSdkSmithyClient.mod.Command
 import typingsSlinky.awsSdkTypes.httpMod.HttpHandlerOptions
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity/types/commands/MergeDeveloperIdentitiesCommand", JSImport.Namespace)
-@js.native
-object mergeDeveloperIdentitiesCommandMod extends js.Object {
+object mergeDeveloperIdentitiesCommandMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity/types/commands/MergeDeveloperIdentitiesCommand", "MergeDeveloperIdentitiesCommand")
   @js.native
   class MergeDeveloperIdentitiesCommand protected ()
     extends Command[

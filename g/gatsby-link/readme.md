@@ -10,9 +10,9 @@ An enhanced Link component for Gatsby sites with support for resource prefetchin
 | ------------------ | :-------------: |
 | Full name          | gatsby-link |
 | Keywords           | gatsby |
-| # releases         | 250 |
-| # dependents       | 62 |
-| # downloads        | 4745460 |
+| # releases         | 90 |
+| # dependents       | 105 |
+| # downloads        | 19447998 |
 | # stars            | 1 |
 
 ## Links

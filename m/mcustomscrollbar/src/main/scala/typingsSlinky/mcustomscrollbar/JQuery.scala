@@ -2,12 +2,13 @@ package typingsSlinky.mcustomscrollbar
 
 import typingsSlinky.mcustomscrollbar.MCustomScrollbar.CustomScrollbarOptions
 import typingsSlinky.mcustomscrollbar.MCustomScrollbar.ScrollToParameterOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Creates a new mCustomScrollbar with the specified or default options

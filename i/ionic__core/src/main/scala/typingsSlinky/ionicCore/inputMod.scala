@@ -27,14 +27,14 @@ import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.mod.TextFieldTypes
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/input/input", JSImport.Namespace)
-@js.native
-object inputMod extends js.Object {
+object inputMod {
   
+  @JSImport("@ionic/core/dist/types/components/input/input", "Input")
   @js.native
   class Input () extends ComponentInterface {
     

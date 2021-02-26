@@ -2,12 +2,13 @@ package typingsSlinky.gdal.mod
 
 import typingsSlinky.gdal.gdalStrings.r
 import typingsSlinky.gdal.gdalStrings.rPlussign
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Driver extends js.Object {
+trait Driver extends StObject {
   
   def copyFiles(name_old: String, name_new: String): Unit = js.native
   

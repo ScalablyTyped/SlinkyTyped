@@ -7,15 +7,22 @@ import typingsSlinky.calidation.mod.FieldsConfig
 import typingsSlinky.calidation.mod.Transforms
 import typingsSlinky.calidation.mod.ValidationContext
 import typingsSlinky.calidation.mod.ValidationProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Validation {
   
+  @scala.inline
+  def apply[T /* <: js.Object */](children: ValidationContext[T] => ReactElement, config: FieldsConfig[T]): Builder[T] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), config = config.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ValidationProps[T]]))
+  }
+  
   @JSImport("calidation", "Validation")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T /* <: js.Object */] (val args: js.Array[js.Any])
@@ -30,10 +37,4 @@ object Validation {
   }
   
   def withProps[T /* <: js.Object */](p: ValidationProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T /* <: js.Object */](children: ValidationContext[T] => ReactElement, config: FieldsConfig[T]): Builder[T] = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), config = config.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ValidationProps[T]]))
-  }
 }

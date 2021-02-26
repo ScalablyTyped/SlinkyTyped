@@ -5,14 +5,14 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.HTMLProps
 import typingsSlinky.reactScroll.linkMod.ReactScrollLinkProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-scroll/modules/components/Button", JSImport.Namespace)
-@js.native
-object buttonMod extends js.Object {
+object buttonMod {
   
+  @JSImport("react-scroll/modules/components/Button", JSImport.Default)
   @js.native
   class default ()
     extends Component[ButtonProps, js.Object, js.Any]

@@ -11,8 +11,8 @@ Sort an object's keys, including an optional key list
 | Full name          | sort-object-keys |
 | Keywords           | keys, object, sort |
 | # releases         | 2 |
-| # dependents       | 25 |
-| # downloads        | 7598031 |
+| # dependents       | 30 |
+| # downloads        | 14203215 |
 | # stars            | 0 |
 
 ## Links

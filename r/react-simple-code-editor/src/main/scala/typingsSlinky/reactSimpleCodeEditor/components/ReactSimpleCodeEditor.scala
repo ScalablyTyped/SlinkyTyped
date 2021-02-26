@@ -78,15 +78,31 @@ import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.tree
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.url
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.vertical
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactSimpleCodeEditor {
   
+  @scala.inline
+  def apply(
+    highlight: String => String | ReactElement,
+    onBlur: js.UndefOr[FocusEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLTextAreaElement], Unit]]),
+    onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLTextAreaElement], Unit]]),
+    onFocus: js.UndefOr[FocusEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLTextAreaElement], Unit]]),
+    onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticKeyboardEvent[HTMLTextAreaElement], Unit]]),
+    onKeyUp: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticKeyboardEvent[HTMLTextAreaElement], Unit]]),
+    onValueChange: String => Unit,
+    value: String
+  ): Builder = {
+    val __props = js.Dynamic.literal(highlight = js.Any.fromFunction1(highlight), onBlur = onBlur.asInstanceOf[js.Any], onClick = onClick.asInstanceOf[js.Any], onFocus = onFocus.asInstanceOf[js.Any], onKeyDown = onKeyDown.asInstanceOf[js.Any], onKeyUp = onKeyUp.asInstanceOf[js.Any], onValueChange = js.Any.fromFunction1(onValueChange), value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DetailedHTMLPropsHTMLAttr]))
+  }
+  
   @JSImport("react-simple-code-editor", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -279,10 +295,10 @@ object ReactSimpleCodeEditor {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -640,19 +656,4 @@ object ReactSimpleCodeEditor {
   }
   
   def withProps(p: DetailedHTMLPropsHTMLAttr): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    highlight: String => String | ReactElement,
-    onBlur: js.UndefOr[FocusEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLTextAreaElement], Unit]]),
-    onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLTextAreaElement], Unit]]),
-    onFocus: js.UndefOr[FocusEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLTextAreaElement], Unit]]),
-    onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticKeyboardEvent[HTMLTextAreaElement], Unit]]),
-    onKeyUp: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticKeyboardEvent[HTMLTextAreaElement], Unit]]),
-    onValueChange: String => Unit,
-    value: String
-  ): Builder = {
-    val __props = js.Dynamic.literal(highlight = js.Any.fromFunction1(highlight), onBlur = onBlur.asInstanceOf[js.Any], onClick = onClick.asInstanceOf[js.Any], onFocus = onFocus.asInstanceOf[js.Any], onKeyDown = onKeyDown.asInstanceOf[js.Any], onKeyUp = onKeyUp.asInstanceOf[js.Any], onValueChange = js.Any.fromFunction1(onValueChange), value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DetailedHTMLPropsHTMLAttr]))
-  }
 }

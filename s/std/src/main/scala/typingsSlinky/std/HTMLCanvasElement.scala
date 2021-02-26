@@ -4,6 +4,7 @@ import typingsSlinky.std.stdStrings.`2d`
 import typingsSlinky.std.stdStrings.bitmaprenderer
 import typingsSlinky.std.stdStrings.webgl
 import typingsSlinky.std.stdStrings.webgl2
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

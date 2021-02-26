@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.svgiconMod.SVGIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/ZoomOutSVGIcon", JSImport.Namespace)
-@js.native
-object zoomOutSVGIconMod extends js.Object {
+object zoomOutSVGIconMod {
   
+  @JSImport("@react-md/material-icons/types/ZoomOutSVGIcon", "ZoomOutSVGIcon")
+  @js.native
   val ZoomOutSVGIcon: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
 }

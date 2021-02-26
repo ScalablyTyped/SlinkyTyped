@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientFitness.anon.ActivityType
 import typingsSlinky.maximMazurokGapiClientFitness.anon.QuotaUser
 import typingsSlinky.maximMazurokGapiClientFitness.anon.Resource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SessionsResource extends js.Object {
+trait SessionsResource extends StObject {
   
   /** Deletes a session specified by the given session ID. */
   def delete(): Request[Unit] = js.native

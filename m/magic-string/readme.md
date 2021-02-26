@@ -10,9 +10,9 @@ Modify strings, generate sourcemaps
 | ------------------ | :-------------: |
 | Full name          | magic-string |
 | Keywords           | string, string manipulation, sourcemap, templating, transpilation |
-| # releases         | 12 |
-| # dependents       | 265 |
-| # downloads        | 108443774 |
+| # releases         | 6 |
+| # dependents       | 413 |
+| # downloads        | 248319899 |
 | # stars            | 2 |
 
 ## Links

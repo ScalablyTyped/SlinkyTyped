@@ -27,15 +27,22 @@ import typingsSlinky.inkBigText.inkBigTextStrings.transparent
 import typingsSlinky.inkBigText.inkBigTextStrings.white
 import typingsSlinky.inkBigText.inkBigTextStrings.yellow
 import typingsSlinky.inkBigText.mod.BigTextProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object InkBigText {
   
+  @scala.inline
+  def apply(text: String): Builder = {
+    val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BigTextProps]))
+  }
+  
   @JSImport("ink-big-text", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -49,10 +56,10 @@ object InkBigText {
     def backgroundColor(value: transparent | black | red | green | yellow | blue | magenta | cyan | white): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    def colors(value: js.Array[String]): this.type = set("colors", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def colors(value: js.Array[String]): this.type = set("colors", value.asInstanceOf[js.Any])
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
     
     @scala.inline
     def font(
@@ -73,10 +80,4 @@ object InkBigText {
   }
   
   def withProps(p: BigTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(text: String): Builder = {
-    val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[BigTextProps]))
-  }
 }

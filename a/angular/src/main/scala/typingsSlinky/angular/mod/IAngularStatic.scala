@@ -11,6 +11,7 @@ import typingsSlinky.angular.anon.CodeName
 import typingsSlinky.angular.mod.auto.IInjectorService
 import typingsSlinky.angular.mod.global.Function
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 // see http://docs.angularjs.org/api
 ///////////////////////////////////////////////////////////////////////////
 @js.native
-trait IAngularStatic extends js.Object {
+trait IAngularStatic extends StObject {
   
   /**
     * Restores the pre-1.8 behavior of jqLite that turns XHTML-like strings like
@@ -53,14 +54,6 @@ trait IAngularStatic extends js.Object {
     modules: js.Array[String | Function | js.Array[_]],
     config: IAngularBootstrapConfig
   ): IInjectorService = js.native
-  def bootstrap(element: JQuery): IInjectorService = js.native
-  def bootstrap(element: JQuery, modules: js.UndefOr[scala.Nothing], config: IAngularBootstrapConfig): IInjectorService = js.native
-  def bootstrap(element: JQuery, modules: js.Array[String | Function | js.Array[_]]): IInjectorService = js.native
-  def bootstrap(
-    element: JQuery,
-    modules: js.Array[String | Function | js.Array[_]],
-    config: IAngularBootstrapConfig
-  ): IInjectorService = js.native
   def bootstrap(element: Document): IInjectorService = js.native
   def bootstrap(element: Document, modules: js.UndefOr[scala.Nothing], config: IAngularBootstrapConfig): IInjectorService = js.native
   def bootstrap(element: Document, modules: js.Array[String | Function | js.Array[_]]): IInjectorService = js.native
@@ -74,6 +67,14 @@ trait IAngularStatic extends js.Object {
   def bootstrap(element: Element, modules: js.Array[String | Function | js.Array[_]]): IInjectorService = js.native
   def bootstrap(
     element: Element,
+    modules: js.Array[String | Function | js.Array[_]],
+    config: IAngularBootstrapConfig
+  ): IInjectorService = js.native
+  def bootstrap(element: JQuery): IInjectorService = js.native
+  def bootstrap(element: JQuery, modules: js.UndefOr[scala.Nothing], config: IAngularBootstrapConfig): IInjectorService = js.native
+  def bootstrap(element: JQuery, modules: js.Array[String | Function | js.Array[_]]): IInjectorService = js.native
+  def bootstrap(
+    element: JQuery,
     modules: js.Array[String | Function | js.Array[_]],
     config: IAngularBootstrapConfig
   ): IInjectorService = js.native
@@ -99,11 +100,11 @@ trait IAngularStatic extends js.Object {
     */
   def element(element: String): JQLite = js.native
   def element(element: js.Function0[Unit]): JQLite = js.native
-  def element(element: JQuery): JQLite = js.native
-  def element(element: ArrayLike[Element]): JQLite = js.native
   def element(element: Document): JQLite = js.native
   def element(element: Element): JQLite = js.native
   def element(element: Window): JQLite = js.native
+  def element(element: JQuery): JQLite = js.native
+  def element(element: ArrayLike[Element]): JQLite = js.native
   /**
     * Wraps a raw DOM element or HTML string as a jQuery element.
     *

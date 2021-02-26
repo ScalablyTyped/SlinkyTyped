@@ -4,6 +4,7 @@ import typingsSlinky.yandexMaps.mod.IChild
 import typingsSlinky.yandexMaps.mod.IControlParent
 import typingsSlinky.yandexMaps.mod.IOptionManager
 import typingsSlinky.yandexMaps.mod.IRoutePanel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

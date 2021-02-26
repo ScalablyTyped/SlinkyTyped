@@ -2,12 +2,13 @@ package typingsSlinky.activexMsforms.MSForms
 
 import typingsSlinky.activexStdole.stdole.StdPicture
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ListBox extends js.Object {
+trait ListBox extends StObject {
   
   def AddItem(): Unit = js.native
   def AddItem(pvargItem: js.UndefOr[scala.Nothing], pvargIndex: js.Any): Unit = js.native

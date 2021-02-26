@@ -12,7 +12,7 @@ A library to convert a path into an absolute path.
 | Keywords           | absolute, path |
 | # releases         | 2 |
 | # dependents       | 51 |
-| # downloads        | 587243 |
+| # downloads        | 934936 |
 | # stars            | 0 |
 
 ## Links

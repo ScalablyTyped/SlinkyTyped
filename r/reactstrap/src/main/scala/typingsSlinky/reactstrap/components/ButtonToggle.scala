@@ -75,15 +75,16 @@ import typingsSlinky.reactstrap.reactstrapStrings.tree
 import typingsSlinky.reactstrap.reactstrapStrings.url
 import typingsSlinky.reactstrap.reactstrapStrings.vertical
 import typingsSlinky.reactstrap.reactstrapStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ButtonToggle {
   
-  @JSImport("reactstrap/es", "ButtonToggle")
+  @JSImport("reactstrap/lib", "ButtonToggle")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -636,16 +637,16 @@ object ButtonToggle {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ButtonToggleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ButtonToggle.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ButtonToggleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

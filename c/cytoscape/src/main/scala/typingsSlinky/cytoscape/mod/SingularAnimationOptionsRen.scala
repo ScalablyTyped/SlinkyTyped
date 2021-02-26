@@ -1,6 +1,7 @@
 package typingsSlinky.cytoscape.mod
 
 import typingsSlinky.cytoscape.mod.Css.TransitionTimingFunction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

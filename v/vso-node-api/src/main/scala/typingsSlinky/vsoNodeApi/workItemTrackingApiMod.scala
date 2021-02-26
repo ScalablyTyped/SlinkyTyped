@@ -55,13 +55,26 @@ import typingsSlinky.vsoNodeApi.workItemTrackingInterfacesMod.WorkItemTypeFields
 import typingsSlinky.vsoNodeApi.workItemTrackingInterfacesMod.WorkItemTypeTemplate
 import typingsSlinky.vsoNodeApi.workItemTrackingInterfacesMod.WorkItemTypeTemplateUpdateModel
 import typingsSlinky.vsoNodeApi.workItemTrackingInterfacesMod.WorkItemUpdate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vso-node-api/WorkItemTrackingApi", JSImport.Namespace)
-@js.native
-object workItemTrackingApiMod extends js.Object {
+object workItemTrackingApiMod {
+  
+  @JSImport("vso-node-api/WorkItemTrackingApi", "WorkItemTrackingApi")
+  @js.native
+  class WorkItemTrackingApi protected () extends IWorkItemTrackingApi {
+    def this(baseUrl: String, handlers: js.Array[IRequestHandler]) = this()
+    def this(baseUrl: String, handlers: js.Array[IRequestHandler], options: IRequestOptions) = this()
+  }
+  /* static members */
+  object WorkItemTrackingApi {
+    
+    @JSImport("vso-node-api/WorkItemTrackingApi", "WorkItemTrackingApi.RESOURCE_AREA_ID")
+    @js.native
+    val RESOURCE_AREA_ID: String = js.native
+  }
   
   @js.native
   trait IWorkItemTrackingApi extends ClientApiBase {
@@ -773,17 +786,5 @@ object workItemTrackingApiMod extends js.Object {
     
     def updateWorkItemTypeDefinition(updateModel: WorkItemTypeTemplateUpdateModel): js.Promise[ProvisioningResult] = js.native
     def updateWorkItemTypeDefinition(updateModel: WorkItemTypeTemplateUpdateModel, project: String): js.Promise[ProvisioningResult] = js.native
-  }
-  
-  @js.native
-  class WorkItemTrackingApi protected () extends IWorkItemTrackingApi {
-    def this(baseUrl: String, handlers: js.Array[IRequestHandler]) = this()
-    def this(baseUrl: String, handlers: js.Array[IRequestHandler], options: IRequestOptions) = this()
-  }
-  /* static members */
-  @js.native
-  object WorkItemTrackingApi extends js.Object {
-    
-    val RESOURCE_AREA_ID: String = js.native
   }
 }

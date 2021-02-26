@@ -5,6 +5,7 @@ import typingsSlinky.stellarBase.anon.TxChangesAfter
 import typingsSlinky.stellarSdk.stellarSdkStrings.base64
 import typingsSlinky.stellarSdk.stellarSdkStrings.hex
 import typingsSlinky.stellarSdk.stellarSdkStrings.raw
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,32 +16,55 @@ class TransactionMetaV2 protected ()
   extends typingsSlinky.stellarBase.mod.xdr.TransactionMetaV2 {
   def this(attributes: TxChangesAfter) = this()
 }
-/* static members */
-@JSImport("stellar-sdk", "xdr.TransactionMetaV2")
-@js.native
-object TransactionMetaV2 extends js.Object {
+object TransactionMetaV2 {
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.fromXDR")
+  @js.native
   def fromXDR(input: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.TransactionMetaV2 = js.native
-  @JSName("fromXDR")
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.fromXDR")
+  @js.native
   def fromXDR_base64(input: String, format: base64): typingsSlinky.stellarBase.xdrMod.xdr.TransactionMetaV2 = js.native
-  @JSName("fromXDR")
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.fromXDR")
+  @js.native
   def fromXDR_hex(input: String, format: hex): typingsSlinky.stellarBase.xdrMod.xdr.TransactionMetaV2 = js.native
-  @JSName("fromXDR")
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.fromXDR")
+  @js.native
   def fromXDR_raw(input: Buffer, format: raw): typingsSlinky.stellarBase.xdrMod.xdr.TransactionMetaV2 = js.native
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.isValid")
+  @js.native
   def isValid(value: typingsSlinky.stellarBase.xdrMod.xdr.TransactionMetaV2): Boolean = js.native
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.read")
+  @js.native
   def read(io: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.TransactionMetaV2 = js.native
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.toXDR")
+  @js.native
   def toXDR(value: typingsSlinky.stellarBase.xdrMod.xdr.TransactionMetaV2): Buffer = js.native
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.validateXDR")
+  @js.native
   def validateXDR(input: Buffer): Boolean = js.native
-  @JSName("validateXDR")
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.validateXDR")
+  @js.native
   def validateXDR_base64(input: String, format: base64): Boolean = js.native
-  @JSName("validateXDR")
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.validateXDR")
+  @js.native
   def validateXDR_hex(input: String, format: hex): Boolean = js.native
-  @JSName("validateXDR")
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.validateXDR")
+  @js.native
   def validateXDR_raw(input: Buffer, format: raw): Boolean = js.native
   
+  /* static member */
+  @JSImport("stellar-sdk", "xdr.TransactionMetaV2.write")
+  @js.native
   def write(value: typingsSlinky.stellarBase.xdrMod.xdr.TransactionMetaV2, io: Buffer): Unit = js.native
 }

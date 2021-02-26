@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.miscIndexMod
 
 import org.scalajs.dom.raw.File
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,6 +17,6 @@ class LoadFileError protected ()
     * @param file defines the optional file
     */
   def this(message: String) = this()
-  def this(message: String, `object`: typingsSlinky.babylonjs.webRequestMod.WebRequest) = this()
   def this(message: String, `object`: File) = this()
+  def this(message: String, `object`: typingsSlinky.babylonjs.webRequestMod.WebRequest) = this()
 }

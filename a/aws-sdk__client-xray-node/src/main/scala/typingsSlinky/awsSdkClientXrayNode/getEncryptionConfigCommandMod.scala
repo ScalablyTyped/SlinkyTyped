@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientXrayNode.typesGetEncryptionConfigOutputMod.GetE
 import typingsSlinky.awsSdkClientXrayNode.xrayconfigurationMod.XRayResolvedConfiguration
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-xray-node/commands/GetEncryptionConfigCommand", JSImport.Namespace)
-@js.native
-object getEncryptionConfigCommandMod extends js.Object {
+object getEncryptionConfigCommandMod {
   
+  @JSImport("@aws-sdk/client-xray-node/commands/GetEncryptionConfigCommand", "GetEncryptionConfigCommand")
   @js.native
   class GetEncryptionConfigCommand protected () extends Command[
           InputTypesUnion, 

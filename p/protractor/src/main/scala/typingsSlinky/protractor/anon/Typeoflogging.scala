@@ -6,12 +6,13 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.seleniumWebdriver.loggingMod.IType
 import typingsSlinky.seleniumWebdriver.loggingMod.Level
 import typingsSlinky.seleniumWebdriver.loggingMod.Logger
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeoflogging extends js.Object {
+trait Typeoflogging extends StObject {
   
   var Entry: Instantiable2[
     /* level */ Level, 

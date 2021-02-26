@@ -7,6 +7,7 @@ import typingsSlinky.electron.electronStrings.interrupted
 import typingsSlinky.electron.electronStrings.progressing
 import typingsSlinky.electron.electronStrings.updated
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

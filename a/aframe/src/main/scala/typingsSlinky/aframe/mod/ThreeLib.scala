@@ -17,9 +17,6 @@ import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import org.scalajs.dom.raw.ImageData
 import org.scalajs.dom.raw.WebGLRenderingContext
-import typingsSlinky.aframe.anon.Alphamapfragment
-import typingsSlinky.aframe.anon.Aomap
-import typingsSlinky.aframe.anon.Dictname
 import typingsSlinky.aframe.anon.TypeofAnimationClip
 import typingsSlinky.aframe.anon.TypeofAnimationUtils
 import typingsSlinky.aframe.anon.TypeofBufferGeometry
@@ -39,10 +36,13 @@ import typingsSlinky.aframe.anon.TypeofPropertyBinding
 import typingsSlinky.aframe.anon.TypeofPropertyBindingComposite
 import typingsSlinky.aframe.anon.TypeofQuaternion
 import typingsSlinky.aframe.anon.TypeofSceneUtils
+import typingsSlinky.aframe.anon.TypeofShaderChunk
+import typingsSlinky.aframe.anon.TypeofShaderLib
 import typingsSlinky.aframe.anon.TypeofShapeUtils
 import typingsSlinky.aframe.anon.TypeofSphericalHarmonics3
 import typingsSlinky.aframe.anon.TypeofTexture
 import typingsSlinky.aframe.anon.TypeofTriangle
+import typingsSlinky.aframe.anon.TypeofUniformsLib
 import typingsSlinky.aframe.anon.TypeofWebGLUniforms
 import typingsSlinky.aframe.anon.TypeofXRHand
 import typingsSlinky.std.ArrayLike
@@ -118,12 +118,13 @@ import typingsSlinky.three.webGLStateMod.WebGLState
 import typingsSlinky.three.webGLUtilsMod.WebGLUtils
 import typingsSlinky.three.webXRMod.XRRigidTransform
 import typingsSlinky.three.webXRMod.XRSession
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ThreeLib extends js.Object {
+trait ThreeLib extends StObject {
   
   val ACESFilmicToneMapping: ToneMapping = js.native
   
@@ -491,7 +492,7 @@ trait ThreeLib extends js.Object {
   
   var DirectionalLightHelper: Instantiable1[/* light */ DirectionalLight, typingsSlinky.three.mod.DirectionalLightHelper] = js.native
   
-  var DirectionalLightShadow: Instantiable0[typingsSlinky.three.mod.DirectionalLightShadow] = js.native
+  var DirectionalLightShadow: Instantiable1[/* camera */ Camera, typingsSlinky.three.mod.DirectionalLightShadow] = js.native
   
   var DiscreteInterpolant: Instantiable3[
     /* parameterPositions */ js.Any, 
@@ -979,7 +980,7 @@ trait ThreeLib extends js.Object {
   
   var PointLightHelper: Instantiable1[/* light */ PointLight, typingsSlinky.three.mod.PointLightHelper] = js.native
   
-  var PointLightShadow: Instantiable0[typingsSlinky.three.mod.PointLightShadow] = js.native
+  var PointLightShadow: Instantiable1[/* camera */ Camera, typingsSlinky.three.mod.PointLightShadow] = js.native
   
   var Points: Instantiable0[
     typingsSlinky.three.mod.Points[
@@ -1201,9 +1202,9 @@ trait ThreeLib extends js.Object {
   
   val SceneUtils: TypeofSceneUtils = js.native
   
-  var ShaderChunk: Alphamapfragment = js.native
+  val ShaderChunk: TypeofShaderChunk = js.native
   
-  var ShaderLib: Dictname = js.native
+  val ShaderLib: TypeofShaderLib = js.native
   
   var ShaderMaterial: Instantiable0[typingsSlinky.three.mod.ShaderMaterial] = js.native
   
@@ -1276,7 +1277,7 @@ trait ThreeLib extends js.Object {
   
   var SpotLightHelper: Instantiable1[/* light */ Light, typingsSlinky.three.mod.SpotLightHelper] = js.native
   
-  var SpotLightShadow: Instantiable0[typingsSlinky.three.mod.SpotLightShadow] = js.native
+  var SpotLightShadow: Instantiable1[/* camera */ Camera, typingsSlinky.three.mod.SpotLightShadow] = js.native
   
   var Sprite: Instantiable0[typingsSlinky.three.mod.Sprite] = js.native
   
@@ -1411,7 +1412,7 @@ trait ThreeLib extends js.Object {
   
   var Uniform: Instantiable1[/* value */ js.Any, typingsSlinky.three.mod.Uniform] = js.native
   
-  var UniformsLib: Aomap = js.native
+  val UniformsLib: TypeofUniformsLib = js.native
   
   val UniformsUtils: js.Any = js.native
   

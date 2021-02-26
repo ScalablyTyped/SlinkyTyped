@@ -1,15 +1,16 @@
 package typingsSlinky.reactNativeMaps.mod
 
-import typingsSlinky.reactNative.mod.Animated.Animated
+import typingsSlinky.reactNative.mod.Animated.AnimatedWithChildren
 import typingsSlinky.reactNative.mod.Animated.CompositeAnimation
 import typingsSlinky.reactNative.mod.Animated.Value
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-maps", "AnimatedRegion")
 @js.native
-class AnimatedRegion () extends Animated {
+class AnimatedRegion () extends AnimatedWithChildren {
   def this(region: Region) = this()
   
   def addListener(callback: js.Function1[/* region */ Region, Unit]): String = js.native

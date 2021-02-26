@@ -1,10 +1,10 @@
 organization := "org.scalablytyped.slinky"
 name := "mainloop_dot_js"
-version := "v1.0.3-dt-20201002Z-0f49e4"
+version := "v1.0.3-dt-20201002Z-2f4d7d"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

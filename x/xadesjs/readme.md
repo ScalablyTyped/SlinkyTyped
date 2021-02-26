@@ -10,9 +10,9 @@ A pure Typescript/Javascript implementation of XAdES based on XMLDSIGjs.
 | ------------------ | :-------------: |
 | Full name          | xadesjs |
 | Keywords           | xml, xmldsig, xades, webcrypto, signature, rsa, ec |
-| # releases         | 6 |
-| # dependents       | 4 |
-| # downloads        | 4097 |
+| # releases         | 8 |
+| # dependents       | 5 |
+| # downloads        | 8294 |
 | # stars            | 0 |
 
 ## Links

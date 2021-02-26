@@ -7,6 +7,7 @@ import typingsSlinky.webcl.webclNumbers.`0x2`
 import typingsSlinky.webcl.webclNumbers.`0x40`
 import typingsSlinky.webcl.webclNumbers.`0x4`
 import typingsSlinky.webcl.webclNumbers.`0x8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webcl.webclNumbers.`0x20`
   - typingsSlinky.webcl.webclNumbers.`0x40`
 */
-trait DeviceFPConfigBits extends js.Object
+trait DeviceFPConfigBits extends StObject
 object DeviceFPConfigBits {
   
   @scala.inline

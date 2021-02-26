@@ -11,8 +11,8 @@ Create an error with a code
 | Full name          | err-code |
 | Keywords           | error, err, code, properties, property |
 | # releases         | 5 |
-| # dependents       | 58 |
-| # downloads        | 110154318 |
+| # dependents       | 80 |
+| # downloads        | 142404066 |
 | # stars            | 2 |
 
 ## Links

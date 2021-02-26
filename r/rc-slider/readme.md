@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-slider
 
-Typings are for version 9.6.3
+Typings are for version 9.6.4
 
 ## Library description:
 Slider UI component for React
@@ -10,9 +10,9 @@ Slider UI component for React
 | ------------------ | :-------------: |
 | Full name          | rc-slider |
 | Keywords           | react, react-component, react-slider, slider, input, range |
-| # releases         | 18 |
-| # dependents       | 467 |
-| # downloads        | 20639355 |
+| # releases         | 36 |
+| # dependents       | 621 |
+| # downloads        | 38423211 |
 | # stars            | 13 |
 
 ## Links

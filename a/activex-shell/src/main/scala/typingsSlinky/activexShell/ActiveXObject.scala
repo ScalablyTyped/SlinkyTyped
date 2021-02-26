@@ -7,12 +7,13 @@ import typingsSlinky.activexShell.activexShellStrings.DefaultVerbInvoked
 import typingsSlinky.activexShell.activexShellStrings.EnumDone
 import typingsSlinky.activexShell.activexShellStrings.SelectionChanged
 import typingsSlinky.activexShell.activexShellStrings.VerbInvoked
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ActiveXObject extends js.Object {
+trait ActiveXObject extends StObject {
   
   @JSName("on")
   def on_BeginDrag(

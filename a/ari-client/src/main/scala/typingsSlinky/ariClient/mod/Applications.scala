@@ -3,12 +3,13 @@ package typingsSlinky.ariClient.mod
 import typingsSlinky.ariClient.anon.ApplicationName
 import typingsSlinky.ariClient.anon.EventSource
 import typingsSlinky.ariClient.anon.Filter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Applications extends js.Object {
+trait Applications extends StObject {
   
   /**
     * Filter application events types.

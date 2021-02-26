@@ -1,5 +1,6 @@
 package typingsSlinky.domMediacaptureRecord
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.recording
   - typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.paused
 */
-trait RecordingState extends js.Object
+trait RecordingState extends StObject
 object RecordingState {
   
   @scala.inline

@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.dataScrollerMod.DataScrollerProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/datascroller", JSImport.Namespace)
-@js.native
-object primereactDatascrollerMod extends js.Object {
+object primereactDatascrollerMod {
   
+  @JSImport("primereact/datascroller", "DataScroller")
   @js.native
-  class DataScroller ()
-    extends Component[DataScrollerProps, js.Any, js.Any]
+  class DataScroller protected ()
+    extends typingsSlinky.primereact.dataScrollerMod.DataScroller {
+    def this(props: DataScrollerProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: DataScrollerProps, context: js.Any) = this()
+  }
 }

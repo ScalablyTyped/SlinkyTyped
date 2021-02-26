@@ -5,13 +5,14 @@ import typingsSlinky.dashjs.dashjsStrings.embeddedText
 import typingsSlinky.dashjs.dashjsStrings.fragmentedText
 import typingsSlinky.dashjs.dashjsStrings.text
 import typingsSlinky.dashjs.dashjsStrings.video
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dashjs", "MediaInfo")
 @js.native
-class MediaInfo () extends js.Object {
+class MediaInfo () extends StObject {
   
   var KID: js.Any | Null = js.native
   

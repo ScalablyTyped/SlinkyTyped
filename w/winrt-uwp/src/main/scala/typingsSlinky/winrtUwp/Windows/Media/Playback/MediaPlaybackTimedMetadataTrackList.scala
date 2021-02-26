@@ -9,6 +9,7 @@ import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.anon.Index
 import typingsSlinky.winrtUwp.anon.ItemsTimedMetadataTrack
 import typingsSlinky.winrtUwp.winrtUwpStrings.presentationmodechanged
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

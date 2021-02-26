@@ -5,6 +5,7 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProUtils.dropdownFooterMod.DropdownFooterProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object DropdownFooter {
   
   @JSImport("@ant-design/pro-utils/lib/components/DropdownFooter", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,7 +31,7 @@ object DropdownFooter {
     def onConfirm(value: /* e */ SyntheticMouseEvent[Element] => Unit): this.type = set("onConfirm", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: DropdownFooterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: DropdownFooter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DropdownFooterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

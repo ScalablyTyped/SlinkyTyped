@@ -2,6 +2,7 @@ package typingsSlinky.typescriptServices.mod
 
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxList
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,12 +13,15 @@ class SourceUnitSyntax protected ()
   extends typingsSlinky.typescriptServices.TypeScript.SourceUnitSyntax {
   def this(moduleElements: ISyntaxList, endOfFileToken: ISyntaxToken, parsedInStrictMode: Boolean) = this()
 }
-/* static members */
-@JSImport("typescript-services", "SourceUnitSyntax")
-@js.native
-object SourceUnitSyntax extends js.Object {
+object SourceUnitSyntax {
   
+  /* static member */
+  @JSImport("typescript-services", "SourceUnitSyntax.create")
+  @js.native
   def create(endOfFileToken: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.SourceUnitSyntax = js.native
   
+  /* static member */
+  @JSImport("typescript-services", "SourceUnitSyntax.create1")
+  @js.native
   def create1(endOfFileToken: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.SourceUnitSyntax = js.native
 }

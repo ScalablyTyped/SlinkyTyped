@@ -4,6 +4,7 @@ import typingsSlinky.cassandraDriver.anon.AchievedConsistency
 import typingsSlinky.cassandraDriver.anon.Type
 import typingsSlinky.std.AsyncIterable
 import typingsSlinky.std.Iterable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

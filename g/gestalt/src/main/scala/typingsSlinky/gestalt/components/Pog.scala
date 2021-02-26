@@ -22,6 +22,7 @@ import typingsSlinky.gestalt.gestaltStrings.xl
 import typingsSlinky.gestalt.gestaltStrings.xs
 import typingsSlinky.gestalt.mod.Icons
 import typingsSlinky.gestalt.mod.PogProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +31,7 @@ object Pog {
   
   @JSImport("gestalt", "Pog")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -71,7 +72,7 @@ object Pog {
     def size(value: xs | sm | md | lg | xl): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Pog.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

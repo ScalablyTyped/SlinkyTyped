@@ -8,15 +8,22 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeSafeAreaContext.safeAreaTypesMod.Metrics
 import typingsSlinky.reactNativeSafeAreaContext.safeAreaTypesMod.NativeSafeAreaProviderProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CompatNativeSafeAreaProvider {
   
+  @scala.inline
+  def apply(onInsetsChange: SyntheticEvent[NodeHandle, Metrics] => Unit): Builder = {
+    val __props = js.Dynamic.literal(onInsetsChange = js.Any.fromFunction1(onInsetsChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[NativeSafeAreaProviderProps]))
+  }
+  
   @JSImport("react-native-safe-area-context/lib/typescript/src/CompatNativeSafeAreaProvider", "CompatNativeSafeAreaProvider")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -31,10 +38,4 @@ object CompatNativeSafeAreaProvider {
   }
   
   def withProps(p: NativeSafeAreaProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onInsetsChange: SyntheticEvent[NodeHandle, Metrics] => Unit): Builder = {
-    val __props = js.Dynamic.literal(onInsetsChange = js.Any.fromFunction1(onInsetsChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[NativeSafeAreaProviderProps]))
-  }
 }

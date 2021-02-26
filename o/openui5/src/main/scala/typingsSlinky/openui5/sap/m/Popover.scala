@@ -2,6 +2,7 @@ package typingsSlinky.openui5.sap.m
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.openui5.sap.ui.core.Control
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

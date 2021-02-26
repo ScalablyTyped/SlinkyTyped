@@ -86,15 +86,22 @@ import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObjec
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CommandBar {
   
+  @scala.inline
+  def apply(items: js.Array[ICommandBarItemProps]): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ICommandBarProps]))
+  }
+  
   @JSImport("office-ui-fabric-react", "CommandBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -266,13 +273,13 @@ object CommandBar {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttonAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): this.type = set("buttonAs", value.asInstanceOf[js.Any])
+    def buttonAs(value: IComponentAs[IButtonProps]): this.type = set("buttonAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def buttonAsComponentClass(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): this.type = set("buttonAs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def buttonAs(value: IComponentAs[IButtonProps]): this.type = set("buttonAs", value.asInstanceOf[js.Any])
+    def buttonAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): this.type = set("buttonAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -281,13 +288,13 @@ object CommandBar {
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[ICommandBar]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ ICommandBar | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[ICommandBar]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[ICommandBar]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -308,10 +315,10 @@ object CommandBar {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -320,10 +327,10 @@ object CommandBar {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def farItemsVarargs(value: ICommandBarItemProps*): this.type = set("farItems", js.Array(value :_*))
+    def farItems(value: js.Array[ICommandBarItemProps]): this.type = set("farItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def farItems(value: js.Array[ICommandBarItemProps]): this.type = set("farItems", value.asInstanceOf[js.Any])
+    def farItemsVarargs(value: ICommandBarItemProps*): this.type = set("farItems", js.Array(value :_*))
     
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -608,22 +615,22 @@ object CommandBar {
     def onWheel(value: SyntheticWheelEvent[HTMLDivElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def overflowButtonAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
+    def overflowButtonAs(value: IComponentAs[IButtonProps]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def overflowButtonAsComponentClass(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overflowButtonAs(value: IComponentAs[IButtonProps]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
+    def overflowButtonAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def overflowButtonProps(value: IButtonProps): this.type = set("overflowButtonProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overflowItemsVarargs(value: ICommandBarItemProps*): this.type = set("overflowItems", js.Array(value :_*))
+    def overflowItems(value: js.Array[ICommandBarItemProps]): this.type = set("overflowItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overflowItems(value: js.Array[ICommandBarItemProps]): this.type = set("overflowItems", value.asInstanceOf[js.Any])
+    def overflowItemsVarargs(value: ICommandBarItemProps*): this.type = set("overflowItems", js.Array(value :_*))
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -662,10 +669,10 @@ object CommandBar {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: ICommandBarStyleProps => DeepPartial[ICommandBarStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[ICommandBarStyleProps, ICommandBarStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[ICommandBarStyleProps, ICommandBarStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: ICommandBarStyleProps => DeepPartial[ICommandBarStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -696,10 +703,4 @@ object CommandBar {
   }
   
   def withProps(p: ICommandBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(items: js.Array[ICommandBarItemProps]): Builder = {
-    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ICommandBarProps]))
-  }
 }

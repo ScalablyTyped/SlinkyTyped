@@ -7,14 +7,14 @@ import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.segmentSegmentInterfaceMod.SegmentChangeEventDetail
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/segment/segment", JSImport.Namespace)
-@js.native
-object segmentMod extends js.Object {
+object segmentMod {
   
+  @JSImport("@ionic/core/dist/types/components/segment/segment", "Segment")
   @js.native
   class Segment () extends ComponentInterface {
     

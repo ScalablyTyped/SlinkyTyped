@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesGetBucketEncryptionInputMod.GetBuck
 import typingsSlinky.awsSdkClientS3Node.typesGetBucketEncryptionOutputMod.GetBucketEncryptionOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/GetBucketEncryptionCommand", JSImport.Namespace)
-@js.native
-object getBucketEncryptionCommandMod extends js.Object {
+object getBucketEncryptionCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/GetBucketEncryptionCommand", "GetBucketEncryptionCommand")
   @js.native
   class GetBucketEncryptionCommand protected () extends Command[
           InputTypesUnion, 

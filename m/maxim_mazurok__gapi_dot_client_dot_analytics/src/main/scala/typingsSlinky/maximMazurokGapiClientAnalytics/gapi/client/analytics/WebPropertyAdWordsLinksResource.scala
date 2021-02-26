@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAnalytics.anon.KeyOauthtokenPrettyPri
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.Startindex
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.UserIpWebPropertyAdWordsLinkId
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.WebPropertyAdWordsLinkId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebPropertyAdWordsLinksResource extends js.Object {
+trait WebPropertyAdWordsLinksResource extends StObject {
   
   /** Deletes a web property-Google Ads link. */
   def delete(): Request[Unit] = js.native

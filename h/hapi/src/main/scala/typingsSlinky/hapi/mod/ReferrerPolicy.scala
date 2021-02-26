@@ -1,5 +1,6 @@
 package typingsSlinky.hapi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.hapi.hapiStrings.`origin-when-cross-origin`
   - typingsSlinky.hapi.hapiStrings.`strict-origin-when-cross-origin`
 */
-trait ReferrerPolicy extends js.Object
+trait ReferrerPolicy extends StObject
 object ReferrerPolicy {
   
   @scala.inline

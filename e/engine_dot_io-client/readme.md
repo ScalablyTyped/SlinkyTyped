@@ -10,9 +10,9 @@ Client for the realtime Engine
 | ------------------ | :-------------: |
 | Full name          | engine.io-client |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 127 |
-| # downloads        | 158272578 |
+| # releases         | 16 |
+| # dependents       | 132 |
+| # downloads        | 234339248 |
 | # stars            | 2 |
 
 ## Links

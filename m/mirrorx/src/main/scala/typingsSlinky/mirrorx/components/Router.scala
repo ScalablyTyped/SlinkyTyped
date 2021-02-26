@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.history.mod.History
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.mirrorx.mod.ConnectedRouterProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Router {
   
+  @scala.inline
+  def apply[State](): Builder[State] = {
+    val __props = js.Dynamic.literal()
+    new Builder[State](js.Array(this.component, __props.asInstanceOf[ConnectedRouterProps[State]]))
+  }
+  
   @JSImport("mirrorx", "Router")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[State] (val args: js.Array[js.Any])
@@ -27,13 +34,7 @@ object Router {
     def store(value: js.Any): this.type = set("store", value.asInstanceOf[js.Any])
   }
   
-  def withProps[State](p: ConnectedRouterProps[State]): Builder[State] = new Builder[State](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[State](): Builder[State] = {
-    val __props = js.Dynamic.literal()
-    new Builder[State](js.Array(this.component, __props.asInstanceOf[ConnectedRouterProps[State]]))
-  }
-  
   implicit def make[State](companion: Router.type): Builder[State] = new Builder[State](js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps[State](p: ConnectedRouterProps[State]): Builder[State] = new Builder[State](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

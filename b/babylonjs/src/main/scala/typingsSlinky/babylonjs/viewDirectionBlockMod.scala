@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/viewDirectionBlock", JSImport.Namespace)
-@js.native
-object viewDirectionBlockMod extends js.Object {
+object viewDirectionBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/viewDirectionBlock", "ViewDirectionBlock")
   @js.native
   class ViewDirectionBlock protected () extends NodeMaterialBlock {
     /**

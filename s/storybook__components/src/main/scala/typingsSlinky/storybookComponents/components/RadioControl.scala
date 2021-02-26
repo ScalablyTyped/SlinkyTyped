@@ -6,15 +6,27 @@ import typingsSlinky.storybookComponents.controlsTypesMod.OptionsObject
 import typingsSlinky.storybookComponents.controlsTypesMod.OptionsSingleSelection
 import typingsSlinky.storybookComponents.radioMod.RadioProps
 import typingsSlinky.storybookComponents.typesMod.ArgType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RadioControl {
   
+  @scala.inline
+  def apply(
+    isInline: Boolean,
+    name: String,
+    onChange: OptionsSingleSelection => OptionsSingleSelection | Unit,
+    options: OptionsObject
+  ): Builder = {
+    val __props = js.Dynamic.literal(isInline = isInline.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RadioProps]))
+  }
+  
   @JSImport("@storybook/components/dist/controls/options/Radio", "RadioControl")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,15 +50,4 @@ object RadioControl {
   }
   
   def withProps(p: RadioProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    isInline: Boolean,
-    name: String,
-    onChange: OptionsSingleSelection => OptionsSingleSelection | Unit,
-    options: OptionsObject
-  ): Builder = {
-    val __props = js.Dynamic.literal(isInline = isInline.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), options = options.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RadioProps]))
-  }
 }

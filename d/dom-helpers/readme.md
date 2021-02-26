@@ -10,15 +10,15 @@ tiny modular DOM lib for ie9+
 | ------------------ | :-------------: |
 | Full name          | dom-helpers |
 | Keywords           | dom-helpers, react-component, dom, api, cross-browser, style, event, height, width, dom-helpers, class, classlist, css |
-| # releases         | 8 |
-| # dependents       | 460 |
-| # downloads        | 153312623 |
+| # releases         | 9 |
+| # dependents       | 554 |
+| # downloads        | 292346300 |
 | # stars            | 10 |
 
 ## Links
-- [Homepage](https://github.com/jquense/dom-helpers#readme)
-- [Bugs](https://github.com/jquense/dom-helpers/issues)
-- [Repository](https://github.com/jquense/dom-helpers)
+- [Homepage](https://github.com/react-bootstrap/dom-helpers#readme)
+- [Bugs](https://github.com/react-bootstrap/dom-helpers/issues)
+- [Repository](https://github.com/react-bootstrap/dom-helpers)
 - [Npm](https://www.npmjs.com/package/dom-helpers)
     
 

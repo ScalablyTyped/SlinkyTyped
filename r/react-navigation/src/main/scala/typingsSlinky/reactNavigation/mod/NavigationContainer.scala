@@ -2,6 +2,7 @@ package typingsSlinky.reactNavigation.mod
 
 import typingsSlinky.react.mod.ComponentClass
 import typingsSlinky.reactNavigation.anon.Nav
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

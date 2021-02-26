@@ -20,6 +20,7 @@ import typingsSlinky.activexWord.activexWordNumbers.`65655`
 import typingsSlinky.activexWord.activexWordNumbers.`8211`
 import typingsSlinky.activexWord.activexWordNumbers.`8212`
 import typingsSlinky.activexWord.activexWordNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -46,7 +47,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWord.activexWordNumbers.`9`
   - typingsSlinky.activexWord.activexWordNumbers.`65655`
 */
-trait WdFindMatch extends js.Object
+trait WdFindMatch extends StObject
 object WdFindMatch {
   
   @scala.inline

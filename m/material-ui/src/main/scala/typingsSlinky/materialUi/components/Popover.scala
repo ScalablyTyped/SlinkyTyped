@@ -9,6 +9,7 @@ import typingsSlinky.materialUi.MaterialUI.Popover.PopoverProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ object Popover {
   
   @JSImport("material-ui", "Popover")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -25,13 +26,13 @@ object Popover {
        with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.Popover] {
     
     @scala.inline
-    def anchorElElement(value: Element): this.type = set("anchorEl", value.asInstanceOf[js.Any])
+    def anchorEl(value: ReactInstance): this.type = set("anchorEl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def anchorElComponent(value: ReactComponentClass[js.Any]): this.type = set("anchorEl", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def anchorEl(value: ReactInstance): this.type = set("anchorEl", value.asInstanceOf[js.Any])
+    def anchorElElement(value: Element): this.type = set("anchorEl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def anchorOrigin(value: origin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
@@ -70,7 +71,7 @@ object Popover {
     def zDepth(value: Double): this.type = set("zDepth", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Popover.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -10,9 +10,9 @@ Let webpack generate all your favicons and icons for you
 | ------------------ | :-------------: |
 | Full name          | favicons-webpack-plugin |
 | Keywords           | webpack, plugin, html-webpack-plugin, webapp, pwa, manifest, favicon, icon, png, svg |
-| # releases         | 7 |
-| # dependents       | 70 |
-| # downloads        | 2053239 |
+| # releases         | 25 |
+| # dependents       | 83 |
+| # downloads        | 3342998 |
 | # stars            | 16 |
 
 ## Links

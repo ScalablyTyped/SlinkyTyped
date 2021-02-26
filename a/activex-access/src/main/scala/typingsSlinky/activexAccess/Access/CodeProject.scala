@@ -1,11 +1,12 @@
 package typingsSlinky.activexAccess.Access
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CodeProject extends js.Object {
+trait CodeProject extends StObject {
   
   val AccessConnection: typingsSlinky.activexAdodb.ADODB.Connection = js.native
   

@@ -10,9 +10,9 @@ Call a callback when a readable/writable/duplex stream has completed or failed.
 | ------------------ | :-------------: |
 | Full name          | end-of-stream |
 | Keywords           | stream, streams, callback, finish, close, end, wait |
-| # releases         | 5 |
-| # dependents       | 343 |
-| # downloads        | 493652942 |
+| # releases         | 4 |
+| # dependents       | 472 |
+| # downloads        | 905631559 |
 | # stars            | 18 |
 
 ## Links

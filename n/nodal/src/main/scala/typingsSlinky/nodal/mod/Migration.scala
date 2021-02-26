@@ -1,12 +1,13 @@
 package typingsSlinky.nodal.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nodal", "Migration")
 @js.native
-class Migration protected () extends js.Object {
+class Migration protected () extends StObject {
   def this(db: Database) = this()
   
   def addColumn(table: String, column: String, `type`: DataType, properties: IColumnProperties): js.Any = js.native

@@ -10,6 +10,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Auto
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.BinCount
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.BinWidth
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Category
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

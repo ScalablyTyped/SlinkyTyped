@@ -1,5 +1,6 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.squareConnect.squareConnectStrings.PAYMENT_METHOD_ERROR
   - typingsSlinky.squareConnect.squareConnectStrings.REFUND_ERROR
 */
-trait ErrorCategoryType extends js.Object
+trait ErrorCategoryType extends StObject
 object ErrorCategoryType {
   
   @scala.inline

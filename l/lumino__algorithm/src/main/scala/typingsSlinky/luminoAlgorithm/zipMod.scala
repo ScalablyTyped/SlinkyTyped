@@ -2,16 +2,14 @@ package typingsSlinky.luminoAlgorithm
 
 import typingsSlinky.luminoAlgorithm.iterMod.IIterator
 import typingsSlinky.luminoAlgorithm.iterMod.IterableOrArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@lumino/algorithm/types/zip", JSImport.Namespace)
-@js.native
-object zipMod extends js.Object {
+object zipMod {
   
-  def zip[T](objects: IterableOrArrayLike[T]*): IIterator[js.Array[T]] = js.native
-  
+  @JSImport("@lumino/algorithm/types/zip", "ZipIterator")
   @js.native
   class ZipIterator[T] protected ()
     extends IIterator[js.Array[T]] {
@@ -24,4 +22,8 @@ object zipMod extends js.Object {
     
     var _source: js.Any = js.native
   }
+  
+  @JSImport("@lumino/algorithm/types/zip", "zip")
+  @js.native
+  def zip[T](objects: IterableOrArrayLike[T]*): IIterator[js.Array[T]] = js.native
 }

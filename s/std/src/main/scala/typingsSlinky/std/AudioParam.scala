@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /// DOM Iterable APIs
 /////////////////////////////
 @js.native
-trait AudioParam extends js.Object {
+trait AudioParam extends StObject {
   
   var automationRate: AutomationRate = js.native
   
@@ -32,8 +33,8 @@ trait AudioParam extends js.Object {
   def setValueAtTime(value: Double, startTime: Double): org.scalajs.dom.raw.AudioParam = js.native
   
   def setValueCurveAtTime(values: js.Array[Double], startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
-  def setValueCurveAtTime(values: js.typedarray.Float32Array, startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
   def setValueCurveAtTime(values: js.Iterable[Double], startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
+  def setValueCurveAtTime(values: js.typedarray.Float32Array, startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
   
   var value: Double = js.native
 }

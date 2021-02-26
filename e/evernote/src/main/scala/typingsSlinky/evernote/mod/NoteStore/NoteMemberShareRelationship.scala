@@ -3,13 +3,14 @@ package typingsSlinky.evernote.mod.NoteStore
 import typingsSlinky.evernote.anon.Privilege
 import typingsSlinky.evernote.mod.Types.SharedNotePrivilegeLevel
 import typingsSlinky.evernote.mod.Types.UserID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("evernote", "NoteStore.NoteMemberShareRelationship")
 @js.native
-class NoteMemberShareRelationship () extends js.Object {
+class NoteMemberShareRelationship () extends StObject {
   def this(args: Privilege) = this()
   
   var displayName: js.UndefOr[String] = js.native

@@ -6,6 +6,7 @@ import typingsSlinky.kendoUi.kendo.dataviz.map.Extent
 import typingsSlinky.kendoUi.kendo.dataviz.map.Location
 import typingsSlinky.kendoUi.kendo.geometry.Point
 import typingsSlinky.kendoUi.kendo.ui.Widget
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

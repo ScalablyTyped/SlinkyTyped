@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsBrowser.typesGenerateDataKeyWithoutPlaintext
 import typingsSlinky.awsSdkClientKmsBrowser.typesGenerateDataKeyWithoutPlaintextOutputMod.GenerateDataKeyWithoutPlaintextOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-browser/commands/GenerateDataKeyWithoutPlaintextCommand", JSImport.Namespace)
-@js.native
-object generateDataKeyWithoutPlaintextCommandMod extends js.Object {
+object generateDataKeyWithoutPlaintextCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-browser/commands/GenerateDataKeyWithoutPlaintextCommand", "GenerateDataKeyWithoutPlaintextCommand")
   @js.native
   class GenerateDataKeyWithoutPlaintextCommand protected () extends Command[
           InputTypesUnion, 

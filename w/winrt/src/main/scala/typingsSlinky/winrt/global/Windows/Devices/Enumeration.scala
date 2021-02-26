@@ -4,16 +4,16 @@ import typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceClass
 import typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectType
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Windows.Devices.Enumeration")
-@js.native
-object Enumeration extends js.Object {
+object Enumeration {
   
+  @JSGlobal("Windows.Devices.Enumeration.DeviceClass")
   @js.native
-  object DeviceClass extends js.Object {
+  object DeviceClass extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceClass with Double] = js.native
@@ -29,45 +29,70 @@ object Enumeration extends js.Object {
     /* 4 */ val videoCapture: typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceClass.videoCapture with Double = js.native
   }
   
+  @JSGlobal("Windows.Devices.Enumeration.DeviceInformation")
   @js.native
   class DeviceInformation ()
     extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformation
   /* static members */
-  @js.native
-  object DeviceInformation extends js.Object {
+  object DeviceInformation {
     
+    @JSGlobal("Windows.Devices.Enumeration.DeviceInformation.createFromIdAsync")
+    @js.native
     def createFromIdAsync(id: String): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformation] = js.native
+    @JSGlobal("Windows.Devices.Enumeration.DeviceInformation.createFromIdAsync")
+    @js.native
     def createFromIdAsync(id: String, additionalProperties: IIterable[String]): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformation] = js.native
     
+    @JSGlobal("Windows.Devices.Enumeration.DeviceInformation.createWatcher")
+    @js.native
     def createWatcher(): typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceWatcher = js.native
+    @JSGlobal("Windows.Devices.Enumeration.DeviceInformation.createWatcher")
+    @js.native
     def createWatcher(aqsFilter: String): typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceWatcher = js.native
+    @JSGlobal("Windows.Devices.Enumeration.DeviceInformation.createWatcher")
+    @js.native
     def createWatcher(aqsFilter: String, additionalProperties: IIterable[String]): typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceWatcher = js.native
+    @JSGlobal("Windows.Devices.Enumeration.DeviceInformation.createWatcher")
+    @js.native
     def createWatcher(deviceClass: DeviceClass): typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceWatcher = js.native
     
+    @JSGlobal("Windows.Devices.Enumeration.DeviceInformation.findAllAsync")
+    @js.native
     def findAllAsync(): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationCollection] = js.native
+    @JSGlobal("Windows.Devices.Enumeration.DeviceInformation.findAllAsync")
+    @js.native
     def findAllAsync(aqsFilter: String): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationCollection] = js.native
+    @JSGlobal("Windows.Devices.Enumeration.DeviceInformation.findAllAsync")
+    @js.native
     def findAllAsync(aqsFilter: String, additionalProperties: IIterable[String]): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationCollection] = js.native
+    @JSGlobal("Windows.Devices.Enumeration.DeviceInformation.findAllAsync")
+    @js.native
     def findAllAsync(deviceClass: DeviceClass): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationCollection] = js.native
   }
   
+  @JSGlobal("Windows.Devices.Enumeration.DeviceInformationCollection")
   @js.native
   class DeviceInformationCollection ()
     extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationCollection
   
+  @JSGlobal("Windows.Devices.Enumeration.DeviceInformationUpdate")
   @js.native
   class DeviceInformationUpdate ()
     extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationUpdate
   
+  @JSGlobal("Windows.Devices.Enumeration.DeviceThumbnail")
   @js.native
   class DeviceThumbnail ()
     extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceThumbnail
   
+  @JSGlobal("Windows.Devices.Enumeration.DeviceWatcher")
   @js.native
   class DeviceWatcher ()
     extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceWatcher
   
+  @JSGlobal("Windows.Devices.Enumeration.DeviceWatcherStatus")
   @js.native
-  object DeviceWatcherStatus extends js.Object {
+  object DeviceWatcherStatus extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceWatcherStatus with Double] = js.native
@@ -85,12 +110,14 @@ object Enumeration extends js.Object {
     /* 3 */ val stopping: typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceWatcherStatus.stopping with Double = js.native
   }
   
+  @JSGlobal("Windows.Devices.Enumeration.EnclosureLocation")
   @js.native
   class EnclosureLocation ()
     extends typingsSlinky.winrt.Windows.Devices.Enumeration.EnclosureLocation
   
+  @JSGlobal("Windows.Devices.Enumeration.Panel")
   @js.native
-  object Panel extends js.Object {
+  object Panel extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Devices.Enumeration.Panel with Double] = js.native
@@ -110,31 +137,42 @@ object Enumeration extends js.Object {
     /* 0 */ val unknown: typingsSlinky.winrt.Windows.Devices.Enumeration.Panel.unknown with Double = js.native
   }
   
-  @js.native
-  object Pnp extends js.Object {
+  object Pnp {
     
+    @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObject")
     @js.native
     class PnpObject ()
       extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObject
     /* static members */
-    @js.native
-    object PnpObject extends js.Object {
+    object PnpObject {
       
+      @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObject.createFromIdAsync")
+      @js.native
       def createFromIdAsync(`type`: PnpObjectType, id: String, requestedProperties: IIterable[String]): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObject] = js.native
       
+      @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObject.createWatcher")
+      @js.native
       def createWatcher(`type`: PnpObjectType, requestedProperties: IIterable[String]): typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectWatcher = js.native
+      @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObject.createWatcher")
+      @js.native
       def createWatcher(`type`: PnpObjectType, requestedProperties: IIterable[String], aqsFilter: String): typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectWatcher = js.native
       
+      @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObject.findAllAsync")
+      @js.native
       def findAllAsync(`type`: PnpObjectType, requestedProperties: IIterable[String]): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectCollection] = js.native
+      @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObject.findAllAsync")
+      @js.native
       def findAllAsync(`type`: PnpObjectType, requestedProperties: IIterable[String], aqsFilter: String): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectCollection] = js.native
     }
     
+    @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObjectCollection")
     @js.native
     class PnpObjectCollection ()
       extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectCollection
     
+    @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObjectType")
     @js.native
-    object PnpObjectType extends js.Object {
+    object PnpObjectType extends StObject {
       
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectType with Double] = js.native
@@ -150,10 +188,12 @@ object Enumeration extends js.Object {
       /* 0 */ val unknown: typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectType.unknown with Double = js.native
     }
     
+    @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObjectUpdate")
     @js.native
     class PnpObjectUpdate ()
       extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectUpdate
     
+    @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObjectWatcher")
     @js.native
     class PnpObjectWatcher ()
       extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectWatcher

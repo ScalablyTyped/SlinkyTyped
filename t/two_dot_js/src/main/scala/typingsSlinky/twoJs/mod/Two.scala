@@ -2,12 +2,13 @@ package typingsSlinky.twoJs.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Two extends js.Object {
+trait Two extends StObject {
   
   def add(objects: Object*): this.type = js.native
   def add(objects: js.Array[Object]): this.type = js.native

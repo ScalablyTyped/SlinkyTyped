@@ -1,6 +1,7 @@
 package typingsSlinky.gm.mod
 
 import typingsSlinky.gm.gmStrings.Xor_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +30,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gm.gmStrings.CopyYellow
   - typingsSlinky.gm.gmStrings.CopyBlack
 */
-trait ComposeOperator extends js.Object
+trait ComposeOperator extends StObject
 object ComposeOperator {
   
   @scala.inline

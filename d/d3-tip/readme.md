@@ -10,9 +10,9 @@ Tooltips for d3 svg visualizations
 | ------------------ | :-------------: |
 | Full name          | d3-tip |
 | Keywords           | d3, tooltip |
-| # releases         | 3 |
-| # dependents       | 65 |
-| # downloads        | 1726264 |
+| # releases         | 0 |
+| # dependents       | 77 |
+| # downloads        | 3483584 |
 | # stars            | 5 |
 
 ## Links

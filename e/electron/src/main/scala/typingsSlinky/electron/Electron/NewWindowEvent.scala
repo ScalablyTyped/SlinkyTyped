@@ -6,6 +6,7 @@ import typingsSlinky.electron.electronStrings.`new-window`
 import typingsSlinky.electron.electronStrings.`save-to-disk`
 import typingsSlinky.electron.electronStrings.default
 import typingsSlinky.electron.electronStrings.other
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

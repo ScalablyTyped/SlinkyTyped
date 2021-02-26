@@ -1,6 +1,7 @@
 package typingsSlinky.csstype.mod
 
 import typingsSlinky.csstype.csstypeStrings.menu_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,14 +18,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.revert
   - typingsSlinky.csstype.csstypeStrings.unset
 */
-trait MozWindowShadowProperty extends js.Object
+trait MozWindowShadowProperty extends StObject
 object MozWindowShadowProperty {
   
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
+  def default: typingsSlinky.csstype.csstypeStrings.default = "default".asInstanceOf[typingsSlinky.csstype.csstypeStrings.default]
   
   @scala.inline
-  def default: typingsSlinky.csstype.csstypeStrings.default = "default".asInstanceOf[typingsSlinky.csstype.csstypeStrings.default]
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   
   @scala.inline
   def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]

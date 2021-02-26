@@ -15,6 +15,7 @@ import typingsSlinky.activexWia.activexWiaNumbers.`1103`
 import typingsSlinky.activexWia.activexWiaNumbers.`1104`
 import typingsSlinky.activexWia.activexWiaNumbers.`1105`
 import typingsSlinky.activexWia.activexWiaNumbers.`1106`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,7 +41,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWia.activexWiaNumbers.`1104`
   - typingsSlinky.activexWia.activexWiaNumbers.`1106`
 */
-trait WiaImagePropertyType extends js.Object
+trait WiaImagePropertyType extends StObject
 object WiaImagePropertyType {
   
   @scala.inline

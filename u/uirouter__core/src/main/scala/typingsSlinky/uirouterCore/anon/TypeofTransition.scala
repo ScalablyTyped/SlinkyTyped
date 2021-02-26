@@ -5,6 +5,7 @@ import typingsSlinky.uirouterCore.pathNodeMod.PathNode
 import typingsSlinky.uirouterCore.routerMod.UIRouter
 import typingsSlinky.uirouterCore.targetStateMod.TargetState
 import typingsSlinky.uirouterCore.transitionTransitionMod.Transition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

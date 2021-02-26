@@ -1,21 +1,41 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractEnum
+import typingsSlinky.mendixmodelsdk.versionChecksMod.ILifeCycle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.LanguageSettingType")
 @js.native
-class LanguageSettingType () extends AbstractEnum
-/* static members */
-@JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.LanguageSettingType")
-@js.native
-object LanguageSettingType extends js.Object {
+class LanguageSettingType protected () extends AbstractEnum {
+  def this(_name: String, lifeCycleInfo: ILifeCycle) = this()
+}
+object LanguageSettingType {
   
-  var CurrentUser: LanguageSettingType = js.native
+  @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.LanguageSettingType")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var ProjectDefault: LanguageSettingType = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.LanguageSettingType.CurrentUser")
+  @js.native
+  def CurrentUser: LanguageSettingType = js.native
+  @scala.inline
+  def CurrentUser_=(x: LanguageSettingType): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("CurrentUser")(x.asInstanceOf[js.Any])
   
-  var Variable: LanguageSettingType = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.LanguageSettingType.ProjectDefault")
+  @js.native
+  def ProjectDefault: LanguageSettingType = js.native
+  @scala.inline
+  def ProjectDefault_=(x: LanguageSettingType): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ProjectDefault")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.LanguageSettingType.Variable")
+  @js.native
+  def Variable: LanguageSettingType = js.native
+  @scala.inline
+  def Variable_=(x: LanguageSettingType): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Variable")(x.asInstanceOf[js.Any])
 }

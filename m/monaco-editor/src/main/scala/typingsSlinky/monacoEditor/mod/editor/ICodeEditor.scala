@@ -9,6 +9,7 @@ import typingsSlinky.monacoEditor.mod.IPosition
 import typingsSlinky.monacoEditor.mod.IScrollEvent
 import typingsSlinky.monacoEditor.mod.Range
 import typingsSlinky.monacoEditor.mod.Selection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

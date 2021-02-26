@@ -3,7 +3,8 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameIgnoreEdgeWidth
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import typingsSlinky.reactOnsenui.anon.IgnoreEdgeWidth
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.mod.TabbarRenderTab
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.auto
@@ -11,15 +12,25 @@ import typingsSlinky.reactOnsenui.reactOnsenuiStrings.bottom
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.none
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.slide
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tabbar {
   
+  @scala.inline
+  def apply(
+    index: Double,
+    renderTabs: (Double, typingsSlinky.reactOnsenui.mod.Tabbar) => js.Array[TabbarRenderTab]
+  ): Builder = {
+    val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any], renderTabs = js.Any.fromFunction2(renderTabs))
+    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassName with IgnoreEdgeWidth]))
+  }
+  
   @JSImport("react-onsenui", "Tabbar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -66,14 +77,5 @@ object Tabbar {
     def tabBorder(value: Boolean): this.type = set("tabBorder", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HTMLAttributesidclassNameIgnoreEdgeWidth): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    index: Double,
-    renderTabs: (Double, typingsSlinky.reactOnsenui.mod.Tabbar) => js.Array[TabbarRenderTab]
-  ): Builder = {
-    val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any], renderTabs = js.Any.fromFunction2(renderTabs))
-    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassNameIgnoreEdgeWidth]))
-  }
+  def withProps(p: HTMLAttributesidclassName with IgnoreEdgeWidth): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

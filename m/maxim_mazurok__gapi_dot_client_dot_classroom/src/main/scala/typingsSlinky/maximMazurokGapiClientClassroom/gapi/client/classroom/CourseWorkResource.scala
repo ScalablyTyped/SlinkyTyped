@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientClassroom.anon.CourseWorkStates
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.Fields
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientClassroom.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CourseWorkResource extends js.Object {
+trait CourseWorkResource extends StObject {
   
   def create(request: Alt, body: CourseWork): Request[CourseWork] = js.native
   /**

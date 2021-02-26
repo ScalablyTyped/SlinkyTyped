@@ -1,12 +1,13 @@
 package typingsSlinky.auth0.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("auth0", "AuthenticationClient")
 @js.native
-class AuthenticationClient protected () extends js.Object {
+class AuthenticationClient protected () extends StObject {
   def this(options: AuthenticationClientOptions) = this()
   
   def changePassword(data: ResetPasswordOptions): js.Promise[_] = js.native

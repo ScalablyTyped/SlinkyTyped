@@ -2,12 +2,13 @@ package typingsSlinky.browserSync.mod
 
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PerRouteMiddleware extends js.Object {
+trait PerRouteMiddleware extends StObject {
   
   def handle(req: IncomingMessage, res: ServerResponse, next: js.Function0[Unit]): js.Any = js.native
   @JSName("handle")

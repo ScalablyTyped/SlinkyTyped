@@ -1,6 +1,7 @@
 package typingsSlinky.winjs.WinJS.UI
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Represents a navigation command in a NavBarContainer.
   **/
 @js.native
-trait NavBarCommand extends js.Object {
+trait NavBarCommand extends StObject {
   
   //#endregion Events
   //#region Methods

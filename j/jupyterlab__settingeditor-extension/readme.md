@@ -10,9 +10,9 @@ JupyterLab - Setting Editor Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/settingeditor-extension |
 | Keywords           | - |
-| # releases         | 63 |
+| # releases         | 130 |
 | # dependents       | 1 |
-| # downloads        | 759672 |
+| # downloads        | 1459775 |
 | # stars            | 0 |
 
 ## Links

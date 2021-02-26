@@ -3,6 +3,7 @@ package typingsSlinky.winrt.Windows.Networking.NetworkOperators
 import typingsSlinky.winrt.Windows.Data.Xml.Dom.XmlDocument
 import typingsSlinky.winrt.Windows.Foundation.Uri
 import typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkAdapter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

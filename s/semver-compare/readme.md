@@ -10,9 +10,9 @@ compare two semver version strings, returning -1, 0, or 1
 | ------------------ | :-------------: |
 | Full name          | semver-compare |
 | Keywords           | semver, compare, cmp, comparison, sort |
-| # releases         | 1 |
-| # dependents       | 115 |
-| # downloads        | 86977737 |
+| # releases         | 0 |
+| # dependents       | 168 |
+| # downloads        | 206040981 |
 | # stars            | 5 |
 
 ## Links

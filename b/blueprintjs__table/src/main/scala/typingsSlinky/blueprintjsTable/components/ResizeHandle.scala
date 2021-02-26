@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.resizeHandleMod.IResizeHandleProps
 import typingsSlinky.blueprintjsTable.resizeHandleMod.Orientation
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ResizeHandle {
   
+  @scala.inline
+  def apply(onLayoutLock: js.UndefOr[Boolean] => Unit, orientation: Orientation): Builder = {
+    val __props = js.Dynamic.literal(onLayoutLock = js.Any.fromFunction1(onLayoutLock), orientation = orientation.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IResizeHandleProps]))
+  }
+  
   @JSImport("@blueprintjs/table", "ResizeHandle")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -33,10 +40,4 @@ object ResizeHandle {
   }
   
   def withProps(p: IResizeHandleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onLayoutLock: js.UndefOr[Boolean] => Unit, orientation: Orientation): Builder = {
-    val __props = js.Dynamic.literal(onLayoutLock = js.Any.fromFunction1(onLayoutLock), orientation = orientation.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IResizeHandleProps]))
-  }
 }

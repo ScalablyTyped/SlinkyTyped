@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.transformMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.vegaTypingsStrings.archimedian
   - typingsSlinky.vegaTypings.vegaTypingsStrings.rectangular
 */
-trait WordcloudSpiral extends js.Object
+trait WordcloudSpiral extends StObject
 object WordcloudSpiral {
   
   @scala.inline

@@ -17,12 +17,13 @@ import typingsSlinky.maximMazurokGapiClientAndroiddeviceprovisioning.anon.Resour
 import typingsSlinky.maximMazurokGapiClientAndroiddeviceprovisioning.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientAndroiddeviceprovisioning.anon.Uploadprotocol
 import typingsSlinky.maximMazurokGapiClientAndroiddeviceprovisioning.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DevicesResource extends js.Object {
+trait DevicesResource extends StObject {
   
   def applyConfiguration(request: Alt, body: CustomerApplyConfigurationRequest): Request[js.Object] = js.native
   /**

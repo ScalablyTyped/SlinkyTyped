@@ -1,12 +1,13 @@
 package typingsSlinky.p5.mod
 
 import org.scalajs.dom.raw.AudioParam
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Oscillator extends js.Object {
+trait Oscillator extends StObject {
   
   /**
     *   Add a value to the p5.Oscillator's output

@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.legacyMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,12 +18,12 @@ class PBRMetallicRoughnessMaterial protected ()
   def this(name: String, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
 }
 /* static members */
-@JSImport("babylonjs/Legacy/legacy", "PBRMetallicRoughnessMaterial")
-@js.native
-object PBRMetallicRoughnessMaterial extends js.Object {
+object PBRMetallicRoughnessMaterial {
   
   /**
     * Parses a JSON object correponding to the serialize function.
     */
+  @JSImport("babylonjs/Legacy/legacy", "PBRMetallicRoughnessMaterial.Parse")
+  @js.native
   def Parse(source: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.pbrMetallicRoughnessMaterialMod.PBRMetallicRoughnessMaterial = js.native
 }

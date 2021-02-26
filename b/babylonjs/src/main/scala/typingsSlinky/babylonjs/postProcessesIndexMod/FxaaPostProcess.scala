@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,10 +25,10 @@ class FxaaPostProcess protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/PostProcesses/index", "FxaaPostProcess")
-@js.native
-object FxaaPostProcess extends js.Object {
+object FxaaPostProcess {
   
   /** @hidden */
+  @JSImport("babylonjs/PostProcesses/index", "FxaaPostProcess._Parse")
+  @js.native
   def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.fxaaPostProcessMod.FxaaPostProcess = js.native
 }

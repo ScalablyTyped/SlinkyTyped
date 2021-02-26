@@ -3,12 +3,13 @@ package typingsSlinky.angularMaterial.mod.angularAugmentingMod.material
 import org.scalajs.dom.raw.Element
 import typingsSlinky.angular.JQuery
 import typingsSlinky.angularMaterial.angularMaterialBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IToastPreset[T] extends js.Object {
+trait IToastPreset[T] extends StObject {
   
   def action(action: String): T = js.native
   
@@ -24,8 +25,8 @@ trait IToastPreset[T] extends js.Object {
   
   def parent(): T = js.native
   def parent(parent: String): T = js.native
-  def parent(parent: JQuery): T = js.native
   def parent(parent: Element): T = js.native
+  def parent(parent: JQuery): T = js.native
   
   def position(position: String): T = js.native
   
@@ -33,6 +34,6 @@ trait IToastPreset[T] extends js.Object {
   
   def theme(theme: String): T = js.native
   
-   // default: root node
+  // default: root node
   def toastClass(toastClass: String): T = js.native
 }

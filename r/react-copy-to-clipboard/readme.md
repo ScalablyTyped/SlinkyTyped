@@ -10,9 +10,9 @@ Copy-to-clipboard React component
 | ------------------ | :-------------: |
 | Full name          | react-copy-to-clipboard |
 | Keywords           | component, react-component, react, copy to clipboard, clipboard |
-| # releases         | 2 |
-| # dependents       | 301 |
-| # downloads        | 13360288 |
+| # releases         | 3 |
+| # dependents       | 486 |
+| # downloads        | 23545581 |
 | # stars            | 14 |
 
 ## Links

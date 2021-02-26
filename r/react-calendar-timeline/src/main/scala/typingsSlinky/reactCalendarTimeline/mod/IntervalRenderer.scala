@@ -1,12 +1,13 @@
 package typingsSlinky.reactCalendarTimeline.mod
 
 import typingsSlinky.reactCalendarTimeline.anon.RequiredGetIntervalPropsk
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IntervalRenderer[Data] extends js.Object {
+trait IntervalRenderer[Data] extends StObject {
   
   var data: js.UndefOr[Data] = js.native
   

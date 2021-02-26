@@ -10,13 +10,13 @@ Pretty unicode tables for the CLI
 | ------------------ | :-------------: |
 | Full name          | cli-table |
 | Keywords           | cli, colors, table |
-| # releases         | 0 |
-| # dependents       | 1830 |
-| # downloads        | 61075100 |
+| # releases         | 5 |
+| # dependents       | 2136 |
+| # downloads        | 89179382 |
 | # stars            | 81 |
 
 ## Links
-- [Homepage](https://github.com/Automattic/cli-table)
+- [Homepage](https://github.com/Automattic/cli-table#readme)
 - [Bugs](https://github.com/Automattic/cli-table/issues)
 - [Repository](https://github.com/Automattic/cli-table)
 - [Npm](https://www.npmjs.com/package/cli-table)

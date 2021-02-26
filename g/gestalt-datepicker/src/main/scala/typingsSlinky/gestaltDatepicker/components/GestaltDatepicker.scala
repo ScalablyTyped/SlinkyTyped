@@ -14,15 +14,22 @@ import typingsSlinky.gestaltDatepicker.gestaltDatepickerStrings.up
 import typingsSlinky.gestaltDatepicker.mod.DatePickerProps
 import typingsSlinky.gestaltDatepicker.mod.default
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object GestaltDatepicker {
   
+  @scala.inline
+  def apply(id: String, onChange: Event => Unit): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[DatePickerProps]))
+  }
+  
   @JSImport("gestalt-datepicker", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +43,10 @@ object GestaltDatepicker {
     def errorMessage(value: String): this.type = set("errorMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def excludeDatesVarargs(value: js.Date*): this.type = set("excludeDates", js.Array(value :_*))
+    def excludeDates(value: js.Array[js.Date]): this.type = set("excludeDates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def excludeDates(value: js.Array[js.Date]): this.type = set("excludeDates", value.asInstanceOf[js.Any])
+    def excludeDatesVarargs(value: js.Date*): this.type = set("excludeDates", js.Array(value :_*))
     
     @scala.inline
     def helperText(value: String): this.type = set("helperText", value.asInstanceOf[js.Any])
@@ -48,10 +55,10 @@ object GestaltDatepicker {
     def idealDirection(value: up | right | down | left): this.type = set("idealDirection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def includeDatesVarargs(value: js.Date*): this.type = set("includeDates", js.Array(value :_*))
+    def includeDates(value: js.Array[js.Date]): this.type = set("includeDates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def includeDates(value: js.Array[js.Date]): this.type = set("includeDates", value.asInstanceOf[js.Any])
+    def includeDatesVarargs(value: js.Date*): this.type = set("includeDates", js.Array(value :_*))
     
     @scala.inline
     def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
@@ -66,16 +73,16 @@ object GestaltDatepicker {
     def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nextRefRefObject(value: ReactRef[_]): this.type = set("nextRef", value.asInstanceOf[js.Any])
+    def nextRef(value: Ref[_]): this.type = set("nextRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def nextRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("nextRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def nextRef(value: Ref[_]): this.type = set("nextRef", value.asInstanceOf[js.Any])
+    def nextRefNull: this.type = set("nextRef", null)
     
     @scala.inline
-    def nextRefNull: this.type = set("nextRef", null)
+    def nextRefRefObject(value: ReactRef[_]): this.type = set("nextRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -94,10 +101,4 @@ object GestaltDatepicker {
   }
   
   def withProps(p: DatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String, onChange: Event => Unit): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[DatePickerProps]))
-  }
 }

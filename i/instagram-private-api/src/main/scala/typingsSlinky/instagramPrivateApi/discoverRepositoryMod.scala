@@ -1,17 +1,19 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.discoverRepositoryChainingResponseMod.DiscoverRepositoryChainingResponseRootObject
 import typingsSlinky.instagramPrivateApi.repositoryMod.Repository
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/repositories/discover.repository", JSImport.Namespace)
-@js.native
-object discoverRepositoryMod extends js.Object {
+object discoverRepositoryMod {
   
+  @JSImport("instagram-private-api/dist/repositories/discover.repository", "DiscoverRepository")
   @js.native
-  class DiscoverRepository () extends Repository {
+  class DiscoverRepository protected () extends Repository {
+    def this(client: IgApiClient) = this()
     
     def chaining(targetId: String): js.Promise[DiscoverRepositoryChainingResponseRootObject] = js.native
     

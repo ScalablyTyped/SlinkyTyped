@@ -16,14 +16,14 @@ import typingsSlinky.std.CanvasLineJoin
 import typingsSlinky.std.CanvasTextAlign
 import typingsSlinky.std.CanvasTextBaseline
 import typingsSlinky.std.ImageBitmap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@lumino/datagrid/lib/graphicscontext", JSImport.Namespace)
-@js.native
-object graphicscontextMod extends js.Object {
+object graphicscontextMod {
   
+  @JSImport("@lumino/datagrid/lib/graphicscontext", "GraphicsContext")
   @js.native
   class GraphicsContext protected () extends IDisposable {
     /**

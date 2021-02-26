@@ -3,13 +3,14 @@ package typingsSlinky.grammarkdown.grammarkdownMod
 import typingsSlinky.esfxAsyncCanceltoken.mod.CancelToken
 import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.prex.mod.CancellationToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown/dist/grammarkdown", "Grammar")
 @js.native
-class Grammar protected () extends js.Object {
+class Grammar protected () extends StObject {
   def this(rootNames: js.Iterable[String]) = this()
   def this(rootNames: js.Iterable[String], options: CompilerOptions) = this()
   def this(rootNames: js.Iterable[String], options: js.UndefOr[scala.Nothing], host: AsyncHost) = this()
@@ -319,78 +320,124 @@ class Grammar protected () extends js.Object {
   var writeFileSyncFallback: js.Any = js.native
 }
 /* static members */
-@JSImport("grammarkdown/dist/grammarkdown", "Grammar")
-@js.native
-object Grammar extends js.Object {
+object Grammar {
   
   /** @deprecated since 2.1.0 - `prex.CancellationToken` may no longer be accepted in future releases. Please use a token that implements `@esfx/cancelable.Cancelable` */
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(
     content: String,
     options: js.UndefOr[scala.Nothing],
     hostFallback: js.UndefOr[scala.Nothing],
     cancelable: Cancelable
   ): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(
     content: String,
     options: js.UndefOr[scala.Nothing],
     hostFallback: js.UndefOr[scala.Nothing],
     cancelable: CancellationToken
   ): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: js.UndefOr[scala.Nothing], hostFallback: AsyncHost): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(
     content: String,
     options: js.UndefOr[scala.Nothing],
     hostFallback: AsyncHost,
     cancelable: Cancelable
   ): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(
     content: String,
     options: js.UndefOr[scala.Nothing],
     hostFallback: AsyncHost,
     cancelable: CancellationToken
   ): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: js.UndefOr[scala.Nothing], hostFallback: Host): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: js.UndefOr[scala.Nothing], hostFallback: Host, cancelable: Cancelable): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(
     content: String,
     options: js.UndefOr[scala.Nothing],
     hostFallback: Host,
     cancelable: CancellationToken
   ): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: js.UndefOr[scala.Nothing], hostFallback: SyncHost): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(
     content: String,
     options: js.UndefOr[scala.Nothing],
     hostFallback: SyncHost,
     cancelable: Cancelable
   ): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(
     content: String,
     options: js.UndefOr[scala.Nothing],
     hostFallback: SyncHost,
     cancelable: CancellationToken
   ): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: CompilerOptions): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(
     content: String,
     options: CompilerOptions,
     hostFallback: js.UndefOr[scala.Nothing],
     cancelable: Cancelable
   ): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(
     content: String,
     options: CompilerOptions,
     hostFallback: js.UndefOr[scala.Nothing],
     cancelable: CancellationToken
   ): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: CompilerOptions, hostFallback: AsyncHost): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: CompilerOptions, hostFallback: AsyncHost, cancelable: Cancelable): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: CompilerOptions, hostFallback: AsyncHost, cancelable: CancellationToken): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: CompilerOptions, hostFallback: Host): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: CompilerOptions, hostFallback: Host, cancelable: Cancelable): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: CompilerOptions, hostFallback: Host, cancelable: CancellationToken): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: CompilerOptions, hostFallback: SyncHost): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: CompilerOptions, hostFallback: SyncHost, cancelable: Cancelable): String = js.native
+  @JSImport("grammarkdown/dist/grammarkdown", "Grammar.convert")
+  @js.native
   def convert(content: String, options: CompilerOptions, hostFallback: SyncHost, cancelable: CancellationToken): String = js.native
 }

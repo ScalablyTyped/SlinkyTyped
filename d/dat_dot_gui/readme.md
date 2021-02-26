@@ -10,9 +10,9 @@ A lightweight graphical user interface for changing variables in JavaScript.
 | ------------------ | :-------------: |
 | Full name          | dat.gui |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 61 |
-| # downloads        | 396695 |
+| # releases         | 3 |
+| # dependents       | 90 |
+| # downloads        | 623214 |
 | # stars            | 8 |
 
 ## Links

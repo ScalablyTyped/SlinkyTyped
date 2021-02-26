@@ -6,6 +6,7 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeKeyboardSpacer.mod.KeyboardSpacerProps
 import typingsSlinky.reactNativeKeyboardSpacer.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ReactNativeKeyboardSpacer {
   
   @JSImport("react-native-keyboard-spacer", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,7 +35,7 @@ object ReactNativeKeyboardSpacer {
     def topSpacing(value: Double): this.type = set("topSpacing", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: KeyboardSpacerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeKeyboardSpacer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: KeyboardSpacerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

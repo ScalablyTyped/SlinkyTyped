@@ -3,6 +3,7 @@ package typingsSlinky.phaser.Phaser
 import typingsSlinky.phaser.LeaderboardScore
 import typingsSlinky.phaser.Phaser.Events.EventEmitter
 import typingsSlinky.phaser.integer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

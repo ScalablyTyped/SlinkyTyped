@@ -8,6 +8,7 @@ import typingsSlinky.activexOffice.activexOfficeNumbers.`32`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`4`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`64`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`2`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`32`
 */
-trait MsoBarProtection extends js.Object
+trait MsoBarProtection extends StObject
 object MsoBarProtection {
   
   @scala.inline

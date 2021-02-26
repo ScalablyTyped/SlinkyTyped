@@ -1,6 +1,7 @@
 package typingsSlinky.dynogels.mod.AWS
 
 import typingsSlinky.awsSdk.temporaryCredentialsMod.TemporaryCredentials.TemporaryCredentialsOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,6 +26,4 @@ class TemporaryCredentials ()
   ) = this()
 }
 // Needed to expose interfaces on the class
-@JSImport("dynogels", "AWS.TemporaryCredentials")
-@js.native
-object TemporaryCredentials extends js.Object
+object TemporaryCredentials

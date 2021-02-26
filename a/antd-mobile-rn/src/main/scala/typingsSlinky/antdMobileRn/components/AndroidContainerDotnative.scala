@@ -6,15 +6,22 @@ import typingsSlinky.antdMobileRn.androidContainerNativeMod.ActionSheetNativePro
 import typingsSlinky.antdMobileRn.androidContainerNativeMod.default
 import typingsSlinky.antdMobileRn.styleIndexNativeMod.ActionSheetStyle
 import typingsSlinky.reactNative.mod.ActionSheetIOSOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AndroidContainerDotnative {
   
+  @scala.inline
+  def apply(config: ActionSheetIOSOptions): Builder = {
+    val __props = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ActionSheetNativeProps]))
+  }
+  
   @JSImport("antd-mobile-rn/lib/action-sheet/AndroidContainer.native", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,10 +42,4 @@ object AndroidContainerDotnative {
   }
   
   def withProps(p: ActionSheetNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(config: ActionSheetIOSOptions): Builder = {
-    val __props = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ActionSheetNativeProps]))
-  }
 }

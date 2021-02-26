@@ -9,15 +9,22 @@ import typingsSlinky.react.mod.StyleHTMLAttributes
 import typingsSlinky.reactShare.anon.CommonShareButtonPropstitDisabled
 import typingsSlinky.reactShare.reactShareStrings.screenCenter
 import typingsSlinky.reactShare.reactShareStrings.windowCenter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object WeiboShareButton {
   
+  @scala.inline
+  def apply(url: String): Builder = {
+    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropstitDisabled]))
+  }
+  
   @JSImport("react-share", "WeiboShareButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -74,10 +81,4 @@ object WeiboShareButton {
   }
   
   def withProps(p: CommonShareButtonPropstitDisabled): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(url: String): Builder = {
-    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropstitDisabled]))
-  }
 }

@@ -29,6 +29,7 @@ import typingsSlinky.victory.victoryStrings.horizontal
 import typingsSlinky.victory.victoryStrings.labels
 import typingsSlinky.victory.victoryStrings.parent
 import typingsSlinky.victory.victoryStrings.vertical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,7 +38,7 @@ object VictoryLegend {
   
   @JSImport("victory", "VictoryLegend")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,25 +55,22 @@ object VictoryLegend {
     def borderPadding(value: PaddingProps): this.type = set("borderPadding", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def categoriesVarargs(value: String*): this.type = set("categories", js.Array(value :_*))
+    def categories(value: CategoryPropType): this.type = set("categories", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def categories(value: CategoryPropType): this.type = set("categories", value.asInstanceOf[js.Any])
+    def categoriesVarargs(value: String*): this.type = set("categories", js.Array(value :_*))
     
     @scala.inline
     def centerTitle(value: Boolean): this.type = set("centerTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def colorScaleVarargs(value: String*): this.type = set("colorScale", js.Array(value :_*))
-    
-    @scala.inline
     def colorScale(value: ColorScalePropType): this.type = set("colorScale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerComponent(value: ReactElement): this.type = set("containerComponent", value.asInstanceOf[js.Any])
+    def colorScaleVarargs(value: String*): this.type = set("colorScale", js.Array(value :_*))
     
     @scala.inline
-    def dataVarargs(value: Name*): this.type = set("data", js.Array(value :_*))
+    def containerComponent(value: ReactElement): this.type = set("containerComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def data(value: js.Array[Name]): this.type = set("data", value.asInstanceOf[js.Any])
@@ -81,28 +79,31 @@ object VictoryLegend {
     def dataComponent(value: ReactElement): this.type = set("dataComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def dataVarargs(value: Name*): this.type = set("data", js.Array(value :_*))
+    
+    @scala.inline
     def domain(value: DomainPropType): this.type = set("domain", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def eventKeyVarargs(value: String*): this.type = set("eventKey", js.Array(value :_*))
-    
-    @scala.inline
-    def eventKeyFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("eventKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def eventKey(value: StringOrNumberOrCallback | js.Array[String]): this.type = set("eventKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def eventsVarargs(value: (EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback])*): this.type = set("events", js.Array(value :_*))
+    def eventKeyFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("eventKey", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def eventKeyVarargs(value: String*): this.type = set("eventKey", js.Array(value :_*))
     
     @scala.inline
     def events(value: js.Array[EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback]]): this.type = set("events", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def externalEventMutationsVarargs(value: js.Any*): this.type = set("externalEventMutations", js.Array(value :_*))
+    def eventsVarargs(value: (EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback])*): this.type = set("events", js.Array(value :_*))
     
     @scala.inline
     def externalEventMutations(value: js.Array[_]): this.type = set("externalEventMutations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def externalEventMutationsVarargs(value: js.Any*): this.type = set("externalEventMutations", js.Array(value :_*))
     
     @scala.inline
     def groupComponent(value: ReactElement): this.type = set("groupComponent", value.asInstanceOf[js.Any])
@@ -120,13 +121,13 @@ object VictoryLegend {
     def itemsPerRow(value: Double): this.type = set("itemsPerRow", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelFunction1(value: /* data */ js.Any => String): this.type = set("label", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def label(value: String | (js.Function1[/* data */ js.Any, String])): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelComponent(value: ReactElement): this.type = set("labelComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelFunction1(value: /* data */ js.Any => String): this.type = set("label", js.Any.fromFunction1(value))
     
     @scala.inline
     def maxDomain(value: Double | `0`): this.type = set("maxDomain", value.asInstanceOf[js.Any])
@@ -165,9 +166,6 @@ object VictoryLegend {
     def theme(value: VictoryThemeDefinition): this.type = set("theme", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleVarargs(value: String*): this.type = set("title", js.Array(value :_*))
-    
-    @scala.inline
     def title(value: String | js.Array[String]): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -175,6 +173,9 @@ object VictoryLegend {
     
     @scala.inline
     def titleOrientation(value: OrientationTypes): this.type = set("titleOrientation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def titleVarargs(value: String*): this.type = set("title", js.Array(value :_*))
     
     @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
@@ -186,16 +187,16 @@ object VictoryLegend {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def y0Varargs(value: String*): this.type = set("y0", js.Array(value :_*))
+    def y0(value: DataGetterPropType): this.type = set("y0", value.asInstanceOf[js.Any])
     
     @scala.inline
     def y0Function1(value: /* data */ js.Any => Double | String | js.Array[String]): this.type = set("y0", js.Any.fromFunction1(value))
     
     @scala.inline
-    def y0(value: DataGetterPropType): this.type = set("y0", value.asInstanceOf[js.Any])
+    def y0Varargs(value: String*): this.type = set("y0", js.Array(value :_*))
   }
   
-  def withProps(p: VictoryLegendProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: VictoryLegend.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: VictoryLegendProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

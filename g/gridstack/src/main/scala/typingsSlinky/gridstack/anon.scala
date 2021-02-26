@@ -13,13 +13,12 @@ import typingsSlinky.gridstack.typesMod.GridStackWidget
 import typingsSlinky.gridstack.typesMod.numberOrString
 import typingsSlinky.gridstack.utilsMod.HeightData
 import typingsSlinky.gridstack.utilsMod.Utils
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
   trait TypeofGridStackDD extends Instantiable1[/* grid */ GridStack, GridStackDD] {

@@ -12,6 +12,7 @@ import typingsSlinky.antdMobile.antdMobileStrings.top
 import typingsSlinky.antdMobile.antdMobileStrings.topLeft
 import typingsSlinky.antdMobile.antdMobileStrings.topRight
 import typingsSlinky.antdMobile.popoverMod.PopOverPropsType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object Popover {
   
   @JSImport("antd-mobile", "Popover")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,7 +53,7 @@ object Popover {
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PopOverPropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Popover.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PopOverPropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

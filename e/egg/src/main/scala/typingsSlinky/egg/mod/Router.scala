@@ -1,13 +1,13 @@
 package typingsSlinky.egg.mod
 
-import typingsSlinky.koaRouter.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Router
-  extends ^[js.Any, Context] {
+  extends typingsSlinky.koaRouter.mod.^[js.Any, Context] {
   
   /**
     * restful router api

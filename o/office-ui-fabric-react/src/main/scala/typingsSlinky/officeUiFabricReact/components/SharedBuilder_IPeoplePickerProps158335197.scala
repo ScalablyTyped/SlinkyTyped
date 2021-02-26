@@ -22,6 +22,7 @@ import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,13 +36,13 @@ class SharedBuilder_IPeoplePickerProps158335197[R <: js.Object] (val args: js.Ar
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def componentRef(value: IRefObject[IBasePicker[IPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def componentRefFunction1(value: /* ref */ IBasePicker[IPersonaProps] | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
   
   @scala.inline
   def componentRefRefObject(value: ReactRef[IBasePicker[IPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def componentRef(value: IRefObject[IBasePicker[IPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   
   @scala.inline
   def createGenericItem(
@@ -49,10 +50,10 @@ class SharedBuilder_IPeoplePickerProps158335197[R <: js.Object] (val args: js.Ar
   ): this.type = set("createGenericItem", js.Any.fromFunction2(value))
   
   @scala.inline
-  def defaultSelectedItemsVarargs(value: IPersonaProps*): this.type = set("defaultSelectedItems", js.Array(value :_*))
+  def defaultSelectedItems(value: js.Array[IPersonaProps]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultSelectedItems(value: js.Array[IPersonaProps]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
+  def defaultSelectedItemsVarargs(value: IPersonaProps*): this.type = set("defaultSelectedItems", js.Array(value :_*))
   
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -135,22 +136,22 @@ class SharedBuilder_IPeoplePickerProps158335197[R <: js.Object] (val args: js.Ar
   def resolveDelay(value: Double): this.type = set("resolveDelay", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def searchingTextFunction1(value: /* props */ Input => String): this.type = set("searchingText", js.Any.fromFunction1(value))
-  
-  @scala.inline
   def searchingText(value: (js.Function1[/* props */ Input, String]) | String): this.type = set("searchingText", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def selectedItemsVarargs(value: IPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
+  def searchingTextFunction1(value: /* props */ Input => String): this.type = set("searchingText", js.Any.fromFunction1(value))
   
   @scala.inline
   def selectedItems(value: js.Array[IPersonaProps]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def stylesFunction1(value: IBasePickerStyleProps => DeepPartial[IBasePickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def selectedItemsVarargs(value: IPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
   
   @scala.inline
   def styles(value: IStyleFunctionOrObject[IBasePickerStyleProps, IBasePickerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def stylesFunction1(value: IBasePickerStyleProps => DeepPartial[IBasePickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   
   @scala.inline
   def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])

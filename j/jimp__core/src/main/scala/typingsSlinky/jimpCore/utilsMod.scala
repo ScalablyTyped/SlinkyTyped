@@ -6,13 +6,12 @@ import typingsSlinky.jimpCore.pluginsMod.JimpPlugin
 import typingsSlinky.jimpCore.pluginsMod.JimpType
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jimp/core/types/utils", JSImport.Namespace)
-@js.native
-object utilsMod extends js.Object {
+object utilsMod {
   
   type FunctionRet[T] = js.Array[js.Function1[/* props */ js.Array[js.Any] | scala.Nothing, T]]
   

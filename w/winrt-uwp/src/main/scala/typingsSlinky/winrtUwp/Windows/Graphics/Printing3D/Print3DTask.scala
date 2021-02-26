@@ -6,13 +6,14 @@ import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.completed
 import typingsSlinky.winrtUwp.winrtUwpStrings.sourcechanged
 import typingsSlinky.winrtUwp.winrtUwpStrings.submitting
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a 3D print job. */
 @js.native
-trait Print3DTask extends js.Object {
+trait Print3DTask extends StObject {
   
   def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("addEventListener")

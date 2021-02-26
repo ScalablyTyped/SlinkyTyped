@@ -7,16 +7,16 @@ import typingsSlinky.uirouterCore.mod.UIRouter
 import typingsSlinky.uirouterCore.mod.UrlMatcher
 import typingsSlinky.uirouterCore.mod.UrlRouter
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlRuleHandlerFn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@uirouter/angularjs/lib/urlRouterProvider", JSImport.Namespace)
-@js.native
-object urlRouterProviderMod extends js.Object {
+object urlRouterProviderMod {
   
+  @JSImport("@uirouter/angularjs/lib/urlRouterProvider", "UrlRouterProvider")
   @js.native
-  class UrlRouterProvider protected () extends js.Object {
+  class UrlRouterProvider protected () extends StObject {
     /** @hidden */
     def this(/** @hidden */ router: UIRouter) = this()
     
@@ -167,9 +167,10 @@ object urlRouterProviderMod extends js.Object {
     def when(what: UrlMatcher, handler: IInjectable): this.type = js.native
   }
   /* static members */
-  @js.native
-  object UrlRouterProvider extends js.Object {
+  object UrlRouterProvider {
     
+    @JSImport("@uirouter/angularjs/lib/urlRouterProvider", "UrlRouterProvider.injectableHandler")
+    @js.native
     def injectableHandler(router: UIRouter, handler: IInjectable): UrlRuleHandlerFn = js.native
   }
   

@@ -1,13 +1,14 @@
 package typingsSlinky.cesium.mod
 
 import typingsSlinky.cesium.anon.Outline
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "EllipseGraphics")
 @js.native
-class EllipseGraphics () extends js.Object {
+class EllipseGraphics () extends StObject {
   def this(options: Outline) = this()
   
   def clone(result: EllipseGraphics): EllipseGraphics = js.native

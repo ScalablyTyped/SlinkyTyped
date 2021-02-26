@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientApigateway.anon.Key
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.Name
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientApigateway.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ConfigsResource extends js.Object {
+trait ConfigsResource extends StObject {
   
   /** Creates a new ApiConfig in a given project and location. */
   def create(request: Accesstoken): Request[ApigatewayOperation] = js.native

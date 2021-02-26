@@ -1,5 +1,6 @@
 package typingsSlinky.dockerode.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,18 +9,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.dockerode.mod.NamedGenericResource
   - typingsSlinky.dockerode.mod.DiscreteGenericResource
 */
-trait GenericResource extends js.Object
+trait GenericResource extends StObject
 object GenericResource {
   
   @scala.inline
-  def NamedGenericResource(): GenericResource = {
+  def DiscreteGenericResource(): typingsSlinky.dockerode.mod.DiscreteGenericResource = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[GenericResource]
+    __obj.asInstanceOf[typingsSlinky.dockerode.mod.DiscreteGenericResource]
   }
   
   @scala.inline
-  def DiscreteGenericResource(): GenericResource = {
+  def NamedGenericResource(): typingsSlinky.dockerode.mod.NamedGenericResource = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[GenericResource]
+    __obj.asInstanceOf[typingsSlinky.dockerode.mod.NamedGenericResource]
   }
 }

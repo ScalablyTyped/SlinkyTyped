@@ -5,16 +5,16 @@ import typingsSlinky.agGrid.colDefMod.ColDef
 import typingsSlinky.agGrid.iCellEditorMod.ICellEditorComp
 import typingsSlinky.agGrid.iCellEditorMod.ICellEditorParams
 import typingsSlinky.agGrid.utilsMod.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/rendering/cellEditorFactory", JSImport.Namespace)
-@js.native
-object cellEditorFactoryMod extends js.Object {
+object cellEditorFactoryMod {
   
+  @JSImport("ag-grid/dist/lib/rendering/cellEditorFactory", "CellEditorFactory")
   @js.native
-  class CellEditorFactory () extends js.Object {
+  class CellEditorFactory () extends StObject {
     
     def addCellEditor(key: String, cellEditor: InstantiableICellEditorComp): Unit = js.native
     

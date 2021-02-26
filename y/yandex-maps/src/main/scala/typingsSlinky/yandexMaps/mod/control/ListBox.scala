@@ -3,6 +3,7 @@ package typingsSlinky.yandexMaps.mod.control
 import typingsSlinky.yandexMaps.mod.ICollection
 import typingsSlinky.yandexMaps.mod.IControlParent
 import typingsSlinky.yandexMaps.mod.IOptionManager
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

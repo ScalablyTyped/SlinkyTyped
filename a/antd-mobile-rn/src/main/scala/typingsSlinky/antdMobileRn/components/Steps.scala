@@ -7,15 +7,22 @@ import typingsSlinky.antdMobileRn.antdMobileRnStrings.horizontal
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.vertical
 import typingsSlinky.antdMobileRn.stepsIndexNativeMod.StepsNativeProps
 import typingsSlinky.antdMobileRn.stepsStyleIndexNativeMod.IStepsStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Steps {
   
+  @scala.inline
+  def apply(children: js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StepsNativeProps]))
+  }
+  
   @JSImport("antd-mobile-rn", "Steps")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,10 +46,4 @@ object Steps {
   }
   
   def withProps(p: StepsNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: js.Array[ReactElement]): Builder = {
-    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[StepsNativeProps]))
-  }
 }

@@ -4,23 +4,28 @@ import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestTyp
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DefinitionParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DefinitionRegistrationOptions
 import typingsSlinky.vscodeLanguageserverProtocol.vscodeLanguageserverProtocolStrings.textDocumentSlashdefinition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageserver-protocol", "DefinitionRequest")
-@js.native
-object DefinitionRequest extends js.Object {
+object DefinitionRequest {
   
+  @JSImport("vscode-languageserver-protocol", "DefinitionRequest.method")
+  @js.native
   val method: textDocumentSlashdefinition = js.native
   
   /** @deprecated Use DefinitionRequest.type */
+  @JSImport("vscode-languageserver-protocol", "DefinitionRequest.resultType")
+  @js.native
   val resultType: typingsSlinky.vscodeJsonrpc.mod.ProgressType[
     js.Array[
       typingsSlinky.vscodeLanguageserverTypes.mod.Location | typingsSlinky.vscodeLanguageserverTypes.mod.LocationLink
     ]
   ] = js.native
   
+  @JSImport("vscode-languageserver-protocol", "DefinitionRequest.type")
+  @js.native
   val `type`: ProtocolRequestType[
     DefinitionParams, 
     typingsSlinky.vscodeLanguageserverTypes.mod.Location | (js.Array[

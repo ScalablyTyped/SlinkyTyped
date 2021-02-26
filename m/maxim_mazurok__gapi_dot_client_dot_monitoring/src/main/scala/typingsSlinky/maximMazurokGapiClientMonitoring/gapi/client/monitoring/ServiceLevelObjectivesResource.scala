@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientMonitoring.anon.NameOauthtoken
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.OauthtokenParent
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.ServiceLevelObjectiveId
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.View
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServiceLevelObjectivesResource extends js.Object {
+trait ServiceLevelObjectivesResource extends StObject {
   
   def create(request: OauthtokenParent, body: ServiceLevelObjective): Request[ServiceLevelObjective] = js.native
   /** Create a ServiceLevelObjective for the given Service. */

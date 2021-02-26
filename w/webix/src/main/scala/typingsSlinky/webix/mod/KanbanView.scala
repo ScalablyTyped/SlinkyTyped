@@ -1,15 +1,15 @@
 package typingsSlinky.webix.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait KanbanView extends js.Object {
+trait KanbanView extends StObject {
   
   @JSName("$dragCreate")
   def $dragCreate(source: HTMLElement, event: Event): HTMLElement = js.native
@@ -40,6 +40,3 @@ trait KanbanView extends js.Object {
   
   var on_context: StringDictionary[js.Any] = js.native
 }
-@JSImport("webix", "KanbanView")
-@js.native
-object KanbanView extends TopLevel[KanbanView]

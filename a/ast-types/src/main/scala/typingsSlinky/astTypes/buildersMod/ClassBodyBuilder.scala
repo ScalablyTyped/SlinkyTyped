@@ -15,12 +15,13 @@ import typingsSlinky.astTypes.kindsMod.TSMethodSignatureKind
 import typingsSlinky.astTypes.kindsMod.TSPropertySignatureKind
 import typingsSlinky.astTypes.kindsMod.VariableDeclaratorKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassBody
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClassBodyBuilder extends js.Object {
+trait ClassBodyBuilder extends StObject {
   
   def apply(
     body: js.Array[

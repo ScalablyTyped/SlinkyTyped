@@ -10,9 +10,9 @@ menu ui component for react
 | ------------------ | :-------------: |
 | Full name          | rc-menu |
 | Keywords           | react, react-component, menu, ui, react-menu |
-| # releases         | 71 |
-| # dependents       | 226 |
-| # downloads        | 11794489 |
+| # releases         | 59 |
+| # dependents       | 279 |
+| # downloads        | 26798780 |
 | # stars            | 3 |
 
 ## Links

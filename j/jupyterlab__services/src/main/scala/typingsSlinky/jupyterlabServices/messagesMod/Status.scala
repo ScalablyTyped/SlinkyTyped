@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.autorestarting
   - typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.dead
 */
-trait Status extends js.Object
+trait Status extends StObject
 object Status {
   
   @scala.inline

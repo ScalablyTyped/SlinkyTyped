@@ -1,12 +1,13 @@
 package typingsSlinky.ionicCore.componentsMod.LocalJSX
 
 import org.scalajs.dom.raw.CustomEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IonTabs extends js.Object {
+trait IonTabs extends StObject {
   
   /**
     * Emitted when the navigation has finished transitioning to a new component.
@@ -27,30 +28,18 @@ object IonTabs {
   }
   
   @scala.inline
-  implicit class IonTabsOps[Self <: IonTabs] (val x: Self) extends AnyVal {
+  implicit class IonTabsMutableBuilder[Self <: IonTabs] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setOnIonTabsDidChange(value: /* event */ CustomEvent => Unit): Self = StObject.set(x, "onIonTabsDidChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setOnIonTabsDidChangeUndefined: Self = StObject.set(x, "onIonTabsDidChange", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setOnIonTabsWillChange(value: /* event */ CustomEvent => Unit): Self = StObject.set(x, "onIonTabsWillChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnIonTabsDidChange(value: /* event */ CustomEvent => Unit): Self = this.set("onIonTabsDidChange", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnIonTabsDidChange: Self = this.set("onIonTabsDidChange", js.undefined)
-    
-    @scala.inline
-    def setOnIonTabsWillChange(value: /* event */ CustomEvent => Unit): Self = this.set("onIonTabsWillChange", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnIonTabsWillChange: Self = this.set("onIonTabsWillChange", js.undefined)
+    def setOnIonTabsWillChangeUndefined: Self = StObject.set(x, "onIonTabsWillChange", js.undefined)
   }
 }

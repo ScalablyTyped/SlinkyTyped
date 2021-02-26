@@ -2,31 +2,35 @@ package typingsSlinky.navermaps.global.naver.maps
 
 import typingsSlinky.navermaps.naver.maps.visualization.DotMapOptions
 import typingsSlinky.navermaps.naver.maps.visualization.HeatMapOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("naver.maps.visualization")
-@js.native
-object visualization extends js.Object {
+object visualization {
   
   // Sub module: visualization
+  @JSGlobal("naver.maps.visualization")
+  @js.native
   def apply(): Unit = js.native
   
+  @JSGlobal("naver.maps.visualization.DotMap")
   @js.native
   class DotMap ()
     extends typingsSlinky.navermaps.naver.maps.visualization.DotMap {
     def this(dotMapOptions: DotMapOptions) = this()
   }
   
+  @JSGlobal("naver.maps.visualization.HeatMap")
   @js.native
   class HeatMap ()
     extends typingsSlinky.navermaps.naver.maps.visualization.HeatMap {
     def this(heatMapOptions: HeatMapOptions) = this()
   }
   
+  @JSGlobal("naver.maps.visualization.SpectrumStyle")
   @js.native
-  object SpectrumStyle extends js.Object {
+  object SpectrumStyle extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.navermaps.naver.maps.visualization.SpectrumStyle with Double] = js.native
@@ -54,6 +58,7 @@ object visualization extends js.Object {
     /* 6 */ val YIOrRd: typingsSlinky.navermaps.naver.maps.visualization.SpectrumStyle.YIOrRd with Double = js.native
   }
   
+  @JSGlobal("naver.maps.visualization.WeightedLocation")
   @js.native
   class WeightedLocation protected ()
     extends typingsSlinky.navermaps.naver.maps.visualization.WeightedLocation {

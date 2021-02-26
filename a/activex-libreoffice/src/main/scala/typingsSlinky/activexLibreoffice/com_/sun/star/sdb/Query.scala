@@ -7,15 +7,14 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySet
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfo
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XVetoableChangeListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.container.XNameAccess
-import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.XColumnsSupplier
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.XDataDescriptorFactory
 import typingsSlinky.activexLibreoffice.com_.sun.star.sdbcx.XRename
-import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XContent
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XContentEventListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.ucb.XContentIdentifier
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.Color
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,9 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait Query
-  extends XPropertySet
-     with XContent
-     with XComponent
+  extends XQueryDefinition
      with DataSettings
      with XDataDescriptorFactory
      with XRename

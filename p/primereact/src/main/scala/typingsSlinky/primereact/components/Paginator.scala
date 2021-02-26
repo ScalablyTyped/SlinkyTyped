@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.paginatorMod.PageState
 import typingsSlinky.primereact.paginatorMod.PaginatorProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object Paginator {
   
   @JSImport("primereact/paginator", "Paginator")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,10 +52,10 @@ object Paginator {
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsPerPageOptionsVarargs(value: js.Any*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
+    def rowsPerPageOptions(value: js.Array[_]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowsPerPageOptions(value: js.Array[_]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
+    def rowsPerPageOptionsVarargs(value: js.Any*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
     
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
@@ -66,7 +67,7 @@ object Paginator {
     def totalRecords(value: Double): this.type = set("totalRecords", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PaginatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Paginator.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PaginatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

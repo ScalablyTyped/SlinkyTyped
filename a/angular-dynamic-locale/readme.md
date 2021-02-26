@@ -10,9 +10,9 @@ A minimal module that adds the ability to dynamically change the locale
 | ------------------ | :-------------: |
 | Full name          | angular-dynamic-locale |
 | Keywords           | - |
-| # releases         | 5 |
-| # dependents       | 16 |
-| # downloads        | 994182 |
+| # releases         | 0 |
+| # dependents       | 20 |
+| # downloads        | 1200500 |
 | # stars            | 1 |
 
 ## Links

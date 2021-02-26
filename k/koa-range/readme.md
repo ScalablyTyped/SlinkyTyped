@@ -10,9 +10,9 @@ range request implementation for koa
 | ------------------ | :-------------: |
 | Full name          | koa-range |
 | Keywords           | range, koa, http |
-| # releases         | 2 |
-| # dependents       | 18 |
-| # downloads        | 2290780 |
+| # releases         | 0 |
+| # dependents       | 24 |
+| # downloads        | 5135140 |
 | # stars            | 1 |
 
 ## Links

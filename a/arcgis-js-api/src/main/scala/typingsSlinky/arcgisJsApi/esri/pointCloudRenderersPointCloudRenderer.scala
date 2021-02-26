@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,4 +11,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arcgisJsApi.esri.PointCloudStretchRenderer
   - typingsSlinky.arcgisJsApi.esri.PointCloudUniqueValueRenderer
 */
-trait pointCloudRenderersPointCloudRenderer extends js.Object
+trait pointCloudRenderersPointCloudRenderer extends StObject

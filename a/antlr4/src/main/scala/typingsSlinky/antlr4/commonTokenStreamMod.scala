@@ -2,14 +2,14 @@ package typingsSlinky.antlr4
 
 import typingsSlinky.antlr4.bufferedTokenStreamMod.BufferedTokenStream
 import typingsSlinky.antlr4.lexerMod.Lexer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antlr4/CommonTokenStream", JSImport.Namespace)
-@js.native
-object commonTokenStreamMod extends js.Object {
+object commonTokenStreamMod {
   
+  @JSImport("antlr4/CommonTokenStream", "CommonTokenStream")
   @js.native
   class CommonTokenStream protected () extends BufferedTokenStream {
     def this(lexer: Lexer) = this()

@@ -4,6 +4,7 @@ import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySet
 import typingsSlinky.activexLibreoffice.com_.sun.star.view.XPrintSettingsSupplier
 import typingsSlinky.activexLibreoffice.com_.sun.star.view.XViewSettingsSupplier
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

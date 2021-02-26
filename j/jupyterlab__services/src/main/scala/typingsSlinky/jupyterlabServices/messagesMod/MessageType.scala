@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,7 +41,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.input_request
   - typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.input_reply
 */
-trait MessageType extends js.Object
+trait MessageType extends StObject
 object MessageType {
   
   @scala.inline

@@ -94,6 +94,7 @@ import typingsSlinky.activexWord.activexWordNumbers.`95`
 import typingsSlinky.activexWord.activexWordNumbers.`96`
 import typingsSlinky.activexWord.activexWordNumbers.`97`
 import typingsSlinky.activexWord.activexWordNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -194,7 +195,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexWord.activexWordNumbers.`61`
   - typingsSlinky.activexWord.activexWordNumbers.`60`
 */
-trait WdFieldType extends js.Object
+trait WdFieldType extends StObject
 object WdFieldType {
   
   @scala.inline

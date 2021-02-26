@@ -3,14 +3,14 @@ package typingsSlinky.typeorm
 import typingsSlinky.typeorm.commonObjectLiteralMod.ObjectLiteral
 import typingsSlinky.typeorm.cordovaCordovaDriverMod.CordovaDriver
 import typingsSlinky.typeorm.sqliteAbstractAbstractSqliteQueryRunnerMod.AbstractSqliteQueryRunner
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/driver/cordova/CordovaQueryRunner", JSImport.Namespace)
-@js.native
-object cordovaCordovaQueryRunnerMod extends js.Object {
+object cordovaCordovaQueryRunnerMod {
   
+  @JSImport("typeorm/driver/cordova/CordovaQueryRunner", "CordovaQueryRunner")
   @js.native
   class CordovaQueryRunner protected () extends AbstractSqliteQueryRunner {
     def this(driver: CordovaDriver) = this()

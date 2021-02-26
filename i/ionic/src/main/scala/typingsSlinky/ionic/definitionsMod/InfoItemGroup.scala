@@ -1,5 +1,6 @@
 package typingsSlinky.ionic.definitionsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ionic.ionicStrings.system
   - typingsSlinky.ionic.ionicStrings.environment
 */
-trait InfoItemGroup extends js.Object
+trait InfoItemGroup extends StObject
 object InfoItemGroup {
   
   @scala.inline

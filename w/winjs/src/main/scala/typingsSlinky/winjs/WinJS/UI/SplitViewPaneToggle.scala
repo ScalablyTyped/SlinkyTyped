@@ -3,6 +3,7 @@ package typingsSlinky.winjs.WinJS.UI
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Displays a button which is used for opening and closing a SplitView's pane.
   **/
 @js.native
-trait SplitViewPaneToggle extends js.Object {
+trait SplitViewPaneToggle extends StObject {
   
   /**
     * Registers an event handler for the specified event.

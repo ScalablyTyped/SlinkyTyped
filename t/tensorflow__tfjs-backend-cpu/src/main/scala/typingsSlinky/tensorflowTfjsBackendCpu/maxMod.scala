@@ -1,13 +1,14 @@
 package typingsSlinky.tensorflowTfjsBackendCpu
 
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/Max", JSImport.Namespace)
-@js.native
-object maxMod extends js.Object {
+object maxMod {
   
+  @JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/Max", "maxConfig")
+  @js.native
   val maxConfig: KernelConfig = js.native
 }

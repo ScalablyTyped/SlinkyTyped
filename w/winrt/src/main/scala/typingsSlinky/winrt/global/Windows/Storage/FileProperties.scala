@@ -1,31 +1,35 @@
 package typingsSlinky.winrt.global.Windows.Storage
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("Windows.Storage.FileProperties")
-@js.native
-object FileProperties extends js.Object {
+object FileProperties {
   
+  @JSGlobal("Windows.Storage.FileProperties.BasicProperties")
   @js.native
   class BasicProperties ()
     extends typingsSlinky.winrt.Windows.Storage.FileProperties.BasicProperties
   
+  @JSGlobal("Windows.Storage.FileProperties.DocumentProperties")
   @js.native
   class DocumentProperties ()
     extends typingsSlinky.winrt.Windows.Storage.FileProperties.DocumentProperties
   
+  @JSGlobal("Windows.Storage.FileProperties.ImageProperties")
   @js.native
   class ImageProperties ()
     extends typingsSlinky.winrt.Windows.Storage.FileProperties.ImageProperties
   
+  @JSGlobal("Windows.Storage.FileProperties.MusicProperties")
   @js.native
   class MusicProperties ()
     extends typingsSlinky.winrt.Windows.Storage.FileProperties.MusicProperties
   
+  @JSGlobal("Windows.Storage.FileProperties.PhotoOrientation")
   @js.native
-  object PhotoOrientation extends js.Object {
+  object PhotoOrientation extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Storage.FileProperties.PhotoOrientation with Double] = js.native
@@ -49,8 +53,9 @@ object FileProperties extends js.Object {
     /* 0 */ val unspecified: typingsSlinky.winrt.Windows.Storage.FileProperties.PhotoOrientation.unspecified with Double = js.native
   }
   
+  @JSGlobal("Windows.Storage.FileProperties.PropertyPrefetchOptions")
   @js.native
-  object PropertyPrefetchOptions extends js.Object {
+  object PropertyPrefetchOptions extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -70,16 +75,19 @@ object FileProperties extends js.Object {
     /* 2 */ val videoProperties: typingsSlinky.winrt.Windows.Storage.FileProperties.PropertyPrefetchOptions.videoProperties with Double = js.native
   }
   
+  @JSGlobal("Windows.Storage.FileProperties.StorageItemContentProperties")
   @js.native
   class StorageItemContentProperties ()
     extends typingsSlinky.winrt.Windows.Storage.FileProperties.StorageItemContentProperties
   
+  @JSGlobal("Windows.Storage.FileProperties.StorageItemThumbnail")
   @js.native
   class StorageItemThumbnail ()
     extends typingsSlinky.winrt.Windows.Storage.FileProperties.StorageItemThumbnail
   
+  @JSGlobal("Windows.Storage.FileProperties.ThumbnailMode")
   @js.native
-  object ThumbnailMode extends js.Object {
+  object ThumbnailMode extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Storage.FileProperties.ThumbnailMode with Double] = js.native
@@ -97,8 +105,9 @@ object FileProperties extends js.Object {
     /* 1 */ val videosView: typingsSlinky.winrt.Windows.Storage.FileProperties.ThumbnailMode.videosView with Double = js.native
   }
   
+  @JSGlobal("Windows.Storage.FileProperties.ThumbnailOptions")
   @js.native
-  object ThumbnailOptions extends js.Object {
+  object ThumbnailOptions extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Storage.FileProperties.ThumbnailOptions with Double] = js.native
@@ -112,8 +121,9 @@ object FileProperties extends js.Object {
     /* 3 */ val useCurrentScale: typingsSlinky.winrt.Windows.Storage.FileProperties.ThumbnailOptions.useCurrentScale with Double = js.native
   }
   
+  @JSGlobal("Windows.Storage.FileProperties.ThumbnailType")
   @js.native
-  object ThumbnailType extends js.Object {
+  object ThumbnailType extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Storage.FileProperties.ThumbnailType with Double] = js.native
@@ -123,8 +133,9 @@ object FileProperties extends js.Object {
     /* 0 */ val image: typingsSlinky.winrt.Windows.Storage.FileProperties.ThumbnailType.image with Double = js.native
   }
   
+  @JSGlobal("Windows.Storage.FileProperties.VideoOrientation")
   @js.native
-  object VideoOrientation extends js.Object {
+  object VideoOrientation extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrt.Windows.Storage.FileProperties.VideoOrientation with Double] = js.native
@@ -138,6 +149,7 @@ object FileProperties extends js.Object {
     /* 1 */ val rotate90: typingsSlinky.winrt.Windows.Storage.FileProperties.VideoOrientation.rotate90 with Double = js.native
   }
   
+  @JSGlobal("Windows.Storage.FileProperties.VideoProperties")
   @js.native
   class VideoProperties ()
     extends typingsSlinky.winrt.Windows.Storage.FileProperties.VideoProperties

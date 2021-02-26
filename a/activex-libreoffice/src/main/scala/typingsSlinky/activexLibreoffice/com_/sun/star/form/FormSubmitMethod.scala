@@ -2,6 +2,7 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.form
 
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
 import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`0`
   - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`1`
 */
-trait FormSubmitMethod extends js.Object
+trait FormSubmitMethod extends StObject
 object FormSubmitMethod {
   
   /** specifies to append the input information of a form to the target URL as parameters. */

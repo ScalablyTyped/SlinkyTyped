@@ -10,9 +10,9 @@ Require module from string
 | ------------------ | :-------------: |
 | Full name          | require-from-string |
 | Keywords           | - |
-| # releases         | 2 |
-| # dependents       | 282 |
-| # downloads        | 197349509 |
+| # releases         | 0 |
+| # dependents       | 376 |
+| # downloads        | 136991162 |
 | # stars            | 3 |
 
 ## Links

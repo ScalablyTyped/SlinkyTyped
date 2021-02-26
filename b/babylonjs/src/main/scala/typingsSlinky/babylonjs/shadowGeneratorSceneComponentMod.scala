@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.sceneComponentMod.ISceneSerializableComponent
 import typingsSlinky.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Lights/Shadows/shadowGeneratorSceneComponent", JSImport.Namespace)
-@js.native
-object shadowGeneratorSceneComponentMod extends js.Object {
+object shadowGeneratorSceneComponentMod {
   
+  @JSImport("babylonjs/Lights/Shadows/shadowGeneratorSceneComponent", "ShadowGeneratorSceneComponent")
   @js.native
   class ShadowGeneratorSceneComponent protected () extends ISceneSerializableComponent {
     /**

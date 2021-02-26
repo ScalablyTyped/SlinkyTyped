@@ -4,16 +4,19 @@ import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocume
 import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.RenameParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.RenameRegistrationOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageclient", "RenameRequest")
-@js.native
-object RenameRequest extends js.Object {
+object RenameRequest {
   
+  @JSImport("vscode-languageclient", "RenameRequest.method")
+  @js.native
   val method: textDocumentSlashrename = js.native
   
+  @JSImport("vscode-languageclient", "RenameRequest.type")
+  @js.native
   val `type`: ProtocolRequestType[
     RenameParams, 
     typingsSlinky.vscodeLanguageserverTypes.mod.WorkspaceEdit | Null, 

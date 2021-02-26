@@ -1,13 +1,14 @@
 package typingsSlinky.evernote.mod.NoteStore
 
 import typingsSlinky.evernote.anon.NoSetModify
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("evernote", "NoteStore.ShareRelationshipRestrictions")
 @js.native
-class ShareRelationshipRestrictions () extends js.Object {
+class ShareRelationshipRestrictions () extends StObject {
   def this(args: NoSetModify) = this()
   
   var noSetFullAccess: js.UndefOr[Boolean] = js.native

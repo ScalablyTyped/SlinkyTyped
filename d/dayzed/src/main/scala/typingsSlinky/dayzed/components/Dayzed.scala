@@ -14,15 +14,22 @@ import typingsSlinky.dayzed.mod.DateObj
 import typingsSlinky.dayzed.mod.Props
 import typingsSlinky.dayzed.mod.RenderProps
 import typingsSlinky.dayzed.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Dayzed {
   
+  @scala.inline
+  def apply(onDateSelected: DateObj => Unit): Builder = {
+    val __props = js.Dynamic.literal(onDateSelected = js.Any.fromFunction1(onDateSelected))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
+  
   @JSImport("dayzed", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -57,23 +64,17 @@ object Dayzed {
     def render(value: /* renderProps */ RenderProps => ReactElement): this.type = set("render", js.Any.fromFunction1(value))
     
     @scala.inline
-    def selectedVarargs(value: js.Date*): this.type = set("selected", js.Array(value :_*))
+    def selected(value: js.Date | js.Array[js.Date]): this.type = set("selected", value.asInstanceOf[js.Any])
     
     @scala.inline
     def selectedDate(value: js.Date): this.type = set("selected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selected(value: js.Date | js.Array[js.Date]): this.type = set("selected", value.asInstanceOf[js.Any])
+    def selectedVarargs(value: js.Date*): this.type = set("selected", js.Array(value :_*))
     
     @scala.inline
     def showOutsideDays(value: Boolean): this.type = set("showOutsideDays", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onDateSelected: DateObj => Unit): Builder = {
-    val __props = js.Dynamic.literal(onDateSelected = js.Any.fromFunction1(onDateSelected))
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
 }

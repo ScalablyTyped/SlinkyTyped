@@ -6,6 +6,7 @@ import typingsSlinky.edtrIoMathquill.mod.Config
 import typingsSlinky.edtrIoMathquill.mod.MQ
 import typingsSlinky.reactMathquill.mod.Props
 import typingsSlinky.reactMathquill.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ReactMathquill {
   
   @JSImport("react-mathquill", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -34,7 +35,7 @@ object ReactMathquill {
     def onChange(value: /* mathField */ MQ => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactMathquill.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

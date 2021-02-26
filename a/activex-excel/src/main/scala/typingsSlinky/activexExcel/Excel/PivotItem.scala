@@ -1,12 +1,13 @@
 package typingsSlinky.activexExcel.Excel
 
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PivotItem extends js.Object {
+trait PivotItem extends StObject {
   
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   

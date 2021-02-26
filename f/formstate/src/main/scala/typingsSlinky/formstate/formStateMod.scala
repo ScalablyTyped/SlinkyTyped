@@ -9,14 +9,14 @@ import typingsSlinky.formstate.formstateStrings.map
 import typingsSlinky.formstate.typesMod.ComposibleValidatable
 import typingsSlinky.formstate.typesMod.Validator
 import typingsSlinky.std.Map
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("formstate/lib/core/formState", JSImport.Namespace)
-@js.native
-object formStateMod extends js.Object {
+object formStateMod {
   
+  @JSImport("formstate/lib/core/formState", "FormState")
   @js.native
   class FormState[TValue /* <: ValidatableMapOrArray */] protected () extends ComposibleValidatable[TValue] {
     def this(/**

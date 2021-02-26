@@ -34,12 +34,13 @@ import typingsSlinky.semanticUiAccordion.semanticUiAccordionStrings.setting
 import typingsSlinky.semanticUiAccordion.semanticUiAccordionStrings.silent
 import typingsSlinky.semanticUiAccordion.semanticUiAccordionStrings.toggle
 import typingsSlinky.semanticUiAccordion.semanticUiAccordionStrings.verbose
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def accordion(): JQuery = js.native
   def accordion(behavior: setting, name: animateChildren, value: js.UndefOr[scala.Nothing]): Boolean = js.native

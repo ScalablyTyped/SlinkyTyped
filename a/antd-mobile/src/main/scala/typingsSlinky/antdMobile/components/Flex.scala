@@ -19,6 +19,7 @@ import typingsSlinky.antdMobile.antdMobileStrings.start
 import typingsSlinky.antdMobile.antdMobileStrings.stretch
 import typingsSlinky.antdMobile.flexFlexMod.FlexProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +28,7 @@ object Flex {
   
   @JSImport("antd-mobile", "Flex")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -68,7 +69,7 @@ object Flex {
     def wrap(value: nowrap | typingsSlinky.antdMobile.antdMobileStrings.wrap | `wrap-reverse`): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FlexProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Flex.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FlexProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

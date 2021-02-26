@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientContent.anon.FieldsKeyOauthtokenPrett
 import typingsSlinky.maximMazurokGapiClientContent.anon.Key
 import typingsSlinky.maximMazurokGapiClientContent.anon.ReturnAddressId
 import typingsSlinky.maximMazurokGapiClientContent.anon.UploadType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReturnaddressResource extends js.Object {
+trait ReturnaddressResource extends StObject {
   
   /** Batches multiple return address related calls in a single request. */
   def custombatch(request: FieldsKeyOauthtokenPrettyPrint): Request[ReturnaddressCustomBatchResponse] = js.native

@@ -3,6 +3,7 @@ package typingsSlinky.tizenCommonWeb.applicationMod
 import org.scalablytyped.runtime.Instantiable6
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.GROUP
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.SINGLE
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

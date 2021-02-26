@@ -1,11 +1,12 @@
 package typingsSlinky.canvaskitWasm.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TonalColorsInput extends js.Object {
+trait TonalColorsInput extends StObject {
   
   var ambient: InputColor = js.native
   
@@ -20,36 +21,24 @@ object TonalColorsInput {
   }
   
   @scala.inline
-  implicit class TonalColorsInputOps[Self <: TonalColorsInput] (val x: Self) extends AnyVal {
+  implicit class TonalColorsInputMutableBuilder[Self <: TonalColorsInput] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAmbient(value: InputColor): Self = StObject.set(x, "ambient", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setAmbientFloat32Array(value: js.typedarray.Float32Array): Self = StObject.set(x, "ambient", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setAmbientVarargs(value: Double*): Self = StObject.set(x, "ambient", js.Array(value :_*))
     
     @scala.inline
-    def setAmbientFloat32Array(value: js.typedarray.Float32Array): Self = this.set("ambient", value.asInstanceOf[js.Any])
+    def setSpot(value: InputColor): Self = StObject.set(x, "spot", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAmbientVarargs(value: Double*): Self = this.set("ambient", js.Array(value :_*))
+    def setSpotFloat32Array(value: js.typedarray.Float32Array): Self = StObject.set(x, "spot", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAmbient(value: InputColor): Self = this.set("ambient", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSpotFloat32Array(value: js.typedarray.Float32Array): Self = this.set("spot", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSpotVarargs(value: Double*): Self = this.set("spot", js.Array(value :_*))
-    
-    @scala.inline
-    def setSpot(value: InputColor): Self = this.set("spot", value.asInstanceOf[js.Any])
+    def setSpotVarargs(value: Double*): Self = StObject.set(x, "spot", js.Array(value :_*))
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.global.spine
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,10 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class DebugUtils ()
   extends typingsSlinky.phaser.spine.DebugUtils
-/* static members */
-@JSGlobal("spine.DebugUtils")
-@js.native
-object DebugUtils extends js.Object {
+object DebugUtils {
   
+  /* static member */
+  @JSGlobal("spine.DebugUtils.logBones")
+  @js.native
   def logBones(skeleton: typingsSlinky.phaser.spine.Skeleton): Unit = js.native
 }

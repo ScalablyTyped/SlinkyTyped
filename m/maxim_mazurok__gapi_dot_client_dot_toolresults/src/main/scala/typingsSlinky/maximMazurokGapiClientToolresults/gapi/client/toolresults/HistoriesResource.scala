@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientToolresults.anon.CallbackFields
 import typingsSlinky.maximMazurokGapiClientToolresults.anon.FieldsHistoryId
 import typingsSlinky.maximMazurokGapiClientToolresults.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientToolresults.anon.FilterByName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HistoriesResource extends js.Object {
+trait HistoriesResource extends StObject {
   
   /**
     * Creates a History. The returned History will have the id set. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to

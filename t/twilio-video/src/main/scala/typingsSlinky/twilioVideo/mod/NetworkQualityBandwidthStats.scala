@@ -1,12 +1,13 @@
 package typingsSlinky.twilioVideo.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("twilio-video", "NetworkQualityBandwidthStats")
 @js.native
-class NetworkQualityBandwidthStats () extends js.Object {
+class NetworkQualityBandwidthStats () extends StObject {
   
   var actual: Double | Null = js.native
   

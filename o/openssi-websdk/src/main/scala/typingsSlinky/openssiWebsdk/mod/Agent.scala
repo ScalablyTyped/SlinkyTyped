@@ -6,13 +6,14 @@ import typingsSlinky.openssiWebsdk.openssiWebsdkStrings.fatal
 import typingsSlinky.openssiWebsdk.openssiWebsdkStrings.info
 import typingsSlinky.openssiWebsdk.openssiWebsdkStrings.trace
 import typingsSlinky.openssiWebsdk.openssiWebsdkStrings.warn
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openssi-websdk", "Agent")
 @js.native
-class Agent protected () extends js.Object {
+class Agent protected () extends StObject {
   def this(account_url: String, agent_name: String, agent_password: String, friendly_name: String) = this()
   def this(
     account_url: String,

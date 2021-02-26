@@ -4,6 +4,7 @@ import typingsSlinky.webcl.webclNumbers.`0x1151`
 import typingsSlinky.webcl.webclNumbers.`0x1152`
 import typingsSlinky.webcl.webclNumbers.`0x1153`
 import typingsSlinky.webcl.webclNumbers.`0x1154`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webcl.webclNumbers.`0x1153`
   - typingsSlinky.webcl.webclNumbers.`0x1154`
 */
-trait SamplerInfo extends js.Object
+trait SamplerInfo extends StObject
 object SamplerInfo {
   
   @scala.inline

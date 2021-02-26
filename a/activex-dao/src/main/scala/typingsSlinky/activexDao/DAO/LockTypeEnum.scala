@@ -4,6 +4,7 @@ import typingsSlinky.activexDao.activexDaoNumbers.`1`
 import typingsSlinky.activexDao.activexDaoNumbers.`2`
 import typingsSlinky.activexDao.activexDaoNumbers.`3`
 import typingsSlinky.activexDao.activexDaoNumbers.`5`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexDao.activexDaoNumbers.`1`
   - typingsSlinky.activexDao.activexDaoNumbers.`2`
 */
-trait LockTypeEnum extends js.Object
+trait LockTypeEnum extends StObject
 object LockTypeEnum {
   
   @scala.inline

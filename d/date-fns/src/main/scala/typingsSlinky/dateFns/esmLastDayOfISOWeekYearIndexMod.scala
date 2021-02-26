@@ -1,17 +1,19 @@
 package typingsSlinky.dateFns
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("date-fns/esm/lastDayOfISOWeekYear/index", JSImport.Namespace)
-@js.native
-object esmLastDayOfISOWeekYearIndexMod extends js.Object {
+object esmLastDayOfISOWeekYearIndexMod {
   
-  @js.native
-  object default extends js.Object {
+  object default {
     
-    def apply(date: Double): js.Date = js.native
+    @JSImport("date-fns/esm/lastDayOfISOWeekYear/index", JSImport.Default)
+    @js.native
     def apply(date: js.Date): js.Date = js.native
+    @JSImport("date-fns/esm/lastDayOfISOWeekYear/index", JSImport.Default)
+    @js.native
+    def apply(date: Double): js.Date = js.native
   }
 }

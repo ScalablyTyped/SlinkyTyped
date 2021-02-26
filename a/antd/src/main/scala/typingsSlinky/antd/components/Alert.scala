@@ -13,15 +13,27 @@ import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.warning
 import typingsSlinky.antd.errorBoundaryMod.ErrorBoundaryProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Alert {
   
+  object ErrorBoundary {
+    
+    @JSImport("antd", "Alert.ErrorBoundary")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: ErrorBoundary.type): SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary] = new SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: ErrorBoundaryProps): SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary] = new SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd", "Alert")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,22 +53,22 @@ object Alert {
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeTextReactElement(value: ReactElement): this.type = set("closeText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def closeText(value: ReactElement): this.type = set("closeText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
+    def closeTextReactElement(value: ReactElement): this.type = set("closeText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def description(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def message(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
@@ -89,18 +101,7 @@ object Alert {
     def `type`(value: success | info | warning | error): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Alert.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object ErrorBoundary {
-    
-    @JSImport("antd", "Alert.ErrorBoundary")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: ErrorBoundaryProps): SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary] = new SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: ErrorBoundary.type): SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary] = new SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary](js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: AlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

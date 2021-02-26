@@ -12,7 +12,7 @@ Framework to make high-performance SPA/WebApp. Render with web canvas.
 | Keywords           | webapp, app, canvas, spa |
 | # releases         | 0 |
 | # dependents       | 0 |
-| # downloads        | 537 |
+| # downloads        | 165 |
 | # stars            | 0 |
 
 ## Links

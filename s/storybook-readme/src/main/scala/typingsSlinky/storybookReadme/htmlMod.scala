@@ -1,13 +1,14 @@
 package typingsSlinky.storybookReadme
 
 import typingsSlinky.storybookReadme.mod.MakeDecoratorResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("storybook-readme/html", JSImport.Namespace)
-@js.native
-object htmlMod extends js.Object {
+object htmlMod {
   
+  @JSImport("storybook-readme/html", "addReadme")
+  @js.native
   val addReadme: MakeDecoratorResult = js.native
 }

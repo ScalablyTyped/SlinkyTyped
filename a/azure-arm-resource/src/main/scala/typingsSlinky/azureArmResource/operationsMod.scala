@@ -5,16 +5,15 @@ import typingsSlinky.azureArmResource.modelsMod.FeatureOperationsListResult
 import typingsSlinky.azureArmResource.modelsMod.FeatureResult
 import typingsSlinky.msRest.mod.HttpOperationResponse
 import typingsSlinky.msRest.mod.ServiceCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("azure-arm-resource/lib/feature/operations", JSImport.Namespace)
-@js.native
-object operationsMod extends js.Object {
+object operationsMod {
   
   @js.native
-  trait Features extends js.Object {
+  trait Features extends StObject {
     
     /**
       * Gets the preview feature with the specified name.

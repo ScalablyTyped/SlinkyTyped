@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesGetAppInputMod.GetAppInput
 import typingsSlinky.awsSdkClientPinpointBrowser.typesGetAppOutputMod.GetAppOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/GetAppCommand", JSImport.Namespace)
-@js.native
-object getAppCommandMod extends js.Object {
+object getAppCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/GetAppCommand", "GetAppCommand")
   @js.native
   class GetAppCommand protected () extends Command[
           InputTypesUnion, 

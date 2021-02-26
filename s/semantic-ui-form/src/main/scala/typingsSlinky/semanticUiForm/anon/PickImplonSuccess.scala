@@ -3,13 +3,14 @@ package typingsSlinky.semanticUiForm.anon
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery.TriggeredEvent
 import typingsSlinky.semanticUiForm.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Pick<semantic-ui-form.SemanticUI.FormSettings._Impl, 'onSuccess'> */
 @js.native
-trait PickImplonSuccess extends js.Object {
+trait PickImplonSuccess extends StObject {
   
   def onSuccess(event: TriggeredEvent[HTMLElement, _, _, _], fields: js.Any): Unit = js.native
   @JSName("onSuccess")

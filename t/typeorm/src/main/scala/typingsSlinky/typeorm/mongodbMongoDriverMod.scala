@@ -7,14 +7,14 @@ import typingsSlinky.typeorm.connectionConnectionOptionsMod.ConnectionOptions
 import typingsSlinky.typeorm.driverDriverMod.Driver
 import typingsSlinky.typeorm.mongodbMongoConnectionOptionsMod.MongoConnectionOptions
 import typingsSlinky.typeorm.mongodbMongoQueryRunnerMod.MongoQueryRunner
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/driver/mongodb/MongoDriver", JSImport.Namespace)
-@js.native
-object mongodbMongoDriverMod extends js.Object {
+object mongodbMongoDriverMod {
   
+  @JSImport("typeorm/driver/mongodb/MongoDriver", "MongoDriver")
   @js.native
   class MongoDriver protected () extends Driver {
     def this(connection: Connection) = this()

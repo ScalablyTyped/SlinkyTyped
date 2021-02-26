@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.vpnConnectionRouteMod.VpnConnectionRouteState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,9 +25,7 @@ class VpnConnectionRoute protected ()
   def this(name: String, args: VpnConnectionRouteArgs, opts: CustomResourceOptions) = this()
 }
 /* static members */
-@JSImport("@pulumi/aws", "ec2.VpnConnectionRoute")
-@js.native
-object VpnConnectionRoute extends js.Object {
+object VpnConnectionRoute {
   
   /**
     * Get an existing VpnConnectionRoute resource's state with the given name, ID, and optional extra
@@ -37,14 +36,24 @@ object VpnConnectionRoute extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
+  @JSImport("@pulumi/aws", "ec2.VpnConnectionRoute.get")
+  @js.native
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.vpnConnectionRouteMod.VpnConnectionRoute = js.native
+  @JSImport("@pulumi/aws", "ec2.VpnConnectionRoute.get")
+  @js.native
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.vpnConnectionRouteMod.VpnConnectionRoute = js.native
+  @JSImport("@pulumi/aws", "ec2.VpnConnectionRoute.get")
+  @js.native
   def get(name: String, id: Input[ID], state: VpnConnectionRouteState): typingsSlinky.pulumiAws.vpnConnectionRouteMod.VpnConnectionRoute = js.native
+  @JSImport("@pulumi/aws", "ec2.VpnConnectionRoute.get")
+  @js.native
   def get(name: String, id: Input[ID], state: VpnConnectionRouteState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.vpnConnectionRouteMod.VpnConnectionRoute = js.native
   
   /**
     * Returns true if the given object is an instance of VpnConnectionRoute.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
+  @JSImport("@pulumi/aws", "ec2.VpnConnectionRoute.isInstance")
+  @js.native
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/ec2/vpnConnectionRoute.VpnConnectionRoute */ Boolean = js.native
 }

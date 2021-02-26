@@ -1,20 +1,32 @@
 package typingsSlinky.electron.mod
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.electron.Electron.FromPartitionOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* was `typeof Session` */
 @JSImport("electron", "session")
 @js.native
-object session
-  extends Instantiable0[typingsSlinky.electron.Electron.Session_] {
+class session ()
+  extends typingsSlinky.electron.Electron.Session_
+/* was `typeof Session` */
+object session {
+  
+  @JSImport("electron", "session")
+  @js.native
+  val ^ : js.Any = js.native
   
   /**
     * A `Session` object, the default session object of the app.
     */
-  var defaultSession: typingsSlinky.electron.Electron.Session_ = js.native
+  /* static member */
+  @JSImport("electron", "session.defaultSession")
+  @js.native
+  def defaultSession: typingsSlinky.electron.Electron.Session_ = js.native
+  @scala.inline
+  def defaultSession_=(x: typingsSlinky.electron.Electron.Session_): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultSession")(x.asInstanceOf[js.Any])
   
   // Docs: https://electronjs.org/docs/api/session
   /**
@@ -31,6 +43,11 @@ object session
     * `partition` has never been used before. There is no way to change the `options`
     * of an existing `Session` object.
     */
+  /* static member */
+  @JSImport("electron", "session.fromPartition")
+  @js.native
   def fromPartition(partition: String): typingsSlinky.electron.Electron.Session_ = js.native
+  @JSImport("electron", "session.fromPartition")
+  @js.native
   def fromPartition(partition: String, options: FromPartitionOptions): typingsSlinky.electron.Electron.Session_ = js.native
 }

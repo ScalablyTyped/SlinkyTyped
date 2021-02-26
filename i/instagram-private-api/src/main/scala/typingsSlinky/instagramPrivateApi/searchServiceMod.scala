@@ -1,5 +1,6 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.fbsearchRepositoryPlacesResponseMod.FbsearchRepositoryPlacesResponseItemsItem
 import typingsSlinky.instagramPrivateApi.fbsearchRepositoryTopsearchFlatResponseMod.FbsearchRepositoryTopsearchFlatResponseHashtag
 import typingsSlinky.instagramPrivateApi.fbsearchRepositoryTopsearchFlatResponseMod.FbsearchRepositoryTopsearchFlatResponseListItem
@@ -9,16 +10,17 @@ import typingsSlinky.instagramPrivateApi.locationRepositorySearchResponseMod.Loc
 import typingsSlinky.instagramPrivateApi.repositoryMod.Repository
 import typingsSlinky.instagramPrivateApi.tagRepositorySearchResponseMod.TagRepositorySearchResponseResultsItem
 import typingsSlinky.instagramPrivateApi.userRepositorySearchResponseMod.UserRepositorySearchResponseUsersItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/services/search.service", JSImport.Namespace)
-@js.native
-object searchServiceMod extends js.Object {
+object searchServiceMod {
   
+  @JSImport("instagram-private-api/dist/services/search.service", "SearchService")
   @js.native
-  class SearchService () extends Repository {
+  class SearchService protected () extends Repository {
+    def this(client: IgApiClient) = this()
     
     def blended(query: String): js.Promise[js.Array[FbsearchRepositoryTopsearchFlatResponseListItem]] = js.native
     

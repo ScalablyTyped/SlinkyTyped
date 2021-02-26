@@ -15,15 +15,22 @@ import typingsSlinky.reactNativeSvgCharts.mod.GridProps
 import typingsSlinky.reactNativeSvgCharts.mod.PieChartData
 import typingsSlinky.reactNativeSvgCharts.mod.PieChartProps
 import typingsSlinky.reactNativeSvgCharts.mod.ScaleType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PieChart {
   
+  @scala.inline
+  def apply[T /* <: PieChartData */](data: js.Array[T]): Builder[T] = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[PieChartProps[T]]))
+  }
+  
   @JSImport("react-native-svg-charts", "PieChart")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T /* <: PieChartData */] (val args: js.Array[js.Any])
@@ -119,10 +126,4 @@ object PieChart {
   }
   
   def withProps[T /* <: PieChartData */](p: PieChartProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T /* <: PieChartData */](data: js.Array[T]): Builder[T] = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[PieChartProps[T]]))
-  }
 }

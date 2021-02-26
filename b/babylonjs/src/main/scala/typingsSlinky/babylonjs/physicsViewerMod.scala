@@ -6,16 +6,16 @@ import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.physicsImpostorMod.PhysicsImpostor
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Debug/physicsViewer", JSImport.Namespace)
-@js.native
-object physicsViewerMod extends js.Object {
+object physicsViewerMod {
   
+  @JSImport("babylonjs/Debug/physicsViewer", "PhysicsViewer")
   @js.native
-  class PhysicsViewer protected () extends js.Object {
+  class PhysicsViewer protected () extends StObject {
     /**
       * Creates a new PhysicsViewer
       * @param scene defines the hosting scene

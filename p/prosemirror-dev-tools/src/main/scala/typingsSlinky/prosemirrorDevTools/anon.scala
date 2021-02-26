@@ -6,13 +6,12 @@ import typingsSlinky.prosemirrorModel.mod.Schema
 import typingsSlinky.prosemirrorState.anon.Doc
 import typingsSlinky.prosemirrorState.mod.EditorState
 import typingsSlinky.prosemirrorState.mod.Plugin
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
   trait TypeofEditorState

@@ -10,6 +10,7 @@ import typingsSlinky.activexMshtml.activexMshtmlNumbers.`5`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`6`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`7`
 import typingsSlinky.activexMshtml.activexMshtmlNumbers.`8`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`6`
   - typingsSlinky.activexMshtml.activexMshtmlNumbers.`0`
 */
-trait styleFontSize extends js.Object
+trait styleFontSize extends StObject
 object styleFontSize {
   
   @scala.inline

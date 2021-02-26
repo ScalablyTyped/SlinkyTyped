@@ -5,6 +5,7 @@ import typingsSlinky.reactBigCalendar.reactBigCalendarStrings.day_
 import typingsSlinky.reactBigCalendar.reactBigCalendarStrings.month_
 import typingsSlinky.reactBigCalendar.reactBigCalendarStrings.week_
 import typingsSlinky.reactBigCalendar.reactBigCalendarStrings.work_week_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBigCalendar.reactBigCalendarStrings.day_
   - typingsSlinky.reactBigCalendar.reactBigCalendarStrings.agenda_
 */
-trait View extends js.Object
+trait View extends StObject
 object View {
   
   @scala.inline

@@ -5,6 +5,7 @@ import typingsSlinky.siesta.Siesta.ITest
 import typingsSlinky.siesta.Siesta.Test.Simulate.IEvent
 import typingsSlinky.siesta.Siesta.Test.Simulate.IKeyboard
 import typingsSlinky.siesta.Siesta.Test.Simulate.IMouse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

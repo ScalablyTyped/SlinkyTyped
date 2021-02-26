@@ -5,31 +5,16 @@ import typingsSlinky.vueI18n.anon.Fn0
 import typingsSlinky.vueI18n.anon.FnCall
 import typingsSlinky.vueI18n.anon.FnCallKeyChoiceLocaleValues
 import typingsSlinky.vueI18n.anon.FnCallValueKeyLocale
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vue/types/vue", JSImport.Namespace)
-@js.native
-object vueTypesVueAugmentingMod extends js.Object {
+object vueTypesVueAugmentingMod {
   
   @js.native
-  trait Vue extends js.Object {
+  trait Vue extends StObject {
     
-    @JSName("$d")
-    def $d(value: Double): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-    @JSName("$d")
-    def $d(value: Double, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-    @JSName("$d")
-    def $d(value: Double, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-    @JSName("$d")
-    def $d(value: Double, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-    @JSName("$d")
-    def $d(
-      value: Double,
-      key: typingsSlinky.vueI18n.mod.VueI18n.Path,
-      locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
-    ): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
     @JSName("$d")
     def $d(value: js.Date): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
     @JSName("$d")
@@ -41,6 +26,20 @@ object vueTypesVueAugmentingMod extends js.Object {
     @JSName("$d")
     def $d(
       value: js.Date,
+      key: typingsSlinky.vueI18n.mod.VueI18n.Path,
+      locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
+    ): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+    @JSName("$d")
+    def $d(value: Double): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+    @JSName("$d")
+    def $d(value: Double, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+    @JSName("$d")
+    def $d(value: Double, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+    @JSName("$d")
+    def $d(value: Double, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+    @JSName("$d")
+    def $d(
+      value: Double,
       key: typingsSlinky.vueI18n.mod.VueI18n.Path,
       locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
     ): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native

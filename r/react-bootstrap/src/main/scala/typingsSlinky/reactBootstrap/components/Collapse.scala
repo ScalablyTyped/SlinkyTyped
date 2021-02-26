@@ -7,6 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrap.collapseMod.CollapseProps
 import typingsSlinky.reactBootstrap.reactBootstrapStrings.height
 import typingsSlinky.reactBootstrap.reactBootstrapStrings.width
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object Collapse {
   
   @JSImport("react-bootstrap", "Collapse")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -23,10 +24,10 @@ object Collapse {
        with StBuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Collapse] {
     
     @scala.inline
-    def dimensionFunction0(value: () => String): this.type = set("dimension", js.Any.fromFunction0(value))
+    def dimension(value: height | width | js.Function0[String]): this.type = set("dimension", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dimension(value: height | width | js.Function0[String]): this.type = set("dimension", value.asInstanceOf[js.Any])
+    def dimensionFunction0(value: () => String): this.type = set("dimension", js.Any.fromFunction0(value))
     
     @scala.inline
     def getDimensionValue(value: (/* dimension */ Double, /* element */ ReactElement) => Double): this.type = set("getDimensionValue", js.Any.fromFunction2(value))
@@ -65,7 +66,7 @@ object Collapse {
     def unmountOnExit(value: Boolean): this.type = set("unmountOnExit", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Collapse.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

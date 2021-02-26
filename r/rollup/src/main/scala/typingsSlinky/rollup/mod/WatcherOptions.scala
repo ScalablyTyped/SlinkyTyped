@@ -1,11 +1,12 @@
 package typingsSlinky.rollup.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WatcherOptions extends js.Object {
+trait WatcherOptions extends StObject {
   
   var buildDelay: js.UndefOr[Double] = js.native
   
@@ -28,66 +29,54 @@ object WatcherOptions {
   }
   
   @scala.inline
-  implicit class WatcherOptionsOps[Self <: WatcherOptions] (val x: Self) extends AnyVal {
+  implicit class WatcherOptionsMutableBuilder[Self <: WatcherOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBuildDelay(value: Double): Self = StObject.set(x, "buildDelay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setBuildDelayUndefined: Self = StObject.set(x, "buildDelay", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setChokidar(value: ChokidarOptions): Self = StObject.set(x, "chokidar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBuildDelay(value: Double): Self = this.set("buildDelay", value.asInstanceOf[js.Any])
+    def setChokidarUndefined: Self = StObject.set(x, "chokidar", js.undefined)
     
     @scala.inline
-    def deleteBuildDelay: Self = this.set("buildDelay", js.undefined)
+    def setClearScreen(value: Boolean): Self = StObject.set(x, "clearScreen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChokidar(value: ChokidarOptions): Self = this.set("chokidar", value.asInstanceOf[js.Any])
+    def setClearScreenUndefined: Self = StObject.set(x, "clearScreen", js.undefined)
     
     @scala.inline
-    def deleteChokidar: Self = this.set("chokidar", js.undefined)
+    def setExclude(value: String | js.RegExp | (js.Array[String | js.RegExp])): Self = StObject.set(x, "exclude", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClearScreen(value: Boolean): Self = this.set("clearScreen", value.asInstanceOf[js.Any])
+    def setExcludeRegExp(value: js.RegExp): Self = StObject.set(x, "exclude", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteClearScreen: Self = this.set("clearScreen", js.undefined)
+    def setExcludeUndefined: Self = StObject.set(x, "exclude", js.undefined)
     
     @scala.inline
-    def setExcludeVarargs(value: (String | js.RegExp)*): Self = this.set("exclude", js.Array(value :_*))
+    def setExcludeVarargs(value: (String | js.RegExp)*): Self = StObject.set(x, "exclude", js.Array(value :_*))
     
     @scala.inline
-    def setExcludeRegExp(value: js.RegExp): Self = this.set("exclude", value.asInstanceOf[js.Any])
+    def setInclude(value: String | js.RegExp | (js.Array[String | js.RegExp])): Self = StObject.set(x, "include", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExclude(value: String | js.RegExp | (js.Array[String | js.RegExp])): Self = this.set("exclude", value.asInstanceOf[js.Any])
+    def setIncludeRegExp(value: js.RegExp): Self = StObject.set(x, "include", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteExclude: Self = this.set("exclude", js.undefined)
+    def setIncludeUndefined: Self = StObject.set(x, "include", js.undefined)
     
     @scala.inline
-    def setIncludeVarargs(value: (String | js.RegExp)*): Self = this.set("include", js.Array(value :_*))
+    def setIncludeVarargs(value: (String | js.RegExp)*): Self = StObject.set(x, "include", js.Array(value :_*))
     
     @scala.inline
-    def setIncludeRegExp(value: js.RegExp): Self = this.set("include", value.asInstanceOf[js.Any])
+    def setSkipWrite(value: Boolean): Self = StObject.set(x, "skipWrite", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInclude(value: String | js.RegExp | (js.Array[String | js.RegExp])): Self = this.set("include", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteInclude: Self = this.set("include", js.undefined)
-    
-    @scala.inline
-    def setSkipWrite(value: Boolean): Self = this.set("skipWrite", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSkipWrite: Self = this.set("skipWrite", js.undefined)
+    def setSkipWriteUndefined: Self = StObject.set(x, "skipWrite", js.undefined)
   }
 }

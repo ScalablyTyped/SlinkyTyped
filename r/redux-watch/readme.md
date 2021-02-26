@@ -10,12 +10,15 @@ Watch Redux state for changes.
 | ------------------ | :-------------: |
 | Full name          | redux-watch |
 | Keywords           | redux, watch, observe, monitor, notify, state, observer, watcher, react |
-| # releases         | 0 |
-| # dependents       | 6 |
-| # downloads        | 348395 |
+| # releases         | 2 |
+| # dependents       | 12 |
+| # downloads        | 589921 |
 | # stars            | 2 |
 
 ## Links
+- [Homepage](https://github.com/jprichardson/redux-watch#readme)
+- [Bugs](https://github.com/jprichardson/redux-watch/issues)
+- [Repository](https://github.com/jprichardson/redux-watch)
 - [Npm](https://www.npmjs.com/package/redux-watch)
     
 

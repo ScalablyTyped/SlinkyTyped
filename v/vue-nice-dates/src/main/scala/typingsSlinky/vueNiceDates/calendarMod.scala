@@ -1,20 +1,18 @@
 package typingsSlinky.vueNiceDates
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.vue.vueMod.Vue
 import typingsSlinky.vue.vueMod.VueConstructor
 import typingsSlinky.vueNiceDates.anon.Date
 import typingsSlinky.vueNiceDates.anon.GetGridType
 import typingsSlinky.vueNiceDates.anon.GridType
 import typingsSlinky.vueNiceDates.anon.MergedModifiers
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vue-nice-dates/Calendar", JSImport.Namespace)
-@js.native
-object calendarMod extends js.Object {
+object calendarMod {
   
   @js.native
   trait Calendar extends VueConstructor[Vue] {
@@ -31,6 +29,7 @@ object calendarMod extends js.Object {
         js.Function2[/* newValue */ js.Date | String, /* oldValue */ js.Date | String, Unit]
       ] = js.native
   }
+  @JSImport("vue-nice-dates/Calendar", "Calendar")
   @js.native
-  object Calendar extends TopLevel[Calendar]
+  val Calendar: typingsSlinky.vueNiceDates.calendarMod.Calendar = js.native
 }

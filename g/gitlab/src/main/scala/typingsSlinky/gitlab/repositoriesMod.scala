@@ -1,20 +1,22 @@
 package typingsSlinky.gitlab
 
 import typingsSlinky.gitlab.anon.shastringSudo
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.Sudo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gitlab/dist/types/core/services/Repositories", JSImport.Namespace)
-@js.native
-object repositoriesMod extends js.Object {
+object repositoriesMod {
   
+  @JSImport("gitlab/dist/types/core/services/Repositories", "Repositories")
   @js.native
   class Repositories () extends BaseService {
+    def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
     
     def compare(projectId: String, from: String, to: String): js.Promise[GetResponse] = js.native
     def compare(projectId: String, from: String, to: String, options: Sudo): js.Promise[GetResponse] = js.native

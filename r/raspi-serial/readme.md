@@ -11,8 +11,8 @@ Provides access to the serial port on the Raspberry Pi as part of the Raspi.js l
 | Full name          | raspi-serial |
 | Keywords           | nodebots, robotics, raspberry pi |
 | # releases         | 4 |
-| # dependents       | 1 |
-| # downloads        | 8945 |
+| # dependents       | 3 |
+| # downloads        | 7053 |
 | # stars            | 0 |
 
 ## Links

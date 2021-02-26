@@ -6,16 +6,29 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.semanticUiReact.portalInnerMod.PortalInnerProps
 import typingsSlinky.semanticUiReact.portalPortalMod.PortalProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Portal {
   
+  object Inner {
+    
+    @JSImport("semantic-ui-react", "Portal.Inner")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Inner.type): SharedBuilder_PortalInnerProps_752634075[typingsSlinky.semanticUiReact.mod.Portal.Inner] = new SharedBuilder_PortalInnerProps_752634075[typingsSlinky.semanticUiReact.mod.Portal.Inner](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PortalInnerProps): SharedBuilder_PortalInnerProps_752634075[typingsSlinky.semanticUiReact.mod.Portal.Inner] = new SharedBuilder_PortalInnerProps_752634075[typingsSlinky.semanticUiReact.mod.Portal.Inner](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Portal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -80,25 +93,25 @@ object Portal {
     def openOnTriggerMouseEnter(value: Boolean): this.type = set("openOnTriggerMouseEnter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def trigger(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def triggerRefRefObject(value: ReactRef[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def triggerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("triggerRef", js.Any.fromFunction1(value))
+    def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     
     @scala.inline
     def triggerRef(value: typingsSlinky.react.mod.Ref[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def triggerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("triggerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def triggerRefNull: this.type = set("triggerRef", null)
+    
+    @scala.inline
+    def triggerRefRefObject(value: ReactRef[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PortalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Portal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PortalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

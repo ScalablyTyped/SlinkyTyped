@@ -1,13 +1,14 @@
 package typingsSlinky.atom.mod
 
 import typingsSlinky.node.childProcessMod.ChildProcess
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("atom", "BufferedProcess")
 @js.native
-class BufferedProcess protected () extends js.Object {
+class BufferedProcess protected () extends StObject {
   def this(options: ProcessOptions) = this()
   
   // Helper Methods

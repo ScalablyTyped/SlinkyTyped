@@ -10,9 +10,9 @@ Extendable client for GitHub's REST & GraphQL APIs
 | ------------------ | :-------------: |
 | Full name          | @octokit/core |
 | Keywords           | octokit, github, api, sdk, toolkit |
-| # releases         | 27 |
-| # dependents       | 20 |
-| # downloads        | 8019057 |
+| # releases         | 35 |
+| # dependents       | 58 |
+| # downloads        | 30339397 |
 | # stars            | 0 |
 
 ## Links

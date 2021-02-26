@@ -4,15 +4,15 @@
 Typings are for version 2.22
 
 ## Library description:
-A library for integrating with Braintree.
+A library for server-side integrating with Braintree.
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | braintree |
 | Keywords           | braintree, payments |
-| # releases         | 19 |
-| # dependents       | 29 |
-| # downloads        | 1375694 |
+| # releases         | 12 |
+| # dependents       | 33 |
+| # downloads        | 1962914 |
 | # stars            | 20 |
 
 ## Links

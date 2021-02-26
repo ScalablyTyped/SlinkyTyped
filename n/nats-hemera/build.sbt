@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "nats-hemera"
-version := "7.0.2-0f492c"
+version := "7.0.2-a72773"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "nats" % "1.4.12-25e2db",
-  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
-  "org.scalablytyped.slinky" %%% "pino" % "6.3-dt-20201119Z-db80e0",
-  "org.scalablytyped.slinky" %%% "pino-std-serializers" % "2.4-dt-20200515Z-3112cc",
-  "org.scalablytyped.slinky" %%% "sonic-boom" % "0.7-dt-20190819Z-7413b3",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "nats" % "1.4.12-ec1f17",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-f152d9",
+  "org.scalablytyped.slinky" %%% "pino" % "6.3-dt-20201119Z-2dc530",
+  "org.scalablytyped.slinky" %%% "pino-std-serializers" % "2.4-dt-20200515Z-6d97ed",
+  "org.scalablytyped.slinky" %%% "sonic-boom" % "0.7-dt-20190819Z-da5dc0",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

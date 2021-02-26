@@ -3,6 +3,7 @@ package typingsSlinky.devextreme.mod.DevExpress.data
 import typingsSlinky.devextreme.anon.Expand
 import typingsSlinky.devextreme.mod.global.JQueryPromise
 import typingsSlinky.devextreme.mod.global.Promise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

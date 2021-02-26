@@ -10,15 +10,22 @@ import typingsSlinky.rmcCalendar.rmcCalendarStrings.normal
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.xl
 import typingsSlinky.rmcCalendar.singleMonthMod.PropsType
 import typingsSlinky.rmcCalendar.singleMonthMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SingleMonth {
   
+  @scala.inline
+  def apply(locale: Locale, monthData: MonthData): Builder = {
+    val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], monthData = monthData.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
+  }
+  
   @JSImport("rmc-calendar/lib/date/SingleMonth", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -36,10 +43,4 @@ object SingleMonth {
   }
   
   def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(locale: Locale, monthData: MonthData): Builder = {
-    val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], monthData = monthData.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
-  }
 }

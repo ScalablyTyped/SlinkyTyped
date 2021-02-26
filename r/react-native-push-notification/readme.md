@@ -9,10 +9,10 @@ React Native Local and Remote Notifications
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | react-native-push-notification |
-| Keywords           | react-component, react-native, ios, android, notifications, push, apns, gcm |
-| # releases         | 6 |
-| # dependents       | 9 |
-| # downloads        | 1220620 |
+| Keywords           | react-component, react-native, ios, android, notifications, push, apns, firebase |
+| # releases         | 25 |
+| # dependents       | 12 |
+| # downloads        | 2394929 |
 | # stars            | 15 |
 
 ## Links

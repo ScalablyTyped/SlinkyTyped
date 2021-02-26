@@ -1,6 +1,8 @@
 package typingsSlinky.stripe.mod.resources
 
+import typingsSlinky.stripe.mod.Stripe
 import typingsSlinky.stripe.mod.StripeResource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("stripe", "resources.Recipients")
 @js.native
-class Recipients () extends StripeResource {
+class Recipients protected () extends StripeResource {
+  def this(stripe: Stripe, urlData: js.Any) = this()
   
   /**
     * @deprecated

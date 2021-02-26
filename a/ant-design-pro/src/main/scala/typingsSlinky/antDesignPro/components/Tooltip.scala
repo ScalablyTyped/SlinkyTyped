@@ -7,6 +7,7 @@ import typingsSlinky.bizcharts.mod.PositionType
 import typingsSlinky.bizcharts.mod.TooltipProps
 import typingsSlinky.bizcharts.mod.triggerOnType
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object Tooltip {
   
   @JSImport("ant-design-pro/lib/Charts/bizcharts", "Tooltip")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -86,7 +87,7 @@ object Tooltip {
     def useHtml(value: Boolean): this.type = set("useHtml", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Tooltip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

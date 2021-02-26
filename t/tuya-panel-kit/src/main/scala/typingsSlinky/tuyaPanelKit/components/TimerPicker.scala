@@ -40,6 +40,7 @@ import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.radiobutton_unchecked
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.right
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.stretch
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.yes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -48,7 +49,7 @@ object TimerPicker {
   
   @JSImport("tuya-panel-kit", "TimerPicker")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -56,10 +57,10 @@ object TimerPicker {
        with StBuildingComponent[tag.type, typingsSlinky.tuyaPanelKit.mod.TimerPicker] {
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none_ | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -86,10 +87,10 @@ object TimerPicker {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -236,10 +237,10 @@ object TimerPicker {
     def pointerEvents(value: `box-none` | none_ | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prefixPositionVarargs(value: String*): this.type = set("prefixPosition", js.Array(value :_*))
+    def prefixPosition(value: js.Array[String] | left | right): this.type = set("prefixPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prefixPosition(value: js.Array[String] | left | right): this.type = set("prefixPosition", value.asInstanceOf[js.Any])
+    def prefixPositionVarargs(value: String*): this.type = set("prefixPosition", js.Array(value :_*))
     
     @scala.inline
     def prompt(value: String): this.type = set("prompt", value.asInstanceOf[js.Any])
@@ -302,7 +303,7 @@ object TimerPicker {
     def visibleItemCount(value: Double): this.type = set("visibleItemCount", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TimerPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TimerPicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TimerPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -3,13 +3,12 @@ package typingsSlinky.agGrid
 import typingsSlinky.agGrid.colDefMod.AbstractColDef
 import typingsSlinky.agGrid.columnGroupMod.ColumnGroup
 import typingsSlinky.agGrid.iEventEmitterMod.IEventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/entities/columnGroupChild", JSImport.Namespace)
-@js.native
-object columnGroupChildMod extends js.Object {
+object columnGroupChildMod {
   
   @js.native
   trait ColumnGroupChild extends IEventEmitter {

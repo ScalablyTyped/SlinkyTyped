@@ -1,8 +1,8 @@
 package typingsSlinky.restify.mod
 
-import typingsSlinky.bunyan.mod.^
 import typingsSlinky.node.Buffer
 import typingsSlinky.spdy.mod.Server_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,8 +28,8 @@ trait Server
     * @returns                the newly created route.
     */
   def del(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def del(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   def del(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def del(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   
   /** enable DTrace support */
   var dtrace: Boolean = js.native
@@ -45,8 +45,8 @@ trait Server
     * @returns                the newly created route.
     */
   def get(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def get(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   def get(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def get(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   
   /**
     * Return debug information about the server.
@@ -64,8 +64,8 @@ trait Server
     * @returns                the newly created route.
     */
   def head(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def head(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   def head(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def head(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   
   var http2: js.UndefOr[Boolean] = js.native
   
@@ -90,7 +90,7 @@ trait Server
   def listen(args: js.Any*): js.Any = js.native
   
   /** bunyan instance. */
-  var log: ^ = js.native
+  var log: typingsSlinky.bunyan.mod.^ = js.native
   
   /** Name of the server. */
   var name: String = js.native
@@ -106,8 +106,8 @@ trait Server
     * @returns                the newly created route.
     */
   def opts(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def opts(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   def opts(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def opts(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   
   /**
     * Minimal port of the functionality offered by Express.js Route Param
@@ -139,8 +139,8 @@ trait Server
     * @returns                the newly created route.
     */
   def patch(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def patch(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   def patch(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def patch(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   
   /**
     * Mounts a chain on the given path against this HTTP verb
@@ -150,8 +150,8 @@ trait Server
     * @returns                the newly created route.
     */
   def post(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def post(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   def post(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def post(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   
   /**
     * Gives you hooks to run _before_ any routes are located.  This gives you
@@ -172,8 +172,8 @@ trait Server
     * @returns                the newly created route.
     */
   def put(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def put(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   def put(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def put(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
   
   /**
     * Removes a route from the server.

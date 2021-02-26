@@ -19,12 +19,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.ResourceUserIpZone
 import typingsSlinky.maximMazurokGapiClientCompute.anon.ReturnPartialSuccess
 import typingsSlinky.maximMazurokGapiClientCompute.anon.Size
 import typingsSlinky.maximMazurokGapiClientCompute.anon.UserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InstanceGroupManagersResource extends js.Object {
+trait InstanceGroupManagersResource extends StObject {
   
   def abandonInstances(request: FieldsInstanceGroupManager, body: InstanceGroupManagersAbandonInstancesRequest): Request[Operation] = js.native
   /**

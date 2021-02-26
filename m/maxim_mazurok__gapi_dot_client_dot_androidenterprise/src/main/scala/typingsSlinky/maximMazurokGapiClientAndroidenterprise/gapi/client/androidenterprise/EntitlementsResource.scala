@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.Alt
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.EntitlementId
 import typingsSlinky.maximMazurokGapiClientAndroidenterprise.anon.Uploadprotocol
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EntitlementsResource extends js.Object {
+trait EntitlementsResource extends StObject {
   
   /** Removes an entitlement to an app for a user. */
   def delete(): Request[Unit] = js.native

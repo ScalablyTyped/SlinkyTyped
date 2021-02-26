@@ -10,9 +10,9 @@ Default Jimp plugin.
 | ------------------ | :-------------: |
 | Full name          | @jimp/plugins |
 | Keywords           | - |
-| # releases         | 72 |
-| # dependents       | 1 |
-| # downloads        | 14490405 |
+| # releases         | 103 |
+| # dependents       | 2 |
+| # downloads        | 42452025 |
 | # stars            | 0 |
 
 ## Links

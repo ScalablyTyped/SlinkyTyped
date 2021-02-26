@@ -1,5 +1,6 @@
 package typingsSlinky.c3.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.c3.c3Strings.timeseries
   - typingsSlinky.c3.c3Strings.log
 */
-trait YAxisType extends js.Object
+trait YAxisType extends StObject
 object YAxisType {
   
   @scala.inline

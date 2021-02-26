@@ -4,14 +4,14 @@ import typingsSlinky.babylonjs.BABYLON.IBoneWeightShaderOptions
 import typingsSlinky.babylonjs.BABYLON.ISkeletonMapShaderOptions
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.PartialISkeletonViewerOptComputeBonesUsingShaders
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("BABYLON.Debug")
-@js.native
-object Debug extends js.Object {
+object Debug {
   
+  @JSGlobal("BABYLON.Debug.AxesViewer")
   @js.native
   class AxesViewer protected ()
     extends typingsSlinky.babylonjs.BABYLON.Debug.AxesViewer {
@@ -142,12 +142,20 @@ object Debug extends js.Object {
     ) = this()
   }
   /* static members */
-  @js.native
-  object AxesViewer extends js.Object {
+  object AxesViewer {
     
-    var _SetRenderingGroupId: js.Any = js.native
+    @JSGlobal("BABYLON.Debug.AxesViewer")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSGlobal("BABYLON.Debug.AxesViewer._SetRenderingGroupId")
+    @js.native
+    def _SetRenderingGroupId: js.Any = js.native
+    @scala.inline
+    def _SetRenderingGroupId_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_SetRenderingGroupId")(x.asInstanceOf[js.Any])
   }
   
+  @JSGlobal("BABYLON.Debug.BoneAxesViewer")
   @js.native
   class BoneAxesViewer protected ()
     extends typingsSlinky.babylonjs.BABYLON.Debug.BoneAxesViewer {
@@ -171,6 +179,7 @@ object Debug extends js.Object {
     ) = this()
   }
   
+  @JSGlobal("BABYLON.Debug.PhysicsViewer")
   @js.native
   class PhysicsViewer protected ()
     extends typingsSlinky.babylonjs.BABYLON.Debug.PhysicsViewer {
@@ -181,6 +190,7 @@ object Debug extends js.Object {
     def this(scene: typingsSlinky.babylonjs.BABYLON.Scene) = this()
   }
   
+  @JSGlobal("BABYLON.Debug.SkeletonViewer")
   @js.native
   class SkeletonViewer protected ()
     extends typingsSlinky.babylonjs.BABYLON.Debug.SkeletonViewer {
@@ -293,8 +303,11 @@ object Debug extends js.Object {
     ) = this()
   }
   /* static members */
-  @js.native
-  object SkeletonViewer extends js.Object {
+  object SkeletonViewer {
+    
+    @JSGlobal("BABYLON.Debug.SkeletonViewer")
+    @js.native
+    val ^ : js.Any = js.native
     
     /** public static method to create a BoneWeight Shader
       * @param options The constructor options
@@ -302,6 +315,8 @@ object Debug extends js.Object {
       * @returns The created ShaderMaterial
       * @see http://www.babylonjs-playground.com/#1BZJVJ#395
       */
+    @JSGlobal("BABYLON.Debug.SkeletonViewer.CreateBoneWeightShader")
+    @js.native
     def CreateBoneWeightShader(options: IBoneWeightShaderOptions, scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.ShaderMaterial = js.native
     
     /** public static method to create a BoneWeight Shader
@@ -309,15 +324,23 @@ object Debug extends js.Object {
       * @param scene The scene that the shader is scoped to
       * @returns The created ShaderMaterial
       */
+    @JSGlobal("BABYLON.Debug.SkeletonViewer.CreateSkeletonMapShader")
+    @js.native
     def CreateSkeletonMapShader(options: ISkeletonMapShaderOptions, scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.ShaderMaterial = js.native
     
     /** public Display constants BABYLON.SkeletonViewer.DISPLAY_LINES */
+    @JSGlobal("BABYLON.Debug.SkeletonViewer.DISPLAY_LINES")
+    @js.native
     val DISPLAY_LINES: Double = js.native
     
     /** public Display constants BABYLON.SkeletonViewer.DISPLAY_SPHERES */
+    @JSGlobal("BABYLON.Debug.SkeletonViewer.DISPLAY_SPHERES")
+    @js.native
     val DISPLAY_SPHERES: Double = js.native
     
     /** public Display constants BABYLON.SkeletonViewer.DISPLAY_SPHERE_AND_SPURS */
+    @JSGlobal("BABYLON.Debug.SkeletonViewer.DISPLAY_SPHERE_AND_SPURS")
+    @js.native
     val DISPLAY_SPHERE_AND_SPURS: Double = js.native
     
     /** private static method to create a BoneWeight Shader
@@ -326,6 +349,10 @@ object Debug extends js.Object {
       * @param scene The scene that the shader is scoped to
       * @returns an Array of floats from the color gradient values
       */
-    var _CreateBoneMapColorBuffer: js.Any = js.native
+    @JSGlobal("BABYLON.Debug.SkeletonViewer._CreateBoneMapColorBuffer")
+    @js.native
+    def _CreateBoneMapColorBuffer: js.Any = js.native
+    @scala.inline
+    def _CreateBoneMapColorBuffer_=(x: js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("_CreateBoneMapColorBuffer")(x.asInstanceOf[js.Any])
   }
 }

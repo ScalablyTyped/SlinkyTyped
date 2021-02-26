@@ -6,6 +6,7 @@ import typingsSlinky.babylonjs.HTMLVideoElement
 import typingsSlinky.babylonjs.anon.minWidthnumbermaxWidthnum
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.videoTextureMod.VideoTextureSettings
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -412,9 +413,7 @@ class VideoTexture protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs", "VideoTexture")
-@js.native
-object VideoTexture extends js.Object {
+object VideoTexture {
   
   /**
     * Creates a video texture straight from a stream.
@@ -422,6 +421,8 @@ object VideoTexture extends js.Object {
     * @param stream Define the stream the texture should be created from
     * @returns The created video texture as a promise
     */
+  @JSImport("babylonjs", "VideoTexture.CreateFromStreamAsync")
+  @js.native
   def CreateFromStreamAsync(scene: typingsSlinky.babylonjs.sceneMod.Scene, stream: MediaStream): js.Promise[typingsSlinky.babylonjs.videoTextureMod.VideoTexture] = js.native
   
   /**
@@ -431,22 +432,28 @@ object VideoTexture extends js.Object {
     * @param constraints Define the constraints to use to create the web cam feed from WebRTC
     * @param audioConstaints Define the audio constraints to use to create the web cam feed from WebRTC
     */
+  @JSImport("babylonjs", "VideoTexture.CreateFromWebCam")
+  @js.native
   def CreateFromWebCam(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     onReady: js.Function1[/* videoTexture */ this.type, Unit],
     constraints: minWidthnumbermaxWidthnum
   ): Unit = js.native
-  def CreateFromWebCam(
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
-    onReady: js.Function1[/* videoTexture */ this.type, Unit],
-    constraints: minWidthnumbermaxWidthnum,
-    audioConstaints: Boolean
-  ): Unit = js.native
+  @JSImport("babylonjs", "VideoTexture.CreateFromWebCam")
+  @js.native
   def CreateFromWebCam(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     onReady: js.Function1[/* videoTexture */ this.type, Unit],
     constraints: minWidthnumbermaxWidthnum,
     audioConstaints: MediaTrackConstraints
+  ): Unit = js.native
+  @JSImport("babylonjs", "VideoTexture.CreateFromWebCam")
+  @js.native
+  def CreateFromWebCam(
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    onReady: js.Function1[/* videoTexture */ this.type, Unit],
+    constraints: minWidthnumbermaxWidthnum,
+    audioConstaints: Boolean
   ): Unit = js.native
   
   /**
@@ -456,15 +463,21 @@ object VideoTexture extends js.Object {
     * @param audioConstaints Define the audio constraints to use to create the web cam feed from WebRTC
     * @returns The created video texture as a promise
     */
+  @JSImport("babylonjs", "VideoTexture.CreateFromWebCamAsync")
+  @js.native
   def CreateFromWebCamAsync(scene: typingsSlinky.babylonjs.sceneMod.Scene, constraints: minWidthnumbermaxWidthnum): js.Promise[typingsSlinky.babylonjs.videoTextureMod.VideoTexture] = js.native
-  def CreateFromWebCamAsync(
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
-    constraints: minWidthnumbermaxWidthnum,
-    audioConstaints: Boolean
-  ): js.Promise[typingsSlinky.babylonjs.videoTextureMod.VideoTexture] = js.native
+  @JSImport("babylonjs", "VideoTexture.CreateFromWebCamAsync")
+  @js.native
   def CreateFromWebCamAsync(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     constraints: minWidthnumbermaxWidthnum,
     audioConstaints: MediaTrackConstraints
+  ): js.Promise[typingsSlinky.babylonjs.videoTextureMod.VideoTexture] = js.native
+  @JSImport("babylonjs", "VideoTexture.CreateFromWebCamAsync")
+  @js.native
+  def CreateFromWebCamAsync(
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    constraints: minWidthnumbermaxWidthnum,
+    audioConstaints: Boolean
   ): js.Promise[typingsSlinky.babylonjs.videoTextureMod.VideoTexture] = js.native
 }

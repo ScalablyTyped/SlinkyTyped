@@ -6,12 +6,13 @@ import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestCallback
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `1` extends js.Object {
+trait `1` extends StObject {
   
   def deprecations[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deprecations[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native

@@ -6,6 +6,7 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.tuyaPanelKit.mod.RadialGradientProps
 import typingsSlinky.tuyaPanelKit.themeMod.StopsProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object RadialGradient {
   
   @JSImport("tuya-panel-kit", "RadialGradient")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,10 +44,10 @@ object RadialGradient {
     def ry(value: String): this.type = set("ry", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stopsVarargs(value: StopsProps*): this.type = set("stops", js.Array(value :_*))
+    def stops(value: js.Array[StopsProps]): this.type = set("stops", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stops(value: js.Array[StopsProps]): this.type = set("stops", value.asInstanceOf[js.Any])
+    def stopsVarargs(value: StopsProps*): this.type = set("stops", js.Array(value :_*))
     
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
@@ -55,7 +56,7 @@ object RadialGradient {
     def styleNull: this.type = set("style", null)
   }
   
-  def withProps(p: RadialGradientProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RadialGradient.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: RadialGradientProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

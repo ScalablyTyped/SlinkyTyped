@@ -2,6 +2,7 @@ package typingsSlinky.mendixmodelsdk.mod
 
 import typingsSlinky.mendixmodelsdk.commonMod.common.IErrorCallback
 import typingsSlinky.mendixmodelsdk.imodelserverclientMod.IModelServerClient
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

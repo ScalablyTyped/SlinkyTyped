@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcTrigger.mod.default
 import typingsSlinky.rmcTrigger.propsTypeMod.ITriggerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object RmcTrigger {
   
   @JSImport("rmc-trigger", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -60,9 +61,6 @@ object RmcTrigger {
     def onPopupVisibleChange(value: js.Function): this.type = set("onPopupVisibleChange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def popupReactElement(value: ReactElement): this.type = set("popup", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def popup(value: ReactElement | js.Function): this.type = set("popup", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -76,6 +74,9 @@ object RmcTrigger {
     
     @scala.inline
     def popupPlacement(value: String): this.type = set("popupPlacement", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def popupReactElement(value: ReactElement): this.type = set("popup", value.asInstanceOf[js.Any])
     
     @scala.inline
     def popupStyle(value: js.Any): this.type = set("popupStyle", value.asInstanceOf[js.Any])
@@ -93,7 +94,7 @@ object RmcTrigger {
     def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ITriggerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RmcTrigger.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ITriggerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

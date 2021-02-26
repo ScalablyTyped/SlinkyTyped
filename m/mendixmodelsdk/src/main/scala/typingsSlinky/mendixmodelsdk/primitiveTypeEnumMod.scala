@@ -1,80 +1,59 @@
 package typingsSlinky.mendixmodelsdk
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("mendixmodelsdk/dist/sdk/internal/properties/PrimitiveTypeEnum", JSImport.Namespace)
-@js.native
-object primitiveTypeEnumMod extends js.Object {
+object primitiveTypeEnumMod {
   
   @js.native
-  sealed trait PrimitiveTypeEnum extends js.Object
+  sealed trait PrimitiveTypeEnum extends StObject
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties/PrimitiveTypeEnum", "PrimitiveTypeEnum")
   @js.native
-  object PrimitiveTypeEnum extends js.Object {
+  object PrimitiveTypeEnum extends StObject {
     
     @JSBracketAccess
     def apply(value: scala.Double): js.UndefOr[PrimitiveTypeEnum with scala.Double] = js.native
     
     @js.native
     sealed trait Blob extends PrimitiveTypeEnum
-    /* 9 */ @js.native
-    object Blob
-      extends TopLevel[Blob with scala.Double]
+    /* 9 */ val Blob: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Blob with scala.Double = js.native
     
     @js.native
     sealed trait Boolean extends PrimitiveTypeEnum
-    /* 2 */ @js.native
-    object Boolean
-      extends TopLevel[Boolean with scala.Double]
+    /* 2 */ val Boolean: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Boolean with scala.Double = js.native
     
     @js.native
     sealed trait Color extends PrimitiveTypeEnum
-    /* 8 */ @js.native
-    object Color
-      extends TopLevel[Color with scala.Double]
+    /* 8 */ val Color: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Color with scala.Double = js.native
     
     @js.native
     sealed trait DateTime extends PrimitiveTypeEnum
-    /* 4 */ @js.native
-    object DateTime
-      extends TopLevel[DateTime with scala.Double]
+    /* 4 */ val DateTime: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.DateTime with scala.Double = js.native
     
     @js.native
     sealed trait Double extends PrimitiveTypeEnum
-    /* 3 */ @js.native
-    object Double
-      extends TopLevel[Double with scala.Double]
+    /* 3 */ val Double: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Double with scala.Double = js.native
     
     @js.native
     sealed trait Guid extends PrimitiveTypeEnum
-    /* 5 */ @js.native
-    object Guid
-      extends TopLevel[Guid with scala.Double]
+    /* 5 */ val Guid: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Guid with scala.Double = js.native
     
     @js.native
     sealed trait Integer extends PrimitiveTypeEnum
-    /* 0 */ @js.native
-    object Integer
-      extends TopLevel[Integer with scala.Double]
+    /* 0 */ val Integer: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Integer with scala.Double = js.native
     
     @js.native
     sealed trait Point extends PrimitiveTypeEnum
-    /* 6 */ @js.native
-    object Point
-      extends TopLevel[Point with scala.Double]
+    /* 6 */ val Point: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Point with scala.Double = js.native
     
     @js.native
     sealed trait Size extends PrimitiveTypeEnum
-    /* 7 */ @js.native
-    object Size
-      extends TopLevel[Size with scala.Double]
+    /* 7 */ val Size: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Size with scala.Double = js.native
     
     @js.native
     sealed trait String extends PrimitiveTypeEnum
-    /* 1 */ @js.native
-    object String
-      extends TopLevel[String with scala.Double]
+    /* 1 */ val String: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.String with scala.Double = js.native
   }
 }

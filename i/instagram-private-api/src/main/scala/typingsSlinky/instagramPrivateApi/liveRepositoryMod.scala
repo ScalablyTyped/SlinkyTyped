@@ -4,6 +4,7 @@ import typingsSlinky.instagramPrivateApi.anon.BroadcastId_
 import typingsSlinky.instagramPrivateApi.anon.CoverUploadId
 import typingsSlinky.instagramPrivateApi.anon.LastFetchTs
 import typingsSlinky.instagramPrivateApi.anon.Message
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.liveAddPostLiveToIgtvResponseMod.LiveAddPostLiveToIgtvResponseRootObject
 import typingsSlinky.instagramPrivateApi.liveAddToPostResponseMod.LiveAddToPostResponse
 import typingsSlinky.instagramPrivateApi.liveCommentsResponseMod.LiveCommentsResponseRootObject
@@ -20,16 +21,17 @@ import typingsSlinky.instagramPrivateApi.liveStartBroadcastResponseMod.LiveStart
 import typingsSlinky.instagramPrivateApi.liveSwitchCommentsResponseMod.LiveSwitchCommentsResponseRootObject
 import typingsSlinky.instagramPrivateApi.liveViewerListResponseMod.LiveViewerListResponseRootObject
 import typingsSlinky.instagramPrivateApi.repositoryMod.Repository
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/repositories/live.repository", JSImport.Namespace)
-@js.native
-object liveRepositoryMod extends js.Object {
+object liveRepositoryMod {
   
+  @JSImport("instagram-private-api/dist/repositories/live.repository", "LiveRepository")
   @js.native
-  class LiveRepository () extends Repository {
+  class LiveRepository protected () extends Repository {
+    def this(client: IgApiClient) = this()
     
     def activateQuestion(broadcastId: String, questionId: String): js.Promise[_] = js.native
     

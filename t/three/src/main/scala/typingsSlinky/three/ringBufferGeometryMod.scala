@@ -2,14 +2,14 @@ package typingsSlinky.three
 
 import typingsSlinky.three.anon.InnerRadius
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/geometries/RingBufferGeometry", JSImport.Namespace)
-@js.native
-object ringBufferGeometryMod extends js.Object {
+object ringBufferGeometryMod {
   
+  @JSImport("three/src/geometries/RingBufferGeometry", "RingBufferGeometry")
   @js.native
   class RingBufferGeometry protected () extends BufferGeometry {
     /**

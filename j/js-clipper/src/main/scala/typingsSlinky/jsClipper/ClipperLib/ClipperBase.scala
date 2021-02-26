@@ -1,12 +1,13 @@
 package typingsSlinky.jsClipper.ClipperLib
 
 import typingsSlinky.std.ArrayLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClipperBase extends js.Object {
+trait ClipperBase extends StObject {
   
   def AddBoundsToLML(e: TEdge): TEdge = js.native
   

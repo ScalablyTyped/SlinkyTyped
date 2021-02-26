@@ -1,5 +1,6 @@
 package typingsSlinky.nodeRsa.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nodeRsa.nodeRsaStrings.sha384
   - typingsSlinky.nodeRsa.nodeRsaStrings.sha512
 */
-trait HashingAlgorithm extends js.Object
+trait HashingAlgorithm extends StObject
 object HashingAlgorithm {
   
   @scala.inline

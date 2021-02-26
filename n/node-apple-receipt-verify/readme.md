@@ -12,7 +12,7 @@ A Node.js module for Apple In-App-Purchase receipt validation for iOS
 | Keywords           | purchase, receipt, apple, inapp, ios receipt, inapppurchase, in-app-purchase, apple receipt |
 | # releases         | 14 |
 | # dependents       | 0 |
-| # downloads        | 29423 |
+| # downloads        | 41474 |
 | # stars            | 1 |
 
 ## Links

@@ -1,11 +1,12 @@
 package typingsSlinky.igniteUi
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IgDatePickerMethods extends js.Object {
+trait IgDatePickerMethods extends StObject {
   
   /**
     * Changes the the regional settings of widget element to the language specified in [options.regional](ui.igdatepicker#options:regional)

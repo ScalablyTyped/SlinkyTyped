@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientRecommendationengine.gapi.client.rec
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientRecommendationengine.anon.Callback
 import typingsSlinky.maximMazurokGapiClientRecommendationengine.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PlacementsResource extends js.Object {
+trait PlacementsResource extends StObject {
   
   def predict(request: Callback, body: GoogleCloudRecommendationengineV1beta1PredictRequest): Request[GoogleCloudRecommendationengineV1beta1PredictResponse] = js.native
   /**

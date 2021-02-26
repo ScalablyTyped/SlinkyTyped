@@ -3,6 +3,7 @@ package typingsSlinky.powerappsComponentFramework.ComponentFramework
 import typingsSlinky.powerappsComponentFramework.ComponentFramework.DeviceApi.CaptureImageOptions
 import typingsSlinky.powerappsComponentFramework.ComponentFramework.DeviceApi.PickFileOptions
 import typingsSlinky.powerappsComponentFramework.ComponentFramework.DeviceApi.Position
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * The interface for the context.device
   */
 @js.native
-trait Device extends js.Object {
+trait Device extends StObject {
   
   /**
     * Invokes the device microphone to record audio.

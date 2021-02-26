@@ -1,11 +1,12 @@
 package typingsSlinky.cassanknex.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WhereableQueryBuilder[T] extends js.Object {
+trait WhereableQueryBuilder[T] extends StObject {
   
   def andWhere[K /* <: /* keyof T */ String */](
     lhs: K,

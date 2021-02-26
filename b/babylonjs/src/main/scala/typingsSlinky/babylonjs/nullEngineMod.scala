@@ -16,14 +16,14 @@ import typingsSlinky.babylonjs.thinEngineMod.ISceneLike
 import typingsSlinky.babylonjs.typesMod.FloatArray
 import typingsSlinky.babylonjs.typesMod.IndicesArray
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Engines/nullEngine", JSImport.Namespace)
-@js.native
-object nullEngineMod extends js.Object {
+object nullEngineMod {
   
+  @JSImport("babylonjs/Engines/nullEngine", "NullEngine")
   @js.native
   class NullEngine () extends Engine {
     def this(options: NullEngineOptions) = this()
@@ -434,8 +434,9 @@ object nullEngineMod extends js.Object {
     def updateDynamicVertexBuffer(vertexBuffer: WebGLBuffer, vertices: FloatArray, byteOffset: Double, byteLength: Double): Unit = js.native
   }
   
+  @JSImport("babylonjs/Engines/nullEngine", "NullEngineOptions")
   @js.native
-  class NullEngineOptions () extends js.Object {
+  class NullEngineOptions () extends StObject {
     
     /**
       * If delta time between frames should be constant

@@ -2,6 +2,7 @@ package typingsSlinky.monacoEditor.mod.editor
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.monacoEditor.mod.IDisposable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

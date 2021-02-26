@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SVGPathSegList extends js.Object {
+trait SVGPathSegList extends StObject {
   
   def appendItem(newItem: org.scalajs.dom.raw.SVGPathSeg): org.scalajs.dom.raw.SVGPathSeg = js.native
   
@@ -35,48 +36,36 @@ object SVGPathSegList {
     numberOfItems: Double,
     removeItem: Double => org.scalajs.dom.raw.SVGPathSeg,
     replaceItem: (org.scalajs.dom.raw.SVGPathSeg, Double) => org.scalajs.dom.raw.SVGPathSeg
-  ): SVGPathSegList = {
+  ): org.scalajs.dom.raw.SVGPathSegList = {
     val __obj = js.Dynamic.literal(appendItem = js.Any.fromFunction1(appendItem), clear = js.Any.fromFunction0(clear), getItem = js.Any.fromFunction1(getItem), initialize = js.Any.fromFunction1(initialize), insertItemBefore = js.Any.fromFunction2(insertItemBefore), numberOfItems = numberOfItems.asInstanceOf[js.Any], removeItem = js.Any.fromFunction1(removeItem), replaceItem = js.Any.fromFunction2(replaceItem))
-    __obj.asInstanceOf[SVGPathSegList]
+    __obj.asInstanceOf[org.scalajs.dom.raw.SVGPathSegList]
   }
   
   @scala.inline
-  implicit class SVGPathSegListOps[Self <: org.scalajs.dom.raw.SVGPathSegList] (val x: Self) extends AnyVal {
+  implicit class SVGPathSegListMutableBuilder[Self <: org.scalajs.dom.raw.SVGPathSegList] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAppendItem(value: org.scalajs.dom.raw.SVGPathSeg => org.scalajs.dom.raw.SVGPathSeg): Self = StObject.set(x, "appendItem", js.Any.fromFunction1(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setClear(value: () => Unit): Self = StObject.set(x, "clear", js.Any.fromFunction0(value))
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setGetItem(value: Double => org.scalajs.dom.raw.SVGPathSeg): Self = StObject.set(x, "getItem", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setAppendItem(value: org.scalajs.dom.raw.SVGPathSeg => org.scalajs.dom.raw.SVGPathSeg): Self = this.set("appendItem", js.Any.fromFunction1(value))
+    def setInitialize(value: org.scalajs.dom.raw.SVGPathSeg => org.scalajs.dom.raw.SVGPathSeg): Self = StObject.set(x, "initialize", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setClear(value: () => Unit): Self = this.set("clear", js.Any.fromFunction0(value))
+    def setInsertItemBefore(value: (org.scalajs.dom.raw.SVGPathSeg, Double) => org.scalajs.dom.raw.SVGPathSeg): Self = StObject.set(x, "insertItemBefore", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setGetItem(value: Double => org.scalajs.dom.raw.SVGPathSeg): Self = this.set("getItem", js.Any.fromFunction1(value))
+    def setNumberOfItems(value: Double): Self = StObject.set(x, "numberOfItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInitialize(value: org.scalajs.dom.raw.SVGPathSeg => org.scalajs.dom.raw.SVGPathSeg): Self = this.set("initialize", js.Any.fromFunction1(value))
+    def setRemoveItem(value: Double => org.scalajs.dom.raw.SVGPathSeg): Self = StObject.set(x, "removeItem", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setInsertItemBefore(value: (org.scalajs.dom.raw.SVGPathSeg, Double) => org.scalajs.dom.raw.SVGPathSeg): Self = this.set("insertItemBefore", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def setNumberOfItems(value: Double): Self = this.set("numberOfItems", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRemoveItem(value: Double => org.scalajs.dom.raw.SVGPathSeg): Self = this.set("removeItem", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setReplaceItem(value: (org.scalajs.dom.raw.SVGPathSeg, Double) => org.scalajs.dom.raw.SVGPathSeg): Self = this.set("replaceItem", js.Any.fromFunction2(value))
+    def setReplaceItem(value: (org.scalajs.dom.raw.SVGPathSeg, Double) => org.scalajs.dom.raw.SVGPathSeg): Self = StObject.set(x, "replaceItem", js.Any.fromFunction2(value))
   }
 }

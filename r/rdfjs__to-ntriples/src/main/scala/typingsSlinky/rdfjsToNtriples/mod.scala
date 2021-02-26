@@ -3,20 +3,35 @@ package typingsSlinky.rdfjsToNtriples
 import typingsSlinky.rdfJs.mod.Quad
 import typingsSlinky.rdfJs.mod.Term
 import typingsSlinky.rdfjsToNtriples.anon.FnCall
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@rdfjs/to-ntriples", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("@rdfjs/to-ntriples", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
+  @JSImport("@rdfjs/to-ntriples", "quadToNTriples")
+  @js.native
+  def quadToNTriples: js.Function1[/* quad */ Quad, String] = js.native
+  @JSImport("@rdfjs/to-ntriples", "quadToNTriples")
+  @js.native
   def quadToNTriples(quad: Quad): String = js.native
-  @JSName("quadToNTriples")
-  var quadToNTriples_Original: js.Function1[/* quad */ Quad, String] = js.native
+  @scala.inline
+  def quadToNTriples_=(x: js.Function1[/* quad */ Quad, String]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("quadToNTriples")(x.asInstanceOf[js.Any])
   
+  @JSImport("@rdfjs/to-ntriples", "termToNTriples")
+  @js.native
+  def termToNTriples: FnCall = js.native
+  @JSImport("@rdfjs/to-ntriples", "termToNTriples")
+  @js.native
   def termToNTriples(term: js.Any): js.UndefOr[scala.Nothing] = js.native
+  @JSImport("@rdfjs/to-ntriples", "termToNTriples")
+  @js.native
   def termToNTriples(term: Term): String = js.native
-  @JSName("termToNTriples")
-  var termToNTriples_Original: FnCall = js.native
+  @scala.inline
+  def termToNTriples_=(x: FnCall): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("termToNTriples")(x.asInstanceOf[js.Any])
 }

@@ -1,12 +1,13 @@
 package typingsSlinky.babylonjs.indexMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "DualShockInput")
 @js.native
-object DualShockInput extends js.Object {
+object DualShockInput extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.babylonjs.deviceEnumsMod.DualShockInput with Double] = js.native

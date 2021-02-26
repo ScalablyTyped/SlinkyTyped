@@ -21,15 +21,22 @@ import typingsSlinky.materialUi.MaterialUI.DialogProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Dialog {
   
+  @scala.inline
+  def apply(open: Boolean): Builder = {
+    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DialogProps]))
+  }
+  
   @JSImport("material-ui", "Dialog")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,9 +47,6 @@ object Dialog {
     def actionFocus(value: String): this.type = set("actionFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def actionsVarargs(value: (DialogAction | ReactElement)*): this.type = set("actions", js.Array(value :_*))
-    
-    @scala.inline
     def actions(value: js.Array[DialogAction | ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -50,6 +54,9 @@ object Dialog {
     
     @scala.inline
     def actionsContainerStyle(value: CSSProperties): this.type = set("actionsContainerStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def actionsVarargs(value: (DialogAction | ReactElement)*): this.type = set("actions", js.Array(value :_*))
     
     @scala.inline
     def autoDetectWindowHeight(value: Boolean): this.type = set("autoDetectWindowHeight", value.asInstanceOf[js.Any])
@@ -337,23 +344,17 @@ object Dialog {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def titleClassName(value: String): this.type = set("titleClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def titleStyle(value: CSSProperties): this.type = set("titleStyle", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: DialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(open: Boolean): Builder = {
-    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[DialogProps]))
-  }
 }

@@ -1,27 +1,15 @@
 package typingsSlinky.ol
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/style/IconAnchorUnits", JSImport.Namespace)
-@js.native
-object iconAnchorUnitsMod extends js.Object {
+object iconAnchorUnitsMod {
   
+  @JSImport("ol/style/IconAnchorUnits", JSImport.Default)
   @js.native
-  sealed trait IconAnchorUnits extends js.Object
-  @js.native
-  object IconAnchorUnits extends js.Object {
-    
-    @js.native
-    sealed trait FRACTION extends IconAnchorUnits
-    
-    @js.native
-    sealed trait PIXELS extends IconAnchorUnits
-  }
-  
-  @js.native
-  object default extends js.Object {
+  object default extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[IconAnchorUnits with String] = js.native
@@ -29,5 +17,18 @@ object iconAnchorUnitsMod extends js.Object {
     /* "fraction" */ val FRACTION: typingsSlinky.ol.iconAnchorUnitsMod.IconAnchorUnits.FRACTION with String = js.native
     
     /* "pixels" */ val PIXELS: typingsSlinky.ol.iconAnchorUnitsMod.IconAnchorUnits.PIXELS with String = js.native
+  }
+  
+  @js.native
+  sealed trait IconAnchorUnits extends StObject
+  @JSImport("ol/style/IconAnchorUnits", "IconAnchorUnits")
+  @js.native
+  object IconAnchorUnits extends StObject {
+    
+    @js.native
+    sealed trait FRACTION extends IconAnchorUnits
+    
+    @js.native
+    sealed trait PIXELS extends IconAnchorUnits
   }
 }

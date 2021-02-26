@@ -1,92 +1,75 @@
 package typingsSlinky.storybookUi.anon
 
-import typingsSlinky.propTypes.mod.ReactElementLike
-import typingsSlinky.propTypes.mod.ReactNodeArray
-import typingsSlinky.propTypes.mod.Requireable
-import typingsSlinky.propTypes.mod.Validator
+import slinky.core.facade.ReactElement
+import typingsSlinky.storybookUi.sidebarTypesMod.CombinedDataset
+import typingsSlinky.storybookUi.sidebarTypesMod.SearchChildrenFn
+import typingsSlinky.storybookUi.sidebarTypesMod.Selection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Children extends js.Object {
+trait Children extends StObject {
   
-  var childIds: Requireable[js.Array[js.UndefOr[String | Null]]] = js.native
+  var children: SearchChildrenFn = js.native
   
-  var children: Validator[String | Double | Boolean | js.Object | ReactElementLike | ReactNodeArray] = js.native
+  def clearLastViewed(): Unit = js.native
   
-  var id: Validator[String] = js.native
+  var dataset: CombinedDataset = js.native
   
-  var isExpanded: Requireable[Boolean] = js.native
+  var enableShortcuts: js.UndefOr[Boolean] = js.native
   
-  var isLeaf: Validator[Boolean] = js.native
+  def getLastViewed(): js.Array[Selection] = js.native
   
-  var name: Validator[String] = js.native
+  var initialQuery: js.UndefOr[String] = js.native
   
-  var onClick: Validator[js.Function1[/* repeated */ _, _]] = js.native
-  
-  var onKeyUp: Validator[js.Function1[/* repeated */ _, _]] = js.native
-  
-  var prefix: Validator[String] = js.native
+  var isLoading: js.UndefOr[Boolean] = js.native
 }
 object Children {
   
   @scala.inline
   def apply(
-    childIds: Requireable[js.Array[js.UndefOr[String | Null]]],
-    children: Validator[String | Double | Boolean | js.Object | ReactElementLike | ReactNodeArray],
-    id: Validator[String],
-    isExpanded: Requireable[Boolean],
-    isLeaf: Validator[Boolean],
-    name: Validator[String],
-    onClick: Validator[js.Function1[/* repeated */ _, _]],
-    onKeyUp: Validator[js.Function1[/* repeated */ _, _]],
-    prefix: Validator[String]
+    children: /* args */ GetItemProps => ReactElement,
+    clearLastViewed: () => Unit,
+    dataset: CombinedDataset,
+    getLastViewed: () => js.Array[Selection]
   ): Children = {
-    val __obj = js.Dynamic.literal(childIds = childIds.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isExpanded = isExpanded.asInstanceOf[js.Any], isLeaf = isLeaf.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onClick = onClick.asInstanceOf[js.Any], onKeyUp = onKeyUp.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), clearLastViewed = js.Any.fromFunction0(clearLastViewed), dataset = dataset.asInstanceOf[js.Any], getLastViewed = js.Any.fromFunction0(getLastViewed))
     __obj.asInstanceOf[Children]
   }
   
   @scala.inline
-  implicit class ChildrenOps[Self <: Children] (val x: Self) extends AnyVal {
+  implicit class ChildrenMutableBuilder[Self <: Children] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setChildren(value: /* args */ GetItemProps => ReactElement): Self = StObject.set(x, "children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setClearLastViewed(value: () => Unit): Self = StObject.set(x, "clearLastViewed", js.Any.fromFunction0(value))
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDataset(value: CombinedDataset): Self = StObject.set(x, "dataset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildIds(value: Requireable[js.Array[js.UndefOr[String | Null]]]): Self = this.set("childIds", value.asInstanceOf[js.Any])
+    def setEnableShortcuts(value: Boolean): Self = StObject.set(x, "enableShortcuts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildren(value: Validator[String | Double | Boolean | js.Object | ReactElementLike | ReactNodeArray]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setEnableShortcutsUndefined: Self = StObject.set(x, "enableShortcuts", js.undefined)
     
     @scala.inline
-    def setId(value: Validator[String]): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setGetLastViewed(value: () => js.Array[Selection]): Self = StObject.set(x, "getLastViewed", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setIsExpanded(value: Requireable[Boolean]): Self = this.set("isExpanded", value.asInstanceOf[js.Any])
+    def setInitialQuery(value: String): Self = StObject.set(x, "initialQuery", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIsLeaf(value: Validator[Boolean]): Self = this.set("isLeaf", value.asInstanceOf[js.Any])
+    def setInitialQueryUndefined: Self = StObject.set(x, "initialQuery", js.undefined)
     
     @scala.inline
-    def setName(value: Validator[String]): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setIsLoading(value: Boolean): Self = StObject.set(x, "isLoading", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnClick(value: Validator[js.Function1[/* repeated */ _, _]]): Self = this.set("onClick", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOnKeyUp(value: Validator[js.Function1[/* repeated */ _, _]]): Self = this.set("onKeyUp", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPrefix(value: Validator[String]): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    def setIsLoadingUndefined: Self = StObject.set(x, "isLoading", js.undefined)
   }
 }

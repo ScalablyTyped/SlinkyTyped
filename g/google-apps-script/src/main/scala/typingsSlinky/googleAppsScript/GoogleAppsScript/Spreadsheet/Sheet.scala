@@ -3,6 +3,7 @@ package typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.BlobSource
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
 import typingsSlinky.googleAppsScript.anon.ContentsOnly
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * objects from the sheet.
   */
 @js.native
-trait Sheet extends js.Object {
+trait Sheet extends StObject {
   
   def activate(): Sheet = js.native
   

@@ -7,6 +7,7 @@ import typingsSlinky.node.nodeStrings.session
 import typingsSlinky.node.nodeStrings.sessionError
 import typingsSlinky.node.nodeStrings.stream
 import typingsSlinky.node.nodeStrings.timeout
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

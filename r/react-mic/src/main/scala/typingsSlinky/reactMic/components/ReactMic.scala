@@ -11,6 +11,7 @@ import typingsSlinky.reactMic.reactMicStrings.audioSlashwav
 import typingsSlinky.reactMic.reactMicStrings.audioSlashwebm
 import typingsSlinky.reactMic.reactMicStrings.frequencyBars
 import typingsSlinky.reactMic.reactMicStrings.sinewave
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object ReactMic {
   
   @JSImport("react-mic", "ReactMic")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -66,7 +67,7 @@ object ReactMic {
     def visualSetting(value: sinewave | frequencyBars): this.type = set("visualSetting", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactMicProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactMic.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactMicProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

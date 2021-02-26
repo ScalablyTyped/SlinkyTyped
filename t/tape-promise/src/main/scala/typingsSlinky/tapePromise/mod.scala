@@ -2,20 +2,21 @@ package typingsSlinky.tapePromise
 
 import typingsSlinky.tape.mod.TestOptions
 import typingsSlinky.tapePromise.anon.AsyncTapeFunctionNoneopts
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tape-promise", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
+  @JSImport("tape-promise", JSImport.Default)
+  @js.native
   def default(tapeTest: js.Any): AsyncTapeFunctionNoneopts = js.native
   
   // tslint:enable: ban-types
   // tslint:disable: unified-signatures
   @js.native
-  trait AsyncTapeFunction extends js.Object {
+  trait AsyncTapeFunction extends StObject {
     
     def apply(cb: TestCase): Unit = js.native
     /**

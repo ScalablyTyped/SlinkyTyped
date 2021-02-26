@@ -9,16 +9,16 @@ import typingsSlinky.typeorm.typeormStrings.`soft-remove`
 import typingsSlinky.typeorm.typeormStrings.recover
 import typingsSlinky.typeorm.typeormStrings.remove
 import typingsSlinky.typeorm.typeormStrings.save
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/persistence/EntityPersistExecutor", JSImport.Namespace)
-@js.native
-object persistenceEntityPersistExecutorMod extends js.Object {
+object persistenceEntityPersistExecutorMod {
   
+  @JSImport("typeorm/persistence/EntityPersistExecutor", "EntityPersistExecutor")
   @js.native
-  class EntityPersistExecutor protected () extends js.Object {
+  class EntityPersistExecutor protected () extends StObject {
     def this(
       connection: Connection,
       queryRunner: js.UndefOr[QueryRunner],

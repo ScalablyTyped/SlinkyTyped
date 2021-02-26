@@ -3,12 +3,13 @@ package typingsSlinky.tuyaPanelKit.anon
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DeepMerge extends js.Object {
+trait DeepMerge extends StObject {
   
   var ThemeConsumer: ReactElement = js.native
   
@@ -42,39 +43,27 @@ object DeepMerge {
   }
   
   @scala.inline
-  implicit class DeepMergeOps[Self <: DeepMerge] (val x: Self) extends AnyVal {
+  implicit class DeepMergeMutableBuilder[Self <: DeepMerge] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setDeepMerge(value: (js.Object, /* repeated */ js.Object) => js.Object): Self = StObject.set(x, "deepMerge", js.Any.fromFunction2(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setGetTheme(value: (js.Object, String, js.Any) => js.Any): Self = StObject.set(x, "getTheme", js.Any.fromFunction3(value))
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setParseToCss(value: (js.Array[Double], String) => StringDictionary[Double]): Self = StObject.set(x, "parseToCss", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setThemeConsumer(value: ReactElement): Self = this.set("ThemeConsumer", value.asInstanceOf[js.Any])
+    def setParseToStyle(value: (js.Array[Double], String) => StringDictionary[Double]): Self = StObject.set(x, "parseToStyle", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setThemeProvider(value: ReactElement): Self = this.set("ThemeProvider", value.asInstanceOf[js.Any])
+    def setThemeConsumer(value: ReactElement): Self = StObject.set(x, "ThemeConsumer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDeepMerge(value: (js.Object, /* repeated */ js.Object) => js.Object): Self = this.set("deepMerge", js.Any.fromFunction2(value))
+    def setThemeProvider(value: ReactElement): Self = StObject.set(x, "ThemeProvider", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetTheme(value: (js.Object, String, js.Any) => js.Any): Self = this.set("getTheme", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def setParseToCss(value: (js.Array[Double], String) => StringDictionary[Double]): Self = this.set("parseToCss", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def setParseToStyle(value: (js.Array[Double], String) => StringDictionary[Double]): Self = this.set("parseToStyle", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def setWithTheme(value: ReactComponentClass[js.Any] => ReactComponentClass[js.Any]): Self = this.set("withTheme", js.Any.fromFunction1(value))
+    def setWithTheme(value: ReactComponentClass[js.Any] => ReactComponentClass[js.Any]): Self = StObject.set(x, "withTheme", js.Any.fromFunction1(value))
   }
 }

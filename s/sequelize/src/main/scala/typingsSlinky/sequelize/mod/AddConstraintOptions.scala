@@ -3,8 +3,8 @@ package typingsSlinky.sequelize.mod
 import typingsSlinky.sequelize.sequelizeStrings.`foreign key`
 import typingsSlinky.sequelize.sequelizeStrings.`primary key`
 import typingsSlinky.sequelize.sequelizeStrings.check
-import typingsSlinky.sequelize.sequelizeStrings.default
 import typingsSlinky.sequelize.sequelizeStrings.unique_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,41 +16,41 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.sequelize.mod.AddPrimaryKeyConstraintOptions
   - typingsSlinky.sequelize.mod.AddForeignKeyConstraintOptions
 */
-trait AddConstraintOptions extends js.Object
+trait AddConstraintOptions extends StObject
 object AddConstraintOptions {
   
   @scala.inline
-  def AddDefaultConstraintOptions(`type`: default): AddConstraintOptions = {
+  def AddCheckConstraintOptions(`type`: check): typingsSlinky.sequelize.mod.AddCheckConstraintOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AddConstraintOptions]
+    __obj.asInstanceOf[typingsSlinky.sequelize.mod.AddCheckConstraintOptions]
   }
   
   @scala.inline
-  def AddForeignKeyConstraintOptions(onDelete: String, onUpdate: String, `type`: `foreign key`): AddConstraintOptions = {
+  def AddDefaultConstraintOptions(`type`: typingsSlinky.sequelize.sequelizeStrings.default): typingsSlinky.sequelize.mod.AddDefaultConstraintOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[typingsSlinky.sequelize.mod.AddDefaultConstraintOptions]
+  }
+  
+  @scala.inline
+  def AddForeignKeyConstraintOptions(onDelete: String, onUpdate: String, `type`: `foreign key`): typingsSlinky.sequelize.mod.AddForeignKeyConstraintOptions = {
     val __obj = js.Dynamic.literal(onDelete = onDelete.asInstanceOf[js.Any], onUpdate = onUpdate.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AddConstraintOptions]
+    __obj.asInstanceOf[typingsSlinky.sequelize.mod.AddForeignKeyConstraintOptions]
   }
   
   @scala.inline
-  def AddCheckConstraintOptions(`type`: check): AddConstraintOptions = {
+  def AddPrimaryKeyConstraintOptions(`type`: `primary key`): typingsSlinky.sequelize.mod.AddPrimaryKeyConstraintOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AddConstraintOptions]
+    __obj.asInstanceOf[typingsSlinky.sequelize.mod.AddPrimaryKeyConstraintOptions]
   }
   
   @scala.inline
-  def AddUniqueConstraintOptions(`type`: unique_): AddConstraintOptions = {
+  def AddUniqueConstraintOptions(`type`: unique_): typingsSlinky.sequelize.mod.AddUniqueConstraintOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AddConstraintOptions]
-  }
-  
-  @scala.inline
-  def AddPrimaryKeyConstraintOptions(`type`: `primary key`): AddConstraintOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AddConstraintOptions]
+    __obj.asInstanceOf[typingsSlinky.sequelize.mod.AddUniqueConstraintOptions]
   }
 }

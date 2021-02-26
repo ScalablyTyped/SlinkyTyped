@@ -4,13 +4,14 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.stellarBase.stellarBaseStrings.base64
 import typingsSlinky.stellarBase.stellarBaseStrings.hex
 import typingsSlinky.stellarBase.stellarBaseStrings.raw
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // tslint:disable-line:strict-export-declare-modifiers
 @js.native
-trait Operation[T /* <: typingsSlinky.stellarBase.mod.Operation */] extends js.Object {
+trait Operation[T /* <: typingsSlinky.stellarBase.mod.Operation */] extends StObject {
   
   def body(): OperationBody = js.native
   def body(value: OperationBody): OperationBody = js.native

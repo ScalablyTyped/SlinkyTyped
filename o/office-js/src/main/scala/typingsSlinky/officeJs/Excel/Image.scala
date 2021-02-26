@@ -10,6 +10,7 @@ import typingsSlinky.officeJs.officeJsStrings.JPEG
 import typingsSlinky.officeJs.officeJsStrings.PNG
 import typingsSlinky.officeJs.officeJsStrings.SVG
 import typingsSlinky.officeJs.officeJsStrings.UNKNOWN
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

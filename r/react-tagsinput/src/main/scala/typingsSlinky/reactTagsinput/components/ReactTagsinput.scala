@@ -10,15 +10,22 @@ import typingsSlinky.reactTagsinput.mod.RenderInputProps
 import typingsSlinky.reactTagsinput.mod.RenderTagProps
 import typingsSlinky.reactTagsinput.mod.TagProps
 import typingsSlinky.reactTagsinput.mod.^
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactTagsinput {
   
+  @scala.inline
+  def apply[Tag](onChange: (js.Array[Tag], js.Array[Tag], js.Array[Double]) => Unit, value: js.Array[Tag]): Builder[Tag] = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction3(onChange), value = value.asInstanceOf[js.Any])
+    new Builder[Tag](js.Array(this.component, __props.asInstanceOf[ReactTagsInputProps[Tag]]))
+  }
+  
   @JSImport("react-tagsinput", JSImport.Namespace)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[Tag] (val args: js.Array[js.Any])
@@ -26,10 +33,10 @@ object ReactTagsinput {
        with StBuildingComponent[tag.type, ^[Tag]] {
     
     @scala.inline
-    def addKeysVarargs(value: (Double | String)*): this.type = set("addKeys", js.Array(value :_*))
+    def addKeys(value: js.Array[Double | String]): this.type = set("addKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def addKeys(value: js.Array[Double | String]): this.type = set("addKeys", value.asInstanceOf[js.Any])
+    def addKeysVarargs(value: (Double | String)*): this.type = set("addKeys", js.Array(value :_*))
     
     @scala.inline
     def addOnBlur(value: Boolean): this.type = set("addOnBlur", value.asInstanceOf[js.Any])
@@ -74,10 +81,10 @@ object ReactTagsinput {
     def preventSubmit(value: Boolean): this.type = set("preventSubmit", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def removeKeysVarargs(value: Double*): this.type = set("removeKeys", js.Array(value :_*))
+    def removeKeys(value: js.Array[Double]): this.type = set("removeKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def removeKeys(value: js.Array[Double]): this.type = set("removeKeys", value.asInstanceOf[js.Any])
+    def removeKeysVarargs(value: Double*): this.type = set("removeKeys", js.Array(value :_*))
     
     @scala.inline
     def renderInput(value: /* props */ RenderInputProps[Tag] => ReactElement): this.type = set("renderInput", js.Any.fromFunction1(value))
@@ -102,10 +109,4 @@ object ReactTagsinput {
   }
   
   def withProps[Tag](p: ReactTagsInputProps[Tag]): Builder[Tag] = new Builder[Tag](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[Tag](onChange: (js.Array[Tag], js.Array[Tag], js.Array[Double]) => Unit, value: js.Array[Tag]): Builder[Tag] = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction3(onChange), value = value.asInstanceOf[js.Any])
-    new Builder[Tag](js.Array(this.component, __props.asInstanceOf[ReactTagsInputProps[Tag]]))
-  }
 }

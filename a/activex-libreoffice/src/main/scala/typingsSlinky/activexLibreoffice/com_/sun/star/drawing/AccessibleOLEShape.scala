@@ -4,7 +4,6 @@ import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessible
 import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessibleAction
 import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessibleContext
-import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessibleExtendedComponent
 import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessibleKeyBinding
 import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessibleRelationSet
 import typingsSlinky.activexLibreoffice.com_.sun.star.accessibility.XAccessibleStateSet
@@ -14,6 +13,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.awt.Size
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XFont
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.Locale
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.Color
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,9 +32,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait AccessibleOLEShape
-  extends XAccessibleExtendedComponent
-     with XAccessible
-     with XAccessibleContext
+  extends AccessibleShape
      with XAccessibleAction
 object AccessibleOLEShape {
   

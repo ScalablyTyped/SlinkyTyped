@@ -11,15 +11,34 @@ import typingsSlinky.blueprintjsTable.dragTypesMod.ICoordinateData
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
 import typingsSlinky.blueprintjsTable.locatorMod.ILocator
 import typingsSlinky.blueprintjsTable.rowHeaderMod.IRowHeaderProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RowHeader {
   
+  @scala.inline
+  def apply(
+    grid: Grid,
+    locator: ILocator,
+    onFocusedCell: IFocusedCellCoordinates => Unit,
+    onLayoutLock: js.UndefOr[Boolean] => Unit,
+    onReordered: (Double, Double, Double) => Unit,
+    onReordering: (Double, Double, Double) => Unit,
+    onResizeGuide: js.Array[Double] => Unit,
+    onRowHeightChanged: (/* index */ Double, /* size */ Double) => Unit,
+    onSelection: js.Array[IRegion] => Unit,
+    rowIndexEnd: Double,
+    rowIndexStart: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(grid = grid.asInstanceOf[js.Any], locator = locator.asInstanceOf[js.Any], onFocusedCell = js.Any.fromFunction1(onFocusedCell), onLayoutLock = js.Any.fromFunction1(onLayoutLock), onReordered = js.Any.fromFunction3(onReordered), onReordering = js.Any.fromFunction3(onReordering), onResizeGuide = js.Any.fromFunction1(onResizeGuide), onRowHeightChanged = js.Any.fromFunction2(onRowHeightChanged), onSelection = js.Any.fromFunction1(onSelection), rowIndexEnd = rowIndexEnd.asInstanceOf[js.Any], rowIndexStart = rowIndexStart.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IRowHeaderProps]))
+  }
+  
   @JSImport("@blueprintjs/table/lib/esm/headers/rowHeader", "RowHeader")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,29 +78,11 @@ object RowHeader {
     ): this.type = set("selectedRegionTransform", js.Any.fromFunction3(value))
     
     @scala.inline
-    def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
+    def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
+    def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
   }
   
   def withProps(p: IRowHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    grid: Grid,
-    locator: ILocator,
-    onFocusedCell: IFocusedCellCoordinates => Unit,
-    onLayoutLock: js.UndefOr[Boolean] => Unit,
-    onReordered: (Double, Double, Double) => Unit,
-    onReordering: (Double, Double, Double) => Unit,
-    onResizeGuide: js.Array[Double] => Unit,
-    onRowHeightChanged: (/* index */ Double, /* size */ Double) => Unit,
-    onSelection: js.Array[IRegion] => Unit,
-    rowIndexEnd: Double,
-    rowIndexStart: Double
-  ): Builder = {
-    val __props = js.Dynamic.literal(grid = grid.asInstanceOf[js.Any], locator = locator.asInstanceOf[js.Any], onFocusedCell = js.Any.fromFunction1(onFocusedCell), onLayoutLock = js.Any.fromFunction1(onLayoutLock), onReordered = js.Any.fromFunction3(onReordered), onReordering = js.Any.fromFunction3(onReordering), onResizeGuide = js.Any.fromFunction1(onResizeGuide), onRowHeightChanged = js.Any.fromFunction2(onRowHeightChanged), onSelection = js.Any.fromFunction1(onSelection), rowIndexEnd = rowIndexEnd.asInstanceOf[js.Any], rowIndexStart = rowIndexStart.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IRowHeaderProps]))
-  }
 }

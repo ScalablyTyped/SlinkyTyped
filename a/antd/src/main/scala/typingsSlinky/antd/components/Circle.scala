@@ -20,15 +20,22 @@ import typingsSlinky.antd.progressProgressMod.ProgressSize
 import typingsSlinky.antd.progressProgressMod.ProgressType
 import typingsSlinky.antd.progressProgressMod.SuccessProps
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Circle {
   
+  @scala.inline
+  def apply(prefixCls: String, progressStatus: String): Builder = {
+    val __props = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any], progressStatus = progressStatus.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CircleProps]))
+  }
+  
   @JSImport("antd/lib/progress/Circle", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -91,10 +98,4 @@ object Circle {
   }
   
   def withProps(p: CircleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(prefixCls: String, progressStatus: String): Builder = {
-    val __props = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any], progressStatus = progressStatus.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CircleProps]))
-  }
 }

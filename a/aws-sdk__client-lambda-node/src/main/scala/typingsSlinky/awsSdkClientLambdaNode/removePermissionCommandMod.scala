@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientLambdaNode.typesRemovePermissionInputMod.Remove
 import typingsSlinky.awsSdkClientLambdaNode.typesRemovePermissionOutputMod.RemovePermissionOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-lambda-node/commands/RemovePermissionCommand", JSImport.Namespace)
-@js.native
-object removePermissionCommandMod extends js.Object {
+object removePermissionCommandMod {
   
+  @JSImport("@aws-sdk/client-lambda-node/commands/RemovePermissionCommand", "RemovePermissionCommand")
   @js.native
   class RemovePermissionCommand protected () extends Command[
           InputTypesUnion, 

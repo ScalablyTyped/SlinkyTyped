@@ -6,6 +6,7 @@ import typingsSlinky.antdMobileRn.anon.Target
 import typingsSlinky.antdMobileRn.radioStyleIndexNativeMod.IRadioStyle
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.StyleProp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

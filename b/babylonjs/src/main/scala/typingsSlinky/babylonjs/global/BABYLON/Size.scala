@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,9 +17,7 @@ class Size protected ()
   def this(width: Double, height: Double) = this()
 }
 /* static members */
-@JSGlobal("BABYLON.Size")
-@js.native
-object Size extends js.Object {
+object Size {
   
   /**
     * Creates a new Size set at the linear interpolation "amount" between "start" and "end"
@@ -27,6 +26,8 @@ object Size extends js.Object {
     * @param amount amount to lerp between the start and end values
     * @returns a new Size set at the linear interpolation "amount" between "start" and "end"
     */
+  @JSGlobal("BABYLON.Size.Lerp")
+  @js.native
   def Lerp(
     start: typingsSlinky.babylonjs.BABYLON.Size,
     end: typingsSlinky.babylonjs.BABYLON.Size,
@@ -37,5 +38,7 @@ object Size extends js.Object {
     * Create a new size of zero
     * @returns a new Size set to (0.0, 0.0)
     */
+  @JSGlobal("BABYLON.Size.Zero")
+  @js.native
   def Zero(): typingsSlinky.babylonjs.BABYLON.Size = js.native
 }

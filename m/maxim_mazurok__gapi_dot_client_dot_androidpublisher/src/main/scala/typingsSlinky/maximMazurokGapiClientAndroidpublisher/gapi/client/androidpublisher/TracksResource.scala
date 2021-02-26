@@ -4,12 +4,13 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientAndroidpublisher.anon.Alt
 import typingsSlinky.maximMazurokGapiClientAndroidpublisher.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientAndroidpublisher.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TracksResource extends js.Object {
+trait TracksResource extends StObject {
   
   /** Gets a track. */
   def get(): Request[Track] = js.native

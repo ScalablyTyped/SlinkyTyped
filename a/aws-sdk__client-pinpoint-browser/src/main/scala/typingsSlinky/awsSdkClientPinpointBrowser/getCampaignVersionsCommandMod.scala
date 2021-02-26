@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesGetCampaignVersionsInputMo
 import typingsSlinky.awsSdkClientPinpointBrowser.typesGetCampaignVersionsOutputMod.GetCampaignVersionsOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-pinpoint-browser/commands/GetCampaignVersionsCommand", JSImport.Namespace)
-@js.native
-object getCampaignVersionsCommandMod extends js.Object {
+object getCampaignVersionsCommandMod {
   
+  @JSImport("@aws-sdk/client-pinpoint-browser/commands/GetCampaignVersionsCommand", "GetCampaignVersionsCommand")
   @js.native
   class GetCampaignVersionsCommand protected () extends Command[
           InputTypesUnion, 

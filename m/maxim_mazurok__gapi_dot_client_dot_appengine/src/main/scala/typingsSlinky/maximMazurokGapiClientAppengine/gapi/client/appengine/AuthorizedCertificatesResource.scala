@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientAppengine.anon.AuthorizedCertificates
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.Callback
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.Fields
 import typingsSlinky.maximMazurokGapiClientAppengine.anon.Key
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AuthorizedCertificatesResource extends js.Object {
+trait AuthorizedCertificatesResource extends StObject {
   
   /** Uploads the specified SSL certificate. */
   def create(request: Accesstoken): Request[AuthorizedCertificate] = js.native

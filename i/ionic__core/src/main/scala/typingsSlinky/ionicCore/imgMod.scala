@@ -3,14 +3,14 @@ package typingsSlinky.ionicCore
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/img/img", JSImport.Namespace)
-@js.native
-object imgMod extends js.Object {
+object imgMod {
   
+  @JSImport("@ionic/core/dist/types/components/img/img", "Img")
   @js.native
   class Img () extends ComponentInterface {
     

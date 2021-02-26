@@ -36,6 +36,7 @@ import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
 import typingsSlinky.recharts.rechartsStrings.outer
 import typingsSlinky.recharts.rechartsStrings.polygon
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,7 +45,7 @@ object PolarAngleAxis {
   
   @JSImport("recharts", "PolarAngleAxis")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -106,10 +107,10 @@ object PolarAngleAxis {
     def cy(value: Double): this.type = set("cy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataKeyFunction1(value: /* dataObject */ js.Any => String | Double | (js.Tuple2[Double, Double]) | Null): this.type = set("dataKey", js.Any.fromFunction1(value))
+    def dataKey(value: DataKey): this.type = set("dataKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dataKey(value: DataKey): this.type = set("dataKey", value.asInstanceOf[js.Any])
+    def dataKeyFunction1(value: /* dataObject */ js.Any => String | Double | (js.Tuple2[Double, Double]) | Null): this.type = set("dataKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -258,10 +259,10 @@ object PolarAngleAxis {
     def radius(value: Percentage | Double): this.type = set("radius", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scaleFunction1(value: /* repeated */ js.Any => Unit): this.type = set("scale", js.Any.fromFunction1(value))
+    def scale(value: ScaleType | RechartsFunction): this.type = set("scale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scale(value: ScaleType | RechartsFunction): this.type = set("scale", value.asInstanceOf[js.Any])
+    def scaleFunction1(value: /* repeated */ js.Any => Unit): this.type = set("scale", js.Any.fromFunction1(value))
     
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
@@ -309,25 +310,25 @@ object PolarAngleAxis {
     def textRendering(value: auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit): this.type = set("textRendering", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tickReactElement(value: ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def tickFunction1(value: _ => ReactElement): this.type = set("tick", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def tick(value: Boolean | ContentRenderer[_] | js.Object | ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tickFormatter(value: /* value */ js.Any => js.Any): this.type = set("tickFormatter", js.Any.fromFunction1(value))
     
     @scala.inline
+    def tickFunction1(value: _ => ReactElement): this.type = set("tick", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def tickLine(value: Boolean | js.Object): this.type = set("tickLine", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ticksVarargs(value: PolarAngleAxisTick*): this.type = set("ticks", js.Array(value :_*))
+    def tickReactElement(value: ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ticks(value: js.Array[PolarAngleAxisTick]): this.type = set("ticks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def ticksVarargs(value: PolarAngleAxisTick*): this.type = set("ticks", js.Array(value :_*))
     
     @scala.inline
     def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
@@ -357,7 +358,7 @@ object PolarAngleAxis {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PolarAngleAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: PolarAngleAxis.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PolarAngleAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

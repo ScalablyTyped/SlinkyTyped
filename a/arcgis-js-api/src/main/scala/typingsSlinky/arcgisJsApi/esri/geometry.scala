@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry.html)
   */
-@JSGlobal("__esri.geometry")
-@js.native
-object geometry extends js.Object {
+object geometry {
+  
+  type Extent = typingsSlinky.arcgisJsApi.esri.Extent
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.arcgisJsApi.esri.Extent
@@ -21,9 +22,7 @@ object geometry extends js.Object {
     - typingsSlinky.arcgisJsApi.esri.Polyline
     - typingsSlinky.arcgisJsApi.esri.Mesh
   */
-  trait Geometry extends js.Object
-  
-  type Extent = typingsSlinky.arcgisJsApi.esri.Extent
+  trait Geometry extends StObject
   
   type Mesh = typingsSlinky.arcgisJsApi.esri.Mesh
   

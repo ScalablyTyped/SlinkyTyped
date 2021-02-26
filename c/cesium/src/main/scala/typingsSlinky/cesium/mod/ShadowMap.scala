@@ -1,13 +1,14 @@
 package typingsSlinky.cesium.mod
 
 import typingsSlinky.cesium.anon.CascadesEnabled
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "ShadowMap")
 @js.native
-class ShadowMap protected () extends js.Object {
+class ShadowMap protected () extends StObject {
   def this(obtions: CascadesEnabled) = this()
   
   var darkness: Double = js.native

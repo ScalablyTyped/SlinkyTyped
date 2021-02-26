@@ -2,13 +2,32 @@ package typingsSlinky.ol
 
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.geometryLayoutMod.GeometryLayout
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ol/geom/MultiLineString", JSImport.Namespace)
-@js.native
-object multiLineStringMod extends js.Object {
+object multiLineStringMod {
+  
+  @JSImport("ol/geom/MultiLineString", JSImport.Default)
+  @js.native
+  class default protected () extends MultiLineString {
+    def this(coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default]) = this()
+    def this(
+      coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default],
+      opt_layout: GeometryLayout
+    ) = this()
+    def this(
+      coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default],
+      opt_layout: js.UndefOr[scala.Nothing],
+      opt_ends: js.Array[Double]
+    ) = this()
+    def this(
+      coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default],
+      opt_layout: GeometryLayout,
+      opt_ends: js.Array[Double]
+    ) = this()
+  }
   
   @js.native
   trait MultiLineString
@@ -51,24 +70,5 @@ object multiLineStringMod extends js.Object {
       * Return the linestrings of this multilinestring.
       */
     def getLineStrings(): js.Array[typingsSlinky.ol.lineStringMod.default] = js.native
-  }
-  
-  @js.native
-  class default protected () extends MultiLineString {
-    def this(coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default]) = this()
-    def this(
-      coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default],
-      opt_layout: GeometryLayout
-    ) = this()
-    def this(
-      coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default],
-      opt_layout: js.UndefOr[scala.Nothing],
-      opt_ends: js.Array[Double]
-    ) = this()
-    def this(
-      coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default],
-      opt_layout: GeometryLayout,
-      opt_ends: js.Array[Double]
-    ) = this()
   }
 }

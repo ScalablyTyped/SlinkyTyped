@@ -10,6 +10,7 @@ import typingsSlinky.postcssSelectorParser.postcssSelectorParserStrings.namespac
 import typingsSlinky.postcssSelectorParser.postcssSelectorParserStrings.ns
 import typingsSlinky.postcssSelectorParser.postcssSelectorParserStrings.operator
 import typingsSlinky.postcssSelectorParser.postcssSelectorParserStrings.value
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

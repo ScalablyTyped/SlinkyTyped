@@ -8,12 +8,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.ForwardingRuleKeyOauthto
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientCompute.anon.ProjectQuotaUserRequestId
 import typingsSlinky.maximMazurokGapiClientCompute.anon.RequestIdUserIp
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait GlobalForwardingRulesResource extends js.Object {
+trait GlobalForwardingRulesResource extends StObject {
   
   /** Deletes the specified GlobalForwardingRule resource. */
   def delete(): Request[Operation] = js.native

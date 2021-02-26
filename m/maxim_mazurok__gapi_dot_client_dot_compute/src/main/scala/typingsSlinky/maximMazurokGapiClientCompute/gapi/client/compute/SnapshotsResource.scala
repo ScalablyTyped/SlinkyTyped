@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientCompute.anon.KeyOauthtokenPrettyPrint
 import typingsSlinky.maximMazurokGapiClientCompute.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientCompute.anon.OauthtokenOptionsRequestedPolicyVersion
 import typingsSlinky.maximMazurokGapiClientCompute.anon.QuotaUserSnapshot
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SnapshotsResource extends js.Object {
+trait SnapshotsResource extends StObject {
   
   /**
     * Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is

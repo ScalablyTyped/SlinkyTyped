@@ -40,6 +40,7 @@ import typingsSlinky.reactNativeElements.mod.HeaderSubComponent
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.center
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.left
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.right
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -48,7 +49,7 @@ object Header {
   
   @JSImport("react-native-elements", "Header")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -59,10 +60,10 @@ object Header {
     def ViewComponent(value: ReactComponentClass[_]): this.type = set("ViewComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -89,10 +90,10 @@ object Header {
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -107,22 +108,22 @@ object Header {
     def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def backgroundImageVarargs(value: ImageURISource*): this.type = set("backgroundImage", js.Array(value :_*))
-    
-    @scala.inline
     def backgroundImage(value: ImageSourcePropType): this.type = set("backgroundImage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def backgroundImageStyle(value: ImageStyle): this.type = set("backgroundImageStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def backgroundImageVarargs(value: ImageURISource*): this.type = set("backgroundImage", js.Array(value :_*))
+    
+    @scala.inline
     def barStyle(value: StatusBarStyle): this.type = set("barStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def centerComponentReactElement(value: ReactElement): this.type = set("centerComponent", value.asInstanceOf[js.Any])
+    def centerComponent(value: HeaderSubComponent): this.type = set("centerComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def centerComponent(value: HeaderSubComponent): this.type = set("centerComponent", value.asInstanceOf[js.Any])
+    def centerComponentReactElement(value: ReactElement): this.type = set("centerComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def centerContainerStyle(value: StyleProp[ViewStyle]): this.type = set("centerContainerStyle", value.asInstanceOf[js.Any])
@@ -155,10 +156,10 @@ object Header {
     def isTVSelectable(value: Boolean): this.type = set("isTVSelectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftComponentReactElement(value: ReactElement): this.type = set("leftComponent", value.asInstanceOf[js.Any])
+    def leftComponent(value: HeaderSubComponent): this.type = set("leftComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftComponent(value: HeaderSubComponent): this.type = set("leftComponent", value.asInstanceOf[js.Any])
+    def leftComponentReactElement(value: ReactElement): this.type = set("leftComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftContainerStyle(value: StyleProp[ViewStyle]): this.type = set("leftContainerStyle", value.asInstanceOf[js.Any])
@@ -254,10 +255,10 @@ object Header {
     def renderToHardwareTextureAndroid(value: Boolean): this.type = set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightComponentReactElement(value: ReactElement): this.type = set("rightComponent", value.asInstanceOf[js.Any])
+    def rightComponent(value: HeaderSubComponent): this.type = set("rightComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightComponent(value: HeaderSubComponent): this.type = set("rightComponent", value.asInstanceOf[js.Any])
+    def rightComponentReactElement(value: ReactElement): this.type = set("rightComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rightContainerStyle(value: StyleProp[ViewStyle]): this.type = set("rightContainerStyle", value.asInstanceOf[js.Any])
@@ -296,7 +297,7 @@ object Header {
     def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Header.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

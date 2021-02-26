@@ -7,15 +7,22 @@ import typingsSlinky.reactSound.mod.default
 import typingsSlinky.reactSound.reactSoundStrings.PAUSED
 import typingsSlinky.reactSound.reactSoundStrings.PLAYING
 import typingsSlinky.reactSound.reactSoundStrings.STOPPED
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactSound {
   
+  @scala.inline
+  def apply(playStatus: PLAYING | STOPPED | PAUSED, url: String): Builder = {
+    val __props = js.Dynamic.literal(playStatus = playStatus.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactSoundProps]))
+  }
+  
   @JSImport("react-sound", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -69,10 +76,4 @@ object ReactSound {
   }
   
   def withProps(p: ReactSoundProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(playStatus: PLAYING | STOPPED | PAUSED, url: String): Builder = {
-    val __props = js.Dynamic.literal(playStatus = playStatus.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactSoundProps]))
-  }
 }

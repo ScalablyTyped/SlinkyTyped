@@ -14,15 +14,22 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.mini
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.small
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.very
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Rail {
   
+  @scala.inline
+  def apply(position: SemanticFLOATS): Builder = {
+    val __props = js.Dynamic.literal(position = position.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RailProps]))
+  }
+  
   @JSImport("semantic-ui-react", "Rail")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -42,10 +49,10 @@ object Rail {
     def close(value: Boolean | very): this.type = set("close", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dividing(value: Boolean): this.type = set("dividing", value.asInstanceOf[js.Any])
@@ -58,10 +65,4 @@ object Rail {
   }
   
   def withProps(p: RailProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(position: SemanticFLOATS): Builder = {
-    val __props = js.Dynamic.literal(position = position.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RailProps]))
-  }
 }

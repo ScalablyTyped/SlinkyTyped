@@ -13,12 +13,13 @@ import typingsSlinky.maximMazurokGapiClientVault.anon.PageToken
 import typingsSlinky.maximMazurokGapiClientVault.anon.Uploadprotocol
 import typingsSlinky.maximMazurokGapiClientVault.anon.View
 import typingsSlinky.maximMazurokGapiClientVault.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MattersResource extends js.Object {
+trait MattersResource extends StObject {
   
   def addPermissions(request: Alt, body: AddMatterPermissionsRequest): Request[MatterPermission] = js.native
   /** Adds an account as a matter collaborator. */

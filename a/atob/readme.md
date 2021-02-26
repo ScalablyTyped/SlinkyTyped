@@ -10,9 +10,9 @@ atob for Node.JS and Linux / Mac / Windows CLI (it's a one-liner)
 | ------------------ | :-------------: |
 | Full name          | atob |
 | Keywords           | atob, browser |
-| # releases         | 4 |
-| # dependents       | 445 |
-| # downloads        | 433125249 |
+| # releases         | 0 |
+| # dependents       | 691 |
+| # downloads        | 660665614 |
 | # stars            | 6 |
 
 ## Links

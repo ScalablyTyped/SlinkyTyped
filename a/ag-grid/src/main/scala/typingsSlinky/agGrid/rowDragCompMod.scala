@@ -4,14 +4,14 @@ import typingsSlinky.agGrid.beansMod.Beans
 import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.componentMod.Component
 import typingsSlinky.agGrid.rowNodeMod.RowNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ag-grid/dist/lib/rendering/rowDragComp", JSImport.Namespace)
-@js.native
-object rowDragCompMod extends js.Object {
+object rowDragCompMod {
   
+  @JSImport("ag-grid/dist/lib/rendering/rowDragComp", "RowDragComp")
   @js.native
   class RowDragComp protected () extends Component {
     def this(rowNode: RowNode, column: Column, cellValue: String, beans: Beans) = this()

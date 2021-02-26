@@ -3,17 +3,22 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.rootContainerTypesMod.IRootContainerViewConfig
 import typingsSlinky.playable.rootContainerTypesMod.IRootContainerViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/root-container/root-container.view", JSImport.Namespace)
-@js.native
-object rootContainerViewMod extends js.Object {
+object rootContainerViewMod {
+  
+  @JSImport("playable/dist/src/modules/root-container/root-container.view", JSImport.Default)
+  @js.native
+  class default protected () extends RootContainerView {
+    def this(config: IRootContainerViewConfig) = this()
+  }
   
   @js.native
   trait RootContainerView
-    extends typingsSlinky.playable.stylableMod.default[IRootContainerViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[IRootContainerViewStyles] {
     
     @JSName("_$rootElement")
     var _$rootElement: js.Any = js.native
@@ -48,10 +53,5 @@ object rootContainerViewMod extends js.Object {
     def setWidth(width: Double): Unit = js.native
     
     def show(): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends RootContainerView {
-    def this(config: IRootContainerViewConfig) = this()
   }
 }

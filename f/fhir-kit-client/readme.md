@@ -10,9 +10,9 @@ FHIR Client
 | ------------------ | :-------------: |
 | Full name          | fhir-kit-client |
 | Keywords           | FHIR, SMART, CDS Hooks, HL7 |
-| # releases         | 24 |
+| # releases         | 17 |
 | # dependents       | 1 |
-| # downloads        | 21999 |
+| # downloads        | 18953 |
 | # stars            | 0 |
 
 ## Links

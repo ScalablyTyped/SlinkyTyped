@@ -3,13 +3,14 @@ package typingsSlinky.reactTable.mod
 import typingsSlinky.reactTable.anon.PartialTableToggleHideAll
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined react-table.react-table.TableInstance<D> & {  column :react-table.react-table.ColumnInstance<D>} */
 @js.native
-trait HeaderProps[D /* <: js.Object */] extends js.Object {
+trait HeaderProps[D /* <: js.Object */] extends StObject {
   
   var allColumns: js.Array[ColumnInstance[D]] = js.native
   

@@ -10,9 +10,9 @@ Recursive version of fs.readdir with streaming API.
 | ------------------ | :-------------: |
 | Full name          | readdirp |
 | Keywords           | recursive, fs, stream, streams, readdir, filesystem, find, filter |
-| # releases         | 14 |
-| # dependents       | 357 |
-| # downloads        | 708405871 |
+| # releases         | 13 |
+| # dependents       | 395 |
+| # downloads        | 1111298690 |
 | # stars            | 26 |
 
 ## Links

@@ -3,6 +3,7 @@ package typingsSlinky.frctlFractal.mod
 import typingsSlinky.frctlFractal.anon.Content
 import typingsSlinky.frctlFractal.mod.fractal.core.entities.EntitySource
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -10,9 +10,9 @@ Elliptic curve library functions for the secp256k1 curve.
 | ------------------ | :-------------: |
 | Full name          | @ethersproject/signing-key |
 | Keywords           | Ethereum, ethers |
-| # releases         | 24 |
-| # dependents       | 5 |
-| # downloads        | 268710 |
+| # releases         | 31 |
+| # dependents       | 14 |
+| # downloads        | 2572167 |
 | # stars            | 0 |
 
 ## Links

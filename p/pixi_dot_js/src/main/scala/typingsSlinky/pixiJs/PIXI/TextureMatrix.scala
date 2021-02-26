@@ -1,5 +1,6 @@
 package typingsSlinky.pixiJs.PIXI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @memberof PIXI
   */
 @js.native
-trait TextureMatrix extends js.Object {
+trait TextureMatrix extends StObject {
   
   /**
     * Tracks Texture frame changes

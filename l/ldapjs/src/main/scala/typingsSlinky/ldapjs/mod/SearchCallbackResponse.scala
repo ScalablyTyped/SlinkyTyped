@@ -6,6 +6,7 @@ import typingsSlinky.ldapjs.ldapjsStrings.page
 import typingsSlinky.ldapjs.ldapjsStrings.searchEntry_
 import typingsSlinky.ldapjs.ldapjsStrings.searchReference
 import typingsSlinky.node.eventsMod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -3,12 +3,13 @@ package typingsSlinky.facebookJsSdk.facebook
 import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.delete
 import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.get
 import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.post
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FacebookStatic extends js.Object {
+trait FacebookStatic extends StObject {
   
   var AppEvents: js.Any = js.native
   

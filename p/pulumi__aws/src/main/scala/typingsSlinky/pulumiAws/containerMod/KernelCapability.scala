@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.containerMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,7 +45,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pulumiAws.pulumiAwsStrings.SYSLOG
   - typingsSlinky.pulumiAws.pulumiAwsStrings.WAKE_ALARM
 */
-trait KernelCapability extends js.Object
+trait KernelCapability extends StObject
 object KernelCapability {
   
   @scala.inline

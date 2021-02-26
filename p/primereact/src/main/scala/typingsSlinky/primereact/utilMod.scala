@@ -2,13 +2,12 @@ package typingsSlinky.primereact
 
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/components/util", JSImport.Namespace)
-@js.native
-object utilMod extends js.Object {
+object utilMod {
   
   type Omit[T, K /* <: /* keyof T */ String */] = Pick[T, Exclude[/* keyof T */ String, K]]
 }

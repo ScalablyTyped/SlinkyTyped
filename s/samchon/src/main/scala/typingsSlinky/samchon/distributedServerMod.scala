@@ -3,33 +3,23 @@ package typingsSlinky.samchon
 import typingsSlinky.samchon.distributedSystemArrayMod.DistributedSystemArray
 import typingsSlinky.samchon.distributedSystemMod.DistributedSystem
 import typingsSlinky.samchon.iserverconnectorMod.IServerConnector
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/templates/distributed/derived/DistributedServer", JSImport.Namespace)
-@js.native
-object distributedServerMod extends js.Object {
+object distributedServerMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-  - typingsSlinky.tstl.isizeMod.ISize because Already inherited
-  - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
-  - typingsSlinky.tstl.ipushMod.IPush because Already inherited
-  - typingsSlinky.tstl.iemptyMod.IEmpty because Already inherited
-  - typingsSlinky.std.Iterable because Already inherited
-  - typingsSlinky.tstl.ibidirectionalcontainerMod.IBidirectionalContainer because Already inherited
-  - typingsSlinky.tstl.icontainerMod.IContainer because Already inherited
-  - typingsSlinky.tstl.ipushbackMod.IPushBack because Already inherited
-  - typingsSlinky.tstl.containerContainerMod.Container because Already inherited
-  - typingsSlinky.tstl.ifrontMod.IFront because Already inherited
-  - typingsSlinky.tstl.arrayContainerMod.ArrayContainer because Already inherited
   - typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher because Already inherited
-  - typingsSlinky.tstl.dequeMod.Deque because Already inherited
+  - typingsSlinky.ecol.icollectionMod.ICollection because Already inherited
   - typingsSlinky.ecol.dequeCollectionMod.DequeCollection because Already inherited
+  - typingsSlinky.ecol.mod.DequeCollection because Already inherited
   - typingsSlinky.samchon.iprotocolMod.IProtocol because Already inherited
   - typingsSlinky.samchon.entityCollectionMod.EntityDequeCollection because Already inherited
   - typingsSlinky.samchon.externalSystemMod.ExternalSystem because Already inherited
-  - typingsSlinky.samchon.iexternalserverMod.IExternalServer because var conflicts: _Compute_col_size, _Fetch_index, _Handle_close, _Insert_to_end, _Insert_to_middle, _Notify_erase, _Notify_insert, _Reserve, _Swap, _Try_add_row_at_back, _Try_add_row_at_front, _Try_expand_capacity, capacity_, communicator, communicator_, dispatcher_, iterator, iterator_IContainer_, matrix_, name, size_, system_array_. Inlined connect */ @js.native
+  - typingsSlinky.samchon.iexternalserverMod.IExternalServer because var conflicts: _Handle_close, _Notify_erase, _Notify_insert, communicator, communicator_, dispatcher_, name, system_array_. Inlined connect */ @JSImport("samchon/templates/distributed/derived/DistributedServer", "DistributedServer")
+  @js.native
   abstract class DistributedServer protected () extends DistributedSystem {
     /**
       * Construct from parent {@link DistributedSystemArray}.

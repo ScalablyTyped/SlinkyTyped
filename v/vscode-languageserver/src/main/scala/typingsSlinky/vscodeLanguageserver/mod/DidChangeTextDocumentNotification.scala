@@ -4,15 +4,18 @@ import typingsSlinky.vscodeLanguageserver.vscodeLanguageserverStrings.textDocume
 import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolNotificationType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DidChangeTextDocumentParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentChangeRegistrationOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vscode-languageserver", "DidChangeTextDocumentNotification")
-@js.native
-object DidChangeTextDocumentNotification extends js.Object {
+object DidChangeTextDocumentNotification {
   
+  @JSImport("vscode-languageserver", "DidChangeTextDocumentNotification.method")
+  @js.native
   val method: textDocumentSlashdidChange = js.native
   
+  @JSImport("vscode-languageserver", "DidChangeTextDocumentNotification.type")
+  @js.native
   val `type`: ProtocolNotificationType[DidChangeTextDocumentParams, TextDocumentChangeRegistrationOptions] = js.native
 }

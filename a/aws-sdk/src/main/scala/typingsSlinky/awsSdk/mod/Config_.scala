@@ -3,6 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.configMod.APIVersions
 import typingsSlinky.awsSdk.configServicePlaceholdersMod.ConfigurationServicePlaceholders
 import typingsSlinky.awsSdk.coreMod.Config
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

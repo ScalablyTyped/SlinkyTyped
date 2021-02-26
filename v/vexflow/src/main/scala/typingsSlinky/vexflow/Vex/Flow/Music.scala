@@ -3,12 +3,13 @@ package typingsSlinky.vexflow.Vex.Flow
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.vexflow.anon.AccidentalRoot
 import typingsSlinky.vexflow.anon.Root
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Music extends js.Object {
+trait Music extends StObject {
   
   def createScaleMap(keySignature: String): StringDictionary[String] = js.native
   

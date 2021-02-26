@@ -2,6 +2,7 @@ package typingsSlinky.ckeditorCkeditor5Utils.mod
 
 import typingsSlinky.ckeditorCkeditor5Utils.anon.IdProperty
 import typingsSlinky.std.Iterable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

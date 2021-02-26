@@ -1,5 +1,6 @@
 package typingsSlinky.figma.mod.global
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.figma.figmaStrings.EFFECT
   - typingsSlinky.figma.figmaStrings.GRID
 */
-trait StyleType extends js.Object
+trait StyleType extends StObject
 object StyleType {
   
   @scala.inline

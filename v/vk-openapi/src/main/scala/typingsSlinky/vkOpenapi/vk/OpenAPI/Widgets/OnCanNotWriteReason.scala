@@ -1,5 +1,6 @@
 package typingsSlinky.vkOpenapi.vk.OpenAPI.Widgets
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vkOpenapi.vkOpenapiStrings.disabled_messages
   - typingsSlinky.vkOpenapi.vkOpenapiStrings.cant_write
 */
-trait OnCanNotWriteReason extends js.Object
+trait OnCanNotWriteReason extends StObject
 object OnCanNotWriteReason {
   
   @scala.inline

@@ -1,14 +1,15 @@
 package typingsSlinky.amapJsApiTransfer.AMap
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait TransferPolicy extends js.Object
+sealed trait TransferPolicy extends StObject
 @JSGlobal("AMap.TransferPolicy")
 @js.native
-object TransferPolicy extends js.Object {
+object TransferPolicy extends StObject {
   
   /**
     * 最经济模式

@@ -4,6 +4,7 @@ import typingsSlinky.webcl.webclNumbers.`0x1190`
 import typingsSlinky.webcl.webclNumbers.`0x1191`
 import typingsSlinky.webcl.webclNumbers.`0x1193`
 import typingsSlinky.webcl.webclNumbers.`0x1194`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webcl.webclNumbers.`0x1193`
   - typingsSlinky.webcl.webclNumbers.`0x1194`
 */
-trait KernelInfo extends js.Object
+trait KernelInfo extends StObject
 object KernelInfo {
   
   //KERNEL_REFERENCE_COUNT                    = 0x1192, // disallowed

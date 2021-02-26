@@ -10,15 +10,15 @@ Non-Fabric-specific package version setter
 | ------------------ | :-------------: |
 | Full name          | @uifabric/set-version |
 | Keywords           | - |
-| # releases         | 37 |
-| # dependents       | 25 |
-| # downloads        | 1283798 |
+| # releases         | 53 |
+| # dependents       | 46 |
+| # downloads        | 3950715 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/OfficeDev/office-ui-fabric-react#readme)
-- [Bugs](https://github.com/OfficeDev/office-ui-fabric-react/issues)
-- [Repository](https://github.com/OfficeDev/office-ui-fabric-react)
+- [Homepage](https://github.com/microsoft/fluentui#readme)
+- [Bugs](https://github.com/microsoft/fluentui/issues)
+- [Repository](https://github.com/microsoft/fluentui)
 - [Npm](https://www.npmjs.com/package/%40uifabric%2Fset-version)
     
 

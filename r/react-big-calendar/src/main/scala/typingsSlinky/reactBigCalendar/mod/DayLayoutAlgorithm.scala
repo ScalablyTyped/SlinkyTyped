@@ -1,5 +1,6 @@
 package typingsSlinky.reactBigCalendar.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactBigCalendar.reactBigCalendarStrings.overlap
   - typingsSlinky.reactBigCalendar.reactBigCalendarStrings.`no-overlap`
 */
-trait DayLayoutAlgorithm extends js.Object
+trait DayLayoutAlgorithm extends StObject
 object DayLayoutAlgorithm {
   
   @scala.inline

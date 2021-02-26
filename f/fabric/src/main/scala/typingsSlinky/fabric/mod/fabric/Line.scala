@@ -2,6 +2,7 @@ package typingsSlinky.fabric.mod.fabric
 
 import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.fabric.fabricImplMod.ILineOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,11 +21,17 @@ class Line ()
   def this(points: js.Array[Double], objObjects: ILineOptions) = this()
 }
 /* static members */
-@JSImport("fabric", "fabric.Line")
-@js.native
-object Line extends js.Object {
+object Line {
   
-  var ATTRIBUTE_NAMES: js.Array[String] = js.native
+  @JSImport("fabric", "fabric.Line")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  @JSImport("fabric", "fabric.Line.ATTRIBUTE_NAMES")
+  @js.native
+  def ATTRIBUTE_NAMES: js.Array[String] = js.native
+  @scala.inline
+  def ATTRIBUTE_NAMES_=(x: js.Array[String]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("ATTRIBUTE_NAMES")(x.asInstanceOf[js.Any])
   
   /**
     * Returns fabric.Line instance from an SVG element
@@ -34,14 +41,24 @@ object Line extends js.Object {
     * @param {Object} [options] Options object
     * @param {Function} [callback] callback function invoked after parsing
     */
+  @JSImport("fabric", "fabric.Line.fromElement")
+  @js.native
   def fromElement(element: SVGElement): typingsSlinky.fabric.fabricImplMod.Line = js.native
+  @JSImport("fabric", "fabric.Line.fromElement")
+  @js.native
   def fromElement(element: SVGElement, callback: js.UndefOr[scala.Nothing], options: ILineOptions): typingsSlinky.fabric.fabricImplMod.Line = js.native
+  @JSImport("fabric", "fabric.Line.fromElement")
+  @js.native
   def fromElement(element: SVGElement, callback: js.Function): typingsSlinky.fabric.fabricImplMod.Line = js.native
+  @JSImport("fabric", "fabric.Line.fromElement")
+  @js.native
   def fromElement(element: SVGElement, callback: js.Function, options: ILineOptions): typingsSlinky.fabric.fabricImplMod.Line = js.native
   
   /**
     * Returns fabric.Line instance from an object representation
     * @param object Object to create an instance from
     */
+  @JSImport("fabric", "fabric.Line.fromObject")
+  @js.native
   def fromObject(`object`: js.Any): typingsSlinky.fabric.fabricImplMod.Line = js.native
 }

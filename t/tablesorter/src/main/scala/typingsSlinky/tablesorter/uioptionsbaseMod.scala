@@ -5,13 +5,12 @@ import typingsSlinky.tablesorter.omitMod.Omit
 import typingsSlinky.tablesorter.tablesorterStrings.max
 import typingsSlinky.tablesorter.tablesorterStrings.min
 import typingsSlinky.tablesorter.tablesorterStrings.step
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("tablesorter/Filtering/Formatter/Options/UIOptionsBase", JSImport.Namespace)
-@js.native
-object uioptionsbaseMod extends js.Object {
+object uioptionsbaseMod {
   
   type UIOptionsBase[T /* <: Max */] = Omit[T, min | max | step]
 }

@@ -1,19 +1,29 @@
 package typingsSlinky.officeUiFabricReact.mod
 
 import typingsSlinky.officeUiFabricReact.anon.CreateGenericItem
+import typingsSlinky.officeUiFabricReact.peoplePickerMod.IPeoplePickerProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react", "NormalPeoplePickerBase")
 @js.native
-class NormalPeoplePickerBase ()
-  extends typingsSlinky.officeUiFabricReact.libPickersMod.NormalPeoplePickerBase
+class NormalPeoplePickerBase protected ()
+  extends typingsSlinky.officeUiFabricReact.libPickersMod.NormalPeoplePickerBase {
+  def this(basePickerProps: IPeoplePickerProps) = this()
+}
 /* static members */
-@JSImport("office-ui-fabric-react", "NormalPeoplePickerBase")
-@js.native
-object NormalPeoplePickerBase extends js.Object {
+object NormalPeoplePickerBase {
+  
+  @JSImport("office-ui-fabric-react", "NormalPeoplePickerBase")
+  @js.native
+  val ^ : js.Any = js.native
   
   /** Default props for NormalPeoplePicker. */
-  var defaultProps: CreateGenericItem = js.native
+  @JSImport("office-ui-fabric-react", "NormalPeoplePickerBase.defaultProps")
+  @js.native
+  def defaultProps: CreateGenericItem = js.native
+  @scala.inline
+  def defaultProps_=(x: CreateGenericItem): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
 }

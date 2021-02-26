@@ -1,12 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "ListBreakTypesResponse")
 @js.native
-class ListBreakTypesResponse () extends js.Object {
+class ListBreakTypesResponse () extends StObject {
   
   /**
     *  A page of `BreakType` results.

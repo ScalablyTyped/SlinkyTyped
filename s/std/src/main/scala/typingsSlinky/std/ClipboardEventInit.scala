@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,33 +13,21 @@ trait ClipboardEventInit extends EventInit {
 object ClipboardEventInit {
   
   @scala.inline
-  def apply(): ClipboardEventInit = {
+  def apply(): org.scalajs.dom.raw.ClipboardEventInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ClipboardEventInit]
+    __obj.asInstanceOf[org.scalajs.dom.raw.ClipboardEventInit]
   }
   
   @scala.inline
-  implicit class ClipboardEventInitOps[Self <: org.scalajs.dom.raw.ClipboardEventInit] (val x: Self) extends AnyVal {
+  implicit class ClipboardEventInitMutableBuilder[Self <: org.scalajs.dom.raw.ClipboardEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setClipboardData(value: org.scalajs.dom.raw.DataTransfer): Self = StObject.set(x, "clipboardData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setClipboardDataNull: Self = StObject.set(x, "clipboardData", null)
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setClipboardData(value: org.scalajs.dom.raw.DataTransfer): Self = this.set("clipboardData", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteClipboardData: Self = this.set("clipboardData", js.undefined)
-    
-    @scala.inline
-    def setClipboardDataNull: Self = this.set("clipboardData", null)
+    def setClipboardDataUndefined: Self = StObject.set(x, "clipboardData", js.undefined)
   }
 }

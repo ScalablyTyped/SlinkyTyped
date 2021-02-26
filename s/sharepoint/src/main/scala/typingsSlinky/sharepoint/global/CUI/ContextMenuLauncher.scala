@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint.global.CUI
 
-import typingsSlinky.sharepoint.CUI.IModalController
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,5 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CUI.ContextMenuLauncher")
 @js.native
 class ContextMenuLauncher ()
-  extends typingsSlinky.sharepoint.CUI.Control
-     with IModalController
+  extends typingsSlinky.sharepoint.CUI.MenuLauncher

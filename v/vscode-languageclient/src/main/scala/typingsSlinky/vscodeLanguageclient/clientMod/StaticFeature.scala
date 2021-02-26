@@ -3,12 +3,13 @@ package typingsSlinky.vscodeLanguageclient.clientMod
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.ClientCapabilities
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.InitializeParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.ServerCapabilities
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait StaticFeature extends js.Object {
+trait StaticFeature extends StObject {
   
   /**
     * Called to fill in the client capabilities this feature implements.

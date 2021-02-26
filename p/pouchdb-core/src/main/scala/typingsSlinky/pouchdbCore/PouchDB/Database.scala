@@ -36,6 +36,7 @@ import typingsSlinky.pouchdbCore.PouchDB.Core.RevisionDiffOptions
 import typingsSlinky.pouchdbCore.PouchDB.Core.RevisionDiffResponse
 import typingsSlinky.pouchdbCore.PouchDB.Core.RevisionId
 import typingsSlinky.pouchdbCore.anon.`0`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

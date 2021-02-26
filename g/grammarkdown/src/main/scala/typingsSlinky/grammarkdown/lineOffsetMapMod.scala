@@ -3,16 +3,16 @@ package typingsSlinky.grammarkdown
 import typingsSlinky.grammarkdown.nodesMod.SourceFile
 import typingsSlinky.grammarkdown.typesMod.Position
 import typingsSlinky.grammarkdown.typesMod.Range
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("grammarkdown/dist/lineOffsetMap", JSImport.Namespace)
-@js.native
-object lineOffsetMapMod extends js.Object {
+object lineOffsetMapMod {
   
+  @JSImport("grammarkdown/dist/lineOffsetMap", "LineOffsetMap")
   @js.native
-  class LineOffsetMap () extends js.Object {
+  class LineOffsetMap () extends StObject {
     
     var generatedFilesLineOffsets: js.Any = js.native
     

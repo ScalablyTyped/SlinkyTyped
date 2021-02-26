@@ -5,12 +5,13 @@ import typingsSlinky.knockoutPaging.KnockoutComponentTypes.Config
 import typingsSlinky.knockoutPaging.KnockoutComponentTypes.Definition
 import typingsSlinky.knockoutPaging.KnockoutComponentTypes.EmptyConfig
 import typingsSlinky.knockoutPaging.KnockoutComponentTypes.Loader
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait KnockoutComponents extends js.Object {
+trait KnockoutComponents extends StObject {
   
   def clearCachedDefinition(componentName: String): Unit = js.native
   

@@ -3,17 +3,22 @@ package typingsSlinky.playable
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.playable.downloadTypesMod.IDownloadViewConfig
 import typingsSlinky.playable.downloadTypesMod.IDownloadViewStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/modules/ui/controls/download/download.view", JSImport.Namespace)
-@js.native
-object downloadViewMod extends js.Object {
+object downloadViewMod {
+  
+  @JSImport("playable/dist/src/modules/ui/controls/download/download.view", JSImport.Default)
+  @js.native
+  class default protected () extends DownloadView {
+    def this(config: IDownloadViewConfig) = this()
+  }
   
   @js.native
   trait DownloadView
-    extends typingsSlinky.playable.stylableMod.default[IDownloadViewStyles] {
+    extends typingsSlinky.playable.viewMod.default[IDownloadViewStyles] {
     
     @JSName("_$downloadButton")
     var _$downloadButton: js.Any = js.native
@@ -40,10 +45,5 @@ object downloadViewMod extends js.Object {
     def hide(): Unit = js.native
     
     def show(): Unit = js.native
-  }
-  
-  @js.native
-  class default protected () extends DownloadView {
-    def this(config: IDownloadViewConfig) = this()
   }
 }

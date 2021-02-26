@@ -6,6 +6,7 @@ import typingsSlinky.mithril.anon.FnCallElementComponent
 import typingsSlinky.mithril.anon.FnCallUrlOptions
 import typingsSlinky.mithril.anon.JsonpOptionsurlstring
 import typingsSlinky.mithril.anon.Url
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

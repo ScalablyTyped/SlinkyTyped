@@ -1,6 +1,7 @@
 package typingsSlinky.preact.jsxCsstypeMod
 
 import typingsSlinky.preact.preactStrings.menu_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,14 +18,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.preact.preactStrings.revert
   - typingsSlinky.preact.preactStrings.unset
 */
-trait MozWindowShadowProperty extends js.Object
+trait MozWindowShadowProperty extends StObject
 object MozWindowShadowProperty {
   
   @scala.inline
-  def `-moz-initial`: typingsSlinky.preact.preactStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.preact.preactStrings.`-moz-initial`]
+  def default: typingsSlinky.preact.preactStrings.default = "default".asInstanceOf[typingsSlinky.preact.preactStrings.default]
   
   @scala.inline
-  def default: typingsSlinky.preact.preactStrings.default = "default".asInstanceOf[typingsSlinky.preact.preactStrings.default]
+  def `-moz-initial`: typingsSlinky.preact.preactStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.preact.preactStrings.`-moz-initial`]
   
   @scala.inline
   def inherit: typingsSlinky.preact.preactStrings.inherit = "inherit".asInstanceOf[typingsSlinky.preact.preactStrings.inherit]

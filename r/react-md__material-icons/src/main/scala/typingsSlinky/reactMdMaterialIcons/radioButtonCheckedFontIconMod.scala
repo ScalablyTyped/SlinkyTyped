@@ -4,13 +4,14 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.fontIconMod.FontIconProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@react-md/material-icons/types/RadioButtonCheckedFontIcon", JSImport.Namespace)
-@js.native
-object radioButtonCheckedFontIconMod extends js.Object {
+object radioButtonCheckedFontIconMod {
   
+  @JSImport("@react-md/material-icons/types/RadioButtonCheckedFontIcon", "RadioButtonCheckedFontIcon")
+  @js.native
   val RadioButtonCheckedFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

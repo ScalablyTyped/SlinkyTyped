@@ -1,6 +1,7 @@
 package typingsSlinky.apolloProtobufjs.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Constructs a new message instance.
   * @param [properties] Properties to set
   */
-class Message[T /* <: js.Object */] () extends js.Object {
+class Message[T /* <: js.Object */] () extends StObject {
   def this(properties: Properties[T]) = this()
   
   /** Reference to the reflected type. */
@@ -25,12 +26,11 @@ class Message[T /* <: js.Object */] () extends js.Object {
   def toJSON(): StringDictionary[js.UndefOr[js.Any]] = js.native
 }
 /* static members */
-@JSImport("@apollo/protobufjs", "Message")
-@js.native
-object Message extends js.Object {
+object Message {
   
   /** Reference to the reflected type. */
-  @JSName("$type")
+  @JSImport("@apollo/protobufjs", "Message.$type")
+  @js.native
   val $type: Type = js.native
   
   /**
@@ -38,24 +38,36 @@ object Message extends js.Object {
     * @param [properties] Properties to set
     * @returns Message instance
     */
+  @JSImport("@apollo/protobufjs", "Message.create")
+  @js.native
   def create[T /* <: Message[T] */](): Message[T] = js.native
+  @JSImport("@apollo/protobufjs", "Message.create")
+  @js.native
   def create[T /* <: Message[T] */](properties: StringDictionary[js.UndefOr[js.Any]]): Message[T] = js.native
   
+  @JSImport("@apollo/protobufjs", "Message.decode")
+  @js.native
+  def decode[T /* <: Message[T] */](reader: js.typedarray.Uint8Array): T = js.native
   /**
     * Decodes a message of this type.
     * @param reader Reader or buffer to decode
     * @returns Decoded message
     */
+  @JSImport("@apollo/protobufjs", "Message.decode")
+  @js.native
   def decode[T /* <: Message[T] */](reader: Reader): T = js.native
-  def decode[T /* <: Message[T] */](reader: js.typedarray.Uint8Array): T = js.native
   
+  @JSImport("@apollo/protobufjs", "Message.decodeDelimited")
+  @js.native
+  def decodeDelimited[T /* <: Message[T] */](reader: js.typedarray.Uint8Array): T = js.native
   /**
     * Decodes a message of this type preceeded by its length as a varint.
     * @param reader Reader or buffer to decode
     * @returns Decoded message
     */
+  @JSImport("@apollo/protobufjs", "Message.decodeDelimited")
+  @js.native
   def decodeDelimited[T /* <: Message[T] */](reader: Reader): T = js.native
-  def decodeDelimited[T /* <: Message[T] */](reader: js.typedarray.Uint8Array): T = js.native
   
   /**
     * Encodes a message of this type.
@@ -63,9 +75,17 @@ object Message extends js.Object {
     * @param [writer] Writer to use
     * @returns Writer
     */
+  @JSImport("@apollo/protobufjs", "Message.encode")
+  @js.native
   def encode[T /* <: Message[T] */](message: T): Writer = js.native
+  @JSImport("@apollo/protobufjs", "Message.encode")
+  @js.native
   def encode[T /* <: Message[T] */](message: T, writer: Writer): Writer = js.native
+  @JSImport("@apollo/protobufjs", "Message.encode")
+  @js.native
   def encode[T /* <: Message[T] */](message: StringDictionary[js.UndefOr[js.Any]]): Writer = js.native
+  @JSImport("@apollo/protobufjs", "Message.encode")
+  @js.native
   def encode[T /* <: Message[T] */](message: StringDictionary[js.UndefOr[js.Any]], writer: Writer): Writer = js.native
   
   /**
@@ -74,9 +94,17 @@ object Message extends js.Object {
     * @param [writer] Writer to use
     * @returns Writer
     */
+  @JSImport("@apollo/protobufjs", "Message.encodeDelimited")
+  @js.native
   def encodeDelimited[T /* <: Message[T] */](message: T): Writer = js.native
+  @JSImport("@apollo/protobufjs", "Message.encodeDelimited")
+  @js.native
   def encodeDelimited[T /* <: Message[T] */](message: T, writer: Writer): Writer = js.native
+  @JSImport("@apollo/protobufjs", "Message.encodeDelimited")
+  @js.native
   def encodeDelimited[T /* <: Message[T] */](message: StringDictionary[js.UndefOr[js.Any]]): Writer = js.native
+  @JSImport("@apollo/protobufjs", "Message.encodeDelimited")
+  @js.native
   def encodeDelimited[T /* <: Message[T] */](message: StringDictionary[js.UndefOr[js.Any]], writer: Writer): Writer = js.native
   
   /**
@@ -84,6 +112,8 @@ object Message extends js.Object {
     * @param object Plain object
     * @returns Message instance
     */
+  @JSImport("@apollo/protobufjs", "Message.fromObject")
+  @js.native
   def fromObject[T /* <: Message[T] */](`object`: StringDictionary[js.UndefOr[js.Any]]): T = js.native
   
   /**
@@ -92,7 +122,11 @@ object Message extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("@apollo/protobufjs", "Message.toObject")
+  @js.native
   def toObject[T /* <: Message[T] */](message: T): StringDictionary[js.UndefOr[js.Any]] = js.native
+  @JSImport("@apollo/protobufjs", "Message.toObject")
+  @js.native
   def toObject[T /* <: Message[T] */](message: T, options: IConversionOptions): StringDictionary[js.UndefOr[js.Any]] = js.native
   
   /**
@@ -100,5 +134,7 @@ object Message extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("@apollo/protobufjs", "Message.verify")
+  @js.native
   def verify(message: StringDictionary[js.UndefOr[js.Any]]): String | Null = js.native
 }

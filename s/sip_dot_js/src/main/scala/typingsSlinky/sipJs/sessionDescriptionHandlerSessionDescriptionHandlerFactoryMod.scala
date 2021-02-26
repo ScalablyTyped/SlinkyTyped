@@ -3,13 +3,12 @@ package typingsSlinky.sipJs
 import typingsSlinky.sipJs.apiMod.Session
 import typingsSlinky.sipJs.sessionDescriptionHandlerFactoryOptionsMod.SessionDescriptionHandlerFactoryOptions
 import typingsSlinky.sipJs.sessionDescriptionHandlerSessionDescriptionHandlerMod.SessionDescriptionHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("sip.js/lib/platform/web/session-description-handler/session-description-handler-factory", JSImport.Namespace)
-@js.native
-object sessionDescriptionHandlerSessionDescriptionHandlerFactoryMod extends js.Object {
+object sessionDescriptionHandlerSessionDescriptionHandlerFactoryMod {
   
   @js.native
   trait SessionDescriptionHandlerFactory

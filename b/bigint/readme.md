@@ -12,7 +12,7 @@ Arbitrary-precision integer arithmetic using libgmp
 | Keywords           | gmp, libgmp, big, bignum, bigint, integer, arithmetic, precision |
 | # releases         | 0 |
 | # dependents       | 13 |
-| # downloads        | 5006 |
+| # downloads        | 2317 |
 | # stars            | 4 |
 
 ## Links

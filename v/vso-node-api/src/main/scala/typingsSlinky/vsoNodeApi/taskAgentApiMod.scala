@@ -6,24 +6,18 @@ import typingsSlinky.vsoNodeApi.taskAgentApiBaseMod.TaskAgentApiBase
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IHeaders
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestHandler
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vso-node-api/TaskAgentApi", JSImport.Namespace)
-@js.native
-object taskAgentApiMod extends js.Object {
-  
-  @js.native
-  trait ITaskAgentApi extends ITaskAgentApiBase {
-    
-    def uploadTaskDefinition(customHeaders: IHeaders, contentStream: ReadableStream, taskId: String, overwrite: Boolean): js.Promise[Unit] = js.native
-  }
+object taskAgentApiMod {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.vsoNodeApi.clientApiBasesMod.ClientApiBase because Already inherited
   - typingsSlinky.vsoNodeApi.taskAgentApiBaseMod.ITaskAgentApiBase because Already inherited
-  - typingsSlinky.vsoNodeApi.taskAgentApiMod.ITaskAgentApi because var conflicts: baseUrl, http, rest, userAgent, vsoClient. Inlined uploadTaskDefinition */ @js.native
+  - typingsSlinky.vsoNodeApi.taskAgentApiMod.ITaskAgentApi because var conflicts: baseUrl, http, rest, userAgent, vsoClient. Inlined uploadTaskDefinition */ @JSImport("vso-node-api/TaskAgentApi", "TaskAgentApi")
+  @js.native
   class TaskAgentApi protected () extends TaskAgentApiBase {
     def this(baseUrl: String, handlers: js.Array[IRequestHandler]) = this()
     def this(baseUrl: String, handlers: js.Array[IRequestHandler], options: IRequestOptions) = this()
@@ -44,6 +38,12 @@ object taskAgentApiMod extends js.Object {
       * @param {boolean} overwrite
       * @param onResult callback function
       */
+    def uploadTaskDefinition(customHeaders: IHeaders, contentStream: ReadableStream, taskId: String, overwrite: Boolean): js.Promise[Unit] = js.native
+  }
+  
+  @js.native
+  trait ITaskAgentApi extends ITaskAgentApiBase {
+    
     def uploadTaskDefinition(customHeaders: IHeaders, contentStream: ReadableStream, taskId: String, overwrite: Boolean): js.Promise[Unit] = js.native
   }
 }

@@ -12,7 +12,7 @@ Cordova Notification Plugin
 | Keywords           | cordova, notification, ecosystem:cordova, cordova-android, cordova-browser, cordova-ios, cordova-windows |
 | # releases         | 1 |
 | # dependents       | 15 |
-| # downloads        | 908843 |
+| # downloads        | 937839 |
 | # stars            | 25 |
 
 ## Links

@@ -6,22 +6,24 @@
 
 This is all example output of the ScalablyTyped Typescript to Scala.js converter.
 
-Check out [https://www.scalablytyped.org](scalablytyped.org)
+Check out [scalablytyped.org](https://www.scalablytyped.org)
 
 ## About
 
-This is one of the biggest Scala repos on the planet:
+This is one of the biggest Scala repos on the planet with with **9984**  compiling libraries.
+
+:
 ```
 
 --------------------------------------------------------------------------------
  Language             Files        Lines        Blank      Comment         Code
 --------------------------------------------------------------------------------
- Scala               497284     32925904      7652785      4513242     20759877
- Markdown             10391       364303       122624            0       241679
- Makefile                 5           97           25            0           72
+ Scala               358294     31511022      6936315      4603768     19970939
+ Markdown             10400       368253       122838            0       245415
+ Makefile                 5           90           22            0           68
  JSON                     1            1            0            0            1
 --------------------------------------------------------------------------------
- Total               507681     33290305      7775434      4513242     21001629
+ Total               368700     31879366      7059175      4603768     20216423
 --------------------------------------------------------------------------------
 
 ```

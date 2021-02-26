@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-field-form
 
-Typings are for version 1.15.1
+Typings are for version 1.17.2
 
 ## Library description:
 React Form Component
@@ -10,9 +10,9 @@ React Form Component
 | ------------------ | :-------------: |
 | Full name          | rc-field-form |
 | Keywords           | react, react-component, react-form, form |
-| # releases         | 41 |
-| # dependents       | 13 |
-| # downloads        | 108565 |
+| # releases         | 89 |
+| # dependents       | 69 |
+| # downloads        | 10456819 |
 | # stars            | 0 |
 
 ## Links

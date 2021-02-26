@@ -1,22 +1,21 @@
 package typingsSlinky.babylonjs
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.File
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.sceneLoaderMod.ISceneLoaderProgressEvent
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Misc/filesInput", JSImport.Namespace)
-@js.native
-object filesInputMod extends js.Object {
+object filesInputMod {
   
+  @JSImport("babylonjs/Misc/filesInput", "FilesInput")
   @js.native
-  class FilesInput protected () extends js.Object {
+  class FilesInput protected () extends StObject {
     /**
       * Creates a new FilesInput
       * @param engine defines the rendering engine
@@ -114,14 +113,5 @@ object filesInputMod extends js.Object {
     def reload(): Unit = js.native
     
     var renderFunction: js.Any = js.native
-  }
-  /* static members */
-  @js.native
-  object FilesInput extends js.Object {
-    
-    /**
-      * List of files ready to be loaded
-      */
-    def FilesToLoad: StringDictionary[File] = js.native
   }
 }

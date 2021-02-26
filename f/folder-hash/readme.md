@@ -10,9 +10,9 @@ Create a hash checksum over a folder and its content - its children and their co
 | ------------------ | :-------------: |
 | Full name          | folder-hash |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 53 |
-| # downloads        | 2107377 |
+| # releases         | 10 |
+| # dependents       | 63 |
+| # downloads        | 3730396 |
 | # stars            | 0 |
 
 ## Links

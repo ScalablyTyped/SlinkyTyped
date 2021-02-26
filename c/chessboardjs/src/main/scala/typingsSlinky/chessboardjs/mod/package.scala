@@ -1,5 +1,6 @@
 package typingsSlinky.chessboardjs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +12,9 @@ package object mod {
     */ typingsSlinky.chessboardjs.chessboardjsStrings.BoardPositionType with org.scalablytyped.runtime.TopLevel[js.Any]
   
   type Callback = js.Function0[scala.Unit]
+  
+  @scala.inline
+  def ChessBoard: typingsSlinky.chessboardjs.mod.ChessBoardFactory = typingsSlinky.chessboardjs.mod.^.asInstanceOf[js.Dynamic].selectDynamic("ChessBoard").asInstanceOf[typingsSlinky.chessboardjs.mod.ChessBoardFactory]
   
   type OrientationFlipType = typingsSlinky.chessboardjs.chessboardjsStrings.flip
   

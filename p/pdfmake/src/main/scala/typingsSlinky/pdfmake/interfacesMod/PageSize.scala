@@ -1,5 +1,6 @@
 package typingsSlinky.pdfmake.interfacesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pdfmake.interfacesMod.PredefinedPageSize
   - typingsSlinky.pdfmake.interfacesMod.CustomPageSize
 */
-trait PageSize extends js.Object
+trait PageSize extends StObject

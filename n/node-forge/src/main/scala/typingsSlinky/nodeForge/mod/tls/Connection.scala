@@ -6,12 +6,13 @@ import typingsSlinky.nodeForge.mod.pki.CAStore
 import typingsSlinky.nodeForge.mod.pki.Certificate
 import typingsSlinky.nodeForge.mod.pki.PEM
 import typingsSlinky.nodeForge.mod.util.ByteBuffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Connection extends js.Object {
+trait Connection extends StObject {
   
   var caStore: CAStore = js.native
   

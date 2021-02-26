@@ -2,14 +2,14 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.iserverMod.IServer
 import typingsSlinky.samchon.sharedWorkerClientDriverMod.SharedWorkerClientDriver
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("samchon/protocol/server/SharedWorkerServer", JSImport.Namespace)
-@js.native
-object sharedWorkerServerMod extends js.Object {
+object sharedWorkerServerMod {
   
+  @JSImport("samchon/protocol/server/SharedWorkerServer", "SharedWorkerServer")
   @js.native
   abstract class SharedWorkerServer () extends IServer {
     

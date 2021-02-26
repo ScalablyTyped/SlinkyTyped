@@ -2,13 +2,14 @@ package typingsSlinky.johnnyFive.mod
 
 import typingsSlinky.johnnyFive.johnnyFiveStrings.change
 import typingsSlinky.johnnyFive.johnnyFiveStrings.data
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("johnny-five", "Hygrometer")
 @js.native
-class Hygrometer protected () extends js.Object {
+class Hygrometer protected () extends StObject {
   def this(option: HygrometerOption) = this()
   
   val RH: Double = js.native

@@ -23,12 +23,13 @@ import typingsSlinky.iobroker.objectsMod.global.ioBroker.SettableObject
 import typingsSlinky.iobroker.objectsMod.global.ioBroker.StateObject
 import typingsSlinky.node.Buffer
 import typingsSlinky.std.Record
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Adapter extends js.Object {
+trait Adapter extends StObject {
   
   /** path to the adapter folder */
   var adapterDir: String = js.native
@@ -634,12 +635,12 @@ trait Adapter extends js.Object {
   def formatDate(dateObj: String, format: String): String = js.native
   def formatDate(dateObj: String, isDuration: String, format: String): String = js.native
   def formatDate(dateObj: String, isDuration: Boolean, format: String): String = js.native
-  def formatDate(dateObj: Double, format: String): String = js.native
-  def formatDate(dateObj: Double, isDuration: String, format: String): String = js.native
-  def formatDate(dateObj: Double, isDuration: Boolean, format: String): String = js.native
   def formatDate(dateObj: js.Date, format: String): String = js.native
   def formatDate(dateObj: js.Date, isDuration: String, format: String): String = js.native
   def formatDate(dateObj: js.Date, isDuration: Boolean, format: String): String = js.native
+  def formatDate(dateObj: Double, format: String): String = js.native
+  def formatDate(dateObj: Double, isDuration: String, format: String): String = js.native
+  def formatDate(dateObj: Double, isDuration: Boolean, format: String): String = js.native
   
   def formatValue(value: String, decimals: Double, format: js.Any): String = js.native
   def formatValue(value: String, format: js.Any): String = js.native

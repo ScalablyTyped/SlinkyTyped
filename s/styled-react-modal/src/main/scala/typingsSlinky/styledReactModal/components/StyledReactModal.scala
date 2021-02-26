@@ -7,15 +7,22 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.styledReactModal.mod.ModalProps
 import typingsSlinky.styledReactModal.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StyledReactModal {
   
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
+  }
+  
   @JSImport("styled-react-modal", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,16 +42,16 @@ object StyledReactModal {
     def backgroundProps(value: js.Object): this.type = set("backgroundProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def beforeCloseFunction0(value: () => Unit): this.type = set("beforeClose", js.Any.fromFunction0(value))
-    
-    @scala.inline
     def beforeClose(value: js.Promise[Unit] | js.Function0[Unit]): this.type = set("beforeClose", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def beforeOpenFunction0(value: () => Unit): this.type = set("beforeOpen", js.Any.fromFunction0(value))
+    def beforeCloseFunction0(value: () => Unit): this.type = set("beforeClose", js.Any.fromFunction0(value))
     
     @scala.inline
     def beforeOpen(value: js.Promise[Unit] | js.Function0[Unit]): this.type = set("beforeOpen", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def beforeOpenFunction0(value: () => Unit): this.type = set("beforeOpen", js.Any.fromFunction0(value))
     
     @scala.inline
     def onBackgroundClick(value: /* event */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onBackgroundClick", js.Any.fromFunction1(value))
@@ -54,10 +61,4 @@ object StyledReactModal {
   }
   
   def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(isOpen: Boolean): Builder = {
-    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
-  }
 }

@@ -3,14 +3,14 @@ package typingsSlinky.ionicCore
 import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/infinite-scroll-content/infinite-scroll-content", JSImport.Namespace)
-@js.native
-object infiniteScrollContentMod extends js.Object {
+object infiniteScrollContentMod {
   
+  @JSImport("@ionic/core/dist/types/components/infinite-scroll-content/infinite-scroll-content", "InfiniteScrollContent")
   @js.native
   class InfiniteScrollContent () extends ComponentInterface {
     

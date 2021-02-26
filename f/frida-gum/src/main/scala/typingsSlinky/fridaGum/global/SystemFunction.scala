@@ -1,15 +1,15 @@
 package typingsSlinky.fridaGum.global
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.fridaGum.NativeABI
 import typingsSlinky.fridaGum.NativeFunctionOptions
 import typingsSlinky.fridaGum.NativePointerValue
 import typingsSlinky.fridaGum.NativeType
-import typingsSlinky.fridaGum.SystemFunctionConstructor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("SystemFunction")
 @js.native
 class SystemFunction protected ()
@@ -28,6 +28,3 @@ class SystemFunction protected ()
     abiOrOptions: NativeFunctionOptions
   ) = this()
 }
-@JSGlobal("SystemFunction")
-@js.native
-object SystemFunction extends TopLevel[SystemFunctionConstructor]

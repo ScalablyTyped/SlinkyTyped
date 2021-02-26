@@ -12,6 +12,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ares
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.hectares
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.imperial
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.metric
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

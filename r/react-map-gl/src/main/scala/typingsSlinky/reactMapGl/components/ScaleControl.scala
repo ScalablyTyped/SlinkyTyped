@@ -6,6 +6,7 @@ import typingsSlinky.reactMapGl.mod.ScaleControlProps
 import typingsSlinky.reactMapGl.reactMapGlStrings.imperial
 import typingsSlinky.reactMapGl.reactMapGlStrings.metric
 import typingsSlinky.reactMapGl.reactMapGlStrings.nautical
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ScaleControl {
   
   @JSImport("react-map-gl", "ScaleControl")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,7 +41,7 @@ object ScaleControl {
     def unit(value: imperial | metric | nautical): this.type = set("unit", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ScaleControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ScaleControl.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ScaleControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

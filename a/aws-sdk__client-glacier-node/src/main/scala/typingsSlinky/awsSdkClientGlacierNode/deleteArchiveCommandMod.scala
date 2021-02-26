@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientGlacierNode.typesDeleteArchiveInputMod.DeleteAr
 import typingsSlinky.awsSdkClientGlacierNode.typesDeleteArchiveOutputMod.DeleteArchiveOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-glacier-node/commands/DeleteArchiveCommand", JSImport.Namespace)
-@js.native
-object deleteArchiveCommandMod extends js.Object {
+object deleteArchiveCommandMod {
   
+  @JSImport("@aws-sdk/client-glacier-node/commands/DeleteArchiveCommand", "DeleteArchiveCommand")
   @js.native
   class DeleteArchiveCommand protected () extends Command[
           InputTypesUnion, 

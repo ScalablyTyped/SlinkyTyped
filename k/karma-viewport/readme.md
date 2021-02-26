@@ -10,9 +10,9 @@ A Karma plugin for testing responsive features and layout
 | ------------------ | :-------------: |
 | Full name          | karma-viewport |
 | Keywords           | breakpoint, iframe, karma, karma-framework, karma-plugin, responsive, testing, viewport |
-| # releases         | 6 |
-| # dependents       | 3 |
-| # downloads        | 247478 |
+| # releases         | 3 |
+| # dependents       | 5 |
+| # downloads        | 535734 |
 | # stars            | 0 |
 
 ## Links

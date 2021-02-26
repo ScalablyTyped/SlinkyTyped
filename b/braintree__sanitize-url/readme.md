@@ -10,9 +10,9 @@ A url sanitizer
 | ------------------ | :-------------: |
 | Full name          | @braintree/sanitize-url |
 | Keywords           | - |
-| # releases         | 3 |
-| # dependents       | 30 |
-| # downloads        | 7998671 |
+| # releases         | 8 |
+| # dependents       | 44 |
+| # downloads        | 13564319 |
 | # stars            | 0 |
 
 ## Links

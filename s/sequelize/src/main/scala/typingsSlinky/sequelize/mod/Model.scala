@@ -5,6 +5,7 @@ import typingsSlinky.sequelize.anon.Count
 import typingsSlinky.sequelize.anon.UpsertOptionsreturningfal
 import typingsSlinky.sequelize.anon.UpsertOptionsreturningtru
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

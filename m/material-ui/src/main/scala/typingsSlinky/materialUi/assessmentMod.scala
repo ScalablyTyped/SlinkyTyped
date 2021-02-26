@@ -2,19 +2,19 @@ package typingsSlinky.materialUi
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-ui/svg-icons/action/assessment", JSImport.Namespace)
-@js.native
-object assessmentMod extends js.Object {
+object assessmentMod {
   
+  @JSImport("material-ui/svg-icons/action/assessment", JSImport.Default)
+  @js.native
+  class default () extends ActionAssessment
+  
+  @JSImport("material-ui/svg-icons/action/assessment", "ActionAssessment")
   @js.native
   class ActionAssessment ()
-    extends Component[SvgIconProps, js.Object, js.Any]
-  
-  @js.native
-  class default ()
     extends Component[SvgIconProps, js.Object, js.Any]
 }

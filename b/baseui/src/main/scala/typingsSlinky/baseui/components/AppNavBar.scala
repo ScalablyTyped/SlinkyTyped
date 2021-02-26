@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.appNavBarMod.AppNavBarPropsT
 import typingsSlinky.baseui.appNavBarMod.NavItemT
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object AppNavBar {
   
   @JSImport("baseui/app-nav-bar", "AppNavBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -24,10 +25,10 @@ object AppNavBar {
     def isMainItemActive(value: /* item */ NavItemT => Boolean): this.type = set("isMainItemActive", js.Any.fromFunction1(value))
     
     @scala.inline
-    def mainItemsVarargs(value: NavItemT*): this.type = set("mainItems", js.Array(value :_*))
+    def mainItems(value: js.Array[NavItemT]): this.type = set("mainItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def mainItems(value: js.Array[NavItemT]): this.type = set("mainItems", value.asInstanceOf[js.Any])
+    def mainItemsVarargs(value: NavItemT*): this.type = set("mainItems", js.Array(value :_*))
     
     @scala.inline
     def mapItemToNode(value: /* item */ NavItemT => ReactElement): this.type = set("mapItemToNode", js.Any.fromFunction1(value))
@@ -43,31 +44,31 @@ object AppNavBar {
     ): this.type = set("onUserItemSelect", js.Any.fromFunction1(value))
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def userImgUrl(value: String): this.type = set("userImgUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def userItemsVarargs(value: NavItemT*): this.type = set("userItems", js.Array(value :_*))
+    def userItems(value: js.Array[NavItemT]): this.type = set("userItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def userItems(value: js.Array[NavItemT]): this.type = set("userItems", value.asInstanceOf[js.Any])
+    def userItemsVarargs(value: NavItemT*): this.type = set("userItems", js.Array(value :_*))
     
     @scala.inline
     def username(value: String): this.type = set("username", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def usernameSubtitleReactElement(value: ReactElement): this.type = set("usernameSubtitle", value.asInstanceOf[js.Any])
+    def usernameSubtitle(value: ReactElement): this.type = set("usernameSubtitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def usernameSubtitle(value: ReactElement): this.type = set("usernameSubtitle", value.asInstanceOf[js.Any])
+    def usernameSubtitleReactElement(value: ReactElement): this.type = set("usernameSubtitle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AppNavBarPropsT): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: AppNavBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AppNavBarPropsT): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

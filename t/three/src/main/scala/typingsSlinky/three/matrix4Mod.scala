@@ -5,14 +5,14 @@ import typingsSlinky.three.eulerMod.Euler
 import typingsSlinky.three.matrix3Mod.Matrix
 import typingsSlinky.three.quaternionMod.Quaternion
 import typingsSlinky.three.vector3Mod.Vector3
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/math/Matrix4", JSImport.Namespace)
-@js.native
-object matrix4Mod extends js.Object {
+object matrix4Mod {
   
+  @JSImport("three/src/math/Matrix4", "Matrix4")
   @js.native
   class Matrix4 () extends Matrix {
     

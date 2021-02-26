@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.Hour
 import typingsSlinky.fundamentalReact.anon.MeridiemAM
 import typingsSlinky.fundamentalReact.timeMod.TimeProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object Time {
   
   @JSImport("fundamental-react", "Time")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -90,7 +91,7 @@ object Time {
     def time(value: Hour): this.type = set("time", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TimeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Time.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TimeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

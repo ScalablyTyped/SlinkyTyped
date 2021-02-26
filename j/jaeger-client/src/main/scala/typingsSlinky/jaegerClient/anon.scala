@@ -9,13 +9,12 @@ import typingsSlinky.promClient.mod.GaugeConfiguration
 import typingsSlinky.promClient.mod.HistogramConfiguration
 import typingsSlinky.promClient.mod.Registry
 import typingsSlinky.promClient.mod.SummaryConfiguration
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
   trait TypeofAggregatorRegistry extends Instantiable0[AggregatorRegistry] {
@@ -53,7 +52,7 @@ object anon extends js.Object {
   }
   
   @js.native
-  trait Typeofprometheus extends js.Object {
+  trait Typeofprometheus extends StObject {
     
     var AggregatorRegistry: TypeofAggregatorRegistry = js.native
     

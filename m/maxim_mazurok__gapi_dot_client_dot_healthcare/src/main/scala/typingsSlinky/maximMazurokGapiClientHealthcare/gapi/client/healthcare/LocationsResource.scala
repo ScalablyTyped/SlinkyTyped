@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientHealthcare.gapi.client.healthcare
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.Name
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.PageSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LocationsResource extends js.Object {
+trait LocationsResource extends StObject {
   
   var datasets: DatasetsResource = js.native
   

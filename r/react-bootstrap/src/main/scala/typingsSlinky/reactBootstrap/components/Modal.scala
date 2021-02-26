@@ -73,21 +73,91 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactBootstrap.mod.Sizes
+import typingsSlinky.reactBootstrap.modalBodyMod.ModalBodyProps
+import typingsSlinky.reactBootstrap.modalDialogMod.ModalDialogProps
+import typingsSlinky.reactBootstrap.modalFooterMod.ModalFooterProps
+import typingsSlinky.reactBootstrap.modalHeaderMod.ModalHeaderProps
 import typingsSlinky.reactBootstrap.modalMod.ModalProps
+import typingsSlinky.reactBootstrap.modalTitleMod.ModalTitleProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Modal {
   
+  @scala.inline
+  def apply(onHide: js.Function): Builder = {
+    val __props = js.Dynamic.literal(onHide = onHide.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
+  }
+  
+  object Body {
+    
+    @JSImport("react-bootstrap", "Modal.Body")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Body.type): SharedBuilder_ModalBodyProps1217961480[typingsSlinky.reactBootstrap.mod.Modal.Body] = new SharedBuilder_ModalBodyProps1217961480[typingsSlinky.reactBootstrap.mod.Modal.Body](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: ModalBodyProps): SharedBuilder_ModalBodyProps1217961480[typingsSlinky.reactBootstrap.mod.Modal.Body] = new SharedBuilder_ModalBodyProps1217961480[typingsSlinky.reactBootstrap.mod.Modal.Body](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Dialog {
+    
+    @JSImport("react-bootstrap", "Modal.Dialog")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Dialog.type): SharedBuilder_ModalDialogProps1384425002[typingsSlinky.reactBootstrap.mod.Modal.Dialog] = new SharedBuilder_ModalDialogProps1384425002[typingsSlinky.reactBootstrap.mod.Modal.Dialog](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: ModalDialogProps): SharedBuilder_ModalDialogProps1384425002[typingsSlinky.reactBootstrap.mod.Modal.Dialog] = new SharedBuilder_ModalDialogProps1384425002[typingsSlinky.reactBootstrap.mod.Modal.Dialog](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Footer {
+    
+    @JSImport("react-bootstrap", "Modal.Footer")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Footer.type): SharedBuilder_ModalFooterProps_1850304987[typingsSlinky.reactBootstrap.mod.Modal.Footer] = new SharedBuilder_ModalFooterProps_1850304987[typingsSlinky.reactBootstrap.mod.Modal.Footer](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: ModalFooterProps): SharedBuilder_ModalFooterProps_1850304987[typingsSlinky.reactBootstrap.mod.Modal.Footer] = new SharedBuilder_ModalFooterProps_1850304987[typingsSlinky.reactBootstrap.mod.Modal.Footer](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Header {
+    
+    @JSImport("react-bootstrap", "Modal.Header")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Header.type): SharedBuilder_ModalHeaderProps3439676[typingsSlinky.reactBootstrap.mod.Modal.Header] = new SharedBuilder_ModalHeaderProps3439676[typingsSlinky.reactBootstrap.mod.Modal.Header](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: ModalHeaderProps): SharedBuilder_ModalHeaderProps3439676[typingsSlinky.reactBootstrap.mod.Modal.Header] = new SharedBuilder_ModalHeaderProps3439676[typingsSlinky.reactBootstrap.mod.Modal.Header](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Title {
+    
+    @JSImport("react-bootstrap", "Modal.Title")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Title.type): SharedBuilder_ModalTitleProps1023951677[typingsSlinky.reactBootstrap.mod.Modal.Title] = new SharedBuilder_ModalTitleProps1023951677[typingsSlinky.reactBootstrap.mod.Modal.Title](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: ModalTitleProps): SharedBuilder_ModalTitleProps1023951677[typingsSlinky.reactBootstrap.mod.Modal.Title] = new SharedBuilder_ModalTitleProps1023951677[typingsSlinky.reactBootstrap.mod.Modal.Title](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("react-bootstrap", "Modal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Modal] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -377,16 +447,13 @@ object Modal {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -992,10 +1059,10 @@ object Modal {
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -1011,10 +1078,4 @@ object Modal {
   }
   
   def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onHide: js.Function): Builder = {
-    val __props = js.Dynamic.literal(onHide = onHide.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
-  }
 }

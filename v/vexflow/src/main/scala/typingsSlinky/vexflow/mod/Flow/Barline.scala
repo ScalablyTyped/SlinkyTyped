@@ -1,5 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,12 +11,11 @@ class Barline protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Barline {
   def this(`type`: typingsSlinky.vexflow.Vex.Flow.Barline.`type`, x: Double) = this()
 }
-@JSImport("vexflow", "Flow.Barline")
-@js.native
-object Barline extends js.Object {
+object Barline {
   
+  @JSImport("vexflow", "Flow.Barline.type")
   @js.native
-  object `type` extends js.Object {
+  object `type` extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.vexflow.Vex.Flow.Barline.`type` with Double] = js.native

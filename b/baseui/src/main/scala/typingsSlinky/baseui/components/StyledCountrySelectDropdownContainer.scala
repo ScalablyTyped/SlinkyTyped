@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.styletronReact.mod.StyletronComponentInjectedProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,11 +13,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 js.Any with typingsSlinky.styletronReact.mod.StyletronComponentInjectedProps[js.Any]] because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.) */
 object StyledCountrySelectDropdownContainer {
   
+  def apply(p: PropsWithChildren[js.Any with StyletronComponentInjectedProps[js.Any]]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @JSImport("baseui/phone-input", "StyledCountrySelectDropdownContainer")
   @js.native
-  object component extends js.Object
-  
-  def apply(p: PropsWithChildren[js.Any with StyletronComponentInjectedProps[js.Any]]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  val component: js.Object = js.native
   
   implicit def make(companion: StyledCountrySelectDropdownContainer.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }

@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,18 +37,26 @@ class GossipBatchByTransactionIdRequest () extends IGossipBatchByTransactionIdRe
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest")
-@js.native
-object GossipBatchByTransactionIdRequest extends js.Object {
+object GossipBatchByTransactionIdRequest {
   
   /**
     * Creates a new GossipBatchByTransactionIdRequest instance using the specified properties.
     * @param [properties] Properties to set
     * @returns GossipBatchByTransactionIdRequest instance
     */
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.create")
+  @js.native
   def create(): GossipBatchByTransactionIdRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.create")
+  @js.native
   def create(properties: IGossipBatchByTransactionIdRequest): GossipBatchByTransactionIdRequest = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): GossipBatchByTransactionIdRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): GossipBatchByTransactionIdRequest = js.native
   /**
     * Decodes a GossipBatchByTransactionIdRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -56,11 +65,16 @@ object GossipBatchByTransactionIdRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.decode")
+  @js.native
   def decode(reader: Reader): GossipBatchByTransactionIdRequest = js.native
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.decode")
+  @js.native
   def decode(reader: Reader, length: Double): GossipBatchByTransactionIdRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array): GossipBatchByTransactionIdRequest = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): GossipBatchByTransactionIdRequest = js.native
   
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): GossipBatchByTransactionIdRequest = js.native
   /**
     * Decodes a GossipBatchByTransactionIdRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -68,8 +82,9 @@ object GossipBatchByTransactionIdRequest extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): GossipBatchByTransactionIdRequest = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): GossipBatchByTransactionIdRequest = js.native
   
   /**
     * Encodes the specified GossipBatchByTransactionIdRequest message. Does not implicitly {@link GossipBatchByTransactionIdRequest.verify|verify} messages.
@@ -77,7 +92,11 @@ object GossipBatchByTransactionIdRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.encode")
+  @js.native
   def encode(message: IGossipBatchByTransactionIdRequest): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.encode")
+  @js.native
   def encode(message: IGossipBatchByTransactionIdRequest, writer: Writer): Writer = js.native
   
   /**
@@ -86,7 +105,11 @@ object GossipBatchByTransactionIdRequest extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IGossipBatchByTransactionIdRequest): Writer = js.native
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IGossipBatchByTransactionIdRequest, writer: Writer): Writer = js.native
   
   /**
@@ -94,6 +117,8 @@ object GossipBatchByTransactionIdRequest extends js.Object {
     * @param object Plain object
     * @returns GossipBatchByTransactionIdRequest
     */
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): GossipBatchByTransactionIdRequest = js.native
   
   /**
@@ -102,7 +127,11 @@ object GossipBatchByTransactionIdRequest extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.toObject")
+  @js.native
   def toObject(message: GossipBatchByTransactionIdRequest): StringDictionary[js.Any] = js.native
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.toObject")
+  @js.native
   def toObject(message: GossipBatchByTransactionIdRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -110,5 +139,7 @@ object GossipBatchByTransactionIdRequest extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("sawtooth-sdk/protobuf", "GossipBatchByTransactionIdRequest.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

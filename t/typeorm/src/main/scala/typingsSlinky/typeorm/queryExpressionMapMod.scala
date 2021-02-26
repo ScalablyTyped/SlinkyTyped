@@ -29,16 +29,16 @@ import typingsSlinky.typeorm.typeormStrings.relation
 import typingsSlinky.typeorm.typeormStrings.restore
 import typingsSlinky.typeorm.typeormStrings.select
 import typingsSlinky.typeorm.typeormStrings.update
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/browser/query-builder/QueryExpressionMap", JSImport.Namespace)
-@js.native
-object queryExpressionMapMod extends js.Object {
+object queryExpressionMapMod {
   
+  @JSImport("typeorm/browser/query-builder/QueryExpressionMap", "QueryExpressionMap")
   @js.native
-  class QueryExpressionMap protected () extends js.Object {
+  class QueryExpressionMap protected () extends StObject {
     def this(connection: Connection) = this()
     
     /**

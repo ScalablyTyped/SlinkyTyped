@@ -18,6 +18,7 @@ import typingsSlinky.konva.typesMod.Vector2d
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.reactKonva.reactKonvaCoreMod.KonvaNodeEvents
 import typingsSlinky.std.Number
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ object FastLayer {
   
   @JSImport("react-konva", "FastLayer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,10 +62,10 @@ object FastLayer {
     def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filtersVarargs(value: Filter*): this.type = set("filters", js.Array(value :_*))
+    def filters(value: js.Array[Filter]): this.type = set("filters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filters(value: js.Array[Filter]): this.type = set("filters", value.asInstanceOf[js.Any])
+    def filtersVarargs(value: Filter*): this.type = set("filters", js.Array(value :_*))
     
     @scala.inline
     def globalCompositeOperation(value: globalCompositeOperationType): this.type = set("globalCompositeOperation", value.asInstanceOf[js.Any])
@@ -196,9 +197,9 @@ object FastLayer {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
+  implicit def make(companion: FastLayer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   def withProps(
     p: typingsSlinky.konva.mod.Konva.LayerConfig with KonvaNodeEvents with ClassAttributes[typingsSlinky.konva.mod.Konva.FastLayer]
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: FastLayer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

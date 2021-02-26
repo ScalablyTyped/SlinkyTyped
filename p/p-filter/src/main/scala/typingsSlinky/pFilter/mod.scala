@@ -1,12 +1,11 @@
 package typingsSlinky.pFilter
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("p-filter", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   /**
   	Filter promises concurrently.
@@ -33,15 +32,23 @@ object mod extends js.Object {
   	})();
   	```
   	*/
+  @JSImport("p-filter", JSImport.Namespace)
+  @js.native
   def apply[ValueType](
     input: js.Iterable[ValueType | js.Thenable[ValueType]],
     filterer: js.Function2[/* element */ ValueType, /* index */ Double, Boolean | js.Thenable[Boolean]]
   ): js.Promise[js.Array[ValueType]] = js.native
+  @JSImport("p-filter", JSImport.Namespace)
+  @js.native
   def apply[ValueType](
     input: js.Iterable[ValueType | js.Thenable[ValueType]],
     filterer: js.Function2[/* element */ ValueType, /* index */ Double, Boolean | js.Thenable[Boolean]],
     options: Options
   ): js.Promise[js.Array[ValueType]] = js.native
+  
+  @JSImport("p-filter", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
   
   // TODO: Remove this for the next major release, refactor the whole definition to:
   // declare function pFilter<ValueType>(
@@ -53,7 +60,11 @@ object mod extends js.Object {
   // 	options?: pFilter.Options
   // ): Promise<ValueType[]>;
   // export = pFilter;
-  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof pFilter */ js.Any = js.native
+  @JSImport("p-filter", "default")
+  @js.native
+  def default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof pFilter */ js.Any = js.native
+  @scala.inline
+  def default_=(x: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof pFilter */ js.Any): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("default")(x.asInstanceOf[js.Any])
   
   type Options = typingsSlinky.pMap.mod.Options
 }

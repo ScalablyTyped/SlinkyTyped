@@ -14,15 +14,27 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.`small fade`
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.fade
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.move
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.rotate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Reveal {
   
+  object Content {
+    
+    @JSImport("semantic-ui-react", "Reveal.Content")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Content.type): SharedBuilder_RevealContentProps2098528121 = new SharedBuilder_RevealContentProps2098528121(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: RevealContentProps): SharedBuilder_RevealContentProps2098528121 = new SharedBuilder_RevealContentProps2098528121(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("semantic-ui-react", "Reveal")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -44,10 +56,10 @@ object Reveal {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -56,18 +68,7 @@ object Reveal {
     def instant(value: Boolean): this.type = set("instant", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: RevealProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Reveal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Content {
-    
-    @JSImport("semantic-ui-react", "Reveal.Content")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: RevealContentProps): SharedBuilder_RevealContentProps2098528121 = new SharedBuilder_RevealContentProps2098528121(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Content.type): SharedBuilder_RevealContentProps2098528121 = new SharedBuilder_RevealContentProps2098528121(js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: RevealProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

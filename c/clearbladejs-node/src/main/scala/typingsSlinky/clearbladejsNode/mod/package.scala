@@ -1,5 +1,6 @@
 package typingsSlinky.clearbladejsNode
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +12,11 @@ package object mod {
     /* response */ typingsSlinky.clearbladejsNode.mod.Resp, 
     scala.Unit
   ]
+  
+  @scala.inline
+  def ClearBlade: typingsSlinky.clearbladejsNode.mod.ClearBladeGlobal = typingsSlinky.clearbladejsNode.mod.^.asInstanceOf[js.Dynamic].selectDynamic("ClearBlade").asInstanceOf[typingsSlinky.clearbladejsNode.mod.ClearBladeGlobal]
+  @scala.inline
+  def ClearBlade_=(x: typingsSlinky.clearbladejsNode.mod.ClearBladeGlobal): scala.Unit = typingsSlinky.clearbladejsNode.mod.^.asInstanceOf[js.Dynamic].updateDynamic("ClearBlade")(x.asInstanceOf[js.Any])
   
   type ItemOptions = typingsSlinky.clearbladejsNode.mod.CollectionOptionsWithID
   

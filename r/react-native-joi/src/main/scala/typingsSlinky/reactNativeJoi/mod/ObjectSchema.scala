@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeJoi.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -96,7 +97,6 @@ trait ObjectSchema extends AnySchema {
   def oxor(peers: String*): this.type = js.native
   def oxor(peers: js.Array[String]): this.type = js.native
   
-  def pattern(pattern: SchemaLike, schema: SchemaLike): this.type = js.native
   /**
     * Specify validation rules for unknown keys matching a pattern.
     *
@@ -104,6 +104,7 @@ trait ObjectSchema extends AnySchema {
     * @param schema - the schema object matching keys must validate against
     */
   def pattern(pattern: js.RegExp, schema: SchemaLike): this.type = js.native
+  def pattern(pattern: SchemaLike, schema: SchemaLike): this.type = js.native
   
   /**
     * Renames a key to another name (deletes the renamed key).

@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.storybookAddonKnobs.numberMod.NumberTypeKnobValue
 import typingsSlinky.storybookAddonKnobs.numberMod.NumberTypeProps
 import typingsSlinky.storybookAddonKnobs.numberMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -76,6 +76,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -84,7 +85,7 @@ object Textarea {
   
   @JSImport("@material-ui/core/InputBase/Textarea", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -313,16 +314,16 @@ object Textarea {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def innerRefNull: this.type = set("innerRef", null)
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -649,16 +650,16 @@ object Textarea {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def textareaRefRefObject(value: ReactRef[_]): this.type = set("textareaRef", value.asInstanceOf[js.Any])
+    def textareaRef(value: Ref[_] | ReactRef[_]): this.type = set("textareaRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def textareaRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("textareaRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def textareaRef(value: Ref[_] | ReactRef[_]): this.type = set("textareaRef", value.asInstanceOf[js.Any])
+    def textareaRefNull: this.type = set("textareaRef", null)
     
     @scala.inline
-    def textareaRefNull: this.type = set("textareaRef", null)
+    def textareaRefRefObject(value: ReactRef[_]): this.type = set("textareaRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -682,7 +683,7 @@ object Textarea {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TextareaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Textarea.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: TextareaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

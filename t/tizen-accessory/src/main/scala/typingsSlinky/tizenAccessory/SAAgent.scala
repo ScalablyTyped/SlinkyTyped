@@ -4,12 +4,13 @@ import typingsSlinky.tizenAccessory.anon.Onconnect
 import typingsSlinky.tizenAccessory.anon.Onerror
 import typingsSlinky.tizenAccessory.tizenAccessoryStrings.consumer
 import typingsSlinky.tizenAccessory.tizenAccessoryStrings.provider
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SAAgent extends js.Object {
+trait SAAgent extends StObject {
   
   def acceptServiceConnectionRequest(peerAgent: SAPeerAgent): Unit = js.native
   

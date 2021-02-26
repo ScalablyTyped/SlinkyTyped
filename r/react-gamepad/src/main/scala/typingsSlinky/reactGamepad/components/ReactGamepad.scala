@@ -7,6 +7,7 @@ import typingsSlinky.reactGamepad.mod.Button
 import typingsSlinky.reactGamepad.mod.Layout
 import typingsSlinky.reactGamepad.mod.Props
 import typingsSlinky.reactGamepad.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object ReactGamepad {
   
   @JSImport("react-gamepad", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -95,7 +96,7 @@ object ReactGamepad {
     def stickThreshold(value: Double): this.type = set("stickThreshold", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactGamepad.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

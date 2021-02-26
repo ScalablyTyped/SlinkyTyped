@@ -10,15 +10,15 @@ LDAP client and server APIs
 | ------------------ | :-------------: |
 | Full name          | ldapjs |
 | Keywords           | - |
-| # releases         | 7 |
-| # dependents       | 195 |
-| # downloads        | 2578205 |
+| # releases         | 12 |
+| # dependents       | 243 |
+| # downloads        | 3916705 |
 | # stars            | 26 |
 
 ## Links
 - [Homepage](http://ldapjs.org)
-- [Bugs](https://github.com/mcavage/node-ldapjs/issues)
-- [Repository](https://github.com/mcavage/node-ldapjs)
+- [Bugs](https://github.com/ldapjs/node-ldapjs/issues)
+- [Repository](https://github.com/ldapjs/node-ldapjs)
 - [Npm](https://www.npmjs.com/package/ldapjs)
     
 

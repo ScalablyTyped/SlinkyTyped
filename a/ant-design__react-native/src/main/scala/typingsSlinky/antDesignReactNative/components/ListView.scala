@@ -5,15 +5,25 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.anon.Highlight
 import typingsSlinky.antDesignReactNative.listViewMod.ListViewProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ListView {
   
+  @scala.inline
+  def apply[T](
+    onFetch: (Double, js.Function0[_], js.Function0[Unit]) => Unit,
+    renderItem: (T, Double, Highlight) => ReactElement | Null
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(onFetch = js.Any.fromFunction3(onFetch), renderItem = js.Any.fromFunction3(renderItem))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ListViewProps[T]]))
+  }
+  
   @JSImport("@ant-design/react-native", "ListView")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
@@ -145,13 +155,4 @@ object ListView {
   }
   
   def withProps[T](p: ListViewProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[T](
-    onFetch: (Double, js.Function0[_], js.Function0[Unit]) => Unit,
-    renderItem: (T, Double, Highlight) => ReactElement | Null
-  ): Builder[T] = {
-    val __props = js.Dynamic.literal(onFetch = js.Any.fromFunction3(onFetch), renderItem = js.Any.fromFunction3(renderItem))
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ListViewProps[T]]))
-  }
 }

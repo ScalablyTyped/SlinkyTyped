@@ -2,7 +2,7 @@ package typingsSlinky.reactAliceCarousel
 
 import org.scalajs.dom.raw.Event
 import slinky.core.facade.ReactElement
-import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.PureComponent
 import typingsSlinky.reactAliceCarousel.anon.ActiveIndex
 import typingsSlinky.reactAliceCarousel.anon.IsNextSlideDisabled
 import typingsSlinky.reactAliceCarousel.anon.ReadonlyProps
@@ -12,17 +12,35 @@ import typingsSlinky.reactAliceCarousel.typesMod.Props
 import typingsSlinky.reactAliceCarousel.typesMod.SlideTo
 import typingsSlinky.reactAliceCarousel.typesMod.State
 import typingsSlinky.vanillaSwipe.typesMod.EventData
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-alice-carousel", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
+  
+  @JSImport("react-alice-carousel", JSImport.Default)
+  @js.native
+  class default protected () extends AliceCarousel {
+    def this(props: js.Any) = this()
+  }
+  /* static members */
+  object default {
+    
+    @JSImport("react-alice-carousel", JSImport.Default)
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("react-alice-carousel", "default.defaultProps")
+    @js.native
+    def defaultProps: ActiveIndex = js.native
+    @scala.inline
+    def defaultProps_=(x: ActiveIndex): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
+  }
   
   @js.native
   trait AliceCarousel
-    extends Component[Props, State, js.Any] {
+    extends PureComponent[Props, State, js.Any] {
     
     var RootElement: js.Any = js.native
     
@@ -144,16 +162,5 @@ object mod extends js.Object {
     var touchEndTimeoutId: js.Any = js.native
     
     def touchmovePosition: Double = js.native
-  }
-  
-  @js.native
-  class default protected () extends AliceCarousel {
-    def this(props: js.Any) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    var defaultProps: ActiveIndex = js.native
   }
 }

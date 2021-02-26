@@ -10,12 +10,13 @@ import typingsSlinky.maximMazurokGapiClientDatamigration.anon.Key
 import typingsSlinky.maximMazurokGapiClientDatamigration.anon.Name
 import typingsSlinky.maximMazurokGapiClientDatamigration.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientDatamigration.anon.PrettyPrint
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ConnectionProfilesResource extends js.Object {
+trait ConnectionProfilesResource extends StObject {
   
   /** Creates a new connection profile in a given project and location. */
   def create(request: Accesstoken): Request[Operation] = js.native

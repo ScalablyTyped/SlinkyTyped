@@ -10,10 +10,10 @@ React is a JavaScript library for building user interfaces.
 | ------------------ | :-------------: |
 | Full name          | react |
 | Keywords           | react |
-| # releases         | 110 |
-| # dependents       | 35113 |
-| # downloads        | 278269585 |
-| # stars            | 746 |
+| # releases         | 136 |
+| # dependents       | 48159 |
+| # downloads        | 426323461 |
+| # stars            | 764 |
 
 ## Links
 - [Homepage](https://reactjs.org/)

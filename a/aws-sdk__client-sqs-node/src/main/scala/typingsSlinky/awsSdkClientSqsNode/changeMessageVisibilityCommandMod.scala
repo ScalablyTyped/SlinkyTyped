@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientSqsNode.typesChangeMessageVisibilityInputMod.Ch
 import typingsSlinky.awsSdkClientSqsNode.typesChangeMessageVisibilityOutputMod.ChangeMessageVisibilityOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-sqs-node/commands/ChangeMessageVisibilityCommand", JSImport.Namespace)
-@js.native
-object changeMessageVisibilityCommandMod extends js.Object {
+object changeMessageVisibilityCommandMod {
   
+  @JSImport("@aws-sdk/client-sqs-node/commands/ChangeMessageVisibilityCommand", "ChangeMessageVisibilityCommand")
   @js.native
   class ChangeMessageVisibilityCommand protected () extends Command[
           InputTypesUnion, 

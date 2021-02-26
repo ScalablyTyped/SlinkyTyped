@@ -1,5 +1,6 @@
 package typingsSlinky.googleSpreadsheet.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.googleSpreadsheet.googleSpreadsheetStrings.MIDDLE
   - typingsSlinky.googleSpreadsheet.googleSpreadsheetStrings.BOTTOM
 */
-trait VerticalAlign extends js.Object
+trait VerticalAlign extends StObject
 object VerticalAlign {
   
   @scala.inline

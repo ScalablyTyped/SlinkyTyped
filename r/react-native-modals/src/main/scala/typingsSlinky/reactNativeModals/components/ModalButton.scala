@@ -7,15 +7,22 @@ import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeModals.mod.AlignTypes
 import typingsSlinky.reactNativeModals.mod.ModalButtonProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ModalButton {
   
+  @scala.inline
+  def apply(onPress: () => Unit, text: String): Builder = {
+    val __props = js.Dynamic.literal(onPress = js.Any.fromFunction0(onPress), text = text.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ModalButtonProps]))
+  }
+  
   @JSImport("react-native-modals", "ModalButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -48,10 +55,4 @@ object ModalButton {
   }
   
   def withProps(p: ModalButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(onPress: () => Unit, text: String): Builder = {
-    val __props = js.Dynamic.literal(onPress = js.Any.fromFunction0(onPress), text = text.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ModalButtonProps]))
-  }
 }

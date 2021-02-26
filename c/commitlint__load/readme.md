@@ -11,8 +11,8 @@ Load shared commitlint configuration
 | Full name          | @commitlint/load |
 | Keywords           | conventional-changelog, commitlint, library, core |
 | # releases         | 20 |
-| # dependents       | 42 |
-| # downloads        | 14309826 |
+| # dependents       | 70 |
+| # downloads        | 36865921 |
 | # stars            | 0 |
 
 ## Links

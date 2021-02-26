@@ -5,16 +5,16 @@ import typingsSlinky.awsSdkClientCognitoIdentityBrowser.cognitoIdentityConfigura
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.commandMod.Command
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-cognito-identity-browser/CognitoIdentityClient", JSImport.Namespace)
-@js.native
-object cognitoIdentityClientMod extends js.Object {
+object cognitoIdentityClientMod {
   
+  @JSImport("@aws-sdk/client-cognito-identity-browser/CognitoIdentityClient", "CognitoIdentityClient")
   @js.native
-  class CognitoIdentityClient protected () extends js.Object {
+  class CognitoIdentityClient protected () extends StObject {
     def this(configuration: CognitoIdentityConfiguration) = this()
     
     val config: CognitoIdentityResolvedConfiguration = js.native

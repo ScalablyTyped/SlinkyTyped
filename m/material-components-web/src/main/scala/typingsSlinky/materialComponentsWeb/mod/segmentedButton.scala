@@ -1,59 +1,64 @@
 package typingsSlinky.materialComponentsWeb.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materialSegmentedButton.adapterMod.MDCSegmentedButtonAdapter
 import typingsSlinky.materialSegmentedButton.anon.PartialMDCSegmentedButton
 import typingsSlinky.materialSegmentedButton.anon.PartialMDCSegmentedButtonAddClass
-import typingsSlinky.materialSegmentedButton.segmentAdapterMod.MDCSegmentedButtonSegmentAdapter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("material-components-web", "segmentedButton")
-@js.native
-object segmentedButton extends js.Object {
+object segmentedButton {
   
+  @JSImport("material-components-web", "segmentedButton.MDCSegmentedButton")
   @js.native
-  class MDCSegmentedButton ()
-    extends typingsSlinky.materialSegmentedButton.mod.MDCSegmentedButton
+  class MDCSegmentedButton protected ()
+    extends typingsSlinky.materialSegmentedButton.mod.MDCSegmentedButton {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(
+      root: Element,
+      foundation: typingsSlinky.materialSegmentedButton.foundationMod.MDCSegmentedButtonFoundation,
+      args: js.Any*
+    ) = this()
+  }
   /* static members */
-  @js.native
-  object MDCSegmentedButton extends js.Object {
+  object MDCSegmentedButton {
     
+    @JSImport("material-components-web", "segmentedButton.MDCSegmentedButton.attachTo")
+    @js.native
     def attachTo(root: Element): typingsSlinky.materialSegmentedButton.componentMod.MDCSegmentedButton = js.native
   }
   
+  @JSImport("material-components-web", "segmentedButton.MDCSegmentedButtonFoundation")
   @js.native
   class MDCSegmentedButtonFoundation ()
     extends typingsSlinky.materialSegmentedButton.mod.MDCSegmentedButtonFoundation {
     def this(adapter: PartialMDCSegmentedButton) = this()
   }
-  /* static members */
-  @js.native
-  object MDCSegmentedButtonFoundation extends js.Object {
-    
-    def defaultAdapter: MDCSegmentedButtonAdapter = js.native
-  }
   
+  @JSImport("material-components-web", "segmentedButton.MDCSegmentedButtonSegment")
   @js.native
-  class MDCSegmentedButtonSegment ()
-    extends typingsSlinky.materialSegmentedButton.mod.MDCSegmentedButtonSegment
+  class MDCSegmentedButtonSegment protected ()
+    extends typingsSlinky.materialSegmentedButton.mod.MDCSegmentedButtonSegment {
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
+    def this(
+      root: Element,
+      foundation: typingsSlinky.materialSegmentedButton.segmentFoundationMod.MDCSegmentedButtonSegmentFoundation,
+      args: js.Any*
+    ) = this()
+  }
   /* static members */
-  @js.native
-  object MDCSegmentedButtonSegment extends js.Object {
+  object MDCSegmentedButtonSegment {
     
+    @JSImport("material-components-web", "segmentedButton.MDCSegmentedButtonSegment.attachTo")
+    @js.native
     def attachTo(root: Element): typingsSlinky.materialSegmentedButton.segmentComponentMod.MDCSegmentedButtonSegment = js.native
   }
   
+  @JSImport("material-components-web", "segmentedButton.MDCSegmentedButtonSegmentFoundation")
   @js.native
   class MDCSegmentedButtonSegmentFoundation ()
     extends typingsSlinky.materialSegmentedButton.mod.MDCSegmentedButtonSegmentFoundation {
     def this(adapter: PartialMDCSegmentedButtonAddClass) = this()
-  }
-  /* static members */
-  @js.native
-  object MDCSegmentedButtonSegmentFoundation extends js.Object {
-    
-    def defaultAdapter: MDCSegmentedButtonSegmentAdapter = js.native
   }
 }

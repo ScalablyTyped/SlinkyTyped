@@ -7,15 +7,23 @@ import typingsSlinky.reactToastify.anon.Position
 import typingsSlinky.reactToastify.progressBarMod.ProgressBarProps
 import typingsSlinky.reactToastify.typesMod.ToastClassName
 import typingsSlinky.reactToastify.typesMod.TypeOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ProgressBar {
   
+  @scala.inline
+  def apply(closeToast: () => Unit, delay: Double, isRunning: Boolean, `type`: TypeOptions): Builder = {
+    val __props = js.Dynamic.literal(closeToast = js.Any.fromFunction0(closeToast), delay = delay.asInstanceOf[js.Any], isRunning = isRunning.asInstanceOf[js.Any])
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ProgressBarProps]))
+  }
+  
   @JSImport("react-toastify/dist/components", "ProgressBar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -23,10 +31,10 @@ object ProgressBar {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def classNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("className", js.Any.fromFunction1(value))
+    def className(value: ToastClassName): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def className(value: ToastClassName): this.type = set("className", value.asInstanceOf[js.Any])
+    def classNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("className", js.Any.fromFunction1(value))
     
     @scala.inline
     def controlledProgress(value: Boolean): this.type = set("controlledProgress", value.asInstanceOf[js.Any])
@@ -48,11 +56,4 @@ object ProgressBar {
   }
   
   def withProps(p: ProgressBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(closeToast: () => Unit, delay: Double, isRunning: Boolean, `type`: TypeOptions): Builder = {
-    val __props = js.Dynamic.literal(closeToast = js.Any.fromFunction0(closeToast), delay = delay.asInstanceOf[js.Any], isRunning = isRunning.asInstanceOf[js.Any])
-    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ProgressBarProps]))
-  }
 }

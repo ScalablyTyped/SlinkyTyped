@@ -1,5 +1,6 @@
 package typingsSlinky.webix.webix.ui
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webix.webixStrings.onDestruct
   - typingsSlinky.webix.webixStrings.onViewShow
 */
-trait portletEventName extends js.Object
+trait portletEventName extends StObject
 object portletEventName {
   
   @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.elasticApmNode.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.elasticApmNode.elasticApmNodeStrings.messages
   - typingsSlinky.elasticApmNode.elasticApmNodeStrings.always
 */
-trait CaptureErrorLogStackTraces extends js.Object
+trait CaptureErrorLogStackTraces extends StObject
 object CaptureErrorLogStackTraces {
   
   @scala.inline

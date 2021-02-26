@@ -3,6 +3,7 @@ package typingsSlinky.heremaps.global.H.map
 import typingsSlinky.heremaps.H.geo.IPoint
 import typingsSlinky.heremaps.H.geo.MultiPoint
 import typingsSlinky.heremaps.H.map.DomMarker.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

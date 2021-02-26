@@ -11,6 +11,7 @@ import typingsSlinky.xrm.xrmStrings.money
 import typingsSlinky.xrm.xrmStrings.multioptionset
 import typingsSlinky.xrm.xrmStrings.optionset
 import typingsSlinky.xrm.xrmStrings.string
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,7 +33,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.optionset
   - typingsSlinky.xrm.xrmStrings.string
 */
-trait AttributeType extends js.Object
+trait AttributeType extends StObject
 object AttributeType {
   
   @scala.inline

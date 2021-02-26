@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientSqsNode.typesDeleteMessageInputMod.DeleteMessag
 import typingsSlinky.awsSdkClientSqsNode.typesDeleteMessageOutputMod.DeleteMessageOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-sqs-node/commands/DeleteMessageCommand", JSImport.Namespace)
-@js.native
-object deleteMessageCommandMod extends js.Object {
+object deleteMessageCommandMod {
   
+  @JSImport("@aws-sdk/client-sqs-node/commands/DeleteMessageCommand", "DeleteMessageCommand")
   @js.native
   class DeleteMessageCommand protected () extends Command[
           InputTypesUnion, 

@@ -7,6 +7,7 @@ import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarIconStrings
 import typingsSlinky.officeUiFabricReact.calendarYearMod.ICalendarYearHeaderProps
 import typingsSlinky.officeUiFabricReact.calendarYearMod.ICalendarYearProps
 import typingsSlinky.officeUiFabricReact.calendarYearMod.ICalendarYearStrings
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object CalendarYear {
   
   @JSImport("office-ui-fabric-react/lib/components/Calendar/CalendarYear", "CalendarYear")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -56,7 +57,7 @@ object CalendarYear {
     def strings(value: ICalendarYearStrings): this.type = set("strings", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ICalendarYearProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: CalendarYear.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ICalendarYearProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

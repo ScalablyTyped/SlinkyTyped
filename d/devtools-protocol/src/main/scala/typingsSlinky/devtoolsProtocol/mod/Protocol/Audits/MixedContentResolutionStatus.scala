@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Audits
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.MixedContentAutomaticallyUpgraded
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.MixedContentWarning
 */
-trait MixedContentResolutionStatus extends js.Object
+trait MixedContentResolutionStatus extends StObject
 object MixedContentResolutionStatus {
   
   @scala.inline

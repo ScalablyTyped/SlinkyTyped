@@ -1,15 +1,15 @@
 package typingsSlinky.stellarSdk.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("stellar-sdk", "Horizon")
-@js.native
-object Horizon extends js.Object {
+object Horizon {
   
+  @JSImport("stellar-sdk", "Horizon.OperationResponseType")
   @js.native
-  object OperationResponseType extends js.Object {
+  object OperationResponseType extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType with String] = js.native
@@ -53,8 +53,9 @@ object Horizon extends js.Object {
     /* "set_options" */ val setOptions: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.setOptions with String = js.native
   }
   
+  @JSImport("stellar-sdk", "Horizon.OperationResponseTypeI")
   @js.native
-  object OperationResponseTypeI extends js.Object {
+  object OperationResponseTypeI extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
@@ -100,8 +101,9 @@ object Horizon extends js.Object {
     /* 5 */ val setOptions: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.setOptions with Double = js.native
   }
   
+  @JSImport("stellar-sdk", "Horizon.TransactionFailedResultCodes")
   @js.native
-  object TransactionFailedResultCodes extends js.Object {
+  object TransactionFailedResultCodes extends StObject {
     
     @JSBracketAccess
     def apply(value: String): js.UndefOr[

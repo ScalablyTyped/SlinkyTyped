@@ -11,14 +11,14 @@ import typingsSlinky.ionicCore.ionicCoreStrings.inset
 import typingsSlinky.ionicCore.ionicCoreStrings.none
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/item/item", JSImport.Namespace)
-@js.native
-object itemMod extends js.Object {
+object itemMod {
   
+  @JSImport("@ionic/core/dist/types/components/item/item", "Item")
   @js.native
   class Item ()
     extends ComponentInterface

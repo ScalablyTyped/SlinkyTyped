@@ -7,13 +7,14 @@ import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStream
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IOutputStream
 import typingsSlinky.winrtUwp.Windows.Web.Http.Headers.HttpContentHeaderCollection
 import typingsSlinky.winrtUwp.anon.Length
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides HTTP content that uses the multipart/form-data MIME type. */
 @js.native
-trait HttpMultipartFormDataContent extends js.Object {
+trait HttpMultipartFormDataContent extends StObject {
   
   /**
     * Add HTTP content to the HttpMultipartFormDataContent instance.

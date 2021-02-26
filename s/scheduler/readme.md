@@ -10,9 +10,9 @@ Cooperative scheduler for the browser environment.
 | ------------------ | :-------------: |
 | Full name          | scheduler |
 | Keywords           | react |
-| # releases         | 98 |
-| # dependents       | 96 |
-| # downloads        | 214599550 |
+| # releases         | 136 |
+| # dependents       | 191 |
+| # downloads        | 448548798 |
 | # stars            | 1 |
 
 ## Links

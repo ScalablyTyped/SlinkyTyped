@@ -3,14 +3,14 @@ package typingsSlinky.workboxRouting
 import typingsSlinky.workboxRouting.httpmethodMod.HTTPMethod
 import typingsSlinky.workboxRouting.routeHandlerMod.RouteHandler
 import typingsSlinky.workboxRouting.routeMod.Route
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("workbox-routing/RegExpRoute", JSImport.Namespace)
-@js.native
-object regExpRouteMod extends js.Object {
+object regExpRouteMod {
   
+  @JSImport("workbox-routing/RegExpRoute", "RegExpRoute")
   @js.native
   class RegExpRoute protected ()
     extends Route[js.Array[String]] {

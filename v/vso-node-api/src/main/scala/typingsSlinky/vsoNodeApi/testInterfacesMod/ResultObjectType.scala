@@ -1,30 +1,24 @@
 package typingsSlinky.vsoNodeApi.testInterfacesMod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait ResultObjectType extends js.Object
+sealed trait ResultObjectType extends StObject
 @JSImport("vso-node-api/interfaces/TestInterfaces", "ResultObjectType")
 @js.native
-object ResultObjectType extends js.Object {
+object ResultObjectType extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[ResultObjectType with Double] = js.native
   
   @js.native
   sealed trait TestPlan extends ResultObjectType
-  /* 1 */ @js.native
-  object TestPlan
-    extends TopLevel[typingsSlinky.vsoNodeApi.testInterfacesMod.ResultObjectType.TestPlan with Double]
+  /* 1 */ val TestPlan: typingsSlinky.vsoNodeApi.testInterfacesMod.ResultObjectType.TestPlan with Double = js.native
   
   @js.native
   sealed trait TestSuite extends ResultObjectType
-  /* 0 */ @js.native
-  object TestSuite
-    extends TopLevel[
-          typingsSlinky.vsoNodeApi.testInterfacesMod.ResultObjectType.TestSuite with Double
-        ]
+  /* 0 */ val TestSuite: typingsSlinky.vsoNodeApi.testInterfacesMod.ResultObjectType.TestSuite with Double = js.native
 }

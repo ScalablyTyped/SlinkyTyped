@@ -5,6 +5,7 @@ import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import typingsSlinky.apolloReportingProtobuf.protobufMod.IReport
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,18 +21,26 @@ class Report ()
   def this(properties: IReport) = this()
 }
 /* static members */
-@JSImport("apollo-reporting-protobuf", "Report")
-@js.native
-object Report extends js.Object {
+object Report {
   
   /**
     * Creates a new Report instance using the specified properties.
     * @param [properties] Properties to set
     * @returns Report instance
     */
+  @JSImport("apollo-reporting-protobuf", "Report.create")
+  @js.native
   def create(): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
+  @JSImport("apollo-reporting-protobuf", "Report.create")
+  @js.native
   def create(properties: IReport): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
   
+  @JSImport("apollo-reporting-protobuf", "Report.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
+  @JSImport("apollo-reporting-protobuf", "Report.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
   /**
     * Decodes a Report message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -40,11 +49,16 @@ object Report extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf", "Report.decode")
+  @js.native
   def decode(reader: Reader): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
+  @JSImport("apollo-reporting-protobuf", "Report.decode")
+  @js.native
   def decode(reader: Reader, length: Double): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
-  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
   
+  @JSImport("apollo-reporting-protobuf", "Report.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
   /**
     * Decodes a Report message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,8 +66,9 @@ object Report extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf", "Report.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
   
   /**
     * Encodes the specified Report message. Does not implicitly {@link Report.verify|verify} messages.
@@ -61,7 +76,11 @@ object Report extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf", "Report.encode")
+  @js.native
   def encode(message: IReport): Writer = js.native
+  @JSImport("apollo-reporting-protobuf", "Report.encode")
+  @js.native
   def encode(message: IReport, writer: Writer): Writer = js.native
   
   /**
@@ -70,7 +89,11 @@ object Report extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf", "Report.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IReport): Writer = js.native
+  @JSImport("apollo-reporting-protobuf", "Report.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IReport, writer: Writer): Writer = js.native
   
   /**
@@ -78,6 +101,8 @@ object Report extends js.Object {
     * @param object Plain object
     * @returns Report
     */
+  @JSImport("apollo-reporting-protobuf", "Report.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.apolloReportingProtobuf.protobufMod.Report = js.native
   
   /**
@@ -86,7 +111,11 @@ object Report extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("apollo-reporting-protobuf", "Report.toObject")
+  @js.native
   def toObject(message: typingsSlinky.apolloReportingProtobuf.protobufMod.Report): StringDictionary[js.Any] = js.native
+  @JSImport("apollo-reporting-protobuf", "Report.toObject")
+  @js.native
   def toObject(message: typingsSlinky.apolloReportingProtobuf.protobufMod.Report, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -94,5 +123,7 @@ object Report extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("apollo-reporting-protobuf", "Report.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

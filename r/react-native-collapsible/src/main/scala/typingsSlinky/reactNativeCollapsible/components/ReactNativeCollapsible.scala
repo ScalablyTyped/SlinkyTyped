@@ -10,6 +10,7 @@ import typingsSlinky.reactNativeCollapsible.mod.default
 import typingsSlinky.reactNativeCollapsible.reactNativeCollapsibleStrings.bottom
 import typingsSlinky.reactNativeCollapsible.reactNativeCollapsibleStrings.center
 import typingsSlinky.reactNativeCollapsible.reactNativeCollapsibleStrings.top
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object ReactNativeCollapsible {
   
   @JSImport("react-native-collapsible", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -53,7 +54,7 @@ object ReactNativeCollapsible {
     def styleNull: this.type = set("style", null)
   }
   
-  def withProps(p: CollapsibleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeCollapsible.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CollapsibleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

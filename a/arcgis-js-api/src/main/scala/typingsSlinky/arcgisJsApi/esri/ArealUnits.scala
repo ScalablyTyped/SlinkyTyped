@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`square-kilometers`
   - typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`square-miles`
 */
-trait ArealUnits extends js.Object
+trait ArealUnits extends StObject
 object ArealUnits {
   
   @scala.inline

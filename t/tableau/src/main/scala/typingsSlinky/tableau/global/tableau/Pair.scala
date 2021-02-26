@@ -1,5 +1,6 @@
 package typingsSlinky.tableau.global.tableau
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ class Pair protected ()
   extends typingsSlinky.tableau.tableau.Pair {
   /** Creates a new Pair with the specified field name/value pairing */
   def this(fieldName: String, value: String) = this()
+  def this(fieldName: String, value: js.Date) = this()
   def this(fieldName: String, value: Boolean) = this()
   def this(fieldName: String, value: Double) = this()
-  def this(fieldName: String, value: js.Date) = this()
 }

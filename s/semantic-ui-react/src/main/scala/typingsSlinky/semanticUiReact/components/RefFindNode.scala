@@ -7,15 +7,35 @@ import typingsSlinky.react.anon.Children
 import typingsSlinky.react.mod.ErrorInfo
 import typingsSlinky.semanticUiReact.refFindNodeMod.default
 import typingsSlinky.std.Pick
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RefFindNode {
   
+  @scala.inline
+  def apply(
+    context: js.Any,
+    forceUpdate: js.UndefOr[js.Function0[Unit]] => Unit,
+    props: typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode with Children,
+    render: () => ReactElement,
+    setState: (js.UndefOr[
+      (js.Function2[
+        js.Object, 
+        typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode, 
+        Null | js.Object | (Pick[js.Object, js.Any])
+      ]) | Null | js.Object | (Pick[js.Object, js.Any])
+    ], js.UndefOr[js.Function0[Unit]]) => Unit,
+    state: js.Object
+  ): Builder = {
+    val __props = js.Dynamic.literal(context = context.asInstanceOf[js.Any], forceUpdate = js.Any.fromFunction1(forceUpdate), props = props.asInstanceOf[js.Any], render = js.Any.fromFunction0(render), setState = js.Any.fromFunction2(setState), state = state.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode]))
+  }
+  
   @JSImport("semantic-ui-react/dist/commonjs/addons/Ref/RefFindNode", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -72,23 +92,4 @@ object RefFindNode {
   }
   
   def withProps(p: typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    context: js.Any,
-    forceUpdate: js.UndefOr[js.Function0[Unit]] => Unit,
-    props: typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode with Children,
-    render: () => ReactElement,
-    setState: (js.UndefOr[
-      (js.Function2[
-        js.Object, 
-        typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode, 
-        Null | js.Object | (Pick[js.Object, js.Any])
-      ]) | Null | js.Object | (Pick[js.Object, js.Any])
-    ], js.UndefOr[js.Function0[Unit]]) => Unit,
-    state: js.Object
-  ): Builder = {
-    val __props = js.Dynamic.literal(context = context.asInstanceOf[js.Any], forceUpdate = js.Any.fromFunction1(forceUpdate), props = props.asInstanceOf[js.Any], render = js.Any.fromFunction0(render), setState = js.Any.fromFunction2(setState), state = state.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode]))
-  }
 }

@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeZssRichTextEditor.anon.PartialRichTextEditorProp
 import typingsSlinky.reactNativeZssRichTextEditor.mod.ContentInset
 import typingsSlinky.reactNativeZssRichTextEditor.mod.RichTextStyles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object RichTextEditor {
   
   @JSImport("react-native-zss-rich-text-editor", "RichTextEditor")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,7 +52,7 @@ object RichTextEditor {
     def titlePlaceholder(value: String): this.type = set("titlePlaceholder", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PartialRichTextEditorProp): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: RichTextEditor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PartialRichTextEditorProp): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -3,6 +3,7 @@ package typingsSlinky.hapi.mod
 import typingsSlinky.hapi.hapiStrings.finish
 import typingsSlinky.hapi.hapiStrings.peek
 import typingsSlinky.podium.mod.Podium
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

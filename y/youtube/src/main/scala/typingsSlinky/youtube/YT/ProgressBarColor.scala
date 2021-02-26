@@ -1,5 +1,6 @@
 package typingsSlinky.youtube.YT
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.youtube.youtubeStrings.red
   - typingsSlinky.youtube.youtubeStrings.white
 */
-trait ProgressBarColor extends js.Object
+trait ProgressBarColor extends StObject
 object ProgressBarColor {
   
   @scala.inline

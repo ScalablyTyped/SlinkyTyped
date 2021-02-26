@@ -7,6 +7,7 @@ import typingsSlinky.algoliasearchHelper.anon.Error
 import typingsSlinky.algoliasearchHelper.anon.Results
 import typingsSlinky.algoliasearchHelper.anon.ResultsState
 import typingsSlinky.events.mod.EventEmitter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

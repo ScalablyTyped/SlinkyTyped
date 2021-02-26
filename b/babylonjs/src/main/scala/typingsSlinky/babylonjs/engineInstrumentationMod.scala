@@ -3,14 +3,14 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.perfCounterMod.PerfCounter
 import typingsSlinky.babylonjs.sceneMod.IDisposable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Instrumentation/engineInstrumentation", JSImport.Namespace)
-@js.native
-object engineInstrumentationMod extends js.Object {
+object engineInstrumentationMod {
   
+  @JSImport("babylonjs/Instrumentation/engineInstrumentation", "EngineInstrumentation")
   @js.native
   class EngineInstrumentation protected () extends IDisposable {
     /**

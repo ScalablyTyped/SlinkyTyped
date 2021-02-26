@@ -1,12 +1,14 @@
 package typingsSlinky.coreJs
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("core-js/fn/get-iterator", JSImport.Namespace)
-@js.native
-object getIteratorMod extends js.Object {
+object getIteratorMod {
   
+  /* was `typeof core.getIterator` */
+  @JSImport("core-js/fn/get-iterator", JSImport.Namespace)
+  @js.native
   def apply[T](iterable: js.Iterable[T]): js.Iterator[T] = js.native
 }

@@ -17,12 +17,13 @@ import typingsSlinky.maximMazurokGapiClientDatamigration.anon.Resource
 import typingsSlinky.maximMazurokGapiClientDatamigration.anon.UploadType
 import typingsSlinky.maximMazurokGapiClientDatamigration.anon.Uploadprotocol
 import typingsSlinky.maximMazurokGapiClientDatamigration.anon.Xgafv
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MigrationJobsResource extends js.Object {
+trait MigrationJobsResource extends StObject {
   
   /** Creates a new migration job in a given project and location. */
   def create(request: MigrationJobId): Request[Operation] = js.native

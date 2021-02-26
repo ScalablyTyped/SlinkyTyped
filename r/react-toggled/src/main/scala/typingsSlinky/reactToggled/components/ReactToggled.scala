@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactToggled.mod.ReactToggledProps
 import typingsSlinky.reactToggled.mod.TogglerStateAndHelpers
 import typingsSlinky.reactToggled.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactToggled {
   
+  @scala.inline
+  def apply(children: /* options */ TogglerStateAndHelpers => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactToggledProps]))
+  }
+  
   @JSImport("react-toggled", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +39,4 @@ object ReactToggled {
   }
   
   def withProps(p: ReactToggledProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(children: /* options */ TogglerStateAndHelpers => ReactElement): Builder = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactToggledProps]))
-  }
 }

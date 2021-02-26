@@ -14,6 +14,7 @@ import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`8`
 import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`9`
 import typingsSlinky.fundamentalReact.iconMod.IconGlyph
 import typingsSlinky.fundamentalReact.infoLabelMod.InfoLabelProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ object InfoLabel {
   
   @JSImport("fundamental-react", "InfoLabel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -45,7 +46,7 @@ object InfoLabel {
     def numeric(value: Boolean): this.type = set("numeric", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: InfoLabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: InfoLabel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: InfoLabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

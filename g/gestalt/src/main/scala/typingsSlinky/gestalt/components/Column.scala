@@ -4,15 +4,22 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.mod.ColumnProps
 import typingsSlinky.gestalt.mod.UnsignedUpTo12
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Column {
   
+  @scala.inline
+  def apply(span: UnsignedUpTo12): Builder = {
+    val __props = js.Dynamic.literal(span = span.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ColumnProps]))
+  }
+  
   @JSImport("gestalt", "Column")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +37,4 @@ object Column {
   }
   
   def withProps(p: ColumnProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(span: UnsignedUpTo12): Builder = {
-    val __props = js.Dynamic.literal(span = span.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ColumnProps]))
-  }
 }

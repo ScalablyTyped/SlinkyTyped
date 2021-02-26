@@ -19,6 +19,7 @@ import typingsSlinky.konva.typesMod.Vector2d
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.reactKonva.reactKonvaCoreMod.KonvaNodeEvents
 import typingsSlinky.std.Number
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +28,7 @@ object Transformer {
   
   @JSImport("react-konva", "Transformer")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -47,10 +48,10 @@ object Transformer {
     def anchorStrokeWidth(value: Double): this.type = set("anchorStrokeWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderDashVarargs(value: Double*): this.type = set("borderDash", js.Array(value :_*))
+    def borderDash(value: js.Array[Double]): this.type = set("borderDash", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderDash(value: js.Array[Double]): this.type = set("borderDash", value.asInstanceOf[js.Any])
+    def borderDashVarargs(value: Double*): this.type = set("borderDash", js.Array(value :_*))
     
     @scala.inline
     def borderEnabled(value: Boolean): this.type = set("borderEnabled", value.asInstanceOf[js.Any])
@@ -95,16 +96,16 @@ object Transformer {
     def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def enabledAnchorsVarargs(value: String*): this.type = set("enabledAnchors", js.Array(value :_*))
-    
-    @scala.inline
     def enabledAnchors(value: js.Array[String]): this.type = set("enabledAnchors", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filtersVarargs(value: Filter*): this.type = set("filters", js.Array(value :_*))
+    def enabledAnchorsVarargs(value: String*): this.type = set("enabledAnchors", js.Array(value :_*))
     
     @scala.inline
     def filters(value: js.Array[Filter]): this.type = set("filters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def filtersVarargs(value: Filter*): this.type = set("filters", js.Array(value :_*))
     
     @scala.inline
     def globalCompositeOperation(value: globalCompositeOperationType): this.type = set("globalCompositeOperation", value.asInstanceOf[js.Any])
@@ -230,10 +231,10 @@ object Transformer {
     def rotationSnapTolerance(value: Double): this.type = set("rotationSnapTolerance", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rotationSnapsVarargs(value: Double*): this.type = set("rotationSnaps", js.Array(value :_*))
+    def rotationSnaps(value: js.Array[Double]): this.type = set("rotationSnaps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rotationSnaps(value: js.Array[Double]): this.type = set("rotationSnaps", value.asInstanceOf[js.Any])
+    def rotationSnapsVarargs(value: Double*): this.type = set("rotationSnaps", js.Array(value :_*))
     
     @scala.inline
     def scale(value: Vector2d): this.type = set("scale", value.asInstanceOf[js.Any])
@@ -257,9 +258,9 @@ object Transformer {
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
   
+  implicit def make(companion: Transformer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   def withProps(
     p: typingsSlinky.konva.mod.Konva.TransformerConfig with KonvaNodeEvents with ClassAttributes[typingsSlinky.konva.mod.Konva.Transformer]
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: Transformer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

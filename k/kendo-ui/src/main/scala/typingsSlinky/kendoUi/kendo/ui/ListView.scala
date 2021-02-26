@@ -5,6 +5,7 @@ import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.data.DataSource
 import typingsSlinky.kendoUi.kendo.data.ObservableArray
 import typingsSlinky.kendoUi.kendo.data.ObservableObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,8 +20,8 @@ trait ListView extends Widget {
   def clearSelection(): Unit = js.native
   
   def dataItem(row: String): ObservableObject = js.native
-  def dataItem(row: JQuery): ObservableObject = js.native
   def dataItem(row: Element): ObservableObject = js.native
+  def dataItem(row: JQuery): ObservableObject = js.native
   
   def dataItems(): ObservableArray = js.native
   

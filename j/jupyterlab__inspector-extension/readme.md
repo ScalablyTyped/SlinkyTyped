@@ -10,13 +10,15 @@ JupyterLab - Code Inspector Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/inspector-extension |
 | Keywords           | - |
-| # releases         | 64 |
+| # releases         | 131 |
 | # dependents       | 1 |
-| # downloads        | 760247 |
+| # downloads        | 1465240 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/jupyterlab/jupyterlab)
 - [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
+- [Repository](https://github.com/jupyterlab/jupyterlab)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Finspector-extension)
     
 

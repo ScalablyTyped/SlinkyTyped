@@ -45,97 +45,18 @@ import typingsSlinky.reactNativeElements.anon.PartialImageProps
 import typingsSlinky.reactNativeElements.mod.CardProps
 import typingsSlinky.reactNativeElements.mod.ImageProps
 import typingsSlinky.reactNativeElements.mod.TextProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Card {
   
-  @JSImport("react-native-elements", "Card")
-  @js.native
-  object component extends js.Object
-  
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Card] {
-    
-    @scala.inline
-    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def containerStyleNull: this.type = set("containerStyle", null)
-    
-    @scala.inline
-    def dividerStyle(value: StyleProp[ViewStyle]): this.type = set("dividerStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def dividerStyleNull: this.type = set("dividerStyle", null)
-    
-    @scala.inline
-    def featuredSubtitle(value: String): this.type = set("featuredSubtitle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def featuredSubtitleStyle(value: StyleProp[TextStyle]): this.type = set("featuredSubtitleStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def featuredSubtitleStyleNull: this.type = set("featuredSubtitleStyle", null)
-    
-    @scala.inline
-    def featuredTitle(value: String): this.type = set("featuredTitle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def featuredTitleStyle(value: StyleProp[TextStyle]): this.type = set("featuredTitleStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def featuredTitleStyleNull: this.type = set("featuredTitleStyle", null)
-    
-    @scala.inline
-    def imageVarargs(value: ImageURISource*): this.type = set("image", js.Array(value :_*))
-    
-    @scala.inline
-    def image(value: ImageSourcePropType): this.type = set("image", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def imageProps(value: PartialImageProps): this.type = set("imageProps", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def imageStyle(value: ImageStyle): this.type = set("imageStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def imageWrapperStyle(value: StyleProp[ViewStyle]): this.type = set("imageWrapperStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def imageWrapperStyleNull: this.type = set("imageWrapperStyle", null)
-    
-    @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def titleStyle(value: StyleProp[TextStyle]): this.type = set("titleStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def titleStyleNull: this.type = set("titleStyle", null)
-    
-    @scala.inline
-    def wrapperStyle(value: StyleProp[ViewStyle]): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def wrapperStyleNull: this.type = set("wrapperStyle", null)
-  }
-  
-  def withProps(p: CardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  implicit def make(companion: Card.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
-  
   object Divider {
     
     @JSImport("react-native-elements", "Card.Divider")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -143,10 +64,10 @@ object Card {
          with StBuildingComponent[tag.type, js.Object] {
       
       @scala.inline
-      def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+      def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+      def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
       
       @scala.inline
       def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -173,10 +94,10 @@ object Card {
       def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+      def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+      def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
       
       @scala.inline
       def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -314,38 +235,44 @@ object Card {
       def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: ViewProps): typingsSlinky.reactNativeElements.components.Card.Divider.Builder = new typingsSlinky.reactNativeElements.components.Card.Divider.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
     implicit def make(companion: Divider.type): typingsSlinky.reactNativeElements.components.Card.Divider.Builder = new typingsSlinky.reactNativeElements.components.Card.Divider.Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: ViewProps): typingsSlinky.reactNativeElements.components.Card.Divider.Builder = new typingsSlinky.reactNativeElements.components.Card.Divider.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object FeaturedSubtitle {
     
     @JSImport("react-native-elements", "Card.FeaturedSubtitle")
     @js.native
-    object component extends js.Object
-    
-    def withProps(p: TextProps): SharedBuilder_TextProps_219755688 = new SharedBuilder_TextProps_219755688(js.Array(this.component, p.asInstanceOf[js.Any]))
+    val component: js.Object = js.native
     
     implicit def make(companion: FeaturedSubtitle.type): SharedBuilder_TextProps_219755688 = new SharedBuilder_TextProps_219755688(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TextProps): SharedBuilder_TextProps_219755688 = new SharedBuilder_TextProps_219755688(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object FeaturedTitle {
     
     @JSImport("react-native-elements", "Card.FeaturedTitle")
     @js.native
-    object component extends js.Object
-    
-    def withProps(p: TextProps): SharedBuilder_TextProps_219755688 = new SharedBuilder_TextProps_219755688(js.Array(this.component, p.asInstanceOf[js.Any]))
+    val component: js.Object = js.native
     
     implicit def make(companion: FeaturedTitle.type): SharedBuilder_TextProps_219755688 = new SharedBuilder_TextProps_219755688(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TextProps): SharedBuilder_TextProps_219755688 = new SharedBuilder_TextProps_219755688(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
   
   object Image {
     
+    @scala.inline
+    def apply(source: ImageSourcePropType): typingsSlinky.reactNativeElements.components.Card.Image.Builder = {
+      val __props = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
+      new typingsSlinky.reactNativeElements.components.Card.Image.Builder(js.Array(this.component, __props.asInstanceOf[ImageProps]))
+    }
+    
     @JSImport("react-native-elements", "Card.Image")
     @js.native
-    object component extends js.Object
+    val component: js.Object = js.native
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
@@ -356,22 +283,22 @@ object Card {
       def Component(value: ReactComponentClass[js.Object]): this.type = set("Component", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def ImageComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
+      def ImageComponent(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def ImageComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def ImageComponent(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
+      def ImageComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
       
       @scala.inline
       def PlaceholderContent(value: ReactElement): this.type = set("PlaceholderContent", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+      def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+      def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
       
       @scala.inline
       def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -398,10 +325,10 @@ object Card {
       def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+      def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+      def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
       
       @scala.inline
       def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -528,22 +455,96 @@ object Card {
     }
     
     def withProps(p: ImageProps): typingsSlinky.reactNativeElements.components.Card.Image.Builder = new typingsSlinky.reactNativeElements.components.Card.Image.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    @scala.inline
-    def apply(source: ImageSourcePropType): typingsSlinky.reactNativeElements.components.Card.Image.Builder = {
-      val __props = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
-      new typingsSlinky.reactNativeElements.components.Card.Image.Builder(js.Array(this.component, __props.asInstanceOf[ImageProps]))
-    }
   }
   
   object Title {
     
     @JSImport("react-native-elements", "Card.Title")
     @js.native
-    object component extends js.Object
-    
-    def withProps(p: TextProps): SharedBuilder_TextProps_219755688 = new SharedBuilder_TextProps_219755688(js.Array(this.component, p.asInstanceOf[js.Any]))
+    val component: js.Object = js.native
     
     implicit def make(companion: Title.type): SharedBuilder_TextProps_219755688 = new SharedBuilder_TextProps_219755688(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TextProps): SharedBuilder_TextProps_219755688 = new SharedBuilder_TextProps_219755688(js.Array(this.component, p.asInstanceOf[js.Any]))
   }
+  
+  @JSImport("react-native-elements", "Card")
+  @js.native
+  val component: js.Object = js.native
+  
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Card] {
+    
+    @scala.inline
+    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def containerStyleNull: this.type = set("containerStyle", null)
+    
+    @scala.inline
+    def dividerStyle(value: StyleProp[ViewStyle]): this.type = set("dividerStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dividerStyleNull: this.type = set("dividerStyle", null)
+    
+    @scala.inline
+    def featuredSubtitle(value: String): this.type = set("featuredSubtitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def featuredSubtitleStyle(value: StyleProp[TextStyle]): this.type = set("featuredSubtitleStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def featuredSubtitleStyleNull: this.type = set("featuredSubtitleStyle", null)
+    
+    @scala.inline
+    def featuredTitle(value: String): this.type = set("featuredTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def featuredTitleStyle(value: StyleProp[TextStyle]): this.type = set("featuredTitleStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def featuredTitleStyleNull: this.type = set("featuredTitleStyle", null)
+    
+    @scala.inline
+    def image(value: ImageSourcePropType): this.type = set("image", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def imageProps(value: PartialImageProps): this.type = set("imageProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def imageStyle(value: ImageStyle): this.type = set("imageStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def imageVarargs(value: ImageURISource*): this.type = set("image", js.Array(value :_*))
+    
+    @scala.inline
+    def imageWrapperStyle(value: StyleProp[ViewStyle]): this.type = set("imageWrapperStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def imageWrapperStyleNull: this.type = set("imageWrapperStyle", null)
+    
+    @scala.inline
+    def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def titleStyle(value: StyleProp[TextStyle]): this.type = set("titleStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def titleStyleNull: this.type = set("titleStyle", null)
+    
+    @scala.inline
+    def wrapperStyle(value: StyleProp[ViewStyle]): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def wrapperStyleNull: this.type = set("wrapperStyle", null)
+  }
+  
+  implicit def make(companion: Card.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

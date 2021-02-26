@@ -7,13 +7,18 @@ import typingsSlinky.appBuilderLib.macOptionsMod.MacConfiguration
 import typingsSlinky.appBuilderLib.packagerMod.Packager
 import typingsSlinky.appBuilderLib.platformPackagerMod.PlatformPackager
 import typingsSlinky.lazyVal.mod.Lazy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("app-builder-lib/out/macPackager", JSImport.Namespace)
-@js.native
-object macPackagerMod extends js.Object {
+object macPackagerMod {
+  
+  @JSImport("app-builder-lib/out/macPackager", JSImport.Default)
+  @js.native
+  class default protected () extends MacPackager {
+    def this(info: Packager) = this()
+  }
   
   @js.native
   trait MacPackager extends PlatformPackager[MacConfiguration] {
@@ -32,10 +37,5 @@ object macPackagerMod extends js.Object {
     /* protected */ def doSign(opts: SignOptions): js.Promise[_] = js.native
     
     var sign: js.Any = js.native
-  }
-  
-  @js.native
-  class default protected () extends MacPackager {
-    def this(info: Packager) = this()
   }
 }

@@ -6,12 +6,13 @@ import typingsSlinky.std.stdStrings.MutationEvents
 import typingsSlinky.std.stdStrings.SVGZoomEvents
 import typingsSlinky.std.stdStrings.UIEvents
 import typingsSlinky.std.stdStrings.`VRDisplayEvent `
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DocumentEvent extends js.Object {
+trait DocumentEvent extends StObject {
   
   def createEvent(eventInterface: java.lang.String): org.scalajs.dom.raw.Event = js.native
   @JSName("createEvent")

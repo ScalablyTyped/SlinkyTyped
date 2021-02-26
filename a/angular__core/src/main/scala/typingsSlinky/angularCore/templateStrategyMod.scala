@@ -3,14 +3,14 @@ package typingsSlinky.angularCore
 import typingsSlinky.angularCore.ngQueryVisitorMod.ClassMetadataMap
 import typingsSlinky.angularCore.timingStrategyMod.TimingStrategy
 import typingsSlinky.typescript.mod.CompilerHost
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@angular/core/schematics/migrations/static-queries/strategies/template_strategy/template_strategy", JSImport.Namespace)
-@js.native
-object templateStrategyMod extends js.Object {
+object templateStrategyMod {
   
+  @JSImport("@angular/core/schematics/migrations/static-queries/strategies/template_strategy/template_strategy", "QueryTemplateStrategy")
   @js.native
   class QueryTemplateStrategy protected () extends TimingStrategy {
     def this(projectPath: String, classMetadata: ClassMetadataMap, host: CompilerHost) = this()

@@ -12,6 +12,7 @@ import typingsSlinky.reactNativeSwiper.mod.Swiper
 import typingsSlinky.reactNativeSwiper.mod.SwiperProperties
 import typingsSlinky.reactNativeSwiper.mod.SwiperState
 import typingsSlinky.reactNativeSwiper.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object ReactNativeSwiper {
   
   @JSImport("react-native-swiper", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -172,7 +173,7 @@ object ReactNativeSwiper {
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SwiperProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactNativeSwiper.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SwiperProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

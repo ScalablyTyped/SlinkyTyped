@@ -10,10 +10,10 @@ Command line jasmine
 | ------------------ | :-------------: |
 | Full name          | jasmine |
 | Keywords           | test, jasmine, tdd, bdd |
-| # releases         | 10 |
-| # dependents       | 716 |
-| # downloads        | 63392825 |
-| # stars            | 64 |
+| # releases         | 8 |
+| # dependents       | 780 |
+| # downloads        | 84716413 |
+| # stars            | 65 |
 
 ## Links
 - [Homepage](http://jasmine.github.io/)

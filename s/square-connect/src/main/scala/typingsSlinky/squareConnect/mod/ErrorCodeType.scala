@@ -1,5 +1,6 @@
 package typingsSlinky.squareConnect.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -97,7 +98,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.squareConnect.squareConnectStrings.SERVICE_UNAVAILABLE
   - typingsSlinky.squareConnect.squareConnectStrings.GATEWAY_TIMEOUT
 */
-trait ErrorCodeType extends js.Object
+trait ErrorCodeType extends StObject
 object ErrorCodeType {
   
   @scala.inline

@@ -15,6 +15,7 @@ import typingsSlinky.officeJs.officeJsStrings.FullRebuild
 import typingsSlinky.officeJs.officeJsStrings.Manual
 import typingsSlinky.officeJs.officeJsStrings.Pending
 import typingsSlinky.officeJs.officeJsStrings.Recalculate
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

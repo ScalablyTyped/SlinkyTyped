@@ -17,12 +17,13 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.LayerTree.ReplaySnapshotReque
 import typingsSlinky.devtoolsProtocol.mod.Protocol.LayerTree.ReplaySnapshotResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.LayerTree.SnapshotCommandLogRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.LayerTree.SnapshotCommandLogResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LayerTreeApi extends js.Object {
+trait LayerTreeApi extends StObject {
   
   /**
     * Provides the reasons why the given layer was composited.

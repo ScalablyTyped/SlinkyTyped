@@ -5,14 +5,14 @@ import typingsSlinky.firebaseAppTypes.mod.FirebaseAppConfig
 import typingsSlinky.firebaseAppTypes.mod.FirebaseOptions
 import typingsSlinky.firebaseAppTypes.privateMod.FirebaseNamespace
 import typingsSlinky.firebaseAppTypes.privateMod.FirebaseService
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/app/dist/packages/app/src/firebaseApp", JSImport.Namespace)
-@js.native
-object firebaseAppMod extends js.Object {
+object firebaseAppMod {
   
+  @JSImport("@firebase/app/dist/packages/app/src/firebaseApp", "FirebaseAppImpl")
   @js.native
   class FirebaseAppImpl protected () extends FirebaseApp {
     def this(options: FirebaseOptions, config: FirebaseAppConfig, firebase_ : FirebaseNamespace) = this()

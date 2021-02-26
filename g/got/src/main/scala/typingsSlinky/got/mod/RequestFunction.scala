@@ -4,12 +4,13 @@ import typingsSlinky.node.httpMod.ClientRequest
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpsMod.RequestOptions
 import typingsSlinky.node.urlMod.URL_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RequestFunction extends js.Object {
+trait RequestFunction extends StObject {
   
   def apply(options: String): ClientRequest = js.native
   def apply(options: String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native

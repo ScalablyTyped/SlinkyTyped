@@ -2,6 +2,7 @@ package typingsSlinky.pgPromise.mod
 
 import typingsSlinky.pgPromise.anon.CapSQL
 import typingsSlinky.pgPromise.anon.RawType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 // Query formatting namespace;
 // API: http://vitaly-t.github.io/pg-promise/formatting.html
 @js.native
-trait IFormatting extends js.Object {
+trait IFormatting extends StObject {
   
   def alias(name: String): String = js.native
   def alias(name: js.Function0[String]): String = js.native
@@ -32,10 +33,10 @@ trait IFormatting extends js.Object {
   
   var ctf: RawType = js.native
   
-  def date(d: js.Function0[js.Date]): String = js.native
-  def date(d: js.Function0[js.Date], raw: Boolean): String = js.native
   def date(d: js.Date): String = js.native
   def date(d: js.Date, raw: Boolean): String = js.native
+  def date(d: js.Function0[js.Date]): String = js.native
+  def date(d: js.Function0[js.Date], raw: Boolean): String = js.native
   
   def format(query: String): String = js.native
   def format(query: String, values: js.UndefOr[scala.Nothing], options: IFormattingOptions): String = js.native

@@ -96,15 +96,22 @@ import typingsSlinky.reactMdForm.formThemeProviderMod.FormUnderlineDirection
 import typingsSlinky.reactMdPortal.getContainerMod.PortalInto
 import typingsSlinky.reactMdUtils.anon.PartialPositionAnchor
 import typingsSlinky.reactMdUtils.typesMod.PositionWidth
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AutoComplete {
   
+  @scala.inline
+  def apply(data: js.Array[AutoCompleteData], id: String): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AutoCompleteProps with RefAttributes[HTMLInputElement]]))
+  }
+  
   @JSImport("@react-md/autocomplete", "AutoComplete")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -121,10 +128,10 @@ object AutoComplete {
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def afterResultsChildrenReactElement(value: ReactElement): this.type = set("afterResultsChildren", value.asInstanceOf[js.Any])
+    def afterResultsChildren(value: ReactElement): this.type = set("afterResultsChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def afterResultsChildren(value: ReactElement): this.type = set("afterResultsChildren", value.asInstanceOf[js.Any])
+    def afterResultsChildrenReactElement(value: ReactElement): this.type = set("afterResultsChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def alt(value: String): this.type = set("alt", value.asInstanceOf[js.Any])
@@ -294,10 +301,10 @@ object AutoComplete {
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def beforeResultsChildrenReactElement(value: ReactElement): this.type = set("beforeResultsChildren", value.asInstanceOf[js.Any])
+    def beforeResultsChildren(value: ReactElement): this.type = set("beforeResultsChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def beforeResultsChildren(value: ReactElement): this.type = set("beforeResultsChildren", value.asInstanceOf[js.Any])
+    def beforeResultsChildrenReactElement(value: ReactElement): this.type = set("beforeResultsChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def capture(value: Boolean | String): this.type = set("capture", value.asInstanceOf[js.Any])
@@ -324,16 +331,16 @@ object AutoComplete {
     def containerProps(value: OmitHTMLAttributesHTMLDiv): this.type = set("containerProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerRefRefObject(value: ReactRef[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
+    def containerRef(value: Ref[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def containerRefFunction1(value: /* instance */ HTMLDivElement | Null => Unit): this.type = set("containerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def containerRef(value: Ref[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
+    def containerRefNull: this.type = set("containerRef", null)
     
     @scala.inline
-    def containerRefNull: this.type = set("containerRef", null)
+    def containerRefRefObject(value: ReactRef[HTMLDivElement]): this.type = set("containerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -384,12 +391,12 @@ object AutoComplete {
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def filter(value: AutoCompleteFilterFunction[js.Object]): this.type = set("filter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def filterFunction3(
       value: (/* query */ String, /* data */ js.Array[AutoCompleteData], /* options */ FilterFunctionOptions[js.Object]) => js.Array[AutoCompleteData]
     ): this.type = set("filter", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def filter(value: AutoCompleteFilterFunction[js.Object]): this.type = set("filter", value.asInstanceOf[js.Any])
     
     @scala.inline
     def filterOnNoValue(value: Boolean): this.type = set("filterOnNoValue", value.asInstanceOf[js.Any])
@@ -488,9 +495,6 @@ object AutoComplete {
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -500,16 +504,19 @@ object AutoComplete {
     def labelKey(value: String): this.type = set("labelKey", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def labelStyle(value: CSSProperties): this.type = set("labelStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftChildrenReactElement(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
+    def leftChildren(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def leftChildren(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
+    def leftChildrenReactElement(value: ReactElement): this.type = set("leftChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
@@ -542,10 +549,10 @@ object AutoComplete {
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def omitKeysVarargs(value: String*): this.type = set("omitKeys", js.Array(value :_*))
+    def omitKeys(value: js.Array[String]): this.type = set("omitKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def omitKeys(value: js.Array[String]): this.type = set("omitKeys", value.asInstanceOf[js.Any])
+    def omitKeysVarargs(value: String*): this.type = set("omitKeys", js.Array(value :_*))
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLInputElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -797,19 +804,19 @@ object AutoComplete {
     def portal(value: Boolean): this.type = set("portal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
+    def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portalIntoFunction0(value: () => HTMLElement | Null): this.type = set("portalInto", js.Any.fromFunction0(value))
     
     @scala.inline
-    def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def portalIntoNull: this.type = set("portalInto", null)
+    def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portalIntoId(value: String): this.type = set("portalIntoId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def portalIntoNull: this.type = set("portalInto", null)
     
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
@@ -836,10 +843,10 @@ object AutoComplete {
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightChildrenReactElement(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
+    def rightChildren(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightChildren(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
+    def rightChildrenReactElement(value: ReactElement): this.type = set("rightChildren", value.asInstanceOf[js.Any])
     
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
@@ -921,10 +928,4 @@ object AutoComplete {
   }
   
   def withProps(p: AutoCompleteProps with RefAttributes[HTMLInputElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[AutoCompleteData], id: String): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AutoCompleteProps with RefAttributes[HTMLInputElement]]))
-  }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeShare.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("react-native-share", "Sheet")
 @js.native
 class Sheet ()
-  extends typingsSlinky.reactNativeShare.sheetMod.Sheet
+  extends typingsSlinky.reactNativeShare.sheetMod.default

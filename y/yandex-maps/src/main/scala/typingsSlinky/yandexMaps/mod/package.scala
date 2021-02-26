@@ -1,5 +1,6 @@
 package typingsSlinky.yandexMaps
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -72,4 +73,36 @@ package object mod {
   ]) | java.lang.String
   
   type PresetKey = java.lang.String
+  
+  @scala.inline
+  def ready(): js.Promise[scala.Unit] = typingsSlinky.yandexMaps.mod.^.asInstanceOf[js.Dynamic].applyDynamic("ready")().asInstanceOf[js.Promise[scala.Unit]]
+  @scala.inline
+  def ready(
+    successCallback: js.UndefOr[scala.Nothing],
+    errorCallback: js.UndefOr[scala.Nothing],
+    context: js.Object
+  ): js.Promise[scala.Unit] = (typingsSlinky.yandexMaps.mod.^.asInstanceOf[js.Dynamic].applyDynamic("ready")(successCallback.asInstanceOf[js.Any], errorCallback.asInstanceOf[js.Any], context.asInstanceOf[js.Any])).asInstanceOf[js.Promise[scala.Unit]]
+  @scala.inline
+  def ready(successCallback: js.UndefOr[scala.Nothing], errorCallback: js.Function0[_]): js.Promise[scala.Unit] = (typingsSlinky.yandexMaps.mod.^.asInstanceOf[js.Dynamic].applyDynamic("ready")(successCallback.asInstanceOf[js.Any], errorCallback.asInstanceOf[js.Any])).asInstanceOf[js.Promise[scala.Unit]]
+  @scala.inline
+  def ready(successCallback: js.UndefOr[scala.Nothing], errorCallback: js.Function0[_], context: js.Object): js.Promise[scala.Unit] = (typingsSlinky.yandexMaps.mod.^.asInstanceOf[js.Dynamic].applyDynamic("ready")(successCallback.asInstanceOf[js.Any], errorCallback.asInstanceOf[js.Any], context.asInstanceOf[js.Any])).asInstanceOf[js.Promise[scala.Unit]]
+  @scala.inline
+  def ready(successCallback: js.Function0[_ | typingsSlinky.yandexMaps.mod.IReadyobject]): js.Promise[scala.Unit] = typingsSlinky.yandexMaps.mod.^.asInstanceOf[js.Dynamic].applyDynamic("ready")(successCallback.asInstanceOf[js.Any]).asInstanceOf[js.Promise[scala.Unit]]
+  @scala.inline
+  def ready(
+    successCallback: js.Function0[_ | typingsSlinky.yandexMaps.mod.IReadyobject],
+    errorCallback: js.UndefOr[scala.Nothing],
+    context: js.Object
+  ): js.Promise[scala.Unit] = (typingsSlinky.yandexMaps.mod.^.asInstanceOf[js.Dynamic].applyDynamic("ready")(successCallback.asInstanceOf[js.Any], errorCallback.asInstanceOf[js.Any], context.asInstanceOf[js.Any])).asInstanceOf[js.Promise[scala.Unit]]
+  @scala.inline
+  def ready(
+    successCallback: js.Function0[_ | typingsSlinky.yandexMaps.mod.IReadyobject],
+    errorCallback: js.Function0[_]
+  ): js.Promise[scala.Unit] = (typingsSlinky.yandexMaps.mod.^.asInstanceOf[js.Dynamic].applyDynamic("ready")(successCallback.asInstanceOf[js.Any], errorCallback.asInstanceOf[js.Any])).asInstanceOf[js.Promise[scala.Unit]]
+  @scala.inline
+  def ready(
+    successCallback: js.Function0[_ | typingsSlinky.yandexMaps.mod.IReadyobject],
+    errorCallback: js.Function0[_],
+    context: js.Object
+  ): js.Promise[scala.Unit] = (typingsSlinky.yandexMaps.mod.^.asInstanceOf[js.Dynamic].applyDynamic("ready")(successCallback.asInstanceOf[js.Any], errorCallback.asInstanceOf[js.Any], context.asInstanceOf[js.Any])).asInstanceOf[js.Promise[scala.Unit]]
 }

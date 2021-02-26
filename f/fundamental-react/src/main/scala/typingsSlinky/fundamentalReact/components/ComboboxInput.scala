@@ -7,15 +7,22 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.State
 import typingsSlinky.fundamentalReact.comboboxInputMod.ComboboxInputProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ComboboxInput {
   
+  @scala.inline
+  def apply(menu: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(menu = menu.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ComboboxInputProps]))
+  }
+  
   @JSImport("fundamental-react", "ComboboxInput")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +61,4 @@ object ComboboxInput {
   }
   
   def withProps(p: ComboboxInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(menu: ReactElement): Builder = {
-    val __props = js.Dynamic.literal(menu = menu.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ComboboxInputProps]))
-  }
 }

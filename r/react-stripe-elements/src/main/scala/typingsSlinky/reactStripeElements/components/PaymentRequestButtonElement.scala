@@ -11,6 +11,7 @@ import typingsSlinky.stripeV3.anon.Complete
 import typingsSlinky.stripeV3.stripe.paymentRequest.StripePaymentRequest
 import typingsSlinky.stripeV3.stripeV3Strings.default
 import typingsSlinky.stripeV3.stripeV3Strings.solid
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object PaymentRequestButtonElement {
   
   @JSImport("react-stripe-elements", "PaymentRequestButtonElement")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -81,16 +82,16 @@ object PaymentRequestButtonElement {
     def style(value: Complete): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def supportedCountriesVarargs(value: String*): this.type = set("supportedCountries", js.Array(value :_*))
+    def supportedCountries(value: js.Array[String]): this.type = set("supportedCountries", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def supportedCountries(value: js.Array[String]): this.type = set("supportedCountries", value.asInstanceOf[js.Any])
+    def supportedCountriesVarargs(value: String*): this.type = set("supportedCountries", js.Array(value :_*))
     
     @scala.inline
     def value(value: String | StringDictionary[String]): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PaymentRequestButtonElementProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: PaymentRequestButtonElement.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PaymentRequestButtonElementProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -3,6 +3,7 @@ package typingsSlinky.amapJsSdk.AMap
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.amapJsSdk.anon.Name
 import typingsSlinky.amapJsSdk.anon.Offset
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

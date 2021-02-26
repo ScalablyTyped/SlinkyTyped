@@ -78,6 +78,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -86,7 +87,7 @@ object Shellbar {
   
   @JSImport("fundamental-react", "Shellbar")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -100,10 +101,10 @@ object Shellbar {
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def actionsVarargs(value: Glyph*): this.type = set("actions", js.Array(value :_*))
+    def actions(value: js.Array[Glyph]): this.type = set("actions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def actions(value: js.Array[Glyph]): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actionsVarargs(value: Glyph*): this.type = set("actions", js.Array(value :_*))
     
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
@@ -288,10 +289,10 @@ object Shellbar {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -339,10 +340,10 @@ object Shellbar {
     def localizedText(value: NotificationsButton): this.type = set("localizedText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def logoReactElement(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
+    def logo(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def logo(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
+    def logoReactElement(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
     
     @scala.inline
     def logoSAP(value: Boolean): this.type = set("logoSAP", value.asInstanceOf[js.Any])
@@ -594,28 +595,28 @@ object Shellbar {
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def productMenuVarargs(value: typingsSlinky.fundamentalReact.anon.Link*): this.type = set("productMenu", js.Array(value :_*))
+    def productMenu(value: js.Array[typingsSlinky.fundamentalReact.anon.Link]): this.type = set("productMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def productMenu(value: js.Array[typingsSlinky.fundamentalReact.anon.Link]): this.type = set("productMenu", value.asInstanceOf[js.Any])
+    def productMenuVarargs(value: typingsSlinky.fundamentalReact.anon.Link*): this.type = set("productMenu", js.Array(value :_*))
     
     @scala.inline
     def productSwitch(value: js.Object): this.type = set("productSwitch", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def productSwitchListVarargs(value: typingsSlinky.fundamentalReact.anon.Image*): this.type = set("productSwitchList", js.Array(value :_*))
+    def productSwitchList(value: js.Array[typingsSlinky.fundamentalReact.anon.Image]): this.type = set("productSwitchList", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def productSwitchList(value: js.Array[typingsSlinky.fundamentalReact.anon.Image]): this.type = set("productSwitchList", value.asInstanceOf[js.Any])
+    def productSwitchListVarargs(value: typingsSlinky.fundamentalReact.anon.Image*): this.type = set("productSwitchList", js.Array(value :_*))
     
     @scala.inline
     def productTitle(value: String): this.type = set("productTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def profileMenuVarargs(value: StringDictionary[js.Any]*): this.type = set("profileMenu", js.Array(value :_*))
+    def profileMenu(value: js.Array[StringDictionary[_]]): this.type = set("profileMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def profileMenu(value: js.Array[StringDictionary[_]]): this.type = set("profileMenu", value.asInstanceOf[js.Any])
+    def profileMenuVarargs(value: StringDictionary[js.Any]*): this.type = set("profileMenu", js.Array(value :_*))
     
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -672,7 +673,7 @@ object Shellbar {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ShellbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Shellbar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ShellbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

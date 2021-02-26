@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Materials/Node/Blocks/worleyNoise3DBlock", JSImport.Namespace)
-@js.native
-object worleyNoise3DBlockMod extends js.Object {
+object worleyNoise3DBlockMod {
   
+  @JSImport("babylonjs/Materials/Node/Blocks/worleyNoise3DBlock", "WorleyNoise3DBlock")
   @js.native
   class WorleyNoise3DBlock protected () extends NodeMaterialBlock {
     /**

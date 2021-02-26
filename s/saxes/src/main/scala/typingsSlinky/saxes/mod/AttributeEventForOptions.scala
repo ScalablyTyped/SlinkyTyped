@@ -1,5 +1,6 @@
 package typingsSlinky.saxes.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.saxes.mod.SaxesAttributePlain
   - typingsSlinky.saxes.mod.SaxesAttributeNSIncomplete
 */
-trait AttributeEventForOptions[O /* <: SaxesOptions */] extends js.Object
+trait AttributeEventForOptions[O /* <: SaxesOptions */] extends StObject

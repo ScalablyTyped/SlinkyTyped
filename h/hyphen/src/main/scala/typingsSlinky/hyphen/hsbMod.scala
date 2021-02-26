@@ -3,21 +3,30 @@ package typingsSlinky.hyphen
 import typingsSlinky.hyphen.mod.HyphenationFunctionAsync
 import typingsSlinky.hyphen.mod.HyphenationFunctionSync
 import typingsSlinky.hyphen.mod.PatternsDefinition
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("hyphen/hsb", JSImport.Namespace)
-@js.native
-object hsbMod extends js.Object {
+object hsbMod {
   
+  @JSImport("hyphen/hsb", "hyphenate")
+  @js.native
   val hyphenate: HyphenationFunctionAsync = js.native
   
+  @JSImport("hyphen/hsb", "hyphenateHTML")
+  @js.native
   val hyphenateHTML: HyphenationFunctionAsync = js.native
   
+  @JSImport("hyphen/hsb", "hyphenateHTMLSync")
+  @js.native
   val hyphenateHTMLSync: HyphenationFunctionSync = js.native
   
+  @JSImport("hyphen/hsb", "hyphenateSync")
+  @js.native
   val hyphenateSync: HyphenationFunctionSync = js.native
   
+  @JSImport("hyphen/hsb", "patterns")
+  @js.native
   val patterns: PatternsDefinition = js.native
 }

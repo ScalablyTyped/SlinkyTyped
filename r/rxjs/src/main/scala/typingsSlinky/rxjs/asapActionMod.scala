@@ -3,14 +3,14 @@ package typingsSlinky.rxjs
 import typingsSlinky.rxjs.asapSchedulerMod.AsapScheduler
 import typingsSlinky.rxjs.asyncActionMod.AsyncAction
 import typingsSlinky.rxjs.typesMod.SchedulerAction
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rxjs/internal/scheduler/AsapAction", JSImport.Namespace)
-@js.native
-object asapActionMod extends js.Object {
+object asapActionMod {
   
+  @JSImport("rxjs/internal/scheduler/AsapAction", "AsapAction")
   @js.native
   class AsapAction[T] protected () extends AsyncAction[T] {
     def this(

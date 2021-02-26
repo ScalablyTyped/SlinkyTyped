@@ -3,14 +3,14 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.touchCameraMod.TouchCamera
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Cameras/universalCamera", JSImport.Namespace)
-@js.native
-object universalCameraMod extends js.Object {
+object universalCameraMod {
   
+  @JSImport("babylonjs/Cameras/universalCamera", "UniversalCamera")
   @js.native
   class UniversalCamera protected () extends TouchCamera {
     /**

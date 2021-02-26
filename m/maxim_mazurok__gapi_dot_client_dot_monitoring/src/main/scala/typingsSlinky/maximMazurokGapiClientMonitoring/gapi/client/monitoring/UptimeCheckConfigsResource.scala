@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientMonitoring.anon.Key
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.KeyName
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.KeyOauthtoken
 import typingsSlinky.maximMazurokGapiClientMonitoring.anon.Parent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UptimeCheckConfigsResource extends js.Object {
+trait UptimeCheckConfigsResource extends StObject {
   
   def create(request: FieldsKey, body: UptimeCheckConfig): Request[UptimeCheckConfig] = js.native
   /** Creates a new Uptime check configuration. */

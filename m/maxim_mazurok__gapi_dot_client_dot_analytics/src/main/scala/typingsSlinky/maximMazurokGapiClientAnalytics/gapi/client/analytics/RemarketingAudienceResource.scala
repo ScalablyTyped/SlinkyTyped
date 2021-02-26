@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientAnalytics.anon.MaxresultsOauthtoken
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.QuotaUserRemarketingAudienceId
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.RemarketingAudienceId
 import typingsSlinky.maximMazurokGapiClientAnalytics.anon.UserIpWebPropertyId
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RemarketingAudienceResource extends js.Object {
+trait RemarketingAudienceResource extends StObject {
   
   /** Delete a remarketing audience. */
   def delete(): Request[Unit] = js.native

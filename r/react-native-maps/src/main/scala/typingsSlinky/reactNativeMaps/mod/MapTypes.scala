@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeMaps.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeMaps.reactNativeMapsStrings.none
   - typingsSlinky.reactNativeMaps.reactNativeMapsStrings.mutedStandard
 */
-trait MapTypes extends js.Object
+trait MapTypes extends StObject
 object MapTypes {
   
   @scala.inline

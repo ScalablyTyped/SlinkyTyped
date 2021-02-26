@@ -7,12 +7,13 @@ import typingsSlinky.maximMazurokGapiClientAdsense.anon.CustomChannelId
 import typingsSlinky.maximMazurokGapiClientAdsense.anon.Key
 import typingsSlinky.maximMazurokGapiClientAdsense.anon.MaxResults
 import typingsSlinky.maximMazurokGapiClientAdsense.anon.Oauthtoken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CustomchannelsResource extends js.Object {
+trait CustomchannelsResource extends StObject {
   
   var adunits: AdunitsResource = js.native
   

@@ -5,6 +5,7 @@ import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.NamedValue
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XCloseListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XCloseable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,14 +1,14 @@
 package typingsSlinky.devextreme.mod.default
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxTemplateOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("devextreme", "core")
-@js.native
-object core extends js.Object {
+object core {
   
+  @JSImport("devextreme", "default.core.dxTemplate")
   @js.native
   class dxTemplate ()
     extends typingsSlinky.devextreme.mod.DevExpress.core.dxTemplate {

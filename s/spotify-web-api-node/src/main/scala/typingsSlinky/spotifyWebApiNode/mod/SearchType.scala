@@ -1,5 +1,6 @@
 package typingsSlinky.spotifyWebApiNode.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.playlist
   - typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.track
 */
-trait SearchType extends js.Object
+trait SearchType extends StObject
 object SearchType {
   
   @scala.inline

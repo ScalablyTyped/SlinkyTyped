@@ -6,6 +6,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.formol.mod.FieldProps
 import typingsSlinky.react.mod.Ref
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object Field {
   
   @JSImport("formol", "Field")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -22,22 +23,22 @@ object Field {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def TypeFieldFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
+    def TypeField(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
     
     @scala.inline
     def TypeFieldComponentClass(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def TypeField(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
+    def TypeFieldFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
     
     @scala.inline
     def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def choicesVarargs(value: js.Any*): this.type = set("choices", js.Array(value :_*))
+    def choices(value: js.Array[_]): this.type = set("choices", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def choices(value: js.Array[_]): this.type = set("choices", value.asInstanceOf[js.Any])
+    def choicesVarargs(value: js.Any*): this.type = set("choices", js.Array(value :_*))
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -52,16 +53,16 @@ object Field {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def error(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extrasReactElement(value: ReactElement): this.type = set("extras", value.asInstanceOf[js.Any])
+    def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
     def extras(value: ReactElement): this.type = set("extras", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def extrasReactElement(value: ReactElement): this.type = set("extras", value.asInstanceOf[js.Any])
     
     @scala.inline
     def formatter(value: js.Any => js.Any): this.type = set("formatter", js.Any.fromFunction1(value))
@@ -114,10 +115,10 @@ object Field {
     def unformatter(value: js.Any => js.Any): this.type = set("unformatter", js.Any.fromFunction1(value))
     
     @scala.inline
-    def unitReactElement(value: ReactElement): this.type = set("unit", value.asInstanceOf[js.Any])
+    def unit(value: ReactElement): this.type = set("unit", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def unit(value: ReactElement): this.type = set("unit", value.asInstanceOf[js.Any])
+    def unitReactElement(value: ReactElement): this.type = set("unit", value.asInstanceOf[js.Any])
     
     @scala.inline
     def unregister(value: /* name */ String => Unit): this.type = set("unregister", js.Any.fromFunction1(value))
@@ -132,7 +133,7 @@ object Field {
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FieldProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Field.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: FieldProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

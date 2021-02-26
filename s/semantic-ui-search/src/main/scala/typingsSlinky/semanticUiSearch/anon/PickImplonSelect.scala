@@ -2,13 +2,14 @@ package typingsSlinky.semanticUiSearch.anon
 
 import typingsSlinky.semanticUiSearch.JQuery
 import typingsSlinky.semanticUiSearch.semanticUiSearchBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Pick<semantic-ui-search.SemanticUI.SearchSettings._Impl, 'onSelect'> */
 @js.native
-trait PickImplonSelect extends js.Object {
+trait PickImplonSelect extends StObject {
   
   def onSelect(result: js.Any, response: js.Any): `false` | Unit = js.native
   @JSName("onSelect")

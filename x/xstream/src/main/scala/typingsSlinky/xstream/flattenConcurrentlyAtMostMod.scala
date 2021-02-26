@@ -3,16 +3,18 @@ package typingsSlinky.xstream
 import typingsSlinky.xstream.mod.MemoryStream
 import typingsSlinky.xstream.mod.Operator
 import typingsSlinky.xstream.mod.Stream
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xstream/extra/flattenConcurrentlyAtMost", JSImport.Namespace)
-@js.native
-object flattenConcurrentlyAtMostMod extends js.Object {
+object flattenConcurrentlyAtMostMod {
   
+  @JSImport("xstream/extra/flattenConcurrentlyAtMost", JSImport.Default)
+  @js.native
   def default[T](n: Double): js.Function1[/* ins */ Stream[Stream[T] | MemoryStream[T]], Stream[T]] = js.native
   
+  @JSImport("xstream/extra/flattenConcurrentlyAtMost", "FlattenConcAMOperator")
   @js.native
   class FlattenConcAMOperator[T] protected () extends Operator[Stream[T], T] {
     def this(n: Double, ins: Stream[Stream[T]]) = this()

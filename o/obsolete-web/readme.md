@@ -10,9 +10,9 @@ A library that detects browser compatibility and prompts website users to upgrad
 | ------------------ | :-------------: |
 | Full name          | obsolete-web |
 | Keywords           | obsolete, obsolete-web |
-| # releases         | 20 |
+| # releases         | 2 |
 | # dependents       | 1 |
-| # downloads        | 41277 |
+| # downloads        | 58487 |
 | # stars            | 0 |
 
 ## Links

@@ -4,13 +4,14 @@ import typingsSlinky.atom.mod.Point
 import typingsSlinky.atom.mod.PointCompatible
 import typingsSlinky.atom.mod.RangeCompatible
 import typingsSlinky.atom.mod.RangeLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Readonly<atom.atom.Range> */
 @js.native
-trait ReadonlyRange extends js.Object {
+trait ReadonlyRange extends StObject {
   
   def compare(otherRange: RangeCompatible): Double = js.native
   

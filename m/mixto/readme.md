@@ -10,8 +10,8 @@ A mixin superclass. Its subclasses have `.extend` and `.includeInto` methods to 
 | Full name          | mixto |
 | Keywords           | mixin, trait |
 | # releases         | 0 |
-| # dependents       | 16 |
-| # downloads        | 2254819 |
+| # dependents       | 17 |
+| # downloads        | 1905285 |
 | # stars            | 0 |
 
 ## Links

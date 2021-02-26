@@ -1,6 +1,7 @@
 package typingsSlinky.gm.mod
 
 import typingsSlinky.gm.gmStrings.gaussian_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gm.gmStrings.laplacian
   - typingsSlinky.gm.gmStrings.poisson
 */
-trait NoiseType extends js.Object
+trait NoiseType extends StObject
 object NoiseType {
   
   @scala.inline

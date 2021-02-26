@@ -7,6 +7,7 @@ import typingsSlinky.reactPanelgroup.mod.PropTypes
 import typingsSlinky.reactPanelgroup.mod.default
 import typingsSlinky.reactPanelgroup.reactPanelgroupStrings.column
 import typingsSlinky.reactPanelgroup.reactPanelgroupStrings.row
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object ReactPanelgroup {
   
   @JSImport("react-panelgroup", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,16 +36,16 @@ object ReactPanelgroup {
     def panelColor(value: String): this.type = set("panelColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def panelWidthsVarargs(value: (PanelWidth | Null)*): this.type = set("panelWidths", js.Array(value :_*))
+    def panelWidths(value: js.Array[PanelWidth | Null]): this.type = set("panelWidths", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def panelWidths(value: js.Array[PanelWidth | Null]): this.type = set("panelWidths", value.asInstanceOf[js.Any])
+    def panelWidthsVarargs(value: (PanelWidth | Null)*): this.type = set("panelWidths", js.Array(value :_*))
     
     @scala.inline
     def spacing(value: Double): this.type = set("spacing", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactPanelgroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: PropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

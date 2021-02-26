@@ -18,6 +18,7 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.table
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.timeEnd
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.trace
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.warning
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,7 +43,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.count
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.timeEnd
 */
-trait ConsoleAPICalledEventType extends js.Object
+trait ConsoleAPICalledEventType extends StObject
 object ConsoleAPICalledEventType {
   
   @scala.inline

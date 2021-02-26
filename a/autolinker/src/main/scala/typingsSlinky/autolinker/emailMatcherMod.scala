@@ -1,16 +1,23 @@
 package typingsSlinky.autolinker
 
 import typingsSlinky.autolinker.matcherMatcherMod.Matcher
+import typingsSlinky.autolinker.matcherMatcherMod.MatcherConfig
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("autolinker/dist/commonjs/matcher/email-matcher", JSImport.Namespace)
-@js.native
-object emailMatcherMod extends js.Object {
+object emailMatcherMod {
   
+  @JSImport("autolinker/dist/commonjs/matcher/email-matcher", "EmailMatcher")
   @js.native
-  class EmailMatcher () extends Matcher {
+  class EmailMatcher protected () extends Matcher {
+    /**
+      * @method constructor
+      * @param {Object} cfg The configuration properties for the Matcher
+      *   instance, specified in an Object (map).
+      */
+    def this(cfg: MatcherConfig) = this()
     
     /**
       * Valid characters that can be used in the "local" part of an email address,

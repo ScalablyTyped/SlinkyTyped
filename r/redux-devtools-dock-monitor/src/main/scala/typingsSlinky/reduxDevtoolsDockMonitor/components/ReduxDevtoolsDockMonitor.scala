@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reduxDevtoolsDockMonitor.mod.DockPosition
 import typingsSlinky.reduxDevtoolsDockMonitor.mod.IDockMonitorProps
 import typingsSlinky.reduxDevtoolsDockMonitor.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReduxDevtoolsDockMonitor {
   
+  @scala.inline
+  def apply(changePositionKey: String, toggleVisibilityKey: String): Builder = {
+    val __props = js.Dynamic.literal(changePositionKey = changePositionKey.asInstanceOf[js.Any], toggleVisibilityKey = toggleVisibilityKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDockMonitorProps]))
+  }
+  
   @JSImport("redux-devtools-dock-monitor", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,10 +44,4 @@ object ReduxDevtoolsDockMonitor {
   }
   
   def withProps(p: IDockMonitorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(changePositionKey: String, toggleVisibilityKey: String): Builder = {
-    val __props = js.Dynamic.literal(changePositionKey = changePositionKey.asInstanceOf[js.Any], toggleVisibilityKey = toggleVisibilityKey.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IDockMonitorProps]))
-  }
 }

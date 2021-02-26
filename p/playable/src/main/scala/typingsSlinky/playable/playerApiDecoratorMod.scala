@@ -1,25 +1,30 @@
 package typingsSlinky.playable
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("playable/dist/src/core/player-api-decorator", JSImport.Namespace)
-@js.native
-object playerApiDecoratorMod extends js.Object {
+object playerApiDecoratorMod {
   
-  val PLAYER_API_PROPERTY: /* "___playerAPI" */ String = js.native
-  
+  @JSImport("playable/dist/src/core/player-api-decorator", JSImport.Default)
+  @js.native
   def default(): js.Function3[
     /* target */ js.Any, 
     /* property */ String, 
     /* descriptor */ js.PropertyDescriptor, 
     Unit
   ] = js.native
+  @JSImport("playable/dist/src/core/player-api-decorator", JSImport.Default)
+  @js.native
   def default(name: String): js.Function3[
     /* target */ js.Any, 
     /* property */ String, 
     /* descriptor */ js.PropertyDescriptor, 
     Unit
   ] = js.native
+  
+  @JSImport("playable/dist/src/core/player-api-decorator", "PLAYER_API_PROPERTY")
+  @js.native
+  val PLAYER_API_PROPERTY: /* "___playerAPI" */ String = js.native
 }

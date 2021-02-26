@@ -3,6 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.overlayPanelMod.OverlayPanelProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ object OverlayPanel {
   
   @JSImport("primereact/overlaypanel", "OverlayPanel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -43,7 +44,7 @@ object OverlayPanel {
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: OverlayPanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: OverlayPanel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: OverlayPanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

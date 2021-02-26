@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.ImageData
 import typingsSlinky.xelib.anon.Data
 import typingsSlinky.xelib.xelibBooleans.`false`
 import typingsSlinky.xelib.xelibBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - Dropped / * import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ValueType * / any
 - Dropped / * import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ConflictThis * / any
 - Dropped / * import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ConflictAll * / any */ @js.native
-trait XELib extends js.Object {
+trait XELib extends StObject {
   
   /**
     * Adds an value the `Additional Races` array on `record`.

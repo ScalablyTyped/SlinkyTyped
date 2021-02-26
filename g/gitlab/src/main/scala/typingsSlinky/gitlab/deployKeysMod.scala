@@ -1,20 +1,22 @@
 package typingsSlinky.gitlab
 
 import typingsSlinky.gitlab.anon.projectIdstringnumberunde
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.Sudo
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gitlab/dist/types/core/services/DeployKeys", JSImport.Namespace)
-@js.native
-object deployKeysMod extends js.Object {
+object deployKeysMod {
   
+  @JSImport("gitlab/dist/types/core/services/DeployKeys", "DeployKeys")
   @js.native
   class DeployKeys () extends BaseService {
+    def this(hasTokenJobTokenOauthTokenSudoProfileTokenProfileModeHostUrlVersionCamelizeRejectUnauthorizedRequesterRequestTimeout: BaseServiceOptions) = this()
     
     def add(projectId: String): js.Promise[js.Object] = js.native
     def add(projectId: String, options: Sudo): js.Promise[js.Object] = js.native

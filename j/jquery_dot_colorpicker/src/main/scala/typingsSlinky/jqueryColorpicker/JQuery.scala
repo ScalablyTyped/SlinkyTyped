@@ -4,12 +4,13 @@ import typingsSlinky.jqueryColorpicker.jqueryColorpickerStrings.close
 import typingsSlinky.jqueryColorpicker.jqueryColorpickerStrings.destroy
 import typingsSlinky.jqueryColorpicker.jqueryColorpickerStrings.open
 import typingsSlinky.jqueryColorpicker.jqueryColorpickerStrings.setColor
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def colorpicker(): JQuery = js.native
   def colorpicker(method: String): JQuery = js.native

@@ -2,12 +2,13 @@ package typingsSlinky.ckeditor.CKEDITOR
 
 import typingsSlinky.ckeditor.CKEDITOR.dom.domObject
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait focusManager extends js.Object {
+trait focusManager extends StObject {
   
   def add(element: element, isCapture: Boolean): Unit = js.native
   

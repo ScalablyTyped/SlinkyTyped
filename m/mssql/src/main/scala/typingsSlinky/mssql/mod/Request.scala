@@ -3,6 +3,7 @@ package typingsSlinky.mssql.mod
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.TemplateStringsArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

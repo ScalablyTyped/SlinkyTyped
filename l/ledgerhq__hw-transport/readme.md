@@ -10,9 +10,9 @@ Ledger Hardware Wallet common interface of the communication layer
 | ------------------ | :-------------: |
 | Full name          | @ledgerhq/hw-transport |
 | Keywords           | Ledger, LedgerWallet, NanoS, Blue, Hardware Wallet |
-| # releases         | 149 |
-| # dependents       | 66 |
-| # downloads        | 581368 |
+| # releases         | 101 |
+| # dependents       | 128 |
+| # downloads        | 1291071 |
 | # stars            | 0 |
 
 ## Links

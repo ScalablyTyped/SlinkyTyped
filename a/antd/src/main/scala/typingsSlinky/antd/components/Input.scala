@@ -17,7 +17,7 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
-import slinky.web.html.input.tag
+import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
@@ -98,6 +98,8 @@ import typingsSlinky.antd.inputGroupMod.GroupProps
 import typingsSlinky.antd.inputInputMod.InputProps
 import typingsSlinky.antd.passwordMod.PasswordProps
 import typingsSlinky.antd.searchMod.SearchProps
+import typingsSlinky.antd.textAreaMod.TextAreaProps
+import typingsSlinky.antd.textAreaMod.TextAreaRef
 import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -105,20 +107,98 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Input {
   
+  object Group {
+    
+    @JSImport("antd", "Input.Group")
+    @js.native
+    val component: js.Object = js.native
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def onBlur(value: SyntheticFocusEvent[HTMLSpanElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+      
+      @scala.inline
+      def onFocus(value: SyntheticFocusEvent[HTMLSpanElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+      
+      @scala.inline
+      def onMouseEnter(value: SyntheticMouseEvent[HTMLSpanElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+      
+      @scala.inline
+      def onMouseLeave(value: SyntheticMouseEvent[HTMLSpanElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+      
+      @scala.inline
+      def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def size(value: large | small | default): this.type = set("size", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    }
+    
+    implicit def make(companion: Group.type): typingsSlinky.antd.components.Input.Group.Builder = new typingsSlinky.antd.components.Input.Group.Builder(js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: GroupProps): typingsSlinky.antd.components.Input.Group.Builder = new typingsSlinky.antd.components.Input.Group.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Password {
+    
+    @JSImport("antd", "Input.Password")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Password.type): SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object] = new SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: PasswordProps with RefAttributes[js.Any]): SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object] = new SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object Search {
+    
+    @JSImport("antd", "Input.Search")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: Search.type): SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default] = new SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: SearchProps with RefAttributes[typingsSlinky.antd.inputInputMod.default]): SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default] = new SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
+  object TextArea {
+    
+    @JSImport("antd", "Input.TextArea")
+    @js.native
+    val component: js.Object = js.native
+    
+    implicit def make(companion: TextArea.type): SharedBuilder_TextAreaPropsRefAttributes1467975471[TextAreaRef] = new SharedBuilder_TextAreaPropsRefAttributes1467975471[TextAreaRef](js.Array(this.component, js.Dictionary.empty))()
+    
+    def withProps(p: TextAreaProps with RefAttributes[TextAreaRef]): SharedBuilder_TextAreaPropsRefAttributes1467975471[TextAreaRef] = new SharedBuilder_TextAreaPropsRefAttributes1467975471[TextAreaRef](js.Array(this.component, p.asInstanceOf[js.Any]))
+  }
+  
   @JSImport("antd", "Input")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Input] {
+       with StBuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.antd.mod.Input] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -130,16 +210,16 @@ object Input {
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def addonAfterReactElement(value: ReactElement): this.type = set("addonAfter", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def addonAfter(value: ReactElement): this.type = set("addonAfter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def addonBeforeReactElement(value: ReactElement): this.type = set("addonBefore", value.asInstanceOf[js.Any])
+    def addonAfterReactElement(value: ReactElement): this.type = set("addonAfter", value.asInstanceOf[js.Any])
     
     @scala.inline
     def addonBefore(value: ReactElement): this.type = set("addonBefore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def addonBeforeReactElement(value: ReactElement): this.type = set("addonBefore", value.asInstanceOf[js.Any])
     
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
@@ -342,10 +422,10 @@ object Input {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -681,13 +761,13 @@ object Input {
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def prefixReactElement(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def prefix(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def prefixReactElement(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -732,10 +812,10 @@ object Input {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suffixReactElement(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
+    def suffix(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def suffix(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
+    def suffixReactElement(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -767,10 +847,10 @@ object Input {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -779,73 +859,7 @@ object Input {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Input.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   
-  object Group {
-    
-    @JSImport("antd", "Input.Group")
-    @js.native
-    object component extends js.Object
-    
-    @scala.inline
-    class Builder (val args: js.Array[js.Any])
-      extends AnyVal
-         with StBuildingComponent[slinky.web.html.span.tag.type, js.Object] {
-      
-      @scala.inline
-      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def onBlur(value: SyntheticFocusEvent[HTMLSpanElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
-      
-      @scala.inline
-      def onFocus(value: SyntheticFocusEvent[HTMLSpanElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
-      
-      @scala.inline
-      def onMouseEnter(value: SyntheticMouseEvent[HTMLSpanElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
-      
-      @scala.inline
-      def onMouseLeave(value: SyntheticMouseEvent[HTMLSpanElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
-      
-      @scala.inline
-      def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def size(value: large | small | default): this.type = set("size", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
-    }
-    
-    def withProps(p: GroupProps): typingsSlinky.antd.components.Input.Group.Builder = new typingsSlinky.antd.components.Input.Group.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Group.type): typingsSlinky.antd.components.Input.Group.Builder = new typingsSlinky.antd.components.Input.Group.Builder(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Password {
-    
-    @JSImport("antd", "Input.Password")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: PasswordProps with RefAttributes[js.Any]): SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object] = new SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Password.type): SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object] = new SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object](js.Array(this.component, js.Dictionary.empty))()
-  }
-  
-  object Search {
-    
-    @JSImport("antd", "Input.Search")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: SearchProps with RefAttributes[typingsSlinky.antd.inputInputMod.default]): SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default] = new SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default](js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Search.type): SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default] = new SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default](js.Array(this.component, js.Dictionary.empty))()
-  }
+  def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

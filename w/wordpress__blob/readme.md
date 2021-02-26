@@ -9,15 +9,16 @@ Blob utilities for WordPress.
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @wordpress/blob |
-| Keywords           | wordpress, blob |
-| # releases         | 20 |
-| # dependents       | 7 |
-| # downloads        | 121651 |
+| Keywords           | wordpress, gutenberg, blob |
+| # releases         | 13 |
+| # dependents       | 8 |
+| # downloads        | 646086 |
 | # stars            | 0 |
 
 ## Links
 - [Homepage](https://github.com/WordPress/gutenberg/tree/master/packages/blob/README.md)
 - [Bugs](https://github.com/WordPress/gutenberg/issues)
+- [Repository](https://github.com/WordPress/gutenberg)
 - [Npm](https://www.npmjs.com/package/%40wordpress%2Fblob)
     
 

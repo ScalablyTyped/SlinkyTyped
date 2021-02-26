@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientCloudsearch.gapi.client.cloudsearch
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientCloudsearch.anon.FieldsKey
 import typingsSlinky.maximMazurokGapiClientCloudsearch.anon.ResourceName
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MediaResource extends js.Object {
+trait MediaResource extends StObject {
   
   def upload(request: FieldsKey, body: Media): Request[Media] = js.native
   /**

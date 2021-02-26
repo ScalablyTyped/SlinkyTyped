@@ -4,6 +4,7 @@ import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,10 +23,16 @@ class Dropout protected () extends Layer {
   val seed: js.Any = js.native
 }
 /* static members */
-@JSImport("@tensorflow/tfjs-layers/dist/layers/core", "Dropout")
-@js.native
-object Dropout extends js.Object {
+object Dropout {
+  
+  @JSImport("@tensorflow/tfjs-layers/dist/layers/core", "Dropout")
+  @js.native
+  val ^ : js.Any = js.native
   
   /** @nocollapse */
-  var className: String = js.native
+  @JSImport("@tensorflow/tfjs-layers/dist/layers/core", "Dropout.className")
+  @js.native
+  def className: String = js.native
+  @scala.inline
+  def className_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("className")(x.asInstanceOf[js.Any])
 }

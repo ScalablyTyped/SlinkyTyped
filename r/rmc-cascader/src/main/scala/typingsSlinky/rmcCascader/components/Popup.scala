@@ -7,15 +7,22 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.rmcCascader.cascaderTypesMod.CascaderValue
 import typingsSlinky.rmcCascader.popupMod.IPopupCascaderProps
 import typingsSlinky.rmcCascader.popupMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Popup {
   
+  @scala.inline
+  def apply(cascader: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(cascader = cascader.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IPopupCascaderProps]))
+  }
+  
   @JSImport("rmc-cascader/lib/Popup", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -35,28 +42,28 @@ object Popup {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement | String): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def content(value: ReactElement | String): this.type = set("content", value.asInstanceOf[js.Any])
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dismissTextReactElement(value: ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
+    def dismissText(value: String | ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dismissText(value: String | ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
+    def dismissTextReactElement(value: ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    def okText(value: String | ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def okText(value: String | ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onChange(value: /* date */ js.UndefOr[CascaderValue] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
@@ -92,10 +99,10 @@ object Popup {
     def styles(value: js.Any): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
@@ -114,10 +121,4 @@ object Popup {
   }
   
   def withProps(p: IPopupCascaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(cascader: ReactElement): Builder = {
-    val __props = js.Dynamic.literal(cascader = cascader.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IPopupCascaderProps]))
-  }
 }

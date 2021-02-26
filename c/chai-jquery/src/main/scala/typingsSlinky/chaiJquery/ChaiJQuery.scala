@@ -17,6 +17,7 @@ import typingsSlinky.jquery.JQueryMouseEventObject
 import typingsSlinky.jquery.JQueryPromise
 import typingsSlinky.jquery.JQuerySerializeArrayElement
 import typingsSlinky.jquery.JQueryXHR
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -76,6 +77,8 @@ trait ChaiJQuery
   
   def after(content1: String, content2: js.Any*): ChaiJQuery = js.native
   def after(content1: js.Array[_], content2: js.Any*): ChaiJQuery = js.native
+  def after(content1: Element, content2: js.Any*): ChaiJQuery = js.native
+  def after(content1: Text, content2: js.Any*): ChaiJQuery = js.native
   /**
     * Insert content, specified by the parameter, after each element in the set of matched elements.
     *
@@ -83,8 +86,6 @@ trait ChaiJQuery
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert after each element in the set of matched elements.
     */
   def after(content1: JQuery[HTMLElement], content2: js.Any*): ChaiJQuery = js.native
-  def after(content1: Element, content2: js.Any*): ChaiJQuery = js.native
-  def after(content1: Text, content2: js.Any*): ChaiJQuery = js.native
   /**
     * Insert content, specified by the parameter, after each element in the set of matched elements.
     *
@@ -200,6 +201,8 @@ trait ChaiJQuery
   
   def append(content1: String, content2: js.Any*): ChaiJQuery = js.native
   def append(content1: js.Array[_], content2: js.Any*): ChaiJQuery = js.native
+  def append(content1: Element, content2: js.Any*): ChaiJQuery = js.native
+  def append(content1: Text, content2: js.Any*): ChaiJQuery = js.native
   /**
     * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
     *
@@ -207,8 +210,6 @@ trait ChaiJQuery
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the end of each element in the set of matched elements.
     */
   def append(content1: JQuery[HTMLElement], content2: js.Any*): ChaiJQuery = js.native
-  def append(content1: Element, content2: js.Any*): ChaiJQuery = js.native
-  def append(content1: Text, content2: js.Any*): ChaiJQuery = js.native
   /**
     * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
     *
@@ -218,13 +219,13 @@ trait ChaiJQuery
   
   def appendTo(target: String): ChaiJQuery = js.native
   def appendTo(target: js.Array[_]): ChaiJQuery = js.native
+  def appendTo(target: Element): ChaiJQuery = js.native
   /**
     * Insert every element in the set of matched elements to the end of the target.
     *
     * @param target A selector, element, HTML string, array of elements, or jQuery object; the matched set of elements will be inserted at the end of the element(s) specified by this parameter.
     */
   def appendTo(target: JQuery[HTMLElement]): ChaiJQuery = js.native
-  def appendTo(target: Element): ChaiJQuery = js.native
   
   /**
     * Get the value of an attribute for the first element in the set of matched elements.
@@ -256,6 +257,8 @@ trait ChaiJQuery
   
   def before(content1: String, content2: js.Any*): ChaiJQuery = js.native
   def before(content1: js.Array[_], content2: js.Any*): ChaiJQuery = js.native
+  def before(content1: Element, content2: js.Any*): ChaiJQuery = js.native
+  def before(content1: Text, content2: js.Any*): ChaiJQuery = js.native
   /**
     * Insert content, specified by the parameter, before each element in the set of matched elements.
     *
@@ -263,8 +266,6 @@ trait ChaiJQuery
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert before each element in the set of matched elements.
     */
   def before(content1: JQuery[HTMLElement], content2: js.Any*): ChaiJQuery = js.native
-  def before(content1: Element, content2: js.Any*): ChaiJQuery = js.native
-  def before(content1: Text, content2: js.Any*): ChaiJQuery = js.native
   /**
     * Insert content, specified by the parameter, before each element in the set of matched elements.
     *
@@ -888,8 +889,8 @@ trait ChaiJQuery
     * @param selector A selector representing a jQuery collection in which to look for an element.
     */
   def index(selector: String): Double = js.native
-  def index(selector: JQuery[HTMLElement]): Double = js.native
   def index(selector: Element): Double = js.native
+  def index(selector: JQuery[HTMLElement]): Double = js.native
   
   /**
     * Get the current computed height for the first element in the set of matched elements, including padding but not border.
@@ -917,25 +918,25 @@ trait ChaiJQuery
   
   def insertAfter(target: String): ChaiJQuery = js.native
   def insertAfter(target: js.Array[_]): ChaiJQuery = js.native
+  def insertAfter(target: Element): ChaiJQuery = js.native
+  def insertAfter(target: Text): ChaiJQuery = js.native
   /**
     * Insert every element in the set of matched elements after the target.
     *
     * param target A selector, element, array of elements, HTML string, or jQuery object; the matched set of elements will be inserted after the element(s) specified by this parameter.
     */
   def insertAfter(target: JQuery[HTMLElement]): ChaiJQuery = js.native
-  def insertAfter(target: Element): ChaiJQuery = js.native
-  def insertAfter(target: Text): ChaiJQuery = js.native
   
   def insertBefore(target: String): ChaiJQuery = js.native
   def insertBefore(target: js.Array[_]): ChaiJQuery = js.native
+  def insertBefore(target: Element): ChaiJQuery = js.native
+  def insertBefore(target: Text): ChaiJQuery = js.native
   /**
     * Insert every element in the set of matched elements before the target.
     *
     * param target A selector, element, array of elements, HTML string, or jQuery object; the matched set of elements will be inserted before the element(s) specified by this parameter.
     */
   def insertBefore(target: JQuery[HTMLElement]): ChaiJQuery = js.native
-  def insertBefore(target: Element): ChaiJQuery = js.native
-  def insertBefore(target: Text): ChaiJQuery = js.native
   
   /**
     * Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments.
@@ -1510,6 +1511,8 @@ trait ChaiJQuery
   
   def prepend(content1: String, content2: js.Any*): ChaiJQuery = js.native
   def prepend(content1: js.Array[_], content2: js.Any*): ChaiJQuery = js.native
+  def prepend(content1: Element, content2: js.Any*): ChaiJQuery = js.native
+  def prepend(content1: Text, content2: js.Any*): ChaiJQuery = js.native
   /**
     * Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
     *
@@ -1517,8 +1520,6 @@ trait ChaiJQuery
     * param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the beginning of each element in the set of matched elements.
     */
   def prepend(content1: JQuery[HTMLElement], content2: js.Any*): ChaiJQuery = js.native
-  def prepend(content1: Element, content2: js.Any*): ChaiJQuery = js.native
-  def prepend(content1: Text, content2: js.Any*): ChaiJQuery = js.native
   /**
     * Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
     *
@@ -1528,13 +1529,13 @@ trait ChaiJQuery
   
   def prependTo(target: String): ChaiJQuery = js.native
   def prependTo(target: js.Array[_]): ChaiJQuery = js.native
+  def prependTo(target: Element): ChaiJQuery = js.native
   /**
     * Insert every element in the set of matched elements to the beginning of the target.
     *
     * @param target A selector, element, HTML string, array of elements, or jQuery object; the matched set of elements will be inserted at the beginning of the element(s) specified by this parameter.
     */
   def prependTo(target: JQuery[HTMLElement]): ChaiJQuery = js.native
-  def prependTo(target: Element): ChaiJQuery = js.native
   
   /**
     * Get the immediately preceding sibling of each element in the set of matched elements, optionally filtered by a selector.
@@ -1719,13 +1720,13 @@ trait ChaiJQuery
   
   def replaceAll(target: String): ChaiJQuery = js.native
   def replaceAll(target: js.Array[_]): ChaiJQuery = js.native
+  def replaceAll(target: Element): ChaiJQuery = js.native
   /**
     * Replace each target element with the set of matched elements.
     *
     * @param target A selector string, jQuery object, DOM element, or array of elements indicating which element(s) to replace.
     */
   def replaceAll(target: JQuery[HTMLElement]): ChaiJQuery = js.native
-  def replaceAll(target: Element): ChaiJQuery = js.native
   
   /**
     * Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.
@@ -1735,14 +1736,14 @@ trait ChaiJQuery
   def replaceWith(func: js.Function0[Element | JQuery[HTMLElement]]): ChaiJQuery = js.native
   def replaceWith(newContent: String): ChaiJQuery = js.native
   def replaceWith(newContent: js.Array[_]): ChaiJQuery = js.native
+  def replaceWith(newContent: Element): ChaiJQuery = js.native
+  def replaceWith(newContent: Text): ChaiJQuery = js.native
   /**
     * Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.
     *
     * param newContent The content to insert. May be an HTML string, DOM element, array of DOM elements, or jQuery object.
     */
   def replaceWith(newContent: JQuery[HTMLElement]): ChaiJQuery = js.native
-  def replaceWith(newContent: Element): ChaiJQuery = js.native
-  def replaceWith(newContent: Text): ChaiJQuery = js.native
   
   /**
     * Trigger the "resize" event on an element.
@@ -2237,23 +2238,23 @@ trait ChaiJQuery
     */
   def wrap(func: js.Function1[/* index */ Double, String | JQuery[HTMLElement]]): ChaiJQuery = js.native
   def wrap(wrappingElement: String): ChaiJQuery = js.native
+  def wrap(wrappingElement: Element): ChaiJQuery = js.native
   /**
     * Wrap an HTML structure around each element in the set of matched elements.
     *
     * @param wrappingElement A selector, element, HTML string, or jQuery object specifying the structure to wrap around the matched elements.
     */
   def wrap(wrappingElement: JQuery[HTMLElement]): ChaiJQuery = js.native
-  def wrap(wrappingElement: Element): ChaiJQuery = js.native
   
   def wrapAll(func: js.Function1[/* index */ Double, String]): ChaiJQuery = js.native
   def wrapAll(wrappingElement: String): ChaiJQuery = js.native
+  def wrapAll(wrappingElement: Element): ChaiJQuery = js.native
   /**
     * Wrap an HTML structure around all elements in the set of matched elements.
     *
     * @param wrappingElement A selector, element, HTML string, or jQuery object specifying the structure to wrap around the matched elements.
     */
   def wrapAll(wrappingElement: JQuery[HTMLElement]): ChaiJQuery = js.native
-  def wrapAll(wrappingElement: Element): ChaiJQuery = js.native
   
   /**
     * Wrap an HTML structure around the content of each element in the set of matched elements.
@@ -2262,11 +2263,11 @@ trait ChaiJQuery
     */
   def wrapInner(func: js.Function1[/* index */ Double, String]): ChaiJQuery = js.native
   def wrapInner(wrappingElement: String): ChaiJQuery = js.native
+  def wrapInner(wrappingElement: Element): ChaiJQuery = js.native
   /**
     * Wrap an HTML structure around the content of each element in the set of matched elements.
     *
     * @param wrappingElement An HTML snippet, selector expression, jQuery object, or DOM element specifying the structure to wrap around the content of the matched elements.
     */
   def wrapInner(wrappingElement: JQuery[HTMLElement]): ChaiJQuery = js.native
-  def wrapInner(wrappingElement: Element): ChaiJQuery = js.native
 }

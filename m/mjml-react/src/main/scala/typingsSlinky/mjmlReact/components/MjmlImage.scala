@@ -8,6 +8,7 @@ import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.HrefProps
 import typingsSlinky.mjmlReact.mod.MjmlImageProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object MjmlImage {
   
   @JSImport("mjml-react", "MjmlImage")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -84,7 +85,7 @@ object MjmlImage {
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MjmlImageProps with PaddingProps with ClassNameProps with HrefProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: MjmlImage.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MjmlImageProps with PaddingProps with ClassNameProps with HrefProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

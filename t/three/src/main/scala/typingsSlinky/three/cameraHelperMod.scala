@@ -6,14 +6,14 @@ import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.lineSegmentsMod.LineSegments
 import typingsSlinky.three.materialMod.Material
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/helpers/CameraHelper", JSImport.Namespace)
-@js.native
-object cameraHelperMod extends js.Object {
+object cameraHelperMod {
   
+  @JSImport("three/src/helpers/CameraHelper", "CameraHelper")
   @js.native
   class CameraHelper protected ()
     extends LineSegments[Geometry | BufferGeometry, Material | js.Array[Material]] {

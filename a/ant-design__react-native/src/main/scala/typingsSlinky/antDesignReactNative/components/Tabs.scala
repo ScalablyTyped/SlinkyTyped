@@ -16,15 +16,22 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.std.Partial
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tabs {
   
+  @scala.inline
+  def apply(tabs: js.Array[TabData]): Builder = {
+    val __props = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabsProps]))
+  }
+  
   @JSImport("@ant-design/react-native", "Tabs")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -65,10 +72,10 @@ object Tabs {
     def renderTab(value: /* tab */ TabData => ReactElement): this.type = set("renderTab", js.Any.fromFunction1(value))
     
     @scala.inline
-    def renderTabBarFunction1(value: /* props */ TabBarPropsType => ReactElement): this.type = set("renderTabBar", js.Any.fromFunction1(value))
+    def renderTabBar(value: (js.Function1[/* props */ TabBarPropsType, ReactElement]) | `false`): this.type = set("renderTabBar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderTabBar(value: (js.Function1[/* props */ TabBarPropsType, ReactElement]) | `false`): this.type = set("renderTabBar", value.asInstanceOf[js.Any])
+    def renderTabBarFunction1(value: /* props */ TabBarPropsType => ReactElement): this.type = set("renderTabBar", js.Any.fromFunction1(value))
     
     @scala.inline
     def renderUnderline(value: /* style */ js.Any => ReactElement): this.type = set("renderUnderline", js.Any.fromFunction1(value))
@@ -123,10 +130,4 @@ object Tabs {
   }
   
   def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(tabs: js.Array[TabData]): Builder = {
-    val __props = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TabsProps]))
-  }
 }

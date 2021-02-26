@@ -10,9 +10,9 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 | ------------------ | :-------------: |
 | Full name          | @pulumi/aws |
 | Keywords           | pulumi, aws |
-| # releases         | 617 |
-| # dependents       | 18 |
-| # downloads        | 209081 |
+| # releases         | 510 |
+| # dependents       | 37 |
+| # downloads        | 994682 |
 | # stars            | 0 |
 
 ## Links

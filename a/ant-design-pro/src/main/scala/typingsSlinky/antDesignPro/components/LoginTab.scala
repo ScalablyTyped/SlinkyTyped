@@ -1,38 +1,24 @@
 package typingsSlinky.antDesignPro.components
 
-import slinky.core.facade.ReactElement
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.anon.AddTab
 import typingsSlinky.antDesignPro.loginTabMod.LoginTabProps
 import typingsSlinky.antDesignPro.loginTabMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object LoginTab {
   
+  @scala.inline
+  def apply(tabUtil: AddTab): SharedBuilder_LoginTabProps_1090029391[default] = {
+    val __props = js.Dynamic.literal(tabUtil = tabUtil.asInstanceOf[js.Any])
+    new SharedBuilder_LoginTabProps_1090029391[default](js.Array(this.component, __props.asInstanceOf[LoginTabProps]))
+  }
+  
   @JSImport("ant-design-pro/lib/Login/LoginTab", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, default] {
-    
-    @scala.inline
-    def tabReactElement(value: ReactElement): this.type = set("tab", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def tab(value: ReactElement): this.type = set("tab", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: LoginTabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(tabUtil: AddTab): Builder = {
-    val __props = js.Dynamic.literal(tabUtil = tabUtil.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[LoginTabProps]))
-  }
+  def withProps(p: LoginTabProps): SharedBuilder_LoginTabProps_1090029391[default] = new SharedBuilder_LoginTabProps_1090029391[default](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

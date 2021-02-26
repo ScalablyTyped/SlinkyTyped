@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.rowMod.RowProps
+import typingsSlinky.reactstrap.rowMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "Row")
+@JSImport("reactstrap/lib", "Row")
 @js.native
-class Row ()
-  extends Component[RowProps, js.Object, js.Any]
+class Row () extends default

@@ -1,12 +1,13 @@
 package typingsSlinky.novaEditorNode
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /// https://novadocs.panic.com/api-reference/language-client/
 @js.native
-trait LanguageClient extends js.Object {
+trait LanguageClient extends StObject {
   
   val identifier: String = js.native
   

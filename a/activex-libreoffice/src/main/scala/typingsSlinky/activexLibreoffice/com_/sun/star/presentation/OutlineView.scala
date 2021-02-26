@@ -10,7 +10,6 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XMouseClickHandler
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XMouseListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XMouseMotionListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XPaintListener
-import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XUserInputInterception
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XWindow
 import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XWindowListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyChangeListener
@@ -18,20 +17,17 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySet
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfo
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XVetoableChangeListener
 import typingsSlinky.activexLibreoffice.com_.sun.star.datatransfer.XTransferable
-import typingsSlinky.activexLibreoffice.com_.sun.star.datatransfer.XTransferableSupplier
+import typingsSlinky.activexLibreoffice.com_.sun.star.frame.Controller
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.DispatchDescriptor
-import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XController
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XDispatch
-import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XDispatchProvider
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XFrame
 import typingsSlinky.activexLibreoffice.com_.sun.star.frame.XModel
 import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
-import typingsSlinky.activexLibreoffice.com_.sun.star.ui.XContextMenuInterception
 import typingsSlinky.activexLibreoffice.com_.sun.star.ui.XContextMenuInterceptor
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.URL
 import typingsSlinky.activexLibreoffice.com_.sun.star.view.XSelectionChangeListener
-import typingsSlinky.activexLibreoffice.com_.sun.star.view.XSelectionSupplier
 import typingsSlinky.std.SafeArray
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,12 +40,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait OutlineView
-  extends XController
-     with XDispatchProvider
-     with XContextMenuInterception
-     with XUserInputInterception
-     with XSelectionSupplier
-     with XTransferableSupplier
+  extends Controller
      with XWindow
      with XPropertySet {
   
@@ -125,21 +116,9 @@ object OutlineView {
   }
   
   @scala.inline
-  implicit class OutlineViewOps[Self <: OutlineView] (val x: Self) extends AnyVal {
+  implicit class OutlineViewMutableBuilder[Self <: OutlineView] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setVisibleArea(value: Rectangle): Self = this.set("VisibleArea", value.asInstanceOf[js.Any])
+    def setVisibleArea(value: Rectangle): Self = StObject.set(x, "VisibleArea", value.asInstanceOf[js.Any])
   }
 }

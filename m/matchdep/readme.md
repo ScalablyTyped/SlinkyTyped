@@ -12,7 +12,7 @@ Use micromatch to filter npm module dependencies by name.
 | Keywords           | package.json, dependencies, devDependencies, peerDependencies |
 | # releases         | 0 |
 | # dependents       | 69 |
-| # downloads        | 35406535 |
+| # downloads        | 47289961 |
 | # stars            | 13 |
 
 ## Links

@@ -1,15 +1,17 @@
 package typingsSlinky.vueChartkick
 
+import org.scalablytyped.runtime.Shortcut
 import typingsSlinky.vue.pluginMod.PluginObject
 import typingsSlinky.vueChartkick.anon.Adapter
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vue-chartkick", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod extends Shortcut {
   
+  @JSImport("vue-chartkick", JSImport.Default)
+  @js.native
   val default: VueChartkickPlugin = js.native
   
   @js.native
@@ -19,4 +21,9 @@ object mod extends js.Object {
     
     var version: String = js.native
   }
+  
+  type _To = VueChartkickPlugin
+  
+  /* This means you don't have to write `default`, but can instead just say `mod.foo` */
+  override def _to: VueChartkickPlugin = default
 }

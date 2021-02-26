@@ -20,6 +20,7 @@ import typingsSlinky.baseui.baseuiStrings.square
 import typingsSlinky.baseui.baseuiStrings.tertiary
 import typingsSlinky.baseui.buttonGroupMod.ButtonGroupOverrides
 import typingsSlinky.baseui.buttonGroupMod.ButtonGroupProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ object ButtonGroup {
   
   @JSImport("baseui/button-group", "ButtonGroup")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,10 +55,10 @@ object ButtonGroup {
     def overrides(value: ButtonGroupOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedVarargs(value: Double*): this.type = set("selected", js.Array(value :_*))
+    def selected(value: Double | js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selected(value: Double | js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
+    def selectedVarargs(value: Double*): this.type = set("selected", js.Array(value :_*))
     
     @scala.inline
     def shape(value: pill | default_ | square | round | circle): this.type = set("shape", value.asInstanceOf[js.Any])
@@ -66,7 +67,7 @@ object ButtonGroup {
     def size(value: compact | default_ | large_ | mini): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ButtonGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ButtonGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ButtonGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

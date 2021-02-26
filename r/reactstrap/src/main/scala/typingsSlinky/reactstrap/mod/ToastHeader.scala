@@ -1,12 +1,11 @@
 package typingsSlinky.reactstrap.mod
 
-import typingsSlinky.react.mod.Component
-import typingsSlinky.reactstrap.toastHeaderMod.ToastHeaderProps
+import typingsSlinky.reactstrap.toastHeaderMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/es", "ToastHeader")
+@JSImport("reactstrap/lib", "ToastHeader")
 @js.native
-class ToastHeader ()
-  extends Component[ToastHeaderProps, js.Object, js.Any]
+class ToastHeader () extends default

@@ -4,18 +4,21 @@
 Typings are for version 1.0.0-rc.3
 
 ## Library description:
-Exports a streamReader function that accepts a readable stream, a function to call on each chunk, and a chunk size in bytes to buffer interally before calling the supplied function.
+[![NPM version](https://img.shields.io/npm/v/@aws-sdk/chunked-stream-reader-node/latest.svg)](https://www.npmjs.com/package/@aws-sdk/chunked-stream-reader-node) [![NPM downloads](https://img.shields.io/npm/dm/@aws-sdk/chunked-stream-reader-node.svg)](http
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/chunked-stream-reader-node |
 | Keywords           | - |
-| # releases         | 6 |
+| # releases         | 25 |
 | # dependents       | 1 |
-| # downloads        | 315 |
+| # downloads        | 2304 |
 | # stars            | 0 |
 
 ## Links
+- [Homepage](https://github.com/aws/aws-sdk-js-v3/tree/main/packages/chunked-stream-reader-node)
+- [Bugs](https://github.com/aws/aws-sdk-js-v3/issues)
+- [Repository](https://github.com/aws/aws-sdk-js-v3)
 - [Npm](https://www.npmjs.com/package/%40aws-sdk%2Fchunked-stream-reader-node)
     
 

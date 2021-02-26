@@ -6,18 +6,18 @@ import typingsSlinky.sourceMap.mod.SourceMapGenerator
 import typingsSlinky.webpackSources.cachedSourceMod.^
 import typingsSlinky.webpackSources.libMod.CachedData
 import typingsSlinky.webpackSources.libMod.SourceLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("webpack-sources", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
   
   /**
     * Decorates a Source and caches returned results of map, source, size and sourceAndMap in memory.
     * Every other operation is delegated to the wrapped Source.
     */
+  @JSImport("webpack-sources", "CachedSource")
   @js.native
   class CachedSource protected () extends ^ {
     def this(source: typingsSlinky.webpackSources.sourceMod.^) = this()
@@ -25,30 +25,34 @@ object mod extends js.Object {
     def this(source: Null, cachedData: CachedData) = this()
   }
   
+  @JSImport("webpack-sources", "CompatSource")
   @js.native
   class CompatSource protected ()
     extends typingsSlinky.webpackSources.compatSourceMod.^ {
     def this(sourceLike: SourceLike) = this()
   }
-  /* static members */
-  @js.native
-  object CompatSource extends js.Object {
+  object CompatSource {
     
-    def from(sourceLike: SourceLike): typingsSlinky.webpackSources.sourceMod.^  | typingsSlinky.webpackSources.compatSourceMod.CompatSource = js.native
+    /* static member */
+    @JSImport("webpack-sources", "CompatSource.from")
+    @js.native
+    def from(sourceLike: SourceLike): typingsSlinky.webpackSources.sourceMod.^ | typingsSlinky.webpackSources.compatSourceMod.CompatSource = js.native
   }
   
   /**
     * Concatenate multiple Sources or strings to a single source.
     */
+  @JSImport("webpack-sources", "ConcatSource")
   @js.native
   class ConcatSource protected ()
     extends typingsSlinky.webpackSources.concatSourceMod.^ {
-    def this(args: (String | typingsSlinky.webpackSources.sourceMod.^ )*) = this()
+    def this(args: (String | typingsSlinky.webpackSources.sourceMod.^)*) = this()
   }
   
   /**
     * Represents source code, which is a copy of the original file
     */
+  @JSImport("webpack-sources", "OriginalSource")
   @js.native
   class OriginalSource protected ()
     extends typingsSlinky.webpackSources.originalSourceMod.^ {
@@ -62,6 +66,7 @@ object mod extends js.Object {
   /**
     * Prefix every line of the decorated Source with a provided string.
     */
+  @JSImport("webpack-sources", "PrefixSource")
   @js.native
   class PrefixSource protected ()
     extends typingsSlinky.webpackSources.prefixSourceMod.^ {
@@ -74,6 +79,7 @@ object mod extends js.Object {
   /**
     * Represents source code without SourceMap
     */
+  @JSImport("webpack-sources", "RawSource")
   @js.native
   class RawSource protected ()
     extends typingsSlinky.webpackSources.rawSourceMod.^ {
@@ -84,6 +90,7 @@ object mod extends js.Object {
     * Decorates a Source with replacements and insertions of source code.
     *
     */
+  @JSImport("webpack-sources", "ReplaceSource")
   @js.native
   class ReplaceSource protected ()
     extends typingsSlinky.webpackSources.replaceSourceMod.^ {
@@ -95,6 +102,7 @@ object mod extends js.Object {
     def this(source: typingsSlinky.webpackSources.sourceMod.^, name: String) = this()
   }
   
+  @JSImport("webpack-sources", "SizeOnlySource")
   @js.native
   class SizeOnlySource protected ()
     extends typingsSlinky.webpackSources.sizeOnlySourceMod.^ {
@@ -105,13 +113,15 @@ object mod extends js.Object {
     * Base class for all sources.
     * A Source can be asked for source code, size, source map and hash.
     */
+  @JSImport("webpack-sources", "Source")
   @js.native
   abstract class Source ()
-    extends typingsSlinky.webpackSources.sourceMod.Source
+    extends typingsSlinky.webpackSources.sourceMod.^
   
   /**
     * Represents source code with SourceMap, optionally having an additional SourceMap for the original source.
     */
+  @JSImport("webpack-sources", "SourceMapSource")
   @js.native
   class SourceMapSource protected ()
     extends typingsSlinky.webpackSources.sourceMapSourceMod.^ {

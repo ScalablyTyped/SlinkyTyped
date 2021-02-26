@@ -2,12 +2,13 @@ package typingsSlinky.reachRouter.mod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.history.mod.LocationState
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RouterProps extends js.Object {
+trait RouterProps extends StObject {
   
   var basepath: js.UndefOr[String] = js.native
   
@@ -26,48 +27,36 @@ object RouterProps {
   }
   
   @scala.inline
-  implicit class RouterPropsOps[Self <: RouterProps] (val x: Self) extends AnyVal {
+  implicit class RouterPropsMutableBuilder[Self <: RouterProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBasepath(value: String): Self = StObject.set(x, "basepath", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setBasepathUndefined: Self = StObject.set(x, "basepath", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setComponent(value: ReactComponentClass[js.Object] | String): Self = StObject.set(x, "component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBasepath(value: String): Self = this.set("basepath", value.asInstanceOf[js.Any])
+    def setComponentComponentClass(value: ReactComponentClass[js.Object]): Self = StObject.set(x, "component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBasepath: Self = this.set("basepath", js.undefined)
+    def setComponentFunctionComponent(value: ReactComponentClass[js.Object]): Self = StObject.set(x, "component", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setComponentFunctionComponent(value: ReactComponentClass[js.Object]): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponentUndefined: Self = StObject.set(x, "component", js.undefined)
     
     @scala.inline
-    def setComponentComponentClass(value: ReactComponentClass[js.Object]): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setLocation(value: WindowLocation[LocationState]): Self = StObject.set(x, "location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setComponent(value: ReactComponentClass[js.Object] | String): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setLocationUndefined: Self = StObject.set(x, "location", js.undefined)
     
     @scala.inline
-    def deleteComponent: Self = this.set("component", js.undefined)
+    def setPrimary(value: Boolean): Self = StObject.set(x, "primary", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLocation(value: WindowLocation[LocationState]): Self = this.set("location", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
-    
-    @scala.inline
-    def setPrimary(value: Boolean): Self = this.set("primary", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePrimary: Self = this.set("primary", js.undefined)
+    def setPrimaryUndefined: Self = StObject.set(x, "primary", js.undefined)
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.vueTemplateCompiler.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vueTemplateCompiler.vueTemplateCompilerNumbers.`3`
   - typingsSlinky.vueTemplateCompiler.vueTemplateCompilerNumbers.`4`
 */
-trait SSROptimizability extends js.Object
+trait SSROptimizability extends StObject
 object SSROptimizability {
   
   @scala.inline

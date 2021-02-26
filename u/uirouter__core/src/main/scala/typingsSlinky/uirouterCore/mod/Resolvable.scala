@@ -2,6 +2,7 @@ package typingsSlinky.uirouterCore.mod
 
 import typingsSlinky.uirouterCore.resolveInterfaceMod.ResolvableLiteral
 import typingsSlinky.uirouterCore.resolveInterfaceMod.ResolvePolicy
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -61,9 +62,9 @@ class Resolvable protected ()
   def this(token: js.Any, resolveFn: js.Function, deps: js.Array[_], policy: ResolvePolicy, data: js.Any) = this()
 }
 /* static members */
-@JSImport("@uirouter/core", "Resolvable")
-@js.native
-object Resolvable extends js.Object {
+object Resolvable {
   
+  @JSImport("@uirouter/core", "Resolvable.fromData")
+  @js.native
   def fromData(token: js.Any, data: js.Any): typingsSlinky.uirouterCore.resolvableMod.Resolvable = js.native
 }

@@ -6,21 +6,24 @@ import typingsSlinky.reactSelect.componentsInputMod.InputProps
 import typingsSlinky.reactSelect.transitionsMod.fn
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
 import typingsSlinky.reactSelect.typesMod.Theme
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-select/src/animated/Input", JSImport.Namespace)
-@js.native
-object inputMod extends js.Object {
+object inputMod {
   
-  def AnimatedInput(WrappedComponent: ReactComponentClass[InputProps]): ReactComponentClass[AnimatedInputProps] = js.native
-  
+  @JSImport("react-select/src/animated/Input", JSImport.Default)
+  @js.native
   def default(WrappedComponent: ReactComponentClass[InputProps]): ReactComponentClass[AnimatedInputProps] = js.native
+  
+  @JSImport("react-select/src/animated/Input", "AnimatedInput")
+  @js.native
+  def AnimatedInput(WrappedComponent: ReactComponentClass[InputProps]): ReactComponentClass[AnimatedInputProps] = js.native
   
   /* Inlined react-select.react-select/src/animated/transitions.BaseTransition & react-select.react-select/src/types.PropsWithInnerRef & react-select.react-select/src/components/Input.InputProps */
   @js.native
-  trait AnimatedInputProps extends js.Object {
+  trait AnimatedInputProps extends StObject {
     
     var className: js.UndefOr[String] = js.native
     

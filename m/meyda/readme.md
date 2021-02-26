@@ -10,9 +10,9 @@ Real-time feature extraction for the web audio api
 | ------------------ | :-------------: |
 | Full name          | meyda |
 | Keywords           | audio, feature, extraction, music, sound, information, retrieval |
-| # releases         | 1 |
-| # dependents       | 5 |
-| # downloads        | 12453 |
+| # releases         | 16 |
+| # dependents       | 8 |
+| # downloads        | 22381 |
 | # stars            | 1 |
 
 ## Links

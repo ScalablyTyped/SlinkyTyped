@@ -2,6 +2,7 @@ package typingsSlinky.react.mod
 
 import org.scalajs.dom.raw.EventTarget
 import slinky.web.SyntheticKeyboardEvent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -77,64 +78,52 @@ object KeyboardEvent {
     timeStamp: Double,
     `type`: String,
     which: Double
-  ): KeyboardEvent[T] = {
+  ): SyntheticKeyboardEvent[T] = {
     val __obj = js.Dynamic.literal(altKey = altKey.asInstanceOf[js.Any], bubbles = bubbles.asInstanceOf[js.Any], cancelable = cancelable.asInstanceOf[js.Any], charCode = charCode.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], ctrlKey = ctrlKey.asInstanceOf[js.Any], currentTarget = currentTarget.asInstanceOf[js.Any], defaultPrevented = defaultPrevented.asInstanceOf[js.Any], eventPhase = eventPhase.asInstanceOf[js.Any], getModifierState = js.Any.fromFunction1(getModifierState), isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), isPropagationStopped = js.Any.fromFunction0(isPropagationStopped), isTrusted = isTrusted.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], keyCode = keyCode.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], metaKey = metaKey.asInstanceOf[js.Any], nativeEvent = nativeEvent.asInstanceOf[js.Any], persist = js.Any.fromFunction0(persist), preventDefault = js.Any.fromFunction0(preventDefault), repeat = repeat.asInstanceOf[js.Any], shiftKey = shiftKey.asInstanceOf[js.Any], stopPropagation = js.Any.fromFunction0(stopPropagation), target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], which = which.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[KeyboardEvent[T]]
+    __obj.asInstanceOf[SyntheticKeyboardEvent[T]]
   }
   
   @scala.inline
-  implicit class KeyboardEventOps[Self <: SyntheticKeyboardEvent[_], T] (val x: Self with SyntheticKeyboardEvent[T]) extends AnyVal {
+  implicit class KeyboardEventMutableBuilder[Self <: SyntheticKeyboardEvent[_], T] (val x: Self with SyntheticKeyboardEvent[T]) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAltKey(value: Boolean): Self = StObject.set(x, "altKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setCharCode(value: Double): Self = StObject.set(x, "charCode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setCode(value: String): Self = StObject.set(x, "code", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAltKey(value: Boolean): Self = this.set("altKey", value.asInstanceOf[js.Any])
+    def setCtrlKey(value: Boolean): Self = StObject.set(x, "ctrlKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCharCode(value: Double): Self = this.set("charCode", value.asInstanceOf[js.Any])
+    def setGetModifierState(value: String => Boolean): Self = StObject.set(x, "getModifierState", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])
+    def setKey(value: String): Self = StObject.set(x, "key", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCtrlKey(value: Boolean): Self = this.set("ctrlKey", value.asInstanceOf[js.Any])
+    def setKeyCode(value: Double): Self = StObject.set(x, "keyCode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetModifierState(value: String => Boolean): Self = this.set("getModifierState", js.Any.fromFunction1(value))
+    def setLocale(value: String): Self = StObject.set(x, "locale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setLocation(value: Double): Self = StObject.set(x, "location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setKeyCode(value: Double): Self = this.set("keyCode", value.asInstanceOf[js.Any])
+    def setMetaKey(value: Boolean): Self = StObject.set(x, "metaKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    def setRepeat(value: Boolean): Self = StObject.set(x, "repeat", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLocation(value: Double): Self = this.set("location", value.asInstanceOf[js.Any])
+    def setShiftKey(value: Boolean): Self = StObject.set(x, "shiftKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMetaKey(value: Boolean): Self = this.set("metaKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRepeat(value: Boolean): Self = this.set("repeat", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setShiftKey(value: Boolean): Self = this.set("shiftKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setWhich(value: Double): Self = this.set("which", value.asInstanceOf[js.Any])
+    def setWhich(value: Double): Self = StObject.set(x, "which", value.asInstanceOf[js.Any])
   }
 }

@@ -94,12 +94,13 @@ import typingsSlinky.semanticUiApi.semanticUiApiStrings.url
 import typingsSlinky.semanticUiApi.semanticUiApiStrings.urlData
 import typingsSlinky.semanticUiApi.semanticUiApiStrings.verbose
 import typingsSlinky.semanticUiApi.semanticUiApiStrings.xml
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def api(): JQuery = js.native
   def api(behavior: setting, name: action, value: js.UndefOr[scala.Nothing]): String | `false` = js.native

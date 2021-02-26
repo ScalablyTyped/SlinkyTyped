@@ -2,12 +2,13 @@ package typingsSlinky.backlogJs.mod
 
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.backlogJs.anon.Method
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Request extends js.Object {
+trait Request extends StObject {
   
   def checkStatus(response: Response): js.Promise[Response] = js.native
   

@@ -23,12 +23,13 @@ import typingsSlinky.activexOffice.Office.SignatureSet
 import typingsSlinky.activexOffice.Office.UserPermission
 import typingsSlinky.activexOffice.Office.WorkflowTasks
 import typingsSlinky.activexOffice.Office.WorkflowTemplates
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Presentation extends js.Object {
+trait Presentation extends StObject {
   
   def AcceptAll(): Unit = js.native
   

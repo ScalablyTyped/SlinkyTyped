@@ -1,5 +1,6 @@
 package typingsSlinky.nodeRedEditorClient.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.nodeRedEditorClient.nodeRedEditorClientStrings.jsonata
   - typingsSlinky.nodeRedEditorClient.nodeRedEditorClientStrings.env
 */
-trait WidgetTypedInputType extends js.Object
+trait WidgetTypedInputType extends StObject
 object WidgetTypedInputType {
   
   @scala.inline

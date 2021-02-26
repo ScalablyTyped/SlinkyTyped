@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,69 +23,57 @@ trait ServiceWorkerMessageEventInit extends EventInit {
 object ServiceWorkerMessageEventInit {
   
   @scala.inline
-  def apply(): ServiceWorkerMessageEventInit = {
+  def apply(): org.scalajs.dom.experimental.serviceworkers.ServiceWorkerMessageEventInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ServiceWorkerMessageEventInit]
+    __obj.asInstanceOf[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerMessageEventInit]
   }
   
   @scala.inline
-  implicit class ServiceWorkerMessageEventInitOps[Self <: org.scalajs.dom.experimental.serviceworkers.ServiceWorkerMessageEventInit] (val x: Self) extends AnyVal {
+  implicit class ServiceWorkerMessageEventInitMutableBuilder[Self <: org.scalajs.dom.experimental.serviceworkers.ServiceWorkerMessageEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setData(value: js.Any): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setDataUndefined: Self = StObject.set(x, "data", js.undefined)
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setLastEventId(value: java.lang.String): Self = StObject.set(x, "lastEventId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setData(value: js.Any): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setLastEventIdUndefined: Self = StObject.set(x, "lastEventId", js.undefined)
     
     @scala.inline
-    def deleteData: Self = this.set("data", js.undefined)
+    def setOrigin(value: java.lang.String): Self = StObject.set(x, "origin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLastEventId(value: java.lang.String): Self = this.set("lastEventId", value.asInstanceOf[js.Any])
+    def setOriginUndefined: Self = StObject.set(x, "origin", js.undefined)
     
     @scala.inline
-    def deleteLastEventId: Self = this.set("lastEventId", js.undefined)
+    def setPorts(value: js.Array[org.scalajs.dom.raw.MessagePort]): Self = StObject.set(x, "ports", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOrigin(value: java.lang.String): Self = this.set("origin", value.asInstanceOf[js.Any])
+    def setPortsNull: Self = StObject.set(x, "ports", null)
     
     @scala.inline
-    def deleteOrigin: Self = this.set("origin", js.undefined)
+    def setPortsUndefined: Self = StObject.set(x, "ports", js.undefined)
     
     @scala.inline
-    def setPortsVarargs(value: org.scalajs.dom.raw.MessagePort*): Self = this.set("ports", js.Array(value :_*))
+    def setPortsVarargs(value: org.scalajs.dom.raw.MessagePort*): Self = StObject.set(x, "ports", js.Array(value :_*))
     
     @scala.inline
-    def setPorts(value: js.Array[org.scalajs.dom.raw.MessagePort]): Self = this.set("ports", value.asInstanceOf[js.Any])
+    def setSource(value: org.scalajs.dom.experimental.serviceworkers.ServiceWorker | org.scalajs.dom.raw.MessagePort): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deletePorts: Self = this.set("ports", js.undefined)
+    def setSourceMessagePort(value: org.scalajs.dom.raw.MessagePort): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPortsNull: Self = this.set("ports", null)
+    def setSourceNull: Self = StObject.set(x, "source", null)
     
     @scala.inline
-    def setSourceServiceWorker(value: org.scalajs.dom.experimental.serviceworkers.ServiceWorker): Self = this.set("source", value.asInstanceOf[js.Any])
+    def setSourceServiceWorker(value: org.scalajs.dom.experimental.serviceworkers.ServiceWorker): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSourceMessagePort(value: org.scalajs.dom.raw.MessagePort): Self = this.set("source", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSource(value: org.scalajs.dom.experimental.serviceworkers.ServiceWorker | org.scalajs.dom.raw.MessagePort): Self = this.set("source", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSource: Self = this.set("source", js.undefined)
-    
-    @scala.inline
-    def setSourceNull: Self = this.set("source", null)
+    def setSourceUndefined: Self = StObject.set(x, "source", js.undefined)
   }
 }

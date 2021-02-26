@@ -2,14 +2,14 @@ package typingsSlinky.firebasePerformance
 
 import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
 import typingsSlinky.firebasePerformanceTypes.mod.FirebasePerformance
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/performance/dist/src/controllers/perf", JSImport.Namespace)
-@js.native
-object perfMod extends js.Object {
+object perfMod {
   
+  @JSImport("@firebase/performance/dist/src/controllers/perf", "PerformanceController")
   @js.native
   class PerformanceController protected () extends FirebasePerformance {
     def this(app: FirebaseApp) = this()

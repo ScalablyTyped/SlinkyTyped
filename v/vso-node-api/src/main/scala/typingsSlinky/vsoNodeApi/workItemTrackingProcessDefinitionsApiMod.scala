@@ -22,13 +22,19 @@ import typingsSlinky.vsoNodeApi.workItemTrackingProcessDefinitionsInterfacesMod.
 import typingsSlinky.vsoNodeApi.workItemTrackingProcessDefinitionsInterfacesMod.WorkItemTypeFieldModel
 import typingsSlinky.vsoNodeApi.workItemTrackingProcessDefinitionsInterfacesMod.WorkItemTypeModel
 import typingsSlinky.vsoNodeApi.workItemTrackingProcessDefinitionsInterfacesMod.WorkItemTypeUpdateModel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vso-node-api/WorkItemTrackingProcessDefinitionsApi", JSImport.Namespace)
-@js.native
-object workItemTrackingProcessDefinitionsApiMod extends js.Object {
+object workItemTrackingProcessDefinitionsApiMod {
+  
+  @JSImport("vso-node-api/WorkItemTrackingProcessDefinitionsApi", "WorkItemTrackingProcessDefinitionsApi")
+  @js.native
+  class WorkItemTrackingProcessDefinitionsApi protected () extends IWorkItemTrackingProcessDefinitionsApi {
+    def this(baseUrl: String, handlers: js.Array[IRequestHandler]) = this()
+    def this(baseUrl: String, handlers: js.Array[IRequestHandler], options: IRequestOptions) = this()
+  }
   
   @js.native
   trait IWorkItemTrackingProcessDefinitionsApi extends ClientApiBase {
@@ -156,11 +162,5 @@ object workItemTrackingProcessDefinitionsApiMod extends js.Object {
     def updateStateDefinition(stateModel: WorkItemStateInputModel, processId: String, witRefName: String, stateId: String): js.Promise[WorkItemStateResultModel] = js.native
     
     def updateWorkItemType(workItemTypeUpdate: WorkItemTypeUpdateModel, processId: String, witRefName: String): js.Promise[WorkItemTypeModel] = js.native
-  }
-  
-  @js.native
-  class WorkItemTrackingProcessDefinitionsApi protected () extends IWorkItemTrackingProcessDefinitionsApi {
-    def this(baseUrl: String, handlers: js.Array[IRequestHandler]) = this()
-    def this(baseUrl: String, handlers: js.Array[IRequestHandler], options: IRequestOptions) = this()
   }
 }

@@ -5,15 +5,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.history.mod.LocationDescriptor
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.reactRouter.mod.RedirectProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Redirect {
   
+  @scala.inline
+  def apply(to: LocationDescriptor[LocationState]): Builder = {
+    val __props = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RedirectProps]))
+  }
+  
   @JSImport("dva/router", "Redirect")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -37,10 +44,4 @@ object Redirect {
   }
   
   def withProps(p: RedirectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(to: LocationDescriptor[LocationState]): Builder = {
-    val __props = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[RedirectProps]))
-  }
 }

@@ -83,6 +83,7 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -91,12 +92,15 @@ object TextField {
   
   @JSImport("office-ui-fabric-react", "TextField")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
+    @scala.inline
+    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -341,13 +345,13 @@ object TextField {
     def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def componentRef(value: IRefObject[ITextField]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRefFunction1(value: /* ref */ ITextField | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def componentRefRefObject(value: ReactRef[ITextField]): this.type = set("componentRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def componentRef(value: IRefObject[ITextField]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
@@ -380,9 +384,6 @@ object TextField {
     def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -413,10 +414,10 @@ object TextField {
     def encType(value: String): this.type = set("encType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorMessageReactElement(value: ReactElement): this.type = set("errorMessage", value.asInstanceOf[js.Any])
+    def errorMessage(value: String | ReactElement): this.type = set("errorMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def errorMessage(value: String | ReactElement): this.type = set("errorMessage", value.asInstanceOf[js.Any])
+    def errorMessageReactElement(value: ReactElement): this.type = set("errorMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
@@ -965,10 +966,10 @@ object TextField {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: ITextFieldStyleProps => DeepPartial[ITextFieldStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IStyleFunctionOrObject[ITextFieldStyleProps, ITextFieldStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def styles(value: IStyleFunctionOrObject[ITextFieldStyleProps, ITextFieldStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def stylesFunction1(value: ITextFieldStyleProps => DeepPartial[ITextFieldStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     
     @scala.inline
     def suffix(value: String): this.type = set("suffix", value.asInstanceOf[js.Any])
@@ -1037,7 +1038,7 @@ object TextField {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ITextFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: TextField.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ITextFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

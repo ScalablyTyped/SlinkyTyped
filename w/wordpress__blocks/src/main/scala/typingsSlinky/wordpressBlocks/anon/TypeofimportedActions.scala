@@ -3,12 +3,13 @@ package typingsSlinky.wordpressBlocks.anon
 import typingsSlinky.wordpressBlocks.categoriesMod.Category
 import typingsSlinky.wordpressBlocks.mod.BlockConfiguration
 import typingsSlinky.wordpressBlocks.mod.BlockStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofimportedActions extends js.Object {
+trait TypeofimportedActions extends StObject {
   
   def addBlockStyles(blockName: String, styles: js.Array[BlockStyle]): Unit = js.native
   def addBlockStyles(blockName: String, styles: BlockStyle): Unit = js.native

@@ -10,9 +10,9 @@ Throw better errors.
 | ------------------ | :-------------: |
 | Full name          | ono |
 | Keywords           | throw, error, errors, exception, printf, format, wrap, inner, original, stack, properties |
-| # releases         | 14 |
-| # dependents       | 38 |
-| # downloads        | 25931837 |
+| # releases         | 13 |
+| # dependents       | 34 |
+| # downloads        | 43904771 |
 | # stars            | 0 |
 
 ## Links

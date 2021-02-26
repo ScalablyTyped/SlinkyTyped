@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.openui5.sap.ui.core.Control
 import typingsSlinky.openui5.sap.ui.core.Element
 import typingsSlinky.openui5.sap.ui.core.TitleLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -365,8 +366,6 @@ trait Page extends Control {
     */
   def scrollTo(y: Double, time: Double): Page = js.native
   
-  def scrollToElement(oElement: Element): Page = js.native
-  def scrollToElement(oElement: Element, iTime: Double): Page = js.native
   /**
     * Scrolls to an element(DOM or sap.ui.core.Element) within the page if the element is rendered.
     * @since 1.30
@@ -377,6 +376,8 @@ trait Page extends Control {
     */
   def scrollToElement(oElement: HTMLElement): Page = js.native
   def scrollToElement(oElement: HTMLElement, iTime: Double): Page = js.native
+  def scrollToElement(oElement: Element): Page = js.native
+  def scrollToElement(oElement: Element, iTime: Double): Page = js.native
   
   /**
     * Sets a new value for property <code>backgroundDesign</code>.This property is used to set the

@@ -12,6 +12,7 @@ import typingsSlinky.antd.carouselMod.CarouselProps
 import typingsSlinky.antd.carouselMod.DotPosition
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.RefAttributes
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object Carousel {
   
   @JSImport("antd", "Carousel")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -136,10 +137,10 @@ object Carousel {
     def prevArrow(value: ReactElement): this.type = set("prevArrow", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def responsiveVarargs(value: ResponsiveObject*): this.type = set("responsive", js.Array(value :_*))
+    def responsive(value: js.Array[ResponsiveObject]): this.type = set("responsive", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def responsive(value: js.Array[ResponsiveObject]): this.type = set("responsive", value.asInstanceOf[js.Any])
+    def responsiveVarargs(value: ResponsiveObject*): this.type = set("responsive", js.Array(value :_*))
     
     @scala.inline
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
@@ -202,7 +203,7 @@ object Carousel {
     def waitForAnimate(value: Boolean): this.type = set("waitForAnimate", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CarouselProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Carousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CarouselProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

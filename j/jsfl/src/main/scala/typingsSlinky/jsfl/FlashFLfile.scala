@@ -1,11 +1,12 @@
 package typingsSlinky.jsfl
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FlashFLfile extends js.Object {
+trait FlashFLfile extends StObject {
   
   def copy(fileURI: String, copyURI: String): Boolean = js.native
   

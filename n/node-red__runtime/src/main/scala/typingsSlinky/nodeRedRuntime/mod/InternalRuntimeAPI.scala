@@ -12,13 +12,14 @@ import typingsSlinky.nodeRedUtil.mod.I18n
 import typingsSlinky.nodeRedUtil.mod.Log
 import typingsSlinky.nodeRedUtil.mod.Util
 import typingsSlinky.qs.mod.ParsedQs
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // tslint:disable-line:no-empty-interface
 @js.native
-trait InternalRuntimeAPI extends js.Object {
+trait InternalRuntimeAPI extends StObject {
   
   val adminApi: js.Object = js.native
   

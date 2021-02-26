@@ -11,8 +11,8 @@ Extract the actual stack of an error
 | Full name          | extract-stack |
 | Keywords           | extract, stack, error, trace, traces, lines, parse, get |
 | # releases         | 2 |
-| # dependents       | 8 |
-| # downloads        | 12191482 |
+| # dependents       | 11 |
+| # downloads        | 41993764 |
 | # stars            | 0 |
 
 ## Links

@@ -10,9 +10,9 @@ JavaScript library for reorderable drag-and-drop lists on modern browsers and to
 | ------------------ | :-------------: |
 | Full name          | sortablejs |
 | Keywords           | sortable, reorder, drag, meteor, angular, ng-sortable, react, vue, mixin |
-| # releases         | 14 |
-| # dependents       | 426 |
-| # downloads        | 11295149 |
+| # releases         | 16 |
+| # dependents       | 770 |
+| # downloads        | 22890995 |
 | # stars            | 20 |
 
 ## Links

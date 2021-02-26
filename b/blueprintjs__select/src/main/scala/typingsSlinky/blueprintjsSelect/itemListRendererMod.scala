@@ -3,24 +3,29 @@ package typingsSlinky.blueprintjsSelect
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@blueprintjs/select/lib/esm/common/itemListRenderer", JSImport.Namespace)
-@js.native
-object itemListRendererMod extends js.Object {
+object itemListRendererMod {
   
+  @JSImport("@blueprintjs/select/lib/esm/common/itemListRenderer", "renderFilteredItems")
+  @js.native
   def renderFilteredItems(props: IItemListRendererProps[_]): ReactElement = js.native
+  @JSImport("@blueprintjs/select/lib/esm/common/itemListRenderer", "renderFilteredItems")
+  @js.native
   def renderFilteredItems(
     props: IItemListRendererProps[_],
     noResults: js.UndefOr[ReactElement],
     initialContent: ReactElement
   ): ReactElement = js.native
+  @JSImport("@blueprintjs/select/lib/esm/common/itemListRenderer", "renderFilteredItems")
+  @js.native
   def renderFilteredItems(props: IItemListRendererProps[_], noResults: ReactElement): ReactElement = js.native
   
   @js.native
-  trait IItemListRendererProps[T] extends js.Object {
+  trait IItemListRendererProps[T] extends StObject {
     
     /**
       * The currently focused item (for keyboard interactions), or `null` to

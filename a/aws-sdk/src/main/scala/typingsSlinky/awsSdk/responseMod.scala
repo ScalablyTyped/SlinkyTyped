@@ -2,16 +2,16 @@ package typingsSlinky.awsSdk
 
 import typingsSlinky.awsSdk.httpResponseMod.HttpResponse
 import typingsSlinky.awsSdk.requestMod.Request
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("aws-sdk/lib/response", JSImport.Namespace)
-@js.native
-object responseMod extends js.Object {
+object responseMod {
   
+  @JSImport("aws-sdk/lib/response", "Response")
   @js.native
-  class Response[D, E] () extends js.Object {
+  class Response[D, E] () extends StObject {
     
     /**
     		 * The de-serialized response data from the service.

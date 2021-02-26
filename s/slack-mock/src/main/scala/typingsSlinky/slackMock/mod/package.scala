@@ -1,10 +1,16 @@
 package typingsSlinky.slackMock
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
+  @scala.inline
+  def apply(): typingsSlinky.slackMock.mod.Instance_ = typingsSlinky.slackMock.mod.^.asInstanceOf[js.Dynamic].apply().asInstanceOf[typingsSlinky.slackMock.mod.Instance_]
+  @scala.inline
+  def apply(config: typingsSlinky.slackMock.mod.ConfigOptions): typingsSlinky.slackMock.mod.Instance_ = typingsSlinky.slackMock.mod.^.asInstanceOf[js.Dynamic].apply(config.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.slackMock.mod.Instance_]
   
   type EventHttpHeaders = typingsSlinky.node.httpMod.IncomingHttpHeaders
   
@@ -35,4 +41,9 @@ package object mod {
   
   // Web
   type WebUrl = java.lang.String
+  
+  @scala.inline
+  def instance: typingsSlinky.slackMock.mod.Instance_ = typingsSlinky.slackMock.mod.^.asInstanceOf[js.Dynamic].selectDynamic("instance").asInstanceOf[typingsSlinky.slackMock.mod.Instance_]
+  @scala.inline
+  def instance_=(x: typingsSlinky.slackMock.mod.Instance_): scala.Unit = typingsSlinky.slackMock.mod.^.asInstanceOf[js.Dynamic].updateDynamic("instance")(x.asInstanceOf[js.Any])
 }

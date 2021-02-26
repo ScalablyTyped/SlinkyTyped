@@ -2,6 +2,7 @@ package typingsSlinky.heremaps.global.H.map
 
 import typingsSlinky.heremaps.H.Map_
 import typingsSlinky.heremaps.H.map.Imprint.Options
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

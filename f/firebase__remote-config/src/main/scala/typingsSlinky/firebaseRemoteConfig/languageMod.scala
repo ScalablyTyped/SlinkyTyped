@@ -1,14 +1,17 @@
 package typingsSlinky.firebaseRemoteConfig
 
 import org.scalajs.dom.raw.NavigatorLanguage
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@firebase/remote-config/dist/src/language", JSImport.Namespace)
-@js.native
-object languageMod extends js.Object {
+object languageMod {
   
+  @JSImport("@firebase/remote-config/dist/src/language", "getUserLanguage")
+  @js.native
   def getUserLanguage(): String = js.native
+  @JSImport("@firebase/remote-config/dist/src/language", "getUserLanguage")
+  @js.native
   def getUserLanguage(navigatorLanguage: NavigatorLanguage): String = js.native
 }

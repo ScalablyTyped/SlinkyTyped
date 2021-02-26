@@ -7,15 +7,22 @@ import typingsSlinky.reactMediumImageZoom.mod.ImageZoomImage
 import typingsSlinky.reactMediumImageZoom.mod.ImageZoomProps
 import typingsSlinky.reactMediumImageZoom.mod.ImageZoomZoomImage
 import typingsSlinky.reactMediumImageZoom.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactMediumImageZoom {
   
+  @scala.inline
+  def apply(image: ImageZoomImage): Builder = {
+    val __props = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ImageZoomProps]))
+  }
+  
   @JSImport("react-medium-image-zoom", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -51,10 +58,4 @@ object ReactMediumImageZoom {
   }
   
   def withProps(p: ImageZoomProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(image: ImageZoomImage): Builder = {
-    val __props = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ImageZoomProps]))
-  }
 }

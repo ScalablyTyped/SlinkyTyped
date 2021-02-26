@@ -2,6 +2,7 @@ package typingsSlinky.rsocketTypes.reactiveSocketTypesMod
 
 import typingsSlinky.rsocketTypes.rsocketTypesNumbers.`0`
 import typingsSlinky.rsocketTypes.rsocketTypesNumbers.`0x02`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,48 +34,36 @@ object LeaseFrame {
   }
   
   @scala.inline
-  implicit class LeaseFrameOps[Self <: LeaseFrame] (val x: Self) extends AnyVal {
+  implicit class LeaseFrameMutableBuilder[Self <: LeaseFrame] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setFlags(value: Double): Self = StObject.set(x, "flags", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setLength(value: Double): Self = StObject.set(x, "length", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setLengthUndefined: Self = StObject.set(x, "length", js.undefined)
     
     @scala.inline
-    def setFlags(value: Double): Self = this.set("flags", value.asInstanceOf[js.Any])
+    def setMetadata(value: Encodable): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRequestCount(value: Double): Self = this.set("requestCount", value.asInstanceOf[js.Any])
+    def setMetadataUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStreamId(value: `0`): Self = this.set("streamId", value.asInstanceOf[js.Any])
+    def setMetadataUndefined: Self = StObject.set(x, "metadata", js.undefined)
     
     @scala.inline
-    def setTtl(value: Double): Self = this.set("ttl", value.asInstanceOf[js.Any])
+    def setRequestCount(value: Double): Self = StObject.set(x, "requestCount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: `0x02`): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setStreamId(value: `0`): Self = StObject.set(x, "streamId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLength(value: Double): Self = this.set("length", value.asInstanceOf[js.Any])
+    def setTtl(value: Double): Self = StObject.set(x, "ttl", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLength: Self = this.set("length", js.undefined)
-    
-    @scala.inline
-    def setMetadataUint8Array(value: js.typedarray.Uint8Array): Self = this.set("metadata", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMetadata(value: Encodable): Self = this.set("metadata", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMetadata: Self = this.set("metadata", js.undefined)
+    def setType(value: `0x02`): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
   }
 }

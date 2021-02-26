@@ -6,12 +6,13 @@ import typingsSlinky.exceljs.anon.PartialBorders
 import typingsSlinky.exceljs.anon.PartialFont
 import typingsSlinky.exceljs.anon.PartialProtection
 import typingsSlinky.exceljs.anon.PartialStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Column extends js.Object {
+trait Column extends StObject {
   
   var alignment: js.UndefOr[PartialAlignment] = js.native
   

@@ -17,6 +17,7 @@ import typingsSlinky.officeJs.officeJsStrings.Grey50
 import typingsSlinky.officeJs.officeJsStrings.Grey75
 import typingsSlinky.officeJs.officeJsStrings.None
 import typingsSlinky.officeJs.officeJsStrings.RoundDot
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

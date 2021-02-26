@@ -10,6 +10,7 @@ import typingsSlinky.reactDynamicNumber.reactDynamicNumberStrings.Comma
 import typingsSlinky.reactDynamicNumber.reactDynamicNumberStrings.Dot
 import typingsSlinky.reactDynamicNumber.reactDynamicNumberStrings.Space
 import typingsSlinky.reactDynamicNumber.reactDynamicNumberStrings._empty
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ object ReactDynamicNumber {
   
   @JSImport("react-dynamic-number", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -55,7 +56,7 @@ object ReactDynamicNumber {
     def value(value: Double | _empty): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DynamicNumberProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactDynamicNumber.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: DynamicNumberProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

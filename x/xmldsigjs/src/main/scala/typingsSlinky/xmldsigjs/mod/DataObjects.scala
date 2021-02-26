@@ -1,6 +1,6 @@
 package typingsSlinky.xmldsigjs.mod
 
-import typingsSlinky.xmlCore.mod.XmlCollection
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("xmldsigjs", "DataObjects")
 @js.native
 class DataObjects ()
-  extends XmlCollection[typingsSlinky.xmldsigjs.dataObjectMod.DataObject]
+  extends typingsSlinky.xmldsigjs.xmlMod.DataObjects {
+  def this(properties: js.Object) = this()
+}

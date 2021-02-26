@@ -1,12 +1,13 @@
 package typingsSlinky.activexMsforms.MSForms
 
 import typingsSlinky.activexStdole.stdole.StdPicture
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UserForm extends js.Object {
+trait UserForm extends StObject {
   
   val ActiveControl: Control = js.native
   

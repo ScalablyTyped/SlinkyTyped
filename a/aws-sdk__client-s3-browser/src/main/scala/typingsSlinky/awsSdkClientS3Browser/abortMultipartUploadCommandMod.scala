@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Browser.typesAbortMultipartUploadInputMod.Abo
 import typingsSlinky.awsSdkClientS3Browser.typesAbortMultipartUploadOutputMod.AbortMultipartUploadOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-browser/commands/AbortMultipartUploadCommand", JSImport.Namespace)
-@js.native
-object abortMultipartUploadCommandMod extends js.Object {
+object abortMultipartUploadCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-browser/commands/AbortMultipartUploadCommand", "AbortMultipartUploadCommand")
   @js.native
   class AbortMultipartUploadCommand protected () extends Command[
           InputTypesUnion, 

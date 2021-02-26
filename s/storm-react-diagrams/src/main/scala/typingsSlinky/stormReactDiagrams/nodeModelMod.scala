@@ -6,14 +6,14 @@ import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModel
 import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModelListener
 import typingsSlinky.stormReactDiagrams.diagramModelMod.DiagramModel
 import typingsSlinky.stormReactDiagrams.portModelMod.PortModel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("storm-react-diagrams/dist/src/models/NodeModel", JSImport.Namespace)
-@js.native
-object nodeModelMod extends js.Object {
+object nodeModelMod {
   
+  @JSImport("storm-react-diagrams/dist/src/models/NodeModel", "NodeModel")
   @js.native
   class NodeModel () extends BaseModel[DiagramModel, BaseModelListener] {
     def this(nodeType: String) = this()

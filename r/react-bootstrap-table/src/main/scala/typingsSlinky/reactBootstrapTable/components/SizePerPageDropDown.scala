@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTable.anon.Text
 import typingsSlinky.reactBootstrapTable.mod.DropDirection
 import typingsSlinky.reactBootstrapTable.mod.SizePerPageDropDownProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ object SizePerPageDropDown {
   
   @JSImport("react-bootstrap-table", "SizePerPageDropDown")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -39,16 +40,16 @@ object SizePerPageDropDown {
     def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def optionsVarargs(value: (Double | Text)*): this.type = set("options", js.Array(value :_*))
+    def options(value: js.Array[Double | Text]): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: js.Array[Double | Text]): this.type = set("options", value.asInstanceOf[js.Any])
+    def optionsVarargs(value: (Double | Text)*): this.type = set("options", js.Array(value :_*))
     
     @scala.inline
     def variation(value: DropDirection): this.type = set("variation", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SizePerPageDropDownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SizePerPageDropDown.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SizePerPageDropDownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

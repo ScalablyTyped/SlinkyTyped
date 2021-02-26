@@ -2,12 +2,13 @@ package typingsSlinky.vscodeJsonrpc.mod
 
 import typingsSlinky.vscodeJsonrpc.messagesMod.Message
 import typingsSlinky.vscodeJsonrpc.messagesMod.NotificationMessage
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MessageConnection extends js.Object {
+trait MessageConnection extends StObject {
   
   def dispose(): Unit = js.native
   

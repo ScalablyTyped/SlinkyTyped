@@ -3,12 +3,13 @@ package typingsSlinky.maximMazurokGapiClientFirestore.gapi.client.firestore
 import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.maximMazurokGapiClientFirestore.anon.Accesstoken
 import typingsSlinky.maximMazurokGapiClientFirestore.anon.CallbackFields
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OperationsResource extends js.Object {
+trait OperationsResource extends StObject {
   
   def cancel(request: Accesstoken, body: GoogleLongrunningCancelOperationRequest): Request[js.Object] = js.native
   /**

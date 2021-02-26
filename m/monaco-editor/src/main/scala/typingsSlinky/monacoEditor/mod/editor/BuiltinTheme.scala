@@ -1,5 +1,6 @@
 package typingsSlinky.monacoEditor.mod.editor
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.monacoEditor.monacoEditorStrings.`vs-dark`
   - typingsSlinky.monacoEditor.monacoEditorStrings.`hc-black`
 */
-trait BuiltinTheme extends js.Object
+trait BuiltinTheme extends StObject
 object BuiltinTheme {
   
   @scala.inline

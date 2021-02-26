@@ -2,6 +2,7 @@ package typingsSlinky.postmark.modelsMod
 
 import typingsSlinky.postmark.webhookMod.HttpAuth
 import typingsSlinky.postmark.webhookMod.WebhookRequestTriggers
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

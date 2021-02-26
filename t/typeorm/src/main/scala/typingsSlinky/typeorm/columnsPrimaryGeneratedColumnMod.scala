@@ -6,26 +6,35 @@ import typingsSlinky.typeorm.optionsPrimaryGeneratedColumnUUIDOptionsMod.Primary
 import typingsSlinky.typeorm.typeormStrings.increment
 import typingsSlinky.typeorm.typeormStrings.rowid
 import typingsSlinky.typeorm.typeormStrings.uuid
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("typeorm/decorator/columns/PrimaryGeneratedColumn", JSImport.Namespace)
-@js.native
-object columnsPrimaryGeneratedColumnMod extends js.Object {
+object columnsPrimaryGeneratedColumnMod {
   
+  @JSImport("typeorm/decorator/columns/PrimaryGeneratedColumn", "PrimaryGeneratedColumn")
+  @js.native
   def PrimaryGeneratedColumn(): PropertyDecorator = js.native
+  @JSImport("typeorm/decorator/columns/PrimaryGeneratedColumn", "PrimaryGeneratedColumn")
+  @js.native
   def PrimaryGeneratedColumn(options: PrimaryGeneratedColumnNumericOptions): PropertyDecorator = js.native
-  @JSName("PrimaryGeneratedColumn")
+  @JSImport("typeorm/decorator/columns/PrimaryGeneratedColumn", "PrimaryGeneratedColumn")
+  @js.native
   def PrimaryGeneratedColumn_increment(strategy: increment): PropertyDecorator = js.native
-  @JSName("PrimaryGeneratedColumn")
+  @JSImport("typeorm/decorator/columns/PrimaryGeneratedColumn", "PrimaryGeneratedColumn")
+  @js.native
   def PrimaryGeneratedColumn_increment(strategy: increment, options: PrimaryGeneratedColumnNumericOptions): PropertyDecorator = js.native
-  @JSName("PrimaryGeneratedColumn")
+  @JSImport("typeorm/decorator/columns/PrimaryGeneratedColumn", "PrimaryGeneratedColumn")
+  @js.native
   def PrimaryGeneratedColumn_rowid(strategy: rowid): PropertyDecorator = js.native
-  @JSName("PrimaryGeneratedColumn")
+  @JSImport("typeorm/decorator/columns/PrimaryGeneratedColumn", "PrimaryGeneratedColumn")
+  @js.native
   def PrimaryGeneratedColumn_rowid(strategy: rowid, options: PrimaryGeneratedColumnUUIDOptions): PropertyDecorator = js.native
-  @JSName("PrimaryGeneratedColumn")
+  @JSImport("typeorm/decorator/columns/PrimaryGeneratedColumn", "PrimaryGeneratedColumn")
+  @js.native
   def PrimaryGeneratedColumn_uuid(strategy: uuid): PropertyDecorator = js.native
-  @JSName("PrimaryGeneratedColumn")
+  @JSImport("typeorm/decorator/columns/PrimaryGeneratedColumn", "PrimaryGeneratedColumn")
+  @js.native
   def PrimaryGeneratedColumn_uuid(strategy: uuid, options: PrimaryGeneratedColumnUUIDOptions): PropertyDecorator = js.native
 }

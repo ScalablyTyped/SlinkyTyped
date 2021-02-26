@@ -2,6 +2,7 @@ package typingsSlinky.webcl.WEBCL
 
 import typingsSlinky.webcl.webclNumbers.`0`
 import typingsSlinky.webcl.webclNumbers.`1`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.webcl.webclNumbers.`0`
   - typingsSlinky.webcl.webclNumbers.`1`
 */
-trait Bool extends js.Object
+trait Bool extends StObject
 object Bool {
   
   @scala.inline

@@ -8,14 +8,14 @@ import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mobx.observablevalueMod.IObservableValue
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("mendixmodelsdk/dist/sdk/internal/properties/ByNameReferenceProperty", JSImport.Namespace)
-@js.native
-object byNameReferencePropertyMod extends js.Object {
+object byNameReferencePropertyMod {
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties/ByNameReferenceProperty", "ByNameReferenceListProperty")
   @js.native
   class ByNameReferenceListProperty[T /* <: IAbstractElement */] protected ()
     extends AbstractProperty[js.Array[T], IList[String]] {
@@ -37,6 +37,7 @@ object byNameReferencePropertyMod extends js.Object {
     def updateWithRawValue(value: js.Array[String]): Unit = js.native
   }
   
+  @JSImport("mendixmodelsdk/dist/sdk/internal/properties/ByNameReferenceProperty", "ByNameReferenceProperty")
   @js.native
   class ByNameReferenceProperty[T /* <: IAbstractElement */] protected () extends AbstractProperty[T | Null, IObservableValue[String | Null]] {
     def this(

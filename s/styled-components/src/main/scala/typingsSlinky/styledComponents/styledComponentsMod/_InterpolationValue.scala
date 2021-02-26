@@ -1,5 +1,6 @@
 package typingsSlinky.styledComponents.styledComponentsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,15 +11,15 @@ trait _InterpolationValue
 object _InterpolationValue {
   
   @scala.inline
-  def Keyframes_(getName: () => String): _InterpolationValue = {
-    val __obj = js.Dynamic.literal(getName = js.Any.fromFunction0(getName))
-    __obj.asInstanceOf[_InterpolationValue]
+  def CSSObject(): typingsSlinky.styledComponents.styledComponentsMod.CSSObject = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[typingsSlinky.styledComponents.styledComponentsMod.CSSObject]
   }
   
   @scala.inline
-  def CSSObject(): _InterpolationValue = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[_InterpolationValue]
+  def Keyframes_(getName: () => String): typingsSlinky.styledComponents.styledComponentsMod.Keyframes_ = {
+    val __obj = js.Dynamic.literal(getName = js.Any.fromFunction0(getName))
+    __obj.asInstanceOf[typingsSlinky.styledComponents.styledComponentsMod.Keyframes_]
   }
   
   @scala.inline
@@ -30,10 +31,10 @@ object _InterpolationValue {
       js.Any with StyledComponentInnerOtherProps[AnyStyledComponent], 
       _ | StyledComponentInnerAttrs[AnyStyledComponent]
     ]
-  ): _InterpolationValue = {
+  ): typingsSlinky.styledComponents.anon.PickStyledComponentBasean = {
     val __obj = js.Dynamic.literal(withComponent = js.Any.fromFunction1(withComponent))
     __obj.updateDynamic("$$typeof")(DollarDollartypeof.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_InterpolationValue]
+    __obj.asInstanceOf[typingsSlinky.styledComponents.anon.PickStyledComponentBasean]
   }
   
   @scala.inline
@@ -45,9 +46,9 @@ object _InterpolationValue {
       js.Any with StyledComponentInnerOtherProps[AnyStyledComponent], 
       scala.Nothing | StyledComponentInnerAttrs[AnyStyledComponent]
     ]
-  ): _InterpolationValue = {
+  ): typingsSlinky.styledComponents.anon.PickStyledComponentBaseanDefaultProps = {
     val __obj = js.Dynamic.literal(withComponent = js.Any.fromFunction1(withComponent))
     __obj.updateDynamic("$$typeof")(DollarDollartypeof.asInstanceOf[js.Any])
-    __obj.asInstanceOf[_InterpolationValue]
+    __obj.asInstanceOf[typingsSlinky.styledComponents.anon.PickStyledComponentBaseanDefaultProps]
   }
 }

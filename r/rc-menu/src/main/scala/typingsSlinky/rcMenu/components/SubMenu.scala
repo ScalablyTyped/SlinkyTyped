@@ -20,6 +20,7 @@ import typingsSlinky.rcMenu.subMenuMod.SubMenuProps
 import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.ReactInstance
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ object SubMenu {
   
   @JSImport("rc-menu/es/SubMenu", "SubMenu")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -54,13 +55,13 @@ object SubMenu {
     def eventKey(value: String): this.type = set("eventKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    def expandIcon(value: RenderIconType): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def expandIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("expandIcon", js.Any.fromFunction1(value))
     
     @scala.inline
-    def expandIcon(value: RenderIconType): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def forceSubMenuRender(value: Boolean): this.type = set("forceSubMenuRender", value.asInstanceOf[js.Any])
@@ -72,13 +73,13 @@ object SubMenu {
     def isOpen(value: Boolean): this.type = set("isOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemIconReactElement(value: ReactElement): this.type = set("itemIcon", value.asInstanceOf[js.Any])
+    def itemIcon(value: RenderIconType): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def itemIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("itemIcon", js.Any.fromFunction1(value))
     
     @scala.inline
-    def itemIcon(value: RenderIconType): this.type = set("itemIcon", value.asInstanceOf[js.Any])
+    def itemIconReactElement(value: ReactElement): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def level(value: Double): this.type = set("level", value.asInstanceOf[js.Any])
@@ -129,10 +130,10 @@ object SubMenu {
     def onTitleMouseLeave(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): this.type = set("onTitleMouseLeave", js.Any.fromFunction1(value))
     
     @scala.inline
-    def openKeysVarargs(value: String*): this.type = set("openKeys", js.Array(value :_*))
+    def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
+    def openKeysVarargs(value: String*): this.type = set("openKeys", js.Array(value :_*))
     
     @scala.inline
     def parentMenu(value: ReactElementisRootMenuboo): this.type = set("parentMenu", value.asInstanceOf[js.Any])
@@ -141,19 +142,19 @@ object SubMenu {
     def popupClassName(value: String): this.type = set("popupClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def popupOffsetVarargs(value: Double*): this.type = set("popupOffset", js.Array(value :_*))
+    def popupOffset(value: js.Array[Double]): this.type = set("popupOffset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def popupOffset(value: js.Array[Double]): this.type = set("popupOffset", value.asInstanceOf[js.Any])
+    def popupOffsetVarargs(value: Double*): this.type = set("popupOffset", js.Array(value :_*))
     
     @scala.inline
     def rootPrefixCls(value: String): this.type = set("rootPrefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
+    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
     
     @scala.inline
     def store(value: MiniStore): this.type = set("store", value.asInstanceOf[js.Any])
@@ -165,16 +166,16 @@ object SubMenu {
     def subMenuOpenDelay(value: Double): this.type = set("subMenuOpenDelay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def triggerSubMenuAction(value: TriggerSubMenuAction): this.type = set("triggerSubMenuAction", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: SubMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: SubMenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: SubMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

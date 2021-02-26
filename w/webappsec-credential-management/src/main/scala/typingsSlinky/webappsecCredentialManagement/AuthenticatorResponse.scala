@@ -1,5 +1,6 @@
 package typingsSlinky.webappsecCredentialManagement
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @see {@link https://w3c.github.io/webauthn/#authenticatorresponse}
   */
 @js.native
-trait AuthenticatorResponse extends js.Object {
+trait AuthenticatorResponse extends StObject {
   
   val clientDataJSON: js.typedarray.ArrayBuffer = js.native
 }
@@ -21,21 +22,9 @@ object AuthenticatorResponse {
   }
   
   @scala.inline
-  implicit class AuthenticatorResponseOps[Self <: AuthenticatorResponse] (val x: Self) extends AnyVal {
+  implicit class AuthenticatorResponseMutableBuilder[Self <: AuthenticatorResponse] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setClientDataJSON(value: js.typedarray.ArrayBuffer): Self = this.set("clientDataJSON", value.asInstanceOf[js.Any])
+    def setClientDataJSON(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "clientDataJSON", value.asInstanceOf[js.Any])
   }
 }

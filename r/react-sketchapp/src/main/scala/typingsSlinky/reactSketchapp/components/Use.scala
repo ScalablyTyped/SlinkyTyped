@@ -13,15 +13,22 @@ import typingsSlinky.reactSketchapp.reactSketchappStrings.round
 import typingsSlinky.reactSketchapp.reactSketchappStrings.square
 import typingsSlinky.reactSketchapp.useMod.UseProps
 import typingsSlinky.reactSketchapp.useMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Use {
   
+  @scala.inline
+  def apply(href: String): Builder = {
+    val __props = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[UseProps]))
+  }
+  
   @JSImport("react-sketchapp/lib/components/Svg/Use", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -86,10 +93,10 @@ object Use {
     def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
+    def strokeDasharray(value: NumberArrayProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def strokeDasharray(value: NumberArrayProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
+    def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
     
     @scala.inline
     def strokeDashoffset(value: NumberProp): this.type = set("strokeDashoffset", value.asInstanceOf[js.Any])
@@ -132,10 +139,4 @@ object Use {
   }
   
   def withProps(p: UseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(href: String): Builder = {
-    val __props = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[UseProps]))
-  }
 }

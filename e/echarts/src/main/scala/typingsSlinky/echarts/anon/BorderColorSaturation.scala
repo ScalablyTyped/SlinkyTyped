@@ -1,11 +1,12 @@
 package typingsSlinky.echarts.anon
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BorderColorSaturation extends js.Object {
+trait BorderColorSaturation extends StObject {
   
   /**
     * The border color and gap color of a node.
@@ -126,72 +127,60 @@ object BorderColorSaturation {
   }
   
   @scala.inline
-  implicit class BorderColorSaturationOps[Self <: BorderColorSaturation] (val x: Self) extends AnyVal {
+  implicit class BorderColorSaturationMutableBuilder[Self <: BorderColorSaturation] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setBorderColor(value: String): Self = StObject.set(x, "borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setBorderColorSaturation(value: String): Self = StObject.set(x, "borderColorSaturation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setBorderColorSaturationUndefined: Self = StObject.set(x, "borderColorSaturation", js.undefined)
     
     @scala.inline
-    def setBorderColor(value: String): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    def setBorderColorUndefined: Self = StObject.set(x, "borderColor", js.undefined)
     
     @scala.inline
-    def deleteBorderColor: Self = this.set("borderColor", js.undefined)
+    def setBorderWidth(value: Double): Self = StObject.set(x, "borderWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBorderColorSaturation(value: String): Self = this.set("borderColorSaturation", value.asInstanceOf[js.Any])
+    def setBorderWidthUndefined: Self = StObject.set(x, "borderWidth", js.undefined)
     
     @scala.inline
-    def deleteBorderColorSaturation: Self = this.set("borderColorSaturation", js.undefined)
+    def setColor(value: String): Self = StObject.set(x, "color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBorderWidth(value: Double): Self = this.set("borderWidth", value.asInstanceOf[js.Any])
+    def setColorAlpha(value: Double): Self = StObject.set(x, "colorAlpha", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBorderWidth: Self = this.set("borderWidth", js.undefined)
+    def setColorAlphaUndefined: Self = StObject.set(x, "colorAlpha", js.undefined)
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColorSaturation(value: Double): Self = StObject.set(x, "colorSaturation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteColor: Self = this.set("color", js.undefined)
+    def setColorSaturationUndefined: Self = StObject.set(x, "colorSaturation", js.undefined)
     
     @scala.inline
-    def setColorAlpha(value: Double): Self = this.set("colorAlpha", value.asInstanceOf[js.Any])
+    def setColorUndefined: Self = StObject.set(x, "color", js.undefined)
     
     @scala.inline
-    def deleteColorAlpha: Self = this.set("colorAlpha", js.undefined)
+    def setGapWidth(value: Double): Self = StObject.set(x, "gapWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColorSaturation(value: Double): Self = this.set("colorSaturation", value.asInstanceOf[js.Any])
+    def setGapWidthUndefined: Self = StObject.set(x, "gapWidth", js.undefined)
     
     @scala.inline
-    def deleteColorSaturation: Self = this.set("colorSaturation", js.undefined)
+    def setStrokeColor(value: String): Self = StObject.set(x, "strokeColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGapWidth(value: Double): Self = this.set("gapWidth", value.asInstanceOf[js.Any])
+    def setStrokeColorUndefined: Self = StObject.set(x, "strokeColor", js.undefined)
     
     @scala.inline
-    def deleteGapWidth: Self = this.set("gapWidth", js.undefined)
+    def setStrokeWidth(value: Double): Self = StObject.set(x, "strokeWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStrokeColor(value: String): Self = this.set("strokeColor", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStrokeColor: Self = this.set("strokeColor", js.undefined)
-    
-    @scala.inline
-    def setStrokeWidth(value: Double): Self = this.set("strokeWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStrokeWidth: Self = this.set("strokeWidth", js.undefined)
+    def setStrokeWidthUndefined: Self = StObject.set(x, "strokeWidth", js.undefined)
   }
 }

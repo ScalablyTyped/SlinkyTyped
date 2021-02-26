@@ -2,6 +2,7 @@ package typingsSlinky.actionsOnGoogle.conversationMod
 
 import typingsSlinky.actionsOnGoogle.browseMod.BrowseCarouselOptions
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2UiElementsCarouselBrowseItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

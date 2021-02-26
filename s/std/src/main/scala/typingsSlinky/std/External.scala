@@ -1,11 +1,12 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait External extends js.Object {
+trait External extends StObject {
   
   /** @deprecated */
   def AddSearchProvider(): Unit = js.native
@@ -16,30 +17,18 @@ trait External extends js.Object {
 object External {
   
   @scala.inline
-  def apply(AddSearchProvider: () => Unit, IsSearchProviderInstalled: () => Unit): External = {
+  def apply(AddSearchProvider: () => Unit, IsSearchProviderInstalled: () => Unit): org.scalajs.dom.raw.External = {
     val __obj = js.Dynamic.literal(AddSearchProvider = js.Any.fromFunction0(AddSearchProvider), IsSearchProviderInstalled = js.Any.fromFunction0(IsSearchProviderInstalled))
-    __obj.asInstanceOf[External]
+    __obj.asInstanceOf[org.scalajs.dom.raw.External]
   }
   
   @scala.inline
-  implicit class ExternalOps[Self <: org.scalajs.dom.raw.External] (val x: Self) extends AnyVal {
+  implicit class ExternalMutableBuilder[Self <: org.scalajs.dom.raw.External] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAddSearchProvider(value: () => Unit): Self = StObject.set(x, "AddSearchProvider", js.Any.fromFunction0(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setAddSearchProvider(value: () => Unit): Self = this.set("AddSearchProvider", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setIsSearchProviderInstalled(value: () => Unit): Self = this.set("IsSearchProviderInstalled", js.Any.fromFunction0(value))
+    def setIsSearchProviderInstalled(value: () => Unit): Self = StObject.set(x, "IsSearchProviderInstalled", js.Any.fromFunction0(value))
   }
 }

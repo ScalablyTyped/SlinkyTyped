@@ -3,6 +3,7 @@ package typingsSlinky.rax.mod
 import typingsSlinky.rax.raxStrings.mouse
 import typingsSlinky.rax.raxStrings.pen
 import typingsSlinky.rax.raxStrings.touch
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -5,14 +5,14 @@ import typingsSlinky.formstate.anon.NewValue
 import typingsSlinky.formstate.anon.Value
 import typingsSlinky.formstate.typesMod.ComposibleValidatable
 import typingsSlinky.formstate.typesMod.Validator
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("formstate/lib/core/fieldState", JSImport.Namespace)
-@js.native
-object fieldStateMod extends js.Object {
+object fieldStateMod {
   
+  @JSImport("formstate/lib/core/fieldState", "FieldState")
   @js.native
   class FieldState[TValue] protected () extends ComposibleValidatable[TValue] {
     def this(_initValue: TValue) = this()

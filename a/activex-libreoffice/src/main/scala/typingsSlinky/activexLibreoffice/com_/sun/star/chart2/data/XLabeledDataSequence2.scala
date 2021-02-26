@@ -4,6 +4,7 @@ import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XCloneable
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XModifyBroadcaster
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XModifyListener
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

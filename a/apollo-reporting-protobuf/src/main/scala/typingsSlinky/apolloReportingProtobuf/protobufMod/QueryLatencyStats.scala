@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -68,18 +69,26 @@ class QueryLatencyStats () extends IQueryLatencyStats {
   def toJSON(): StringDictionary[js.Any] = js.native
 }
 /* static members */
-@JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats")
-@js.native
-object QueryLatencyStats extends js.Object {
+object QueryLatencyStats {
   
   /**
     * Creates a new QueryLatencyStats instance using the specified properties.
     * @param [properties] Properties to set
     * @returns QueryLatencyStats instance
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.create")
+  @js.native
   def create(): QueryLatencyStats = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.create")
+  @js.native
   def create(properties: IQueryLatencyStats): QueryLatencyStats = js.native
   
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array): QueryLatencyStats = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.decode")
+  @js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): QueryLatencyStats = js.native
   /**
     * Decodes a QueryLatencyStats message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -88,11 +97,16 @@ object QueryLatencyStats extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.decode")
+  @js.native
   def decode(reader: Reader): QueryLatencyStats = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.decode")
+  @js.native
   def decode(reader: Reader, length: Double): QueryLatencyStats = js.native
-  def decode(reader: js.typedarray.Uint8Array): QueryLatencyStats = js.native
-  def decode(reader: js.typedarray.Uint8Array, length: Double): QueryLatencyStats = js.native
   
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.decodeDelimited")
+  @js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): QueryLatencyStats = js.native
   /**
     * Decodes a QueryLatencyStats message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -100,8 +114,9 @@ object QueryLatencyStats extends js.Object {
     * @throws {Error} If the payload is not a reader or valid buffer
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.decodeDelimited")
+  @js.native
   def decodeDelimited(reader: Reader): QueryLatencyStats = js.native
-  def decodeDelimited(reader: js.typedarray.Uint8Array): QueryLatencyStats = js.native
   
   /**
     * Encodes the specified QueryLatencyStats message. Does not implicitly {@link QueryLatencyStats.verify|verify} messages.
@@ -109,7 +124,11 @@ object QueryLatencyStats extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.encode")
+  @js.native
   def encode(message: IQueryLatencyStats): Writer = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.encode")
+  @js.native
   def encode(message: IQueryLatencyStats, writer: Writer): Writer = js.native
   
   /**
@@ -118,7 +137,11 @@ object QueryLatencyStats extends js.Object {
     * @param [writer] Writer to encode to
     * @returns Writer
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IQueryLatencyStats): Writer = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.encodeDelimited")
+  @js.native
   def encodeDelimited(message: IQueryLatencyStats, writer: Writer): Writer = js.native
   
   /**
@@ -126,6 +149,8 @@ object QueryLatencyStats extends js.Object {
     * @param object Plain object
     * @returns QueryLatencyStats
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.fromObject")
+  @js.native
   def fromObject(`object`: StringDictionary[js.Any]): QueryLatencyStats = js.native
   
   /**
@@ -134,7 +159,11 @@ object QueryLatencyStats extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.toObject")
+  @js.native
   def toObject(message: QueryLatencyStats): StringDictionary[js.Any] = js.native
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.toObject")
+  @js.native
   def toObject(message: QueryLatencyStats, options: IConversionOptions): StringDictionary[js.Any] = js.native
   
   /**
@@ -142,5 +171,7 @@ object QueryLatencyStats extends js.Object {
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
+  @JSImport("apollo-reporting-protobuf/dist/protobuf", "QueryLatencyStats.verify")
+  @js.native
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }

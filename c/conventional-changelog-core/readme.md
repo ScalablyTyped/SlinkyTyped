@@ -10,9 +10,9 @@ conventional-changelog core
 | ------------------ | :-------------: |
 | Full name          | conventional-changelog-core |
 | Keywords           | conventional-changelog, conventional, changelog, log |
-| # releases         | 31 |
-| # dependents       | 26 |
-| # downloads        | 32495707 |
+| # releases         | 19 |
+| # dependents       | 52 |
+| # downloads        | 61952715 |
 | # stars            | 1 |
 
 ## Links

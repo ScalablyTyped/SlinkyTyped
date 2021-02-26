@@ -19,6 +19,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.relation
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.standard
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.touches
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.within
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

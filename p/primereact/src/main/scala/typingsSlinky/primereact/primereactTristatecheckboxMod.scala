@@ -1,16 +1,22 @@
 package typingsSlinky.primereact
 
 import typingsSlinky.primereact.triStateCheckboxMod.TriStateCheckboxProps
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("primereact/tristatecheckbox", JSImport.Namespace)
-@js.native
-object primereactTristatecheckboxMod extends js.Object {
+object primereactTristatecheckboxMod {
   
+  @JSImport("primereact/tristatecheckbox", "TriStateCheckbox")
   @js.native
-  class TriStateCheckbox ()
-    extends Component[TriStateCheckboxProps, js.Any, js.Any]
+  class TriStateCheckbox protected ()
+    extends typingsSlinky.primereact.triStateCheckboxMod.TriStateCheckbox {
+    def this(props: TriStateCheckboxProps) = this()
+    /**
+      * @deprecated
+      * @see https://reactjs.org/docs/legacy-context.html
+      */
+    def this(props: TriStateCheckboxProps, context: js.Any) = this()
+  }
 }

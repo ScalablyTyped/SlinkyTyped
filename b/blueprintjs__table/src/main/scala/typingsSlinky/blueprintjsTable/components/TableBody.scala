@@ -15,15 +15,34 @@ import typingsSlinky.blueprintjsTable.rectMod.Rect
 import typingsSlinky.blueprintjsTable.renderModeMod.RenderMode.BATCH
 import typingsSlinky.blueprintjsTable.renderModeMod.RenderMode.NONE
 import typingsSlinky.blueprintjsTable.tableBodyMod.ITableBodyProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TableBody {
   
+  @scala.inline
+  def apply(
+    cellRenderer: (/* rowIndex */ Double, /* columnIndex */ Double) => ReactElement,
+    columnIndexEnd: Double,
+    columnIndexStart: Double,
+    grid: Grid,
+    loading: Boolean,
+    locator: ILocator,
+    onFocusedCell: IFocusedCellCoordinates => Unit,
+    onSelection: js.Array[IRegion] => Unit,
+    rowIndexEnd: Double,
+    rowIndexStart: Double,
+    viewportRect: Rect
+  ): Builder = {
+    val __props = js.Dynamic.literal(cellRenderer = js.Any.fromFunction2(cellRenderer), columnIndexEnd = columnIndexEnd.asInstanceOf[js.Any], columnIndexStart = columnIndexStart.asInstanceOf[js.Any], grid = grid.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any], locator = locator.asInstanceOf[js.Any], onFocusedCell = js.Any.fromFunction1(onFocusedCell), onSelection = js.Any.fromFunction1(onSelection), rowIndexEnd = rowIndexEnd.asInstanceOf[js.Any], rowIndexStart = rowIndexStart.asInstanceOf[js.Any], viewportRect = viewportRect.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITableBodyProps]))
+  }
+  
   @JSImport("@blueprintjs/table/lib/esm/tableBody", "TableBody")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -63,29 +82,11 @@ object TableBody {
     ): this.type = set("selectedRegionTransform", js.Any.fromFunction3(value))
     
     @scala.inline
-    def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
+    def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
+    def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
   }
   
   def withProps(p: ITableBodyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    cellRenderer: (/* rowIndex */ Double, /* columnIndex */ Double) => ReactElement,
-    columnIndexEnd: Double,
-    columnIndexStart: Double,
-    grid: Grid,
-    loading: Boolean,
-    locator: ILocator,
-    onFocusedCell: IFocusedCellCoordinates => Unit,
-    onSelection: js.Array[IRegion] => Unit,
-    rowIndexEnd: Double,
-    rowIndexStart: Double,
-    viewportRect: Rect
-  ): Builder = {
-    val __props = js.Dynamic.literal(cellRenderer = js.Any.fromFunction2(cellRenderer), columnIndexEnd = columnIndexEnd.asInstanceOf[js.Any], columnIndexStart = columnIndexStart.asInstanceOf[js.Any], grid = grid.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any], locator = locator.asInstanceOf[js.Any], onFocusedCell = js.Any.fromFunction1(onFocusedCell), onSelection = js.Any.fromFunction1(onSelection), rowIndexEnd = rowIndexEnd.asInstanceOf[js.Any], rowIndexStart = rowIndexStart.asInstanceOf[js.Any], viewportRect = viewportRect.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ITableBodyProps]))
-  }
 }

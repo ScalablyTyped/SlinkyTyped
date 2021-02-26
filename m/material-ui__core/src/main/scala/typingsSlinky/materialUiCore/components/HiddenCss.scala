@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.createBreakpointsMod.Breakpoint
 import typingsSlinky.materialUiCore.hiddenCssMod.HiddenCssProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object HiddenCss {
   
   @JSImport("@material-ui/core/Hidden/HiddenCss", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -32,10 +33,10 @@ object HiddenCss {
     def mdUp(value: Boolean): this.type = set("mdUp", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onlyVarargs(value: Breakpoint*): this.type = set("only", js.Array(value :_*))
+    def only(value: Breakpoint | js.Array[Breakpoint]): this.type = set("only", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def only(value: Breakpoint | js.Array[Breakpoint]): this.type = set("only", value.asInstanceOf[js.Any])
+    def onlyVarargs(value: Breakpoint*): this.type = set("only", js.Array(value :_*))
     
     @scala.inline
     def smDown(value: Boolean): this.type = set("smDown", value.asInstanceOf[js.Any])
@@ -56,7 +57,7 @@ object HiddenCss {
     def xsUp(value: Boolean): this.type = set("xsUp", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HiddenCssProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: HiddenCss.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: HiddenCssProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

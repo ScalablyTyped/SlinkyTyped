@@ -13,15 +13,15 @@ import typingsSlinky.ckeditorCkeditor5Engine.mod.model.SchemaContextDefinition
 import typingsSlinky.ckeditorCkeditor5Engine.mod.view.View
 import typingsSlinky.ckeditorCkeditor5Utils.mod.Emitter
 import typingsSlinky.ckeditorCkeditor5Utils.mod.Observable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ckeditor/ckeditor5-engine", "controller")
-@js.native
-object controller extends js.Object {
+object controller {
   
   // engine/controller/datacontroller
+  @JSImport("@ckeditor/ckeditor5-engine", "controller.DataController")
   @js.native
   class DataController protected () extends Observable {
     def this(model: Model) = this()
@@ -52,21 +52,22 @@ object controller extends js.Object {
     
     val processor: DataProcessor = js.native
     
-    def stringify(modelElementOrFragment: DocumentFragment): String = js.native
     def stringify(modelElementOrFragment: Element): String = js.native
+    def stringify(modelElementOrFragment: DocumentFragment): String = js.native
     
-    def toModel(viewElementOrFragment: DocumentFragment): DocumentFragment = js.native
-    def toModel(viewElementOrFragment: DocumentFragment, context: SchemaContextDefinition): DocumentFragment = js.native
     def toModel(viewElementOrFragment: Element): DocumentFragment = js.native
     def toModel(viewElementOrFragment: Element, context: SchemaContextDefinition): DocumentFragment = js.native
+    def toModel(viewElementOrFragment: DocumentFragment): DocumentFragment = js.native
+    def toModel(viewElementOrFragment: DocumentFragment, context: SchemaContextDefinition): DocumentFragment = js.native
     
-    def toView(modelElementOrFragment: DocumentFragment): DocumentFragment = js.native
     def toView(modelElementOrFragment: Element): DocumentFragment = js.native
+    def toView(modelElementOrFragment: DocumentFragment): DocumentFragment = js.native
     
     val upcastDispatcher: UpcastDispatcher = js.native
   }
   
   // engine/controller/editingcontroller
+  @JSImport("@ckeditor/ckeditor5-engine", "controller.EditingController")
   @js.native
   class EditingController protected () extends Observable {
     def this(model: Model) = this()

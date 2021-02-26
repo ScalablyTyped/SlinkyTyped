@@ -10,9 +10,9 @@ Range input. Slides in all directions.
 | ------------------ | :-------------: |
 | Full name          | react-range |
 | Keywords           | react, react-dom, react-component, range, slider, interval |
-| # releases         | 24 |
-| # dependents       | 12 |
-| # downloads        | 727410 |
+| # releases         | 47 |
+| # dependents       | 32 |
+| # downloads        | 1916535 |
 | # stars            | 0 |
 
 ## Links

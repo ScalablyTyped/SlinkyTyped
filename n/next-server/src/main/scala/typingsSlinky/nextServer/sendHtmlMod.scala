@@ -3,14 +3,15 @@ package typingsSlinky.nextServer
 import typingsSlinky.nextServer.anon.GenerateEtags
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("next-server/dist/server/send-html", JSImport.Namespace)
-@js.native
-object sendHtmlMod extends js.Object {
+object sendHtmlMod {
   
+  @JSImport("next-server/dist/server/send-html", "sendHTML")
+  @js.native
   def sendHTML(
     req: IncomingMessage,
     res: ServerResponse,

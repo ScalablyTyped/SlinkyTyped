@@ -11,8 +11,8 @@ Parse postgres array columns
 | Full name          | postgres-array |
 | Keywords           | postgres, array, parser |
 | # releases         | 3 |
-| # dependents       | 7 |
-| # downloads        | 36802683 |
+| # dependents       | 10 |
+| # downloads        | 70673343 |
 | # stars            | 0 |
 
 ## Links

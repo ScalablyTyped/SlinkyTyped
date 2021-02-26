@@ -4,13 +4,12 @@ import typingsSlinky.authmosphere.anon.Scope
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("authmosphere/lib/src/types/ExtendedRequest", JSImport.Namespace)
-@js.native
-object extendedRequestMod extends js.Object {
+object extendedRequestMod {
   
   @js.native
   trait ExtendedRequest

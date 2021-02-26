@@ -9,6 +9,7 @@ import typingsSlinky.activexOffice.activexOfficeNumbers.`6`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`7`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`8`
 import typingsSlinky.activexOffice.activexOfficeNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.activexOffice.activexOfficeNumbers.`3`
   - typingsSlinky.activexOffice.activexOfficeNumbers.`1`
 */
-trait XlPieSliceIndex extends js.Object
+trait XlPieSliceIndex extends StObject
 object XlPieSliceIndex {
   
   @scala.inline

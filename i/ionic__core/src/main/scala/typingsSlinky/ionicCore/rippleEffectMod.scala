@@ -4,14 +4,14 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.ionicCoreStrings.bounded
 import typingsSlinky.ionicCore.ionicCoreStrings.unbounded
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ionic/core/dist/types/components/ripple-effect/ripple-effect", JSImport.Namespace)
-@js.native
-object rippleEffectMod extends js.Object {
+object rippleEffectMod {
   
+  @JSImport("@ionic/core/dist/types/components/ripple-effect/ripple-effect", "RippleEffect")
   @js.native
   class RippleEffect () extends ComponentInterface {
     

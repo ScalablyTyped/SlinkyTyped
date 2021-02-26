@@ -2,14 +2,14 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.arcRotateCameraMod.ArcRotateCamera
 import typingsSlinky.babylonjs.behaviorMod.Behavior
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/Behaviors/Cameras/autoRotationBehavior", JSImport.Namespace)
-@js.native
-object autoRotationBehaviorMod extends js.Object {
+object autoRotationBehaviorMod {
   
+  @JSImport("babylonjs/Behaviors/Cameras/autoRotationBehavior", "AutoRotationBehavior")
   @js.native
   class AutoRotationBehavior () extends Behavior[ArcRotateCamera] {
     

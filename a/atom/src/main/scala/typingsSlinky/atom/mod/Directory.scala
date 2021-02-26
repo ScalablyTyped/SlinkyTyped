@@ -1,12 +1,13 @@
 package typingsSlinky.atom.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("atom", "Directory")
 @js.native
-class Directory protected () extends js.Object {
+class Directory protected () extends StObject {
   // Construction
   /** Configures a new Directory instance, no files are accessed. */
   def this(directoryPath: String) = this()

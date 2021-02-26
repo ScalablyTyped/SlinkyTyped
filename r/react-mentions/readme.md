@@ -10,9 +10,9 @@ React mentions input
 | ------------------ | :-------------: |
 | Full name          | react-mentions |
 | Keywords           | react, mentions, react-component |
-| # releases         | 20 |
-| # dependents       | 14 |
-| # downloads        | 1320683 |
+| # releases         | 16 |
+| # dependents       | 19 |
+| # downloads        | 2776758 |
 | # stars            | 1 |
 
 ## Links

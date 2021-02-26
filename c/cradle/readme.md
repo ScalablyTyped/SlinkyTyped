@@ -10,8 +10,8 @@ the high-level, caching, CouchDB library
 | Full name          | cradle |
 | Keywords           | couchdb, database, couch |
 | # releases         | 0 |
-| # dependents       | 108 |
-| # downloads        | 92263 |
+| # dependents       | 107 |
+| # downloads        | 76089 |
 | # stars            | 18 |
 
 ## Links

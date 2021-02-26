@@ -11,8 +11,8 @@ Fast dom parser based on regexps
 | Full name          | dom-parser |
 | Keywords           | domparser, dom, parser, xml, html, xmlparser, htmlparser, scraping |
 | # releases         | 2 |
-| # dependents       | 29 |
-| # downloads        | 228335 |
+| # dependents       | 39 |
+| # downloads        | 530337 |
 | # stars            | 2 |
 
 ## Links

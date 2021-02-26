@@ -1,14 +1,15 @@
 package typingsSlinky.antd
 
 import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antd/lib/form/hooks/useCacheErrors", JSImport.Namespace)
-@js.native
-object useCacheErrorsMod extends js.Object {
+object useCacheErrorsMod {
   
+  @JSImport("antd/lib/form/hooks/useCacheErrors", JSImport.Default)
+  @js.native
   def default(
     errors: js.Array[ReactElement],
     changeTrigger: js.Function1[/* visible */ Boolean, Unit],

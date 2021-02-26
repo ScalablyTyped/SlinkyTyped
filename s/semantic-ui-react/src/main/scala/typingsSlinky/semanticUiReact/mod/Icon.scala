@@ -3,6 +3,7 @@ package typingsSlinky.semanticUiReact.mod
 import slinky.core.ReactComponentClass
 import typingsSlinky.semanticUiReact.iconGroupMod.IconGroupProps
 import typingsSlinky.semanticUiReact.iconMod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,10 +11,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("semantic-ui-react", "Icon")
 @js.native
 class Icon () extends default
-/* static members */
-@JSImport("semantic-ui-react", "Icon")
-@js.native
-object Icon extends js.Object {
+object Icon {
   
-  var Group: ReactComponentClass[IconGroupProps] = js.native
+  /* was `typeof IconGroup` */
+  @JSImport("semantic-ui-react", "Icon.Group")
+  @js.native
+  val Group: ReactComponentClass[IconGroupProps] = js.native
 }

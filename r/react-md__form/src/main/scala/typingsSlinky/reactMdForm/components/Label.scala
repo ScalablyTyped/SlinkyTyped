@@ -75,15 +75,22 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactMdForm.labelLabelMod.LabelProps
 import typingsSlinky.reactMdForm.reactMdFormStrings.label
 import typingsSlinky.reactMdForm.reactMdFormStrings.span
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Label {
   
+  @scala.inline
+  def apply(htmlFor: String): Builder = {
+    val __props = js.Dynamic.literal(htmlFor = htmlFor.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LabelProps with RefAttributes[HTMLLabelElement]]))
+  }
+  
   @JSImport("@react-md/form", "Label")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -279,10 +286,10 @@ object Label {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -625,10 +632,4 @@ object Label {
   }
   
   def withProps(p: LabelProps with RefAttributes[HTMLLabelElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(htmlFor: String): Builder = {
-    val __props = js.Dynamic.literal(htmlFor = htmlFor.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[LabelProps with RefAttributes[HTMLLabelElement]]))
-  }
 }

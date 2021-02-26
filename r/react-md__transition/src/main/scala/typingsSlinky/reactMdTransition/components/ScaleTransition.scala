@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMdPortal.getContainerMod.PortalInto
 import typingsSlinky.reactMdTransition.scaleTransitionMod.ScaleTransitionProps
 import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ScaleTransition {
   
+  @scala.inline
+  def apply(visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ScaleTransitionProps]))
+  }
+  
   @JSImport("@react-md/transition", "ScaleTransition")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -61,19 +68,19 @@ object ScaleTransition {
     def portal(value: Boolean): this.type = set("portal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
+    def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portalIntoFunction0(value: () => HTMLElement | Null): this.type = set("portalInto", js.Any.fromFunction0(value))
     
     @scala.inline
-    def portalInto(value: PortalInto): this.type = set("portalInto", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def portalIntoNull: this.type = set("portalInto", null)
+    def portalIntoHTMLElement(value: HTMLElement): this.type = set("portalInto", value.asInstanceOf[js.Any])
     
     @scala.inline
     def portalIntoId(value: String): this.type = set("portalIntoId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def portalIntoNull: this.type = set("portalInto", null)
     
     @scala.inline
     def timeout(value: TransitionTimeout): this.type = set("timeout", value.asInstanceOf[js.Any])
@@ -86,10 +93,4 @@ object ScaleTransition {
   }
   
   def withProps(p: ScaleTransitionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(visible: Boolean): Builder = {
-    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ScaleTransitionProps]))
-  }
 }

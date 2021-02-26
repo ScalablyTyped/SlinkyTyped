@@ -1,12 +1,13 @@
 package typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component
 
 import typingsSlinky.wechatMiniprogram.anon.Partialcreatedvoidattache
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Lifetimes extends js.Object {
+trait Lifetimes extends StObject {
   
   /**
     * @deprecated 旧式的定义方式，基础库 `2.2.3` 起请在 lifetimes 中定义
@@ -84,39 +85,27 @@ object Lifetimes {
   }
   
   @scala.inline
-  implicit class LifetimesOps[Self <: Lifetimes] (val x: Self) extends AnyVal {
+  implicit class LifetimesMutableBuilder[Self <: Lifetimes] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAttached(value: () => Unit): Self = StObject.set(x, "attached", js.Any.fromFunction0(value))
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setCreated(value: () => Unit): Self = StObject.set(x, "created", js.Any.fromFunction0(value))
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setDetached(value: () => Unit): Self = StObject.set(x, "detached", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setAttached(value: () => Unit): Self = this.set("attached", js.Any.fromFunction0(value))
+    def setError(value: js.Error => Unit): Self = StObject.set(x, "error", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setCreated(value: () => Unit): Self = this.set("created", js.Any.fromFunction0(value))
+    def setLifetimes(value: Partialcreatedvoidattache): Self = StObject.set(x, "lifetimes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDetached(value: () => Unit): Self = this.set("detached", js.Any.fromFunction0(value))
+    def setMoved(value: () => Unit): Self = StObject.set(x, "moved", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setError(value: js.Error => Unit): Self = this.set("error", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setLifetimes(value: Partialcreatedvoidattache): Self = this.set("lifetimes", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMoved(value: () => Unit): Self = this.set("moved", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setReady(value: () => Unit): Self = this.set("ready", js.Any.fromFunction0(value))
+    def setReady(value: () => Unit): Self = StObject.set(x, "ready", js.Any.fromFunction0(value))
   }
 }

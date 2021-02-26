@@ -10,9 +10,9 @@ Native filesystem access for react-native
 | ------------------ | :-------------: |
 | Full name          | react-native-fs |
 | Keywords           | react-component, react-native, ios, android, fs, filesystem, download, upload, file-transfer |
-| # releases         | 27 |
-| # dependents       | 79 |
-| # downloads        | 2106353 |
+| # releases         | 13 |
+| # dependents       | 116 |
+| # downloads        | 3966471 |
 | # stars            | 8 |
 
 ## Links

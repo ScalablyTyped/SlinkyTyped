@@ -1,12 +1,13 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts", "Time")
 @js.native
-class Time_ protected () extends js.Object {
+class Time_ protected () extends StObject {
   /**
     * The Time class. Time settings are applied in general for each page using
     * `Highcharts.setOptions`, or individually for each Chart item through the

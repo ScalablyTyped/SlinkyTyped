@@ -27,6 +27,7 @@ import typingsSlinky.rcTree.interfaceMod.EventDataNode
 import typingsSlinky.rcTree.interfaceMod.Key
 import typingsSlinky.rcTree.treeMod.CheckInfo
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,19 +50,19 @@ class SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[R <: js.Object] (
   def checkable(value: Boolean): this.type = set("checkable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def checkedKeysVarargs(value: Key*): this.type = set("checkedKeys", js.Array(value :_*))
+  def checkedKeys(value: js.Array[Key] | Checked): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def checkedKeys(value: js.Array[Key] | Checked): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
+  def checkedKeysVarargs(value: Key*): this.type = set("checkedKeys", js.Array(value :_*))
   
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultCheckedKeysVarargs(value: Key*): this.type = set("defaultCheckedKeys", js.Array(value :_*))
+  def defaultCheckedKeys(value: js.Array[Key]): this.type = set("defaultCheckedKeys", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultCheckedKeys(value: js.Array[Key]): this.type = set("defaultCheckedKeys", value.asInstanceOf[js.Any])
+  def defaultCheckedKeysVarargs(value: Key*): this.type = set("defaultCheckedKeys", js.Array(value :_*))
   
   @scala.inline
   def defaultExpandAll(value: Boolean): this.type = set("defaultExpandAll", value.asInstanceOf[js.Any])
@@ -70,16 +71,16 @@ class SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[R <: js.Object] (
   def defaultExpandParent(value: Boolean): this.type = set("defaultExpandParent", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultExpandedKeysVarargs(value: Key*): this.type = set("defaultExpandedKeys", js.Array(value :_*))
-  
-  @scala.inline
   def defaultExpandedKeys(value: js.Array[Key]): this.type = set("defaultExpandedKeys", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultSelectedKeysVarargs(value: Key*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
+  def defaultExpandedKeysVarargs(value: Key*): this.type = set("defaultExpandedKeys", js.Array(value :_*))
   
   @scala.inline
   def defaultSelectedKeys(value: js.Array[Key]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def defaultSelectedKeysVarargs(value: Key*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
   
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -91,10 +92,10 @@ class SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[R <: js.Object] (
   def expandAction(value: ExpandAction): this.type = set("expandAction", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def expandedKeysVarargs(value: Key*): this.type = set("expandedKeys", js.Array(value :_*))
+  def expandedKeys(value: js.Array[Key]): this.type = set("expandedKeys", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def expandedKeys(value: js.Array[Key]): this.type = set("expandedKeys", value.asInstanceOf[js.Any])
+  def expandedKeysVarargs(value: Key*): this.type = set("expandedKeys", js.Array(value :_*))
   
   @scala.inline
   def filterAntTreeNode(value: ReactComponentClass[AntTreeNodeProps] => Boolean): this.type = set("filterAntTreeNode", js.Any.fromFunction1(value))
@@ -109,13 +110,13 @@ class SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[R <: js.Object] (
   def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+  def icon(value: (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, ReactElement]) | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def iconFunction1(value: /* nodeProps */ AntdTreeNodeAttribute => ReactElement): this.type = set("icon", js.Any.fromFunction1(value))
   
   @scala.inline
-  def icon(value: (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, ReactElement]) | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+  def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
   
   @scala.inline
   def itemHeight(value: Double): this.type = set("itemHeight", value.asInstanceOf[js.Any])
@@ -124,10 +125,10 @@ class SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[R <: js.Object] (
   def loadData(value: /* treeNode */ EventDataNode => js.Promise[Unit]): this.type = set("loadData", js.Any.fromFunction1(value))
   
   @scala.inline
-  def loadedKeysVarargs(value: Key*): this.type = set("loadedKeys", js.Array(value :_*))
+  def loadedKeys(value: js.Array[Key]): this.type = set("loadedKeys", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def loadedKeys(value: js.Array[Key]): this.type = set("loadedKeys", value.asInstanceOf[js.Any])
+  def loadedKeysVarargs(value: Key*): this.type = set("loadedKeys", js.Array(value :_*))
   
   @scala.inline
   def motion(value: js.Any): this.type = set("motion", value.asInstanceOf[js.Any])
@@ -204,10 +205,10 @@ class SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[R <: js.Object] (
   def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def selectedKeysVarargs(value: Key*): this.type = set("selectedKeys", js.Array(value :_*))
+  def selectedKeys(value: js.Array[Key]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def selectedKeys(value: js.Array[Key]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+  def selectedKeysVarargs(value: Key*): this.type = set("selectedKeys", js.Array(value :_*))
   
   @scala.inline
   def showIcon(value: Boolean): this.type = set("showIcon", value.asInstanceOf[js.Any])
@@ -228,10 +229,10 @@ class SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[R <: js.Object] (
   def titleRender(value: /* node */ DataNode => ReactElement): this.type = set("titleRender", js.Any.fromFunction1(value))
   
   @scala.inline
-  def treeDataVarargs(value: DataNode*): this.type = set("treeData", js.Array(value :_*))
+  def treeData(value: js.Array[DataNode]): this.type = set("treeData", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def treeData(value: js.Array[DataNode]): this.type = set("treeData", value.asInstanceOf[js.Any])
+  def treeDataVarargs(value: DataNode*): this.type = set("treeData", js.Array(value :_*))
   
   @scala.inline
   def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])

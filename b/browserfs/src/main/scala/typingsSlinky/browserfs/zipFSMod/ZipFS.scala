@@ -8,6 +8,7 @@ import typingsSlinky.browserfs.fileSystemMod.BFSOneArgCallback
 import typingsSlinky.browserfs.fileSystemMod.FileSystem
 import typingsSlinky.browserfs.fileSystemMod.SynchronousFileSystem
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

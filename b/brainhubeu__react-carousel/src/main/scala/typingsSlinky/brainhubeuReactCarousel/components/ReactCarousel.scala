@@ -7,6 +7,7 @@ import typingsSlinky.brainhubeuReactCarousel.anon.PickCarouselPropsExcludek
 import typingsSlinky.brainhubeuReactCarousel.mod.CarouselPluginTypes
 import typingsSlinky.brainhubeuReactCarousel.mod.CarouselProps
 import typingsSlinky.brainhubeuReactCarousel.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object ReactCarousel {
   
   @JSImport("@brainhubeu/react-carousel", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -44,22 +45,22 @@ object ReactCarousel {
     def onChange(value: /* value */ Double => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def pluginsVarargs(value: (String | CarouselPluginTypes)*): this.type = set("plugins", js.Array(value :_*))
-    
-    @scala.inline
     def plugins(value: js.Array[String | CarouselPluginTypes]): this.type = set("plugins", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def slidesVarargs(value: ReactElement*): this.type = set("slides", js.Array(value :_*))
+    def pluginsVarargs(value: (String | CarouselPluginTypes)*): this.type = set("plugins", js.Array(value :_*))
     
     @scala.inline
     def slides(value: js.Array[ReactElement]): this.type = set("slides", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def slidesVarargs(value: ReactElement*): this.type = set("slides", js.Array(value :_*))
+    
+    @scala.inline
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactCarousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

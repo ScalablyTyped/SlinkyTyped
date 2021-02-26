@@ -3,6 +3,7 @@ package typingsSlinky.xrm.XrmEnum
 import typingsSlinky.xrm.xrmStrings.entity
 import typingsSlinky.xrm.xrmStrings.off
 import typingsSlinky.xrm.xrmStrings.on
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.on
   - typingsSlinky.xrm.xrmStrings.off
 */
-trait NavBarDisplay extends js.Object
+trait NavBarDisplay extends StObject
 object NavBarDisplay {
   
   @scala.inline

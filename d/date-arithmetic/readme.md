@@ -10,9 +10,9 @@ simple date math util
 | ------------------ | :-------------: |
 | Full name          | date-arithmetic |
 | Keywords           | moment, date, math |
-| # releases         | 2 |
-| # dependents       | 164 |
-| # downloads        | 4828395 |
+| # releases         | 4 |
+| # dependents       | 191 |
+| # downloads        | 7326644 |
 | # stars            | 5 |
 
 ## Links

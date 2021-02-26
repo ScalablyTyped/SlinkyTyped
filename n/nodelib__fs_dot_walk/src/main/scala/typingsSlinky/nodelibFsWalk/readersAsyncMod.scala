@@ -4,13 +4,18 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.nodelibFsWalk.anon.Typeofscandir
 import typingsSlinky.nodelibFsWalk.typesMod.Entry
 import typingsSlinky.nodelibFsWalk.typesMod.Errno
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@nodelib/fs.walk/out/readers/async", JSImport.Namespace)
-@js.native
-object readersAsyncMod extends js.Object {
+object readersAsyncMod {
+  
+  @JSImport("@nodelib/fs.walk/out/readers/async", JSImport.Default)
+  @js.native
+  class default protected () extends AsyncReader {
+    def this(_root: String, _settings: typingsSlinky.nodelibFsWalk.settingsMod.default) = this()
+  }
   
   @js.native
   trait AsyncReader
@@ -45,11 +50,6 @@ object readersAsyncMod extends js.Object {
     def onError(callback: ErrorEventCallback): Unit = js.native
     
     def read(): EventEmitter = js.native
-  }
-  
-  @js.native
-  class default protected () extends AsyncReader {
-    def this(_root: String, _settings: typingsSlinky.nodelibFsWalk.settingsMod.default) = this()
   }
   
   type EndEventCallback = js.Function0[Unit]

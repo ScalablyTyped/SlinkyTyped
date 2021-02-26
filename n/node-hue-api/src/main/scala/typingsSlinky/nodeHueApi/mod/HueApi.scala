@@ -2,6 +2,7 @@ package typingsSlinky.nodeHueApi.mod
 
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.nodeHueApi.mod.lightState.State
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /*
   * Constructor used for searching for bridges and registering users
   */
-class HueApi () extends js.Object {
+class HueApi () extends StObject {
   /**
     * Creates an instance of HueApi.
     * @param {string} host Address of Hue bridge

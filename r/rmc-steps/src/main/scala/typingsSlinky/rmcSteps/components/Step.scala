@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcSteps.stepMod.IStepProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object Step {
   
   @JSImport("rmc-steps/lib", "Step")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -29,13 +30,13 @@ object Step {
     def description(value: js.Any): this.type = set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconPrefix(value: String): this.type = set("iconPrefix", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def itemWidth(value: Double | String): this.type = set("itemWidth", value.asInstanceOf[js.Any])
@@ -62,7 +63,7 @@ object Step {
     def wrapperStyle(value: js.Any): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IStepProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Step.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IStepProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

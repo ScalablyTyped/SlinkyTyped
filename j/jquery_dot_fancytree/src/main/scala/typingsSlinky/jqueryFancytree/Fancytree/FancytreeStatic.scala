@@ -3,12 +3,13 @@ package typingsSlinky.jqueryFancytree.Fancytree
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import typingsSlinky.jqueryFancytree.JQuery
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FancytreeStatic extends js.Object {
+trait FancytreeStatic extends StObject {
   
   /** Throw an error if condition fails (debug method).  */
   def assert(cond: Boolean, msg: String): Unit = js.native
@@ -33,15 +34,15 @@ trait FancytreeStatic extends js.Object {
   
   def getEventTargetType(event: Event): String = js.native
   
-  def getNode(el: JQuery): FancytreeNode = js.native
   def getNode(el: Element): FancytreeNode = js.native
   def getNode(el: Event): FancytreeNode = js.native
+  def getNode(el: JQuery): FancytreeNode = js.native
   
   def getTree(el: String): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
-  def getTree(el: Double): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
-  def getTree(el: JQuery): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
   def getTree(el: Element): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
   def getTree(el: Event): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
+  def getTree(el: Double): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
+  def getTree(el: JQuery): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
   
   def info(msg: String): Unit = js.native
   

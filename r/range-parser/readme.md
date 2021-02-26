@@ -11,8 +11,8 @@ Range header field string parser
 | Full name          | range-parser |
 | Keywords           | range, parser, http |
 | # releases         | 2 |
-| # dependents       | 324 |
-| # downloads        | 459470051 |
+| # dependents       | 406 |
+| # downloads        | 718925715 |
 | # stars            | 8 |
 
 ## Links

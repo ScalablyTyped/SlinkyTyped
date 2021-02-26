@@ -6,15 +6,22 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMentions.mod.DataFunc
 import typingsSlinky.reactMentions.mod.MentionProps
 import typingsSlinky.reactMentions.mod.SuggestionDataItem
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Mention {
   
+  @scala.inline
+  def apply(data: js.Array[SuggestionDataItem] | DataFunc, trigger: String | js.RegExp): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], trigger = trigger.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MentionProps]))
+  }
+  
   @JSImport("react-mentions", "Mention")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -52,10 +59,4 @@ object Mention {
   }
   
   def withProps(p: MentionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(data: js.Array[SuggestionDataItem] | DataFunc, trigger: String | js.RegExp): Builder = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], trigger = trigger.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MentionProps]))
-  }
 }

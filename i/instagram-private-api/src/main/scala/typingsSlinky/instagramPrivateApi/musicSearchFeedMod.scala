@@ -1,19 +1,21 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.commonTypesMod.IgAppModule
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.musicSearchFeedResponseMod.MusicSearchFeedResponseItemsItem
 import typingsSlinky.instagramPrivateApi.musicSearchFeedResponseMod.MusicSearchFeedResponseRootObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/music-search.feed", JSImport.Namespace)
-@js.native
-object musicSearchFeedMod extends js.Object {
+object musicSearchFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/music-search.feed", "MusicSearchFeed")
   @js.native
-  class MusicSearchFeed () extends Feed[MusicSearchFeedResponseRootObject, MusicSearchFeedResponseItemsItem] {
+  class MusicSearchFeed protected () extends Feed[MusicSearchFeedResponseRootObject, MusicSearchFeedResponseItemsItem] {
+    def this(client: IgApiClient) = this()
     
     var nextCursor: js.UndefOr[String] = js.native
     

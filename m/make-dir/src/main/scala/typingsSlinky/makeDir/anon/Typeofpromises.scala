@@ -26,12 +26,13 @@ import typingsSlinky.node.fsMod.RmDirOptions
 import typingsSlinky.node.fsMod.RmOptions
 import typingsSlinky.node.fsMod.Stats
 import typingsSlinky.node.promisesMod.FileHandle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Typeofpromises extends js.Object {
+trait Typeofpromises extends StObject {
   
   /**
     * Asynchronously tests a user's permissions for the file specified by path.
@@ -139,14 +140,14 @@ trait Typeofpromises extends js.Object {
     * @param mtime The last modified time. If a string is provided, it will be coerced to number.
     */
   def futimes(handle: FileHandle, atime: String, mtime: String): js.Promise[Unit] = js.native
-  def futimes(handle: FileHandle, atime: String, mtime: Double): js.Promise[Unit] = js.native
   def futimes(handle: FileHandle, atime: String, mtime: js.Date): js.Promise[Unit] = js.native
-  def futimes(handle: FileHandle, atime: Double, mtime: String): js.Promise[Unit] = js.native
-  def futimes(handle: FileHandle, atime: Double, mtime: Double): js.Promise[Unit] = js.native
-  def futimes(handle: FileHandle, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+  def futimes(handle: FileHandle, atime: String, mtime: Double): js.Promise[Unit] = js.native
   def futimes(handle: FileHandle, atime: js.Date, mtime: String): js.Promise[Unit] = js.native
-  def futimes(handle: FileHandle, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
   def futimes(handle: FileHandle, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
+  def futimes(handle: FileHandle, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
+  def futimes(handle: FileHandle, atime: Double, mtime: String): js.Promise[Unit] = js.native
+  def futimes(handle: FileHandle, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+  def futimes(handle: FileHandle, atime: Double, mtime: Double): js.Promise[Unit] = js.native
   
   /**
     * Asynchronous lchmod(2) - Change permissions of a file. Does not dereference symbolic links.
@@ -183,14 +184,14 @@ trait Typeofpromises extends js.Object {
     * @param mtime The last modified time. If a string is provided, it will be coerced to number.
     */
   def lutimes(path: PathLike, atime: String, mtime: String): js.Promise[Unit] = js.native
-  def lutimes(path: PathLike, atime: String, mtime: Double): js.Promise[Unit] = js.native
   def lutimes(path: PathLike, atime: String, mtime: js.Date): js.Promise[Unit] = js.native
-  def lutimes(path: PathLike, atime: Double, mtime: String): js.Promise[Unit] = js.native
-  def lutimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = js.native
-  def lutimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: String, mtime: Double): js.Promise[Unit] = js.native
   def lutimes(path: PathLike, atime: js.Date, mtime: String): js.Promise[Unit] = js.native
-  def lutimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
   def lutimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: Double, mtime: String): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = js.native
   
   /**
     * Asynchronous mkdir(2) - create a directory.
@@ -431,14 +432,14 @@ trait Typeofpromises extends js.Object {
     * @param mtime The last modified time. If a string is provided, it will be coerced to number.
     */
   def utimes(path: PathLike, atime: String, mtime: String): js.Promise[Unit] = js.native
-  def utimes(path: PathLike, atime: String, mtime: Double): js.Promise[Unit] = js.native
   def utimes(path: PathLike, atime: String, mtime: js.Date): js.Promise[Unit] = js.native
-  def utimes(path: PathLike, atime: Double, mtime: String): js.Promise[Unit] = js.native
-  def utimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = js.native
-  def utimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+  def utimes(path: PathLike, atime: String, mtime: Double): js.Promise[Unit] = js.native
   def utimes(path: PathLike, atime: js.Date, mtime: String): js.Promise[Unit] = js.native
-  def utimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
   def utimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
+  def utimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
+  def utimes(path: PathLike, atime: Double, mtime: String): js.Promise[Unit] = js.native
+  def utimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+  def utimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = js.native
   
   /**
     * Asynchronously writes `string` to the file referenced by the supplied `FileHandle`.

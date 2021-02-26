@@ -1,5 +1,6 @@
 package typingsSlinky.filepond.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.filepond.filepondStrings.microphone
   - typingsSlinky.filepond.filepondStrings.camcorder
 */
-trait CaptureAttribute extends js.Object
+trait CaptureAttribute extends StObject
 object CaptureAttribute {
   
   @scala.inline

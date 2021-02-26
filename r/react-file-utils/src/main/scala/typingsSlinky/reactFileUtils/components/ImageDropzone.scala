@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFileUtils.anon.Accept
 import typingsSlinky.reactFileUtils.mod.FileLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object ImageDropzone {
   
   @JSImport("react-file-utils", "ImageDropzone")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -20,10 +21,10 @@ object ImageDropzone {
        with StBuildingComponent[tag.type, typingsSlinky.reactFileUtils.mod.ImageDropzone] {
     
     @scala.inline
-    def acceptVarargs(value: String*): this.type = set("accept", js.Array(value :_*))
+    def accept(value: String | js.Array[String]): this.type = set("accept", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accept(value: String | js.Array[String]): this.type = set("accept", value.asInstanceOf[js.Any])
+    def acceptVarargs(value: String*): this.type = set("accept", js.Array(value :_*))
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -35,7 +36,7 @@ object ImageDropzone {
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Accept): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ImageDropzone.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Accept): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

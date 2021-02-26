@@ -10,9 +10,9 @@ converts a JS object into a nice and readable tree structure for the console
 | ------------------ | :-------------: |
 | Full name          | treeify |
 | Keywords           | object, tree, print, console, pretty |
-| # releases         | 2 |
-| # dependents       | 125 |
-| # downloads        | 16347878 |
+| # releases         | 0 |
+| # dependents       | 147 |
+| # downloads        | 43168856 |
 | # stars            | 6 |
 
 ## Links

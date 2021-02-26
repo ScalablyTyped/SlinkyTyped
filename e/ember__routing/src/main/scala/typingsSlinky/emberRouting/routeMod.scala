@@ -6,17 +6,20 @@ import typingsSlinky.emberRouting.anon.QueryParams
 import typingsSlinky.emberRouting.transitionMod.Transition
 import typingsSlinky.emberRouting.typesMod.RenderOptions
 import typingsSlinky.emberRouting.typesMod.RouteQueryParam
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ember/routing/route", JSImport.Namespace)
-@js.native
-object routeMod extends js.Object {
+object routeMod {
+  
+  @JSImport("@ember/routing/route", JSImport.Default)
+  @js.native
+  class default () extends Route
   
   /* import warning: RemoveDifficultInheritance.summarizeChanges 
   - Dropped / * import warning: parser.TsParser#tsDeclClass functionCall class extends from : EmberObject.extend(ActionHandler, Evented) * / any */ @js.native
-  trait Route extends js.Object {
+  trait Route extends StObject {
     
     // events
     /**
@@ -536,9 +539,6 @@ object routeMod extends js.Object {
       */
     def willTransition(transition: Transition[_]): Unit = js.native
   }
-  
-  @js.native
-  class default () extends Route
   
   // tslint:disable-next-line:strict-export-declare-modifiers
   type RouteModel = js.Object | String | Double

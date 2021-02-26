@@ -2,12 +2,13 @@ package typingsSlinky.ejWebAll.ej
 
 import typingsSlinky.ejWebAll.JQueryParam
 import typingsSlinky.ejWebAll.JQueryXHR
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Adaptor extends js.Object {
+trait Adaptor extends StObject {
   
   def convertToQueryString(req: js.Any, query: Query, dm: DataManager): JQueryParam = js.native
   

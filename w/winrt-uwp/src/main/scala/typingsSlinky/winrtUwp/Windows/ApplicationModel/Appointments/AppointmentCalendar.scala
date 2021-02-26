@@ -5,13 +5,14 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.UI.Color
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a calendar with appointments. */
 @js.native
-trait AppointmentCalendar extends js.Object {
+trait AppointmentCalendar extends StObject {
   
   /** Gets or sets a Boolean value that indicates if the calendar supports cancelling meetings. */
   var canCancelMeetings: Boolean = js.native

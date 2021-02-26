@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,49 +43,37 @@ object Response {
     trailer: js.Promise[org.scalajs.dom.experimental.Headers],
     `type`: org.scalajs.dom.experimental.ResponseType,
     url: java.lang.String
-  ): Response = {
+  ): org.scalajs.dom.experimental.Response = {
     val __obj = js.Dynamic.literal(arrayBuffer = js.Any.fromFunction0(arrayBuffer), blob = js.Any.fromFunction0(blob), bodyUsed = bodyUsed.asInstanceOf[js.Any], formData = js.Any.fromFunction0(formData), headers = headers.asInstanceOf[js.Any], json = js.Any.fromFunction0(json), ok = ok.asInstanceOf[js.Any], redirected = redirected.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], statusText = statusText.asInstanceOf[js.Any], text = js.Any.fromFunction0(text), trailer = trailer.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Response]
+    __obj.asInstanceOf[org.scalajs.dom.experimental.Response]
   }
   
   @scala.inline
-  implicit class ResponseOps[Self <: org.scalajs.dom.experimental.Response] (val x: Self) extends AnyVal {
+  implicit class ResponseMutableBuilder[Self <: org.scalajs.dom.experimental.Response] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setHeaders(value: org.scalajs.dom.experimental.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setOk(value: scala.Boolean): Self = StObject.set(x, "ok", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setRedirected(value: scala.Boolean): Self = StObject.set(x, "redirected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeaders(value: org.scalajs.dom.experimental.Headers): Self = this.set("headers", value.asInstanceOf[js.Any])
+    def setStatus(value: Double): Self = StObject.set(x, "status", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOk(value: scala.Boolean): Self = this.set("ok", value.asInstanceOf[js.Any])
+    def setStatusText(value: java.lang.String): Self = StObject.set(x, "statusText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRedirected(value: scala.Boolean): Self = this.set("redirected", value.asInstanceOf[js.Any])
+    def setTrailer(value: js.Promise[org.scalajs.dom.experimental.Headers]): Self = StObject.set(x, "trailer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStatus(value: Double): Self = this.set("status", value.asInstanceOf[js.Any])
+    def setType(value: org.scalajs.dom.experimental.ResponseType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStatusText(value: java.lang.String): Self = this.set("statusText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTrailer(value: js.Promise[org.scalajs.dom.experimental.Headers]): Self = this.set("trailer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setType(value: org.scalajs.dom.experimental.ResponseType): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUrl(value: java.lang.String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
   }
 }

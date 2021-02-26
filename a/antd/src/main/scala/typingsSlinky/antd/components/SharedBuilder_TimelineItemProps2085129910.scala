@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,16 +21,16 @@ class SharedBuilder_TimelineItemProps2085129910 (val args: js.Array[js.Any])
   def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def dotReactElement(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def dot(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+  def dotReactElement(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
   
   @scala.inline
   def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
   
   @scala.inline
   def pending(value: Boolean): this.type = set("pending", value.asInstanceOf[js.Any])

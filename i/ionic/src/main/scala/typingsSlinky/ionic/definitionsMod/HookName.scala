@@ -1,5 +1,6 @@
 package typingsSlinky.ionic.definitionsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.ionic.ionicStrings.serveColonbefore
   - typingsSlinky.ionic.ionicStrings.serveColonafter
 */
-trait HookName extends js.Object
+trait HookName extends StObject
 object HookName {
   
   @scala.inline

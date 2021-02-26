@@ -1,14 +1,16 @@
 package typingsSlinky.videoJs.videoCoreMod.default
 
+import typingsSlinky.videoJs.mod.videojs.MenuButton
 import typingsSlinky.videoJs.mod.videojs.MenuButtonOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("video.js/dist/alt/video.core", "MenuButton")
+/* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
+@JSImport("video.js/dist/alt/video.core", "default.MenuButton")
 @js.native
-class MenuButtonCls protected ()
-  extends typingsSlinky.videoJs.mod.videojs.MenuButton {
+class MenuButtonCls protected () extends MenuButton {
   /**
     * Creates an instance of this class.
     *

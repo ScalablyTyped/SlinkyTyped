@@ -13,12 +13,13 @@ import typingsSlinky.maximMazurokGapiClientHealthcare.anon.OptionsrequestedPolic
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.Resource
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.SourceStore
 import typingsSlinky.maximMazurokGapiClientHealthcare.anon.UpdateMask
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FhirStoresResource extends js.Object {
+trait FhirStoresResource extends StObject {
   
   def create(request: AltCallback, body: FhirStore): Request[FhirStore] = js.native
   /** Creates a new FHIR store within the parent dataset. */

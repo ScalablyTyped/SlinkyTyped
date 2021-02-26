@@ -7,15 +7,22 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.tuyaPanelKit.mod.UnitTextProps
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.icon
 import typingsSlinky.tuyaPanelKit.tuyaPanelKitStrings.text
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object UnitText {
   
+  @scala.inline
+  def apply(value: String | Double): Builder = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[UnitTextProps]))
+  }
+  
   @JSImport("tuya-panel-kit", "UnitText")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,10 +48,10 @@ object UnitText {
     def symbolWidth(value: Double): this.type = set("symbolWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def symbolsVarargs(value: String*): this.type = set("symbols", js.Array(value :_*))
+    def symbols(value: js.Array[String]): this.type = set("symbols", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def symbols(value: js.Array[String]): this.type = set("symbols", value.asInstanceOf[js.Any])
+    def symbolsVarargs(value: String*): this.type = set("symbols", js.Array(value :_*))
     
     @scala.inline
     def unit(value: String): this.type = set("unit", value.asInstanceOf[js.Any])
@@ -71,20 +78,14 @@ object UnitText {
     def valueColor(value: String): this.type = set("valueColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueColorsVarargs(value: String*): this.type = set("valueColors", js.Array(value :_*))
+    def valueColors(value: js.Array[String]): this.type = set("valueColors", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueColors(value: js.Array[String]): this.type = set("valueColors", value.asInstanceOf[js.Any])
+    def valueColorsVarargs(value: String*): this.type = set("valueColors", js.Array(value :_*))
     
     @scala.inline
     def valueSize(value: Double): this.type = set("valueSize", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: UnitTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(value: String | Double): Builder = {
-    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[UnitTextProps]))
-  }
 }

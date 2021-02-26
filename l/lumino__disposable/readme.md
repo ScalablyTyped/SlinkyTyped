@@ -10,9 +10,9 @@ Lumino Disposable
 | ------------------ | :-------------: |
 | Full name          | @lumino/disposable |
 | Keywords           | - |
-| # releases         | 10 |
-| # dependents       | 86 |
-| # downloads        | 326576 |
+| # releases         | 13 |
+| # dependents       | 161 |
+| # downloads        | 1383608 |
 | # stars            | 0 |
 
 ## Links

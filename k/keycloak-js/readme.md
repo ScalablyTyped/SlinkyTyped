@@ -10,9 +10,9 @@ Keycloak Adapter
 | ------------------ | :-------------: |
 | Full name          | keycloak-js |
 | Keywords           | keycloak, sso, oauth, oauth2, authentication |
-| # releases         | 25 |
-| # dependents       | 64 |
-| # downloads        | 1540868 |
+| # releases         | 21 |
+| # dependents       | 107 |
+| # downloads        | 4140572 |
 | # stars            | 1 |
 
 ## Links

@@ -6,6 +6,7 @@ import typingsSlinky.antdMobileRn.activityIndicatorIndexNativeMod.ActivityIndica
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.large
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.small
 import typingsSlinky.antdMobileRn.styleIndexDotnativeMod.IActivityIndicatorStyle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ActivityIndicator {
   
   @JSImport("antd-mobile-rn", "ActivityIndicator")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,7 +41,7 @@ object ActivityIndicator {
     def toast(value: Boolean): this.type = set("toast", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ActivityIndicatorNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ActivityIndicator.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ActivityIndicatorNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

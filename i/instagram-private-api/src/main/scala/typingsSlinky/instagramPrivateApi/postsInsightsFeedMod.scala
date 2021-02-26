@@ -1,18 +1,20 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.feedMod.Feed
 import typingsSlinky.instagramPrivateApi.postsInsightsFeedResponseMod.PostsInsightsFeedResponseEdgesItem
 import typingsSlinky.instagramPrivateApi.postsInsightsFeedResponseMod.PostsInsightsFeedResponseRootObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("instagram-private-api/dist/feeds/posts-insights.feed", JSImport.Namespace)
-@js.native
-object postsInsightsFeedMod extends js.Object {
+object postsInsightsFeedMod {
   
+  @JSImport("instagram-private-api/dist/feeds/posts-insights.feed", "PostsInsightsFeed")
   @js.native
-  class PostsInsightsFeed () extends Feed[PostsInsightsFeedResponseRootObject, PostsInsightsFeedResponseEdgesItem] {
+  class PostsInsightsFeed protected () extends Feed[PostsInsightsFeedResponseRootObject, PostsInsightsFeedResponseEdgesItem] {
+    def this(client: IgApiClient) = this()
     
     var nextCursor: js.Any = js.native
     

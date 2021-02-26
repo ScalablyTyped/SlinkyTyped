@@ -1,11 +1,12 @@
 package typingsSlinky.jasmineAjax
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MockAjax extends js.Object {
+trait MockAjax extends StObject {
   
   def addCustomParamParser(parser: JasmineAjaxParamParser): Unit = js.native
   

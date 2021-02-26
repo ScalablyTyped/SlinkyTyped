@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CanvasHTMLAttributes
 import typingsSlinky.reactSignatureCanvas.mod.ReactSignatureCanvasProps
 import typingsSlinky.reactSignatureCanvas.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object ReactSignatureCanvas {
   
   @JSImport("react-signature-canvas", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -28,7 +29,7 @@ object ReactSignatureCanvas {
     def clearOnResize(value: Boolean): this.type = set("clearOnResize", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ReactSignatureCanvasProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactSignatureCanvas.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: ReactSignatureCanvasProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

@@ -10,9 +10,9 @@ A framework for creating ambitious web applications.
 | ------------------ | :-------------: |
 | Full name          | ember |
 | Keywords           | - |
-| # releases         | 1 |
+| # releases         | 0 |
 | # dependents       | 10 |
-| # downloads        | 72193 |
+| # downloads        | 88366 |
 | # stars            | 28 |
 
 ## Links

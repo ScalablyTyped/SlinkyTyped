@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientS3Node.typesGetBucketVersioningInputMod.GetBuck
 import typingsSlinky.awsSdkClientS3Node.typesGetBucketVersioningOutputMod.GetBucketVersioningOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-s3-node/commands/GetBucketVersioningCommand", JSImport.Namespace)
-@js.native
-object getBucketVersioningCommandMod extends js.Object {
+object getBucketVersioningCommandMod {
   
+  @JSImport("@aws-sdk/client-s3-node/commands/GetBucketVersioningCommand", "GetBucketVersioningCommand")
   @js.native
   class GetBucketVersioningCommand protected () extends Command[
           InputTypesUnion, 

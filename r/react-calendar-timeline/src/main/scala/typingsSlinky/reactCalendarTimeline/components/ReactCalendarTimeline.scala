@@ -28,15 +28,22 @@ import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.left
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.move
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.resize
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.right
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactCalendarTimeline {
   
+  @scala.inline
+  def apply[CustomItem /* <: TimelineItemBase[js.Any] */, CustomGroup /* <: TimelineGroupBase */](groups: js.Array[CustomGroup], items: js.Array[CustomItem]): Builder[CustomItem, CustomGroup] = {
+    val __props = js.Dynamic.literal(groups = groups.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
+    new Builder[CustomItem, CustomGroup](js.Array(this.component, __props.asInstanceOf[ReactCalendarTimelineProps[CustomItem, CustomGroup]]))
+  }
+  
   @JSImport("react-calendar-timeline", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder[CustomItem /* <: TimelineItemBase[js.Any] */, CustomGroup /* <: TimelineGroupBase */] (val args: js.Array[js.Any])
@@ -56,16 +63,16 @@ object ReactCalendarTimeline {
     def clickTolerance(value: Double): this.type = set("clickTolerance", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultTimeEndDate(value: js.Date): this.type = set("defaultTimeEnd", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def defaultTimeEnd(value: js.Date | Moment): this.type = set("defaultTimeEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultTimeStartDate(value: js.Date): this.type = set("defaultTimeStart", value.asInstanceOf[js.Any])
+    def defaultTimeEndDate(value: js.Date): this.type = set("defaultTimeEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultTimeStart(value: js.Date | Moment): this.type = set("defaultTimeStart", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def defaultTimeStartDate(value: js.Date): this.type = set("defaultTimeStart", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dragSnap(value: Double): this.type = set("dragSnap", value.asInstanceOf[js.Any])
@@ -74,16 +81,16 @@ object ReactCalendarTimeline {
     def groupRenderer(value: /* props */ ReactCalendarGroupRendererProps[CustomGroup] => ReactElement): this.type = set("groupRenderer", js.Any.fromFunction1(value))
     
     @scala.inline
-    def headerRefRefObject(value: ReactRef[_]): this.type = set("headerRef", value.asInstanceOf[js.Any])
+    def headerRef(value: Ref[_]): this.type = set("headerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def headerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("headerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def headerRef(value: Ref[_]): this.type = set("headerRef", value.asInstanceOf[js.Any])
+    def headerRefNull: this.type = set("headerRef", null)
     
     @scala.inline
-    def headerRefNull: this.type = set("headerRef", null)
+    def headerRefRefObject(value: ReactRef[_]): this.type = set("headerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def horizontalLineClassNamesForGroup(value: CustomGroup => js.Array[String]): this.type = set("horizontalLineClassNamesForGroup", js.Any.fromFunction1(value))
@@ -165,37 +172,37 @@ object ReactCalendarTimeline {
     def resizeDetector(value: /* containerResizeDetector */ js.Any => Unit): this.type = set("resizeDetector", js.Any.fromFunction1(value))
     
     @scala.inline
-    def rightSidebarContentReactElement(value: ReactElement): this.type = set("rightSidebarContent", value.asInstanceOf[js.Any])
+    def rightSidebarContent(value: ReactElement): this.type = set("rightSidebarContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rightSidebarContent(value: ReactElement): this.type = set("rightSidebarContent", value.asInstanceOf[js.Any])
+    def rightSidebarContentReactElement(value: ReactElement): this.type = set("rightSidebarContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rightSidebarWidth(value: Double): this.type = set("rightSidebarWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def scrollRefRefObject(value: ReactRef[_]): this.type = set("scrollRef", value.asInstanceOf[js.Any])
+    def scrollRef(value: Ref[_]): this.type = set("scrollRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def scrollRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("scrollRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def scrollRef(value: Ref[_]): this.type = set("scrollRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def scrollRefNull: this.type = set("scrollRef", null)
     
     @scala.inline
-    def selectedVarargs(value: Double*): this.type = set("selected", js.Array(value :_*))
+    def scrollRefRefObject(value: ReactRef[_]): this.type = set("scrollRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def selected(value: js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def sidebarContentReactElement(value: ReactElement): this.type = set("sidebarContent", value.asInstanceOf[js.Any])
+    def selectedVarargs(value: Double*): this.type = set("selected", js.Array(value :_*))
     
     @scala.inline
     def sidebarContent(value: ReactElement): this.type = set("sidebarContent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def sidebarContentReactElement(value: ReactElement): this.type = set("sidebarContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def sidebarWidth(value: Double): this.type = set("sidebarWidth", value.asInstanceOf[js.Any])
@@ -216,23 +223,17 @@ object ReactCalendarTimeline {
     def verticalLineClassNamesForTime(value: (/* start */ Double, /* end */ Double) => js.UndefOr[js.Array[String]]): this.type = set("verticalLineClassNamesForTime", js.Any.fromFunction2(value))
     
     @scala.inline
-    def visibleTimeEndDate(value: js.Date): this.type = set("visibleTimeEnd", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def visibleTimeEnd(value: js.Date | Moment | Double): this.type = set("visibleTimeEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def visibleTimeStartDate(value: js.Date): this.type = set("visibleTimeStart", value.asInstanceOf[js.Any])
+    def visibleTimeEndDate(value: js.Date): this.type = set("visibleTimeEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
     def visibleTimeStart(value: js.Date | Moment | Double): this.type = set("visibleTimeStart", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def visibleTimeStartDate(value: js.Date): this.type = set("visibleTimeStart", value.asInstanceOf[js.Any])
   }
   
   def withProps[CustomItem /* <: TimelineItemBase[js.Any] */, CustomGroup /* <: TimelineGroupBase */](p: ReactCalendarTimelineProps[CustomItem, CustomGroup]): Builder[CustomItem, CustomGroup] = new Builder[CustomItem, CustomGroup](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[CustomItem /* <: TimelineItemBase[js.Any] */, CustomGroup /* <: TimelineGroupBase */](groups: js.Array[CustomGroup], items: js.Array[CustomItem]): Builder[CustomItem, CustomGroup] = {
-    val __props = js.Dynamic.literal(groups = groups.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
-    new Builder[CustomItem, CustomGroup](js.Array(this.component, __props.asInstanceOf[ReactCalendarTimelineProps[CustomItem, CustomGroup]]))
-  }
 }

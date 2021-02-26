@@ -10,9 +10,9 @@ A Feathers OAuth1 authentication strategy
 | ------------------ | :-------------: |
 | Full name          | @feathersjs/authentication-oauth1 |
 | Keywords           | feathers, feathers-plugin |
-| # releases         | 10 |
+| # releases         | 1 |
 | # dependents       | 0 |
-| # downloads        | 12886 |
+| # downloads        | 5315 |
 | # stars            | 0 |
 
 ## Links

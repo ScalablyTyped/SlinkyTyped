@@ -2,6 +2,7 @@ package typingsSlinky.mocha
 
 import typingsSlinky.mocha.Mocha.Interface
 import typingsSlinky.mocha.Mocha.MochaOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

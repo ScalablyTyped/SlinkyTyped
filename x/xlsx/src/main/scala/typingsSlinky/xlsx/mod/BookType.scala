@@ -1,5 +1,6 @@
 package typingsSlinky.xlsx.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +26,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xlsx.xlsxStrings.prn
   - typingsSlinky.xlsx.xlsxStrings.eth
 */
-trait BookType extends js.Object
+trait BookType extends StObject
 object BookType {
   
   @scala.inline

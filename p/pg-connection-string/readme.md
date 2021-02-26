@@ -10,15 +10,15 @@ Functions for dealing with a PostgresSQL connection string
 | ------------------ | :-------------: |
 | Full name          | pg-connection-string |
 | Keywords           | pg, connection, string, parse |
-| # releases         | 2 |
-| # dependents       | 121 |
-| # downloads        | 47470472 |
+| # releases         | 7 |
+| # dependents       | 131 |
+| # downloads        | 79031499 |
 | # stars            | 0 |
 
 ## Links
 - [Homepage](https://github.com/iceddev/pg-connection-string)
 - [Bugs](https://github.com/iceddev/pg-connection-string/issues)
-- [Repository](https://github.com/iceddev/pg-connection-string)
+- [Repository](https://github.com/brianc/node-postgres)
 - [Npm](https://www.npmjs.com/package/pg-connection-string)
     
 

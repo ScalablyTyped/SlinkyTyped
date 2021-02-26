@@ -9,6 +9,7 @@ import typingsSlinky.ssh2.ssh2Strings.close
 import typingsSlinky.ssh2.ssh2Strings.connection
 import typingsSlinky.ssh2.ssh2Strings.error
 import typingsSlinky.ssh2.ssh2Strings.listening
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -187,15 +188,29 @@ class Server protected () extends EventEmitter {
   def unref(): Unit = js.native
 }
 /* static members */
-@JSImport("ssh2", "Server")
-@js.native
-object Server extends js.Object {
+object Server {
   
-  var KEEPALIVE_CLIENT_COUNT_MAX: Double = js.native
+  @JSImport("ssh2", "Server")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var KEEPALIVE_CLIENT_INTERVAL: Double = js.native
+  @JSImport("ssh2", "Server.KEEPALIVE_CLIENT_COUNT_MAX")
+  @js.native
+  def KEEPALIVE_CLIENT_COUNT_MAX: Double = js.native
+  @scala.inline
+  def KEEPALIVE_CLIENT_COUNT_MAX_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("KEEPALIVE_CLIENT_COUNT_MAX")(x.asInstanceOf[js.Any])
   
-  var KEEPALIVE_INTERVAL: Double = js.native
+  @JSImport("ssh2", "Server.KEEPALIVE_CLIENT_INTERVAL")
+  @js.native
+  def KEEPALIVE_CLIENT_INTERVAL: Double = js.native
+  @scala.inline
+  def KEEPALIVE_CLIENT_INTERVAL_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("KEEPALIVE_CLIENT_INTERVAL")(x.asInstanceOf[js.Any])
+  
+  @JSImport("ssh2", "Server.KEEPALIVE_INTERVAL")
+  @js.native
+  def KEEPALIVE_INTERVAL: Double = js.native
+  @scala.inline
+  def KEEPALIVE_INTERVAL_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("KEEPALIVE_INTERVAL")(x.asInstanceOf[js.Any])
   
   /**
     * Creates and returns a new Server instance.
@@ -203,7 +218,11 @@ object Server extends js.Object {
     * @param config Server configuration properties.
     * @param connectionListener if supplied, is added as a connection listener.
     */
+  @JSImport("ssh2", "Server.createServer")
+  @js.native
   def createServer(config: ServerConfig): Server = js.native
+  @JSImport("ssh2", "Server.createServer")
+  @js.native
   def createServer(
     config: ServerConfig,
     connectionListener: js.Function2[/* client */ Connection, /* info */ ClientInfo, Unit]

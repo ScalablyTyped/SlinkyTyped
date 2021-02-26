@@ -1,5 +1,6 @@
 package typingsSlinky.nodeZendesk
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,4 +15,7 @@ package object mod {
   ]
   
   type ZendeskID = scala.Double
+  
+  @scala.inline
+  def createClient(config: typingsSlinky.nodeZendesk.mod.ClientOptions): typingsSlinky.nodeZendesk.mod.Client = typingsSlinky.nodeZendesk.mod.^.asInstanceOf[js.Dynamic].applyDynamic("createClient")(config.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.nodeZendesk.mod.Client]
 }

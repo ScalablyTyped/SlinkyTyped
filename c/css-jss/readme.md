@@ -10,9 +10,9 @@ Implements css() interface on top of JSS
 | ------------------ | :-------------: |
 | Full name          | css-jss |
 | Keywords           | jss, style, sheet, stylesheet, css, components, composable, css in js, css-in-js |
-| # releases         | 16 |
-| # dependents       | 2 |
-| # downloads        | 356990 |
+| # releases         | 23 |
+| # dependents       | 4 |
+| # downloads        | 2524273 |
 | # stars            | 0 |
 
 ## Links

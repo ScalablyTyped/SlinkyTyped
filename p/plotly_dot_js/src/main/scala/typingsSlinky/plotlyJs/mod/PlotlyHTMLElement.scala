@@ -31,6 +31,7 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_transitioning
 import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_transitioninterrupted
 import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_unhover
 import typingsSlinky.std.HTMLElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

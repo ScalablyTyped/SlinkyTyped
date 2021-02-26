@@ -10,9 +10,9 @@ This is a small package for react-md that can create the elevation styles in the
 | ------------------ | :-------------: |
 | Full name          | @react-md/elevation |
 | Keywords           | react-md, material design, sass, styles, elevation |
-| # releases         | 23 |
+| # releases         | 38 |
 | # dependents       | 9 |
-| # downloads        | 5197 |
+| # downloads        | 23483 |
 | # stars            | 0 |
 
 ## Links

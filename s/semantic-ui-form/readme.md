@@ -10,9 +10,9 @@ Single component release of form
 | ------------------ | :-------------: |
 | Full name          | semantic-ui-form |
 | Keywords           | - |
-| # releases         | 5 |
+| # releases         | 0 |
 | # dependents       | 2 |
-| # downloads        | 25184 |
+| # downloads        | 21986 |
 | # stars            | 0 |
 
 ## Links

@@ -4,16 +4,17 @@ import typingsSlinky.dynamodb.anon.AttributeNames
 import typingsSlinky.dynamodb.callbackMod.Callback
 import typingsSlinky.dynamodb.executeFilterMod.ExecuteFilter
 import typingsSlinky.node.streamMod.Readable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("dynamodb/Scan", JSImport.Namespace)
-@js.native
-object scanMod extends js.Object {
+object scanMod {
+  
+  type ParallelScan = Scan
   
   @js.native
-  trait Scan extends js.Object {
+  trait Scan extends StObject {
     
     def addFilterCondition(condition: AttributeNames): Scan = js.native
     
@@ -79,6 +80,4 @@ object scanMod extends js.Object {
     
     def where(keyName: String): Scan = js.native
   }
-  
-  type ParallelScan = Scan
 }

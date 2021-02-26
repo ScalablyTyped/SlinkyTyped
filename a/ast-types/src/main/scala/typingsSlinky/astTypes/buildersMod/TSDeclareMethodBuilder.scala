@@ -9,12 +9,13 @@ import typingsSlinky.astTypes.kindsMod.PatternKind
 import typingsSlinky.astTypes.kindsMod.StringLiteralKind
 import typingsSlinky.astTypes.kindsMod.TSTypeAnnotationKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSDeclareMethod
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TSDeclareMethodBuilder extends js.Object {
+trait TSDeclareMethodBuilder extends StObject {
   
   def apply(key: ExpressionKind, params: js.Array[PatternKind]): TSDeclareMethod = js.native
   def apply(key: ExpressionKind, params: js.Array[PatternKind], returnType: NoopKind): TSDeclareMethod = js.native

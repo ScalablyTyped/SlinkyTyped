@@ -10,9 +10,9 @@ URI.js is a Javascript library for working with URLs.
 | ------------------ | :-------------: |
 | Full name          | urijs |
 | Keywords           | uri, url, urn, uri mutation, url mutation, uri manipulation, url manipulation, uri template, url template, unified resource locator, unified resource identifier, query string, RFC 3986, RFC3986, RFC 6570, RFC6570, jquery-plugin, ecosystem:jquery |
-| # releases         | 3 |
-| # dependents       | 571 |
-| # downloads        | 64743220 |
+| # releases         | 4 |
+| # dependents       | 674 |
+| # downloads        | 65239049 |
 | # stars            | 27 |
 
 ## Links

@@ -2,16 +2,36 @@ package typingsSlinky.wdioRepl
 
 import typingsSlinky.node.replMod.REPLEval
 import typingsSlinky.node.vmMod.Context
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@wdio/repl", JSImport.Namespace)
-@js.native
-object mod extends js.Object {
+object mod {
+  
+  @JSImport("@wdio/repl", JSImport.Default)
+  @js.native
+  class default () extends WDIORepl {
+    def this(config: ReplConfig) = this()
+  }
+  /* static members */
+  object default {
+    
+    @JSImport("@wdio/repl", JSImport.Default)
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @JSImport("@wdio/repl", "default.introMessage")
+    @js.native
+    def introMessage: String = js.native
+    @scala.inline
+    def introMessage_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("introMessage")(x.asInstanceOf[js.Any])
+  }
+  
+  type ReplCallback = js.Function2[/* err */ js.Error | Null, /* result */ js.Any, Unit]
   
   @js.native
-  trait ReplConfig extends js.Object {
+  trait ReplConfig extends StObject {
     
     var commandTimeout: Double = js.native
     
@@ -32,7 +52,7 @@ object mod extends js.Object {
   }
   
   @js.native
-  trait WDIORepl extends js.Object {
+  trait WDIORepl extends StObject {
     
     var _config: js.Any = js.native
     
@@ -50,17 +70,4 @@ object mod extends js.Object {
     def start(): js.Promise[_] = js.native
     def start(context: Context): js.Promise[_] = js.native
   }
-  
-  @js.native
-  class default () extends WDIORepl {
-    def this(config: ReplConfig) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    var introMessage: String = js.native
-  }
-  
-  type ReplCallback = js.Function2[/* err */ js.Error | Null, /* result */ js.Any, Unit]
 }

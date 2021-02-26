@@ -5,12 +5,13 @@ import typingsSlinky.maximMazurokGapiClientAdsense.anon.Alt
 import typingsSlinky.maximMazurokGapiClientAdsense.anon.Fields
 import typingsSlinky.maximMazurokGapiClientAdsense.anon.SavedReportId
 import typingsSlinky.maximMazurokGapiClientAdsense.anon.StartIndex
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SavedResource extends js.Object {
+trait SavedResource extends StObject {
   
   /** Generate an AdSense report based on the saved report ID sent in the query parameters. */
   def generate(): Request[AdsenseReportsGenerateResponse] = js.native

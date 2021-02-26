@@ -5,14 +5,14 @@ import typingsSlinky.gulpTypescript.inputMod.File
 import typingsSlinky.gulpTypescript.projectMod.ProjectInfo
 import typingsSlinky.gulpTypescript.typesMod.FinalTransformers
 import typingsSlinky.typescript.mod.Program
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("gulp-typescript/release/compiler", JSImport.Namespace)
-@js.native
-object compilerMod extends js.Object {
+object compilerMod {
   
+  @JSImport("gulp-typescript/release/compiler", "FileCompiler")
   @js.native
   class FileCompiler () extends ICompiler {
     
@@ -31,17 +31,7 @@ object compilerMod extends js.Object {
     var write: js.Any = js.native
   }
   
-  @js.native
-  trait ICompiler extends js.Object {
-    
-    def inputDone(): Unit = js.native
-    
-    def inputFile(file: File): Unit = js.native
-    
-    def prepare(project: ProjectInfo): Unit = js.native
-    def prepare(project: ProjectInfo, finalTransformers: FinalTransformers): Unit = js.native
-  }
-  
+  @JSImport("gulp-typescript/release/compiler", "ProjectCompiler")
   @js.native
   class ProjectCompiler () extends ICompiler {
     
@@ -62,5 +52,16 @@ object compilerMod extends js.Object {
     var project: ProjectInfo = js.native
     
     var removeSourceMapComment: js.Any = js.native
+  }
+  
+  @js.native
+  trait ICompiler extends StObject {
+    
+    def inputDone(): Unit = js.native
+    
+    def inputFile(file: File): Unit = js.native
+    
+    def prepare(project: ProjectInfo): Unit = js.native
+    def prepare(project: ProjectInfo, finalTransformers: FinalTransformers): Unit = js.native
   }
 }

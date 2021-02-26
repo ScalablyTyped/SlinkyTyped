@@ -1,12 +1,13 @@
 package typingsSlinky.mfiles
 
 import typingsSlinky.mfiles.MFiles.MFSearchFlags
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ISearchConditions extends js.Object {
+trait ISearchConditions extends StObject {
   
   def Add(Index: Double, SearchCondition: ISearchCondition): Unit = js.native
   

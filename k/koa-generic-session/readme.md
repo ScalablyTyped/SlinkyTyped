@@ -10,9 +10,9 @@ koa generic session store by memory, redis or others
 | ------------------ | :-------------: |
 | Full name          | koa-generic-session |
 | Keywords           | koa, middleware, session |
-| # releases         | 3 |
-| # dependents       | 73 |
-| # downloads        | 536273 |
+| # releases         | 6 |
+| # dependents       | 79 |
+| # downloads        | 993972 |
 | # stars            | 9 |
 
 ## Links

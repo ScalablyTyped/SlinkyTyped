@@ -7,6 +7,7 @@ import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.baseui.dndListMod.ListOverrides
 import typingsSlinky.baseui.dndListMod.State
 import typingsSlinky.baseui.dndListMod.StatefulListProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ object StatefulList {
   
   @JSImport("baseui/dnd-list", "StatefulList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -41,7 +42,7 @@ object StatefulList {
     def stateReducer(value: (change_, /* nextState */ State, /* currentState */ State) => State): this.type = set("stateReducer", js.Any.fromFunction3(value))
   }
   
-  def withProps(p: StatefulListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: StatefulList.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: StatefulListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

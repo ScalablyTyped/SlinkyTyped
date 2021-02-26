@@ -16,12 +16,13 @@ import typingsSlinky.activexExcel.activexExcelNumbers.`6`
 import typingsSlinky.activexExcel.activexExcelNumbers.`7`
 import typingsSlinky.activexExcel.activexExcelNumbers.`8`
 import typingsSlinky.activexExcel.activexExcelNumbers.`9`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CellFormat extends js.Object {
+trait CellFormat extends StObject {
   
   var AddIndent: Boolean = js.native
   

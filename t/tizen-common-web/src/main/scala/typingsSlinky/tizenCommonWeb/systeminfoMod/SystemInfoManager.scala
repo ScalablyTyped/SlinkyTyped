@@ -22,12 +22,13 @@ import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.STORAGE
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.VIDEOSOURCE
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.WIFI_NETWORK
 import typingsSlinky.tizenCommonWeb.tizenMod.ErrorCallback
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SystemInfoManager extends js.Object {
+trait SystemInfoManager extends StObject {
   
   /**
     * Adds a listener to allow tracking of changes in one or more values of a system property.

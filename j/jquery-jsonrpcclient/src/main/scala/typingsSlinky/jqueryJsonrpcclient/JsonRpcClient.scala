@@ -2,12 +2,13 @@ package typingsSlinky.jqueryJsonrpcclient
 
 import typingsSlinky.jquery.JQueryDeferred
 import typingsSlinky.jquery.JQueryXHR
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JsonRpcClient extends js.Object {
+trait JsonRpcClient extends StObject {
   
   /**
     * Make a batch-call by using a callback.

@@ -5,16 +5,15 @@ import typingsSlinky.datatablesNetColreorder.datatablesNetColreorderStrings.from
 import typingsSlinky.datatablesNetColreorder.datatablesNetColreorderStrings.fromOriginal
 import typingsSlinky.datatablesNetColreorder.datatablesNetColreorderStrings.toCurrent
 import typingsSlinky.datatablesNetColreorder.datatablesNetColreorderStrings.toOriginal
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object anon extends js.Object {
+object anon {
   
   @js.native
-  trait Move extends js.Object {
+  trait Move extends StObject {
     
     /*
       * Programmatically reorder columns

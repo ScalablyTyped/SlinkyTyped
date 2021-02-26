@@ -1,23 +1,24 @@
 package typingsSlinky.spotifyWebPlaybackSdk
 
-import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.spotifyWebPlaybackSdk.Spotify.PlayerInit
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
-  @js.native
-  object Spotify extends js.Object {
+  object Spotify {
     
-    val Player: Instantiable1[
-        /* options */ PlayerInit, 
-        typingsSlinky.spotifyWebPlaybackSdk.Spotify.SpotifyPlayer
-      ] = js.native
+    /* was `typeof SpotifyPlayer` */
+    @JSGlobal("Spotify.Player")
+    @js.native
+    class Player protected ()
+      extends typingsSlinky.spotifyWebPlaybackSdk.Spotify.SpotifyPlayer {
+      def this(options: PlayerInit) = this()
+    }
     
+    @JSGlobal("Spotify.SpotifyPlayer")
     @js.native
     class SpotifyPlayer protected ()
       extends typingsSlinky.spotifyWebPlaybackSdk.Spotify.SpotifyPlayer {

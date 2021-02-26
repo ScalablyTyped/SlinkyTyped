@@ -1,12 +1,11 @@
 package typingsSlinky.jestExpectMessage
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobal("jest")
-@js.native
-object jest extends js.Object {
+object jest {
   
   type Expect = js.Function2[
     /* actual */ js.Any, 

@@ -1,5 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +24,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normandyAddonStudy
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.urlbar
 */
-trait _PermissionNoPrompt extends js.Object
+trait _PermissionNoPrompt extends StObject
 object _PermissionNoPrompt {
   
   @scala.inline

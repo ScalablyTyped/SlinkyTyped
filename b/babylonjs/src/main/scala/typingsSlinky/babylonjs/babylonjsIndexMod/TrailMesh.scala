@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.babylonjsIndexMod
 
 import typingsSlinky.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -73,9 +74,7 @@ class TrailMesh protected ()
   ) = this()
 }
 /* static members */
-@JSImport("babylonjs/Meshes/index", "TrailMesh")
-@js.native
-object TrailMesh extends js.Object {
+object TrailMesh {
   
   /**
     * Parses a serialized trail mesh
@@ -83,5 +82,7 @@ object TrailMesh extends js.Object {
     * @param scene the scene to create the trail mesh in
     * @returns the created trail mesh
     */
+  @JSImport("babylonjs/Meshes/index", "TrailMesh.Parse")
+  @js.native
   def Parse(parsedMesh: js.Any, scene: Scene): typingsSlinky.babylonjs.trailMeshMod.TrailMesh = js.native
 }

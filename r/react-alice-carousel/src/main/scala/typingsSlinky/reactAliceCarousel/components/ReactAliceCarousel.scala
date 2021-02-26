@@ -20,6 +20,7 @@ import typingsSlinky.reactAliceCarousel.typesMod.EventObject
 import typingsSlinky.reactAliceCarousel.typesMod.Props
 import typingsSlinky.reactAliceCarousel.typesMod.Responsive
 import typingsSlinky.reactAliceCarousel.typesMod.RootElement
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ object ReactAliceCarousel {
   
   @JSImport("react-alice-carousel", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -91,10 +92,10 @@ object ReactAliceCarousel {
     def infinite(value: Boolean): this.type = set("infinite", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemsVarargs(value: js.Any*): this.type = set("items", js.Array(value :_*))
+    def items(value: js.Array[_]): this.type = set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def items(value: js.Array[_]): this.type = set("items", value.asInstanceOf[js.Any])
+    def itemsVarargs(value: js.Any*): this.type = set("items", js.Array(value :_*))
     
     @scala.inline
     def mouseTracking(value: Boolean): this.type = set("mouseTracking", value.asInstanceOf[js.Any])
@@ -139,7 +140,7 @@ object ReactAliceCarousel {
     def touchTracking(value: Boolean): this.type = set("touchTracking", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactAliceCarousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

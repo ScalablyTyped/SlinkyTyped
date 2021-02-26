@@ -1,6 +1,7 @@
 package typingsSlinky.coinbaseCommerceNode.mod
 
 import typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.usdc_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.litecoin
   - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.usdc_
 */
-trait CryptoName extends js.Object
+trait CryptoName extends StObject
 object CryptoName {
   
   @scala.inline

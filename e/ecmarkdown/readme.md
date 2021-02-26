@@ -10,9 +10,9 @@ A compiler for "Ecmarkdown" algorithm shorthand into HTML.
 | ------------------ | :-------------: |
 | Full name          | ecmarkdown |
 | Keywords           | ecmascript, javascript, specs, typography, markup, markdown, html, code |
-| # releases         | 1 |
+| # releases         | 9 |
 | # dependents       | 1 |
-| # downloads        | 5585 |
+| # downloads        | 11856 |
 | # stars            | 0 |
 
 ## Links

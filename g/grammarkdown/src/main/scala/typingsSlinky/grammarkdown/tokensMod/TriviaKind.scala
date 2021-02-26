@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.tokensMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.grammarkdown.tokensMod.CommentTriviaKind
   - typingsSlinky.grammarkdown.tokensMod.HtmlTriviaKind
 */
-trait TriviaKind extends js.Object
+trait TriviaKind extends StObject

@@ -10,9 +10,9 @@ Wraps FS methods using Promise
 | ------------------ | :-------------: |
 | Full name          | promise-fs |
 | Keywords           | promise, promisify, fs |
-| # releases         | 5 |
-| # dependents       | 24 |
-| # downloads        | 981425 |
+| # releases         | 3 |
+| # dependents       | 36 |
+| # downloads        | 3164268 |
 | # stars            | 0 |
 
 ## Links

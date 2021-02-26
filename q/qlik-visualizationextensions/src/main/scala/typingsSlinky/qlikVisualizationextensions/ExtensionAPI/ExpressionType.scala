@@ -1,5 +1,6 @@
 package typingsSlinky.qlikVisualizationextensions.ExtensionAPI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.optional
   - typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings._empty
 */
-trait ExpressionType extends js.Object
+trait ExpressionType extends StObject
 object ExpressionType {
   
   @scala.inline

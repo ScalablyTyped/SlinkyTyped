@@ -2,6 +2,7 @@ package typingsSlinky.ariClient.mod
 
 import typingsSlinky.ariClient.anon.DestinationRecordingNameString
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

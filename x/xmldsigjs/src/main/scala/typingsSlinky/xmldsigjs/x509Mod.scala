@@ -5,16 +5,16 @@ import org.scalajs.dom.crypto.CryptoKey
 import org.scalajs.dom.crypto.EcKeyImportParams
 import org.scalajs.dom.crypto.RsaHashedImportParams
 import typingsSlinky.std.BufferSource
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("xmldsigjs/build/types/pki/x509", JSImport.Namespace)
-@js.native
-object x509Mod extends js.Object {
+object x509Mod {
   
+  @JSImport("xmldsigjs/build/types/pki/x509", "X509Certificate")
   @js.native
-  class X509Certificate () extends js.Object {
+  class X509Certificate () extends StObject {
     def this(rawData: BufferSource) = this()
     
     /**
@@ -85,8 +85,6 @@ object x509Mod extends js.Object {
     var simpl: js.Any = js.native
   }
   
-  trait _DigestAlgorithm extends js.Object
-  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - typingsSlinky.xmldsigjs.xmldsigjsStrings.`SHA-1`
@@ -95,4 +93,6 @@ object x509Mod extends js.Object {
     - typingsSlinky.xmldsigjs.xmldsigjsStrings.`SHA-512`
   */
   type DigestAlgorithm = _DigestAlgorithm | String
+  
+  trait _DigestAlgorithm extends StObject
 }

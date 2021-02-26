@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,13 +14,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Stage[T /* <: js.Function */] protected ()
   extends typingsSlinky.babylonjs.legacyMod.Stage[T]
 /* static members */
-@JSImport("babylonjs", "Stage")
-@js.native
-object Stage extends js.Object {
+object Stage {
   
   /**
     * Creates a new Stage.
     * @returns A new instance of a Stage
     */
+  @JSImport("babylonjs", "Stage.Create")
+  @js.native
   def Create[T /* <: js.Function */](): typingsSlinky.babylonjs.sceneComponentMod.Stage[T] = js.native
 }

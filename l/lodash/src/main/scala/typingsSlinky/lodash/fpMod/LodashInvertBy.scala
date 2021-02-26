@@ -4,12 +4,13 @@ import typingsSlinky.lodash.mod.Dictionary
 import typingsSlinky.lodash.mod.NumericDictionary
 import typingsSlinky.lodash.mod.ValueIteratee
 import typingsSlinky.lodash.mod.__
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashInvertBy extends js.Object {
+trait LodashInvertBy extends StObject {
   
   def apply[T](interatee: ValueIteratee[T]): LodashInvertBy1x1[T] = js.native
   def apply[T /* <: js.Object */](

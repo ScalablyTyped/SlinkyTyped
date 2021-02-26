@@ -2,14 +2,14 @@ package typingsSlinky.soap
 
 import typingsSlinky.soap.typesMod.IHeaders
 import typingsSlinky.soap.typesMod.ISecurity
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("soap/lib/security/BearerSecurity", JSImport.Namespace)
-@js.native
-object bearerSecurityMod extends js.Object {
+object bearerSecurityMod {
   
+  @JSImport("soap/lib/security/BearerSecurity", "BearerSecurity")
   @js.native
   class BearerSecurity protected () extends ISecurity {
     def this(token: String) = this()

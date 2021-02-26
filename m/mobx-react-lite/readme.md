@@ -4,21 +4,21 @@
 Typings are for version 3.1.6
 
 ## Library description:
-Lightweight React bindings for MobX based on React 16.8 and Hooks
+Lightweight React bindings for MobX based on React 16.8+ and Hooks
 
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | mobx-react-lite |
-| Keywords           | mobx, mobservable, react-component, react, reactjs, reactive, hooks, observer, useObserver, useComputer |
-| # releases         | 34 |
-| # dependents       | 45 |
-| # downloads        | 2695952 |
+| Keywords           | mobx, mobservable, react-component, react, reactjs, reactive, hooks, observer, useLocalObservable |
+| # releases         | 49 |
+| # dependents       | 122 |
+| # downloads        | 15314433 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://mobx-react.js.org)
-- [Bugs](https://github.com/mobxjs/mobx-react-lite/issues)
-- [Repository](https://github.com/mobxjs/mobx-react-lite)
+- [Homepage](https://mobx.js.org)
+- [Bugs](https://github.com/mobxjs/mobx/issues)
+- [Repository](https://github.com/mobxjs/mobx)
 - [Npm](https://www.npmjs.com/package/mobx-react-lite)
     
 

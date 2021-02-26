@@ -1,11 +1,12 @@
 package typingsSlinky.doccookies
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait docCookies extends js.Object {
+trait docCookies extends StObject {
   
   /**
     Read a cookie. If the cookie doesn't exist a null value will be returned.
@@ -111,35 +112,6 @@ trait docCookies extends js.Object {
   ): Boolean = js.native
   def setItem(sKey: String, sValue: String, vEnd: String, sPath: String, sDomain: String): Boolean = js.native
   def setItem(sKey: String, sValue: String, vEnd: String, sPath: String, sDomain: String, bSecure: Boolean): Boolean = js.native
-  def setItem(sKey: String, sValue: String, vEnd: Double): Boolean = js.native
-  def setItem(
-    sKey: String,
-    sValue: String,
-    vEnd: Double,
-    sPath: js.UndefOr[scala.Nothing],
-    sDomain: js.UndefOr[scala.Nothing],
-    bSecure: Boolean
-  ): Boolean = js.native
-  def setItem(sKey: String, sValue: String, vEnd: Double, sPath: js.UndefOr[scala.Nothing], sDomain: String): Boolean = js.native
-  def setItem(
-    sKey: String,
-    sValue: String,
-    vEnd: Double,
-    sPath: js.UndefOr[scala.Nothing],
-    sDomain: String,
-    bSecure: Boolean
-  ): Boolean = js.native
-  def setItem(sKey: String, sValue: String, vEnd: Double, sPath: String): Boolean = js.native
-  def setItem(
-    sKey: String,
-    sValue: String,
-    vEnd: Double,
-    sPath: String,
-    sDomain: js.UndefOr[scala.Nothing],
-    bSecure: Boolean
-  ): Boolean = js.native
-  def setItem(sKey: String, sValue: String, vEnd: Double, sPath: String, sDomain: String): Boolean = js.native
-  def setItem(sKey: String, sValue: String, vEnd: Double, sPath: String, sDomain: String, bSecure: Boolean): Boolean = js.native
   def setItem(sKey: String, sValue: String, vEnd: js.Date): Boolean = js.native
   def setItem(
     sKey: String,
@@ -169,4 +141,33 @@ trait docCookies extends js.Object {
   ): Boolean = js.native
   def setItem(sKey: String, sValue: String, vEnd: js.Date, sPath: String, sDomain: String): Boolean = js.native
   def setItem(sKey: String, sValue: String, vEnd: js.Date, sPath: String, sDomain: String, bSecure: Boolean): Boolean = js.native
+  def setItem(sKey: String, sValue: String, vEnd: Double): Boolean = js.native
+  def setItem(
+    sKey: String,
+    sValue: String,
+    vEnd: Double,
+    sPath: js.UndefOr[scala.Nothing],
+    sDomain: js.UndefOr[scala.Nothing],
+    bSecure: Boolean
+  ): Boolean = js.native
+  def setItem(sKey: String, sValue: String, vEnd: Double, sPath: js.UndefOr[scala.Nothing], sDomain: String): Boolean = js.native
+  def setItem(
+    sKey: String,
+    sValue: String,
+    vEnd: Double,
+    sPath: js.UndefOr[scala.Nothing],
+    sDomain: String,
+    bSecure: Boolean
+  ): Boolean = js.native
+  def setItem(sKey: String, sValue: String, vEnd: Double, sPath: String): Boolean = js.native
+  def setItem(
+    sKey: String,
+    sValue: String,
+    vEnd: Double,
+    sPath: String,
+    sDomain: js.UndefOr[scala.Nothing],
+    bSecure: Boolean
+  ): Boolean = js.native
+  def setItem(sKey: String, sValue: String, vEnd: Double, sPath: String, sDomain: String): Boolean = js.native
+  def setItem(sKey: String, sValue: String, vEnd: Double, sPath: String, sDomain: String, bSecure: Boolean): Boolean = js.native
 }

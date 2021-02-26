@@ -1,12 +1,13 @@
 package typingsSlinky.jsfl
 
 import typingsSlinky.jsfl.anon.Keyframe
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FlashFL extends js.Object {
+trait FlashFL extends StObject {
   
   var Math: FlashMath = js.native
   

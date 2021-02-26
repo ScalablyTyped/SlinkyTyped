@@ -4,6 +4,7 @@ import typingsSlinky.grammarkdown.grammarkdownMod.SyntaxKind.CloseBracketToken
 import typingsSlinky.grammarkdown.grammarkdownMod.SyntaxKind.GoalKeyword
 import typingsSlinky.grammarkdown.grammarkdownMod.SyntaxKind.LexicalKeyword
 import typingsSlinky.grammarkdown.grammarkdownMod.SyntaxKind.OpenBracketToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

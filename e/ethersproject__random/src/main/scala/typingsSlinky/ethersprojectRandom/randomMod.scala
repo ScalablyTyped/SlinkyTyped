@@ -1,12 +1,13 @@
 package typingsSlinky.ethersprojectRandom
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ethersproject/random/lib/random", JSImport.Namespace)
-@js.native
-object randomMod extends js.Object {
+object randomMod {
   
+  @JSImport("@ethersproject/random/lib/random", "randomBytes")
+  @js.native
   def randomBytes(length: Double): js.typedarray.Uint8Array = js.native
 }

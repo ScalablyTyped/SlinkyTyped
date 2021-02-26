@@ -10,9 +10,9 @@ Gulp plugin for the TypeDoc typescript documentation tool.
 | ------------------ | :-------------: |
 | Full name          | gulp-typedoc |
 | Keywords           | typedoc, typescript, gulpplugin |
-| # releases         | 4 |
-| # dependents       | 19 |
-| # downloads        | 305230 |
+| # releases         | 9 |
+| # dependents       | 22 |
+| # downloads        | 384520 |
 | # stars            | 6 |
 
 ## Links

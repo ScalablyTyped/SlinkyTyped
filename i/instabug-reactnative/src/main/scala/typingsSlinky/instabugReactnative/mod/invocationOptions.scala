@@ -1,36 +1,32 @@
 package typingsSlinky.instabugReactnative.mod
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-sealed trait invocationOptions extends js.Object
+sealed trait invocationOptions extends StObject
 @JSImport("instabug-reactnative", "invocationOptions")
 @js.native
-object invocationOptions extends js.Object {
+object invocationOptions extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[invocationOptions with Double] = js.native
   
   @js.native
   sealed trait invocationOptionsCommentFieldRequired extends invocationOptions
-  /* 2 */ @js.native
-  object invocationOptionsCommentFieldRequired extends TopLevel[invocationOptionsCommentFieldRequired with Double]
+  /* 2 */ val invocationOptionsCommentFieldRequired: typingsSlinky.instabugReactnative.mod.invocationOptions.invocationOptionsCommentFieldRequired with Double = js.native
   
   @js.native
   sealed trait invocationOptionsDisablePostSendingDialog extends invocationOptions
-  /* 3 */ @js.native
-  object invocationOptionsDisablePostSendingDialog extends TopLevel[invocationOptionsDisablePostSendingDialog with Double]
+  /* 3 */ val invocationOptionsDisablePostSendingDialog: typingsSlinky.instabugReactnative.mod.invocationOptions.invocationOptionsDisablePostSendingDialog with Double = js.native
   
   @js.native
   sealed trait invocationOptionsEmailFieldHidden extends invocationOptions
-  /* 0 */ @js.native
-  object invocationOptionsEmailFieldHidden extends TopLevel[invocationOptionsEmailFieldHidden with Double]
+  /* 0 */ val invocationOptionsEmailFieldHidden: typingsSlinky.instabugReactnative.mod.invocationOptions.invocationOptionsEmailFieldHidden with Double = js.native
   
   @js.native
   sealed trait invocationOptionsEmailFieldOptional extends invocationOptions
-  /* 1 */ @js.native
-  object invocationOptionsEmailFieldOptional extends TopLevel[invocationOptionsEmailFieldOptional with Double]
+  /* 1 */ val invocationOptionsEmailFieldOptional: typingsSlinky.instabugReactnative.mod.invocationOptions.invocationOptionsEmailFieldOptional with Double = js.native
 }

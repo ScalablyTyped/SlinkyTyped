@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientOsconfig.anon.Filter
 import typingsSlinky.maximMazurokGapiClientOsconfig.anon.Key
 import typingsSlinky.maximMazurokGapiClientOsconfig.anon.Oauthtoken
 import typingsSlinky.maximMazurokGapiClientOsconfig.anon.Parent
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PatchJobsResource extends js.Object {
+trait PatchJobsResource extends StObject {
   
   def cancel(request: Callback, body: CancelPatchJobRequest): Request[PatchJob] = js.native
   /** Cancel a patch job. The patch job must be active. Canceled patch jobs cannot be restarted. */

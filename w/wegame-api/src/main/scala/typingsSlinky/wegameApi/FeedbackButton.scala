@@ -2,6 +2,7 @@ package typingsSlinky.wegameApi
 
 import typingsSlinky.wegameApi.wx.types.ButtonStyle
 import typingsSlinky.wegameApi.wx.types.ButtonType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

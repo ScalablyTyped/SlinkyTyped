@@ -1,5 +1,6 @@
 package typingsSlinky.pixiJs.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("pixi.js", "WRAP_MODES")
 @js.native
-object WRAP_MODES extends js.Object {
+object WRAP_MODES extends StObject {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.pixiJs.PIXI.WRAP_MODES with Double] = js.native

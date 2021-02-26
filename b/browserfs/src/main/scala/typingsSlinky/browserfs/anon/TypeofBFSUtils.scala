@@ -5,12 +5,13 @@ import typingsSlinky.browserfs.fileSystemMod.FileSystem
 import typingsSlinky.browserfs.fileSystemMod.FileSystemConstructor
 import typingsSlinky.browserfs.utilMod.Arrayish
 import typingsSlinky.node.Buffer
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TypeofBFSUtils extends js.Object {
+trait TypeofBFSUtils extends StObject {
   
   def arrayBuffer2Buffer(ab: js.typedarray.ArrayBuffer): Buffer = js.native
   

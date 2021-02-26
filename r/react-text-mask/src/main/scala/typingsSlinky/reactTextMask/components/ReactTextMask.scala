@@ -84,6 +84,7 @@ import typingsSlinky.reactTextMask.mod.MaskedInputProps
 import typingsSlinky.reactTextMask.mod.default
 import typingsSlinky.reactTextMask.mod.maskArray
 import typingsSlinky.reactTextMask.reactTextMaskBooleans.`false`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,7 +93,7 @@ object ReactTextMask {
   
   @JSImport("react-text-mask", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -303,10 +304,10 @@ object ReactTextMask {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -384,13 +385,13 @@ object ReactTextMask {
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maskVarargs(value: (String | js.RegExp)*): this.type = set("mask", js.Array(value :_*))
+    def mask(value: maskArray | (js.Function1[/* value */ String, maskArray])): this.type = set("mask", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maskFunction1(value: /* value */ String => maskArray): this.type = set("mask", js.Any.fromFunction1(value))
     
     @scala.inline
-    def mask(value: maskArray | (js.Function1[/* value */ String, maskArray])): this.type = set("mask", value.asInstanceOf[js.Any])
+    def maskVarargs(value: (String | js.RegExp)*): this.type = set("mask", js.Array(value :_*))
     
     @scala.inline
     def max(value: Double | String): this.type = set("max", value.asInstanceOf[js.Any])
@@ -737,10 +738,10 @@ object ReactTextMask {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -749,7 +750,7 @@ object ReactTextMask {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MaskedInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactTextMask.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: MaskedInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

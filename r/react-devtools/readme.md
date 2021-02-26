@@ -10,9 +10,9 @@ Use react-devtools outside of the browser
 | ------------------ | :-------------: |
 | Full name          | react-devtools |
 | Keywords           | - |
-| # releases         | 45 |
-| # dependents       | 9 |
-| # downloads        | 962961 |
+| # releases         | 37 |
+| # dependents       | 11 |
+| # downloads        | 1746034 |
 | # stars            | 7 |
 
 ## Links

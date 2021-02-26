@@ -4,12 +4,13 @@ import typingsSlinky.bootstrap3Typeahead.Bootstrap3Typeahead.Options
 import typingsSlinky.bootstrap3Typeahead.bootstrap3TypeaheadStrings.destroy
 import typingsSlinky.bootstrap3Typeahead.bootstrap3TypeaheadStrings.getActive
 import typingsSlinky.bootstrap3Typeahead.bootstrap3TypeaheadStrings.lookup
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   /**
     * Initialize or destroy Typeahead

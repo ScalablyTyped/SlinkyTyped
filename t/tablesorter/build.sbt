@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "tablesorter"
-version := "2.31-dt-20200515Z-7fdd21"
+version := "2.31-dt-20200515Z-bf1e9f"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
-  "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
+  "com.olvind" %%% "scalablytyped-runtime" % "2.4.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "cldrjs" % "0.4.4-dt-20200923Z-ef6a59",
-  "org.scalablytyped.slinky" %%% "globalize" % "1.5-dt-20201002Z-c42821",
-  "org.scalablytyped.slinky" %%% "jquery" % "3.5-dt-20201028Z-467d08",
-  "org.scalablytyped.slinky" %%% "jqueryui" % "1.12-dt-20201002Z-73651a",
-  "org.scalablytyped.slinky" %%% "select2" % "4.0-dt-20201020Z-560c50",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20201002Z-017d7b",
-  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
+  "org.scalablytyped.slinky" %%% "cldrjs" % "0.4.4-dt-20200923Z-0209b0",
+  "org.scalablytyped.slinky" %%% "globalize" % "1.5-dt-20201002Z-b10d86",
+  "org.scalablytyped.slinky" %%% "jquery" % "3.5-dt-20201028Z-7b4ce2",
+  "org.scalablytyped.slinky" %%% "jqueryui" % "1.12-dt-20201002Z-d328c8",
+  "org.scalablytyped.slinky" %%% "select2" % "4.0-dt-20201020Z-f76456",
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20201002Z-da3788",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-233b27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

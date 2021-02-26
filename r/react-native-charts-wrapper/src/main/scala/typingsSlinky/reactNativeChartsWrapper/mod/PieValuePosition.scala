@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.INSIDE_SLICE
   - typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.OUTSIDE_SLICE
 */
-trait PieValuePosition extends js.Object
+trait PieValuePosition extends StObject
 object PieValuePosition {
   
   @scala.inline

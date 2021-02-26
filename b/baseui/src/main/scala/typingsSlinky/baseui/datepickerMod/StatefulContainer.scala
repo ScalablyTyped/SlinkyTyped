@@ -9,14 +9,21 @@ import typingsSlinky.baseui.baseuiStrings.moveLeft
 import typingsSlinky.baseui.baseuiStrings.moveRight
 import typingsSlinky.baseui.baseuiStrings.moveUp
 import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("baseui/datepicker", "StatefulContainer")
 @js.native
-class StatefulContainer ()
+class StatefulContainer protected ()
   extends Component[StatefulContainerProps[CalendarProps | DatepickerProps], ContainerState, js.Any] {
+  def this(props: StatefulContainerProps[CalendarProps | DatepickerProps]) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
+  def this(props: StatefulContainerProps[CalendarProps | DatepickerProps], context: js.Any) = this()
   
   @JSName("internalSetState")
   def internalSetState_change(`type`: change_, changes: ContainerState): Unit = js.native

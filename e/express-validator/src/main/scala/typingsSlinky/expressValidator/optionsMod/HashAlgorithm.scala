@@ -1,5 +1,6 @@
 package typingsSlinky.expressValidator.optionsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.expressValidator.expressValidatorStrings.crc32
   - typingsSlinky.expressValidator.expressValidatorStrings.crc32b
 */
-trait HashAlgorithm extends js.Object
+trait HashAlgorithm extends StObject
 object HashAlgorithm {
   
   @scala.inline

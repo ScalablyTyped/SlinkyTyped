@@ -3,13 +3,14 @@ package typingsSlinky.grammarkdown.grammarkdownMod
 import typingsSlinky.esfxAsyncCanceltoken.mod.CancelToken
 import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.prex.mod.CancellationToken
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown/dist/grammarkdown", "Emitter")
 @js.native
-class Emitter protected () extends js.Object {
+class Emitter protected () extends StObject {
   def this(options: CompilerOptions) = this()
   
   /* protected */ def afterEmitNode(node: Node2[SyntaxKind]): Unit = js.native

@@ -1,6 +1,8 @@
 package typingsSlinky.reactOnsenui.components
 
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameIsCancelable
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
+import typingsSlinky.reactOnsenui.anon.IsCancelable
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +11,9 @@ object AlertDialog {
   
   @JSImport("react-onsenui", "AlertDialog")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
-  def withProps(p: HTMLAttributesidclassNameIsCancelable): SharedBuilder_HTMLAttributesidclassNameIsCancelable902080739[typingsSlinky.reactOnsenui.mod.AlertDialog] = new SharedBuilder_HTMLAttributesidclassNameIsCancelable902080739[typingsSlinky.reactOnsenui.mod.AlertDialog](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AlertDialog.type): SharedBuilder_HTMLAttributesidclassNameIsCancelable_589368230[typingsSlinky.reactOnsenui.mod.AlertDialog] = new SharedBuilder_HTMLAttributesidclassNameIsCancelable_589368230[typingsSlinky.reactOnsenui.mod.AlertDialog](js.Array(this.component, js.Dictionary.empty))()
   
-  implicit def make(companion: AlertDialog.type): SharedBuilder_HTMLAttributesidclassNameIsCancelable902080739[typingsSlinky.reactOnsenui.mod.AlertDialog] = new SharedBuilder_HTMLAttributesidclassNameIsCancelable902080739[typingsSlinky.reactOnsenui.mod.AlertDialog](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: HTMLAttributesidclassName with IsCancelable): SharedBuilder_HTMLAttributesidclassNameIsCancelable_589368230[typingsSlinky.reactOnsenui.mod.AlertDialog] = new SharedBuilder_HTMLAttributesidclassNameIsCancelable_589368230[typingsSlinky.reactOnsenui.mod.AlertDialog](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

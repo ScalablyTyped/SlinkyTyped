@@ -2,14 +2,14 @@ package typingsSlinky.headroom
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSGlobalScope
-@js.native
-object global extends js.Object {
+object global {
   
+  @JSGlobal("Headroom")
   @js.native
   class Headroom protected ()
     extends typingsSlinky.headroom.Headroom {

@@ -6,18 +6,16 @@ import typingsSlinky.ethersprojectAbi.abstractCoderMod.Result
 import typingsSlinky.ethersprojectAbi.abstractCoderMod.Writer
 import typingsSlinky.ethersprojectAbi.fragmentsMod.ParamType
 import typingsSlinky.ethersprojectBytes.mod.BytesLike
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@ethersproject/abi/lib/abi-coder", JSImport.Namespace)
-@js.native
-object abiCoderMod extends js.Object {
+object abiCoderMod {
   
-  val defaultAbiCoder: AbiCoder = js.native
-  
+  @JSImport("@ethersproject/abi/lib/abi-coder", "AbiCoder")
   @js.native
-  class AbiCoder () extends js.Object {
+  class AbiCoder () extends StObject {
     def this(coerceFunc: CoerceFunc) = this()
     
     def _getCoder(param: ParamType): Coder = js.native
@@ -34,6 +32,10 @@ object abiCoderMod extends js.Object {
     
     def encode(types: js.Array[String | ParamType], values: js.Array[_]): String = js.native
   }
+  
+  @JSImport("@ethersproject/abi/lib/abi-coder", "defaultAbiCoder")
+  @js.native
+  val defaultAbiCoder: AbiCoder = js.native
   
   type CoerceFunc = js.Function2[/* type */ String, /* value */ js.Any, js.Any]
 }

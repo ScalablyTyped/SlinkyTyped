@@ -11,6 +11,7 @@ import typingsSlinky.officeUiFabricReact.shimmeredDetailsListTypesMod.IShimmered
 import typingsSlinky.officeUiFabricReact.shimmeredDetailsListTypesMod.IShimmeredDetailsListStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object ShimmeredDetailsList {
   
   @JSImport("office-ui-fabric-react", "ShimmeredDetailsList")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -30,10 +31,10 @@ object ShimmeredDetailsList {
     def ariaLabelForShimmer(value: String): this.type = set("ariaLabelForShimmer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def detailsListStylesFunction1(value: IDetailsListStyleProps => DeepPartial[IDetailsListStyles]): this.type = set("detailsListStyles", js.Any.fromFunction1(value))
+    def detailsListStyles(value: IStyleFunctionOrObject[IDetailsListStyleProps, IDetailsListStyles]): this.type = set("detailsListStyles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def detailsListStyles(value: IStyleFunctionOrObject[IDetailsListStyleProps, IDetailsListStyles]): this.type = set("detailsListStyles", value.asInstanceOf[js.Any])
+    def detailsListStylesFunction1(value: IDetailsListStyleProps => DeepPartial[IDetailsListStyles]): this.type = set("detailsListStyles", js.Any.fromFunction1(value))
     
     @scala.inline
     def enableShimmer(value: Boolean): this.type = set("enableShimmer", value.asInstanceOf[js.Any])
@@ -50,19 +51,19 @@ object ShimmeredDetailsList {
     def shimmerLines(value: Double): this.type = set("shimmerLines", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shimmerOverlayStylesFunction1(value: IShimmeredDetailsListStyleProps => DeepPartial[IShimmeredDetailsListStyles]): this.type = set("shimmerOverlayStyles", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def shimmerOverlayStyles(value: IStyleFunctionOrObject[IShimmeredDetailsListStyleProps, IShimmeredDetailsListStyles]): this.type = set("shimmerOverlayStyles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stylesFunction1(value: IShimmeredDetailsListStyleProps => DeepPartial[IShimmeredDetailsListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def shimmerOverlayStylesFunction1(value: IShimmeredDetailsListStyleProps => DeepPartial[IShimmeredDetailsListStyles]): this.type = set("shimmerOverlayStyles", js.Any.fromFunction1(value))
     
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IShimmeredDetailsListStyleProps, IShimmeredDetailsListStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def stylesFunction1(value: IShimmeredDetailsListStyleProps => DeepPartial[IShimmeredDetailsListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: IShimmeredDetailsListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ShimmeredDetailsList.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: IShimmeredDetailsListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

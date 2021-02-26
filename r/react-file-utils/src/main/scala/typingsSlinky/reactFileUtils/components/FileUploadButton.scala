@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Blob
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFileUtils.anon.Accepts
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ object FileUploadButton {
   
   @JSImport("react-file-utils", "FileUploadButton")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -20,10 +21,10 @@ object FileUploadButton {
        with StBuildingComponent[tag.type, typingsSlinky.reactFileUtils.mod.FileUploadButton] {
     
     @scala.inline
-    def acceptsVarargs(value: String*): this.type = set("accepts", js.Array(value :_*))
+    def accepts(value: String | js.Array[String]): this.type = set("accepts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accepts(value: String | js.Array[String]): this.type = set("accepts", value.asInstanceOf[js.Any])
+    def acceptsVarargs(value: String*): this.type = set("accepts", js.Array(value :_*))
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -35,7 +36,7 @@ object FileUploadButton {
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Accepts): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: FileUploadButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: Accepts): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

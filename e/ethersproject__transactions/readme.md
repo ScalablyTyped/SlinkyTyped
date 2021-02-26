@@ -10,9 +10,9 @@ Utilities for decoding and encoding Ethereum transaction for ethers.
 | ------------------ | :-------------: |
 | Full name          | @ethersproject/transactions |
 | Keywords           | Ethereum, ethers |
-| # releases         | 23 |
-| # dependents       | 11 |
-| # downloads        | 267214 |
+| # releases         | 31 |
+| # dependents       | 31 |
+| # downloads        | 2463669 |
 | # stars            | 0 |
 
 ## Links

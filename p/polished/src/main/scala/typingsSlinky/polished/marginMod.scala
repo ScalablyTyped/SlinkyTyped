@@ -1,13 +1,14 @@
 package typingsSlinky.polished
 
 import typingsSlinky.polished.styleMod.Styles
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("polished/lib/shorthands/margin", JSImport.Namespace)
-@js.native
-object marginMod extends js.Object {
+object marginMod {
   
+  @JSImport("polished/lib/shorthands/margin", JSImport.Default)
+  @js.native
   def default(values: (Null | Unit | String | Double)*): Styles = js.native
 }

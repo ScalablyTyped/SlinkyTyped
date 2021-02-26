@@ -1,19 +1,34 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod.expressions
 
+import typingsSlinky.mendixmodelsdk.versionChecksMod.ILifeCycle
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "expressions.UnaryOperator")
 @js.native
-class UnaryOperator ()
-  extends typingsSlinky.mendixmodelsdk.expressionsMod.expressions.UnaryOperator
-/* static members */
-@JSImport("mendixmodelsdk/dist/gen/all-model-classes", "expressions.UnaryOperator")
-@js.native
-object UnaryOperator extends js.Object {
+class UnaryOperator protected ()
+  extends typingsSlinky.mendixmodelsdk.expressionsMod.expressions.UnaryOperator {
+  def this(_name: String, lifeCycleInfo: ILifeCycle) = this()
+}
+object UnaryOperator {
   
-  var None: typingsSlinky.mendixmodelsdk.expressionsMod.expressions.UnaryOperator = js.native
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "expressions.UnaryOperator")
+  @js.native
+  val ^ : js.Any = js.native
   
-  var UnaryMinus: typingsSlinky.mendixmodelsdk.expressionsMod.expressions.UnaryOperator = js.native
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "expressions.UnaryOperator.None")
+  @js.native
+  def None: typingsSlinky.mendixmodelsdk.expressionsMod.expressions.UnaryOperator = js.native
+  @scala.inline
+  def None_=(x: typingsSlinky.mendixmodelsdk.expressionsMod.expressions.UnaryOperator): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("None")(x.asInstanceOf[js.Any])
+  
+  /* static member */
+  @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "expressions.UnaryOperator.UnaryMinus")
+  @js.native
+  def UnaryMinus: typingsSlinky.mendixmodelsdk.expressionsMod.expressions.UnaryOperator = js.native
+  @scala.inline
+  def UnaryMinus_=(x: typingsSlinky.mendixmodelsdk.expressionsMod.expressions.UnaryOperator): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("UnaryMinus")(x.asInstanceOf[js.Any])
 }

@@ -17,12 +17,13 @@ import typingsSlinky.angularCore.mod.ViewEncapsulation
 import typingsSlinky.angularCore.mod.ViewQueriesFunction
 import typingsSlinky.angularCore.mod.ɵCssSelectorList
 import typingsSlinky.angularCore.mod.ɵRenderFlags
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ChangeDetection[T] extends js.Object {
+trait ChangeDetection[T] extends StObject {
   
   /**
     * The strategy that the default change detector uses to detect changes.

@@ -7,14 +7,14 @@ import typingsSlinky.awsSdkClientKmsNode.typesDeleteAliasInputMod.DeleteAliasInp
 import typingsSlinky.awsSdkClientKmsNode.typesDeleteAliasOutputMod.DeleteAliasOutput
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/client-kms-node/commands/DeleteAliasCommand", JSImport.Namespace)
-@js.native
-object deleteAliasCommandMod extends js.Object {
+object deleteAliasCommandMod {
   
+  @JSImport("@aws-sdk/client-kms-node/commands/DeleteAliasCommand", "DeleteAliasCommand")
   @js.native
   class DeleteAliasCommand protected () extends Command[
           InputTypesUnion, 

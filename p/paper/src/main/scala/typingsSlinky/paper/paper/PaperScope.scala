@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
+import org.scalablytyped.runtime.Instantiable4
 import org.scalablytyped.runtime.Instantiable6
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
@@ -16,6 +17,7 @@ import typingsSlinky.paper.anon.TypeofPathItem
 import typingsSlinky.paper.anon.TypeofPoint
 import typingsSlinky.paper.anon.TypeofShape
 import typingsSlinky.paper.anon.TypeofSize
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,9 +43,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * `PaperScope`.
   */
 @js.native
-trait PaperScope extends js.Object {
+trait PaperScope extends StObject {
   
-  var Color: TypeofColor = js.native
+  var Color: TypeofColor with (Instantiable4[
+    /* red */ Double, 
+    /* green */ Double, 
+    /* blue */ Double, 
+    /* alpha */ js.UndefOr[Double], 
+    typingsSlinky.paper.paper.Color
+  ]) = js.native
   
   var CompoundPath: Instantiable1[/* pathData */ String, typingsSlinky.paper.paper.CompoundPath] = js.native
   
@@ -72,7 +80,7 @@ trait PaperScope extends js.Object {
   
   var Item: Instantiable0[typingsSlinky.paper.paper.Item] = js.native
   
-  var Key: TypeofKey = js.native
+  var Key: TypeofKey with Instantiable0[typingsSlinky.paper.paper.Key] = js.native
   
   var KeyEvent: Instantiable0[typingsSlinky.paper.paper.KeyEvent] = js.native
   
@@ -82,15 +90,15 @@ trait PaperScope extends js.Object {
   
   var MouseEvent: Instantiable0[typingsSlinky.paper.paper.MouseEvent] = js.native
   
-  var PaperScope: TypeofPaperScope = js.native
+  var PaperScope: TypeofPaperScope with Instantiable0[typingsSlinky.paper.paper.PaperScope] = js.native
   
-  var PaperScript: TypeofPaperScript = js.native
+  var PaperScript: TypeofPaperScript with Instantiable0[typingsSlinky.paper.paper.PaperScript] = js.native
   
   var Path: TypeofPath with (Instantiable1[/* segments */ js.UndefOr[js.Array[Segment]], typingsSlinky.paper.paper.Path]) = js.native
   
-  var PathItem: TypeofPathItem = js.native
+  var PathItem: TypeofPathItem with Instantiable0[typingsSlinky.paper.paper.PathItem] = js.native
   
-  var Point: TypeofPoint = js.native
+  var Point: TypeofPoint with (Instantiable2[/* x */ Double, /* y */ Double, typingsSlinky.paper.paper.Point]) = js.native
   
   var PointText: Instantiable1[/* point */ Point, typingsSlinky.paper.paper.PointText] = js.native
   
@@ -113,7 +121,7 @@ trait PaperScope extends js.Object {
   
   var Shape: TypeofShape with Instantiable0[typingsSlinky.paper.paper.Shape] = js.native
   
-  var Size: TypeofSize = js.native
+  var Size: TypeofSize with (Instantiable2[/* width */ Double, /* height */ Double, typingsSlinky.paper.paper.Size]) = js.native
   
   var Style: Instantiable1[/* style */ js.Object, typingsSlinky.paper.paper.Style] = js.native
   
@@ -211,7 +219,6 @@ trait PaperScope extends js.Object {
   var settings: js.Any = js.native
   
   def setup(element: String): Unit = js.native
-  def setup(element: Size): Unit = js.native
   /** 
     * Sets up an empty project for us. If a canvas is provided, it also creates
     * a {@link View} for it, both linked to this scope.
@@ -222,6 +229,7 @@ trait PaperScope extends js.Object {
     * worker.
     */
   def setup(element: HTMLCanvasElement): Unit = js.native
+  def setup(element: Size): Unit = js.native
   
   /** 
     * The reference to the active tool.

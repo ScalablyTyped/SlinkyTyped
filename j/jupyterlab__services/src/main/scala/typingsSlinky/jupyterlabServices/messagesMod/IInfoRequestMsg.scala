@@ -22,6 +22,7 @@ import typingsSlinky.jupyterlabServices.anon.Wait
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.kernel_info_request
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.shell
 import typingsSlinky.luminoCoreutils.jsonMod.JSONObject
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

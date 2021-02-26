@@ -5,16 +5,18 @@ import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneState
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptions
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptionsWithRequiredGetKey
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/Selection", JSImport.Namespace)
-@js.native
-object libSelectionMod extends js.Object {
+object libSelectionMod {
   
+  @JSImport("office-ui-fabric-react/lib/Selection", "SELECTION_CHANGE")
+  @js.native
   val SELECTION_CHANGE: /* "change" */ String = js.native
   
+  @JSImport("office-ui-fabric-react/lib/Selection", "Selection")
   @js.native
   class Selection[TItem] protected ()
     extends typingsSlinky.officeUiFabricReact.selectionMod.Selection[TItem] {
@@ -26,8 +28,9 @@ object libSelectionMod extends js.Object {
     def this(/* import warning: parser.TsParser#functionParam Dropping repeated marker of param options because its type TItem extends IObjectWithKey ? [] | [ISelectionOptions<TItem>] : [ISelectionOptionsWithRequiredGetKey<TItem>] is not an array type */ options: js.Array[js.Any | ISelectionOptions[TItem] | ISelectionOptionsWithRequiredGetKey[TItem]]) = this()
   }
   
+  @JSImport("office-ui-fabric-react/lib/Selection", "SelectionDirection")
   @js.native
-  object SelectionDirection extends js.Object {
+  object SelectionDirection extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionDirection with Double] = js.native
@@ -37,8 +40,9 @@ object libSelectionMod extends js.Object {
     /* 1 */ val vertical: typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionDirection.vertical with Double = js.native
   }
   
+  @JSImport("office-ui-fabric-react/lib/Selection", "SelectionMode")
   @js.native
-  object SelectionMode extends js.Object {
+  object SelectionMode extends StObject {
     
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode with Double] = js.native
@@ -50,17 +54,27 @@ object libSelectionMod extends js.Object {
     /* 1 */ val single: typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode.single with Double = js.native
   }
   
+  @JSImport("office-ui-fabric-react/lib/Selection", "SelectionZone")
   @js.native
   class SelectionZone protected ()
     extends typingsSlinky.officeUiFabricReact.selectionMod.SelectionZone {
     def this(props: ISelectionZoneProps) = this()
   }
   /* static members */
-  @js.native
-  object SelectionZone extends js.Object {
+  object SelectionZone {
     
-    var defaultProps: IsSelectedOnFocus = js.native
+    @JSImport("office-ui-fabric-react/lib/Selection", "SelectionZone")
+    @js.native
+    val ^ : js.Any = js.native
     
+    @JSImport("office-ui-fabric-react/lib/Selection", "SelectionZone.defaultProps")
+    @js.native
+    def defaultProps: IsSelectedOnFocus = js.native
+    @scala.inline
+    def defaultProps_=(x: IsSelectedOnFocus): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(x.asInstanceOf[js.Any])
+    
+    @JSImport("office-ui-fabric-react/lib/Selection", "SelectionZone.getDerivedStateFromProps")
+    @js.native
     def getDerivedStateFromProps(nextProps: ISelectionZoneProps, prevState: ISelectionZoneState): ISelectionZoneState = js.native
   }
 }

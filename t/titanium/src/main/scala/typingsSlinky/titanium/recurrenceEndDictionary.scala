@@ -1,5 +1,6 @@
 package typingsSlinky.titanium
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Dictionary containing either `endDate` or `occurrenceCount` property.
   */
 @js.native
-trait recurrenceEndDictionary extends js.Object {
+trait recurrenceEndDictionary extends StObject {
   
   /**
     * End date of the recurrence end, or undefined if the recurrence end is count-based.
@@ -29,30 +30,18 @@ object recurrenceEndDictionary {
   }
   
   @scala.inline
-  implicit class recurrenceEndDictionaryOps[Self <: recurrenceEndDictionary] (val x: Self) extends AnyVal {
+  implicit class recurrenceEndDictionaryMutableBuilder[Self <: recurrenceEndDictionary] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setEndDate(value: js.Date): Self = StObject.set(x, "endDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setEndDateUndefined: Self = StObject.set(x, "endDate", js.undefined)
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setOccurrenceCount(value: Double): Self = StObject.set(x, "occurrenceCount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEndDate(value: js.Date): Self = this.set("endDate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteEndDate: Self = this.set("endDate", js.undefined)
-    
-    @scala.inline
-    def setOccurrenceCount(value: Double): Self = this.set("occurrenceCount", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOccurrenceCount: Self = this.set("occurrenceCount", js.undefined)
+    def setOccurrenceCountUndefined: Self = StObject.set(x, "occurrenceCount", js.undefined)
   }
 }

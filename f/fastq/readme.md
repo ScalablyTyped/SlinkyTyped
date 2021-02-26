@@ -10,9 +10,9 @@ Fast, in memory work queue
 | ------------------ | :-------------: |
 | Full name          | fastq |
 | Keywords           | fast, queue, async, worker |
-| # releases         | 2 |
-| # dependents       | 18 |
-| # downloads        | 26150568 |
+| # releases         | 6 |
+| # dependents       | 65 |
+| # downloads        | 315012077 |
 | # stars            | 3 |
 
 ## Links

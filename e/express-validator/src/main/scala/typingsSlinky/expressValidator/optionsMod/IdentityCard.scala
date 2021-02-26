@@ -1,5 +1,6 @@
 package typingsSlinky.expressValidator.optionsMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.expressValidator.expressValidatorStrings.`zh-CN`
   - typingsSlinky.expressValidator.expressValidatorStrings.`zh-TW`
 */
-trait IdentityCard extends js.Object
+trait IdentityCard extends StObject
 object IdentityCard {
   
   @scala.inline

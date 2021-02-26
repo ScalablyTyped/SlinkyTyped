@@ -6,15 +6,27 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.anon.ListItemProfile
 import typingsSlinky.baseui.menuMod.OptionProfileProps
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OptionProfile {
   
+  @scala.inline
+  def apply(
+    getProfileItemImg: js.Any => String | ReactComponentClass[_],
+    getProfileItemImgText: js.Any => String,
+    getProfileItemLabels: js.Any => typingsSlinky.baseui.anon.Body,
+    item: js.Any
+  ): Builder = {
+    val __props = js.Dynamic.literal(getProfileItemImg = js.Any.fromFunction1(getProfileItemImg), getProfileItemImgText = js.Any.fromFunction1(getProfileItemImgText), getProfileItemLabels = js.Any.fromFunction1(getProfileItemLabels), item = item.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OptionProfileProps]))
+  }
+  
   @JSImport("baseui/menu", "OptionProfile")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -38,15 +50,4 @@ object OptionProfile {
   }
   
   def withProps(p: OptionProfileProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(
-    getProfileItemImg: js.Any => String | ReactComponentClass[_],
-    getProfileItemImgText: js.Any => String,
-    getProfileItemLabels: js.Any => typingsSlinky.baseui.anon.Body,
-    item: js.Any
-  ): Builder = {
-    val __props = js.Dynamic.literal(getProfileItemImg = js.Any.fromFunction1(getProfileItemImg), getProfileItemImgText = js.Any.fromFunction1(getProfileItemImgText), getProfileItemLabels = js.Any.fromFunction1(getProfileItemLabels), item = item.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[OptionProfileProps]))
-  }
 }

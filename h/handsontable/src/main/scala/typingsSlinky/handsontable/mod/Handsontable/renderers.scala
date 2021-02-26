@@ -1,19 +1,17 @@
 package typingsSlinky.handsontable.mod.Handsontable
 
 import org.scalajs.dom.raw.HTMLTableCellElement
-import typingsSlinky.handsontable.mod._Handsontable.Core
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("handsontable", "Handsontable.renderers")
-@js.native
-object renderers extends js.Object {
+object renderers {
   
   type Autocomplete = Base
   
   type Base = js.Function7[
-    /* instance */ Core, 
+    /* instance */ typingsSlinky.handsontable.mod._Handsontable.Core, 
     /* TD */ HTMLTableCellElement, 
     /* row */ Double, 
     /* col */ Double, 

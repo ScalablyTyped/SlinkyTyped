@@ -10,9 +10,9 @@ Lumino Pluggable Application
 | ------------------ | :-------------: |
 | Full name          | @lumino/application |
 | Keywords           | - |
-| # releases         | 21 |
-| # dependents       | 4 |
-| # downloads        | 344597 |
+| # releases         | 28 |
+| # dependents       | 5 |
+| # downloads        | 1045480 |
 | # stars            | 0 |
 
 ## Links

@@ -1,5 +1,6 @@
 package typingsSlinky.pixiJs.PIXI
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pixiJs.pixiJsStrings.touchmove
   - typingsSlinky.pixiJs.pixiJsStrings.tap
 */
-trait InteractionTouchEvents extends js.Object
+trait InteractionTouchEvents extends StObject
 object InteractionTouchEvents {
   
   @scala.inline

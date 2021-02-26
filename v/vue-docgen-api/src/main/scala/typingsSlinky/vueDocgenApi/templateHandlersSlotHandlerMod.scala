@@ -1,14 +1,15 @@
 package typingsSlinky.vueDocgenApi
 
 import typingsSlinky.vueCompilerCore.mod.TemplateChildNode
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("vue-docgen-api/dist/template-handlers/slotHandler", JSImport.Namespace)
-@js.native
-object templateHandlersSlotHandlerMod extends js.Object {
+object templateHandlersSlotHandlerMod {
   
+  @JSImport("vue-docgen-api/dist/template-handlers/slotHandler", JSImport.Default)
+  @js.native
   def default(
     documentation: typingsSlinky.vueDocgenApi.documentationMod.default,
     templateAst: TemplateChildNode,

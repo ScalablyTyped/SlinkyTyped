@@ -10,9 +10,9 @@ A helper for protactor and gulp
 | ------------------ | :-------------: |
 | Full name          | gulp-protractor |
 | Keywords           | gulpfriendly, protractor |
-| # releases         | 2 |
-| # dependents       | 43 |
-| # downloads        | 1464611 |
+| # releases         | 0 |
+| # dependents       | 52 |
+| # downloads        | 1364749 |
 | # stars            | 11 |
 
 ## Links

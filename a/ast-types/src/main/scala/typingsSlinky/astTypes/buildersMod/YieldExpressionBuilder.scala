@@ -3,12 +3,13 @@ package typingsSlinky.astTypes.buildersMod
 import typingsSlinky.astTypes.anon.Delegate
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.YieldExpression
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait YieldExpressionBuilder extends js.Object {
+trait YieldExpressionBuilder extends StObject {
   
   def apply(): YieldExpression = js.native
   def apply(argument: Null, delegate: Boolean): YieldExpression = js.native

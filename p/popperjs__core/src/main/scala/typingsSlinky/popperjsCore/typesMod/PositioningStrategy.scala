@@ -1,5 +1,6 @@
 package typingsSlinky.popperjsCore.typesMod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.popperjsCore.popperjsCoreStrings.absolute
   - typingsSlinky.popperjsCore.popperjsCoreStrings.fixed
 */
-trait PositioningStrategy extends js.Object
+trait PositioningStrategy extends StObject
 object PositioningStrategy {
   
   @scala.inline

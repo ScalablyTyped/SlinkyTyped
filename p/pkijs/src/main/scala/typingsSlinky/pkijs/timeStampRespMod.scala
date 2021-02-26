@@ -3,16 +3,44 @@ package typingsSlinky.pkijs
 import org.scalajs.dom.crypto.CryptoKey
 import typingsSlinky.pkijs.signedDataMod.VerifyParams
 import typingsSlinky.pkijs.signedDataMod.VerifyResult
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("pkijs/src/TimeStampResp", JSImport.Namespace)
-@js.native
-object timeStampRespMod extends js.Object {
+object timeStampRespMod {
+  
+  @JSImport("pkijs/src/TimeStampResp", JSImport.Default)
+  @js.native
+  class default () extends TimeStampResp {
+    def this(params: js.Any) = this()
+  }
+  /* static members */
+  object default {
+    
+    /**
+      * Compare values with default values for all class members
+      * @param {string} memberName String name for a class member
+      * @param {*} memberValue Value to compare with default value
+      */
+    @JSImport("pkijs/src/TimeStampResp", "default.compareWithDefault")
+    @js.native
+    def compareWithDefault(memberName: String, memberValue: js.Any): Boolean = js.native
+    
+    @JSImport("pkijs/src/TimeStampResp", "default.defaultValues")
+    @js.native
+    def defaultValues(memberName: String): js.Any = js.native
+    
+    @JSImport("pkijs/src/TimeStampResp", "default.schema")
+    @js.native
+    def schema(): js.Any = js.native
+    @JSImport("pkijs/src/TimeStampResp", "default.schema")
+    @js.native
+    def schema(parameters: js.Any): js.Any = js.native
+  }
   
   @js.native
-  trait TimeStampResp extends js.Object {
+  trait TimeStampResp extends StObject {
     
     def fromSchema(schema: js.Any): Unit = js.native
     
@@ -39,26 +67,5 @@ object timeStampRespMod extends js.Object {
       * @returns {Promise}
       */
     def verify(verificationParameters: VerifyParams): js.Thenable[VerifyResult] = js.native
-  }
-  
-  @js.native
-  class default () extends TimeStampResp {
-    def this(params: js.Any) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    /**
-      * Compare values with default values for all class members
-      * @param {string} memberName String name for a class member
-      * @param {*} memberValue Value to compare with default value
-      */
-    def compareWithDefault(memberName: String, memberValue: js.Any): Boolean = js.native
-    
-    def defaultValues(memberName: String): js.Any = js.native
-    
-    def schema(): js.Any = js.native
-    def schema(parameters: js.Any): js.Any = js.native
   }
 }

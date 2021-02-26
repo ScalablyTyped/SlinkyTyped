@@ -42,12 +42,13 @@ import typingsSlinky.semanticUiShape.semanticUiShapeStrings.setting
 import typingsSlinky.semanticUiShape.semanticUiShapeStrings.silent
 import typingsSlinky.semanticUiShape.semanticUiShapeStrings.verbose
 import typingsSlinky.semanticUiShape.semanticUiShapeStrings.width
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends StObject {
   
   def shape(): JQuery = js.native
   def shape(behavior: setting, name: beforeChange, value: js.UndefOr[scala.Nothing]): js.ThisFunction0[/* this */ JQuery, Unit] = js.native

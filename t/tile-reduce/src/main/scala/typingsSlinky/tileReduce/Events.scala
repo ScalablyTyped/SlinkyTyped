@@ -5,12 +5,13 @@ import typingsSlinky.tileReduce.tileReduceStrings.end
 import typingsSlinky.tileReduce.tileReduceStrings.map
 import typingsSlinky.tileReduce.tileReduceStrings.reduce
 import typingsSlinky.tileReduce.tileReduceStrings.start
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Events extends js.Object {
+trait Events extends StObject {
   
   /**
     * End Event

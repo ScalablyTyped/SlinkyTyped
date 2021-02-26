@@ -8,6 +8,7 @@ import typingsSlinky.antvG2.mod.AxisTitle
 import typingsSlinky.antvG2.mod.Styles.tickLine
 import typingsSlinky.bizcharts.mod.AxisProps
 import typingsSlinky.bizcharts.mod.PositionType
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ object Axis {
   
   @JSImport("bizcharts", "Axis")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -75,7 +76,7 @@ object Axis {
     def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: Axis.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: AxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

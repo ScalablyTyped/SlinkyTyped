@@ -1,12 +1,13 @@
 package typingsSlinky.kdbxweb.mod
 
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("kdbxweb", "BinaryStream")
 @js.native
-class BinaryStream protected () extends js.Object {
+class BinaryStream protected () extends StObject {
   def this(arrayBuffer: js.typedarray.ArrayBuffer) = this()
   
   def getByteLength(): Double = js.native

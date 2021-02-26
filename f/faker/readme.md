@@ -10,10 +10,10 @@ Generate massive amounts of fake contextual data
 | ------------------ | :-------------: |
 | Full name          | faker |
 | Keywords           | - |
-| # releases         | 1 |
-| # dependents       | 841 |
-| # downloads        | 42019297 |
-| # stars            | 271 |
+| # releases         | 5 |
+| # dependents       | 1162 |
+| # downloads        | 78172478 |
+| # stars            | 272 |
 
 ## Links
 - [Homepage](https://github.com/Marak/Faker.js#readme)

@@ -10,9 +10,9 @@ A library for parsing IPv4 and IPv6 IP addresses in node and the browser.
 | ------------------ | :-------------: |
 | Full name          | ip-address |
 | Keywords           | ipv6, ipv4, browser, validation |
-| # releases         | 9 |
-| # dependents       | 80 |
-| # downloads        | 5955247 |
+| # releases         | 10 |
+| # dependents       | 101 |
+| # downloads        | 8811716 |
 | # stars            | 7 |
 
 ## Links

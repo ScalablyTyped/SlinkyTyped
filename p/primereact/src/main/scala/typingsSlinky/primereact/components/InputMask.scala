@@ -6,6 +6,7 @@ import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.inputMaskMod.InputMaskProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,7 @@ object InputMask {
   
   @JSImport("primereact/inputmask", "InputMask")
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -88,7 +89,7 @@ object InputMask {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: InputMaskProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: InputMask.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: InputMaskProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

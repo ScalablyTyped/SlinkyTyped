@@ -3,14 +3,14 @@ package typingsSlinky.three
 import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.threeBooleans.`true`
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("three/src/extras/objects/ImmediateRenderObject", JSImport.Namespace)
-@js.native
-object immediateRenderObjectMod extends js.Object {
+object immediateRenderObjectMod {
   
+  @JSImport("three/src/extras/objects/ImmediateRenderObject", "ImmediateRenderObject")
   @js.native
   class ImmediateRenderObject protected () extends Object3D {
     def this(material: Material) = this()

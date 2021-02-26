@@ -10,9 +10,9 @@ detect and report syntax errors in source code strings
 | ------------------ | :-------------: |
 | Full name          | syntax-error |
 | Keywords           | syntax, error, esprima, stack, line, column |
-| # releases         | 2 |
-| # dependents       | 103 |
-| # downloads        | 26337060 |
+| # releases         | 1 |
+| # dependents       | 108 |
+| # downloads        | 36180222 |
 | # stars            | 8 |
 
 ## Links

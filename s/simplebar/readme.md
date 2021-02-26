@@ -10,9 +10,9 @@ Scrollbars, simpler.
 | ------------------ | :-------------: |
 | Full name          | simplebar |
 | Keywords           | - |
-| # releases         | 53 |
-| # dependents       | 33 |
-| # downloads        | 18569683 |
+| # releases         | 48 |
+| # dependents       | 59 |
+| # downloads        | 66559805 |
 | # stars            | 1 |
 
 ## Links

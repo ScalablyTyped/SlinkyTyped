@@ -1,12 +1,13 @@
 package typingsSlinky.reactTable.mod
 
 import typingsSlinky.reactTable.anon.PartialTableToggleAllRows
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UseRowSelectInstanceProps[D /* <: js.Object */] extends js.Object {
+trait UseRowSelectInstanceProps[D /* <: js.Object */] extends StObject {
   
   def getToggleAllPageRowsSelectedProps(): TableToggleAllRowsSelectedProps = js.native
   def getToggleAllPageRowsSelectedProps(props: PartialTableToggleAllRows): TableToggleAllRowsSelectedProps = js.native

@@ -4,6 +4,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.feet_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.kilometers_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.meters_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.miles_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`nautical-miles`
   - typingsSlinky.arcgisJsApi.arcgisJsApiStrings.yards
 */
-trait LinearUnits extends js.Object
+trait LinearUnits extends StObject
 object LinearUnits {
   
   @scala.inline

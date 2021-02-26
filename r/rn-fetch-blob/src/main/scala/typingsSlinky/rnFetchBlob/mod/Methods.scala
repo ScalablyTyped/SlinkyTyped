@@ -4,6 +4,7 @@ import typingsSlinky.rnFetchBlob.rnFetchBlobStrings.delete_
 import typingsSlinky.rnFetchBlob.rnFetchBlobStrings.get_
 import typingsSlinky.rnFetchBlob.rnFetchBlobStrings.post_
 import typingsSlinky.rnFetchBlob.rnFetchBlobStrings.put_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.rnFetchBlob.rnFetchBlobStrings.delete_
   - typingsSlinky.rnFetchBlob.rnFetchBlobStrings.put_
 */
-trait Methods extends js.Object
+trait Methods extends StObject
 object Methods {
   
   @scala.inline

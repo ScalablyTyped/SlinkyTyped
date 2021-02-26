@@ -12,6 +12,7 @@ import typingsSlinky.reactGeosuggest.mod.QueryType
 import typingsSlinky.reactGeosuggest.mod.Styles
 import typingsSlinky.reactGeosuggest.mod.Suggest
 import typingsSlinky.reactGeosuggest.mod.default
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object ReactGeosuggest {
   
   @JSImport("react-geosuggest", JSImport.Default)
   @js.native
-  object component extends js.Object
+  val component: js.Object = js.native
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
@@ -40,19 +41,19 @@ object ReactGeosuggest {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def countryVarargs(value: String*): this.type = set("country", js.Array(value :_*))
+    def country(value: String | js.Array[String]): this.type = set("country", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def country(value: String | js.Array[String]): this.type = set("country", value.asInstanceOf[js.Any])
+    def countryVarargs(value: String*): this.type = set("country", js.Array(value :_*))
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fixturesVarargs(value: Fixture*): this.type = set("fixtures", js.Array(value :_*))
+    def fixtures(value: js.Array[Fixture]): this.type = set("fixtures", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def fixtures(value: js.Array[Fixture]): this.type = set("fixtures", value.asInstanceOf[js.Any])
+    def fixturesVarargs(value: Fixture*): this.type = set("fixtures", js.Array(value :_*))
     
     @scala.inline
     def getSuggestLabel(value: /* googleSuggest */ AutocompletePrediction => String): this.type = set("getSuggestLabel", js.Any.fromFunction1(value))
@@ -145,13 +146,13 @@ object ReactGeosuggest {
     def suggestsHiddenClassName(value: String): this.type = set("suggestsHiddenClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def typesVarargs(value: QueryType*): this.type = set("types", js.Array(value :_*))
+    def types(value: js.Array[QueryType]): this.type = set("types", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def types(value: js.Array[QueryType]): this.type = set("types", value.asInstanceOf[js.Any])
+    def typesVarargs(value: QueryType*): this.type = set("types", js.Array(value :_*))
   }
   
-  def withProps(p: GeosuggestProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
   implicit def make(companion: ReactGeosuggest.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  def withProps(p: GeosuggestProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
 }

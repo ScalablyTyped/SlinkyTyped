@@ -3,28 +3,29 @@ package typingsSlinky.vueI18n.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.vue.vueMod.Vue
 import typingsSlinky.vueI18n.mod.VueI18n.PluralizationRulesMap
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IVueI18n extends js.Object {
+trait IVueI18n extends StObject {
   
-  def d(value: Double): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-  def d(value: Double, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-  def d(value: Double, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-  def d(value: Double, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-  def d(
-    value: Double,
-    key: typingsSlinky.vueI18n.mod.VueI18n.Path,
-    locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
-  ): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(value: js.Date): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(value: js.Date, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(value: js.Date, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(value: js.Date, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(
     value: js.Date,
+    key: typingsSlinky.vueI18n.mod.VueI18n.Path,
+    locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
+  ): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+  def d(value: Double): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+  def d(value: Double, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+  def d(value: Double, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+  def d(value: Double, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+  def d(
+    value: Double,
     key: typingsSlinky.vueI18n.mod.VueI18n.Path,
     locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
   ): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native

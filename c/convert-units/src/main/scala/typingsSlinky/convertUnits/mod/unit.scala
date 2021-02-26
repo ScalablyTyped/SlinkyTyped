@@ -11,10 +11,12 @@ import typingsSlinky.convertUnits.convertUnitsStrings.mVARh_
 import typingsSlinky.convertUnits.convertUnitsStrings.mVA_
 import typingsSlinky.convertUnits.convertUnitsStrings.mW_
 import typingsSlinky.convertUnits.convertUnitsStrings.mWh_
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// Angle
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.convertUnits.convertUnitsStrings.mm
   - typingsSlinky.convertUnits.convertUnitsStrings.cm
@@ -189,7 +191,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.convertUnits.convertUnitsStrings.arcmin
   - typingsSlinky.convertUnits.convertUnitsStrings.arcsec
 */
-trait unit extends js.Object
+trait unit extends StObject
 object unit {
   
   @scala.inline

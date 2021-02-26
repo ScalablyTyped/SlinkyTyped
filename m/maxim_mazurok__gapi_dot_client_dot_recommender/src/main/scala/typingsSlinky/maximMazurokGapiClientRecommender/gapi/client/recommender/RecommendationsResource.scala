@@ -6,12 +6,13 @@ import typingsSlinky.maximMazurokGapiClientRecommender.anon.Alt
 import typingsSlinky.maximMazurokGapiClientRecommender.anon.Fields
 import typingsSlinky.maximMazurokGapiClientRecommender.anon.Key
 import typingsSlinky.maximMazurokGapiClientRecommender.anon.Name
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RecommendationsResource extends js.Object {
+trait RecommendationsResource extends StObject {
   
   /** Gets the requested recommendation. Requires the recommender.*.get IAM permission for the specified recommender. */
   def get(): Request[GoogleCloudRecommenderV1Recommendation] = js.native

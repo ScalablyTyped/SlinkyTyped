@@ -4,12 +4,13 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
+import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SnackbarProps extends js.Object {
+trait SnackbarProps extends StObject {
   
   var action: js.UndefOr[ReactElement] = js.native
   
@@ -40,78 +41,66 @@ object SnackbarProps {
   }
   
   @scala.inline
-  implicit class SnackbarPropsOps[Self <: SnackbarProps] (val x: Self) extends AnyVal {
+  implicit class SnackbarPropsMutableBuilder[Self <: SnackbarProps] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    def setAction(value: ReactElement): Self = StObject.set(x, "action", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    def setActionReactElement(value: ReactElement): Self = StObject.set(x, "action", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
+    def setActionUndefined: Self = StObject.set(x, "action", js.undefined)
     
     @scala.inline
-    def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
+    def setAutoHideDuration(value: Double): Self = StObject.set(x, "autoHideDuration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setActionReactElement(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
+    def setAutoHideDurationUndefined: Self = StObject.set(x, "autoHideDuration", js.undefined)
     
     @scala.inline
-    def setAction(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
+    def setBodyStyle(value: CSSProperties): Self = StObject.set(x, "bodyStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAction: Self = this.set("action", js.undefined)
+    def setBodyStyleUndefined: Self = StObject.set(x, "bodyStyle", js.undefined)
     
     @scala.inline
-    def setAutoHideDuration(value: Double): Self = this.set("autoHideDuration", value.asInstanceOf[js.Any])
+    def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAutoHideDuration: Self = this.set("autoHideDuration", js.undefined)
+    def setClassNameUndefined: Self = StObject.set(x, "className", js.undefined)
     
     @scala.inline
-    def setBodyStyle(value: CSSProperties): Self = this.set("bodyStyle", value.asInstanceOf[js.Any])
+    def setContentStyle(value: CSSProperties): Self = StObject.set(x, "contentStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBodyStyle: Self = this.set("bodyStyle", js.undefined)
+    def setContentStyleUndefined: Self = StObject.set(x, "contentStyle", js.undefined)
     
     @scala.inline
-    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    def setMessage(value: ReactElement): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteClassName: Self = this.set("className", js.undefined)
+    def setMessageUndefined: Self = StObject.set(x, "message", js.undefined)
     
     @scala.inline
-    def setContentStyle(value: CSSProperties): Self = this.set("contentStyle", value.asInstanceOf[js.Any])
+    def setOnActionClick(value: SyntheticMouseEvent[js.Object] => Unit): Self = StObject.set(x, "onActionClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteContentStyle: Self = this.set("contentStyle", js.undefined)
+    def setOnActionClickUndefined: Self = StObject.set(x, "onActionClick", js.undefined)
     
     @scala.inline
-    def setMessage(value: ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setOnRequestClose(value: /* reason */ String => Unit): Self = StObject.set(x, "onRequestClose", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteMessage: Self = this.set("message", js.undefined)
+    def setOnRequestCloseUndefined: Self = StObject.set(x, "onRequestClose", js.undefined)
     
     @scala.inline
-    def setOnActionClick(value: SyntheticMouseEvent[js.Object] => Unit): Self = this.set("onActionClick", js.Any.fromFunction1(value))
+    def setOpen(value: Boolean): Self = StObject.set(x, "open", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteOnActionClick: Self = this.set("onActionClick", js.undefined)
+    def setStyle(value: CSSProperties): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnRequestClose(value: /* reason */ String => Unit): Self = this.set("onRequestClose", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnRequestClose: Self = this.set("onRequestClose", js.undefined)
-    
-    @scala.inline
-    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStyle: Self = this.set("style", js.undefined)
+    def setStyleUndefined: Self = StObject.set(x, "style", js.undefined)
   }
 }

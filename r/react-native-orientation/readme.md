@@ -11,8 +11,8 @@ Listen to device orientation changes in React Native applications and programmat
 | Full name          | react-native-orientation |
 | Keywords           | orientation, react-native, ios, android |
 | # releases         | 1 |
-| # dependents       | 31 |
-| # downloads        | 1268160 |
+| # dependents       | 40 |
+| # downloads        | 1088261 |
 | # stars            | 9 |
 
 ## Links
